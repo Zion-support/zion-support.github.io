@@ -5,7 +5,6 @@ import { glob } from 'glob';
 //Find all TypeScript/JSX files in src/components;
 // let fixedFiles = 0;
 
-<<<<<<< HEAD
 for (const filePath of files) {
   try {
     //Fix orphaned /> tags (standalone /> on their own lines)
@@ -14,26 +13,21 @@ for (const filePath of files) {
     //Fix unterminated regular expression literals in object properties;
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
-=======
 for (const filePath of files) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;
     });
 
     //Fix JSX attributes that look like regex but are actually strings;
-<<<<<<< HEAD
     content = content.replace(/={\s*\/[^\/\n]*$/gm, match => {)
       const value = match;)
         .match(/={\s*\/[^\/\n]*$/)[0]
         .replace(/={\s*\//, '')
         .trim();
       return `={'${value}'}`;
-=======
     content = content.replace(/={/* TODO: Fix JSX expression */}`
       return `={'${value}'}`;)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
     //Fix common patterns where /> appears in wrong places;
@@ -48,47 +42,35 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/<br\s*>\s*$/gm, '<br />');
 
     //Fix unterminated regular expressions in array/object literals;
-<<<<<<< HEAD
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
-=======
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;
     });
 
     //Fix malformed JSX expressions;
-<<<<<<< HEAD
     content = content.replace(/\{\s*\/[^\/\n]*$/gm, match => {)
-=======
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return `{'${value}'}`;)
     });
 
     //Fix specific patterns with unterminated regex in object properties;
-<<<<<<< HEAD
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
-=======
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;
     });
 
-<<<<<<< HEAD
     //Fix malformed template literals;
     content = content.replace(/`[^`]*$/gm, match => {)
       if (!match.endsWith('`')) {
         return match + '`';
-=======
     //Fix malformed template literals;`
     content = content.replace(/`[^`]*$/gm, match => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       return match;)
     });
@@ -98,25 +80,19 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
     content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>');
 
     //Fix malformed JSX attributes;
-<<<<<<< HEAD
     content = content.replace(/(\w+)=\{[^}]*$/gm, match => {
       if (!match.includes('}')) {
-=======
     content = content.replace(/(\w+)=\{[^}]*$/gm, match => {/* TODO: Fix JSX expression */}
       if (!match.includes('}')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return match + '}';
       }
       return match;
     });
 
     //Fix specific patterns with malformed object properties;
-<<<<<<< HEAD
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
       if (value.startsWith('/') && !value.endsWith('/')) {
-=======
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         return `${prop}: '${value.substring(1)}'`;
       }
       return match;

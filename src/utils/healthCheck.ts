@@ -1,9 +1,20 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
+import React from 'react'
+import { logger } from './logger'
+import { performanceMonitor } from './performanceMonitor'
+
+// Core Web Vitals thresholds
+const coreWebVitals = {
+  lcp: { good: 2500, needsImprovement: 4000 },
+  fid: { good: 100, needsImprovement: 300 },
+  cls: { good: 0.1, needsImprovement: 0.25 },
+  fcp: { good: 1800, needsImprovement: 3000 },
+  ttfb: { good: 800, needsImprovement: 1800 }
+}
 export interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: number;
@@ -116,7 +127,6 @@ class HealthCheckService {
       logger.warn('Application health degraded', { healthStatus })
     }
     return healthStatus
-=======
 
 'use client'
 /**
@@ -216,9 +226,7 @@ constructor() {/* TODO: Fix JSX expression */}
     if ()
 //       this.cachedStatus &&
 //       now - this.lastCheckTime;
-          < this.cacheTimeout,
-
-) {// TODO: Add content;}
+          < this.cacheTimeout) {// TODO: Add content;}
 
 }
       return this.cachedStatus;
@@ -301,12 +309,10 @@ const hasFailures = checks.some((c) => c.status === 'fail')
       logger.warn('Application health degraded', { healthStatus })
     }
     return healthStatus;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Get current health status (may return cached)
    */
-<<<<<<< HEAD
   async getStatus(): Promise<HealthStatus> {
     return this.runChecks()
   }
@@ -359,21 +365,51 @@ $4};
       const report = performanceMonitor.getReport()
       const { poor, needsImprovement, good } = report.summary
       let status: 'pass' | 'warn' | 'fail' = 'pass'
-      let message = `Performance: ${good} good, ${needsImprovement} needs improvement, ${poor} poor`
-      if (poor > 0) {
+      let message = 'Performance metrics available'
+      
+      // Check if any critical metrics are missing or poor
+      const criticalMetrics = ['lcp', 'fid', 'cls', 'fcp', 'ttfb']
+      const missingMetrics: string[] = []
+      const poor: string[] = []
+      const needsImprovement: string[] = []
+      const good: string[] = []
+      const vitals = Object.keys(coreWebVitals)
+      
+      criticalMetrics.forEach(metric => {
+        const metrics = performanceMonitor.getMetrics()
+        const value = metrics[metric as keyof typeof metrics]
+        if (value === undefined) {
+          missingMetrics.push(metric)
+        } else {
+          const thresholds = coreWebVitals[metric as keyof typeof coreWebVitals]
+          if (value <= thresholds.good) {
+            good.push(metric)
+          } else if (value <= thresholds.needsImprovement) {
+            needsImprovement.push(metric)
+          } else {
+            poor.push(metric)
+          }
+        }
+      })
+      
+      if (missingMetrics.length > 2) {
         status = 'warn'
+        message = `Missing critical metrics: ${missingMetrics.join(', ')}`
       }
-      if (poor > 2) {
+      
+      if (missingMetrics.length > 3) {
         status = 'fail'
-        message = `Critical performance issues: ${poor} poor metrics`
+        message = `Critical performance data unavailable: ${missingMetrics.join(', ')}`
       }
       return {
         name: 'performance',
         status,
         message,
         details: {
-          metrics: report.metrics,
-          summary: report.summary
+          vitals,
+          poor,
+          needsImprovement,
+          good
         }
       }
     } catch (error) {
@@ -388,7 +424,6 @@ $4}
    * Check browser API availability
    */
   private checkBrowserAPIs(): HealthCheck {
-=======
   async getStatus(): Promise;
           <HealthStatus> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -531,14 +566,12 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   private checkBrowserAPIs(): HealthCheck {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const requiredAPIs = [
       'fetch',
       'localStorage',
       'sessionStorage',
       'console',
       'navigator'
-<<<<<<< HEAD
     ];
     const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {
@@ -548,9 +581,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
     })
     if (missingAPIs.length > 0) {
       return {
-        name: 'browser-apis',
-=======
-    ]
+        name: 'browser-apis']
 
     const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {// TODO: Add content;}
@@ -570,13 +601,11 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
 };
 
   name: 'browser-apis',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         status: 'warn',
         message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
         details: { missingAPIs }
       }
     }
-<<<<<<< HEAD
     return {
       name: 'browser-apis',
       status: 'pass',
@@ -636,7 +665,6 @@ $4}
    * Get formatted uptime string
    */
   getFormattedUptime(): string {
-=======
     return {// TODO: Add content;}
 };
   name: 'browser-apis',
@@ -734,13 +762,11 @@ $4}
   getFormattedUptime(): string {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const uptime = this.getUptime()
     const seconds = Math.floor(uptime / 1000)
     const minutes = Math.floor(seconds / 60)
     const hours = Math.floor(minutes / 60)
     const days = Math.floor(hours / 24)
-<<<<<<< HEAD
     if (days > 0) {
       return `${days}d ${hours % 24}h ${minutes % 60}m`
     } else if (hours > 0) {
@@ -748,7 +774,6 @@ $4}
     } else if (minutes > 0) {
       return `${minutes}m ${seconds % 60}s`
     } else {
-=======
 
     if (days > 0) {// TODO: Add content;}
 }
@@ -762,12 +787,10 @@ $4}
     } else {// TODO: Add content;}
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return `${seconds}s`
     }
   }
   /**
-<<<<<<< HEAD
    * Clear cached status
    */
   clearCache(): void {
@@ -785,30 +808,3 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck
-=======
-   * Clear cached status;
-   */
-
-  clearCache(): void {// TODO: Add content;}
-
-}
-    this.cachedStatus = undefined;
-    this.lastCheckTime = 0;
-  }
-}
-// Export singleton instance;
-export const healthCheck = new HealthCheckService()
-// Export convenience functions;
-export const runHealthChecks = () => healthCheck.runChecks()
-export const getHealthStatus = () => healthCheck.getStatus()
-export const registerHealthCheck = (nam,
-  e: string, checkF,)
-  n: HealthCheckFunction) =>
-//   healthCheck.register(name, checkFn)
-export const getUptime = () => healthCheck.getUptime()
-export const getFormattedUptime = () => healthCheck.getFormattedUptime()
-export default healthCheck;"`
-
-
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

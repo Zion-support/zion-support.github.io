@@ -141,9 +141,7 @@ const scripts = document.querySelectorAll('script[data-defer]')
   O: Add content;}
 }
 
-    document.addEventListener('DOMContentLoaded', () => {
-
-}
+    document.addEventListener('DOMContentLoaded', () => {}
   )
   } else {/* TODO: Fix JSX expression */}
   }

@@ -4,7 +4,7 @@
   d: "string"}config?: unknown) => void} } } const,
   PerformanceMonitor: React.FC = () => {/* TODO: Fix JSX expression */}"
   P:"}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}"
-  s: ["largest-contentful-paint"] })} catch () {}const fidObserver = new (window as any).PerformanceObserver((lis,)
+  s: ["largest-contentful-paint"] })} catch () {}const fidObserver = new (window as any).PerformanceObserver((lis)
   t: unknown) => {/* TODO: Fix JSX expression */}"
   D:"}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}"
   s: ["first-input"] })} catch () {}let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,")
@@ -32,7 +32,7 @@
   d: "string"}config?: unknown) => void} } } const,
   PerformanceMonitor: React.FC = () => {/* TODO: Fix JSX expression */}"
   P:"}entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}"
-  s: ["largest-contentful-paint"] })} catch (e) {} const fidObserver = new (window as any).PerformanceObserver((lis,)
+  s: ["largest-contentful-paint"] })} catch (e) {} const fidObserver = new (window as any).PerformanceObserver((lis)
   t: unknown) => {/* TODO: Fix JSX expression */}"
   D:"}entry.processingStart - entry.startTime)} } } }); try {/* TODO: Fix JSX expression */}"
   s: ["first-input"] })} catch (e) {} let clsValue = 0; const clsObserver = new (window as any).PerformanceObserver((lis,")

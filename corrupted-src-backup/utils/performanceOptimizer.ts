@@ -1,19 +1,15 @@
 // Performance optimization utilities;
-<<<<<<< HEAD
 export class PerformanceOptimizer {
   private static instance: PerformanceOptimizer;
   private metrics: Map<string, number> = new Map();</string>static</string> getInstance(): PerformanceOptimizer {
     if (!PerformanceOptimizer.instance) {
       PerformanceOptimizer.instance = new PerformanceOptimizer();
-=======
 export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return PerformanceOptimizer.instance;
   }
 
   // Lazy load images with intersection observer;
-<<<<<<< HEAD
   lazyLoadImages(): void {
     if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver(entries => {)
@@ -24,26 +20,20 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
               img['src'] = img.dataset['src'];
               img.classList.remove('lazy');
               imageObserver.unobserve(img);
-=======
   lazyLoadImages(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             }
           }
         });
       });
 
-<<<<<<< HEAD
       document.querySelectorAll('img[data-src]').forEach(img => {)
         imageObserver.observe(img);
-=======
       document.querySelectorAll('img[data-src]').forEach(img => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
   }
 
   // Preload critical resources;
-<<<<<<< HEAD
   preloadCriticalResources(): void {
     const _criticalResources = ['/fonts/inter.woff2', '/images/hero-bg.jpg', '/images/logo.svg'];
 
@@ -54,25 +44,20 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       link.as = resource.endsWith('.woff2') ? 'font' : 'image';
       if (resource.endsWith('.woff2')) {
         link.crossOrigin = 'anonymous';
-=======
   preloadCriticalResources(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       document.head.appendChild(link);
     });
   }
 
   // Optimize scroll performance;
-<<<<<<< HEAD
   optimizeScroll(): void {
     let _ticking = false;
 
     const updateScrollPosition = () => {
       // Throttled scroll handling;
       ticking = false;
-=======
   optimizeScroll(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     const requestTick = () => {/* TODO: Fix JSX expression */}
@@ -84,7 +69,6 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   }
 
   // Measure performance metrics;
-<<<<<<< HEAD
   measurePerformance(name: string, fn: () => void): void {
     //     const start = performance.now();
     fn();
@@ -95,17 +79,14 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
     if (process.env['NODE_ENV'] === 'development') {
       //       // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
-=======
   measurePerformance(nam,
-  e: string, f,)
+  e: string, f)
   n: () => void): void {/* TODO: Fix JSX expression */}
   e: ${name} took ${duration.toFixed(2)}ms`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   // Get performance metrics;
-<<<<<<< HEAD
   getMetrics(): Record<string, number> {
     return Object.fromEntries(this.metrics);
   }
@@ -121,9 +102,7 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
-        crossOrigin: 'anonymous',
-      },
-    ];
+        crossOrigin: 'anonymous'}];
 
     hints.forEach(hint => {)
       const _link = document.createElement('link');
@@ -132,7 +111,6 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       if (hint.crossOrigin) {
         link.crossOrigin = hint.crossOrigin;
       }
-=======
   getMetrics(): Record<string, number> {/* TODO: Fix JSX expression */}
   }
 
@@ -144,29 +122,23 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
   s://fonts.googleapis.com' },
       {/* TODO: Fix JSX expression */}
-      },
-    ];
+      }];
 
     hints.forEach(hint => {/* TODO: Fix JSX expression */}
       })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       document.head.appendChild(link);
     });
   }
 
   // Add Web Vitals reporting method;
-<<<<<<< HEAD
   reportWebVitals(metrics: unknown): void {,
     if (process.env['NODE_ENV'] === 'development') {,
-=======
-  reportWebVitals(metric,)
+  reportWebVitals(metric)
   s: unknown): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       //       }
   }
 
   // Add page load measurement method;
-<<<<<<< HEAD
   measurePageLoad(): unknown {
     if (typeof window === 'undefined' || !window.performance) {
       return null;
@@ -176,25 +148,20 @@ export class PerformanceOptimizer {/* TODO: Fix JSX expression */}
     return {
       loadTime: timing.loadEventEnd - timing.navigationStart;
       interactiveTime: timing.domInteractive - timing.navigationStart;
-=======
   measurePageLoad(): unknown {/* TODO: Fix JSX expression */}
     }
 
     const _timing = window.performance.timing;
     return {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
   // Initialize all optimizations;
-<<<<<<< HEAD
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
     this.measurePerformance('preloadCriticalResources', () => this.preloadCriticalResources());
     this.measurePerformance('optimizeScroll', () => this.optimizeScroll());
-=======
   initialize(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 

@@ -1,5 +1,4 @@
 export interface NextGenerationAIService;
-<<<<<<< HEAD
 export interface NextGenerationAIService {;
   id: string;
   name: string;
@@ -48,7 +47,6 @@ export interface NextGenerationAIService {}
   customers: number;
   rating: number;
   reviews: number;
-=======
 export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
 export interface NextGenerationAIService {}
   review,
@@ -72,9 +70,7 @@ export interface NextGenerationAIService {}
   ratin,
   g: number,
   review,
-  s: number,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-}
+  s: number}
   i,
   d: string;
   nam,
@@ -133,7 +129,6 @@ export interface NextGenerationAIService {}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -162,7 +157,6 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     period: '/month',
     description: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
     features: [,
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -174,8 +168,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   ratin,
   g: number;
   review,
-  s: number,
-}
+  s: number}
   review,
   s: number;    mobil,
   e: string;
@@ -184,8 +177,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
     addres,
   s: string;
     websit,
-  e: string,
-  }
+  e: string}
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -197,8 +189,7 @@ export const nextGenerationAIServices: NextGenerationAIService[] = [
   ratin,
   g: number;
   review,
-  s: number,
-}
+  s: number}
 export const,
   nextGenerationAIServices: NextGenerationAIService[] = [,
   // Advanced AI Agents & Autonomous Systems,
@@ -215,7 +206,6 @@ export const,
   n: 'Revolutionary AI agent that autonomously manages business operations, makes decisions, and executes tasks without human intervention. Achieve 24/7 business operations with intelligent automation.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous decision-making engine',
       'Natural language business communication',
       'Multi-platform task execution',
@@ -227,7 +217,6 @@ export const,
       'Risk assessment and mitigation',
       'Performance optimization'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-purple-700'
@@ -251,8 +240,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced AI system with autonomous decision-making capabilities, natural language processing, and multi-platform integration. Includes safety protocols and human oversight options.',
     launchDate: '2024-12-01'
@@ -268,7 +256,6 @@ export const,
     period: '/month',
     description: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -332,8 +319,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 89,
-  },
+  s: 89},
   // Quantum AI Computing Platform,
   id: 'quantum-ai-computing-platform',
     nam,
@@ -348,7 +334,6 @@ export const,
   n: 'Revolutionary quantum AI computing platform that combines quantum computing with artificial intelligence to solve previously unsolvable problems. Achieve computational breakthroughs in research, finance, and science.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum AI algorithm optimization',
       'Hybrid quantum-classical computing',
       'Quantum machine learning models',
@@ -360,7 +345,6 @@ export const,
       'Quantum chemistry simulations',
       'Quantum financial modeling'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-indigo-700',
@@ -384,8 +368,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced quantum computing platform with custom quantum algorithms, hybrid computing capabilities, and comprehensive quantum AI tools. Includes quantum error correction and optimization.',
     launchDate: '2024-11-15'
@@ -401,7 +384,6 @@ export const,
     period: '/month',
     description: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -464,8 +446,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 45,
-  },
+  s: 45},
   // Neural Interface Development Platform,
   id: 'neural-interface-development-platform',
     nam,
@@ -480,7 +461,6 @@ export const,
   n: 'Revolutionary platform for developing neural interfaces and brain-computer interfaces. Create applications that directly connect with the human nervous system for medical, research, and consumer applications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Neural signal processing',
       'Brain-computer interface SDK',
       'Real-time neural data analysis',
@@ -492,7 +472,6 @@ export const,
       'Compliance with medical standards',
       '24/7 neural interface support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700',
@@ -516,8 +495,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced neural interface platform with real-time signal processing, machine learning capabilities, and comprehensive safety protocols. Includes medical device compliance and testing tools.',
     launchDate: '2024-10-01'
@@ -533,7 +511,6 @@ export const,
     period: '/month',
     description: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -596,8 +573,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 67,
-  },
+  s: 67},
   // AI-Powered Space Exploration Platform,
   id: 'ai-space-exploration-platform',
     nam,
@@ -612,7 +588,6 @@ export const,
   n: 'Revolutionary AI platform for autonomous space exploration, satellite operations, and space mission management. Enable autonomous space operations with intelligent decision-making and real-time optimization.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous satellite operations',
       'AI-powered mission planning',
       'Real-time space data analysis',
@@ -624,7 +599,6 @@ export const,
       'Earth observation analytics',
       'Space weather monitoring'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-blue-700',
@@ -648,8 +622,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced AI space platform with autonomous decision-making, real-time optimization, and comprehensive space operations management. Includes safety protocols and mission planning tools.',
     launchDate: '2024-09-15'
@@ -665,7 +638,6 @@ export const,
     period: '/month',
     description: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -728,8 +700,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 28,
-  },
+  s: 28},
   // Biotech AI Drug Discovery Platform,
   id: 'biotech-ai-drug-discovery',
     nam,
@@ -744,7 +715,6 @@ export const,
   n: 'Revolutionary AI platform for accelerating drug discovery and pharmaceutical research. Reduce drug development timelines by 80% and increase success rates through intelligent molecular analysis and prediction.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI molecular modeling',
       'Drug target identification',
       'Predictive toxicity analysis',
@@ -756,7 +726,6 @@ export const,
       'Drug interaction prediction',
       'Regulatory compliance tools'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700',
@@ -780,8 +749,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced AI drug discovery platform with molecular modeling, predictive analytics, and comprehensive research tools. Includes regulatory compliance and clinical trial optimization.',
     launchDate: '2024-08-01'
@@ -797,7 +765,6 @@ export const,
     period: '/month',
     description: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -860,8 +827,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 52,
-  },
+  s: 52},
   // Quantum Financial Trading Platform,
   id: 'quantum-financial-trading-platform',
     nam,
@@ -876,7 +842,6 @@ export const,
   n: 'Revolutionary quantum computing platform for financial trading, risk management, and portfolio optimization. Achieve superior returns through quantum-powered algorithms and real-time market analysis.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum algorithmic trading',
       'Real-time risk assessment',
       'Portfolio optimization algorithms',
@@ -888,7 +853,6 @@ export const,
       'API for broker integration',
       '24/7 trading operations'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-600 to-orange-700'
@@ -912,8 +876,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced quantum trading platform with real-time optimization, risk management, and comprehensive trading tools. Includes regulatory compliance and performance analytics.',
     launchDate: '2024-07-15'
@@ -929,7 +892,6 @@ export const,
     period: '/month',
     description: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -992,8 +954,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 58,
-  },
+  s: 58},
   // AI-Powered Metaverse Development Platform,
   id: 'ai-metaverse-development-platform',
     nam,
@@ -1008,7 +969,6 @@ export const,
   n: 'Revolutionary platform for building AI-powered metaverse experiences with intelligent NPCs, dynamic content generation, and immersive virtual environments. Create the next generation of digital experiences.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered NPC generation',
       'Dynamic content creation',
       'Real-time environment adaptation',
@@ -1020,7 +980,6 @@ export const,
       'Performance optimization',
       'Analytics and insights'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-pink-600 to-rose-700',
@@ -1044,8 +1003,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced metaverse platform with AI-powered content generation, intelligent interactions, and comprehensive development tools. Includes VR/AR integration and performance optimization.',
     launchDate: '2024-06-01'
@@ -1061,7 +1019,6 @@ export const,
     period: '/month',
     description: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and performance.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1124,8 +1081,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 95,
-  },
+  s: 95},
   // Autonomous Vehicle AI Platform,
   id: 'autonomous-vehicle-ai-platform',
     nam,
@@ -1140,7 +1096,6 @@ export const,
   n: 'Revolutionary AI platform for autonomous vehicles with advanced perception, decision-making, and safety systems. Enable fully autonomous transportation with industry-leading safety and performance.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced computer vision',
       'Real-time decision making',
       'Predictive safety systems',
@@ -1152,7 +1107,6 @@ export const,
       'Regulatory compliance',
       'Performance analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-gray-600 to-slate-700',
@@ -1176,8 +1130,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced autonomous vehicle platform with comprehensive safety systems, real-time decision-making, and regulatory compliance. Includes fleet management and performance analytics.',
     launchDate: '2024-05-15'
@@ -1193,7 +1146,6 @@ export const,
     period: '/month',
     description: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1256,8 +1208,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 42,
-  },
+  s: 42},
   // Quantum Internet Security Platform,
   id: 'quantum-internet-security-platform',
     nam,
@@ -1272,7 +1223,6 @@ export const,
   n: 'Revolutionary quantum internet security platform that provides unhackable communication through quantum key distribution and post-quantum cryptography. Secure the future of internet communications.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum key distribution (QKD)',
       'Post-quantum cryptography',
       'Quantum entanglement security',
@@ -1284,7 +1234,6 @@ export const,
       '24/7 quantum security operations',
       'Unhackable communication channels'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -1308,8 +1257,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced quantum security platform with quantum key distribution, post-quantum cryptography, and comprehensive security tools. Includes government compliance and monitoring systems.',
     launchDate: '2024-04-01'
@@ -1325,7 +1273,6 @@ export const,
     period: '/month',
     description: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real-time optimization.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -1388,8 +1335,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 33,
-  },
+  s: 33},
   // AI-Powered Manufacturing Platform,
   id: 'ai-manufacturing-platform',
     nam,
@@ -1404,7 +1350,6 @@ export const,
   n: 'Revolutionary AI platform for intelligent manufacturing with predictive maintenance, quality control, and process optimization. Achieve Industry 4.0 with intelligent automation and real-time optimization.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Predictive maintenance',
       'Quality control automation',
       'Process optimization',
@@ -1416,7 +1361,6 @@ export const,
       'Automation workflows',
       'Compliance management'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-amber-700',
@@ -1441,15 +1385,13 @@ export const,
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
-    },
+      website: 'https://ziontechgroup.com'},
     realImplementation: true;
     implementationDetails: 'Advanced manufacturing platform with AI-powered optimization, predictive analytics, and comprehensive automation tools. Includes IoT integration and compliance management.',
     launchDate: '2024-03-15'
     customers: 220;
     rating: 4.7;
     reviews: 125;
-=======
     popula,
   r: true,
     ico,
@@ -1515,9 +1457,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 125,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 125}
 ];
 export interface NextGenerationAIService export interface NextGenerationAIService {/* TODO: Fix JSX expression */}
   g: number; export interface NextGenerationAIService {} review,
@@ -1532,41 +1472,41 @@ export interface NextGenerationAIService export interface NextGenerationAIServic
   s: number, ratin,
   g: number, review,
   s: number } i,
-  d: string,; nam,
-  e: string,; taglin,
-  e: string,; pric,
-  e: string,; perio,
-  d: string,; descriptio,
-  n: string,; feature,
-  s: string[],; popula,
-  r: boolean,; ico,
-  n: string,; colo,
-  r: string,; textColo,
-  r: string,; lin,
-  k: string,; marketPositio,
-  n: string,; targetAudienc,
-  e: string,; trialDay,
-  s: number,; setupTim,
-  e: string,; categor,
-  y: string,; realServic,
-  e: boolean,; technolog,
-  y: string[],; integration,
-  s: string[],; useCase,
-  s: string[],; ro,
-  i: string,; competitor,
-  s: string[],; marketSiz,
-  e: string,; growthRat,
-  e: string,; varian,
-  t: string,; contactInf,
+  d: string; nam,
+  e: string; taglin,
+  e: string; pric,
+  e: string; perio,
+  d: string; descriptio,
+  n: string; feature,
+  s: string[]; popula,
+  r: boolean; ico,
+  n: string; colo,
+  r: string; textColo,
+  r: string; lin,
+  k: string; marketPositio,
+  n: string; targetAudienc,
+  e: string; trialDay,
+  s: number; setupTim,
+  e: string; categor,
+  y: string; realServic,
+  e: boolean; technolog,
+  y: string[]; integration,
+  s: string[]; useCase,
+  s: string[]; ro,
+  i: string; competitor,
+  s: string[]; marketSiz,
+  e: string; growthRat,
+  e: string; varian,
+  t: string; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  s: string,} websit,
-  e: string} },; realImplementatio,
-  n: boolean,; implementationDetail,
-  s: string,; launchDat,
-  e: string,; customer,
-  s: number,; ratin,
-  g: number,; review,
-  s: number, } review,
+  s: string} websit,
+  e: string} }; realImplementatio,
+  n: boolean; implementationDetail,
+  s: string; launchDat,
+  e: string; customer,
+  s: number; ratin,
+  g: number; review,
+  s: number} review,
   s: number, mobil,
   e: string,
   email: string,

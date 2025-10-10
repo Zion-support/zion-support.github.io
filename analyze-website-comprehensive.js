@@ -5,8 +5,6 @@ import http from 'http';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Configuration;
 const BASE_URL = 'https: //ziontechgroup.com';
 const MAX_DEPTH = 3;
@@ -23,8 +21,7 @@ const analysisResults = {
   workingLinks: 0;
   brokenLinks: 0;
   missingPages: 0;
-  errors: [],
-};
+  errors: []};
 
 // Helper function to make HTTP requests;
 function makeRequest(url, options = {}) {
@@ -174,16 +171,14 @@ async function analyzeUrl(url, depth = 0) {
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'Page not found',
-      });
+        reason: 'Page not found'});
       analysisResults.brokenLinks++;
     } else {
       brokenLinks.push({)
         url: url;)
         statusCode: response.statusCode),
         depth: depth),
-        reason: 'HTTP error',
-      });
+        reason: 'HTTP error'});
       analysisResults.brokenLinks++;
     }
   } catch (error) {
@@ -267,17 +262,13 @@ async function analyzeWebsite() {
     }
 
     console.log('\nDetailed report saved to: website-analysis-report.json');
-    ,
-  } catch (error) {
+    } catch (error) {
     console.error('Analysis failed:', error);
   }
 }
 
 // Run the analysis;
 analyzeWebsite();
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 class WebsiteAnalyzer {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -428,7 +419,6 @@ class WebsiteAnalyzer {
       });
     }
     
-<<<<<<< HEAD
     console.log(`\n📄 PAGES FOUND:`);
     this.pages.forEach((page, url) => {
       console.log(`   • ${url}`);
@@ -437,9 +427,7 @@ class WebsiteAnalyzer {
     });
     
     // Save detailed report
-=======
     // Save report to file
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     const report = {
       baseUrl: this.baseUrl,
       analyzedAt: new Date().toISOString(),
@@ -458,12 +446,9 @@ class WebsiteAnalyzer {
   }
 }
 
-<<<<<<< HEAD
 // Run the analysis
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyze().catch(console.error);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
 // Main execution
 if (import.meta.url === `file://${process.argv[1]}`) {
   const baseUrl = process.argv[2] || 'https://ziontechgroup.com';
@@ -472,4 +457,3 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export default WebsiteAnalyzer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233

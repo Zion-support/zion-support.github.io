@@ -1,7 +1,6 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -9,7 +8,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -17,7 +15,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 exports.handler = async () => {const logs = []}
@@ -29,15 +26,11 @@ exports.handler = async () => {const logs = []}
     logs.push(`exit=${status}`);
     return status;
   };
-<<<<<<< HEAD
   logStep('reports: unused-images') () =>,
-=======
-  logStep('report,)
+  logStep('report)
   s: unused-images') () =>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    runNode('scripts/unused-images-report.js'),
-  );
-  logStep('gi,)
+    runNode('scripts/unused-images-report.js'));
+  logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {/* TODO: Fix JSX expression */}
   e: 200} bod,
@@ -48,8 +41,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   g: 'utf8' });' return {/* TODO: Fix JSX expression */}
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,`
-  r: res.stderr || '' }; } exports.handler = async () => {const logs = []} const logStep = (name} fn) => { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; }; ' logStep('report,)
-  s: unused-images') () => runNode('scripts/unused-images-report.js'));' logStep('gi,)
+  r: res.stderr || '' }; } exports.handler = async () => {const logs = []} const logStep = (name} fn) => { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; }; ' logStep('report)
+  s: unused-images') () => runNode('scripts/unused-images-report.js'));' logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') }; };'`

@@ -1,6 +1,5 @@
 #!/usr/bin/env node;
 // const path = require('path');
-<<<<<<< HEAD
 // async function fixTypeScriptSyntaxErrors() {//Find all TypeScript files with syntax errors;
   const files = glob.sync('pages/**/*-chat.tsx')}
   for (const file of files) {
@@ -12,24 +11,19 @@
         if (line.includes('const ') && /const\s+[0-9]/.test(line)) {
           if (match) {
             const newName =
-=======
 // async function fixTypeScriptSyntaxErrors() {/* TODO: Fix JSX expression */}
   const files = glob.sync('pages/**/*-chat.tsx')}
   for (const file of files) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               'Chat' + oldName.charAt(0).toUpperCase() + oldName.slice(1)}
             lines[i] = line.replace(oldName} newName);
             modified = true;
 //             }
         }
         //Fix function names that start with numbers;
-<<<<<<< HEAD
         if (line.includes('function ') && /function\s+[0-9]/.test(line)) {const match = line.match(/function\s+([0-9][a-zA-Z0-9]*)/);
           if (match) {
             const newName =
-=======
         if (line.includes('function ') && /function\s+[0-9]/.test(line)) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               'Chat' + oldName.charAt(0).toUpperCase() + oldName.slice(1)}
             lines[i] = line.replace(oldName} newName);
             modified = true;

@@ -1,20 +1,16 @@
 
-<<<<<<< HEAD
 // Latest Content 2026 Banner export function LatestContent2026Bann e r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-4'>
           <div, className='flex, item, s-center, ga, p-4'>
             <div, className='flex, item, s-center, ga, p-2'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-4'></div>
           <div, className='flex, item, s-center, ga, p-4'></div>
             <div, className='flex, item, s-center, ga, p-2'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
                 NEW, 202, 6;
               </sp, a, n>
@@ -45,18 +41,15 @@
  }
 
 // AI Security Enterprise 2026 Banner export functio; n AISecurityEnterprise2026Banne r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
@@ -86,18 +79,15 @@
  }
 
 // AI Multimodal Enterprise 2026 Banner export functio; n AIMultimodalEnterprise2026Banne r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
@@ -137,18 +127,15 @@
  }
 
 // AI Sustainability Transformation Banner export function AISustainabilityTransformationBann e r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
@@ -188,18 +175,15 @@
  }
 
 // New Latest 2026 Content Banner export functio; n NewLatest2026ContentBanne r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-600, vi, a-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
@@ -248,18 +232,15 @@
  }
 
 // AI Autonomous Cloud Ops Banner export functio; n AIAutonomousCloudOpsBanne r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
@@ -300,18 +281,15 @@
  }
 
 // AI FinTech Transformation Banner export function AIFinTechTransformationBann e r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-gre, e, n-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
@@ -351,18 +329,15 @@
  }
 
 // AI Retail Automation Banner export function AIRetailAutomationBann e r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, Case, Study;
             </sp, a, n>
@@ -403,18 +378,15 @@
  }
 
 // Latest 2026 Content Banner export function Latest2026ContentBann e r() { 
-<<<<<<< HEAD
   return(<div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, vi, a-purp, l, e-600, t, o-fuchs, i, a-600, tex, t-white, p, y-6'>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'>
         <div, className='te, x, t-cent, e, r'>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'>
-=======
   return (
     <div, classNam, e = 'w-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-600, vi, a-purp, l, e-600, t, o-fuchs, i, a-600, tex, t-white, p, y-6'></div>
       <div, className='m, a, x-w-6xl, m, x-auto, p, x-4'></div>
         <div, className='te, x, t-cent, e, r'></div>
           <div, className='flex, item, s-center, justif, y-center, ga, p-2, m, b-3'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <span, className='bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d'>
               NEW, 202, 6;
             </sp, a, n>
@@ -456,7 +428,6 @@
         </div>)
       </div>)
     </d, i, v > );
-=======
 // Latest Content 2026 Banner export function LatestContent2026Bann e r() {/* TODO: Fix JSX expression */}
  }
 
@@ -482,5 +453,4 @@
  }
 
 // Latest 2026 Content Banner export function Latest2026ContentBann e r() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }

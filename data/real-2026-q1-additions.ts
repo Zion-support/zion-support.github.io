@@ -1,12 +1,10 @@
 
-<<<<<<< HEAD
     id: 'customer - feedback - intelligence'
     name: 'Customer Feedback Intelligence',
     tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'customer - feedback - intelligence',
     nam,
@@ -19,16 +17,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
     feature,
   s: [,
       'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
-      'Roadmap export',
-    ],
-<<<<<<< HEAD
+      'Roadmap export'],
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -62,7 +57,6 @@
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -115,8 +109,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 'api - security - posture - monitor',
     nam,
@@ -129,16 +122,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.',
     feature,
   s: [,
       'OpenAPI scanning',
       'Auth / rate limit tests',
       'OWASP API checks',
-      'PR annotations and diffs',
-    ],
-<<<<<<< HEAD
+      'PR annotations and diffs'],
     popular: true;
     icon: ''
     color: 'from - rose - 600 to - pink - 700'
@@ -173,7 +163,6 @@
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -226,8 +215,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 6,
-  },
+  s: 6},
       'Flexible cron/rate',
     i,
   d: 'edge - cron - orchestrator',
@@ -241,16 +229,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.',
     feature,
   s: [,
       'Flexible cron / rate',
       'Idempotency and retries',
       'Run history',
-      'Alerting and webhooks',
-    ],
-<<<<<<< HEAD
+      'Alerting and webhooks'],
     popular: false;
     icon: ''
     color: 'from - amber - 500 to - orange - 600'
@@ -284,7 +269,6 @@
     price: '$39',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -337,8 +321,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4,
-  },
+  s: 4},
     i,
   d: 'email - parsing - routing - api',
     nam,
@@ -351,16 +334,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.',
     feature,
   s: [,
       'Signature stripping',
       'Attachment handling',
       'Webhook retries / DLQ',
-      'Inspector UI',
-    ],
-<<<<<<< HEAD
+      'Inspector UI'],
     popular: false;
     icon: ''
     color: 'from - indigo - 600 to - blue - 700'
@@ -395,7 +375,6 @@
     price: '$119',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -448,8 +427,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5,
-  },
+  s: 5},
       'Brand/tone controls',
     i,
   d: 'ai - marketing - content - studio',
@@ -463,16 +441,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.',
     feature,
   s: [,
       'Brand / tone controls',
       'Templates and briefs',
       'Compliance checks',
-      'Multi - channel export',
-    ],
-<<<<<<< HEAD
+      'Multi - channel export'],
     popular: true;
     icon: ''
     color: 'from - fuchsia - 600 to - pink - 700'
@@ -507,7 +482,6 @@
     price: '$19',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -560,8 +534,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 9,
-  },
+  s: 9},
       'CSP/HSTS checks',
     i,
   d: 'security - headers - scanner',
@@ -575,16 +548,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Audit security headers across environments and get pull request annotations, weekly reports and diffs.',
     feature,
   s: [,
       'CSP / HSTS checks',
       'Cookie flags',
       'PR annotations',
-      'Weekly reports',
-    ],
-<<<<<<< HEAD
+      'Weekly reports'],
     popular: false;
     icon: ''
     color: 'from - sky - 600 to - blue - 700'
@@ -618,7 +588,6 @@
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -671,8 +640,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 10,
-  },
+  s: 10},
     i,
   d: 'ml - feature - store - starter',
     nam,
@@ -685,16 +653,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.',
     feature,
   s: [,
       'Feature versioning',
       'Validation rules',
       'Lineage tracking',
-      'Online serving API',
-    ],
-<<<<<<< HEAD
+      'Online serving API'],
     popular: false;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700'
@@ -728,7 +693,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -781,8 +745,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'slo - burn - rate - coach',
     nam,
@@ -795,16 +758,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.',
     feature,
   s: [,
       'SLO editor',
       'Burn - rate alerts',
       'Runbook hints',
-      'Integrations and webhooks',
-    ],
-<<<<<<< HEAD
+      'Integrations and webhooks'],
     popular: false;
     icon: ''
     color: 'from - lime - 500 to - emerald - 600'
@@ -838,7 +798,6 @@
     price: '$69',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -891,8 +850,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 6,
-  },
+  s: 6},
     i,
   d: 'browser - performance - optimizer',
     nam,
@@ -905,16 +863,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.',
     feature,
   s: [,
       'RUM + synthetic',
       'Budgets and alerts',
       'Bundle diff and PR notes',
-      'Edge hints',
-    ],
-<<<<<<< HEAD
+      'Edge hints'],
     popular: false;
     icon: ''
     color: 'from - cyan - 600 to - purple - 700'
@@ -948,7 +903,6 @@
     price: '$499',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -1001,8 +955,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'cloud - cost - governance - suite',
     nam,
@@ -1015,16 +968,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.',
     feature,
   s: [,
       'Budgets and owners',
       'Anomaly detection',
       'Policy guardrails',
-      'IaC recommendation exports',
-    ],
-<<<<<<< HEAD
+      'IaC recommendation exports'],
     popular: true;
     icon: ''
     color: 'from - amber - 600 to - orange - 700'
@@ -1058,7 +1008,6 @@
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -1111,8 +1060,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 4,
-  },
+  s: 4},
     i,
   d: 'api - changelog - sdk - publisher',
     nam,
@@ -1125,16 +1073,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.',
     feature,
   s: [,
       'Docs from schemas',
       'SDK generation',
       'Changelogs',
-      'Searchable portal',
-    ],
-<<<<<<< HEAD
+      'Searchable portal'],
     popular: false;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -1161,8 +1106,7 @@
     customers: 9;
     rating: 4 && 4.7;
     reviews: 6;
-  },
-];
+  }];
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 1025%'
@@ -1557,7 +1501,6 @@ const contact =
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com',
-=======
     popula,
   r: false,
     ico,
@@ -1610,9 +1553,7 @@ const contact =
     ratin,
   g: 4 && 4.7,
     review,
-  s: 6,
-  },
-];
+  s: 6}];
 		integration,
   s: ['StripePayPalGoogle Analytics'];
 		useCase,
@@ -1638,8 +1579,7 @@ const contact =
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 7,
-	}
+  s: 7}
 		i,
   d: 'customer-feedback-intelligence'
 		nam,
@@ -1706,8 +1646,7 @@ const contact =
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 5,
-	}
+  s: 5}
 		i,
   d: 'api-security-posture-monitor'
 		nam,
@@ -1774,8 +1713,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6,
-	}
+  s: 6}
 		i,
   d: 'edge-cron-orchestrator'
 		nam,
@@ -1842,8 +1780,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4,
-	}
+  s: 4}
 		i,
   d: 'email-parsing-routing-api'
 		nam,
@@ -1910,8 +1847,7 @@ const contact =
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5,
-	}
+  s: 5}
 		i,
   d: 'ai-marketing-content-studio'
 		nam,
@@ -1978,8 +1914,7 @@ const contact =
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 9,
-	}
+  s: 9}
 		i,
   d: 'security-headers-scanner'
 		nam,
@@ -2046,8 +1981,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 10,
-	}
+  s: 10}
 		i,
   d: 'ml-feature-store-starter'
 		nam,
@@ -2114,8 +2048,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3,
-	}
+  s: 3}
 		i,
   d: 'slo-burn-rate-coach'
 		nam,
@@ -2182,8 +2115,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6,
-	}
+  s: 6}
 		i,
   d: 'browser-performance-optimizer'
 		nam,
@@ -2250,8 +2182,7 @@ const contact =
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3,
-	}
+  s: 3}
 		i,
   d: 'cloud-cost-governance-suite'
 		nam,
@@ -2318,8 +2249,7 @@ const contact =
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 4,
-	}
+  s: 4}
 		i,
   d: 'api-changelog-sdk-publisher'
 		nam,
@@ -2386,8 +2316,7 @@ const contact =
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 6,
-	}
+  s: 6}
 ];
 const contact =
 	mobil,
@@ -2399,7 +2328,6 @@ const contact =
 	websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   real2026Q1Additions: EnhancedRealMicroSaasService[] = [,
@@ -2420,9 +2348,7 @@ export const,
       'UTM and coupon attribution',
       'Fraud heuristics',
       'Stripe/PayPal payouts',
-      'Partner portal and reporting',
-    ],
-<<<<<<< HEAD
+      'Partner portal and reporting'],
     popular: false;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -2449,7 +2375,6 @@ export const,
     customers: 12;
     rating: 4.6;
     reviews: 7;
-=======
     popula,
   r: false,
     ico,
@@ -2502,9 +2427,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 7},
     i,
   d: 'customer-feedback-intelligence',
     nam,
@@ -2522,9 +2445,7 @@ export const,
       'Multichannel ingestion',
       'LLM clustering and themes',
       'Impact scoring',
-      'Roadmap export',
-    ],
-<<<<<<< HEAD
+      'Roadmap export'],
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -2551,7 +2472,6 @@ export const,
     customers: 9;
     rating: 4.7;
     reviews: 5;
-=======
     popula,
   r: true,
     ico,
@@ -2604,9 +2524,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 5},
     i,
   d: 'api-security-posture-monitor',
     nam,
@@ -2624,9 +2542,7 @@ export const,
       'OpenAPI scanning',
       'Auth/rate limit tests',
       'OWASP API checks',
-      'PR annotations and diffs',
-    ],
-<<<<<<< HEAD
+      'PR annotations and diffs'],
     popular: true;
     icon: ''
     color: 'from-rose-600 to-pink-700'
@@ -2653,7 +2569,6 @@ export const,
     customers: 11;
     rating: 4.5;
     reviews: 6;
-=======
     popula,
   r: true,
     ico,
@@ -2706,9 +2621,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 6},
     i,
   d: 'edge-cron-orchestrator',
     nam,
@@ -2726,9 +2639,7 @@ export const,
       'Flexible cron/rate',
       'Idempotency and retries',
       'Run history',
-      'Alerting and webhooks',
-    ],
-<<<<<<< HEAD
+      'Alerting and webhooks'],
     popular: false;
     icon: ''
     color: 'from-amber-500 to-orange-600'
@@ -2755,7 +2666,6 @@ export const,
     customers: 7;
     rating: 4.5;
     reviews: 4;
-=======
     popula,
   r: false,
     ico,
@@ -2808,9 +2718,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 4,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 4},
     i,
   d: 'email-parsing-routing-api',
     nam,
@@ -2828,9 +2736,7 @@ export const,
       'Signature stripping',
       'Attachment handling',
       'Webhook retries/DLQ',
-      'Inspector UI',
-    ],
-<<<<<<< HEAD
+      'Inspector UI'],
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -2857,7 +2763,6 @@ export const,
     customers: 8;
     rating: 4.6;
     reviews: 5;
-=======
     popula,
   r: false,
     ico,
@@ -2910,9 +2815,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 5},
     i,
   d: 'ai-marketing-content-studio',
     nam,
@@ -2930,9 +2833,7 @@ export const,
       'Brand/tone controls',
       'Templates and briefs',
       'Compliance checks',
-      'Multi-channel export',
-    ],
-<<<<<<< HEAD
+      'Multi-channel export'],
     popular: true;
     icon: ''
     color: 'from-fuchsia-600 to-pink-700'
@@ -2959,7 +2860,6 @@ export const,
     customers: 15;
     rating: 4.6;
     reviews: 9;
-=======
     popula,
   r: true,
     ico,
@@ -3012,9 +2912,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 9},
     i,
   d: 'security-headers-scanner',
     nam,
@@ -3032,9 +2930,7 @@ export const,
       'CSP/HSTS checks',
       'Cookie flags',
       'PR annotations',
-      'Weekly reports',
-    ],
-<<<<<<< HEAD
+      'Weekly reports'],
     popular: false;
     icon: ''
     color: 'from-sky-600 to-blue-700'
@@ -3061,7 +2957,6 @@ export const,
     customers: 20;
     rating: 4.5;
     reviews: 10;
-=======
     popula,
   r: false,
     ico,
@@ -3114,9 +3009,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 10,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 10},
     i,
   d: 'ml-feature-store-starter',
     nam,
@@ -3134,9 +3027,7 @@ export const,
       'Feature versioning',
       'Validation rules',
       'Lineage tracking',
-      'Online serving API',
-    ],
-<<<<<<< HEAD
+      'Online serving API'],
     popular: false;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -3163,7 +3054,6 @@ export const,
     customers: 6;
     rating: 4.5;
     reviews: 3;
-=======
     popula,
   r: false,
     ico,
@@ -3216,9 +3106,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 3,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 3},
     i,
   d: 'slo-burn-rate-coach',
     nam,
@@ -3236,9 +3124,7 @@ export const,
       'SLO editor',
       'Burn-rate alerts',
       'Runbook hints',
-      'Integrations and webhooks',
-    ],
-<<<<<<< HEAD
+      'Integrations and webhooks'],
     popular: false;
     icon: ''
     color: 'from-lime-500 to-emerald-600'
@@ -3265,7 +3151,6 @@ export const,
     customers: 10;
     rating: 4.5;
     reviews: 6;
-=======
     popula,
   r: false,
     ico,
@@ -3318,9 +3203,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 6},
     i,
   d: 'browser-performance-optimizer',
     nam,
@@ -3338,9 +3221,7 @@ export const,
       'RUM + synthetic',
       'Budgets and alerts',
       'Bundle diff and PR notes',
-      'Edge hints',
-    ],
-<<<<<<< HEAD
+      'Edge hints'],
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-purple-700'
@@ -3367,7 +3248,6 @@ export const,
     customers: 5;
     rating: 4.5;
     reviews: 3;
-=======
     popula,
   r: false,
     ico,
@@ -3420,9 +3300,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 3,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 3},
     i,
   d: 'cloud-cost-governance-suite',
     nam,
@@ -3440,9 +3318,7 @@ export const,
       'Budgets and owners',
       'Anomaly detection',
       'Policy guardrails',
-      'IaC recommendation exports',
-    ],
-<<<<<<< HEAD
+      'IaC recommendation exports'],
     popular: true;
     icon: ''
     color: 'from-amber-600 to-orange-700'
@@ -3469,7 +3345,6 @@ export const,
     customers: 6;
     rating: 4.6;
     reviews: 4;
-=======
     popula,
   r: true,
     ico,
@@ -3522,9 +3397,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 4,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 4},
     i,
   d: 'api-changelog-sdk-publisher',
     nam,
@@ -3542,9 +3415,7 @@ export const,
       'Docs from schemas',
       'SDK generation',
       'Changelogs',
-      'Searchable portal',
-    ],
-<<<<<<< HEAD
+      'Searchable portal'],
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -3984,7 +3855,6 @@ export const,
 	}
 ];
 		reviews: 6;
-=======
     popula,
   r: false,
     ico,
@@ -4037,8 +3907,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 6,
-  };
+  s: 6};
 ];
 		i,
   d: 'affiliate-analytics-starter'
@@ -4108,8 +3977,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 7,
-	},
+  s: 7},
 		i,
   d: 'customer-feedback-intelligence',
 		nam,
@@ -4176,8 +4044,7 @@ export const,
 		ratin,
   g: 4.7,
 		review,
-  s: 5,
-	},
+  s: 5},
 		i,
   d: 'api-security-posture-monitor',
 		nam,
@@ -4244,8 +4111,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 6,
-	},
+  s: 6},
 		i,
   d: 'edge-cron-orchestrator',
 		nam,
@@ -4312,8 +4178,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 4,
-	},
+  s: 4},
 		i,
   d: 'email-parsing-routing-api',
 		nam,
@@ -4380,8 +4245,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 5,
-	},
+  s: 5},
 		i,
   d: 'ai-marketing-content-studio',
 		nam,
@@ -4448,8 +4312,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 9,
-	},
+  s: 9},
 		i,
   d: 'security-headers-scanner',
 		nam,
@@ -4516,8 +4379,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 10,
-	},
+  s: 10},
 		i,
   d: 'ml-feature-store-starter',
 		nam,
@@ -4584,8 +4446,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 3,
-	},
+  s: 3},
 		i,
   d: 'slo-burn-rate-coach',
 		nam,
@@ -4652,8 +4513,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 6,
-	},
+  s: 6},
 		i,
   d: 'browser-performance-optimizer',
 		nam,
@@ -4720,8 +4580,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 3,
-	},
+  s: 3},
 		i,
   d: 'cloud-cost-governance-suite',
 		nam,
@@ -4788,8 +4647,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 4,
-	},
+  s: 4},
 		i,
   d: 'api-changelog-sdk-publisher',
 		nam,
@@ -4856,13 +4714,10 @@ export const,
 		ratin,
   g: 4.7,
 		review,
-  s: 6,
-	}
+  s: 6}
 ];
 		review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-	}
+  s: 6}
 ];
 i,
   d: 'customer - feedback - intelligence',' nam,
@@ -4871,7 +4726,7 @@ i,
   e: '$149',' perio,
   d: '/month', descriptio,
   n:  ,' 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.', feature,
-  s: [, ' 'Multichannel ingestion',' 'LLM clustering and themes',' 'Impact scoring',' 'Roadmap export', ], popula,
+  s: [, ' 'Multichannel ingestion',' 'LLM clustering and themes',' 'Impact scoring',' 'Roadmap export'], popula,
   r: true,' ico,
   n: '💬', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
@@ -4898,14 +4753,14 @@ i,
   e: '2026 - 01 - 12', customer,
   s: 9, ratin,
   g: 4 && 4.7, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'api - security - posture - monitor',' nam,
   e: 'API Security Posture Monitor',' taglin,
   e: 'Detect OWASP API risks and auth gaps with CI annotations',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
   n:  ,' 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.', feature,
-  s: [, ' 'OpenAPI scanning',' 'Auth / rate limit tests',' 'OWASP API checks',' 'PR annotations and diffs', ], popula,
+  s: [, ' 'OpenAPI scanning',' 'Auth / rate limit tests',' 'OWASP API checks',' 'PR annotations and diffs'], popula,
   r: true,' ico,
   n: '🛡️', ' colo,
   r: 'from - rose - 600 to - pink - 700',' text_colo,
@@ -4932,14 +4787,14 @@ i,
   e: '2026 - 01 - 14', customer,
   s: 11, ratin,
   g: 4 && 4.5, review,
-  s: 6, }, ' 'Flexible cron/rate',' i,
+  s: 6}, ' 'Flexible cron/rate',' i,
   d: 'edge - cron - orchestrator',' nam,
   e: 'Edge Cron Orchestrator',' taglin,
   e: 'Reliable schedules with retries, jitter and DLQs',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
   n:  ,' 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.', feature,
-  s: [,' 'Flexible cron / rate', ' 'Idempotency and retries',' 'Run history',' 'Alerting and webhooks', ], popula,
+  s: [,' 'Flexible cron / rate', ' 'Idempotency and retries',' 'Run history',' 'Alerting and webhooks'], popula,
   r: false,' ico,
   n: '⏰', ' colo,
   r: 'from - amber - 500 to - orange - 600',' text_colo,
@@ -4966,14 +4821,14 @@ i,
   e: '2026 - 01 - 18', customer,
   s: 7, ratin,
   g: 4 && 4.5, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'email - parsing - routing - api',' nam,
   e: 'Email Parsing & Routing API',' taglin,
   e: 'Inbound email to structured events with attachments',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
   n:  ,' 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead - letter queues.', feature,
-  s: [, ' 'Signature stripping',' 'Attachment handling',' 'Webhook retries / DLQ',' 'Inspector UI', ], popula,
+  s: [, ' 'Signature stripping',' 'Attachment handling',' 'Webhook retries / DLQ',' 'Inspector UI'], popula,
   r: false,' ico,
   n: '📨', ' colo,
   r: 'from - indigo - 600 to - blue - 700',' text_colo,
@@ -5000,14 +4855,14 @@ i,
   e: '2026 - 01 - 20', customer,
   s: 8, ratin,
   g: 4 && 4.6, review,
-  s: 5, }, ' 'Brand/tone controls',' i,
+  s: 5}, ' 'Brand/tone controls',' i,
   d: 'ai - marketing - content - studio',' nam,
   e: 'AI Marketing Content Studio',' taglin,
   e: 'Campaign - ready blogs, emails and ads with brand guardrails',' pric,
   e: '$119',' perio,
   d: '/month', descriptio,
   n:  ,' 'Generate on - brand content with templates, tone control, compliance checks, and multi - channel export.', feature,
-  s: [,' 'Brand / tone controls', ' 'Templates and briefs',' 'Compliance checks',' 'Multi - channel export', ], popula,
+  s: [,' 'Brand / tone controls', ' 'Templates and briefs',' 'Compliance checks',' 'Multi - channel export'], popula,
   r: true,' ico,
   n: '📝', ' colo,
   r: 'from - fuchsia - 600 to - pink - 700',' text_colo,
@@ -5034,14 +4889,14 @@ i,
   e: '2026 - 01 - 22', customer,
   s: 15, ratin,
   g: 4 && 4.6, review,
-  s: 9, }, ' 'CSP/HSTS checks',' i,
+  s: 9}, ' 'CSP/HSTS checks',' i,
   d: 'security - headers - scanner',' nam,
   e: 'Security Headers Scanner',' taglin,
   e: 'Continuous CSP / HSTS / cookie flag auditing with diffs',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
   n:  ,' 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.', feature,
-  s: [,' 'CSP / HSTS checks', ' 'Cookie flags',' 'PR annotations',' 'Weekly reports', ], popula,
+  s: [,' 'CSP / HSTS checks', ' 'Cookie flags',' 'PR annotations',' 'Weekly reports'], popula,
   r: false,' ico,
   n: '🔐', ' colo,
   r: 'from - sky - 600 to - blue - 700',' text_colo,
@@ -5068,14 +4923,14 @@ i,
   e: '2026 - 01 - 25', customer,
   s: 20, ratin,
   g: 4 && 4.5, review,
-  s: 10, }, ' i,
+  s: 10}, ' i,
   d: 'ml - feature - store - starter',' nam,
   e: 'ML Feature Store Starter',' taglin,
   e: 'Versioned features, validation and online serving',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n:  ,' 'Ship ML features faster with versioning, validation rules, lineage, and low - latency serving APIs.', feature,
-  s: [, ' 'Feature versioning',' 'Validation rules',' 'Lineage tracking',' 'Online serving API', ], popula,
+  s: [, ' 'Feature versioning',' 'Validation rules',' 'Lineage tracking',' 'Online serving API'], popula,
   r: false,' ico,
   n: '📦', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
@@ -5102,14 +4957,14 @@ i,
   e: '2026 - 01 - 28', customer,
   s: 6, ratin,
   g: 4 && 4.5, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'slo - burn - rate - coach',' nam,
   e: 'SLO Burn Rate Coach',' taglin,
   e: 'Compute SLOs and coach on burn - rate risks',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Define SLOs, compute error budgets and get proactive coaching with burn - rate alerts tied to runbooks.', feature,
-  s: [, ' 'SLO editor',' 'Burn - rate alerts',' 'Runbook hints',' 'Integrations and webhooks', ], popula,
+  s: [, ' 'SLO editor',' 'Burn - rate alerts',' 'Runbook hints',' 'Integrations and webhooks'], popula,
   r: false,' ico,
   n: '📈', ' colo,
   r: 'from - lime - 500 to - emerald - 600',' text_colo,
@@ -5136,14 +4991,14 @@ i,
   e: '2026 - 02 - 01', customer,
   s: 10, ratin,
   g: 4 && 4.5, review,
-  s: 6, }, ' i,
+  s: 6}, ' i,
   d: 'browser - performance - optimizer',' nam,
   e: 'Browser Performance Optimizer',' taglin,
   e: 'Budget - driven CWV with hints and PR annotations',' pric,
   e: '$69',' perio,
   d: '/month', descriptio,
   n:  ,' 'Improve Core Web Vitals with RUM / synthetic insights, performance budgets, and PR annotations for bundle changes.', feature,
-  s: [, ' 'RUM + synthetic',' 'Budgets and alerts',' 'Bundle diff and PR notes',' 'Edge hints', ], popula,
+  s: [, ' 'RUM + synthetic',' 'Budgets and alerts',' 'Bundle diff and PR notes',' 'Edge hints'], popula,
   r: false,' ico,
   n: '⚡', ' colo,
   r: 'from - cyan - 600 to - purple - 700',' text_colo,
@@ -5170,14 +5025,14 @@ i,
   e: '2026 - 02 - 05', customer,
   s: 5, ratin,
   g: 4 && 4.5, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'cloud - cost - governance - suite',' nam,
   e: 'Cloud Cost Governance Suite',' taglin,
   e: 'Budgets, owners, and policy guardrails across clouds',' pric,
   e: '$499',' perio,
   d: '/month', descriptio,
   n:  ,' 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.', feature,
-  s: [, ' 'Budgets and owners',' 'Anomaly detection',' 'Policy guardrails',' 'IaC recommendation exports', ], popula,
+  s: [, ' 'Budgets and owners',' 'Anomaly detection',' 'Policy guardrails',' 'IaC recommendation exports'], popula,
   r: true,' ico,
   n: '💸', ' colo,
   r: 'from - amber - 600 to - orange - 700',' text_colo,
@@ -5204,14 +5059,14 @@ i,
   e: '2026 - 02 - 08', customer,
   s: 6, ratin,
   g: 4 && 4.6, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'api - changelog - sdk - publisher',' nam,
   e: 'API Changelog & SDK Publisher',' taglin,
   e: 'Generate docs, changelogs and SDKs from schemas',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
   n:  ,' 'Turn OpenAPI / GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.', feature,
-  s: [, ' 'Docs from schemas',' 'SDK generation',' 'Changelogs',' 'Searchable portal', ], popula,
+  s: [, ' 'Docs from schemas',' 'SDK generation',' 'Changelogs',' 'Searchable portal'], popula,
   r: false,' ico,
   n: '📘', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
@@ -5238,7 +5093,7 @@ i,
   e: '2026 - 02 - 12', customer,
   s: 9, ratin,
   g: 4 && 4.7, review,
-  s: 6, }, ]; ' integration,
+  s: 6}]; ' integration,
   s: ['StripePayPalGoogle Analytics'];' useCase,
   s: ['Partner growthAutomated payouts'];' ro,
   i: 'Grow partner revenue by 10–25%'' competitor,
@@ -5638,7 +5493,7 @@ i,
   e: '$129',' perio,
   d: '/month', descriptio,
   n: ' 'Lightweight affiliate tracking with UTM/coupon support, heuristic fraud signals, and one-click Stripe/PayPal payouts.', feature,
-  s: [' 'UTM and coupon attribution',' 'Fraud heuristics',' 'Stripe/PayPal payouts',' 'Partner portal and reporting', ], popula,
+  s: [' 'UTM and coupon attribution',' 'Fraud heuristics',' 'Stripe/PayPal payouts',' 'Partner portal and reporting'], popula,
   r: false,' ico,
   n: '🤝',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
@@ -5665,14 +5520,14 @@ i,
   e: '2026-01-10', customer,
   s: 12, ratin,
   g: 4.6, review,
-  s: 7, }, ' i,
+  s: 7}, ' i,
   d: 'customer-feedback-intelligence',' nam,
   e: 'Customer Feedback Intelligence',' taglin,
   e: 'Summarize NPS/CSAT and reviews into prioritized insights',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n: ' 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.', feature,
-  s: [' 'Multichannel ingestion',' 'LLM clustering and themes',' 'Impact scoring',' 'Roadmap export', ], popula,
+  s: [' 'Multichannel ingestion',' 'LLM clustering and themes',' 'Impact scoring',' 'Roadmap export'], popula,
   r: true,' ico,
   n: '💬',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
@@ -5699,14 +5554,14 @@ i,
   e: '2026-01-12', customer,
   s: 9, ratin,
   g: 4.7, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'api-security-posture-monitor',' nam,
   e: 'API Security Posture Monitor',' taglin,
   e: 'Detect OWASP API risks and auth gaps with CI annotations',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
   n: ' 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.', feature,
-  s: [' 'OpenAPI scanning',' 'Auth/rate limit tests',' 'OWASP API checks',' 'PR annotations and diffs', ], popula,
+  s: [' 'OpenAPI scanning',' 'Auth/rate limit tests',' 'OWASP API checks',' 'PR annotations and diffs'], popula,
   r: true,' ico,
   n: '🛡️',' colo,
   r: 'from-rose-600 to-pink-700',' textColo,
@@ -5733,14 +5588,14 @@ i,
   e: '2026-01-14', customer,
   s: 11, ratin,
   g: 4.5, review,
-  s: 6, }, ' i,
+  s: 6}, ' i,
   d: 'edge-cron-orchestrator',' nam,
   e: 'Edge Cron Orchestrator',' taglin,
   e: 'Reliable schedules with retries, jitter and DLQs',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
   n: ' 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.', feature,
-  s: [' 'Flexible cron/rate',' 'Idempotency and retries',' 'Run history',' 'Alerting and webhooks', ], popula,
+  s: [' 'Flexible cron/rate',' 'Idempotency and retries',' 'Run history',' 'Alerting and webhooks'], popula,
   r: false,' ico,
   n: '⏰',' colo,
   r: 'from-amber-500 to-orange-600',' textColo,
@@ -5767,14 +5622,14 @@ i,
   e: '2026-01-18', customer,
   s: 7, ratin,
   g: 4.5, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'email-parsing-routing-api',' nam,
   e: 'Email Parsing & Routing API',' taglin,
   e: 'Inbound email to structured events with attachments',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
   n: ' 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.', feature,
-  s: [' 'Signature stripping',' 'Attachment handling',' 'Webhook retries/DLQ',' 'Inspector UI', ], popula,
+  s: [' 'Signature stripping',' 'Attachment handling',' 'Webhook retries/DLQ',' 'Inspector UI'], popula,
   r: false,' ico,
   n: '📨',' colo,
   r: 'from-indigo-600 to-blue-700',' textColo,
@@ -5801,14 +5656,14 @@ i,
   e: '2026-01-20', customer,
   s: 8, ratin,
   g: 4.6, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'ai-marketing-content-studio',' nam,
   e: 'AI Marketing Content Studio',' taglin,
   e: 'Campaign-ready blogs, emails and ads with brand guardrails',' pric,
   e: '$119',' perio,
   d: '/month', descriptio,
   n: ' 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.', feature,
-  s: [' 'Brand/tone controls',' 'Templates and briefs',' 'Compliance checks',' 'Multi-channel export', ], popula,
+  s: [' 'Brand/tone controls',' 'Templates and briefs',' 'Compliance checks',' 'Multi-channel export'], popula,
   r: true,' ico,
   n: '📝',' colo,
   r: 'from-fuchsia-600 to-pink-700',' textColo,
@@ -5835,14 +5690,14 @@ i,
   e: '2026-01-22', customer,
   s: 15, ratin,
   g: 4.6, review,
-  s: 9, }, ' i,
+  s: 9}, ' i,
   d: 'security-headers-scanner',' nam,
   e: 'Security Headers Scanner',' taglin,
   e: 'Continuous CSP/HSTS/cookie flag auditing with diffs',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
   n: ' 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.', feature,
-  s: [' 'CSP/HSTS checks',' 'Cookie flags',' 'PR annotations',' 'Weekly reports', ], popula,
+  s: [' 'CSP/HSTS checks',' 'Cookie flags',' 'PR annotations',' 'Weekly reports'], popula,
   r: false,' ico,
   n: '🔐',' colo,
   r: 'from-sky-600 to-blue-700',' textColo,
@@ -5869,14 +5724,14 @@ i,
   e: '2026-01-25', customer,
   s: 20, ratin,
   g: 4.5, review,
-  s: 10, }, ' i,
+  s: 10}, ' i,
   d: 'ml-feature-store-starter',' nam,
   e: 'ML Feature Store Starter',' taglin,
   e: 'Versioned features, validation and online serving',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n: ' 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.', feature,
-  s: [' 'Feature versioning',' 'Validation rules',' 'Lineage tracking',' 'Online serving API', ], popula,
+  s: [' 'Feature versioning',' 'Validation rules',' 'Lineage tracking',' 'Online serving API'], popula,
   r: false,' ico,
   n: '📦',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
@@ -5903,14 +5758,14 @@ i,
   e: '2026-01-28', customer,
   s: 6, ratin,
   g: 4.5, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'slo-burn-rate-coach',' nam,
   e: 'SLO Burn Rate Coach',' taglin,
   e: 'Compute SLOs and coach on burn-rate risks',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n: ' 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.', feature,
-  s: [' 'SLO editor',' 'Burn-rate alerts',' 'Runbook hints',' 'Integrations and webhooks', ], popula,
+  s: [' 'SLO editor',' 'Burn-rate alerts',' 'Runbook hints',' 'Integrations and webhooks'], popula,
   r: false,' ico,
   n: '📈',' colo,
   r: 'from-lime-500 to-emerald-600',' textColo,
@@ -5937,14 +5792,14 @@ i,
   e: '2026-02-01', customer,
   s: 10, ratin,
   g: 4.5, review,
-  s: 6, }, ' i,
+  s: 6}, ' i,
   d: 'browser-performance-optimizer',' nam,
   e: 'Browser Performance Optimizer',' taglin,
   e: 'Budget-driven CWV with hints and PR annotations',' pric,
   e: '$69',' perio,
   d: '/month', descriptio,
   n: ' 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.', feature,
-  s: [' 'RUM + synthetic',' 'Budgets and alerts',' 'Bundle diff and PR notes',' 'Edge hints', ], popula,
+  s: [' 'RUM + synthetic',' 'Budgets and alerts',' 'Bundle diff and PR notes',' 'Edge hints'], popula,
   r: false,' ico,
   n: '⚡',' colo,
   r: 'from-cyan-600 to-purple-700',' textColo,
@@ -5971,14 +5826,14 @@ i,
   e: '2026-02-05', customer,
   s: 5, ratin,
   g: 4.5, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'cloud-cost-governance-suite',' nam,
   e: 'Cloud Cost Governance Suite',' taglin,
   e: 'Budgets, owners, and policy guardrails across clouds',' pric,
   e: '$499',' perio,
   d: '/month', descriptio,
   n: ' 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.', feature,
-  s: [' 'Budgets and owners',' 'Anomaly detection',' 'Policy guardrails',' 'IaC recommendation exports', ], popula,
+  s: [' 'Budgets and owners',' 'Anomaly detection',' 'Policy guardrails',' 'IaC recommendation exports'], popula,
   r: true,' ico,
   n: '💸',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
@@ -6005,14 +5860,14 @@ i,
   e: '2026-02-08', customer,
   s: 6, ratin,
   g: 4.6, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'api-changelog-sdk-publisher',' nam,
   e: 'API Changelog & SDK Publisher',' taglin,
   e: 'Generate docs, changelogs and SDKs from schemas',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
   n: ' 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.', feature,
-  s: [' 'Docs from schemas',' 'SDK generation',' 'Changelogs',' 'Searchable portal', ], popula,
+  s: [' 'Docs from schemas',' 'SDK generation',' 'Changelogs',' 'Searchable portal'], popula,
   r: false,' ico,
   n: '📘',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
@@ -6039,7 +5894,7 @@ i,
   e: '2026-02-12', customer,
   s: 9, ratin,
   g: 4.7, review,
-  s: 6, },; ]; ' i,
+  s: 6}; ]; ' i,
   d: 'affiliate-analytics-starter' ' i,
   d: 'affiliate-analytics-starter',' nam,
   e: 'Affiliate Analytics Starter',' taglin,

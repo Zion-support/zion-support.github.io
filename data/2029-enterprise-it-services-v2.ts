@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface EnterpriseITService2029V2 {;
   id: string;
   name: string;
@@ -44,7 +43,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [,
     id: 'autonomous-devops-platform',
     name: 'Autonomous DevOps Platform',
     description:,
-=======
 export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   e: string}
     addres,
@@ -58,7 +56,6 @@ export const,
   e: 'Autonomous DevOps Platform'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Fully autonomous DevOps platform that automatically manages infrastructure, deployments, monitoring, and optimization without human intervention, reducing operational overhead by 90%.'
     categor,
   y: ['DevOps', 'Automation', 'Infrastructure', 'CI/CD', 'Monitoring']
@@ -84,20 +81,15 @@ export const,
       'Enhance security posture'
       'Optimize resource utilization'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise DevOps transformation'
       'Cloud infrastructure management'
       'Microservices deployment'
       'Continuous integration/deployment'
       'Infrastructure automation'
-<<<<<<< HEAD
-      'Performance optimization',
-    ],
+      'Performance optimization'],
     marketSize: '$25.8B by 2029',
     competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions']
     technology: ['AI/ML', 'Kubernetes', 'Terraform', 'Monitoring Tools']
@@ -105,8 +97,7 @@ export const,
     support: [,
       '24/7 enterprise support',
       'DevOps experts',
-      'Implementation team',
-    ],
+      'Implementation team'],
     compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'HIPAA'],    scalability: 'Enterprise-grade, multi-cloud support',    roi: '500% within 12 months',
     deployment: 'Cloud-native, hybrid options'
     maintenance: 'Fully autonomous, continuous optimization'
@@ -126,8 +117,7 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
     id: 'quantum-cloud-infrastructure',
     name: 'Quantum Cloud Infrastructure',
@@ -138,11 +128,9 @@ export const,
       'Quantum Computing',
       'Infrastructure',
       'Security',
-      'Performance',
-    ],
+      'Performance'],
     price: '$18,999/month'
     features: [;
-=======
       'Performance optimization'
     ]
     marketSiz,
@@ -226,7 +214,6 @@ export const,
   e: '$18,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum computing resources'
       'Quantum-safe encryption'
       'Hybrid quantum-classical computing'
@@ -245,24 +232,18 @@ export const,
       'Competitive advantage'
       'Long-term investment value'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Scientific computing'
       'Financial modeling'
       'Cryptography research'
       'Machine learning acceleration'
       'Optimization problems'
-<<<<<<< HEAD
-      'Research and development',
-    ],
+      'Research and development'],
     marketSize: '$35.2B by 2029',
     competitors: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud']
     technology: [;
-=======
       'Research and development'
     ]
     marketSiz,
@@ -271,18 +252,15 @@ export const,
   s: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud']
     technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum Computing'
       'Cloud Infrastructure'
       'Quantum Security'
       'Hybrid Computing'
     ]
-<<<<<<< HEAD
     integration: [
       'Existing cloud platforms'
       'Quantum applications',
-      'Enterprise systems',
-    ],
+      'Enterprise systems'],
     support: ['24/7 quantum support', 'Quantum experts', 'Implementation team']
     compliance: ['SOC 2', 'ISO 27001', 'FedRAMP', 'Quantum standards'],    scalability: 'Enterprise-grade, global quantum network',    roi: '700% within 24 months',
     deployment: 'Cloud-native, quantum-ready'
@@ -301,8 +279,7 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
     id: 'ai-powered-enterprise-security',
     name: 'AI-Powered Enterprise Security',
@@ -313,11 +290,9 @@ export const,
       'AI',
       'Enterprise Security',
       'Threat Detection',
-      'Automation',
-    ],
+      'Automation'],
     price: '$9,999/month'
     features: [;
-=======
     integratio,
   n: [,
       'Existing cloud platforms'
@@ -391,7 +366,6 @@ export const,
   e: '$9,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI-powered threat detection'
       'Real-time security monitoring'
       'Automated incident response'
@@ -410,34 +384,27 @@ export const,
       'Enhance compliance posture'
       'Reduce security team workload'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise security operations'
       'Threat intelligence'
       'Incident response'
       'Compliance management'
       'Security automation'
-<<<<<<< HEAD
-      'Risk assessment',
-    ],
+      'Risk assessment'],
     marketSize: '$38.7B by 2029',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance']
     technology: [
       'AI/ML',
       'Machine Learning',
       'Behavioral Analysis',
-      'Security',
-    ],
+      'Security'],
     integration: ['SIEM systems', 'EDR platforms', 'Security tools']
     support: [,
       '24/7 security support',
       'Security experts',
-      'Implementation team',
-    ],
+      'Implementation team'],
     compliance: ['SOC 2', 'ISO 27001', 'NIST', 'GDPR'],    scalability: 'Enterprise-grade, global deployment',    roi: '600% within 15 months',
     deployment: 'Cloud-native, on-premise options'
     maintenance: 'Continuous AI learning, threat updates'
@@ -455,8 +422,7 @@ export const,
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
     id: 'autonomous-it-operations-center',
     name: 'Autonomous IT Operations Center',
@@ -467,11 +433,9 @@ export const,
       'Automation',
       'Infrastructure',
       'Monitoring',
-      'Management',
-    ],
+      'Management'],
     price: '$14,999/month'
     features: [;
-=======
       'Risk assessment'
     ]
     marketSiz,
@@ -558,7 +522,6 @@ export const,
   e: '$14,999/month'
     feature,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Autonomous infrastructure management'
       'Self-healing systems'
       'Predictive maintenance'
@@ -577,20 +540,15 @@ export const,
       'Enhance user experience'
       'Optimize resource utilization'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise IT operations'
       'Data center management'
       'Application performance management'
       'Infrastructure automation'
       'Service desk automation'
-<<<<<<< HEAD
-      'IT service management',
-    ],
+      'IT service management'],
     marketSize: '$28.9B by 2029',
     competitors: ['ServiceNow', 'BMC', 'Micro Focus', 'Ivanti']
     technology: ['AI/ML', 'Automation', 'Monitoring', 'ITSM']
@@ -614,7 +572,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
       'IT service management'
     ]
     marketSiz,
@@ -671,7 +628,6 @@ export const,
   s://ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
       mobil,
@@ -682,19 +638,15 @@ export const,
   e: 'http,
   s://ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  };
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
     ];
     benefit,
   s: [;
       'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value'
     ];
-<<<<<<< HEAD
     useCases: [;
-      'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development',
-    ],
+      'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development'],
     marketSize: '$35.2 B by 2029', competitors: ['AWSMicrosoft AzureGoogle CloudIBM Cloud'],
     technology: ['Quantum ComputingCloud InfrastructureQuantum SecurityHybrid Computing'], integration: ['Existing cloud platformsQuantum applicationsEnterprise systems'],
     support: ['24/7 quantum supportQuantum expertsImplementation team'], compliance: ['SOC 2 ISO 27001 FedRAMPQuantum standards'],
@@ -719,7 +671,6 @@ export const,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     useCase,
   s: [;
       'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development'
@@ -779,7 +730,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   };
     i,
@@ -799,10 +749,8 @@ export const,
   s: [;
       'Detect threats 10x fasterReduce false positives by 80%Automate security responsesImprove threat preventionEnhance compliance postureReduce security team workload'
     ];
-<<<<<<< HEAD
     useCases: [;
-      'Enterprise security operationsThreat intelligenceIncident responseCompliance managementSecurity automationRisk assessment',
-    ],
+      'Enterprise security operationsThreat intelligenceIncident responseCompliance managementSecurity automationRisk assessment'],
     marketSize: '$38.7 B by 2029', competitors: ['CrowdStrikeSentinelOneDarktraceCylance'],
     technology: ['AI/MLMachine LearningBehavioral AnalysisSecurity'], integration: ['SIEM systemsEDR platformsSecurity tools'],
     support: ['24/7 security supportSecurity expertsImplementation team'], compliance: ['SOC 2 ISO 27001 NISTGDPR'],
@@ -827,7 +775,6 @@ export const,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     useCase,
   s: [;
       'Enterprise security operationsThreat intelligenceIncident responseCompliance managementSecurity automationRisk assessment'
@@ -887,7 +834,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   };
     i,
@@ -907,10 +853,8 @@ export const,
   s: [;
       'Achieve 99.99% uptimeReduce operational costs by 85%Eliminate manual interventionsImprove system performanceEnhance user experienceOptimize resource utilization'
     ];
-<<<<<<< HEAD
     useCases: [;
-      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management',
-    ],
+      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'],
     marketSize: '$28.9 B by 2029', competitors: ['ServiceNowBMCMicro FocusIvanti'],
     technology: ['AI/MLAutomationMonitoringITSM'], integration: ['ITSM platformsMonitoring toolsEnterprise systems'],
     support: ['24/7 operations supportIT expertsImplementation team'], compliance: ['SOC 2 ISO 27001 ITILCOBIT'],
@@ -927,7 +871,6 @@ export const,
     scalability: 'Enterprise-grade, multi-tenant support'
     roi: '450% within 18 months',
     deployment: 'Cloud-native, hybrid options'
-=======
     useCase,
   s: [;
       'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
@@ -969,14 +912,12 @@ export const,
   i: '450% within 18 months'
     deploymen,
   t: 'Cloud-native, hybrid options'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
 ;
 ];      'Enterprise IT operations_data center management_application performance management_infrastructure automation_service desk automationIT service management'
     ];
-<<<<<<< HEAD
     market_size: '$28.9B by 2029'
     competitors: ['ServiceNowBMCMicro FocusIvanti'];
     technology: ['AI / MLAutomationMonitoringITSM'];
@@ -1000,8 +941,7 @@ export const,
     exit: 'IPO or enterprise acquisition'
     contact: unknown;
       mobile: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];
     api: 'Operations management APIs', mobile: 'Mobile operations apps',
@@ -1019,7 +959,6 @@ export const,
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     market_siz,
   e: '$28.9B by 2029'
     competitor,
@@ -1105,7 +1044,6 @@ export const,
   s://ziontechgroup.com',
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -1274,7 +1212,7 @@ export interface EnterpriseITService2029V2 {/* TODO: Fix JSX expression */}
   l: 'kleber@ziontechgroup.com',' websit,
   e: 'http,
   s://ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', }, },;' ]; 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ]; benefit,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};' ]; 'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management' ]; benefit,
   s: [' 'Quantum computing capabilitiesUnbreakable securityExponential performance gainsFuture-proof infrastructureCompetitive advantageLong-term investment value' ]; useCase,
   s: [' 'Scientific computingFinancial modelingCryptography researchMachine learning accelerationOptimization problemsResearch and development' ],' marketSiz,
   e: '$35.2B by 2029', competitor,

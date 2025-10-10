@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 
 
 import { Link } from 'react-router-dom';
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
@@ -67,7 +61,6 @@ $4}
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>Developer Tools - Zion Tech Group</title>
@@ -120,7 +113,6 @@ $4}
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="w-5 h-5" />
-=======
     <div>Coming Soon</div>
 
   );
@@ -284,14 +276,12 @@ $4}
                 </div>"
                 <div className="flex items-center space-x-2"></div>"
                   <MapPin className="w-5 h-5" /></MapPin>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <span className="text-white font-medium">Middletown, DE</span>
                 </div>
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* Tools Grid */}
         <section className="py-16 px-4">
@@ -320,7 +310,6 @@ $4}
                       {tool.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
-=======
         {/* Tools Grid */}"
         <section className="py-16 px-4"></section>"
           <div className="max-w-7xl mx-auto"></div>"
@@ -351,12 +340,10 @@ $4}
                       {tool.features.map((feature, featureIndex) => ()}"
           <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                           {feature}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   </div>
 
                   <div className="mb-6">
@@ -365,7 +352,6 @@ $4}
                       {tool.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-=======
                   </div>"
                   <div className="mb-6"></div>"
                     <h4 className="font-semibold text-gray-900 mb-3">Benefit,
@@ -374,12 +360,10 @@ $4}
                       {tool.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>"
                           <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /></TrendingUp>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                           {benefit}
                         </li>
                       ))}
                     </ul>
-<<<<<<< HEAD
                   </div>
 
                   <div className="text-center">
@@ -389,7 +373,6 @@ $4}
                     >
                       Get Started Now
                     </a>
-=======
                   </div>"
                   <div className="text-center"></div>
                     <a></a>
@@ -401,14 +384,12 @@ $4}
 // >
 //                       Get Started Now;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
 
         {/* CTA Section */}
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
@@ -439,7 +420,6 @@ $4}
         <Footer />
       </div>
     </>
-=======
         {/* CTA Section */}"
         <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
           <div className="max-w-4xl mx-auto text-center"></div>"
@@ -487,7 +467,6 @@ $4}
       <Footer /></Footer>
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

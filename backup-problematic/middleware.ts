@@ -4,7 +4,6 @@
  * Applies security headers and implements security policies;
  */
 
-<<<<<<< HEAD
 export function middleware(request: NextRequest) {
   const _response = NextResponse.next();
 
@@ -27,8 +26,7 @@ export function middleware(request: NextRequest) {
       "frame-ancestors 'none'",
       "base-uri 'self'",
       "form-action 'self'",
-      "upgrade-insecure-requests",
-    ].join('; '),
+      "upgrade-insecure-requests"].join('; '),
     
     // Force HTTPS;
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
@@ -45,14 +43,12 @@ export function middleware(request: NextRequest) {
       'usb=()',
       'magnetometer=()',
       'accelerometer=()',
-      'gyroscope=()',
-    ].join(', '),
+      'gyroscope=()'].join(', '),
 
     // Additional security headers;
     'X-DNS-Prefetch-Control': 'on',
     'X-Download-Options': 'noopen',
-    'X-Permitted-Cross-Domain-Policies': 'none',
-  };
+    'X-Permitted-Cross-Domain-Policies': 'none'};
 
   // Apply all security headers;
   Object.entries(securityHeaders).forEach(([key, value]) => {
@@ -70,8 +66,7 @@ export function middleware(request: NextRequest) {
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {
     return new NextResponse(null, { status: 204, headers: response.headers });
-=======
-export function middleware(reques,)
+export function middleware(reques)
   t: NextRequest) {/* TODO: Fix JSX expression */}
   };
 
@@ -86,13 +81,11 @@ export function middleware(reques,)
   // Handle preflight requests;
   if (request.method === 'OPTIONS') {/* TODO: Fix JSX expression */}
   s: response.headers });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   return response;
 }
 
-<<<<<<< HEAD
 export const config = {
   matcher: [
     /*
@@ -102,9 +95,6 @@ export const config = {
      * - favicon.ico (favicon file)
      * - public folder;
      */,
-    '/((?!_next/static|_next/image|favicon.ico|public/).*)',
-  ],
-=======
+    '/((?!_next/static|_next/image|favicon.ico|public/).*)'],
 export const config = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };

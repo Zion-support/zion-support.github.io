@@ -19,7 +19,7 @@ interface ServicePageProps {/* TODO: Fix JSX expression */}
           <{ className?: string }>;
   service,
   s: Array<{/* TODO: Fix JSX expression */}
-  s: string[];,}
+  s: string[];}
     pric,
   e: string;
 

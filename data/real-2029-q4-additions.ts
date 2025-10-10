@@ -7,7 +7,6 @@
       'Analytic,
   s: response time, CSAT impact, volume by topic'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: '';
     color: 'from-cyan-600 to-blue-700'
@@ -30,7 +29,6 @@
     variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
-=======
     popula,
   r: true;
     ico,
@@ -75,7 +73,6 @@
   o: contact;
     realImplementatio,
   n: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intent classification and priority scoring',
       'One-click reply drafts with tone controls',
       'Auto-tagging and routing to teams',
@@ -86,9 +83,7 @@
       'Auto - tagging and routing to teams',
       'PII redaction and allowlist domains',
       'SLA - aware escalations and summaries',      'Analytic,
-  s: response time, CSAT impact, volume by topic',
-    ],
-<<<<<<< HEAD
+  s: response time, CSAT impact, volume by topic'],
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -125,7 +120,6 @@
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -180,8 +174,7 @@
     ratin,
   g: 4 && 4.8,
     review,
-  s: 74,
-  },
+  s: 74},
     i,
   d: 'mobile - survey - studio',
     nam,
@@ -195,7 +188,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Launch high - conversion mobile surveys with skip logic, NPS / CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses.',
     feature,
   s: [,
@@ -208,7 +200,6 @@
       'Real-time charts and cohort filters'
       'GDPR/CCPA consent and deletion tools'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: '';
     color: 'from-emerald-600 to-teal-700'
@@ -223,7 +214,6 @@
     realService: true;
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
-=======
     popula,
   r: false;
     ico,
@@ -252,30 +242,23 @@
   y: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
     integration,
   s: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Branching logic and progress-save',
       'Question,
   bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
       'Real-time charts and cohort filters',
-      'GDPR/CCPA consent and deletion tools',
-    ],
-<<<<<<< HEAD
+      'GDPR/CCPA consent and deletion tools'],
     popular: false;
       'Question bank: CSAT, NPS, PMF, churn',
-=======
     popula,
   r: false,
       'Question,
   bank: CSAT, NPS, PMF, churn',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
       'Real - time charts and cohort filters',
-      'GDPR / CCPA consent and deletion tools',
-    ],
-<<<<<<< HEAD
+      'GDPR / CCPA consent and deletion tools'],
     popular: false;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700'
@@ -291,8 +274,7 @@
     useCases: [
       'Landing page surveys'
       'In-product polls'
-      'Exit intent feedback',
-    ],
+      'Exit intent feedback'],
     roi: 'Increase response rates 25x and de-risk product decisions.',
     competitors: ['Typeform', 'SurveyMonkey']
     marketSize: 'Survey market $9 B+'
@@ -306,7 +288,6 @@
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
     use_cases: [,
-=======
     popula,
   r: false,
     ico,
@@ -364,12 +345,9 @@
   s: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
     use_case,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Landing page surveys',
       'In - product polls',
-      'Exit intent feedback',
-    ],
-<<<<<<< HEAD
+      'Exit intent feedback'],
     roi: 'Increase response rates 25x and de - risk product decisions.',
     competitors: ['Typeform', 'SurveyMonkey'],
     market_size: 'Survey market $9B+'
@@ -383,7 +361,6 @@
     customers: 60;
     rating: 4 && 4.6;
     reviews: 33;
-=======
     ro,
   i: 'Increase response rates 25x and de - risk product decisions.',
     competitor,
@@ -408,15 +385,12 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 33,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 33},
       'QR tickets and check-in app',
       'Speaker/sponsor asset management',
       'Automated reminders and WhatsApp/SMS alerts',
       'Feedback/NPS post-event forms',
       'Budget tracker and P&L exports',
-<<<<<<< HEAD
     id: 'event - ops - dashboard',
     name: 'EventOps Dashboard',
     tagline: unknown;
@@ -424,7 +398,6 @@
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'event - ops - dashboard',
     nam,
@@ -438,7 +411,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.',
     feature,
   s: [,
@@ -447,9 +419,7 @@
       'Automated reminders and WhatsApp / SMS alerts',
       'Feedback / NPS post - event forms',
       'Budget tracker and P & L exports',
-      'Embeddable agendas and live updates',
-    ],
-<<<<<<< HEAD
+      'Embeddable agendas and live updates'],
     popular: true;
     icon: '',
     integrations: ['Stripe', 'Resend', 'Mailchimp', 'Twilio'],
@@ -475,7 +445,6 @@
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -508,8 +477,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 29,
-  },
+  s: 29},
     i,
   d: 'oncall - scheduler - pro',
     nam,
@@ -523,7 +491,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.',
     feature,
   s: [,
@@ -532,9 +499,7 @@
       'Slack / Teams integration and on - call handoffs',
       'Vacation / holiday calendars',
       'Incident reports and postmortem templates',
-      'SLO and error budget reminders',
-    ],
-<<<<<<< HEAD
+      'SLO and error budget reminders'],
     popular: false;
       'Lean alternative for SMBs; complements enterprise incident suites.',
     target_audience: 'SRE teams, startups, agencies',
@@ -563,7 +528,6 @@
     price: '$89',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
       'Lean alternative for SMBs; complements enterprise incident suites.',
@@ -602,8 +566,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 19,
-  },
+  s: 19},
     i,
   d: 'seo - content - optimizer - pro',
     nam,
@@ -617,7 +580,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.',
     feature,
   s: [,
@@ -626,19 +588,13 @@
       'Outline and brief generation',
       'On - page audit and schema suggestions',
       'Rank tracking and change logs',
-      'CMS export (Markdown / Headless)',
-    ],
-<<<<<<< HEAD
+      'CMS export (Markdown / Headless)'],
     popular: true;
-=======
     popula,
   r: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Google Search Console',
       'Ahrefs (export)',
-      'Semrush (export)',
-    ],
-<<<<<<< HEAD
+      'Semrush (export)'],
     use_cases: ['Page optimization', 'Content planning', 'Brief creation'],
     roi: 'Improve organic traffic 2050% over 36 months.',
     competitors: ['SurferSEO', 'Frase', 'ClearScope'],
@@ -660,7 +616,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     use_case,
   s: ['Page optimization', 'Content planning', 'Brief creation'],
     ro,
@@ -686,8 +641,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 54,
-  },
+  s: 54},
     i,
   d: 'feature - flags - lite',
     nam,
@@ -701,7 +655,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting.',
     feature,
   s: [,
@@ -710,9 +663,7 @@
       'Gradual rollouts and percentage splits',
       'Audit logs and environment scoping',
       'Server and client SDKs',
-      'Webhook notifications',
-    ],
-<<<<<<< HEAD
+      'Webhook notifications'],
     popular: false;
       'Minimal alternative to enterprise flag platforms for SMBs.',
     target_audience: 'Startups, agencies, indie devs',
@@ -726,7 +677,6 @@
     customers: 70;
     rating: 4 && 4.5;
     reviews: 21;
-=======
     popula,
   r: false,
       'Minimal alternative to enterprise flag platforms for SMBs.',
@@ -751,17 +701,13 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 21,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 21},
       'Company/person enrich via email or domain',
       'Tech stack detection and hiring signals',
       'CSV bulk processing and API',
       'CRM enrichment workflows',
       'Confidence scores and data provenance',
-      'Usage - based pricing tiers',
-    ],
-<<<<<<< HEAD
+      'Usage - based pricing tiers'],
     popular: true;
     integrations: ['HubSpot', 'Salesforce (export)', 'Airtable'],
     use_cases: ['Lead scoring', 'ICP matching', 'Outbound targeting'],
@@ -778,7 +724,6 @@
     customers: 40;
     rating: 4 && 4.4;
     reviews: 17;
-=======
     popula,
   r: true,
     integration,
@@ -809,17 +754,13 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 17,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 17},
       'High-accuracy OCR and field mapping',
       'Line item extraction and taxes',
       'Validation UI and review queues',
       'Export to CSV, JSON, or webhook',
       'ERP connectors and retry policies',
-      'PII redaction and retention policies',
-    ],
-<<<<<<< HEAD
+      'PII redaction and retention policies'],
     popular: false;
     integrations: ['QuickBooks (export)', 'Xero (export)', 'SAP (export)'],
     use_cases: ['AP automation', 'Expense processing'],
@@ -846,7 +787,6 @@
     description: unknown;
       'Create robotic process automations for web workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.',
     features: [,
-=======
     popula,
   r: false,
     integration,
@@ -877,8 +817,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 14,
-  },
+  s: 14},
     i,
   d: 'rpa - browser - automation',
     nam,
@@ -896,15 +835,12 @@
   workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Workflow editor and step recorder',
       'Retry logic and backoff policies',
       'Captcha solving hooks and proxies',
       'File storage and PII redaction',
       'Job queue, metrics, and alerts',
-      'Human approval steps',
-    ],
-<<<<<<< HEAD
+      'Human approval steps'],
     popular: true;
     competitors: ['UiPath (SMB)', 'Robocorp'],
     market_size: 'RPA $13B+'
@@ -926,7 +862,6 @@
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     competitor,
@@ -951,8 +886,7 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 18,
-  },
+  s: 18},
     i,
   d: 'redaction - compliance - api',
     nam,
@@ -966,7 +900,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.',
     feature,
   s: [,
@@ -975,9 +908,7 @@
       'Audit logs and retention policies',
       'Batch processing and streaming',
       'Webhook retries and DLQs',
-      'Export to S3 / R2 and BigQuery',
-    ],
-<<<<<<< HEAD
+      'Export to S3 / R2 and BigQuery'],
     popular: false;
     icon: ''
     color: 'from - teal - 600 to - cyan - 700'
@@ -1011,7 +942,6 @@
     price: '$69',
     period: '/month',
     description:,
-=======
     popula,
   r: false,
     ico,
@@ -1064,8 +994,7 @@
     ratin,
   g: 4 && 4.3,
     review,
-  s: 12,
-  },
+  s: 12},
     i,
   d: 'kpi-scorecards-studio'
     nam,
@@ -1078,7 +1007,6 @@
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
     feature,
   s: [;
@@ -1089,7 +1017,6 @@
       'Shareable links with permissions'
       'Annotations and change logs'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -1123,7 +1050,6 @@
     price: '$69',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false;
     ico,
@@ -1176,8 +1102,7 @@
     ratin,
   g: 4.4;
     review,
-  s: 16,
-  }
+  s: 16}
     i,
   d: 'kpi - scorecards - studio',
     nam,
@@ -1190,7 +1115,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
     feature,
   s: [,
@@ -1199,9 +1123,7 @@
       'Alerting on thresholds and trends',
       'Warehouse connectors',
       'Shareable links with permissions',
-      'Annotations and change logs',
-    ],
-<<<<<<< HEAD
+      'Annotations and change logs'],
     popular: false;
     icon: ''
     color: 'from - green - 600 to - emerald - 700'
@@ -1234,7 +1156,6 @@ const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com',
-=======
     popula,
   r: false,
     ico,
@@ -1287,8 +1208,7 @@ const contact =
     ratin,
   g: 4 && 4.4,
     review,
-  s: 16,
-  };
+  s: 16};
 ];
 const contact =
 	mobil,
@@ -1299,7 +1219,6 @@ const contact =
 	websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   real2029Q4Additions: RealMarketService[] = [,
@@ -1319,7 +1238,6 @@ export const,
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and,
   summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
-<<<<<<< HEAD
 		popular: true;
 		icon: ''
 		color: 'from-cyan-600 to-blue-700',
@@ -2111,7 +2029,6 @@ export const,
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
-=======
 		popula,
   r: true;
 		ico,
@@ -2164,8 +2081,7 @@ export const,
 		ratin,
   g: 4 && 4.8,
 		review,
-  s: 74,
-	}
+  s: 74}
 		i,
   d: 'mobile-survey-studio'
 		nam,
@@ -2235,8 +2151,7 @@ export const,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 33,
-	}
+  s: 33}
 		i,
   d: 'event-ops-dashboard'
 		nam,
@@ -2305,8 +2220,7 @@ export const,
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 29,
-	}
+  s: 29}
 		i,
   d: 'oncall-scheduler-pro'
 		nam,
@@ -2375,8 +2289,7 @@ export const,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 19,
-	}
+  s: 19}
 		i,
   d: 'seo-content-optimizer-pro'
 		nam,
@@ -2445,8 +2358,7 @@ export const,
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 54,
-	}
+  s: 54}
 		i,
   d: 'feature-flags-lite'
 		nam,
@@ -2515,8 +2427,7 @@ export const,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 21,
-	}
+  s: 21}
 		i,
   d: 'sales-lead-enrichment'
 		nam,
@@ -2585,8 +2496,7 @@ export const,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 17,
-	}
+  s: 17}
 		i,
   d: 'invoice-ocr-processor'
 		nam,
@@ -2655,8 +2565,7 @@ export const,
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 14,
-	}
+  s: 14}
 		i,
   d: 'rpa-browser-automation'
 		nam,
@@ -2726,8 +2635,7 @@ export const,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 18,
-	}
+  s: 18}
 		i,
   d: 'redaction-compliance-api'
 		nam,
@@ -2796,8 +2704,7 @@ export const,
 		ratin,
   g: 4 && 4.3,
 		review,
-  s: 12,
-	}
+  s: 12}
 		i,
   d: 'kpi-scorecards-studio'
 		nam,
@@ -2866,8 +2773,7 @@ export const,
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 16,
-	}
+  s: 16}
 ];
   i,
   d: 'ai - email - triage - copilot'
@@ -2938,8 +2844,7 @@ export const,
   ratin,
   g: 4.8,
   review,
-  s: 74,
-}
+  s: 74}
   i,
   d: 'mobile - survey - studio'
   nam,
@@ -3009,8 +2914,7 @@ export const,
   ratin,
   g: 4.6,
   review,
-  s: 33,
-}
+  s: 33}
   i,
   d: 'event - ops - dashboard'
   nam,
@@ -3079,8 +2983,7 @@ export const,
   ratin,
   g: 4.7,
   review,
-  s: 29,
-}
+  s: 29}
   i,
   d: 'oncall - scheduler - pro'
   nam,
@@ -3149,8 +3052,7 @@ export const,
   ratin,
   g: 4.5,
   review,
-  s: 19,
-}
+  s: 19}
   i,
   d: 'seo - content - optimizer - pro'
   nam,
@@ -3219,8 +3121,7 @@ export const,
   ratin,
   g: 4.6,
   review,
-  s: 54,
-}
+  s: 54}
   i,
   d: 'feature - flags - lite'
   nam,
@@ -3289,8 +3190,7 @@ export const,
   ratin,
   g: 4.5,
   review,
-  s: 21,
-}
+  s: 21}
   i,
   d: 'sales - lead - enrichment'
   nam,
@@ -3359,8 +3259,7 @@ export const,
   ratin,
   g: 4.4,
   review,
-  s: 17,
-}
+  s: 17}
   i,
   d: 'invoice - ocr - processor'
   nam,
@@ -3429,8 +3328,7 @@ export const,
   ratin,
   g: 4.5,
   review,
-  s: 14,
-}
+  s: 14}
   i,
   d: 'rpa - browser - automation'
   nam,
@@ -3500,8 +3398,7 @@ export const,
   ratin,
   g: 4.4,
   review,
-  s: 18,
-}
+  s: 18}
   i,
   d: 'redaction - compliance - api'
   nam,
@@ -3570,8 +3467,7 @@ export const,
   ratin,
   g: 4.3,
   review,
-  s: 12,
-}
+  s: 12}
   i,
   d: 'kpi - scorecards - studio'
   nam,
@@ -3640,8 +3536,7 @@ export const,
   ratin,
   g: 4.4,
   review,
-  s: 16,
-}
+  s: 16}
 		ratin,
   g: 4.4;
 		review,
@@ -3651,7 +3546,6 @@ export const,
 	websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   real2029Q4Additions: RealMarketService[] = [;
@@ -3665,7 +3559,6 @@ export const,
 		review,
   s: 33}
 	};
-<<<<<<< HEAD
 	{;
 		id: 'event-ops-dashboard';
 		name: 'EventOps Dashboard';
@@ -3776,7 +3669,6 @@ export const,
 		customers: 95;
 		rating: 4.6}
 		reviews: 54}
-=======
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
@@ -3791,14 +3683,12 @@ export const,
   g: 4.6}
 		review,
   s: 54}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 21}
 	};
-<<<<<<< HEAD
 	{;
 		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
@@ -3835,12 +3725,10 @@ export const,
 		customers: 40;
 		rating: 4.4}
 		reviews: 17}
-=======
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 17}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
@@ -3857,7 +3745,6 @@ export const,
 		review,
   s: 12}
 	};
-<<<<<<< HEAD
 	{;
 		id: 'kpi-scorecards-studio';
 		name: 'KPI Scorecards Studio';
@@ -3902,7 +3789,6 @@ export const,
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
 	website: 'https://ziontechgroup.com',
-=======
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
@@ -3915,7 +3801,6 @@ export const,
 	websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   real2029Q4Additions: RealMarketService[] = [;
@@ -3929,7 +3814,6 @@ export const,
 		review,
   s: 33}
 	};
-<<<<<<< HEAD
 	{;
 		id: 'event-ops-dashboard';
 		name: 'EventOps Dashboard';
@@ -4040,7 +3924,6 @@ export const,
 		customers: 95;
 		rating: 4.6}
 		reviews: 54}
-=======
 	{/* TODO: Fix JSX expression */}
   g: 4.7}
 		review,
@@ -4055,14 +3938,12 @@ export const,
   g: 4.6}
 		review,
   s: 54}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
 		review,
   s: 21}
 	};
-<<<<<<< HEAD
 	{;
 		id: 'sales-lead-enrichment';
 		name: 'Sales Lead Enrichment';
@@ -4099,12 +3980,10 @@ export const,
 		customers: 40;
 		rating: 4.4}
 		reviews: 17}
-=======
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 17}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
@@ -4121,7 +4000,6 @@ export const,
 		review,
   s: 12}
 	};
-<<<<<<< HEAD
 	{;
 		id: 'kpi-scorecards-studio';
 		name: 'KPI Scorecards Studio';
@@ -4158,12 +4036,10 @@ export const,
 		customers: 36;
 		rating: 4.4}
 		reviews: 16}
-=======
 	{/* TODO: Fix JSX expression */}
   g: 4.4}
 		review,
   s: 16}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	}
 ];
 'Intent classification and priority scoring'' 'One-click reply drafts with tone controls'' 'Auto-tagging and routing to teams'' 'PII redaction and allowlist domains'' 'SLA-aware escalations and summaries'' 'Analytic,
@@ -4190,7 +4066,7 @@ export const,
   t: 'ai-futuristic' contactInf,
   o: contact,
   realImplementation: true' 'Intent classification and priority scoring',' 'One-click reply drafts with tone controls',' 'Auto-tagging and routing to teams',' 'PII redaction and allowlist domains',' 'SLA-aware escalations and summaries', ' 'Intent classification and priority scoring',' 'One - click reply drafts with tone controls',' 'Auto - tagging and routing to teams',' 'PII redaction and allowlist domains',' 'SLA - aware escalations and summaries', 'Analytic,
-  s: response time, CSAT impact, volume by topic', ], popula,
+  s: response time, CSAT impact, volume by topic'], popula,
   r: true,' ico,
   n: '✉️', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
@@ -4217,7 +4093,7 @@ export const,
   e: '2029 - 10 - 12', customer,
   s: 120, ratin,
   g: 4 && 4.8, review,
-  s: 74, }, ' i,
+  s: 74}, ' i,
   d: 'mobile - survey - studio',' nam,
   e: 'Mobile Survey Studio', taglin,
   e:  ,' 'Conversational, mobile - first surveys with branching logic and realtime dashboards',' pric,
@@ -4240,9 +4116,9 @@ export const,
   e: true' technolog,
   y: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']' integration,
   s: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']' 'Branching logic and progress-save',' 'Question,
-  bank: CSAT, NPS, PMF, churn',' 'Anonymous or identified responses',' 'Webhooks and Zapier integration',' 'Real-time charts and cohort filters',' 'GDPR/CCPA consent and deletion tools', ], popula,
+  bank: CSAT, NPS, PMF, churn',' 'Anonymous or identified responses',' 'Webhooks and Zapier integration',' 'Real-time charts and cohort filters',' 'GDPR/CCPA consent and deletion tools'], popula,
   r: false,' 'Question,
-  bank: CSAT, NPS, PMF, churn',' 'Anonymous or identified responses',' 'Webhooks and Zapier integration',' 'Real - time charts and cohort filters',' 'GDPR / CCPA consent and deletion tools', ], popula,
+  bank: CSAT, NPS, PMF, churn',' 'Anonymous or identified responses',' 'Webhooks and Zapier integration',' 'Real - time charts and cohort filters',' 'GDPR / CCPA consent and deletion tools'], popula,
   r: false,' ico,
   n: '📱', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
@@ -4268,7 +4144,7 @@ export const,
   e: true,' technolog,
   y: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],' integration,
   s: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'], use_case,
-  s: [,' 'Landing page surveys',' 'In - product polls',' 'Exit intent feedback', ],' ro,
+  s: [,' 'Landing page surveys',' 'In - product polls',' 'Exit intent feedback'],' ro,
   i: 'Increase response rates 2–5x and de - risk product decisions.',' competitor,
   s: ['Typeform', 'SurveyMonkey'],' market_siz,
   e: 'Survey market $9B+',' growth_rat,
@@ -4280,14 +4156,14 @@ export const,
   e: '2029 - 11 - 05', customer,
   s: 60, ratin,
   g: 4 && 4.6, review,
-  s: 33, }, ' 'QR tickets and check-in app',' 'Speaker/sponsor asset management',' 'Automated reminders and WhatsApp/SMS alerts',' 'Feedback/NPS post-event forms',' 'Budget tracker and P&L exports',' i,
+  s: 33}, ' 'QR tickets and check-in app',' 'Speaker/sponsor asset management',' 'Automated reminders and WhatsApp/SMS alerts',' 'Feedback/NPS post-event forms',' 'Budget tracker and P&L exports',' i,
   d: 'event - ops - dashboard',' nam,
   e: 'EventOps Dashboard', taglin,
   e:  ,' 'Ticketing, invitations, run - of - show, and post - event analytics in one place',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n:  ,' 'Plan and run events with schedules, speaker portals, QR ticketing, sponsor assets, and feedback loops. Integrates with Stripe and major email providers.', feature,
-  s: [,' 'QR tickets and check - in app',' 'Speaker / sponsor asset management',' 'Automated reminders and WhatsApp / SMS alerts',' 'Feedback / NPS post - event forms',' 'Budget tracker and P & L exports', ' 'Embeddable agendas and live updates', ], popula,
+  s: [,' 'QR tickets and check - in app',' 'Speaker / sponsor asset management',' 'Automated reminders and WhatsApp / SMS alerts',' 'Feedback / NPS post - event forms',' 'Budget tracker and P & L exports', ' 'Embeddable agendas and live updates'], popula,
   r: true,' ico,
   n: '🎟️',' integration,
   s: ['Stripe', 'Resend', 'Mailchimp', 'Twilio'],' use_case,
@@ -4303,14 +4179,14 @@ export const,
   e: '2029 - 09 - 23', customer,
   s: 48, ratin,
   g: 4 && 4.7, review,
-  s: 29, }, ' i,
+  s: 29}, ' i,
   d: 'oncall - scheduler - pro',' nam,
   e: 'OnCall Scheduler Pro', taglin,
   e:  ,' 'Policy - based shift planning, rotations, and escalations with Slack / Teams',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
   n:  ,' 'Create and manage on - call schedules with handoff workflows, time - zone awareness, and paging integrations. Includes incident postmortem templates and SLO reminders.', feature,
-  s: [, ' 'Flexible rotations and override rules',' 'Escalation policies and schedules',' 'Slack / Teams integration and on - call handoffs',' 'Vacation / holiday calendars',' 'Incident reports and postmortem templates',' 'SLO and error budget reminders', ], popula,
+  s: [, ' 'Flexible rotations and override rules',' 'Escalation policies and schedules',' 'Slack / Teams integration and on - call handoffs',' 'Vacation / holiday calendars',' 'Incident reports and postmortem templates',' 'SLO and error budget reminders'], popula,
   r: false,' 'Lean alternative for SMBs; complements enterprise incident suites.',' target_audienc,
   e: 'SRE teams, startups, agencies', trial_day,
   s: 14,' setup_tim,
@@ -4329,15 +4205,15 @@ export const,
   e: '2029 - 10 - 30', customer,
   s: 32, ratin,
   g: 4 && 4.5, review,
-  s: 19, }, ' i,
+  s: 19}, ' i,
   d: 'seo - content - optimizer - pro',' nam,
   e: 'SEO Content Optimizer Pro', taglin,
   e:  ,' 'AI - assisted briefs, outlines, and on - page optimization with live SERP data',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
   n:  ,' 'Plan and optimize content using SERP insights, competitor gaps, and structured briefs. Exports to CMS and tracks rankings over time.', feature,
-  s: [, ' 'Keyword clustering and topical maps',' 'Competitor gap analysis',' 'Outline and brief generation',' 'On - page audit and schema suggestions',' 'Rank tracking and change logs',' 'CMS export (Markdown / Headless)', ], popula,
-  r: true,' 'Google Search Console',' 'Ahrefs (export)',' 'Semrush (export)', ],' use_case,
+  s: [, ' 'Keyword clustering and topical maps',' 'Competitor gap analysis',' 'Outline and brief generation',' 'On - page audit and schema suggestions',' 'Rank tracking and change logs',' 'CMS export (Markdown / Headless)'], popula,
+  r: true,' 'Google Search Console',' 'Ahrefs (export)',' 'Semrush (export)'],' use_case,
   s: ['Page optimization', 'Content planning', 'Brief creation'],' ro,
   i: 'Improve organic traffic 20–50% over 3–6 months.',' competitor,
   s: ['SurferSEO', 'Frase', 'ClearScope'],' market_siz,
@@ -4350,14 +4226,14 @@ export const,
   e: '2029 - 09 - 10', customer,
   s: 95, ratin,
   g: 4 && 4.6, review,
-  s: 54, }, ' i,
+  s: 54}, ' i,
   d: 'feature - flags - lite',' nam,
   e: 'Feature Flags Lite', taglin,
   e:  ,' 'Simple kill switches, gradual rollouts, and A / B targeting for web apps',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Add feature flags to your app with SDKs for React / Node, rule targeting, and environments. Includes audit logs and safe defaulting.', feature,
-  s: [, ' 'Boolean, multivariate, and JSON flags',' 'User and cohort targeting',' 'Gradual rollouts and percentage splits',' 'Audit logs and environment scoping',' 'Server and client SDKs',' 'Webhook notifications', ], popula,
+  s: [, ' 'Boolean, multivariate, and JSON flags',' 'User and cohort targeting',' 'Gradual rollouts and percentage splits',' 'Audit logs and environment scoping',' 'Server and client SDKs',' 'Webhook notifications'], popula,
   r: false,' 'Minimal alternative to enterprise flag platforms for SMBs.',' target_audienc,
   e: 'Startups, agencies, indie devs', trial_day,
   s: 14,' setup_tim,
@@ -4369,7 +4245,7 @@ export const,
   s: ['LaunchDarkly (entry)', 'Flagsmith'], customer,
   s: 70, ratin,
   g: 4 && 4.5, review,
-  s: 21, }, ' 'Company/person enrich via email or domain',' 'Tech stack detection and hiring signals',' 'CSV bulk processing and API',' 'CRM enrichment workflows',' 'Confidence scores and data provenance',' 'Usage - based pricing tiers', ], popula,
+  s: 21}, ' 'Company/person enrich via email or domain',' 'Tech stack detection and hiring signals',' 'CSV bulk processing and API',' 'CRM enrichment workflows',' 'Confidence scores and data provenance',' 'Usage - based pricing tiers'], popula,
   r: true,' integration,
   s: ['HubSpot', 'Salesforce (export)', 'Airtable'],' use_case,
   s: ['Lead scoring', 'ICP matching', 'Outbound targeting'],' ro,
@@ -4384,7 +4260,7 @@ export const,
   e: '2029 - 11 - 18', customer,
   s: 40, ratin,
   g: 4 && 4.4, review,
-  s: 17, }, ' 'High-accuracy OCR and field mapping',' 'Line item extraction and taxes',' 'Validation UI and review queues',' 'Export to CSV, JSON, or webhook',' 'ERP connectors and retry policies',' 'PII redaction and retention policies', ], popula,
+  s: 17}, ' 'High-accuracy OCR and field mapping',' 'Line item extraction and taxes',' 'Validation UI and review queues',' 'Export to CSV, JSON, or webhook',' 'ERP connectors and retry policies',' 'PII redaction and retention policies'], popula,
   r: false,' integration,
   s: ['QuickBooks (export)', 'Xero (export)', 'SAP (export)'],' use_case,
   s: ['AP automation', 'Expense processing'],' ro,
@@ -4399,7 +4275,7 @@ export const,
   e: '2029 - 12 - 01', customer,
   s: 27, ratin,
   g: 4 && 4.5, review,
-  s: 14, }, ' i,
+  s: 14}, ' i,
   d: 'rpa - browser - automation',' nam,
   e: 'RPA Browser Automation Kit', taglin,
   e:  ,' 'Headless browser workflows with queues, retries, and human review',' pric,
@@ -4407,7 +4283,7 @@ export const,
   d: '/month', descriptio,
   n:  ,' 'Create robotic process automations for web,
   workflows: login, scrape, form - fill, download, and upload. Includes scheduling, proxy support, and error screenshots.', feature,
-  s: [, ' 'Workflow editor and step recorder',' 'Retry logic and backoff policies',' 'Captcha solving hooks and proxies',' 'File storage and PII redaction',' 'Job queue, metrics, and alerts',' 'Human approval steps', ], popula,
+  s: [, ' 'Workflow editor and step recorder',' 'Retry logic and backoff policies',' 'Captcha solving hooks and proxies',' 'File storage and PII redaction',' 'Job queue, metrics, and alerts',' 'Human approval steps'], popula,
   r: true,' competitor,
   s: ['UiPath (SMB)', 'Robocorp'],' market_siz,
   e: 'RPA $13B+',' growth_rat,
@@ -4419,14 +4295,14 @@ export const,
   e: '2029 - 11 - 28', customer,
   s: 38, ratin,
   g: 4 && 4.4, review,
-  s: 18, }, ' i,
+  s: 18}, ' i,
   d: 'redaction - compliance - api',' nam,
   e: 'Redaction & Compliance API', taglin,
   e:  ,' 'PII detection and redaction for text and documents with audit logs',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Detect and redact sensitive data (PII / PHI / PCI) from text and PDFs with configurable policies. Includes audit logs and exports for compliance teams.', feature,
-  s: [, ' 'Configurable detectors (SSN, phone, email) credit card)',' 'Context - aware redaction and masking',' 'Audit logs and retention policies',' 'Batch processing and streaming',' 'Webhook retries and DLQs',' 'Export to S3 / R2 and BigQuery', ], popula,
+  s: [, ' 'Configurable detectors (SSN, phone, email) credit card)',' 'Context - aware redaction and masking',' 'Audit logs and retention policies',' 'Batch processing and streaming',' 'Webhook retries and DLQs',' 'Export to S3 / R2 and BigQuery'], popula,
   r: false,' ico,
   n: '🧼', ' colo,
   r: 'from - teal - 600 to - cyan - 700',' text_colo,
@@ -4453,7 +4329,7 @@ export const,
   e: '2029 - 12 - 03', customer,
   s: 22, ratin,
   g: 4 && 4.3, review,
-  s: 12, }, ' i,
+  s: 12}, ' i,
   d: 'kpi-scorecards-studio'' nam,
   e: 'KPI Scorecards Studio'' taglin,
   e: 'OKR/KPI dashboards with goals, alerts, and executive summaries'' pric,
@@ -4494,7 +4370,7 @@ export const,
   e: '$69',' perio,
   d: '/month', descriptio,
   n:  ,' 'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.', feature,
-  s: [, ' 'Goal trees and KPI ownership',' 'Weekly executive summaries',' 'Alerting on thresholds and trends',' 'Warehouse connectors',' 'Shareable links with permissions',' 'Annotations and change logs', ], popula,
+  s: [, ' 'Goal trees and KPI ownership',' 'Weekly executive summaries',' 'Alerting on thresholds and trends',' 'Warehouse connectors',' 'Shareable links with permissions',' 'Annotations and change logs'], popula,
   r: false,' ico,
   n: '📊', ' colo,
   r: 'from - green - 600 to - emerald - 700',' text_colo,
@@ -4521,7 +4397,7 @@ export const,
   e: '2029 - 10 - 20', customer,
   s: 36, ratin,
   g: 4 && 4.4, review,
-  s: 16, },; ]; const contact = ' mobil,
+  s: 16}; ]; const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -4939,7 +4815,7 @@ export const,
   e: '2029 - 10 - 12' customer,
   s: 120, ratin,
   g: 4.8, review,
-  s: 74, } ' i,
+  s: 74} ' i,
   d: 'mobile - survey - studio'' nam,
   e: 'Mobile Survey Studio',' taglin,
   e: 'Conversational, mobile - first surveys with branching logic and realtime dashboards'' pric,
@@ -4974,7 +4850,7 @@ export const,
   e: '2029 - 11 - 05' customer,
   s: 60, ratin,
   g: 4.6, review,
-  s: 33, } ' i,
+  s: 33} ' i,
   d: 'event - ops - dashboard'' nam,
   e: 'EventOps Dashboard',' taglin,
   e: 'Ticketing, invitations, run - of - show, and post - event analytics in one place'' pric,
@@ -5008,7 +4884,7 @@ export const,
   e: '2029 - 09 - 23' customer,
   s: 48, ratin,
   g: 4.7, review,
-  s: 29, } ' i,
+  s: 29} ' i,
   d: 'oncall - scheduler - pro'' nam,
   e: 'OnCall Scheduler Pro',' taglin,
   e: 'Policy - based shift planning, rotations, and escalations with Slack / Teams'' pric,
@@ -5042,7 +4918,7 @@ export const,
   e: '2029 - 10 - 30' customer,
   s: 32, ratin,
   g: 4.5, review,
-  s: 19, } ' i,
+  s: 19} ' i,
   d: 'seo - content - optimizer - pro'' nam,
   e: 'SEO Content Optimizer Pro',' taglin,
   e: 'AI - assisted briefs, outlines, and on - page optimization with live SERP data'' pric,
@@ -5076,7 +4952,7 @@ export const,
   e: '2029 - 09 - 10' customer,
   s: 95, ratin,
   g: 4.6, review,
-  s: 54, } ' i,
+  s: 54} ' i,
   d: 'feature - flags - lite'' nam,
   e: 'Feature Flags Lite',' taglin,
   e: 'Simple kill switches, gradual rollouts, and A / B targeting for web apps'' pric,
@@ -5110,7 +4986,7 @@ export const,
   e: '2029 - 10 - 02' customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 21, } ' i,
+  s: 21} ' i,
   d: 'sales - lead - enrichment'' nam,
   e: 'Sales Lead Enrichment'' taglin,
   e: 'Firmographics and signals to qualify leads instantly via API and CSV'' pric,
@@ -5144,7 +5020,7 @@ export const,
   e: '2029 - 11 - 18' customer,
   s: 40, ratin,
   g: 4.4, review,
-  s: 17, } ' i,
+  s: 17} ' i,
   d: 'invoice - ocr - processor'' nam,
   e: 'Invoice OCR Processor'' taglin,
   e: 'Extract line items and totals from invoices and receipts to your ERP'' pric,
@@ -5178,7 +5054,7 @@ export const,
   e: '2029 - 12 - 01' customer,
   s: 27, ratin,
   g: 4.5, review,
-  s: 14, } ' i,
+  s: 14} ' i,
   d: 'rpa - browser - automation'' nam,
   e: 'RPA Browser Automation Kit',' taglin,
   e: 'Headless browser workflows with queues, retries, and human review'' pric,
@@ -5213,7 +5089,7 @@ export const,
   e: '2029 - 11 - 28' customer,
   s: 38, ratin,
   g: 4.4, review,
-  s: 18, } ' i,
+  s: 18} ' i,
   d: 'redaction - compliance - api'' nam,
   e: 'Redaction & Compliance API'' taglin,
   e: 'PII detection and redaction for text and documents with audit logs'' pric,
@@ -5247,7 +5123,7 @@ export const,
   e: '2029 - 12 - 03' customer,
   s: 22, ratin,
   g: 4.3, review,
-  s: 12, } ' i,
+  s: 12} ' i,
   d: 'kpi - scorecards - studio'' nam,
   e: 'KPI Scorecards Studio',' taglin,
   e: 'OKR / KPI dashboards with goals, alerts, and executive summaries'' pric,
@@ -5281,60 +5157,60 @@ export const,
   e: '2029 - 10 - 20' customer,
   s: 36, ratin,
   g: 4.4, review,
-  s: 16, } ratin,
+  s: 16} ratin,
   g: 4.4,
   reviews: 16 ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' },; export const,
+  s://ziontechgroup.com' }; export const,
   real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.8,} review,
-  s: 74} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 33} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 29} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 19} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 54} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 21} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 17} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 14} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 18} },; {/* TODO: Fix JSX expression */}
-  g: 4.3,} review,
-  s: 12} },; {/* TODO: Fix JSX expression */}
+  g: 4.8} review,
+  s: 74} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 33} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 29} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 19} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 54} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 21} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 17} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 14} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 18} }; {/* TODO: Fix JSX expression */}
+  g: 4.3} review,
+  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
   s: 16} } ]; ' import { RealMarketService } from './real-market-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' },; export const,
+  s://ziontechgroup.com' }; export const,
   real2029Q4Additions: RealMarketService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.8,} review,
-  s: 74} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 33} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 29} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 19} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 54} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 21} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 17} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 14} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 18} },; {/* TODO: Fix JSX expression */}
-  g: 4.3,} review,
-  s: 12} },; {/* TODO: Fix JSX expression */}
+  g: 4.8} review,
+  s: 74} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 33} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 29} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 19} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 54} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 21} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 17} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 14} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 18} }; {/* TODO: Fix JSX expression */}
+  g: 4.3} review,
+  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.4} review,
   s: 16} } ]; '

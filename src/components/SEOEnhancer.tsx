@@ -11,8 +11,7 @@ const,
     },
     addres,
   s: {/* TODO: Fix JSX expression */}
-    },
-  };
+    }};
 
   const finalStructuredData = structuredData || defaultStructuredData;
 

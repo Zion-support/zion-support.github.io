@@ -1,12 +1,9 @@
 :src/pages/blog/ai-2025-oct-multimodal-enterprise-intelligence/index.tsx;
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-<<<<<<< HEAD
       <Helm, e, t>
         <title>
-=======
       <Helm, e, t></Helm>
         <title></title>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           Multimodal, Enterprise, Intelligence 20, 2, 5: Vis, i, o, n, Langua, g, e & Audio, AI, Convergence | Zion, Tech, Group;
         </title>
         <meta, nam, e = 'description'

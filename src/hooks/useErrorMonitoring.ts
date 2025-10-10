@@ -11,7 +11,7 @@ declare global {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     __REACT_ERROR_HANDLER__?: (erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: unknown) => void;
   }
 }
@@ -20,7 +20,7 @@ export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
 }
   const { trackError } = useAnalytics();
   const reportError = useCallback()
-    (erro,)
+    (erro)
   r: Error, context?: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -32,7 +32,7 @@ export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     // Global error handler;
-const handleError = (even,)
+const handleError = (even)
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -43,7 +43,7 @@ const handleError = (even,)
       reportError(error, 'global_error');
     };
     // Unhandled promise rejection handler;
-const handleUnhandledRejection = (even,)
+const handleUnhandledRejection = (even)
   t: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -57,13 +57,13 @@ const handleUnhandledRejection = (even,)
     };
     // React error boundary handler (if available)
     const handleReactError = (erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       const componentStack =
         (errorInfo as { componentStack?: string })?.componentStack || 'unknown';
-      reportError(error, `react_error_boundar,)`
+      reportError(error, `react_error_boundar)`
   y: ${componentStack}`);
     };
     // Add event listeners;

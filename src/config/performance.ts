@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
@@ -44,12 +43,10 @@ export const _performanceConfig = {
   },
   // Resource hints
   preload: [
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
-  ],
+    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
   prefetch: [
     '/api/health',
-    '/api/config',
-  ],
+    '/api/config'],
   // Image optimization
   images: {
 // deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -88,7 +85,6 @@ $4}
 };
 export type PerformanceConfig = typeof performanceConfig;
 export default performanceConfig;
-=======
 
 /**
  * Performance Configuration;
@@ -157,23 +153,21 @@ export const _performanceConfig = {// TODO: Add content;}
   preloa,
   d: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
     {/* TODO: Fix JSX expression */}
   n: 'anonymous' },
 //   ],
   prefetc,
   h: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //     '/api/health',
 //     '/api/config',
 //   ],
   // Image optimization,
   image,
   s: {/* TODO: Fix JSX expression */}
-  s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],}
+  s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]}
 // imageSize,
   s: [16, 32, 48, 64, 96, 128, 256, 384],
 // format,
@@ -186,7 +180,7 @@ export const _performanceConfig = {// TODO: Add content;}
   // Bundle optimization,
   bundl,
   e: {/* TODO: Fix JSX expression */}
-  e: 20000,}
+  e: 20000}
 // maxChunkSiz,
   e: 244000,
 // splitChunk,
@@ -194,7 +188,7 @@ export const _performanceConfig = {// TODO: Add content;}
   s: {}
 // vendo,
   r: {/* TODO: Fix JSX expression */}
-  t: /[\/]node_modules[\/]/,}
+  t: /[\/]node_modules[\/]/}
 // priorit,
   y: -10,
 // reuseExistingChun,
@@ -214,7 +208,7 @@ export const _performanceConfig = {// TODO: Add content;}
   // Performance monitoring,
   monitorin,
   g: {/* TODO: Fix JSX expression */}
-  d: true,}
+  d: true}
 // sampleRat,
   e: 1.0, // 100% in production;
 // reportInterva,
@@ -230,4 +224,3 @@ export default performanceConfig;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 interface ModernLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -45,7 +44,6 @@ $4};
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
       </div>
-=======
 
 
 'use client';
@@ -67,7 +65,7 @@ const,
   text = 'Loading...',
   fullScreen = false;)
 }) => {/* TODO: Fix JSX expression */}
-  m: 'w-4 h-4',}
+  m: 'w-4 h-4'}
     m,
   d: 'w-8 h-8',
     l,
@@ -110,17 +108,13 @@ const,
           <p className="text-sm text-gray-300 animate-pulse">{text}</p>
         )}
       </div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <span className="sr-only">Loading content, please wait...</span>
     </div>
   );
 };
-<<<<<<< HEAD
 export default ModernLoadingSpinner;
-=======
 
 export default ModernLoadingSpinner;"`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

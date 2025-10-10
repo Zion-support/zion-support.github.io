@@ -1,24 +1,20 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Improved Error Boundary
  * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
  */
 interface Props {
-=======
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   children: ReactNode;
 
   fallback?: ReactNode;
   onError?: (erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) => void;
   resetKeys?: Array;
           <string | number>;
 }
-<<<<<<< HEAD
 interface State {
   hasError: boolean;
   error: Error | null;
@@ -61,15 +57,13 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       errorCount: prevState.errorCount + 1
     }));
     // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {
-    }
+    if (process.env['NODE_ENV'] === 'development') {}
     // Send to external error tracking (if available)
     if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
             componentStack: errorInfo.componentStack
-=======
 interface State {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -106,7 +100,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   t: 0;
     };
   }
-  static getDerivedStateFromError(erro,)
+  static getDerivedStateFromError(erro)
   r: Error): Partial;
           <State> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -120,7 +114,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     };
   }
   componentDidCatch(erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -135,7 +129,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   k: error.stack,
       componen,
   t: errorInfo.componentStack ?? undefined,
-      timestam,)
+      timestam)
   p: Date.now(),
       userAgen,
   t: navigator.userAgent,
@@ -182,40 +176,32 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
   componentStac,
   k: errorInfo.componentStack;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         })
       });
     }
   }
-<<<<<<< HEAD
   componentDidUpdate(prevProps: Props): void {
-=======
 
-  componentDidUpdate(prevProp,)
+  componentDidUpdate(prevProp)
   s: Props): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // Reset error state if resetKeys changed
     if (this.props.resetKeys && prevProps.resetKeys) {
         (key, index) => key !== prevProps.resetKeys![index]
       );
-<<<<<<< HEAD
       if (resetKeysChanged && this.state.hasError) {
-=======
 
       if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         this.resetErrorBoundary();
       }
     }
   }
-<<<<<<< HEAD
   resetErrorBoundary = (): void => {
     this.setState({
       hasError: false,
@@ -246,7 +232,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
             </p>
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
               <details style={styles.details}>
-=======
 
   resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -298,14 +283,12 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
             {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
           <details style={styles.details}></details>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <summary style={styles.summary}>Error Details (Development Only)</summary>
                 <div style={styles.errorDetails}></div>
                   <p style={styles.errorMessage}></p>
                     <strong>Erro,
   r:</strong> {this.state.error.message}
                   </p>
-<<<<<<< HEAD
                   {this.state.error.stack && (
                     <pre style={styles.stack}>
                       {this.state.error.stack}
@@ -314,7 +297,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                   {this.state.errorInfo?.componentStack && (
                     <pre style={styles.stack}>
                       <strong>Component Stack:</strong>
-=======
 
                   {this.state.error.stack && ()}
           <pre style={styles.stack}></pre>
@@ -326,7 +308,6 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                       <strong>Component,
   Stack:</strong>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       {this.state.errorInfo.componentStack}
                     </pre>
                   )}
@@ -338,35 +319,29 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 onClick={this.resetErrorBoundary}
                 style={styles.button}"
                 aria-label="Try Again"
-<<<<<<< HEAD
               >
                 Try Again
               </button>
               <button
-=======
 
 // >
 //                 Try Again;
           </button>
               <button></button>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 onClick={this.handleReload}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Reload Page"
-<<<<<<< HEAD
               >
                 Reload Page
               </button>
               <button
-=======
 
 // >
 //                 Reload Page;
           </button>
               <button></button>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 onClick={this.handleGoHome}
                 style={{...styles.button, ...styles.secondaryButton}}"
                 aria-label="Go to Homepage"
@@ -374,22 +349,18 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
                 Go Home
               </button>
             </div>
-<<<<<<< HEAD
             {this.state.errorCount > 1 && (
               <p style={styles.errorCount}>
                 This error has occurred {this.state.errorCount} times
-=======
 
             {this.state.errorCount > 1 && ()}
           <p style={styles.errorCount}></p>
                 This error has occurred {this.state.errorCount} times;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </p>
             )}
           </div>
         </div>
-<<<<<<< HEAD
       );
     }
     return this.props.children;
@@ -487,7 +458,6 @@ $4},
     color:   ,
 $4}
 };
-=======
 
       );
     }
@@ -698,4 +668,3 @@ const styles = {// TODO: Add content;}
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

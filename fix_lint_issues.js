@@ -7,7 +7,6 @@ import { fileURLToPath } from 'url';
 // const __dirname = path.dirname(__filename);
 
 // Function to fix common lint issues in a file;
-<<<<<<< HEAD
 function fixLintIssues(filePath) {
   try {
     // Skip if not a source file;
@@ -28,7 +27,6 @@ function fixLintIssues(filePath) {
     
     // Fix 2: Remove unused Helmet imports;
     if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {
-=======
 function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     }
     
@@ -44,31 +42,26 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     // Fix,
   2: Remove unused Helmet imports;
     if (content.includes('import { Helmet } from \'react-helmet-async\';') && !content.includes('<Helmet')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       content = content.replace(/import { Helmet } from 'react-helmet-async';\n?/g, '');
       modified = true;
     }
     
-<<<<<<< HEAD
     // Fix 3: Remove unused lucide-react imports;
     if (lucideMatch) {,
       if (usedImports.length === 0) {,
         modified = true;
       } else if (usedImports.length < imports.length) {
         modified = true;
-=======
     // Fix,
   3: Remove unused lucide-react imports;
     if (lucideMatch) {/* TODO: Fix JSX expression */}
       } else if (usedImports.length < imports.length) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
     
     // Fix,
   4: Remove unused variables (simple cases)
     
-<<<<<<< HEAD
     for (let i = 0; i < lines.length; i++) {
       
       // Skip lines that are just unused variable declarations;
@@ -94,7 +87,6 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
           fixedLines.push('// ' + line);
           modified = true;
           continue;
-=======
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
         }
       }
@@ -102,7 +94,6 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
       // Fix,
   5: Comment out console statements in production code;
 //       if (line.includes('console.') && !filePath.includes('test') && !filePath.includes('spec')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }
       
@@ -111,58 +102,46 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
     
     content = fixedLines.join('\n');
     
-<<<<<<< HEAD
     // Fix 6: Remove unused useCallback imports;
     if (content.includes('useCallback') && !content.includes('useCallback(')) {,
       content = content.replace(/,\s*useCallback/g, '');
       content = content.replace(/useCallback,\s*/g, '');
       if (content.includes('import { useCallback }')) {
-=======
     // Fix,
   6: Remove unused useCallback imports;
     if (content.includes('useCallback') && !content.includes('useCallback(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { useCallback }')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         content = content.replace(/import { useCallback } from 'react';\n?/g, '');
       }
       modified = true;
     }
     
-<<<<<<< HEAD
     // Fix 7: Remove unused lazy imports;
     if (content.includes('lazy') && !content.includes('lazy(')) {,
       content = content.replace(/,\s*lazy/g, '');
       content = content.replace(/lazy,\s*/g, '');
       if (content.includes('import { lazy }')) {
-=======
     // Fix,
   7: Remove unused lazy imports;
     if (content.includes('lazy') && !content.includes('lazy(')) {/* TODO: Fix JSX expression */}
       if (content.includes('import { lazy }')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         content = content.replace(/import { lazy } from 'react';\n?/g, '');
       }
       modified = true;
     }
     
-<<<<<<< HEAD
     // Fix 8: Remove unused Link imports from react-router-dom;
     if (content.includes('import { Link } from \'react-router-dom\';') && !content.includes('<Link')) {
-=======
     // Fix,
   8: Remove unused Link imports from react-router-dom;
     if (content.includes('import { Link } from \'react-router-dom\';') && !content.includes('<Link')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       content = content.replace(/import { Link } from 'react-router-dom';\n?/g, '');
       modified = true;
     }
     
-<<<<<<< HEAD
     // Fix 9: Remove unused Users imports;
-=======
     // Fix,
   9: Remove unused Users imports;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     const unusedIcons = ['ArrowLeft', 'Search', 'BookOpen', 'Users', 'Star', 'Target', 'CheckCircle', 'Calendar', 'User', 'Tag', 'Cpu'];
     for (const icon of unusedIcons) {/* TODO: Fix JSX expression */}
       if (content.includes(icon) && !content.includes(`<${icon}`) && !content.includes(`${icon}.`)) {/* TODO: Fix JSX expression */}`
@@ -172,17 +151,14 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
       }
     }
     
-<<<<<<< HEAD
     // Fix 10: Remove unused jest imports in non-test files;
     if (content.includes('jest') && !filePath.includes('test') && !filePath.includes('spec')) {,
       content = content.replace(/,\s*jest/g, '');
       content = content.replace(/\s*/g, '');
       modified = true;
-=======
     // Fix,
   10: Remove unused jest imports in non-test files;
     if (content.includes('jest') && !filePath.includes('test') && !filePath.includes('spec')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     
     if (modified) {/* TODO: Fix JSX expression */}
@@ -194,7 +170,6 @@ function fixLintIssues(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to recursively fix lint issues;
-<<<<<<< HEAD
 function fixAllLintIssues(_dir) {
   try {
     for (const file of files) {
@@ -204,9 +179,7 @@ function fixAllLintIssues(_dir) {
           // Skip certain directories;
           if (['node_modules', '.git', 'dist', '.next', 'media', '__tests__'].includes(file)) {
             continue;
-=======
 function fixAllLintIssues(_dir) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
           fixedCount += fixAllLintIssues(filePath);
         } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {/* TODO: Fix JSX expression */}

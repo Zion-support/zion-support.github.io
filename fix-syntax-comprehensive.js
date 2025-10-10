@@ -42,7 +42,7 @@ function fixSyntaxErrors(filePath) {
       },
       // Fix missing commas in imports
       {
-        pattern: /import\s+{([^,}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
+        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
         replacement: "import { $1, $2 } from '$3';"
       },
       // Fix malformed import with semicolon

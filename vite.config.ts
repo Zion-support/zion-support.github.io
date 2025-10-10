@@ -2,27 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
-<<<<<<< HEAD
-export default defineConfig({)
-  plugins: [react()],
-  root: '.',
-  publicDir: 'public',
-  resolve: {,
-    alias: {,
-      '@': resolve(__dirname, 'app'),
-      '@components': resolve(__dirname, 'app/components'),
-      '@utils': resolve(__dirname, 'app/utils'),
-      '@hooks': resolve(__dirname, 'app/hooks'),
-      '@types': resolve(__dirname, 'app/types'),
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
 export default defineConfig({
   plugins: [react()],
   resolve: {
@@ -38,29 +17,7 @@ export default defineConfig({
       '@/content': resolve(__dirname, './content')
     }
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  buil,
-  d: {/* TODO: Fix JSX expression */}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-      '@components': resolve(__dirname, './src/components'),
-      '@utils': resolve(__dirname, './src/utils'),
-      '@hooks': resolve(__dirname, './src/hooks'),
-      '@types': resolve(__dirname, './src/types'),
-      '@app': resolve(__dirname, './app'),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
   build: {
-<<<<<<< HEAD
     target: 'esnext'
     minify: 'terser'
     sourcemap: false;
@@ -99,8 +56,7 @@ export default defineConfig({
         safari10: true;
         toplevel: true;
         properties: {,
-          regex: /^_/,
-        }
+          regex: /^_/}
       },
       format: {
         comments: false;
@@ -196,11 +152,14 @@ export default defineConfig({
             }
             return 'pages';
           }
-=======
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
     minify: 'terser',
+    target: 'es2020',
+    cssTarget: 'chrome80',
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -223,7 +182,6 @@ export default defineConfig({
             }
             return 'vendor-misc';
           }
-          
           // App chunks
           if (id.includes('/app/ai-')) {
             return 'ai-services';
@@ -234,52 +192,16 @@ export default defineConfig({
           if (id.includes('/app/components/')) {
             return 'components';
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, './src'),
-    },
-  },
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-  build: {
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-<<<<<<< HEAD
-          router: ['react-router-dom'],
-=======
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          router: ['react-router-dom'],
-          utils: ['clsx', 'tailwind-merge']
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-=======
-          return null;
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
-=======
           return 'app';
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         },
         chunkFileNames: 'assets/[name]-[hash].js'
         entryFileNames: 'assets/[name]-[hash].js'
         assetFileNames: (assetInfo) => {
-<<<<<<< HEAD
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];,
           if (/\.(css)$/.test(assetInfo.name)) {,
-=======
           const ext = assetInfo.name?.split('.').pop();
           if (/\.(css)$/i.test(assetInfo.name || '')) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             return `assets/css/[name]-[hash].${ext}`;
           }
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
@@ -291,9 +213,7 @@ export default defineConfig({
           return `assets/[name]-[hash].${ext}`;
         }
       }
-    },
-<<<<<<< HEAD
-  },
+    }},
   server: {,
     port: 3000;
     host: true;
@@ -308,55 +228,28 @@ export default defineConfig({
   },
   css: {,
     postcss: './postcss.config.js',
-=======
     terserOptions: {
       compress: {
         drop_console: true,
-<<<<<<< HEAD
         drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2,
       },
       mangle: {
         safari10: true,
+        properties: {
+          regex: /^_/
+        }
       },
       format: {
         comments: false,
-<<<<<<< HEAD
-=======
-        drop_debugger: true
-      },
-      mangle: {
-        safari10: true
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
-      },
-      format: {
-        comments: false
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f409
+        ascii_only: true
       }
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
     cssCodeSplit: true,
-<<<<<<< HEAD
     assetsInlineLimit: 4096,
-  },
-  server: {
-    port: 3000,
-    open: true,
-  },
-  preview: {
-    port: 4173,
-    open: true,
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
-  css: {
-    devSourcemap: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-=======
-    assetsInlineLimit: 4096
   },
   server: {
     port: 3000,
@@ -372,5 +265,4 @@ export default defineConfig({
   css: {
     devSourcemap: true
   }
->>>>>>> cursor/analyze-improve-and-deploy-application-f5c8
 });

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -51,7 +50,6 @@ const contact =
   website: 'https://ziontechgroup.com'}}
 export const realServicesQ32025: Q3Service[] = [,
   {  reviews?: number;
-=======
   i,
   d: string;
   nam,
@@ -89,7 +87,6 @@ const contact =
 export const,
   realServicesQ32025: Q3Service[] = [,
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 const contact =
   mobil,
@@ -102,7 +99,6 @@ const contact =
   e: 'http,
   s://ziontechgroup.com'
 const contact =
-<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   address: '364 E Main St STE 1008 Middletown DE 19709'
 // const contact = {;
@@ -110,7 +106,6 @@ const contact =
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup && ziontechgroup.com',
-=======
   mobil,
   e: '+1 302 464 0950',
   addres,
@@ -120,31 +115,25 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup && ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 };
 export const,
-  realServicesQ32025: Q3Service[] = [,
-}
-<<<<<<< HEAD
+  realServicesQ32025: Q3Service[] = [}
 export const realServicesQ32025: Q3Service[] = [,
     id: 'subscription-analytics-revenue-optimization',
-    name: 'Subscription Analytics & Revenue Optimization',
-}
+    name: 'Subscription Analytics & Revenue Optimization'}
   address: '364 E Main St STE 1008 Middletown DE 19709',
 export const realServicesQ32025: Q3Service[] = [,
   {  reviews?: number;
 }
 const contact =
-  mobile: '+1 302 464 0950',
-};
+  mobile: '+1 302 464 0950'};
 export const realServicesQ32025: Q3Service[] = [,
     tagline:,
       'Churn insights, cohort analysis, and pricing experiments for SaaS growth'
     price: '$599',
     period: '/month',
     description:,
-=======
 export const,
   realServicesQ32025: Q3Service[] = [,
     i,
@@ -173,7 +162,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'We implement and operate a revenue analytics stack that surfaces churn drivers, LTV/CAC ratios, cohort trends, and pricing experiment outcomes. Includes instrumentation templates and weekly executive reports.'
     feature,
   s: [;
@@ -184,13 +172,11 @@ export const,
       'Revenue forecasting models'
       'Weekly executive summaries'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/subscription-analytics-revenue-optimization',
-=======
     popula,
   r: true;
     ico,
@@ -202,7 +188,6 @@ export const,
     lin,
   k: 'http,
   s://ziontechgroup.com/services/subscription-analytics-revenue-optimization'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Churn and retention analysis',
       'Cohort and funnel dashboards',
       'Price testing and packaging experiments',
@@ -223,7 +208,6 @@ export const,
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     link: 'https://ziontechgroup && ziontechgroup.com/services/subscription-analytics-revenue-optimization',
@@ -370,7 +354,6 @@ export const,
     customers: 10;
     rating: 4 && 4.8;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -476,8 +459,7 @@ export const,
   contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_inf,
-  o: contact,
-  }
+  o: contact}
     i,
   d: 'digital - product - commerce - stack'
     nam,
@@ -531,8 +513,7 @@ export const,
   s: 18,
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_inf,
-  o: contact,
-  }
+  o: contact}
     i,
   d: 'wordpress - internal - linking - automation'
     nam,
@@ -601,8 +582,7 @@ export const,
   contactInfo: contact;
     // @ts - expect - error augment common shape for UI components that expect contact_info;
     contact_inf,
-  o: contact,
-  }
+  o: contact}
     nam,
   e: 'Ecommerce Reviews & UGC Activation'
     taglin,
@@ -652,14 +632,11 @@ export const,
   g: 4 && 4.8,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Reviews widget integration',
       'Email / SMS post - purchase triggers',
       'Photo / video UGC capture',
       'Moderation and syndication',
-      'Conversion impact reporting',
-    ],
-<<<<<<< HEAD
+      'Conversion impact reporting'],
     icon: '',
     id: 'subscription-analytics-revenue-optimization', name: 'Subscription Analytics & Revenue Optimization',
     tagline: 'Churn insights, cohort analysis, and pricing experiments for SaaS growth',
@@ -693,7 +670,6 @@ export const,
     price: '$1,200'
     period: '/project',
     description:,
-=======
     ico,
   n: '',
     i,
@@ -709,8 +685,7 @@ export const,
     feature,
   s: [;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact,
-  }
+  contactInfo: contact}
     targetAudienc,
   e: 'SaaS startups, PLG companies, finance and growth teams'
     trialDay,
@@ -740,8 +715,7 @@ export const,
     review,
   s: 31;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact,
-  }
+  contactInfo: contact}
     i,
   d: 'digital-product-commerce-stack'
     nam,
@@ -755,14 +729,12 @@ export const,
   d: '/project'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'
       'Reviews widget integration',
       'Email / SMS post - purchase triggers',
       'Photo / video UGC capture',
       'Moderation and syndication',
-      'Conversion impact reporting',
-    ],
+      'Conversion impact reporting'],
     ico,
   n: '',
     feature,
@@ -774,7 +746,6 @@ export const,
       'Sales analytics and email hooks'
       '1-week launch plan'
     ]
-<<<<<<< HEAD
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -801,7 +772,6 @@ export const,
     price: '$299',
     period: '/month',
     description:,
-=======
     ico,
   n: '',
     colo,
@@ -838,8 +808,7 @@ export const,
     review,
   s: 18;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact,
-  }
+  contactInfo: contact}
     i,
   d: 'wordpress-internal-linking-automation'
     nam,
@@ -852,7 +821,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'We deploy and tune internal linking automation for WordPress sites, calibrate anchor text, and surface orphan pages. Includes monthly SEO structure audits and CTR uplift experiments.'
     feature,
   s: [;
@@ -862,7 +830,6 @@ export const,
       'Reporting and recommendations'
       'Sitemap and crawl improvements'
     ]
-<<<<<<< HEAD
     icon: ''
     color: 'from-purple-600 to-pink-600'
     textColor: 'text-purple-200',
@@ -878,8 +845,7 @@ export const,
     useCases: [
       'Boost organic traffic',
       'Fix site structure',
-      'Improve crawl and CTR',
-    ],
+      'Improve crawl and CTR'],
     roi: '525% organic uplift in 812 weeks on content libraries.',
     competitors: ['Link Whisper', 'Internal Link Juicer']
     customers: 30;
@@ -894,7 +860,6 @@ export const,
     price: '$999',
     period: '/project',
     description:,
-=======
     ico,
   n: '',
     colo,
@@ -937,8 +902,7 @@ export const,
     review,
   s: 22;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact,
-  }
+  contactInfo: contact}
     i,
   d: 'reviews-ugc-activation'
     nam,
@@ -951,7 +915,6 @@ export const,
   d: '/project'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'We implement reviews and UGC collection across your storefront with on-brand widgets, post-purchase triggers, and moderation pipelines. Includes KPI dashboards for conversion lift.'
     feature,
   s: [;
@@ -961,7 +924,6 @@ export const,
       'Moderation and syndication'
       'Conversion impact reporting'
     ]
-<<<<<<< HEAD
     icon: '';
     color: 'from-amber-600 to-rose-600'
     textColor: 'text-amber-200'
@@ -981,8 +943,7 @@ export const,
     reviews: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo;,
     contactInfo: contact;
-  },];    contactInfo: contact;
-=======
+  }];    contactInfo: contact;
     ico,
   n: '';
     colo,
@@ -1019,17 +980,13 @@ export const,
     review,
   s: 12;
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact,
-  },];    contactInf,
-  o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  contactInfo: contact}];    contactInf,
+  o: contact}
 ];
       'Churn and retention analysisCohort and funnel dashboards',
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -1050,7 +1007,6 @@ export const,
     customers: 24;
     rating: 4.9;
     reviews: 31;
-=======
     popula,
   r: true,
     ico,
@@ -1065,8 +1021,7 @@ export const,
     marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     contactInf,
-  o: contact,
-  },
+  o: contact},
     marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudienc,
@@ -1091,15 +1046,12 @@ export const,
   g: 4.9,
     review,
   s: 31,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   },
     i,
   d: 'digital-product-commerce-stack',
     nam,
-  e: 'Digital Product Commerce Stack',
-    ],
-<<<<<<< HEAD
+  e: 'Digital Product Commerce Stack'],
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -1111,7 +1063,6 @@ export const,
     customers: 12;
     rating: 4.8;
     reviews: 18;
-=======
     ico,
   n: '',
     colo,
@@ -1135,15 +1086,12 @@ export const,
   g: 4.8,
     review,
   s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   },
     i,
   d: 'wordpress-internal-linking-automation',
     nam,
-  e: 'WordPress Internal Linking Automation',
-    ],
-<<<<<<< HEAD
+  e: 'WordPress Internal Linking Automation'],
     icon: '',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-200',
@@ -1156,7 +1104,6 @@ export const,
     customers: 30;
     rating: 4.7;
     reviews: 22;
-=======
     ico,
   n: '',
     colo,
@@ -1182,15 +1129,12 @@ export const,
   g: 4.7,
     review,
   s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   },
     i,
   d: 'reviews-ugc-activation',
     nam,
-  e: 'Ecommerce Reviews & UGC Activation',
-    ],
-<<<<<<< HEAD
+  e: 'Ecommerce Reviews & UGC Activation'],
     icon: ''
     color: 'from-amber-600 to-rose-600'
     textColor: 'text-amber-200'
@@ -1202,7 +1146,6 @@ export const,
     customers: 10;
     rating: 4.8;
     reviews: 12;
-=======
     ico,
   n: '',
     colo,
@@ -1226,7 +1169,6 @@ export const,
   g: 4.8,
     review,
   s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
   }
 ];
@@ -1253,7 +1195,6 @@ export const,
       'Price testing and packaging experimentsRevenue leakage detection',
       'Revenue forecasting modelsWeekly executive summaries'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -1271,7 +1212,6 @@ export const,
     technology: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'],
     integrations: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
     useCases: [,
-=======
     popula,
   r: true,
     ico,
@@ -1286,8 +1226,7 @@ export const,
     marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     contactInf,
-  o: contact,
-  },
+  o: contact},
     marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',
     targetAudienc,
@@ -1306,12 +1245,9 @@ export const,
   s: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'],
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Reduce churn',
       'Price optimization',
-      'Board-ready revenue KPIs',
-    ],
-<<<<<<< HEAD
+      'Board-ready revenue KPIs'],
     roi: '310% ARR lift from churn reduction and pricing wins.',
     competitors: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],
     technology: ['dbtSnowflake/BigQuery', 'Segment/GA4 Python'],
@@ -1329,7 +1265,6 @@ export const,
     contactInfo: contact;
     contactInfo: contact;
     contactInfo: contact;
-=======
     ro,
   i: '310% ARR lift from churn reduction and pricing wins.',
     competitor,
@@ -1361,9 +1296,7 @@ export const,
     contactInf,
   o: contact,
     contactInf,
-  o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  o: contact},
     i,
   d: 'digital-product-commerce-stack',
     nam,
@@ -1398,7 +1331,6 @@ export const,
       'EU/US tax and compliance guidanceStorefront templates and checkout',
       'Sales analytics and email hooks1-week launch plan'
     ],
-<<<<<<< HEAD
     icon: ''
     color: 'from-cyan-600 to-blue-700'
     textColor: 'text-cyan-300',
@@ -1427,7 +1359,6 @@ export const,
     contactInfo: contact;
     contactInfo: contact;
     contactInfo: contact;
-=======
     ico,
   n: '',
     colo,
@@ -1482,9 +1413,7 @@ export const,
     contactInf,
   o: contact,
     contactInf,
-  o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  o: contact},
     i,
   d: 'wordpress-internal-linking-automation',
     nam,
@@ -1518,7 +1447,6 @@ export const,
       'Click-through rate experimentsReporting and recommendations',
       'Sitemap and crawl improvements'
     ],
-<<<<<<< HEAD
     icon: ''
     color: 'from-purple-600 to-pink-600'
     textColor: 'text-purple-200',
@@ -1534,7 +1462,6 @@ export const,
     technology: ['WordPress', 'GA4', 'Looker Studio'],
     integrations: ['Link Whisper', 'Yoast/RankMath', 'Search Console'],
     useCases: [,
-=======
     ico,
   n: '',
     colo,
@@ -1566,12 +1493,9 @@ export const,
   s: ['Link Whisper', 'Yoast/RankMath', 'Search Console'],
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Boost organic traffic',
       'Fix site structure',
-      'Improve crawl and CTR',
-    ],
-<<<<<<< HEAD
+      'Improve crawl and CTR'],
     roi: '525% organic uplift in 812 weeks on content libraries.',
     competitors: ['Link Whisper', 'Internal Link Juicer'],
     technology: ['WordPressGA4', 'Looker Studio'],
@@ -1586,7 +1510,6 @@ export const,
     contactInfo: contact;
     contactInfo: contact;
     contactInfo: contact;
-=======
     ro,
   i: '525% organic uplift in 812 weeks on content libraries.',
     competitor,
@@ -1612,9 +1535,7 @@ export const,
     contactInf,
   o: contact,
     contactInf,
-  o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  o: contact},
     i,
   d: 'reviews-ugc-activation',
     nam,
@@ -1648,7 +1569,6 @@ export const,
       'Photo/video UGC captureModeration and syndication',
       'Conversion impact reporting'
     ],
-<<<<<<< HEAD
     icon: ''
     color: 'from-amber-600 to-rose-600'
     textColor: 'text-amber-200'
@@ -1676,9 +1596,8 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo;
     contactInfo: contact;
     contactInfo: contact;
-  },];    contactInfo: contact;
+  }];    contactInfo: contact;
     contactInfo: contact;
-=======
     ico,
   n: '',
     colo,
@@ -1731,13 +1650,10 @@ export const,
     // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact,
     contactInf,
-  o: contact,
-  },];    contactInf,
+  o: contact}];    contactInf,
   o: contact;
     contactInf,
-  o: contact,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  o: contact}
 ];
   }
 ];
@@ -1773,7 +1689,7 @@ i,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com',} export const,
+  s://ziontechgroup.com'} export const,
   realServicesQ32025: Q3Service[] = [ { reviews?: number } const contact = ' mobil,
   e: '+1 302 464 0950'' emai,
   l: 'kleber@ziontechgroup.com'' addres,
@@ -1861,7 +1777,7 @@ i,
   g: 4 && 4.8, review,
   s: 18, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact // @ts - expect - error augment common shape for UI components that expect contact_info; contact_inf,
-  o: contact, } ' i,
+  o: contact} ' i,
   d: 'digital - product - commerce - stack'' nam,
   e: 'Digital Product Commerce Stack',' taglin,
   e: 'End - to - end setup for selling downloads, licenses, and subscriptions'' pric,
@@ -1887,7 +1803,7 @@ i,
   s: 12; ratin,
   g: 4 && 4.8, review,
   s: 18, // @ts - expect - error augment common shape for UI components that expect contact_info; contact_inf,
-  o: contact, } ' i,
+  o: contact} ' i,
   d: 'wordpress - internal - linking - automation' ' nam,
   e: 'WordPress Internal Linking Automation'' taglin,
   e: 'AI - guided internal links that improve SEO structure and topical authority'' pric,
@@ -1921,7 +1837,7 @@ i,
   g: 4 && 4.7, review,
   s: 22, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact // @ts - expect - error augment common shape for UI components that expect contact_info; contact_inf,
-  o: contact, } ' nam,
+  o: contact} ' nam,
   e: 'Ecommerce Reviews & UGC Activation'' taglin,
   e: 'Deploy reviews and UGC workflows that increase trust and conversion'' pric,
   e: '$999' ' perio,
@@ -1945,7 +1861,7 @@ i,
   s: ['YotpoJudge.meLooxStamped.io']; customer,
   s: 10; ratin,
   g: 4 && 4.8, review,
-  s: 12, ' 'Reviews widget integration',' 'Email / SMS post - purchase triggers',' 'Photo / video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting', ],' ico,
+  s: 12, ' 'Reviews widget integration',' 'Email / SMS post - purchase triggers',' 'Photo / video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting'],' ico,
   n: '⭐', ' i,
   d: 'subscription-analytics-revenue-optimization', nam,
   e: 'Subscription Analytics & Revenue Optimization',' taglin,
@@ -1975,7 +1891,7 @@ i,
   e:' 'End-to-end setup for selling downloads, licenses, and subscriptions'' pric,
   e: '$1,200'' perio,
   d: '/project' descriptio,
-  n:' 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'' 'Reviews widget integration',' 'Email / SMS post - purchase triggers',' 'Photo / video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting', ],' ico,
+  n:' 'We stand up a production-grade commerce stack for digital products with subscriptions, tax handling, license keys, refunds, and analytics. Includes storefront templates and payment integrations.'' 'Reviews widget integration',' 'Email / SMS post - purchase triggers',' 'Photo / video UGC capture',' 'Moderation and syndication',' 'Conversion impact reporting'],' ico,
   n: '⭐', feature,
   s: [' 'Payments, taxes, and invoicing'' 'License keys and subscriptions'' 'EU/US tax and compliance guidance'' 'Storefront templates and checkout'' 'Sales analytics and email hooks'' '1-week launch plan' ]' ico,
   n: '🛒'' colo,
@@ -2049,7 +1965,7 @@ i,
   s: 10,
   rating: 4.8,
   reviews: 12 // @ts-expect-error augment common shape for UI components that expect contactInfo,
-  contactInfo: contact },]; contactInf,
+  contactInfo: contact }]; contactInf,
   o: contact } ]; ' 'Churn and retention analysisCohort and funnel dashboards',' 'Price testing and packaging experimentsRevenue leakage detection',' 'Revenue forecasting modelsWeekly executive summaries' ], popula,
   r: true,' ico,
   n: '📊',' colo,
@@ -2058,7 +1974,7 @@ i,
   k: 'http,
   s://ziontechgroup.com/services/subscription-analytics-revenue-optimization',' marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.', contactInf,
-  o: contact, },' marketPositio,
+  o: contact},' marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',' targetAudienc,
   e: 'SaaS startups, PLG companies, finance and growth teams', trialDay,
   s: 14,' setupTim,
@@ -2072,7 +1988,7 @@ i,
   g: 4.9, review,
   s: 31, // @ts-expect-error augment common shape for UI components that expect contactInfo }, ' i,
   d: 'digital-product-commerce-stack',' nam,
-  e: 'Digital Product Commerce Stack', ],' ico,
+  e: 'Digital Product Commerce Stack'],' ico,
   n: '🛒',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,
@@ -2086,7 +2002,7 @@ i,
   g: 4.8, review,
   s: 18, // @ts-expect-error augment common shape for UI components that expect contactInfo }, ' i,
   d: 'wordpress-internal-linking-automation',' nam,
-  e: 'WordPress Internal Linking Automation', ],' ico,
+  e: 'WordPress Internal Linking Automation'],' ico,
   n: '🔗',' colo,
   r: 'from-purple-600 to-pink-600',' textColo,
   r: 'text-purple-200',' lin,
@@ -2101,7 +2017,7 @@ i,
   g: 4.7, review,
   s: 22, // @ts-expect-error augment common shape for UI components that expect contactInfo }, ' i,
   d: 'reviews-ugc-activation',' nam,
-  e: 'Ecommerce Reviews & UGC Activation', ],' ico,
+  e: 'Ecommerce Reviews & UGC Activation'],' ico,
   n: '⭐',' colo,
   r: 'from-amber-600 to-rose-600',' textColo,
   r: 'text-amber-200',' lin,
@@ -2129,7 +2045,7 @@ i,
   k: 'http,
   s://ziontechgroup.com/services/subscription-analytics-revenue-optimization',' marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.', contactInf,
-  o: contact, },' marketPositio,
+  o: contact},' marketPositio,
   n: 'Comparable to ProfitWell/ChartMogul with added hands-on growth engineering.',' targetAudienc,
   e: 'SaaS startups, PLG companies, finance and growth teams', trialDay,
   s: 14,' setupTim,
@@ -2138,7 +2054,7 @@ i,
   e: true,' technolog,
   y: ['dbt', 'Snowflake/BigQuery', 'Segment/GA4', 'Python'],' integration,
   s: ['Stripe', 'Paddle', 'Chargebee', 'Lemon Squeezy'], useCase,
-  s: [' 'Reduce churn',' 'Price optimization',' 'Board-ready revenue KPIs', ],' ro,
+  s: [' 'Reduce churn',' 'Price optimization',' 'Board-ready revenue KPIs'],' ro,
   i: '3–10% ARR lift from churn reduction and pricing wins.',' competitor,
   s: ['ProfitWell Metrics', 'ChartMogul', 'Baremetrics'],' technolog,
   y: ['dbtSnowflake/BigQuery', 'Segment/GA4Python'],' integration,
@@ -2222,7 +2138,7 @@ i,
   e: true,' technolog,
   y: ['WordPress', 'GA4', 'Looker Studio'],' integration,
   s: ['Link Whisper', 'Yoast/RankMath', 'Search Console'], useCase,
-  s: [' 'Boost organic traffic',' 'Fix site structure',' 'Improve crawl and CTR', ],' ro,
+  s: [' 'Boost organic traffic',' 'Fix site structure',' 'Improve crawl and CTR'],' ro,
   i: '5–25% organic uplift in 8–12 weeks on content libraries.',' competitor,
   s: ['Link Whisper', 'Internal Link Juicer'],' technolog,
   y: ['WordPressGA4', 'Looker Studio'],' integration,
@@ -2274,6 +2190,6 @@ i,
   g: 4.8, review,
   s: 12, // @ts-expect-error augment common shape for UI components that expect contactInfo,
   contactInfo: contact,
-  contactInfo: contact, },]; contactInf,
+  contactInfo: contact}]; contactInf,
   o: contact,
   contactInfo: contact } ]; } ]; '

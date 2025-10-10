@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
@@ -19,10 +18,8 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     icon: '',
     marketPrice: '$8,000-15,000/month'
     benefits: [}
-=======
 export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Access to quantum computing power'
       'Hybrid classical-quantum processing'
       'Future-proof cloud infrastructure'
@@ -36,12 +33,10 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Climate simulation'
     ]
   }
-<<<<<<< HEAD
     id: 'ai-powered-devops-platform',
     name: 'AI-Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation',
     description:,
-=======
     i,
   d: 'ai-powered-devops-platform'
     nam,
@@ -50,7 +45,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent DevOps automation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.'
     pric,
   e: '$2,999'
@@ -65,13 +59,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Smart resource optimization'
       'Continuous learning algorithms'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'DevOps & AI',
     icon: '',
     marketPrice: '$4,000-7,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -82,30 +74,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$4,000-7,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '90% faster deployment cycles'
       'Intelligent infrastructure management'
       'Predictive scaling'
       'Automated incident resolution'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Continuous deployment'
       'Infrastructure automation'
       'Testing automation',
-      'Monitoring and alerting',
-    ],
-  }
-<<<<<<< HEAD
+      'Monitoring and alerting']}
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum-resistant security solutions',
     description:,
-=======
     i,
   d: 'quantum-cybersecurity-platform'
     nam,
@@ -114,7 +98,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum-resistant security solutions'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.'
     pric,
   e: '$5,499'
@@ -129,13 +112,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Future-proof security'
       'Real-time threat analysis'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Quantum Security',
     icon: '',
     marketPrice: '$7,000-12,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -146,30 +127,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7,000-12,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-resistant security'
       'Future-proof protection'
       'Advanced threat detection'
       'Military-grade security'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Government security'
       'Financial institutions'
       'Healthcare data protection',
-      'Critical infrastructure',
-    ],
-  }
-<<<<<<< HEAD
+      'Critical infrastructure']}
     id: 'edge-computing-orchestration-platform',
     name: 'Edge Computing Orchestration Platform',
     tagline: 'Intelligent edge computing management',
     description:,
-=======
     i,
   d: 'edge-computing-orchestration-platform'
     nam,
@@ -178,7 +151,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent edge computing management'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.'
     pric,
   e: '$3,999'
@@ -193,13 +165,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Edge resource management'
       'Distributed data processing'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Edge Computing',
     icon: '',
     marketPrice: '$5,000-8,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -210,30 +180,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$5,000-8,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ultra-low latency processing'
       'Distributed computing power'
       'Edge AI capabilities'
       'Scalable edge infrastructure'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IoT applications'
       'Real-time analytics'
       'Edge AI processing',
-      'Distributed computing',
-    ],
-  }
-<<<<<<< HEAD
+      'Distributed computing']}
     id: 'quantum-database-platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum-powered data management',
     description:,
-=======
     i,
   d: 'quantum-database-platform'
     nam,
@@ -242,7 +204,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum-powered data management'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.'
     pric,
   e: '$4,999'
@@ -257,13 +218,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Quantum data analytics'
       'Hybrid quantum-classical storage'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Quantum Database',
     icon: '',
     marketPrice: '$6,000-10,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -274,30 +233,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$6,000-10,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '1000x faster database queries'
       'Quantum data compression'
       'Advanced search capabilities'
       'Future-proof data management'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Big data analytics'
       'Real-time search'
       'Data warehousing',
-      'Business intelligence',
-    ],
-  }
-<<<<<<< HEAD
+      'Business intelligence']}
     id: 'ai-powered-network-security',
     name: 'AI-Powered Network Security',
     tagline: 'Intelligent network protection',
     description:,
-=======
     i,
   d: 'ai-powered-network-security'
     nam,
@@ -306,7 +257,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent network protection'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.'
     pric,
   e: '$2,499'
@@ -321,13 +271,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Automated threat response'
       'Predictive security analytics'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Network Security',
     icon: '',
     marketPrice: '$3,500-6,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -338,30 +286,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$3,500-6,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Proactive threat detection'
       'Automated security response'
       'Intelligent network protection'
       'Reduced false positives'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise network security'
       'Cloud security'
       'IoT security',
-      'Remote work security',
-    ],
-  }
-<<<<<<< HEAD
+      'Remote work security']}
     id: 'quantum-internet-protocols',
     name: 'Quantum Internet Protocols',
     tagline: 'Next-generation quantum networking',
     description:,
-=======
     i,
   d: 'quantum-internet-protocols'
     nam,
@@ -370,7 +310,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Next-generation quantum networking'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.'
     pric,
   e: '$7,999'
@@ -385,13 +324,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Quantum network security'
       'Quantum internet standards'
     ]
-<<<<<<< HEAD
     popular: false;
     category: 'Quantum Internet',
     icon: '',
     marketPrice: '$10,000-20,000/month'
     benefits: [;
-=======
     popula,
   r: false;
     categor,
@@ -402,30 +339,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$10,000-20,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Unbreakable quantum communication'
       'Quantum network optimization'
       'Future internet protocols'
       'Quantum internet infrastructure'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Government communications'
       'Financial networks'
       'Research networks',
-      'Quantum internet backbone',
-    ],
-  }
-<<<<<<< HEAD
+      'Quantum internet backbone']}
     id: 'ai-powered-infrastructure-monitoring',
     name: 'AI-Powered Infrastructure Monitoring',
     tagline: 'Intelligent infrastructure oversight',
     description:,
-=======
     i,
   d: 'ai-powered-infrastructure-monitoring'
     nam,
@@ -434,7 +363,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent infrastructure oversight'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.'
     pric,
   e: '$1,999'
@@ -449,13 +377,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Automated monitoring'
       'Resource optimization'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Infrastructure Monitoring',
     icon: '',
     marketPrice: '$3,000-5,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -466,30 +392,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$3,000-5,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Proactive issue detection'
       'Automated monitoring'
       'Performance optimization'
       'Reduced downtime'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Server monitoring'
       'Network monitoring'
       'Application monitoring',
-      'Cloud infrastructure',
-    ],
-  }
-<<<<<<< HEAD
+      'Cloud infrastructure']}
     id: 'quantum-storage-platform',
     name: 'Quantum Storage Platform',
     tagline: 'Quantum-accelerated data storage',
     description:,
-=======
     i,
   d: 'quantum-storage-platform'
     nam,
@@ -498,7 +416,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum-accelerated data storage'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.'
     pric,
   e: '$5,499'
@@ -513,13 +430,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Hybrid quantum-classical storage'
       'Quantum storage security'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Quantum Storage',
     icon: '',
     marketPrice: '$7,000-12,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -530,30 +445,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7,000-12,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '100x data compression'
       'Quantum data encoding'
       'Advanced storage optimization'
       'Future-proof storage technology'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Big data storage'
       'Data archiving'
       'Cloud storage',
-      'Data backup',
-    ],
-  }
-<<<<<<< HEAD
+      'Data backup']}
     id: 'ai-powered-disaster-recovery',
     name: 'AI-Powered Disaster Recovery',
     tagline: 'Intelligent recovery automation',
     description:,
-=======
     i,
   d: 'ai-powered-disaster-recovery'
     nam,
@@ -562,7 +469,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent recovery automation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.'
     pric,
   e: '$3,499'
@@ -577,13 +483,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Automated testing'
       'Backup optimization'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Disaster Recovery',
     icon: '',
     marketPrice: '$4,500-7,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -594,32 +498,24 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$4,500-7,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated recovery procedures'
       'Intelligent backup management'
       'Predictive recovery planning'
       'Reduced recovery time'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data center recovery'
       'Cloud recovery'
       'Application recovery',
-      'Business continuity',
-    ],
-  }
+      'Business continuity']}
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Quantum Cloud',
     icon: '',
     marketPrice: '$8,000-15,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -630,29 +526,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$8,000-15,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Access to quantum computing power'
       'Hybrid classical-quantum processing'
       'Future-proof cloud infrastructure'
       'Quantum advantage in the cloud'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Scientific research computing'
       'Financial modeling'
       'Drug discovery',
-      'Climate simulation',
-    ],
-  }
+      'Climate simulation']}
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
   }
 ];
-<<<<<<< HEAD
 export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     name: 'Quantum Cloud Infrastructure Platform',
     tagline: 'Next-generation quantum cloud computing',
@@ -672,10 +561,8 @@ export const real2036ITServices = [{id: 'quantum-cloud-infrastructure-platform',
     icon: '',
     marketPrice: '$8,000-15,000/month'
     benefits: [}
-=======
 export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Access to quantum computing power'
       'Hybrid classical-quantum processing'
       'Future-proof cloud infrastructure'
@@ -689,12 +576,10 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Climate simulation'
     ]
   }
-<<<<<<< HEAD
     id: 'ai-powered-devops-platform',
     name: 'AI-Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation',
     description:,
-=======
     i,
   d: 'ai-powered-devops-platform'
     nam,
@@ -703,7 +588,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent DevOps automation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced DevOps platform with AI-powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.'
     pric,
   e: '$2,999'
@@ -718,13 +602,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Smart resource optimization'
       'Continuous learning algorithms'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'DevOps & AI',
     icon: '',
     marketPrice: '$4,000-7,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -735,30 +617,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$4,000-7,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '90% faster deployment cycles'
       'Intelligent infrastructure management'
       'Predictive scaling'
       'Automated incident resolution'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Continuous deployment'
       'Infrastructure automation'
       'Testing automation',
-      'Monitoring and alerting',
-    ],
-  }
-<<<<<<< HEAD
+      'Monitoring and alerting']}
     id: 'quantum-cybersecurity-platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum-resistant security solutions',
     description:,
-=======
     i,
   d: 'quantum-cybersecurity-platform'
     nam,
@@ -767,7 +641,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum-resistant security solutions'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced cybersecurity platform with quantum-resistant algorithms, quantum threat detection, and future-proof security protocols. Features quantum encryption, quantum key distribution, and quantum-resistant cryptography.'
     pric,
   e: '$5,499'
@@ -782,13 +655,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Future-proof security'
       'Real-time threat analysis'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Quantum Security',
     icon: '',
     marketPrice: '$7,000-12,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -799,30 +670,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7,000-12,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-resistant security'
       'Future-proof protection'
       'Advanced threat detection'
       'Military-grade security'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Government security'
       'Financial institutions'
       'Healthcare data protection',
-      'Critical infrastructure',
-    ],
-  }
-<<<<<<< HEAD
+      'Critical infrastructure']}
     id: 'edge-computing-orchestration-platform',
     name: 'Edge Computing Orchestration Platform',
     tagline: 'Intelligent edge computing management',
     description:,
-=======
     i,
   d: 'edge-computing-orchestration-platform'
     nam,
@@ -831,7 +694,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent edge computing management'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.'
     pric,
   e: '$3,999'
@@ -846,13 +708,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Edge resource management'
       'Distributed data processing'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Edge Computing',
     icon: '',
     marketPrice: '$5,000-8,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -863,30 +723,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$5,000-8,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ultra-low latency processing'
       'Distributed computing power'
       'Edge AI capabilities'
       'Scalable edge infrastructure'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'IoT applications'
       'Real-time analytics'
       'Edge AI processing',
-      'Distributed computing',
-    ],
-  }
-<<<<<<< HEAD
+      'Distributed computing']}
     id: 'quantum-database-platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum-powered data management',
     description:,
-=======
     i,
   d: 'quantum-database-platform'
     nam,
@@ -895,7 +747,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum-powered data management'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum database platform providing quantum-accelerated queries, quantum data compression, and quantum-optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.'
     pric,
   e: '$4,999'
@@ -910,13 +761,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Quantum data analytics'
       'Hybrid quantum-classical storage'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Quantum Database',
     icon: '',
     marketPrice: '$6,000-10,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -927,30 +776,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$6,000-10,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '1000x faster database queries'
       'Quantum data compression'
       'Advanced search capabilities'
       'Future-proof data management'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Big data analytics'
       'Real-time search'
       'Data warehousing',
-      'Business intelligence',
-    ],
-  }
-<<<<<<< HEAD
+      'Business intelligence']}
     id: 'ai-powered-network-security',
     name: 'AI-Powered Network Security',
     tagline: 'Intelligent network protection',
     description:,
-=======
     i,
   d: 'ai-powered-network-security'
     nam,
@@ -959,7 +800,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent network protection'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced network security platform with AI-powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.'
     pric,
   e: '$2,499'
@@ -974,13 +814,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Automated threat response'
       'Predictive security analytics'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Network Security',
     icon: '',
     marketPrice: '$3,500-6,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -991,30 +829,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$3,500-6,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Proactive threat detection'
       'Automated security response'
       'Intelligent network protection'
       'Reduced false positives'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Enterprise network security'
       'Cloud security'
       'IoT security',
-      'Remote work security',
-    ],
-  }
-<<<<<<< HEAD
+      'Remote work security']}
     id: 'quantum-internet-protocols',
     name: 'Quantum Internet Protocols',
     tagline: 'Next-generation quantum networking',
     description:,
-=======
     i,
   d: 'quantum-internet-protocols'
     nam,
@@ -1023,7 +853,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Next-generation quantum networking'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.'
     pric,
   e: '$7,999'
@@ -1038,13 +867,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Quantum network security'
       'Quantum internet standards'
     ]
-<<<<<<< HEAD
     popular: false;
     category: 'Quantum Internet',
     icon: '',
     marketPrice: '$10,000-20,000/month'
     benefits: [;
-=======
     popula,
   r: false;
     categor,
@@ -1055,30 +882,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$10,000-20,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Unbreakable quantum communication'
       'Quantum network optimization'
       'Future internet protocols'
       'Quantum internet infrastructure'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Government communications'
       'Financial networks'
       'Research networks',
-      'Quantum internet backbone',
-    ],
-  }
-<<<<<<< HEAD
+      'Quantum internet backbone']}
     id: 'ai-powered-infrastructure-monitoring',
     name: 'AI-Powered Infrastructure Monitoring',
     tagline: 'Intelligent infrastructure oversight',
     description:,
-=======
     i,
   d: 'ai-powered-infrastructure-monitoring'
     nam,
@@ -1087,7 +906,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent infrastructure oversight'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced infrastructure monitoring platform with AI-powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.'
     pric,
   e: '$1,999'
@@ -1102,13 +920,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Automated monitoring'
       'Resource optimization'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Infrastructure Monitoring',
     icon: '',
     marketPrice: '$3,000-5,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -1119,30 +935,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$3,000-5,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Proactive issue detection'
       'Automated monitoring'
       'Performance optimization'
       'Reduced downtime'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Server monitoring'
       'Network monitoring'
       'Application monitoring',
-      'Cloud infrastructure',
-    ],
-  }
-<<<<<<< HEAD
+      'Cloud infrastructure']}
     id: 'quantum-storage-platform',
     name: 'Quantum Storage Platform',
     tagline: 'Quantum-accelerated data storage',
     description:,
-=======
     i,
   d: 'quantum-storage-platform'
     nam,
@@ -1151,7 +959,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum-accelerated data storage'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum-optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.'
     pric,
   e: '$5,499'
@@ -1166,13 +973,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Hybrid quantum-classical storage'
       'Quantum storage security'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Quantum Storage',
     icon: '',
     marketPrice: '$7,000-12,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -1183,30 +988,22 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7,000-12,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '100x data compression'
       'Quantum data encoding'
       'Advanced storage optimization'
       'Future-proof storage technology'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Big data storage'
       'Data archiving'
       'Cloud storage',
-      'Data backup',
-    ],
-  }
-<<<<<<< HEAD
+      'Data backup']}
     id: 'ai-powered-disaster-recovery',
     name: 'AI-Powered Disaster Recovery',
     tagline: 'Intelligent recovery automation',
     description:,
-=======
     i,
   d: 'ai-powered-disaster-recovery'
     nam,
@@ -1215,7 +1012,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent recovery automation'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced disaster recovery platform with AI-powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.'
     pric,
   e: '$3,499'
@@ -1230,13 +1026,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Automated testing'
       'Backup optimization'
     ]
-<<<<<<< HEAD
     popular: true;
     category: 'Disaster Recovery',
     icon: '',
     marketPrice: '$4,500-7,000/month'
     benefits: [;
-=======
     popula,
   r: true;
     categor,
@@ -1247,13 +1041,11 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$4,500-7,000/month'
     benefit,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated recovery procedures'
       'Intelligent backup management'
       'Predictive recovery planning'
       'Reduced recovery time'
     ]
-<<<<<<< HEAD
     useCases: [
 export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - platform'
     name: 'Quantum Cloud Infrastructure Platform',
@@ -1267,8 +1059,7 @@ export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - plat
       'Quantum resource management',
       'Quantum networking',
       'Quantum security protocols',
-      'Scalable quantum infrastructure',
-    ],
+      'Scalable quantum infrastructure'],
     popular: true;
     category: 'Quantum Cloud',
     icon: '',
@@ -1277,20 +1068,17 @@ export const real2036ITServices = [{id: 'quantum - cloud - infrastructure - plat
       'Access to quantum computing power',
       'Hybrid classical - quantum processing',
       'Future - proof cloud infrastructure',
-      'Quantum advantage in the cloud',
-    ],
+      'Quantum advantage in the cloud'],
     use_cases: [,
       'Scientific research computing',
       'Financial modeling',
       'Drug discovery',
-      'Climate simulation',
-    ]}
+      'Climate simulation']}
   },
     id: 'ai - powered - devops - platform',
     name: 'AI - Powered DevOps Platform',
     tagline: 'Intelligent DevOps automation',
     description: unknown;
-=======
     useCase,
   s: [,
 export const real2036ITServices = [{/* TODO: Fix JSX expression */}
@@ -1304,7 +1092,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent DevOps automation',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced DevOps platform with AI - powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',
     pric,
   e: '$2, 999',
@@ -1317,15 +1104,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Predictive infrastructure scaling',
       'Automated incident response',
       'Smart resource optimization',
-      'Continuous learning algorithms',
-    ],
-<<<<<<< HEAD
+      'Continuous learning algorithms'],
     popular: true;
     category: 'DevOps & AI',
     icon: '',
     market_price: '$4, 000 - 7, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1336,26 +1120,20 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$4, 000 - 7, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '90% faster deployment cycles',
       'Intelligent infrastructure management',
       'Predictive scaling',
-      'Automated incident resolution',
-    ],
+      'Automated incident resolution'],
     use_case,
   s: [,
       'Continuous deployment',
       'Infrastructure automation',
       'Testing automation',
-      'Monitoring and alerting',
-    ],
-  },
-<<<<<<< HEAD
+      'Monitoring and alerting']},
     id: 'quantum - cybersecurity - platform',
     name: 'Quantum Cybersecurity Platform',
     tagline: 'Quantum - resistant security solutions',
     description: unknown;
-=======
     i,
   d: 'quantum - cybersecurity - platform',
     nam,
@@ -1364,7 +1142,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum - resistant security solutions',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced cybersecurity platform with quantum - resistant algorithms, quantum threat detection, and future - proof security protocols. Features quantum encryption, quantum key distribution, and quantum - resistant cryptography.',
     pric,
   e: '$5, 499',
@@ -1377,15 +1154,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Quantum encryption',
       'Quantum key distribution',
       'Future - proof security',
-      'Real - time threat analysis',
-    ],
-<<<<<<< HEAD
+      'Real - time threat analysis'],
     popular: true;
     category: 'Quantum Security',
     icon: '',
     market_price: '$7, 000 - 12, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1396,26 +1170,20 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7, 000 - 12, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum - resistant security',
       'Future - proof protection',
       'Advanced threat detection',
-      'Military - grade security',
-    ],
+      'Military - grade security'],
     use_case,
   s: [,
       'Government security',
       'Financial institutions',
       'Healthcare data protection',
-      'Critical infrastructure',
-    ],
-  },
-<<<<<<< HEAD
+      'Critical infrastructure']},
     id: 'edge - computing - orchestration - platform',
     name: 'Edge Computing Orchestration Platform',
     tagline: 'Intelligent edge computing management',
     description: unknown;
-=======
     i,
   d: 'edge - computing - orchestration - platform',
     nam,
@@ -1424,7 +1192,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent edge computing management',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',
     pric,
   e: '$3, 999',
@@ -1437,15 +1204,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Edge AI processing',
       'Latency optimization',
       'Edge resource management',
-      'Distributed data processing',
-    ],
-<<<<<<< HEAD
+      'Distributed data processing'],
     popular: true;
     category: 'Edge Computing',
     icon: '',
     market_price: '$5, 000 - 8, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1456,26 +1220,20 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$5, 000 - 8, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Ultra - low latency processing',
       'Distributed computing power',
       'Edge AI capabilities',
-      'Scalable edge infrastructure',
-    ],
+      'Scalable edge infrastructure'],
     use_case,
   s: [,
       'IoT applications',
       'Real - time analytics',
       'Edge AI processing',
-      'Distributed computing',
-    ],
-  },
-<<<<<<< HEAD
+      'Distributed computing']},
     id: 'quantum - database - platform',
     name: 'Quantum Database Platform',
     tagline: 'Quantum - powered data management',
     description: unknown;
-=======
     i,
   d: 'quantum - database - platform',
     nam,
@@ -1484,7 +1242,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum - powered data management',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum database platform providing quantum - accelerated queries, quantum data compression, and quantum - optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',
     pric,
   e: '$4, 999',
@@ -1497,15 +1254,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Quantum search algorithms',
       'Quantum data indexing',
       'Quantum data analytics',
-      'Hybrid quantum - classical storage',
-    ],
-<<<<<<< HEAD
+      'Hybrid quantum - classical storage'],
     popular: true;
     category: 'Quantum Database',
     icon: '',
     market_price: '$6, 000 - 10, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1516,26 +1270,20 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$6, 000 - 10, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '1000x faster database queries',
       'Quantum data compression',
       'Advanced search capabilities',
-      'Future - proof data management',
-    ],
+      'Future - proof data management'],
     use_case,
   s: [,
       'Big data analytics',
       'Real - time search',
       'Data warehousing',
-      'Business intelligence',
-    ],
-  },
-<<<<<<< HEAD
+      'Business intelligence']},
     id: 'ai - powered - network - security',
     name: 'AI - Powered Network Security',
     tagline: 'Intelligent network protection',
     description: unknown;
-=======
     i,
   d: 'ai - powered - network - security',
     nam,
@@ -1544,7 +1292,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent network protection',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced network security platform with AI - powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',
     pric,
   e: '$2, 499',
@@ -1557,15 +1304,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Behavioral analysis',
       'Anomaly detection',
       'Automated threat response',
-      'Predictive security analytics',
-    ],
-<<<<<<< HEAD
+      'Predictive security analytics'],
     popular: true;
     category: 'Network Security',
     icon: '',
     market_price: '$3, 500 - 6, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1576,26 +1320,20 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$3, 500 - 6, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Proactive threat detection',
       'Automated security response',
       'Intelligent network protection',
-      'Reduced false positives',
-    ],
+      'Reduced false positives'],
     use_case,
   s: [,
       'Enterprise network security',
       'Cloud security',
       'IoT security',
-      'Remote work security',
-    ],
-  },
-<<<<<<< HEAD
+      'Remote work security']},
     id: 'quantum - internet - protocols',
     name: 'Quantum Internet Protocols',
     tagline: 'Next - generation quantum networking',
     description: unknown;
-=======
     i,
   d: 'quantum - internet - protocols',
     nam,
@@ -1604,7 +1342,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Next - generation quantum networking',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',
     pric,
   e: '$7, 999',
@@ -1617,15 +1354,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Quantum entanglement distribution',
       'Quantum network optimization',
       'Quantum network security',
-      'Quantum internet standards',
-    ],
-<<<<<<< HEAD
+      'Quantum internet standards'],
     popular: false;
     category: 'Quantum Internet',
     icon: '',
     market_price: '$10, 000 - 20, 000 / month',
     benefits: [,
-=======
     popula,
   r: false,
     categor,
@@ -1636,26 +1370,20 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$10, 000 - 20, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Unbreakable quantum communication',
       'Quantum network optimization',
       'Future internet protocols',
-      'Quantum internet infrastructure',
-    ],
+      'Quantum internet infrastructure'],
     use_case,
   s: [,
       'Government communications',
       'Financial networks',
       'Research networks',
-      'Quantum internet backbone',
-    ],
-  },
-<<<<<<< HEAD
+      'Quantum internet backbone']},
     id: 'ai - powered - infrastructure - monitoring',
     name: 'AI - Powered Infrastructure Monitoring',
     tagline: 'Intelligent infrastructure oversight',
     description: unknown;
-=======
     i,
   d: 'ai - powered - infrastructure - monitoring',
     nam,
@@ -1664,7 +1392,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent infrastructure oversight',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced infrastructure monitoring platform with AI - powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',
     pric,
   e: '$1, 999',
@@ -1677,15 +1404,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Intelligent alerting',
       'Performance optimization',
       'Automated monitoring',
-      'Resource optimization',
-    ],
-<<<<<<< HEAD
+      'Resource optimization'],
     popular: true;
     category: 'Infrastructure Monitoring',
     icon: '',
     market_price: '$3, 000 - 5, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1696,26 +1420,20 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$3, 000 - 5, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Proactive issue detection',
       'Automated monitoring',
       'Performance optimization',
-      'Reduced downtime',
-    ],
+      'Reduced downtime'],
     use_case,
   s: [,
       'Server monitoring',
       'Network monitoring',
       'Application monitoring',
-      'Cloud infrastructure',
-    ],
-  },
-<<<<<<< HEAD
+      'Cloud infrastructure']},
     id: 'quantum - storage - platform',
     name: 'Quantum Storage Platform',
     tagline: 'Quantum - accelerated data storage',
     description: unknown;
-=======
     i,
   d: 'quantum - storage - platform',
     nam,
@@ -1724,7 +1442,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Quantum - accelerated data storage',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum - optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',
     pric,
   e: '$5, 499',
@@ -1737,15 +1454,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Quantum storage algorithms',
       'Quantum data optimization',
       'Hybrid quantum - classical storage',
-      'Quantum storage security',
-    ],
-<<<<<<< HEAD
+      'Quantum storage security'],
     popular: true;
     category: 'Quantum Storage',
     icon: '',
     market_price: '$7, 000 - 12, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1756,26 +1470,20 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$7, 000 - 12, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '100x data compression',
       'Quantum data encoding',
       'Advanced storage optimization',
-      'Future - proof storage technology',
-    ],
+      'Future - proof storage technology'],
     use_case,
   s: [,
       'Big data storage',
       'Data archiving',
       'Cloud storage',
-      'Data backup',
-    ],
-  },
-<<<<<<< HEAD
+      'Data backup']},
     id: 'ai - powered - disaster - recovery',
     name: 'AI - Powered Disaster Recovery',
     tagline: 'Intelligent recovery automation',
     description: unknown;
-=======
     i,
   d: 'ai - powered - disaster - recovery',
     nam,
@@ -1784,7 +1492,6 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: 'Intelligent recovery automation',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',
     pric,
   e: '$3, 499',
@@ -1797,15 +1504,12 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
       'Automated recovery procedures',
       'Predictive recovery planning',
       'Automated testing',
-      'Backup optimization',
-    ],
-<<<<<<< HEAD
+      'Backup optimization'],
     popular: true;
     category: 'Disaster Recovery',
     icon: '',
     market_price: '$4, 500 - 7, 000 / month',
     benefits: [,
-=======
     popula,
   r: true,
     categor,
@@ -1816,20 +1520,16 @@ export const real2036ITServices = [{/* TODO: Fix JSX expression */}
   e: '$4, 500 - 7, 000 / month',
     benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated recovery procedures',
       'Intelligent backup management',
       'Predictive recovery planning',
-      'Reduced recovery time',
-    ],
+      'Reduced recovery time'],
     use_case,
   s: [,
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
-      'Business continuity',
-    ],
-  };
+      'Business continuity']};
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
   };
@@ -1839,13 +1539,10 @@ export const real2036 ITServices = [
       'Data center recovery',
       'Cloud recovery',
       'Application recovery',
-      'Business continuity',
-    ],
-  };
+      'Business continuity']};
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 export const real2036ITServices = [
-<<<<<<< HEAD
   {;
     id: 'quantum-cloud-infrastructure-platform';
     name: 'Quantum Cloud Infrastructure Platform';
@@ -1861,8 +1558,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$8,000-15,000/month';
     benefits: [,
-      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud',
-    ];,
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud'];,
     useCases: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
     ]}
@@ -1882,8 +1578,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$4,000-7,000/month';
     benefits: [,
-      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution',
-    ];,
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution'];,
     useCases: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting'
     ]}
@@ -1903,8 +1598,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security',
-    ];,
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security'];,
     useCases: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure'
     ]}
@@ -1924,8 +1618,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$5,000-8,000/month';
     benefits: [,
-      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure',
-    ];,
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure'];,
     useCases: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing'
     ]}
@@ -1945,8 +1638,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$6,000-10,000/month';
     benefits: [,
-      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management',
-    ];,
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];,
     useCases: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence'
     ]}
@@ -1966,8 +1658,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$3,500-6,000/month';
     benefits: [,
-      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives',
-    ];,
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives'];,
     useCases: [}
       'Enterprise network securityCloud securityIoT securityRemote work security'
     ]}
@@ -1987,8 +1678,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$10,000-20,000/month';
     benefits: [,
-      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure',
-    ];,
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure'];,
     useCases: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone'
     ]}
@@ -2008,8 +1698,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$3,000-5,000/month';
     benefits: [,
-      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime',
-    ];,
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime'];,
     useCases: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure'
     ]}
@@ -2029,8 +1718,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology',
-    ];,
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];,
     useCases: [}
       'Big data storageData archivingCloud storageData backup'
     ]}
@@ -2050,10 +1738,8 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$4,500-7,000/month';
     benefits: [,
-      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time',
-    ];,
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time'];,
     useCases: [}
-=======
   {/* TODO: Fix JSX expression */}
   s: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
@@ -2101,7 +1787,6 @@ export const real2036ITServices = [
   };
   {/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]}
   }
@@ -2111,7 +1796,6 @@ export const real2036ITServices = [
 ];      'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]
 export const real2036ITServices = [
-<<<<<<< HEAD
   {;
     id: 'quantum-cloud-infrastructure-platform';
     name: 'Quantum Cloud Infrastructure Platform';
@@ -2127,8 +1811,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$8,000-15,000/month';
     benefits: [,
-      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud',
-    ];,
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud'];,
     useCases: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
     ]}
@@ -2148,8 +1831,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$4,000-7,000/month';
     benefits: [,
-      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution',
-    ];,
+      '90% faster deployment cyclesIntelligent infrastructure managementPredictive scalingAutomated incident resolution'];,
     useCases: [}
       'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting'
     ]}
@@ -2169,8 +1851,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security',
-    ];,
+      'Quantum-resistant securityFuture-proof protectionAdvanced threat detectionMilitary-grade security'];,
     useCases: [}
       'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure'
     ]}
@@ -2190,8 +1871,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$5,000-8,000/month';
     benefits: [,
-      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure',
-    ];,
+      'Ultra-low latency processingDistributed computing powerEdge AI capabilitiesScalable edge infrastructure'];,
     useCases: [}
       'IoT applicationsReal-time analyticsEdge AI processingDistributed computing'
     ]}
@@ -2211,8 +1891,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$6,000-10,000/month';
     benefits: [,
-      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management',
-    ];,
+      '1000x faster database queriesQuantum data compressionAdvanced search capabilitiesFuture-proof data management'];,
     useCases: [}
       'Big data analyticsReal-time searchData warehousingBusiness intelligence'
     ]}
@@ -2232,8 +1911,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$3,500-6,000/month';
     benefits: [,
-      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives',
-    ];,
+      'Proactive threat detectionAutomated security responseIntelligent network protectionReduced false positives'];,
     useCases: [}
       'Enterprise network securityCloud securityIoT securityRemote work security'
     ]}
@@ -2253,8 +1931,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$10,000-20,000/month';
     benefits: [,
-      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure',
-    ];,
+      'Unbreakable quantum communicationQuantum network optimizationFuture internet protocolsQuantum internet infrastructure'];,
     useCases: [}
       'Government communicationsFinancial networksResearch networksQuantum internet backbone'
     ]}
@@ -2274,8 +1951,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$3,000-5,000/month';
     benefits: [,
-      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime',
-    ];,
+      'Proactive issue detectionAutomated monitoringPerformance optimizationReduced downtime'];,
     useCases: [}
       'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure'
     ]}
@@ -2295,8 +1971,7 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$7,000-12,000/month';
     benefits: [,
-      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology',
-    ];,
+      '100x data compressionQuantum data encodingAdvanced storage optimizationFuture-proof storage technology'];,
     useCases: [}
       'Big data storageData archivingCloud storageData backup'
     ]}
@@ -2316,10 +1991,8 @@ export const real2036ITServices = [
     icon: '';
     marketPrice: '$4,500-7,000/month';
     benefits: [,
-      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time',
-    ];,
+      'Automated recovery proceduresIntelligent backup managementPredictive recovery planningReduced recovery time'];,
     useCases: [}
-=======
   {/* TODO: Fix JSX expression */}
   s: [}
       'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
@@ -2367,7 +2040,6 @@ export const real2036ITServices = [
   };
   {/* TODO: Fix JSX expression */}
   s: [}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data center recoveryCloud recoveryApplication recoveryBusiness continuity'
     ]}
   }
@@ -2642,147 +2314,147 @@ export const real2036ITServices = [ i,
   e: 'Next - generation quantum cloud computing', descriptio,
   n:  ,' 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum - classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',' pric,
   e: '$6, 999',' perio,
-  d: 'month',' 'Quantum computing resources',' 'Quantum - classical hybrid computing',' 'Quantum resource management',' 'Quantum networking',' 'Quantum security protocols',' 'Scalable quantum infrastructure', ], popula,
+  d: 'month',' 'Quantum computing resources',' 'Quantum - classical hybrid computing',' 'Quantum resource management',' 'Quantum networking',' 'Quantum security protocols',' 'Scalable quantum infrastructure'], popula,
   r: true,' categor,
   y: 'Quantum Cloud',' ico,
   n: '☁️⚛️',' market_pric,
   e: '$8, 000 - 15, 000 / month', benefit,
-  s: [,' 'Access to quantum computing power',' 'Hybrid classical - quantum processing',' 'Future - proof cloud infrastructure',' 'Quantum advantage in the cloud', ], use_case,
-  s: [,' 'Scientific research computing',' 'Financial modeling',' 'Drug discovery',' 'Climate simulation', ], }, ' i,
+  s: [,' 'Access to quantum computing power',' 'Hybrid classical - quantum processing',' 'Future - proof cloud infrastructure',' 'Quantum advantage in the cloud'], use_case,
+  s: [,' 'Scientific research computing',' 'Financial modeling',' 'Drug discovery',' 'Climate simulation']}, ' i,
   d: 'ai - powered - devops - platform',' nam,
   e: 'AI - Powered DevOps Platform',' taglin,
   e: 'Intelligent DevOps automation', descriptio,
   n:  ,' 'Advanced DevOps platform with AI - powered automation, intelligent deployment strategies, and predictive infrastructure management. Features automated testing, deployment optimization, and intelligent monitoring.',' pric,
   e: '$2, 999',' perio,
   d: 'month', feature,
-  s: [,' 'AI - powered deployment automation',' 'Intelligent testing strategies',' 'Predictive infrastructure scaling',' 'Automated incident response',' 'Smart resource optimization',' 'Continuous learning algorithms', ], popula,
+  s: [,' 'AI - powered deployment automation',' 'Intelligent testing strategies',' 'Predictive infrastructure scaling',' 'Automated incident response',' 'Smart resource optimization',' 'Continuous learning algorithms'], popula,
   r: true,' categor,
   y: 'DevOps & AI',' ico,
   n: '🤖🔄',' market_pric,
   e: '$4, 000 - 7, 000 / month', benefit,
-  s: [,' '90% faster deployment cycles',' 'Intelligent infrastructure management',' 'Predictive scaling',' 'Automated incident resolution', ], use_case,
-  s: [,' 'Continuous deployment',' 'Infrastructure automation',' 'Testing automation',' 'Monitoring and alerting', ], }, ' i,
+  s: [,' '90% faster deployment cycles',' 'Intelligent infrastructure management',' 'Predictive scaling',' 'Automated incident resolution'], use_case,
+  s: [,' 'Continuous deployment',' 'Infrastructure automation',' 'Testing automation',' 'Monitoring and alerting']}, ' i,
   d: 'quantum - cybersecurity - platform',' nam,
   e: 'Quantum Cybersecurity Platform',' taglin,
   e: 'Quantum - resistant security solutions', descriptio,
   n:  ,' 'Advanced cybersecurity platform with quantum - resistant algorithms, quantum threat detection, and future - proof security protocols. Features quantum encryption, quantum key distribution, and quantum - resistant cryptography.',' pric,
   e: '$5, 499',' perio,
   d: 'month', feature,
-  s: [,' 'Quantum - resistant algorithms',' 'Quantum threat detection',' 'Quantum encryption',' 'Quantum key distribution',' 'Future - proof security',' 'Real - time threat analysis', ], popula,
+  s: [,' 'Quantum - resistant algorithms',' 'Quantum threat detection',' 'Quantum encryption',' 'Quantum key distribution',' 'Future - proof security',' 'Real - time threat analysis'], popula,
   r: true,' categor,
   y: 'Quantum Security',' ico,
   n: '🔒⚛️',' market_pric,
   e: '$7, 000 - 12, 000 / month', benefit,
-  s: [,' 'Quantum - resistant security',' 'Future - proof protection',' 'Advanced threat detection',' 'Military - grade security', ], use_case,
-  s: [,' 'Government security',' 'Financial institutions',' 'Healthcare data protection',' 'Critical infrastructure', ], }, ' i,
+  s: [,' 'Quantum - resistant security',' 'Future - proof protection',' 'Advanced threat detection',' 'Military - grade security'], use_case,
+  s: [,' 'Government security',' 'Financial institutions',' 'Healthcare data protection',' 'Critical infrastructure']}, ' i,
   d: 'edge - computing - orchestration - platform',' nam,
   e: 'Edge Computing Orchestration Platform',' taglin,
   e: 'Intelligent edge computing management', descriptio,
   n:  ,' 'Comprehensive edge computing platform with intelligent orchestration, distributed computing optimization, and edge AI capabilities. Features edge resource management, latency optimization, and distributed AI processing.',' pric,
   e: '$3, 999',' perio,
   d: 'month', feature,
-  s: [,' 'Intelligent edge orchestration',' 'Distributed computing optimization',' 'Edge AI processing',' 'Latency optimization',' 'Edge resource management',' 'Distributed data processing', ], popula,
+  s: [,' 'Intelligent edge orchestration',' 'Distributed computing optimization',' 'Edge AI processing',' 'Latency optimization',' 'Edge resource management',' 'Distributed data processing'], popula,
   r: true,' categor,
   y: 'Edge Computing',' ico,
   n: '🌐⚡',' market_pric,
   e: '$5, 000 - 8, 000 / month', benefit,
-  s: [,' 'Ultra - low latency processing',' 'Distributed computing power',' 'Edge AI capabilities',' 'Scalable edge infrastructure', ], use_case,
-  s: [,' 'IoT applications',' 'Real - time analytics',' 'Edge AI processing',' 'Distributed computing', ], }, ' i,
+  s: [,' 'Ultra - low latency processing',' 'Distributed computing power',' 'Edge AI capabilities',' 'Scalable edge infrastructure'], use_case,
+  s: [,' 'IoT applications',' 'Real - time analytics',' 'Edge AI processing',' 'Distributed computing']}, ' i,
   d: 'quantum - database - platform',' nam,
   e: 'Quantum Database Platform',' taglin,
   e: 'Quantum - powered data management', descriptio,
   n:  ,' 'Revolutionary quantum database platform providing quantum - accelerated queries, quantum data compression, and quantum - optimized data structures. Features quantum search algorithms, quantum data indexing, and quantum data analytics.',' pric,
   e: '$4, 999',' perio,
   d: 'month', feature,
-  s: [,' 'Quantum - accelerated queries',' 'Quantum data compression',' 'Quantum search algorithms',' 'Quantum data indexing',' 'Quantum data analytics',' 'Hybrid quantum - classical storage', ], popula,
+  s: [,' 'Quantum - accelerated queries',' 'Quantum data compression',' 'Quantum search algorithms',' 'Quantum data indexing',' 'Quantum data analytics',' 'Hybrid quantum - classical storage'], popula,
   r: true,' categor,
   y: 'Quantum Database',' ico,
   n: '🗄️⚛️',' market_pric,
   e: '$6, 000 - 10, 000 / month', benefit,
-  s: [,' '1000x faster database queries',' 'Quantum data compression',' 'Advanced search capabilities',' 'Future - proof data management', ], use_case,
-  s: [,' 'Big data analytics',' 'Real - time search',' 'Data warehousing',' 'Business intelligence', ], }, ' i,
+  s: [,' '1000x faster database queries',' 'Quantum data compression',' 'Advanced search capabilities',' 'Future - proof data management'], use_case,
+  s: [,' 'Big data analytics',' 'Real - time search',' 'Data warehousing',' 'Business intelligence']}, ' i,
   d: 'ai - powered - network - security',' nam,
   e: 'AI - Powered Network Security',' taglin,
   e: 'Intelligent network protection', descriptio,
   n:  ,' 'Advanced network security platform with AI - powered threat detection, intelligent firewall management, and predictive security analytics. Features behavioral analysis, anomaly detection, and automated threat response.',' pric,
   e: '$2, 499',' perio,
   d: 'month', feature,
-  s: [,' 'AI threat detection',' 'Intelligent firewall management',' 'Behavioral analysis',' 'Anomaly detection',' 'Automated threat response',' 'Predictive security analytics', ], popula,
+  s: [,' 'AI threat detection',' 'Intelligent firewall management',' 'Behavioral analysis',' 'Anomaly detection',' 'Automated threat response',' 'Predictive security analytics'], popula,
   r: true,' categor,
   y: 'Network Security',' ico,
   n: '🛡️🤖',' market_pric,
   e: '$3, 500 - 6, 000 / month', benefit,
-  s: [,' 'Proactive threat detection',' 'Automated security response',' 'Intelligent network protection',' 'Reduced false positives', ], use_case,
-  s: [,' 'Enterprise network security',' 'Cloud security',' 'IoT security',' 'Remote work security', ], }, ' i,
+  s: [,' 'Proactive threat detection',' 'Automated security response',' 'Intelligent network protection',' 'Reduced false positives'], use_case,
+  s: [,' 'Enterprise network security',' 'Cloud security',' 'IoT security',' 'Remote work security']}, ' i,
   d: 'quantum - internet - protocols',' nam,
   e: 'Quantum Internet Protocols',' taglin,
   e: 'Next - generation quantum networking', descriptio,
   n:  ,' 'Revolutionary quantum internet protocols platform providing quantum communication standards, quantum routing algorithms, and quantum network optimization. Features quantum entanglement distribution, quantum routing, and quantum network security.',' pric,
   e: '$7, 999',' perio,
   d: 'month', feature,
-  s: [,' 'Quantum communication protocols',' 'Quantum routing algorithms',' 'Quantum entanglement distribution',' 'Quantum network optimization',' 'Quantum network security',' 'Quantum internet standards', ], popula,
+  s: [,' 'Quantum communication protocols',' 'Quantum routing algorithms',' 'Quantum entanglement distribution',' 'Quantum network optimization',' 'Quantum network security',' 'Quantum internet standards'], popula,
   r: false,' categor,
   y: 'Quantum Internet',' ico,
   n: '🌐⚛️',' market_pric,
   e: '$10, 000 - 20, 000 / month', benefit,
-  s: [,' 'Unbreakable quantum communication',' 'Quantum network optimization',' 'Future internet protocols',' 'Quantum internet infrastructure', ], use_case,
-  s: [,' 'Government communications',' 'Financial networks',' 'Research networks',' 'Quantum internet backbone', ], }, ' i,
+  s: [,' 'Unbreakable quantum communication',' 'Quantum network optimization',' 'Future internet protocols',' 'Quantum internet infrastructure'], use_case,
+  s: [,' 'Government communications',' 'Financial networks',' 'Research networks',' 'Quantum internet backbone']}, ' i,
   d: 'ai - powered - infrastructure - monitoring',' nam,
   e: 'AI - Powered Infrastructure Monitoring',' taglin,
   e: 'Intelligent infrastructure oversight', descriptio,
   n:  ,' 'Advanced infrastructure monitoring platform with AI - powered analytics, predictive maintenance, and intelligent alerting. Features automated monitoring, performance optimization, and intelligent resource management.',' pric,
   e: '$1, 999',' perio,
   d: 'month', feature,
-  s: [,' 'AI - powered monitoring',' 'Predictive maintenance',' 'Intelligent alerting',' 'Performance optimization',' 'Automated monitoring',' 'Resource optimization', ], popula,
+  s: [,' 'AI - powered monitoring',' 'Predictive maintenance',' 'Intelligent alerting',' 'Performance optimization',' 'Automated monitoring',' 'Resource optimization'], popula,
   r: true,' categor,
   y: 'Infrastructure Monitoring',' ico,
   n: '📊🤖',' market_pric,
   e: '$3, 000 - 5, 000 / month', benefit,
-  s: [,' 'Proactive issue detection',' 'Automated monitoring',' 'Performance optimization',' 'Reduced downtime', ], use_case,
-  s: [,' 'Server monitoring',' 'Network monitoring',' 'Application monitoring',' 'Cloud infrastructure', ], }, ' i,
+  s: [,' 'Proactive issue detection',' 'Automated monitoring',' 'Performance optimization',' 'Reduced downtime'], use_case,
+  s: [,' 'Server monitoring',' 'Network monitoring',' 'Application monitoring',' 'Cloud infrastructure']}, ' i,
   d: 'quantum - storage - platform',' nam,
   e: 'Quantum Storage Platform',' taglin,
   e: 'Quantum - accelerated data storage', descriptio,
   n:  ,' 'Revolutionary quantum storage platform providing quantum data compression, quantum data encoding, and quantum - optimized storage algorithms. Features quantum compression algorithms, quantum data encoding, and quantum storage optimization.',' pric,
   e: '$5, 499',' perio,
   d: 'month', feature,
-  s: [,' 'Quantum data compression',' 'Quantum data encoding',' 'Quantum storage algorithms',' 'Quantum data optimization',' 'Hybrid quantum - classical storage',' 'Quantum storage security', ], popula,
+  s: [,' 'Quantum data compression',' 'Quantum data encoding',' 'Quantum storage algorithms',' 'Quantum data optimization',' 'Hybrid quantum - classical storage',' 'Quantum storage security'], popula,
   r: true,' categor,
   y: 'Quantum Storage',' ico,
   n: '💾⚛️',' market_pric,
   e: '$7, 000 - 12, 000 / month', benefit,
-  s: [,' '100x data compression',' 'Quantum data encoding',' 'Advanced storage optimization',' 'Future - proof storage technology', ], use_case,
-  s: [,' 'Big data storage',' 'Data archiving',' 'Cloud storage',' 'Data backup', ], }, ' i,
+  s: [,' '100x data compression',' 'Quantum data encoding',' 'Advanced storage optimization',' 'Future - proof storage technology'], use_case,
+  s: [,' 'Big data storage',' 'Data archiving',' 'Cloud storage',' 'Data backup']}, ' i,
   d: 'ai - powered - disaster - recovery',' nam,
   e: 'AI - Powered Disaster Recovery',' taglin,
   e: 'Intelligent recovery automation', descriptio,
   n:  ,' 'Advanced disaster recovery platform with AI - powered recovery strategies, intelligent backup management, and automated recovery procedures. Features predictive recovery planning, automated testing, and intelligent backup optimization.',' pric,
   e: '$3, 499',' perio,
   d: 'month', feature,
-  s: [,' 'AI recovery strategies',' 'Intelligent backup management',' 'Automated recovery procedures',' 'Predictive recovery planning',' 'Automated testing',' 'Backup optimization', ], popula,
+  s: [,' 'AI recovery strategies',' 'Intelligent backup management',' 'Automated recovery procedures',' 'Predictive recovery planning',' 'Automated testing',' 'Backup optimization'], popula,
   r: true,' categor,
   y: 'Disaster Recovery',' ico,
   n: '🔄🤖',' market_pric,
   e: '$4, 500 - 7, 000 / month', benefit,
-  s: [,' 'Automated recovery procedures',' 'Intelligent backup management',' 'Predictive recovery planning',' 'Reduced recovery time', ], use_case,
-  s: [,' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity', ], },;' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] },;' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ ' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity', ], },;' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
-  s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'IoT applicationsReal-time analyticsEdge AI processingDistributed computing' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Big data analyticsReal-time searchData warehousingBusiness intelligence' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Enterprise network securityCloud securityIoT securityRemote work security' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Big data storageData archivingCloud storageData backup' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]; },;' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
-  s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'IoT applicationsReal-time analyticsEdge AI processingDistributed computing' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Big data analyticsReal-time searchData warehousingBusiness intelligence' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Enterprise network securityCloud securityIoT securityRemote work security' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} },; {/* TODO: Fix JSX expression */}
-  s: [}' 'Big data storageData archivingCloud storageData backup' ]} },; {/* TODO: Fix JSX expression */}
+  s: [,' 'Automated recovery procedures',' 'Intelligent backup management',' 'Predictive recovery planning',' 'Reduced recovery time'], use_case,
+  s: [,' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] };' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [ ' 'Data center recovery',' 'Cloud recovery',' 'Application recovery',' 'Business continuity']};' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
+  s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'IoT applicationsReal-time analyticsEdge AI processingDistributed computing' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Big data analyticsReal-time searchData warehousingBusiness intelligence' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Enterprise network securityCloud securityIoT securityRemote work security' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Big data storageData archivingCloud storageData backup' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]; };' ]; 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ] export const real2036ITServices = [; {/* TODO: Fix JSX expression */}
+  s: [}' 'Scientific research computingFinancial modelingDrug discoveryClimate simulation' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Continuous deploymentInfrastructure automationTesting automationMonitoring and alerting' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Government securityFinancial institutionsHealthcare data protectionCritical infrastructure' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'IoT applicationsReal-time analyticsEdge AI processingDistributed computing' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Big data analyticsReal-time searchData warehousingBusiness intelligence' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Enterprise network securityCloud securityIoT securityRemote work security' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Government communicationsFinancial networksResearch networksQuantum internet backbone' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Server monitoringNetwork monitoringApplication monitoringCloud infrastructure' ]} }; {/* TODO: Fix JSX expression */}
+  s: [}' 'Big data storageData archivingCloud storageData backup' ]} }; {/* TODO: Fix JSX expression */}
   s: [}' 'Data center recoveryCloud recoveryApplication recoveryBusiness continuity' ]} } ]; '

@@ -1,5 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
 interface, FeaturedConten, t {
 id: numb, e, r;
 tit, l, e: stri, n, g;
@@ -68,7 +67,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       bad, g, e: 'FEATUR, E, D','
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
       ic, o, n: <Award, className="w-6 h-6/>,"
-=======
 interface, FeaturedConten, t {/* TODO: Fix JSX expression */}
 }
 const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
@@ -80,7 +78,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     {/* TODO: Fix JSX expression */}
       li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fla, g, s}
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       li, n, k: '/bl, o, g/gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6}
   ];
   const, achievement, s = ["
@@ -98,7 +95,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       ic, o, n: <Sparkles, className="w-6 h-6" />,";
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollbac, k, s'
     }
-<<<<<<< HEAD
     {
       id: 7;
       tit, l, e: 'Consentless, Personalizatio, n (Ed, g, e)',';
@@ -145,7 +141,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
       gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
       ic, o, n: <Award, className="w-6 h-6" />,";
       li, n, k: '/bl, o, g/gen, a, i-quali, t, y-tie, r, s-v2-20, 2, 6'
-=======
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -153,7 +148,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   ];
   const, achievement, s = ["
@@ -162,8 +156,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
     { val, u, e: '2, 0, 0+', lab, e, l: 'Expert, Article, s', ic, o, n: <Award, className="w-8 h-8" /> },";"
     { val, u, e: '50+', lab, e, l: 'Industry, Award, s', ic, o, n: <Target, className="w-8 h-8" /> }";
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
   return(<div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
@@ -176,7 +168,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
             { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
                 <div, classNam, e="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r">
-=======
   return (
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}</div>
@@ -190,7 +181,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
             { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (</div>
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>
                 <div, classNam, e="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20"
@@ -212,13 +202,10 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
             <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6"></div>
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-<<<<<<< HEAD
                 LIMITED, TIME, OFFER;
               <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
-=======
                 LIMITED, TIME, OFFER</span>
               <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <a, hre, f="/subscri, b, e"
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
@@ -228,7 +215,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 <input, typ, e="ema, i, l"
                   <Link, classNam, e="w-5 h-5" />
 }}
-=======
   return ("
     <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}"
@@ -274,4 +260,3 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {/* TODO: Fix JSX exp
                 <input, typ, e="ema, i, l""
                   <Link, classNam, e="w-5 h-5" /></input>
 }}")`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

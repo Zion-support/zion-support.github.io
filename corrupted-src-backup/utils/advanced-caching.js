@@ -3,7 +3,6 @@
  * Intelligent caching with TTL, invalidation, and performance optimization;
  */
 
-<<<<<<< HEAD
 class AdvancedCachingSystem {
   constructor() {
     this.cache = new Map();
@@ -33,7 +32,6 @@ class AdvancedCachingSystem {
     // Check if we need to evict items;
     if (this.cache.size >= this.maxSize) {
       this.evictLeastUsed();
-=======
 class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
   }
 
@@ -41,7 +39,6 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
   }
 
   set(key, value, ttl = this.defaultTTL) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     this.cache.set(key, value);
@@ -54,7 +51,6 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
     return true;
   }
 
-<<<<<<< HEAD
   get(key) {
     const _now = Date.now();
     //     const expiry = this.ttlMap.get(key);
@@ -70,13 +66,11 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
       // Update access count;
       //       const count = this.accessCount.get(key) || 0;
       this.accessCount.set(key, count + 1);
-=======
   get(key) {/* TODO: Fix JSX expression */}
     }
 
     //     const value = this.cache.get(key);
     if (value !== undefined) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return value;
@@ -122,23 +116,19 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
       //       }
   }
 
-<<<<<<< HEAD
   clearStorage() {
     try {
       const _keys = Object.keys(localStorage);
       keys.forEach(key => {)
         if (key.startsWith('cache_')) {
           localStorage.removeItem(key);
-=======
   clearStorage() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       });
     } catch (error) {/* TODO: Fix JSX expression */}
       //       }
   }
 
-<<<<<<< HEAD
   loadFromStorage() {
     try {
       const _keys = Object.keys(localStorage);
@@ -154,10 +144,8 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
             this.accessCount.set(cacheKey, 1);
           } else {
             localStorage.removeItem(key);
-=======
   loadFromStorage() {/* TODO: Fix JSX expression */}
           } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       });
@@ -165,7 +153,6 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
       //       }
   }
 
-<<<<<<< HEAD
   setupMemoryPressureHandling() {
     // Monitor memory usage;
     if ('memory' in performance) {
@@ -175,15 +162,12 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
 
         if (usedRatio > 0.8) {
           this.aggressiveCleanup();
-=======
   setupMemoryPressureHandling() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }, 30000); // Check every 30 seconds;
     }
   }
 
-<<<<<<< HEAD
   aggressiveCleanup() {
     // Remove least recently used items;
     const sortedKeys = Array.from(this.accessCount.entries())
@@ -212,7 +196,6 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
       ...this.stats,
       size: this.cache.size;
       hitRate: this.stats.hits / (this.stats.hits + this.stats.misses) || 0;
-=======
   aggressiveCleanup() {/* TODO: Fix JSX expression */}
     }
   }
@@ -222,12 +205,10 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
   }
 
   getStats() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
   // Cache warming strategies;
-<<<<<<< HEAD
   warmCache(keys, fetcher) {
     return Promise.all(keys.map(async key => {)
         if (!this.has(key)) {
@@ -237,12 +218,10 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
             return { key, success: true };
           } catch (error) {
             return { key, success: false, error };
-=======
   warmCache(keys, fetcher) {/* TODO: Fix JSX expression */}
   s: true };
           } catch (error) {/* TODO: Fix JSX expression */}
   s: false, error };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
         return {/* TODO: Fix JSX expression */}
@@ -252,19 +231,15 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
   }
 
   // Prefetch related data;
-<<<<<<< HEAD
   prefetch(primaryKey, relatedKeys, fetcher) {
     //     const primaryValue = this.get(primaryKey);
     if (primaryValue) {
       this.warmCache(relatedKeys, fetcher);
-=======
   prefetch(primaryKey, relatedKeys, fetcher) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   // Cache invalidation patterns;
-<<<<<<< HEAD
   invalidatePattern(pattern) {
     const _regex = new RegExp(pattern);
     const _keysToDelete = [];
@@ -272,9 +247,7 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
     for (const key of this.cache.keys()) {
       if (regex.test(key)) {
         keysToDelete.push(key);
-=======
   invalidatePattern(pattern) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
 
@@ -283,16 +256,13 @@ class AdvancedCachingSystem {/* TODO: Fix JSX expression */}
   }
 
   // Cache compression for large values;
-<<<<<<< HEAD
   compressValue(value) {
     try {
       return JSON.stringify(value);
     } catch (error) {
       return value;
-=======
   compressValue(value) {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 

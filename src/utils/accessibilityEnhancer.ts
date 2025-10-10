@@ -15,9 +15,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
       enableScreenReaderSupport: true,
       enableHighContrast: true,
       enableFocusIndicators: true,
-      enableAriaLabels: true,
-
-    }
+      enableAriaLabels: true}
     this.init()
 
 

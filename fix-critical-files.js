@@ -15,9 +15,7 @@ function fixCriticalFiles() {
   openGraph: {
     title: 'Zion Tech Group - Advanced AI and IT Solutions',
     description: 'Leading provider of AI-powered enterprise solutions, automation, and digital transformation services.',
-    type: 'website',
-  },
-};`
+    type: 'website'}};`
     },
     {
       path: '/workspace/src/vite-env.d.ts',
@@ -45,8 +43,7 @@ import Footer from '../components/Footer';
 import Analytics from './components/Analytics';
 
 export default function RootLayout({
-  children,
-}: {
+  children}: {
   children: React.ReactNode;
 }) {
   return (

@@ -1,7 +1,6 @@
 import React from 'react';
 interface FeaturedConten, t {/* TODO: Fix JSX expression */}
 }
-<<<<<<< HEAD
 const NewContentAdvertisingBanne, r: React.FC = () => { ,
   const featuredConten, t: FeaturedConte, n, t[] = [
     {
@@ -15,9 +14,7 @@ const NewContentAdvertisingBanne, r: React.FC = () => { ,
       gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-50, 0',
       ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
       li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s'
-=======
 const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
      },
     {/* TODO: Fix JSX expression */}
      },
@@ -32,21 +29,17 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
     {  val, u, e: '9, 8%', lab, e, l: 'Customer, Satisfacti, o, n', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / >  },"
     {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / >  },"
     {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-=======
   ]; return (
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
@@ -63,7 +56,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             Revolutionary, New, Content H, u, b;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-=======
   ]; return ("
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
@@ -86,31 +78,24 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             Revolutionary, New, Content H, u, b;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. 
             Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve.
-<<<<<<< HEAD
           </p>)
           {/* Achievement, Stat, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
             { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
-=======
           </p>
-<<<<<<< HEAD
           {/* Achievement, Stat, s */}
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
             { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (</div>
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div, className="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r">
-=======
           {/* Achievement, Stat, s */}"
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o"></div>
             {/* TODO: Fix JSX expression */}"
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>"
                 <div, className="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {achieveme, n, t.ic, o, n}
                 </div>"
                 <div, className="te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1"></div>
@@ -123,7 +108,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             ))}
           </div>
         </div>
-<<<<<<< HEAD
         {/* Featured, Content, Cards */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (</div>
@@ -143,7 +127,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 {/* Catego, r, y */}
                 <div, classNam, e = "mb-4"></div>
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-indi, g, o-400, tex, t-xs, fon, t-semibold, border, border-indi, g, o-5, 0, 0/30">
-=======
         {/* Featured, Content, Cards */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}"
@@ -163,7 +146,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 {/* Catego, r, y */}"
                 <div, classNam, e = "mb-4"></div>"
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-indi, g, o-400, tex, t-xs, fon, t-semibold, border, border-indi, g, o-5, 0, 0/30"></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {conte, n, t.category}
                   </sp, a, n>
                 </div>
@@ -171,7 +153,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t"></h3>
                   {conte, n, t.t, i, t, l, e}
                 </h3>
-<<<<<<< HEAD
                 {/* Meta, Inf, o */}
                 <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>
                   <span, className="flex, item, s-center, ga, p-2"></span>
@@ -187,7 +168,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 <div, className="mb-6"></div>
                   <div, className="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0"></div>
                     <Users, className="w-4 h-4" />
-=======
                 {/* Meta, Inf, o */}"
                 <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>"
                   <span, className="flex, item, s-center, ga, p-2"></span>"
@@ -203,7 +183,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 <div, className="mb-6"></div>"
                   <div, className="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0"></div>"
                     <Users, className="w-4 h-4" /></Users>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <span, className="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
                   </div>
                 </d, i, v > {/* CTA, Butto, n */}`
@@ -217,7 +196,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             </div>
           ))}
         </div>
-<<<<<<< HEAD
         {/* Special, Offer, Section */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-indi, g, o-5, 0, 0/20, m, b-16"></div>
           <div, className="te, x, t-cent, e, r"></div>
@@ -242,7 +220,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
               </div>
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>
                 <a, hre, f="/subscri, b, e"
-=======
         {/* Special, Offer, Section */}"
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-indi, g, o-5, 0, 0/20, m, b-16"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
@@ -267,7 +244,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
               </div>"
               <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4"></div>"
                 <a, hre, f="/subscri, b, e""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, className="w-5 h-5" /></Sparkles>
@@ -283,7 +259,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* Newsletter, Sig, n, u, p */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, vi, a-purp, l, e-500, t, o-pi, n, k-5, 0, 0"></div>
@@ -302,7 +277,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
                   <sp, a, n>Subscri, b, e</sp, a, n>
                   <Link, className="w-5 h-5" />
-=======
         {/* Newsletter, Sig, n, u, p */}"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, vi, a-purp, l, e-500, t, o-pi, n, k-5, 0, 0"></div>"
@@ -321,7 +295,6 @@ const NewContentAdvertisingBanne, r: React.FC = () => {/* TODO: Fix JSX expressi
                 <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></button>
                   <sp, a, n>Subscri, b, e</sp, a, n>"
                   <Link, className="w-5 h-5" /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 </button>
               </div>"
               <p, className="te, x, t-xs, tex, t-gr, a, y-500, m, t-4"></p>

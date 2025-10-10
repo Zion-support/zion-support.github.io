@@ -2,7 +2,6 @@
  * SEO utility functions;
  */
 
-<<<<<<< HEAD
 export interface SEOConfig {
   title: string;
   description: string;
@@ -12,13 +11,11 @@ export interface SEOConfig {
 }
 
 export const generateMetaTags = (config: SEOConfig): string => {,
-=======
 export interface SEOConfig {/* TODO: Fix JSX expression */}
 }
 
-export const generateMetaTags = (confi,)
+export const generateMetaTags = (confi)
   g: SEOConfig): string => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   const { title, description, keywords, ogImage, canonicalUrl } = config;
 
   let _tags = `<title>${title}</title>`;`
@@ -39,14 +36,11 @@ export const generateMetaTags = (confi,)
   return tags;
 };
 
-<<<<<<< HEAD
 export const updatePageTitle = (title: string) => {,
   if (typeof window !== 'undefined') {,
     document.title = title;
-=======
-export const updatePageTitle = (titl,)
+export const updatePageTitle = (titl)
   e: string) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 };
 "`

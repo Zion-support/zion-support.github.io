@@ -183,24 +183,21 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       company: "DataCorp Solutions",
       content: "The AI Analytics Dashboard has transformed how we analyze our data. The predictive analytics feature alone has helped us identify trends 3 months in advance.",
       rating: 5;
-      avatar: "DK",
-    },
+      avatar: "DK"},
     {
       name: "Lisa Wang",
       role: "Business Intelligence Manager",
       company: "GrowthTech Inc",
       content: "The custom dashboard builder is incredibly intuitive. We created our entire reporting suite in just one week, and the automated reports save us 20 hours per month.",
       rating: 5;
-      avatar: "LW",
-    },
+      avatar: "LW"},
     {
       name: "Robert Johnson"
       role: "CEO",
       company: "InnovateLabs",
       content: "The real-time analytics have given us unprecedented visibility into our business operations. We can now make decisions based on live data instead of waiting for reports.",
       rating: 5;
-      avatar: "RJ",
-    }
+      avatar: "RJ"}
   ];
 
   const stats = [
@@ -210,23 +207,16 @@ const AIAnalyticsDashboardPage: React.FC = () => {
     { number: "24/7", label: "AI Monitoring", icon: Brain }
   ];
 
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}<div className="relative py-20 overflow-hidden">{/* Animated Background */}</div>
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
         {/* Animated Background */}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
         {/* Animated Background */}
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
@@ -235,11 +225,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 bg-cyan-400/10 text-cyan-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
               <BarChart3 className="w-4 h-4" />
-<<<<<<< HEAD
-<<<<<<< HEAD
               <span>AI-Powered Analytics<h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-advanced">AI Analytics Dashboard</h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Transform Data into Actionable Insights with AI<p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">Unlock the power of your data with our advanced AI analytics platform.</p>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div><div className="relative py-20 overflow-hidden">{/* Animated Background */}</div>
         <div className="absolute inset-0"></div>
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl animate-pulse"></div><div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div><div className="relative z-10 container mx-auto px-4"></div>
@@ -248,9 +235,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <BarChart3 className="w-4 h-4" />
               <span>AI-Powered Analytics</span><h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-advanced">AI Analytics Dashboard</h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Transform Data into Actionable Insights with AI</p><p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">Unlock the power of your data with our advanced AI analytics platform.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               Get real-time insights, predictive analytics, and automated reporting that drives business growth.</p>
-=======
               <span>AI-Powered Analytics</span>
             </div>
 
@@ -265,27 +250,21 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">,
               Unlock the power of your data with our advanced AI analytics platform.,
               Get real-time insights, predictive analytics, and automated reporting that drives business growth.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
-=======
               <span>AI-Powered Analytics</span>
             </div>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text-advanced">AI Analytics Dashboard</h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Transform Data into Actionable Insights with AI</p>
             <p className="text-lg text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">Unlock the power of your data with our advanced AI analytics platform.
               Get real-time insights, predictive analytics, and automated reporting that drives business growth.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-33bd
 
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 to="/contact"
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-              >
+        className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+      >
                 <span className="relative z-10">Start Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -294,7 +273,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 to="/demo"
                 className="group relative inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
-<<<<<<< HEAD
                 <Eye className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" >View Demo</Eye>
               </Eye>
             </div>
@@ -307,15 +285,13 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300"></div>
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
-<<<<<<< HEAD
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"><div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}<div className="text-gray-400 font-medium">{stat.label}</div>
-=======
                 <Eye className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 View Demo;
               </Link>
             </div>,
-          </div>,)
-,)
+          </div>)
+)
           {/* Stats */})
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-20">),
             {stats.map((stat, index) => (
@@ -328,10 +304,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 </div>,
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div><div className="text-3xl md:text-4xl font-bold text-white mb-2 neon-text">{stat.number}</div><div className="text-gray-400 font-medium">{stat.label}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -339,11 +312,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       </div>
 
       {/* Features Section */}
-<<<<<<< HEAD
       <div className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">Powerful Analytics Features<p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Discover how our AI-powered analytics can transform your business intelligence<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
@@ -351,7 +322,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform mb-6">
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{feature.title}<p className="text-gray-400 mb-6 leading-relaxed">{feature.description}<div className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</div>
-=======
             <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent neon-text">
               Powerful Analytics Features;
             </h2>
@@ -380,9 +350,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
                   <div className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
-=======
       <div className="py-20"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
@@ -393,7 +361,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{feature.title}</h3><p className="text-gray-400 mb-6 leading-relaxed">{feature.description}</p><div className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</div>
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
                       </CheckCircle>
                     ))}
@@ -406,22 +373,17 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       </div>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-text">Simple, Transparent Pricing<p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Choose the plan that fits your analytics needs. All plans include our core AI features.<div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingTiers.map((tier, index) => (<div key={index} className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${tier.popular ? 'ring-2 ring-cyan-400/30' : ''}`}>{tier.popular && (</div>
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-=======
       <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-text">Simple, Transparent Pricing</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Choose the plan that fits your analytics needs. All plans include our core AI features.</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">{pricingTiers.map((tier, index) => (</div><div key={index} className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 ${tier.popular ? 'ring-2 ring-cyan-400/30' : ''}`}>{tier.popular && (</div>
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-4 py-2 rounded-full">Most Popular</span>
-=======
             <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent neon-text">,
               Simple, Transparent Pricing;
             </h2>
@@ -437,7 +399,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-4 py-2 rounded-full">
                       Most Popular;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </span>
                   </div>
                 )}
@@ -445,33 +406,24 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                 <div className="text-center mb-8"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3><p className="text-gray-400 mb-6">{tier.description}</p>
 
-<<<<<<< HEAD
                   <div className="mb-6">
-<<<<<<< HEAD
                     <span className="text-5xl font-bold text-white">{tier.price}<span className="text-gray-400 text-lg">{tier.period}<Link
-=======
                     <span className="text-5xl font-bold text-white">{tier.price}</span>
                     <span className="text-gray-400 text-lg">{tier.period}</span>
                   </div>
 
                   <Link;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                   <div className="mb-6"></div>
                     <span className="text-5xl font-bold text-white">{tier.price}</span><span className="text-gray-400 text-lg">{tier.period}</span><Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     to="/contact"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                       tier.popular;
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700',}
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover: from-cyan-600 hover:to-purple-700'}
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'}
                     }`}
-<<<<<<< HEAD
                   >Get Started</Link>
-=======
                   >
                     Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     <ArrowRight className="w-4 h-4 ml-2" />
                   <div className="space-y-4">{tier.features.map((feature, featureIndex) => (</div>
                     <div key={featureIndex} className="flex items-center text-gray-300"></div>
@@ -486,15 +438,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       </div>
 
       {/* Testimonials Section */}
-<<<<<<< HEAD
       <div className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-<<<<<<< HEAD
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent neon-text">What Our Customers Say<p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Join thousands of businesses using AI Analytics Dashboard to make data-driven decisions<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300">
                 <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-6 leading-relaxed">"{testimonial.content}"</p>
-=======
             <h2 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent neon-text">
               What Our Customers Say;
             </h2>
@@ -514,15 +463,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
                 <p className="text-gray-300 italic mb-6 leading-relaxed">
                   "{testimonial.content}"
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
       <div className="py-20"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent neon-text">What Our Customers Say</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">Join thousands of businesses using AI Analytics Dashboard to make data-driven decisions</p><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-300"></div>
                 <div className="flex justify-center mb-4">{[...Array(5)].map((_, i) => (</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 italic mb-6 leading-relaxed">"{testimonial.content}"</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </p>
 
                 <div className="flex items-center"></div>
@@ -539,25 +485,20 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       </div>
 
       {/* CTA Section */}
-<<<<<<< HEAD
       <div className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
         <div className="container mx-auto px-4">
           <div className="text-center">
-<<<<<<< HEAD
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">Ready to Transform Your Data Analytics?<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Join thousands of businesses already using AI Analytics Dashboard to unlock insights and drive growth.</p>
-=======
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
               Ready to Transform Your Data Analytics?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join thousands of businesses already using AI Analytics Dashboard to unlock insights and drive growth.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
           </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link;
-=======
       <div className="py-20 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>
         <div className="container mx-auto px-4"></div>
           <div className="text-center"></div>
@@ -566,10 +507,9 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center"></div>
               <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 to="/contact"
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
-              >
+        className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/25"
+      >
                 <span className="relative z-10">Start Your Free Trial</span>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="$2" />
@@ -578,22 +518,16 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               <div className="flex items-center space-x-6 text-gray-300"></div>
                 <div className="flex items-center"></div>
                   <Phone className="w-4 h-4 text-cyan-400 mr-2" />
-<<<<<<< HEAD
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">+1 (302) 464-0950</a>
-=======
                   <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
                     +1 (302) 464-0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   </a>
                 </div>
                 <div className="flex items-center"></div>
                   <Mail className="w-4 h-4 text-cyan-400 mr-2" />
-<<<<<<< HEAD
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">kleber@ziontechgroup.com</a>
-=======
                   <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
                     kleber@ziontechgroup.com;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   </a>
                 </div>
               </div>
@@ -601,8 +535,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </div>
       </div>,
-    </div>,
-  );
+    </div>);
 };
 
 export default AIAnalyticsDashboardPage;

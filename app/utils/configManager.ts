@@ -4,7 +4,6 @@
  * Configuration Manager;
  * Centralized configuration management with environment-based settings;
  */
-<<<<<<< HEAD
 
 export type Environment = 'development' | 'staging' | 'production' | 'test'
 
@@ -79,8 +78,7 @@ const defaultConfig: AppConfig = {
   ui: {,
     theme: 'auto',
     language: 'en',
-    timezone: 'UTC',
-  },
+    timezone: 'UTC'},
   logging: {,
     level: 'info',
     enableConsole: true;
@@ -158,7 +156,6 @@ class ConfigManager {
 // Export singleton instance;
 export const configManager = new ConfigManager()
 export default configManager;
-=======
 export type Environment = 'development' | 'staging' | 'production' | 'test';
 export interface AppConfig {/* TODO: Fix JSX expression */}
   };
@@ -274,10 +271,10 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Deep merge two config objects;
    */
   private mergeConfig(bas,
-  e: AppConfig, overrid,)
+  e: AppConfig, overrid)
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */}
     const result = { ...base } as AppConfig;
-    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke,)
+    (Object.keys(override) as Array<keyof AppConfig>).forEach(<K extends keyof AppConfig>(ke)
   y: K) => {/* TODO: Fix JSX expression */}
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {/* TODO: Fix JSX expression */}
@@ -290,7 +287,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Get configuration value;
    */
-  get<K extends keyof AppConfig>(ke,)
+  get<K extends keyof AppConfig>(ke)
   y: K): AppConfig[K];
   get<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
@@ -308,7 +305,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
    * Set configuration value;
    */
   set<K extends keyof AppConfig>(ke,
-  y: K, valu,)
+  y: K, valu)
   e: AppConfig[K]): void;
   set<K extends keyof AppConfig, NK extends keyof AppConfig[K]>(ke,
   y: K,
@@ -335,7 +332,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Get default value for a config key;
    */
-  private getDefaultForKey<K extends keyof AppConfig>(ke,)
+  private getDefaultForKey<K extends keyof AppConfig>(ke)
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */}
       },
       feature,
@@ -370,19 +367,19 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Check if feature is enabled;
    */
-  isFeatureEnabled(featur,)
+  isFeatureEnabled(featur)
   e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */}
   }
   /**
    * Enable feature;
    */
-  enableFeature(featur,)
+  enableFeature(featur)
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
   }
   /**
    * Disable feature;
    */
-  disableFeature(featur,)
+  disableFeature(featur)
   e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */}
   }
   /**
@@ -394,7 +391,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Update API configuration;
    */
-  updateAPIConfig(confi,)
+  updateAPIConfig(confi)
   g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */}
     this.config.api = { ...this.config.api, ...config };
   }
@@ -421,7 +418,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
   /**
    * Override configuration;
    */
-  override(confi,)
+  override(confi)
   g: Partial<AppConfig>): void {/* TODO: Fix JSX expression */}
   }
   /**
@@ -456,4 +453,3 @@ export class ConfigManager {/* TODO: Fix JSX expression */}
 // Export singleton instance;
 export const configManager = ConfigManager.getInstance();
 export default ConfigManager;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

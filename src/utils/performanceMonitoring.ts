@@ -11,7 +11,7 @@ const logger = {/* TODO: Fix JSX expression */}
 };
   debu,
   g: (messag,
-  e: string, contex,)
+  e: string, contex)
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -23,7 +23,7 @@ const logger = {/* TODO: Fix JSX expression */}
   },
   inf,
   o: (messag,
-  e: string, contex,)
+  e: string, contex)
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
@@ -31,7 +31,7 @@ const logger = {/* TODO: Fix JSX expression */}
   },
   war,
   n: (messag,
-  e: string, contex,)
+  e: string, contex)
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
@@ -39,7 +39,7 @@ const logger = {/* TODO: Fix JSX expression */}
   },
   erro,
   r: (messag,
-  e: string, contex,)
+  e: string, contex)
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
@@ -221,7 +221,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
     };
     this.webVitals[name] = metric;`
-    logger.info(`Web,)`
+    logger.info(`Web)`
   Vital: ${name}`, 'PerformanceMonitoring', { value, rating });
     // Send to analytics;
     this.sendToAnalytics(metric);
@@ -422,7 +422,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
    */
   measureFunction;
           <T>(nam,
-  e: string, f,)
+  e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -437,7 +437,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
    */
   async measureAsyncFunction;
           <T>(nam,
-  e: string, f,)
+  e: string, f)
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

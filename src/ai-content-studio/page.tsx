@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -103,6 +101,5 @@ const AIContentStudioPage: React.FC = () => {
     </div>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 export default AIContentStudioPage;

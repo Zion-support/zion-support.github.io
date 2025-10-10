@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 export const reportError = (error: Error, context?: Record<string, any>) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'exception', {
       description: error.message,
       fatal: false,
-      ...context,
-    });
+      ...context});
   }
   
   // Also log to console in development
@@ -21,19 +19,16 @@ export const initErrorReporting = () => {
       reportError(event.error, {
         filename: event.filename,
         lineno: event.lineno,
-        colno: event.colno,
-      });
+        colno: event.colno});
     });
 
     // Unhandled promise rejection handler
     window.addEventListener('unhandledrejection', (event) => {
       reportError(new Error(event.reason), {
-        type: 'unhandledrejection',
-      });
+        type: 'unhandledrejection'});
     });
   }
 };
-=======
 
 'use client'
 /**
@@ -99,7 +94,7 @@ class ErrorTrackingService {// TODO: Add content;}
   errors: Map;
           <string, TrackedError> = new Map();
   private,
-  errorListeners: Array<(erro,)
+  errorListeners: Array<(erro)
   r: TrackedError) => void> = [];
   private maxStoredErrors = 1000;
   private constructor() {/* TODO: Fix JSX expression */}
@@ -152,7 +147,7 @@ class ErrorTrackingService {// TODO: Add content;}
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      this.trackError(new Error(`Unhandled Promise,)`
+      this.trackError(new Error(`Unhandled Promise)`
   Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -429,4 +424,3 @@ export default ErrorTrackingService;`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

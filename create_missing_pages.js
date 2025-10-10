@@ -518,7 +518,7 @@ import SEOOptimizer from '../../components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
 
 const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page: React.FC = () => {,
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,)
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
       <SEOOptimizer;),
         title="${config.title} - Zion Tech Group"
         description="${config.description}"
@@ -590,8 +590,8 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
           </div>
           
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
-            ${config.benefits.map(benefit => `,)
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">,)
+            ${config.benefits.map(benefit => `)
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300">)
               <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />),
               <h3 className="text-xl font-semibold text-white mb-2">${benefit}</h3>
               <p className="text-gray-300">Measurable improvement in your business metrics</p>
@@ -669,8 +669,7 @@ const ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slic
       </main>
 
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default ${pageName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('')}Page;`;

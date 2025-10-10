@@ -5,7 +5,6 @@
       'Lead/contact enrichment'
       'Analytics and response SLAs'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: '';
     color: 'from-cyan-600 to-blue-700',
@@ -27,7 +26,6 @@
     variant: 'network-futuristic',
     contactInfo: contact;
     realImplementation: true;
-=======
     popula,
   r: true;
     ico,
@@ -71,7 +69,6 @@
   o: contact;
     realImplementatio,
   n: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intent classification + prioritization',
       'On-brand response drafting',
       'Automatic polite follow-ups',
@@ -79,9 +76,7 @@
       'Intent classification + prioritization',
       'On - brand response drafting',
       'Automatic polite follow - ups',
-      'Lead / contact enrichment',      'Analytics and response SLAs',
-    ],
-<<<<<<< HEAD
+      'Lead / contact enrichment',      'Analytics and response SLAs'],
     popular: true;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700',
@@ -140,7 +135,6 @@
     customers: 48;
     rating: 4.7;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -181,8 +175,7 @@
     ratin,
   g: 4.7;
     review,
-  s: 12,
-  }
+  s: 12}
     competitor,
   s: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
     market_siz,
@@ -205,8 +198,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 12,
-  },
+  s: 12},
     colo,
   r: 'from-cyan-600 to-blue-700',
     textColo,
@@ -255,14 +247,11 @@
     ratin,
   g: 4.7;
     review,
-  s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 12}
       'Branching logic + A/B prompts',
       'SMS/WhatsApp/web delivery',
       'Real-time analytics',
       'CSV/Sheets export',
-<<<<<<< HEAD
     id: 'mobile - survey - studio',
     name: 'Mobile Survey Studio',
     tagline: unknown;
@@ -270,7 +259,6 @@
     price: '$19',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'mobile - survey - studio',
     nam,
@@ -284,7 +272,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.',
     feature,
   s: [,
@@ -292,9 +279,7 @@
       'SMS / WhatsApp / web delivery',
       'Real - time analytics',
       'CSV / Sheets export',
-      'Webhooks + API',
-    ],
-<<<<<<< HEAD
+      'Webhooks + API'],
     popular: false;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700',
@@ -330,7 +315,6 @@
     price: '$12',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -384,8 +368,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 9,
-  },
+  s: 9},
     i,
   d: 'niche - productivity - planner',
     nam,
@@ -399,7 +382,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.',
     feature,
   s: [,
@@ -407,9 +389,7 @@
       'Calendar + task sync',
       'Benchmark KPIs',
       'Export to PDF',
-      'Role - based views',
-    ],
-<<<<<<< HEAD
+      'Role - based views'],
     popular: false;
     icon: ''
     color: 'from - purple - 600 to - indigo - 700'
@@ -445,7 +425,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -498,8 +477,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 7,
-  },
+  s: 7},
       'QR tickets + check-in',
       'Email/SMS reminders',
     i,
@@ -514,7 +492,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.',
     feature,
   s: [,
@@ -522,9 +499,7 @@
       'Email / SMS reminders',
       'Agenda builder',
       'Feedback forms',
-      'Post - event reports',
-    ],
-<<<<<<< HEAD
+      'Post - event reports'],
     popular: true;
     icon: ''
     color: 'from - pink - 600 to - rose - 700'
@@ -558,7 +533,6 @@
     price: '$29',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -611,8 +585,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 11,
-  },
+  s: 11},
     i,
   d: 'affiliate - tracking - suite',
     nam,
@@ -625,7 +598,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Create affiliate programs with branded links, flexible commission rules, and payout exports.',
     feature,
   s: [,
@@ -633,9 +605,7 @@
       'UTM attribution',
       'Rule - based commissions',
       'Payout exports',
-      'Fraud checks',
-    ],
-<<<<<<< HEAD
+      'Fraud checks'],
     popular: false;
     icon: ''
     color: 'from - amber - 600 to - orange - 700'
@@ -669,7 +639,6 @@
     price: '$15',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -722,8 +691,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 'smb - analytics - lite',
     nam,
@@ -736,7 +704,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.',
     feature,
   s: [,
@@ -744,9 +711,7 @@
       'Funnels + cohorts',
       'Weekly email summaries',
       'CSV export',
-      'No cookies mode',
-    ],
-<<<<<<< HEAD
+      'No cookies mode'],
     popular: false;
     icon: ''
     color: 'from - sky - 600 to - indigo - 700',
@@ -781,7 +746,6 @@
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -834,8 +798,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 8,
-  },
+  s: 8},
       'Email-to-ticket',
     i,
   d: 'it - helpdesk - portal',
@@ -849,7 +812,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.',
     feature,
   s: [,
@@ -857,9 +819,7 @@
       'KB + article templates',
       'SLAs + escalations',
       'Client portal',
-      'Reports',
-    ],
-<<<<<<< HEAD
+      'Reports'],
     popular: true;
     icon: ''
     color: 'from - blue - 600 to - indigo - 700'
@@ -894,7 +854,6 @@
     price: '$39',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -947,8 +906,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 6,
-  },
+  s: 6},
       'Self-serve returns portal',
     i,
   d: 'ecommerce - returns - manager',
@@ -962,7 +920,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.',
     feature,
   s: [,
@@ -970,9 +927,7 @@
       'Label generation',
       'Return reasons analytics',
       'Inventory sync',
-      'Notifications',
-    ],
-<<<<<<< HEAD
+      'Notifications'],
     popular: true;
     icon: ''
     color: 'from - violet - 600 to - fuchsia - 700'
@@ -1006,7 +961,6 @@
     price: '$15',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -1059,8 +1013,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 'automated - email - followups',
     nam,
@@ -1073,7 +1026,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.',
     feature,
   s: [,
@@ -1081,9 +1033,7 @@
       'Inbox integration',
       'Smart stop on reply',
       'Templates',
-      'Analytics',
-    ],
-<<<<<<< HEAD
+      'Analytics'],
     popular: false;
     icon: ''
     color: 'from - cyan - 600 to - teal - 700'
@@ -1110,7 +1060,6 @@
     customers: 28;
     rating: 4 && 4.5;
     reviews: 8;
-=======
     popula,
   r: false,
     ico,
@@ -1163,9 +1112,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 8},
     i,
   d: 'podcast - transcription - service',
     nam,
@@ -1185,9 +1132,7 @@
       'Timestamps + chapters',
       'Summaries + highlights',
       'Blog export',
-      'Glossary',
-    ],
-<<<<<<< HEAD
+      'Glossary'],
     popular: false;
     icon: ''
     color: 'from - indigo - 600 to - blue - 700'
@@ -1222,7 +1167,6 @@
     price: '$29',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -1275,8 +1219,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 6,
-  },
+  s: 6},
       'On-page audits',
     i,
   d: 'ai - seo - content - optimizer',
@@ -1290,7 +1233,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.',
     feature,
   s: [,
@@ -1298,9 +1240,7 @@
       'Topic clustering',
       'SERP intent match',
       'Internal link hints',
-      'Rewrite suggestions',
-    ],
-<<<<<<< HEAD
+      'Rewrite suggestions'],
     popular: true;
     icon: ''
     color: 'from - emerald - 600 to - green - 700'
@@ -1334,7 +1274,6 @@
     price: '$15',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -1387,8 +1326,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 10,
-  },
+  s: 10},
     i,
   d: 'social - scheduler - ai',
     nam,
@@ -1401,7 +1339,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.',
     feature,
   s: [,
@@ -1409,9 +1346,7 @@
       'Calendar + auto - times',
       'Hashtag + emoji assistant',
       'Link tracking',
-      'Client approvals',
-    ],
-<<<<<<< HEAD
+      'Client approvals'],
     popular: false;
     icon: ''
     color: 'from - fuchsia - 600 to - pink - 700'
@@ -1445,7 +1380,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -1498,8 +1432,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 7,
-  },
+  s: 7},
     i,
   d: 'lead - enrichment - api',
     nam,
@@ -1512,7 +1445,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'REST API to enrich leads with verified firmographics and social signals for scoring and routing.',
     feature,
   s: [,
@@ -1520,9 +1452,7 @@
       'Role detection',
       'Validated email signals',
       'Confidence scoring',
-      'Usage dashboards',
-    ],
-<<<<<<< HEAD
+      'Usage dashboards'],
     popular: false;
     icon: ''
     color: 'from - blue - 600 to - sky - 700'
@@ -1556,7 +1486,6 @@
     price: '$25',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -1609,8 +1538,7 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 4,
-  },
+  s: 4},
     i,
   d: 'consent - management - cmp',
     nam,
@@ -1623,7 +1551,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.',
     feature,
   s: [,
@@ -1631,9 +1558,7 @@
       'IAB TCF',
       'Preference center',
       'Audit logs',
-      'Multi - brand themes',
-    ],
-<<<<<<< HEAD
+      'Multi - brand themes'],
     popular: true;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700',
@@ -1667,7 +1592,6 @@
     price: '$9',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -1720,8 +1644,7 @@
     ratin,
   g: 4 && 4.7,
     review,
-  s: 10,
-  },
+  s: 10},
     i,
   d: 'cookie - scanner - pro',
     nam,
@@ -1734,7 +1657,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.',
     feature,
   s: [,
@@ -1742,9 +1664,7 @@
       'Tracker classification',
       'Policy generator',
       'Diffs + history',
-      'CI hook',
-    ],
-<<<<<<< HEAD
+      'CI hook'],
     popular: false;
     icon: ''
     color: 'from - amber - 600 to - yellow - 700'
@@ -1778,7 +1698,6 @@
     price: '$19',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -1831,8 +1750,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 'statuspage - sla - tracker',
     nam,
@@ -1845,7 +1763,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Connect monitors, log incidents, and share public SLA / uptime reports with customers.',
     feature,
   s: [,
@@ -1853,9 +1770,7 @@
       'Public status page',
       'SLA calculator',
       'RSS + webhooks',
-      'Exports',
-    ],
-<<<<<<< HEAD
+      'Exports'],
     popular: false;
     icon: ''
     color: 'from - sky - 600 to - cyan - 700'
@@ -1889,7 +1804,6 @@
     price: '$29',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -1942,8 +1856,7 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'agentic - lead - qualifier',
     nam,
@@ -1956,7 +1869,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.',
     feature,
   s: [,
@@ -1964,9 +1876,7 @@
       'Calendar booking',
       'CRM routing',
       'Visitor insights',
-      'Hand - off to human',
-    ],
-<<<<<<< HEAD
+      'Hand - off to human'],
     popular: true;
     category: 'AI & Data',
     real_service: true;
@@ -1991,7 +1901,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     categor,
@@ -2025,8 +1934,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 7,
-  },
+  s: 7},
     i,
   d: 'gdpr - dsar - portal - lite',
     nam,
@@ -2039,7 +1947,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Hosted portal for DSARs with identity verification, workflow, and export helpers.',
     feature,
   s: [,
@@ -2047,9 +1954,7 @@
       'Identity check',
       'Triage + workflow',
       'Exports',
-      'Audit logs',
-    ],
-<<<<<<< HEAD
+      'Audit logs'],
     popular: true;
     integrations: ['Zendesk', 'Google Drive'],
     use_cases: ['DSAR fulfillment'],
@@ -2068,7 +1973,6 @@
   },
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     integration,
@@ -2098,13 +2002,11 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4,
-  },
+  s: 4},
     perio,
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.',
     feature,
   s: [,
@@ -2112,9 +2014,7 @@
       'Calendar booking',
       'CRM routing',
       'Visitor insights',
-      'Hand - off to human',
-    ],
-<<<<<<< HEAD
+      'Hand - off to human'],
     popular: true;
     icon: ''
     color: 'from - teal - 600 to - emerald - 700'
@@ -2148,7 +2048,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -2201,8 +2100,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 7,
-  },
+  s: 7},
     i,
   d: 'gdpr - dsar - portal - lite',
     nam,
@@ -2215,7 +2113,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Hosted portal for DSARs with identity verification, workflow, and export helpers.',
     feature,
   s: [,
@@ -2223,9 +2120,7 @@
       'Identity check',
       'Triage + workflow',
       'Exports',
-      'Audit logs',
-    ],
-<<<<<<< HEAD
+      'Audit logs'],
     popular: true;
     icon: ''
     color: 'from - red - 600 to - rose - 700'
@@ -2259,7 +2154,6 @@
     price: '$19',
     period: '/month',
     description:,
-=======
     popula,
   r: true,
     ico,
@@ -2312,8 +2206,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4,
-  },
+  s: 4},
     i,
   d: 'feature-flag-auditor'
     nam,
@@ -2326,7 +2219,6 @@
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto-open PRs.'
     feature,
   s: [;
@@ -2336,7 +2228,6 @@
       'PR suggestions'
       'CI integration'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: '';
     color: 'from-rose-600 to-pink-700'
@@ -2363,7 +2254,6 @@
     customers: 8;
     rating: 4.4;
     reviews: 3;
-=======
     popula,
   r: false;
     ico,
@@ -2416,16 +2306,12 @@
     ratin,
   g: 4.4;
     review,
-  s: 3,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 3}
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
       'PR suggestions',
-      'CI integration',
-    ],
-<<<<<<< HEAD
+      'CI integration'],
     popular: false;
     icon: ''
     color: 'from - rose - 600 to - pink - 700'
@@ -2459,7 +2345,6 @@
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -2512,8 +2397,7 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'postgres - index - advisor - pro',
     nam,
@@ -2526,7 +2410,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
     feature,
   s: [,
@@ -2534,9 +2417,7 @@
       'Index suggestions',
       'Risk scoring',
       'PR generation',
-      'Rollback assist',
-    ],
-<<<<<<< HEAD
+      'Rollback assist'],
     popular: true;
     category: 'Developer Tools',
     real_service: true;
@@ -2555,7 +2436,6 @@
     customers: 15;
     rating: 4 && 4.6;
     reviews: 5;
-=======
     popula,
   r: true,
     categor,
@@ -2591,16 +2471,12 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 5},
       'Usage analysis',
       'Rule suggestions',
       'Cost simulator',
       'Change sets',
-      'Alerting',
-    ],
-<<<<<<< HEAD
+      'Alerting'],
     popular: false;
     category: 'Cloud & FinOps',
     real_service: true;
@@ -2619,7 +2495,6 @@
     customers: 17;
     rating: 4 && 4.5;
     reviews: 4;
-=======
     popula,
   r: false,
     categor,
@@ -2655,16 +2530,12 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 4},
       'Connectors',
       'Sensitive entity detection',
       'Sampling with redaction',
       'Findings export',
-      'Alerting',
-    ],
-<<<<<<< HEAD
+      'Alerting'],
     popular: true;
     category: 'Quality & Monitoring',
     real_service: true;
@@ -2717,7 +2588,6 @@
     price: '$79',
     period: '/month',
     description:,
-=======
     popula,
   r: true,
     categor,
@@ -2753,8 +2623,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 'api-breaking-change-watcher',
     nam,
@@ -2805,8 +2674,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'postgres-index-advisor-pro'
     nam,
@@ -2819,7 +2687,6 @@
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
     feature,
   s: [;
@@ -2829,7 +2696,6 @@
       'PR generation'
       'Rollback assist'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: '';
     color: 'from-blue-700 to-indigo-800'
@@ -2856,7 +2722,6 @@
     customers: 15;
     rating: 4.6;
     reviews: 5;
-=======
     popula,
   r: true;
     ico,
@@ -2909,9 +2774,7 @@
     ratin,
   g: 4.6;
     review,
-  s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 5}
     i,
   d: 's3-lifecycle-optimizer'
     nam,
@@ -2932,7 +2795,6 @@
       'Change sets'
       'Alerting'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: '';
     color: 'from-emerald-700 to-teal-800'
@@ -2966,7 +2828,6 @@
     price: '$89',
     period: '/month',
     description:,
-=======
     popula,
   r: false;
     ico,
@@ -3019,8 +2880,7 @@
     ratin,
   g: 4.5;
     review,
-  s: 4,
-  }
+  s: 4}
     i,
   d: 'pii-discovery-scanner'
     nam,
@@ -3033,7 +2893,6 @@
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
     feature,
   s: [;
@@ -3043,7 +2902,6 @@
       'Findings export'
       'Alerting'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-700 to-rose-800'
@@ -3070,7 +2928,6 @@
     customers: 13;
     rating: 4.6;
     reviews: 5;
-=======
     popula,
   r: true;
     ico,
@@ -3123,16 +2980,12 @@
     ratin,
   g: 4.6;
     review,
-  s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 5}
       'Repo scanner',
       'Flag inventory',
       'Risk detection',
       'PR suggestions',
-      'CI integration',
-    ],
-<<<<<<< HEAD
+      'CI integration'],
     popular: false;
     icon: ''
     color: 'from-rose-600 to-pink-700'
@@ -3166,7 +3019,6 @@
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3219,8 +3071,7 @@
     ratin,
   g: 4.4,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'postgres - index - advisor - pro',
     nam,
@@ -3233,7 +3084,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
     feature,
   s: [,
@@ -3241,9 +3091,7 @@
       'Index suggestions',
       'Risk scoring',
       'PR generation',
-      'Rollback assist',
-    ],
-<<<<<<< HEAD
+      'Rollback assist'],
     popular: true;
     icon: ''
     color: 'from - blue - 700 to - indigo - 800'
@@ -3277,7 +3125,6 @@
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3330,8 +3177,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 's3 - lifecycle - optimizer',
     nam,
@@ -3344,7 +3190,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
     feature,
   s: [,
@@ -3352,9 +3197,7 @@
       'Rule suggestions',
       'Cost simulator',
       'Change sets',
-      'Alerting',
-    ],
-<<<<<<< HEAD
+      'Alerting'],
     popular: false;
     icon: ''
     color: 'from - emerald - 700 to - teal - 800'
@@ -3388,7 +3231,6 @@
     price: '$89',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3441,8 +3283,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4,
-  },
+  s: 4},
     i,
   d: 'pii - discovery - scanner',
     nam,
@@ -3455,7 +3296,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.',
     feature,
   s: [,
@@ -3463,9 +3303,7 @@
       'Sensitive entity detection',
       'Sampling with redaction',
       'Findings export',
-      'Alerting',
-    ],
-<<<<<<< HEAD
+      'Alerting'],
     popular: true;
     icon: ''
     color: 'from - red - 700 to - rose - 800'
@@ -3506,7 +3344,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3559,8 +3396,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 'api-breaking-change-watcher'
     nam,
@@ -3586,7 +3422,6 @@
   d: '/month',
     descriptio,
   n: unknown;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
     feature,
   s: [,
@@ -3594,9 +3429,7 @@
       'Diff rules',
       'Owner mapping',
       'CI checks',
-      'Changelog hints',
-    ],
-<<<<<<< HEAD
+      'Changelog hints'],
     popular: false;
     icon: ''
     color: 'from - indigo - 700 to - violet - 800'
@@ -3623,7 +3456,6 @@
     customers: 12;
     rating: 4 && 4.5;
     reviews: 3;
-=======
     popula,
   r: false,
     ico,
@@ -3676,9 +3508,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 3,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 3},
       'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.',
     feature,
   s: [;
@@ -3688,7 +3518,6 @@
       'CI checks'
       'Changelog hints'
     ]
-<<<<<<< HEAD
     popular: false;
     icon: '';
     color: 'from-indigo-700 to-violet-800'
@@ -3722,7 +3551,6 @@
     price: '$19',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false;
     ico,
@@ -3775,8 +3603,7 @@
     ratin,
   g: 4.5;
     review,
-  s: 3,
-  }
+  s: 3}
     i,
   d: 'feature - flag - auditor',
     nam,
@@ -3789,7 +3616,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.',
     feature,
   s: [,
@@ -3797,9 +3623,7 @@
       'Flag inventory',
       'Risk detection',
       'PR suggestions',
-      'CI integration',
-    ],
-<<<<<<< HEAD
+      'CI integration'],
     popular: false;
     icon: ''
     color: 'from - rose - 600 to - pink - 700'
@@ -3833,7 +3657,6 @@
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -3886,8 +3709,7 @@
     ratin,
   g: 4 && 4.4,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'postgres - index - advisor - pro',
     nam,
@@ -3900,7 +3722,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.',
     feature,
   s: [,
@@ -3908,9 +3729,7 @@
       'Index suggestions',
       'Risk scoring',
       'PR generation',
-      'Rollback assist',
-    ],
-<<<<<<< HEAD
+      'Rollback assist'],
     popular: true;
     icon: ''
     color: 'from - blue - 700 to - indigo - 800'
@@ -3944,7 +3763,6 @@
     price: '$59',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -3997,8 +3815,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 's3 - lifecycle - optimizer',
     nam,
@@ -4011,7 +3828,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.',
     feature,
   s: [,
@@ -4019,9 +3835,7 @@
       'Rule suggestions',
       'Cost simulator',
       'Change sets',
-      'Alerting',
-    ],
-<<<<<<< HEAD
+      'Alerting'],
     popular: false;
     icon: ''
     color: 'from - emerald - 700 to - teal - 800'
@@ -4055,7 +3869,6 @@
     price: '$89',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4108,8 +3921,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4,
-  },
+  s: 4},
     i,
   d: 'pii - discovery - scanner',
     nam,
@@ -4122,7 +3934,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.',
     feature,
   s: [,
@@ -4130,9 +3941,7 @@
       'Sensitive entity detection',
       'Sampling with redaction',
       'Findings export',
-      'Alerting',
-    ],
-<<<<<<< HEAD
+      'Alerting'],
     popular: true;
     icon: ''
     color: 'from - red - 700 to - rose - 800'
@@ -4174,7 +3983,6 @@
     price: '$49',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4227,8 +4035,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 5,
-  },
+  s: 5},
     i,
   d: 'api-breaking-change-watcher',
     nam,
@@ -4256,7 +4063,6 @@
   d: '/month',
     descriptio,
   n: unknown;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.',
     feature,
   s: [,
@@ -4264,9 +4070,7 @@
       'Diff rules',
       'Owner mapping',
       'CI checks',
-      'Changelog hints',
-    ],
-<<<<<<< HEAD
+      'Changelog hints'],
     popular: false;
     icon: ''
     color: 'from - indigo - 700 to - violet - 800'
@@ -4300,7 +4104,6 @@
     price: '$39',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4353,8 +4156,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'synthetic - journey - monitor',
     nam,
@@ -4367,7 +4169,6 @@
   d: '/month',
     descriptio,
   n: unknown;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.',
     feature,
   s: [,
@@ -4375,9 +4176,7 @@
       'Selector healing',
       'Schedules',
       'SLO alerts',
-      'Reports',
-    ],
-<<<<<<< HEAD
+      'Reports'],
     popular: false;
     icon: ''
     color: 'from - cyan - 700 to - blue - 800'
@@ -4412,7 +4211,6 @@
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4465,8 +4263,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 6,
-  },
+  s: 6},
     i,
   d: 'iam - permission - analyzer',
     nam,
@@ -4480,7 +4277,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.',
     feature,
   s: [,
@@ -4488,9 +4284,7 @@
       'Usage analysis',
       'Recommendations',
       'PR generation',
-      'Alerting',
-    ],
-<<<<<<< HEAD
+      'Alerting'],
     popular: true;
     icon: ''
     color: 'from - blue - 700 to - slate - 800'
@@ -4524,7 +4318,6 @@
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4577,8 +4370,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'warehouse - cost - optimizer',
     nam,
@@ -4591,7 +4383,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.',
     feature,
   s: [,
@@ -4599,9 +4390,7 @@
       'Size / schedule proposals',
       'Cost simulator',
       'PR templates',
-      'Alerts',
-    ],
-<<<<<<< HEAD
+      'Alerts'],
     popular: true;
     icon: ''
     color: 'from - indigo - 700 to - violet - 800'
@@ -4635,7 +4424,6 @@
     price: '$39',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -4688,8 +4476,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 3,
-  },
+  s: 3},
     i,
   d: 'email - warmup - monitor',
     nam,
@@ -4702,7 +4489,6 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Run warmup campaigns and monitor deliverability metrics to stay out of spam.',
     feature,
   s: [,
@@ -4710,9 +4496,7 @@
       'Seed inbox tests',
       'Domain / auth checks',
       'Alerts',
-      'Reports',
-    ],
-<<<<<<< HEAD
+      'Reports'],
     popular: false;
     icon: ''
     color: 'from - orange - 600 to - rose - 700'
@@ -4746,7 +4530,6 @@
     price: '$25',
     period: '/user / mo',
     description: unknown;
-=======
     popula,
   r: false,
     ico,
@@ -4799,8 +4582,7 @@
     ratin,
   g: 4 && 4.5,
     review,
-  s: 4,
-  },
+  s: 4},
     i,
   d: 'ai - meeting - to - ticket',
     nam,
@@ -4813,7 +4595,6 @@
   d: '/user / mo',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Transcribe meetings, extract action items, and open tickets with owners and due dates.',
     feature,
   s: [,
@@ -4821,9 +4602,7 @@
       'Action extraction',
       'Ticket creation',
       'Owner mapping',
-      'Summaries',
-    ],
-<<<<<<< HEAD
+      'Summaries'],
     popular: true;
     icon: ''
     color: 'from - cyan - 700 to - blue - 800'
@@ -4850,13 +4629,11 @@
     customers: 24;
     rating: 4 && 4.6;
     reviews: 6;
-  },
-];
+  }];
 const contact =
 	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com',
-=======
     popula,
   r: true,
     ico,
@@ -4909,9 +4686,7 @@ const contact =
     ratin,
   g: 4 && 4.6,
     review,
-  s: 6,
-  },
-];
+  s: 6}];
 const contact =
 	mobil,
   e: '+1 302 464 0950', emai,
@@ -4921,7 +4696,6 @@ const contact =
 	websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [,
@@ -4939,7 +4713,6 @@ export const,
   s: [;
 			'Intent classification + prioritizationOn-brand response draftingAutomatic polite follow-upsLead/contact enrichmentAnalytics and response SLAs'
 		];
-<<<<<<< HEAD
 		popular: true;
 		icon: ''
 		color: 'from-cyan-600 to-blue-700',
@@ -6858,8 +6631,7 @@ export const,
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com',
-};
+	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	{,
 		id: 'ai-email-responder';
@@ -7008,7 +6780,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 31;
 		rating: 4.7}
 		reviews: 11}
-=======
 		popula,
   r: true;
 		ico,
@@ -7061,8 +6832,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 12,
-	}
+  s: 12}
 		i,
   d: 'mobile-survey-studio'
 		nam,
@@ -7131,8 +6901,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 9,
-	}
+  s: 9}
 		i,
   d: 'niche-productivity-planner'
 		nam,
@@ -7201,8 +6970,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 7,
-	}
+  s: 7}
 		i,
   d: 'event-management-dashboard'
 		nam,
@@ -7271,8 +7039,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 11,
-	}
+  s: 11}
 		i,
   d: 'affiliate-tracking-suite'
 		nam,
@@ -7339,8 +7106,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 5,
-	}
+  s: 5}
 		i,
   d: 'smb-analytics-lite'
 		nam,
@@ -7407,8 +7173,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 8,
-	}
+  s: 8}
 		i,
   d: 'it-helpdesk-portal'
 		nam,
@@ -7475,8 +7240,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 6,
-	}
+  s: 6}
 		i,
   d: 'ecommerce-returns-manager'
 		nam,
@@ -7543,8 +7307,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5,
-	}
+  s: 5}
 		i,
   d: 'automated-email-followups'
 		nam,
@@ -7611,8 +7374,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 8,
-	}
+  s: 8}
 		i,
   d: 'podcast-transcription-service'
 		nam,
@@ -7679,8 +7441,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 6,
-	}
+  s: 6}
 		i,
   d: 'ai-seo-content-optimizer'
 		nam,
@@ -7747,8 +7508,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 10,
-	}
+  s: 10}
 		i,
   d: 'social-scheduler-ai'
 		nam,
@@ -7815,8 +7575,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 7,
-	}
+  s: 7}
 		i,
   d: 'lead-enrichment-api'
 		nam,
@@ -7883,8 +7642,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 4,
-	}
+  s: 4}
 		i,
   d: 'consent-management-cmp'
 		nam,
@@ -7951,8 +7709,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 10,
-	}
+  s: 10}
 		i,
   d: 'cookie-scanner-pro'
 		nam,
@@ -8019,8 +7776,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 5,
-	}
+  s: 5}
 		i,
   d: 'statuspage-sla-tracker'
 		nam,
@@ -8087,8 +7843,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 3,
-	}
+  s: 3}
 		i,
   d: 'agentic-lead-qualifier'
 		nam,
@@ -8155,8 +7910,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 7,
-	}
+  s: 7}
 		i,
   d: 'gdpr-dsar-portal-lite'
 		nam,
@@ -8223,8 +7977,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4,
-	}
+  s: 4}
 		i,
   d: 'feature-flag-auditor'
 		nam,
@@ -8291,8 +8044,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.4,
 		review,
-  s: 3,
-	}
+  s: 3}
 		i,
   d: 'postgres-index-advisor-pro'
 		nam,
@@ -8359,8 +8111,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5,
-	}
+  s: 5}
 		i,
   d: 's3-lifecycle-optimizer'
 		nam,
@@ -8427,8 +8178,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4,
-	}
+  s: 4}
 		i,
   d: 'pii-discovery-scanner'
 		nam,
@@ -8495,8 +8245,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 5,
-	}
+  s: 5}
 		i,
   d: 'api-breaking-change-watcher'
 		nam,
@@ -8563,8 +8312,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3,
-	}
+  s: 3}
 		i,
   d: 'synthetic-journey-monitor'
 		nam,
@@ -8631,8 +8379,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 6,
-	}
+  s: 6}
 		i,
   d: 'iam-permission-analyzer'
 		nam,
@@ -8699,8 +8446,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 3,
-	}
+  s: 3}
 		i,
   d: 'warehouse-cost-optimizer'
 		nam,
@@ -8767,8 +8513,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 3,
-	}
+  s: 3}
 		i,
   d: 'email-warmup-monitor'
 		nam,
@@ -8835,8 +8580,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 4,
-	}
+  s: 4}
 		i,
   d: 'ai-meeting-to-ticket'
 		nam,
@@ -8903,8 +8647,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 6,
-	}
+  s: 6}
 ];
   i,
   d: 'ai - email - responder'
@@ -8974,8 +8717,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.7,
   review,
-  s: 12,
-}
+  s: 12}
   i,
   d: 'mobile - survey - studio'
   nam,
@@ -9044,8 +8786,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 9,
-}
+  s: 9}
   i,
   d: 'niche - productivity - planner'
   nam,
@@ -9114,8 +8855,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 7,
-}
+  s: 7}
   i,
   d: 'event - management - dashboard'
   nam,
@@ -9184,8 +8924,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.7,
   review,
-  s: 11,
-}
+  s: 11}
   i,
   d: 'affiliate - tracking - suite'
   nam,
@@ -9252,8 +8991,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 5,
-}
+  s: 5}
   i,
   d: 'smb - analytics - lite'
   nam,
@@ -9320,8 +9058,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 8,
-}
+  s: 8}
   i,
   d: 'it - helpdesk - portal'
   nam,
@@ -9388,8 +9125,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.7,
   review,
-  s: 6,
-}
+  s: 6}
   i,
   d: 'ecommerce - returns - manager'
   nam,
@@ -9456,8 +9192,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 5,
-}
+  s: 5}
   i,
   d: 'automated - email - followups'
   nam,
@@ -9524,8 +9259,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 8,
-}
+  s: 8}
   i,
   d: 'podcast - transcription - service'
   nam,
@@ -9592,8 +9326,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 6,
-}
+  s: 6}
   i,
   d: 'ai - seo - content - optimizer'
   nam,
@@ -9660,8 +9393,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.7,
   review,
-  s: 10,
-}
+  s: 10}
   i,
   d: 'social - scheduler - ai'
   nam,
@@ -9728,8 +9460,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 7,
-}
+  s: 7}
   i,
   d: 'lead - enrichment - api'
   nam,
@@ -9796,8 +9527,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.4,
   review,
-  s: 4,
-}
+  s: 4}
   i,
   d: 'consent - management - cmp'
   nam,
@@ -9864,8 +9594,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.7,
   review,
-  s: 10,
-}
+  s: 10}
   i,
   d: 'cookie - scanner - pro'
   nam,
@@ -9932,8 +9661,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 5,
-}
+  s: 5}
   i,
   d: 'statuspage - sla - tracker'
   nam,
@@ -10000,8 +9728,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.4,
   review,
-  s: 3,
-}
+  s: 3}
   i,
   d: 'agentic - lead - qualifier'
   nam,
@@ -10068,8 +9795,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 7,
-}
+  s: 7}
   i,
   d: 'gdpr - dsar - portal - lite'
   nam,
@@ -10136,8 +9862,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 4,
-}
+  s: 4}
   i,
   d: 'feature - flag - auditor'
   nam,
@@ -10204,8 +9929,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.4,
   review,
-  s: 3,
-}
+  s: 3}
   i,
   d: 'postgres - index - advisor - pro'
   nam,
@@ -10272,8 +9996,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 5,
-}
+  s: 5}
   i,
   d: 's3 - lifecycle - optimizer'
   nam,
@@ -10340,8 +10063,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 4,
-}
+  s: 4}
   i,
   d: 'pii - discovery - scanner'
   nam,
@@ -10408,8 +10130,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 5,
-}
+  s: 5}
   i,
   d: 'api - breaking - change - watcher'
   nam,
@@ -10476,8 +10197,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 3,
-}
+  s: 3}
   i,
   d: 'synthetic - journey - monitor'
   nam,
@@ -10544,8 +10264,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 6,
-}
+  s: 6}
   i,
   d: 'iam - permission - analyzer'
   nam,
@@ -10612,8 +10331,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 3,
-}
+  s: 3}
   i,
   d: 'warehouse - cost - optimizer'
   nam,
@@ -10680,8 +10398,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 3,
-}
+  s: 3}
   i,
   d: 'email - warmup - monitor'
   nam,
@@ -10748,8 +10465,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 4,
-}
+  s: 4}
   i,
   d: 'ai - meeting - to - ticket'
   nam,
@@ -10816,8 +10532,7 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 6,
-}
+  s: 6}
 		ratin,
   g: 4.6;
 		review,
@@ -10849,7 +10564,6 @@ export const,
   g: 4.7}
 		review,
   s: 11}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
@@ -10973,13 +10687,11 @@ export const,
 	}
 ];
 ;
-<<<<<<< HEAD
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com',
-};
+	website: 'https://ziontechgroup.com'};
 export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 	{,
 		id: 'ai-email-responder';
@@ -11128,7 +10840,6 @@ export const real2035 Q2 Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 31;
 		rating: 4.7}
 		reviews: 11}
-=======
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
@@ -11156,7 +10867,6 @@ export const,
   g: 4.7}
 		review,
   s: 11}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.5}
@@ -11301,7 +11011,7 @@ export const,
   e: '15% CAGR'' varian,
   t: 'network-futuristic' contactInf,
   o: contact,
-  realImplementation: true' 'Intent classification + prioritization',' 'On-brand response drafting',' 'Automatic polite follow-ups',' 'Lead/contact enrichment', ' 'Intent classification + prioritization',' 'On - brand response drafting',' 'Automatic polite follow - ups',' 'Lead / contact enrichment', 'Analytics and response SLAs', ], popula,
+  realImplementation: true' 'Intent classification + prioritization',' 'On-brand response drafting',' 'Automatic polite follow-ups',' 'Lead/contact enrichment', ' 'Intent classification + prioritization',' 'On - brand response drafting',' 'Automatic polite follow - ups',' 'Lead / contact enrichment', 'Analytics and response SLAs'], popula,
   r: true,' ico,
   n: '📧', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
@@ -11333,11 +11043,11 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 48, ratin,
   g: 4 && 4.7, review,
-  s: 12, }, ' colo,
+  s: 12}, ' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-300',' lin,
   k: 'http,
-  s://ziontechgroup.com/services/ai-email-responder',;' marketPositio,
+  s://ziontechgroup.com/services/ai-email-responder';' marketPositio,
   n: 'Competes with Superhuman/Front add-ons, turnkey for SMBs',' targetAudienc,
   e: 'Sales, support, founder-led teams', trialDay,
   s: 14,' setupTim,
@@ -11365,7 +11075,7 @@ export const,
   e: '$19',' perio,
   d: '/month', descriptio,
   n:  ,' 'Build conversational surveys that adapt in real time. Increase completion with SMS / WhatsApp delivery and one - tap choices.', feature,
-  s: [,' 'Branching logic + A / B prompts',' 'SMS / WhatsApp / web delivery',' 'Real - time analytics',' 'CSV / Sheets export', ' 'Webhooks + API', ], popula,
+  s: [,' 'Branching logic + A / B prompts',' 'SMS / WhatsApp / web delivery',' 'Real - time analytics',' 'CSV / Sheets export', ' 'Webhooks + API'], popula,
   r: false,' ico,
   n: '📱', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
@@ -11392,14 +11102,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 22, ratin,
   g: 4 && 4.6, review,
-  s: 9, }, ' i,
+  s: 9}, ' i,
   d: 'niche - productivity - planner',' nam,
   e: 'Niche Productivity Planner', taglin,
   e:  ,' 'Industry - specific planners with templates, rituals, and benchmarks',' pric,
   e: '$12',' perio,
   d: '/month', descriptio,
   n:  ,' 'Prebuilt workflows for agencies, clinics, and shops. Weekly rituals, KPI widgets, and printable schedules.', feature,
-  s: [, ' 'Industry templates',' 'Calendar + task sync',' 'Benchmark KPIs',' 'Export to PDF',' 'Role - based views', ], popula,
+  s: [, ' 'Industry templates',' 'Calendar + task sync',' 'Benchmark KPIs',' 'Export to PDF',' 'Role - based views'], popula,
   r: false,' ico,
   n: '🗂️', ' colo,
   r: 'from - purple - 600 to - indigo - 700',' text_colo,
@@ -11426,14 +11136,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 18, ratin,
   g: 4 && 4.5, review,
-  s: 7, }, ' 'QR tickets + check-in',' 'Email/SMS reminders',' i,
+  s: 7}, ' 'QR tickets + check-in',' 'Email/SMS reminders',' i,
   d: 'event - management - dashboard',' nam,
   e: 'Event Management Dashboard',' taglin,
   e: 'Tickets, scheduling, comms, and post - event analytics',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Run webinars or in - person events with landing pages, reminders, QR tickets, and feedback analytics.', feature,
-  s: [,' 'QR tickets + check - in',' 'Email / SMS reminders', ' 'Agenda builder',' 'Feedback forms',' 'Post - event reports', ], popula,
+  s: [,' 'QR tickets + check - in',' 'Email / SMS reminders', ' 'Agenda builder',' 'Feedback forms',' 'Post - event reports'], popula,
   r: true,' ico,
   n: '🎟️', ' colo,
   r: 'from - pink - 600 to - rose - 700',' text_colo,
@@ -11460,14 +11170,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 31, ratin,
   g: 4 && 4.7, review,
-  s: 11, }, ' i,
+  s: 11}, ' i,
   d: 'affiliate - tracking - suite',' nam,
   e: 'Affiliate Tracking Suite',' taglin,
   e: 'Links, attribution, commission rules, and payouts',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
   n:  ,' 'Create affiliate programs with branded links, flexible commission rules, and payout exports.', feature,
-  s: [, ' 'Custom referral links',' 'UTM attribution',' 'Rule - based commissions',' 'Payout exports',' 'Fraud checks', ], popula,
+  s: [, ' 'Custom referral links',' 'UTM attribution',' 'Rule - based commissions',' 'Payout exports',' 'Fraud checks'], popula,
   r: false,' ico,
   n: '🔗', ' colo,
   r: 'from - amber - 600 to - orange - 700',' text_colo,
@@ -11494,14 +11204,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 12, ratin,
   g: 4 && 4.5, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'smb - analytics - lite',' nam,
   e: 'SMB Analytics Lite',' taglin,
   e: 'Traffic, funnels, and conversions without complexity',' pric,
   e: '$15',' perio,
   d: '/month', descriptio,
   n:  ,' 'Privacy - friendly analytics for small businesses with funnel insights and weekly summaries.', feature,
-  s: [, ' 'Page + event analytics',' 'Funnels + cohorts',' 'Weekly email summaries',' 'CSV export',' 'No cookies mode', ], popula,
+  s: [, ' 'Page + event analytics',' 'Funnels + cohorts',' 'Weekly email summaries',' 'CSV export',' 'No cookies mode'], popula,
   r: false,' ico,
   n: '📊', ' colo,
   r: 'from - sky - 600 to - indigo - 700',' text_colo,
@@ -11528,14 +11238,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 40, ratin,
   g: 4 && 4.6, review,
-  s: 8, }, ' 'Email-to-ticket',' i,
+  s: 8}, ' 'Email-to-ticket',' i,
   d: 'it - helpdesk - portal',' nam,
   e: 'IT Helpdesk Portal',' taglin,
   e: 'Tickets, knowledge base, SLAs, and client portal',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
   n:  ,' 'Managed ticketing for MSPs and internal IT with automation rules, approval flows, and client - visible status.', feature,
-  s: [,' 'Email - to - ticket', ' 'KB + article templates',' 'SLAs + escalations',' 'Client portal',' 'Reports', ], popula,
+  s: [,' 'Email - to - ticket', ' 'KB + article templates',' 'SLAs + escalations',' 'Client portal',' 'Reports'], popula,
   r: true,' ico,
   n: '🆘', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
@@ -11562,14 +11272,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 16, ratin,
   g: 4 && 4.7, review,
-  s: 6, }, ' 'Self-serve returns portal',' i,
+  s: 6}, ' 'Self-serve returns portal',' i,
   d: 'ecommerce - returns - manager',' nam,
   e: 'E‑commerce Returns Manager',' taglin,
   e: 'Customer - friendly returns with labels and status tracking',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
   n:  ,' 'Automate RMAs, label generation, and status notifications. Analytics to reduce avoidable returns.', feature,
-  s: [,' 'Self - serve returns portal', ' 'Label generation',' 'Return reasons analytics',' 'Inventory sync',' 'Notifications', ], popula,
+  s: [,' 'Self - serve returns portal', ' 'Label generation',' 'Return reasons analytics',' 'Inventory sync',' 'Notifications'], popula,
   r: true,' ico,
   n: '📦', ' colo,
   r: 'from - violet - 600 to - fuchsia - 700',' text_colo,
@@ -11596,14 +11306,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 14, ratin,
   g: 4 && 4.6, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'automated - email - followups',' nam,
   e: 'Automated Email Follow‑ups',' taglin,
   e: 'No - lead - left - behind sequences across inboxes',' pric,
   e: '$15',' perio,
   d: '/month', descriptio,
   n:  ,' 'Simple sequencer to follow up on stale leads and open tickets with natural language and auto - scheduling.', feature,
-  s: [, ' 'Sequences + delays',' 'Inbox integration',' 'Smart stop on reply',' 'Templates',' 'Analytics', ], popula,
+  s: [, ' 'Sequences + delays',' 'Inbox integration',' 'Smart stop on reply',' 'Templates',' 'Analytics'], popula,
   r: false,' ico,
   n: '📨', ' colo,
   r: 'from - cyan - 600 to - teal - 700',' text_colo,
@@ -11630,14 +11340,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 28, ratin,
   g: 4 && 4.5, review,
-  s: 8, }, ' i,
+  s: 8}, ' i,
   d: 'podcast - transcription - service',' nam,
   e: 'Podcast Transcription Service',' taglin,
   e: 'Accurate transcripts, chapters, and SEO blog exports',' pric,
   e: '$12',' perio,
   d: '/month', descriptio,
   n: ;' 'Upload or link to podcast episodes, get transcripts, summaries, chapters, and Wordpress - ready blog exports.', feature,
-  s: [, ' 'Fast transcripts',' 'Timestamps + chapters',' 'Summaries + highlights',' 'Blog export',' 'Glossary', ], popula,
+  s: [, ' 'Fast transcripts',' 'Timestamps + chapters',' 'Summaries + highlights',' 'Blog export',' 'Glossary'], popula,
   r: false,' ico,
   n: '🎙️', ' colo,
   r: 'from - indigo - 600 to - blue - 700',' text_colo,
@@ -11664,14 +11374,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 20, ratin,
   g: 4 && 4.6, review,
-  s: 6, }, ' 'On-page audits',' i,
+  s: 6}, ' 'On-page audits',' i,
   d: 'ai - seo - content - optimizer',' nam,
   e: 'AI SEO Content Optimizer',' taglin,
   e: 'Live on - page audits and SEO - aware rewrites',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
   n:  ,' 'In - editor SEO suggestions, competitive gap analysis, and AI rewrites targeting featured snippets.', feature,
-  s: [,' 'On - page audits', ' 'Topic clustering',' 'SERP intent match',' 'Internal link hints',' 'Rewrite suggestions', ], popula,
+  s: [,' 'On - page audits', ' 'Topic clustering',' 'SERP intent match',' 'Internal link hints',' 'Rewrite suggestions'], popula,
   r: true,' ico,
   n: '🔎', ' colo,
   r: 'from - emerald - 600 to - green - 700',' text_colo,
@@ -11698,14 +11408,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 33, ratin,
   g: 4 && 4.7, review,
-  s: 10, }, ' i,
+  s: 10}, ' i,
   d: 'social - scheduler - ai',' nam,
   e: 'Social Scheduler AI',' taglin,
   e: 'Auto - generate, schedule, and repurpose posts cross - platform',' pric,
   e: '$15',' perio,
   d: '/month', descriptio,
   n:  ,' 'Turn links, videos, or blog posts into tailored social snippets and schedule them with best - time predictions.', feature,
-  s: [, ' 'Content repurposing',' 'Calendar + auto - times',' 'Hashtag + emoji assistant',' 'Link tracking',' 'Client approvals', ], popula,
+  s: [, ' 'Content repurposing',' 'Calendar + auto - times',' 'Hashtag + emoji assistant',' 'Link tracking',' 'Client approvals'], popula,
   r: false,' ico,
   n: '📆', ' colo,
   r: 'from - fuchsia - 600 to - pink - 700',' text_colo,
@@ -11732,14 +11442,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 26, ratin,
   g: 4 && 4.5, review,
-  s: 7, }, ' i,
+  s: 7}, ' i,
   d: 'lead - enrichment - api',' nam,
   e: 'Lead Enrichment API',' taglin,
   e: 'Company, role, and social signals from an email / domain',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'REST API to enrich leads with verified firmographics and social signals for scoring and routing.', feature,
-  s: [, ' 'Firmographics',' 'Role detection',' 'Validated email signals',' 'Confidence scoring',' 'Usage dashboards', ], popula,
+  s: [, ' 'Firmographics',' 'Role detection',' 'Validated email signals',' 'Confidence scoring',' 'Usage dashboards'], popula,
   r: false,' ico,
   n: '🧩', ' colo,
   r: 'from - blue - 600 to - sky - 700',' text_colo,
@@ -11766,14 +11476,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 9, ratin,
   g: 4 && 4.4, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'consent - management - cmp',' nam,
   e: 'Consent Management CMP',' taglin,
   e: 'GDPR / CCPA consent banners, preferences, and audit logs',' pric,
   e: '$25',' perio,
   d: '/month', descriptio,
   n:  ,' 'Deploy branded consent banners, a preferences center, and downloadable audit logs. Geo - aware rules.', feature,
-  s: [, ' 'Geo rules',' 'IAB TCF',' 'Preference center',' 'Audit logs',' 'Multi - brand themes', ], popula,
+  s: [, ' 'Geo rules',' 'IAB TCF',' 'Preference center',' 'Audit logs',' 'Multi - brand themes'], popula,
   r: true,' ico,
   n: '✅', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
@@ -11800,14 +11510,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 37, ratin,
   g: 4 && 4.7, review,
-  s: 10, }, ' i,
+  s: 10}, ' i,
   d: 'cookie - scanner - pro',' nam,
   e: 'Cookie Scanner Pro',' taglin,
   e: 'Auto - detects cookies + trackers and updates your policy',' pric,
   e: '$9',' perio,
   d: '/month', descriptio,
   n:  ,' 'Scan your site for cookies / trackers, classify them, and generate policy updates with change diffs.', feature,
-  s: [, ' 'Site scan',' 'Tracker classification',' 'Policy generator',' 'Diffs + history',' 'CI hook', ], popula,
+  s: [, ' 'Site scan',' 'Tracker classification',' 'Policy generator',' 'Diffs + history',' 'CI hook'], popula,
   r: false,' ico,
   n: '🍪', ' colo,
   r: 'from - amber - 600 to - yellow - 700',' text_colo,
@@ -11834,14 +11544,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 19, ratin,
   g: 4 && 4.5, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'statuspage - sla - tracker',' nam,
   e: 'StatusPage SLA Tracker',' taglin,
   e: 'Track uptime / incidents and publish SLA reports',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
   n:  ,' 'Connect monitors, log incidents, and share public SLA / uptime reports with customers.', feature,
-  s: [, ' 'Incident log',' 'Public status page',' 'SLA calculator',' 'RSS + webhooks',' 'Exports', ], popula,
+  s: [, ' 'Incident log',' 'Public status page',' 'SLA calculator',' 'RSS + webhooks',' 'Exports'], popula,
   r: false,' ico,
   n: '📈', ' colo,
   r: 'from - sky - 600 to - cyan - 700',' text_colo,
@@ -11868,14 +11578,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 11, ratin,
   g: 4 && 4.4, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'agentic - lead - qualifier',' nam,
   e: 'Agentic Lead Qualifier',' taglin,
   e: 'Website chat agent that pre - qualifies and routes leads',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
   n:  ,' 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.', feature,
-  s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human', ], popula,
+  s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human'], popula,
   r: true,' categor,
   y: 'AI & Data', real_servic,
   e: true,' technolog,
@@ -11892,14 +11602,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 23, ratin,
   g: 4 && 4.6, review,
-  s: 7, }, ' i,
+  s: 7}, ' i,
   d: 'gdpr - dsar - portal - lite',' nam,
   e: 'GDPR DSAR Portal Lite',' taglin,
   e: 'Accept, verify, export, and fulfill data subject requests',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Hosted portal for DSARs with identity verification, workflow, and export helpers.', feature,
-  s: [, ' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs', ], popula,
+  s: [, ' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs'], popula,
   r: true,' integration,
   s: ['Zendesk', 'Google Drive'],' use_case,
   s: ['DSAR fulfillment'],' ro,
@@ -11914,10 +11624,10 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 10, ratin,
   g: 4 && 4.5, review,
-  s: 4, }, ' perio,
+  s: 4}, ' perio,
   d: '/month', descriptio,
   n:  ,' 'Embedded chat agent asks smart questions, books meetings, and routes leads to the right team.', feature,
-  s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human', ], popula,
+  s: [, ' 'Qualifying flows',' 'Calendar booking',' 'CRM routing',' 'Visitor insights',' 'Hand - off to human'], popula,
   r: true,' ico,
   n: '🤖',' colo,
   r: 'from - teal - 600 to - emerald - 700',' text_colo,
@@ -11944,14 +11654,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 23, ratin,
   g: 4 && 4.6, review,
-  s: 7, }, ' i,
+  s: 7}, ' i,
   d: 'gdpr - dsar - portal - lite',' nam,
   e: 'GDPR DSAR Portal Lite',' taglin,
   e: 'Accept, verify, export, and fulfill data subject requests',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n:  ,' 'Hosted portal for DSARs with identity verification, workflow, and export helpers.', feature,
-  s: [,' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs', ], popula,
+  s: [,' 'Request intake',' 'Identity check',' 'Triage + workflow',' 'Exports',' 'Audit logs'], popula,
   r: true,' ico,
   n: '🛡️',' colo,
   r: 'from - red - 600 to - rose - 700',' text_colo,
@@ -11978,7 +11688,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 10, ratin,
   g: 4 && 4.5, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'feature-flag-auditor'' nam,
   e: 'Feature Flag Auditor'' taglin,
   e: 'Flag hygiene checks and end-of-life automation'' pric,
@@ -12012,7 +11722,7 @@ export const,
   e: '2025-08-20' customer,
   s: 8,
   rating: 4.4,
-  reviews: 3 }' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration', ], popula,
+  reviews: 3 }' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration'], popula,
   r: false,' ico,
   n: '🚩', ' colo,
   r: 'from - rose - 600 to - pink - 700',' text_colo,
@@ -12039,14 +11749,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 8, ratin,
   g: 4 && 4.4, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'postgres - index - advisor - pro',' nam,
   e: 'Postgres Index Advisor Pro',' taglin,
   e: 'Index recommendations and controlled PR rollouts',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
-  s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist', ], popula,
+  s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
   r: true,' categor,
   y: 'Developer Tools', real_servic,
   e: true,' technolog,
@@ -12064,7 +11774,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 15, ratin,
   g: 4 && 4.6, review,
-  s: 5, }, ' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting', ], popula,
+  s: 5}, ' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
   r: false,' categor,
   y: 'Cloud & FinOps', real_servic,
   e: true,' technolog,
@@ -12082,7 +11792,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 17, ratin,
   g: 4 && 4.5, review,
-  s: 4, }, ' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting', ], popula,
+  s: 4}, ' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
   r: true,' categor,
   y: 'Quality & Monitoring', real_servic,
   e: true,' technolog,
@@ -12100,7 +11810,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 13, ratin,
   g: 4 && 4.6, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'api-breaking-change-watcher',' nam,
   e: 'API Breaking Change Watcher',' taglin,
   e: 'Schema diffs with CI gates and notifications',' pric,
@@ -12125,7 +11835,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 12, ratin,
   g: 4 && 4.5, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'postgres-index-advisor-pro'' nam,
   e: 'Postgres Index Advisor Pro'' taglin,
   e: 'Index recommendations and controlled PR rollouts'' pric,
@@ -12227,7 +11937,7 @@ export const,
   e: '2025-08-20' customer,
   s: 13,
   rating: 4.6,
-  reviews: 5 } ' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration', ], popula,
+  reviews: 5 } ' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration'], popula,
   r: false,' ico,
   n: '🚩',' colo,
   r: 'from-rose-600 to-pink-700',' textColo,
@@ -12242,7 +11952,7 @@ export const,
   e: true,' technolog,
   y: ['Git APIs', 'Static analysis'],' integration,
   s: ['GitHub', 'GitLab', 'Flagsmith'],' useCase,
-  s: ['Cleanup debt', 'Reduce risk'],;' ro,
+  s: ['Cleanup debt', 'Reduce risk'];' ro,
   i: 'Avoid outages, reduce toil',' competitor,
   s: ['LaunchDarkly add-ons'],' marketSiz,
   e: '$1B flags',' growthRat,
@@ -12254,14 +11964,14 @@ export const,
   e: '2025-08-20', customer,
   s: 8, ratin,
   g: 4.4, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'postgres - index - advisor - pro',' nam,
   e: 'Postgres Index Advisor Pro',' taglin,
   e: 'Index recommendations and controlled PR rollouts',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
-  s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist', ], popula,
+  s: [,' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
   r: true,' ico,
   n: '🗄️',' colo,
   r: 'from - blue - 700 to - indigo - 800',' text_colo,
@@ -12288,14 +11998,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 15, ratin,
   g: 4 && 4.6, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 's3 - lifecycle - optimizer',' nam,
   e: 'S3 Lifecycle Optimizer',' taglin,
   e: 'Move objects between storage classes to cut costs',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
   n:  ,' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.', feature,
-  s: [,' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting', ], popula,
+  s: [,' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
   r: false,' ico,
   n: '🗂️',' colo,
   r: 'from - emerald - 700 to - teal - 800',' text_colo,
@@ -12322,14 +12032,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 17, ratin,
   g: 4 && 4.5, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'pii - discovery - scanner',' nam,
   e: 'PII Discovery Scanner',' taglin,
   e: 'Scan buckets and DBs for PII / PHI with evidence exports',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
   n:  ,' 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.', feature,
-  s: [,' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting', ], popula,
+  s: [,' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
   r: true,' ico,
   n: '🕵️',' colo,
   r: 'from - red - 700 to - rose - 800',' text_colo,
@@ -12356,7 +12066,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 13, ratin,
   g: 4 && 4.6, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'api-breaking-change-watcher'' nam,
   e: 'API Breaking Change Watcher'' taglin,
   e: 'Schema diffs with CI gates and notifications'' pric,
@@ -12369,7 +12079,7 @@ export const,
   e: '$49',' perio,
   d: '/month', descriptio,
   n: ;' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
-  s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints', ], popula,
+  s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
   r: false,' ico,
   n: '🧭', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
@@ -12396,7 +12106,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 12, ratin,
   g: 4 && 4.5, review,
-  s: 3, }, ' 'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.', feature,
+  s: 3}, ' 'Monitor OpenAPI/GraphQL schemas for breaking changes; gate CI and alert owners with upgrade notes.', feature,
   s: [' 'Schema registry'' 'Diff rules'' 'Owner mapping'' 'CI checks'' 'Changelog hints' ] popula,
   r: false' ico,
   n: '🧭'' colo,
@@ -12431,7 +12141,7 @@ export const,
   e: '$19',' perio,
   d: '/month', descriptio,
   n:  ,' 'Scan repositories and environments for stale flags, dangerous defaults, and missing cleanups. Auto - open PRs.', feature,
-  s: [, ' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration', ], popula,
+  s: [, ' 'Repo scanner',' 'Flag inventory',' 'Risk detection',' 'PR suggestions',' 'CI integration'], popula,
   r: false,' ico,
   n: '🚩', ' colo,
   r: 'from - rose - 600 to - pink - 700',' text_colo,
@@ -12458,14 +12168,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 8, ratin,
   g: 4 && 4.4, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'postgres - index - advisor - pro',' nam,
   e: 'Postgres Index Advisor Pro',' taglin,
   e: 'Index recommendations and controlled PR rollouts',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.', feature,
-  s: [, ' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist', ], popula,
+  s: [, ' 'Slow query capture',' 'Index suggestions',' 'Risk scoring',' 'PR generation',' 'Rollback assist'], popula,
   r: true,' ico,
   n: '🗄️', ' colo,
   r: 'from - blue - 700 to - indigo - 800',' text_colo,
@@ -12492,14 +12202,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 15, ratin,
   g: 4 && 4.6, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 's3 - lifecycle - optimizer',' nam,
   e: 'S3 Lifecycle Optimizer',' taglin,
   e: 'Move objects between storage classes to cut costs',' pric,
   e: '$59',' perio,
   d: '/month', descriptio,
   n:  ,' 'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.', feature,
-  s: [, ' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting', ], popula,
+  s: [, ' 'Usage analysis',' 'Rule suggestions',' 'Cost simulator',' 'Change sets',' 'Alerting'], popula,
   r: false,' ico,
   n: '🗂️', ' colo,
   r: 'from - emerald - 700 to - teal - 800',' text_colo,
@@ -12526,14 +12236,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 17, ratin,
   g: 4 && 4.5, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'pii - discovery - scanner',' nam,
   e: 'PII Discovery Scanner',' taglin,
   e: 'Scan buckets and DBs for PII / PHI with evidence exports',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
   n:  ,' 'Find PII in cloud storage and databases, redact samples, and export auditor - friendly evidence.', feature,
-  s: [, ' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting', ], popula,
+  s: [, ' 'Connectors',' 'Sensitive entity detection',' 'Sampling with redaction',' 'Findings export',' 'Alerting'], popula,
   r: true,' ico,
   n: '🕵️', ' colo,
   r: 'from - red - 700 to - rose - 800',' text_colo,
@@ -12560,7 +12270,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 13, ratin,
   g: 4 && 4.6, review,
-  s: 5, }, ' i,
+  s: 5}, ' i,
   d: 'api-breaking-change-watcher',' nam,
   e: 'API Breaking Change Watcher',' taglin,
   e: 'Schema diffs with CI gates and notifications',' pric,
@@ -12574,7 +12284,7 @@ export const,
   e: '$49',' perio,
   d: '/month', descriptio,
   n: ;' 'Monitor OpenAPI / GraphQL schemas for breaking changes, gate CI and alert owners with upgrade notes.', feature,
-  s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints', ], popula,
+  s: [, ' 'Schema registry',' 'Diff rules',' 'Owner mapping',' 'CI checks',' 'Changelog hints'], popula,
   r: false,' ico,
   n: '🧭', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
@@ -12601,14 +12311,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 12, ratin,
   g: 4 && 4.5, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'synthetic - journey - monitor',' nam,
   e: 'Synthetic Journey Monitor',' taglin,
   e: 'Record and replay user flows with SLO alerts',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
   n: ;' 'Browser - based recorder creates resilient journeys, run on a schedule and alert on SLO errors or latency.', feature,
-  s: [, ' 'Recorder',' 'Selector healing',' 'Schedules',' 'SLO alerts',' 'Reports', ], popula,
+  s: [, ' 'Recorder',' 'Selector healing',' 'Schedules',' 'SLO alerts',' 'Reports'], popula,
   r: false,' ico,
   n: '🧪', ' colo,
   r: 'from - cyan - 700 to - blue - 800',' text_colo,
@@ -12635,14 +12345,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 21, ratin,
   g: 4 && 4.5, review,
-  s: 6, }, ' i,
+  s: 6}, ' i,
   d: 'iam - permission - analyzer',' nam,
   e: 'IAM Permission Analyzer', taglin,
   e:  ,' 'Detect over - privileged access and propose least - privilege policies',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.', feature,
-  s: [, ' 'Policy inventory',' 'Usage analysis',' 'Recommendations',' 'PR generation',' 'Alerting', ], popula,
+  s: [, ' 'Policy inventory',' 'Usage analysis',' 'Recommendations',' 'PR generation',' 'Alerting'], popula,
   r: true,' ico,
   n: '🔐', ' colo,
   r: 'from - blue - 700 to - slate - 800',' text_colo,
@@ -12669,14 +12379,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 9, ratin,
   g: 4 && 4.6, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'warehouse - cost - optimizer',' nam,
   e: 'Data Warehouse Cost Optimizer',' taglin,
   e: 'Right - size warehouses and schedule off - peak workloads',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
   n:  ,' 'Analyze query patterns and propose sizing + scheduling changes to slash Snowflake / BigQuery costs.', feature,
-  s: [, ' 'Query profiling',' 'Size / schedule proposals',' 'Cost simulator',' 'PR templates',' 'Alerts', ], popula,
+  s: [, ' 'Query profiling',' 'Size / schedule proposals',' 'Cost simulator',' 'PR templates',' 'Alerts'], popula,
   r: true,' ico,
   n: '🧱', ' colo,
   r: 'from - indigo - 700 to - violet - 800',' text_colo,
@@ -12703,14 +12413,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 7, ratin,
   g: 4 && 4.5, review,
-  s: 3, }, ' i,
+  s: 3}, ' i,
   d: 'email - warmup - monitor',' nam,
   e: 'Email Warmup & Reputation Monitor',' taglin,
   e: 'Track sender reputation and run inbox placement tests',' pric,
   e: '$39',' perio,
   d: '/month', descriptio,
   n:  ,' 'Run warmup campaigns and monitor deliverability metrics to stay out of spam.', feature,
-  s: [, ' 'Warmup campaigns',' 'Seed inbox tests',' 'Domain / auth checks',' 'Alerts',' 'Reports', ], popula,
+  s: [, ' 'Warmup campaigns',' 'Seed inbox tests',' 'Domain / auth checks',' 'Alerts',' 'Reports'], popula,
   r: false,' ico,
   n: '🔥', ' colo,
   r: 'from - orange - 600 to - rose - 700',' text_colo,
@@ -12737,14 +12447,14 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 16, ratin,
   g: 4 && 4.5, review,
-  s: 4, }, ' i,
+  s: 4}, ' i,
   d: 'ai - meeting - to - ticket',' nam,
   e: 'AI Meeting‑to‑Ticket Copilot',' taglin,
   e: 'Turn meeting action items into Jira / GitHub tickets',' pric,
   e: '$25',' perio,
   d: '/user / mo', descriptio,
   n:  ,' 'Transcribe meetings, extract action items, and open tickets with owners and due dates.', feature,
-  s: [, ' 'Transcription',' 'Action extraction',' 'Ticket creation',' 'Owner mapping',' 'Summaries', ], popula,
+  s: [, ' 'Transcription',' 'Action extraction',' 'Ticket creation',' 'Owner mapping',' 'Summaries'], popula,
   r: true,' ico,
   n: '📝', ' colo,
   r: 'from - cyan - 700 to - blue - 800',' text_colo,
@@ -12771,7 +12481,7 @@ export const,
   e: '2025 - 08 - 20', customer,
   s: 24, ratin,
   g: 4 && 4.6, review,
-  s: 6, }, ]; const contact = ' mobil,
+  s: 6}]; const contact = ' mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
@@ -13763,7 +13473,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 48, ratin,
   g: 4.7, review,
-  s: 12, } ' i,
+  s: 12} ' i,
   d: 'mobile - survey - studio'' nam,
   e: 'Mobile Survey Studio',' taglin,
   e: 'Adaptive, mobile - first surveys with branching logic and analytics'' pric,
@@ -13797,7 +13507,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 22, ratin,
   g: 4.6, review,
-  s: 9, } ' i,
+  s: 9} ' i,
   d: 'niche - productivity - planner'' nam,
   e: 'Niche Productivity Planner',' taglin,
   e: 'Industry - specific planners with templates, rituals, and benchmarks'' pric,
@@ -13831,7 +13541,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 18, ratin,
   g: 4.5, review,
-  s: 7, } ' i,
+  s: 7} ' i,
   d: 'event - management - dashboard'' nam,
   e: 'Event Management Dashboard',' taglin,
   e: 'Tickets, scheduling, comms, and post - event analytics'' pric,
@@ -13865,7 +13575,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 31, ratin,
   g: 4.7, review,
-  s: 11, } ' i,
+  s: 11} ' i,
   d: 'affiliate - tracking - suite'' nam,
   e: 'Affiliate Tracking Suite',' taglin,
   e: 'Links, attribution, commission rules, and payouts'' pric,
@@ -13899,7 +13609,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 12, ratin,
   g: 4.5, review,
-  s: 5, } ' i,
+  s: 5} ' i,
   d: 'smb - analytics - lite'' nam,
   e: 'SMB Analytics Lite',' taglin,
   e: 'Traffic, funnels, and conversions without complexity'' pric,
@@ -13933,7 +13643,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 40, ratin,
   g: 4.6, review,
-  s: 8, } ' i,
+  s: 8} ' i,
   d: 'it - helpdesk - portal'' nam,
   e: 'IT Helpdesk Portal',' taglin,
   e: 'Tickets, knowledge base, SLAs, and client portal'' pric,
@@ -13967,7 +13677,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 16, ratin,
   g: 4.7, review,
-  s: 6, } ' i,
+  s: 6} ' i,
   d: 'ecommerce - returns - manager'' nam,
   e: 'E‑commerce Returns Manager'' taglin,
   e: 'Customer - friendly returns with labels and status tracking'' pric,
@@ -14001,7 +13711,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 14, ratin,
   g: 4.6, review,
-  s: 5, } ' i,
+  s: 5} ' i,
   d: 'automated - email - followups'' nam,
   e: 'Automated Email Follow‑ups'' taglin,
   e: 'No - lead - left - behind sequences across inboxes'' pric,
@@ -14035,7 +13745,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 28, ratin,
   g: 4.5, review,
-  s: 8, } ' i,
+  s: 8} ' i,
   d: 'podcast - transcription - service'' nam,
   e: 'Podcast Transcription Service',' taglin,
   e: 'Accurate transcripts, chapters, and SEO blog exports'' pric,
@@ -14069,7 +13779,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 20, ratin,
   g: 4.6, review,
-  s: 6, } ' i,
+  s: 6} ' i,
   d: 'ai - seo - content - optimizer'' nam,
   e: 'AI SEO Content Optimizer'' taglin,
   e: 'Live on - page audits and SEO - aware rewrites'' pric,
@@ -14103,7 +13813,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 33, ratin,
   g: 4.7, review,
-  s: 10, } ' i,
+  s: 10} ' i,
   d: 'social - scheduler - ai'' nam,
   e: 'Social Scheduler AI',' taglin,
   e: 'Auto - generate, schedule, and repurpose posts cross - platform'' pric,
@@ -14137,7 +13847,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 26, ratin,
   g: 4.5, review,
-  s: 7, } ' i,
+  s: 7} ' i,
   d: 'lead - enrichment - api'' nam,
   e: 'Lead Enrichment API',' taglin,
   e: 'Company, role, and social signals from an email / domain'' pric,
@@ -14171,7 +13881,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 9, ratin,
   g: 4.4, review,
-  s: 4, } ' i,
+  s: 4} ' i,
   d: 'consent - management - cmp'' nam,
   e: 'Consent Management CMP',' taglin,
   e: 'GDPR / CCPA consent banners, preferences, and audit logs'' pric,
@@ -14205,7 +13915,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 37, ratin,
   g: 4.7, review,
-  s: 10, } ' i,
+  s: 10} ' i,
   d: 'cookie - scanner - pro'' nam,
   e: 'Cookie Scanner Pro'' taglin,
   e: 'Auto - detects cookies + trackers and updates your policy'' pric,
@@ -14239,7 +13949,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 19, ratin,
   g: 4.5, review,
-  s: 5, } ' i,
+  s: 5} ' i,
   d: 'statuspage - sla - tracker'' nam,
   e: 'StatusPage SLA Tracker'' taglin,
   e: 'Track uptime / incidents and publish SLA reports'' pric,
@@ -14273,7 +13983,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 11, ratin,
   g: 4.4, review,
-  s: 3, } ' i,
+  s: 3} ' i,
   d: 'agentic - lead - qualifier'' nam,
   e: 'Agentic Lead Qualifier'' taglin,
   e: 'Website chat agent that pre - qualifies and routes leads'' pric,
@@ -14307,7 +14017,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 23, ratin,
   g: 4.6, review,
-  s: 7, } ' i,
+  s: 7} ' i,
   d: 'gdpr - dsar - portal - lite'' nam,
   e: 'GDPR DSAR Portal Lite',' taglin,
   e: 'Accept, verify, export, and fulfill data subject requests'' pric,
@@ -14341,7 +14051,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 10, ratin,
   g: 4.5, review,
-  s: 4, } ' i,
+  s: 4} ' i,
   d: 'feature - flag - auditor'' nam,
   e: 'Feature Flag Auditor'' taglin,
   e: 'Flag hygiene checks and end - of - life automation'' pric,
@@ -14375,7 +14085,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 8, ratin,
   g: 4.4, review,
-  s: 3, } ' i,
+  s: 3} ' i,
   d: 'postgres - index - advisor - pro'' nam,
   e: 'Postgres Index Advisor Pro'' taglin,
   e: 'Index recommendations and controlled PR rollouts'' pric,
@@ -14409,7 +14119,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 15, ratin,
   g: 4.6, review,
-  s: 5, } ' i,
+  s: 5} ' i,
   d: 's3 - lifecycle - optimizer'' nam,
   e: 'S3 Lifecycle Optimizer'' taglin,
   e: 'Move objects between storage classes to cut costs'' pric,
@@ -14443,7 +14153,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 17, ratin,
   g: 4.5, review,
-  s: 4, } ' i,
+  s: 4} ' i,
   d: 'pii - discovery - scanner'' nam,
   e: 'PII Discovery Scanner'' taglin,
   e: 'Scan buckets and DBs for PII / PHI with evidence exports'' pric,
@@ -14477,7 +14187,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 13, ratin,
   g: 4.6, review,
-  s: 5, } ' i,
+  s: 5} ' i,
   d: 'api - breaking - change - watcher'' nam,
   e: 'API Breaking Change Watcher'' taglin,
   e: 'Schema diffs with CI gates and notifications'' pric,
@@ -14511,7 +14221,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 12, ratin,
   g: 4.5, review,
-  s: 3, } ' i,
+  s: 3} ' i,
   d: 'synthetic - journey - monitor'' nam,
   e: 'Synthetic Journey Monitor'' taglin,
   e: 'Record and replay user flows with SLO alerts'' pric,
@@ -14545,7 +14255,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 21, ratin,
   g: 4.5, review,
-  s: 6, } ' i,
+  s: 6} ' i,
   d: 'iam - permission - analyzer'' nam,
   e: 'IAM Permission Analyzer'' taglin,
   e: 'Detect over - privileged access and propose least - privilege policies'' pric,
@@ -14579,7 +14289,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 9, ratin,
   g: 4.6, review,
-  s: 3, } ' i,
+  s: 3} ' i,
   d: 'warehouse - cost - optimizer'' nam,
   e: 'Data Warehouse Cost Optimizer'' taglin,
   e: 'Right - size warehouses and schedule off - peak workloads'' pric,
@@ -14613,7 +14323,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 7, ratin,
   g: 4.5, review,
-  s: 3, } ' i,
+  s: 3} ' i,
   d: 'email - warmup - monitor'' nam,
   e: 'Email Warmup & Reputation Monitor'' taglin,
   e: 'Track sender reputation and run inbox placement tests'' pric,
@@ -14647,7 +14357,7 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 16, ratin,
   g: 4.5, review,
-  s: 4, } ' i,
+  s: 4} ' i,
   d: 'ai - meeting - to - ticket'' nam,
   e: 'AI Meeting‑to‑Ticket Copilot'' taglin,
   e: 'Turn meeting action items into Jira / GitHub tickets'' pric,
@@ -14681,128 +14391,128 @@ export const,
   e: '2025 - 08 - 20' customer,
   s: 24, ratin,
   g: 4.6, review,
-  s: 6, } ratin,
+  s: 6} ratin,
   g: 4.6,
   reviews: 6 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' },; export const,
+  s://ziontechgroup.com' }; export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 12} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 9} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 7} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 11} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 8} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 6} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 8} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 6} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 10} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 7} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 4} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 10} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 7} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 4} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 4} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 6} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 4} },; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 12} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 9} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 7} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 11} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 8} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 6} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 8} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 6} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 10} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 7} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 4} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 10} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 7} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 4} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 4} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 6} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 6} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' },; export const,
+  s://ziontechgroup.com' }; export const,
   real2035Q2Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 12} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 9} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 7} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 11} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 8} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 6} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 8} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 6} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 10} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 7} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 4} },; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 10} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 7} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 4} },; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 4} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 5} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 6} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 3} },; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 4} },; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 12} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 9} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 7} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 11} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 8} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 6} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 8} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 6} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 10} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 7} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 4} }; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 10} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 7} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 4} }; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 4} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 5} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 6} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 3} }; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 4} }; {/* TODO: Fix JSX expression */}
   g: 4.6} review,
   s: 6} } ]; '

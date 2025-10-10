@@ -18,7 +18,6 @@ export const securityHeaders = [
   },
   {/* TODO: Fix JSX expression */}
   },
-<<<<<<< HEAD
   {
     key: 'Content-Security-Policy',
     value: [,
@@ -28,12 +27,8 @@ export const securityHeaders = [
       "img-src 'self' data: https:",
       "font-src 'self' data: ",
       "connect-src 'self' *.google-analytics.com",
-      "frame-ancestors 'self'",
-    ].join('; '),
-=======
+      "frame-ancestors 'self'"].join('; '),
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-];
+  }];
 
 export default securityHeaders;

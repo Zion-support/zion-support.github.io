@@ -1,139 +1,145 @@
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-const HealthcareITPage: React.FC = () => {,
-  const features = [,
-    {,
-      icon: Heart;
+const HealthcareITPage: React.FC = () => {
+  const features = [
+    {
+      icon: Heart,
+      title: 'Electronic Health Records',
+      description: 'Comprehensive EHR systems that streamline patient data management and improve care coordination.',
+      benefits: ['Patient data management', 'Care coordination', 'Interoperability']
+    },
+    {
+      icon: Shield,
       title: 'HIPAA Compliance',
-      description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
-      benefits: ['Automated compliance', 'Audit trails', 'Risk management']
+      description: 'Ensure full compliance with healthcare regulations and data protection standards.',
+      benefits: ['HIPAA compliant', 'Data encryption', 'Audit trails']
     },
     {
-      icon: Zap;
-      title: 'Patient Data Security',
-      description: 'Bank-level security for patient data with encryption, access controls, and monitoring.',
-      benefits: ['Data encryption', 'Access controls', 'Security monitoring']
-    },
-    {
-      icon: Clock;
-      title: '24/7 System Monitoring',
-      description: 'Continuous monitoring of healthcare systems with real-time alerts and notifications.',
-      benefits: ['Always-on monitoring', 'Instant alerts', 'System health']
-    },
-    {
-      icon: Users;
-      title: 'Interoperability',
-      description: 'Seamless integration with EHR systems, medical devices, and healthcare applications.',
-      benefits: ['EHR integration', 'Device connectivity', 'Data exchange']
-    },
-    {
-      icon: Shield;
-      title: 'Cybersecurity',
-      description: 'Advanced cybersecurity measures designed specifically for healthcare environments.',
-      benefits: ['Threat detection', 'Incident response', 'Security training']
-    },
-    {
-      icon: BarChart;
+      icon: BarChart,
       title: 'Healthcare Analytics',
-      description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
-      benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']
+      description: 'Advanced analytics and reporting tools for healthcare insights and decision making.',
+      benefits: ['Patient insights', 'Performance metrics', 'Predictive analytics']
+    },
+    {
+      icon: Clock,
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support for critical healthcare systems.',
+      benefits: ['Critical system support', 'Rapid response', 'Minimal downtime']
+    },
+    {
+      icon: Users,
+      title: 'Multi-User Access',
+      description: 'Secure access for healthcare professionals with role-based permissions.',
+      benefits: ['Role-based access', 'Secure authentication', 'User management']
+    },
+    {
+      icon: Zap,
+      title: 'Telemedicine Solutions',
+      description: 'Remote healthcare delivery platforms for virtual consultations and monitoring.',
+      benefits: ['Virtual consultations', 'Remote monitoring', 'Patient engagement']
     }
   ];
 
-<<<<<<< HEAD
+  const benefits = [
+    'Improve patient care quality by 40%',
+    'Reduce administrative costs by 60%',
+    'Enhance data security and privacy',
+    'Streamline healthcare workflows',
+    'Enable better care coordination',
+    'Support telemedicine initiatives'
+  ];
+
+  const services = [
+    {
+      title: 'EHR Systems',
+      description: 'Comprehensive electronic health record management',
+      icon: '📋'
+    },
+    {
+      title: 'Telemedicine',
+      description: 'Virtual healthcare delivery platforms',
+      icon: '💻'
+    },
+    {
+      title: 'Medical Imaging',
+      description: 'Advanced medical imaging and diagnostic tools',
+      icon: '🩺'
+    },
+    {
+      title: 'Patient Portal',
+      description: 'Secure patient access to health information',
+      icon: '👤'
+    }
+  ];
+
   return (
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
-      <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="relative py-20 px-4 overflow-hidden">
-<<<<<<< HEAD
-=======
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">)
-      <Navigation />)
-      {/* Hero Section */})
-      <section className="relative py-20 px-4 overflow-hidden">)
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Healthcare IT Solutions - Zion Tech Group | Medical Technology</title>
+        <meta name="description" content="Transform healthcare delivery with our comprehensive IT solutions. EHR systems, telemedicine, and HIPAA-compliant technology for modern healthcare." />
+        <meta name="keywords" content="healthcare IT, EHR systems, telemedicine, HIPAA compliance, medical technology, healthcare software" />
+      </Helmet>
+      
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Healthcare<span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
-=======
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(239,68,68,0.3)_0%,transparent_50%)] animate-pulse" /></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Healthcare</h1><span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">IT Solutions</span><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-            Built for hospitals, clinics, medical practices, and healthcare organizations.</p>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Healthcare IT
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Solutions
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Transform healthcare delivery with our comprehensive IT solutions. From EHR systems to telemedicine, 
+            we deliver secure, compliant, and efficient technology for modern healthcare.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">Get Started Today</button>
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Schedule Demo</button>
-=======
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-            Healthcare;
-            <span className="block bg-gradient-to-r from-red-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              IT Solutions;
-            </span>,
-          </h1>,
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">,
-            Specialized IT solutions for healthcare with HIPAA compliance, security, and interoperability.
-            Built for hospitals, clinics, medical practices, and healthcare organizations.
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-500/25">
-              Get Started Today;
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Get Healthcare IT Demo
             </button>
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Schedule Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
             </button>
           </div>
-        </div>,
-      </section>,
-,
-{/* Features Section */}
+        </div>
+      </section>
+
+      {/* Features Section */}
       <section className="py-20 px-4">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-4xl font-bold text-white mb-4">Healthcare IT Solutions<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for healthcare industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
-        <div className="max-w-7xl mx-auto"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Healthcare IT Solutions</h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for healthcare industry</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-red-400/50 transition-all duration-300 group"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                  <feature.icon className="w-6 h-6 text-white" />
-=======
-            <h2 className="text-4xl font-bold text-white mb-4">Healthcare IT Solutions</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Comprehensive Healthcare Solutions
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed specifically for healthcare industry;
+              Our healthcare IT solutions are designed to meet the unique needs of healthcare providers, 
+              ensuring compliance, security, and improved patient care.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-red-400/50 transition-all duration-300 group">,
-                <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">,
-                  <feature.icon className="w-6 h-6 text-white" />,
-                </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p><ul className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</ul>
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{benefit}</CheckCircle>
-                    </CheckCircle>
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <feature.icon className="w-8 h-8 text-purple-400 mr-3" />
+                  <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                      {benefit}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -142,38 +148,78 @@ const HealthcareITPage: React.FC = () => {,
         </div>
       </section>
 
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Healthcare Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions for all aspects of healthcare delivery and management.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300">{service.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why Choose Our Healthcare IT Solutions?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of modern healthcare technology with our proven solutions.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
-<section className="py-20 px-4">
-<<<<<<< HEAD
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-<<<<<<< HEAD
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?<p className="text-xl text-gray-300 mb-8">Join leading healthcare organizations using our specialized IT solutions for compliance and security</p>
-=======
-        <div className="max-w-4xl mx-auto text-center"></section>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?</h2><p className="text-xl text-gray-300 mb-8">Join leading healthcare organizations using our specialized IT solutions for compliance and security</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">Start Free Trial<button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">Contact Sales</button>
-=======
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Healthcare IT Excellence?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Healthcare Delivery?
+          </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join leading healthcare organizations using our specialized IT solutions for compliance and security;
+            Transform your healthcare practice with our cutting-edge IT solutions. 
+            Get started with a free consultation and discover how we can help.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              Get Free Consultation
             </button>
-            <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Schedule Demo
             </button>
           </div>
         </div>
       </section>
 
-      <Footer />,
-    </div>,
+      <Footer />
+    </div>
   );
 };
 

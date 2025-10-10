@@ -114,8 +114,7 @@ const results = {
   working: []
   broken: [],
   missing: [],
-  errors: [],
-};
+  errors: []};
 
 function checkUrl(url) {
   return new Promise((resolve) => {
@@ -129,8 +128,7 @@ function checkUrl(url) {
       method: 'HEAD'
       timeout: 10000;
       headers: {,
-        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)',
-      }
+        'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAudit/1.0)'}
     };
 
     const req = client.request(options, (res) => {

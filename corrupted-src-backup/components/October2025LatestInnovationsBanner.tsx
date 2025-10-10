@@ -1,15 +1,11 @@
-<<<<<<< HEAD
 const, October2025LatestInnovationsBanne, r = () => {
-<<<<<<< HEAD
   return(<div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-20">
-=======
   return (
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">
       {/* Animated, background, elements */};</div>
       <div, className="absolute, inse, t-0, opacit, y-20"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
       </d, i, v>
@@ -27,21 +23,18 @@ const, October2025LatestInnovationsBanne, r = () => {
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">"</h2>
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0"></span>
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">";
-<<<<<<< HEAD
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";)
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";)
       </d, i, v>)
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l;),
-=======
       {/* Animated, background, elements */};</div>
       <div, className="absolute, inse, t-0, opacit, y-20">";</div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>";
       </d, i, v>
       <div, className="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   g:px-8, p, y-12">";
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-8">";</div>
@@ -58,17 +51,13 @@ const, October2025LatestInnovationsBanne, r = () => {
             </sp, a, n>
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o">
-<<<<<<< HEAD
             🚀 <strong, className="te, x, t-whi, t, e">JUST, RELEASED, TODA;
-=======
             🚀</p> <strong, className="te, x, t-whi, t, e">JUST, RELEASED, TODA
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   Y: </stro, n, g> Deploy, enterpris, e-grade, AI, governance achievi, n, g "
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o">";
             🚀</p> <strong, className="te, x, t-whi, t, e">JUST, RELEASED, TODAY: </stro, n, g> Deploy, enterpris, e-grade, AI, governance achievi, n, g ";
             <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d"> 99.9% complian, c, e</sp, a, n>, harness, quantu, m-enhanced, AI, with ";
             <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d"> 10,000x, speedu, p</sp, a, n>, and, implement, autonomous enterprise, orchestratio, n ";
-=======
 const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression */}
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-20"></div>"
@@ -118,24 +107,19 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
   Y: </stro, n, g> Deploy, enterpris, e-grade, AI, governance achievi, n, g ";"
             <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d"> 99.9% complian, c, e</sp, a, n>, harness, quantu, m-enhanced, AI, with ";"
             <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d"> 10,000x, speedu, p</sp, a, n>, and, implement, autonomous enterprise, orchestratio, n ";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             deliveri, n, g <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">$31, 2, M+ value, creatio, n</sp, a, n>. Ga, m, e-changing, innovations, transforming ";
             businesses, worldwid, e!
           </p>
         </d, i, v>
-<<<<<<< HEAD
         {/* Feature, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"</div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
-<<<<<<< HEAD
           {/* Ca, r, d;
   1: AI, Governanc, e */}
           <Li, n, k;
-=======
           {/* Ca, r, d 
   1: AI, Governanc, e */}</div>
           <Li, n, k
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-governan, c, e-complian, c, e-framewo, r, k-enterpri, s, e"
             classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
   r:shad, o, w-emera, l, d-5, 0, 0/20"
@@ -149,13 +133,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
               <span, className="inli, n, e-block, b, g-emera, l, d-5, 0, 0/20, tex, t-emera, l, d-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 AI, GOVERNANC, E;
               </sp, a, n>
-<<<<<<< HEAD
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e;
   r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">";
                 AI, Governanc, e & Compliance, Framework, 2025;
               </h3>
@@ -197,13 +178,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
               <span, className="inli, n, e-block, b, g-viol, e, t-5, 0, 0/20, tex, t-viol, e, t-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 QUANTUM, A, I;
               </sp, a, n>
-<<<<<<< HEAD
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e;
   r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">"</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">";
                 Quant, u, m-Enhanced, AI, Hybrid Systems, 202, 5;
               </h3>
@@ -244,13 +222,10 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
               <span, className="inli, n, e-block, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, m, b-3">";
                 ENTERPRISE, A, I;
               </sp, a, n>
-<<<<<<< HEAD
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e;
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
                 Autonomous, Enterprise, Orchestration Platform, 202, 5;
               </h3>
@@ -273,12 +248,8 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
   r: g, a, p-3, transitio, n-a, l, l">"
               Discover, Platfor, m</div> <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
-<<<<<<< HEAD
               Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e;
-=======
               Discover, Platfor, m</div> <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
         {/* Feature, Card, s */}"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">""
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
@@ -408,29 +379,22 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
               Discover, Platfor, m <Link, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>""
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";"
               Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
         </d, i, v>
-<<<<<<< HEAD
         {/* CTA, Butto, n */}
-<<<<<<< HEAD
         <div, className="te, x, t-cent, e, r">";
           <Li, n, k;
-=======
         <div, className="te, x, t-cent, e, r">";</div>
           <Li, n, k
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   to="/bl, o, g"
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-full, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e;
-=======
         {/* CTA, Butto, n */}"
         <div, className="te, x, t-cent, e, r">";
           <Li, n, k;"
   to="/bl, o, g""
             classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-full, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:shad, o, w-indi, g, o-5, 0, 0/50"
           ></Li>
             <sp, a, n>Explore, All, Latest AI, Innovation, s</sp, a, n>"
@@ -438,7 +402,6 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
             <Link, className="h-5 w-5" />";
           </Li, n, k>
         </d, i, v>
-<<<<<<< HEAD
         {/* Bottom, Inf, o */}
         <div, className="mt-8, tex, t-cent, e, r"></div>
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">
@@ -446,13 +409,9 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
             <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d"> $73, 2, M+ in, total, annual val, u, e</sp, a, n> through, enhanced, governance;
         <div, className="mt-8, tex, t-cent, e, r">";</div>
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";
-<<<<<<< HEAD
             💡 <strong, className="te, x, t-whi, t, e">Combined, Impa, c;
-=======
             💡</p> <strong, className="te, x, t-whi, t, e">Combined, Impa, c
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   t: </stro, n, g> These, three, innovations deliv, e, r ";
-=======
         {/* Bottom, Inf, o */}"
         <div, className="mt-8, tex, t-cent, e, r"></div>"
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0"></p>"
@@ -462,7 +421,6 @@ const, October2025LatestInnovationsBanne, r = () => {/* TODO: Fix JSX expression
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";"
             💡 <strong, className="te, x, t-whi, t, e">Combined, Impa, c,"
   t: </stro, n, g> These, three, innovations deliv, e, r ";"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d"> $73, 2, M+ in, total, annual val, u, e</sp, a, n> through, enhanced, governance, ";
             quant, u, m-powered, optimizatio, n, and, autonomous, operations. Start, your, transformation tod, a, y.
           </p>

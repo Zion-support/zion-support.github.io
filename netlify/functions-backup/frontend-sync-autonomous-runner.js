@@ -1,13 +1,11 @@
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process');
-<<<<<<< HEAD
   try {execSync('node automation/frontend-sync-autonomous-orchestrator.cjs once 0 || true')
       { stdio: 'inherit'} shell: true;
       })
     );
     execSync('node automation/advanced-git-sync.cjs || true', {stdio: inherit),
         shell: true}
-=======
   try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;
@@ -15,17 +13,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     );
     execSync('node automation/advanced-git-sync.cjs || true', {/* TODO: Fix JSX expression */}
   l: true})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
     execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(frontend-sync): run autonomous sync [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true },
-    );
-<<<<<<< HEAD
+  l: true });
     return {statusCode: 200;
-      body: JSON.stringify({,)
+      body: JSON.stringify({)
         ok: true),
         task: 'frontend-sync-autonomous-runner'}
       });
@@ -34,13 +29,11 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     return {/* TODO: Fix JSX expression */}
   k: 'frontend-sync-autonomous-runner'}
       });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
@@ -48,7 +41,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/5 * * * *'}
 };
-<<<<<<< HEAD
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/frontend-sync-autonomous-orchestrator.cjs once 0 || true') { stdio: 'inherit'} shell: true;
       });' execSync('node automation/advanced-git-sync.cjs || true') {stdio: 'inherit'} shell: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(frontend-sync): run autonomous sync [skip ci]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
@@ -56,9 +48,7 @@ exports.handler = async function() { const { execSync } = require('child_process
         body: JSON.stringify({ok: true),
         task: 'frontend-sync-autonomous-runner' }) }; } catch (e) {return { statusCode: 200;
         body: JSON.stringify({ok: false),
-        error: String(e;),
-      }) }; } }; exports.config = {' schedule: '*/5 * * * *'} };'
-=======
+        error: String(e;)}) }; } }; exports.config = {' schedule: '*/5 * * * *'} };'
 exports.handler = async function() { const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;
@@ -72,4 +62,3 @@ exports.handler = async function() { const { execSync } = require('child_process
   k: 'frontend-sync-autonomous-runner' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } }; exports.config = {/* TODO: Fix JSX expression */}
   e: '*/5 * * * *'} };'"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

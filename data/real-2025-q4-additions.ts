@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface Q4Service {id: string;
   name: string;
   tagline: string;
@@ -35,12 +34,10 @@ export interface Q4Service {id: string;
     email: string;
     address: string}
     website: string}
-=======
 export interface Q4Service {/* TODO: Fix JSX expression */}
   s: string}
     websit,
   e: string}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   real_implementatio,
   n: boolean;
@@ -50,7 +47,6 @@ export interface Q4Service {/* TODO: Fix JSX expression */}
   rating?: number;
   reviews?: number;
 const contact =
-<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup && ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -58,7 +54,6 @@ const contact =
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-=======
   mobil,
   e: '+1 302 464 0950',
   emai,
@@ -74,13 +69,10 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
       'Affiliate programs',
       'Influencer tracking',
-      'Partnership analytics',
-    ],
-<<<<<<< HEAD
+      'Partnership analytics'],
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
     marketSize: '$1.5B affiliate software'
@@ -109,7 +101,6 @@ const contact =
     price: '$29',
     period: '/month',
     description: unknown;
-=======
     ro,
   i: 'Increase attributed sales 1025% with optimized partnerships.',
     competitor,
@@ -148,8 +139,7 @@ const contact =
     ratin,
   g: 4 && 4.7,
     review,
-  s: 48,
-  },
+  s: 48},
       'Multi-speaker diarization',
     i,
   d: 'podcast - transcription - studio',
@@ -163,24 +153,19 @@ const contact =
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO - optimized summaries.',
     feature,
   s: [,
       'Multi - speaker diarization',
-<<<<<<< HEAD
     customers: 120;
     rating: 4.7;
     reviews: 48;
-=======
     customer,
   s: 120,
     ratin,
   g: 4.7,
     review,
-  s: 48,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 48},
     i,
   d: 'podcast-transcription-studio',
     nam,
@@ -200,9 +185,7 @@ const contact =
       'Chapter detection and show notes',
       'Embeddings and semantic search',
       'Export to SRT, VTT, DOCX',
-      'Podcast platform integrations',
-    ],
-<<<<<<< HEAD
+      'Podcast platform integrations'],
     popular: false;
     icon: ''
     color: 'from - cyan - 600 to - blue - 700'
@@ -257,7 +240,6 @@ const contact =
     customers: 60;
     rating: 4.6;
     reviews: 22;
-=======
     popula,
   r: false,
     ico,
@@ -312,8 +294,7 @@ const contact =
     ratin,
   g: 4 && 4.6,
     review,
-  s: 22,
-  },
+  s: 22},
     i,
   d: 'micro - crm - local - business',
     colo,
@@ -364,9 +345,7 @@ const contact =
     ratin,
   g: 4.6,
     review,
-  s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 22},
     i,
   d: 'micro-crm-local-business',
     nam,
@@ -386,9 +365,7 @@ const contact =
       'Calendar with SMS/email reminders',
       'Import/export CSV and simple API',
       'Mobile-friendly PWA',
-      'Basic reporting',
-    ],
-<<<<<<< HEAD
+      'Basic reporting'],
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -451,7 +428,6 @@ const contact =
     customers: 210;
     rating: 4.5;
     reviews: 77;
-=======
     popula,
   r: true,
     ico,
@@ -526,8 +502,7 @@ const contact =
     ratin,
   g: 4 && 4.5,
     review,
-  s: 77,
-  },
+  s: 77},
     i,
   d: 'returns - automation - saas',
     nam,
@@ -572,9 +547,7 @@ const contact =
     ratin,
   g: 4.5,
     review,
-  s: 77,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 77},
     i,
   d: 'returns-automation-saas',
     nam,
@@ -594,9 +567,7 @@ const contact =
       'RMA approval rules',
       'Inventory and refund sync',
       'Email/SMS notifications',
-      'Analytics on reasons and cost',
-    ],
-<<<<<<< HEAD
+      'Analytics on reasons and cost'],
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700',
@@ -650,7 +621,6 @@ const contact =
     customers: 95;
     rating: 4.6;
     reviews: 35;
-=======
     popula,
   r: false,
     ico,
@@ -723,8 +693,7 @@ const contact =
     ratin,
   g: 4 && 4.6,
     review,
-  s: 35,
-  },
+  s: 35},
     i,
   d: 'it - helpdesk - for - msps',
     technolog,
@@ -756,9 +725,7 @@ const contact =
     ratin,
   g: 4.6,
     review,
-  s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 35},
     i,
   d: 'it-helpdesk-for-msps',
     nam,
@@ -778,9 +745,7 @@ const contact =
       'Public/private knowledge base',
       'Client portal with reports',
       'RMM and network tool integrations',
-      'Billing export and time tracking',
-    ],
-<<<<<<< HEAD
+      'Billing export and time tracking'],
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -819,8 +784,7 @@ const contact =
     customers: 70;
     rating: 4 && 4.5;
     reviews: 28;
-  },
-];
+  }];
 export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     name: 'AI - Governed RAG Platform',
     tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
@@ -834,8 +798,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
       'Evals and drift tracking',
       'Human - in - the - loop approvals',
       'Observability and cost caps',
-      'SDKs for Node / Python',
-    ],
+      'SDKs for Node / Python'],
     popular: true;
     icon: '',
     color: 'from - cyan - 600 to - blue - 700',
@@ -871,7 +834,6 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     price: '$249',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -946,9 +908,7 @@ export const real2025 Q4 Additions = [{id: 'ai - governed - rag - platform',
     ratin,
   g: 4 && 4.5,
     review,
-  s: 28,
-  },
-];
+  s: 28}];
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text - cyan - 300'}
     lin,
@@ -997,8 +957,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.8,
     review,
-  s: 11,
-  },
+  s: 11},
     i,
   d: 'edge - personalization - engine',
     nam,
@@ -1011,7 +970,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Low - latency personalization rules and ML scoring at the edge with audience definitions, A / B tests, and analytics.',
     feature,
   s: [,
@@ -1019,9 +977,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Edge functions and KV cache',
       'A / B and holdout tests',
       'Privacy - first scoring',
-      'Dashboards and exports',
-    ],
-<<<<<<< HEAD
+      'Dashboards and exports'],
     popular: true;
     icon: '',
     technology: ['Next.js', 'Node.js', 'PostgreSQL'],
@@ -1039,13 +995,11 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 70;
     rating: 4.5;
     reviews: 28;
-  },
-];
+  }];
 }
     customers: 120;
     rating: 4.7;
     reviews: 48;
-=======
     popula,
   r: true,
     ico,
@@ -1079,18 +1033,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 28,
-  },
-];
+  s: 28}];
 }
     customer,
   s: 120,
     ratin,
   g: 4.7,
     review,
-  s: 48,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 48},
     i,
   d: 'podcast-transcription-studio',
     nam,
@@ -1109,9 +1059,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Chapter detection and show notes',
       'Embeddings and semantic search',
       'Export to SRT, VTT, DOCX',
-      'Podcast platform integrations',
-    ],
-<<<<<<< HEAD
+      'Podcast platform integrations'],
     popular: false;
       'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
     target_audience: 'Podcasters, media teams, agencies',
@@ -1133,7 +1081,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 60;
     rating: 4 && 4.6;
     reviews: 22;
-=======
     popula,
   r: false,
       'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
@@ -1173,17 +1120,13 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 22},
       'Contact management and segmentation',
       'Pipelines and kanban views',
       'Calendar with SMS/email reminders',
       'Import/export CSV and simple API',
       'Mobile-friendly PWA',
-      'Basic reporting',
-    ],
-<<<<<<< HEAD
+      'Basic reporting'],
     popular: true;
     icon: '',
     integrations: ['Gmail', 'Outlook', 'Stripe'],
@@ -1201,7 +1144,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 210;
     rating: 4 && 4.5;
     reviews: 77;
-=======
     popula,
   r: true,
     ico,
@@ -1234,17 +1176,13 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.5,
     review,
-  s: 77,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 77},
       'Customer returns portal',
       'Prepaid label generation',
       'RMA approval rules',
       'Inventory and refund sync',
       'Email / SMS notifications',
-      'Analytics on reasons and cost',
-    ],
-<<<<<<< HEAD
+      'Analytics on reasons and cost'],
     popular: false;
     integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
     use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
@@ -1261,7 +1199,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 95;
     rating: 4 && 4.6;
     reviews: 35;
-=======
     popula,
   r: false,
     integration,
@@ -1292,17 +1229,13 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 35},
       'Inbox and portal ticket intake',
       'Auto - routing, SLAs, and escalations',
       'Public / private knowledge base',
       'Client portal with reports',
       'RMM and network tool integrations',
-      'Billing export and time tracking',
-    ],
-<<<<<<< HEAD
+      'Billing export and time tracking'],
     popular: true;
     integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
     use_cases: ['IT support', 'SLA management', 'Client reporting'],
@@ -1319,7 +1252,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 70;
     rating: 4 && 4.5;
     reviews: 28;
-=======
     popula,
   r: true,
     integration,
@@ -1350,26 +1282,20 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.5,
     review,
-  s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-];
+  s: 28}];
 export const real2025 Q4 Additions = [
       'Document sync and chunking pipelines',
       'Metadata and policy guardrails',
       'Evals and drift tracking',
       'Human - in - the - loop approvals',
       'Observability and cost caps',
-      'SDKs for Node / Python',
-    ],
-<<<<<<< HEAD
+      'SDKs for Node / Python'],
     popular: true;
       'Pipelines, policies, eval harness, cost and latency budgets.',
     launch_date: '2025 - 03 - 01'
     customers: 18;
     rating: 4 && 4.8;
     reviews: 11;
-=======
     popula,
   r: true,
       'Pipelines, policies, eval harness, cost and latency budgets.',
@@ -1380,16 +1306,12 @@ export const real2025 Q4 Additions = [
     ratin,
   g: 4 && 4.8,
     review,
-  s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 11},
       'Audience builder and traits',
       'Edge functions and KV cache',
       'A / B and holdout tests',
       'Privacy - first scoring',
-      'Dashboards and exports',
-    ],
-<<<<<<< HEAD
+      'Dashboards and exports'],
     popular: true;
 export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
@@ -1427,7 +1349,6 @@ export const real2025Q4Additions = [{id: 'ai-governed-rag-platform',
     customers: 18;
     rating: 4.8;
     reviews: 11;
-=======
     popula,
   r: true,
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
@@ -1474,9 +1395,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 11},
     i,
   d: 'edge-personalization-engine',
     nam,
@@ -1495,7 +1414,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'A/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-emerald-600 to-teal-700',
@@ -1541,7 +1459,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -1615,8 +1532,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 23,
-  },
+  s: 23},
       'One-PR one-env automation',
     i,
   d: 'devx - preview - environments',
@@ -1630,7 +1546,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.',
     feature,
   s: [,
@@ -1638,8 +1553,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Seed data and fixtures',
       'Smoke tests and screenshots',
       'Secrets and policies as code',
-      'Cost and TTL controls',
-    ],
+      'Cost and TTL controls'],
     ico,
   n: '',
     colo,
@@ -1652,7 +1566,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_positio,
   n: unknown;
       'Faster than DIY scripts, comparable to Uffizzi / Gitpod previews.',
-<<<<<<< HEAD
     target_audience: 'Platform and app teams'
     trial_days: 14;
     setup_time: '13 days',
@@ -1680,7 +1593,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$129',
     period: '/month',
     description: unknown;
-=======
     target_audienc,
   e: 'Platform and app teams',
     trial_day,
@@ -1720,8 +1632,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 16,
-  },
+  s: 16},
     i,
   d: 'real - time - log - anomaly - guard',
     nam,
@@ -1734,7 +1645,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.',
     feature,
   s: [,
@@ -1742,8 +1652,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Anomaly detection and drift',
       'LLM summaries and hints',
       'Slack / Email alerts and tickets',
-      'Dashboards and exports',
-    ],
+      'Dashboards and exports'],
     ico,
   n: '',
     colo,
@@ -1756,7 +1665,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     market_positio,
   n: unknown;
       'Adds AI summaries to classic log alerts, vendor - agnostic ingestion.',
-<<<<<<< HEAD
     target_audience: 'SREs and platform teams'
     trial_days: 7;
     setup_time: 'Same day',
@@ -1784,7 +1692,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     target_audienc,
   e: 'SREs and platform teams',
     trial_day,
@@ -1824,8 +1731,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.5,
     review,
-  s: 19,
-  },
+  s: 19},
     i,
   d: 'governed - feature - flags',
     nam,
@@ -1838,7 +1744,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.',
     feature,
   s: [,
@@ -1846,9 +1751,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Change logs and RBAC',
       'SLO - based rollbacks',
       'SDKs and edge eval',
-      'Experiments and cohorts',
-    ],
-<<<<<<< HEAD
+      'Experiments and cohorts'],
     icon: '',
     technology: ['Edge runtime, KV/Redis, Next.js'],
     integrations: ['Shopify, Stripe, Segment'],
@@ -1865,7 +1768,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 42;
     rating: 4.6;
     reviews: 23;
-=======
     ico,
   n: '',
     technolog,
@@ -1897,9 +1799,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 23},
     i,
   d: 'devx-preview-environments',
     nam,
@@ -1918,7 +1818,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Smoke tests and screenshotsSecrets and policies as code',
       'Cost and TTL controls'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
@@ -1944,7 +1843,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 27;
     rating: 4.7;
     reviews: 16;
-=======
     ico,
   n: '',
     colo,
@@ -1995,9 +1893,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 16,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 16},
     i,
   d: 'real-time-log-anomaly-guard',
     nam,
@@ -2016,7 +1912,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'LLM summaries and hintsSlack/Email alerts and tickets',
       'Dashboards and exports'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
@@ -2042,7 +1937,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 33;
     rating: 4.5;
     reviews: 19;
-=======
     ico,
   n: '',
     colo,
@@ -2093,9 +1987,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 19},
     i,
   d: 'governed-feature-flags',
     nam,
@@ -2114,7 +2006,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'SLO-based rollbacksSDKs and edge eval',
       'Experiments and cohorts'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
@@ -2154,7 +2045,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     ico,
   n: '',
     colo,
@@ -2220,8 +2110,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 12,
-  },
+  s: 12},
     i,
   d: 'email - sequence - copilot',
     nam,
@@ -2234,7 +2123,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Compose, schedule, and monitor outbound sequences with domain warm - up, safety guardrails, and reply intent scoring.',
     feature,
   s: [,
@@ -2242,9 +2130,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Warm - up and safety checks',
       'Reply intent and routing',
       'Blacklist monitoring',
-      'CRM sync',
-    ],
-<<<<<<< HEAD
+      'CRM sync'],
     icon: '',
     color: 'from - fuchsia - 600 to - pink - 700',
     text_color: 'text - fuchsia - 300',
@@ -2277,7 +2163,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$299',
     period: '/month',
     description: unknown;
-=======
     ico,
   n: '',
     colo,
@@ -2328,8 +2213,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.5,
     review,
-  s: 20,
-  },
+  s: 20},
     i,
   d: 'data - contracts - guardrails',
     nam,
@@ -2342,7 +2226,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI / CD.',
     feature,
   s: [,
@@ -2350,9 +2233,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Back / forward compatibility checks',
       'Lineage and ownership',
       'Alerts and SLOs',
-      'CI / CD integrations',
-    ],
-<<<<<<< HEAD
+      'CI / CD integrations'],
     icon: '',
     category: 'Developer Tools',
     realService: true;
@@ -2371,7 +2252,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 21;
     rating: 4.6;
     reviews: 12;
-=======
     ico,
   n: '',
     categor,
@@ -2407,9 +2287,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 12},
     i,
   d: 'email-sequence-copilot',
     nam,
@@ -2428,7 +2306,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Reply intent and routingBlacklist monitoring',
       'CRM sync'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
@@ -2454,7 +2331,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 38;
     rating: 4.5;
     reviews: 20;
-=======
     ico,
   n: '',
     colo,
@@ -2505,9 +2381,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 20,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 20},
     i,
   d: 'data-contracts-guardrails',
     nam,
@@ -2526,7 +2400,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Lineage and ownershipAlerts and SLOs',
       'CI/CD integrations'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
@@ -2568,7 +2441,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$4, 500',
     period: '/fixed',
     description: unknown;
-=======
     ico,
   n: '',
     colo,
@@ -2634,8 +2506,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 9,
-  },
+  s: 9},
       'Okta/Entra app configs',
       'SAML/OIDC + SCIM',
     i,
@@ -2650,16 +2521,13 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/fixed',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Done - with - you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise - ready documentation.',
     feature,
   s: [,
       'Okta / Entra app configs',
       'SAML / OIDC + SCIM',
       'Security test plans',
-      'Customer enablement kit',
-    ],
-<<<<<<< HEAD
+      'Customer enablement kit'],
     icon: '',
     category: 'Data & Analytics',
     realService: true;
@@ -2678,7 +2546,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 12;
     rating: 4.6;
     reviews: 9;
-=======
     ico,
   n: '',
     categor,
@@ -2714,9 +2581,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 9},
     i,
   d: 'managed-sso-fast-track',
     nam,
@@ -2734,7 +2599,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Okta/Entra app configsSAML/OIDC + SCIM',
       'Security test plansCustomer enablement kit'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
@@ -2774,7 +2638,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     ico,
   n: '',
     colo,
@@ -2840,8 +2703,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.7,
     review,
-  s: 7,
-  },
+  s: 7},
     i,
   d: 'ai - sales - pipeline - insights',
     nam,
@@ -2854,16 +2716,13 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Connect CRM to compute forecast hygiene, risk scores, and next - best actions with weekly reports and alerts.',
     feature,
   s: [,
       'Risk scoring and hygiene checks',
       'Stage SLAs and alerts',
       'Next - best action copilot',
-      'Reporting and dashboards',
-    ],
-<<<<<<< HEAD
+      'Reporting and dashboards'],
     icon: '',
     category: 'Enterprise IT',
     realService: true;
@@ -2882,7 +2741,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 9;
     rating: 4.7;
     reviews: 7;
-=======
     ico,
   n: '',
     categor,
@@ -2918,9 +2776,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 7},
     i,
   d: 'ai-sales-pipeline-insights',
     nam,
@@ -2938,7 +2794,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Risk scoring and hygiene checksStage SLAs and alerts',
       'Next-best action copilotReporting and dashboards'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
@@ -2990,7 +2845,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 14;
     rating: 4.5;
     reviews: 10;
-=======
     ico,
   n: '',
     colo,
@@ -3084,8 +2938,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.5,
     review,
-  s: 10,
-  },
+  s: 10},
     i,
   d: 'secure - webhook - relay',
     customer,
@@ -3093,9 +2946,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 10,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 10},
     i,
   d: 'secure-webhook-relay',
     nam,
@@ -3114,7 +2965,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Retries and backoffFan-out and transformations',
       'Audit logs and RBAC'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -3123,7 +2973,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     targetAudience: 'Developers and platform teams',
     trialDays: 14;
     setupTime: 'Same day',
-=======
     ico,
   n: '',
     colo,
@@ -3141,14 +2990,11 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   s: 14,
     setupTim,
   e: 'Same day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Signature verification and secrets',
       'Replay and DLQs',
       'Retries and backoff',
       'Fan - out and transformations',
-      'Audit logs and RBAC',
-    ],
-<<<<<<< HEAD
+      'Audit logs and RBAC'],
     icon: '',
     color: 'from - cyan - 600 to - blue - 700',
     text_color: 'text - cyan - 300',
@@ -3193,7 +3039,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 31;
     rating: 4.6;
     reviews: 18;
-=======
     ico,
   n: '',
     colo,
@@ -3244,8 +3089,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 18,
-  },
+  s: 18},
     i,
   d: 'managed - postgres - ha - lite',
     categor,
@@ -3281,9 +3125,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 18},
     i,
   d: 'managed-postgres-ha-lite',
     nam,
@@ -3302,7 +3144,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Automated backups and PITRFailover drills and runbooks',
       'Index and bloat maintenancePerformance dashboards'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
@@ -3311,7 +3152,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     targetAudience: 'SMBs and startups',
     trialDays: 7;
     setupTime: '35 days',
-=======
     ico,
   n: '',
     colo,
@@ -3329,13 +3169,10 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   s: 7,
     setupTim,
   e: '35 days',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated backups and PITR',
       'Failover drills and runbooks',
       'Index and bloat maintenance',
-      'Performance dashboards',
-    ],
-<<<<<<< HEAD
+      'Performance dashboards'],
     icon: '',
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
@@ -3365,7 +3202,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     mobile: string, email: string;
     address: string;
     website: string;
-=======
     ico,
   n: '',
     colo,
@@ -3416,17 +3252,14 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4 && 4.6,
     review,
-  s: 9,
-  },
+  s: 9},
     mobil,
   e: string, emai,
   l: string,
     addres,
   s: string,
     websit,
-  e: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  };
+  e: string};
   realImplementatio,
   n: boolean, implementationDetails?: string,
   launchDate?: string;
@@ -3435,11 +3268,9 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   reviews?: number;
 }
 const contact =
-<<<<<<< HEAD
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-=======
   mobil,
   e: '+1 302 464 0950', emai,
   l: 'kleber@ziontechgroup.com',
@@ -3448,7 +3279,6 @@ const contact =
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   realQ4Services2025: RealQ4Service[] = [,
@@ -3466,7 +3296,6 @@ export const,
   s: [,
 			'Multi-channel attribution and cookie-less trackingFraud rules, device fingerprinting, IP reputation checksCustomizable commission structures and tiersAutomated payouts and tax form collectionShareable links, coupons, and influencer codesPartner portal and real-time analytics'
 		];
-<<<<<<< HEAD
 		popular: true, icon: '',
 		color: 'from-violet-600 to-fuchsia-700', textColor: 'text-fuchsia-400',
 		link: 'https://ziontechgroup.com/services/affiliate-marketing-hub',
@@ -3482,7 +3311,6 @@ export const,
 		implementationDetails: 'Server-side tracking with webhook ingestion and fraud-scoring pipeline.', launchDate: '2025-10-01',
 		customers: 120, rating: 4.7;
 		reviews: 48;
-=======
 		popula,
   r: true, ico,
   n: '',
@@ -3524,9 +3352,7 @@ export const,
   s: 120, ratin,
   g: 4.7,
 		review,
-  s: 48,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-	};
+  s: 48};
 		i,
   d: 'podcast-transcription-studio', nam,
   e: 'Podcast Transcription Studio',
@@ -3541,7 +3367,6 @@ export const,
   s: [,
 			'Multi-speaker diarizationTimestamps and filler removalChapter detection and show notesEmbeddings and semantic searchExport to SRT, VTT, DOCXPodcast platform integrations'
 		];
-<<<<<<< HEAD
 		popular: false, icon: '',
 		color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
 		link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
@@ -3564,8 +3389,7 @@ export const,
     price: '$19', period: '/month',
 		description: 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
     features: [;
-			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple APIMobile-friendly PWABasic reporting',
-		],
+			'Contact management and segmentationPipelines and kanban viewsCalendar with SMS/email remindersImport/export CSV and simple APIMobile-friendly PWABasic reporting'],
 		popular: true, icon: '',
 		color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
 		link: 'https://ziontechgroup.com/services/micro-crm-local-business',
@@ -3588,8 +3412,7 @@ export const,
 		period: '/month',
 		description: 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
     features: [;
-			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund syncEmail/SMS notificationsAnalytics on reasons and cost',
-		],
+			'Customer returns portalPrepaid label generationRMA approval rulesInventory and refund syncEmail/SMS notificationsAnalytics on reasons and cost'],
 		popular: false, icon: '',
 		color: 'from-amber-600 to-orange-700', textColor: 'text-amber-400',
 		link: 'https://ziontechgroup.com/services/returns-automation-saas',
@@ -3606,7 +3429,6 @@ export const,
     launchDate: '2025-10-05', customers: 95;
 		rating: 4.6;
 		reviews: 35;
-=======
 		popula,
   r: false, ico,
   n: '',
@@ -3649,8 +3471,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 22,
-	};
+  s: 22};
 		i,
   d: 'micro-crm-local-business', nam,
   e: 'Micro CRM for Local Business',
@@ -3707,8 +3528,7 @@ export const,
 		ratin,
   g: 4.5,
 		review,
-  s: 77,
-	};
+  s: 77};
 		i,
   d: 'returns-automation-saas', nam,
   e: 'Ecommerce Returns Automation',
@@ -3765,9 +3585,7 @@ export const,
 		ratin,
   g: 4.6,
 		review,
-  s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-	};
+  s: 35};
 		i,
   d: 'it-helpdesk-for-msps', nam,
   e: 'IT Helpdesk for MSPs',
@@ -3782,7 +3600,6 @@ export const,
   s: [,
 			'Inbox and portal ticket intakeAuto-routing, SLAs, and escalationsPublic/private knowledge baseClient portal with reportsRMM and network tool integrationsBilling export and time tracking'
 		];
-<<<<<<< HEAD
 		popular: true, icon: '',
 		color: 'from-blue-600 to-indigo-700', textColor: 'text-indigo-400',
 		link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
@@ -3807,8 +3624,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
     price: '$699', period: '/month',
     description: 'Production-ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high-stakes workflows.',
     features: [;
-      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python',
-    ]}
+      'Document sync and chunking pipelinesMetadata and policy guardrailsEvals and drift trackingHuman-in-the-loop approvalsObservability and cost capsSDKs for Node/Python']}
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300'}
@@ -3860,7 +3676,6 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
 ];
     rating: 4 && 4.6;
     reviews: 9;
-=======
 		popula,
   r: true, ico,
   n: '',
@@ -3904,8 +3719,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform', name: 'AI
 		ratin,
   g: 4.5,
 		review,
-  s: 28,
-	}
+  s: 28}
 ];
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ]}
@@ -4003,15 +3817,12 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 9,
-  }
+  s: 9}
 ];
     ratin,
   g: 4 && 4.6,
     review,
-  s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 9}
 ];
 const contact =
   mobil,
@@ -4022,8 +3833,7 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709',
   websit,
   e: 'http,
-  s://ziontechgroup.com',
-};
+  s://ziontechgroup.com'};
 export const,
   realQ4Services2025: RealQ4Service[] = [,
     i,
@@ -4045,9 +3855,7 @@ export const,
       'Customizable commission structures and tiers',
       'Automated payouts and tax form collection',
       'Shareable links, coupons, and influencer codes',
-      'Partner portal and real-time analytics',
-    ],
-<<<<<<< HEAD
+      'Partner portal and real-time analytics'],
     popular: true;
     icon: ''
     color: 'from-violet-600 to-fuchsia-700'
@@ -4063,7 +3871,6 @@ export const,
     technology: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis'],
     integrations: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
     useCases: [,
-=======
     popula,
   r: true,
     ico,
@@ -4094,12 +3901,9 @@ export const,
   s: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'],
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Affiliate programs',
       'Influencer tracking',
-      'Partnership analytics',
-    ],
-<<<<<<< HEAD
+      'Partnership analytics'],
     roi: 'Increase attributed sales 1025% with optimized partnerships.',
     competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
     marketSize: '$1.5B affiliate software'
@@ -4112,7 +3916,6 @@ export const,
     customers: 120;
     rating: 4.7;
     reviews: 48;
-=======
     ro,
   i: 'Increase attributed sales 1025% with optimized partnerships.',
     competitor,
@@ -4136,9 +3939,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 48,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 48},
     i,
   d: 'podcast-transcription-studio',
     nam,
@@ -4158,9 +3959,7 @@ export const,
       'Chapter detection and show notes',
       'Embeddings and semantic search',
       'Export to SRT, VTT, DOCX',
-      'Podcast platform integrations',
-    ],
-<<<<<<< HEAD
+      'Podcast platform integrations'],
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700',
@@ -4187,7 +3986,6 @@ export const,
     customers: 60;
     rating: 4.6;
     reviews: 22;
-=======
     popula,
   r: false,
     ico,
@@ -4240,9 +4038,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 22},
     i,
   d: 'micro-crm-local-business',
     nam,
@@ -4262,9 +4058,7 @@ export const,
       'Calendar with SMS/email reminders',
       'Import/export CSV and simple API',
       'Mobile-friendly PWA',
-      'Basic reporting',
-    ],
-<<<<<<< HEAD
+      'Basic reporting'],
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -4292,7 +4086,6 @@ export const,
     customers: 210;
     rating: 4.5;
     reviews: 77;
-=======
     popula,
   r: true,
     ico,
@@ -4346,9 +4139,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 77,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 77},
     i,
   d: 'returns-automation-saas',
     nam,
@@ -4368,9 +4159,7 @@ export const,
       'RMA approval rules',
       'Inventory and refund sync',
       'Email/SMS notifications',
-      'Analytics on reasons and cost',
-    ],
-<<<<<<< HEAD
+      'Analytics on reasons and cost'],
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700',
@@ -4397,7 +4186,6 @@ export const,
     customers: 95;
     rating: 4.6;
     reviews: 35;
-=======
     popula,
   r: false,
     ico,
@@ -4450,9 +4238,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 35},
     i,
   d: 'it-helpdesk-for-msps',
     nam,
@@ -4472,9 +4258,7 @@ export const,
       'Public/private knowledge base',
       'Client portal with reports',
       'RMM and network tool integrations',
-      'Billing export and time tracking',
-    ],
-<<<<<<< HEAD
+      'Billing export and time tracking'],
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -4502,8 +4286,7 @@ export const,
     customers: 70;
     rating: 4.5;
     reviews: 28;
-  },
-];
+  }];
 }
 export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     name: 'AI-Governed RAG Platform',
@@ -4542,7 +4325,6 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     customers: 18;
     rating: 4.8;
     reviews: 11;
-=======
     popula,
   r: true,
     ico,
@@ -4596,9 +4378,7 @@ export const real2025 Q4 Additions = [{id: 'ai-governed-rag-platform',
     ratin,
   g: 4.5,
     review,
-  s: 28,
-  },
-];
+  s: 28}];
 }
 export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   r: 'text-cyan-300'}
@@ -4646,9 +4426,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8,
     review,
-  s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 11},
     i,
   d: 'edge-personalization-engine',
     nam,
@@ -4667,7 +4445,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'A/B and holdout testsPrivacy-first scoring',
       'Dashboards and exports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: '',
     color: 'from-emerald-600 to-teal-700',
@@ -4694,7 +4471,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 42;
     rating: 4.6;
     reviews: 23;
-=======
     popula,
   r: true,
     ico,
@@ -4747,9 +4523,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 23},
     i,
   d: 'devx-preview-environments',
     nam,
@@ -4768,7 +4542,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Smoke tests and screenshotsSecrets and policies as code',
       'Cost and TTL controls'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
@@ -4794,7 +4567,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 27;
     rating: 4.7;
     reviews: 16;
-=======
     ico,
   n: '',
     colo,
@@ -4845,9 +4617,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 16,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 16},
     i,
   d: 'real-time-log-anomaly-guard',
     nam,
@@ -4866,7 +4636,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'LLM summaries and hintsSlack/Email alerts and tickets',
       'Dashboards and exports'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
@@ -4892,7 +4661,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 33;
     rating: 4.5;
     reviews: 19;
-=======
     ico,
   n: '',
     colo,
@@ -4943,9 +4711,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 19},
     i,
   d: 'governed-feature-flags',
     nam,
@@ -4964,7 +4730,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'SLO-based rollbacksSDKs and edge eval',
       'Experiments and cohorts'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
@@ -4990,7 +4755,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 21;
     rating: 4.6;
     reviews: 12;
-=======
     ico,
   n: '',
     colo,
@@ -5041,9 +4805,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 12},
     i,
   d: 'email-sequence-copilot',
     nam,
@@ -5062,7 +4824,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Reply intent and routingBlacklist monitoring',
       'CRM sync'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
@@ -5088,7 +4849,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 38;
     rating: 4.5;
     reviews: 20;
-=======
     ico,
   n: '',
     colo,
@@ -5139,9 +4899,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 20,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 20},
     i,
   d: 'data-contracts-guardrails',
     nam,
@@ -5160,7 +4918,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Lineage and ownershipAlerts and SLOs',
       'CI/CD integrations'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
@@ -5186,7 +4943,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 12;
     rating: 4.6;
     reviews: 9;
-=======
     ico,
   n: '',
     colo,
@@ -5237,9 +4993,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 9},
     i,
   d: 'managed-sso-fast-track',
     nam,
@@ -5257,7 +5011,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Okta/Entra app configsSAML/OIDC + SCIM',
       'Security test plansCustomer enablement kit'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
@@ -5283,7 +5036,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 9;
     rating: 4.7;
     reviews: 7;
-=======
     ico,
   n: '',
     colo,
@@ -5334,9 +5086,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7,
     review,
-  s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 7},
     i,
   d: 'ai-sales-pipeline-insights',
     nam,
@@ -5354,7 +5104,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Risk scoring and hygiene checksStage SLAs and alerts',
       'Next-best action copilotReporting and dashboards'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
@@ -5380,7 +5129,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 14;
     rating: 4.5;
     reviews: 10;
-=======
     ico,
   n: '',
     colo,
@@ -5431,9 +5179,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5,
     review,
-  s: 10,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 10},
     i,
   d: 'secure-webhook-relay',
     nam,
@@ -5452,7 +5198,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Retries and backoffFan-out and transformations',
       'Audit logs and RBAC'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
@@ -5478,7 +5223,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     customers: 31;
     rating: 4.6;
     reviews: 18;
-=======
     ico,
   n: '',
     colo,
@@ -5529,9 +5273,7 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 18},
     i,
   d: 'managed-postgres-ha-lite',
     nam,
@@ -5550,7 +5292,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
       'Automated backups and PITRFailover drills and runbooks',
       'Index and bloat maintenancePerformance dashboards'
     ],
-<<<<<<< HEAD
     icon: '',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
@@ -5579,7 +5320,6 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
   }
 ];
     reviews: 9;
-=======
     ico,
   n: '',
     colo,
@@ -5630,13 +5370,10 @@ export const real2025Q4Additions = [{/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6,
     review,
-  s: 9,
-  }
+  s: 9}
 ];
     review,
-  s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 9}
 ];
 export interface Q4Service,
   id: string; nam,
@@ -5652,7 +5389,7 @@ export interface Q4Service,
   e: string; emai,
   l: string; addres,
   s: string; websit,
-  e: string, } real_implementatio,
+  e: string} real_implementatio,
   n: boolean; implementation_details?: string; launch_date?: string; customers?: number; rating?: number; reviews?: number, const contact = mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
@@ -5661,7 +5398,7 @@ export interface Q4Service,
   l: 'kleber@ziontechgroup.com'' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'' websit,
   e: 'http,
-  s://ziontechgroup.com' }' 'Affiliate programs',' 'Influencer tracking',' 'Partnership analytics', ],' ro,
+  s://ziontechgroup.com' }' 'Affiliate programs',' 'Influencer tracking',' 'Partnership analytics'],' ro,
   i: 'Increase attributed sales 10–25% with optimized partnerships.',' competitor,
   s: ['Refersion', 'LeadDyno', 'Tapfiliate'], ' marketSiz,
   e: '$1.5B affiliate software', ' growthRat,
@@ -5680,7 +5417,7 @@ export interface Q4Service,
   e: '2025 - 10 - 01', customer,
   s: 120, ratin,
   g: 4 && 4.7, review,
-  s: 48, }, ' 'Multi-speaker diarization',' i,
+  s: 48}, ' 'Multi-speaker diarization',' i,
   d: 'podcast - transcription - studio',' nam,
   e: 'Podcast Transcription Studio',' taglin,
   e: 'Fast, accurate multi - speaker transcriptions with summaries',' pric,
@@ -5690,14 +5427,14 @@ export interface Q4Service,
   s: [,' 'Multi - speaker diarization', customer,
   s: 120, ratin,
   g: 4.7, review,
-  s: 48, }, ' i,
+  s: 48}, ' i,
   d: 'podcast-transcription-studio',' nam,
   e: 'Podcast Transcription Studio',' taglin,
   e: 'Fast, accurate multi-speaker transcriptions with summaries',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
   n: ' 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.', feature,
-  s: [' 'Multi-speaker diarization',' 'Timestamps and filler removal',' 'Chapter detection and show notes',' 'Embeddings and semantic search',' 'Export to SRT, VTT, DOCX',' 'Podcast platform integrations', ], popula,
+  s: [' 'Multi-speaker diarization',' 'Timestamps and filler removal',' 'Chapter detection and show notes',' 'Embeddings and semantic search',' 'Export to SRT, VTT, DOCX',' 'Podcast platform integrations'], popula,
   r: false,' ico,
   n: '🎧', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
@@ -5724,7 +5461,7 @@ export interface Q4Service,
   e: '2025 - 09 - 15', customer,
   s: 60, ratin,
   g: 4 && 4.6, review,
-  s: 22, }, ' i,
+  s: 22}, ' i,
   d: 'micro - crm - local - business',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
   r: 'text-cyan-400',' lin,
@@ -5750,14 +5487,14 @@ export interface Q4Service,
   e: '2025-09-15', customer,
   s: 60, ratin,
   g: 4.6, review,
-  s: 22, }, ' i,
+  s: 22}, ' i,
   d: 'micro-crm-local-business', ' nam,
   e: 'Micro CRM for Local Business',' taglin,
   e: 'Simple contacts, pipelines, and reminders that just work',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
   n: ' 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.', feature,
-  s: [' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA', ' 'Basic reporting', ], popula,
+  s: [' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA', ' 'Basic reporting'], popula,
   r: true,' ico,
   n: '📇', ' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
@@ -5794,7 +5531,7 @@ export interface Q4Service,
   e: '2025 - 10 - 20', customer,
   s: 210, ratin,
   g: 4 && 4.5, review,
-  s: 77, }, ' i,
+  s: 77}, ' i,
   d: 'returns - automation - saas',' nam,
   e: 'E‑commerce Returns Automation',' taglin,
   e: 'Self - serve returns portal and automated labels',' pric,
@@ -5816,14 +5553,14 @@ export interface Q4Service,
   e: '2025-10-20', customer,
   s: 210, ratin,
   g: 4.5, review,
-  s: 77, }, ' i,
+  s: 77}, ' i,
   d: 'returns-automation-saas',' nam,
   e: 'E‑commerce Returns Automation',' taglin,
   e: 'Self-serve returns portal and automated labels',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n: ' 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.', feature,
-  s: [' 'Customer returns portal',' 'Prepaid label generation',' 'RMA approval rules',' 'Inventory and refund sync', ' 'Email/SMS notifications', ' 'Analytics on reasons and cost', ], popula,
+  s: [' 'Customer returns portal',' 'Prepaid label generation',' 'RMA approval rules',' 'Inventory and refund sync', ' 'Email/SMS notifications', ' 'Analytics on reasons and cost'], popula,
   r: false,' ico,
   n: '📦', ' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
@@ -5860,7 +5597,7 @@ export interface Q4Service,
   e: '2025 - 10 - 05', customer,
   s: 95, ratin,
   g: 4 && 4.6, review,
-  s: 35, }, ' i,
+  s: 35}, ' i,
   d: 'it - helpdesk - for - msps',' technolog,
   y: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],' integration,
   s: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],' useCase,
@@ -5876,14 +5613,14 @@ export interface Q4Service,
   e: '2025-10-05', customer,
   s: 95, ratin,
   g: 4.6, review,
-  s: 35, }, ' i,
+  s: 35}, ' i,
   d: 'it-helpdesk-for-msps', ' nam,
   e: 'IT Helpdesk for MSPs',' taglin,
   e: 'Ticketing, SLAs, and client portal built for MSPs',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n: ' 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.', feature,
-  s: [' 'Inbox and portal ticket intake',' 'Auto-routing, SLAs, and escalations',' 'Public/private knowledge base', ' 'Client portal with reports',' 'RMM and network tool integrations',' 'Billing export and time tracking', ], popula,
+  s: [' 'Inbox and portal ticket intake',' 'Auto-routing, SLAs, and escalations',' 'Public/private knowledge base', ' 'Client portal with reports',' 'RMM and network tool integrations',' 'Billing export and time tracking'], popula,
   r: true,' ico,
   n: '🛠️', ' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
@@ -5920,14 +5657,14 @@ export interface Q4Service,
   e: '2025 - 09 - 28', customer,
   s: 70, ratin,
   g: 4 && 4.5, review,
-  s: 28, }, ]; export const real2025Q4Additions = [; ' i,
+  s: 28}]; export const real2025Q4Additions = [; ' i,
   d: 'ai - governed - rag - platform',' nam,
   e: 'AI - Governed RAG Platform',' taglin,
   e: 'Enterprise - grade RAG with guardrails, approvals, and evals',' pric,
   e: '$699',' perio,
   d: '/month', descriptio,
   n:  ,' 'Production - ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high - stakes workflows.', feature,
-  s: [, ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python', ], popula,
+  s: [, ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python'], popula,
   r: true,' ico,
   n: '🧠', ' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
@@ -5954,14 +5691,14 @@ export interface Q4Service,
   e: '2025 - 03 - 01', customer,
   s: 18, ratin,
   g: 4 && 4.8, review,
-  s: 11, }, ' i,
+  s: 11}, ' i,
   d: 'edge - personalization - engine',' nam,
   e: 'Edge Personalization Engine',' taglin,
   e: 'Real - time content and pricing personalization at the edge',' pric,
   e: '$249',' perio,
   d: '/month', descriptio,
   n:  ,' 'Low - latency personalization rules and ML scoring at the edge with audience definitions, A / B tests, and analytics.', feature,
-  s: [, ' 'Audience builder and traits',' 'Edge functions and KV cache',' 'A / B and holdout tests',' 'Privacy - first scoring',' 'Dashboards and exports', ], popula,
+  s: [, ' 'Audience builder and traits',' 'Edge functions and KV cache',' 'A / B and holdout tests',' 'Privacy - first scoring',' 'Dashboards and exports'], popula,
   r: true,' ico,
   n: '⚡', ' technolog,
   y: ['Next.js', 'Node.js', 'PostgreSQL'],' integration,
@@ -5978,17 +5715,17 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28, }, ]; } customer,
+  s: 28}]; } customer,
   s: 120, ratin,
   g: 4.7, review,
-  s: 48, }, ' i,
+  s: 48}, ' i,
   d: 'podcast-transcription-studio',' nam,
   e: 'Podcast Transcription Studio',' taglin,
   e: 'Fast, accurate multi-speaker transcriptions with summaries',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
   n: ' 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.', feature,
-  s: [ ' 'Timestamps and filler removal',' 'Chapter detection and show notes',' 'Embeddings and semantic search',' 'Export to SRT, VTT, DOCX',' 'Podcast platform integrations', ], popula,
+  s: [ ' 'Timestamps and filler removal',' 'Chapter detection and show notes',' 'Embeddings and semantic search',' 'Export to SRT, VTT, DOCX',' 'Podcast platform integrations'], popula,
   r: false,' 'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',' target_audienc,
   e: 'Podcasters, media teams, agencies', trial_day,
   s: 7,' setup_tim,
@@ -6007,7 +5744,7 @@ export interface Q4Service,
   e: '2025 - 09 - 15', customer,
   s: 60, ratin,
   g: 4 && 4.6, review,
-  s: 22, }, ' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA', ' 'Basic reporting', ], popula,
+  s: 22}, ' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA', ' 'Basic reporting'], popula,
   r: true,' ico,
   n: '📇',' integration,
   s: ['Gmail', 'Outlook', 'Stripe'],' use_case,
@@ -6023,7 +5760,7 @@ export interface Q4Service,
   e: '2025 - 10 - 20', customer,
   s: 210, ratin,
   g: 4 && 4.5, review,
-  s: 77, }, ' 'Customer returns portal',' 'Prepaid label generation',' 'RMA approval rules',' 'Inventory and refund sync',' 'Email / SMS notifications',' 'Analytics on reasons and cost', ], popula,
+  s: 77}, ' 'Customer returns portal',' 'Prepaid label generation',' 'RMA approval rules',' 'Inventory and refund sync',' 'Email / SMS notifications',' 'Analytics on reasons and cost'], popula,
   r: false,' integration,
   s: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],' use_case,
   s: ['Returns portal', 'Exchange workflows', 'Refund automation'],' ro,
@@ -6038,7 +5775,7 @@ export interface Q4Service,
   e: '2025 - 10 - 05', customer,
   s: 95, ratin,
   g: 4 && 4.6, review,
-  s: 35, }, ' 'Inbox and portal ticket intake',' 'Auto - routing, SLAs, and escalations',' 'Public / private knowledge base',' 'Client portal with reports',' 'RMM and network tool integrations',' 'Billing export and time tracking', ], popula,
+  s: 35}, ' 'Inbox and portal ticket intake',' 'Auto - routing, SLAs, and escalations',' 'Public / private knowledge base',' 'Client portal with reports',' 'RMM and network tool integrations',' 'Billing export and time tracking'], popula,
   r: true,' integration,
   s: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],' use_case,
   s: ['IT support', 'SLA management', 'Client reporting'],' ro,
@@ -6053,12 +5790,12 @@ export interface Q4Service,
   e: '2025 - 09 - 28', customer,
   s: 70, ratin,
   g: 4 && 4.5, review,
-  s: 28, }, ]; export const real2025Q4Additions = [; ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python', ], popula,
+  s: 28}]; export const real2025Q4Additions = [; ' 'Document sync and chunking pipelines',' 'Metadata and policy guardrails',' 'Evals and drift tracking',' 'Human - in - the - loop approvals',' 'Observability and cost caps',' 'SDKs for Node / Python'], popula,
   r: true,' 'Pipelines, policies, eval harness, cost and latency budgets.',' launch_dat,
   e: '2025 - 03 - 01', customer,
   s: 18, ratin,
   g: 4 && 4.8, review,
-  s: 11, }, ' 'Audience builder and traits',' 'Edge functions and KV cache',' 'A / B and holdout tests',' 'Privacy - first scoring',' 'Dashboards and exports', ], popula,
+  s: 11}, ' 'Audience builder and traits',' 'Edge functions and KV cache',' 'A / B and holdout tests',' 'Privacy - first scoring',' 'Dashboards and exports'], popula,
   r: true, export const real2025Q4Additions = [ ' i,
   d: 'ai-governed-rag-platform',' nam,
   e: 'AI-Governed RAG Platform',' taglin,
@@ -6136,14 +5873,14 @@ export interface Q4Service,
   e: '2025 - 03 - 10', customer,
   s: 42, ratin,
   g: 4 && 4.6, review,
-  s: 23, }, ' 'One-PR one-env automation',' i,
+  s: 23}, ' 'One-PR one-env automation',' i,
   d: 'devx - preview - environments',' nam,
   e: 'DevX Preview Environments',' taglin,
   e: 'On - demand ephemeral previews with seeded data and checks',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
   n:  ,' 'Spin up ephemeral environments per PR with seed data, smoke tests, screenshots, and teardown policies.', feature,
-  s: [,' 'One - PR one - env automation', ' 'Seed data and fixtures',' 'Smoke tests and screenshots',' 'Secrets and policies as code',' 'Cost and TTL controls', ],' ico,
+  s: [,' 'One - PR one - env automation', ' 'Seed data and fixtures',' 'Smoke tests and screenshots',' 'Secrets and policies as code',' 'Cost and TTL controls'],' ico,
   n: '🚀', ' colo,
   r: 'from - blue - 600 to - indigo - 700',' text_colo,
   r: 'text - blue - 300',' lin,`
@@ -6169,14 +5906,14 @@ export interface Q4Service,
   e: '2025 - 03 - 05', customer,
   s: 27, ratin,
   g: 4 && 4.7, review,
-  s: 16, }, ' i,
+  s: 16}, ' i,
   d: 'real - time - log - anomaly - guard',' nam,
   e: 'Real - time Log Anomaly Guard',' taglin,
   e: 'Detect anomalies and regressions with LLM - assisted alerts',' pric,
   e: '$129',' perio,
   d: '/month', descriptio,
   n:  ,' 'Stream logs to detect anomalies, regressions, and hotspots with LLM summaries and remediation hints.', feature,
-  s: [, ' 'Streaming ingestion and rules',' 'Anomaly detection and drift',' 'LLM summaries and hints',' 'Slack / Email alerts and tickets',' 'Dashboards and exports', ],' ico,
+  s: [, ' 'Streaming ingestion and rules',' 'Anomaly detection and drift',' 'LLM summaries and hints',' 'Slack / Email alerts and tickets',' 'Dashboards and exports'],' ico,
   n: '📈', ' colo,
   r: 'from - rose - 600 to - red - 700',' text_colo,
   r: 'text - rose - 300',' lin,`
@@ -6202,14 +5939,14 @@ export interface Q4Service,
   e: '2025 - 03 - 08', customer,
   s: 33, ratin,
   g: 4 && 4.5, review,
-  s: 19, }, ' i,
+  s: 19}, ' i,
   d: 'governed - feature - flags',' nam,
   e: 'Governed Feature Flags',' taglin,
   e: 'Audit - ready flags with policies, approvals, and rollbacks',' pric,
   e: '$99',' perio,
   d: '/month', descriptio,
   n:  ,' 'Lightweight feature flags with policy checks, approvals, change logs, and automatic rollbacks based on SLOs.', feature,
-  s: [, ' 'Policies and approvals',' 'Change logs and RBAC',' 'SLO - based rollbacks',' 'SDKs and edge eval',' 'Experiments and cohorts', ],' ico,
+  s: [, ' 'Policies and approvals',' 'Change logs and RBAC',' 'SLO - based rollbacks',' 'SDKs and edge eval',' 'Experiments and cohorts'],' ico,
   n: '🏳️', ' technolog,
   y: ['Edge runtime, KV/Redis, Next.js'],' integration,
   s: ['Shopify, Stripe, Segment'],' useCase,
@@ -6332,14 +6069,14 @@ export interface Q4Service,
   e: '2025 - 03 - 02', customer,
   s: 21, ratin,
   g: 4 && 4.6, review,
-  s: 12, }, ' i,
+  s: 12}, ' i,
   d: 'email - sequence - copilot',' nam,
   e: 'Email Sequence Copilot',' taglin,
   e: 'On - brand outbound with warm - up, scoring, and safety',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Compose, schedule, and monitor outbound sequences with domain warm - up, safety guardrails, and reply intent scoring.', feature,
-  s: [, ' 'Sequence composer and AI draft',' 'Warm - up and safety checks',' 'Reply intent and routing',' 'Blacklist monitoring',' 'CRM sync', ],' ico,
+  s: [, ' 'Sequence composer and AI draft',' 'Warm - up and safety checks',' 'Reply intent and routing',' 'Blacklist monitoring',' 'CRM sync'],' ico,
   n: '✉️', ' colo,
   r: 'from - fuchsia - 600 to - pink - 700',' text_colo,
   r: 'text - fuchsia - 300',' lin,`
@@ -6365,14 +6102,14 @@ export interface Q4Service,
   e: '2025 - 03 - 12', customer,
   s: 38, ratin,
   g: 4 && 4.5, review,
-  s: 20, }, ' i,
+  s: 20}, ' i,
   d: 'data - contracts - guardrails',' nam,
   e: 'Data Contracts Guardrails',' taglin,
   e: 'Schema governance, lineage, and backward - compat checks',' pric,
   e: '$299',' perio,
   d: '/month', descriptio,
   n:  ,' 'Define and enforce data contracts with compatibility checks, lineage, owners, and alerting integrated with CI / CD.', feature,
-  s: [, ' 'Schema registry and versioning',' 'Back / forward compatibility checks',' 'Lineage and ownership',' 'Alerts and SLOs',' 'CI / CD integrations', ],' ico,
+  s: [, ' 'Schema registry and versioning',' 'Back / forward compatibility checks',' 'Lineage and ownership',' 'Alerts and SLOs',' 'CI / CD integrations'],' ico,
   n: '🧮', ' categor,
   y: 'Developer Tools', realServic,
   e: true,' technolog,
@@ -6464,14 +6201,14 @@ export interface Q4Service,
   e: '2025 - 03 - 03', customer,
   s: 12, ratin,
   g: 4 && 4.6, review,
-  s: 9, }, ' 'Okta/Entra app configs',' 'SAML/OIDC + SCIM',' i,
+  s: 9}, ' 'Okta/Entra app configs',' 'SAML/OIDC + SCIM',' i,
   d: 'managed - sso - fast - track',' nam,
   e: 'Managed SSO Fast Track',' taglin,
   e: 'IdP mappings, SCIM, SAML / OIDC with enterprise checklist',' pric,
   e: '$4, 500',' perio,
   d: '/fixed', descriptio,
   n:  ,' 'Done - with - you SSO rollout for SaaS teams, including IdP app, mappings, SCIM, test plans, and enterprise - ready documentation.', feature,
-  s: [,' 'Okta / Entra app configs',' 'SAML / OIDC + SCIM', ' 'Security test plans',' 'Customer enablement kit', ],' ico,
+  s: [,' 'Okta / Entra app configs',' 'SAML / OIDC + SCIM', ' 'Security test plans',' 'Customer enablement kit'],' ico,
   n: '🔐', ' categor,
   y: 'Data & Analytics', realServic,
   e: true,' technolog,
@@ -6530,14 +6267,14 @@ export interface Q4Service,
   e: '2025 - 03 - 06', customer,
   s: 9, ratin,
   g: 4 && 4.7, review,
-  s: 7, }, ' i,
+  s: 7}, ' i,
   d: 'ai - sales - pipeline - insights',' nam,
   e: 'AI Sales Pipeline Insights',' taglin,
   e: 'Forecast hygiene, stage risks, and next - best actions',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n:  ,' 'Connect CRM to compute forecast hygiene, risk scores, and next - best actions with weekly reports and alerts.', feature,
-  s: [, ' 'Risk scoring and hygiene checks',' 'Stage SLAs and alerts',' 'Next - best action copilot',' 'Reporting and dashboards', ],' ico,
+  s: [, ' 'Risk scoring and hygiene checks',' 'Stage SLAs and alerts',' 'Next - best action copilot',' 'Reporting and dashboards'],' ico,
   n: '📊', ' categor,
   y: 'Enterprise IT', realServic,
   e: true,' technolog,
@@ -6610,7 +6347,7 @@ export interface Q4Service,
   e: '2025 - 03 - 04', customer,
   s: 14, ratin,
   g: 4 && 4.5, review,
-  s: 10, }, ' i,
+  s: 10}, ' i,
   d: 'secure - webhook - relay', customer,
   s: 14, ratin,
   g: 4.5, review,
@@ -6630,7 +6367,7 @@ export interface Q4Service,
   n: 'Production-ready relay alternative to building in-house.',' targetAudienc,
   e: 'Developers and platform teams', trialDay,
   s: 14,' setupTim,
-  e: 'Same day', ' 'Signature verification and secrets',' 'Replay and DLQs',' 'Retries and backoff',' 'Fan - out and transformations',' 'Audit logs and RBAC', ],' ico,
+  e: 'Same day', ' 'Signature verification and secrets',' 'Replay and DLQs',' 'Retries and backoff',' 'Fan - out and transformations',' 'Audit logs and RBAC'],' ico,
   n: '🔁',' colo,
   r: 'from - cyan - 600 to - blue - 700',' text_colo,
   r: 'text - cyan - 300',' lin,`
@@ -6656,7 +6393,7 @@ export interface Q4Service,
   e: '2025 - 03 - 09', customer,
   s: 31, ratin,
   g: 4 && 4.6, review,
-  s: 18, }, ' i,
+  s: 18}, ' i,
   d: 'managed - postgres - ha - lite',' categor,
   y: 'Developer Tools', realServic,
   e: true,' technolog,
@@ -6691,7 +6428,7 @@ export interface Q4Service,
   n: 'Practical alternative to DBAs for small teams.',' targetAudienc,
   e: 'SMBs and startups', trialDay,
   s: 7,' setupTim,
-  e: '3–5 days', ' 'Automated backups and PITR',' 'Failover drills and runbooks',' 'Index and bloat maintenance',' 'Performance dashboards', ],' ico,
+  e: '3–5 days', ' 'Automated backups and PITR',' 'Failover drills and runbooks',' 'Index and bloat maintenance',' 'Performance dashboards'],' ico,
   n: '🗄️',' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
   r: 'text - emerald - 300',' lin,`
@@ -6717,7 +6454,7 @@ export interface Q4Service,
   e: '2025 - 03 - 11', customer,
   s: 17, ratin,
   g: 4 && 4.6, review,
-  s: 9, }, mobil,
+  s: 9}, mobil,
   e: string, emai,
   l: string, addres,
   s: string, websit,
@@ -6960,7 +6697,7 @@ export interface Q4Service,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }; export const,
+  s://ziontechgroup.com'}; export const,
   realQ4Services2025: RealQ4Service[] = [ ' i,
   d: 'affiliate-marketing-hub',' nam,
   e: 'Affiliate Marketing Hub',' taglin,
@@ -6968,7 +6705,7 @@ export interface Q4Service,
   e: '$99',' perio,
   d: '/month', descriptio,
   n: ' 'Full-stack affiliate tracking with multi-touch attribution, fraud detection, and automated commissions. Built for SMB e-commerce and content sites.', feature,
-  s: [' 'Multi-channel attribution and cookie-less tracking',' 'Fraud rules, device fingerprinting, IP reputation checks',' 'Customizable commission structures and tiers',' 'Automated payouts and tax form collection',' 'Shareable links, coupons, and influencer codes',' 'Partner portal and real-time analytics', ], popula,
+  s: [' 'Multi-channel attribution and cookie-less tracking',' 'Fraud rules, device fingerprinting, IP reputation checks',' 'Customizable commission structures and tiers',' 'Automated payouts and tax form collection',' 'Shareable links, coupons, and influencer codes',' 'Partner portal and real-time analytics'], popula,
   r: true,' ico,
   n: '🔗',' colo,
   r: 'from-violet-600 to-fuchsia-700',' textColo,
@@ -6983,7 +6720,7 @@ export interface Q4Service,
   e: true,' technolog,
   y: ['Next.js', 'Node.js', 'PostgreSQL', 'Redis'],' integration,
   s: ['Shopify', 'WooCommerce', 'Stripe', 'PayPal'], useCase,
-  s: [' 'Affiliate programs',' 'Influencer tracking',' 'Partnership analytics', ],' ro,
+  s: [' 'Affiliate programs',' 'Influencer tracking',' 'Partnership analytics'],' ro,
   i: 'Increase attributed sales 10–25% with optimized partnerships.',' competitor,
   s: ['Refersion', 'LeadDyno', 'Tapfiliate'],' marketSiz,
   e: '$1.5B affiliate software',' growthRat,
@@ -6995,14 +6732,14 @@ export interface Q4Service,
   e: '2025-10-01', customer,
   s: 120, ratin,
   g: 4.7, review,
-  s: 48, }, ' i,
+  s: 48}, ' i,
   d: 'podcast-transcription-studio',' nam,
   e: 'Podcast Transcription Studio',' taglin,
   e: 'Fast, accurate multi-speaker transcriptions with summaries',' pric,
   e: '$29',' perio,
   d: '/month', descriptio,
   n: ' 'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.', feature,
-  s: [' 'Multi-speaker diarization',' 'Timestamps and filler removal',' 'Chapter detection and show notes',' 'Embeddings and semantic search',' 'Export to SRT, VTT, DOCX',' 'Podcast platform integrations', ], popula,
+  s: [' 'Multi-speaker diarization',' 'Timestamps and filler removal',' 'Chapter detection and show notes',' 'Embeddings and semantic search',' 'Export to SRT, VTT, DOCX',' 'Podcast platform integrations'], popula,
   r: false,' ico,
   n: '🎧',' colo,
   r: 'from-cyan-600 to-blue-700',' textColo,
@@ -7029,14 +6766,14 @@ export interface Q4Service,
   e: '2025-09-15', customer,
   s: 60, ratin,
   g: 4.6, review,
-  s: 22, }, ' i,
+  s: 22}, ' i,
   d: 'micro-crm-local-business',' nam,
   e: 'Micro CRM for Local Business',' taglin,
   e: 'Simple contacts, pipelines, and reminders that just work',' pric,
   e: '$19',' perio,
   d: '/month', descriptio,
   n: ' 'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.', feature,
-  s: [' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA',' 'Basic reporting', ], popula,
+  s: [' 'Contact management and segmentation',' 'Pipelines and kanban views',' 'Calendar with SMS/email reminders',' 'Import/export CSV and simple API',' 'Mobile-friendly PWA',' 'Basic reporting'], popula,
   r: true,' ico,
   n: '📇',' colo,
   r: 'from-emerald-600 to-teal-700',' textColo,
@@ -7063,14 +6800,14 @@ export interface Q4Service,
   e: '2025-10-20', customer,
   s: 210, ratin,
   g: 4.5, review,
-  s: 77, }, ' i,
+  s: 77}, ' i,
   d: 'returns-automation-saas',' nam,
   e: 'E‑commerce Returns Automation',' taglin,
   e: 'Self-serve returns portal and automated labels',' pric,
   e: '$49',' perio,
   d: '/month', descriptio,
   n: ' 'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.', feature,
-  s: [' 'Customer returns portal',' 'Prepaid label generation',' 'RMA approval rules',' 'Inventory and refund sync',' 'Email/SMS notifications',' 'Analytics on reasons and cost', ], popula,
+  s: [' 'Customer returns portal',' 'Prepaid label generation',' 'RMA approval rules',' 'Inventory and refund sync',' 'Email/SMS notifications',' 'Analytics on reasons and cost'], popula,
   r: false,' ico,
   n: '📦',' colo,
   r: 'from-amber-600 to-orange-700',' textColo,
@@ -7097,14 +6834,14 @@ export interface Q4Service,
   e: '2025-10-05', customer,
   s: 95, ratin,
   g: 4.6, review,
-  s: 35, }, ' i,
+  s: 35}, ' i,
   d: 'it-helpdesk-for-msps',' nam,
   e: 'IT Helpdesk for MSPs',' taglin,
   e: 'Ticketing, SLAs, and client portal built for MSPs',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n: ' 'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.', feature,
-  s: [' 'Inbox and portal ticket intake',' 'Auto-routing, SLAs, and escalations',' 'Public/private knowledge base',' 'Client portal with reports',' 'RMM and network tool integrations',' 'Billing export and time tracking', ], popula,
+  s: [' 'Inbox and portal ticket intake',' 'Auto-routing, SLAs, and escalations',' 'Public/private knowledge base',' 'Client portal with reports',' 'RMM and network tool integrations',' 'Billing export and time tracking'], popula,
   r: true,' ico,
   n: '🛠️',' colo,
   r: 'from-blue-600 to-indigo-700',' textColo,
@@ -7131,7 +6868,7 @@ export interface Q4Service,
   e: '2025-09-28', customer,
   s: 70, ratin,
   g: 4.5, review,
-  s: 28, }, ]; } export const real2025Q4Additions = [ ' i,
+  s: 28}]; } export const real2025Q4Additions = [ ' i,
   d: 'ai-governed-rag-platform',' nam,
   e: 'AI-Governed RAG Platform',' taglin,
   e: 'Enterprise-grade RAG with guardrails, approvals, and evals',' pric,

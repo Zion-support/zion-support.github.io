@@ -89,8 +89,7 @@ function fixStringLiterals(filePath) {
       // Fix incomplete array declarations;
       if (line.match(/^\s*const\s+\w+\s*=\s*\[\s*$/)) {
         line = line.replace(/\[\s*$/, '[\n  // TODO: Add items\n]');
-        modified = true;,
-      }
+        modified = true;}
       
       // Fix incomplete function calls;
       if (line.match(/^\s*\w+\s*\(\s*$/)) {

@@ -37,7 +37,7 @@ const optimizations = {
     return content;
       .replace(/\n\s*\n\s*\n/g, '\n\n')
       .replace(/[ \t]+$/gm, '')
-      .replace(/\n{3,}/g, '\n\n');
+      .replace(/\n{3}/g, '\n\n');
   },
 
   // Optimize React components;
@@ -49,7 +49,7 @@ const optimizations = {
         'const $1: React.FC = React.memo((')
       );
       // Add closing parenthesis for React.memo;
-      content = content.replace(,)
+      content = content.replace()
         /(\w+)\.displayName = '\w+';/g;
         '$1.displayName = \'$1\';\n});'
       );
@@ -138,8 +138,7 @@ async function main() {
   for (const pattern of filePatterns) {
     const files = await glob(pattern, {)
       ignore: excludePatterns),
-      cwd: process.cwd(),
-    });
+      cwd: process.cwd()});
     allFiles.push(...files);
   }
 

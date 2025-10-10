@@ -7,7 +7,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to fix critical parsing errors;
-<<<<<<< HEAD
 function fixCriticalErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -16,16 +15,13 @@ function fixCriticalErrors(filePath) {
     // Fix merge conflict markers;
     if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
       console.log(`Fixing merge conflicts in: ${filePath}`);
-=======
 function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
   in: ${filePath}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       const lines = content.split('\n');
       const result = [];
       let inConflict = false;
       let keepCurrent = true;
       
-<<<<<<< HEAD
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         
@@ -58,11 +54,9 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
     
     // Fix malformed JSX;
     content = content.replace(/<div[^>]*>\s*$/gm, '<div>');
-=======
       for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
         } else if (line.startsWith('')) {/* TODO: Fix JSX expression */}
         } else if (line.startsWith(']*>\s*$/gm, '<div>');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     content = content.replace(/<\/div>\s*$/gm, '</div>');
     
     // Fix function declarations;
@@ -72,14 +66,11 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/(\w+)\s*$/gm, '$1;');
     
     // Fix specific patterns;
-<<<<<<< HEAD
     if (filePath.includes('App.tsx')) {
       content = content.replace(/catch\s*{\s*}/g, 'catch (error) { console.warn("Error:", error); }');
-=======
     if (filePath.includes('App.tsx')) {/* TODO: Fix JSX expression */}
       content = content.replace(/catch\s*{\s*}/g, 'catch (error) {/* TODO: Fix JSX expression */}
   r:", error); }');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     
     if (filePath.includes('middleware')) {/* TODO: Fix JSX expression */}
@@ -95,7 +86,6 @@ function fixCriticalErrors(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all files that need fixing;
-<<<<<<< HEAD
 function findFilesToFix(dir) {
   const files = [];
   
@@ -110,10 +100,8 @@ function findFilesToFix(dir) {
         walkDir(fullPath);
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {
         files.push(fullPath);
-=======
 function findFilesToFix(dir) {/* TODO: Fix JSX expression */}
       } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }

@@ -1,7 +1,6 @@
 export interface Insight {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 export const newInsights: Insight[] = [
   {
     id: 'ai-platform-optimization-insights'
@@ -21,8 +20,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
 - Real-time optimization recommendations reduce costs by 40%
 - Comprehensive ROI tracking enables data-driven decisions;
 - Automated performance tuning increases efficiency by 60%,
-    `,
-  },
+    `},
   {
     id: 'quantum-ai-security-insights'
     title: 'Quantum AI Security: Next-Generation Protection Framework'
@@ -42,12 +40,9 @@ Protect your AI systems with next-generation quantum security frameworks.
 - Zero-trust architecture eliminates security vulnerabilities;
 - Real-time monitoring provides instant threat response;
     `,
-=======
 export const,
   newInsights: Insight[] = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-];
+  }];

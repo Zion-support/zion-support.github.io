@@ -1,68 +1,48 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
 const nextConfig = {
-  experimental: {,
-    optimizeCss: true;
-    optimizePackageImports: ['@mui/material', '@mui/icons-material'],
-    turbo: {,
-      rules: {,
-        '*.svg': {,
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-=======
-const nextConfig = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-        },
-      },
-    },
+  reactStrictMode: true,
+  swcMinify: true,
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@heroicons/react', 'lucide-react', 'framer-motion'],
   },
-<<<<<<< HEAD
-  compiler: {,
+  compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
-    styledComponents: true;
   },
-  images: {,
+  images: {
     formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000;
-    dangerouslyAllowSVG: true;
+    minimumCacheTTL: 60,
+    dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   async headers() {
     return [
       {
         source: '/(.*)',
-        headers: [,
-          {,
+        headers: [
+          {
             key: 'X-Frame-Options',
             value: 'DENY',
-=======
-  compile,
-  r: {/* TODO: Fix JSX expression */}
-  },
-  image,
-  s: {/* TODO: Fix JSX expression */}
-  },
-  async headers() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           },
-          {/* TODO: Fix JSX expression */}
+          {
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
-          {/* TODO: Fix JSX expression */}
+          {
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin',
           },
         ],
       },
-<<<<<<< HEAD
       {
-        source: '/static/(.*)',
-        headers: [,
-          {,
+        source: '/api/(.*)',
+        headers: [
+          {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-=======
-      {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+            value: 'public, max-age=3600, s-maxage=3600',
           },
         ],
       },

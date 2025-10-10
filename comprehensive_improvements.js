@@ -4,7 +4,6 @@
 // const packageJsonPath = '/workspace/package.json';
 
 // Add performance optimization scripts;
-<<<<<<< HEAD
 packageJson.scripts = {
     ...packageJson.scripts,
     'optimize: images': 'node scripts/optimize-images.js',
@@ -12,9 +11,7 @@ packageJson.scripts = {
     'optimize: all': 'pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized',
     'analyze: bundle': 'vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html',
     'perf:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
-=======
 packageJson.scripts = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -22,7 +19,6 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // const performanceScript = `import { execSync } from 'child_process';
 
 // // Optimize images;
-<<<<<<< HEAD
 // try {
     execSync('find public -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -o -name "*.webp" | head -10', { stdio: 'pipe' });
 //     } catch (error) {
@@ -32,7 +28,6 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // try {
     execSync('pnpm run build:optimized', { stdio: 'pipe' });
 //     } catch (error) {
-=======
 // try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 //     } catch (error) {/* TODO: Fix JSX expression */}
@@ -42,13 +37,11 @@ fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 //     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     }
 `
 // `;
 
 fs.writeFileSync('/workspace/scripts/performance-optimizer.js', performanceScript);
-<<<<<<< HEAD
 // // 3. Create accessibility improvements;
 // // const accessibilityScript = `import { execSync } from 'child_process';
 
@@ -56,20 +49,17 @@ fs.writeFileSync('/workspace/scripts/performance-optimizer.js', performanceScrip
 // try {
     // This would run accessibility tests in a real scenario;
 //     } catch (error) {
-=======
 // // 3. Create accessibility improvements;`
 // // const accessibilityScript = `import { execSync } from 'child_process';
 
 // // Check for accessibility issues;
 // try {/* TODO: Fix JSX expression */}
 //     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     }
 `
 // `;
 
 fs.writeFileSync('/workspace/scripts/accessibility-improver.js', accessibilityScript);
-<<<<<<< HEAD
 // // 4. Create SEO improvements;
 // // const seoScript = `import { execSync } from 'child_process';
 
@@ -77,30 +67,24 @@ fs.writeFileSync('/workspace/scripts/accessibility-improver.js', accessibilitySc
 // try {
     // This would run SEO tests in a real scenario;
 //     } catch (error) {
-=======
 // // 4. Create SEO improvements;`
 // // const seoScript = `import { execSync } from 'child_process';
 
 // // Check for SEO issues;
 // try {/* TODO: Fix JSX expression */}
 //     } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //     }
 `
 // `;
 
 fs.writeFileSync('/workspace/scripts/seo-improver.js', seoScript);
-<<<<<<< HEAD
 // // 5. Create comprehensive test suite;
-=======
 // // 5. Create comprehensive test suite;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 // // const testSuite = `import { describe, it, expect } from '@jest/globals';
 
 describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     });
 
-<<<<<<< HEAD
     it('should pass performance test', () => {
 //         const startTime = Date.now();
         // Simulate some work;
@@ -111,18 +95,15 @@ describe('Comprehensive Test Suite', () => {/* TODO: Fix JSX expression */}
     it('should pass accessibility test', () => {
         // Basic accessibility check;
         expect(document).toBeDefined();
-=======
     it('should pass performance test', () => {/* TODO: Fix JSX expression */}
     });
 
     it('should pass accessibility test', () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 });`
 `;
 
 fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
-<<<<<<< HEAD
 // // 6. Create monitoring script;
 // // const monitoringScript = `import { execSync } from 'child_process';
 
@@ -132,13 +113,11 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
         rss: Math.round(memUsage.rss / 1024 / 1024) + ' MB',
         heapUsed: Math.round(memUsage.heapUsed / 1024 / 1024) + ' MB',
         heapTotal: Math.round(memUsage.heapTotal / 1024 / 1024) + ' MB',
-=======
 // // 6. Create monitoring script;`
 // // const monitoringScript = `import { execSync } from 'child_process';
 
 // // Monitor performance;
 // try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 //     } catch (error) {/* TODO: Fix JSX expression */}
 //     }
@@ -146,11 +125,8 @@ fs.writeFileSync('/workspace/__tests__/comprehensive.test.js', testSuite);
 // `;
 
 fs.writeFileSync('/workspace/scripts/monitor.js', monitoringScript);
-<<<<<<< HEAD
 // // 7. Update README with improvements;
-=======
 // // 7. Update README with improvements;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 // const readmeContent = `# Zion Tech Group - Advanced AI and IT Solutions Website;
 ## Recent Improvements;
 ### Performance Optimizations;
@@ -173,11 +149,8 @@ fs.writeFileSync('/workspace/scripts/monitor.js', monitoringScript);
 - ✅ Performance monitoring;
 - ✅ Error tracking;
 - ✅ Code quality checks;
-<<<<<<< HEAD
 ## Quick Start;
-=======
 ## Quick Start;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 \`\`\`bash;
 # Install dependencies;
 pnpm install;
@@ -188,7 +161,6 @@ pnpm build;
 # Run tests;
 pnpm test;
 # Run performance audit;
-<<<<<<< HEAD
 pnpm perf: audit;
 \`\`\`
 
@@ -199,7 +171,6 @@ pnpm perf: audit;
 - \`pnpm lint\` - Run linting;
 - \`pnpm optimize:all\` - Run all optimizations;
 - \`pnpm perf:audit\` - Run performance audit;
-=======
 pnpm,
   perf:audit;`
 \`\`\`
@@ -213,12 +184,10 @@ pnpm,
   optimize:all\` - Run all optimizations;`
 - \`pnpm,`
   perf:audit\` - Run performance audit;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 `;
 ,
 fs.writeFileSync('/workspace/README.md', readmeContent);
 // // 8. Create improvement summary;
-<<<<<<< HEAD
 const improvementSummary = {
     timestamp: new Date().toISOString(),
     improvements: [,
@@ -236,9 +205,7 @@ const improvementSummary = {
         'Verify SEO improvements',
         'Monitor system performance'
     ]
-=======
 const improvementSummary = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 fs.writeFileSync('/workspace/improvements-summary.json', JSON.stringify(improvementSummary, null, 2));

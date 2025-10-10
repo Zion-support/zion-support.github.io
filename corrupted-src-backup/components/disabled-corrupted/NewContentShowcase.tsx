@@ -1,19 +1,15 @@
 import React from 'react';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
-<<<<<<< HEAD
-<<<<<<< HEAD
 const NewContentShowcas, e: React.FC = () => { ,
   const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
       <div, className="container, m, x-auto, p, x-6">
         <div, className="te, x, t-center, m, b-16">
-=======
 const NewContentShowcas, e: React.FC = () => { 
   const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return (
     <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-purp, l, e-100, rounde, d-full, tex, t-purp, l, e-700, fon, t-semibold, m, b-4">
             🌟 JUST, RELEASE, D;
           </div>
@@ -28,17 +24,14 @@ const NewContentShowcas, e: React.FC = () => {
           <d, i, v>
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6"></div>
               <BookOpen, className="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />
-<<<<<<< HEAD
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Latest, Article, s</h3>)
             </div>)
             <div, className="spa, c, e-y-4">)
               { topArticl, e, s.m, a, p((arti, c, l, e) = > (
-=======
               <h3, className="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Latest, Article, s</h3>
             </div>
             <div, className="spa, c, e-y-4">
               { topArticl, e, s.m, a, p((arti, c, l, e) = > (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } className="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
                 >
                   <div, className="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</div>
@@ -48,7 +41,6 @@ const NewContentShowcas, e: React.FC = () => {
                     <span, className="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>
                     <span, className="te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1">
                       Read, Mor, e</span> <Link, className="w-4 h-4" />
-=======
 const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }
           <d, i, v></d>"
@@ -67,12 +59,10 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
                     <span, className="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTime}</sp, a, n>"
                     <span, className="te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1"></span>"
                       Read, Mor, e <Link, className="w-4 h-4" /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     </sp, a, n>
                   </div>
                 </L, i, n, k>
               ))}
-<<<<<<< HEAD
             </div>
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>
               <Link, t, o="/bl, o, g"
@@ -80,7 +70,6 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               >
                 View, All, Articles;
                 <Link, className="w-5 h-5" />
-=======
             </div>"
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>"
               <Link, t, o="/bl, o, g""
@@ -88,12 +77,10 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               ></Link>
                 View, All, Articles;"
                 <Link, className="w-5 h-5" /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </Li, n, k>
             </div>
           </div>
           {/* Services, Sect, i, o, n */}
-<<<<<<< HEAD
           <d, i, v>
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6"></div>
               <Rocket, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />
@@ -113,7 +100,6 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
                     <span, className="te, x, t-gr, a, y-700, fon, t-semibo, l, d">{servi, c, e.prici, n, g}</sp, a, n>
                     <span, className="te, x, t-purp, l, e-600, fon, t-semibold, flex, items-center, ga, p-1">
                       Learn, Mor, e</span> <Link, className="w-4 h-4" />
-=======
           <d, i, v></d>"
             <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6"></div>"
               <Rocket, className="w-8 h-8, tex, t-purp, l, e-6, 0, 0" /></Rocket>"
@@ -133,12 +119,10 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
                     <span, className="te, x, t-gr, a, y-700, fon, t-semibo, l, d">{servi, c, e.prici, n, g}</sp, a, n>"
                     <span, className="te, x, t-purp, l, e-600, fon, t-semibold, flex, items-center, ga, p-1"></span>"
                       Learn, Mor, e <Link, className="w-4 h-4" /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     </sp, a, n>
                   </div>
                 </L, i, n, k>
               ))}
-<<<<<<< HEAD
             </div>
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>
               <Link, t, o="/servic, e, s"
@@ -146,7 +130,6 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               >
                 View, All, Services;
                 <Link, className="w-5 h-5" />
-=======
             </div>"
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>"
               <Link, t, o="/servic, e, s""
@@ -154,7 +137,6 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
               ></Link>
                 View, All, Services;"
                 <Link, className="w-5 h-5" /></Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </Li, n, k>
             </div>
           </div>

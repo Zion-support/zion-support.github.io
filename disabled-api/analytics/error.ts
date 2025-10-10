@@ -5,7 +5,7 @@
   k: string}; ur,
   l: string; timestam,
   p: number, userAgen,
-  t: string} export default function handler(re,)
+  t: string} export default function handler(re)
   q: NextApiRequest) re,
   s: NextApiResponse) {/* TODO: Fix JSX expression */}
   r: 'Method not allowed' })} try {/* TODO: Fix JSX expression */}
@@ -17,6 +17,6 @@
   k: data.error.stack; componentStac,
   k: data.errorInfo.componentStack }); // Here you could send the error,
   to: // - A monitoring service (Sentry, LogRocket, Bugsnag) etc.) // - A logging service (LogDNA, Papertrail) etc.) // - A database for analysis // - An alerting system (PagerDuty, Slack) etc.) ' // For now, we'll just acknowledge receipt res.status(200).json({/* TODO: Fix JSX expression */}
-  e: 'Error logged successfully'} timestam,)
+  e: 'Error logged successfully'} timestam)
   p: Date.now() })} catch (error) {/* TODO: Fix JSX expression */}
   r: 'Internal server error' })} }'

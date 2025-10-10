@@ -25,8 +25,7 @@ export interface MiddlewareContext {// TODO: Add content;}
 }
 export type Middleware = ()
   context: MiddlewareContext,
-  next: NextFunction,
-) => Promise;
+  next: NextFunction) => Promise;
           <unknown> | unknown;
  * Middleware executor;
 export class MiddlewareExecutor {// TODO: Add content;}
@@ -37,7 +36,6 @@ export class MiddlewareExecutor {// TODO: Add content;}
 }
     this.middlewares.push(middleware);
     return this;
-<<<<<<< HEAD
    * Execute middleware chain;
   async execute(context: MiddlewareContext): Promise;
           <unknown> {let index = 0;}
@@ -55,9 +53,7 @@ export const _loggingMiddleware: Middleware = async (context, next) => {// TODO:
   const _startTime = Date.now();
   logger.info('Request started', 'RequestMiddleware', {// TODO: Add content;}
 };
-  component: 'RequestMiddleware',
-=======
-  }
+  component: 'RequestMiddleware'}
   /**
    * Execute middleware chain
    */
@@ -80,17 +76,14 @@ export const loggingMiddleware: Middleware = async (context, next) => {
   const startTime = Date.now();
   logger.info('Request started', 'RequestMiddleware', {
     component: 'RequestMiddleware',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
     method: context.request.method,
     url: context.request.url;
   });
-<<<<<<< HEAD
   try {// TODO: Add content;}
 }
     const result = await next();
     const duration = Date.now() - startTime;
-    logger.info('Request completed', 'RequestMiddleware', {url: context.request.url,}
-=======
+    logger.info('Request completed', 'RequestMiddleware', {url: context.request.url}
   try {
     const result = await next();
     const duration = Date.now() - startTime;
@@ -98,11 +91,9 @@ export const loggingMiddleware: Middleware = async (context, next) => {
       component: 'RequestMiddleware',
       method: context.request.method,
       url: context.request.url,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
       status: context.response?.status,
       duration;
     return result;
-<<<<<<< HEAD
   } catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware', {}
     throw error;
  * Authentication middleware;
@@ -111,7 +102,6 @@ export const authMiddleware: Middleware = async (context, next) => {// TODO: Add
   const token = getAuthToken();
   if (token) {// TODO: Add content;}
 }
-=======
   } catch (error) {
     const duration = Date.now() - startTime;
     logger.error('Request failed', error as Error, 'RequestMiddleware', {
@@ -129,7 +119,6 @@ export const authMiddleware: Middleware = async (context, next) => {// TODO: Add
 export const authMiddleware: Middleware = async (context, next) => {
   const token = getAuthToken();
   if (token) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
     context.request.headers['Authorization'] = `Bearer ${token}`;
  * Get authentication token from storage;
 function getAuthToken(): string | null {// TODO: Add content;}
@@ -138,12 +127,11 @@ function getAuthToken(): string | null {// TODO: Add content;}
   return localStorage.getItem('authToken');
  * Error handling middleware;
 export const errorHandlingMiddleware: Middleware = async (context, next) => {// Transform error into a standardized format;}
-    const standardError = {message: error instanceof Error ? error.message : 'Unknown error',}
+    const standardError = {message: error instanceof Error ? error.message : 'Unknown error'}
       status: context.response?.status || 500,
       method: context.request.method;
     logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {// TODO: Add content;}
 };
-<<<<<<< HEAD
   component: 'ErrorHandlingMiddleware',
 ...standardError;
     throw standardError;
@@ -162,7 +150,6 @@ const validTimestamps = timestamps.filter(t => now - t;
           < windowMs);
     if (validTimestamps.length >= maxRequests) {// TODO: Add content;}
 }
-=======
 /**
  * Rate limiting middleware
  */
@@ -175,11 +162,9 @@ export const rateLimitMiddleware = (maxRequests: number, windowMs: number): Midd
     // Remove expired timestamps
     const validTimestamps = timestamps.filter(t => now - t < windowMs);
     if (validTimestamps.length >= maxRequests) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
       throw new Error('Rate limit exceeded');
     validTimestamps.push(now);
     requests.set(key, validTimestamps);
-<<<<<<< HEAD
  * Caching middleware;
 export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add content;}
 }
@@ -191,7 +176,6 @@ if (context.request.method !== 'GET') {const cached = cache.get(key);}
       logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware', url: key });
       return cached.data;
     cache.set(key, {// TODO: Add content;}
-=======
     return await next();
   };
 };
@@ -217,7 +201,6 @@ export const cachingMiddleware = (ttl: number): Middleware => {
     });
     return result;
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 };
   data: result,
       timestamp: Date.now()
@@ -232,18 +215,14 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
 //             'RetryMiddleware',
             {// TODO: Add content;}
 };
-  component: 'RetryMiddleware',
-          );
+  component: 'RetryMiddleware');
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
     throw lastError;
  * Timeout middleware;
 export const timeoutMiddleware = (timeoutMs: number): Middleware => {return await Promise.race([}
-  // TODO: Add items,
-]
+  // TODO: Add items]
 //       next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs)),
-    ]);
-<<<<<<< HEAD
+      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs))]);
  * Request transformation middleware;
 export const transformRequestMiddleware = ()
   transformer: (context: MiddlewareContext) => MiddlewareContext | Promise;
@@ -251,7 +230,6 @@ export const transformRequestMiddleware = ()
 ): Middleware => {return await transformer(result);}
  * Create default middleware chain;
 export function createDefaultMiddlewareChain(): MiddlewareExecutor {// TODO: Add content;}
-=======
   };
 };
 /**
@@ -288,7 +266,6 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
     .use(authMiddleware)
     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000));
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 }
   const executor = new MiddlewareExecutor();
   return executor;
@@ -297,7 +274,7 @@ export function createDefaultMiddlewareChain(): MiddlewareExecutor {
 //     .use(authMiddleware)
 //     .use(timeoutMiddleware(30000))
     .use(retryMiddleware(2, 1000));
-export default {MiddlewareExecutor,}
+export default {MiddlewareExecutor}
   loggingMiddleware,
   authMiddleware,
   errorHandlingMiddleware,

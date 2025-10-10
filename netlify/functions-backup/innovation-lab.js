@@ -1,7 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('innovation-lab function triggered')}
     // Innovation lab simulation;
-<<<<<<< HEAD
     const result = {
       statusCode: 200;
       headers: {,
@@ -16,19 +15,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           status: 'active',
           experiments: 0;
           lastExperiment: new Date().toISOString()}
-=======
     const result = {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   t: new Date().toISOString()}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-        },
-      }),
-    };
+        }})};
     return result;
-<<<<<<< HEAD
 //   } catch (error) {// console.error('Error in innovation-lab: ') error;
       }
     return {
@@ -40,7 +34,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),
         function: 'innovation-lab'}
-=======
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
@@ -49,16 +42,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'innovation-lab'})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
         timestamp: new Date().toISOString(),' function: 'innovation-lab',' source: event.source || 'unknown', innovation: {' status: 'active', experiments: 0;
         lastExperiment: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in innovation-lab: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'innovation-lab' }) }; } };'
-=======
         timestam,
   p: new Date().toISOString(),' functio,
   n: 'innovation-lab',' sourc,
@@ -68,7 +58,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       } return {/* TODO: Fix JSX expression */}
   s: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-  r: 'Internal server error'} messag,)
+  r: 'Internal server error'} messag)
   e: error.message)' functio,
   n: 'innovation-lab' }) }; } };'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

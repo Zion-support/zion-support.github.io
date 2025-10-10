@@ -1,6 +1,5 @@
 
 
-<<<<<<< HEAD
 export const PROVIDERS: IntegrationProviderMeta[] = [
 ,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
@@ -14,7 +13,6 @@ export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'greenhouse', name: 'Greenhouse', category: 'ats', description: 'ATS & recruiting' },
   { id: 'lever', name: 'Lever', category: 'ats', description: 'ATS & CRM' },
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
-=======
 import type { IntegrationProviderMeta } from './types';
 
 
@@ -34,7 +32,6 @@ export const,
   n: 'ATS & CRM' },
   {/* TODO: Fix JSX expression */}
   n: 'Recruiting software' },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
@@ -42,14 +39,12 @@ export const,
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
 
-<<<<<<< HEAD
 export const PROVIDERS: IntegrationProviderMeta[] = [,
 ,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
 ,
 export const PROVIDERS: IntegrationProviderMeta[] = [,
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' },
-=======
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
 
@@ -60,7 +55,6 @@ export const,
   PROVIDERS: IntegrationProviderMeta[] = [
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
@@ -68,18 +62,15 @@ export const,
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
 
-<<<<<<< HEAD
 export const PROVIDERS: IntegrationProviderMeta[] = [
   {,
     id: 'salesforce',
     name: 'Salesforce',
     category: 'crm',
     description: 'Enterprise CRM',
-=======
 export const,
   PROVIDERS: IntegrationProviderMeta[] = [
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   {/* TODO: Fix JSX expression */}
   },
@@ -101,12 +92,10 @@ export const,
   n: 'HRIS & ATS' }
 ];
 
-<<<<<<< HEAD
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
 
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
-=======
 
 
 
@@ -118,33 +107,25 @@ export const,
 
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 ];
 
   {/* TODO: Fix JSX expression */}
   n: 'HRIS & ATS' }
 ];
 
-<<<<<<< HEAD
 export function getProviderById(id: string): IntegrationProviderMeta | undefined {,
-    description: 'HRIS & ATS',
-  },
-];
+    description: 'HRIS & ATS'}];
 
-export function getProviderById(id: string;),
-): IntegrationProviderMeta | undefined {,
+export function getProviderById(id: string;)): IntegrationProviderMeta | undefined {,
   return PROVIDERS.find(p => p.id === id);
-=======
 
-export function getProviderById(i,)
+export function getProviderById(i)
   d: string): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
-  },
-];
+  }];
 
 export function getProviderById(i,
   d: string;)
 ): IntegrationProviderMeta | undefined {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useCallback } from 'react';
 
@@ -85,7 +84,6 @@ $4})
   );
 };
 export default Image;
-=======
 
 
 'use client';
@@ -225,4 +223,3 @@ export default Image;"`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

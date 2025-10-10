@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -40,7 +39,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     period: '/month',
     description: 'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.',
     features: [,
-=======
   i,
   d: string;
   nam,
@@ -98,8 +96,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     emai,
   l: string;
     addres,
-  s: string,
-  }
+  s: string}
 }
 export const,
   realMicroSaasServices: RealMicroSaasService[] = [,
@@ -117,7 +114,6 @@ export const,
   n: 'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '500+ legal document templates',
       'AI-powered compliance checking',
       'Real-time legal updates',
@@ -127,9 +123,7 @@ export const,
       'Legal research integration',
       'Client portal access',
       'Automated legal advice',
-      '24/7 legal support',
-    ],
-<<<<<<< HEAD
+      '24/7 legal support'],
     popular: true;
     icon: ''
     color: 'from-blue-500 to-indigo-600'
@@ -142,7 +136,6 @@ export const,
     category: 'Legal Technology',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -168,13 +161,11 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Machine Learning',
       'Legal AI',
       'Document Generation',
-      'Compliance Engine',
-    ],
+      'Compliance Engine'],
     integration,
   s: [,
       'DocuSign',
@@ -182,17 +173,14 @@ export const,
       'Clio',
       'PracticePanther',
       'LawPay',
-      'QuickBooks',
-    ],
+      'QuickBooks'],
     useCase,
   s: [,
       'Contract generation',
       'Legal form creation',
       'Compliance documentation',
       'Client onboarding',
-      'Legal research',
-    ],
-<<<<<<< HEAD
+      'Legal research'],
     roi: '300% time savings on document creation',
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net'],
     marketSize: '$2.1B legal tech market'
@@ -201,9 +189,7 @@ export const,
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
-  },
+      website: 'https://ziontechgroup.com'}},
     id: 'ai-customer-service-automation'
     name: 'AI Customer Service Automation'
     tagline: '24/7 intelligent customer support with AI chatbots',
@@ -211,7 +197,6 @@ export const,
     period: '/month',
     description: 'Advanced AI-powered customer service automation that handles 80% of customer inquiries automatically. Provides human-like responses and seamless escalation to human agents.',
     features: [,
-=======
     ro,
   i: '300% time savings on document creation',
     competitor,
@@ -230,9 +215,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-customer-service-automation',
     nam,
@@ -247,7 +230,6 @@ export const,
   n: 'Advanced AI-powered customer service automation that handles 80% of customer inquiries automatically. Provides human-like responses and seamless escalation to human agents.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Multi-language support (50+ languages)',
       'Natural conversation flow',
       'Sentiment analysis',
@@ -257,9 +239,7 @@ export const,
       'Analytics dashboard',
       'Custom branding',
       'API integrations',
-      'Real-time learning',
-    ],
-<<<<<<< HEAD
+      'Real-time learning'],
     popular: true;
     icon: ''
     color: 'from-green-500 to-emerald-600'
@@ -272,7 +252,6 @@ export const,
     category: 'Customer Service & Support',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -298,13 +277,11 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Machine Learning',
       'Sentiment Analysis',
       'Voice Recognition',
-      'Chatbot AI',
-    ],
+      'Chatbot AI'],
     integration,
   s: [,
       'Zendesk',
@@ -312,17 +289,14 @@ export const,
       'Freshdesk',
       'Slack',
       'Microsoft Teams',
-      'Shopify',
-    ],
+      'Shopify'],
     useCase,
   s: [,
       'Customer support',
       'Order tracking',
       'Product inquiries',
       'Technical support',
-      'Appointment booking',
-    ],
-<<<<<<< HEAD
+      'Appointment booking'],
     roi: '60% reduction in support costs',
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to'],
     marketSize: '$15.8B customer service software market'
@@ -332,7 +306,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     ro,
   i: '60% reduction in support costs',
     competitor,
@@ -351,10 +324,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-seo-optimizer-pro',
     nam,
@@ -378,9 +348,7 @@ export const,
       'Backlink monitoring',
       'Local SEO optimization',
       'Mobile optimization',
-      'Performance analytics',
-    ],
-<<<<<<< HEAD
+      'Performance analytics'],
     popular: true;
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -393,7 +361,6 @@ export const,
     category: 'Digital Marketing & SEO',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -419,13 +386,11 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Natural Language Processing',
       'Data Analytics',
       'SEO Algorithms',
-      'Web Crawling',
-    ],
+      'Web Crawling'],
     integration,
   s: [,
       'Google Analytics',
@@ -433,17 +398,14 @@ export const,
       'WordPress',
       'Shopify',
       'WooCommerce',
-      'HubSpot',
-    ],
+      'HubSpot'],
     useCase,
   s: [,
       'Website optimization',
       'Content marketing',
       'Local business SEO',
       'E-commerce SEO',
-      'Blog optimization',
-    ],
-<<<<<<< HEAD
+      'Blog optimization'],
     roi: '200% increase in organic traffic in 6 months',
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath'],
     marketSize: '$8.2B SEO tools market'
@@ -453,7 +415,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     ro,
   i: '200% increase in organic traffic in 6 months',
     competitor,
@@ -472,10 +433,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-video-editing-suite',
     nam,
@@ -499,9 +457,7 @@ export const,
       'Video templates library',
       'Cloud rendering',
       'Collaborative editing',
-      'Export to multiple formats',
-    ],
-<<<<<<< HEAD
+      'Export to multiple formats'],
     popular: true;
     icon: ''
     color: 'from-red-500 to-pink-600'
@@ -514,7 +470,6 @@ export const,
     category: 'Creative & Media',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -540,13 +495,11 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Computer Vision',
       'Machine Learning',
       'Audio Processing',
       'Video Compression',
-      'Cloud Computing',
-    ],
+      'Cloud Computing'],
     integration,
   s: [,
       'Adobe Creative Suite',
@@ -554,16 +507,14 @@ export const,
       'DaVinci Resolve',
       'YouTube',
       'Vimeo',
-      'Social media platforms',
-    ],
+      'Social media platforms'],
     useCase,
   s: [,
       'Social media content',
       'Marketing videos',
       'Product demos',
       'Educational content',
-      'Event highlights',
-    ],
+      'Event highlights'],
     ro,
   i: '80% reduction in editing time',
     competitor,
@@ -572,9 +523,7 @@ export const,
       'Final Cut Pro',
       'DaVinci Resolve',
       'Camtasia',
-      'Filmora',
-    ],
-<<<<<<< HEAD
+      'Filmora'],
     marketSize: '$3.2B video editing software market'
     growthRate: '45% annual growth'
     contactInfo: unknown;
@@ -582,7 +531,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     marketSiz,
   e: '$3.2B video editing software market',
     growthRat,
@@ -597,10 +545,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-data-analytics-platform',
     nam,
@@ -624,9 +569,7 @@ export const,
       'Custom reporting',
       'Data integration tools',
       'API access',
-      'Advanced security',
-    ],
-<<<<<<< HEAD
+      'Advanced security'],
     popular: true;
     icon: ''
     color: 'from-cyan-500 to-blue-600'
@@ -639,7 +582,6 @@ export const,
     category: 'Data & Analytics',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -665,13 +607,11 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Data Mining',
       'Statistical Analysis',
       'Big Data Processing',
-      'Predictive Modeling',
-    ],
+      'Predictive Modeling'],
     integration,
   s: [,
       'Google Analytics',
@@ -680,17 +620,14 @@ export const,
       'MySQL',
       'PostgreSQL',
       'AWS',
-      'Google Cloud',
-    ],
+      'Google Cloud'],
     useCase,
   s: [,
       'Business intelligence',
       'Customer analytics',
       'Market research',
       'Performance tracking',
-      'Risk assessment',
-    ],
-<<<<<<< HEAD
+      'Risk assessment'],
     roi: '150% improvement in decision-making speed',
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo'],
     marketSize: '$23.4B business intelligence market'
@@ -700,7 +637,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     ro,
   i: '150% improvement in decision-making speed',
     competitor,
@@ -719,10 +655,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-hr-recruitment-platform',
     nam,
@@ -746,9 +679,7 @@ export const,
       'Candidate tracking',
       'Performance analytics',
       'Integration with job boards',
-      'Mobile app access',
-    ],
-<<<<<<< HEAD
+      'Mobile app access'],
     popular: true;
     icon: ''
     color: 'from-indigo-500 to-purple-600'
@@ -761,7 +692,6 @@ export const,
     category: 'Human Resources',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -787,13 +717,11 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Machine Learning',
       'Predictive Analytics',
       'AI Matching',
-      'Automation',
-    ],
+      'Automation'],
     integration,
   s: [,
       'LinkedIn',
@@ -802,16 +730,14 @@ export const,
       'Workday',
       'BambooHR',
       'Slack',
-      'Microsoft Teams',
-    ],
+      'Microsoft Teams'],
     useCase,
   s: [,
       'Candidate sourcing',
       'Resume screening',
       'Skill assessment',
       'Interview coordination',
-      'Hiring analytics',
-    ],
+      'Hiring analytics'],
     ro,
   i: '50% reduction in time-to-hire',
     competitor,
@@ -820,9 +746,7 @@ export const,
       'BambooHR',
       'Greenhouse',
       'Lever',
-      'SmartRecruiters',
-    ],
-<<<<<<< HEAD
+      'SmartRecruiters'],
     marketSize: '$2.8B recruitment software market'
     growthRate: '42% annual growth'
     contactInfo: unknown;
@@ -830,7 +754,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     marketSiz,
   e: '$2.8B recruitment software market',
     growthRat,
@@ -845,10 +768,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-sales-automation-platform',
     nam,
@@ -872,9 +792,7 @@ export const,
       'CRM integration',
       'Mobile sales app',
       'Real-time notifications',
-      'Custom workflows',
-    ],
-<<<<<<< HEAD
+      'Custom workflows'],
     popular: true;
     icon: ''
     color: 'from-yellow-500 to-orange-600'
@@ -887,7 +805,6 @@ export const,
     category: 'Sales & CRM',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -913,13 +830,11 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Predictive Analytics',
       'Natural Language Processing',
       'Automation',
-      'AI Optimization',
-    ],
+      'AI Optimization'],
     integration,
   s: [,
       'Salesforce',
@@ -928,16 +843,14 @@ export const,
       'Zoho CRM',
       'Microsoft Dynamics',
       'Gmail',
-      'Outlook',
-    ],
+      'Outlook'],
     useCase,
   s: [,
       'Lead generation',
       'Sales forecasting',
       'Pipeline management',
       'Email campaigns',
-      'Performance tracking',
-    ],
+      'Performance tracking'],
     ro,
   i: '35% increase in sales conversion rates',
     competitor,
@@ -946,9 +859,7 @@ export const,
       'HubSpot',
       'Pipedrive',
       'Zoho CRM',
-      'Freshsales',
-    ],
-<<<<<<< HEAD
+      'Freshsales'],
     marketSize: '$18.6B CRM market'
     growthRate: '33% annual growth'
     contactInfo: unknown;
@@ -956,7 +867,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     marketSiz,
   e: '$18.6B CRM market',
     growthRat,
@@ -971,10 +881,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-market-research-platform',
     nam,
@@ -998,9 +905,7 @@ export const,
       'Data visualization',
       'API access',
       'Real-time updates',
-      'Export capabilities',
-    ],
-<<<<<<< HEAD
+      'Export capabilities'],
     popular: true;
     icon: ''
     color: 'from-teal-500 to-green-600'
@@ -1013,7 +918,6 @@ export const,
     category: 'Market Research',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1039,29 +943,25 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Natural Language Processing',
       'Data Mining',
       'Predictive Analytics',
-      'Web Scraping',
-    ],
+      'Web Scraping'],
     integration,
   s: [,
       'Google Trends',
       'Social media platforms',
       'News APIs',
       'Financial data sources',
-      'Custom databases',
-    ],
+      'Custom databases'],
     useCase,
   s: [,
       'Market analysis',
       'Competitor research',
       'Trend identification',
       'Investment decisions',
-      'Product development',
-    ],
+      'Product development'],
     ro,
   i: '200% faster market insights generation',
     competitor,
@@ -1070,9 +970,7 @@ export const,
       'IBISWorld',
       'Mintel',
       'Euromonitor',
-      'Forrester',
-    ],
-<<<<<<< HEAD
+      'Forrester'],
     marketSize: '$1.9B market research market'
     growthRate: '28% annual growth'
     contactInfo: unknown;
@@ -1080,7 +978,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     marketSiz,
   e: '$1.9B market research market',
     growthRat,
@@ -1095,10 +992,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-blockchain-analytics',
     nam,
@@ -1122,9 +1016,7 @@ export const,
       'API integration',
       'Custom alerts',
       'Data export',
-      'Multi-chain support',
-    ],
-<<<<<<< HEAD
+      'Multi-chain support'],
     popular: true;
     icon: ''
     color: 'from-gray-500 to-slate-600'
@@ -1137,7 +1029,6 @@ export const,
     category: 'Blockchain & Cryptocurrency',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1163,29 +1054,25 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain Analysis',
       'Machine Learning',
       'Cryptography',
       'Data Analytics',
-      'AI Pattern Recognition',
-    ],
+      'AI Pattern Recognition'],
     integration,
   s: [,
       'Ethereum',
       'Bitcoin',
       'Binance Smart Chain',
       'Polygon',
-      'Custom blockchain APIs',
-    ],
+      'Custom blockchain APIs'],
     useCase,
   s: [,
       'Transaction monitoring',
       'Risk assessment',
       'Compliance reporting',
       'Portfolio analysis',
-      'Market research',
-    ],
+      'Market research'],
     ro,
   i: '300% improvement in blockchain intelligence',
     competitor,
@@ -1194,9 +1081,7 @@ export const,
       'Elliptic',
       'CipherTrace',
       'Blockchain.com',
-      'Etherscan',
-    ],
-<<<<<<< HEAD
+      'Etherscan'],
     marketSize: '$1.2B blockchain analytics market'
     growthRate: '65% annual growth'
     contactInfo: unknown;
@@ -1204,7 +1089,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     marketSiz,
   e: '$1.2B blockchain analytics market',
     growthRat,
@@ -1219,10 +1103,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-cloud-cost-optimizer',
     nam,
@@ -1246,9 +1127,7 @@ export const,
       'Automated scaling',
       'Budget alerts',
       'Detailed reporting',
-      'API integration',
-    ],
-<<<<<<< HEAD
+      'API integration'],
     popular: true;
     icon: ''
     color: 'from-blue-500 to-cyan-600'
@@ -1261,7 +1140,6 @@ export const,
     category: 'Cloud & DevOps',
     realService: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -1287,13 +1165,11 @@ export const,
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Cloud Computing',
       'Cost Optimization',
       'Resource Management',
-      'Predictive Analytics',
-    ],
+      'Predictive Analytics'],
     integration,
   s: [,
       'AWS',
@@ -1301,16 +1177,14 @@ export const,
       'Google Cloud',
       'Kubernetes',
       'Docker',
-      'Terraform',
-    ],
+      'Terraform'],
     useCase,
   s: [,
       'Cost optimization',
       'Resource management',
       'Capacity planning',
       'Budget management',
-      'Performance optimization',
-    ],
+      'Performance optimization'],
     ro,
   i: '40% reduction in cloud costs',
     competitor,
@@ -1319,9 +1193,7 @@ export const,
       'CloudCheckr',
       'ParkMyCloud',
       'Cloudability',
-      'AWS Cost Explorer',
-    ],
-<<<<<<< HEAD
+      'AWS Cost Explorer'],
     marketSize: '$4.8B cloud cost management market'
     growthRate: '52% annual growth'
     contactInfo: unknown;
@@ -1329,7 +1201,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
     marketSiz,
   e: '$4.8B cloud cost management market',
     growthRat,
@@ -1344,10 +1215,7 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup.com',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
+  s://ziontechgroup.com'}},
     i,
   d: 'ai-database-performance-monitor',
     nam,
@@ -1371,9 +1239,7 @@ export const,
       'Backup monitoring',
       'Custom dashboards',
       'API access',
-      'Multi-database support',
-    ],
-<<<<<<< HEAD
+      'Multi-database support'],
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'],
     support: 'Dedicated health coach, community support, and 24/7 platform assistance.',
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II'],
@@ -1397,7 +1263,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '15 minutes',
-=======
     integration,
   s: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'],
     suppor,
@@ -1420,8 +1285,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 134,
-  },
+  s: 134},
     i,
   d: 'ai-email-responder-pro',
     nam,
@@ -1443,9 +1307,7 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '15 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '15 minutes'},
     feature,
   s: [,
       'Inbox labeling and prioritization',
@@ -1454,15 +1316,12 @@ export const,
       'Auto-draft with human-in-the-loop',
       'Zendesk/HubSpot/Gmail integration',
       'Metric,
-  s: FRT/ART, deflection rate',
-    ],
+  s: FRT/ART, deflection rate'],
     benefit,
   s: [,
       'Cut response time by 60%',
       'Deflect 3050% routine tickets',
-      'Improve CSAT and NPS',
-    ],
-<<<<<<< HEAD
+      'Improve CSAT and NPS'],
     targetAudience: ['Support teams', 'Sales ops', 'Founders', 'Agencies'],
     marketPosition: 'Alternatives include Superhuman AI and Front AI. Differentiator: policy guardrails and CRM context sync.',
     competitors: ['Superhuman', 'Front', 'Zendesk AI'],
@@ -1471,7 +1330,6 @@ export const,
     implementationDetails: 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.',
     roi: 'Reduce support headcount needs by 0.20.5 FTE per 1 k tickets/mo.',
     useCases: [,
-=======
     targetAudienc,
   e: ['Support teams', 'Sales ops', 'Founders', 'Agencies'],
     marketPositio,
@@ -1489,12 +1347,9 @@ export const,
   i: 'Reduce support headcount needs by 0.20.5 FTE per 1k tickets/mo.',
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Support autoreplies',
       'Sales follow-ups',
-      'Vendor coordination',
-    ],
-<<<<<<< HEAD
+      'Vendor coordination'],
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II'],
@@ -1518,7 +1373,6 @@ export const,
       currency: 'USD',
       trialDays: 7;
       setupTime: '10 minutes',
-=======
     integration,
   s: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],
     suppor,
@@ -1541,8 +1395,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 46,
-  },
+  s: 46},
     i,
   d: 'mobile-conversational-surveys',
     nam,
@@ -1564,23 +1417,18 @@ export const,
       trialDay,
   s: 7,
       setupTim,
-  e: '10 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '10 minutes'},
     feature,
   s: [,
       'Branching logic',
       'A/B prompts',
       'Embeddable widget',
       'CSV/JSON export',
-      'Webhook triggers',
-    ],
+      'Webhook triggers'],
     benefit,
   s: [,
       '+35% completion rate vs. forms',
-      'Cleaner data, fewer drop-offs',
-    ],
-<<<<<<< HEAD
+      'Cleaner data, fewer drop-offs'],
     targetAudience: ['Product teams', 'Marketers', 'UX researchers'],
     marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
     competitors: ['Typeform', 'SurveySparrow', 'Tally'],
@@ -1612,7 +1460,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '5 minutes',
-=======
     targetAudienc,
   e: ['Product teams', 'Marketers', 'UX researchers'],
     marketPositio,
@@ -1651,8 +1498,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 22,
-  },
+  s: 22},
     i,
   d: 'niche-productivity-planner',
     nam,
@@ -1674,17 +1520,13 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '5 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '5 minutes'},
     feature,
   s: [,
       'Industry templates',
       'Automations',
       'Calendar & Gantt',
-      'Role-based permissions',
-    ],
-<<<<<<< HEAD
+      'Role-based permissions'],
     benefits: ['Reduce setup time by 80%', 'Consistency across teams'],
     targetAudience: ['Agencies', 'Studios', 'SMBs'],
     marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
@@ -1717,7 +1559,6 @@ export const,
       currency: 'USD',
       trialDays: 7;
       setupTime: '1 day',
-=======
     benefit,
   s: ['Reduce setup time by 80%', 'Consistency across teams'],
     targetAudienc,
@@ -1758,8 +1599,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 14,
-  },
+  s: 14},
     i,
   d: 'event-management-dashboard',
     nam,
@@ -1781,17 +1621,13 @@ export const,
       trialDay,
   s: 7,
       setupTim,
-  e: '1 day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 day'},
     feature,
   s: [,
       'Ticketing & check-in',
       'Session builder',
       'Email campaigns',
-      'Live polls & Q&A',
-    ],
-<<<<<<< HEAD
+      'Live polls & Q&A'],
     benefits: ['Launch events faster', 'Better attendee engagement'],
     targetAudience: ['Conferences', 'Meetups', 'Communities'],
     marketPosition: 'Lean alternative to Hopin and Eventbrite with richer analytics.',
@@ -1824,7 +1660,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 hour',
-=======
     benefit,
   s: ['Launch events faster', 'Better attendee engagement'],
     targetAudienc,
@@ -1865,8 +1700,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 18,
-  },
+  s: 18},
     i,
   d: 'affiliate-tracking-suite',
     nam,
@@ -1888,17 +1722,13 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '1 hour',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 hour'},
     feature,
   s: [,
       'Custom links',
       'Attribution windows',
       'Coupon attribution',
-      'Payout exports',
-    ],
-<<<<<<< HEAD
+      'Payout exports'],
     benefits: ['Grow revenue via affiliates', 'Reduce fraud'],
     targetAudience: ['Ecommerce', 'SaaS'],
     marketPosition: 'Simpler than Impact and PartnerStack with transparent pricing.',
@@ -1931,7 +1761,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '5 minutes',
-=======
     benefit,
   s: ['Grow revenue via affiliates', 'Reduce fraud'],
     targetAudienc,
@@ -1972,8 +1801,7 @@ export const,
     ratin,
   g: 4.4,
     review,
-  s: 12,
-  },
+  s: 12},
     i,
   d: 'smb-website-analytics',
     nam,
@@ -1995,17 +1823,13 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '5 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '5 minutes'},
     feature,
   s: [,
       'Goals & funnels',
       'Weekly insights email',
       'Anomaly alerts',
-      'Shareable dashboards',
-    ],
-<<<<<<< HEAD
+      'Shareable dashboards'],
     benefits: ['Know what works', 'Focus on actions'],
     targetAudience: ['Founders', 'Marketers', 'Agencies'],
     marketPosition: 'Alternative to Plausible and Fathom with built-in insights.',
@@ -2038,7 +1862,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '2 hours',
-=======
     benefit,
   s: ['Know what works', 'Focus on actions'],
     targetAudienc,
@@ -2079,8 +1902,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 28,
-  },
+  s: 28},
     i,
   d: 'it-helpdesk-lite',
     nam,
@@ -2102,17 +1924,13 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '2 hours',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '2 hours'},
     feature,
   s: [,
       'Email-to-ticket',
       'SLA timers',
       'Macros/automations',
-      'Self-serve portal',
-    ],
-<<<<<<< HEAD
+      'Self-serve portal'],
     benefits: ['Shorter MTTR', 'Fewer escalations'],
     targetAudience: ['MSPs', 'IT teams'],
     marketPosition: 'Lightweight alternative to Zendesk and Freshservice.',
@@ -2145,7 +1963,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 hour',
-=======
     benefit,
   s: ['Shorter MTTR', 'Fewer escalations'],
     targetAudienc,
@@ -2186,8 +2003,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 31,
-  },
+  s: 31},
     i,
   d: 'ecommerce-return-manager',
     nam,
@@ -2209,17 +2025,13 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '1 hour',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 hour'},
     feature,
   s: [,
       'Self-service portal',
       'Label generation',
       'Return reasons analytics',
-      'Exchanges & store credit',
-    ],
-<<<<<<< HEAD
+      'Exchanges & store credit'],
     benefits: ['Higher retention', 'Lower support load'],
     targetAudience: ['D2 C brands', 'Marketplaces'],
     marketPosition: 'Competitive with Loop and Returnly at simpler pricing.',
@@ -2252,7 +2064,6 @@ export const,
       currency: 'USD',
       trialDays: 7;
       setupTime: '20 minutes',
-=======
     benefit,
   s: ['Higher retention', 'Lower support load'],
     targetAudienc,
@@ -2293,8 +2104,7 @@ export const,
     ratin,
   g: 4.4,
     review,
-  s: 19,
-  },
+  s: 19},
     i,
   d: 'auto-email-followups',
     nam,
@@ -2316,17 +2126,13 @@ export const,
       trialDay,
   s: 7,
       setupTim,
-  e: '20 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '20 minutes'},
     feature,
   s: [,
       'Sequences',
       'Rules & triggers',
       'Open/click tracking',
-      'AI snippets',
-    ],
-<<<<<<< HEAD
+      'AI snippets'],
     benefits: ['Higher reply rate', 'Fewer manual tasks'],
     targetAudience: ['SMB sales teams', 'Agencies'],
     marketPosition: 'Alternative to Lemlist and Mailshake with stricter safety.',
@@ -2359,7 +2165,6 @@ export const,
       currency: 'USD',
       trialDays: 7;
       setupTime: '5 minutes',
-=======
     benefit,
   s: ['Higher reply rate', 'Fewer manual tasks'],
     targetAudienc,
@@ -2400,8 +2205,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 17,
-  },
+  s: 17},
     i,
   d: 'podcast-transcription-studio',
     nam,
@@ -2423,17 +2227,13 @@ export const,
       trialDay,
   s: 7,
       setupTim,
-  e: '5 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '5 minutes'},
     feature,
   s: [,
       'Speaker diarization',
       'Timecodes',
       'Chapters',
-      'Show notes drafts',
-    ],
-<<<<<<< HEAD
+      'Show notes drafts'],
     benefits: ['Accessibility', 'SEO-ready content'],
     targetAudience: ['Podcasters', 'Agencies'],
     marketPosition: 'Alternative to Descript transcripts with simpler pricing.',
@@ -2466,7 +2266,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 day',
-=======
     benefit,
   s: ['Accessibility', 'SEO-ready content'],
     targetAudienc,
@@ -2507,8 +2306,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 52,
-  },
+  s: 52},
     i,
   d: 'ai-knowledge-graph-studio',
     nam,
@@ -2530,17 +2328,13 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '1 day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 day'},
     feature,
   s: [,
       'Entity/relation extraction',
       'Schema editor',
       'Vector + graph search',
-      'Lineage view',
-    ],
-<<<<<<< HEAD
+      'Lineage view'],
     benefits: ['Higher RAG precision', 'Governance & explainability'],
     targetAudience: ['Data teams', 'Platform engineering', 'Compliance'],
     marketPosition: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.',
@@ -2573,7 +2367,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '1 day',
-=======
     benefit,
   s: ['Higher RAG precision', 'Governance & explainability'],
     targetAudienc,
@@ -2614,8 +2407,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 11,
-  },
+  s: 11},
     i,
   d: 'llm-guarded-api-gateway',
     nam,
@@ -2637,16 +2429,13 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '1 day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 day'},
     feature,
   s: [,
       'Provider adapters',
       'Policy engine',
       'PII redaction',
-      'Rate limits',
-    ],
+      'Rate limits'],
     benefit,
   s: ['Control spend', 'Reduce risk'],
     targetAudienc,
@@ -2654,7 +2443,6 @@ export const,
     marketPositio,
   n: unknown;
       'Comparable to OpenRouter/EdenAI, adds governance and audit.',
-<<<<<<< HEAD
     competitors: ['OpenRouter', 'EdenAI', 'Helicone'],
     techStack: ['Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic'],
     realImplementation: true;
@@ -2684,7 +2472,6 @@ export const,
       currency: 'USD',
       trialDays: 7;
       setupTime: '1 day',
-=======
     competitor,
   s: ['OpenRouter', 'EdenAI', 'Helicone'],
     techStac,
@@ -2719,8 +2506,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 13,
-  },
+  s: 13},
     i,
   d: 'serverless-lakehouse-starter',
     nam,
@@ -2742,17 +2528,13 @@ export const,
       trialDay,
   s: 7,
       setupTim,
-  e: '1 day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 day'},
     feature,
   s: [,
       'Event collector',
       'Connector library',
       'dbt models',
-      'Grafana dashboards',
-    ],
-<<<<<<< HEAD
+      'Grafana dashboards'],
     benefits: ['Faster analytics ROI', 'Lower platform toil'],
     targetAudience: ['Data teams', 'Ops'],
     marketPosition: 'Starter alternative to building bespoke stacks.',
@@ -2785,7 +2567,6 @@ export const,
       currency: 'USD',
       trialDays: 14;
       setupTime: '2 hours',
-=======
     benefit,
   s: ['Faster analytics ROI', 'Lower platform toil'],
     targetAudienc,
@@ -2826,8 +2607,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 7,
-  },
+  s: 7},
     i,
   d: 'data-contracts-hub',
     nam,
@@ -2849,17 +2629,13 @@ export const,
       trialDay,
   s: 14,
       setupTim,
-  e: '2 hours',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '2 hours'},
     feature,
   s: [,
       'Schema registry',
       'Diff viewer',
       'CI gates',
-      'Backfill helpers',
-    ],
-<<<<<<< HEAD
+      'Backfill helpers'],
     benefits: ['Fewer incidents', 'Faster changes'],
     targetAudience: ['Data platform', 'Analytics engineers'],
     marketPosition: 'Complements dbt and warehouse-native governance.',
@@ -2880,14 +2656,13 @@ export const,
     customers: 19;
     rating: 4.6;
     reviews: 6;
-  },];
+  }];
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator',
     tagline: 'Generate legally compliant documents in seconds with AI',
     price: '$89',
     period: '/month',
     description:,
-=======
     benefit,
   s: ['Fewer incidents', 'Faster changes'],
     targetAudienc,
@@ -2928,8 +2703,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 6,
-  },];
+  s: 6}];
     i,
   d: 'ai-legal-document-generator'
     nam,
@@ -2942,7 +2716,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.'
     feature,
   s: [;
@@ -2957,7 +2730,6 @@ export const,
       'Automated legal advice'
       '24/7 legal support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-500 to-indigo-600'
@@ -2965,7 +2737,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-legal-documents',
     marketPosition: 'Leading AI legal document platform with 99.7% accuracy rate',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -2981,7 +2752,6 @@ export const,
   n: 'Leading AI legal document platform with 99.7% accuracy rate'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Law firms, legal professionals, small businesses, entrepreneurs, real estate agents'
     trialDay,
   s: 14;
@@ -3008,19 +2778,14 @@ export const,
       'LawPay'
       'QuickBooks'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Contract generation'
       'Legal form creation'
       'Compliance documentation'
       'Client onboarding'
-<<<<<<< HEAD
-      'Legal research',
-    ],
+      'Legal research'],
     roi: '300% time savings on document creation',
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net']
     marketSize: '$2.1B legal tech market'
@@ -3029,7 +2794,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
       'Legal research'
     ]
     ro,
@@ -3050,7 +2814,6 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
     i,
@@ -3078,7 +2841,6 @@ export const,
       'API integrations'
       'Real-time learning'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-500 to-emerald-600'
@@ -3086,7 +2848,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-customer-service',
     marketPosition: 'Industry-leading AI customer service with 95% customer satisfaction',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3102,7 +2863,6 @@ export const,
   n: 'Industry-leading AI customer service with 95% customer satisfaction'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'E-commerce businesses, SaaS companies, customer support teams, retail chains'
     trialDay,
   s: 21;
@@ -3129,19 +2889,14 @@ export const,
       'Microsoft Teams'
       'Shopify'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Customer support'
       'Order tracking'
       'Product inquiries'
       'Technical support'
-<<<<<<< HEAD
-      'Appointment booking',
-    ],
+      'Appointment booking'],
     roi: '60% reduction in support costs',
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to']
     marketSize: '$15.8B customer service software market'
@@ -3149,8 +2904,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-seo-optimizer-pro'
     name: 'AI SEO Optimizer Pro',
@@ -3158,7 +2912,6 @@ export const,
     price: '$199',
     period: '/month',
     description:,
-=======
       'Appointment booking'
     ]
     ro,
@@ -3193,7 +2946,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive SEO automation platform that analyzes, optimizes, and monitors your website performance. Uses AI to identify opportunities and implement best practices automatically.'
     feature,
   s: [;
@@ -3208,7 +2960,6 @@ export const,
       'Mobile optimization'
       'Performance analytics'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -3216,7 +2967,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-seo-optimizer',
     marketPosition: 'Leading AI SEO platform with 40% better ranking improvements',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3232,7 +2982,6 @@ export const,
   n: 'Leading AI SEO platform with 40% better ranking improvements'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Digital marketing agencies, e-commerce businesses, content creators, small businesses'
     trialDay,
   s: 14;
@@ -3259,19 +3008,14 @@ export const,
       'WooCommerce'
       'HubSpot'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Website optimization'
       'Content marketing'
       'Local business SEO'
       'E-commerce SEO'
-<<<<<<< HEAD
-      'Blog optimization',
-    ],
+      'Blog optimization'],
     roi: '200% increase in organic traffic in 6 months',
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath']
     marketSize: '$8.2B SEO tools market'
@@ -3279,8 +3023,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-video-editing-suite'
     name: 'AI Video Editing Suite',
@@ -3288,7 +3031,6 @@ export const,
     price: '$299',
     period: '/month',
     description:,
-=======
       'Blog optimization'
     ]
     ro,
@@ -3323,7 +3065,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary video editing platform that uses AI to automate complex editing tasks. Perfect for content creators, marketers, and video professionals who need high-quality output quickly.'
     feature,
   s: [;
@@ -3338,7 +3079,6 @@ export const,
       'Collaborative editing'
       'Export to multiple formats'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-500 to-pink-600'
@@ -3346,7 +3086,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-video-editing',
     marketPosition: 'Cutting-edge AI video editing with 10x faster workflow',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3362,7 +3101,6 @@ export const,
   n: 'Cutting-edge AI video editing with 10x faster workflow'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Content creators, video marketers, social media managers, film students, small businesses'
     trialDay,
   s: 21;
@@ -3397,29 +3135,24 @@ export const,
       'Educational content'
       'Event highlights'
     ]
-<<<<<<< HEAD
     roi: '80% reduction in editing time'
     competitors: [
-=======
     ro,
   i: '80% reduction in editing time'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Adobe Premiere Pro'
       'Final Cut Pro'
       'DaVinci Resolve'
       'Camtasia'
       'Filmora'
     ]
-<<<<<<< HEAD
     marketSize: '$3.2B video editing software market'
     growthRate: '45% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-data-analytics-platform'
     name: 'AI Data Analytics Platform',
@@ -3427,7 +3160,6 @@ export const,
     price: '$399',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$3.2B video editing software market'
     growthRat,
@@ -3456,7 +3188,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced data analytics platform that uses AI to automatically discover patterns, generate insights, and create predictive models. Perfect for businesses looking to make data-driven decisions.'
     feature,
   s: [;
@@ -3471,7 +3202,6 @@ export const,
       'API access'
       'Advanced security'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-500 to-blue-600'
@@ -3479,7 +3209,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-data-analytics',
     marketPosition: 'Leading AI analytics platform with 90% accuracy in predictions',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3495,7 +3224,6 @@ export const,
   n: 'Leading AI analytics platform with 90% accuracy in predictions'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data analysts, business intelligence teams, marketing agencies, e-commerce businesses'
     trialDay,
   s: 21;
@@ -3523,19 +3251,14 @@ export const,
       'AWS'
       'Google Cloud'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Business intelligence'
       'Customer analytics'
       'Market research'
       'Performance tracking'
-<<<<<<< HEAD
-      'Risk assessment',
-    ],
+      'Risk assessment'],
     roi: '150% improvement in decision-making speed',
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo']
     marketSize: '$23.4B business intelligence market'
@@ -3543,8 +3266,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-hr-recruitment-platform'
     name: 'AI HR Recruitment Platform',
@@ -3552,7 +3274,6 @@ export const,
     price: '$179',
     period: '/month',
     description:,
-=======
       'Risk assessment'
     ]
     ro,
@@ -3587,7 +3308,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent HR recruitment platform that automates candidate sourcing, screening, and assessment. Uses AI to match the best candidates with job requirements and company culture.'
     feature,
   s: [;
@@ -3602,7 +3322,6 @@ export const,
       'Integration with job boards'
       'Mobile app access'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-500 to-purple-600'
@@ -3610,7 +3329,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-hr-recruitment',
     marketPosition: 'Leading AI recruitment platform with 70% faster hiring process',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3626,7 +3344,6 @@ export const,
   n: 'Leading AI recruitment platform with 70% faster hiring process'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'HR professionals, recruitment agencies, small businesses, enterprise companies'
     trialDay,
   s: 14;
@@ -3662,29 +3379,24 @@ export const,
       'Interview coordination'
       'Hiring analytics'
     ]
-<<<<<<< HEAD
     roi: '50% reduction in time-to-hire'
     competitors: [
-=======
     ro,
   i: '50% reduction in time-to-hire'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Workday'
       'BambooHR'
       'Greenhouse'
       'Lever'
       'SmartRecruiters'
     ]
-<<<<<<< HEAD
     marketSize: '$2.8B recruitment software market'
     growthRate: '42% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-sales-automation-platform'
     name: 'AI Sales Automation Platform',
@@ -3692,7 +3404,6 @@ export const,
     price: '$249',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$2.8B recruitment software market'
     growthRat,
@@ -3721,7 +3432,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive sales automation platform that uses AI to identify leads, prioritize opportunities, and optimize sales processes. Increases conversion rates and reduces sales cycle time.'
     feature,
   s: [;
@@ -3736,7 +3446,6 @@ export const,
       'Real-time notifications'
       'Custom workflows'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-500 to-orange-600'
@@ -3744,7 +3453,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-sales-automation',
     marketPosition: 'Industry-leading sales automation with 35% increase in conversion rates',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3760,7 +3468,6 @@ export const,
   n: 'Industry-leading sales automation with 35% increase in conversion rates'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Sales teams, B2B companies, real estate agents, insurance agents, consultants'
     trialDay,
   s: 21;
@@ -3796,29 +3503,24 @@ export const,
       'Email campaigns'
       'Performance tracking'
     ]
-<<<<<<< HEAD
     roi: '35% increase in sales conversion rates'
     competitors: [
-=======
     ro,
   i: '35% increase in sales conversion rates'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Salesforce'
       'HubSpot'
       'Pipedrive'
       'Zoho CRM'
       'Freshsales'
     ]
-<<<<<<< HEAD
     marketSize: '$18.6B CRM market'
     growthRate: '33% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-market-research-platform'
     name: 'AI Market Research Platform',
@@ -3826,7 +3528,6 @@ export const,
     price: '$159',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$18.6B CRM market'
     growthRat,
@@ -3855,7 +3556,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision-making.'
     feature,
   s: [;
@@ -3870,7 +3570,6 @@ export const,
       'Real-time updates'
       'Export capabilities'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-teal-500 to-green-600'
@@ -3878,7 +3577,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-market-research',
     marketPosition: 'Leading AI market research with 95% accuracy in trend predictions',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -3894,7 +3592,6 @@ export const,
   n: 'Leading AI market research with 95% accuracy in trend predictions'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Market researchers, business strategists, startups, investment firms, consultants'
     trialDay,
   s: 14;
@@ -3928,29 +3625,24 @@ export const,
       'Investment decisions'
       'Product development'
     ]
-<<<<<<< HEAD
     roi: '200% faster market insights generation'
     competitors: [
-=======
     ro,
   i: '200% faster market insights generation'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Statista'
       'IBISWorld'
       'Mintel'
       'Euromonitor'
       'Forrester'
     ]
-<<<<<<< HEAD
     marketSize: '$1.9B market research market'
     growthRate: '28% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-blockchain-analytics'
     name: 'AI Blockchain Analytics Platform',
@@ -3958,7 +3650,6 @@ export const,
     price: '$599',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$1.9B market research market'
     growthRat,
@@ -3987,7 +3678,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive blockchain analytics platform that uses AI to track transactions, identify patterns, and provide insights into cryptocurrency and blockchain activities.'
     feature,
   s: [;
@@ -4002,7 +3692,6 @@ export const,
       'Data export'
       'Multi-chain support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-gray-500 to-slate-600'
@@ -4010,7 +3699,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-blockchain-analytics',
     marketPosition: 'Leading blockchain analytics with 99.9% transaction accuracy',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -4026,7 +3714,6 @@ export const,
   n: 'Leading blockchain analytics with 99.9% transaction accuracy'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cryptocurrency traders, blockchain companies, financial institutions, regulators'
     trialDay,
   s: 21;
@@ -4060,29 +3747,24 @@ export const,
       'Portfolio analysis'
       'Market research'
     ]
-<<<<<<< HEAD
     roi: '300% improvement in blockchain intelligence'
     competitors: [
-=======
     ro,
   i: '300% improvement in blockchain intelligence'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Chainalysis'
       'Elliptic'
       'CipherTrace'
       'Blockchain.com'
       'Etherscan'
     ]
-<<<<<<< HEAD
     marketSize: '$1.2B blockchain analytics market'
     growthRate: '65% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-cloud-cost-optimizer'
     name: 'AI Cloud Cost Optimizer',
@@ -4090,7 +3772,6 @@ export const,
     price: '$199',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$1.2B blockchain analytics market'
     growthRat,
@@ -4119,7 +3800,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent cloud cost optimization platform that automatically analyzes usage patterns and recommends cost-saving strategies. Works with AWS, Azure, and Google Cloud.'
     feature,
   s: [;
@@ -4134,7 +3814,6 @@ export const,
       'Detailed reporting'
       'API integration'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-500 to-cyan-600'
@@ -4142,7 +3821,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-cloud-cost-optimizer',
     marketPosition: 'Leading cloud cost optimization with 40% average cost reduction',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -4158,7 +3836,6 @@ export const,
   n: 'Leading cloud cost optimization with 40% average cost reduction'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'DevOps teams, cloud architects, IT managers, startups, enterprise companies'
     trialDay,
   s: 21;
@@ -4193,29 +3870,24 @@ export const,
       'Budget management'
       'Performance optimization'
     ]
-<<<<<<< HEAD
     roi: '40% reduction in cloud costs'
     competitors: [
-=======
     ro,
   i: '40% reduction in cloud costs'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'CloudHealth'
       'CloudCheckr'
       'ParkMyCloud'
       'Cloudability'
       'AWS Cost Explorer'
     ]
-<<<<<<< HEAD
     marketSize: '$4.8B cloud cost management market'
     growthRate: '52% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-database-performance-monitor'
     name: 'AI Database Performance Monitor',
@@ -4225,7 +3897,6 @@ export const,
     description:,
       'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.'
     features: [
-=======
     marketSiz,
   e: '$4.8B cloud cost management market'
     growthRat,
@@ -4257,19 +3928,16 @@ export const,
       'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI performance analysis'
       'Query optimization'
       'Real-time monitoring'
       'Performance alerts'
       'Capacity planning'
       'Security monitoring'
-<<<<<<< HEAD
       'Backup monitoring',
       'Custom dashboards',
       'API access',
-      'Multi-database support',
-    ],
+      'Multi-database support'],
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal']
     support: 'Dedicated health coach, community support, and 24/7 platform assistance.'
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II']
@@ -4292,8 +3960,7 @@ export const,
       yearly: 790;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '15 minutes',
-    }
+      setupTime: '15 minutes'}
     features: [
       'Inbox labeling and prioritization',
       'On-brand response templates',
@@ -4305,8 +3972,7 @@ export const,
     benefits: [,
       'Cut response time by 60%',
       'Deflect 3050% routine tickets',
-      'Improve CSAT and NPS',
-    ],
+      'Improve CSAT and NPS'],
     targetAudience: ['Support teams', 'Sales ops', 'Founders', 'Agencies']
     marketPosition: 'Alternatives include Superhuman AI and Front AI. Differentiator: policy guardrails and CRM context sync.',
     competitors: ['Superhuman', 'Front', 'Zendesk AI']
@@ -4318,8 +3984,7 @@ export const,
     useCases: [,
       'Support autoreplies',
       'Sales follow-ups',
-      'Vendor coordination',
-    ],
+      'Vendor coordination'],
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack']
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II']
@@ -4342,7 +4007,6 @@ export const,
       currency: 'USD',
       trialDays: 7;
       setupTime: '10 minutes',
-=======
       'Backup monitoring'
       'Custom dashboards'
       'API access'
@@ -4370,8 +4034,7 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 134,
-  }
+  s: 134}
     i,
   d: 'ai-email-responder-pro'
     nam,
@@ -4455,8 +4118,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 46,
-  }
+  s: 46}
     i,
   d: 'mobile-conversational-surveys'
     nam,
@@ -4478,7 +4140,6 @@ export const,
   s: 7,
       setupTim,
   e: '10 minutes'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     feature,
   s: [;
@@ -4487,7 +4148,6 @@ export const,
       'Embeddable widget'
       'CSV/JSON export'
       'Webhook triggers'
-<<<<<<< HEAD
     ],
     benefits: [,
       '+35% completion rate vs. forms',
@@ -4523,14 +4183,12 @@ export const,
       yearly: 390;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '5 minutes',
-    }
+      setupTime: '5 minutes'}
     features: [
       'Industry templates',
       'Automations',
       'Calendar & Gantt',
-      'Role-based permissions',
-    ],
+      'Role-based permissions'],
     benefits: ['Reduce setup time by 80%', 'Consistency across teams']
     targetAudience: ['Agencies', 'Studios', 'SMBs']
     marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
@@ -4562,14 +4220,12 @@ export const,
       yearly: 1290;
       currency: 'USD',
       trialDays: 7;
-      setupTime: '1 day',
-    }
+      setupTime: '1 day'}
     features: [
       'Ticketing & check-in',
       'Session builder',
       'Email campaigns',
-      'Live polls & Q&A',
-    ],
+      'Live polls & Q&A'],
     benefits: ['Launch events faster', 'Better attendee engagement']
     targetAudience: ['Conferences', 'Meetups', 'Communities']
     marketPosition: 'Lean alternative to Hopin and Eventbrite with richer analytics.',
@@ -4600,14 +4256,12 @@ export const,
       yearly: 990;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '1 hour',
-    }
+      setupTime: '1 hour'}
     features: [
       'Custom links',
       'Attribution windows',
       'Coupon attribution',
-      'Payout exports',
-    ],
+      'Payout exports'],
     benefits: ['Grow revenue via affiliates', 'Reduce fraud']
     targetAudience: ['Ecommerce', 'SaaS']
     marketPosition: 'Simpler than Impact and PartnerStack with transparent pricing.',
@@ -4639,14 +4293,12 @@ export const,
       yearly: 290;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '5 minutes',
-    }
+      setupTime: '5 minutes'}
     features: [
       'Goals & funnels',
       'Weekly insights email',
       'Anomaly alerts',
-      'Shareable dashboards',
-    ],
+      'Shareable dashboards'],
     benefits: ['Know what works', 'Focus on actions']
     targetAudience: ['Founders', 'Marketers', 'Agencies']
     marketPosition: 'Alternative to Plausible and Fathom with built-in insights.',
@@ -4677,14 +4329,12 @@ export const,
       yearly: 590;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '2 hours',
-    }
+      setupTime: '2 hours'}
     features: [
       'Email-to-ticket',
       'SLA timers',
       'Macros/automations',
-      'Self-serve portal',
-    ],
+      'Self-serve portal'],
     benefits: ['Shorter MTTR', 'Fewer escalations']
     targetAudience: ['MSPs', 'IT teams']
     marketPosition: 'Lightweight alternative to Zendesk and Freshservice.',
@@ -4716,14 +4366,12 @@ export const,
       yearly: 790;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '1 hour',
-    }
+      setupTime: '1 hour'}
     features: [
       'Self-service portal',
       'Label generation',
       'Return reasons analytics',
-      'Exchanges & store credit',
-    ],
+      'Exchanges & store credit'],
     benefits: ['Higher retention', 'Lower support load']
     targetAudience: ['D2C brands', 'Marketplaces']
     marketPosition: 'Competitive with Loop and Returnly at simpler pricing.',
@@ -4755,14 +4403,12 @@ export const,
       yearly: 490;
       currency: 'USD',
       trialDays: 7;
-      setupTime: '20 minutes',
-    }
+      setupTime: '20 minutes'}
     features: [
       'Sequences',
       'Rules & triggers',
       'Open/click tracking',
-      'AI snippets',
-    ],
+      'AI snippets'],
     benefits: ['Higher reply rate', 'Fewer manual tasks']
     targetAudience: ['SMB sales teams', 'Agencies']
     marketPosition: 'Alternative to Lemlist and Mailshake with stricter safety.',
@@ -4793,14 +4439,12 @@ export const,
       yearly: 390;
       currency: 'USD',
       trialDays: 7;
-      setupTime: '5 minutes',
-    }
+      setupTime: '5 minutes'}
     features: [
       'Speaker diarization',
       'Timecodes',
       'Chapters',
-      'Show notes drafts',
-    ],
+      'Show notes drafts'],
     benefits: ['Accessibility', 'SEO-ready content']
     targetAudience: ['Podcasters', 'Agencies']
     marketPosition: 'Alternative to Descript transcripts with simpler pricing.',
@@ -4832,14 +4476,12 @@ export const,
       yearly: 1990;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '1 day',
-    }
+      setupTime: '1 day'}
     features: [
       'Entity/relation extraction',
       'Schema editor',
       'Vector + graph search',
-      'Lineage view',
-    ],
+      'Lineage view'],
     benefits: ['Higher RAG precision', 'Governance & explainability']
     targetAudience: ['Data teams', 'Platform engineering', 'Compliance']
     marketPosition: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.',
@@ -4870,14 +4512,12 @@ export const,
       yearly: 2990;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '1 day',
-    }
+      setupTime: '1 day'}
     features: [
       'Provider adapters',
       'Policy engine',
       'PII redaction',
-      'Rate limits',
-    ],
+      'Rate limits'],
     benefits: ['Control spend', 'Reduce risk']
     targetAudience: ['Platform teams', 'AI product']
     marketPosition: 'Comparable to OpenRouter/EdenAI, adds governance and audit.',
@@ -4909,14 +4549,12 @@ export const,
       yearly: 2490;
       currency: 'USD',
       trialDays: 7;
-      setupTime: '1 day',
-    }
+      setupTime: '1 day'}
     features: [
       'Event collector',
       'Connector library',
       'dbt models',
-      'Grafana dashboards',
-    ],
+      'Grafana dashboards'],
     benefits: ['Faster analytics ROI', 'Lower platform toil']
     targetAudience: ['Data teams', 'Ops']
     marketPosition: 'Starter alternative to building bespoke stacks.',
@@ -4947,14 +4585,12 @@ export const,
       yearly: 1290;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '2 hours',
-    }
+      setupTime: '2 hours'}
     features: [
       'Schema registry',
       'Diff viewer',
       'CI gates',
-      'Backfill helpers',
-    ],
+      'Backfill helpers'],
     benefits: ['Fewer incidents', 'Faster changes']
     targetAudience: ['Data platform', 'Analytics engineers']
     marketPosition: 'Complements dbt and warehouse-native governance.',
@@ -4975,10 +4611,9 @@ export const,
     customers: 19;
     rating: 4.6;
     reviews: 6;
-  },];
+  }];
 // Helper functions;
-export const getServicesByCategory = (category: string) =>,
-  }, ];
+export const getServicesByCategory = (category: string) =>}];
 ;
 // Helper functions;
 export const getServicesByCategory = (category: string) =>: unknown;
@@ -5021,7 +4656,6 @@ realImplementation: true;
 implementationDetails: 'Template gallery, response store, analytics, export jobs.'
     rating: 4.6;
     reviews: 6;
-=======
     ]
     benefit,
   s: [,
@@ -5067,8 +4701,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.6;
     review,
-  s: 22,
-  }
+  s: 22}
     i,
   d: 'niche-productivity-planner'
     nam,
@@ -5139,8 +4772,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.5;
     review,
-  s: 14,
-  }
+  s: 14}
     i,
   d: 'event-management-dashboard'
     nam,
@@ -5210,8 +4842,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.6;
     review,
-  s: 18,
-  }
+  s: 18}
     i,
   d: 'affiliate-tracking-suite'
     nam,
@@ -5281,8 +4912,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.4;
     review,
-  s: 12,
-  }
+  s: 12}
     i,
   d: 'smb-website-analytics'
     nam,
@@ -5353,8 +4983,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.7;
     review,
-  s: 28,
-  }
+  s: 28}
     i,
   d: 'it-helpdesk-lite'
     nam,
@@ -5424,8 +5053,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.5;
     review,
-  s: 31,
-  }
+  s: 31}
     i,
   d: 'ecommerce-return-manager'
     nam,
@@ -5497,8 +5125,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.4;
     review,
-  s: 19,
-  }
+  s: 19}
     i,
   d: 'auto-email-followups'
     nam,
@@ -5568,8 +5195,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.5;
     review,
-  s: 17,
-  }
+  s: 17}
     i,
   d: 'podcast-transcription-studio'
     nam,
@@ -5639,8 +5265,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.7;
     review,
-  s: 52,
-  }
+  s: 52}
     i,
   d: 'ai-knowledge-graph-studio'
     nam,
@@ -5711,8 +5336,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.8;
     review,
-  s: 11,
-  }
+  s: 11}
     i,
   d: 'llm-guarded-api-gateway'
     nam,
@@ -5782,8 +5406,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.8;
     review,
-  s: 13,
-  }
+  s: 13}
     i,
   d: 'serverless-lakehouse-starter'
     nam,
@@ -5854,8 +5477,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.6;
     review,
-  s: 7,
-  }
+  s: 7}
     i,
   d: 'data-contracts-hub'
     nam,
@@ -5925,15 +5547,13 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.6;
     review,
-  s: 6,
-  },];
+  s: 6}];
 // Helper functions;
-export const getServicesByCategory = (categor,)
-  y: string) =>,
-  }, ];
+export const getServicesByCategory = (categor)
+  y: string) =>}];
 ;
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category),    i,
   d: 'data - contracts - hub'
@@ -5992,11 +5612,10 @@ export const getServicesByCategory = (categor,)
     ratin,
   g: 4 && 4.6,
     review,
-  s: 6,
-  }
+  s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) =>;
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPositio,
@@ -6012,16 +5631,13 @@ implementationDetail,
     ratin,
   g: 4.6,
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 6}
 ];
 ;
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category);
-<<<<<<< HEAD
 market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
 competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
@@ -6066,7 +5682,6 @@ launch_date: '2025 - 01 - 20'
 customers: 60;
 rating: 4 && 4.5;
 reviews: 14;
-=======
 market_positio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
 competitor,
@@ -6103,8 +5718,7 @@ customer,
 ratin,
   g: 4 && 4.6;
 review,
-  s: 22,
-};
+  s: 22};
 marketPositio,
   n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitor,
@@ -6116,8 +5730,7 @@ realImplementatio,
 implementationDetail,
   s: 'Template JSON schemas, rules engine, import/export.'
 review,
-  s: 22,
-}
+  s: 22}
 market_positio,
   n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitor,
@@ -6154,9 +5767,7 @@ customer,
 ratin,
   g: 4 && 4.5;
 review,
-  s: 14,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-};
+  s: 14};
 export const serviceCategories = [
   'Legal Technology'
   'Customer Service & Support'
@@ -6215,18 +5826,14 @@ export const serviceCategories = [
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
   return realMicroSaasServices.filter(service => service.category === category)
 };
-<<<<<<< HEAD
 export const getServicesByPriceRange = (min: number) max: number) =>,
-  return realMicroSaasServices.filter(service =>,)
-=======
-export const getServicesByPriceRange = (mi,)
+  return realMicroSaasServices.filter(service =>)
+export const getServicesByPriceRange = (mi)
   n: number) ma,
   x: number) =>,
   return realMicroSaasServices.filter(service =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseFloat(service.price.replace('$') '').replace(; ''));
-    return price >= min && (max === Infinity || price <= max),
-  })
+    return price >= min && (max === Infinity || price <= max)})
 };
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
@@ -6303,7 +5910,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
 export const,
   realMicroSaasServices: RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
-<<<<<<< HEAD
   {
     id: 'ai-legal-document-generator';
     name: 'AI Legal Document Generator';
@@ -6337,8 +5943,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-customer-service-automation';
@@ -6373,8 +5978,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-seo-optimizer-pro';
@@ -6409,8 +6013,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-video-editing-suite';
@@ -6445,8 +6048,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-data-analytics-platform';
@@ -6481,8 +6083,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-hr-recruitment-platform';
@@ -6517,8 +6118,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-sales-automation-platform';
@@ -6553,8 +6153,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-market-research-platform';
@@ -6589,8 +6188,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-blockchain-analytics';
@@ -6625,8 +6223,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-cloud-cost-optimizer';
@@ -6661,8 +6258,7 @@ export const,
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-database-performance-monitor';
@@ -6673,8 +6269,7 @@ export const,
     description: 'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.';
     features: [
       'AI performance analysisQuery optimizationReal-time monitoringPerformance alertsCapacity planningSecurity monitoringBackup monitoringCustom dashboards';
-      'API accessMulti-database support',
-    ];,
+      'API accessMulti-database support'];,
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'];
     support: 'Dedicated health coach, community support, and 24/7 platform assistance.';
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II'];
@@ -6686,7 +6281,6 @@ export const,
     customers: 1100;
     rating: 4.6}
     reviews: 134}
-=======
   {/* TODO: Fix JSX expression */}
   e: '35% annual growth'}
     contactInf,
@@ -6841,7 +6435,6 @@ export const,
   g: 4.6}
     review,
   s: 134}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}
@@ -6854,7 +6447,6 @@ export const,
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate'
     ];
-<<<<<<< HEAD
     benefits: [
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
     ];
@@ -7254,7 +6846,6 @@ export const,
     customers: 19;
     rating: 4.6;
     reviews: 6;
-=======
     benefit,
   s: [,
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
@@ -7298,8 +6889,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 46,
-  };
+  s: 46};
   {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}
     pric,
@@ -7348,8 +6938,7 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 22,
-  };
+  s: 22};
   {/* TODO: Fix JSX expression */}
   y: 'Operations'}
     pric,
@@ -7398,8 +6987,7 @@ export const,
     ratin,
   g: 4.5;
     review,
-  s: 14,
-  };
+  s: 14};
   {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}
     pric,
@@ -7448,8 +7036,7 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 18,
-  };
+  s: 18};
   {/* TODO: Fix JSX expression */}
   y: 'Growth'}
     pric,
@@ -7498,8 +7085,7 @@ export const,
     ratin,
   g: 4.4;
     review,
-  s: 12,
-  };
+  s: 12};
   {/* TODO: Fix JSX expression */}
   y: 'Analytics'}
     pric,
@@ -7548,8 +7134,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 28,
-  };
+  s: 28};
   {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}
     pric,
@@ -7598,8 +7183,7 @@ export const,
     ratin,
   g: 4.5;
     review,
-  s: 31,
-  };
+  s: 31};
   {/* TODO: Fix JSX expression */}
   y: 'Ecommerce'}
     pric,
@@ -7648,8 +7232,7 @@ export const,
     ratin,
   g: 4.4;
     review,
-  s: 19,
-  };
+  s: 19};
   {/* TODO: Fix JSX expression */}
   y: 'Sales'}
     pric,
@@ -7698,8 +7281,7 @@ export const,
     ratin,
   g: 4.5;
     review,
-  s: 17,
-  };
+  s: 17};
   {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}
     pric,
@@ -7748,8 +7330,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 52,
-  };
+  s: 52};
   {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}
     pric,
@@ -7798,8 +7379,7 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 11,
-  };
+  s: 11};
   {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}
     pric,
@@ -7848,8 +7428,7 @@ export const,
     ratin,
   g: 4.8;
     review,
-  s: 13,
-  };
+  s: 13};
   {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}
     pric,
@@ -7898,8 +7477,7 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 7,
-  };
+  s: 7};
   {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}
     pric,
@@ -7948,23 +7526,18 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
 };
-<<<<<<< HEAD
 export const getServicesByPriceRange = (min: number) max: number) => {;
   return realMicroSaasServices.filter(service => {),
-=======
-export const getServicesByPriceRange = (mi,)
+export const getServicesByPriceRange = (mi)
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseFloat(service.price.replace('$') '').replace(} ''));
     return price >= min && (max === Infinity || price <= max);
   });
@@ -7978,7 +7551,6 @@ export const serviceCategories = [
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT'
 ];
-<<<<<<< HEAD
     website: string;
   }
     name: 'AI Legal Document Generator',
@@ -7986,10 +7558,8 @@ export const serviceCategories = [
     price: '$89',
     period: '/month',
     description: unknown;
-=======
     websit,
-  e: string,
-  }
+  e: string}
     nam,
   e: 'AI Legal Document Generator',
     taglin,
@@ -8000,7 +7570,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.',
     feature,
   s: [,
@@ -8013,9 +7582,7 @@ export const serviceCategories = [
       'Legal research integration',
       'Client portal access',
       'Automated legal advice',
-      '24 / 7 legal support',
-    ],
-<<<<<<< HEAD
+      '24 / 7 legal support'],
     popular: true;
     icon: '',
       'Law firms, legal professionals, small businesses, entrepreneurs, real estate agents',
@@ -8024,7 +7591,6 @@ export const serviceCategories = [
     category: 'Legal Technology',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8040,13 +7606,11 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Machine Learning',
       'Legal AI',
       'Document Generation',
-      'Compliance Engine',
-    ],
+      'Compliance Engine'],
     integration,
   s: [,
       'DocuSign',
@@ -8054,16 +7618,14 @@ export const serviceCategories = [
       'Clio',
       'PracticePanther',
       'LawPay',
-      'QuickBooks',
-    ],
+      'QuickBooks'],
     use_case,
   s: [,
       'Contract generation',
       'Legal form creation',
       'Compliance documentation',
       'Client onboarding',
-      'Legal research',
-    ],
+      'Legal research'],
     ro,
   i: '300% time savings on document creation',
       mobil,
@@ -8074,17 +7636,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - customer - service - automation'
     name: 'AI Customer Service Automation',
     tagline: '24 / 7 intelligent customer support with AI chatbots',
     price: '$149',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - customer - service - automation',
     nam,
@@ -8097,7 +7655,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced AI - powered customer service automation that handles 80% of customer inquiries automatically. Provides human - like responses and seamless escalation to human agents.',
     feature,
   s: [,
@@ -8110,15 +7667,12 @@ export const serviceCategories = [
       'Analytics dashboard',
       'Custom branding',
       'API integrations',
-      'Real - time learning',
-    ],
-<<<<<<< HEAD
+      'Real - time learning'],
     popular: true;
     icon: ''
     category: 'Customer Service & Support',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8129,13 +7683,11 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Machine Learning',
       'Sentiment Analysis',
       'Voice Recognition',
-      'Chatbot AI',
-    ],
+      'Chatbot AI'],
     integration,
   s: [,
       'Zendesk',
@@ -8143,16 +7695,14 @@ export const serviceCategories = [
       'Freshdesk',
       'Slack',
       'Microsoft Teams',
-      'Shopify',
-    ],
+      'Shopify'],
     use_case,
   s: [,
       'Customer support',
       'Order tracking',
       'Product inquiries',
       'Technical support',
-      'Appointment booking',
-    ],
+      'Appointment booking'],
     ro,
   i: '60% reduction in support costs',
       mobil,
@@ -8163,17 +7713,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - seo - optimizer - pro'
     name: 'AI SEO Optimizer Pro',
     tagline: 'Automated SEO optimization powered by artificial intelligence',
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - seo - optimizer - pro',
     nam,
@@ -8186,7 +7732,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive SEO automation platform that analyzes, optimizes, and monitors your website performance. Uses AI to identify opportunities and implement best practices automatically.',
     feature,
   s: [,
@@ -8199,9 +7744,7 @@ export const serviceCategories = [
       'Backlink monitoring',
       'Local SEO optimization',
       'Mobile optimization',
-      'Performance analytics',
-    ],
-<<<<<<< HEAD
+      'Performance analytics'],
     popular: true;
     icon: '',
       'Leading AI SEO platform with 40% better ranking improvements',
@@ -8212,7 +7755,6 @@ export const serviceCategories = [
     category: 'Digital Marketing & SEO',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8231,13 +7773,11 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Natural Language Processing',
       'Data Analytics',
       'SEO Algorithms',
-      'Web Crawling',
-    ],
+      'Web Crawling'],
     integration,
   s: [,
       'Google Analytics',
@@ -8245,16 +7785,14 @@ export const serviceCategories = [
       'WordPress',
       'Shopify',
       'WooCommerce',
-      'HubSpot',
-    ],
+      'HubSpot'],
     use_case,
   s: [,
       'Website optimization',
       'Content marketing',
       'Local business SEO',
       'E - commerce SEO',
-      'Blog optimization',
-    ],
+      'Blog optimization'],
     ro,
   i: '200% increase in organic traffic in 6 months',
     competitor,
@@ -8267,17 +7805,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - video - editing - suite'
     name: 'AI Video Editing Suite',
     tagline: 'Professional video editing powered by artificial intelligence',
     price: '$299',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - video - editing - suite',
     nam,
@@ -8290,7 +7824,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary video editing platform that uses AI to automate complex editing tasks. Perfect for content creators, marketers, and video professionals who need high - quality output quickly.',
     feature,
   s: [,
@@ -8303,9 +7836,7 @@ export const serviceCategories = [
       'Video templates library',
       'Cloud rendering',
       'Collaborative editing',
-      'Export to multiple formats',
-    ],
-<<<<<<< HEAD
+      'Export to multiple formats'],
     popular: true;
     icon: '',
       'Content creators, video marketers, social media managers, film students, small businesses',
@@ -8314,7 +7845,6 @@ export const serviceCategories = [
     category: 'Creative & Media',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8330,13 +7860,11 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Computer Vision',
       'Machine Learning',
       'Audio Processing',
       'Video Compression',
-      'Cloud Computing',
-    ],
+      'Cloud Computing'],
     integration,
   s: [,
       'Adobe Creative Suite',
@@ -8344,16 +7872,14 @@ export const serviceCategories = [
       'DaVinci Resolve',
       'YouTube',
       'Vimeo',
-      'Social media platforms',
-    ],
+      'Social media platforms'],
     use_case,
   s: [,
       'Social media content',
       'Marketing videos',
       'Product demos',
       'Educational content',
-      'Event highlights',
-    ],
+      'Event highlights'],
     ro,
   i: '80% reduction in editing time',
     competitor,
@@ -8362,8 +7888,7 @@ export const serviceCategories = [
       'Final Cut Pro',
       'DaVinci Resolve',
       'Camtasia',
-      'Filmora',
-    ],
+      'Filmora'],
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -8372,17 +7897,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - data - analytics - platform'
     name: 'AI Data Analytics Platform',
     tagline: 'Transform raw data into actionable insights with AI',
     price: '$399',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - data - analytics - platform',
     nam,
@@ -8395,7 +7916,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced data analytics platform that uses AI to automatically discover patterns, generate insights, and create predictive models. Perfect for businesses looking to make data - driven decisions.',
     feature,
   s: [,
@@ -8408,9 +7928,7 @@ export const serviceCategories = [
       'Custom reporting',
       'Data integration tools',
       'API access',
-      'Advanced security',
-    ],
-<<<<<<< HEAD
+      'Advanced security'],
     popular: true;
     icon: '',
       'Leading AI analytics platform with 90% accuracy in predictions',
@@ -8421,7 +7939,6 @@ export const serviceCategories = [
     category: 'Data & Analytics',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8440,13 +7957,11 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Data Mining',
       'Statistical Analysis',
       'Big Data Processing',
-      'Predictive Modeling',
-    ],
+      'Predictive Modeling'],
     integration,
   s: [,
       'Google Analytics',
@@ -8455,16 +7970,14 @@ export const serviceCategories = [
       'MySQL',
       'PostgreSQL',
       'AWS',
-      'Google Cloud',
-    ],
+      'Google Cloud'],
     use_case,
   s: [,
       'Business intelligence',
       'Customer analytics',
       'Market research',
       'Performance tracking',
-      'Risk assessment',
-    ],
+      'Risk assessment'],
     ro,
   i: '150% improvement in decision - making speed',
     competitor,
@@ -8477,17 +7990,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - hr - recruitment - platform'
     name: 'AI HR Recruitment Platform',
     tagline: 'Streamline hiring with AI - powered recruitment automation',
     price: '$179',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - hr - recruitment - platform',
     nam,
@@ -8500,7 +8009,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent HR recruitment platform that automates candidate sourcing, screening, and assessment. Uses AI to match the best candidates with job requirements and company culture.',
     feature,
   s: [,
@@ -8513,9 +8021,7 @@ export const serviceCategories = [
       'Candidate tracking',
       'Performance analytics',
       'Integration with job boards',
-      'Mobile app access',
-    ],
-<<<<<<< HEAD
+      'Mobile app access'],
     popular: true;
     icon: '',
       'Leading AI recruitment platform with 70% faster hiring process',
@@ -8526,7 +8032,6 @@ export const serviceCategories = [
     category: 'Human Resources',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8545,13 +8050,11 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Natural Language Processing',
       'Machine Learning',
       'Predictive Analytics',
       'AI Matching',
-      'Automation',
-    ],
+      'Automation'],
     integration,
   s: [,
       'LinkedIn',
@@ -8560,16 +8063,14 @@ export const serviceCategories = [
       'Workday',
       'BambooHR',
       'Slack',
-      'Microsoft Teams',
-    ],
+      'Microsoft Teams'],
     use_case,
   s: [,
       'Candidate sourcing',
       'Resume screening',
       'Skill assessment',
       'Interview coordination',
-      'Hiring analytics',
-    ],
+      'Hiring analytics'],
     ro,
   i: '50% reduction in time - to - hire',
     competitor,
@@ -8578,8 +8079,7 @@ export const serviceCategories = [
       'BambooHR',
       'Greenhouse',
       'Lever',
-      'SmartRecruiters',
-    ],
+      'SmartRecruiters'],
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -8588,17 +8088,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - sales - automation - platform'
     name: 'AI Sales Automation Platform',
     tagline: 'Boost sales performance with intelligent automation',
     price: '$249',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - sales - automation - platform',
     nam,
@@ -8611,7 +8107,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive sales automation platform that uses AI to identify leads, prioritize opportunities, and optimize sales processes. Increases conversion rates and reduces sales cycle time.',
     feature,
   s: [,
@@ -8624,9 +8119,7 @@ export const serviceCategories = [
       'CRM integration',
       'Mobile sales app',
       'Real - time notifications',
-      'Custom workflows',
-    ],
-<<<<<<< HEAD
+      'Custom workflows'],
     popular: true;
     icon: '',
       'Sales teams, B2B companies, real estate agents, insurance agents, consultants',
@@ -8635,7 +8128,6 @@ export const serviceCategories = [
     category: 'Sales & CRM',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8651,13 +8143,11 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Predictive Analytics',
       'Natural Language Processing',
       'Automation',
-      'AI Optimization',
-    ],
+      'AI Optimization'],
     integration,
   s: [,
       'Salesforce',
@@ -8666,16 +8156,14 @@ export const serviceCategories = [
       'Zoho CRM',
       'Microsoft Dynamics',
       'Gmail',
-      'Outlook',
-    ],
+      'Outlook'],
     use_case,
   s: [,
       'Lead generation',
       'Sales forecasting',
       'Pipeline management',
       'Email campaigns',
-      'Performance tracking',
-    ],
+      'Performance tracking'],
     ro,
   i: '35% increase in sales conversion rates',
     competitor,
@@ -8684,8 +8172,7 @@ export const serviceCategories = [
       'HubSpot',
       'Pipedrive',
       'Zoho CRM',
-      'Freshsales',
-    ],
+      'Freshsales'],
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -8694,17 +8181,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - market - research - platform'
     name: 'AI Market Research Platform',
     tagline: 'Discover market opportunities with AI - powered research',
     price: '$159',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - market - research - platform',
     nam,
@@ -8717,7 +8200,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision - making.',
     feature,
   s: [,
@@ -8730,9 +8212,7 @@ export const serviceCategories = [
       'Data visualization',
       'API access',
       'Real - time updates',
-      'Export capabilities',
-    ],
-<<<<<<< HEAD
+      'Export capabilities'],
     popular: true;
     icon: '',
       'Leading AI market research with 95% accuracy in trend predictions',
@@ -8743,7 +8223,6 @@ export const serviceCategories = [
     category: 'Market Research',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8762,29 +8241,25 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Natural Language Processing',
       'Data Mining',
       'Predictive Analytics',
-      'Web Scraping',
-    ],
+      'Web Scraping'],
     integration,
   s: [,
       'Google Trends',
       'Social media platforms',
       'News APIs',
       'Financial data sources',
-      'Custom databases',
-    ],
+      'Custom databases'],
     use_case,
   s: [,
       'Market analysis',
       'Competitor research',
       'Trend identification',
       'Investment decisions',
-      'Product development',
-    ],
+      'Product development'],
     ro,
   i: '200% faster market insights generation',
     competitor,
@@ -8793,8 +8268,7 @@ export const serviceCategories = [
       'IBISWorld',
       'Mintel',
       'Euromonitor',
-      'Forrester',
-    ],
+      'Forrester'],
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -8803,17 +8277,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - blockchain - analytics'
     name: 'AI Blockchain Analytics Platform',
     tagline: 'Advanced blockchain intelligence and analytics',
     price: '$599',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - blockchain - analytics',
     nam,
@@ -8826,7 +8296,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive blockchain analytics platform that uses AI to track transactions, identify patterns, and provide insights into cryptocurrency and blockchain activities.',
     feature,
   s: [,
@@ -8839,9 +8308,7 @@ export const serviceCategories = [
       'API integration',
       'Custom alerts',
       'Data export',
-      'Multi - chain support',
-    ],
-<<<<<<< HEAD
+      'Multi - chain support'],
     popular: true;
     icon: '',
       'Cryptocurrency traders, blockchain companies, financial institutions, regulators',
@@ -8850,7 +8317,6 @@ export const serviceCategories = [
     category: 'Blockchain & Cryptocurrency',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8866,29 +8332,25 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Blockchain Analysis',
       'Machine Learning',
       'Cryptography',
       'Data Analytics',
-      'AI Pattern Recognition',
-    ],
+      'AI Pattern Recognition'],
     integration,
   s: [,
       'Ethereum',
       'Bitcoin',
       'Binance Smart Chain',
       'Polygon',
-      'Custom blockchain APIs',
-    ],
+      'Custom blockchain APIs'],
     use_case,
   s: [,
       'Transaction monitoring',
       'Risk assessment',
       'Compliance reporting',
       'Portfolio analysis',
-      'Market research',
-    ],
+      'Market research'],
     ro,
   i: '300% improvement in blockchain intelligence',
     competitor,
@@ -8897,8 +8359,7 @@ export const serviceCategories = [
       'Elliptic',
       'CipherTrace',
       'Blockchain && Blockchain.com',
-      'Etherscan',
-    ],
+      'Etherscan'],
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -8907,17 +8368,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - cloud - cost - optimizer'
     name: 'AI Cloud Cost Optimizer',
     tagline: 'Reduce cloud costs by up to 40% with AI optimization',
     price: '$199',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - cloud - cost - optimizer',
     nam,
@@ -8930,7 +8387,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent cloud cost optimization platform that automatically analyzes usage patterns and recommends cost - saving strategies. Works with AWS, Azure, and Google Cloud.',
     feature,
   s: [,
@@ -8943,9 +8399,7 @@ export const serviceCategories = [
       'Automated scaling',
       'Budget alerts',
       'Detailed reporting',
-      'API integration',
-    ],
-<<<<<<< HEAD
+      'API integration'],
     popular: true;
     icon: '',
       'Leading cloud cost optimization with 40% average cost reduction',
@@ -8956,7 +8410,6 @@ export const serviceCategories = [
     category: 'Cloud & DevOps',
     real_service: true;
     technology: [,
-=======
     popula,
   r: true,
     ico,
@@ -8975,13 +8428,11 @@ export const serviceCategories = [
   e: true,
     technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Machine Learning',
       'Cloud Computing',
       'Cost Optimization',
       'Resource Management',
-      'Predictive Analytics',
-    ],
+      'Predictive Analytics'],
     integration,
   s: [,
       'AWS',
@@ -8989,16 +8440,14 @@ export const serviceCategories = [
       'Google Cloud',
       'Kubernetes',
       'Docker',
-      'Terraform',
-    ],
+      'Terraform'],
     use_case,
   s: [,
       'Cost optimization',
       'Resource management',
       'Capacity planning',
       'Budget management',
-      'Performance optimization',
-    ],
+      'Performance optimization'],
     ro,
   i: '40% reduction in cloud costs',
     competitor,
@@ -9007,8 +8456,7 @@ export const serviceCategories = [
       'CloudCheckr',
       'ParkMyCloud',
       'Cloudability',
-      'AWS Cost Explorer',
-    ],
+      'AWS Cost Explorer'],
       mobil,
   e: '+1 302 464 0950',
       emai,
@@ -9017,17 +8465,13 @@ export const serviceCategories = [
   s: '364 E Main St STE 1008 Middletown DE 19709',
       websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com',
-    },
-  },
-<<<<<<< HEAD
+  s://ziontechgroup && ziontechgroup.com'}},
     id: 'ai - database - performance - monitor'
     name: 'AI Database Performance Monitor',
     tagline: 'Optimize database performance with AI - powered monitoring',
     price: '$179',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'ai - database - performance - monitor',
     nam,
@@ -9040,7 +8484,6 @@ export const serviceCategories = [
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.',
     feature,
   s: [,
@@ -9053,9 +8496,7 @@ export const serviceCategories = [
       'Backup monitoring',
       'Custom dashboards',
       'API access',
-      'Multi - database support',
-    ],
-<<<<<<< HEAD
+      'Multi - database support'],
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'],
     support: unknown;
       'Dedicated health coach, community support, and 24 / 7 platform assistance.',
@@ -9080,7 +8521,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '15 minutes',
-=======
     integration,
   s: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'],
     suppor,
@@ -9101,8 +8541,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.6,
     review,
-  s: 134,
-  },
+  s: 134},
     i,
   d: 'ai - email - responder - pro',
     nam,
@@ -9125,9 +8564,7 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '15 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '15 minutes'},
     feature,
   s: [,
       'Inbox labeling and prioritization',
@@ -9136,20 +8573,16 @@ export const serviceCategories = [
       'Auto - draft with human - in - the - loop',
       'Zendesk / HubSpot / Gmail integration',
       'Metric,
-  s: FRT / ART, deflection rate',
-    ],
+  s: FRT / ART, deflection rate'],
     benefit,
   s: [,
       'Cut response time by 60%',
       'Deflect 3050% routine tickets',
-      'Improve CSAT and NPS',
-    ],
-<<<<<<< HEAD
+      'Improve CSAT and NPS'],
     target_audience: ['Support teams', 'Sales ops', 'Founders', 'Agencies'],
     market_position: unknown;
       'Alternatives include Superhuman AI and Front AI. Differentiator: policy guardrails and CRM context sync.',
     competitors: ['Superhuman', 'Front', 'Zendesk AI'],
-=======
     target_audienc,
   e: ['Support teams', 'Sales ops', 'Founders', 'Agencies'],
     market_positio,
@@ -9158,12 +8591,9 @@ export const serviceCategories = [
   r: policy guardrails and CRM context sync.',
     competitor,
   s: ['Superhuman', 'Front', 'Zendesk AI'],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Support autoreplies',
       'Sales follow - ups',
-      'Vendor coordination',
-    ],
-<<<<<<< HEAD
+      'Vendor coordination'],
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II'],
@@ -9187,7 +8617,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 7;
       setup_time: '10 minutes',
-=======
     integration,
   s: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],
     suppor,
@@ -9207,8 +8636,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.7,
     review,
-  s: 46,
-  },
+  s: 46},
     i,
   d: 'mobile - conversational - surveys',
     nam,
@@ -9231,36 +8659,28 @@ export const serviceCategories = [
       trial_day,
   s: 7,
       setup_tim,
-  e: '10 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '10 minutes'},
     feature,
   s: [,
       'Branching logic',
       'A / B prompts',
       'Embeddable widget',
       'CSV / JSON export',
-      'Webhook triggers',
-    ],
+      'Webhook triggers'],
     benefit,
   s: [,
       '+35% completion rate vs. forms',
-      'Cleaner data, fewer drop - offs',
-    ],
-<<<<<<< HEAD
+      'Cleaner data, fewer drop - offs'],
     target_audience: ['Product teams', 'Marketers', 'UX researchers'],
     market_position: unknown;
-=======
     target_audienc,
   e: ['Product teams', 'Marketers', 'UX researchers'],
     market_positio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
     competitor,
   s: ['Typeform', 'SurveySparrow', 'Tally'],
       'Template gallery, response store, analytics, export jobs.',
-<<<<<<< HEAD
     roi: 'Improves feedback volume 2050%.',
     use_cases: ['NPS', 'Beta feedback', 'Lead qual'],
     integrations: ['HubSpot', 'Segment', 'Zapier'],
@@ -9286,7 +8706,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '5 minutes',
-=======
     ro,
   i: 'Improves feedback volume 2050%.',
     use_case,
@@ -9310,8 +8729,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.6,
     review,
-  s: 22,
-  },
+  s: 22},
     i,
   d: 'niche - productivity - planner',
     nam,
@@ -9334,17 +8752,13 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '5 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '5 minutes'},
     feature,
   s: [,
       'Industry templates',
       'Automations',
       'Calendar & Gantt',
-      'Role - based permissions',
-    ],
-<<<<<<< HEAD
+      'Role - based permissions'],
     benefits: ['Reduce setup time by 80%', 'Consistency across teams'],
     target_audience: ['Agencies', 'Studios', 'SMBs'],
     market_position: unknown;
@@ -9375,7 +8789,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 7;
       setup_time: '1 day',
-=======
     benefit,
   s: ['Reduce setup time by 80%', 'Consistency across teams'],
     target_audienc,
@@ -9408,8 +8821,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.5,
     review,
-  s: 14,
-  },
+  s: 14},
     i,
   d: 'event - management - dashboard',
     nam,
@@ -9432,17 +8844,13 @@ export const serviceCategories = [
       trial_day,
   s: 7,
       setup_tim,
-  e: '1 day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 day'},
     feature,
   s: [,
       'Ticketing & check - in',
       'Session builder',
       'Email campaigns',
-      'Live polls & Q & A',
-    ],
-<<<<<<< HEAD
+      'Live polls & Q & A'],
     benefits: ['Launch events faster', 'Better attendee engagement'],
     target_audience: ['Conferences', 'Meetups', 'Communities'],
     market_position: unknown;
@@ -9473,7 +8881,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '1 hour',
-=======
     benefit,
   s: ['Launch events faster', 'Better attendee engagement'],
     target_audienc,
@@ -9506,8 +8913,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.6,
     review,
-  s: 18,
-  },
+  s: 18},
     i,
   d: 'affiliate - tracking - suite',
     nam,
@@ -9530,17 +8936,13 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '1 hour',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 hour'},
     feature,
   s: [,
       'Custom links',
       'Attribution windows',
       'Coupon attribution',
-      'Payout exports',
-    ],
-<<<<<<< HEAD
+      'Payout exports'],
     benefits: ['Grow revenue via affiliates', 'Reduce fraud'],
     target_audience: ['Ecommerce', 'SaaS'],
     market_position: unknown;
@@ -9571,7 +8973,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '5 minutes',
-=======
     benefit,
   s: ['Grow revenue via affiliates', 'Reduce fraud'],
     target_audienc,
@@ -9604,8 +9005,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.4,
     review,
-  s: 12,
-  },
+  s: 12},
     i,
   d: 'smb - website - analytics',
     nam,
@@ -9628,17 +9028,13 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '5 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '5 minutes'},
     feature,
   s: [,
       'Goals & funnels',
       'Weekly insights email',
       'Anomaly alerts',
-      'Shareable dashboards',
-    ],
-<<<<<<< HEAD
+      'Shareable dashboards'],
     benefits: ['Know what works', 'Focus on actions'],
     target_audience: ['Founders', 'Marketers', 'Agencies'],
     market_position: unknown;
@@ -9669,7 +9065,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '2 hours',
-=======
     benefit,
   s: ['Know what works', 'Focus on actions'],
     target_audienc,
@@ -9702,8 +9097,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.7,
     review,
-  s: 28,
-  },
+  s: 28},
     i,
   d: 'it - helpdesk - lite',
     nam,
@@ -9726,17 +9120,13 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '2 hours',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '2 hours'},
     feature,
   s: [,
       'Email - to - ticket',
       'SLA timers',
       'Macros / automations',
-      'Self - serve portal',
-    ],
-<<<<<<< HEAD
+      'Self - serve portal'],
     benefits: ['Shorter MTTR', 'Fewer escalations'],
     target_audience: ['MSPs', 'IT teams'],
     market_position: 'Lightweight alternative to Zendesk and Freshservice.',
@@ -9766,7 +9156,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '1 hour',
-=======
     benefit,
   s: ['Shorter MTTR', 'Fewer escalations'],
     target_audienc,
@@ -9798,8 +9187,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.5,
     review,
-  s: 31,
-  },
+  s: 31},
     i,
   d: 'ecommerce - return - manager',
     nam,
@@ -9822,16 +9210,13 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '1 hour',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 hour'},
     feature,
   s: [,
       'Self - service portal',
       'Label generation',
       'Return reasons analytics',
-      'Exchanges & store credit',
-    ],
+      'Exchanges & store credit'],
     benefit,
   s: ['Higher retention', 'Lower support load'],
     target_audienc,
@@ -9841,7 +9226,6 @@ export const serviceCategories = [
     competitor,
   s: ['Loop', 'Returnly'],
       'Webhook integrations, label providers, RMA workflows.',
-<<<<<<< HEAD
     roi: 'Reduce refund losses via exchanges.',
     use_cases: ['Returns', 'Exchanges', 'Warranties'],
     integrations: ['Shopify', 'Shippo', 'EasyPost'],
@@ -9867,7 +9251,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 7;
       setup_time: '20 minutes',
-=======
     ro,
   i: 'Reduce refund losses via exchanges.',
     use_case,
@@ -9891,8 +9274,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.4,
     review,
-  s: 19,
-  },
+  s: 19},
     i,
   d: 'auto - email - followups',
     nam,
@@ -9915,17 +9297,13 @@ export const serviceCategories = [
       trial_day,
   s: 7,
       setup_tim,
-  e: '20 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '20 minutes'},
     feature,
   s: [,
       'Sequences',
       'Rules & triggers',
       'Open / click tracking',
-      'AI snippets',
-    ],
-<<<<<<< HEAD
+      'AI snippets'],
     benefits: ['Higher reply rate', 'Fewer manual tasks'],
     target_audience: ['SMB sales teams', 'Agencies'],
     market_position: unknown;
@@ -9955,7 +9333,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 7;
       setup_time: '5 minutes',
-=======
     benefit,
   s: ['Higher reply rate', 'Fewer manual tasks'],
     target_audienc,
@@ -9986,8 +9363,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.5,
     review,
-  s: 17,
-  },
+  s: 17},
     i,
   d: 'podcast - transcription - studio',
     nam,
@@ -10010,17 +9386,13 @@ export const serviceCategories = [
       trial_day,
   s: 7,
       setup_tim,
-  e: '5 minutes',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '5 minutes'},
     feature,
   s: [,
       'Speaker diarization',
       'Timecodes',
       'Chapters',
-      'Show notes drafts',
-    ],
-<<<<<<< HEAD
+      'Show notes drafts'],
     benefits: ['Accessibility', 'SEO - ready content'],
     target_audience: ['Podcasters', 'Agencies'],
     market_position: 'Alternative to Descript transcripts with simpler pricing.',
@@ -10045,7 +9417,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '1 day',
-=======
     benefit,
   s: ['Accessibility', 'SEO - ready content'],
     target_audienc,
@@ -10067,8 +9438,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.7,
     review,
-  s: 52,
-  },
+  s: 52},
     i,
   d: 'ai - knowledge - graph - studio',
     nam,
@@ -10091,17 +9461,13 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '1 day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 day'},
     feature,
   s: [,
       'Entity / relation extraction',
       'Schema editor',
       'Vector + graph search',
-      'Lineage view',
-    ],
-<<<<<<< HEAD
+      'Lineage view'],
     benefits: ['Higher RAG precision', 'Governance & explainability'],
     target_audience: ['Data teams', 'Platform engineering', 'Compliance'],
     market_position: unknown;
@@ -10135,7 +9501,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '1 day',
-=======
     benefit,
   s: ['Higher RAG precision', 'Governance & explainability'],
     target_audienc,
@@ -10174,8 +9539,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.8,
     review,
-  s: 11,
-  },
+  s: 11},
     i,
   d: 'llm - guarded - api - gateway',
     nam,
@@ -10198,16 +9562,13 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '1 day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 day'},
     feature,
   s: [,
       'Provider adapters',
       'Policy engine',
       'PII redaction',
-      'Rate limits',
-    ],
+      'Rate limits'],
     benefit,
   s: ['Control spend', 'Reduce risk'],
     target_audienc,
@@ -10215,7 +9576,6 @@ export const serviceCategories = [
     market_positio,
   n: unknown;
       'Comparable to OpenRouter / EdenAI, adds governance and audit.',
-<<<<<<< HEAD
     competitors: ['OpenRouter', 'EdenAI', 'Helicone'],
     roi: 'Cut model costs by 2040%.',
     use_cases: ['Central model access', 'Safety'],
@@ -10242,7 +9602,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 7;
       setup_time: '1 day',
-=======
     competitor,
   s: ['OpenRouter', 'EdenAI', 'Helicone'],
     ro,
@@ -10268,8 +9627,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.8,
     review,
-  s: 13,
-  },
+  s: 13},
     i,
   d: 'serverless - lakehouse - starter',
     nam,
@@ -10292,17 +9650,13 @@ export const serviceCategories = [
       trial_day,
   s: 7,
       setup_tim,
-  e: '1 day',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '1 day'},
     feature,
   s: [,
       'Event collector',
       'Connector library',
       'dbt models',
-      'Grafana dashboards',
-    ],
-<<<<<<< HEAD
+      'Grafana dashboards'],
     benefits: ['Faster analytics ROI', 'Lower platform toil'],
     target_audience: ['Data teams', 'Ops'],
     market_position: 'Starter alternative to building bespoke stacks.',
@@ -10335,7 +9689,6 @@ export const serviceCategories = [
       currency: 'USD',
       trial_days: 14;
       setup_time: '2 hours',
-=======
     benefit,
   s: ['Faster analytics ROI', 'Lower platform toil'],
     target_audienc,
@@ -10373,8 +9726,7 @@ export const serviceCategories = [
     ratin,
   g: 4 && 4.6,
     review,
-  s: 7,
-  },
+  s: 7},
     i,
   d: 'data - contracts - hub',
     nam,
@@ -10397,17 +9749,13 @@ export const serviceCategories = [
       trial_day,
   s: 14,
       setup_tim,
-  e: '2 hours',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
+  e: '2 hours'},
     feature,
   s: [,
       'Schema registry',
       'Diff viewer',
       'CI gates',
-      'Backfill helpers',
-    ],
-<<<<<<< HEAD
+      'Backfill helpers'],
     benefits: ['Fewer incidents', 'Faster changes'],
     target_audience: ['Data platform', 'Analytics engineers'],
     market_position: 'Complements dbt and warehouse - native governance.',
@@ -10453,7 +9801,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     price: '$89',
     period: '/month',
     description:,
-=======
     benefit,
   s: ['Fewer incidents', 'Faster changes'],
     target_audienc,
@@ -10538,8 +9885,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     addres,
   s: string,
     websit,
-  e: string,
-  }
+  e: string}
 }
 export const,
   realMicroSaasServices: RealMicroSaasService[] = [,
@@ -10555,7 +9901,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.'
     feature,
   s: [;
@@ -10570,7 +9915,6 @@ export const,
       'Automated legal advice'
       '24/7 legal support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-500 to-indigo-600'
@@ -10578,7 +9922,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-legal-documents',
     marketPosition: 'Leading AI legal document platform with 99.7% accuracy rate',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -10594,7 +9937,6 @@ export const,
   n: 'Leading AI legal document platform with 99.7% accuracy rate'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Law firms, legal professionals, small businesses, entrepreneurs, real estate agents'
     trialDay,
   s: 14;
@@ -10621,19 +9963,14 @@ export const,
       'LawPay'
       'QuickBooks'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Contract generation'
       'Legal form creation'
       'Compliance documentation'
       'Client onboarding'
-<<<<<<< HEAD
-      'Legal research',
-    ],
+      'Legal research'],
     roi: '300% time savings on document creation',
     competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net']
     marketSize: '$2.1B legal tech market'
@@ -10642,7 +9979,6 @@ export const,
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com',
-=======
       'Legal research'
     ]
     ro,
@@ -10663,7 +9999,6 @@ export const,
       websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
     i,
@@ -10691,7 +10026,6 @@ export const,
       'API integrations'
       'Real-time learning'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-500 to-emerald-600'
@@ -10699,7 +10033,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-customer-service',
     marketPosition: 'Industry-leading AI customer service with 95% customer satisfaction',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -10715,7 +10048,6 @@ export const,
   n: 'Industry-leading AI customer service with 95% customer satisfaction'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'E-commerce businesses, SaaS companies, customer support teams, retail chains'
     trialDay,
   s: 21;
@@ -10742,19 +10074,14 @@ export const,
       'Microsoft Teams'
       'Shopify'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Customer support'
       'Order tracking'
       'Product inquiries'
       'Technical support'
-<<<<<<< HEAD
-      'Appointment booking',
-    ],
+      'Appointment booking'],
     roi: '60% reduction in support costs',
     competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to']
     marketSize: '$15.8B customer service software market'
@@ -10762,8 +10089,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-seo-optimizer-pro'
     name: 'AI SEO Optimizer Pro',
@@ -10771,7 +10097,6 @@ export const,
     price: '$199',
     period: '/month',
     description:,
-=======
       'Appointment booking'
     ]
     ro,
@@ -10806,7 +10131,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive SEO automation platform that analyzes, optimizes, and monitors your website performance. Uses AI to identify opportunities and implement best practices automatically.'
     feature,
   s: [;
@@ -10821,7 +10145,6 @@ export const,
       'Mobile optimization'
       'Performance analytics'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-500 to-pink-600'
@@ -10829,7 +10152,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-seo-optimizer',
     marketPosition: 'Leading AI SEO platform with 40% better ranking improvements',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -10845,7 +10167,6 @@ export const,
   n: 'Leading AI SEO platform with 40% better ranking improvements'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Digital marketing agencies, e-commerce businesses, content creators, small businesses'
     trialDay,
   s: 14;
@@ -10872,19 +10193,14 @@ export const,
       'WooCommerce'
       'HubSpot'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Website optimization'
       'Content marketing'
       'Local business SEO'
       'E-commerce SEO'
-<<<<<<< HEAD
-      'Blog optimization',
-    ],
+      'Blog optimization'],
     roi: '200% increase in organic traffic in 6 months',
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath']
     marketSize: '$8.2B SEO tools market'
@@ -10892,8 +10208,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-video-editing-suite'
     name: 'AI Video Editing Suite',
@@ -10901,7 +10216,6 @@ export const,
     price: '$299',
     period: '/month',
     description:,
-=======
       'Blog optimization'
     ]
     ro,
@@ -10936,7 +10250,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Revolutionary video editing platform that uses AI to automate complex editing tasks. Perfect for content creators, marketers, and video professionals who need high-quality output quickly.'
     feature,
   s: [;
@@ -10951,7 +10264,6 @@ export const,
       'Collaborative editing'
       'Export to multiple formats'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-500 to-pink-600'
@@ -10959,7 +10271,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-video-editing',
     marketPosition: 'Cutting-edge AI video editing with 10x faster workflow',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -10975,7 +10286,6 @@ export const,
   n: 'Cutting-edge AI video editing with 10x faster workflow'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Content creators, video marketers, social media managers, film students, small businesses'
     trialDay,
   s: 21;
@@ -11010,29 +10320,24 @@ export const,
       'Educational content'
       'Event highlights'
     ]
-<<<<<<< HEAD
     roi: '80% reduction in editing time'
     competitors: [
-=======
     ro,
   i: '80% reduction in editing time'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Adobe Premiere Pro'
       'Final Cut Pro'
       'DaVinci Resolve'
       'Camtasia'
       'Filmora'
     ]
-<<<<<<< HEAD
     marketSize: '$3.2B video editing software market'
     growthRate: '45% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-data-analytics-platform'
     name: 'AI Data Analytics Platform',
@@ -11040,7 +10345,6 @@ export const,
     price: '$399',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$3.2B video editing software market'
     growthRat,
@@ -11069,7 +10373,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Advanced data analytics platform that uses AI to automatically discover patterns, generate insights, and create predictive models. Perfect for businesses looking to make data-driven decisions.'
     feature,
   s: [;
@@ -11084,7 +10387,6 @@ export const,
       'API access'
       'Advanced security'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-500 to-blue-600'
@@ -11092,7 +10394,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-data-analytics',
     marketPosition: 'Leading AI analytics platform with 90% accuracy in predictions',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -11108,7 +10409,6 @@ export const,
   n: 'Leading AI analytics platform with 90% accuracy in predictions'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Data analysts, business intelligence teams, marketing agencies, e-commerce businesses'
     trialDay,
   s: 21;
@@ -11136,19 +10436,14 @@ export const,
       'AWS'
       'Google Cloud'
     ]
-<<<<<<< HEAD
     useCases: [
-=======
     useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Business intelligence'
       'Customer analytics'
       'Market research'
       'Performance tracking'
-<<<<<<< HEAD
-      'Risk assessment',
-    ],
+      'Risk assessment'],
     roi: '150% improvement in decision-making speed',
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo']
     marketSize: '$23.4B business intelligence market'
@@ -11156,8 +10451,7 @@ export const,
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-hr-recruitment-platform'
     name: 'AI HR Recruitment Platform',
@@ -11165,7 +10459,6 @@ export const,
     price: '$179',
     period: '/month',
     description:,
-=======
       'Risk assessment'
     ]
     ro,
@@ -11200,7 +10493,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent HR recruitment platform that automates candidate sourcing, screening, and assessment. Uses AI to match the best candidates with job requirements and company culture.'
     feature,
   s: [;
@@ -11215,7 +10507,6 @@ export const,
       'Integration with job boards'
       'Mobile app access'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-500 to-purple-600'
@@ -11223,7 +10514,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-hr-recruitment',
     marketPosition: 'Leading AI recruitment platform with 70% faster hiring process',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -11239,7 +10529,6 @@ export const,
   n: 'Leading AI recruitment platform with 70% faster hiring process'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'HR professionals, recruitment agencies, small businesses, enterprise companies'
     trialDay,
   s: 14;
@@ -11275,29 +10564,24 @@ export const,
       'Interview coordination'
       'Hiring analytics'
     ]
-<<<<<<< HEAD
     roi: '50% reduction in time-to-hire'
     competitors: [
-=======
     ro,
   i: '50% reduction in time-to-hire'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Workday'
       'BambooHR'
       'Greenhouse'
       'Lever'
       'SmartRecruiters'
     ]
-<<<<<<< HEAD
     marketSize: '$2.8B recruitment software market'
     growthRate: '42% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-sales-automation-platform'
     name: 'AI Sales Automation Platform',
@@ -11305,7 +10589,6 @@ export const,
     price: '$249',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$2.8B recruitment software market'
     growthRat,
@@ -11334,7 +10617,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive sales automation platform that uses AI to identify leads, prioritize opportunities, and optimize sales processes. Increases conversion rates and reduces sales cycle time.'
     feature,
   s: [;
@@ -11349,7 +10631,6 @@ export const,
       'Real-time notifications'
       'Custom workflows'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-yellow-500 to-orange-600'
@@ -11357,7 +10638,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-sales-automation',
     marketPosition: 'Industry-leading sales automation with 35% increase in conversion rates',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -11373,7 +10653,6 @@ export const,
   n: 'Industry-leading sales automation with 35% increase in conversion rates'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Sales teams, B2B companies, real estate agents, insurance agents, consultants'
     trialDay,
   s: 21;
@@ -11409,29 +10688,24 @@ export const,
       'Email campaigns'
       'Performance tracking'
     ]
-<<<<<<< HEAD
     roi: '35% increase in sales conversion rates'
     competitors: [
-=======
     ro,
   i: '35% increase in sales conversion rates'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Salesforce'
       'HubSpot'
       'Pipedrive'
       'Zoho CRM'
       'Freshsales'
     ]
-<<<<<<< HEAD
     marketSize: '$18.6B CRM market'
     growthRate: '33% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-market-research-platform'
     name: 'AI Market Research Platform',
@@ -11439,7 +10713,6 @@ export const,
     price: '$159',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$18.6B CRM market'
     growthRat,
@@ -11468,7 +10741,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision-making.'
     feature,
   s: [;
@@ -11483,7 +10755,6 @@ export const,
       'Real-time updates'
       'Export capabilities'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-teal-500 to-green-600'
@@ -11491,7 +10762,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-market-research',
     marketPosition: 'Leading AI market research with 95% accuracy in trend predictions',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -11507,7 +10777,6 @@ export const,
   n: 'Leading AI market research with 95% accuracy in trend predictions'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Market researchers, business strategists, startups, investment firms, consultants'
     trialDay,
   s: 14;
@@ -11541,29 +10810,24 @@ export const,
       'Investment decisions'
       'Product development'
     ]
-<<<<<<< HEAD
     roi: '200% faster market insights generation'
     competitors: [
-=======
     ro,
   i: '200% faster market insights generation'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Statista'
       'IBISWorld'
       'Mintel'
       'Euromonitor'
       'Forrester'
     ]
-<<<<<<< HEAD
     marketSize: '$1.9B market research market'
     growthRate: '28% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-blockchain-analytics'
     name: 'AI Blockchain Analytics Platform',
@@ -11571,7 +10835,6 @@ export const,
     price: '$599',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$1.9B market research market'
     growthRat,
@@ -11600,7 +10863,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive blockchain analytics platform that uses AI to track transactions, identify patterns, and provide insights into cryptocurrency and blockchain activities.'
     feature,
   s: [;
@@ -11615,7 +10877,6 @@ export const,
       'Data export'
       'Multi-chain support'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-gray-500 to-slate-600'
@@ -11623,7 +10884,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-blockchain-analytics',
     marketPosition: 'Leading blockchain analytics with 99.9% transaction accuracy',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -11639,7 +10899,6 @@ export const,
   n: 'Leading blockchain analytics with 99.9% transaction accuracy'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Cryptocurrency traders, blockchain companies, financial institutions, regulators'
     trialDay,
   s: 21;
@@ -11673,29 +10932,24 @@ export const,
       'Portfolio analysis'
       'Market research'
     ]
-<<<<<<< HEAD
     roi: '300% improvement in blockchain intelligence'
     competitors: [
-=======
     ro,
   i: '300% improvement in blockchain intelligence'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Chainalysis'
       'Elliptic'
       'CipherTrace'
       'Blockchain.com'
       'Etherscan'
     ]
-<<<<<<< HEAD
     marketSize: '$1.2B blockchain analytics market'
     growthRate: '65% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-cloud-cost-optimizer'
     name: 'AI Cloud Cost Optimizer',
@@ -11703,7 +10957,6 @@ export const,
     price: '$199',
     period: '/month',
     description:,
-=======
     marketSiz,
   e: '$1.2B blockchain analytics market'
     growthRat,
@@ -11732,7 +10985,6 @@ export const,
   d: '/month'
     descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Intelligent cloud cost optimization platform that automatically analyzes usage patterns and recommends cost-saving strategies. Works with AWS, Azure, and Google Cloud.'
     feature,
   s: [;
@@ -11747,7 +10999,6 @@ export const,
       'Detailed reporting'
       'API integration'
     ]
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-500 to-cyan-600'
@@ -11755,7 +11006,6 @@ export const,
     link: 'https://ziontechgroup.com/ai-cloud-cost-optimizer',
     marketPosition: 'Leading cloud cost optimization with 40% average cost reduction',
     targetAudience:,
-=======
     popula,
   r: true;
     ico,
@@ -11771,7 +11021,6 @@ export const,
   n: 'Leading cloud cost optimization with 40% average cost reduction'
     targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'DevOps teams, cloud architects, IT managers, startups, enterprise companies'
     trialDay,
   s: 21;
@@ -11806,29 +11055,24 @@ export const,
       'Budget management'
       'Performance optimization'
     ]
-<<<<<<< HEAD
     roi: '40% reduction in cloud costs'
     competitors: [
-=======
     ro,
   i: '40% reduction in cloud costs'
     competitor,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'CloudHealth'
       'CloudCheckr'
       'ParkMyCloud'
       'Cloudability'
       'AWS Cost Explorer'
     ]
-<<<<<<< HEAD
     marketSize: '$4.8B cloud cost management market'
     growthRate: '52% annual growth'
     contactInfo: mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   }
     id: 'ai-database-performance-monitor'
     name: 'AI Database Performance Monitor',
@@ -11838,7 +11082,6 @@ export const,
     description:,
       'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.'
     features: [
-=======
     marketSiz,
   e: '$4.8B cloud cost management market'
     growthRat,
@@ -11870,19 +11113,16 @@ export const,
       'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.'
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI performance analysis'
       'Query optimization'
       'Real-time monitoring'
       'Performance alerts'
       'Capacity planning'
       'Security monitoring'
-<<<<<<< HEAD
       'Backup monitoring',
       'Custom dashboards',
       'API access',
-      'Multi-database support',
-    ],
+      'Multi-database support'],
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal']
     support: 'Dedicated health coach, community support, and 24/7 platform assistance.'
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II']
@@ -11905,8 +11145,7 @@ export const,
       yearly: 790;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '15 minutes',
-    }
+      setupTime: '15 minutes'}
     features: [
       'Inbox labeling and prioritization',
       'On-brand response templates',
@@ -11918,8 +11157,7 @@ export const,
     benefits: [,
       'Cut response time by 60%',
       'Deflect 3050% routine tickets',
-      'Improve CSAT and NPS',
-    ],
+      'Improve CSAT and NPS'],
     targetAudience: ['Support teams', 'Sales ops', 'Founders', 'Agencies']
     marketPosition: 'Alternatives include Superhuman AI and Front AI. Differentiator: policy guardrails and CRM context sync.',
     competitors: ['Superhuman', 'Front', 'Zendesk AI']
@@ -11931,8 +11169,7 @@ export const,
     useCases: [,
       'Support autoreplies',
       'Sales follow-ups',
-      'Vendor coordination',
-    ],
+      'Vendor coordination'],
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack']
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II']
@@ -11955,7 +11192,6 @@ export const,
       currency: 'USD',
       trialDays: 7;
       setupTime: '10 minutes',
-=======
       'Backup monitoring'
       'Custom dashboards'
       'API access'
@@ -11983,8 +11219,7 @@ export const,
     ratin,
   g: 4.6;
     review,
-  s: 134,
-  }
+  s: 134}
     i,
   d: 'ai-email-responder-pro'
     nam,
@@ -12068,8 +11303,7 @@ export const,
     ratin,
   g: 4.7;
     review,
-  s: 46,
-  }
+  s: 46}
     i,
   d: 'mobile-conversational-surveys'
     nam,
@@ -12091,7 +11325,6 @@ export const,
   s: 7,
       setupTim,
   e: '10 minutes'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     feature,
   s: [;
@@ -12100,7 +11333,6 @@ export const,
       'Embeddable widget'
       'CSV/JSON export'
       'Webhook triggers'
-<<<<<<< HEAD
     ],
     benefits: [,
       '+35% completion rate vs. forms',
@@ -12136,14 +11368,12 @@ export const,
       yearly: 390;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '5 minutes',
-    }
+      setupTime: '5 minutes'}
     features: [
       'Industry templates',
       'Automations',
       'Calendar & Gantt',
-      'Role-based permissions',
-    ],
+      'Role-based permissions'],
     benefits: ['Reduce setup time by 80%', 'Consistency across teams']
     targetAudience: ['Agencies', 'Studios', 'SMBs']
     marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',
@@ -12175,14 +11405,12 @@ export const,
       yearly: 1290;
       currency: 'USD',
       trialDays: 7;
-      setupTime: '1 day',
-    }
+      setupTime: '1 day'}
     features: [
       'Ticketing & check-in',
       'Session builder',
       'Email campaigns',
-      'Live polls & Q&A',
-    ],
+      'Live polls & Q&A'],
     benefits: ['Launch events faster', 'Better attendee engagement']
     targetAudience: ['Conferences', 'Meetups', 'Communities']
     marketPosition: 'Lean alternative to Hopin and Eventbrite with richer analytics.',
@@ -12213,14 +11441,12 @@ export const,
       yearly: 990;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '1 hour',
-    }
+      setupTime: '1 hour'}
     features: [
       'Custom links',
       'Attribution windows',
       'Coupon attribution',
-      'Payout exports',
-    ],
+      'Payout exports'],
     benefits: ['Grow revenue via affiliates', 'Reduce fraud']
     targetAudience: ['Ecommerce', 'SaaS']
     marketPosition: 'Simpler than Impact and PartnerStack with transparent pricing.',
@@ -12252,14 +11478,12 @@ export const,
       yearly: 290;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '5 minutes',
-    }
+      setupTime: '5 minutes'}
     features: [
       'Goals & funnels',
       'Weekly insights email',
       'Anomaly alerts',
-      'Shareable dashboards',
-    ],
+      'Shareable dashboards'],
     benefits: ['Know what works', 'Focus on actions']
     targetAudience: ['Founders', 'Marketers', 'Agencies']
     marketPosition: 'Alternative to Plausible and Fathom with built-in insights.',
@@ -12290,14 +11514,12 @@ export const,
       yearly: 590;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '2 hours',
-    }
+      setupTime: '2 hours'}
     features: [
       'Email-to-ticket',
       'SLA timers',
       'Macros/automations',
-      'Self-serve portal',
-    ],
+      'Self-serve portal'],
     benefits: ['Shorter MTTR', 'Fewer escalations']
     targetAudience: ['MSPs', 'IT teams']
     marketPosition: 'Lightweight alternative to Zendesk and Freshservice.',
@@ -12329,14 +11551,12 @@ export const,
       yearly: 790;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '1 hour',
-    }
+      setupTime: '1 hour'}
     features: [
       'Self-service portal',
       'Label generation',
       'Return reasons analytics',
-      'Exchanges & store credit',
-    ],
+      'Exchanges & store credit'],
     benefits: ['Higher retention', 'Lower support load']
     targetAudience: ['D2C brands', 'Marketplaces']
     marketPosition: 'Competitive with Loop and Returnly at simpler pricing.',
@@ -12368,14 +11588,12 @@ export const,
       yearly: 490;
       currency: 'USD',
       trialDays: 7;
-      setupTime: '20 minutes',
-    }
+      setupTime: '20 minutes'}
     features: [
       'Sequences',
       'Rules & triggers',
       'Open/click tracking',
-      'AI snippets',
-    ],
+      'AI snippets'],
     benefits: ['Higher reply rate', 'Fewer manual tasks']
     targetAudience: ['SMB sales teams', 'Agencies']
     marketPosition: 'Alternative to Lemlist and Mailshake with stricter safety.',
@@ -12406,14 +11624,12 @@ export const,
       yearly: 390;
       currency: 'USD',
       trialDays: 7;
-      setupTime: '5 minutes',
-    }
+      setupTime: '5 minutes'}
     features: [
       'Speaker diarization',
       'Timecodes',
       'Chapters',
-      'Show notes drafts',
-    ],
+      'Show notes drafts'],
     benefits: ['Accessibility', 'SEO-ready content']
     targetAudience: ['Podcasters', 'Agencies']
     marketPosition: 'Alternative to Descript transcripts with simpler pricing.',
@@ -12445,14 +11661,12 @@ export const,
       yearly: 1990;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '1 day',
-    }
+      setupTime: '1 day'}
     features: [
       'Entity/relation extraction',
       'Schema editor',
       'Vector + graph search',
-      'Lineage view',
-    ],
+      'Lineage view'],
     benefits: ['Higher RAG precision', 'Governance & explainability']
     targetAudience: ['Data teams', 'Platform engineering', 'Compliance']
     marketPosition: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.',
@@ -12483,14 +11697,12 @@ export const,
       yearly: 2990;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '1 day',
-    }
+      setupTime: '1 day'}
     features: [
       'Provider adapters',
       'Policy engine',
       'PII redaction',
-      'Rate limits',
-    ],
+      'Rate limits'],
     benefits: ['Control spend', 'Reduce risk']
     targetAudience: ['Platform teams', 'AI product']
     marketPosition: 'Comparable to OpenRouter/EdenAI, adds governance and audit.',
@@ -12522,14 +11734,12 @@ export const,
       yearly: 2490;
       currency: 'USD',
       trialDays: 7;
-      setupTime: '1 day',
-    }
+      setupTime: '1 day'}
     features: [
       'Event collector',
       'Connector library',
       'dbt models',
-      'Grafana dashboards',
-    ],
+      'Grafana dashboards'],
     benefits: ['Faster analytics ROI', 'Lower platform toil']
     targetAudience: ['Data teams', 'Ops']
     marketPosition: 'Starter alternative to building bespoke stacks.',
@@ -12560,14 +11770,12 @@ export const,
       yearly: 1290;
       currency: 'USD',
       trialDays: 14;
-      setupTime: '2 hours',
-    }
+      setupTime: '2 hours'}
     features: [
       'Schema registry',
       'Diff viewer',
       'CI gates',
-      'Backfill helpers',
-    ],
+      'Backfill helpers'],
     benefits: ['Fewer incidents', 'Faster changes']
     targetAudience: ['Data platform', 'Analytics engineers']
     marketPosition: 'Complements dbt and warehouse-native governance.',
@@ -12588,7 +11796,7 @@ export const,
     customers: 19;
     rating: 4.6;
     reviews: 6;
-  },];
+  }];
 // Helper functions;
 export const getServicesByCategory = (category: string) =>;
     roi: 'Reduce data breakage incidents by 5070%.'
@@ -12614,7 +11822,6 @@ realImplementation: true;
 implementationDetails: 'Template gallery, response store, analytics, export jobs.'
     rating: 4.6;
     reviews: 6;
-=======
     ]
     benefit,
   s: [,
@@ -12660,8 +11867,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.6;
     review,
-  s: 22,
-  }
+  s: 22}
     i,
   d: 'niche-productivity-planner'
     nam,
@@ -12732,8 +11938,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.5;
     review,
-  s: 14,
-  }
+  s: 14}
     i,
   d: 'event-management-dashboard'
     nam,
@@ -12803,8 +12008,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.6;
     review,
-  s: 18,
-  }
+  s: 18}
     i,
   d: 'affiliate-tracking-suite'
     nam,
@@ -12874,8 +12078,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.4;
     review,
-  s: 12,
-  }
+  s: 12}
     i,
   d: 'smb-website-analytics'
     nam,
@@ -12946,8 +12149,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.7;
     review,
-  s: 28,
-  }
+  s: 28}
     i,
   d: 'it-helpdesk-lite'
     nam,
@@ -13017,8 +12219,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.5;
     review,
-  s: 31,
-  }
+  s: 31}
     i,
   d: 'ecommerce-return-manager'
     nam,
@@ -13090,8 +12291,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.4;
     review,
-  s: 19,
-  }
+  s: 19}
     i,
   d: 'auto-email-followups'
     nam,
@@ -13161,8 +12361,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.5;
     review,
-  s: 17,
-  }
+  s: 17}
     i,
   d: 'podcast-transcription-studio'
     nam,
@@ -13232,8 +12431,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.7;
     review,
-  s: 52,
-  }
+  s: 52}
     i,
   d: 'ai-knowledge-graph-studio'
     nam,
@@ -13304,8 +12502,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.8;
     review,
-  s: 11,
-  }
+  s: 11}
     i,
   d: 'llm-guarded-api-gateway'
     nam,
@@ -13375,8 +12572,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.8;
     review,
-  s: 13,
-  }
+  s: 13}
     i,
   d: 'serverless-lakehouse-starter'
     nam,
@@ -13447,8 +12643,7 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.6;
     review,
-  s: 7,
-  }
+  s: 7}
     i,
   d: 'data-contracts-hub'
     nam,
@@ -13518,10 +12713,9 @@ implementationDetails: 'Template gallery, response store, analytics, export jobs
     ratin,
   g: 4.6;
     review,
-  s: 6,
-  },];
+  s: 6}];
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) =>;
     ro,
   i: 'Reduce data breakage incidents by 5070%.'
@@ -13544,11 +12738,10 @@ export const getServicesByCategory = (categor,)
     customer,
   s: 19;
     review,
-  s: 6,
-  }
+  s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) =>;
   return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPositio,
@@ -13564,16 +12757,13 @@ implementationDetail,
     ratin,
   g: 4.6,
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 6}
 ];
 ;
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) =>: unknown;
   return realMicroSaasServices.filter (service => service.category === category);
-<<<<<<< HEAD
 market_position: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
 competitors: ['TypeformSurveySparrowTally'];
 tech_stack: ['Next.jsSupabaseVercel EdgeOpenAI'];
@@ -13611,7 +12801,6 @@ color: 'from - purple - 600 to - pink - 600'
 popular: false;
 launch_date: '2025 - 01 - 20'
 customers: 60;
-=======
 market_positio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'
 competitor,
@@ -13653,8 +12842,7 @@ realImplementatio,
 implementationDetail,
   s: 'Template JSON schemas, rules engine, import/export.'
 review,
-  s: 22,
-}
+  s: 22}
 market_positio,
   n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'
 competitor,
@@ -13685,7 +12873,6 @@ launch_dat,
   e: '2025 - 01 - 20'
 customer,
   s: 60;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 export const serviceCategories = [
   'Legal Technology'
   'Customer Service & Support'
@@ -13712,17 +12899,13 @@ export const serviceCategories = [
   'Financial Technology'
   'Education Technology'
   'Enterprise IT'
-<<<<<<< HEAD
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research',
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity',
 reviews: 14;
-=======
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'
 review,
-  s: 14,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-}
+  s: 14}
 ;
 export const service_categories = [
   'Legal Technology',
@@ -13749,8 +12932,7 @@ export const service_categories = [
   'Biotechnology & Healthcare',
   'Financial Technology',
   'Education Technology',
-  'Enterprise IT',
-];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
+  'Enterprise IT'];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'
   'Enterprise IT'
@@ -13766,7 +12948,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   }
 }
 ;
-<<<<<<< HEAD
 export interface RealMicroSaasService {;
 export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
@@ -13803,8 +12984,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-customer-service-automation';
@@ -13839,8 +13019,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-seo-optimizer-pro';
@@ -13875,8 +13054,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-video-editing-suite';
@@ -13911,8 +13089,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-data-analytics-platform';
@@ -13947,8 +13124,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-hr-recruitment-platform';
@@ -13983,8 +13159,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-sales-automation-platform';
@@ -14019,8 +13194,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-market-research-platform';
@@ -14055,8 +13229,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-blockchain-analytics';
@@ -14091,8 +13264,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-cloud-cost-optimizer';
@@ -14127,8 +13299,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-database-performance-monitor';
@@ -14139,8 +13310,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     description: 'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.';
     features: [
       'AI performance analysisQuery optimizationReal-time monitoringPerformance alertsCapacity planningSecurity monitoringBackup monitoringCustom dashboards';
-      'API accessMulti-database support',
-    ];,
+      'API accessMulti-database support'];,
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'];
     support: 'Dedicated health coach, community support, and 24/7 platform assistance.';
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II'];
@@ -14152,7 +13322,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     customers: 1100;
     rating: 4.6}
     reviews: 134}
-=======
 export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: '35% annual growth'}
     contactInf,
@@ -14307,7 +13476,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 134}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}
@@ -14320,7 +13488,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate'
     ];
-<<<<<<< HEAD
     benefits: [
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
     ];
@@ -14720,7 +13887,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     customers: 19;
     rating: 4.6;
     reviews: 6;
-=======
     benefit,
   s: [,
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
@@ -14764,8 +13930,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 46,
-  };
+  s: 46};
   {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}
     pric,
@@ -14814,8 +13979,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 22,
-  };
+  s: 22};
   {/* TODO: Fix JSX expression */}
   y: 'Operations'}
     pric,
@@ -14864,8 +14028,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 14,
-  };
+  s: 14};
   {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}
     pric,
@@ -14914,8 +14077,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 18,
-  };
+  s: 18};
   {/* TODO: Fix JSX expression */}
   y: 'Growth'}
     pric,
@@ -14964,8 +14126,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.4;
     review,
-  s: 12,
-  };
+  s: 12};
   {/* TODO: Fix JSX expression */}
   y: 'Analytics'}
     pric,
@@ -15014,8 +14175,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 28,
-  };
+  s: 28};
   {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}
     pric,
@@ -15064,8 +14224,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 31,
-  };
+  s: 31};
   {/* TODO: Fix JSX expression */}
   y: 'Ecommerce'}
     pric,
@@ -15114,8 +14273,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.4;
     review,
-  s: 19,
-  };
+  s: 19};
   {/* TODO: Fix JSX expression */}
   y: 'Sales'}
     pric,
@@ -15164,8 +14322,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 17,
-  };
+  s: 17};
   {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}
     pric,
@@ -15214,8 +14371,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 52,
-  };
+  s: 52};
   {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}
     pric,
@@ -15264,8 +14420,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 11,
-  };
+  s: 11};
   {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}
     pric,
@@ -15314,8 +14469,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 13,
-  };
+  s: 13};
   {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}
     pric,
@@ -15364,8 +14518,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 7,
-  };
+  s: 7};
   {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}
     pric,
@@ -15414,23 +14567,18 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
 };
-<<<<<<< HEAD
 export const getServicesByPriceRange = (min: number) max: number) => {;
   return realMicroSaasServices.filter(service => {),
-=======
-export const getServicesByPriceRange = (mi,)
+export const getServicesByPriceRange = (mi)
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseFloat(service.price.replace('$') '').replace(} ''));
     return price >= min && (max === Infinity || price <= max);
   });
@@ -15453,7 +14601,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   }
 }
 ;
-<<<<<<< HEAD
 export interface RealMicroSaasService {;
 export const realMicroSaasServices: RealMicroSaasService[] = [;
   // AI-Powered Business Solutions;
@@ -15490,8 +14637,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-customer-service-automation';
@@ -15526,8 +14672,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-seo-optimizer-pro';
@@ -15562,8 +14707,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-video-editing-suite';
@@ -15598,8 +14742,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-data-analytics-platform';
@@ -15634,8 +14777,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-hr-recruitment-platform';
@@ -15670,8 +14812,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-sales-automation-platform';
@@ -15706,8 +14847,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-market-research-platform';
@@ -15742,8 +14882,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-blockchain-analytics';
@@ -15778,8 +14917,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-cloud-cost-optimizer';
@@ -15814,8 +14952,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
   };
   {;
     id: 'ai-database-performance-monitor';
@@ -15826,8 +14963,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     description: 'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.';
     features: [
       'AI performance analysisQuery optimizationReal-time monitoringPerformance alertsCapacity planningSecurity monitoringBackup monitoringCustom dashboards';
-      'API accessMulti-database support',
-    ];,
+      'API accessMulti-database support'];,
     integrations: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'];
     support: 'Dedicated health coach, community support, and 24/7 platform assistance.';
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II'];
@@ -15839,7 +14975,6 @@ export const realMicroSaasServices: RealMicroSaasService[] = [;
     customers: 1100;
     rating: 4.6}
     reviews: 134}
-=======
 export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   e: '35% annual growth'}
     contactInf,
@@ -15994,7 +15129,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
   g: 4.6}
     review,
   s: 134}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   {/* TODO: Fix JSX expression */}
   y: 'Productivity & Automation'}
@@ -16007,7 +15141,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
       'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
   integrationMetrics: FRT/ART, deflection rate'
     ];
-<<<<<<< HEAD
     benefits: [
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
     ];
@@ -16407,7 +15540,6 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     customers: 19;
     rating: 4.6;
     reviews: 6;
-=======
     benefit,
   s: [,
       'Cut response time by 60%Deflect 3050% routine ticketsImprove CSAT and NPS'
@@ -16451,8 +15583,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 46,
-  };
+  s: 46};
   {/* TODO: Fix JSX expression */}
   y: 'Marketing & Research'}
     pric,
@@ -16501,8 +15632,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 22,
-  };
+  s: 22};
   {/* TODO: Fix JSX expression */}
   y: 'Operations'}
     pric,
@@ -16551,8 +15681,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 14,
-  };
+  s: 14};
   {/* TODO: Fix JSX expression */}
   y: 'Media & Events'}
     pric,
@@ -16601,8 +15730,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 18,
-  };
+  s: 18};
   {/* TODO: Fix JSX expression */}
   y: 'Growth'}
     pric,
@@ -16651,8 +15779,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.4;
     review,
-  s: 12,
-  };
+  s: 12};
   {/* TODO: Fix JSX expression */}
   y: 'Analytics'}
     pric,
@@ -16701,8 +15828,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 28,
-  };
+  s: 28};
   {/* TODO: Fix JSX expression */}
   y: 'IT & Operations'}
     pric,
@@ -16751,8 +15877,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 31,
-  };
+  s: 31};
   {/* TODO: Fix JSX expression */}
   y: 'Ecommerce'}
     pric,
@@ -16801,8 +15926,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.4;
     review,
-  s: 19,
-  };
+  s: 19};
   {/* TODO: Fix JSX expression */}
   y: 'Sales'}
     pric,
@@ -16851,8 +15975,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.5;
     review,
-  s: 17,
-  };
+  s: 17};
   {/* TODO: Fix JSX expression */}
   y: 'Media & Content'}
     pric,
@@ -16901,8 +16024,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.7;
     review,
-  s: 52,
-  };
+  s: 52};
   {/* TODO: Fix JSX expression */}
   y: 'AI & Data'}
     pric,
@@ -16951,8 +16073,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 11,
-  };
+  s: 11};
   {/* TODO: Fix JSX expression */}
   y: 'AI & Platform'}
     pric,
@@ -17001,8 +16122,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.8;
     review,
-  s: 13,
-  };
+  s: 13};
   {/* TODO: Fix JSX expression */}
   y: 'Data & Analytics'}
     pric,
@@ -17051,8 +16171,7 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 7,
-  };
+  s: 7};
   {/* TODO: Fix JSX expression */}
   y: 'Data & Platform'}
     pric,
@@ -17101,23 +16220,18 @@ export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
     ratin,
   g: 4.6;
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 6}
 ];
 // Helper functions;
-export const getServicesByCategory = (categor,)
+export const getServicesByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
   return realMicroSaasServices.filter(service => service.category === category)}
 };
-<<<<<<< HEAD
 export const getServicesByPriceRange = (min: number) max: number) => {;
   return realMicroSaasServices.filter(service => {),
-=======
-export const getServicesByPriceRange = (mi,)
+export const getServicesByPriceRange = (mi)
   n: number) ma,
   x: number) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseFloat(service.price.replace('$') '').replace(} ''));
     return price >= min && (max === Infinity || price <= max);
   });
@@ -17163,7 +16277,7 @@ i,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string, } } export const,
+  s: string} } export const,
   realMicroSaasServices: RealMicroSaasService[] = [ // AI-Powered Business Solutions,
   id: 'ai-legal-document-generator',' nam,
   e: 'AI Legal Document Generator',' taglin,
@@ -17171,7 +16285,7 @@ i,
   e: '$89',' perio,
   d: '/month', descriptio,
   n: ' 'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.', feature,
-  s: [' '500+ legal document templates',' 'AI-powered compliance checking',' 'Real-time legal updates',' 'Multi-jurisdiction support',' 'Electronic signature integration',' 'Document version control',' 'Legal research integration',' 'Client portal access',' 'Automated legal advice',' '24/7 legal support', ], popula,
+  s: [' '500+ legal document templates',' 'AI-powered compliance checking',' 'Real-time legal updates',' 'Multi-jurisdiction support',' 'Electronic signature integration',' 'Document version control',' 'Legal research integration',' 'Client portal access',' 'Automated legal advice',' '24/7 legal support'], popula,
   r: true,' ico,
   n: '⚖️',' colo,
   r: 'from-blue-500 to-indigo-600',' textColo,
@@ -17184,9 +16298,9 @@ i,
   e: '15 minutes',' categor,
   y: 'Legal Technology', realServic,
   e: true, technolog,
-  y: [' 'Natural Language Processing',' 'Machine Learning',' 'Legal AI',' 'Document Generation',' 'Compliance Engine', ], integration,
-  s: [' 'DocuSign',' 'Adobe Sign',' 'Clio',' 'PracticePanther',' 'LawPay',' 'QuickBooks', ], useCase,
-  s: [' 'Contract generation',' 'Legal form creation',' 'Compliance documentation',' 'Client onboarding',' 'Legal research', ],' ro,
+  y: [' 'Natural Language Processing',' 'Machine Learning',' 'Legal AI',' 'Document Generation',' 'Compliance Engine'], integration,
+  s: [' 'DocuSign',' 'Adobe Sign',' 'Clio',' 'PracticePanther',' 'LawPay',' 'QuickBooks'], useCase,
+  s: [' 'Contract generation',' 'Legal form creation',' 'Compliance documentation',' 'Client onboarding',' 'Legal research'],' ro,
   i: '300% time savings on document creation',' competitor,
   s: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net'],' marketSiz,
   e: '$2.1B legal tech market',' growthRat,
@@ -17196,14 +16310,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-customer-service-automation',' nam,
   e: 'AI Customer Service Automation',' taglin,
   e: '24/7 intelligent customer support with AI chatbots',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n: ' 'Advanced AI-powered customer service automation that handles 80% of customer inquiries automatically. Provides human-like responses and seamless escalation to human agents.', feature,
-  s: [' 'Multi-language support (50+ languages)',' 'Natural conversation flow',' 'Sentiment analysis',' 'Automatic ticket routing',' 'Knowledge base integration',' 'Voice and text support',' 'Analytics dashboard',' 'Custom branding',' 'API integrations',' 'Real-time learning', ], popula,
+  s: [' 'Multi-language support (50+ languages)',' 'Natural conversation flow',' 'Sentiment analysis',' 'Automatic ticket routing',' 'Knowledge base integration',' 'Voice and text support',' 'Analytics dashboard',' 'Custom branding',' 'API integrations',' 'Real-time learning'], popula,
   r: true,' ico,
   n: '🤖',' colo,
   r: 'from-green-500 to-emerald-600',' textColo,
@@ -17216,9 +16330,9 @@ i,
   e: '2 hours',' categor,
   y: 'Customer Service & Support', realServic,
   e: true, technolog,
-  y: [' 'Natural Language Processing',' 'Machine Learning',' 'Sentiment Analysis',' 'Voice Recognition',' 'Chatbot AI', ], integration,
-  s: [' 'Zendesk',' 'Intercom',' 'Freshdesk',' 'Slack',' 'Microsoft Teams',' 'Shopify', ], useCase,
-  s: [' 'Customer support',' 'Order tracking',' 'Product inquiries',' 'Technical support',' 'Appointment booking', ],' ro,
+  y: [' 'Natural Language Processing',' 'Machine Learning',' 'Sentiment Analysis',' 'Voice Recognition',' 'Chatbot AI'], integration,
+  s: [' 'Zendesk',' 'Intercom',' 'Freshdesk',' 'Slack',' 'Microsoft Teams',' 'Shopify'], useCase,
+  s: [' 'Customer support',' 'Order tracking',' 'Product inquiries',' 'Technical support',' 'Appointment booking'],' ro,
   i: '60% reduction in support costs',' competitor,
   s: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to'],' marketSiz,
   e: '$15.8B customer service software market',' growthRat,
@@ -17228,14 +16342,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-seo-optimizer-pro',' nam,
   e: 'AI SEO Optimizer Pro',' taglin,
   e: 'Automated SEO optimization powered by artificial intelligence',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
   n: ' 'Comprehensive SEO automation platform that analyzes, optimizes, and monitors your website performance. Uses AI to identify opportunities and implement best practices automatically.', feature,
-  s: [' 'AI-powered keyword research',' 'Automatic on-page optimization',' 'Competitor analysis',' 'Content optimization suggestions',' 'Technical SEO audits',' 'Ranking tracking',' 'Backlink monitoring',' 'Local SEO optimization',' 'Mobile optimization',' 'Performance analytics', ], popula,
+  s: [' 'AI-powered keyword research',' 'Automatic on-page optimization',' 'Competitor analysis',' 'Content optimization suggestions',' 'Technical SEO audits',' 'Ranking tracking',' 'Backlink monitoring',' 'Local SEO optimization',' 'Mobile optimization',' 'Performance analytics'], popula,
   r: true,' ico,
   n: '📈',' colo,
   r: 'from-purple-500 to-pink-600',' textColo,
@@ -17248,9 +16362,9 @@ i,
   e: '1 hour',' categor,
   y: 'Digital Marketing & SEO', realServic,
   e: true, technolog,
-  y: [' 'Machine Learning',' 'Natural Language Processing',' 'Data Analytics',' 'SEO Algorithms',' 'Web Crawling', ], integration,
-  s: [' 'Google Analytics',' 'Google Search Console',' 'WordPress',' 'Shopify',' 'WooCommerce',' 'HubSpot', ], useCase,
-  s: [' 'Website optimization',' 'Content marketing',' 'Local business SEO',' 'E-commerce SEO',' 'Blog optimization', ],' ro,
+  y: [' 'Machine Learning',' 'Natural Language Processing',' 'Data Analytics',' 'SEO Algorithms',' 'Web Crawling'], integration,
+  s: [' 'Google Analytics',' 'Google Search Console',' 'WordPress',' 'Shopify',' 'WooCommerce',' 'HubSpot'], useCase,
+  s: [' 'Website optimization',' 'Content marketing',' 'Local business SEO',' 'E-commerce SEO',' 'Blog optimization'],' ro,
   i: '200% increase in organic traffic in 6 months',' competitor,
   s: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath'],' marketSiz,
   e: '$8.2B SEO tools market',' growthRat,
@@ -17260,14 +16374,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-video-editing-suite',' nam,
   e: 'AI Video Editing Suite',' taglin,
   e: 'Professional video editing powered by artificial intelligence',' pric,
   e: '$299',' perio,
   d: '/month', descriptio,
   n: ' 'Revolutionary video editing platform that uses AI to automate complex editing tasks. Perfect for content creators, marketers, and video professionals who need high-quality output quickly.', feature,
-  s: [' 'AI-powered scene detection',' 'Automatic color correction',' 'Smart audio enhancement',' 'Background removal',' 'Text-to-speech generation',' 'Auto-captioning',' 'Video templates library',' 'Cloud rendering',' 'Collaborative editing',' 'Export to multiple formats', ], popula,
+  s: [' 'AI-powered scene detection',' 'Automatic color correction',' 'Smart audio enhancement',' 'Background removal',' 'Text-to-speech generation',' 'Auto-captioning',' 'Video templates library',' 'Cloud rendering',' 'Collaborative editing',' 'Export to multiple formats'], popula,
   r: true,' ico,
   n: '🎬',' colo,
   r: 'from-red-500 to-pink-600',' textColo,
@@ -17280,11 +16394,11 @@ i,
   e: '30 minutes',' categor,
   y: 'Creative & Media', realServic,
   e: true, technolog,
-  y: [' 'Computer Vision',' 'Machine Learning',' 'Audio Processing',' 'Video Compression',' 'Cloud Computing', ], integration,
-  s: [' 'Adobe Creative Suite',' 'Final Cut Pro',' 'DaVinci Resolve',' 'YouTube',' 'Vimeo',' 'Social media platforms', ], useCase,
-  s: [' 'Social media content',' 'Marketing videos',' 'Product demos',' 'Educational content',' 'Event highlights', ],' ro,
+  y: [' 'Computer Vision',' 'Machine Learning',' 'Audio Processing',' 'Video Compression',' 'Cloud Computing'], integration,
+  s: [' 'Adobe Creative Suite',' 'Final Cut Pro',' 'DaVinci Resolve',' 'YouTube',' 'Vimeo',' 'Social media platforms'], useCase,
+  s: [' 'Social media content',' 'Marketing videos',' 'Product demos',' 'Educational content',' 'Event highlights'],' ro,
   i: '80% reduction in editing time', competitor,
-  s: [' 'Adobe Premiere Pro',' 'Final Cut Pro',' 'DaVinci Resolve',' 'Camtasia',' 'Filmora', ],' marketSiz,
+  s: [' 'Adobe Premiere Pro',' 'Final Cut Pro',' 'DaVinci Resolve',' 'Camtasia',' 'Filmora'],' marketSiz,
   e: '$3.2B video editing software market',' growthRat,
   e: '45% annual growth', contactInf,
   o: ' mobil,
@@ -17292,14 +16406,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-data-analytics-platform',' nam,
   e: 'AI Data Analytics Platform',' taglin,
   e: 'Transform raw data into actionable insights with AI',' pric,
   e: '$399',' perio,
   d: '/month', descriptio,
   n: ' 'Advanced data analytics platform that uses AI to automatically discover patterns, generate insights, and create predictive models. Perfect for businesses looking to make data-driven decisions.', feature,
-  s: [' 'AI-powered data discovery',' 'Automated pattern recognition',' 'Predictive analytics',' 'Real-time data processing',' 'Interactive dashboards',' 'Data visualization',' 'Custom reporting',' 'Data integration tools',' 'API access',' 'Advanced security', ], popula,
+  s: [' 'AI-powered data discovery',' 'Automated pattern recognition',' 'Predictive analytics',' 'Real-time data processing',' 'Interactive dashboards',' 'Data visualization',' 'Custom reporting',' 'Data integration tools',' 'API access',' 'Advanced security'], popula,
   r: true,' ico,
   n: '📊',' colo,
   r: 'from-cyan-500 to-blue-600',' textColo,
@@ -17312,9 +16426,9 @@ i,
   e: '4 hours',' categor,
   y: 'Data & Analytics', realServic,
   e: true, technolog,
-  y: [' 'Machine Learning',' 'Data Mining',' 'Statistical Analysis',' 'Big Data Processing',' 'Predictive Modeling', ], integration,
-  s: [' 'Google Analytics',' 'Salesforce',' 'HubSpot',' 'MySQL',' 'PostgreSQL',' 'AWS',' 'Google Cloud', ], useCase,
-  s: [' 'Business intelligence',' 'Customer analytics',' 'Market research',' 'Performance tracking',' 'Risk assessment', ],' ro,
+  y: [' 'Machine Learning',' 'Data Mining',' 'Statistical Analysis',' 'Big Data Processing',' 'Predictive Modeling'], integration,
+  s: [' 'Google Analytics',' 'Salesforce',' 'HubSpot',' 'MySQL',' 'PostgreSQL',' 'AWS',' 'Google Cloud'], useCase,
+  s: [' 'Business intelligence',' 'Customer analytics',' 'Market research',' 'Performance tracking',' 'Risk assessment'],' ro,
   i: '150% improvement in decision-making speed',' competitor,
   s: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo'],' marketSiz,
   e: '$23.4B business intelligence market',' growthRat,
@@ -17324,14 +16438,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-hr-recruitment-platform',' nam,
   e: 'AI HR Recruitment Platform',' taglin,
   e: 'Streamline hiring with AI-powered recruitment automation',' pric,
   e: '$179',' perio,
   d: '/month', descriptio,
   n: ' 'Intelligent HR recruitment platform that automates candidate sourcing, screening, and assessment. Uses AI to match the best candidates with job requirements and company culture.', feature,
-  s: [' 'AI candidate matching',' 'Automated resume screening',' 'Skill assessment tools',' 'Interview scheduling',' 'Background verification',' 'Diversity analytics',' 'Candidate tracking',' 'Performance analytics',' 'Integration with job boards',' 'Mobile app access', ], popula,
+  s: [' 'AI candidate matching',' 'Automated resume screening',' 'Skill assessment tools',' 'Interview scheduling',' 'Background verification',' 'Diversity analytics',' 'Candidate tracking',' 'Performance analytics',' 'Integration with job boards',' 'Mobile app access'], popula,
   r: true,' ico,
   n: '👥',' colo,
   r: 'from-indigo-500 to-purple-600',' textColo,
@@ -17344,11 +16458,11 @@ i,
   e: '2 hours',' categor,
   y: 'Human Resources', realServic,
   e: true, technolog,
-  y: [' 'Natural Language Processing',' 'Machine Learning',' 'Predictive Analytics',' 'AI Matching',' 'Automation', ], integration,
-  s: [' 'LinkedIn',' 'Indeed',' 'Glassdoor',' 'Workday',' 'BambooHR',' 'Slack',' 'Microsoft Teams', ], useCase,
-  s: [' 'Candidate sourcing',' 'Resume screening',' 'Skill assessment',' 'Interview coordination',' 'Hiring analytics', ],' ro,
+  y: [' 'Natural Language Processing',' 'Machine Learning',' 'Predictive Analytics',' 'AI Matching',' 'Automation'], integration,
+  s: [' 'LinkedIn',' 'Indeed',' 'Glassdoor',' 'Workday',' 'BambooHR',' 'Slack',' 'Microsoft Teams'], useCase,
+  s: [' 'Candidate sourcing',' 'Resume screening',' 'Skill assessment',' 'Interview coordination',' 'Hiring analytics'],' ro,
   i: '50% reduction in time-to-hire', competitor,
-  s: [' 'Workday',' 'BambooHR',' 'Greenhouse',' 'Lever',' 'SmartRecruiters', ],' marketSiz,
+  s: [' 'Workday',' 'BambooHR',' 'Greenhouse',' 'Lever',' 'SmartRecruiters'],' marketSiz,
   e: '$2.8B recruitment software market',' growthRat,
   e: '42% annual growth', contactInf,
   o: ' mobil,
@@ -17356,14 +16470,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-sales-automation-platform',' nam,
   e: 'AI Sales Automation Platform',' taglin,
   e: 'Boost sales performance with intelligent automation',' pric,
   e: '$249',' perio,
   d: '/month', descriptio,
   n: ' 'Comprehensive sales automation platform that uses AI to identify leads, prioritize opportunities, and optimize sales processes. Increases conversion rates and reduces sales cycle time.', feature,
-  s: [' 'AI lead scoring',' 'Sales forecasting',' 'Pipeline management',' 'Email automation',' 'Meeting scheduling',' 'Performance analytics',' 'CRM integration',' 'Mobile sales app',' 'Real-time notifications',' 'Custom workflows', ], popula,
+  s: [' 'AI lead scoring',' 'Sales forecasting',' 'Pipeline management',' 'Email automation',' 'Meeting scheduling',' 'Performance analytics',' 'CRM integration',' 'Mobile sales app',' 'Real-time notifications',' 'Custom workflows'], popula,
   r: true,' ico,
   n: '💰',' colo,
   r: 'from-yellow-500 to-orange-600',' textColo,
@@ -17376,11 +16490,11 @@ i,
   e: '3 hours',' categor,
   y: 'Sales & CRM', realServic,
   e: true, technolog,
-  y: [' 'Machine Learning',' 'Predictive Analytics',' 'Natural Language Processing',' 'Automation',' 'AI Optimization', ], integration,
-  s: [' 'Salesforce',' 'HubSpot',' 'Pipedrive',' 'Zoho CRM',' 'Microsoft Dynamics',' 'Gmail',' 'Outlook', ], useCase,
-  s: [' 'Lead generation',' 'Sales forecasting',' 'Pipeline management',' 'Email campaigns',' 'Performance tracking', ],' ro,
+  y: [' 'Machine Learning',' 'Predictive Analytics',' 'Natural Language Processing',' 'Automation',' 'AI Optimization'], integration,
+  s: [' 'Salesforce',' 'HubSpot',' 'Pipedrive',' 'Zoho CRM',' 'Microsoft Dynamics',' 'Gmail',' 'Outlook'], useCase,
+  s: [' 'Lead generation',' 'Sales forecasting',' 'Pipeline management',' 'Email campaigns',' 'Performance tracking'],' ro,
   i: '35% increase in sales conversion rates', competitor,
-  s: [' 'Salesforce',' 'HubSpot',' 'Pipedrive',' 'Zoho CRM',' 'Freshsales', ],' marketSiz,
+  s: [' 'Salesforce',' 'HubSpot',' 'Pipedrive',' 'Zoho CRM',' 'Freshsales'],' marketSiz,
   e: '$18.6B CRM market',' growthRat,
   e: '33% annual growth', contactInf,
   o: ' mobil,
@@ -17388,14 +16502,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-market-research-platform',' nam,
   e: 'AI Market Research Platform',' taglin,
   e: 'Discover market opportunities with AI-powered research',' pric,
   e: '$159',' perio,
   d: '/month', descriptio,
   n: ' 'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision-making.', feature,
-  s: [' 'AI market analysis',' 'Competitor monitoring',' 'Trend prediction',' 'Customer sentiment analysis',' 'Market size estimation',' 'Custom reports',' 'Data visualization',' 'API access',' 'Real-time updates',' 'Export capabilities', ], popula,
+  s: [' 'AI market analysis',' 'Competitor monitoring',' 'Trend prediction',' 'Customer sentiment analysis',' 'Market size estimation',' 'Custom reports',' 'Data visualization',' 'API access',' 'Real-time updates',' 'Export capabilities'], popula,
   r: true,' ico,
   n: '🔍',' colo,
   r: 'from-teal-500 to-green-600',' textColo,
@@ -17408,11 +16522,11 @@ i,
   e: '2 hours',' categor,
   y: 'Market Research', realServic,
   e: true, technolog,
-  y: [' 'Machine Learning',' 'Natural Language Processing',' 'Data Mining',' 'Predictive Analytics',' 'Web Scraping', ], integration,
-  s: [' 'Google Trends',' 'Social media platforms',' 'News APIs',' 'Financial data sources',' 'Custom databases', ], useCase,
-  s: [' 'Market analysis',' 'Competitor research',' 'Trend identification',' 'Investment decisions',' 'Product development', ],' ro,
+  y: [' 'Machine Learning',' 'Natural Language Processing',' 'Data Mining',' 'Predictive Analytics',' 'Web Scraping'], integration,
+  s: [' 'Google Trends',' 'Social media platforms',' 'News APIs',' 'Financial data sources',' 'Custom databases'], useCase,
+  s: [' 'Market analysis',' 'Competitor research',' 'Trend identification',' 'Investment decisions',' 'Product development'],' ro,
   i: '200% faster market insights generation', competitor,
-  s: [' 'Statista',' 'IBISWorld',' 'Mintel',' 'Euromonitor',' 'Forrester', ],' marketSiz,
+  s: [' 'Statista',' 'IBISWorld',' 'Mintel',' 'Euromonitor',' 'Forrester'],' marketSiz,
   e: '$1.9B market research market',' growthRat,
   e: '28% annual growth', contactInf,
   o: ' mobil,
@@ -17420,14 +16534,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-blockchain-analytics',' nam,
   e: 'AI Blockchain Analytics Platform',' taglin,
   e: 'Advanced blockchain intelligence and analytics',' pric,
   e: '$599',' perio,
   d: '/month', descriptio,
   n: ' 'Comprehensive blockchain analytics platform that uses AI to track transactions, identify patterns, and provide insights into cryptocurrency and blockchain activities.', feature,
-  s: [' 'Real-time transaction monitoring',' 'AI pattern recognition',' 'Risk assessment',' 'Compliance reporting',' 'Portfolio tracking',' 'Market analysis',' 'API integration',' 'Custom alerts',' 'Data export',' 'Multi-chain support', ], popula,
+  s: [' 'Real-time transaction monitoring',' 'AI pattern recognition',' 'Risk assessment',' 'Compliance reporting',' 'Portfolio tracking',' 'Market analysis',' 'API integration',' 'Custom alerts',' 'Data export',' 'Multi-chain support'], popula,
   r: true,' ico,
   n: '🔗',' colo,
   r: 'from-gray-500 to-slate-600',' textColo,
@@ -17440,11 +16554,11 @@ i,
   e: '4 hours',' categor,
   y: 'Blockchain & Cryptocurrency', realServic,
   e: true, technolog,
-  y: [' 'Blockchain Analysis',' 'Machine Learning',' 'Cryptography',' 'Data Analytics',' 'AI Pattern Recognition', ], integration,
-  s: [' 'Ethereum',' 'Bitcoin',' 'Binance Smart Chain',' 'Polygon',' 'Custom blockchain APIs', ], useCase,
-  s: [' 'Transaction monitoring',' 'Risk assessment',' 'Compliance reporting',' 'Portfolio analysis',' 'Market research', ],' ro,
+  y: [' 'Blockchain Analysis',' 'Machine Learning',' 'Cryptography',' 'Data Analytics',' 'AI Pattern Recognition'], integration,
+  s: [' 'Ethereum',' 'Bitcoin',' 'Binance Smart Chain',' 'Polygon',' 'Custom blockchain APIs'], useCase,
+  s: [' 'Transaction monitoring',' 'Risk assessment',' 'Compliance reporting',' 'Portfolio analysis',' 'Market research'],' ro,
   i: '300% improvement in blockchain intelligence', competitor,
-  s: [' 'Chainalysis',' 'Elliptic',' 'CipherTrace',' 'Blockchain.com',' 'Etherscan', ],' marketSiz,
+  s: [' 'Chainalysis',' 'Elliptic',' 'CipherTrace',' 'Blockchain.com',' 'Etherscan'],' marketSiz,
   e: '$1.2B blockchain analytics market',' growthRat,
   e: '65% annual growth', contactInf,
   o: ' mobil,
@@ -17452,14 +16566,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-cloud-cost-optimizer',' nam,
   e: 'AI Cloud Cost Optimizer',' taglin,
   e: 'Reduce cloud costs by up to 40% with AI optimization',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
   n: ' 'Intelligent cloud cost optimization platform that automatically analyzes usage patterns and recommends cost-saving strategies. Works with AWS, Azure, and Google Cloud.', feature,
-  s: [' 'AI cost analysis',' 'Automated optimization',' 'Multi-cloud support',' 'Real-time monitoring',' 'Cost forecasting',' 'Resource recommendations',' 'Automated scaling',' 'Budget alerts',' 'Detailed reporting',' 'API integration', ], popula,
+  s: [' 'AI cost analysis',' 'Automated optimization',' 'Multi-cloud support',' 'Real-time monitoring',' 'Cost forecasting',' 'Resource recommendations',' 'Automated scaling',' 'Budget alerts',' 'Detailed reporting',' 'API integration'], popula,
   r: true,' ico,
   n: '☁️',' colo,
   r: 'from-blue-500 to-cyan-600',' textColo,
@@ -17472,11 +16586,11 @@ i,
   e: '3 hours',' categor,
   y: 'Cloud & DevOps', realServic,
   e: true, technolog,
-  y: [' 'Machine Learning',' 'Cloud Computing',' 'Cost Optimization',' 'Resource Management',' 'Predictive Analytics', ], integration,
-  s: [' 'AWS',' 'Microsoft Azure',' 'Google Cloud',' 'Kubernetes',' 'Docker',' 'Terraform', ], useCase,
-  s: [' 'Cost optimization',' 'Resource management',' 'Capacity planning',' 'Budget management',' 'Performance optimization', ],' ro,
+  y: [' 'Machine Learning',' 'Cloud Computing',' 'Cost Optimization',' 'Resource Management',' 'Predictive Analytics'], integration,
+  s: [' 'AWS',' 'Microsoft Azure',' 'Google Cloud',' 'Kubernetes',' 'Docker',' 'Terraform'], useCase,
+  s: [' 'Cost optimization',' 'Resource management',' 'Capacity planning',' 'Budget management',' 'Performance optimization'],' ro,
   i: '40% reduction in cloud costs', competitor,
-  s: [' 'CloudHealth',' 'CloudCheckr',' 'ParkMyCloud',' 'Cloudability',' 'AWS Cost Explorer', ],' marketSiz,
+  s: [' 'CloudHealth',' 'CloudCheckr',' 'ParkMyCloud',' 'Cloudability',' 'AWS Cost Explorer'],' marketSiz,
   e: '$4.8B cloud cost management market',' growthRat,
   e: '52% annual growth', contactInf,
   o: ' mobil,
@@ -17484,14 +16598,14 @@ i,
   l: 'kleber@ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup.com'}}, ' i,
   d: 'ai-database-performance-monitor',' nam,
   e: 'AI Database Performance Monitor',' taglin,
   e: 'Optimize database performance with AI-powered monitoring',' pric,
   e: '$179',' perio,
   d: '/month', descriptio,
   n: ' 'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.', feature,
-  s: [' 'AI performance analysis',' 'Query optimization',' 'Real-time monitoring',' 'Performance alerts',' 'Capacity planning',' 'Security monitoring',' 'Backup monitoring',' 'Custom dashboards',' 'API access',' 'Multi-database support', ],' integration,
+  s: [' 'AI performance analysis',' 'Query optimization',' 'Real-time monitoring',' 'Performance alerts',' 'Capacity planning',' 'Security monitoring',' 'Backup monitoring',' 'Custom dashboards',' 'API access',' 'Multi-database support'],' integration,
   s: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'], suppor,
   t: ' 'Dedicated health coach, community support, and 24/7 platform assistance.',' complianc,
   e: ['HIPAA, GDPR, CCPA, SOC 2 Type II'],' lin,
@@ -17503,7 +16617,7 @@ i,
   e: '2024-03-05', customer,
   s: 1100, ratin,
   g: 4.6, review,
-  s: 134, }, ' i,
+  s: 134}, ' i,
   d: 'ai-email-responder-pro',' nam,
   e: 'AI Email Responder Pro',' taglin,
   e: 'Auto-triage and reply to routine emails with guardrails', descriptio,
@@ -17514,10 +16628,10 @@ i,
   y: 790,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '15 minutes', }, feature,
+  e: '15 minutes'}, feature,
   s: [' 'Inbox labeling and prioritization',' 'On-brand response templates',' 'Sentiment and urgency detection',' 'Auto-draft with human-in-the-loop',' 'Zendesk/HubSpot/Gmail integration',' 'Metric,
-  s: FRT/ART, deflection rate', ], benefit,
-  s: [' 'Cut response time by 60%',' 'Deflect 30–50% routine tickets',' 'Improve CSAT and NPS', ],' targetAudienc,
+  s: FRT/ART, deflection rate'], benefit,
+  s: [' 'Cut response time by 60%',' 'Deflect 30–50% routine tickets',' 'Improve CSAT and NPS'],' targetAudienc,
   e: ['Support teams', 'Sales ops', 'Founders', 'Agencies'], marketPositio,
   n: ' 'Alternatives include Superhuman AI and Front AI. Differentiato,
   r: policy guardrails and CRM context sync.',' competitor,
@@ -17526,7 +16640,7 @@ i,
   n: true, implementationDetail,
   s: ' 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.',' ro,
   i: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.', useCase,
-  s: [' 'Support autoreplies',' 'Sales follow-ups',' 'Vendor coordination', ],' integration,
+  s: [' 'Support autoreplies',' 'Sales follow-ups',' 'Vendor coordination'],' integration,
   s: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],' suppor,
   t: 'Email and chat support with onboarding concierge for teams',' complianc,
   e: ['GDPR', 'CCPA', 'SOC 2 Type II'],' lin,
@@ -17538,7 +16652,7 @@ i,
   e: '2025-02-01', customer,
   s: 180, ratin,
   g: 4.7, review,
-  s: 46, }, ' i,
+  s: 46}, ' i,
   d: 'mobile-conversational-surveys',' nam,
   e: 'Mobile Conversational Surveys',' taglin,
   e: 'Adaptive, chat-style surveys with higher completion rates', descriptio,
@@ -17549,9 +16663,9 @@ i,
   y: 490,' currenc,
   y: 'USD', trialDay,
   s: 7,' setupTim,
-  e: '10 minutes', }, feature,
-  s: [' 'Branching logic',' 'A/B prompts',' 'Embeddable widget',' 'CSV/JSON export',' 'Webhook triggers', ], benefit,
-  s: [' '+35% completion rate vs. forms',' 'Cleaner data, fewer drop-offs', ],' targetAudienc,
+  e: '10 minutes'}, feature,
+  s: [' 'Branching logic',' 'A/B prompts',' 'Embeddable widget',' 'CSV/JSON export',' 'Webhook triggers'], benefit,
+  s: [' '+35% completion rate vs. forms',' 'Cleaner data, fewer drop-offs'],' targetAudienc,
   e: ['Product teams', 'Marketers', 'UX researchers'], marketPositio,
   n: ' 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',' competitor,
   s: ['Typeform', 'SurveySparrow', 'Tally'],' techStac,
@@ -17571,7 +16685,7 @@ i,
   e: '2024-12-10', customer,
   s: 95, ratin,
   g: 4.6, review,
-  s: 22, }, ' i,
+  s: 22}, ' i,
   d: 'niche-productivity-planner',' nam,
   e: 'Niche Productivity Planner',' taglin,
   e: 'Opinionated project boards, tailored to your industry', descriptio,
@@ -17582,8 +16696,8 @@ i,
   y: 390,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '5 minutes', }, feature,
-  s: [' 'Industry templates',' 'Automations',' 'Calendar & Gantt',' 'Role-based permissions', ],' benefit,
+  e: '5 minutes'}, feature,
+  s: [' 'Industry templates',' 'Automations',' 'Calendar & Gantt',' 'Role-based permissions'],' benefit,
   s: ['Reduce setup time by 80%', 'Consistency across teams'],' targetAudienc,
   e: ['Agencies', 'Studios', 'SMBs'], marketPositio,
   n: ' 'Alternative to Notion templates + Asana. Faster to start with curated flows.',' competitor,
@@ -17604,7 +16718,7 @@ i,
   e: '2025-01-20', customer,
   s: 60, ratin,
   g: 4.5, review,
-  s: 14, }, ' i,
+  s: 14}, ' i,
   d: 'event-management-dashboard',' nam,
   e: 'Event Management Dashboard',' taglin,
   e: 'Tickets, scheduling, engagement analytics in one place', descriptio,
@@ -17615,8 +16729,8 @@ i,
   y: 1290,' currenc,
   y: 'USD', trialDay,
   s: 7,' setupTim,
-  e: '1 day', }, feature,
-  s: [' 'Ticketing & check-in',' 'Session builder',' 'Email campaigns',' 'Live polls & Q&A', ],' benefit,
+  e: '1 day'}, feature,
+  s: [' 'Ticketing & check-in',' 'Session builder',' 'Email campaigns',' 'Live polls & Q&A'],' benefit,
   s: ['Launch events faster', 'Better attendee engagement'],' targetAudienc,
   e: ['Conferences', 'Meetups', 'Communities'], marketPositio,
   n: ' 'Lean alternative to Hopin and Eventbrite with richer analytics.',' competitor,
@@ -17637,7 +16751,7 @@ i,
   e: '2024-11-18', customer,
   s: 70, ratin,
   g: 4.6, review,
-  s: 18, }, ' i,
+  s: 18}, ' i,
   d: 'affiliate-tracking-suite',' nam,
   e: 'Affiliate Tracking Suite',' taglin,
   e: 'Links, attribution, commissions, payouts—no spreadsheet required', descriptio,
@@ -17648,8 +16762,8 @@ i,
   y: 990,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '1 hour', }, feature,
-  s: [' 'Custom links',' 'Attribution windows',' 'Coupon attribution',' 'Payout exports', ],' benefit,
+  e: '1 hour'}, feature,
+  s: [' 'Custom links',' 'Attribution windows',' 'Coupon attribution',' 'Payout exports'],' benefit,
   s: ['Grow revenue via affiliates', 'Reduce fraud'],' targetAudienc,
   e: ['E‑commerce', 'SaaS'], marketPositio,
   n: ' 'Simpler than Impact and PartnerStack with transparent pricing.',' competitor,
@@ -17670,7 +16784,7 @@ i,
   e: '2024-10-12', customer,
   s: 55, ratin,
   g: 4.4, review,
-  s: 12, }, ' i,
+  s: 12}, ' i,
   d: 'smb-website-analytics',' nam,
   e: 'SMB Website Analytics',' taglin,
   e: 'Privacy-friendly analytics with actionable insights', descriptio,
@@ -17681,8 +16795,8 @@ i,
   y: 290,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '5 minutes', }, feature,
-  s: [' 'Goals & funnels',' 'Weekly insights email',' 'Anomaly alerts',' 'Shareable dashboards', ],' benefit,
+  e: '5 minutes'}, feature,
+  s: [' 'Goals & funnels',' 'Weekly insights email',' 'Anomaly alerts',' 'Shareable dashboards'],' benefit,
   s: ['Know what works', 'Focus on actions'],' targetAudienc,
   e: ['Founders', 'Marketers', 'Agencies'], marketPositio,
   n: ' 'Alternative to Plausible and Fathom with built-in insights.',' competitor,
@@ -17703,7 +16817,7 @@ i,
   e: '2025-02-05', customer,
   s: 140, ratin,
   g: 4.7, review,
-  s: 28, }, ' i,
+  s: 28}, ' i,
   d: 'it-helpdesk-lite',' nam,
   e: 'IT Helpdesk Lite',' taglin,
   e: 'Tickets, SLA timers, knowledge base, portal—ready day one', descriptio,
@@ -17714,8 +16828,8 @@ i,
   y: 590,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '2 hours', }, feature,
-  s: [' 'Email-to-ticket',' 'SLA timers',' 'Macros/automations',' 'Self-serve portal', ],' benefit,
+  e: '2 hours'}, feature,
+  s: [' 'Email-to-ticket',' 'SLA timers',' 'Macros/automations',' 'Self-serve portal'],' benefit,
   s: ['Shorter MTTR', 'Fewer escalations'],' targetAudienc,
   e: ['MSPs', 'IT teams'],' marketPositio,
   n: 'Lightweight alternative to Zendesk and Freshservice.',' competitor,
@@ -17736,7 +16850,7 @@ i,
   e: '2024-09-22', customer,
   s: 120, ratin,
   g: 4.5, review,
-  s: 31, }, ' i,
+  s: 31}, ' i,
   d: 'ecommerce-return-manager',' nam,
   e: 'E‑commerce Return Manager',' taglin,
   e: 'Customer-friendly returns with labels and status tracking', descriptio,
@@ -17747,8 +16861,8 @@ i,
   y: 790,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '1 hour', }, feature,
-  s: [' 'Self-service portal',' 'Label generation',' 'Return reasons analytics',' 'Exchanges & store credit', ],' benefit,
+  e: '1 hour'}, feature,
+  s: [' 'Self-service portal',' 'Label generation',' 'Return reasons analytics',' 'Exchanges & store credit'],' benefit,
   s: ['Higher retention', 'Lower support load'],' targetAudienc,
   e: ['D2C brands', 'Marketplaces'],' marketPositio,
   n: 'Competitive with Loop and Returnly at simpler pricing.',' competitor,
@@ -17769,7 +16883,7 @@ i,
   e: '2024-08-30', customer,
   s: 75, ratin,
   g: 4.4, review,
-  s: 19, }, ' i,
+  s: 19}, ' i,
   d: 'auto-email-followups',' nam,
   e: 'Automated Email Follow‑ups',' taglin,
   e: 'Cadence sequences for leads with AI personalization', descriptio,
@@ -17780,8 +16894,8 @@ i,
   y: 490,' currenc,
   y: 'USD', trialDay,
   s: 7,' setupTim,
-  e: '20 minutes', }, feature,
-  s: [' 'Sequences',' 'Rules & triggers',' 'Open/click tracking',' 'AI snippets', ],' benefit,
+  e: '20 minutes'}, feature,
+  s: [' 'Sequences',' 'Rules & triggers',' 'Open/click tracking',' 'AI snippets'],' benefit,
   s: ['Higher reply rate', 'Fewer manual tasks'],' targetAudienc,
   e: ['SMB sales teams', 'Agencies'], marketPositio,
   n: ' 'Alternative to Lemlist and Mailshake with stricter safety.',' competitor,
@@ -17802,7 +16916,7 @@ i,
   e: '2025-01-25', customer,
   s: 90, ratin,
   g: 4.5, review,
-  s: 17, }, ' i,
+  s: 17}, ' i,
   d: 'podcast-transcription-studio',' nam,
   e: 'Podcast Transcription Studio',' taglin,
   e: 'Accurate transcripts, show notes, and highlights', descriptio,
@@ -17813,8 +16927,8 @@ i,
   y: 390,' currenc,
   y: 'USD', trialDay,
   s: 7,' setupTim,
-  e: '5 minutes', }, feature,
-  s: [' 'Speaker diarization',' 'Timecodes',' 'Chapters',' 'Show notes drafts', ],' benefit,
+  e: '5 minutes'}, feature,
+  s: [' 'Speaker diarization',' 'Timecodes',' 'Chapters',' 'Show notes drafts'],' benefit,
   s: ['Accessibility', 'SEO-ready content'],' targetAudienc,
   e: ['Podcasters', 'Agencies'],' marketPositio,
   n: 'Alternative to Descript transcripts with simpler pricing.',' competitor,
@@ -17835,7 +16949,7 @@ i,
   e: '2024-12-02', customer,
   s: 210, ratin,
   g: 4.7, review,
-  s: 52, }, ' i,
+  s: 52}, ' i,
   d: 'ai-knowledge-graph-studio',' nam,
   e: 'AI Knowledge Graph Studio',' taglin,
   e: 'Build semantic graphs for RAG and lineage in minutes', descriptio,
@@ -17846,8 +16960,8 @@ i,
   y: 1990,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '1 day', }, feature,
-  s: [' 'Entity/relation extraction',' 'Schema editor',' 'Vector + graph search',' 'Lineage view', ],' benefit,
+  e: '1 day'}, feature,
+  s: [' 'Entity/relation extraction',' 'Schema editor',' 'Vector + graph search',' 'Lineage view'],' benefit,
   s: ['Higher RAG precision', 'Governance & explainability'],' targetAudienc,
   e: ['Data teams', 'Platform engineering', 'Compliance'], marketPositio,
   n: ' 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.',' competitor,
@@ -17868,7 +16982,7 @@ i,
   e: '2025-02-08', customer,
   s: 35, ratin,
   g: 4.8, review,
-  s: 11, }, ' i,
+  s: 11}, ' i,
   d: 'llm-guarded-api-gateway',' nam,
   e: 'LLM Guarded API Gateway',' taglin,
   e: 'Policy, safety, metering and routing for GenAI apps', descriptio,
@@ -17879,8 +16993,8 @@ i,
   y: 2990,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '1 day', }, feature,
-  s: [' 'Provider adapters',' 'Policy engine',' 'PII redaction',' 'Rate limits', ],' benefit,
+  e: '1 day'}, feature,
+  s: [' 'Provider adapters',' 'Policy engine',' 'PII redaction',' 'Rate limits'],' benefit,
   s: ['Control spend', 'Reduce risk'],' targetAudienc,
   e: ['Platform teams', 'AI product'], marketPositio,
   n: ;' 'Comparable to OpenRouter/EdenAI, adds governance and audit.',' competitor,
@@ -17901,7 +17015,7 @@ i,
   e: '2025-02-08', customer,
   s: 42, ratin,
   g: 4.8, review,
-  s: 13, }, ' i,
+  s: 13}, ' i,
   d: 'serverless-lakehouse-starter',' nam,
   e: 'Serverless Lakehouse Starter',' taglin,
   e: 'Spin up ELT + dbt + dashboards in a day', descriptio,
@@ -17912,8 +17026,8 @@ i,
   y: 2490,' currenc,
   y: 'USD', trialDay,
   s: 7,' setupTim,
-  e: '1 day', }, feature,
-  s: [' 'Event collector',' 'Connector library',' 'dbt models',' 'Grafana dashboards', ],' benefit,
+  e: '1 day'}, feature,
+  s: [' 'Event collector',' 'Connector library',' 'dbt models',' 'Grafana dashboards'],' benefit,
   s: ['Faster analytics ROI', 'Lower platform toil'],' targetAudienc,
   e: ['Data teams', 'Ops'],' marketPositio,
   n: 'Starter alternative to building bespoke stacks.',' competitor,
@@ -17934,7 +17048,7 @@ i,
   e: '2025-02-08', customer,
   s: 24, ratin,
   g: 4.6, review,
-  s: 7, }, ' i,
+  s: 7}, ' i,
   d: 'data-contracts-hub',' nam,
   e: 'Data Contracts Hub',' taglin,
   e: 'Diff schemas, enforce CI gates, and prevent breaking changes', descriptio,
@@ -17945,8 +17059,8 @@ i,
   y: 1290,' currenc,
   y: 'USD', trialDay,
   s: 14,' setupTim,
-  e: '2 hours', }, feature,
-  s: [' 'Schema registry',' 'Diff viewer',' 'CI gates',' 'Backfill helpers', ],' benefit,
+  e: '2 hours'}, feature,
+  s: [' 'Schema registry',' 'Diff viewer',' 'CI gates',' 'Backfill helpers'],' benefit,
   s: ['Fewer incidents', 'Faster changes'],' targetAudienc,
   e: ['Data platform', 'Analytics engineers'],' marketPositio,
   n: 'Complements dbt and warehouse-native governance.',' competitor,
@@ -17967,7 +17081,7 @@ i,
   e: '2025-02-08', customer,
   s: 19, ratin,
   g: 4.6, review,
-  s: 6, },]; ' i,
+  s: 6}]; ' i,
   d: 'ai-legal-document-generator'' nam,
   e: 'AI Legal Document Generator'' taglin,
   e: 'Generate legally compliant documents in seconds with AI'' pric,
@@ -18770,8 +17884,8 @@ i,
   e: '2025-02-08' customer,
   s: 19,
   rating: 4.6,
-  reviews: 6 },]; // Helper functions export const getServicesByCategory = (categor,)
-  y: string) => }, ]; // Helper functions; export const getServicesByCategory = (categor,)
+  reviews: 6 }]; // Helper functions export const getServicesByCategory = (categor)
+  y: string) => }]; // Helper functions; export const getServicesByCategory = (categor)
   y: string) =>: unknown ' return realMicroSaasServices.filter (service => service.category === category), i,
   d: 'data - contracts - hub'' nam,
   e: 'Data Contracts Hub'' taglin,
@@ -18803,7 +17917,7 @@ i,
   e: '2025 - 02 - 08' customer,
   s: 19, ratin,
   g: 4 && 4.6, review,
-  s: 6 } ]; // Helper functions export const getServicesByCategory = (categor,)
+  s: 6 } ]; // Helper functions export const getServicesByCategory = (categor)
   y: string) => return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);' marketPositio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'' competitor,
   s: ['TypeformSurveySparrowTally'];' techStac,
@@ -18811,7 +17925,7 @@ i,
   n: true,' implementationDetail,
   s: 'Template gallery, response store, analytics, export jobs.' ratin,
   g: 4.6, review,
-  s: 6, } ]; // Helper functions; export const getServicesByCategory = (categor,)
+  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
   y: string) =>: unknown return realMicroSaasServices.filter (service => service.category === category);' market_positio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'' competitor,
   s: ['TypeformSurveySparrowTally'];' tech_stac,
@@ -18837,7 +17951,7 @@ i,
   k: ['Next && Next.jsPrismaPostgreSQL']; realImplementatio,
   n: true,' implementationDetail,
   s: 'Template JSON schemas, rules engine, import/export.' review,
-  s: 22, }' market_positio,
+  s: 22}' market_positio,
   n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'' competitor,
   s: ['AsanaClickUpNotion'];' tech_stac,
   k: ['Next.jsPrismaPostgreSQL']; real_implementatio,
@@ -18856,500 +17970,500 @@ i,
   e: '2025 - 01 - 20' customer,
   s: 60; ratin,
   g: 4 && 4.5, review,
-  s: 14 }; export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI/UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT',;' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) };' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) }; export const getServicesByPriceRange = (mi,)
+  s: 14 }; export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI/UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT';' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) };' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' return realMicroSaasServices.filter(service => service.category === category) }; export const getServicesByPriceRange = (mi)
   n: number) ma,
   x: number) => return realMicroSaasServices.filter(service => ' const price = parseFloat(service.price.replace('$') '').replace(; '')); return price >= min && (max === Infinity || price <= max) }) }; export const serviceCategories = [' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research' ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' i,
-  d: string,; nam,
-  e: string,; taglin,
-  e: string,; pric,
-  e: string,; perio,
-  d: string,; descriptio,
-  n: string,; feature,
-  s: string[],; popula,
-  r: boolean,; ico,
-  n: string,; colo,
-  r: string,; textColo,
-  r: string,; lin,
-  k: string,; marketPositio,
-  n: string,; targetAudienc,
-  e: string,; trialDay,
-  s: number,; setupTim,
-  e: string,; categor,
-  y: string,; realServic,
-  e: boolean,; technolog,
-  y: string[],; integration,
-  s: string[],; useCase,
-  s: string[],; ro,
-  i: string,; competitor,
-  s: string[],; marketSiz,
-  e: string,; growthRat,
-  e: string,; contactInf,
+  d: string; nam,
+  e: string; taglin,
+  e: string; pric,
+  e: string; perio,
+  d: string; descriptio,
+  n: string; feature,
+  s: string[]; popula,
+  r: boolean; ico,
+  n: string; colo,
+  r: string; textColo,
+  r: string; lin,
+  k: string; marketPositio,
+  n: string; targetAudienc,
+  e: string; trialDay,
+  s: number; setupTim,
+  e: string; categor,
+  y: string; realServic,
+  e: boolean; technolog,
+  y: string[]; integration,
+  s: string[]; useCase,
+  s: string[]; ro,
+  i: string; competitor,
+  s: string[]; marketSiz,
+  e: string; growthRat,
+  e: string; contactInf,
   o: {/* TODO: Fix JSX expression */}
-  s: string,} websit,
+  s: string} websit,
   e: string} } } ;' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
-  s: string,} websit,
+  s: string} websit,
   e: string} } } ; export const,
   realMicroSaasServices: RealMicroSaasService[] = [; // AI-Powered Business Solutions; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 134} },; {/* TODO: Fix JSX expression */}
-  y: 'Productivity & Automation',}' pric,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 134} }; {/* TODO: Fix JSX expression */}
+  y: 'Productivity & Automation'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' },; feature,
+  e: '15 minutes' }; feature,
   s: [,' 'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
-  integrationMetrics: FRT/ART, deflection rate' ],; benefit,
-  s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ],;' targetAudienc,
-  e: ['Support teamsSales opsFoundersAgencies'],;' marketPositio,
+  integrationMetrics: FRT/ART, deflection rate' ]; benefit,
+  s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ];' targetAudienc,
+  e: ['Support teamsSales opsFoundersAgencies'];' marketPositio,
   n: 'Alternatives include Superhuman AI and Front AI. Differentiato,
-  r: policy guardrails and CRM context sync.',;' competitor,
-  s: ['SuperhumanFrontZendesk AI'],;' techStac,
-  k: ['Next.jsTypeScriptPostgreSQLOpenAIGmail API'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.',;' ro,
-  i: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.',;' useCase,
-  s: ['Support autorepliesSales follow-upsVendor coordination'],;' integration,
-  s: ['GmailOutlookHubSpotZendeskSlack'],;' suppor,
-  t: 'Email and chat support with onboarding concierge for teams',;' complianc,
-  e: ['GDPRCCPASOC 2 Type II'],;' lin,
+  r: policy guardrails and CRM context sync.';' competitor,
+  s: ['SuperhumanFrontZendesk AI'];' techStac,
+  k: ['Next.jsTypeScriptPostgreSQLOpenAIGmail API']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.';' ro,
+  i: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.';' useCase,
+  s: ['Support autorepliesSales follow-upsVendor coordination'];' integration,
+  s: ['GmailOutlookHubSpotZendeskSlack'];' suppor,
+  t: 'Email and chat support with onboarding concierge for teams';' complianc,
+  e: ['GDPRCCPASOC 2 Type II'];' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-email-responder',;' ico,
-  n: '📧',;' colo,
-  r: 'from-cyan-600 to-blue-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-01',; customer,
-  s: 180,; ratin,
-  g: 4.7,; review,
-  s: 46, },; {/* TODO: Fix JSX expression */}
-  y: 'Marketing & Research',}' pric,
+  s://ziontechgroup.com/ai-email-responder';' ico,
+  n: '📧';' colo,
+  r: 'from-cyan-600 to-blue-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-01'; customer,
+  s: 180; ratin,
+  g: 4.7; review,
+  s: 46}; {/* TODO: Fix JSX expression */}
+  y: 'Marketing & Research'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' },;' feature,
-  s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'],;' benefit,
-  s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'],;' targetAudienc,
-  e: ['Product teamsMarketersUX researchers'],;' marketPositio,
-  n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',;' competitor,
-  s: ['TypeformSurveySparrowTally'],;' techStac,
-  k: ['Next.jsSupabaseVercel EdgeOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Template gallery, response store, analytics, export jobs.',;' ro,
-  i: 'Improves feedback volume 20–50%.',;' useCase,
-  s: ['NPSBeta feedbackLead qual'],;' integration,
-  s: ['HubSpotSegmentZapier'],;' suppor,
-  t: 'Email support, templates library',;' complianc,
-  e: ['GDPRCCPA'],;' lin,
+  e: '10 minutes' };' feature,
+  s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];' benefit,
+  s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];' targetAudienc,
+  e: ['Product teamsMarketersUX researchers'];' marketPositio,
+  n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';' competitor,
+  s: ['TypeformSurveySparrowTally'];' techStac,
+  k: ['Next.jsSupabaseVercel EdgeOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Template gallery, response store, analytics, export jobs.';' ro,
+  i: 'Improves feedback volume 20–50%.';' useCase,
+  s: ['NPSBeta feedbackLead qual'];' integration,
+  s: ['HubSpotSegmentZapier'];' suppor,
+  t: 'Email support, templates library';' complianc,
+  e: ['GDPRCCPA'];' lin,
   k: 'http,
-  s://ziontechgroup.com/mobile-surveys',;' ico,
-  n: '📱',;' colo,
-  r: 'from-emerald-600 to-teal-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-12-10',; customer,
-  s: 95,; ratin,
-  g: 4.6,; review,
-  s: 22, },; {/* TODO: Fix JSX expression */}
-  y: 'Operations',}' pric,
+  s://ziontechgroup.com/mobile-surveys';' ico,
+  n: '📱';' colo,
+  r: 'from-emerald-600 to-teal-700'; popula,
+  r: false;' launchDat,
+  e: '2024-12-10'; customer,
+  s: 95; ratin,
+  g: 4.6; review,
+  s: 22}; {/* TODO: Fix JSX expression */}
+  y: 'Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'],;' benefit,
-  s: ['Reduce setup time by 80%Consistency across teams'],;' targetAudienc,
-  e: ['AgenciesStudiosSMBs'],;' marketPositio,
-  n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',;' competitor,
-  s: ['AsanaClickUpNotion'],;' techStac,
-  k: ['Next.jsPrismaPostgreSQL'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Template JSON schemas, rules engine, import/export.',;' ro,
-  i: 'Deliverables throughput +15–25%.',;' useCase,
-  s: ['Client deliveryEditorial calendarSprints'],;' integration,
-  s: ['Google CalendarSlackLinear'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];' benefit,
+  s: ['Reduce setup time by 80%Consistency across teams'];' targetAudienc,
+  e: ['AgenciesStudiosSMBs'];' marketPositio,
+  n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';' competitor,
+  s: ['AsanaClickUpNotion'];' techStac,
+  k: ['Next.jsPrismaPostgreSQL']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Template JSON schemas, rules engine, import/export.';' ro,
+  i: 'Deliverables throughput +15–25%.';' useCase,
+  s: ['Client deliveryEditorial calendarSprints'];' integration,
+  s: ['Google CalendarSlackLinear'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/productivity-planner',;' ico,
-  n: '🗓️',;' colo,
-  r: 'from-purple-600 to-pink-600',; popula,
-  r: false,;' launchDat,
-  e: '2025-01-20',; customer,
-  s: 60,; ratin,
-  g: 4.5,; review,
-  s: 14, },; {/* TODO: Fix JSX expression */}
-  y: 'Media & Events',}' pric,
+  s://ziontechgroup.com/productivity-planner';' ico,
+  n: '🗓️';' colo,
+  r: 'from-purple-600 to-pink-600'; popula,
+  r: false;' launchDat,
+  e: '2025-01-20'; customer,
+  s: 60; ratin,
+  g: 4.5; review,
+  s: 14}; {/* TODO: Fix JSX expression */}
+  y: 'Media & Events'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'],;' benefit,
-  s: ['Launch events fasterBetter attendee engagement'],;' targetAudienc,
-  e: ['ConferencesMeetupsCommunities'],;' marketPositio,
-  n: 'Lean alternative to Hopin and Eventbrite with richer analytics.',;' competitor,
-  s: ['HopinEventbrite'],;' techStac,
-  k: ['Next.jsStripeSupabase'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Stripe checkout, QR codes, analytics dashboards.',;' ro,
-  i: 'Increase sponsorship revenue 10–20%.',;' useCase,
-  s: ['WebinarsSummitsWorkshops'],;' integration,
-  s: ['StripeMailchimpZapier'],;' suppor,
-  t: 'Priority email support',;' complianc,
-  e: ['GDPRPCI'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];' benefit,
+  s: ['Launch events fasterBetter attendee engagement'];' targetAudienc,
+  e: ['ConferencesMeetupsCommunities'];' marketPositio,
+  n: 'Lean alternative to Hopin and Eventbrite with richer analytics.';' competitor,
+  s: ['HopinEventbrite'];' techStac,
+  k: ['Next.jsStripeSupabase']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Stripe checkout, QR codes, analytics dashboards.';' ro,
+  i: 'Increase sponsorship revenue 10–20%.';' useCase,
+  s: ['WebinarsSummitsWorkshops'];' integration,
+  s: ['StripeMailchimpZapier'];' suppor,
+  t: 'Priority email support';' complianc,
+  e: ['GDPRPCI'];' lin,
   k: 'http,
-  s://ziontechgroup.com/event-management',;' ico,
-  n: '🎫',;' colo,
-  r: 'from-indigo-600 to-blue-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-11-18',; customer,
-  s: 70,; ratin,
-  g: 4.6,; review,
-  s: 18, },; {/* TODO: Fix JSX expression */}
-  y: 'Growth',}' pric,
+  s://ziontechgroup.com/event-management';' ico,
+  n: '🎫';' colo,
+  r: 'from-indigo-600 to-blue-700'; popula,
+  r: false;' launchDat,
+  e: '2024-11-18'; customer,
+  s: 70; ratin,
+  g: 4.6; review,
+  s: 18}; {/* TODO: Fix JSX expression */}
+  y: 'Growth'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' },;' feature,
-  s: ['Custom linksAttribution windowsCoupon attributionPayout exports'],;' benefit,
-  s: ['Grow revenue via affiliatesReduce fraud'],;' targetAudienc,
-  e: ['E‑commerceSaaS'],;' marketPositio,
-  n: 'Simpler than Impact and PartnerStack with transparent pricing.',;' competitor,
-  s: ['PartnerStackImpact'],;' techStac,
-  k: ['Next.jsPostgreSQLStripe'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Link generation, tracking pixels, payout ledger.',;' ro,
-  i: 'Affiliate channel +10–30% revenue.',;' useCase,
-  s: ['Influencer programsPartner marketplaces'],;' integration,
-  s: ['ShopifyWooCommerceStripe'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 hour' };' feature,
+  s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];' benefit,
+  s: ['Grow revenue via affiliatesReduce fraud'];' targetAudienc,
+  e: ['E‑commerceSaaS'];' marketPositio,
+  n: 'Simpler than Impact and PartnerStack with transparent pricing.';' competitor,
+  s: ['PartnerStackImpact'];' techStac,
+  k: ['Next.jsPostgreSQLStripe']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Link generation, tracking pixels, payout ledger.';' ro,
+  i: 'Affiliate channel +10–30% revenue.';' useCase,
+  s: ['Influencer programsPartner marketplaces'];' integration,
+  s: ['ShopifyWooCommerceStripe'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/affiliate-tracking',;' ico,
-  n: '🔗',;' colo,
-  r: 'from-rose-600 to-red-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-10-12',; customer,
-  s: 55,; ratin,
-  g: 4.4,; review,
-  s: 12, },; {/* TODO: Fix JSX expression */}
-  y: 'Analytics',}' pric,
+  s://ziontechgroup.com/affiliate-tracking';' ico,
+  n: '🔗';' colo,
+  r: 'from-rose-600 to-red-700'; popula,
+  r: false;' launchDat,
+  e: '2024-10-12'; customer,
+  s: 55; ratin,
+  g: 4.4; review,
+  s: 12}; {/* TODO: Fix JSX expression */}
+  y: 'Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'],;' benefit,
-  s: ['Know what worksFocus on actions'],;' targetAudienc,
-  e: ['FoundersMarketersAgencies'],;' marketPositio,
-  n: 'Alternative to Plausible and Fathom with built-in insights.',;' competitor,
-  s: ['PlausibleFathom'],;' techStac,
-  k: ['Next.jsEdge AnalyticsPostgreSQL'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Script tag, event API, insights jobs.',;' ro,
-  i: 'Improve conversion 5–15% via insights.',;' useCase,
-  s: ['Landing pagesCampaign tracking'],;' integration,
-  s: ['ShopifyWebflowZapier'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];' benefit,
+  s: ['Know what worksFocus on actions'];' targetAudienc,
+  e: ['FoundersMarketersAgencies'];' marketPositio,
+  n: 'Alternative to Plausible and Fathom with built-in insights.';' competitor,
+  s: ['PlausibleFathom'];' techStac,
+  k: ['Next.jsEdge AnalyticsPostgreSQL']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Script tag, event API, insights jobs.';' ro,
+  i: 'Improve conversion 5–15% via insights.';' useCase,
+  s: ['Landing pagesCampaign tracking'];' integration,
+  s: ['ShopifyWebflowZapier'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/website-analytics',;' ico,
-  n: '📊',;' colo,
-  r: 'from-sky-600 to-cyan-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-05',; customer,
-  s: 140,; ratin,
-  g: 4.7,; review,
-  s: 28, },; {/* TODO: Fix JSX expression */}
-  y: 'IT & Operations',}' pric,
+  s://ziontechgroup.com/website-analytics';' ico,
+  n: '📊';' colo,
+  r: 'from-sky-600 to-cyan-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-05'; customer,
+  s: 140; ratin,
+  g: 4.7; review,
+  s: 28}; {/* TODO: Fix JSX expression */}
+  y: 'IT & Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' },;' feature,
-  s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'],;' benefit,
-  s: ['Shorter MTTRFewer escalations'],;' targetAudienc,
-  e: ['MSPsIT teams'],;' marketPositio,
-  n: 'Lightweight alternative to Zendesk and Freshservice.',;' competitor,
-  s: ['ZendeskFreshservice'],;' techStac,
-  k: ['Next.jsPostgreSQLNode.js'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Inbound parser, workflow builder, KB CMS.',;' ro,
-  i: 'Reduce ticket volume 15–25% via KB.',;' useCase,
-  s: ['IT requestsAccess provisioning'],;' integration,
-  s: ['OktaGoogle WorkspaceSlack'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '2 hours' };' feature,
+  s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];' benefit,
+  s: ['Shorter MTTRFewer escalations'];' targetAudienc,
+  e: ['MSPsIT teams'];' marketPositio,
+  n: 'Lightweight alternative to Zendesk and Freshservice.';' competitor,
+  s: ['ZendeskFreshservice'];' techStac,
+  k: ['Next.jsPostgreSQLNode.js']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Inbound parser, workflow builder, KB CMS.';' ro,
+  i: 'Reduce ticket volume 15–25% via KB.';' useCase,
+  s: ['IT requestsAccess provisioning'];' integration,
+  s: ['OktaGoogle WorkspaceSlack'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/it-helpdesk',;' ico,
-  n: '🛠️',;' colo,
-  r: 'from-slate-600 to-gray-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-09-22',; customer,
-  s: 120,; ratin,
-  g: 4.5,; review,
-  s: 31, },; {/* TODO: Fix JSX expression */}
-  y: 'E‑commerce',}' pric,
+  s://ziontechgroup.com/it-helpdesk';' ico,
+  n: '🛠️';' colo,
+  r: 'from-slate-600 to-gray-700'; popula,
+  r: false;' launchDat,
+  e: '2024-09-22'; customer,
+  s: 120; ratin,
+  g: 4.5; review,
+  s: 31}; {/* TODO: Fix JSX expression */}
+  y: 'E‑commerce'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' },;' feature,
-  s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'],;' benefit,
-  s: ['Higher retentionLower support load'],;' targetAudienc,
-  e: ['D2C brandsMarketplaces'],;' marketPositio,
-  n: 'Competitive with Loop and Returnly at simpler pricing.',;' competitor,
-  s: ['LoopReturnly'],;' techStac,
-  k: ['Next.jsStripeShopify API'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Webhook integrations, label providers, RMA workflows.',;' ro,
-  i: 'Reduce refund losses via exchanges.',;' useCase,
-  s: ['ReturnsExchangesWarranties'],;' integration,
-  s: ['ShopifyShippoEasyPost'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 hour' };' feature,
+  s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];' benefit,
+  s: ['Higher retentionLower support load'];' targetAudienc,
+  e: ['D2C brandsMarketplaces'];' marketPositio,
+  n: 'Competitive with Loop and Returnly at simpler pricing.';' competitor,
+  s: ['LoopReturnly'];' techStac,
+  k: ['Next.jsStripeShopify API']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Webhook integrations, label providers, RMA workflows.';' ro,
+  i: 'Reduce refund losses via exchanges.';' useCase,
+  s: ['ReturnsExchangesWarranties'];' integration,
+  s: ['ShopifyShippoEasyPost'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/return-manager',;' ico,
-  n: '📦',;' colo,
-  r: 'from-amber-600 to-orange-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-08-30',; customer,
-  s: 75,; ratin,
-  g: 4.4,; review,
-  s: 19, },; {/* TODO: Fix JSX expression */}
-  y: 'Sales',}' pric,
+  s://ziontechgroup.com/return-manager';' ico,
+  n: '📦';' colo,
+  r: 'from-amber-600 to-orange-700'; popula,
+  r: false;' launchDat,
+  e: '2024-08-30'; customer,
+  s: 75; ratin,
+  g: 4.4; review,
+  s: 19}; {/* TODO: Fix JSX expression */}
+  y: 'Sales'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' },;' feature,
-  s: ['SequencesRules & triggersOpen/click trackingAI snippets'],;' benefit,
-  s: ['Higher reply rateFewer manual tasks'],;' targetAudienc,
-  e: ['SMB sales teamsAgencies'],;' marketPositio,
-  n: 'Alternative to Lemlist and Mailshake with stricter safety.',;' competitor,
-  s: ['LemlistMailshake'],;' techStac,
-  k: ['Next.jsPostgreSQLOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Warmup safe-guards, DNS checks, reply classifier.',;' ro,
-  i: '+10–20% conversion uplift.',;' useCase,
-  s: ['ProspectingRenewals'],;' integration,
-  s: ['HubSpotPipedriveGmail'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPRCAN-SPAM'],;' lin,
+  e: '20 minutes' };' feature,
+  s: ['SequencesRules & triggersOpen/click trackingAI snippets'];' benefit,
+  s: ['Higher reply rateFewer manual tasks'];' targetAudienc,
+  e: ['SMB sales teamsAgencies'];' marketPositio,
+  n: 'Alternative to Lemlist and Mailshake with stricter safety.';' competitor,
+  s: ['LemlistMailshake'];' techStac,
+  k: ['Next.jsPostgreSQLOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Warmup safe-guards, DNS checks, reply classifier.';' ro,
+  i: '+10–20% conversion uplift.';' useCase,
+  s: ['ProspectingRenewals'];' integration,
+  s: ['HubSpotPipedriveGmail'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPRCAN-SPAM'];' lin,
   k: 'http,
-  s://ziontechgroup.com/email-followups',;' ico,
-  n: '📨',;' colo,
-  r: 'from-blue-600 to-indigo-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-01-25',; customer,
-  s: 90,; ratin,
-  g: 4.5,; review,
-  s: 17, },; {/* TODO: Fix JSX expression */}
-  y: 'Media & Content',}' pric,
+  s://ziontechgroup.com/email-followups';' ico,
+  n: '📨';' colo,
+  r: 'from-blue-600 to-indigo-700'; popula,
+  r: false;' launchDat,
+  e: '2025-01-25'; customer,
+  s: 90; ratin,
+  g: 4.5; review,
+  s: 17}; {/* TODO: Fix JSX expression */}
+  y: 'Media & Content'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Speaker diarizationTimecodesChaptersShow notes drafts'],;' benefit,
-  s: ['AccessibilitySEO-ready content'],;' targetAudienc,
-  e: ['PodcastersAgencies'],;' marketPositio,
-  n: 'Alternative to Descript transcripts with simpler pricing.',;' competitor,
-  s: ['DescriptRev'],;' techStac,
-  k: ['WhisperNext.jsS3'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Batch jobs, cloud storage, editor UI.',;' ro,
-  i: 'Cut post-production hours by 60–80%.',;' useCase,
-  s: ['TranscriptsRepurposing'],;' integration,
-  s: ['RSSYouTubeAnchor'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];' benefit,
+  s: ['AccessibilitySEO-ready content'];' targetAudienc,
+  e: ['PodcastersAgencies'];' marketPositio,
+  n: 'Alternative to Descript transcripts with simpler pricing.';' competitor,
+  s: ['DescriptRev'];' techStac,
+  k: ['WhisperNext.jsS3']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Batch jobs, cloud storage, editor UI.';' ro,
+  i: 'Cut post-production hours by 60–80%.';' useCase,
+  s: ['TranscriptsRepurposing'];' integration,
+  s: ['RSSYouTubeAnchor'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/podcast-transcription',;' ico,
-  n: '🎙️',;' colo,
-  r: 'from-fuchsia-600 to-violet-700',; popula,
-  r: true,;' launchDat,
-  e: '2024-12-02',; customer,
-  s: 210,; ratin,
-  g: 4.7,; review,
-  s: 52, },; {/* TODO: Fix JSX expression */}
-  y: 'AI & Data',}' pric,
+  s://ziontechgroup.com/podcast-transcription';' ico,
+  n: '🎙️';' colo,
+  r: 'from-fuchsia-600 to-violet-700'; popula,
+  r: true;' launchDat,
+  e: '2024-12-02'; customer,
+  s: 210; ratin,
+  g: 4.7; review,
+  s: 52}; {/* TODO: Fix JSX expression */}
+  y: 'AI & Data'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'],;' benefit,
-  s: ['Higher RAG precisionGovernance & explainability'],;' targetAudienc,
-  e: ['Data teamsPlatform engineeringCompliance'],;' marketPositio,
-  n: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.',;' competitor,
-  s: ['Neo4jMemgraph'],;' techStac,
-  k: ['TypeScriptNeo4jpgvectorOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'ETL connectors, graph builder UI, API for queries.',;' ro,
-  i: 'Reduce discovery time 30–50%.',;' useCase,
-  s: ['RAG graphsData lineageGlossaries'],;' integration,
-  s: ['S3GCSDatabricks'],;' suppor,
-  t: 'Priority support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];' benefit,
+  s: ['Higher RAG precisionGovernance & explainability'];' targetAudienc,
+  e: ['Data teamsPlatform engineeringCompliance'];' marketPositio,
+  n: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.';' competitor,
+  s: ['Neo4jMemgraph'];' techStac,
+  k: ['TypeScriptNeo4jpgvectorOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'ETL connectors, graph builder UI, API for queries.';' ro,
+  i: 'Reduce discovery time 30–50%.';' useCase,
+  s: ['RAG graphsData lineageGlossaries'];' integration,
+  s: ['S3GCSDatabricks'];' suppor,
+  t: 'Priority support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/ai-knowledge-graph-studio',;' ico,
-  n: '🕸️',;' colo,
-  r: 'from-teal-600 to-emerald-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 35,; ratin,
-  g: 4.8,; review,
-  s: 11, },; {/* TODO: Fix JSX expression */}
-  y: 'AI & Platform',}' pric,
+  s://ziontechgroup.com/services/ai-knowledge-graph-studio';' ico,
+  n: '🕸️';' colo,
+  r: 'from-teal-600 to-emerald-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 35; ratin,
+  g: 4.8; review,
+  s: 11}; {/* TODO: Fix JSX expression */}
+  y: 'AI & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Provider adaptersPolicy enginePII redactionRate limits'],;' benefit,
-  s: ['Control spendReduce risk'],;' targetAudienc,
-  e: ['Platform teamsAI product'],;' marketPositio,
-  n: 'Comparable to OpenRouter/EdenAI, adds governance and audit.',;' competitor,
-  s: ['OpenRouterEdenAIHelicone'],;' techStac,
-  k: ['Node.jsPostgreSQLOpenAIAnthropic'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Multi-tenant projects, RBAC, per-key metering.',;' ro,
-  i: 'Cut model costs by 20–40%.',;' useCase,
-  s: ['Central model accessSafety'],;' integration,
-  s: ['OpenAIAnthropicAzure'],;' suppor,
-  t: 'Priority support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Provider adaptersPolicy enginePII redactionRate limits'];' benefit,
+  s: ['Control spendReduce risk'];' targetAudienc,
+  e: ['Platform teamsAI product'];' marketPositio,
+  n: 'Comparable to OpenRouter/EdenAI, adds governance and audit.';' competitor,
+  s: ['OpenRouterEdenAIHelicone'];' techStac,
+  k: ['Node.jsPostgreSQLOpenAIAnthropic']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Multi-tenant projects, RBAC, per-key metering.';' ro,
+  i: 'Cut model costs by 20–40%.';' useCase,
+  s: ['Central model accessSafety'];' integration,
+  s: ['OpenAIAnthropicAzure'];' suppor,
+  t: 'Priority support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/llm-guarded-api-gateway',;' ico,
-  n: '🛡️',;' colo,
-  r: 'from-cyan-700 to-blue-800',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 42,; ratin,
-  g: 4.8,; review,
-  s: 13, },; {/* TODO: Fix JSX expression */}
-  y: 'Data & Analytics',}' pric,
+  s://ziontechgroup.com/services/llm-guarded-api-gateway';' ico,
+  n: '🛡️';' colo,
+  r: 'from-cyan-700 to-blue-800'; popula,
+  r: true;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 42; ratin,
+  g: 4.8; review,
+  s: 13}; {/* TODO: Fix JSX expression */}
+  y: 'Data & Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Event collectorConnector librarydbt modelsGrafana dashboards'],;' benefit,
-  s: ['Faster analytics ROILower platform toil'],;' targetAudienc,
-  e: ['Data teamsOps'],;' marketPositio,
-  n: 'Starter alternative to building bespoke stacks.',;' competitor,
-  s: ['AirbyteFivetran (partial)'],;' techStac,
-  k: ['TerraformdbtClickHouse/BigQuery'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Templates, IaC modules, CI gates.',;' ro,
-  i: 'Deliver insights in days, not months.',;' useCase,
-  s: ['Product analyticsFinance BI'],;' integration,
-  s: ['S3BigQuerySnowflake'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];' benefit,
+  s: ['Faster analytics ROILower platform toil'];' targetAudienc,
+  e: ['Data teamsOps'];' marketPositio,
+  n: 'Starter alternative to building bespoke stacks.';' competitor,
+  s: ['AirbyteFivetran (partial)'];' techStac,
+  k: ['TerraformdbtClickHouse/BigQuery']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Templates, IaC modules, CI gates.';' ro,
+  i: 'Deliver insights in days, not months.';' useCase,
+  s: ['Product analyticsFinance BI'];' integration,
+  s: ['S3BigQuerySnowflake'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/serverless-lakehouse-starter',;' ico,
-  n: '🏗️',;' colo,
-  r: 'from-stone-600 to-zinc-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 24,; ratin,
-  g: 4.6,; review,
-  s: 7, },; {/* TODO: Fix JSX expression */}
-  y: 'Data & Platform',}' pric,
+  s://ziontechgroup.com/services/serverless-lakehouse-starter';' ico,
+  n: '🏗️';' colo,
+  r: 'from-stone-600 to-zinc-700'; popula,
+  r: false;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 24; ratin,
+  g: 4.6; review,
+  s: 7}; {/* TODO: Fix JSX expression */}
+  y: 'Data & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' },;' feature,
-  s: ['Schema registryDiff viewerCI gatesBackfill helpers'],;' benefit,
-  s: ['Fewer incidentsFaster changes'],;' targetAudienc,
-  e: ['Data platformAnalytics engineers'],;' marketPositio,
-  n: 'Complements dbt and warehouse-native governance.',;' competitor,
-  s: ['OpenMetadataGreat Expectations'],;' techStac,
-  k: ['TypeScriptPostgreSQLdbt'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Contracts as code, PR checks, lineage view.',;' ro,
-  i: 'Reduce data breakage incidents by 50–70%.',;' useCase,
-  s: ['Warehouse governanceAnalytics contracts'],;' integration,
-  s: ['dbtGitHubBigQuery'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '2 hours' };' feature,
+  s: ['Schema registryDiff viewerCI gatesBackfill helpers'];' benefit,
+  s: ['Fewer incidentsFaster changes'];' targetAudienc,
+  e: ['Data platformAnalytics engineers'];' marketPositio,
+  n: 'Complements dbt and warehouse-native governance.';' competitor,
+  s: ['OpenMetadataGreat Expectations'];' techStac,
+  k: ['TypeScriptPostgreSQLdbt']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Contracts as code, PR checks, lineage view.';' ro,
+  i: 'Reduce data breakage incidents by 50–70%.';' useCase,
+  s: ['Warehouse governanceAnalytics contracts'];' integration,
+  s: ['dbtGitHubBigQuery'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/data-contracts-hub',;' ico,
-  n: '📜',;' colo,
-  r: 'from-lime-600 to-green-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 19,; ratin,
-  g: 4.6,; review,
-  s: 6, } ],; // Helper functions; export const getServicesByCategory = (categor,)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi,)
+  s://ziontechgroup.com/services/data-contracts-hub';' ico,
+  n: '📜';' colo,
+  r: 'from-lime-600 to-green-700'; popula,
+  r: false;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 19; ratin,
+  g: 4.6; review,
+  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
+  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); },; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} },; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research',;' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity',;' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;' 'Enterprise IT' ]; websit,
-  e: string, }' nam,
+  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); }; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ]; websit,
+  e: string}' nam,
   e: 'AI Legal Document Generator',' taglin,
   e: 'Generate legally compliant documents in seconds with AI',' pric,
   e: '$89',' perio,
   d: '/month', descriptio,
   n:  ,' 'Professional legal document generation platform powered by AI that creates contracts, agreements, and legal forms in seconds. Ensures compliance with current laws and regulations.', feature,
-  s: [,' '500+ legal document templates',' 'AI - powered compliance checking',' 'Real - time legal updates',' 'Multi - jurisdiction support',' 'Electronic signature integration',' 'Document version control',' 'Legal research integration',' 'Client portal access',' 'Automated legal advice',' '24 / 7 legal support', ], popula,
+  s: [,' '500+ legal document templates',' 'AI - powered compliance checking',' 'Real - time legal updates',' 'Multi - jurisdiction support',' 'Electronic signature integration',' 'Document version control',' 'Legal research integration',' 'Client portal access',' 'Automated legal advice',' '24 / 7 legal support'], popula,
   r: true,' ico,
   n: '⚖️',' 'Law firms, legal professionals, small businesses, entrepreneurs, real estate agents', trial_day,
   s: 14,' setup_tim,
   e: '15 minutes',' categor,
   y: 'Legal Technology', real_servic,
   e: true, technolog,
-  y: [,' 'Natural Language Processing',' 'Machine Learning',' 'Legal AI',' 'Document Generation',' 'Compliance Engine', ], integration,
-  s: [,' 'DocuSign',' 'Adobe Sign',' 'Clio',' 'PracticePanther',' 'LawPay',' 'QuickBooks', ], use_case,
-  s: [,' 'Contract generation',' 'Legal form creation',' 'Compliance documentation',' 'Client onboarding',' 'Legal research', ],' ro,
+  y: [,' 'Natural Language Processing',' 'Machine Learning',' 'Legal AI',' 'Document Generation',' 'Compliance Engine'], integration,
+  s: [,' 'DocuSign',' 'Adobe Sign',' 'Clio',' 'PracticePanther',' 'LawPay',' 'QuickBooks'], use_case,
+  s: [,' 'Contract generation',' 'Legal form creation',' 'Compliance documentation',' 'Client onboarding',' 'Legal research'],' ro,
   i: '300% time savings on document creation',' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - customer - service - automation',' nam,
   e: 'AI Customer Service Automation',' taglin,
   e: '24 / 7 intelligent customer support with AI chatbots',' pric,
   e: '$149',' perio,
   d: '/month', descriptio,
   n:  ,' 'Advanced AI - powered customer service automation that handles 80% of customer inquiries automatically. Provides human - like responses and seamless escalation to human agents.', feature,
-  s: [,' 'Multi - language support (50+ languages)',' 'Natural conversation flow',' 'Sentiment analysis',' 'Automatic ticket routing',' 'Knowledge base integration',' 'Voice and text support',' 'Analytics dashboard',' 'Custom branding',' 'API integrations',' 'Real - time learning', ], popula,
+  s: [,' 'Multi - language support (50+ languages)',' 'Natural conversation flow',' 'Sentiment analysis',' 'Automatic ticket routing',' 'Knowledge base integration',' 'Voice and text support',' 'Analytics dashboard',' 'Custom branding',' 'API integrations',' 'Real - time learning'], popula,
   r: true,' ico,
   n: '🤖',' categor,
   y: 'Customer Service & Support', real_servic,
   e: true, technolog,
-  y: [,' 'Natural Language Processing',' 'Machine Learning',' 'Sentiment Analysis',' 'Voice Recognition',' 'Chatbot AI', ], integration,
-  s: [,' 'Zendesk',' 'Intercom',' 'Freshdesk',' 'Slack',' 'Microsoft Teams',' 'Shopify', ], use_case,
-  s: [,' 'Customer support',' 'Order tracking',' 'Product inquiries',' 'Technical support',' 'Appointment booking', ],' ro,
+  y: [,' 'Natural Language Processing',' 'Machine Learning',' 'Sentiment Analysis',' 'Voice Recognition',' 'Chatbot AI'], integration,
+  s: [,' 'Zendesk',' 'Intercom',' 'Freshdesk',' 'Slack',' 'Microsoft Teams',' 'Shopify'], use_case,
+  s: [,' 'Customer support',' 'Order tracking',' 'Product inquiries',' 'Technical support',' 'Appointment booking'],' ro,
   i: '60% reduction in support costs',' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - seo - optimizer - pro',' nam,
   e: 'AI SEO Optimizer Pro',' taglin,
   e: 'Automated SEO optimization powered by artificial intelligence',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive SEO automation platform that analyzes, optimizes, and monitors your website performance. Uses AI to identify opportunities and implement best practices automatically.', feature,
-  s: [,' 'AI - powered keyword research',' 'Automatic on - page optimization',' 'Competitor analysis',' 'Content optimization suggestions',' 'Technical SEO audits',' 'Ranking tracking',' 'Backlink monitoring',' 'Local SEO optimization',' 'Mobile optimization',' 'Performance analytics', ], popula,
+  s: [,' 'AI - powered keyword research',' 'Automatic on - page optimization',' 'Competitor analysis',' 'Content optimization suggestions',' 'Technical SEO audits',' 'Ranking tracking',' 'Backlink monitoring',' 'Local SEO optimization',' 'Mobile optimization',' 'Performance analytics'], popula,
   r: true,' ico,
   n: '📈',' 'Leading AI SEO platform with 40% better ranking improvements', target_audienc,
   e:  ,' 'Digital marketing agencies, e - commerce businesses, content creators, small businesses', trial_day,
@@ -19357,46 +18471,46 @@ i,
   e: '1 hour',' categor,
   y: 'Digital Marketing & SEO', real_servic,
   e: true, technolog,
-  y: [,' 'Machine Learning',' 'Natural Language Processing',' 'Data Analytics',' 'SEO Algorithms',' 'Web Crawling', ], integration,
-  s: [,' 'Google Analytics',' 'Google Search Console',' 'WordPress',' 'Shopify',' 'WooCommerce',' 'HubSpot', ], use_case,
-  s: [,' 'Website optimization',' 'Content marketing',' 'Local business SEO',' 'E - commerce SEO',' 'Blog optimization', ],' ro,
+  y: [,' 'Machine Learning',' 'Natural Language Processing',' 'Data Analytics',' 'SEO Algorithms',' 'Web Crawling'], integration,
+  s: [,' 'Google Analytics',' 'Google Search Console',' 'WordPress',' 'Shopify',' 'WooCommerce',' 'HubSpot'], use_case,
+  s: [,' 'Website optimization',' 'Content marketing',' 'Local business SEO',' 'E - commerce SEO',' 'Blog optimization'],' ro,
   i: '200% increase in organic traffic in 6 months',' competitor,
   s: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath'],' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - video - editing - suite',' nam,
   e: 'AI Video Editing Suite',' taglin,
   e: 'Professional video editing powered by artificial intelligence',' pric,
   e: '$299',' perio,
   d: '/month', descriptio,
   n:  ,' 'Revolutionary video editing platform that uses AI to automate complex editing tasks. Perfect for content creators, marketers, and video professionals who need high - quality output quickly.', feature,
-  s: [,' 'AI - powered scene detection',' 'Automatic color correction',' 'Smart audio enhancement',' 'Background removal',' 'Text - to - speech generation',' 'Auto - captioning',' 'Video templates library',' 'Cloud rendering',' 'Collaborative editing',' 'Export to multiple formats', ], popula,
+  s: [,' 'AI - powered scene detection',' 'Automatic color correction',' 'Smart audio enhancement',' 'Background removal',' 'Text - to - speech generation',' 'Auto - captioning',' 'Video templates library',' 'Cloud rendering',' 'Collaborative editing',' 'Export to multiple formats'], popula,
   r: true,' ico,
   n: '🎬',' 'Content creators, video marketers, social media managers, film students, small businesses', trial_day,
   s: 21,' setup_tim,
   e: '30 minutes',' categor,
   y: 'Creative & Media', real_servic,
   e: true, technolog,
-  y: [,' 'Computer Vision',' 'Machine Learning',' 'Audio Processing',' 'Video Compression',' 'Cloud Computing', ], integration,
-  s: [,' 'Adobe Creative Suite',' 'Final Cut Pro',' 'DaVinci Resolve',' 'YouTube',' 'Vimeo',' 'Social media platforms', ], use_case,
-  s: [,' 'Social media content',' 'Marketing videos',' 'Product demos',' 'Educational content',' 'Event highlights', ],' ro,
+  y: [,' 'Computer Vision',' 'Machine Learning',' 'Audio Processing',' 'Video Compression',' 'Cloud Computing'], integration,
+  s: [,' 'Adobe Creative Suite',' 'Final Cut Pro',' 'DaVinci Resolve',' 'YouTube',' 'Vimeo',' 'Social media platforms'], use_case,
+  s: [,' 'Social media content',' 'Marketing videos',' 'Product demos',' 'Educational content',' 'Event highlights'],' ro,
   i: '80% reduction in editing time', competitor,
-  s: [,' 'Adobe Premiere Pro',' 'Final Cut Pro',' 'DaVinci Resolve',' 'Camtasia',' 'Filmora', ],' mobil,
+  s: [,' 'Adobe Premiere Pro',' 'Final Cut Pro',' 'DaVinci Resolve',' 'Camtasia',' 'Filmora'],' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - data - analytics - platform',' nam,
   e: 'AI Data Analytics Platform',' taglin,
   e: 'Transform raw data into actionable insights with AI',' pric,
   e: '$399',' perio,
   d: '/month', descriptio,
   n:  ,' 'Advanced data analytics platform that uses AI to automatically discover patterns, generate insights, and create predictive models. Perfect for businesses looking to make data - driven decisions.', feature,
-  s: [,' 'AI - powered data discovery',' 'Automated pattern recognition',' 'Predictive analytics',' 'Real - time data processing',' 'Interactive dashboards',' 'Data visualization',' 'Custom reporting',' 'Data integration tools',' 'API access',' 'Advanced security', ], popula,
+  s: [,' 'AI - powered data discovery',' 'Automated pattern recognition',' 'Predictive analytics',' 'Real - time data processing',' 'Interactive dashboards',' 'Data visualization',' 'Custom reporting',' 'Data integration tools',' 'API access',' 'Advanced security'], popula,
   r: true,' ico,
   n: '📊',' 'Leading AI analytics platform with 90% accuracy in predictions', target_audienc,
   e:  ,' 'Data analysts, business intelligence teams, marketing agencies, e - commerce businesses', trial_day,
@@ -19404,23 +18518,23 @@ i,
   e: '4 hours',' categor,
   y: 'Data & Analytics', real_servic,
   e: true, technolog,
-  y: [,' 'Machine Learning',' 'Data Mining',' 'Statistical Analysis',' 'Big Data Processing',' 'Predictive Modeling', ], integration,
-  s: [,' 'Google Analytics',' 'Salesforce',' 'HubSpot',' 'MySQL',' 'PostgreSQL',' 'AWS',' 'Google Cloud', ], use_case,
-  s: [,' 'Business intelligence',' 'Customer analytics',' 'Market research',' 'Performance tracking',' 'Risk assessment', ],' ro,
+  y: [,' 'Machine Learning',' 'Data Mining',' 'Statistical Analysis',' 'Big Data Processing',' 'Predictive Modeling'], integration,
+  s: [,' 'Google Analytics',' 'Salesforce',' 'HubSpot',' 'MySQL',' 'PostgreSQL',' 'AWS',' 'Google Cloud'], use_case,
+  s: [,' 'Business intelligence',' 'Customer analytics',' 'Market research',' 'Performance tracking',' 'Risk assessment'],' ro,
   i: '150% improvement in decision - making speed',' competitor,
   s: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo'],' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - hr - recruitment - platform',' nam,
   e: 'AI HR Recruitment Platform',' taglin,
   e: 'Streamline hiring with AI - powered recruitment automation',' pric,
   e: '$179',' perio,
   d: '/month', descriptio,
   n:  ,' 'Intelligent HR recruitment platform that automates candidate sourcing, screening, and assessment. Uses AI to match the best candidates with job requirements and company culture.', feature,
-  s: [,' 'AI candidate matching',' 'Automated resume screening',' 'Skill assessment tools',' 'Interview scheduling',' 'Background verification',' 'Diversity analytics',' 'Candidate tracking',' 'Performance analytics',' 'Integration with job boards',' 'Mobile app access', ], popula,
+  s: [,' 'AI candidate matching',' 'Automated resume screening',' 'Skill assessment tools',' 'Interview scheduling',' 'Background verification',' 'Diversity analytics',' 'Candidate tracking',' 'Performance analytics',' 'Integration with job boards',' 'Mobile app access'], popula,
   r: true,' ico,
   n: '👥',' 'Leading AI recruitment platform with 70% faster hiring process', target_audienc,
   e:  ,' 'HR professionals, recruitment agencies, small businesses, enterprise companies', trial_day,
@@ -19428,46 +18542,46 @@ i,
   e: '2 hours',' categor,
   y: 'Human Resources', real_servic,
   e: true, technolog,
-  y: [,' 'Natural Language Processing',' 'Machine Learning',' 'Predictive Analytics',' 'AI Matching',' 'Automation', ], integration,
-  s: [,' 'LinkedIn',' 'Indeed',' 'Glassdoor',' 'Workday',' 'BambooHR',' 'Slack',' 'Microsoft Teams', ], use_case,
-  s: [,' 'Candidate sourcing',' 'Resume screening',' 'Skill assessment',' 'Interview coordination',' 'Hiring analytics', ],' ro,
+  y: [,' 'Natural Language Processing',' 'Machine Learning',' 'Predictive Analytics',' 'AI Matching',' 'Automation'], integration,
+  s: [,' 'LinkedIn',' 'Indeed',' 'Glassdoor',' 'Workday',' 'BambooHR',' 'Slack',' 'Microsoft Teams'], use_case,
+  s: [,' 'Candidate sourcing',' 'Resume screening',' 'Skill assessment',' 'Interview coordination',' 'Hiring analytics'],' ro,
   i: '50% reduction in time - to - hire', competitor,
-  s: [,' 'Workday',' 'BambooHR',' 'Greenhouse',' 'Lever',' 'SmartRecruiters', ],' mobil,
+  s: [,' 'Workday',' 'BambooHR',' 'Greenhouse',' 'Lever',' 'SmartRecruiters'],' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - sales - automation - platform',' nam,
   e: 'AI Sales Automation Platform',' taglin,
   e: 'Boost sales performance with intelligent automation',' pric,
   e: '$249',' perio,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive sales automation platform that uses AI to identify leads, prioritize opportunities, and optimize sales processes. Increases conversion rates and reduces sales cycle time.', feature,
-  s: [,' 'AI lead scoring',' 'Sales forecasting',' 'Pipeline management',' 'Email automation',' 'Meeting scheduling',' 'Performance analytics',' 'CRM integration',' 'Mobile sales app',' 'Real - time notifications',' 'Custom workflows', ], popula,
+  s: [,' 'AI lead scoring',' 'Sales forecasting',' 'Pipeline management',' 'Email automation',' 'Meeting scheduling',' 'Performance analytics',' 'CRM integration',' 'Mobile sales app',' 'Real - time notifications',' 'Custom workflows'], popula,
   r: true,' ico,
   n: '💰',' 'Sales teams, B2B companies, real estate agents, insurance agents, consultants', trial_day,
   s: 21,' setup_tim,
   e: '3 hours',' categor,
   y: 'Sales & CRM', real_servic,
   e: true, technolog,
-  y: [,' 'Machine Learning',' 'Predictive Analytics',' 'Natural Language Processing',' 'Automation',' 'AI Optimization', ], integration,
-  s: [,' 'Salesforce',' 'HubSpot',' 'Pipedrive',' 'Zoho CRM',' 'Microsoft Dynamics',' 'Gmail',' 'Outlook', ], use_case,
-  s: [,' 'Lead generation',' 'Sales forecasting',' 'Pipeline management',' 'Email campaigns',' 'Performance tracking', ],' ro,
+  y: [,' 'Machine Learning',' 'Predictive Analytics',' 'Natural Language Processing',' 'Automation',' 'AI Optimization'], integration,
+  s: [,' 'Salesforce',' 'HubSpot',' 'Pipedrive',' 'Zoho CRM',' 'Microsoft Dynamics',' 'Gmail',' 'Outlook'], use_case,
+  s: [,' 'Lead generation',' 'Sales forecasting',' 'Pipeline management',' 'Email campaigns',' 'Performance tracking'],' ro,
   i: '35% increase in sales conversion rates', competitor,
-  s: [,' 'Salesforce',' 'HubSpot',' 'Pipedrive',' 'Zoho CRM',' 'Freshsales', ],' mobil,
+  s: [,' 'Salesforce',' 'HubSpot',' 'Pipedrive',' 'Zoho CRM',' 'Freshsales'],' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - market - research - platform',' nam,
   e: 'AI Market Research Platform',' taglin,
   e: 'Discover market opportunities with AI - powered research',' pric,
   e: '$159',' perio,
   d: '/month', descriptio,
   n:  ,' 'Intelligent market research platform that automatically analyzes market trends, competitor activities, and customer behavior. Provides actionable insights for strategic decision - making.', feature,
-  s: [,' 'AI market analysis',' 'Competitor monitoring',' 'Trend prediction',' 'Customer sentiment analysis',' 'Market size estimation',' 'Custom reports',' 'Data visualization',' 'API access',' 'Real - time updates',' 'Export capabilities', ], popula,
+  s: [,' 'AI market analysis',' 'Competitor monitoring',' 'Trend prediction',' 'Customer sentiment analysis',' 'Market size estimation',' 'Custom reports',' 'Data visualization',' 'API access',' 'Real - time updates',' 'Export capabilities'], popula,
   r: true,' ico,
   n: '🔍',' 'Leading AI market research with 95% accuracy in trend predictions', target_audienc,
   e:  ,' 'Market researchers, business strategists, startups, investment firms, consultants', trial_day,
@@ -19475,46 +18589,46 @@ i,
   e: '2 hours',' categor,
   y: 'Market Research', real_servic,
   e: true, technolog,
-  y: [,' 'Machine Learning',' 'Natural Language Processing',' 'Data Mining',' 'Predictive Analytics',' 'Web Scraping', ], integration,
-  s: [,' 'Google Trends',' 'Social media platforms',' 'News APIs',' 'Financial data sources',' 'Custom databases', ], use_case,
-  s: [,' 'Market analysis',' 'Competitor research',' 'Trend identification',' 'Investment decisions',' 'Product development', ],' ro,
+  y: [,' 'Machine Learning',' 'Natural Language Processing',' 'Data Mining',' 'Predictive Analytics',' 'Web Scraping'], integration,
+  s: [,' 'Google Trends',' 'Social media platforms',' 'News APIs',' 'Financial data sources',' 'Custom databases'], use_case,
+  s: [,' 'Market analysis',' 'Competitor research',' 'Trend identification',' 'Investment decisions',' 'Product development'],' ro,
   i: '200% faster market insights generation', competitor,
-  s: [,' 'Statista',' 'IBISWorld',' 'Mintel',' 'Euromonitor',' 'Forrester', ],' mobil,
+  s: [,' 'Statista',' 'IBISWorld',' 'Mintel',' 'Euromonitor',' 'Forrester'],' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - blockchain - analytics',' nam,
   e: 'AI Blockchain Analytics Platform',' taglin,
   e: 'Advanced blockchain intelligence and analytics',' pric,
   e: '$599',' perio,
   d: '/month', descriptio,
   n:  ,' 'Comprehensive blockchain analytics platform that uses AI to track transactions, identify patterns, and provide insights into cryptocurrency and blockchain activities.', feature,
-  s: [,' 'Real - time transaction monitoring',' 'AI pattern recognition',' 'Risk assessment',' 'Compliance reporting',' 'Portfolio tracking',' 'Market analysis',' 'API integration',' 'Custom alerts',' 'Data export',' 'Multi - chain support', ], popula,
+  s: [,' 'Real - time transaction monitoring',' 'AI pattern recognition',' 'Risk assessment',' 'Compliance reporting',' 'Portfolio tracking',' 'Market analysis',' 'API integration',' 'Custom alerts',' 'Data export',' 'Multi - chain support'], popula,
   r: true,' ico,
   n: '🔗',' 'Cryptocurrency traders, blockchain companies, financial institutions, regulators', trial_day,
   s: 21,' setup_tim,
   e: '4 hours',' categor,
   y: 'Blockchain & Cryptocurrency', real_servic,
   e: true, technolog,
-  y: [,' 'Blockchain Analysis',' 'Machine Learning',' 'Cryptography',' 'Data Analytics',' 'AI Pattern Recognition', ], integration,
-  s: [,' 'Ethereum',' 'Bitcoin',' 'Binance Smart Chain',' 'Polygon',' 'Custom blockchain APIs', ], use_case,
-  s: [,' 'Transaction monitoring',' 'Risk assessment',' 'Compliance reporting',' 'Portfolio analysis',' 'Market research', ],' ro,
+  y: [,' 'Blockchain Analysis',' 'Machine Learning',' 'Cryptography',' 'Data Analytics',' 'AI Pattern Recognition'], integration,
+  s: [,' 'Ethereum',' 'Bitcoin',' 'Binance Smart Chain',' 'Polygon',' 'Custom blockchain APIs'], use_case,
+  s: [,' 'Transaction monitoring',' 'Risk assessment',' 'Compliance reporting',' 'Portfolio analysis',' 'Market research'],' ro,
   i: '300% improvement in blockchain intelligence', competitor,
-  s: [,' 'Chainalysis',' 'Elliptic',' 'CipherTrace',' 'Blockchain && Blockchain.com',' 'Etherscan', ],' mobil,
+  s: [,' 'Chainalysis',' 'Elliptic',' 'CipherTrace',' 'Blockchain && Blockchain.com',' 'Etherscan'],' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - cloud - cost - optimizer',' nam,
   e: 'AI Cloud Cost Optimizer',' taglin,
   e: 'Reduce cloud costs by up to 40% with AI optimization',' pric,
   e: '$199',' perio,
   d: '/month', descriptio,
   n:  ,' 'Intelligent cloud cost optimization platform that automatically analyzes usage patterns and recommends cost - saving strategies. Works with AWS, Azure, and Google Cloud.', feature,
-  s: [,' 'AI cost analysis',' 'Automated optimization',' 'Multi - cloud support',' 'Real - time monitoring',' 'Cost forecasting',' 'Resource recommendations',' 'Automated scaling',' 'Budget alerts',' 'Detailed reporting',' 'API integration', ], popula,
+  s: [,' 'AI cost analysis',' 'Automated optimization',' 'Multi - cloud support',' 'Real - time monitoring',' 'Cost forecasting',' 'Resource recommendations',' 'Automated scaling',' 'Budget alerts',' 'Detailed reporting',' 'API integration'], popula,
   r: true,' ico,
   n: '☁️',' 'Leading cloud cost optimization with 40% average cost reduction', target_audienc,
   e:  ,' 'DevOps teams, cloud architects, IT managers, startups, enterprise companies', trial_day,
@@ -19522,23 +18636,23 @@ i,
   e: '3 hours',' categor,
   y: 'Cloud & DevOps', real_servic,
   e: true, technolog,
-  y: [,' 'Machine Learning',' 'Cloud Computing',' 'Cost Optimization',' 'Resource Management',' 'Predictive Analytics', ], integration,
-  s: [,' 'AWS',' 'Microsoft Azure',' 'Google Cloud',' 'Kubernetes',' 'Docker',' 'Terraform', ], use_case,
-  s: [,' 'Cost optimization',' 'Resource management',' 'Capacity planning',' 'Budget management',' 'Performance optimization', ],' ro,
+  y: [,' 'Machine Learning',' 'Cloud Computing',' 'Cost Optimization',' 'Resource Management',' 'Predictive Analytics'], integration,
+  s: [,' 'AWS',' 'Microsoft Azure',' 'Google Cloud',' 'Kubernetes',' 'Docker',' 'Terraform'], use_case,
+  s: [,' 'Cost optimization',' 'Resource management',' 'Capacity planning',' 'Budget management',' 'Performance optimization'],' ro,
   i: '40% reduction in cloud costs', competitor,
-  s: [,' 'CloudHealth',' 'CloudCheckr',' 'ParkMyCloud',' 'Cloudability',' 'AWS Cost Explorer', ],' mobil,
+  s: [,' 'CloudHealth',' 'CloudCheckr',' 'ParkMyCloud',' 'Cloudability',' 'AWS Cost Explorer'],' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
   e: 'http,
-  s://ziontechgroup && ziontechgroup.com', }, }, ' i,
+  s://ziontechgroup && ziontechgroup.com'}}, ' i,
   d: 'ai - database - performance - monitor',' nam,
   e: 'AI Database Performance Monitor',' taglin,
   e: 'Optimize database performance with AI - powered monitoring',' pric,
   e: '$179',' perio,
   d: '/month', descriptio,
   n:  ,' 'Advanced database performance monitoring platform that uses AI to detect issues, optimize queries, and prevent performance problems before they impact users.', feature,
-  s: [,' 'AI performance analysis',' 'Query optimization',' 'Real - time monitoring',' 'Performance alerts',' 'Capacity planning',' 'Security monitoring',' 'Backup monitoring',' 'Custom dashboards',' 'API access',' 'Multi - database support', ],' integration,
+  s: [,' 'AI performance analysis',' 'Query optimization',' 'Real - time monitoring',' 'Performance alerts',' 'Capacity planning',' 'Security monitoring',' 'Backup monitoring',' 'Custom dashboards',' 'API access',' 'Multi - database support'],' integration,
   s: ['Apple Health, Google Fit, Fitbit, Garmin, MyFitnessPal'], suppor,
   t:  ,' 'Dedicated health coach, community support, and 24 / 7 platform assistance.',' complianc,
   e: ['HIPAA, GDPR, CCPA, SOC 2 Type II'],' ico,
@@ -19548,7 +18662,7 @@ i,
   e: '2024 - 03 - 05', customer,
   s: 1100, ratin,
   g: 4 && 4.6, review,
-  s: 134, }, ' i,
+  s: 134}, ' i,
   d: 'ai - email - responder - pro',' nam,
   e: 'AI Email Responder Pro',' taglin,
   e: 'Auto - triage and reply to routine emails with guardrails', descriptio,
@@ -19559,14 +18673,14 @@ i,
   y: 790,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '15 minutes', }, feature,
+  e: '15 minutes'}, feature,
   s: [,' 'Inbox labeling and prioritization',' 'On - brand response templates',' 'Sentiment and urgency detection',' 'Auto - draft with human - in - the - loop',' 'Zendesk / HubSpot / Gmail integration',' 'Metric,
-  s: FRT / ART, deflection rate', ], benefit,
-  s: [,' 'Cut response time by 60%',' 'Deflect 30–50% routine tickets',' 'Improve CSAT and NPS', ],' target_audienc,
+  s: FRT / ART, deflection rate'], benefit,
+  s: [,' 'Cut response time by 60%',' 'Deflect 30–50% routine tickets',' 'Improve CSAT and NPS'],' target_audienc,
   e: ['Support teams', 'Sales ops', 'Founders', 'Agencies'], market_positio,
   n:  ,' 'Alternatives include Superhuman AI and Front AI. Differentiato,
   r: policy guardrails and CRM context sync.',' competitor,
-  s: ['Superhuman', 'Front', 'Zendesk AI'],' 'Support autoreplies',' 'Sales follow - ups',' 'Vendor coordination', ],' integration,
+  s: ['Superhuman', 'Front', 'Zendesk AI'],' 'Support autoreplies',' 'Sales follow - ups',' 'Vendor coordination'],' integration,
   s: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],' suppor,
   t: 'Email and chat support with onboarding concierge for teams',' complianc,
   e: ['GDPR', 'CCPA', 'SOC 2 Type II'],' ico,
@@ -19576,7 +18690,7 @@ i,
   e: '2025 - 02 - 01', customer,
   s: 180, ratin,
   g: 4 && 4.7, review,
-  s: 46, }, ' i,
+  s: 46}, ' i,
   d: 'mobile - conversational - surveys',' nam,
   e: 'Mobile Conversational Surveys',' taglin,
   e: 'Adaptive, chat - style surveys with higher completion rates', descriptio,
@@ -19587,9 +18701,9 @@ i,
   y: 490,' currenc,
   y: 'USD', trial_day,
   s: 7,' setup_tim,
-  e: '10 minutes', }, feature,
-  s: [,' 'Branching logic',' 'A / B prompts',' 'Embeddable widget',' 'CSV / JSON export',' 'Webhook triggers', ], benefit,
-  s: [,' '+35% completion rate vs. forms',' 'Cleaner data, fewer drop - offs', ],' target_audienc,
+  e: '10 minutes'}, feature,
+  s: [,' 'Branching logic',' 'A / B prompts',' 'Embeddable widget',' 'CSV / JSON export',' 'Webhook triggers'], benefit,
+  s: [,' '+35% completion rate vs. forms',' 'Cleaner data, fewer drop - offs'],' target_audienc,
   e: ['Product teams', 'Marketers', 'UX researchers'], market_positio,
   n:  ,' 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',' competitor,
   s: ['Typeform', 'SurveySparrow', 'Tally'],' 'Template gallery, response store, analytics, export jobs.',' ro,
@@ -19604,7 +18718,7 @@ i,
   e: '2024 - 12 - 10', customer,
   s: 95, ratin,
   g: 4 && 4.6, review,
-  s: 22, }, ' i,
+  s: 22}, ' i,
   d: 'niche - productivity - planner',' nam,
   e: 'Niche Productivity Planner',' taglin,
   e: 'Opinionated project boards, tailored to your industry', descriptio,
@@ -19615,8 +18729,8 @@ i,
   y: 390,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '5 minutes', }, feature,
-  s: [,' 'Industry templates',' 'Automations',' 'Calendar & Gantt',' 'Role - based permissions', ],' benefit,
+  e: '5 minutes'}, feature,
+  s: [,' 'Industry templates',' 'Automations',' 'Calendar & Gantt',' 'Role - based permissions'],' benefit,
   s: ['Reduce setup time by 80%', 'Consistency across teams'],' target_audienc,
   e: ['Agencies', 'Studios', 'SMBs'], market_positio,
   n:  ,' 'Alternative to Notion templates + Asana. Faster to start with curated flows.',' competitor,
@@ -19632,7 +18746,7 @@ i,
   e: '2025 - 01 - 20', customer,
   s: 60, ratin,
   g: 4 && 4.5, review,
-  s: 14, }, ' i,
+  s: 14}, ' i,
   d: 'event - management - dashboard',' nam,
   e: 'Event Management Dashboard',' taglin,
   e: 'Tickets, scheduling, engagement analytics in one place', descriptio,
@@ -19643,8 +18757,8 @@ i,
   y: 1290,' currenc,
   y: 'USD', trial_day,
   s: 7,' setup_tim,
-  e: '1 day', }, feature,
-  s: [,' 'Ticketing & check - in',' 'Session builder',' 'Email campaigns',' 'Live polls & Q & A', ],' benefit,
+  e: '1 day'}, feature,
+  s: [,' 'Ticketing & check - in',' 'Session builder',' 'Email campaigns',' 'Live polls & Q & A'],' benefit,
   s: ['Launch events faster', 'Better attendee engagement'],' target_audienc,
   e: ['Conferences', 'Meetups', 'Communities'], market_positio,
   n:  ,' 'Lean alternative to Hopin and Eventbrite with richer analytics.',' competitor,
@@ -19660,7 +18774,7 @@ i,
   e: '2024 - 11 - 18', customer,
   s: 70, ratin,
   g: 4 && 4.6, review,
-  s: 18, }, ' i,
+  s: 18}, ' i,
   d: 'affiliate - tracking - suite',' nam,
   e: 'Affiliate Tracking Suite',' taglin,
   e: 'Links, attribution, commissions, payouts—no spreadsheet required', descriptio,
@@ -19671,8 +18785,8 @@ i,
   y: 990,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '1 hour', }, feature,
-  s: [,' 'Custom links',' 'Attribution windows',' 'Coupon attribution',' 'Payout exports', ],' benefit,
+  e: '1 hour'}, feature,
+  s: [,' 'Custom links',' 'Attribution windows',' 'Coupon attribution',' 'Payout exports'],' benefit,
   s: ['Grow revenue via affiliates', 'Reduce fraud'],' target_audienc,
   e: ['E‑commerce', 'SaaS'], market_positio,
   n:  ,' 'Simpler than Impact and PartnerStack with transparent pricing.',' competitor,
@@ -19688,7 +18802,7 @@ i,
   e: '2024 - 10 - 12', customer,
   s: 55, ratin,
   g: 4 && 4.4, review,
-  s: 12, }, ' i,
+  s: 12}, ' i,
   d: 'smb - website - analytics',' nam,
   e: 'SMB Website Analytics',' taglin,
   e: 'Privacy - friendly analytics with actionable insights', descriptio,
@@ -19699,8 +18813,8 @@ i,
   y: 290,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '5 minutes', }, feature,
-  s: [,' 'Goals & funnels',' 'Weekly insights email',' 'Anomaly alerts',' 'Shareable dashboards', ],' benefit,
+  e: '5 minutes'}, feature,
+  s: [,' 'Goals & funnels',' 'Weekly insights email',' 'Anomaly alerts',' 'Shareable dashboards'],' benefit,
   s: ['Know what works', 'Focus on actions'],' target_audienc,
   e: ['Founders', 'Marketers', 'Agencies'], market_positio,
   n:  ,' 'Alternative to Plausible and Fathom with built - in insights.',' competitor,
@@ -19716,7 +18830,7 @@ i,
   e: '2025 - 02 - 05', customer,
   s: 140, ratin,
   g: 4 && 4.7, review,
-  s: 28, }, ' i,
+  s: 28}, ' i,
   d: 'it - helpdesk - lite',' nam,
   e: 'IT Helpdesk Lite',' taglin,
   e: 'Tickets, SLA timers, knowledge base, portal—ready day one', descriptio,
@@ -19727,8 +18841,8 @@ i,
   y: 590,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '2 hours', }, feature,
-  s: [,' 'Email - to - ticket',' 'SLA timers',' 'Macros / automations',' 'Self - serve portal', ],' benefit,
+  e: '2 hours'}, feature,
+  s: [,' 'Email - to - ticket',' 'SLA timers',' 'Macros / automations',' 'Self - serve portal'],' benefit,
   s: ['Shorter MTTR', 'Fewer escalations'],' target_audienc,
   e: ['MSPs', 'IT teams'],' market_positio,
   n: 'Lightweight alternative to Zendesk and Freshservice.',' competitor,
@@ -19744,7 +18858,7 @@ i,
   e: '2024 - 09 - 22', customer,
   s: 120, ratin,
   g: 4 && 4.5, review,
-  s: 31, }, ' i,
+  s: 31}, ' i,
   d: 'ecommerce - return - manager',' nam,
   e: 'E‑commerce Return Manager',' taglin,
   e: 'Customer - friendly returns with labels and status tracking', descriptio,
@@ -19755,8 +18869,8 @@ i,
   y: 790,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '1 hour', }, feature,
-  s: [,' 'Self - service portal',' 'Label generation',' 'Return reasons analytics',' 'Exchanges & store credit', ],' benefit,
+  e: '1 hour'}, feature,
+  s: [,' 'Self - service portal',' 'Label generation',' 'Return reasons analytics',' 'Exchanges & store credit'],' benefit,
   s: ['Higher retention', 'Lower support load'],' target_audienc,
   e: ['D2C brands', 'Marketplaces'],' market_positio,
   n: 'Competitive with Loop and Returnly at simpler pricing.',' competitor,
@@ -19772,7 +18886,7 @@ i,
   e: '2024 - 08 - 30', customer,
   s: 75, ratin,
   g: 4 && 4.4, review,
-  s: 19, }, ' i,
+  s: 19}, ' i,
   d: 'auto - email - followups',' nam,
   e: 'Automated Email Follow‑ups',' taglin,
   e: 'Cadence sequences for leads with AI personalization', descriptio,
@@ -19783,8 +18897,8 @@ i,
   y: 490,' currenc,
   y: 'USD', trial_day,
   s: 7,' setup_tim,
-  e: '20 minutes', }, feature,
-  s: [,' 'Sequences',' 'Rules & triggers',' 'Open / click tracking',' 'AI snippets', ],' benefit,
+  e: '20 minutes'}, feature,
+  s: [,' 'Sequences',' 'Rules & triggers',' 'Open / click tracking',' 'AI snippets'],' benefit,
   s: ['Higher reply rate', 'Fewer manual tasks'],' target_audienc,
   e: ['SMB sales teams', 'Agencies'], market_positio,
   n:  ,' 'Alternative to Lemlist and Mailshake with stricter safety.',' competitor,
@@ -19799,7 +18913,7 @@ i,
   e: '2025 - 01 - 25', customer,
   s: 90, ratin,
   g: 4 && 4.5, review,
-  s: 17, }, ' i,
+  s: 17}, ' i,
   d: 'podcast - transcription - studio',' nam,
   e: 'Podcast Transcription Studio',' taglin,
   e: 'Accurate transcripts, show notes, and highlights', descriptio,
@@ -19810,8 +18924,8 @@ i,
   y: 390,' currenc,
   y: 'USD', trial_day,
   s: 7,' setup_tim,
-  e: '5 minutes', }, feature,
-  s: [,' 'Speaker diarization',' 'Timecodes',' 'Chapters',' 'Show notes drafts', ],' benefit,
+  e: '5 minutes'}, feature,
+  s: [,' 'Speaker diarization',' 'Timecodes',' 'Chapters',' 'Show notes drafts'],' benefit,
   s: ['Accessibility', 'SEO - ready content'],' target_audienc,
   e: ['Podcasters', 'Agencies'],' market_positio,
   n: 'Alternative to Descript transcripts with simpler pricing.',' competitor,
@@ -19822,7 +18936,7 @@ i,
   e: '2024 - 12 - 02', customer,
   s: 210, ratin,
   g: 4 && 4.7, review,
-  s: 52, }, ' i,
+  s: 52}, ' i,
   d: 'ai - knowledge - graph - studio',' nam,
   e: 'AI Knowledge Graph Studio',' taglin,
   e: 'Build semantic graphs for RAG and lineage in minutes', descriptio,
@@ -19833,8 +18947,8 @@ i,
   y: 1990,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '1 day', }, feature,
-  s: [,' 'Entity / relation extraction',' 'Schema editor',' 'Vector + graph search',' 'Lineage view', ],' benefit,
+  e: '1 day'}, feature,
+  s: [,' 'Entity / relation extraction',' 'Schema editor',' 'Vector + graph search',' 'Lineage view'],' benefit,
   s: ['Higher RAG precision', 'Governance & explainability'],' target_audienc,
   e: ['Data teams', 'Platform engineering', 'Compliance'], market_positio,
   n:  ,' 'Alternative to Neo4j Aura + bespoke pipelines with faster time - to - value.',' competitor,
@@ -19853,7 +18967,7 @@ i,
   e: '2025 - 02 - 08', customer,
   s: 35, ratin,
   g: 4 && 4.8, review,
-  s: 11, }, ' i,
+  s: 11}, ' i,
   d: 'llm - guarded - api - gateway',' nam,
   e: 'LLM Guarded API Gateway',' taglin,
   e: 'Policy, safety, metering and routing for GenAI apps', descriptio,
@@ -19864,8 +18978,8 @@ i,
   y: 2990,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '1 day', }, feature,
-  s: [,' 'Provider adapters',' 'Policy engine',' 'PII redaction',' 'Rate limits', ],' benefit,
+  e: '1 day'}, feature,
+  s: [,' 'Provider adapters',' 'Policy engine',' 'PII redaction',' 'Rate limits'],' benefit,
   s: ['Control spend', 'Reduce risk'],' target_audienc,
   e: ['Platform teams', 'AI product']; market_positio,
   n: ;' 'Comparable to OpenRouter / EdenAI, adds governance and audit.',' competitor,
@@ -19881,7 +18995,7 @@ i,
   e: '2025 - 02 - 08', customer,
   s: 42, ratin,
   g: 4 && 4.8, review,
-  s: 13, }, ' i,
+  s: 13}, ' i,
   d: 'serverless - lakehouse - starter',' nam,
   e: 'Serverless Lakehouse Starter',' taglin,
   e: 'Spin up ELT + dbt + dashboards in a day', descriptio,
@@ -19892,8 +19006,8 @@ i,
   y: 2490,' currenc,
   y: 'USD', trial_day,
   s: 7,' setup_tim,
-  e: '1 day', }, feature,
-  s: [,' 'Event collector',' 'Connector library',' 'dbt models',' 'Grafana dashboards', ],' benefit,
+  e: '1 day'}, feature,
+  s: [,' 'Event collector',' 'Connector library',' 'dbt models',' 'Grafana dashboards'],' benefit,
   s: ['Faster analytics ROI', 'Lower platform toil'],' target_audienc,
   e: ['Data teams', 'Ops'],' market_positio,
   n: 'Starter alternative to building bespoke stacks.',' competitor,
@@ -19912,7 +19026,7 @@ i,
   e: '2025 - 02 - 08', customer,
   s: 24, ratin,
   g: 4 && 4.6, review,
-  s: 7, }, ' i,
+  s: 7}, ' i,
   d: 'data - contracts - hub',' nam,
   e: 'Data Contracts Hub',' taglin,
   e: 'Diff schemas, enforce CI gates, and prevent breaking changes', descriptio,
@@ -19923,8 +19037,8 @@ i,
   y: 1290,' currenc,
   y: 'USD', trial_day,
   s: 14,' setup_tim,
-  e: '2 hours', }, feature,
-  s: [,' 'Schema registry',' 'Diff viewer',' 'CI gates',' 'Backfill helpers', ],' benefit,
+  e: '2 hours'}, feature,
+  s: [,' 'Schema registry',' 'Diff viewer',' 'CI gates',' 'Backfill helpers'],' benefit,
   s: ['Fewer incidents', 'Faster changes'],' target_audienc,
   e: ['Data platform', 'Analytics engineers'],' market_positio,
   n: 'Complements dbt and warehouse - native governance.',' competitor,
@@ -20777,7 +19891,7 @@ i,
   e: '2025-02-08' customer,
   s: 19,
   rating: 4.6,
-  reviews: 6 },]; // Helper functions export const getServicesByCategory = (categor,)
+  reviews: 6 }]; // Helper functions export const getServicesByCategory = (categor)
   y: string) => ' ro,
   i: 'Reduce data breakage incidents by 50–70%.'' use_case,
   s: ['Warehouse governance_analytics contracts'];' integration,
@@ -20789,7 +19903,7 @@ i,
   r: false;' launch_dat,
   e: '2025 - 02 - 08' customer,
   s: 19, review,
-  s: 6 } ]; // Helper functions export const getServicesByCategory = (categor,)
+  s: 6 } ]; // Helper functions export const getServicesByCategory = (categor)
   y: string) => return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);' marketPositio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'' competitor,
   s: ['TypeformSurveySparrowTally'];' techStac,
@@ -20797,7 +19911,7 @@ i,
   n: true,' implementationDetail,
   s: 'Template gallery, response store, analytics, export jobs.' ratin,
   g: 4.6, review,
-  s: 6, } ]; // Helper functions; export const getServicesByCategory = (categor,)
+  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
   y: string) =>: unknown return realMicroSaasServices.filter (service => service.category === category);' market_positio,
   n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.'' competitor,
   s: ['TypeformSurveySparrowTally'];' tech_stac,
@@ -20819,7 +19933,7 @@ i,
   k: ['Next && Next.jsPrismaPostgreSQL']; realImplementatio,
   n: true,' implementationDetail,
   s: 'Template JSON schemas, rules engine, import/export.' review,
-  s: 22, }' market_positio,
+  s: 22}' market_positio,
   n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.'' competitor,
   s: ['AsanaClickUpNotion'];' tech_stac,
   k: ['Next.jsPrismaPostgreSQL']; real_implementatio,
@@ -20835,830 +19949,830 @@ i,
   r: false;' launch_dat,
   e: '2025 - 01 - 20' customer,
   s: 60; export const serviceCategories = [' 'Legal Technology'' 'Customer Service & Support'' 'Digital Marketing & SEO'' 'Creative & Media'' 'Data & Analytics'' 'Human Resources'' 'Sales & CRM'' 'Market Research'' 'Blockchain & Cryptocurrency'' 'Cloud & DevOps'' 'Database & Performance'' 'Design & UI/UX'' 'Development & DevOps'' 'Business Intelligence'' 'Quantum Computing'' 'Cybersecurity'' 'Metaverse & Virtual Reality'' 'Web3 & DeFi'' 'IoT & Edge Computing'' 'Autonomous Vehicles & Robotics'' 'Climate & Environmental'' 'Biotechnology & Healthcare'' 'Financial Technology'' 'Education Technology'' 'Enterprise IT'' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity' review,
-  s: 14, } ; export const service_categories = [;' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI / UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT',' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
-  s: string,} websit,
+  s: 14} ; export const service_categories = [;' 'Legal Technology',' 'Customer Service & Support',' 'Digital Marketing & SEO',' 'Creative & Media',' 'Data & Analytics',' 'Human Resources',' 'Sales & CRM',' 'Market Research',' 'Blockchain & Cryptocurrency',' 'Cloud & DevOps',' 'Database & Performance',' 'Design & UI / UX',' 'Development & DevOps',' 'Business Intelligence',' 'Quantum Computing',' 'Cybersecurity',' 'Metaverse & Virtual Reality',' 'Web3 & DeFi',' 'IoT & Edge Computing',' 'Autonomous Vehicles & Robotics',' 'Climate & Environmental',' 'Biotechnology & Healthcare',' 'Financial Technology',' 'Education Technology',' 'Enterprise IT',' ]; 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research'' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; ' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity'' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology'' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  s: string} websit,
   e: string} } } ; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 134} },; {/* TODO: Fix JSX expression */}
-  y: 'Productivity & Automation',}' pric,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 134} }; {/* TODO: Fix JSX expression */}
+  y: 'Productivity & Automation'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' },; feature,
+  e: '15 minutes' }; feature,
   s: [,' 'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
-  integrationMetrics: FRT/ART, deflection rate' ],; benefit,
-  s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ],;' targetAudienc,
-  e: ['Support teamsSales opsFoundersAgencies'],;' marketPositio,
+  integrationMetrics: FRT/ART, deflection rate' ]; benefit,
+  s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ];' targetAudienc,
+  e: ['Support teamsSales opsFoundersAgencies'];' marketPositio,
   n: 'Alternatives include Superhuman AI and Front AI. Differentiato,
-  r: policy guardrails and CRM context sync.',;' competitor,
-  s: ['SuperhumanFrontZendesk AI'],;' techStac,
-  k: ['Next.jsTypeScriptPostgreSQLOpenAIGmail API'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.',;' ro,
-  i: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.',;' useCase,
-  s: ['Support autorepliesSales follow-upsVendor coordination'],;' integration,
-  s: ['GmailOutlookHubSpotZendeskSlack'],;' suppor,
-  t: 'Email and chat support with onboarding concierge for teams',;' complianc,
-  e: ['GDPRCCPASOC 2 Type II'],;' lin,
+  r: policy guardrails and CRM context sync.';' competitor,
+  s: ['SuperhumanFrontZendesk AI'];' techStac,
+  k: ['Next.jsTypeScriptPostgreSQLOpenAIGmail API']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.';' ro,
+  i: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.';' useCase,
+  s: ['Support autorepliesSales follow-upsVendor coordination'];' integration,
+  s: ['GmailOutlookHubSpotZendeskSlack'];' suppor,
+  t: 'Email and chat support with onboarding concierge for teams';' complianc,
+  e: ['GDPRCCPASOC 2 Type II'];' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-email-responder',;' ico,
-  n: '📧',;' colo,
-  r: 'from-cyan-600 to-blue-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-01',; customer,
-  s: 180,; ratin,
-  g: 4.7,; review,
-  s: 46, },; {/* TODO: Fix JSX expression */}
-  y: 'Marketing & Research',}' pric,
+  s://ziontechgroup.com/ai-email-responder';' ico,
+  n: '📧';' colo,
+  r: 'from-cyan-600 to-blue-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-01'; customer,
+  s: 180; ratin,
+  g: 4.7; review,
+  s: 46}; {/* TODO: Fix JSX expression */}
+  y: 'Marketing & Research'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' },;' feature,
-  s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'],;' benefit,
-  s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'],;' targetAudienc,
-  e: ['Product teamsMarketersUX researchers'],;' marketPositio,
-  n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',;' competitor,
-  s: ['TypeformSurveySparrowTally'],;' techStac,
-  k: ['Next.jsSupabaseVercel EdgeOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Template gallery, response store, analytics, export jobs.',;' ro,
-  i: 'Improves feedback volume 20–50%.',;' useCase,
-  s: ['NPSBeta feedbackLead qual'],;' integration,
-  s: ['HubSpotSegmentZapier'],;' suppor,
-  t: 'Email support, templates library',;' complianc,
-  e: ['GDPRCCPA'],;' lin,
+  e: '10 minutes' };' feature,
+  s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];' benefit,
+  s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];' targetAudienc,
+  e: ['Product teamsMarketersUX researchers'];' marketPositio,
+  n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';' competitor,
+  s: ['TypeformSurveySparrowTally'];' techStac,
+  k: ['Next.jsSupabaseVercel EdgeOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Template gallery, response store, analytics, export jobs.';' ro,
+  i: 'Improves feedback volume 20–50%.';' useCase,
+  s: ['NPSBeta feedbackLead qual'];' integration,
+  s: ['HubSpotSegmentZapier'];' suppor,
+  t: 'Email support, templates library';' complianc,
+  e: ['GDPRCCPA'];' lin,
   k: 'http,
-  s://ziontechgroup.com/mobile-surveys',;' ico,
-  n: '📱',;' colo,
-  r: 'from-emerald-600 to-teal-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-12-10',; customer,
-  s: 95,; ratin,
-  g: 4.6,; review,
-  s: 22, },; {/* TODO: Fix JSX expression */}
-  y: 'Operations',}' pric,
+  s://ziontechgroup.com/mobile-surveys';' ico,
+  n: '📱';' colo,
+  r: 'from-emerald-600 to-teal-700'; popula,
+  r: false;' launchDat,
+  e: '2024-12-10'; customer,
+  s: 95; ratin,
+  g: 4.6; review,
+  s: 22}; {/* TODO: Fix JSX expression */}
+  y: 'Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'],;' benefit,
-  s: ['Reduce setup time by 80%Consistency across teams'],;' targetAudienc,
-  e: ['AgenciesStudiosSMBs'],;' marketPositio,
-  n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',;' competitor,
-  s: ['AsanaClickUpNotion'],;' techStac,
-  k: ['Next.jsPrismaPostgreSQL'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Template JSON schemas, rules engine, import/export.',;' ro,
-  i: 'Deliverables throughput +15–25%.',;' useCase,
-  s: ['Client deliveryEditorial calendarSprints'],;' integration,
-  s: ['Google CalendarSlackLinear'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];' benefit,
+  s: ['Reduce setup time by 80%Consistency across teams'];' targetAudienc,
+  e: ['AgenciesStudiosSMBs'];' marketPositio,
+  n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';' competitor,
+  s: ['AsanaClickUpNotion'];' techStac,
+  k: ['Next.jsPrismaPostgreSQL']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Template JSON schemas, rules engine, import/export.';' ro,
+  i: 'Deliverables throughput +15–25%.';' useCase,
+  s: ['Client deliveryEditorial calendarSprints'];' integration,
+  s: ['Google CalendarSlackLinear'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/productivity-planner',;' ico,
-  n: '🗓️',;' colo,
-  r: 'from-purple-600 to-pink-600',; popula,
-  r: false,;' launchDat,
-  e: '2025-01-20',; customer,
-  s: 60,; ratin,
-  g: 4.5,; review,
-  s: 14, },; {/* TODO: Fix JSX expression */}
-  y: 'Media & Events',}' pric,
+  s://ziontechgroup.com/productivity-planner';' ico,
+  n: '🗓️';' colo,
+  r: 'from-purple-600 to-pink-600'; popula,
+  r: false;' launchDat,
+  e: '2025-01-20'; customer,
+  s: 60; ratin,
+  g: 4.5; review,
+  s: 14}; {/* TODO: Fix JSX expression */}
+  y: 'Media & Events'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'],;' benefit,
-  s: ['Launch events fasterBetter attendee engagement'],;' targetAudienc,
-  e: ['ConferencesMeetupsCommunities'],;' marketPositio,
-  n: 'Lean alternative to Hopin and Eventbrite with richer analytics.',;' competitor,
-  s: ['HopinEventbrite'],;' techStac,
-  k: ['Next.jsStripeSupabase'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Stripe checkout, QR codes, analytics dashboards.',;' ro,
-  i: 'Increase sponsorship revenue 10–20%.',;' useCase,
-  s: ['WebinarsSummitsWorkshops'],;' integration,
-  s: ['StripeMailchimpZapier'],;' suppor,
-  t: 'Priority email support',;' complianc,
-  e: ['GDPRPCI'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];' benefit,
+  s: ['Launch events fasterBetter attendee engagement'];' targetAudienc,
+  e: ['ConferencesMeetupsCommunities'];' marketPositio,
+  n: 'Lean alternative to Hopin and Eventbrite with richer analytics.';' competitor,
+  s: ['HopinEventbrite'];' techStac,
+  k: ['Next.jsStripeSupabase']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Stripe checkout, QR codes, analytics dashboards.';' ro,
+  i: 'Increase sponsorship revenue 10–20%.';' useCase,
+  s: ['WebinarsSummitsWorkshops'];' integration,
+  s: ['StripeMailchimpZapier'];' suppor,
+  t: 'Priority email support';' complianc,
+  e: ['GDPRPCI'];' lin,
   k: 'http,
-  s://ziontechgroup.com/event-management',;' ico,
-  n: '🎫',;' colo,
-  r: 'from-indigo-600 to-blue-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-11-18',; customer,
-  s: 70,; ratin,
-  g: 4.6,; review,
-  s: 18, },; {/* TODO: Fix JSX expression */}
-  y: 'Growth',}' pric,
+  s://ziontechgroup.com/event-management';' ico,
+  n: '🎫';' colo,
+  r: 'from-indigo-600 to-blue-700'; popula,
+  r: false;' launchDat,
+  e: '2024-11-18'; customer,
+  s: 70; ratin,
+  g: 4.6; review,
+  s: 18}; {/* TODO: Fix JSX expression */}
+  y: 'Growth'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' },;' feature,
-  s: ['Custom linksAttribution windowsCoupon attributionPayout exports'],;' benefit,
-  s: ['Grow revenue via affiliatesReduce fraud'],;' targetAudienc,
-  e: ['E‑commerceSaaS'],;' marketPositio,
-  n: 'Simpler than Impact and PartnerStack with transparent pricing.',;' competitor,
-  s: ['PartnerStackImpact'],;' techStac,
-  k: ['Next.jsPostgreSQLStripe'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Link generation, tracking pixels, payout ledger.',;' ro,
-  i: 'Affiliate channel +10–30% revenue.',;' useCase,
-  s: ['Influencer programsPartner marketplaces'],;' integration,
-  s: ['ShopifyWooCommerceStripe'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 hour' };' feature,
+  s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];' benefit,
+  s: ['Grow revenue via affiliatesReduce fraud'];' targetAudienc,
+  e: ['E‑commerceSaaS'];' marketPositio,
+  n: 'Simpler than Impact and PartnerStack with transparent pricing.';' competitor,
+  s: ['PartnerStackImpact'];' techStac,
+  k: ['Next.jsPostgreSQLStripe']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Link generation, tracking pixels, payout ledger.';' ro,
+  i: 'Affiliate channel +10–30% revenue.';' useCase,
+  s: ['Influencer programsPartner marketplaces'];' integration,
+  s: ['ShopifyWooCommerceStripe'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/affiliate-tracking',;' ico,
-  n: '🔗',;' colo,
-  r: 'from-rose-600 to-red-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-10-12',; customer,
-  s: 55,; ratin,
-  g: 4.4,; review,
-  s: 12, },; {/* TODO: Fix JSX expression */}
-  y: 'Analytics',}' pric,
+  s://ziontechgroup.com/affiliate-tracking';' ico,
+  n: '🔗';' colo,
+  r: 'from-rose-600 to-red-700'; popula,
+  r: false;' launchDat,
+  e: '2024-10-12'; customer,
+  s: 55; ratin,
+  g: 4.4; review,
+  s: 12}; {/* TODO: Fix JSX expression */}
+  y: 'Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'],;' benefit,
-  s: ['Know what worksFocus on actions'],;' targetAudienc,
-  e: ['FoundersMarketersAgencies'],;' marketPositio,
-  n: 'Alternative to Plausible and Fathom with built-in insights.',;' competitor,
-  s: ['PlausibleFathom'],;' techStac,
-  k: ['Next.jsEdge AnalyticsPostgreSQL'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Script tag, event API, insights jobs.',;' ro,
-  i: 'Improve conversion 5–15% via insights.',;' useCase,
-  s: ['Landing pagesCampaign tracking'],;' integration,
-  s: ['ShopifyWebflowZapier'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];' benefit,
+  s: ['Know what worksFocus on actions'];' targetAudienc,
+  e: ['FoundersMarketersAgencies'];' marketPositio,
+  n: 'Alternative to Plausible and Fathom with built-in insights.';' competitor,
+  s: ['PlausibleFathom'];' techStac,
+  k: ['Next.jsEdge AnalyticsPostgreSQL']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Script tag, event API, insights jobs.';' ro,
+  i: 'Improve conversion 5–15% via insights.';' useCase,
+  s: ['Landing pagesCampaign tracking'];' integration,
+  s: ['ShopifyWebflowZapier'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/website-analytics',;' ico,
-  n: '📊',;' colo,
-  r: 'from-sky-600 to-cyan-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-05',; customer,
-  s: 140,; ratin,
-  g: 4.7,; review,
-  s: 28, },; {/* TODO: Fix JSX expression */}
-  y: 'IT & Operations',}' pric,
+  s://ziontechgroup.com/website-analytics';' ico,
+  n: '📊';' colo,
+  r: 'from-sky-600 to-cyan-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-05'; customer,
+  s: 140; ratin,
+  g: 4.7; review,
+  s: 28}; {/* TODO: Fix JSX expression */}
+  y: 'IT & Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' },;' feature,
-  s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'],;' benefit,
-  s: ['Shorter MTTRFewer escalations'],;' targetAudienc,
-  e: ['MSPsIT teams'],;' marketPositio,
-  n: 'Lightweight alternative to Zendesk and Freshservice.',;' competitor,
-  s: ['ZendeskFreshservice'],;' techStac,
-  k: ['Next.jsPostgreSQLNode.js'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Inbound parser, workflow builder, KB CMS.',;' ro,
-  i: 'Reduce ticket volume 15–25% via KB.',;' useCase,
-  s: ['IT requestsAccess provisioning'],;' integration,
-  s: ['OktaGoogle WorkspaceSlack'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '2 hours' };' feature,
+  s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];' benefit,
+  s: ['Shorter MTTRFewer escalations'];' targetAudienc,
+  e: ['MSPsIT teams'];' marketPositio,
+  n: 'Lightweight alternative to Zendesk and Freshservice.';' competitor,
+  s: ['ZendeskFreshservice'];' techStac,
+  k: ['Next.jsPostgreSQLNode.js']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Inbound parser, workflow builder, KB CMS.';' ro,
+  i: 'Reduce ticket volume 15–25% via KB.';' useCase,
+  s: ['IT requestsAccess provisioning'];' integration,
+  s: ['OktaGoogle WorkspaceSlack'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/it-helpdesk',;' ico,
-  n: '🛠️',;' colo,
-  r: 'from-slate-600 to-gray-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-09-22',; customer,
-  s: 120,; ratin,
-  g: 4.5,; review,
-  s: 31, },; {/* TODO: Fix JSX expression */}
-  y: 'E‑commerce',}' pric,
+  s://ziontechgroup.com/it-helpdesk';' ico,
+  n: '🛠️';' colo,
+  r: 'from-slate-600 to-gray-700'; popula,
+  r: false;' launchDat,
+  e: '2024-09-22'; customer,
+  s: 120; ratin,
+  g: 4.5; review,
+  s: 31}; {/* TODO: Fix JSX expression */}
+  y: 'E‑commerce'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' },;' feature,
-  s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'],;' benefit,
-  s: ['Higher retentionLower support load'],;' targetAudienc,
-  e: ['D2C brandsMarketplaces'],;' marketPositio,
-  n: 'Competitive with Loop and Returnly at simpler pricing.',;' competitor,
-  s: ['LoopReturnly'],;' techStac,
-  k: ['Next.jsStripeShopify API'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Webhook integrations, label providers, RMA workflows.',;' ro,
-  i: 'Reduce refund losses via exchanges.',;' useCase,
-  s: ['ReturnsExchangesWarranties'],;' integration,
-  s: ['ShopifyShippoEasyPost'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 hour' };' feature,
+  s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];' benefit,
+  s: ['Higher retentionLower support load'];' targetAudienc,
+  e: ['D2C brandsMarketplaces'];' marketPositio,
+  n: 'Competitive with Loop and Returnly at simpler pricing.';' competitor,
+  s: ['LoopReturnly'];' techStac,
+  k: ['Next.jsStripeShopify API']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Webhook integrations, label providers, RMA workflows.';' ro,
+  i: 'Reduce refund losses via exchanges.';' useCase,
+  s: ['ReturnsExchangesWarranties'];' integration,
+  s: ['ShopifyShippoEasyPost'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/return-manager',;' ico,
-  n: '📦',;' colo,
-  r: 'from-amber-600 to-orange-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-08-30',; customer,
-  s: 75,; ratin,
-  g: 4.4,; review,
-  s: 19, },; {/* TODO: Fix JSX expression */}
-  y: 'Sales',}' pric,
+  s://ziontechgroup.com/return-manager';' ico,
+  n: '📦';' colo,
+  r: 'from-amber-600 to-orange-700'; popula,
+  r: false;' launchDat,
+  e: '2024-08-30'; customer,
+  s: 75; ratin,
+  g: 4.4; review,
+  s: 19}; {/* TODO: Fix JSX expression */}
+  y: 'Sales'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' },;' feature,
-  s: ['SequencesRules & triggersOpen/click trackingAI snippets'],;' benefit,
-  s: ['Higher reply rateFewer manual tasks'],;' targetAudienc,
-  e: ['SMB sales teamsAgencies'],;' marketPositio,
-  n: 'Alternative to Lemlist and Mailshake with stricter safety.',;' competitor,
-  s: ['LemlistMailshake'],;' techStac,
-  k: ['Next.jsPostgreSQLOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Warmup safe-guards, DNS checks, reply classifier.',;' ro,
-  i: '+10–20% conversion uplift.',;' useCase,
-  s: ['ProspectingRenewals'],;' integration,
-  s: ['HubSpotPipedriveGmail'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPRCAN-SPAM'],;' lin,
+  e: '20 minutes' };' feature,
+  s: ['SequencesRules & triggersOpen/click trackingAI snippets'];' benefit,
+  s: ['Higher reply rateFewer manual tasks'];' targetAudienc,
+  e: ['SMB sales teamsAgencies'];' marketPositio,
+  n: 'Alternative to Lemlist and Mailshake with stricter safety.';' competitor,
+  s: ['LemlistMailshake'];' techStac,
+  k: ['Next.jsPostgreSQLOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Warmup safe-guards, DNS checks, reply classifier.';' ro,
+  i: '+10–20% conversion uplift.';' useCase,
+  s: ['ProspectingRenewals'];' integration,
+  s: ['HubSpotPipedriveGmail'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPRCAN-SPAM'];' lin,
   k: 'http,
-  s://ziontechgroup.com/email-followups',;' ico,
-  n: '📨',;' colo,
-  r: 'from-blue-600 to-indigo-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-01-25',; customer,
-  s: 90,; ratin,
-  g: 4.5,; review,
-  s: 17, },; {/* TODO: Fix JSX expression */}
-  y: 'Media & Content',}' pric,
+  s://ziontechgroup.com/email-followups';' ico,
+  n: '📨';' colo,
+  r: 'from-blue-600 to-indigo-700'; popula,
+  r: false;' launchDat,
+  e: '2025-01-25'; customer,
+  s: 90; ratin,
+  g: 4.5; review,
+  s: 17}; {/* TODO: Fix JSX expression */}
+  y: 'Media & Content'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Speaker diarizationTimecodesChaptersShow notes drafts'],;' benefit,
-  s: ['AccessibilitySEO-ready content'],;' targetAudienc,
-  e: ['PodcastersAgencies'],;' marketPositio,
-  n: 'Alternative to Descript transcripts with simpler pricing.',;' competitor,
-  s: ['DescriptRev'],;' techStac,
-  k: ['WhisperNext.jsS3'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Batch jobs, cloud storage, editor UI.',;' ro,
-  i: 'Cut post-production hours by 60–80%.',;' useCase,
-  s: ['TranscriptsRepurposing'],;' integration,
-  s: ['RSSYouTubeAnchor'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];' benefit,
+  s: ['AccessibilitySEO-ready content'];' targetAudienc,
+  e: ['PodcastersAgencies'];' marketPositio,
+  n: 'Alternative to Descript transcripts with simpler pricing.';' competitor,
+  s: ['DescriptRev'];' techStac,
+  k: ['WhisperNext.jsS3']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Batch jobs, cloud storage, editor UI.';' ro,
+  i: 'Cut post-production hours by 60–80%.';' useCase,
+  s: ['TranscriptsRepurposing'];' integration,
+  s: ['RSSYouTubeAnchor'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/podcast-transcription',;' ico,
-  n: '🎙️',;' colo,
-  r: 'from-fuchsia-600 to-violet-700',; popula,
-  r: true,;' launchDat,
-  e: '2024-12-02',; customer,
-  s: 210,; ratin,
-  g: 4.7,; review,
-  s: 52, },; {/* TODO: Fix JSX expression */}
-  y: 'AI & Data',}' pric,
+  s://ziontechgroup.com/podcast-transcription';' ico,
+  n: '🎙️';' colo,
+  r: 'from-fuchsia-600 to-violet-700'; popula,
+  r: true;' launchDat,
+  e: '2024-12-02'; customer,
+  s: 210; ratin,
+  g: 4.7; review,
+  s: 52}; {/* TODO: Fix JSX expression */}
+  y: 'AI & Data'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'],;' benefit,
-  s: ['Higher RAG precisionGovernance & explainability'],;' targetAudienc,
-  e: ['Data teamsPlatform engineeringCompliance'],;' marketPositio,
-  n: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.',;' competitor,
-  s: ['Neo4jMemgraph'],;' techStac,
-  k: ['TypeScriptNeo4jpgvectorOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'ETL connectors, graph builder UI, API for queries.',;' ro,
-  i: 'Reduce discovery time 30–50%.',;' useCase,
-  s: ['RAG graphsData lineageGlossaries'],;' integration,
-  s: ['S3GCSDatabricks'],;' suppor,
-  t: 'Priority support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];' benefit,
+  s: ['Higher RAG precisionGovernance & explainability'];' targetAudienc,
+  e: ['Data teamsPlatform engineeringCompliance'];' marketPositio,
+  n: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.';' competitor,
+  s: ['Neo4jMemgraph'];' techStac,
+  k: ['TypeScriptNeo4jpgvectorOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'ETL connectors, graph builder UI, API for queries.';' ro,
+  i: 'Reduce discovery time 30–50%.';' useCase,
+  s: ['RAG graphsData lineageGlossaries'];' integration,
+  s: ['S3GCSDatabricks'];' suppor,
+  t: 'Priority support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/ai-knowledge-graph-studio',;' ico,
-  n: '🕸️',;' colo,
-  r: 'from-teal-600 to-emerald-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 35,; ratin,
-  g: 4.8,; review,
-  s: 11, },; {/* TODO: Fix JSX expression */}
-  y: 'AI & Platform',}' pric,
+  s://ziontechgroup.com/services/ai-knowledge-graph-studio';' ico,
+  n: '🕸️';' colo,
+  r: 'from-teal-600 to-emerald-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 35; ratin,
+  g: 4.8; review,
+  s: 11}; {/* TODO: Fix JSX expression */}
+  y: 'AI & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Provider adaptersPolicy enginePII redactionRate limits'],;' benefit,
-  s: ['Control spendReduce risk'],;' targetAudienc,
-  e: ['Platform teamsAI product'],;' marketPositio,
-  n: 'Comparable to OpenRouter/EdenAI, adds governance and audit.',;' competitor,
-  s: ['OpenRouterEdenAIHelicone'],;' techStac,
-  k: ['Node.jsPostgreSQLOpenAIAnthropic'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Multi-tenant projects, RBAC, per-key metering.',;' ro,
-  i: 'Cut model costs by 20–40%.',;' useCase,
-  s: ['Central model accessSafety'],;' integration,
-  s: ['OpenAIAnthropicAzure'],;' suppor,
-  t: 'Priority support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Provider adaptersPolicy enginePII redactionRate limits'];' benefit,
+  s: ['Control spendReduce risk'];' targetAudienc,
+  e: ['Platform teamsAI product'];' marketPositio,
+  n: 'Comparable to OpenRouter/EdenAI, adds governance and audit.';' competitor,
+  s: ['OpenRouterEdenAIHelicone'];' techStac,
+  k: ['Node.jsPostgreSQLOpenAIAnthropic']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Multi-tenant projects, RBAC, per-key metering.';' ro,
+  i: 'Cut model costs by 20–40%.';' useCase,
+  s: ['Central model accessSafety'];' integration,
+  s: ['OpenAIAnthropicAzure'];' suppor,
+  t: 'Priority support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/llm-guarded-api-gateway',;' ico,
-  n: '🛡️',;' colo,
-  r: 'from-cyan-700 to-blue-800',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 42,; ratin,
-  g: 4.8,; review,
-  s: 13, },; {/* TODO: Fix JSX expression */}
-  y: 'Data & Analytics',}' pric,
+  s://ziontechgroup.com/services/llm-guarded-api-gateway';' ico,
+  n: '🛡️';' colo,
+  r: 'from-cyan-700 to-blue-800'; popula,
+  r: true;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 42; ratin,
+  g: 4.8; review,
+  s: 13}; {/* TODO: Fix JSX expression */}
+  y: 'Data & Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Event collectorConnector librarydbt modelsGrafana dashboards'],;' benefit,
-  s: ['Faster analytics ROILower platform toil'],;' targetAudienc,
-  e: ['Data teamsOps'],;' marketPositio,
-  n: 'Starter alternative to building bespoke stacks.',;' competitor,
-  s: ['AirbyteFivetran (partial)'],;' techStac,
-  k: ['TerraformdbtClickHouse/BigQuery'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Templates, IaC modules, CI gates.',;' ro,
-  i: 'Deliver insights in days, not months.',;' useCase,
-  s: ['Product analyticsFinance BI'],;' integration,
-  s: ['S3BigQuerySnowflake'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];' benefit,
+  s: ['Faster analytics ROILower platform toil'];' targetAudienc,
+  e: ['Data teamsOps'];' marketPositio,
+  n: 'Starter alternative to building bespoke stacks.';' competitor,
+  s: ['AirbyteFivetran (partial)'];' techStac,
+  k: ['TerraformdbtClickHouse/BigQuery']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Templates, IaC modules, CI gates.';' ro,
+  i: 'Deliver insights in days, not months.';' useCase,
+  s: ['Product analyticsFinance BI'];' integration,
+  s: ['S3BigQuerySnowflake'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/serverless-lakehouse-starter',;' ico,
-  n: '🏗️',;' colo,
-  r: 'from-stone-600 to-zinc-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 24,; ratin,
-  g: 4.6,; review,
-  s: 7, },; {/* TODO: Fix JSX expression */}
-  y: 'Data & Platform',}' pric,
+  s://ziontechgroup.com/services/serverless-lakehouse-starter';' ico,
+  n: '🏗️';' colo,
+  r: 'from-stone-600 to-zinc-700'; popula,
+  r: false;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 24; ratin,
+  g: 4.6; review,
+  s: 7}; {/* TODO: Fix JSX expression */}
+  y: 'Data & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' },;' feature,
-  s: ['Schema registryDiff viewerCI gatesBackfill helpers'],;' benefit,
-  s: ['Fewer incidentsFaster changes'],;' targetAudienc,
-  e: ['Data platformAnalytics engineers'],;' marketPositio,
-  n: 'Complements dbt and warehouse-native governance.',;' competitor,
-  s: ['OpenMetadataGreat Expectations'],;' techStac,
-  k: ['TypeScriptPostgreSQLdbt'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Contracts as code, PR checks, lineage view.',;' ro,
-  i: 'Reduce data breakage incidents by 50–70%.',;' useCase,
-  s: ['Warehouse governanceAnalytics contracts'],;' integration,
-  s: ['dbtGitHubBigQuery'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '2 hours' };' feature,
+  s: ['Schema registryDiff viewerCI gatesBackfill helpers'];' benefit,
+  s: ['Fewer incidentsFaster changes'];' targetAudienc,
+  e: ['Data platformAnalytics engineers'];' marketPositio,
+  n: 'Complements dbt and warehouse-native governance.';' competitor,
+  s: ['OpenMetadataGreat Expectations'];' techStac,
+  k: ['TypeScriptPostgreSQLdbt']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Contracts as code, PR checks, lineage view.';' ro,
+  i: 'Reduce data breakage incidents by 50–70%.';' useCase,
+  s: ['Warehouse governanceAnalytics contracts'];' integration,
+  s: ['dbtGitHubBigQuery'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/data-contracts-hub',;' ico,
-  n: '📜',;' colo,
-  r: 'from-lime-600 to-green-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 19,; ratin,
-  g: 4.6,; review,
-  s: 6, } ],; // Helper functions; export const getServicesByCategory = (categor,)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi,)
+  s://ziontechgroup.com/services/data-contracts-hub';' ico,
+  n: '📜';' colo,
+  r: 'from-lime-600 to-green-700'; popula,
+  r: false;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 19; ratin,
+  g: 4.6; review,
+  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
+  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); },; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} },; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research',;' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity',;' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;' 'Enterprise IT' ];' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
-  s: string,} websit,
+  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); }; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
+  s: string} websit,
   e: string} } } ; export interface RealMicroSaasService {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' } },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 134} },; {/* TODO: Fix JSX expression */}
-  y: 'Productivity & Automation',}' pric,
+  s://ziontechgroup.com' } }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 134} }; {/* TODO: Fix JSX expression */}
+  y: 'Productivity & Automation'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '15 minutes' },; feature,
+  e: '15 minutes' }; feature,
   s: [,' 'Inbox labeling and prioritizationOn-brand response templatesSentiment and urgency detectionAuto-draft with human-in-the-loopZendesk/HubSpot/Gmail,
-  integrationMetrics: FRT/ART, deflection rate' ],; benefit,
-  s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ],;' targetAudienc,
-  e: ['Support teamsSales opsFoundersAgencies'],;' marketPositio,
+  integrationMetrics: FRT/ART, deflection rate' ]; benefit,
+  s: [,' 'Cut response time by 60%Deflect 30–50% routine ticketsImprove CSAT and NPS' ];' targetAudienc,
+  e: ['Support teamsSales opsFoundersAgencies'];' marketPositio,
   n: 'Alternatives include Superhuman AI and Front AI. Differentiato,
-  r: policy guardrails and CRM context sync.',;' competitor,
-  s: ['SuperhumanFrontZendesk AI'],;' techStac,
-  k: ['Next.jsTypeScriptPostgreSQLOpenAIGmail API'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.',;' ro,
-  i: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.',;' useCase,
-  s: ['Support autorepliesSales follow-upsVendor coordination'],;' integration,
-  s: ['GmailOutlookHubSpotZendeskSlack'],;' suppor,
-  t: 'Email and chat support with onboarding concierge for teams',;' complianc,
-  e: ['GDPRCCPASOC 2 Type II'],;' lin,
+  r: policy guardrails and CRM context sync.';' competitor,
+  s: ['SuperhumanFrontZendesk AI'];' techStac,
+  k: ['Next.jsTypeScriptPostgreSQLOpenAIGmail API']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.';' ro,
+  i: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.';' useCase,
+  s: ['Support autorepliesSales follow-upsVendor coordination'];' integration,
+  s: ['GmailOutlookHubSpotZendeskSlack'];' suppor,
+  t: 'Email and chat support with onboarding concierge for teams';' complianc,
+  e: ['GDPRCCPASOC 2 Type II'];' lin,
   k: 'http,
-  s://ziontechgroup.com/ai-email-responder',;' ico,
-  n: '📧',;' colo,
-  r: 'from-cyan-600 to-blue-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-01',; customer,
-  s: 180,; ratin,
-  g: 4.7,; review,
-  s: 46, },; {/* TODO: Fix JSX expression */}
-  y: 'Marketing & Research',}' pric,
+  s://ziontechgroup.com/ai-email-responder';' ico,
+  n: '📧';' colo,
+  r: 'from-cyan-600 to-blue-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-01'; customer,
+  s: 180; ratin,
+  g: 4.7; review,
+  s: 46}; {/* TODO: Fix JSX expression */}
+  y: 'Marketing & Research'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '10 minutes' },;' feature,
-  s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'],;' benefit,
-  s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'],;' targetAudienc,
-  e: ['Product teamsMarketersUX researchers'],;' marketPositio,
-  n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',;' competitor,
-  s: ['TypeformSurveySparrowTally'],;' techStac,
-  k: ['Next.jsSupabaseVercel EdgeOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Template gallery, response store, analytics, export jobs.',;' ro,
-  i: 'Improves feedback volume 20–50%.',;' useCase,
-  s: ['NPSBeta feedbackLead qual'],;' integration,
-  s: ['HubSpotSegmentZapier'],;' suppor,
-  t: 'Email support, templates library',;' complianc,
-  e: ['GDPRCCPA'],;' lin,
+  e: '10 minutes' };' feature,
+  s: ['Branching logicA/B promptsEmbeddable widgetCSV/JSON exportWebhook triggers'];' benefit,
+  s: ['+35% completion rate vs. formsCleaner data, fewer drop-offs'];' targetAudienc,
+  e: ['Product teamsMarketersUX researchers'];' marketPositio,
+  n: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';' competitor,
+  s: ['TypeformSurveySparrowTally'];' techStac,
+  k: ['Next.jsSupabaseVercel EdgeOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Template gallery, response store, analytics, export jobs.';' ro,
+  i: 'Improves feedback volume 20–50%.';' useCase,
+  s: ['NPSBeta feedbackLead qual'];' integration,
+  s: ['HubSpotSegmentZapier'];' suppor,
+  t: 'Email support, templates library';' complianc,
+  e: ['GDPRCCPA'];' lin,
   k: 'http,
-  s://ziontechgroup.com/mobile-surveys',;' ico,
-  n: '📱',;' colo,
-  r: 'from-emerald-600 to-teal-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-12-10',; customer,
-  s: 95,; ratin,
-  g: 4.6,; review,
-  s: 22, },; {/* TODO: Fix JSX expression */}
-  y: 'Operations',}' pric,
+  s://ziontechgroup.com/mobile-surveys';' ico,
+  n: '📱';' colo,
+  r: 'from-emerald-600 to-teal-700'; popula,
+  r: false;' launchDat,
+  e: '2024-12-10'; customer,
+  s: 95; ratin,
+  g: 4.6; review,
+  s: 22}; {/* TODO: Fix JSX expression */}
+  y: 'Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'],;' benefit,
-  s: ['Reduce setup time by 80%Consistency across teams'],;' targetAudienc,
-  e: ['AgenciesStudiosSMBs'],;' marketPositio,
-  n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.',;' competitor,
-  s: ['AsanaClickUpNotion'],;' techStac,
-  k: ['Next.jsPrismaPostgreSQL'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Template JSON schemas, rules engine, import/export.',;' ro,
-  i: 'Deliverables throughput +15–25%.',;' useCase,
-  s: ['Client deliveryEditorial calendarSprints'],;' integration,
-  s: ['Google CalendarSlackLinear'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Industry templatesAutomationsCalendar & GanttRole-based permissions'];' benefit,
+  s: ['Reduce setup time by 80%Consistency across teams'];' targetAudienc,
+  e: ['AgenciesStudiosSMBs'];' marketPositio,
+  n: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';' competitor,
+  s: ['AsanaClickUpNotion'];' techStac,
+  k: ['Next.jsPrismaPostgreSQL']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Template JSON schemas, rules engine, import/export.';' ro,
+  i: 'Deliverables throughput +15–25%.';' useCase,
+  s: ['Client deliveryEditorial calendarSprints'];' integration,
+  s: ['Google CalendarSlackLinear'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/productivity-planner',;' ico,
-  n: '🗓️',;' colo,
-  r: 'from-purple-600 to-pink-600',; popula,
-  r: false,;' launchDat,
-  e: '2025-01-20',; customer,
-  s: 60,; ratin,
-  g: 4.5,; review,
-  s: 14, },; {/* TODO: Fix JSX expression */}
-  y: 'Media & Events',}' pric,
+  s://ziontechgroup.com/productivity-planner';' ico,
+  n: '🗓️';' colo,
+  r: 'from-purple-600 to-pink-600'; popula,
+  r: false;' launchDat,
+  e: '2025-01-20'; customer,
+  s: 60; ratin,
+  g: 4.5; review,
+  s: 14}; {/* TODO: Fix JSX expression */}
+  y: 'Media & Events'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'],;' benefit,
-  s: ['Launch events fasterBetter attendee engagement'],;' targetAudienc,
-  e: ['ConferencesMeetupsCommunities'],;' marketPositio,
-  n: 'Lean alternative to Hopin and Eventbrite with richer analytics.',;' competitor,
-  s: ['HopinEventbrite'],;' techStac,
-  k: ['Next.jsStripeSupabase'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Stripe checkout, QR codes, analytics dashboards.',;' ro,
-  i: 'Increase sponsorship revenue 10–20%.',;' useCase,
-  s: ['WebinarsSummitsWorkshops'],;' integration,
-  s: ['StripeMailchimpZapier'],;' suppor,
-  t: 'Priority email support',;' complianc,
-  e: ['GDPRPCI'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Ticketing & check-inSession builderEmail campaignsLive polls & Q&A'];' benefit,
+  s: ['Launch events fasterBetter attendee engagement'];' targetAudienc,
+  e: ['ConferencesMeetupsCommunities'];' marketPositio,
+  n: 'Lean alternative to Hopin and Eventbrite with richer analytics.';' competitor,
+  s: ['HopinEventbrite'];' techStac,
+  k: ['Next.jsStripeSupabase']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Stripe checkout, QR codes, analytics dashboards.';' ro,
+  i: 'Increase sponsorship revenue 10–20%.';' useCase,
+  s: ['WebinarsSummitsWorkshops'];' integration,
+  s: ['StripeMailchimpZapier'];' suppor,
+  t: 'Priority email support';' complianc,
+  e: ['GDPRPCI'];' lin,
   k: 'http,
-  s://ziontechgroup.com/event-management',;' ico,
-  n: '🎫',;' colo,
-  r: 'from-indigo-600 to-blue-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-11-18',; customer,
-  s: 70,; ratin,
-  g: 4.6,; review,
-  s: 18, },; {/* TODO: Fix JSX expression */}
-  y: 'Growth',}' pric,
+  s://ziontechgroup.com/event-management';' ico,
+  n: '🎫';' colo,
+  r: 'from-indigo-600 to-blue-700'; popula,
+  r: false;' launchDat,
+  e: '2024-11-18'; customer,
+  s: 70; ratin,
+  g: 4.6; review,
+  s: 18}; {/* TODO: Fix JSX expression */}
+  y: 'Growth'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' },;' feature,
-  s: ['Custom linksAttribution windowsCoupon attributionPayout exports'],;' benefit,
-  s: ['Grow revenue via affiliatesReduce fraud'],;' targetAudienc,
-  e: ['E‑commerceSaaS'],;' marketPositio,
-  n: 'Simpler than Impact and PartnerStack with transparent pricing.',;' competitor,
-  s: ['PartnerStackImpact'],;' techStac,
-  k: ['Next.jsPostgreSQLStripe'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Link generation, tracking pixels, payout ledger.',;' ro,
-  i: 'Affiliate channel +10–30% revenue.',;' useCase,
-  s: ['Influencer programsPartner marketplaces'],;' integration,
-  s: ['ShopifyWooCommerceStripe'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 hour' };' feature,
+  s: ['Custom linksAttribution windowsCoupon attributionPayout exports'];' benefit,
+  s: ['Grow revenue via affiliatesReduce fraud'];' targetAudienc,
+  e: ['E‑commerceSaaS'];' marketPositio,
+  n: 'Simpler than Impact and PartnerStack with transparent pricing.';' competitor,
+  s: ['PartnerStackImpact'];' techStac,
+  k: ['Next.jsPostgreSQLStripe']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Link generation, tracking pixels, payout ledger.';' ro,
+  i: 'Affiliate channel +10–30% revenue.';' useCase,
+  s: ['Influencer programsPartner marketplaces'];' integration,
+  s: ['ShopifyWooCommerceStripe'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/affiliate-tracking',;' ico,
-  n: '🔗',;' colo,
-  r: 'from-rose-600 to-red-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-10-12',; customer,
-  s: 55,; ratin,
-  g: 4.4,; review,
-  s: 12, },; {/* TODO: Fix JSX expression */}
-  y: 'Analytics',}' pric,
+  s://ziontechgroup.com/affiliate-tracking';' ico,
+  n: '🔗';' colo,
+  r: 'from-rose-600 to-red-700'; popula,
+  r: false;' launchDat,
+  e: '2024-10-12'; customer,
+  s: 55; ratin,
+  g: 4.4; review,
+  s: 12}; {/* TODO: Fix JSX expression */}
+  y: 'Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'],;' benefit,
-  s: ['Know what worksFocus on actions'],;' targetAudienc,
-  e: ['FoundersMarketersAgencies'],;' marketPositio,
-  n: 'Alternative to Plausible and Fathom with built-in insights.',;' competitor,
-  s: ['PlausibleFathom'],;' techStac,
-  k: ['Next.jsEdge AnalyticsPostgreSQL'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Script tag, event API, insights jobs.',;' ro,
-  i: 'Improve conversion 5–15% via insights.',;' useCase,
-  s: ['Landing pagesCampaign tracking'],;' integration,
-  s: ['ShopifyWebflowZapier'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Goals & funnelsWeekly insights emailAnomaly alertsShareable dashboards'];' benefit,
+  s: ['Know what worksFocus on actions'];' targetAudienc,
+  e: ['FoundersMarketersAgencies'];' marketPositio,
+  n: 'Alternative to Plausible and Fathom with built-in insights.';' competitor,
+  s: ['PlausibleFathom'];' techStac,
+  k: ['Next.jsEdge AnalyticsPostgreSQL']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Script tag, event API, insights jobs.';' ro,
+  i: 'Improve conversion 5–15% via insights.';' useCase,
+  s: ['Landing pagesCampaign tracking'];' integration,
+  s: ['ShopifyWebflowZapier'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/website-analytics',;' ico,
-  n: '📊',;' colo,
-  r: 'from-sky-600 to-cyan-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-05',; customer,
-  s: 140,; ratin,
-  g: 4.7,; review,
-  s: 28, },; {/* TODO: Fix JSX expression */}
-  y: 'IT & Operations',}' pric,
+  s://ziontechgroup.com/website-analytics';' ico,
+  n: '📊';' colo,
+  r: 'from-sky-600 to-cyan-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-05'; customer,
+  s: 140; ratin,
+  g: 4.7; review,
+  s: 28}; {/* TODO: Fix JSX expression */}
+  y: 'IT & Operations'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' },;' feature,
-  s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'],;' benefit,
-  s: ['Shorter MTTRFewer escalations'],;' targetAudienc,
-  e: ['MSPsIT teams'],;' marketPositio,
-  n: 'Lightweight alternative to Zendesk and Freshservice.',;' competitor,
-  s: ['ZendeskFreshservice'],;' techStac,
-  k: ['Next.jsPostgreSQLNode.js'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Inbound parser, workflow builder, KB CMS.',;' ro,
-  i: 'Reduce ticket volume 15–25% via KB.',;' useCase,
-  s: ['IT requestsAccess provisioning'],;' integration,
-  s: ['OktaGoogle WorkspaceSlack'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '2 hours' };' feature,
+  s: ['Email-to-ticketSLA timersMacros/automationsSelf-serve portal'];' benefit,
+  s: ['Shorter MTTRFewer escalations'];' targetAudienc,
+  e: ['MSPsIT teams'];' marketPositio,
+  n: 'Lightweight alternative to Zendesk and Freshservice.';' competitor,
+  s: ['ZendeskFreshservice'];' techStac,
+  k: ['Next.jsPostgreSQLNode.js']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Inbound parser, workflow builder, KB CMS.';' ro,
+  i: 'Reduce ticket volume 15–25% via KB.';' useCase,
+  s: ['IT requestsAccess provisioning'];' integration,
+  s: ['OktaGoogle WorkspaceSlack'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/it-helpdesk',;' ico,
-  n: '🛠️',;' colo,
-  r: 'from-slate-600 to-gray-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-09-22',; customer,
-  s: 120,; ratin,
-  g: 4.5,; review,
-  s: 31, },; {/* TODO: Fix JSX expression */}
-  y: 'E‑commerce',}' pric,
+  s://ziontechgroup.com/it-helpdesk';' ico,
+  n: '🛠️';' colo,
+  r: 'from-slate-600 to-gray-700'; popula,
+  r: false;' launchDat,
+  e: '2024-09-22'; customer,
+  s: 120; ratin,
+  g: 4.5; review,
+  s: 31}; {/* TODO: Fix JSX expression */}
+  y: 'E‑commerce'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 hour' },;' feature,
-  s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'],;' benefit,
-  s: ['Higher retentionLower support load'],;' targetAudienc,
-  e: ['D2C brandsMarketplaces'],;' marketPositio,
-  n: 'Competitive with Loop and Returnly at simpler pricing.',;' competitor,
-  s: ['LoopReturnly'],;' techStac,
-  k: ['Next.jsStripeShopify API'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Webhook integrations, label providers, RMA workflows.',;' ro,
-  i: 'Reduce refund losses via exchanges.',;' useCase,
-  s: ['ReturnsExchangesWarranties'],;' integration,
-  s: ['ShopifyShippoEasyPost'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 hour' };' feature,
+  s: ['Self-service portalLabel generationReturn reasons analyticsExchanges & store credit'];' benefit,
+  s: ['Higher retentionLower support load'];' targetAudienc,
+  e: ['D2C brandsMarketplaces'];' marketPositio,
+  n: 'Competitive with Loop and Returnly at simpler pricing.';' competitor,
+  s: ['LoopReturnly'];' techStac,
+  k: ['Next.jsStripeShopify API']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Webhook integrations, label providers, RMA workflows.';' ro,
+  i: 'Reduce refund losses via exchanges.';' useCase,
+  s: ['ReturnsExchangesWarranties'];' integration,
+  s: ['ShopifyShippoEasyPost'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/return-manager',;' ico,
-  n: '📦',;' colo,
-  r: 'from-amber-600 to-orange-700',; popula,
-  r: false,;' launchDat,
-  e: '2024-08-30',; customer,
-  s: 75,; ratin,
-  g: 4.4,; review,
-  s: 19, },; {/* TODO: Fix JSX expression */}
-  y: 'Sales',}' pric,
+  s://ziontechgroup.com/return-manager';' ico,
+  n: '📦';' colo,
+  r: 'from-amber-600 to-orange-700'; popula,
+  r: false;' launchDat,
+  e: '2024-08-30'; customer,
+  s: 75; ratin,
+  g: 4.4; review,
+  s: 19}; {/* TODO: Fix JSX expression */}
+  y: 'Sales'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '20 minutes' },;' feature,
-  s: ['SequencesRules & triggersOpen/click trackingAI snippets'],;' benefit,
-  s: ['Higher reply rateFewer manual tasks'],;' targetAudienc,
-  e: ['SMB sales teamsAgencies'],;' marketPositio,
-  n: 'Alternative to Lemlist and Mailshake with stricter safety.',;' competitor,
-  s: ['LemlistMailshake'],;' techStac,
-  k: ['Next.jsPostgreSQLOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Warmup safe-guards, DNS checks, reply classifier.',;' ro,
-  i: '+10–20% conversion uplift.',;' useCase,
-  s: ['ProspectingRenewals'],;' integration,
-  s: ['HubSpotPipedriveGmail'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPRCAN-SPAM'],;' lin,
+  e: '20 minutes' };' feature,
+  s: ['SequencesRules & triggersOpen/click trackingAI snippets'];' benefit,
+  s: ['Higher reply rateFewer manual tasks'];' targetAudienc,
+  e: ['SMB sales teamsAgencies'];' marketPositio,
+  n: 'Alternative to Lemlist and Mailshake with stricter safety.';' competitor,
+  s: ['LemlistMailshake'];' techStac,
+  k: ['Next.jsPostgreSQLOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Warmup safe-guards, DNS checks, reply classifier.';' ro,
+  i: '+10–20% conversion uplift.';' useCase,
+  s: ['ProspectingRenewals'];' integration,
+  s: ['HubSpotPipedriveGmail'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPRCAN-SPAM'];' lin,
   k: 'http,
-  s://ziontechgroup.com/email-followups',;' ico,
-  n: '📨',;' colo,
-  r: 'from-blue-600 to-indigo-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-01-25',; customer,
-  s: 90,; ratin,
-  g: 4.5,; review,
-  s: 17, },; {/* TODO: Fix JSX expression */}
-  y: 'Media & Content',}' pric,
+  s://ziontechgroup.com/email-followups';' ico,
+  n: '📨';' colo,
+  r: 'from-blue-600 to-indigo-700'; popula,
+  r: false;' launchDat,
+  e: '2025-01-25'; customer,
+  s: 90; ratin,
+  g: 4.5; review,
+  s: 17}; {/* TODO: Fix JSX expression */}
+  y: 'Media & Content'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '5 minutes' },;' feature,
-  s: ['Speaker diarizationTimecodesChaptersShow notes drafts'],;' benefit,
-  s: ['AccessibilitySEO-ready content'],;' targetAudienc,
-  e: ['PodcastersAgencies'],;' marketPositio,
-  n: 'Alternative to Descript transcripts with simpler pricing.',;' competitor,
-  s: ['DescriptRev'],;' techStac,
-  k: ['WhisperNext.jsS3'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Batch jobs, cloud storage, editor UI.',;' ro,
-  i: 'Cut post-production hours by 60–80%.',;' useCase,
-  s: ['TranscriptsRepurposing'],;' integration,
-  s: ['RSSYouTubeAnchor'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '5 minutes' };' feature,
+  s: ['Speaker diarizationTimecodesChaptersShow notes drafts'];' benefit,
+  s: ['AccessibilitySEO-ready content'];' targetAudienc,
+  e: ['PodcastersAgencies'];' marketPositio,
+  n: 'Alternative to Descript transcripts with simpler pricing.';' competitor,
+  s: ['DescriptRev'];' techStac,
+  k: ['WhisperNext.jsS3']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Batch jobs, cloud storage, editor UI.';' ro,
+  i: 'Cut post-production hours by 60–80%.';' useCase,
+  s: ['TranscriptsRepurposing'];' integration,
+  s: ['RSSYouTubeAnchor'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/podcast-transcription',;' ico,
-  n: '🎙️',;' colo,
-  r: 'from-fuchsia-600 to-violet-700',; popula,
-  r: true,;' launchDat,
-  e: '2024-12-02',; customer,
-  s: 210,; ratin,
-  g: 4.7,; review,
-  s: 52, },; {/* TODO: Fix JSX expression */}
-  y: 'AI & Data',}' pric,
+  s://ziontechgroup.com/podcast-transcription';' ico,
+  n: '🎙️';' colo,
+  r: 'from-fuchsia-600 to-violet-700'; popula,
+  r: true;' launchDat,
+  e: '2024-12-02'; customer,
+  s: 210; ratin,
+  g: 4.7; review,
+  s: 52}; {/* TODO: Fix JSX expression */}
+  y: 'AI & Data'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'],;' benefit,
-  s: ['Higher RAG precisionGovernance & explainability'],;' targetAudienc,
-  e: ['Data teamsPlatform engineeringCompliance'],;' marketPositio,
-  n: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.',;' competitor,
-  s: ['Neo4jMemgraph'],;' techStac,
-  k: ['TypeScriptNeo4jpgvectorOpenAI'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'ETL connectors, graph builder UI, API for queries.',;' ro,
-  i: 'Reduce discovery time 30–50%.',;' useCase,
-  s: ['RAG graphsData lineageGlossaries'],;' integration,
-  s: ['S3GCSDatabricks'],;' suppor,
-  t: 'Priority support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Entity/relation extractionSchema editorVector + graph searchLineage view'];' benefit,
+  s: ['Higher RAG precisionGovernance & explainability'];' targetAudienc,
+  e: ['Data teamsPlatform engineeringCompliance'];' marketPositio,
+  n: 'Alternative to Neo4j Aura + bespoke pipelines with faster time-to-value.';' competitor,
+  s: ['Neo4jMemgraph'];' techStac,
+  k: ['TypeScriptNeo4jpgvectorOpenAI']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'ETL connectors, graph builder UI, API for queries.';' ro,
+  i: 'Reduce discovery time 30–50%.';' useCase,
+  s: ['RAG graphsData lineageGlossaries'];' integration,
+  s: ['S3GCSDatabricks'];' suppor,
+  t: 'Priority support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/ai-knowledge-graph-studio',;' ico,
-  n: '🕸️',;' colo,
-  r: 'from-teal-600 to-emerald-700',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 35,; ratin,
-  g: 4.8,; review,
-  s: 11, },; {/* TODO: Fix JSX expression */}
-  y: 'AI & Platform',}' pric,
+  s://ziontechgroup.com/services/ai-knowledge-graph-studio';' ico,
+  n: '🕸️';' colo,
+  r: 'from-teal-600 to-emerald-700'; popula,
+  r: true;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 35; ratin,
+  g: 4.8; review,
+  s: 11}; {/* TODO: Fix JSX expression */}
+  y: 'AI & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Provider adaptersPolicy enginePII redactionRate limits'],;' benefit,
-  s: ['Control spendReduce risk'],;' targetAudienc,
-  e: ['Platform teamsAI product'],;' marketPositio,
-  n: 'Comparable to OpenRouter/EdenAI, adds governance and audit.',;' competitor,
-  s: ['OpenRouterEdenAIHelicone'],;' techStac,
-  k: ['Node.jsPostgreSQLOpenAIAnthropic'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Multi-tenant projects, RBAC, per-key metering.',;' ro,
-  i: 'Cut model costs by 20–40%.',;' useCase,
-  s: ['Central model accessSafety'],;' integration,
-  s: ['OpenAIAnthropicAzure'],;' suppor,
-  t: 'Priority support',;' complianc,
-  e: ['GDPRSOC 2'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Provider adaptersPolicy enginePII redactionRate limits'];' benefit,
+  s: ['Control spendReduce risk'];' targetAudienc,
+  e: ['Platform teamsAI product'];' marketPositio,
+  n: 'Comparable to OpenRouter/EdenAI, adds governance and audit.';' competitor,
+  s: ['OpenRouterEdenAIHelicone'];' techStac,
+  k: ['Node.jsPostgreSQLOpenAIAnthropic']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Multi-tenant projects, RBAC, per-key metering.';' ro,
+  i: 'Cut model costs by 20–40%.';' useCase,
+  s: ['Central model accessSafety'];' integration,
+  s: ['OpenAIAnthropicAzure'];' suppor,
+  t: 'Priority support';' complianc,
+  e: ['GDPRSOC 2'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/llm-guarded-api-gateway',;' ico,
-  n: '🛡️',;' colo,
-  r: 'from-cyan-700 to-blue-800',; popula,
-  r: true,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 42,; ratin,
-  g: 4.8,; review,
-  s: 13, },; {/* TODO: Fix JSX expression */}
-  y: 'Data & Analytics',}' pric,
+  s://ziontechgroup.com/services/llm-guarded-api-gateway';' ico,
+  n: '🛡️';' colo,
+  r: 'from-cyan-700 to-blue-800'; popula,
+  r: true;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 42; ratin,
+  g: 4.8; review,
+  s: 13}; {/* TODO: Fix JSX expression */}
+  y: 'Data & Analytics'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 7} setupTim,
-  e: '1 day' },;' feature,
-  s: ['Event collectorConnector librarydbt modelsGrafana dashboards'],;' benefit,
-  s: ['Faster analytics ROILower platform toil'],;' targetAudienc,
-  e: ['Data teamsOps'],;' marketPositio,
-  n: 'Starter alternative to building bespoke stacks.',;' competitor,
-  s: ['AirbyteFivetran (partial)'],;' techStac,
-  k: ['TerraformdbtClickHouse/BigQuery'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Templates, IaC modules, CI gates.',;' ro,
-  i: 'Deliver insights in days, not months.',;' useCase,
-  s: ['Product analyticsFinance BI'],;' integration,
-  s: ['S3BigQuerySnowflake'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '1 day' };' feature,
+  s: ['Event collectorConnector librarydbt modelsGrafana dashboards'];' benefit,
+  s: ['Faster analytics ROILower platform toil'];' targetAudienc,
+  e: ['Data teamsOps'];' marketPositio,
+  n: 'Starter alternative to building bespoke stacks.';' competitor,
+  s: ['AirbyteFivetran (partial)'];' techStac,
+  k: ['TerraformdbtClickHouse/BigQuery']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Templates, IaC modules, CI gates.';' ro,
+  i: 'Deliver insights in days, not months.';' useCase,
+  s: ['Product analyticsFinance BI'];' integration,
+  s: ['S3BigQuerySnowflake'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/serverless-lakehouse-starter',;' ico,
-  n: '🏗️',;' colo,
-  r: 'from-stone-600 to-zinc-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 24,; ratin,
-  g: 4.6,; review,
-  s: 7, },; {/* TODO: Fix JSX expression */}
-  y: 'Data & Platform',}' pric,
+  s://ziontechgroup.com/services/serverless-lakehouse-starter';' ico,
+  n: '🏗️';' colo,
+  r: 'from-stone-600 to-zinc-700'; popula,
+  r: false;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 24; ratin,
+  g: 4.6; review,
+  s: 7}; {/* TODO: Fix JSX expression */}
+  y: 'Data & Platform'}' pric,
   e: {/* TODO: Fix JSX expression */}
   s: 14} setupTim,
-  e: '2 hours' },;' feature,
-  s: ['Schema registryDiff viewerCI gatesBackfill helpers'],;' benefit,
-  s: ['Fewer incidentsFaster changes'],;' targetAudienc,
-  e: ['Data platformAnalytics engineers'],;' marketPositio,
-  n: 'Complements dbt and warehouse-native governance.',;' competitor,
-  s: ['OpenMetadataGreat Expectations'],;' techStac,
-  k: ['TypeScriptPostgreSQLdbt'],; realImplementatio,
-  n: true,;' implementationDetail,
-  s: 'Contracts as code, PR checks, lineage view.',;' ro,
-  i: 'Reduce data breakage incidents by 50–70%.',;' useCase,
-  s: ['Warehouse governanceAnalytics contracts'],;' integration,
-  s: ['dbtGitHubBigQuery'],;' suppor,
-  t: 'Email support',;' complianc,
-  e: ['GDPR'],;' lin,
+  e: '2 hours' };' feature,
+  s: ['Schema registryDiff viewerCI gatesBackfill helpers'];' benefit,
+  s: ['Fewer incidentsFaster changes'];' targetAudienc,
+  e: ['Data platformAnalytics engineers'];' marketPositio,
+  n: 'Complements dbt and warehouse-native governance.';' competitor,
+  s: ['OpenMetadataGreat Expectations'];' techStac,
+  k: ['TypeScriptPostgreSQLdbt']; realImplementatio,
+  n: true;' implementationDetail,
+  s: 'Contracts as code, PR checks, lineage view.';' ro,
+  i: 'Reduce data breakage incidents by 50–70%.';' useCase,
+  s: ['Warehouse governanceAnalytics contracts'];' integration,
+  s: ['dbtGitHubBigQuery'];' suppor,
+  t: 'Email support';' complianc,
+  e: ['GDPR'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/data-contracts-hub',;' ico,
-  n: '📜',;' colo,
-  r: 'from-lime-600 to-green-700',; popula,
-  r: false,;' launchDat,
-  e: '2025-02-08',; customer,
-  s: 19,; ratin,
-  g: 4.6,; review,
-  s: 6, } ],; // Helper functions; export const getServicesByCategory = (categor,)
-  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi,)
+  s://ziontechgroup.com/services/data-contracts-hub';' ico,
+  n: '📜';' colo,
+  r: 'from-lime-600 to-green-700'; popula,
+  r: false;' launchDat,
+  e: '2025-02-08'; customer,
+  s: 19; ratin,
+  g: 4.6; review,
+  s: 6} ]; // Helper functions; export const getServicesByCategory = (categor)
+  y: string) => {; return realMicroSaasServices.filter(service => service.category === category)} };; export const getServicesByPriceRange = (mi)
   n: number) ma,
-  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); },; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} },; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research',;' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity',;' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;' 'Enterprise IT' ];' 'Enterprise IT' ]; '
+  x: number) => {; return realMicroSaasServices.filter(service => {,' const price = parseFloat(service.price.replace('$') '').replace(} ''));; return price >= min && (max === Infinity || price <= max); }); }; export const getPopularServices = () => {; return realMicroSaasServices.filter(service => service.popular)} }; export const serviceCategories = [;' 'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';' 'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';' 'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';' 'Enterprise IT' ];' 'Enterprise IT' ]; '

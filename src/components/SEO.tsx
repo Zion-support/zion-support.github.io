@@ -34,8 +34,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   keyword,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //     'AI',
 //     'artificial intelligence',
 //     'enterprise solutions',
@@ -53,8 +52,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   local,
   e: 'en_US',
   twitterCar,
-  d: 'summary_large_image' as const,
-};
+  d: 'summary_large_image' as const};
 export const,
   SEO: React.FC;
           <SEOProps> = ({/* TODO: Fix JSX expression */}
@@ -74,7 +72,7 @@ export const,
 //   structuredData,
   twitterCard = defaultSEO.twitterCard,
   locale = defaultSEO.locale,
-  alternateLocales = [],)
+  alternateLocales = [])
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -93,8 +91,7 @@ export const,
   l: url || defaultSEO.url,
 //     type,
 //     twitterCard,
-//     locale,
-  };
+//     locale};
   // Generate structured data;
 const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -119,8 +116,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
       ur,
   l: seo.url,
       imag,
-  e: seo.image,
-    };
+  e: seo.image};
     if (author) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -129,8 +125,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
 }
         '@type': 'Person',
         nam,
-  e: author,
-      };
+  e: author};
     }
     if (publishDate) {/* TODO: Fix JSX expression */}
   O: Add content;}

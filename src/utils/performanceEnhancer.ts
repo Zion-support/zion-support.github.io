@@ -36,7 +36,7 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
       try {const observer = new PerformanceObserver((list) => {}
           const entries = list.getEntries();
           entries.forEach((entry) => {// Process performance entries;}
-            console.log('Performance,)
+            console.log('Performance)
   entry:', entry.name, entry.duration);
           });
         });

@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Error Handling Configuration
  * Centralized error tracking and reporting settings
  */
 export enum ErrorSeverity {
-=======
 
 'use client'
 /**
@@ -16,20 +14,16 @@ export enum ErrorSeverity {
 export enum ErrorSeverity {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
   CRITICAL = 'critical'
 }
-<<<<<<< HEAD
 export enum ErrorCategory {
-=======
 
 export enum ErrorCategory {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   NETWORK = 'network',
   VALIDATION = 'validation',
   AUTHENTICATION = 'authentication',
@@ -40,7 +34,6 @@ export enum ErrorCategory {// TODO: Add content;}
   THIRD_PARTY = 'third_party',
   UNKNOWN = 'unknown'
 }
-<<<<<<< HEAD
 export interface ErrorConfig {
   enabled: boolean;
   logToConsole: boolean;
@@ -51,7 +44,6 @@ export interface ErrorConfig {
   severityThreshold: ErrorSeverity;
 }
 export const _errorHandlingConfig: ErrorConfig = {
-=======
 
 export interface ErrorConfig {// TODO: Add content;}
 };
@@ -65,18 +57,15 @@ export interface ErrorConfig {// TODO: Add content;}
 }
 export const _errorHandlingConfig: ErrorConfig = {// TODO: Add content;}
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production',
   sendToServer: process.env['NODE_ENV'] === 'production',
   sampleRate: 1.0,
   maxStackTraceLength: 1000,
   ignoreErrors: [
-<<<<<<< HEAD
     /ResizeObserver loop/i,
     /Non-Error promise rejection captured/i,
-    /Loading chunk \d+ failed/i,
-  ],
+    /Loading chunk \d+ failed/i],
   severityThreshold: ErrorSeverity.LOW
 };
 export const _errorMessages = {
@@ -107,10 +96,7 @@ export class AppError extends Error {
     public severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     public metadata?: Record<string, unknown>
   ) {
-=======
-  // TODO: Add items,
-
-]
+  // TODO: Add items]
 //     /ResizeObserver loop/i,
 //     /Non-Error promise rejection captured/i,
 //     /Loading chunk \d+ failed/i,
@@ -205,16 +191,12 @@ export class AppError extends Error {
   ) {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     super(message);
     this.name = 'AppError';
     Error.captureStackTrace(this, this.constructor);
   }
 }
 export default errorHandlingConfig;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -5,7 +5,6 @@
  * for productio n-grade application reliability.
  */
 
-<<<<<<< HEAD
 interface ErrorLo, g {
   timesta, m, p: number;
   lev, e, l: 'err, o, r' | 'wa, r, n' | 'in, f, o' | 'deb, u, g';
@@ -21,12 +20,10 @@ interface ErrorMetric, s {
   errorsByTy, p, e: Reco, r, d<str, i, n, g, number > ;
   lastErr, o, r ? : ErrorL, o, g;
   errorRa, t, e : number; // errors per minut e;
-=======
 interface ErrorLo, g {/* TODO: Fix JSX expression */}
   }
 
 interface ErrorMetric, s {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
 const ERROR_LOG_KE, Y = 'zion_error_lo, g, s'; const MAX_ERROR_LOG, S = 1, 0, 0;
@@ -63,20 +60,17 @@ const saveErrorLo, g = (l, o, g: Error, L, o, g) => {/* TODO: Fix JSX expression
  */
 export const logError = (err, o, r: Err, o, r | st, r, i, n, g,
   conte, x, t?: Reco, r, d<string, unkno, w, n>,
-  lev, e, l: 'err, o, r' | 'wa, r, n' = 'er, r, o, r',)
+  lev, e, l: 'err, o, r' | 'wa, r, n' = 'er, r, o, r')
 ) => {/* TODO: Fix JSX expression */}
     };
 
   // Save to local storage saveErrorLo g(errorL o g);
 
-<<<<<<< HEAD
   // Console logging if() { conso l e.err o r('Error logge d: ' errorL o g);
    }, el, s, e {
     conso, l, e.wa, r, n('Warning, logge, d:', errorL, o, g);
-=======
   // Console logging if() {/* TODO: Fix JSX expression */}
    }, el, s, e {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   // Send to external monitoring servic e (if configure d)
@@ -93,7 +87,6 @@ export const logInfo = (messa, g, e: st, r, i, n, g, conte, x, t?: Reco, r, d<st
 /**
  * Send error to monitoring servic e;
  */
-<<<<<<< HEAD
 const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {  
   if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
 
@@ -107,34 +100,26 @@ const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {
       if ('Sent, r, y' in, windo, w) {
       (window, a, s { Sent, r, y ? : { captureExcepti, o, n: (err, o, r: Er, r, o, r, conte, x, t : Reco, r, d<str, i, n, g, unkno, w, n>) = > vo, i, d   } }).Sent, r, y?.captureExcepti, o, n(new, Erro, r(errorL, o, g.messa, g, e), {
         contex, t, s: {,
-          cust, o, m: errorL, o, g.cont, e, x, t,
-        },
+          cust, o, m: errorL, o, g.cont, e, x, t},
         tags: {,
           lev, e, l: errorL, o, g.le, v, e, l,
           session, I, d: errorL, o, g.sessio, n, I, d,
-=======
 const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {/* TODO: Fix JSX expression */}
       (window, a, s { Sent, r, y ? : { captureExcepti, o, n: (err, o, r: Er, r, o, r, conte, x, t : Reco, r, d<str, i, n, g, unkno, w, n>) = > vo, i, d   } }).Sent, r, y?.captureExcepti, o, n(new, Erro, r(errorL, o, g.messa, g, e), {/* TODO: Fix JSX expression */}
         },
         tag,
   s: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-        },
-      });
+        }});
     }
     */
     // Or send to custom endpoin t;
     /*
-<<<<<<< HEAD
     fet, c, h('/a, p, i/l, o, g-err, o, r', {)
       meth, o, d: 'P, O, S, T')
       heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' })
-=======
     fet, c, h('/a, p, i/l, o, g-err, o, r', {/* TODO: Fix JSX expression */}
-      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' },)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-      bo, d, y: JS, O, N.stringi, f, y(error, L, o, g),
-    }).cat, c, h(conso, l, e.err, o, r);
+      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' })
+      bo, d, y: JS, O, N.stringi, f, y(error, L, o, g)}).cat, c, h(conso, l, e.err, o, r);
     */
   } cat, c, h (err, o, r) {/* TODO: Fix JSX expression */}
   }
@@ -143,18 +128,15 @@ const sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {/* TODO: Fix JSX 
 /**
  * Get error metrics;
  */
-<<<<<<< HEAD
 export const getErrorMetrics = (): ErrorMetri, c, s = > { 
   const log, s = getErrorL, o, g, s(); const error, s = lo, g, s.filt, e, r(l, o, g => l, o, g.lev, e, l === 'er, r, o, r');
 
-  // Count errors by type const errorsByType: Reco r d<str i n g number > = { };
+  // Count errors by type const errorsByType: Reco r d<str i n g number > = {};
   erro, r, s.forEa, c, h(err, o, r = > {)
     const typ, e = err, o, r.messa, g, e.sp, l, i, t(':')[0] || 'Unkno, w, n'; errorsByTy, p, e[ty, p, e] = (errorsByTy, p, e[ty, p, e] || 0) + 1;
-=======
 export const getErrorMetrics = (): ErrorMetri, c, s = > {/* TODO: Fix JSX expression */}
-  errorsByType: Reco r d<str i n g number > = { };
+  errorsByType: Reco r d<str i n g number > = {};
   erro, r, s.forEa, c, h(err, o, r = > {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   });
 
   // Calculate error rate (errors per minute in last hour)
@@ -178,7 +160,6 @@ export const clearErrorLogs = () => {/* TODO: Fix JSX expression */}
 /**
  * Global error handler set u p;
  */
-<<<<<<< HEAD
 export const setupGlobalErrorHandling = () => { 
   if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
 
@@ -194,13 +175,11 @@ export const setupGlobalErrorHandling = () => {
   // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {)
     logErr, o, r(eve, n, t.reas, o, n || 'Unhandled, Promise, Rejectio, n', {)
       promi, s, e: eve, n, t.prom, i, s, e)
-=======
 export const setupGlobalErrorHandling = () => {/* TODO: Fix JSX expression */}
      });
   });
 
   // Handle unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' eve n t = > {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   });
 
@@ -215,7 +194,6 @@ export const setupGlobalErrorHandling = () => {/* TODO: Fix JSX expression */}
 /**
  * Performance monitorin g;
  */
-<<<<<<< HEAD
 export const monitorPerformance = () => { 
   if (typeof, windo, w = == 'undefin, e, d' || !('performan, c, e' in, wind, o, w)) retu, r, n;
 
@@ -227,8 +205,8 @@ export const monitorPerformance = () => {
           // Slow page load ( > 3s)
           logErr, o, r('Slow, page, load detect, e, d',
             {)
-              loadTi, m, e,)
-              domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.fetchSt, a, r, t,)
+              loadTi, m, e)
+              domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.fetchSt, a, r, t)
               ty, p, e: 'performa, n, c, e')
              })
             'wa, r, n')
@@ -239,22 +217,18 @@ export const monitorPerformance = () => {
           loadTi, m, e)
           domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.fetchSt, a, r, t)
           tt, f, b: perfDa, t, a.responseSta, r, t - perfDa, t, a.fetchSt, a, r, t)
-=======
 export const monitorPerformance = () => {/* TODO: Fix JSX expression */}
              },
-            'wa, r, n',
-          );
+            'wa, r, n');
         }
 
         logIn, f, o('Page, load, performance', {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       }
     }, 0);
   });
 
   // Monitor long tasks;
-<<<<<<< HEAD
   if ('PerformanceObserv, e, r' in, windo, w) { 
     t, r, y {
       const longTaskObserve, r = new, PerformanceObserve, r(li, s, t => {)
@@ -263,27 +237,21 @@ export const monitorPerformance = () => {/* TODO: Fix JSX expression */}
             // Long task threshold;
             logErr, o, r('Long, task, detected',
               {)
-                duration: ent, r, y.durat, i, o, n,)
-                startTi, m, e: ent, r, y.startT, i, m, e,)
+                duration: ent, r, y.durat, i, o, n)
+                startTi, m, e: ent, r, y.startT, i, m, e)
                 ty, p, e: 'performa, n, c, e')
                })
               'wa, r, n')
-=======
   if ('PerformanceObserv, e, r' in, windo, w) {/* TODO: Fix JSX expression */}
                },
-              'wa, r, n',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-            );
+              'wa, r, n');
           }
         }
       });
       longTaskObserv, e, r.obser, v, e({ entryTyp, e, s: ['longt, a, s, k'] });
-<<<<<<< HEAD
     } cat, c, h {
       // Long task API not supporte d;
-=======
     } cat, c, h {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 };
@@ -291,7 +259,6 @@ export const monitorPerformance = () => {/* TODO: Fix JSX expression */}
 /**
  * Network error handler;
  */
-<<<<<<< HEAD
 export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: string) => { ,
   logErr, o, r(er, r, o, r, {)
     endpoi, n, t)
@@ -302,13 +269,11 @@ export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: strin
   // Check if offline;
   if (typeof, navigato, r !== 'undefin, e, d' && !navigat, o, r.onLi, n, e) {
     conso, l, e.wa, r, n('is, offline');
-=======
 export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: string) => {/* TODO: Fix JSX expression */}
    });
 
   // Check if offline;
   if (typeof, navigato, r !== 'undefin, e, d' && !navigat, o, r.onLi, n, e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return { offli, n, e: t, r, u, e };
   }
 
@@ -318,11 +283,9 @@ export const handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: strin
 /**
  * T r y-catch wrapper with automatic error logging;
  */
-<<<<<<< HEAD
 export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(
   fn: , T,
-  conte, x, t?: string,
-): T = > { 
+  conte, x, t?: string): T = > { 
   return ((...ar, g, s: Paramete, r, s<, T>) => {
     t, r, y {
       const resul, t = fn(...a, r, g, s);
@@ -330,12 +293,10 @@ export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) =>
       // Handle async functions;
       if (result, instanceof, Promise) {
         return, resul, t.cat, c, h(err, o, r = > {)
-=======
 export const withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(f,
   n: , T,
-  conte, x, t?: string,)
+  conte, x, t?: string)
 ): T = > {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           logErr, o, r(e, r, r, o, r, { conte, x, t, ar, g, s  }); throw, erro, r;
         });
       }

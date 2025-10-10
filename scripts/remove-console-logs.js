@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -48,7 +47,6 @@ const removeConsoleLogs = (filePath) => {
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Cleaned console statements from: ${filePath}`);
-=======
 // Files to exclude from console.log removal;
 const excludePatterns = [
   '**/node_modules/**',
@@ -97,25 +95,21 @@ for (const file of files) {/* TODO: Fix JSX expression */}
     
     if (modified) {/* TODO: Fix JSX expression */}`
   from: ${filePath}`);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return true;
     }
     
-<<<<<<< HEAD
-=======
     filesProcessed++;
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`❌ Error processing ${file}:`, error.message);
 `
 console.log(`\n🎉 Console log cleanup complete!`);`
-console.log(`📊 Files,)`
+console.log(`📊 Files)`
   processed: ${filesProcessed}`);`
-console.log(`🗑️  Total console statements,)`
+console.log(`🗑️  Total console statements)`
   removed: ${totalRemoved}`);`
-console.log(`\n💡 Not,)`
+console.log(`\n💡 Not)`
   e: console.error statements in development mode checks were preserved.`);`
     // console.error(`❌ Error processing ${filePath}:`, error.message);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
@@ -123,7 +117,6 @@ console.log(`\n💡 Not,)`
   }
 };
 
-<<<<<<< HEAD
 // Main execution;
 const srcDir = path.join(__dirname, '..', 'src');
 const appDir = path.join(__dirname, '..', 'app');
@@ -146,7 +139,6 @@ for (const file of allFiles) {
 
 console.log(`Cleaned console statements from ${cleanedCount} files`);
 console.log('Console.log removal completed!');
-=======
 // Function to process all TypeScript and JavaScript files;
 async function processFiles() {/* TODO: Fix JSX expression */}
 }
@@ -160,13 +152,12 @@ async function processFiles() {/* TODO: Fix JSX expression */}
   
   for (const pattern of patterns) {/* TODO: Fix JSX expression */}`
   processed: ${totalFiles}`);`
-  // console.log(`   Files,)`
+  // console.log(`   Files)`
   modified: ${modifiedFiles}`);`
-  // console.log(`   Files,)`
+  // console.log(`   Files)`
   unchanged: ${totalFiles - modifiedFiles}`);
   
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
 export { removeConsoleLogs, processFiles };
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

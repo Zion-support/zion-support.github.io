@@ -3,11 +3,8 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Code, CheckCircle, Terminal, GitBranch, Bug, FileText } from 'lucide-react';
 
-<<<<<<< HEAD
 const AICodeAssistant: React.FC = memo(() => {,
-=======
 const AICodeAssistant: React.FC = memo(() => {}
->>>>>>> origin/merge-error-fixes
   const [isLoaded, setIsLoaded] = useState(false);
 
   React.useEffect(() => {}
@@ -15,50 +12,34 @@ const AICodeAssistant: React.FC = memo(() => {}
   }, []);
 
   const features = [
-<<<<<<< HEAD
     {
       icon: Code;
-=======
     {}
       icon: Code,
->>>>>>> origin/merge-error-fixes
       title: 'Intelligent Code Generation',
       description: 'Generate clean, efficient code from natural language descriptions with AI-powered suggestions',
-      color: 'text-purple-400',
-    },
-<<<<<<< HEAD
+      color: 'text-purple-400'},
     {
       icon: Bug;
-=======
     {}
       icon: Bug,
->>>>>>> origin/merge-error-fixes
       title: 'Smart Debugging',
       description: 'Automatically detect and fix bugs, suggest optimizations, and improve code quality',
-      color: 'text-blue-400',
-    },
-<<<<<<< HEAD
+      color: 'text-blue-400'},
     {
       icon: Terminal;
-=======
     {}
       icon: Terminal,
->>>>>>> origin/merge-error-fixes
       title: 'Multi-Language Support',
       description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, and more',
-      color: 'text-green-400',
-    },
-<<<<<<< HEAD
+      color: 'text-green-400'},
     {
       icon: GitBranch;
-=======
     {}
       icon: GitBranch,
->>>>>>> origin/merge-error-fixes
       title: 'Version Control Integration',
       description: 'Seamlessly integrate with Git, GitHub, and other version control systems',
-      color: 'text-orange-400',
-    }
+      color: 'text-orange-400'}
   ];
 
   const pricingPlans = [
@@ -75,17 +56,11 @@ const AICodeAssistant: React.FC = memo(() => {}
         'VS Code extension',
         'API access'
       ],
-<<<<<<< HEAD
       popular: false},
-=======
       popular: false;
     },
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
-=======
     {}
->>>>>>> origin/merge-error-fixes
       name: 'Team',
       price: '$99',
       period: '/month',
@@ -99,19 +74,13 @@ const AICodeAssistant: React.FC = memo(() => {}
         'Custom integrations',
         'Code review assistance'
       ],
-<<<<<<< HEAD
       popular: true},
-=======
       popular: true;
     },
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     {
       name: 'Enterprise'
-=======
     {}
       name: 'Enterprise',
->>>>>>> origin/merge-error-fixes
       price: '$299',
       period: '/month',
       description: 'For large organizations',
@@ -124,12 +93,9 @@ const AICodeAssistant: React.FC = memo(() => {}
         'Advanced security features',
         'Custom AI models'
       ],
-<<<<<<< HEAD
       popular: false}
-=======
       popular: false;
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   ];
 
   const useCases = [
@@ -137,26 +103,22 @@ const AICodeAssistant: React.FC = memo(() => {}
       title: 'Code Generation',
       description: 'Generate boilerplate code, functions, and complete modules from descriptions',
       icon: Code;
-      result: '90% faster',
-    },
+      result: '90% faster'},
     {}
       title: 'Bug Fixing',
       description: 'Automatically detect and fix common bugs and security vulnerabilities',
       icon: Bug;
-      result: '95% accuracy',
-    },
+      result: '95% accuracy'},
     {}
       title: 'Code Review',
       description: 'AI-powered code review with suggestions for improvements and best practices',
       icon: FileText;
-      result: '80% quality',
-    },
+      result: '80% quality'},
     {}
       title: 'Documentation',
       description: 'Generate comprehensive documentation and comments for your code',
       icon: FileText;
-      result: '100% coverage',
-    }
+      result: '100% coverage'}
   ];
 
   const supportedLanguages = [
@@ -164,19 +126,15 @@ const AICodeAssistant: React.FC = memo(() => {}
     'Swift', 'Kotlin', 'Scala', 'R', 'MATLAB', 'Perl', 'Haskell', 'Clojure', 'Elixir', 'Dart'
   ];
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>AI Code Assistant - Intelligent Programming Assistant | Zion Tech Group</title>
         <meta name="description" content="Boost your coding productivity with our AI-powered code assistant. Generate code, debug issues, and improve code quality with intelligent suggestions." />
         <meta name="keywords" content="AI code assistant, code generation, programming assistant, debugging, code review, developer tools" />
         <meta property="og: title" content="AI Code Assistant - Intelligent Programming Assistant" />
         <meta property="og:description" content="Boost your coding productivity with our AI-powered code assistant." />
-<<<<<<< HEAD
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-code-assistant" />
       <div className="container mx-auto px-4 py-16">{/* Hero Section */}</div>
@@ -185,7 +143,6 @@ const AICodeAssistant: React.FC = memo(() => {}
             <Code className="w-4 h-4" />
             <span>AI-Powered Development</span><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Code Assistant</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Supercharge your development workflow with our intelligent AI code assistant.</p>
             Generate code, debug issues, and improve code quality with advanced AI technology.</p>
-=======
         <meta property="og:type" content="website" />,
         <meta property="og:url" content="https://ziontechgroup.com/ai-code-assistant" />,
       </Helmet>,
@@ -202,27 +159,21 @@ const AICodeAssistant: React.FC = memo(() => {}
             AI Code Assistant;
           </h1>)
 )
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,)
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
             Supercharge your development workflow with our intelligent AI code assistant.),
             Generate code, debug issues, and improve code quality with advanced AI technology.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
 
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a;
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-<<<<<<< HEAD
             ><Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950<a
               href="/contact"
               className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
             >Start Coding Smarter</a>
-=======
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950;
@@ -232,22 +183,18 @@ const AICodeAssistant: React.FC = memo(() => {}
               className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
             >
               Start Coding Smarter;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </a>
           </div>,
         </section>,
 ,
         {/* Key Benefits */}
         <section className="mb-16">
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20">
               <div className="text-3xl font-bold text-purple-400 mb-2">90%<div className="text-white font-semibold mb-2">Faster Development<div className="text-gray-400 text-sm">Generate code 90% faster than traditional methods</div>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></section>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-purple-500/20"></div>
               <div className="text-3xl font-bold text-purple-400 mb-2">90%</div><div className="text-white font-semibold mb-2">Faster Development</div><div className="text-gray-400 text-sm">Generate code 90% faster than traditional methods</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </div>
             <div className="bg-slate-800/50 p-6 rounded-lg border border-blue-500/20"></div>
               <div className="text-3xl font-bold text-blue-400 mb-2">50+</div><div className="text-white font-semibold mb-2">Languages</div><div className="text-gray-400 text-sm">Support for 50+ programming languages</div>
@@ -255,32 +202,23 @@ const AICodeAssistant: React.FC = memo(() => {}
             <div className="bg-slate-800/50 p-6 rounded-lg border border-green-500/20"></div>
               <div className="text-3xl font-bold text-green-400 mb-2">95%</div><div className="text-white font-semibold mb-2">Bug Detection</div><div className="text-gray-400 text-sm">Automatically detect and fix 95% of common bugs</div>
             </div>
-<<<<<<< HEAD
             <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20">
-<<<<<<< HEAD
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7<div className="text-white font-semibold mb-2">Available<div className="text-gray-400 text-sm">AI assistant available around the clock</div>
-=======
             <div className="bg-slate-800/50 p-6 rounded-lg border border-orange-500/20"></div>
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div><div className="text-white font-semibold mb-2">Available</div><div className="text-gray-400 text-sm">AI assistant available around the clock</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </div>
           </div>
         </section>
 
         {/* Features */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</div>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {features.map((feature, index) => (}
               <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
->>>>>>> origin/merge-error-fixes
                 <div className="flex items-start space-x-4">
-=======
               <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
               <div className="text-white font-semibold mb-2">Available</div>
               <div className="text-gray-400 text-sm">AI assistant available around the clock</div>,
@@ -295,14 +233,11 @@ const AICodeAssistant: React.FC = memo(() => {}
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300">,
                 <div className="flex items-start space-x-4">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{features.map((feature, index) => (</section>
               </div><div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-start space-x-4"></div>
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <feature.icon className="w-6 h-6" />
                   </div>
                   <div></div>
@@ -316,20 +251,14 @@ const AICodeAssistant: React.FC = memo(() => {}
 
         {/* Use Cases */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</div>
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index) => (}
->>>>>>> origin/merge-error-fixes
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}<h3 className="text-lg font-semibold text-white mb-2">{useCase.title}<p className="text-gray-400 text-sm">{useCase.description}</p>
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
             {useCases.map((useCase, index) => (
@@ -340,14 +269,11 @@ const AICodeAssistant: React.FC = memo(() => {}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
                 <p className="text-gray-400 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Perfect For</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{useCases.map((useCase, index) => (</section>
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <useCase.icon className="w-8 h-8 text-purple-400" />
                   <div className="text-sm font-semibold text-green-400">{useCase.result}</div><h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3><p className="text-gray-400 text-sm">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -355,26 +281,17 @@ const AICodeAssistant: React.FC = memo(() => {}
 
         {/* Supported Languages */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Programming Languages<div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">{supportedLanguages.map((language, index) => (</div>
               </div><div key={index} className="bg-slate-800/50 p-4 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Programming Languages</h2>
-<<<<<<< HEAD
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-5 gap-4">,
             {supportedLanguages.map((language, index) => (
               <div key={index} className="bg-slate-800/50 p-4 rounded-lg border border-gray-700 hover: border-purple-500/50 transition-all duration-300 text-center">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Supported Programming Languages</h2><div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">{supportedLanguages.map((language, index) => (</section>
               </div><div key={index} className="bg-slate-800/50 p-4 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {supportedLanguages.map((language, index) => (}
               <div key={index} className="bg-slate-800/50 p-4 rounded-lg border border-gray-700 hover:border-purple-500/50 transition-all duration-300 text-center">
->>>>>>> origin/merge-error-fixes
                 <div className="text-white font-medium">{language}</div>
               </div>
             ))}
@@ -383,40 +300,29 @@ const AICodeAssistant: React.FC = memo(() => {}
 
         {/* Pricing */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (</section><div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>{plan.popular && (</div>
                   </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</div>
-=======
           <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
             {pricingPlans.map((plan, index) => (
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (}
->>>>>>> origin/merge-error-fixes
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-purple-500 ring-2 ring-purple-500/20' : 'border-gray-700'} hover:border-purple-500/50 transition-all duration-300`}>
                 {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                     </div>
                   </div>
                 )}
                 <div className="text-center mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-<<<<<<< HEAD
                   <div className="flex items-baseline justify-center"></div>
                     <span className="text-4xl font-bold text-white">{plan.price}</span><span className="text-gray-400 ml-1">{plan.period}</span><p className="text-gray-400 mt-2">{plan.description}</p><ul className="space-y-3 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
                     </ul><li key={featureIndex} className="flex items-center space-x-3">
-=======
                   <div className="flex items-baseline justify-center">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
@@ -426,36 +332,26 @@ const AICodeAssistant: React.FC = memo(() => {}
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center space-x-3">
->>>>>>> origin/merge-error-fixes
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
-<<<<<<< HEAD
                 <a
-=======
                 </ul>
                 <a;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   href="/contact"
-<<<<<<< HEAD
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular;
-                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700',}
+                      ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover: from-purple-700 hover:to-blue-700'}
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'}
-=======
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700'
                       : 'border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
->>>>>>> origin/merge-error-fixes
                   }`}
-<<<<<<< HEAD
                 >Get Started</a>
-=======
                 >
                   Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </a>
               </div>
             ))}
@@ -466,16 +362,12 @@ const AICodeAssistant: React.FC = memo(() => {}
         <section className="text-center bg-gradient-to-r from-purple-600/20 to-blue-600/20 p-12 rounded-lg border border-purple-500/30">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Code Smarter?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join 2,000+ developers already using our AI Code Assistant to boost their productivity.</p>
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <a;
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></section>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="tel:+13024640950"
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-<<<<<<< HEAD
             ><Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950</Phone>
             </Phone>
             <a
@@ -483,19 +375,17 @@ const AICodeAssistant: React.FC = memo(() => {}
               className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
             ></a><MessageSquare className="w-5 h-5 mr-2" >Email Us</MessageSquar>
             </MessageSquare>
-=======
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: (302) 464-0950;
             </a>
             <a;
               href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
-            >
+        className="border-2 border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
+      >
               <MessageSquare className="w-5 h-5 mr-2" />
               Email Us;
             </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </div>
         </section>
       </div>

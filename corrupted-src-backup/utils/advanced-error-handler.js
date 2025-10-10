@@ -9,7 +9,6 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   init() {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   setupGlobalErrorHandlers() {
     // Global error handler;
     window.addEventListener('error', event => {
@@ -23,14 +22,11 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent;
         url: window.location.href;
-=======
   setupGlobalErrorHandlers() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
 
     // Unhandled promise rejection handler;
-<<<<<<< HEAD
     window.addEventListener('unhandledrejection', event => {)
       this.handleError({)
         type: 'Unhandled Promise Rejection')
@@ -39,14 +35,11 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent;
         url: window.location.href;
-=======
     window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     });
   }
 
-<<<<<<< HEAD
   setupUnhandledRejectionHandler() {
     // Additional promise rejection handling;
     window.addEventListener('rejectionhandled', event => {)
@@ -59,13 +52,12 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       event => {
         if (event.target !== document) {
           this.handleError({)
-            type: 'Resource Error',)
+            type: 'Resource Error')
             message: `Failed to load resource: ${event.target.src || event.target.href}`)
             element: event.target.tagName),
             src: event.target.src || event.target.href),
             timestamp: new Date().toISOString(),
             url: window.location.href;
-=======
   setupUnhandledRejectionHandler() {/* TODO: Fix JSX expression */}
       //       });
   }
@@ -79,30 +71,24 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             timestam,
   p: new Date().toISOString(),
             ur,
-  l: window.location.href,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-          });
+  l: window.location.href});
         }
       },
       true;
     );
   }
 
-<<<<<<< HEAD
   setupNetworkErrorHandler() {
     // Handle network-related errors;
     window.addEventListener('online', () => {
       this.handleNetworkStatusChange('online');
-=======
   setupNetworkErrorHandler() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
     window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
     });
   }
 
-<<<<<<< HEAD
   setupRecoveryStrategies() {
     // Define recovery strategies for different error types;
     this.recoveryStrategies.set('network', this.handleNetworkError.bind(this));
@@ -121,28 +107,23 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     // Report to external service;
     if (this.reportingEnabled) {
       this.reportError(errorInfo);
-=======
   setupRecoveryStrategies() {/* TODO: Fix JSX expression */}
   }
 
   handleError(errorInfo) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     // Show user-friendly message;
     this.showUserError(errorInfo);
   }
 
-<<<<<<< HEAD
   logError(errorInfo) {
     this.errorLog.push(errorInfo);
 
     // Maintain log size;
     if (this.errorLog.length > this.maxLogSize) {
       this.errorLog.shift();
-=======
   logError(errorInfo) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     // Console logging;
@@ -165,16 +146,13 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     return 'unknown';
   }
 
-<<<<<<< HEAD
   handleNetworkError(errorInfo) {
     // Retry failed network requests;
     if (errorInfo.retryCount < 3) {
       setTimeout(
         () => {
           this.retryFailedRequest(errorInfo);
-=======
   handleNetworkError(errorInfo) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         },
         Math.pow(2, errorInfo.retryCount || 0) * 1000;
       );
@@ -182,7 +160,6 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     }
   }
 
-<<<<<<< HEAD
   handleResourceError(errorInfo) {
     // Try to load fallback resources;
     if (errorInfo.element === 'IMG') {
@@ -228,7 +205,6 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             ...errorInfo)
             message: `Retry ${retryCount} failed: ${error.message}`)
             retryCount)
-=======
   handleResourceError(errorInfo) {/* TODO: Fix JSX expression */}
     } else if (errorInfo.element === 'SCRIPT') {/* TODO: Fix JSX expression */}
     } else if (errorInfo.element === 'LINK') {/* TODO: Fix JSX expression */}
@@ -250,8 +226,7 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         .catch(error => {/* TODO: Fix JSX expression */}`
   e: `Retry ${retryCount} faile,`
   d: ${error.message}`,
-            retryCount,)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+            retryCount)
           });
         });
     }
@@ -263,7 +238,6 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     }
   }
 
-<<<<<<< HEAD
   loadFallbackScript(src) {
     // Load from CDN or local fallback;
     const _script = document.createElement('script');
@@ -271,14 +245,11 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     script.onerror = () => {
       // Load local fallback;
       script.src = '/js/fallback.js';
-=======
   loadFallbackScript(src) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
     document.head.appendChild(script);
   }
 
-<<<<<<< HEAD
   loadFallbackStylesheet(src) {
     // Load fallback stylesheet;
     const _link = document.createElement('link');
@@ -287,14 +258,11 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     link.onerror = () => {
       // Load local fallback;
       link.href = '/css/fallback.css';
-=======
   loadFallbackStylesheet(src) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
     document.head.appendChild(link);
   }
 
-<<<<<<< HEAD
   handlePropertyAccessError(errorInfo) {
     // Try to fix property access errors;
     //     // Implementation would depend on specific error;
@@ -311,7 +279,6 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       caches.keys().then(cacheNames => {)
         cacheNames.forEach(cacheName => {)
           caches.delete(cacheName);
-=======
   handlePropertyAccessError(errorInfo) {/* TODO: Fix JSX expression */}
   }
 
@@ -319,13 +286,11 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
   }
 
   clearCaches() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         });
       });
     }
   }
 
-<<<<<<< HEAD
   garbageCollect() {
     // Force garbage collection if available;
     if (window.gc) {
@@ -426,7 +391,6 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
         max-width: 300px;
       ">,
         <strong>Error:</strong> ${errorInfo.message}
-=======
   garbageCollect() {/* TODO: Fix JSX expression */}
     }
   }
@@ -448,7 +412,6 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
 
   showErrorToast(errorInfo) {/* TODO: Fix JSX expression */}
   r:</strong> ${errorInfo.message}"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <button onclick="this.parentElement.parentElement.remove()" style="
           backgroun,
   d: none;
@@ -466,25 +429,20 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     document.body.appendChild(toast);
 
     // Auto-remove after 5 seconds;
-<<<<<<< HEAD
     setTimeout(() => {,
       if (toast.parentElement) {,
         toast.remove();
-=======
     setTimeout(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }, 5000);
   }
 
-<<<<<<< HEAD
   handleNetworkStatusChange(status) {
     const _message = status === 'online' ? 'Connection restored' : 'Connection lost';
     this.showErrorToast({)
       message)
       type: 'Network Status'),
-      severity: 'info'),
-    });
+      severity: 'info')});
   }
 
   reportError(errorInfo) {
@@ -493,42 +451,31 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
       window.gtag('event', 'exception', {)
         description: errorInfo.message),
         fatal: errorInfo.severity === 'critical'),
-=======
   handleNetworkStatusChange(status) {/* TODO: Fix JSX expression */}
     });
   }
 
   reportError(errorInfo) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
 
     // Send to custom error reporting service;
-<<<<<<< HEAD
     fetch('/api/errors', {)
-      method: 'POST',)
-      headers: {,)
-        'Content-Type': 'application/json'),
-      })
-      body: JSON.stringify(errorInfo),
-    }).catch(error => {)
-=======
+      method: 'POST')
+      headers: {)
+        'Content-Type': 'application/json')})
+      body: JSON.stringify(errorInfo)}).catch(error => {)
     fetch('/api/errors', {/* TODO: Fix JSX expression */}
       },
-      bod,)
-  y: JSON.stringify(errorInfo),
-    }).catch(error => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+      bod)
+  y: JSON.stringify(errorInfo)}).catch(error => {/* TODO: Fix JSX expression */})
       //       });
   }
 
   // Public methods;
-<<<<<<< HEAD
   getErrorLog() {
     return this.errorLog;
-=======
   getErrorLog() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   clearErrorLog() {/* TODO: Fix JSX expression */}

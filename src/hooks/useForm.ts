@@ -26,7 +26,7 @@ export interface UseFormConfig;
   validationSchema?: Partial;
           <Record<keyof T, ValidationRule[]>>;
   onSubmi,
-  t: (value,)
+  t: (value)
   s: T) => void | Promise<void>;
   validateOnChange?: boolean;
   validateOnBlur?: boolean;
@@ -68,7 +68,7 @@ export function useForm<T extends Record<string, unknown>>({// TODO: Add content
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Validate a single field;
 const validateSingleField = useCallback()
-    (fiel,)
+    (fiel)
   d: keyof T): void => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -167,7 +167,7 @@ const isValid = validateAllFields();
 [values, validateAllFields]
   // Set field value programmatically;
   const setFieldValue = useCallback((fiel,
-  d: keyof T, valu,)
+  d: keyof T, valu)
   e: T[keyof T]) => {[field]: value;}
     if (validateOnChange && touched[field]) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -176,12 +176,12 @@ const isValid = validateAllFields();
   }, [validateOnChange, touched, validateSingleField]);
 // Set field error programmatically;
   const setFieldError = useCallback((fiel,
-  d: keyof T, fieldError,)
+  d: keyof T, fieldError)
   s: string[]) => {[field]: fieldErrors;}
   }, []);
 // Set field touched programmatically;
   const setFieldTouched = useCallback((fiel,
-  d: keyof T, isTouche,)
+  d: keyof T, isTouche)
   d: boolean) => {[field]: isTouched;}
   // Reset form to initial values;
   const resetForm = useCallback(() => {setValues(initialValues);}
@@ -192,7 +192,7 @@ const isValid = validateAllFields();
   // Check if form is valid;
 const isValid = Object.keys(errors).length === 0 ||
     Object.values(errors).every(errorArray => errorArray.length === 0);
-  return {values,}
+  return {values}
     errors,
     touched,
     isSubmitting,

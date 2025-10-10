@@ -27,8 +27,7 @@ const fixes = [
   // Fix missing semicolons in imports;
   { pattern: /from 'lucide-react'\nconst/g, replacement: "from 'lucide-react';\n\nconst" },
   // Fix missing semicolons in lazy imports;
-  { pattern: /import\('\.\.\/components\/[^']+'\)\nconst/g, replacement: "import('../components/$1');\nconst" },
-];
+  { pattern: /import\('\.\.\/components\/[^']+'\)\nconst/g, replacement: "import('../components/$1');\nconst" }];
 
 function fixFile(filePath) {
   try {

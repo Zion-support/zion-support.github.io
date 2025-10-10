@@ -27,7 +27,7 @@ function fixDataStructures(filePath) {
   }
 
   // Fix missing closing braces in object literals
-  const missingClosePattern = /(\w+):\s*([^,}]+)\s*$/gm;
+  const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;
   content = content.replace(missingClosePattern, (match, key, value) => {
     if (!match.includes('}') && !match.includes(',')) {
       return `${key}: ${value},`;
@@ -36,14 +36,14 @@ function fixDataStructures(filePath) {
   });
 
   // Fix missing commas in object properties
-  const missingCommaPattern = /(\w+):\s*([^,}]+)\s*\n\s*(\w+):/g;
+  const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;
   if (missingCommaPattern.test(content)) {
     content = content.replace(missingCommaPattern, '$1: $2,\n      $3:');
     modified = true;
   }
 
   // Fix missing closing braces in arrays
-  const arrayClosePattern = /(\w+):\s*([^,}]+)\s*\n\s*\]/g;
+  const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;
   if (arrayClosePattern.test(content)) {
     content = content.replace(arrayClosePattern, '$1: $2\n    }');
     modified = true;

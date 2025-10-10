@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 
 'use client';
@@ -63,7 +57,6 @@ $4}
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
@@ -97,7 +90,6 @@ $4}
                       placeholder="Enter your email"
                     />
                   </div>
-=======
     <div>Coming Soon</div>
 
   );
@@ -217,12 +209,10 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
           
           
           </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-<<<<<<< HEAD
                     Password
                   </label>
                   <div className="relative">
@@ -337,7 +327,6 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-=======
 // Password
           </label>
                   <div className="relative">
@@ -510,12 +499,10 @@ type="submit" disabled={isLoading}
                     </div>
                     <div></div>"
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       <p className="text-gray-300">{feature.description}</p>
                     </div>
                   </div>
                 ))}
-<<<<<<< HEAD
               </div>
 
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
@@ -532,7 +519,6 @@ type="submit" disabled={isLoading}
                 >
                   Create your account
                   <ArrowRight className="w-4 h-4 ml-1" />
-=======
               </div>"
               <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
                 <h3 className="text-lg font-semibold text-white mb-3"></h3>
@@ -567,7 +553,6 @@ type="submit" disabled={isLoading}
 // >
 //                   Create your account;"
           <ArrowRight className="w-4 h-4 ml-1" /></ArrowRight>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 </a>
               </div>
             </div>
@@ -576,12 +561,9 @@ type="submit" disabled={isLoading}
       </div>
 
       <Footer />
-<<<<<<< HEAD
     </>
-=======
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

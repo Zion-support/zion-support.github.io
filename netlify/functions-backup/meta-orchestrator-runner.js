@@ -1,27 +1,22 @@
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process');
-<<<<<<< HEAD
   try {execSync('node automation/autonomous-meta-orchestrator.cjs || true', {)
       stdio: inherit),
         shell: true}
     });
     execSync('node automation/autonomous-meta-factory.cjs || true', {stdio: inherit),
         shell: true}
-=======
   try {/* TODO: Fix JSX expression */}
   l: true}
     });
     execSync('node automation/autonomous-meta-factory.cjs || true', {/* TODO: Fix JSX expression */}
   l: true})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
     execSync()
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(meta): refresh autonomous meta [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true },
-    );
-<<<<<<< HEAD
+  l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
         task: 'meta-orchestrator-runner' });
@@ -30,12 +25,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     return {/* TODO: Fix JSX expression */}
   k: 'meta-orchestrator-runner' });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
@@ -43,7 +36,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
 exports.config = {/* TODO: Fix JSX expression */}
   e: '0 * * * *'}
 };
-<<<<<<< HEAD
 exports.handler = async function() { const { execSync } = require('child_process'); try {' execSync('node automation/autonomous-meta-orchestrator.cjs || true') { stdio: 'inherit'} shell: true;
       });' execSync('node automation/autonomous-meta-factory.cjs || true') {stdio: 'inherit'} shell: true;
       });' execSync('git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(meta): refresh autonomous meta [skip ci]" || true) && (git push origin main || true)', {stdio: 'inherit'} shell: true;
@@ -51,9 +43,7 @@ exports.handler = async function() { const { execSync } = require('child_process
         body: JSON.stringify({ok: true),
         task: 'meta-orchestrator-runner' }) }; } catch (e) {return { statusCode: 200;
         body: JSON.stringify({ok: false),
-        error: String(e;),
-      }) }; } }; exports.config = {' schedule: '0 * * * *'} };'
-=======
+        error: String(e;)}) }; } }; exports.config = {' schedule: '0 * * * *'} };'
 exports.handler = async function() { const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;
@@ -67,4 +57,3 @@ exports.handler = async function() { const { execSync } = require('child_process
   k: 'meta-orchestrator-runner' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } }; exports.config = {/* TODO: Fix JSX expression */}
   e: '0 * * * *'} };'"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

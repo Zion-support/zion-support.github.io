@@ -1,21 +1,17 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
   return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-=======
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helm, e, t>
         <title>Enterprise, RAG, Security v2 — Au, t, h-Aw, a, r, e, Fre, s, h, Sign, e, d</title>
         <meta, nam, e = 'description'
           conte, n, t='Au, t, h-scoped, retriev, a, l, freshness, window, s, prompt, firewall, s, and, signed, outputs that, keep, answers correct, and, compliant.'
         />)
         <link, re, l = 'canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-enterpri s e-r a g-securi t y-v2',)
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-01-enterpri s e-r a g-securi t y-v2')
         />),
       </Helm, e, t>
 
@@ -26,7 +22,5 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>Au, t, h-A, w, a, r, e, Fre, s, h, Sign, e, d</p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
 }</div>
-=======
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

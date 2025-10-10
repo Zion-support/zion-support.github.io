@@ -163,7 +163,7 @@ export function makeKeyboardAccessible()
 export function getContrastRatio(color1: string, color2: string): number {// TODO: Add content;}
 
 }
-  const getLuminance = (colo,)
+  const getLuminance = (colo)
   r: string): number => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -379,7 +379,7 @@ export class FocusManager {// TODO: Add content;}
       this.previousFocus = null;
     }
   }
-  moveFocusInside(containe,)
+  moveFocusInside(containe)
   r: HTMLElement): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

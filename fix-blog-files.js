@@ -4,7 +4,6 @@ import { fileURLToPath } from 'url';
 
 
 // Function to fix blog files with parsing errors;
-<<<<<<< HEAD
 function fixBlogFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -12,10 +11,8 @@ function fixBlogFile(filePath) {
 
     // Fix missing closing parenthesis and return statement;
     if (content.includes('};') && !content.includes('  );')) {
-=======
 function fixBlogFile(filePath) {/* TODO: Fix JSX expression */}
     if (content.includes('};') && !content.includes('  );')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       content = content.replace(/};$/, '  );\n};');
       modified = true;
     }

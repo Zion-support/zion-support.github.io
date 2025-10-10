@@ -1,25 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
-=======
 
 
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
 'use client';
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const AIMLPlatformPage: React.FC = () => {
-<<<<<<< HEAD
   const features = [
     {
       icon: Brain,
@@ -58,7 +51,6 @@ const AIMLPlatformPage: React.FC = () => {
       name: 'Team',
       price: '$2,499',
       description: 'Ideal for development teams',
-=======
   const features = [];
   return (
     {// TODO: Add content;}
@@ -98,20 +90,17 @@ const AIMLPlatformPage: React.FC = () => {
   e: '$2,499',
       descriptio,
   n: 'Ideal for development teams',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Up to 25 models',
         'Advanced ML tools',
         'Priority support',
         'High-performance compute',
         'Advanced analytics',
         'Team collaboration'
-<<<<<<< HEAD
       popular: true
       name: 'Enterprise',
       price: '$4,999',
       description: 'For large organizations',
         'Unlimited models',
-=======
       popula,
   r: true,
 
@@ -122,31 +111,24 @@ const AIMLPlatformPage: React.FC = () => {
       descriptio,
   n: 'For large organizations',
 'Unlimited models',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Premium ML features',
         '24/7 support',
         'Custom compute',
         'Custom analytics',
         'White-label options',
         'API access'
-<<<<<<< HEAD
 
   const stats = [
-=======
   const stats = [
   // TOD,
   O: Add items;
 ];;
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     { icon: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
     { icon: Star, value: '4.9/5', label: 'User Rating' }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -155,7 +137,6 @@ const AIMLPlatformPage: React.FC = () => {
       </Helmet>
       
       <Navigation />
-<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -172,7 +153,6 @@ const AIMLPlatformPage: React.FC = () => {
           </div>
       
       <Footer />
-=======
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -195,15 +175,11 @@ Learn More;
       <Footer />
     </div>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 
 
-<<<<<<< HEAD
 export default $1;
-=======
 export default AiMlPlatformPage;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -10,8 +10,7 @@
 
 export function debounce<T extends (...args: unknown[]) => unknown>(),
     func: T,
-  wait: number,
-): (...args: Parameters;
+  wait: number): (...args: Parameters;
           <T>) => void {// TODO: Add content;}
 
 }
@@ -41,8 +40,7 @@ export function throttle;
 
           <T extends (...args: unknown[]) => unknown>(),
     func: T,
-  limit: number,
-): (...args: Parameters;
+  limit: number): (...args: Parameters;
           <T>) => void {// TODO: Add content;}
 
 }
@@ -68,13 +66,12 @@ export function throttle;
 export function memoize;
 
           <T extends (...args: unknown[]) => unknown>(),
-    func: T,
-): T {// TODO: Add content;}
+    func: T): T {// TODO: Add content;}
 
 }
   const cache = new Map;
           <string, ReturnType<T>>();
-  return ((...arg,)
+  return ((...arg)
   s: Parameters<T>): ReturnType<T> => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -98,9 +95,7 @@ export function lazyLoad<T extends React.ComponentType<unknown>>()
   c: () => Promise;
           <{/* TODO: Fix JSX expression */}
   t: T }>,
-  fallback?: React.ReactNode,
-
-): React.LazyExoticComponent<T> {// TODO: Add content;}
+  fallback?: React.ReactNode): React.LazyExoticComponent<T> {// TODO: Add content;}
 
 }
   const LazyComponent = React.lazy(importFunc);
@@ -142,12 +137,10 @@ export async function batchAsync;
   item,
   s: T[],
   operatio,
-  n: (ite,)
+  n: (ite)
   m: T) => Promise;
           <R>,
-  batchSize = 10,
-
-): Promise<R[]> {// TODO: Add content;}
+  batchSize = 10): Promise<R[]> {// TODO: Add content;}
 
 }
   const,
@@ -176,7 +169,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
   let,
   rafId: number;
   let running = true;
-  function loop(tim,)
+  function loop(tim)
   e: number) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -206,9 +199,7 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
 export function runWhenIdle()
   callbac,
   k: () => void,
-  options?: IdleRequestOptions,
-
-): number {// TODO: Add content;}
+  options?: IdleRequestOptions): number {// TODO: Add content;}
 
 }
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
@@ -262,7 +253,7 @@ export class VirtualScroller;
   items: T[];
   constructor(item,
   s: T[], itemHeigh,
-  t: number, containerHeigh,)
+  t: number, containerHeigh)
   t: number) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -270,7 +261,7 @@ export class VirtualScroller;
     this.itemHeight = itemHeight;
     this.containerHeight = containerHeight;
   }
-  getVisibleRange(scrollTo,)
+  getVisibleRange(scrollTo)
   p: number): {/* TODO: Fix JSX expression */}
   Y: number } {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -288,7 +279,7 @@ export class VirtualScroller;
 //       offsetY;
     };
   }
-  getVisibleItems(scrollTo,)
+  getVisibleItems(scrollTo)
   p: number): T[] {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -306,9 +297,7 @@ export class VirtualScroller;
  */
 export function setupLazyImages()
   selector = 'img[data-src]',
-  options?: IntersectionObserverInit,
-
-): () => void {// TODO: Add content;}
+  options?: IntersectionObserverInit): () => void {// TODO: Add content;}
 
 }
   const images = document.querySelectorAll;
@@ -438,7 +427,7 @@ export class FPSMonitor {// TODO: Add content;}
   fps: number = 0;
   private,
   rafId: number = 0;
-  start(callback?: (fp,)
+  start(callback?: (fp)
   s: number) => void): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

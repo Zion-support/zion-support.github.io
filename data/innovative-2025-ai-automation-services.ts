@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -46,7 +45,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       price: '$4,999'
       period: '/month',
       description:,
-=======
   i,
   d: string;
   nam,
@@ -106,8 +104,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     emai,
   l: string;
     addres,
-  s: string,
-  }
+  s: string}
 ;
   realImplementatio,
   n: boolean;
@@ -136,7 +133,6 @@ export const,
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Revolutionary AI platform that autonomously manages, optimizes, and executes complex business processes without human oversight. Uses advanced machine learning to continuously improve operations.'
       feature,
   s: [;
@@ -151,7 +147,6 @@ export const,
         'Advanced analytics & reporting'
         'Enterprise-grade security & audit trails'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-purple-600 to-indigo-700'
@@ -165,7 +160,6 @@ export const,
       category: 'AI Automation & Orchestration',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -192,7 +186,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'OpenAI GPT-4, Anthropic Claude, LangChain, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker'
       ]
       integration,
@@ -203,7 +196,6 @@ export const,
   s: [,
         'Supply chain optimization, Customer service automation, Financial process management, HR workflow automation, Manufacturing process control, Quality assurance'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 800% ROI within 8 months through complete process automation and optimization.',
       competitors: [,
         'UiPath, Automation Anywhere, Blue Prism, Custom solutions'
@@ -214,8 +206,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full enterprise platform with autonomous decision-making engine, advanced ML models, comprehensive monitoring, and zero-touch operations.'
@@ -231,7 +222,6 @@ export const,
       price: '$2,499'
       period: '/month',
       description:,
-=======
       ro,
   i: 'Average customer sees 800% ROI within 8 months through complete process automation and optimization.'
       competitor,
@@ -267,8 +257,7 @@ export const,
       ratin,
   g: 4.9;
       review,
-  s: 45,
-    }
+  s: 45}
     // AI-Powered Predictive Customer Intelligence Platform,
   id: 'ai-predictive-customer-intelligence'
       nam,
@@ -281,7 +270,6 @@ export const,
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced AI platform that predicts customer behavior, churn risk, and lifetime value with unprecedented accuracy. Uses behavioral analysis, predictive modeling, and real-time data processing.'
       feature,
   s: [;
@@ -296,7 +284,6 @@ export const,
         'Advanced analytics dashboard'
         'API for custom integrations'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-blue-600 to-cyan-700'
@@ -310,7 +297,6 @@ export const,
       category: 'AI Customer Intelligence',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -337,7 +323,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka'
       ]
       integration,
@@ -348,7 +333,6 @@ export const,
   s: [,
         'Churn prevention, Customer lifetime value optimization, Personalized marketing, Product recommendation, Customer service optimization, Pricing optimization'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 400% ROI within 6 months through improved retention and customer value optimization.',
       competitors: ['Salesforce Einstein, HubSpot AI, Custom ML solutions']
       marketSize: '$18 B customer intelligence market'
@@ -357,8 +341,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full ML platform with real-time data processing, advanced predictive models, comprehensive analytics, and enterprise-grade security.'
@@ -381,7 +364,6 @@ export const,
         'Security vulnerability scanning',
         'Automated deployment pipeline',
         'Code quality optimization',
-=======
       ro,
   i: 'Average customer sees 400% ROI within 6 months through improved retention and customer value optimization.'
       competitor,
@@ -415,8 +397,7 @@ export const,
       ratin,
   g: 4.8;
       review,
-  s: 78,
-    }
+  s: 78}
     // AI-Powered Autonomous Code Generation & Deployment,
   id: 'ai-autonomous-code-generation'
       nam,
@@ -437,14 +418,12 @@ export const,
         'Security vulnerability scanning'
         'Automated deployment pipeline'
         'Code quality optimization'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Multi-language support (Python, JavaScript, Java, C#) Go)'
         'Real-time collaboration tools'
         'Version control integration'
         'Performance optimization'
         'Comprehensive documentation generation'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-green-600 to-emerald-700'
@@ -458,7 +437,6 @@ export const,
       category: 'AI Development & DevOps',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -485,7 +463,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'OpenAI GPT-4, Anthropic Claude, GitHub Copilot API, React, Node.js, PostgreSQL, Docker, Kubernetes'
       ]
       integration,
@@ -496,7 +473,6 @@ export const,
   s: [,
         'Rapid prototyping, Automated testing, Continuous deployment, Code review automation, Documentation generation, Legacy code modernization'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 600% ROI within 4 months through accelerated development and reduced deployment time.',
       competitors: ['GitHub Copilot, Tabnine, Kite, Custom solutions']
       marketSize: '$12 B AI development tools market'
@@ -505,8 +481,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full autonomous development platform with AI code generation, automated testing, security scanning, and deployment automation.'
@@ -522,7 +497,6 @@ export const,
       price: '$5,999'
       period: '/month',
       description:,
-=======
       ro,
   i: 'Average customer sees 600% ROI within 4 months through accelerated development and reduced deployment time.'
       competitor,
@@ -556,8 +530,7 @@ export const,
       ratin,
   g: 4.9;
       review,
-  s: 62,
-    }
+  s: 62}
     // AI-Powered Autonomous Financial Trading Platform,
   id: 'ai-autonomous-financial-trading'
       nam,
@@ -570,7 +543,6 @@ export const,
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced AI-powered trading platform that autonomously executes trades based on sophisticated algorithms, market analysis, and risk management protocols. Includes real-time monitoring and compliance tools.'
       feature,
   s: [;
@@ -585,7 +557,6 @@ export const,
         'Real-time alerts & notifications'
         'API for custom integrations'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-yellow-600 to-orange-700'
@@ -599,7 +570,6 @@ export const,
       category: 'AI Financial Trading',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -626,7 +596,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'TensorFlow, PyTorch, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka, Docker'
       ]
       integration,
@@ -637,7 +606,6 @@ export const,
   s: [,
         'Algorithmic trading, Portfolio management, Risk management, Market analysis, Compliance reporting, Performance optimization'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 500% ROI within 6 months through improved trading performance and risk management.',
       competitors: ['Alpaca, QuantConnect, MetaTrader, Custom solutions']
       marketSize: '$22 B algorithmic trading market'
@@ -646,8 +614,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full autonomous trading platform with advanced AI algorithms, real-time market data, risk management, and compliance tools.'
@@ -668,7 +635,6 @@ export const,
         '98% accurate medical diagnosis',
         'Autonomous patient monitoring',
         'Treatment recommendation engine',
-=======
       ro,
   i: 'Average customer sees 500% ROI within 6 months through improved trading performance and risk management.'
       competitor,
@@ -702,8 +668,7 @@ export const,
       ratin,
   g: 4.9;
       review,
-  s: 38,
-    }
+  s: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform,
   id: 'ai-autonomous-healthcare-diagnosis'
       nam,
@@ -722,7 +687,6 @@ export const,
         '98% accurate medical diagnosis'
         'Autonomous patient monitoring'
         'Treatment recommendation engine'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Medical image analysis (X-ray, MRI) CT)'
         'Symptom analysis & triage'
         'Drug interaction checking'
@@ -731,7 +695,6 @@ export const,
         'Comprehensive medical reports'
         'HIPAA-compliant security'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-red-600 to-pink-700'
@@ -745,7 +708,6 @@ export const,
       category: 'AI Healthcare',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -772,7 +734,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'TensorFlow, PyTorch, Medical AI models, Python, React, Node.js, PostgreSQL, HIPAA-compliant cloud'
       ]
       integration,
@@ -783,7 +744,6 @@ export const,
   s: [,
         'Medical diagnosis, Patient monitoring, Treatment planning, Medical imaging analysis, Drug safety checking, Clinical research'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 700% ROI within 12 months through improved diagnosis accuracy and patient outcomes.',
       competitors: [,
         'IBM Watson Health, Google Health AI, Custom medical AI solutions'
@@ -794,11 +754,9 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
-      implementationDetails:,
-  ];    features: [,
+      implementationDetails:];    features: [,
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'
       'Comprehensive medical reportsHIPAA-compliant security'
     ];
@@ -818,8 +776,7 @@ export const,
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
     launchDate: '2025-03-01', customers: 35;
@@ -862,7 +819,6 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       price: '$4,999'
       period: '/month',
       description:,
-=======
       ro,
   i: 'Average customer sees 700% ROI within 12 months through improved diagnosis accuracy and patient outcomes.'
       competitor,
@@ -989,8 +945,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     emai,
   l: string;
     addres,
-  s: string,
-  }
+  s: string}
   }
   realImplementatio,
   n: boolean;
@@ -1019,7 +974,6 @@ export const,
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Revolutionary AI platform that autonomously manages, optimizes, and executes complex business processes without human oversight. Uses advanced machine learning to continuously improve operations.'
       feature,
   s: [;
@@ -1034,7 +988,6 @@ export const,
         'Advanced analytics & reporting'
         'Enterprise-grade security & audit trails'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-purple-600 to-indigo-700'
@@ -1048,7 +1001,6 @@ export const,
       category: 'AI Automation & Orchestration',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -1075,7 +1027,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'OpenAI GPT-4, Anthropic Claude, LangChain, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker'
       ]
       integration,
@@ -1086,7 +1037,6 @@ export const,
   s: [,
         'Supply chain optimization, Customer service automation, Financial process management, HR workflow automation, Manufacturing process control, Quality assurance'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 800% ROI within 8 months through complete process automation and optimization.',
       competitors: [,
         'UiPath, Automation Anywhere, Blue Prism, Custom solutions'
@@ -1097,8 +1047,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full enterprise platform with autonomous decision-making engine, advanced ML models, comprehensive monitoring, and zero-touch operations.'
@@ -1114,7 +1063,6 @@ export const,
       price: '$2,499'
       period: '/month',
       description:,
-=======
       ro,
   i: 'Average customer sees 800% ROI within 8 months through complete process automation and optimization.'
       competitor,
@@ -1150,8 +1098,7 @@ export const,
       ratin,
   g: 4.9;
       review,
-  s: 45,
-    }
+  s: 45}
     // AI-Powered Predictive Customer Intelligence Platform,
   id: 'ai-predictive-customer-intelligence'
       nam,
@@ -1164,7 +1111,6 @@ export const,
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced AI platform that predicts customer behavior, churn risk, and lifetime value with unprecedented accuracy. Uses behavioral analysis, predictive modeling, and real-time data processing.'
       feature,
   s: [;
@@ -1179,7 +1125,6 @@ export const,
         'Advanced analytics dashboard'
         'API for custom integrations'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-blue-600 to-cyan-700'
@@ -1193,7 +1138,6 @@ export const,
       category: 'AI Customer Intelligence',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -1220,7 +1164,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka'
       ]
       integration,
@@ -1231,7 +1174,6 @@ export const,
   s: [,
         'Churn prevention, Customer lifetime value optimization, Personalized marketing, Product recommendation, Customer service optimization, Pricing optimization'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 400% ROI within 6 months through improved retention and customer value optimization.',
       competitors: ['Salesforce Einstein, HubSpot AI, Custom ML solutions']
       marketSize: '$18 B customer intelligence market'
@@ -1240,8 +1182,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full ML platform with real-time data processing, advanced predictive models, comprehensive analytics, and enterprise-grade security.'
@@ -1264,7 +1205,6 @@ export const,
         'Security vulnerability scanning',
         'Automated deployment pipeline',
         'Code quality optimization',
-=======
       ro,
   i: 'Average customer sees 400% ROI within 6 months through improved retention and customer value optimization.'
       competitor,
@@ -1298,8 +1238,7 @@ export const,
       ratin,
   g: 4.8;
       review,
-  s: 78,
-    }
+  s: 78}
     // AI-Powered Autonomous Code Generation & Deployment,
   id: 'ai-autonomous-code-generation'
       nam,
@@ -1320,14 +1259,12 @@ export const,
         'Security vulnerability scanning'
         'Automated deployment pipeline'
         'Code quality optimization'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Multi-language support (Python, JavaScript, Java, C#) Go)'
         'Real-time collaboration tools'
         'Version control integration'
         'Performance optimization'
         'Comprehensive documentation generation'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-green-600 to-emerald-700'
@@ -1341,7 +1278,6 @@ export const,
       category: 'AI Development & DevOps',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -1368,7 +1304,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'OpenAI GPT-4, Anthropic Claude, GitHub Copilot API, React, Node.js, PostgreSQL, Docker, Kubernetes'
       ]
       integration,
@@ -1379,7 +1314,6 @@ export const,
   s: [,
         'Rapid prototyping, Automated testing, Continuous deployment, Code review automation, Documentation generation, Legacy code modernization'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 600% ROI within 4 months through accelerated development and reduced deployment time.',
       competitors: ['GitHub Copilot, Tabnine, Kite, Custom solutions']
       marketSize: '$12 B AI development tools market'
@@ -1388,8 +1322,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full autonomous development platform with AI code generation, automated testing, security scanning, and deployment automation.'
@@ -1405,7 +1338,6 @@ export const,
       price: '$5,999'
       period: '/month',
       description:,
-=======
       ro,
   i: 'Average customer sees 600% ROI within 4 months through accelerated development and reduced deployment time.'
       competitor,
@@ -1439,8 +1371,7 @@ export const,
       ratin,
   g: 4.9;
       review,
-  s: 62,
-    }
+  s: 62}
     // AI-Powered Autonomous Financial Trading Platform,
   id: 'ai-autonomous-financial-trading'
       nam,
@@ -1453,7 +1384,6 @@ export const,
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced AI-powered trading platform that autonomously executes trades based on sophisticated algorithms, market analysis, and risk management protocols. Includes real-time monitoring and compliance tools.'
       feature,
   s: [;
@@ -1468,7 +1398,6 @@ export const,
         'Real-time alerts & notifications'
         'API for custom integrations'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-yellow-600 to-orange-700'
@@ -1482,7 +1411,6 @@ export const,
       category: 'AI Financial Trading',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -1509,7 +1437,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'TensorFlow, PyTorch, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka, Docker'
       ]
       integration,
@@ -1520,7 +1447,6 @@ export const,
   s: [,
         'Algorithmic trading, Portfolio management, Risk management, Market analysis, Compliance reporting, Performance optimization'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 500% ROI within 6 months through improved trading performance and risk management.',
       competitors: ['Alpaca, QuantConnect, MetaTrader, Custom solutions']
       marketSize: '$22 B algorithmic trading market'
@@ -1529,8 +1455,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full autonomous trading platform with advanced AI algorithms, real-time market data, risk management, and compliance tools.'
@@ -1551,7 +1476,6 @@ export const,
         '98% accurate medical diagnosis',
         'Autonomous patient monitoring',
         'Treatment recommendation engine',
-=======
       ro,
   i: 'Average customer sees 500% ROI within 6 months through improved trading performance and risk management.'
       competitor,
@@ -1585,8 +1509,7 @@ export const,
       ratin,
   g: 4.9;
       review,
-  s: 38,
-    }
+  s: 38}
     // AI-Powered Autonomous Healthcare Diagnosis Platform,
   id: 'ai-autonomous-healthcare-diagnosis'
       nam,
@@ -1605,7 +1528,6 @@ export const,
         '98% accurate medical diagnosis'
         'Autonomous patient monitoring'
         'Treatment recommendation engine'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Medical image analysis (X-ray, MRI) CT)'
         'Symptom analysis & triage'
         'Drug interaction checking'
@@ -1614,7 +1536,6 @@ export const,
         'Comprehensive medical reports'
         'HIPAA-compliant security'
       ]
-<<<<<<< HEAD
       popular: true;
       icon: ''
       color: 'from-red-600 to-pink-700'
@@ -1628,7 +1549,6 @@ export const,
       category: 'AI Healthcare',
       realService: true;
       technology: [,
-=======
       popula,
   r: true;
       ico,
@@ -1655,7 +1575,6 @@ export const,
   e: true;
       technolog,
   y: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'TensorFlow, PyTorch, Medical AI models, Python, React, Node.js, PostgreSQL, HIPAA-compliant cloud'
       ]
       integration,
@@ -1666,7 +1585,6 @@ export const,
   s: [,
         'Medical diagnosis, Patient monitoring, Treatment planning, Medical imaging analysis, Drug safety checking, Clinical research'
       ]
-<<<<<<< HEAD
       roi: 'Average customer sees 700% ROI within 12 months through improved diagnosis accuracy and patient outcomes.',
       competitors: [,
         'IBM Watson Health, Google Health AI, Custom medical AI solutions'
@@ -1677,8 +1595,7 @@ export const,
       contactInfo: mobile: '+1 302 464 0950',
         email: 'kleber@ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
-      }
+        website: 'https://ziontechgroup.com'}
       realImplementation: true;
       implementationDetails:,
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
@@ -1692,7 +1609,6 @@ export const,
       customers: 35;
       rating: 4.9;
       reviews: 28;
-=======
       ro,
   i: 'Average customer sees 700% ROI within 12 months through improved diagnosis accuracy and patient outcomes.'
       competitor,
@@ -1728,8 +1644,7 @@ export const,
       ratin,
   g: 4.9;
       review,
-  s: 28,
-    }
+  s: 28}
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDat,
   e: '2025-03-01',
@@ -1738,15 +1653,12 @@ export const,
       ratin,
   g: 4.9,
       review,
-  s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    };
+  s: 28};
   ];    feature,
   s: [,
       '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'
       'Comprehensive medical reportsHIPAA-compliant security'
     ];
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-autonomous-healthcare-diagnosis', marketPosition: 'Industry-leading medical AI with autonomous capabilities. Competes with IBM Watson Health but offers superior accuracy and autonomy.',
@@ -1763,14 +1675,12 @@ export const,
     contactInfo: unknown;
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    }
+      website: 'https://ziontechgroup.com'}
     realImplementation: true;
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.'
     launchDate: '2025-03-01', customers: 35;
     rating: 4.9;
     reviews: 28;
-=======
     popula,
   r: true, ico,
   n: '',
@@ -1825,9 +1735,7 @@ export const,
     ratin,
   g: 4.9;
     review,
-  s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  };
+  s: 28};
   }
 ];
 export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
@@ -2083,7 +1991,7 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string, } } realImplementatio,
+  s: string} } realImplementatio,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; customer,
@@ -2289,7 +2197,7 @@ export interface InnovativeAIAutomationService {/* TODO: Fix JSX expression */}
   e: '2025-03-01', customer,
   s: 35, ratin,
   g: 4.9, review,
-  s: 28, },; ]; feature,
+  s: 28}; ]; feature,
   s: [' '98% accurate medical diagnosisAutonomous patient monitoringTreatment recommendation engineMedical image analysis (X-ray, MRI) CT)Symptom analysis & triageDrug interaction checkingPatient history analysisReal-time health alerts'' 'Comprehensive medical reportsHIPAA-compliant security' ];' popula,
   r: true, ico,
   n: '🏥'' colo,

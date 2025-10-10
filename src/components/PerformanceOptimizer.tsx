@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, memo, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
@@ -25,7 +24,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
         threshold: 0.01
       });
 
-<<<<<<< HEAD
   const preloadCriticalResources = () => {
     const criticalResources = [
       {
@@ -87,12 +85,9 @@ $4}
       try {
         const registration = await navigator.serviceWorker.register('/sw.js');
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
-<<<<<<< HEAD
-=======
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
-=======
       } catch (error) {
         // Service Worker registration failed - handled silently in production
       }
@@ -115,7 +110,6 @@ $4});
             }
           }
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       });
     }
   }, []);
@@ -197,14 +191,10 @@ $4});
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('/sw.js')
           .then(registration => {
-            if (process.env.NODE_ENV === 'development') {
-
-            }
+            if (process.env.NODE_ENV === 'development') {}
           })
           .catch(error => {
-            if (process.env.NODE_ENV === 'development') {
-
-            }
+            if (process.env.NODE_ENV === 'development') {}
 
       }
     };
@@ -252,9 +242,7 @@ $4});
       if ('web-vitals' in window) {
         import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
           const logMetric = (metric: any) => {
-            if (process.env.NODE_ENV === 'development') {
-
-            }
+            if (process.env.NODE_ENV === 'development') {}
             // Send to analytics in production
             if (process.env.NODE_ENV === 'production') {
               // Send to analytics service
@@ -278,8 +266,6 @@ $4});
 PerformanceOptimizer.displayName = 'PerformanceOptimizer';
 
 export default PerformanceOptimizer;
->>>>>>> origin/main
-=======
 'use client';
 
 
@@ -432,8 +418,7 @@ const,
     // Preload critical images
     const criticalImages = [
       '/logo.png',
-      '/og-image.svg',
-    ];
+      '/og-image.svg'];
 
     criticalImages.forEach((src) => {
       const link = document.createElement('link');
@@ -480,4 +465,3 @@ const,
 };
 
 export default PerformanceOptimizer;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 const UltimateBusinessIntelligence2025Banner = () => {
@@ -50,9 +49,8 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
   const handleClose = () => {
     setIsVisible(false);
   };
-  if (!isVisible) return null;
-  const currentContent = content[currentSlide];
-  return (
+
+  if (!isVisible) return null;return (
     <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Effects */}
       <div className="absolute inset-0">
@@ -151,15 +149,13 @@ tagstags: ['Automation', 'Enterprise', 'Productivity', 'Efficiency', '2025']
             { value: '500+', label: 'Enterprise Clients' },
             { value: '30,000%', label: 'Average ROI' },
             { value: '99.9%', label: 'Success Rate' },
-            { value: '5M+', label: 'Data Points Processed' },
-          ].map((stat, index) => (
+            { value: '5M+', label: 'Data Points Processed' }].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
               <div className="text-gray-300">{stat.label}</div>
     </section>
   );
 export default UltimateBusinessIntelligence2025Banner;
-=======
 
 
 'use client';
@@ -186,7 +182,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       ur,
-  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
+  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough';
       typ,
   e: 'Blog Post',
       metric,
@@ -222,7 +218,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
       descriptio,
   n: 'Automate your entire business process with our comprehensive automation suite, reducing manual work by 95% and increasing productivity by 300%.',
       ur,
-  l: '/services/automation',;
+  l: '/services/automation';
       typ,
   e: 'Service',
                   {tag}
@@ -250,8 +246,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
   md:grid-cols-4 gap-8"></div>
           {[}
   // TOD,
-  O: Add items,
-]
+  O: Add items]
             {/* TODO: Fix JSX expression */}
   l: 'Enterprise Clients' },
             {/* TODO: Fix JSX expression */}
@@ -259,8 +254,7 @@ const _UltimateBusinessIntelligence2025Banner = () => {/* TODO: Fix JSX expressi
             {/* TODO: Fix JSX expression */}
   l: 'Success Rate' },
             {/* TODO: Fix JSX expression */}
-  l: 'Data Points Processed' },
-          ].map((stat, index) => ()
+  l: 'Data Points Processed' }].map((stat, index) => ()
             
           
           
@@ -281,4 +275,3 @@ export default UltimateBusinessIntelligence2025Banner;"
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,7 +1,6 @@
 impo, r, t { ArrowLe, f, t, Serv, e, r, Shie, l, d, Trending, U, p, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 export default function AutonomousInfrastructureHealing20, 2, 5() {  
   return(:src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
     <>
@@ -49,13 +48,10 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
 
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-bl, u, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Autonomous, Infrastructure, Self-Heali, n, g: The, 2025, Reliability;
               Revoluti, o, n;
-=======
               Autonomous, Infrastructure, Self-Heali, n, g: The, 2025, Reliability
               Revoluti, o, n</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
                   <TrendingUp, classNam, e='h-6 w-6, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
@@ -85,7 +81,6 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
-<<<<<<< HEAD
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -100,7 +95,6 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
                   <Zap className=" />,
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,"
-=======
                   <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -115,7 +109,6 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx
                   <Zap className=" />
                   <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>"
                 <li className="flex items-start gap-3">
                   <Shield className=" />
@@ -136,18 +129,16 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-<<<<<<< HEAD
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>
                 </li>
-                <li className="flex items-start gap-3">,)
-                  <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />,)
-          <div>,)
+                <li className="flex items-start gap-3">)
+                  <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />)
+          <div>)
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">),
-=======
                   <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -158,26 +149,22 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
           <div></div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Server className=" />,"
   Key Outcomes;
               </h2>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className=" />">
-<<<<<<< HEAD
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className=" />">
                   <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>
-=======
                   <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className=" />">
                   <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className=" />">
@@ -189,19 +176,16 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-<<<<<<< HEAD
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>)
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>)
-=======
                   <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>
                 <li className="flex items-start gap-3"></li>
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" /></TrendingUp>
@@ -282,11 +266,8 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 The, competitive, advantage is, clea, r: systems, that, heal themselves, operate, at dramatically, higher, reliability with, fraction, of the, operational, cost. Early, adopters, report 85%+ improvement, in, developer satisfaction, and, 4.5x, faster, feature delivery, velocity, as teams, reclaim, time previously, lost, to incident, respons, e.
-<<<<<<< HEAD
                 Start, Your, Reliability Transformati, o, n;
-=======
                 Start, Your, Reliability Transformati, o, n</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Zap, classNam, e='ml-2 h-5 w-5' />
                 Start, Your, Reliability Transformati, o, n;
                 <Zap, className='ml-2 h-5 w-5' />
@@ -300,15 +281,12 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
               </p>
             </section>
 
-<<<<<<< HEAD
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
             <div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-center">
-=======
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx
             <div></section>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-8 text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Infrastructure Reliability?</h2>
               <p className="text-xl mb-6 text-purple-100">
   Deploy autonomous self-healing systems and achieve enterprise-grade reliability at scale.
@@ -329,11 +307,8 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
               >",
                 Start Your Reliability Transformation",
                 <Zap className="ml-2 h-5 w-5 ">,
-                <Zap className="ml-2 h-5 w-5" />,
-  );
-=======
+                <Zap className="ml-2 h-5 w-5" />);
 export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   </div>
   </div>

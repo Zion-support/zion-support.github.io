@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
   const _microSAASServices = [
@@ -3368,17 +3367,14 @@ $4},
       marketPrice: '$350-700/month',
       category: 'Streaming',
       technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
-<<<<<<< HEAD
       contactInfo:     ,
 $4}
   ];
   const categories = [
-=======
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ]; */
   /* const categories = [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
     { name: 'All', count: microSAASServices.length },
     { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
     { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
@@ -3417,7 +3413,6 @@ $4}
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
-=======
 import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
   return (
@@ -10316,7 +10311,6 @@ const categories = [
   ];
   return (<div>Coming Soon</div>)
   )
-    
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
         <title>Micro SAAS Solutions - Zion Tech Group</title>"
@@ -10333,14 +10327,12 @@ const categories = [
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
               <div className="text-gray-300">Applications</div>
-<<<<<<< HEAD
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-green-400 mb-2">$49</div>
@@ -10368,7 +10360,6 @@ const categories = [
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />
-=======
             </div>"
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
               <div className="text-3xl font-bold text-green-400 mb-2">$49</div>"
@@ -10399,14 +10390,12 @@ const categories = [
               </div>"
               <div className="flex items-center space-x-2"></div>"
                 <MapPin className="w-5 h-5" /></MapPin>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Services Grid */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -10452,7 +10441,6 @@ const categories = [
                     {service.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-=======
       {/* Services Grid */}"
       <section className="py-16 px-4"></section>"
         <div className="max-w-7xl mx-auto"></div>"
@@ -10505,19 +10493,16 @@ const categories = [
                     {service.benefits.map((benefit, benefitIndex) => ()}"
           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>"
                         <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" /></TrendingUp>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         {benefit}
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
                 </div>
                 <div className="mb-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
                       <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-=======
                 </div>"
                 <div className="mb-6"></div>"
                   <h4 className="font-semibold text-gray-900 mb-3">Technologie,
@@ -10525,12 +10510,10 @@ const categories = [
                   <div className="flex flex-wrap gap-2"></div>
                     {service.technologies.map((tech, techIndex) => ()}"
           <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         {tech}
                       </span>
                     ))}
                   </div>
-<<<<<<< HEAD
                 </div>
                 <div className="text-center">
                   <a
@@ -10540,7 +10523,6 @@ const categories = [
                     Get Started Now
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
-=======
                 </div>"
                 <div className="text-center"></div>
                   <a></a>
@@ -10553,7 +10535,6 @@ const categories = [
 //                     Get Started Now;
           </a>"
                   <p className="text-xs text-gray-500 mt-2"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {service.contactInfo}
                   </p>
                 </div>
@@ -10562,7 +10543,6 @@ const categories = [
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
@@ -10585,29 +10565,14 @@ const categories = [
             >
               Email Us
             </a>
-=======
       {/* CTA Section */}"
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
         <div className="max-w-4xl mx-auto text-center"></div>"
           <h2 className="text-3xl font-bold text-white mb-6"></h2>
 // Ready to Transform Your Business?
-
           </h2>"
           <p className="text-xl text-purple-100 mb-8"></p>
 // Get started with our micro SAAS solutions today and see the difference AI can make.
-<<<<<<< HEAD
-          
-          
-          
-          
-          
-          
-          
-          
-          
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-73fd
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -10620,16 +10585,10 @@ const categories = [
 // >
 //               Email Us;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           </div>
         </div>
       </section>
     </div>
   );
 };
-<<<<<<< HEAD
-export default MicroSAASPage;
-=======
-
 export default MicroSAASPage;"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

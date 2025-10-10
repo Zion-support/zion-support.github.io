@@ -3,7 +3,6 @@
  * Comprehensive performance monitoring and optimization settings;
  */
 
-<<<<<<< HEAD
 export const performanceConfig = {
   // Core Web Vitals thresholds;
   webVitals: {,
@@ -30,14 +29,12 @@ export const performanceConfig = {
     inp: {,
       good: 200;
       needsImprovement: 500;
-    },
-  },
+    }},
 
   // Resource loading priorities;
   resourceHints: {,
     preconnect: ['https://fonts.googleapis.com', 'https: //fonts.gstatic.com'],
-    dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com'],
-  },
+    dnsPrefetch: ['https://www.google-analytics.com', 'https: //www.googletagmanager.com']},
 
   // Lazy loading configuration;
   lazyLoading: {,
@@ -59,8 +56,7 @@ export const performanceConfig = {
     },
     images: {,
       maxAge: 604800, // 1 week;
-    },
-  },
+    }},
 
   // Bundle optimization;
   bundling: {,
@@ -76,7 +72,6 @@ export const performanceConfig = {
     reportInterval: 30000, // 30 seconds;
     enableLongTaskDetection: true;
     enableMemoryMonitoring: true;
-=======
 export const performanceConfig = {/* TODO: Fix JSX expression */}
     },
     fi,
@@ -93,8 +88,7 @@ export const performanceConfig = {/* TODO: Fix JSX expression */}
     },
     in,
   p: {/* TODO: Fix JSX expression */}
-    },
-  },
+    }},
 
   // Resource loading priorities,
   resourceHints: {/* TODO: Fix JSX expression */}
@@ -112,8 +106,7 @@ export const performanceConfig = {/* TODO: Fix JSX expression */}
     },
     image,
   s: {/* TODO: Fix JSX expression */}
-    },
-  },
+    }},
 
   // Bundle optimization,
   bundling: {/* TODO: Fix JSX expression */}
@@ -121,8 +114,6 @@ export const performanceConfig = {/* TODO: Fix JSX expression */}
 
   // Monitoring,
   monitoring: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-};
+  }};
 
 export default performanceConfig;

@@ -12,8 +12,7 @@ function execGitCommand(command, description) {
     const result = execSync(command, { )
       encoding: 'utf8'),
       cwd: process.cwd(),
-      stdio: 'pipe',
-    });
+      stdio: 'pipe'});
     console.log(`✅ ${description} completed`);
     return result;
   } catch (error) {
@@ -41,15 +40,13 @@ function resolveMergeConflicts(filePath) {
           return match;)
         })
         // Handle other conflict patterns;
-        .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?          const parts = match.split('');
-          if (parts.length > 1) {
+        .replace(/          if (parts.length > 1) {
             const incoming = parts[1].replace(/            return incoming;)
           })
           return match;)
         })
         // Clean up any remaining conflict markers;
-        .replace(/<<<<<<< [^\n]+/g, '')
-        .replace(//g, '')
+        .replace(/        .replace(//g, '')
         .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
       console.log(`✅ Resolved merge conflicts in ${filePath}`);

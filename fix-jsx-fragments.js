@@ -15,11 +15,9 @@ const filesToFix = [
   '/workspace/app/page-optimized.tsx',
   '/workspace/app/privacy/page.tsx',
   '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx',
-];
+  '/workspace/app/terms/page.tsx'];
 
 // // Function to process a single file;
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Remove extra empty lines;
@@ -36,9 +34,7 @@ function processFile(filePath) {
         ) {
           lastClosingTagIndex = i;
           break;
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }
 
@@ -47,7 +43,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
     // Fix function declarations;
-<<<<<<< HEAD
     content = content.replace(
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
@@ -57,24 +52,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (!content.includes('export default') && content.includes('const ')) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
       if (componentName) {,
-=======
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
     }
 
     // Fix any remaining syntax issues;
-<<<<<<< HEAD
     content = content.replace(/\{\s*title:\s*['"`][^'"`]*['"`]\s*,\s*description:\s*['"`][^'"`]*['"`]\s*,\s*type:\s*['"`][^'"`]*['"`]\s*,\s*url:\s*['"`][^'"`]*['"`]\s*\}/g)
       ''
-=======
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
   l:\s*['"`][^'"`]*['"`]\s*\}/g,
       '')
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     );
 
     if (modified) {/* TODO: Fix JSX expression */}
@@ -86,15 +76,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files;
-<<<<<<< HEAD
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
-=======
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 });
 
 // "`

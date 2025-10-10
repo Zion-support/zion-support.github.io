@@ -9,17 +9,13 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]; return(<div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
       {/* Animated, backgro, u, n, d */}
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" />
-=======
   ]; return (
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
       {/* Animated, backgro, u, n, d */}</div>
       <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <div, className="relativ, e, z-10">
         {/* Head, e, r */}</div>
         <div, className="te, x, t-center, m, b-10"></div>
@@ -32,7 +28,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             🚀 5, Revolutionary, AI Breakthroug, h, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o">
-=======
   ]; return ("
     <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n"></div>
       {/* Animated, backgro, u, n, d */}"
@@ -49,22 +44,17 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             🚀 5, Revolutionary, AI Breakthroug, h, s;
           </h2>"
           <p, className="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • 
             Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution;
           </p>
-<<<<<<< HEAD
         </div>)
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">)
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
-=======
         </div>
-<<<<<<< HEAD
         {/* Articles, G, r, i, d */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">
           { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
             >
               <div, className="flex, item, s-start, ga, p-4"></div>
@@ -73,7 +63,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
                 <div, className="fl, e, x-1"></div>
                   <div, className="te, x, t-xs, fon, t-semibold, tex, t-cy, a, n-300, m, b-2">{artic, l, e.cate, g, o, r, y}</div>
                   <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">
-=======
         {/* Articles, G, r, i, d */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10"></div>
           {/* TODO: Fix JSX expression */}"
@@ -85,7 +74,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
                 <div, className="fl, e, x-1"></div>"
                   <div, className="te, x, t-xs, fon, t-semibold, tex, t-cy, a, n-300, m, b-2">{artic, l, e.cate, g, o, r, y}</div>"
                   <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {artic, l, e.t, i, t, l, e}
                   </h3>"
                   <p, classNam, e = "te, x, t-sm, tex, t-bl, u, e-200, m, b-3">{artic, l, e.description}</p>"
@@ -99,17 +87,13 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
           {/* Additional, promotional, card */}"
           <Link, t, o = "/bl, o, g""
             className="group, b, g-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-yell, o, w-4, 0, 0/30, hove, r: bord, e, r-yell, o, w-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, flex, flex-col, item, s-center, justif, y-center, tex, t-cent, e, r"
-<<<<<<< HEAD
           >
             <Sparkles, className="w-1, 2, h-12, tex, t-yell, o, w-400, m, b-4, grou, p-hov, e, r:sca, l, e-125, transitio, n-transfo, r, m" />
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">View, All, Articles</h3>
             <p, className="te, x, t-sm, tex, t-yell, o, w-200, m, b-4">2, 0, 0+ groundbreaking, insight, s</p>
             <div, className="flex, item, s-center, ga, p-2, tex, t-yell, o, w-400, fon, t-semibo, l, d">
-<<<<<<< HEAD
               Explore, No, w;
-=======
               Explore, No, w</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Link, className="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
             </div>
           </Li, n, k>
@@ -118,7 +102,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8"></div>
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r"></div>
             <d, i, v>
-=======
           ></Link>"
             <Sparkles, className="w-1, 2, h-12, tex, t-yell, o, w-400, m, b-4, grou, p-hov, e, r:sca, l, e-125, transitio, n-transfo, r, m" /></Sparkles>"
             <h3, className="te, x, t-xl, fon, t-bold, m, b-2">View, All, Articles</h3>"
@@ -133,7 +116,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
         <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8"></div>"
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r"></div>
             <d, i, v></d>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">New, Breakthrough, s</div>
             </div>
             <d, i, v></d>"
@@ -154,7 +136,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             </div>
           </div>
         </div>
-<<<<<<< HEAD
         {/* CTA, Butt, o, n, s */}
         <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r"></div>
           <Link, t, o="/bl, o, g"
@@ -186,7 +167,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             🔬 Molecular, Manufacturin, g;
           </sp, a, n>
           <span, className="bg-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-pi, n, k-4, 0, 0/30">
-=======
         {/* CTA, Butt, o, n, s */}"
         <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r"></div>"
           <Link, t, o="/bl, o, g""
@@ -218,7 +198,6 @@ const September30NewContentMegaBanner = () => {/* TODO: Fix JSX expression */}
             🔬 Molecular, Manufacturin, g;
           </sp, a, n>"
           <span, className="bg-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-pi, n, k-4, 0, 0/30"></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             📚 AI, Educatio, n;
           </sp, a, n>
         </div>

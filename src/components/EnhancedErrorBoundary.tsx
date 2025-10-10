@@ -15,7 +15,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
 
 
-  static getDerivedStateFromError(erro,)
+  static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}`
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
       retryCoun,
@@ -25,7 +25,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
 
   componentDidCatch(erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
 
@@ -46,7 +46,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   }
 
   private reportError = (erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
   };
 

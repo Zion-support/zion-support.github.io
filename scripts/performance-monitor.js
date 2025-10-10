@@ -11,8 +11,7 @@ const performanceReport = {
   timestamp: new Date().toISOString()
   buildSize: 0;
   pageCount: 0;
-  recommendations: [],
-};
+  recommendations: []};
 
 // Analyze build output;
 const buildDir = path.join(process.cwd(), '.next');

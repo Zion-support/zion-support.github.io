@@ -42,7 +42,7 @@ export class SecurityManager {// TODO: Add content;}
           
           )
           <>]/g, '')
-      .replace(/javascrip,)
+      .replace(/javascrip)
   t:/gi, '')
       .replace(/on\w+=/gi, '')
       .trim()
@@ -102,7 +102,7 @@ const crypto = require('crypto');
     const storage = this.getRateLimitStorage();
     const requests = storage.get(key) || [];
     // Remove old requests;
-const validRequests = requests.filter((tim,)
+const validRequests = requests.filter((tim)
   e: number) => time > windowStart);
     if (validRequests.length >= limit) {/* TODO: Fix JSX expression */}
   O: Add content;}

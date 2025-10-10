@@ -3,8 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -26,7 +24,6 @@ const filesToFix = [
   'app/ai-social-media-scheduler/page.tsx',
   'app/ai-video-generator/page.tsx',
   'app/ai-voice-cloning-studio/page.tsx'
-=======
 // Pattern to match commented-out variable declarations;
 const patterns = [
   // Match commented-out const/let/var declarations;
@@ -34,17 +31,15 @@ const patterns = [
   // Match commented-out variable assignments;
   { regex: /\/\/\s*(\w+)\s*=/g, replacement: '$1 =' },
   // Match commented-out variable references;
-  { regex: /\/\/\s*(\w+)\s*[;,)]/g, replacement: '$1' },
+  { regex: /\/\/\s*(\w+)\s*[;)]/g, replacement: '$1' },
   // Match commented-out object property assignments;
   { regex: /\/\/\s*(\w+):\s*(\w+)/g, replacement: '$1: $2' },
   // Match commented-out function calls;
   { regex: /\/\/\s*(\w+)\s*\(/g, replacement: '$1(' })
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 ];
 
 function fixFile(filePath) {
   try {
-<<<<<<< HEAD
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -52,14 +47,11 @@ function fixFile(filePath) {
     const useStatePattern = /useState\(\s*\{([^}]+)\s*$/gm;
     content = content.replace(useStatePattern, (match, objContent) => {
       if (!objContent.includes('}')) {
-=======
     patterns.forEach(pattern => {)
       if (newContent !== content) {
         content = newContent;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         modified = true;
         return match + '}';
-=======
 // Pattern to match commented-out variable declarations;
 const patterns = [
   // Match commented-out const/let/var declarations;
@@ -76,11 +68,9 @@ const patterns = [
   t: '$1: $2' },
   // Match commented-out function calls;
   {/* TODO: Fix JSX expression */}
-  t: '$1(' },
-];
+  t: '$1(' }];
 )
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       return match;
     });
@@ -116,7 +106,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix 4: Fix missing commas in object literals
-    const missingCommaPattern = /(\w+):\s*([^,}\n]+)\s*\n\s*(\w+):/g;
+    const missingCommaPattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;
     content = content.replace(missingCommaPattern, (match, key1, value1, key2) => {
       if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
         modified = true;
@@ -144,43 +134,36 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
     });
 
     // Fix 7: Fix reserved word usage (like 'false' as identifier)
-    const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([,}])/g;
+    const reservedWordPattern = /:\s*(false|true|null|undefined)\s*([}])/g;
     content = content.replace(reservedWordPattern, (match, reserved, separator) => {
       modified = true;
       return `: ${reserved}${separator}`;
     });
 
-<<<<<<< HEAD
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
       return true;
-=======
     if (modified) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     
     return false;
-<<<<<<< HEAD
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-<<<<<<< HEAD
 console.log('Starting TypeScript error fixes...');
 
 let fixedCount = 0;
 filesToFix.forEach(filePath => {
   const fullPath = path.join(__dirname, filePath);
   if (fs.existsSync(fullPath)) {
-=======
 async function main() {
   
   
   files.forEach(file => {)
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     if (fixFile(fullPath)) {
       fixedCount++;
     }
@@ -188,7 +171,6 @@ async function main() {
     console.log(`File not found: ${filePath}`);
   }
 });
-=======
   } catch (error) {/* TODO: Fix JSX expression */}
   }
 }
@@ -198,6 +180,5 @@ async function main() {/* TODO: Fix JSX expression */}
   files.forEach(file => {/* TODO: Fix JSX expression */}
     })
   });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 console.log(`Fixed ${fixedCount} files.`);

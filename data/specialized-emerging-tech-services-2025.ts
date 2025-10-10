@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -46,16 +45,13 @@ const contact =
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-    }
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-    };
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};
   ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.'
     features: [;
       'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications',
       'Advanced pattern recognitionCustom neuromorphic algorithms',
       benefits: [,
-=======
   i,
   d: string;
   nam,
@@ -117,8 +113,7 @@ const contact =
     addres,
   s: string;
     websit,
-  e: string,
-  }
+  e: string}
   real_implementatio,
   n: boolean;
   implementation_detail,
@@ -147,8 +142,7 @@ const contact =
   s: '364 E Main St STE 1008 Middletown DE 19709',
         'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
     }
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-    };
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};
   ];    descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.'
     feature,
@@ -157,50 +151,38 @@ const contact =
       'Advanced pattern recognitionCustom neuromorphic algorithms'
       benefit,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Energy efficiency',
         'Cognitive capabilities',
         'Real - time learning',
-        'Brain - inspired processing',
-      ],
+        'Brain - inspired processing'],
       capabilitie,
   s: [,
         'Neural architectures',
         'Cognitive computing',
         'Hardware integration',
-        'Custom algorithms',
-      ],
-<<<<<<< HEAD
+        'Custom algorithms'],
       market_advantage: unknown;
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-    },
-  ];    description: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.'
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];    description: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.'
     features: [;
       'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications',
       'Advanced pattern recognition_custom neuromorphic algorithms',
-=======
       market_advantag,
   e: unknown,
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-    },
-  ];    descriptio,
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];    descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.'
     feature,
   s: [;
       'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'
       'Advanced pattern recognition_custom neuromorphic algorithms'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     ],
     popula,
   r: true, ico,
-  n: '',
-  }
+  n: ''}
 ];
 ;
   }
 ];
 ;
-<<<<<<< HEAD
     popular: true, icon: '',
     color: 'from - pink - 600 to - rose - 600', text_color: 'text - pink - 400',
     link: 'https://ziontechgroup.com / neuromorphic - computing - platform', market_position: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
@@ -218,7 +200,6 @@ const contact =
     rating: 4.8, reviews: 34;
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-=======
     popula,
   r: true, ico,
   n: '',
@@ -266,7 +247,6 @@ const contact =
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
@@ -274,7 +254,6 @@ export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -298,7 +277,6 @@ const contact = {,
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -316,8 +294,7 @@ const contact = {,
   capabilitie,
   s: string[];
   marketAdvantag,
-  e: string,
-}
+  e: string}
 ;
     marketSiz,
   e: '$2.1B neuromorphic computing market', growthRat,
@@ -344,12 +321,10 @@ const contact = {/* TODO: Fix JSX expression */}
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   specializedEmergingTechServices: SpecializedEmergingTechService[] = [;
   // AR/VR & Metaverse Services;
-<<<<<<< HEAD
   {
     id: 'ar-vr-metaverse-platform';
     name: 'AR/VR Metaverse Platform';
@@ -389,8 +364,7 @@ export const,
     reviews: 234;
     benefits: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach'];
     capabilities: ['Content creationMetaverse developmentAnalyticsHardware integration'];
-    marketAdvantage: 'First platform to combine AR/VR development with metaverse creation tools',
-  };
+    marketAdvantage: 'First platform to combine AR/VR development with metaverse creation tools'};
   // 5 G/6 G Network Services;
   {;
     id: '5 g-6 g-network-optimization';
@@ -431,8 +405,7 @@ export const,
     reviews: 89;
     benefits: ['Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency'];
     capabilities: ['AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support'];
-    marketAdvantage: 'First AI-powered platform for comprehensive 5G/6G network optimization',
-  };
+    marketAdvantage: 'First AI-powered platform for comprehensive 5G/6G network optimization'};
   // Biotechnology AI Services;
   {;
     id: 'ai-biotechnology-platform';
@@ -473,8 +446,7 @@ export const,
     reviews: 67;
     benefits: ['Accelerated researchCost reductionImproved accuracyCollaboration tools'];
     capabilities: ['Drug discoveryGenetic analysisClinical optimizationResearch collaboration'];
-    marketAdvantage: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools',
-  };
+    marketAdvantage: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools'};
   // Renewable Energy AI Services;
   {;
     id: 'ai-renewable-energy-optimization';
@@ -515,8 +487,7 @@ export const,
     reviews: 123;
     benefits: ['Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance'];
     capabilities: ['Energy optimizationGrid managementReal-time monitoringPredictive analytics'];
-    marketAdvantage: 'First AI-powered platform for comprehensive renewable energy optimization',
-  };
+    marketAdvantage: 'First AI-powered platform for comprehensive renewable energy optimization'};
   // Edge AI Computing Services;
   {;
     id: 'edge-ai-computing-platform';
@@ -557,8 +528,7 @@ export const,
     reviews: 178;
     benefits: ['Reduced latencyImproved performanceCost reductionReal-time processing'];
     capabilities: ['Edge AI deploymentReal-time processingDevice managementMulti-cloud support'];
-    marketAdvantage: 'First platform to combine edge computing with comprehensive AI capabilities',
-  };
+    marketAdvantage: 'First platform to combine edge computing with comprehensive AI capabilities'};
   // Quantum Internet Services;
   {;
     id: 'quantum-internet-platform';
@@ -599,8 +569,7 @@ export const,
     reviews: 18;
     benefits: ['Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance'];
     capabilities: ['Quantum key distributionNetwork managementSecurity protocolsMulti-node support'];
-    marketAdvantage: 'First comprehensive quantum internet platform with commercial applications',
-  };
+    marketAdvantage: 'First comprehensive quantum internet platform with commercial applications'};
   // Neuromorphic Computing Services;
   {;
     id: 'neuromorphic-computing-platform';
@@ -642,7 +611,6 @@ export const,
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}
     capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
-=======
   {/* TODO: Fix JSX expression */}
   i: 'Average 400% ROI through increased engagement and conversion rates'}
     competitor,
@@ -841,14 +809,12 @@ export const,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
     marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
     ];
     popula,
   r: true, ico,
-  n: '',
-  }
+  n: ''}
 ];
 i,
   d: string; nam,
@@ -881,7 +847,7 @@ i,
   e: string; emai,
   l: string; addres,
   s: string; websit,
-  e: string, } real_implementatio,
+  e: string} real_implementatio,
   n: boolean; implementation_detail,
   s: string; launch_dat,
   e: string; customer,
@@ -893,16 +859,16 @@ i,
   e: string, const contact = mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', ' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' }' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities', },;' ]; descriptio,
+  s: '364 E Main St STE 1008 Middletown DE 19709', ' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' }' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};' ]; descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.' feature,
   s: [' 'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'' 'Advanced pattern recognitionCustom neuromorphic algorithms' benefit,
-  s: [,' 'Energy efficiency',' 'Cognitive capabilities',' 'Real - time learning',' 'Brain - inspired processing', ], capabilitie,
-  s: [,' 'Neural architectures',' 'Cognitive computing',' 'Hardware integration',' 'Custom algorithms', ], market_advantag,
-  e:  ,' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities', },' ]; descriptio,
+  s: [,' 'Energy efficiency',' 'Cognitive capabilities',' 'Real - time learning',' 'Brain - inspired processing'], capabilitie,
+  s: [,' 'Neural architectures',' 'Cognitive computing',' 'Hardware integration',' 'Custom algorithms'], market_advantag,
+  e:  ,' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'},' ]; descriptio,
   n: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.' feature,
   s: [;' 'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'' 'Advanced pattern recognition_custom neuromorphic algorithms' ], ' popula,
   r: true, ico,
-  n: '🧠', } ]; } ];' popula,
+  n: '🧠'} ]; } ];' popula,
   r: true, ico,
   n: '🧠',' colo,
   r: 'from - pink - 600 to - rose - 600', text_colo,
@@ -933,17 +899,17 @@ i,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
-  s: string,} websit,
-  e: string} },; realImplementatio,
-  n: boolean,; implementationDetail,
-  s: string,; launchDat,
-  e: string,; customer,
-  s: number,; ratin,
-  g: number,; review,
-  s: number,; benefit,
-  s: string[],; capabilitie,
-  s: string[],; marketAdvantag,
-  e: string, } ;' marketSiz,
+  s: string} websit,
+  e: string} }; realImplementatio,
+  n: boolean; implementationDetail,
+  s: string; launchDat,
+  e: string; customer,
+  s: number; ratin,
+  g: number; review,
+  s: number; benefit,
+  s: string[]; capabilitie,
+  s: string[]; marketAdvantag,
+  e: string} ;' marketSiz,
   e: '$2.1B neuromorphic computing market', growthRat,
   e: '450% annual growth'' varian,
   t: 'ai-futuristic', contactInf,
@@ -957,31 +923,31 @@ i,
   s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' },; export const,
+  s://ziontechgroup.com' }; export const,
   specializedEmergingTechServices: SpecializedEmergingTechService[] = [; // AR/VR & Metaverse Services; {/* TODO: Fix JSX expression */}
-  s: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach'],}' capabilitie,
+  s: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach']}' capabilitie,
   s: ['Content creationMetaverse developmentAnalyticsHardware integration']};' marketAdvantag,
-  e: 'First platform to combine AR/VR development with metaverse creation tools' },; // 5G/6G Network Services; {/* TODO: Fix JSX expression */}
-  s: ['Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency'],}' capabilitie,
+  e: 'First platform to combine AR/VR development with metaverse creation tools' }; // 5G/6G Network Services; {/* TODO: Fix JSX expression */}
+  s: ['Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency']}' capabilitie,
   s: ['AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support']};' marketAdvantag,
-  e: 'First AI-powered platform for comprehensive 5G/6G network optimization' },; // Biotechnology AI Services; {/* TODO: Fix JSX expression */}
-  s: ['Accelerated researchCost reductionImproved accuracyCollaboration tools'],}' capabilitie,
+  e: 'First AI-powered platform for comprehensive 5G/6G network optimization' }; // Biotechnology AI Services; {/* TODO: Fix JSX expression */}
+  s: ['Accelerated researchCost reductionImproved accuracyCollaboration tools']}' capabilitie,
   s: ['Drug discoveryGenetic analysisClinical optimizationResearch collaboration']};' marketAdvantag,
-  e: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools' },; // Renewable Energy AI Services; {/* TODO: Fix JSX expression */}
-  s: ['Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance'],}' capabilitie,
+  e: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools' }; // Renewable Energy AI Services; {/* TODO: Fix JSX expression */}
+  s: ['Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance']}' capabilitie,
   s: ['Energy optimizationGrid managementReal-time monitoringPredictive analytics']};' marketAdvantag,
-  e: 'First AI-powered platform for comprehensive renewable energy optimization' },; // Edge AI Computing Services; {/* TODO: Fix JSX expression */}
-  s: ['Reduced latencyImproved performanceCost reductionReal-time processing'],}' capabilitie,
+  e: 'First AI-powered platform for comprehensive renewable energy optimization' }; // Edge AI Computing Services; {/* TODO: Fix JSX expression */}
+  s: ['Reduced latencyImproved performanceCost reductionReal-time processing']}' capabilitie,
   s: ['Edge AI deploymentReal-time processingDevice managementMulti-cloud support']};' marketAdvantag,
-  e: 'First platform to combine edge computing with comprehensive AI capabilities' },; // Quantum Internet Services; {/* TODO: Fix JSX expression */}
-  s: ['Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance'],}' capabilitie,
+  e: 'First platform to combine edge computing with comprehensive AI capabilities' }; // Quantum Internet Services; {/* TODO: Fix JSX expression */}
+  s: ['Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance']}' capabilitie,
   s: ['Quantum key distributionNetwork managementSecurity protocolsMulti-node support']};' marketAdvantag,
-  e: 'First comprehensive quantum internet platform with commercial applications' },; // Neuromorphic Computing Services; {/* TODO: Fix JSX expression */}
-  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'],}' capabilitie,
+  e: 'First comprehensive quantum internet platform with commercial applications' }; // Neuromorphic Computing Services; {/* TODO: Fix JSX expression */}
+  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}' capabilitie,
   s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}' marketAdvantag,
   e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ]; ' popula,
   r: true, ico,
-  n: '🧠', } ]; '
+  n: '🧠'} ]; '

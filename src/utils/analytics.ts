@@ -7,8 +7,7 @@ export const trackPageView = (pagePath: string, pageTitle?: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
       page_path: pagePath,
-      page_title: pageTitle,
-    });
+      page_title: pageTitle});
   }
 };
 

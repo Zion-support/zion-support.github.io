@@ -15,7 +15,6 @@ function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
 
 findBlogFiles(blogDir);
 
-<<<<<<< HEAD
 function fixParsingErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
@@ -38,11 +37,9 @@ function fixParsingErrors(filePath) {
             newLines.push('  );');
             modified = true;
             continue;
-=======
 function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
       // Check if this line ends with }; and the previous line doesn't have a closing parenthesis;
       if (line.trim() === '};' && i > 0) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         }
       }
@@ -59,12 +56,9 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all blog files;
-<<<<<<< HEAD
 blogFiles.forEach(file => {)
   fixParsingErrors(file);
-=======
 blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 });
 `
 console.log(`Processed ${blogFiles.length} blog files`);`

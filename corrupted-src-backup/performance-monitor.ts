@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 class PerformanceMonitor {
   private static instance: PerformanceMonitor;
   private isInitialized: boolean = false;
 ,
-=======
 class PerformanceMonitor {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   private constructor() {}
 
   static getInstance(): PerformanceMonitor {/* TODO: Fix JSX expression */}

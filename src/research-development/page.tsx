@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 
 'use client';
@@ -258,7 +252,6 @@ $4}
   ];
 
   return (
-<<<<<<< HEAD
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -295,7 +288,6 @@ $4}
             
             <div className="text-center">
               <p className="text-gray-300 max-w-2xl mx-auto">
-=======
     <div>Coming Soon</div>
 
   );
@@ -376,8 +368,7 @@ $4}
   a,
   i: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -396,8 +387,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //           'Improved decision accuracy by 40%',
 //           'Reduced computational overhead by 30%',
 //           'Published 3 papers in top-tier conferences'
@@ -425,8 +415,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //           '95% automation of business processes',
 //           '300% improvement in decision speed',
           'Patent filed for core algorithms'
@@ -454,8 +443,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //           '50% reduction in model development time',
 //           '25% improvement in model performance',
 //           'Open-source framework released'
@@ -469,8 +457,7 @@ $4}
     quantu,
   m: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -489,8 +476,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
           'Quantum speedup demonstrated for specific problems',
 //           'Novel quantum ML algorithms developed',
 //           'Partnership with leading quantum hardware companies'
@@ -518,8 +504,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //           'Improved quantum error rates',
 //           'Practical implementation strategies',
           'Industry collaboration established'
@@ -533,8 +518,7 @@ $4}
     autonomou,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -553,8 +537,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //           '90% reduction in manual operations',
 //           'Self-healing system capabilities',
 //           'Real-world deployment in 5 enterprises'
@@ -582,8 +565,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //           'Novel coordination algorithms developed',
 //           'Scalability demonstrated up to 1000 agents',
 //           'Published in Nature Communications'
@@ -597,8 +579,7 @@ $4}
     emergin,
   g: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
       {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -617,8 +598,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //           'Novel neuromorphic algorithms',
 //           'Hardware-software co-design',
           'Industry partnerships established'
@@ -646,8 +626,7 @@ $4}
         outcome,
   s: [
   // TOD,
-  O: Add items,
-]
+  O: Add items]
 //           '10x reduction in power consumption',
 //           'Real-time processing capabilities',
 //           'Commercial product launched'
@@ -826,12 +805,10 @@ $4}
             </div>"
             <div className="text-center"></div>"
               <p className="text-gray-300 max-w-2xl mx-auto"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 {researchAreas.find(area => area.id === activeTab)?.description}
               </p>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Research Projects */}
           <div className="mb-16">
@@ -880,7 +857,6 @@ $4}
                     <ul className="space-y-1">
                       {project.outcomes.map((outcome, outcomeIndex) => (
                         <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start">
-=======
           {/* Research Projects */}"
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
@@ -941,7 +917,6 @@ $4}
                     <ul className="space-y-1"></ul>
                       {project.outcomes.map((outcome, outcomeIndex) => ()}"
           <li key={outcomeIndex} className="text-sm text-gray-300 flex items-start"></li>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                           <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0"></span>
                           {outcome}
                         </li>
@@ -952,7 +927,6 @@ $4}
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Publications */}
           <div className="mb-16">
@@ -982,7 +956,6 @@ $4}
                       >
                         Read Paper →
                       </a>
-=======
           {/* Publications */}"
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
@@ -1016,14 +989,12 @@ $4}
 // >
 //                         Read Paper;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* Achievements */}
           <div className="mb-16">
@@ -1037,7 +1008,6 @@ $4}
                     <achievement.icon className="w-8 h-8 text-cyan-400" />
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>
-=======
           {/* Achievements */}"
           <div className="mb-16"></div>"
             <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text"></h2>
@@ -1052,13 +1022,11 @@ $4}
                     <achievement.icon className="w-8 h-8 text-cyan-400" /></achievement>
                   </div>"
                   <h3 className="text-lg font-semibold text-white mb-2">{achievement.title}</h3>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   <p className="text-gray-300 text-sm">{achievement.description}</p>
                 </div>
               ))}
             </div>
           </div>
-<<<<<<< HEAD
 
           {/* CTA Section */}
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
@@ -1091,7 +1059,6 @@ $4}
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
               </a>
-=======
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"
             <h2 className="text-2xl font-bold text-white mb-4"></h2>
@@ -1162,19 +1129,15 @@ $4}
           <Mail className="w-4 h-4 mr-2" /></Mail>
 // Email Us;
           </a>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             </div>
           </div>
         </div>
       </div>
 
       <Footer />
-<<<<<<< HEAD
     </>
-=======
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

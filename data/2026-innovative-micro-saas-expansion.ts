@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -53,7 +52,6 @@ const contact =
       price: '$299',
       period: '/month',
       description:,
-=======
   i,
   d: string;
   nam,
@@ -113,8 +111,7 @@ const contact =
     addres,
   s: string;
     websit,
-  e: string,
-  }
+  e: string}
   real_implementatio,
   n: boolean;
   implementation_detail,
@@ -140,8 +137,7 @@ const contact =
       ratin,
   g: 4 && 4.3,
       review,
-  s: 18,
-    };
+  s: 18};
   ];
       i,
   d: 'ai-business-intelligence-suite'
@@ -155,7 +151,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced business intelligence platform that uses AI to analyze data, generate insights, and provide predictive analytics. Features include automated reporting, real-time dashboards, and natural language querying.'
       feature,
   s: [;
@@ -170,7 +165,6 @@ const contact =
         'API for third-party integrations'
         '24/7 AI monitoring and alerts'
       ]
-<<<<<<< HEAD
       popular: true;
       color: 'from-blue-600 to-cyan-600'
       textColor: 'text-blue-400',
@@ -178,7 +172,6 @@ const contact =
       marketPosition:,
         'Competes with Tableau ($70/month), Power BI ($9.99/month). Our advantage: AI automation reduces manual analysis by 80% and provides predictive insights.',
       targetAudience:,
-=======
       popula,
   r: true,
       colo,
@@ -194,7 +187,6 @@ const contact =
   advantage: AI automation reduces manual analysis by 80% and provides predictive insights.'
       targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Small to medium businesses, Data analysts, Business consultants, Marketing agencies, E-commerce companies'
       trialDay,
   s: 14;
@@ -222,19 +214,14 @@ const contact =
         'QuickBooks'
         'Excel'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Sales performance analysis'
         'Customer behavior insights'
         'Financial forecasting'
         'Marketing ROI tracking'
-<<<<<<< HEAD
-        'Operational efficiency monitoring',
-      ],
+        'Operational efficiency monitoring'],
       roi: 'Businesses report 300% ROI through improved decision-making and operational efficiency.',
       competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView']
       marketSize: '$29.5 B BI market'
@@ -255,7 +242,6 @@ const contact =
       price: '$199',
       period: '/month',
       description:,
-=======
         'Operational efficiency monitoring'
       ]
       ro,
@@ -280,8 +266,7 @@ const contact =
       ratin,
   g: 4.8;
       review,
-  s: 23,
-    }
+  s: 23}
     // AI Content Creation & Marketing,
   id: 'ai-content-factory-pro'
       nam,
@@ -294,7 +279,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Comprehensive content creation platform that uses AI to generate blog posts, social media content, marketing copy, and more. Features include SEO optimization, brand voice consistency, and multi-language support.'
       feature,
   s: [;
@@ -309,7 +293,6 @@ const contact =
         'API integration capabilities'
         'Mobile app access'
       ]
-<<<<<<< HEAD
       popular: true;
       color: 'from-green-600 to-emerald-600'
       textColor: 'text-green-400',
@@ -322,7 +305,6 @@ const contact =
       category: 'Content Creation & Marketing'
       realService: true;
       technology: [;
-=======
       popula,
   r: true,
       colo,
@@ -348,7 +330,6 @@ const contact =
   e: true;
       technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Next.js'
         'OpenAI GPT-4'
         'Node.js'
@@ -365,19 +346,14 @@ const contact =
         'Buffer'
         'Google Docs'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Blog post creation'
         'Social media content'
         'Email marketing'
         'Product descriptions'
-<<<<<<< HEAD
-        'Ad copy generation',
-      ],
+        'Ad copy generation'],
       roi: 'Marketing teams save 15-20 hours per week and see 40% improvement in content engagement.',
       competitors: ['Copy.ai', 'Jasper', 'Writesonic', 'ContentBot']
       marketSize: '$12.5 B content marketing market'
@@ -398,7 +374,6 @@ const contact =
       price: '$149',
       period: '/month',
       description:,
-=======
         'Ad copy generation'
       ]
       ro,
@@ -423,8 +398,7 @@ const contact =
       ratin,
   g: 4.7;
       review,
-  s: 34,
-    }
+  s: 34}
     // AI Customer Service & Support,
   id: 'ai-customer-service-automation'
       nam,
@@ -437,7 +411,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Intelligent customer service platform that automates support tickets, provides instant responses via chatbots, and routes complex issues to human agents. Features include sentiment analysis, multilingual support, and 24/7 availability.'
       feature,
   s: [;
@@ -451,14 +424,11 @@ const contact =
         'Escalation management'
         'Mobile app for agents'
         'API for custom integrations'
-<<<<<<< HEAD
       ],
       popular: true;
       marketPosition:,
         'Competes with Zendesk ($49/month), Intercom ($39/month). Our advantage: AI automation reduces response time by 90% and handles 70% of inquiries automatically.',
-      targetAudience:,
-=======
-      ]
+      targetAudience:]
       popula,
   r: true,
       marketPositio,
@@ -467,7 +437,6 @@ const contact =
   advantage: AI automation reduces response time by 90% and handles 70% of inquiries automatically.'
       targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'E-commerce businesses, SaaS companies, Customer support teams, Service providers'
       trialDay,
   s: 14;
@@ -495,19 +464,14 @@ const contact =
         'Slack'
         'Microsoft Teams'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Customer inquiry handling'
         'Ticket automation'
         'FAQ management'
         'Customer satisfaction tracking'
-<<<<<<< HEAD
-        'Support analytics',
-      ],
+        'Support analytics'],
       roi: 'Businesses see 60% reduction in support costs and 85% improvement in response times.',
       competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout']
       marketSize: '$18.5 B customer service software market'
@@ -528,7 +492,6 @@ const contact =
       price: '$249',
       period: '/month',
       description:,
-=======
         'Support analytics'
       ]
       ro,
@@ -553,8 +516,7 @@ const contact =
       ratin,
   g: 4.6;
       review,
-  s: 28,
-    }
+  s: 28}
     // AI-Powered E-commerce Optimization,
   id: 'ai-ecommerce-optimizer'
       nam,
@@ -567,7 +529,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Intelligent e-commerce optimization platform that uses AI to improve product recommendations, optimize pricing strategies, and enhance customer experience. Features include dynamic pricing, inventory management, and conversion rate optimization.'
       feature,
   s: [;
@@ -581,14 +542,11 @@ const contact =
         'Real-time analytics dashboard'
         'Multi-platform integration'
         'Mobile optimization tools'
-<<<<<<< HEAD
       ],
       popular: false;
       marketPosition:,
         'Competes with Dynamic Yield ($1000+/month), Optimizely ($1000+/month). Our advantage: Affordable pricing for SMBs with enterprise-level AI capabilities.',
-      targetAudience:,
-=======
-      ]
+      targetAudience:]
       popula,
   r: false,
       marketPositio,
@@ -597,7 +555,6 @@ const contact =
   advantage: Affordable pricing for SMBs with enterprise-level AI capabilities.'
       targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'E-commerce businesses, Online retailers, DTC brands, Marketplace platforms'
       trialDay,
   s: 14;
@@ -625,19 +582,14 @@ const contact =
         'Stripe'
         'PayPal'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Product recommendation engines'
         'Dynamic pricing strategies'
         'Inventory optimization'
         'Customer segmentation'
-<<<<<<< HEAD
-        'Conversion optimization',
-      ],
+        'Conversion optimization'],
       roi: 'E-commerce businesses report 25-40% increase in average order value and 30% improvement in conversion rates.',
       competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia']
       marketSize: '$22.8 B e-commerce optimization market'
@@ -658,7 +610,6 @@ const contact =
       price: '$199',
       period: '/month',
       description:,
-=======
         'Conversion optimization'
       ]
       ro,
@@ -683,8 +634,7 @@ const contact =
       ratin,
   g: 4.5;
       review,
-  s: 19,
-    }
+  s: 19}
     // AI-Powered HR & Recruitment,
   id: 'ai-hr-recruitment-suite'
       nam,
@@ -697,7 +647,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Comprehensive HR and recruitment platform that uses AI to automate candidate screening, improve hiring decisions, and manage employee lifecycle. Features include resume parsing, skill matching, and performance analytics.'
       feature,
   s: [;
@@ -712,7 +661,6 @@ const contact =
         'Mobile app for candidates'
         'Integration with job boards'
       ]
-<<<<<<< HEAD
       popular: false;
       color: 'from-indigo-600 to-blue-600'
       textColor: 'text-indigo-400',
@@ -727,7 +675,6 @@ const contact =
       realService: true;
       technology: ['React', 'Python', 'NLP', 'PostgreSQL', 'Redis', 'AWS']
       integrations: [;
-=======
       popula,
   r: false,
       colo,
@@ -756,7 +703,6 @@ const contact =
   y: ['React', 'Python', 'NLP', 'PostgreSQL', 'Redis', 'AWS']
       integration,
   s: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'LinkedIn'
         'Indeed'
         'Glassdoor'
@@ -764,19 +710,14 @@ const contact =
         'Microsoft Teams'
         'Google Workspace'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Candidate screening'
         'Resume parsing'
         'Interview scheduling'
         'Performance management'
-<<<<<<< HEAD
-        'Employee onboarding',
-      ],
+        'Employee onboarding'],
       roi: 'HR teams save 20-30 hours per week and improve hiring quality by 40%.',
       competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever']
       marketSize: '$15.8 B HR software market'
@@ -797,7 +738,6 @@ const contact =
       price: '$179',
       period: '/month',
       description:,
-=======
         'Employee onboarding'
       ]
       ro,
@@ -822,8 +762,7 @@ const contact =
       ratin,
   g: 4.4;
       review,
-  s: 22,
-    }
+  s: 22}
     // AI-Powered Financial Management,
   id: 'ai-financial-management-platform'
       nam,
@@ -836,7 +775,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Advanced financial management platform that uses AI to provide financial planning, budgeting, and investment insights. Features include expense tracking, cash flow forecasting, and automated financial reporting.'
       feature,
   s: [;
@@ -851,7 +789,6 @@ const contact =
         'Bank account integration'
         'Mobile app for on-the-go management'
       ]
-<<<<<<< HEAD
       popular: false;
       color: 'from-yellow-600 to-orange-600'
       textColor: 'text-yellow-400',
@@ -864,7 +801,6 @@ const contact =
       category: 'Financial Management'
       realService: true;
       technology: [;
-=======
       popula,
   r: false,
       colo,
@@ -890,7 +826,6 @@ const contact =
   e: true;
       technolog,
   y: [;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'React'
         'Python'
         'TensorFlow'
@@ -907,19 +842,14 @@ const contact =
         'QuickBooks'
         'Xero'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Personal finance management'
         'Business financial planning'
         'Investment tracking'
         'Budget optimization'
-<<<<<<< HEAD
-        'Financial goal achievement',
-      ],
+        'Financial goal achievement'],
       roi: 'Users report 25% improvement in savings and 40% better financial decision-making.',
       competitors: ['Mint', 'YNAB', 'Personal Capital', 'Moneydance']
       marketSize: '$8.9 B personal finance software market'
@@ -940,7 +870,6 @@ const contact =
       price: '$159',
       period: '/month',
       description:,
-=======
         'Financial goal achievement'
       ]
       ro,
@@ -965,8 +894,7 @@ const contact =
       ratin,
   g: 4.6;
       review,
-  s: 31,
-    }
+  s: 31}
     // AI-Powered Project Management,
   id: 'ai-project-management-suite'
       nam,
@@ -979,7 +907,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Intelligent project management platform that uses AI to optimize task allocation, predict project timelines, and improve team productivity. Features include automated scheduling, resource optimization, and real-time collaboration.'
       feature,
   s: [;
@@ -994,7 +921,6 @@ const contact =
         'Mobile app for team members'
         'Advanced reporting and insights'
       ]
-<<<<<<< HEAD
       popular: false;
       color: 'from-teal-600 to-cyan-600'
       textColor: 'text-teal-400',
@@ -1002,7 +928,6 @@ const contact =
       marketPosition:,
         'Competes with Asana ($10.99/user/month), Monday.com ($8/user/month), ClickUp ($5/user/month). Our advantage: AI automation reduces project planning time by 60% and improves delivery accuracy.',
       targetAudience:,
-=======
       popula,
   r: false,
       colo,
@@ -1018,7 +943,6 @@ const contact =
   advantage: AI automation reduces project planning time by 60% and improves delivery accuracy.'
       targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Project managers, Development teams, Marketing agencies, Consulting firms'
       trialDay,
   s: 14;
@@ -1046,19 +970,14 @@ const contact =
         'Jira'
         'Trello'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Project planning and scheduling'
         'Team collaboration'
         'Resource management'
         'Risk assessment'
-<<<<<<< HEAD
-        'Performance tracking',
-      ],
+        'Performance tracking'],
       roi: 'Teams report 35% improvement in project delivery time and 25% increase in productivity.',
       competitors: ['Asana', 'Monday.com', 'ClickUp', 'Basecamp']
       marketSize: '$6.8 B project management software market'
@@ -1079,7 +998,6 @@ const contact =
       price: '$129',
       period: '/month',
       description:,
-=======
         'Performance tracking'
       ]
       ro,
@@ -1104,8 +1022,7 @@ const contact =
       ratin,
   g: 4.5;
       review,
-  s: 26,
-    }
+  s: 26}
     // AI-Powered Learning & Training,
   id: 'ai-learning-management-system'
       nam,
@@ -1118,7 +1035,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Intelligent learning management system that uses AI to personalize learning paths, adapt content difficulty, and track student progress. Features include automated assessments, content recommendations, and performance analytics.'
       feature,
   s: [;
@@ -1132,14 +1048,11 @@ const contact =
         'Mobile learning app'
         'Integration with LMS platforms'
         'Advanced reporting and insights'
-<<<<<<< HEAD
       ],
       popular: false;
       marketPosition:,
         'Competes with Canvas ($40/user/year), Blackboard ($40/user/year), Moodle (Free). Our advantage: AI personalization improves learning outcomes by 30% and reduces dropout rates.',
-      targetAudience:,
-=======
-      ]
+      targetAudience:]
       popula,
   r: false,
       marketPositio,
@@ -1148,7 +1061,6 @@ const contact =
   advantage: AI personalization improves learning outcomes by 30% and reduces dropout rates.'
       targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Educational institutions, Corporate training departments, Online course creators, Tutoring centers'
       trialDay,
   s: 14;
@@ -1176,19 +1088,14 @@ const contact =
         'Moodle'
         'Blackboard'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'K-12 education'
         'Higher education'
         'Corporate training'
         'Online courses'
-<<<<<<< HEAD
-        'Skill development',
-      ],
+        'Skill development'],
       roi: 'Educational institutions see 25% improvement in student performance and 40% reduction in administrative workload.',
       competitors: ['Canvas', 'Blackboard', 'Moodle', 'Schoology']
       marketSize: '$18.6 B learning management system market'
@@ -1209,7 +1116,6 @@ const contact =
       price: '$299',
       period: '/month',
       description:,
-=======
         'Skill development'
       ]
       ro,
@@ -1234,8 +1140,7 @@ const contact =
       ratin,
   g: 4.4;
       review,
-  s: 21,
-    }
+  s: 21}
     // AI-Powered Healthcare Solutions,
   id: 'ai-healthcare-assistant'
       nam,
@@ -1248,7 +1153,6 @@ const contact =
   d: '/month'
       descriptio,
   n:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Comprehensive healthcare management platform that uses AI to improve patient care, automate administrative tasks, and optimize healthcare operations. Features include patient monitoring, appointment scheduling, and medical record management.'
       feature,
   s: [;
@@ -1262,14 +1166,11 @@ const contact =
         'Compliance and security features'
         'Mobile app for patients'
         'Integration with EHR systems'
-<<<<<<< HEAD
       ],
       popular: false;
       marketPosition:,
         'Competes with Epic ($1200/user/month), Cerner ($1000/user/month), Allscripts ($800/user/month). Our advantage: Affordable pricing for small practices with enterprise-level AI capabilities.',
-      targetAudience:,
-=======
-      ]
+      targetAudience:]
       popula,
   r: false,
       marketPositio,
@@ -1278,7 +1179,6 @@ const contact =
   advantage: Affordable pricing for small practices with enterprise-level AI capabilities.'
       targetAudienc,
   e:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Healthcare providers, Medical practices, Hospitals, Telemedicine companies'
       trialDay,
   s: 30;
@@ -1306,19 +1206,14 @@ const contact =
         'Kareo'
         'DrChrono'
       ]
-<<<<<<< HEAD
       useCases: [
-=======
       useCase,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         'Patient care management'
         'Appointment scheduling'
         'Medical record keeping'
         'Telemedicine services'
-<<<<<<< HEAD
-        'Healthcare analytics',
-      ],
+        'Healthcare analytics'],
       roi: 'Healthcare practices report 30% reduction in administrative costs and 25% improvement in patient satisfaction.',
       competitors: ['Epic', 'Cerner', 'Allscripts', 'Practice Fusion']
       marketSize: '$31.5 B healthcare IT market'
@@ -1341,7 +1236,6 @@ const contact =
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string)
 ) =>,
   return innovativeMicroSaasServices2026.filter(service => service.category === category),
-=======
         'Healthcare analytics'
       ]
       ro,
@@ -1366,8 +1260,7 @@ export const getInnovativeMicroSaasServices2026ByCategory = (category: string)
       ratin,
   g: 4.3;
       review,
-  s: 18,
-    }
+  s: 18}
         'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
       launchDat,
   e: '2024-03-15',
@@ -1376,15 +1269,12 @@ export const getInnovativeMicroSaasServices2026ByCategory = (category: string)
       ratin,
   g: 4.3,
       review,
-  s: 18,
-  ];
-export const getInnovativeMicroSaasServices2026ByCategory = (categor,)
+  s: 18];
+export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string)
 ) =>
   return innovativeMicroSaasServices2026.filter(service => service.category === category)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  ),
-}
+  )}
 export const getPopularInnovativeMicroSaasServices2026 = () =>
 };
 export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
@@ -1397,11 +1287,8 @@ export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
   ];
-<<<<<<< HEAD
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number),
-  maxPrice: number),
-) =>,
-  })
+  maxPrice: number)) =>})
 }
 export interface InnovativeMicroSaasService2026 {id: string, name: string;
   tagline: string, price: string;
@@ -1429,8 +1316,7 @@ export interface InnovativeMicroSaasService2026 {id: string, name: string;
 const contact =
   mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
-};
+  website: 'https://ziontechgroup.com'};
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [,
   // AI-Powered Business Intelligence & Analytics;
     id: 'ai-business-intelligence-suite', name: 'AI Business Intelligence Suite',
@@ -1439,8 +1325,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Advanced business intelligence platform that uses AI to analyze data, generate insights, and provide predictive analytics. Features include automated reporting, real-time dashboards, and natural language querying.',
     features: [;
       'AI-powered data analysis and visualizationPredictive analytics and forecastingReal-time dashboard and reportingNatural language query interfaceAutomated insight generationMulti-source data integrationCustom KPI trackingMobile-responsive design',
-      'API for third-party integrations24/7 AI monitoring and alerts',
-    ],
+      'API for third-party integrations24/7 AI monitoring and alerts'],
     popular: true, icon: '',
     color: 'from-blue-600 to-cyan-600', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
@@ -1465,8 +1350,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Comprehensive content creation platform that uses AI to generate blog posts, social media content, marketing copy, and more. Features include SEO optimization, brand voice consistency, and multi-language support.',
     features: [;
       'AI-powered content generationSEO optimization and keyword researchBrand voice consistencyMulti-language content creationContent calendar and schedulingPlagiarism detectionPerformance analyticsTeam collaboration tools',
-      'API integration capabilitiesMobile app access',
-    ],
+      'API integration capabilitiesMobile app access'],
     popular: true, icon: '',
     color: 'from-green-600 to-emerald-600', textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/ai-content-factory-pro',
@@ -1491,8 +1375,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Intelligent customer service platform that automates support tickets, provides instant responses via chatbots, and routes complex issues to human agents. Features include sentiment analysis, multilingual support, and 24/7 availability.',
     features: [;
       'AI-powered chatbot with natural language processingAutomated ticket routing and prioritizationSentiment analysis and customer satisfaction trackingMulti-language support (50+ languages)Integration with CRM systemsPerformance analytics and reportingCustomizable response templatesEscalation management',
-      'Mobile app for agentsAPI for custom integrations',
-    ],
+      'Mobile app for agentsAPI for custom integrations'],
     popular: true, icon: '',
     color: 'from-purple-600 to-pink-600', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-service-automation',
@@ -1517,8 +1400,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Intelligent e-commerce optimization platform that uses AI to improve product recommendations, optimize pricing strategies, and enhance customer experience. Features include dynamic pricing, inventory management, and conversion rate optimization.',
     features: [;
       'AI-powered product recommendationsDynamic pricing optimizationInventory management and forecastingCustomer behavior analysisA/B testing automationConversion rate optimizationPersonalized shopping experiencesReal-time analytics dashboard',
-      'Multi-platform integrationMobile optimization tools',
-    ],
+      'Multi-platform integrationMobile optimization tools'],
     popular: false, icon: '',
     color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
     link: 'https://ziontechgroup.com/ai-ecommerce-optimizer',
@@ -1543,8 +1425,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Comprehensive HR and recruitment platform that uses AI to automate candidate screening, improve hiring decisions, and manage employee lifecycle. Features include resume parsing, skill matching, and performance analytics.',
     features: [;
       'AI-powered resume parsing and screeningSkill-based candidate matchingAutomated interview schedulingPerformance tracking and analyticsEmployee onboarding automationTalent pipeline managementCompliance and legal documentationMulti-language support',
-      'Mobile app for candidatesIntegration with job boards',
-    ],
+      'Mobile app for candidatesIntegration with job boards'],
     popular: false, icon: '',
     color: 'from-indigo-600 to-blue-600', textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/ai-hr-recruitment-suite',
@@ -1569,8 +1450,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Advanced financial management platform that uses AI to provide financial planning, budgeting, and investment insights. Features include expense tracking, cash flow forecasting, and automated financial reporting.',
     features: [;
       'AI-powered expense categorizationCash flow forecasting and analysisAutomated budget planningInvestment portfolio trackingFinancial goal setting and monitoringTax optimization suggestionsReal-time financial dashboardMulti-currency support',
-      'Bank account integrationMobile app for on-the-go management',
-    ],
+      'Bank account integrationMobile app for on-the-go management'],
     popular: false, icon: '',
     color: 'from-yellow-600 to-orange-600', textColor: 'text-yellow-400',
     link: 'https://ziontechgroup.com/ai-financial-management-platform',
@@ -1595,8 +1475,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Intelligent project management platform that uses AI to optimize task allocation, predict project timelines, and improve team productivity. Features include automated scheduling, resource optimization, and real-time collaboration.',
     features: [;
       'AI-powered task prioritizationAutomated project schedulingResource allocation optimizationRisk assessment and mitigationTeam performance analyticsReal-time collaboration toolsProject timeline forecastingIntegration with popular tools',
-      'Mobile app for team membersAdvanced reporting and insights',
-    ],
+      'Mobile app for team membersAdvanced reporting and insights'],
     popular: false, icon: '',
     color: 'from-teal-600 to-cyan-600', textColor: 'text-teal-400',
     link: 'https://ziontechgroup.com/ai-project-management-suite',
@@ -1621,8 +1500,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Intelligent learning management system that uses AI to personalize learning paths, adapt content difficulty, and track student progress. Features include automated assessments, content recommendations, and performance analytics.',
     features: [;
       'AI-powered personalized learning pathsAdaptive content difficultyAutomated assessment generationProgress tracking and analyticsContent recommendation engineMulti-format content supportCollaborative learning toolsMobile learning app',
-      'Integration with LMS platformsAdvanced reporting and insights',
-    ],
+      'Integration with LMS platformsAdvanced reporting and insights'],
     popular: false, icon: '',
     color: 'from-violet-600 to-purple-600', textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/ai-learning-management-system',
@@ -1647,8 +1525,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
     description: 'Comprehensive healthcare management platform that uses AI to improve patient care, automate administrative tasks, and optimize healthcare operations. Features include patient monitoring, appointment scheduling, and medical record management.',
     features: [;
       'AI-powered patient monitoringAutomated appointment schedulingMedical record managementPrescription tracking and remindersHealth analytics and insightsTelemedicine integrationInsurance claim processingCompliance and security features',
-      'Mobile app for patientsIntegration with EHR systems',
-    ],
+      'Mobile app for patientsIntegration with EHR systems'],
     popular: false, icon: '',
     color: 'from-red-600 to-pink-600', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/ai-healthcare-assistant',
@@ -1669,8 +1546,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
 ];
 export const getInnovativeMicroSaasServices2026ByCategory = (category: string) =>,
   return innovativeMicroSaasServices2026.filter(service => service.category === category),
-=======
-export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,)
+export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number)
   maxPric,
   e: number)
@@ -1689,8 +1565,7 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   ratin,
   g: number,
   review,
-  s: number,
-}
+  s: number}
 const contact =
   mobil,
   e: '+1 302 464 0950', emai,
@@ -1760,8 +1635,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 23,
-  };
+  s: 23};
   // AI Content Creation & Marketing,
   id: 'ai-content-factory-pro', nam,
   e: 'AI Content Factory Pro',
@@ -1819,8 +1693,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 34,
-  };
+  s: 34};
   // AI Customer Service & Support,
   id: 'ai-customer-service-automation', nam,
   e: 'AI Customer Service Automation',
@@ -1878,8 +1751,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 28,
-  };
+  s: 28};
   // AI-Powered E-commerce Optimization,
   id: 'ai-ecommerce-optimizer', nam,
   e: 'AI E-commerce Optimizer',
@@ -1937,8 +1809,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 19,
-  };
+  s: 19};
   // AI-Powered HR & Recruitment,
   id: 'ai-hr-recruitment-suite', nam,
   e: 'AI HR & Recruitment Suite',
@@ -1996,8 +1867,7 @@ export const,
     ratin,
   g: 4.4,
     review,
-  s: 22,
-  };
+  s: 22};
   // AI-Powered Financial Management,
   id: 'ai-financial-management-platform', nam,
   e: 'AI Financial Management Platform',
@@ -2055,8 +1925,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 31,
-  };
+  s: 31};
   // AI-Powered Project Management,
   id: 'ai-project-management-suite', nam,
   e: 'AI Project Management Suite',
@@ -2114,8 +1983,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 26,
-  };
+  s: 26};
   // AI-Powered Learning & Training,
   id: 'ai-learning-management-system', nam,
   e: 'AI Learning Management System',
@@ -2173,8 +2041,7 @@ export const,
     ratin,
   g: 4.4,
     review,
-  s: 21,
-  };
+  s: 21};
   // AI-Powered Healthcare Solutions,
   id: 'ai-healthcare-assistant', nam,
   e: 'AI Healthcare Assistant',
@@ -2232,26 +2099,21 @@ export const,
     ratin,
   g: 4.3,
     review,
-  s: 18,
-  }
+  s: 18}
 ];
-export const getInnovativeMicroSaasServices2026ByCategory = (categor,)
+export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) =>,
   return innovativeMicroSaasServices2026.filter(service => service.category === category)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const getPopularInnovativeMicroSaasServices2026 = () =>
   return innovativeMicroSaasServices2026.filter(service => service.popular)
 };
-<<<<<<< HEAD
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number) maxPrice: number) =>,
-  return innovativeMicroSaasServices2026.filter(service =>,)
-=======
-export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,)
+  return innovativeMicroSaasServices2026.filter(service =>)
+export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) =>,
   return innovativeMicroSaasServices2026.filter(service =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parseInt(service.price.replace('$') ''));
 };
   return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service =>)
@@ -2264,15 +2126,12 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,)
   })
 }
 ;
-<<<<<<< HEAD
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string) =>: unknown;
-  return innovativeMicroSaasServices2026.filter(,)
-=======
-export const getInnovativeMicroSaasServices2026ByCategory = (categor,)
+  return innovativeMicroSaasServices2026.filter()
+export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) =>: unknown;
   return innovativeMicroSaasServices2026.filter ()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     service => service.category === category);
 }
 ;
@@ -2280,17 +2139,14 @@ export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown;
   return innovativeMicroSaasServices2026.filter (service => service.popular);
 }
 ;
-<<<<<<< HEAD
 export const getInnovativeMicroSaasServices2026ByPriceRange = (min_price: number)
   max_price: number) =>: unknown;
   return innovativeMicroSaasServices2026.filter(service =>),
-=======
-export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric,)
+export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   e: number)
   max_pric,
   e: number) =>: unknown,
   return innovativeMicroSaasServices2026.filter (service =>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const _price = parse_int (service.price.replace ('$') ''));
     return price >= min_price && price <= max_price;
   });
@@ -2304,7 +2160,6 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
     websit,
   e: string}
   };
-<<<<<<< HEAD
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -2318,7 +2173,6 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'}
   website: 'https://ziontechgroup.com',
-=======
   realImplementatio,
   n: boolean;
   implementationDetail,
@@ -2330,20 +2184,17 @@ export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
   ratin,
   g: number;
   review,
-  s: number,
-}
+  s: number}
 ;
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
   websit,
   e: 'http,
   s://ziontechgroup.com'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 export const,
   innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [;
   // AI-Powered Business Intelligence & Analytics;
-<<<<<<< HEAD
   {
     id: 'ai-business-intelligence-suite';
     name: 'AI Business Intelligence Suite';
@@ -2684,7 +2535,6 @@ export const,
     customers: 24;
     rating: 4.3}
     reviews: 18}
-=======
   {/* TODO: Fix JSX expression */}
   g: 4.8}
     review,
@@ -2737,23 +2587,19 @@ export const,
   g: 4.3}
     review,
   s: 18}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
-export const getInnovativeMicroSaasServices2026ByCategory = (categor,)
+export const getInnovativeMicroSaasServices2026ByCategory = (categor)
   y: string) => {/* TODO: Fix JSX expression */}
   return innovativeMicroSaasServices2026.filter(service => service.category === category)}
 };
 export const getPopularInnovativeMicroSaasServices2026 = () => {/* TODO: Fix JSX expression */}
   return innovativeMicroSaasServices2026.filter(service => service.popular)}
 };
-<<<<<<< HEAD
 export const getInnovativeMicroSaasServices2026ByPriceRange = (minPrice: number) maxPrice: number) => {;
-=======
-export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,)
+export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   return innovativeMicroSaasServices2026.filter(service => {})
     const _price = parseInt(service.price.replace('$') ''));
     return price >= minPrice && price <= maxPrice;
@@ -2791,7 +2637,7 @@ i,
   e: string; emai,
   l: string; addres,
   s: string; websit,
-  e: string, } real_implementatio,
+  e: string} real_implementatio,
   n: boolean; implementation_detail,
   s: string; launch_dat,
   e: string; customer,
@@ -2803,7 +2649,7 @@ i,
   s: '364 E Main St STE 1008 Middletown DE 19709', customer,
   s: 24, ratin,
   g: 4 && 4.3, review,
-  s: 18, },; ]; ' i,
+  s: 18}; ]; ' i,
   d: 'ai-business-intelligence-suite'' nam,
   e: 'AI Business Intelligence Suite' taglin,
   e:' 'Transform raw data into actionable insights with AI-powered analytics'' pric,
@@ -3088,9 +2934,9 @@ i,
   e: '2024-03-15', customer,
   s: 24, ratin,
   g: 4.3, review,
-  s: 18, ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor,)
-  y: string ) => return innovativeMicroSaasServices2026.filter(service => service.category === category) ), } export const getPopularInnovativeMicroSaasServices2026 = () => }; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } ]; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,
-  e: number,)
+  s: 18]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
+  y: string ) => return innovativeMicroSaasServices2026.filter(service => service.category === category) )} export const getPopularInnovativeMicroSaasServices2026 = () => }; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } return innovativeMicroSaasServices2026.filter(service => service.popular); } ]; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,
+  e: number)
   maxPrice: number ) => }) } export interface InnovativeMicroSaasService2026,
   id: string, nam,
   e: string, taglin,
@@ -3439,44 +3285,44 @@ i,
   e: '2024-03-15', customer,
   s: 24, ratin,
   g: 4.3, review,
-  s: 18 } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor,)
-  y: string) => return innovativeMicroSaasServices2026.filter(service => service.category === category) }; export const getPopularInnovativeMicroSaasServices2026 = () => return innovativeMicroSaasServices2026.filter(service => service.popular) }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,)
+  s: 18 } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
+  y: string) => return innovativeMicroSaasServices2026.filter(service => service.category === category) }; export const getPopularInnovativeMicroSaasServices2026 = () => return innovativeMicroSaasServices2026.filter(service => service.popular) }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
-  e: number) => return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); }; return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')); return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); }; }) } ; export const getInnovativeMicroSaasServices2026ByCategory = (categor,)
-  y: string) =>: unknown return innovativeMicroSaasServices2026.filter ( service => service.category === category); } ; export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown return innovativeMicroSaasServices2026.filter (service => service.popular); } ; export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric,)
+  e: number) => return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); }; return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service && service.price.replace('$') '')); return innovativeMicroSaasServices2026.filter(service => ' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); }; }) } ; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
+  y: string) =>: unknown return innovativeMicroSaasServices2026.filter ( service => service.category === category); } ; export const getPopularInnovativeMicroSaasServices2026 = () =>: unknown return innovativeMicroSaasServices2026.filter (service => service.popular); } ; export const getInnovativeMicroSaasServices2026ByPriceRange = (min_pric)
   e: number) max_pric,
   e: number) =>: unknown return innovativeMicroSaasServices2026.filter (service => ' const price = parse_int (service.price.replace ('$') '')); return price >= min_price && price <= max_price; }); }; } return price >= min_price && price <= max_price; }); } ; ' import { ServiceVariant } from '../types/service-variants'; export interface InnovativeMicroSaasService2026 {/* TODO: Fix JSX expression */}
-  s: string,} websit,
-  e: string} },; realImplementatio,
-  n: boolean,; implementationDetail,
-  s: string,; launchDat,
-  e: string,; customer,
-  s: number,; ratin,
-  g: number,; review,
-  s: number, } ; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  s: string} websit,
+  e: string} }; realImplementatio,
+  n: boolean; implementationDetail,
+  s: string; launchDat,
+  e: string; customer,
+  s: number; ratin,
+  g: number; review,
+  s: number} ; const contact = {/* TODO: Fix JSX expression */}
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' },; export const,
+  s://ziontechgroup.com' }; export const,
   innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] = [; // AI-Powered Business Intelligence & Analytics; {/* TODO: Fix JSX expression */}
-  g: 4.8,} review,
-  s: 23} },; // AI Content Creation & Marketing; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 34} },; // AI Customer Service & Support; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 28} },; // AI-Powered E-commerce Optimization; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 19} },; // AI-Powered HR & Recruitment; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 22} },; // AI-Powered Financial Management; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 31} },; // AI-Powered Project Management; {/* TODO: Fix JSX expression */}
-  g: 4.5,} review,
-  s: 26} },; // AI-Powered Learning & Training; {/* TODO: Fix JSX expression */}
-  g: 4.4,} review,
-  s: 21} },; // AI-Powered Healthcare Solutions; {/* TODO: Fix JSX expression */}
-  g: 4.3,} review,
-  s: 18} } ],; export const getInnovativeMicroSaasServices2026ByCategory = (categor,)
-  y: string) => {; return innovativeMicroSaasServices2026.filter(service => service.category === category)} };; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} },; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric,)
+  g: 4.8} review,
+  s: 23} }; // AI Content Creation & Marketing; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 34} }; // AI Customer Service & Support; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 28} }; // AI-Powered E-commerce Optimization; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 19} }; // AI-Powered HR & Recruitment; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 22} }; // AI-Powered Financial Management; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 31} }; // AI-Powered Project Management; {/* TODO: Fix JSX expression */}
+  g: 4.5} review,
+  s: 26} }; // AI-Powered Learning & Training; {/* TODO: Fix JSX expression */}
+  g: 4.4} review,
+  s: 21} }; // AI-Powered Healthcare Solutions; {/* TODO: Fix JSX expression */}
+  g: 4.3} review,
+  s: 18} } ]; export const getInnovativeMicroSaasServices2026ByCategory = (categor)
+  y: string) => {; return innovativeMicroSaasServices2026.filter(service => service.category === category)} };; export const getPopularInnovativeMicroSaasServices2026 = () => {; return innovativeMicroSaasServices2026.filter(service => service.popular)} }; export const getInnovativeMicroSaasServices2026ByPriceRange = (minPric)
   e: number) maxPric,
   e: number) => {; return innovativeMicroSaasServices2026.filter(service => {}' const price = parseInt(service.price.replace('$') '')); return price >= minPrice && price <= maxPrice; }); }; return price >= minPrice && price <= maxPrice }) }; '

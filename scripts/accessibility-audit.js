@@ -286,7 +286,7 @@ const trapFocus = (element) => {
 // - Follow logical tab order;
 `;
 ,
-  fs.writeFileSync(,)
+  fs.writeFileSync()
     path.join(__dirname, '../accessibility-improvements.js'), 
     improvements;
   );

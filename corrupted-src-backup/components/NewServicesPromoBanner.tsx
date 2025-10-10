@@ -1,16 +1,12 @@
 interface, NewServicesPromoBannerProp, s {/* TODO: Fix JSX expression */}
 }
-<<<<<<< HEAD
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
   showCou, n, t =  , 3,
   featuredOn, l, y = t, r, u, e,
             <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
-<<<<<<< HEAD
               Revolutionary, AI, Services Now, Availabl, e;
-=======
               Revolutionary, AI, Services Now, Availabl, e</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
             { servic, e, s.m, a, p((serv, i, c, e) = > (</div>
               <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
@@ -27,7 +23,6 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
               View, All, Services;
               <Link, classNam, e="w-6 h-6" />
   if (varia, n, t = == 'prem, i, u, m') {
-<<<<<<< HEAD
     retu, r, n(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
         <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6">
           <Rocket, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />)
@@ -35,7 +30,6 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
         <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">)
           { servic, e, s.m, a, p((serv, i, c, e) = > (
             <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
-=======
     retu, r, n (
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>
         <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6"></div>
@@ -44,7 +38,6 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
         <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
           { servic, e, s.m, a, p((serv, i, c, e) = > (</div>
             <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <div, classNam, e="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</d, i, v>
               <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}</h3>
               <p, classNam, e="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.description}</p>
@@ -65,7 +58,6 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
             <p, classNam, e="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>
             <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
 }}}}}}}
-=======
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */}
               <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5""
                 <h3, classNam, e="te, x, t-2xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}</h3>"
@@ -108,4 +100,3 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
             <p, classNam, e="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.description}</p>"
             <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e"></Link>
 }}}}}}}"`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
  * @component;
  * @description High-performance promotional banner with accessibility features;
  */
-<<<<<<< HEAD
 const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
   return(<section;
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden",
@@ -17,51 +16,39 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></section>
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div;
-=======
 const,
   October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {/* TODO: Fix JSX expression */}
      > {/* Animated background elements - purely decorative */}
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true"></div>"
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div></div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           className="absolute -bottom-40 -left-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={/* TODO: Fix JSX expression */}
   y: '2s' }}
         ></div>
-<<<<<<< HEAD
         <div;
-=======
         <div></div>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={/* TODO: Fix JSX expression */}
   y: '4s' }}
         ></div>
       </div>
-<<<<<<< HEAD
 
       <div className="container mx-auto px-6 py-12 relative z-10">
-<<<<<<< HEAD
         {/* Header Section */}
         <div className="text-center mb-8">
           <div;
-=======
         {/* Header Section */}</div>
         <div className="text-center mb-8"></div>
           <div 
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full mb-6 animate-fade-in"
             role="status"
             aria-label="New product launch announcement"
           >
-<<<<<<< HEAD
              aria-hidden="true" <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025;
-=======
              aria-hidden="true"</div> <span className="text-white font-bold text-lg">
               🚀 JUST LAUNCHED - OCTOBER 2025
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             </span>
              aria-hidden="true"</div>
 
@@ -74,9 +61,8 @@ const,
           </p>
 )
           <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics">)
-            <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">,)
+            <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">)
               <Network className="w-5 h-5 text-green-300" aria-hidden="true" />),
-=======
 "
       <div className="container mx-auto px-6 py-12 relative z-10"></div>
         {/* Header Section */}"
@@ -104,7 +90,6 @@ const,
           <ul className="flex flex-wrap items-center justify-center gap-4 mb-8 list-none" aria-label="Platform key statistics"></ul>"
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg"></li>"
               <Network className="w-5 h-5 text-green-300" aria-hidden="true" /></Network>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <span className="text-white font-semibold">3,500+ AI Agents</span>
             </li>"
             <li className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg"></li>"
@@ -123,17 +108,13 @@ const,
           </ul>
         </section>
 
-<<<<<<< HEAD
         {/* Call to Action */}
-<<<<<<< HEAD
         <div  className="text-center" role="region" aria-label="Call to action">
           <div  className="inline-flex flex-col sm: flex-row gap-4">
             <Link;
-=======
         <div  className="text-center" role="region" aria-label="Call to action"></div>
           <div  className="inline-flex flex-col sm:flex-row gap-4"></div>
             <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               to="/contact"
                className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2 xl transform hover:scale-105"
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
@@ -151,7 +132,6 @@ const,
           </div>
           <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto">
             ✨</p> <strong>Limited Time Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
-=======
         {/* Call to Action */}"
         <div  className="text-center" role="region" aria-label="Call to action"></div>"
           <div  className="inline-flex flex-col,"
@@ -180,11 +160,9 @@ const,
           <p  className="text-white/80 text-sm mt-6 max-w-2xl mx-auto"></p>
             ✨ <strong>Limited Time,
   Offer:</strong> Get 50% off implementation fees for October 2025 sign-ups. 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             Free 2-week assessment included. No commitment required.
           </p>
         </div>,
-    </section>,
-  );
+    </section>);
 });
 "

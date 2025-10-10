@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * System Monitor Component
@@ -69,7 +68,6 @@ interface SystemMetrics {
     rtt: number;
     saveData: boolean;
 interface SystemMonitorProps {
-=======
 
 
 'use client';
@@ -196,12 +194,10 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
 interface SystemMonitorProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   refreshInterval?: number;
   showDetails?: boolean;
   enableExport?: boolean;
   className?: string;
-<<<<<<< HEAD
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
   refreshInterval = 5000,
   showDetails = true,
@@ -246,8 +242,7 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
         network: networkInfo
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-    } catch (error) {
-  }, []);
+    } catch (error) {}, []);
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
@@ -442,7 +437,6 @@ $4});
                   <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
 export default SystemMonitor;
-=======
 const,
   SystemMonitor: React.FC;
           <SystemMonitorProps> = ({/* TODO: Fix JSX expression */}
@@ -477,7 +471,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   newMetrics: SystemMetrics = {const _networkInfo = getNetworkInfo();}
       const,
   _newMetrics: SystemMetrics = {/* TODO: Fix JSX expression */}
-  e: performanceScore,}
+  e: performanceScore}
           loadTim,
   e: performanceMetrics?.loadTime || 0,
           firstContentfulPain,
@@ -657,4 +651,3 @@ className={`h-2 rounded-full ${}
 export default SystemMonitor;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

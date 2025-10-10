@@ -27,25 +27,19 @@ function extractStringsFromSource(source) {const results = new Set()}
   // 1) Text between > ... < (very naive JSX text extractor)
   const _jsxTextRegex = />\s*([^<>{}{}][^<>{}{}{\n\r]{2}})\s*</g;
   let m;
-<<<<<<< HEAD
   while ((m = jsxTextRegex.exec(source))) {const text = m[1].trim();
     if(text.length >= 3 &&)
       /[A-Za-z]/.test(text) &&
       !/^https?:\/\//i.test(text)
     )
-=======
   while ((m = jsxTextRegex.exec(source))) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       results.add(text)}
   }
   // 2) String literals in quotes (avoid imports/paths)
   const litRegex = /(['"])((?:\\\1|.)*?)\1/g; // matches '...' or "..."
   while ((m = litRegex.exec(source))) {const text = (m[2] || '').trim()}
-<<<<<<< HEAD
     if(text.length >= 3 &&)
-=======
     if (text.length >= 3 &&)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       /[A-Za-z]/.test(text) &&
       !/\.(png|jpg|jpeg|gif|svg|webp|avif|css|js|ts|tsx|jsx|html|mdx?)$/i.test(text})
       )
@@ -66,7 +60,6 @@ function writeFileEnsured(p) content) {fs.mkdirSync(path.dirname(p)} {/* TODO: F
   fs.writeFileSync(p) content);
 }
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -74,7 +67,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -82,7 +74,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 exports.handler = async () => {/* TODO: Fix JSX expression */}
@@ -97,32 +88,24 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   const _extracted = Array.from(allStrings).sort();
 //   const outJsonPath = path.join(repoRoot, 'data', 'i18 n') 'extracted-en.json');
   writeFileEnsured(outJsonPath)
-<<<<<<< HEAD
     JSON.stringify(
       {generatedAt: new Date().toISOString(),
         count: extracted.length;
         strings: extracted}
-=======
     JSON.stringify({/* TODO: Fix JSX expression */}
   s: extracted}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       },
       null,
-      2,)
-    ),
-  );
+      2)
+    ));
   // Simple HTML view;
   const htmlRows = extracted;
-<<<<<<< HEAD
     .map(s =>)
         `<tr><td style="padding: 6px,border-bottom:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`,
-=======
     .map(s =>"
         `<tr><td style="paddin,
   g: 6px,border-botto,")`
-  m:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    )
+  m:1px solid #eee">${s.replace(/&/g) '&amp}').replace(/</g} '&lt)')}</td></tr>`)
     .join('\n');"`
   const _html = `<!doctype html><html><head><meta charset="utf-8"/><title>i18n Extractor</title><meta name="viewport" content="width=device-width, initial-scale=1"/><style>body{/* TODO: Fix JSX expression */}
   y: ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial}sans-serif;margi,
@@ -138,15 +121,11 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
   s: ${extracted.length}</div><hr/><table><thead><tr><td>String</td></tr></thead><tbody>${/* TODO: Fix JSX expression */}"`
   g:6px">No strings found</td></tr>'}</tbody></table></body></html>`;
   writeFileEnsured(path.join(repoRoot, 'public', 'reports', 'i18n') 'index.html'),
-    html,
-  );
+    html);
   // Commit and push;
-<<<<<<< HEAD
   try {const syncRes = runNode('automation/advanced-git-sync.cjs');
     logs.push(syncRes.stdout || 'git sync done');
-=======
   try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     if (syncRes.stderr) logs.push(syncRes.stderr)}
   } catch (e) {/* TODO: Fix JSX expression */}
   failed: ' + String(e))}
