@@ -6,11 +6,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
   const supportChannels = [
     {
@@ -19,99 +16,90 @@ const SupportPage: React.FC = () => {
       description: 'Speak directly with our technical experts',
       availability: '24/7 Emergency Support',
       responseTime: 'Immediate',
-      contact: '+1 302 464 0950',
-      color: 'from-green-500 to-emerald-600'
+      contact: 'Call Now',
+      color: 'from-green-500 to-blue-600'
     },
     {
       icon: Mail,
       title: 'Email Support',
-      description: 'Send us detailed questions and get comprehensive answers',
-      availability: 'Mon-Fri: 9AM-6PM EST',
-      responseTime: 'Within 24 hours',
-      contact: 'kleber@ziontechgroup.com',
-      color: 'from-blue-500 to-cyan-600'
+      description: 'Get detailed responses to your technical questions',
+      availability: '24/7',
+      responseTime: 'Within 2 hours',
+      contact: 'Send Email',
+      color: 'from-blue-500 to-purple-600'
     },
     {
       icon: MessageSquare,
       title: 'Live Chat',
-      description: 'Get instant help through our live chat system',
-      availability: 'Mon-Fri: 9AM-6PM EST',
-      responseTime: 'Immediate',
+      description: 'Real-time chat with our support team',
+      availability: 'Mon-Fri 9AM-6PM EST',
+      responseTime: 'Within 5 minutes',
       contact: 'Start Chat',
       color: 'from-purple-500 to-pink-600'
     },
     {
       icon: Video,
-      title: 'Video Support',
+      title: 'Video Call',
       description: 'Schedule a video call for complex technical issues',
       availability: 'By appointment',
       responseTime: 'Within 2 hours',
       contact: 'Schedule Call',
       color: 'from-orange-500 to-red-600'
     }
-<<<<<<< HEAD
-  ];];];
-  const filteredFaqs = faqs.filter(faq =>
-    faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-=======
   ];
 
   const faqCategories = [
     {
       id: 'general',
       title: 'General Questions',
-      icon: FileText,
       questions: [
         {
           question: 'What services does Zion Tech Group offer?',
-          answer: 'We offer comprehensive AI services, IT solutions, and Micro SaaS tools. Our AI services include chatbots, analytics, computer vision, and automation. IT services cover cloud infrastructure, cybersecurity, DevOps, and custom development. Micro SaaS tools provide ready-to-use business applications.'
+          answer: 'We offer comprehensive AI and IT services including AI development, cloud infrastructure, cybersecurity, digital transformation, and micro SaaS solutions.'
         },
         {
-          question: 'How do I get started with your services?',
-          answer: 'Getting started is easy! Contact us for a free consultation where we assess your needs and recommend the best solutions. You can call us at (302) 464-0950, email kleber@ziontechgroup.com, or fill out our contact form.'
+          question: 'How can I get started with your services?',
+          answer: 'You can start by scheduling a free consultation with our experts. Contact us via phone, email, or live chat to discuss your needs.'
+        },
+        {
+          question: 'Do you offer 24/7 support?',
+          answer: 'Yes, we provide 24/7 emergency support for critical issues. Regular support is available during business hours.'
+        }
+      ]
+    },
+    {
+      id: 'technical',
+      title: 'Technical Support',
+      questions: [
+        {
+          question: 'How do I integrate your AI APIs?',
+          answer: 'We provide comprehensive documentation and SDKs for easy integration. Our support team can also assist with implementation.'
+        },
+        {
+          question: 'What cloud platforms do you support?',
+          answer: 'We support all major cloud platforms including AWS, Azure, Google Cloud, and provide migration services between platforms.'
+        },
+        {
+          question: 'How secure are your services?',
+          answer: 'Security is our top priority. We implement enterprise-grade security measures including encryption, access controls, and regular security audits.'
+        }
+      ]
+    },
+    {
+      id: 'billing',
+      title: 'Billing & Pricing',
+      questions: [
+        {
+          question: 'What are your pricing models?',
+          answer: 'We offer flexible pricing models including subscription-based, project-based, and custom enterprise solutions tailored to your needs.'
         },
         {
           question: 'Do you offer free consultations?',
-          answer: 'Yes! We provide free consultations for all potential clients. During the consultation, we assess your current setup, discuss your goals, and provide recommendations for AI and IT solutions that can help your business grow.'
-        }
-      ]
-    },
-    {
-      id: 'ai-services',
-      title: 'AI Services',
-      icon: MessageSquare,
-      questions: [
-        {
-          question: 'How long does it take to implement AI solutions?',
-          answer: 'Implementation time varies based on complexity. Simple chatbots can be deployed in 2-4 weeks, while complex AI systems may take 3-6 months. We provide detailed timelines during the consultation phase.'
+          answer: 'Yes, we provide free initial consultations to assess your needs and provide recommendations without any obligation.'
         },
         {
-          question: 'Do I need technical expertise to use your AI tools?',
-          answer: 'No! Our AI solutions are designed to be user-friendly. We provide comprehensive training and ongoing support to ensure your team can effectively use and manage the AI tools.'
-        },
-        {
-          question: 'Can AI solutions integrate with my existing systems?',
-          answer: 'Yes, our AI solutions are designed to integrate seamlessly with existing business systems including CRM, ERP, databases, and other enterprise applications. We handle all integration work as part of our service.'
-        }
-      ]
-    },
-    {
-      id: 'it-services',
-      title: 'IT Services',
-      icon: Headphones,
-      questions: [
-        {
-          question: 'What cloud platforms do you support?',
-          answer: 'We support all major cloud platforms including AWS, Microsoft Azure, Google Cloud Platform, and hybrid cloud solutions. We help you choose the best platform for your specific needs and budget.'
-        },
-        {
-          question: 'Do you provide 24/7 IT support?',
-          answer: 'Yes, we offer 24/7 emergency support for critical issues. Our standard support hours are Monday-Friday 9AM-6PM EST, with emergency support available around the clock for urgent technical problems.'
-        },
-        {
-          question: 'How do you ensure data security?',
-          answer: 'We implement enterprise-grade security measures including encryption, access controls, regular security audits, and compliance with industry standards like SOC 2, GDPR, and HIPAA where applicable.'
+          question: 'Can I change my plan anytime?',
+          answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.'
         }
       ]
     }
@@ -119,41 +107,40 @@ const SupportPage: React.FC = () => {
 
   const resources = [
     {
+      icon: FileText,
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
-      icon: FileText,
       link: '/docs'
     },
     {
-      title: 'Video Tutorials',
-      description: 'Step-by-step video guides for all our services',
       icon: Video,
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides for our services',
       link: '/tutorials'
     },
     {
-      title: 'Knowledge Base',
-      description: 'Searchable database of articles and solutions',
-      icon: Search,
-      link: '/knowledge-base'
+      icon: Headphones,
+      title: 'Webinars',
+      description: 'Live and recorded webinars on AI and IT topics',
+      link: '/webinars'
     },
     {
-      title: 'Status Page',
-      description: 'Real-time status of all our services',
-      icon: CheckCircle,
-      link: '/status'
+      icon: MessageSquare,
+      title: 'Community Forum',
+      description: 'Connect with other users and get peer support',
+      link: '/community'
     }
   ];
 
-  const filteredCategories = faqCategories.filter(category => 
-    selectedCategory === 'all' || category.id === selectedCategory
-  );
+  const filteredCategories = selectedCategory === 'all' 
+    ? faqCategories 
+    : faqCategories.filter(category => category.id === selectedCategory);
 
   const filteredQuestions = filteredCategories.flatMap(category => 
     category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
     )
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   );
 
   return (
@@ -174,87 +161,86 @@ const SupportPage: React.FC = () => {
                 Support Center
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Get the help you need with our comprehensive support options. 
-                Our expert team is here to assist you 24/7 with any questions or issues.
+                Get the help you need with our comprehensive support resources and expert assistance.
               </p>
             </div>
 
             {/* Support Channels */}
             <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-8 text-center">Get Support</h2>
+              <h2 className="text-2xl font-bold text-white mb-8 text-center">Contact Support</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {supportChannels.map((channel, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                    <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4`}>
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300 group">
+                    <div className={`w-12 h-12 bg-gradient-to-r ${channel.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                       <channel.icon className="w-6 h-6 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
                     <p className="text-gray-300 mb-4">{channel.description}</p>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex items-center text-gray-400">
+                    <div className="space-y-2 mb-4">
+                      <div className="flex items-center text-sm text-gray-400">
                         <Clock className="w-4 h-4 mr-2" />
                         {channel.availability}
                       </div>
-                      <div className="text-cyan-400 font-semibold">
+                      <div className="text-sm text-cyan-400">
                         Response: {channel.responseTime}
                       </div>
                     </div>
-                    <div className="mt-4">
-                      {channel.contact.startsWith('+') || channel.contact.includes('@') ? (
-                        <a
-                          href={channel.contact.startsWith('+') ? `tel:${channel.contact}` : `mailto:${channel.contact}`}
-                          className="text-cyan-400 hover:text-cyan-300 font-semibold"
-                        >
-                          {channel.contact}
-                        </a>
-                      ) : (
-                        <button className="text-cyan-400 hover:text-cyan-300 font-semibold">
-                          {channel.contact}
-                        </button>
-                      )}
-                    </div>
+                    <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300">
+                      {channel.contact}
+                    </button>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Search and Filter */}
+            <div className="mb-12">
+              <div className="max-w-2xl mx-auto">
+                <div className="relative mb-6">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <input
+                    type="text"
+                    placeholder="Search for help..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  />
+                </div>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  <button
+                    onClick={() => setSelectedCategory('all')}
+                    className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === 'all'
+                        ? 'bg-cyan-500 text-white'
+                        : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
+                    }`}
+                  >
+                    All Categories
+                  </button>
+                  {faqCategories.map((category) => (
+                    <button
+                      key={category.id}
+                      onClick={() => setSelectedCategory(category.id)}
+                      className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
+                        selectedCategory === category.id
+                          ? 'bg-cyan-500 text-white'
+                          : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50'
+                      }`}
+                    >
+                      {category.title}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
 
             {/* FAQ Section */}
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-              
-              {/* Search and Filter */}
-              <div className="mb-8">
-                <div className="flex flex-col md:flex-row gap-4 mb-6">
-                  <div className="flex-1 relative">
-                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                    <input
-                      type="text"
-                      placeholder="Search FAQs..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    />
-                  </div>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    <option value="all">All Categories</option>
-                    {faqCategories.map(category => (
-                      <option key={category.id} value={category.id}>
-                        {category.title}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              {/* FAQ Items */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 {filteredQuestions.map((faq, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                    <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                    <h3 className="text-lg font-bold text-white mb-3">{faq.question}</h3>
                     <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                   </div>
                 ))}
@@ -313,16 +299,10 @@ const SupportPage: React.FC = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-      </section>
-    </div>
-
-=======
       </main>
       
       <Footer />
     </>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   );
 };
 
