@@ -1,106 +1,102 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const { glob } = require('glob');
 
-// Function to fix common syntax errors
+// Function to fix common syntax errors in TSX files
 function fixSyntaxErrors(content) {
-  // Fix missing closing tags
-  content = content.replace(/<div([^>]*)>\s*$/gm, '<div$1></div>');
-  content = content.replace(/<section([^>]*)>\s*$/gm, '<section$1></section>');
-  content = content.replace(/<main([^>]*)>\s*$/gm, '<main$1></main>');
-  content = content.replace(/<article([^>]*)>\s*$/gm, '<article$1></article>');
-  content = content.replace(/<header([^>]*)>\s*$/gm, '<header$1></header>');
-  content = content.replace(/<footer([^>]*)>\s*$/gm, '<footer$1></footer>');
+  let fixed = content;
   
-  // Fix JSX fragments
-  content = content.replace(/<>\s*$/gm, '<></>');
-  content = content.replace(/<>([^<]*)$/gm, '<>{$1}</>');
+  // Remove merge conflict markers
+  fixed = fixed.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+  fixed = fixed.replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
   
-  // Fix missing semicolons in JSX
-  content = content.replace(/([^;}])\s*$/gm, '$1;');
+  // Fix semicolons after JSX elements (but not after regular statements)
+  // Pattern: JSX element followed by semicolon at end of line
+  fixed = fixed.replace(/(<[^>]+>);\s*$/gm, '$1');
   
-  // Fix common JSX syntax issues
-  content = content.replace(/className\s*=\s*"([^"]*)"\s*$/gm, 'className="$1"');
-  content = content.replace(/onClick\s*=\s*{([^}]*)}\s*$/gm, 'onClick={$1}');
+  // Fix semicolons after JSX attributes
+  fixed = fixed.replace(/(\w+="[^"]*");\s*$/gm, '$1');
   
-  // Fix missing closing braces
-  content = content.replace(/\{\s*$/gm, '{}');
+  // Fix semicolons after JSX closing tags
+  fixed = fixed.replace(/(<\/[^>]+>);\s*$/gm, '$1');
   
-  // Fix malformed JSX expressions
-  content = content.replace(/\{\s*([^}]*)\s*$/gm, '{$1}');
+  // Fix semicolons after JSX self-closing tags
+  fixed = fixed.replace(/(<[^>]+\/>);\s*$/gm, '$1');
   
-  // Fix missing return statements
-  content = content.replace(/const\s+(\w+)\s*=\s*\([^)]*\)\s*=>\s*\{([^}]*)\s*$/gm, 'const $1 = ($2) => {\n  return (\n    $3\n  );\n};');
+  // Fix semicolons after JSX fragments
+  fixed = fixed.replace(/(<>|<\/>);\s*$/gm, '$1');
   
-  return content;
-}
-
-// Function to fix specific file patterns
-function fixSpecificFile(filePath, content) {
-  // Fix common patterns in AI pages
-  if (filePath.includes('/ai-')) {
-    // Ensure proper component structure
-    if (!content.includes('export default')) {
-      content = content.replace(/(const\s+\w+\s*=\s*\([^)]*\)\s*=>\s*\{[\s\S]*?)(\s*\});?$/m, '$1\n};\n\nexport default $1;');
-    }
-    
-    // Fix missing React import
-    if (!content.includes("import React")) {
-      content = "'use client';\nimport React from 'react';\n" + content;
-    }
-  }
+  // Fix semicolons after JSX expressions in attributes
+  fixed = fixed.replace(/(\{[^}]*\});\s*$/gm, '$1');
   
-  return content;
+  // Remove standalone semicolons on their own lines
+  fixed = fixed.replace(/^\s*;\s*$/gm, '');
+  
+  // Fix malformed JSX structure - remove semicolons after opening tags
+  fixed = fixed.replace(/(<[A-Za-z][^>]*>);\s*$/gm, '$1');
+  
+  // Fix semicolons after React component declarations
+  fixed = fixed.replace(/(const\s+\w+:\s*React\.FC\s*=\s*\(\)\s*=>\s*\{);\s*$/gm, '$1');
+  
+  // Fix semicolons after return statements
+  fixed = fixed.replace(/(return\s*\([^)]*\));\s*$/gm, '$1');
+  
+  // Fix semicolons after JSX return
+  fixed = fixed.replace(/(return\s*<[^>]+>);\s*$/gm, '$1');
+  
+  // Clean up multiple empty lines
+  fixed = fixed.replace(/\n\s*\n\s*\n/g, '\n\n');
+  
+  return fixed;
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
+    const fixed = fixSyntaxErrors(content);
     
-    let fixedContent = fixSyntaxErrors(content);
-    fixedContent = fixSpecificFile(filePath, fixedContent);
-    
-    // Only write if content changed
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`✓ Fixed syntax errors in: ${filePath}`);
+    if (content !== fixed) {
+      fs.writeFileSync(filePath, fixed, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
     }
+    return false;
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Function to find all TypeScript/TSX files with syntax errors
-function findFilesWithErrors(dir) {
-  const files = [];
+// Main function
+async function main() {
+  const patterns = [
+    'app/**/*.tsx',
+    'app/**/*.ts',
+    'components/**/*.tsx',
+    'components/**/*.ts'
+  ];
   
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
-        files.push(fullPath);
+  let totalFiles = 0;
+  let fixedFiles = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    for (const file of files) {
+      totalFiles++;
+      if (processFile(file)) {
+        fixedFiles++;
       }
     }
   }
   
-  traverse(dir);
-  return files;
+  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
 
-// Main execution
-console.log('🔍 Searching for files with syntax errors...');
-const filesToProcess = findFilesWithErrors('./app');
+if (require.main === module) {
+  main();
+}
 
-console.log(`Found ${filesToProcess.length} files to process`);
-
-filesToProcess.forEach(file => {
-  processFile(file);
-});
-
-console.log('✅ Syntax error fixing complete!');
+module.exports = { fixSyntaxErrors, processFile };

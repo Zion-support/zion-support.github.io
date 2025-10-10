@@ -1,8 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react'
 const EcommerceAnalyticsProPage: React.FC = () => {
   const features = [
     {
@@ -35,8 +34,7 @@ const EcommerceAnalyticsProPage: React.FC = () => {
       title: 'Conversion Tracking',
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.'
     }
-  ];
-
+  ]
   return (
     <>
       <Helmet>
@@ -75,7 +73,6 @@ const EcommerceAnalyticsProPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default EcommerceAnalyticsProPage;
+  )
+}
+export default EcommerceAnalyticsProPage

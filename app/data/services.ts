@@ -1,24 +1,23 @@
-import {;
-  Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,;
-  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,;
-  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,;
+import {
+  Brain, Shield, Stethoscope, DollarSign, Truck, FileText, Factory,
+  GraduationCap, MessageSquare, Settings, BarChart, Eye, CreditCard,
+  Cloud, Building, Database, Lock, Code, Smartphone, Settings as SettingsIcon,
   Target, Zap, BarChart as BarChartIcon, Users, Globe, Cpu, Lock as LockIcon;}
-} from 'lucide-react';
-;
-export const microSAASServices = [;
-  // Productivity & Management Tools;
-  {;
-    title: 'AI Project Manager Pro',;
-    description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',;
-    icon: 'bar-chart',;
-    price: '$99/month',;
-    originalPrice: '$149/month',;
-    features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],;
-    benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],;
-    link: '/ai-project-manager';
-    popular: true,;
-    category: 'Productivity',;
-    rating: 4.9;
+} from 'lucide-react'
+export const microSAASServices = [
+  // Productivity & Management Tools
+  {
+    title: 'AI Project Manager Pro',
+    description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
+    icon: 'bar-chart',
+    price: '$99/month',
+    originalPrice: '$149/month',
+    features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],
+    benefits: ['40% productivity increase', '70% fewer delays', '85% planning accuracy', '30% cost reduction'],
+    link: '/ai-project-manager'
+    popular: true,
+    category: 'Productivity',
+    rating: 4.9
     users: '10,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -29,10 +28,10 @@ export const microSAASServices = [;
     originalPrice: '$119/month',;
     features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support', 'Meeting analytics'],;
     benefits: ['90% meeting efficiency', 'Zero missed action items', 'Automatic follow-ups', 'Better meeting outcomes'],;
-    link: '/ai-meeting-assistant';
+    link: '/ai-meeting-assistant'
     popular: true,;
     category: 'Productivity',;
-    rating: 4.8;
+    rating: 4.8
     users: '20,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -43,10 +42,10 @@ export const microSAASServices = [;
     originalPrice: '$129/month',;
     features: ['Document analysis', 'Smart summarization', 'Knowledge extraction', 'Search & discovery', 'Version control', 'Collaboration tools', 'OCR processing', 'Multi-format support'],;
     benefits: ['80% faster document processing', 'Better knowledge retention', 'Improved search', 'Enhanced collaboration'],;
-    link: '/ai-document-intelligence';
+    link: '/ai-document-intelligence'
     popular: true,;
     category: 'Productivity',;
-    rating: 4.7;
+    rating: 4.7
     users: '15,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -57,10 +56,10 @@ export const microSAASServices = [;
     originalPrice: '$79/month',;
     features: ['Email management', 'Smart scheduling', 'Task automation', 'Voice commands', 'Calendar sync', 'Reminder system', 'Travel planning', 'Expense tracking'],;
     benefits: ['50% time savings', 'Never miss important tasks', 'Better organization', 'Reduced stress'],;
-    link: '/ai-personal-assistant';
+    link: '/ai-personal-assistant'
     popular: true,;
     category: 'Productivity',;
-    rating: 4.9;
+    rating: 4.9
     users: '45,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -71,10 +70,10 @@ export const microSAASServices = [;
     originalPrice: '$149/month',;
     features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Video conferencing', 'Task management', 'Performance insights'],;
     benefits: ['35% team productivity increase', 'Better communication', 'Reduced meetings', 'Improved outcomes'],;
-    link: '/ai-team-collaboration';
+    link: '/ai-team-collaboration'
     popular: true,;
     category: 'Productivity',;
-    rating: 4.8;
+    rating: 4.8
     users: '25,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -85,10 +84,10 @@ export const microSAASServices = [;
     originalPrice: '$79/month',;
     features: ['AI task prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration', 'Deadline alerts', 'Productivity analytics', 'Habit tracking', 'Goal setting'],;
     benefits: ['60% productivity boost', 'Never miss deadlines', 'Better focus', 'Achieve more goals'],;
-    link: '/ai-task-manager';
+    link: '/ai-task-manager'
     popular: true,;
     category: 'Productivity',;
-    rating: 4.8;
+    rating: 4.8
     users: '25,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -99,10 +98,10 @@ export const microSAASServices = [;
     originalPrice: '$119/month',;
     features: ['Visual workflow builder', 'AI optimization', '500+ integrations', 'Custom triggers', 'Error handling', 'Analytics dashboard', 'Team collaboration', 'API access'],;
     benefits: ['20+ hours saved weekly', '99.9% accuracy', 'Easy setup', 'Scalable automation'],;
-    link: '/ai-workflow-automation';
+    link: '/ai-workflow-automation'
     popular: true,;
     category: 'Productivity',;
-    rating: 4.7;
+    rating: 4.7
     users: '15,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -113,10 +112,10 @@ export const microSAASServices = [;
     originalPrice: '$59/month',;
     features: ['Smart scheduling', 'Calendar integration', 'Conflict resolution', 'Time zone handling', 'Meeting analytics', 'Auto-reminders', 'Room booking', 'Catering coordination'],;
     benefits: ['50% scheduling time saved', 'Zero double bookings', 'Better time utilization', 'Reduced no-shows'],;
-    link: '/ai-meeting-scheduler';
+    link: '/ai-meeting-scheduler'
     popular: true,;
     category: 'Productivity',;
-    rating: 4.8;
+    rating: 4.8
     users: '30,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -127,13 +126,13 @@ export const microSAASServices = [;
     originalPrice: '$49/month',;
     features: ['Auto time tracking', 'Productivity analytics', 'Project billing', 'Team insights', 'Idle detection', 'Detailed reports', 'Screenshot monitoring', 'App usage tracking'],;
     benefits: ['Accurate time tracking', 'Better productivity', 'Fair billing', 'Team optimization'],;
-    link: '/ai-time-tracker';
+    link: '/ai-time-tracker'
     popular: true,;
     category: 'Productivity',;
-    rating: 4.6;
+    rating: 4.6
     users: '50,000+',;}
     freeTrial: '14 days'},;
-  // Content & Marketing Tools;
+  // Content & Marketing Tools
   {;
     title: 'AI Content Writer Pro',;
     description: 'Advanced AI content creation with SEO optimization, brand voice consistency, and multi-language support. Generate 10 x more content.',;
@@ -142,10 +141,10 @@ export const microSAASServices = [;
     originalPrice: '$129/month',;
     features: ['SEO-optimized content', 'Brand voice training', 'Multi-language support', 'Content calendar', 'Plagiarism check', 'Tone adjustment', 'Keyword research', 'Content templates'],;
     benefits: ['10x content output', 'SEO ready', 'Brand consistent', 'Time savings'],;
-    link: '/ai-content-writer';
+    link: '/ai-content-writer'
     popular: true,;
     category: 'Content',;
-    rating: 4.9;
+    rating: 4.9
     users: '40,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -156,10 +155,10 @@ export const microSAASServices = [;
     originalPrice: '$199/month',;
     features: ['AI video editing', 'Voice synthesis', 'Auto-captions', 'Template library', 'Music generation', 'Color correction', 'Motion graphics', 'Multi-format export'],;
     benefits: ['90% faster video production', 'Professional quality', 'No editing skills needed', 'Unlimited creativity'],;
-    link: '/ai-video-creator';
+    link: '/ai-video-creator'
     popular: true,;
     category: 'Content',;
-    rating: 4.8;
+    rating: 4.8
     users: '30,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -170,10 +169,10 @@ export const microSAASServices = [;
     originalPrice: '$119/month',;
     features: ['AI audio editing', 'Auto-transcription', 'Show notes generation', 'Distribution automation', 'Analytics dashboard', 'Guest booking', 'Monetization tools', 'Social media integration'],;
     benefits: ['Professional podcast quality', '10x faster production', 'Better audience engagement', 'Monetization ready'],;
-    link: '/ai-podcast-studio';
+    link: '/ai-podcast-studio'
     popular: true,;
     category: 'Content',;
-    rating: 4.7;
+    rating: 4.7
     users: '18,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -184,10 +183,10 @@ export const microSAASServices = [;
     originalPrice: '$99/month',;
     features: ['AI design generation', 'Brand kit management', 'Template library', 'Logo creation', 'Social media graphics', 'Print design', 'Color palette generator', 'Font pairing'],;
     benefits: ['Professional designs', 'Brand consistency', 'No design skills needed', 'Unlimited creativity'],;
-    link: '/ai-graphic-design';
+    link: '/ai-graphic-design'
     popular: true,;
     category: 'Content',;
-    rating: 4.8;
+    rating: 4.8
     users: '35,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -198,10 +197,10 @@ export const microSAASServices = [;
     originalPrice: '$129/month',;
     features: ['AI design generation', 'Content optimization', 'SEO tools', 'Mobile optimization', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],;
     benefits: ['Professional websites', 'SEO optimized', 'Mobile responsive', 'Fast loading'],;
-    link: '/ai-website-builder';
+    link: '/ai-website-builder'
     popular: true,;
     category: 'Content',;
-    rating: 4.9;
+    rating: 4.9
     users: '50,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -212,10 +211,10 @@ export const microSAASServices = [;
     originalPrice: '$99/month',;
     features: ['Auto content creation', 'Smart scheduling', 'Hashtag optimization', 'Engagement tracking', 'Competitor analysis', 'Trend monitoring', 'Multi-platform posting', 'Analytics dashboard'],;
     benefits: ['300% audience growth', 'Consistent posting', 'Better engagement', 'Time savings'],;
-    link: '/ai-social-media-manager';
+    link: '/ai-social-media-manager'
     popular: true,;
     category: 'Marketing',;
-    rating: 4.7;
+    rating: 4.7
     users: '35,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -226,10 +225,10 @@ export const microSAASServices = [;
     originalPrice: '$89/month',;
     features: ['AI personalization', 'A/B testing', 'Email automation', 'Segmentation', 'Analytics dashboard', 'Template library', 'Deliverability optimization', 'List management'],;
     benefits: ['150% higher open rates', 'Better engagement', 'Automated campaigns', 'ROI tracking'],;
-    link: '/ai-email-marketing';
+    link: '/ai-email-marketing'
     popular: true,;
     category: 'Marketing',;
-    rating: 4.8;
+    rating: 4.8
     users: '28,000+',;}
     freeTrial: '7 days'},;
   {;
@@ -240,10 +239,10 @@ export const microSAASServices = [;
     originalPrice: '$119/month',;
     features: ['Keyword research', 'Content optimization', 'Ranking tracking', 'Competitor analysis', 'Technical SEO audit', 'Link building', 'Local SEO', 'Schema markup'],;
     benefits: ['200% traffic increase', 'Higher rankings', 'Better visibility', 'Competitive advantage'],;
-    link: '/ai-seo-optimizer';
+    link: '/ai-seo-optimizer'
     popular: true,;
     category: 'Marketing',;
-    rating: 4.9;
+    rating: 4.9
     users: '22,000+',;}
     freeTrial: '14 days'},;
   {;
@@ -254,27 +253,27 @@ export const microSAASServices = [;
     originalPrice: '$149/month',;
     features: ['AI prospecting', 'Lead scoring', 'Email sequences', 'CRM integration', 'Data enrichment', 'Follow-up automation', 'Lead nurturing', 'Conversion tracking'],;
     benefits: ['5x more leads', 'Higher quality prospects', 'Automated nurturing', 'Better conversion'],;
-    link: '/ai-lead-generation';
+    link: '/ai-lead-generation'
     popular: true,;
     category: 'Marketing',;
-    rating: 4.8;
+    rating: 4.8
     users: '18,000+',;}
     freeTrial: '7 days'}
 ];
-;
-export const aiServices = [;
-  {;
-    title: 'Machine Learning Solutions',;
-    description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',;
-    icon: Brain,;
-    price: '$1,500/month',;
-    originalPrice: '$2,000/month',;
-    features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization', 'Real-time Inference', 'Model Versioning'],;
-    benefits: ['40% better predictions', 'Reduced development time', 'Scalable solutions', 'ROI tracking'],;
-    link: '/machine-learning';
-    popular: true,;
-    category: 'AI Development';
-    rating: 4.9;
+
+export const aiServices = [
+  {
+    title: 'Machine Learning Solutions',
+    description: 'Custom ML models for predictive analytics, decision-making, and intelligent automation. Trusted by Fortune 500 companies.',
+    icon: Brain,
+    price: '$1,500/month',
+    originalPrice: '$2,000/month',
+    features: ['Predictive Analytics', 'Custom Model Development', 'Data Pipeline Setup', 'Model Monitoring', 'A/B Testing', 'Performance Optimization', 'Real-time Inference', 'Model Versioning'],
+    benefits: ['40% better predictions', 'Reduced development time', 'Scalable solutions', 'ROI tracking'],
+    link: '/machine-learning'
+    popular: true,
+    category: 'AI Development'
+    rating: 4.9
     users: '500+',;}
     freeTrial: '30 days'},;
   {;
@@ -285,10 +284,10 @@ export const aiServices = [;
     originalPrice: '$3,000/month',;
     features: ['Threat Detection', 'Behavioral Analysis', 'Automated Response', 'Security Monitoring', 'Incident Response', 'Vulnerability Assessment', 'Compliance Reporting', '24/7 Monitoring'],;
     benefits: ['99.9% threat detection', 'Zero false positives', 'Automated response', 'Compliance ready'],;
-    link: '/ai-cybersecurity';
+    link: '/ai-cybersecurity'
     popular: true,;
-    category: 'Security';
-    rating: 4.8;
+    category: 'Security'
+    rating: 4.8
     users: '300+',;}
     freeTrial: '30 days'},;
   {;
@@ -299,10 +298,10 @@ export const aiServices = [;
     originalPrice: '$5,000/month',;
     features: ['Diagnostic Assistance', 'Patient Monitoring', 'Treatment Optimization', 'Medical Imaging', 'Drug Discovery', 'Clinical Trials', 'Patient Records', 'Telemedicine'],;
     benefits: ['30% faster diagnosis', 'Better patient outcomes', 'Reduced errors', 'Cost savings'],;
-    link: '/ai-healthcare';
+    link: '/ai-healthcare'
     popular: true,;
-    category: 'Healthcare';
-    rating: 4.9;
+    category: 'Healthcare'
+    rating: 4.9
     users: '200+',;}
     freeTrial: '30 days'},;
   {;
@@ -313,10 +312,10 @@ export const aiServices = [;
     originalPrice: '$2,500/month',;
     features: ['Portfolio Optimization', 'Risk Assessment', 'Automated Trading', 'Market Analysis', 'Tax Optimization', 'Retirement Planning', 'Insurance Analysis', 'Real-time Alerts'],;
     benefits: ['25% better returns', 'Risk reduction', 'Automated management', 'Tax optimization'],;
-    link: '/ai-financial-advisor';
+    link: '/ai-financial-advisor'
     popular: true,;
-    category: 'Finance';
-    rating: 4.7;
+    category: 'Finance'
+    rating: 4.7
     users: '400+',;}
     freeTrial: '30 days'},;
   {;
@@ -327,10 +326,10 @@ export const aiServices = [;
     originalPrice: '$3,500/month',;
     features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Quality Control', 'Cost Optimization', 'Risk Management', 'Sustainability Tracking'],;
     benefits: ['35% cost reduction', '99% on-time delivery', 'Better inventory management', 'Sustainability goals'],;
-    link: '/ai-supply-chain';
+    link: '/ai-supply-chain'
     popular: true,;
-    category: 'Logistics';
-    rating: 4.8;
+    category: 'Logistics'
+    rating: 4.8
     users: '250+',;}
     freeTrial: '30 days'},;
   {;
@@ -341,10 +340,10 @@ export const aiServices = [;
     originalPrice: '$2,800/month',;
     features: ['Contract Analysis', 'Case Research', 'Document Automation', 'Legal Research', 'Compliance Checking', 'Risk Assessment', 'Due Diligence', 'Litigation Support'],;
     benefits: ['80% faster research', 'Better accuracy', 'Cost reduction', 'Risk mitigation'],;
-    link: '/ai-legal-assistant';
+    link: '/ai-legal-assistant'
     popular: true,;
-    category: 'Legal';
-    rating: 4.6;
+    category: 'Legal'
+    rating: 4.6
     users: '150+',;}
     freeTrial: '30 days'},;
   {;
@@ -355,10 +354,10 @@ export const aiServices = [;
     originalPrice: '$4,200/month',;
     features: ['Predictive Maintenance', 'Quality Control', 'Production Optimization', 'Supply Chain Integration', 'Energy Management', 'Safety Monitoring', 'Performance Analytics', 'IoT Integration'],;
     benefits: ['40% efficiency increase', 'Zero downtime', 'Better quality', 'Cost savings'],;
-    link: '/ai-manufacturing';
+    link: '/ai-manufacturing'
     popular: true,;
-    category: 'Manufacturing';
-    rating: 4.9;
+    category: 'Manufacturing'
+    rating: 4.9
     users: '180+',;}
     freeTrial: '30 days'},;
   {;
@@ -369,27 +368,27 @@ export const aiServices = [;
     originalPrice: '$1,800/month',;
     features: ['Adaptive Learning', 'Student Analytics', 'Automated Assessment', 'Content Generation', 'Progress Tracking', 'Parent Communication', 'Teacher Tools', 'Accessibility Features'],;
     benefits: ['50% better learning outcomes', 'Personalized education', 'Teacher efficiency', 'Student engagement'],;
-    link: '/ai-education';
+    link: '/ai-education'
     popular: true,;
-    category: 'Education';
-    rating: 4.7;
+    category: 'Education'
+    rating: 4.7
     users: '600+',;}
     freeTrial: '30 days'}
 ];
-;
-export const itServices = [;
-  {;
-    title: 'Cloud Migration Services',;
-    description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',;
-    icon: Cloud,;
-    price: '$2,000/month',;
-    originalPrice: '$3,000/month',;
-    features: ['Zero Downtime Migration', 'Performance Optimization', 'Security Hardening', 'Cost Optimization', 'Disaster Recovery', 'Monitoring Setup', 'Training', '24/7 Support'],;
-    benefits: ['Zero downtime', 'Better performance', 'Cost savings', 'Enhanced security'],;
-    link: '/cloud-migration';
-    popular: true,;
-    category: 'Cloud Services';
-    rating: 4.8;
+
+export const itServices = [
+  {
+    title: 'Cloud Migration Services',
+    description: 'Seamless cloud migration with zero downtime and optimized performance. Migrate to the cloud with confidence.',
+    icon: Cloud,
+    price: '$2,000/month',
+    originalPrice: '$3,000/month',
+    features: ['Zero Downtime Migration', 'Performance Optimization', 'Security Hardening', 'Cost Optimization', 'Disaster Recovery', 'Monitoring Setup', 'Training', '24/7 Support'],
+    benefits: ['Zero downtime', 'Better performance', 'Cost savings', 'Enhanced security'],
+    link: '/cloud-migration'
+    popular: true,
+    category: 'Cloud Services'
+    rating: 4.8
     users: '600+',;}
     freeTrial: '30 days'},;
   {;
@@ -400,10 +399,10 @@ export const itServices = [;
     originalPrice: '$7,500/month',;
     features: ['High Availability Setup', 'Load Balancing', 'Auto-scaling', 'Disaster Recovery', 'Security Hardening', 'Performance Monitoring', 'Backup Solutions', '24/7 Support'],;
     benefits: ['99.99% uptime', 'Unlimited scalability', 'Enterprise security', 'Cost optimization'],;
-    link: '/enterprise-infrastructure';
+    link: '/enterprise-infrastructure'
     popular: true,;
-    category: 'Infrastructure';
-    rating: 4.9;
+    category: 'Infrastructure'
+    rating: 4.9
     users: '100+',;}
     freeTrial: '30 days'},;
   {;
@@ -414,10 +413,10 @@ export const itServices = [;
     originalPrice: '$3,500/month',;
     features: ['CI/CD Pipelines', 'Infrastructure as Code', 'Container Orchestration', 'Monitoring & Alerting', 'Security Scanning', 'Automated Testing', 'Deployment Automation', 'Team Training'],;
     benefits: ['10x faster deployments', 'Zero downtime', 'Better quality', 'Team productivity'],;
-    link: '/devops-automation';
+    link: '/devops-automation'
     popular: true,;
-    category: 'DevOps';
-    rating: 4.8;
+    category: 'DevOps'
+    rating: 4.8
     users: '400+',;}
     freeTrial: '30 days'},;
   {;
@@ -428,10 +427,10 @@ export const itServices = [;
     originalPrice: '$2,500/month',;
     features: ['Performance Tuning', 'Backup & Recovery', 'High Availability', 'Security Hardening', 'Monitoring', 'Query Optimization', 'Index Management', 'Capacity Planning'],;
     benefits: ['50% performance improvement', 'Zero data loss', 'Better security', 'Cost reduction'],;
-    link: '/database-management';
+    link: '/database-management'
     popular: true,;
-    category: 'Database';
-    rating: 4.7;
+    category: 'Database'
+    rating: 4.7
     users: '350+',;}
     freeTrial: '30 days'},;
   {;
@@ -442,10 +441,10 @@ export const itServices = [;
     originalPrice: '$2,200/month',;
     features: ['Next-Gen Firewalls', 'Intrusion Detection', 'Threat Prevention', 'VPN Solutions', 'Network Monitoring', 'Access Control', 'Compliance Reporting', '24/7 Monitoring'],;
     benefits: ['99.9% threat prevention', 'Zero breaches', 'Compliance ready', 'Better performance'],;
-    link: '/network-security';
+    link: '/network-security'
     popular: true,;
-    category: 'Security';
-    rating: 4.9;
+    category: 'Security'
+    rating: 4.9
     users: '500+',;}
     freeTrial: '30 days'},;
   {;
@@ -456,27 +455,27 @@ export const itServices = [;
     originalPrice: '$4,500/month',;
     features: ['Digital Transformation', 'Technology Roadmaps', 'Implementation Planning', 'Vendor Management', 'Cost Optimization', 'Risk Assessment', 'Compliance Planning', 'Change Management'],;
     benefits: ['Better IT strategy', 'Cost optimization', 'Risk reduction', 'Competitive advantage'],;
-    link: '/it-consulting';
+    link: '/it-consulting'
     popular: true,;
-    category: 'Consulting';
-    rating: 4.8;
+    category: 'Consulting'
+    rating: 4.8
     users: '200+',;}
     freeTrial: '30 days'}
 ];
-;
-export const specializedServices = [;
-  {;
-    title: 'Quantum Computing Solutions',;
-    description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',;
-    icon: Cpu,;
-    price: '$5,000/month',;
-    originalPrice: '$7,500/month',;
-    features: ['Quantum Algorithms', 'Optimization Problems', 'Research & Development', 'Quantum Simulation', 'Cryptography', 'Machine Learning', 'Consulting', 'Training'],;
-    benefits: ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-ready technology'],;
-    link: '/quantum-computing';
-    popular: true,;
-    category: 'Quantum';
-    rating: 4.9;
+
+export const specializedServices = [
+  {
+    title: 'Quantum Computing Solutions',
+    description: 'Cutting-edge quantum computing with quantum algorithms, optimization, and research. Solve complex problems with quantum power.',
+    icon: Cpu,
+    price: '$5,000/month',
+    originalPrice: '$7,500/month',
+    features: ['Quantum Algorithms', 'Optimization Problems', 'Research & Development', 'Quantum Simulation', 'Cryptography', 'Machine Learning', 'Consulting', 'Training'],
+    benefits: ['Exponential speedup', 'Complex problem solving', 'Competitive advantage', 'Future-ready technology'],
+    link: '/quantum-computing'
+    popular: true,
+    category: 'Quantum'
+    rating: 4.9
     users: '50+',;}
     freeTrial: '60 days'},;
   {;
@@ -487,10 +486,10 @@ export const specializedServices = [;
     originalPrice: '$6,000/month',;
     features: ['Robotics Development', 'Drone Technology', 'Self-Driving Systems', 'Sensor Integration', 'AI Integration', 'Safety Systems', 'Testing', 'Deployment'],;
     benefits: ['Cutting-edge technology', 'Automation solutions', 'Safety first', 'Innovation leadership'],;
-    link: '/autonomous-systems';
+    link: '/autonomous-systems'
     popular: true,;
-    category: 'Autonomous';
-    rating: 4.8;
+    category: 'Autonomous'
+    rating: 4.8
     users: '100+',;}
     freeTrial: '30 days'},;
   {;
@@ -501,10 +500,10 @@ export const specializedServices = [;
     originalPrice: '$3,500/month',;
     features: ['Smart Contracts', 'DeFi Development', 'NFT Solutions', 'Web3 Integration', 'Token Development', 'Security Audits', 'Consulting', 'Training'],;
     benefits: ['Decentralized solutions', 'Security & transparency', 'Future-ready technology', 'Innovation leadership'],;
-    link: '/blockchain';
+    link: '/blockchain'
     popular: true,;
-    category: 'Blockchain';
-    rating: 4.7;
+    category: 'Blockchain'
+    rating: 4.7
     users: '300+',;}
     freeTrial: '30 days'},;
   {;
@@ -515,33 +514,33 @@ export const specializedServices = [;
     originalPrice: '$2,500/month',;
     features: ['IoT Development', 'Edge Computing', 'Sensor Networks', 'Real-time Processing', 'Data Analytics', 'Security', 'Integration', 'Monitoring'],;
     benefits: ['Connected solutions', 'Real-time insights', 'Edge efficiency', 'Scalable architecture'],;
-    link: '/iot-edge';
+    link: '/iot-edge'
     popular: true,;
-    category: 'IoT';
-    rating: 4.8;
+    category: 'IoT'
+    rating: 4.8
     users: '400+',;}
     freeTrial: '30 days'}
 ];
-export interface Service {;
-  id: string,;
-  name: string,;
-  category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech';
-  subcategory: string,;
-  description: string,;
-  features: string[];
-  pricing: {;
+export interface Service {
+  id: string,
+  name: string,
+  category: 'ai' | 'it' | 'micro-saas' | 'emerging-tech'
+  subcategory: string,
+  description: string,
+  features: string[]
+  pricing: {
     starting: number,;
     currency: string,;
-    period: 'month' | 'year' | 'one-time';
+    period: 'month' | 'year' | 'one-time'
     custom?: boolean;}
   };
-  benefits: string[];
-  useCases: string[];
+  benefits: string[]
+  useCases: string[]
   icon: string,;
   popular: boolean,;
-  new?: boolean;
+  new?: boolean
   path: string,;
-  contact: {;
+  contact: {
     phone: string,;
     email: string,;
     demo: string,;}
@@ -552,50 +551,50 @@ export interface Service {;
     currency: string,;}
   };
 }
-;
-export const services: Service[] = [;
-  // AI Services;
-  {;
-    id: 'ai-project-manager',;
-    name: 'AI Project Manager Pro',;
-    category: 'ai',;
-    subcategory: 'Project Management',;
-    description: 'Intelligent project management with AI-powered scheduling, resource allocation, and risk prediction.',;
-    features: [;
+
+export const services: Service[] = [
+  // AI Services
+  {
+    id: 'ai-project-manager',
+    name: 'AI Project Manager Pro',
+    category: 'ai',
+    subcategory: 'Project Management',
+    description: 'Intelligent project management with AI-powered scheduling, resource allocation, and risk prediction.',
+    features: [
       'AI-powered task prioritization',;
       'Automated resource allocation',;
       'Risk prediction and mitigation',;
       'Real-time progress tracking',;
       'Team collaboration tools',;
-      'Integration with 50+ tools';
+      'Integration with 50+ tools'
     ],;
-    pricing: {;
+    pricing: {
       starting: 299,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '40% faster project delivery',;
       '25% reduction in project costs',;
       '95% accuracy in deadline prediction',;
-      'Real-time risk assessment';
+      'Real-time risk assessment'
     ],;
-    useCases: [;
+    useCases: [
       'Software development projects',;
       'Marketing campaign management',;
       'Construction project oversight',;
-      'Event planning and execution';
+      'Event planning and execution'
     ],;
     icon: '📊',;
     popular: true,;
     new: true,;
     path: '/ai-project-manager',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-project-manager';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 200,;
       max: 500,;
       currency: 'USD';}
@@ -607,40 +606,40 @@ export const services: Service[] = [;
     category: 'ai',;
     subcategory: 'Customer Service',;
     description: '24/7 AI-powered customer support with natural language processing and multi-channel support.',;
-    features: [;
+    features: [
       'Natural language understanding',;
       'Multi-language support (50+ languages)',;
       'Integration with CRM systems',;
       'Sentiment analysis',;
       'Escalation to human agents',;
-      'Analytics and reporting';
+      'Analytics and reporting'
     ],;
-    pricing: {;
+    pricing: {
       starting: 199,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '80% reduction in response time',;
       '24/7 availability',;
       '90% customer satisfaction rate',;
-      '60% cost reduction vs human agents';
+      '60% cost reduction vs human agents'
     ],;
-    useCases: [;
+    useCases: [
       'E-commerce customer support',;
       'SaaS product support',;
       'Healthcare patient inquiries',;
-      'Financial services support';
+      'Financial services support'
     ],;
     icon: '🤖',;
     popular: true,;
     path: '/ai-customer-support-bot',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-customer-support-bot';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 150,;
       max: 400,;
       currency: 'USD';}
@@ -652,40 +651,40 @@ export const services: Service[] = [;
     category: 'ai',;
     subcategory: 'Content Creation',;
     description: 'Advanced AI-powered content creation for blogs, social media, emails, and marketing materials.',;
-    features: [;
+    features: [
       'Multi-format content generation',;
       'SEO optimization',;
       'Brand voice consistency',;
       'Plagiarism detection',;
       'Content scheduling',;
-      'Performance analytics';
+      'Performance analytics'
     ],;
-    pricing: {;
+    pricing: {
       starting: 149,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '10x faster content creation',;
       'Consistent brand messaging',;
       'SEO-optimized content',;
-      'Multi-language support';
+      'Multi-language support'
     ],;
-    useCases: [;
+    useCases: [
       'Blog content creation',;
       'Social media marketing',;
       'Email marketing campaigns',;
-      'Product descriptions';
+      'Product descriptions'
     ],;
     icon: '✍️',;
     popular: true,;
     path: '/ai-content-generation',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-content-generator';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 99,;
       max: 300,;
       currency: 'USD';}
@@ -697,40 +696,40 @@ export const services: Service[] = [;
     category: 'ai',;
     subcategory: 'Analytics',;
     description: 'Advanced AI-powered data analytics with predictive insights and automated reporting.',;
-    features: [;
+    features: [
       'Real-time data processing',;
       'Predictive analytics',;
       'Automated report generation',;
       'Custom dashboard creation',;
       'Data visualization',;
-      'Machine learning models';
+      'Machine learning models'
     ],;
-    pricing: {;
+    pricing: {
       starting: 499,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '50% faster insights generation',;
       'Predictive accuracy up to 95%',;
       'Automated reporting saves 20 hours/week',;
-      'Real-time decision making';
+      'Real-time decision making'
     ],;
-    useCases: [;
+    useCases: [
       'Business intelligence',;
       'Sales forecasting',;
       'Customer behavior analysis',;
-      'Financial risk assessment';
+      'Financial risk assessment'
     ],;
     icon: '📈',;
     popular: true,;
     path: '/ai-data-analytics',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-data-analytics';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 300,;
       max: 1000,;
       currency: 'USD';}
@@ -742,86 +741,86 @@ export const services: Service[] = [;
     category: 'ai',;
     subcategory: 'Security',;
     description: 'Advanced AI-powered cybersecurity with threat detection, prevention, and response automation.',;
-    features: [;
+    features: [
       'Real-time threat detection',;
       'Behavioral analysis',;
       'Automated incident response',;
       'Vulnerability assessment',;
       'Compliance monitoring',;
-      'Security training';
+      'Security training'
     ],;
-    pricing: {;
+    pricing: {
       starting: 799,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '99.9% threat detection accuracy',;
       '50% faster incident response',;
       'Automated compliance reporting',;
-      '24/7 security monitoring';
+      '24/7 security monitoring'
     ],;
-    useCases: [;
+    useCases: [
       'Enterprise security',;
       'Financial services',;
       'Healthcare data protection',;
-      'Government agencies';
+      'Government agencies'
     ],;
     icon: '🔒',;
     popular: true,;
     path: '/ai-cybersecurity',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-cybersecurity';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 500,;
       max: 2000,;
       currency: 'USD';}
     }
   },;
-  // Micro SAAS Services;
+  // Micro SAAS Services
   {;
     id: 'ai-social-media-manager',;
     name: 'AI Social Media Manager',;
     category: 'micro-saas',;
     subcategory: 'Social Media',;
     description: 'Automated social media management with AI-powered content creation and scheduling.',;
-    features: [;
+    features: [
       'Multi-platform posting',;
       'AI content suggestions',;
       'Optimal timing analysis',;
       'Engagement tracking',;
       'Hashtag optimization',;
-      'Competitor analysis';
+      'Competitor analysis'
     ],;
-    pricing: {;
+    pricing: {
       starting: 79,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '3x more engagement',;
       'Save 15 hours/week',;
       'Consistent posting schedule',;
-      'Data-driven content strategy';
+      'Data-driven content strategy'
     ],;
-    useCases: [;
+    useCases: [
       'Small business marketing',;
       'Personal branding',;
       'E-commerce promotion',;
-      'Content creators';
+      'Content creators'
     ],;
     icon: '📱',;
     popular: true,;
     path: '/ai-social-media-manager',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-social-media-manager';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 50,;
       max: 150,;
       currency: 'USD';}
@@ -833,40 +832,40 @@ export const services: Service[] = [;
     category: 'micro-saas',;
     subcategory: 'Email Marketing',;
     description: 'Intelligent email marketing with AI-powered segmentation, personalization, and automation.',;
-    features: [;
+    features: [
       'AI-powered segmentation',;
       'Personalized content',;
       'Send time optimization',;
       'A/B testing automation',;
       'Email template library',;
-      'Performance analytics';
+      'Performance analytics'
     ],;
-    pricing: {;
+    pricing: {
       starting: 99,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '40% higher open rates',;
       '60% increase in click-through rates',;
       'Automated campaign optimization',;
-      'Personalized customer journeys';
+      'Personalized customer journeys'
     ],;
-    useCases: [;
+    useCases: [
       'E-commerce marketing',;
       'Newsletter campaigns',;
       'Lead nurturing',;
-      'Customer retention';
+      'Customer retention'
     ],;
     icon: '📧',;
     popular: true,;
     path: '/ai-email-marketing',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-email-marketing';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 60,;
       max: 200,;
       currency: 'USD';}
@@ -878,40 +877,40 @@ export const services: Service[] = [;
     category: 'micro-saas',;
     subcategory: 'SEO',;
     description: 'AI-powered SEO optimization with keyword research, content analysis, and ranking tracking.',;
-    features: [;
+    features: [
       'AI keyword research',;
       'Content optimization suggestions',;
       'Competitor analysis',;
       'Ranking tracking',;
       'Technical SEO audit',;
-      'Link building recommendations';
+      'Link building recommendations'
     ],;
-    pricing: {;
+    pricing: {
       starting: 129,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '50% faster SEO results',;
       'Comprehensive keyword analysis',;
       'Automated optimization suggestions',;
-      'Competitive advantage insights';
+      'Competitive advantage insights'
     ],;
-    useCases: [;
+    useCases: [
       'Website optimization',;
       'Blog content SEO',;
       'E-commerce SEO',;
-      'Local business SEO';
+      'Local business SEO'
     ],;
     icon: '🎯',;
     popular: true,;
     path: '/ai-seo-optimizer',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-seo-optimizer';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 80,;
       max: 250,;
       currency: 'USD';}
@@ -923,40 +922,40 @@ export const services: Service[] = [;
     category: 'micro-saas',;
     subcategory: 'Finance',;
     description: 'Automated invoice generation with AI-powered data extraction and payment tracking.',;
-    features: [;
+    features: [
       'Automated invoice creation',;
       'AI data extraction',;
       'Payment tracking',;
       'Recurring billing',;
       'Multi-currency support',;
-      'Tax calculation';
+      'Tax calculation'
     ],;
-    pricing: {;
+    pricing: {
       starting: 49,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '90% time savings on invoicing',;
       'Reduced billing errors',;
       'Faster payment processing',;
-      'Professional invoice templates';
+      'Professional invoice templates'
     ],;
-    useCases: [;
+    useCases: [
       'Freelancer billing',;
       'Small business invoicing',;
       'Service-based businesses',;
-      'Contractor payments';
+      'Contractor payments'
     ],;
     icon: '💰',;
     popular: false,;
     path: '/ai-invoice-generator',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-invoice-generator';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 30,;
       max: 100,;
       currency: 'USD';}
@@ -968,86 +967,86 @@ export const services: Service[] = [;
     category: 'micro-saas',;
     subcategory: 'Productivity',;
     description: 'Intelligent time tracking with AI-powered productivity insights and automated reporting.',;
-    features: [;
+    features: [
       'Automatic time tracking',;
       'AI productivity insights',;
       'Project time allocation',;
       'Team collaboration',;
       'Detailed reporting',;
-      'Integration with 100+ tools';
+      'Integration with 100+ tools'
     ],;
-    pricing: {;
+    pricing: {
       starting: 39,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       'Accurate time tracking',;
       'Productivity optimization',;
       'Project profitability analysis',;
-      'Team performance insights';
+      'Team performance insights'
     ],;
-    useCases: [;
+    useCases: [
       'Freelancer time tracking',;
       'Team productivity monitoring',;
       'Project billing',;
-      'Remote work management';
+      'Remote work management'
     ],;
     icon: '⏰',;
     popular: false,;
     path: '/ai-time-tracker',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/ai-time-tracker';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 20,;
       max: 80,;
       currency: 'USD';}
     }
   },;
-  // IT Services;
+  // IT Services
   {;
     id: 'cloud-infrastructure',;
     name: 'Cloud Infrastructure Solutions',;
     category: 'it',;
     subcategory: 'Cloud Computing',;
     description: 'Enterprise-grade cloud infrastructure with 99.9% uptime guarantee and 24/7 support.',;
-    features: [;
+    features: [
       'Multi-cloud deployment',;
       'Auto-scaling capabilities',;
       'Disaster recovery',;
       'Security compliance',;
       'Performance monitoring',;
-      'Cost optimization';
+      'Cost optimization'
     ],;
-    pricing: {;
+    pricing: {
       starting: 999,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '99.9% uptime guarantee',;
       '50% cost reduction vs on-premise',;
       'Instant scalability',;
-      'Enhanced security';
+      'Enhanced security'
     ],;
-    useCases: [;
+    useCases: [
       'Enterprise applications',;
       'E-commerce platforms',;
       'Data analytics',;
-      'Web applications';
+      'Web applications'
     ],;
     icon: '☁️',;
     popular: true,;
     path: '/cloud-infrastructure',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/cloud-infrastructure';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 500,;
       max: 2000,;
       currency: 'USD';}
@@ -1059,40 +1058,40 @@ export const services: Service[] = [;
     category: 'it',;
     subcategory: 'Security',;
     description: 'Comprehensive cybersecurity solution with threat detection, prevention, and compliance.',;
-    features: [;
+    features: [
       'Network security monitoring',;
       'Endpoint protection',;
       'Email security',;
       'Web application firewall',;
       'Compliance reporting',;
-      'Incident response';
+      'Incident response'
     ],;
-    pricing: {;
+    pricing: {
       starting: 1299,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '360-degree security coverage',;
       'Compliance with industry standards',;
       '24/7 security monitoring',;
-      'Rapid threat response';
+      'Rapid threat response'
     ],;
-    useCases: [;
+    useCases: [
       'Enterprise security',;
       'Healthcare compliance',;
       'Financial services',;
-      'Government agencies';
+      'Government agencies'
     ],;
     icon: '🛡️',;
     popular: true,;
     path: '/cybersecurity-suite',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/cybersecurity-suite';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 800,;
       max: 3000,;
       currency: 'USD';}
@@ -1104,40 +1103,40 @@ export const services: Service[] = [;
     category: 'it',;
     subcategory: 'DevOps',;
     description: 'Complete DevOps automation with CI/CD pipelines, infrastructure as code, and monitoring.',;
-    features: [;
+    features: [
       'Automated CI/CD pipelines',;
       'Infrastructure as Code',;
       'Container orchestration',;
       'Monitoring and alerting',;
       'Security scanning',;
-      'Performance optimization';
+      'Performance optimization'
     ],;
-    pricing: {;
+    pricing: {
       starting: 799,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       '10x faster deployments',;
       'Reduced deployment errors',;
       'Automated testing',;
-      'Improved team productivity';
+      'Improved team productivity'
     ],;
-    useCases: [;
+    useCases: [
       'Software development',;
       'Microservices deployment',;
       'Cloud migration',;
-      'Application modernization';
+      'Application modernization'
     ],;
     icon: '🔄',;
     popular: true,;
     path: '/devops-automation',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/devops-automation';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 500,;
       max: 1500,;
       currency: 'USD';}
@@ -1149,88 +1148,88 @@ export const services: Service[] = [;
     category: 'it',;
     subcategory: 'Database',;
     description: 'Professional database management with optimization, backup, and performance tuning.',;
-    features: [;
+    features: [
       'Database optimization',;
       'Automated backups',;
       'Performance monitoring',;
       'Security hardening',;
       'Migration services',;
-      '24/7 support';
+      '24/7 support'
     ],;
-    pricing: {;
+    pricing: {
       starting: 599,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       'Improved database performance',;
       'Data security and compliance',;
       'Reduced downtime',;
-      'Expert database administration';
+      'Expert database administration'
     ],;
-    useCases: [;
+    useCases: [
       'Enterprise databases',;
       'E-commerce platforms',;
       'Data analytics',;
-      'Application databases';
+      'Application databases'
     ],;
     icon: '🗄️',;
     popular: false,;
     path: '/database-management',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/database-management';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 300,;
       max: 1200,;
       currency: 'USD';}
     }
   },;
-  // Emerging Technologies;
+  // Emerging Technologies
   {;
     id: 'quantum-computing',;
     name: 'Quantum Computing Solutions',;
     category: 'emerging-tech',;
     subcategory: 'Quantum',;
     description: 'Next-generation quantum computing capabilities for complex problem solving and optimization.',;
-    features: [;
+    features: [
       'Quantum algorithm development',;
       'Optimization problems',;
       'Cryptography solutions',;
       'Simulation capabilities',;
       'Research collaboration',;
-      'Custom quantum applications';
+      'Custom quantum applications'
     ],;
-    pricing: {;
+    pricing: {
       starting: 5000,;
       currency: 'USD',;
       period: 'month',;
       custom: true;}
     },;
-    benefits: [;
+    benefits: [
       'Exponential computational power',;
       'Revolutionary problem solving',;
       'Future-proof technology',;
-      'Competitive advantage';
+      'Competitive advantage'
     ],;
-    useCases: [;
+    useCases: [
       'Drug discovery',;
       'Financial modeling',;
       'Cryptography',;
-      'Optimization problems';
+      'Optimization problems'
     ],;
     icon: '⚛️',;
     popular: false,;
     new: true,;
     path: '/quantum-computing',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/quantum-computing';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 3000,;
       max: 10000,;
       currency: 'USD';}
@@ -1242,42 +1241,42 @@ export const services: Service[] = [;
     category: 'emerging-tech',;
     subcategory: 'Blockchain',;
     description: 'Comprehensive blockchain solutions including smart contracts, DeFi, and NFT platforms.',;
-    features: [;
+    features: [
       'Smart contract development',;
       'DeFi platform creation',;
       'NFT marketplace development',;
       'Blockchain integration',;
       'Token development',;
-      'Security auditing';
+      'Security auditing'
     ],;
-    pricing: {;
+    pricing: {
       starting: 2999,;
       currency: 'USD',;
       period: 'month',;
       custom: true;}
     },;
-    benefits: [;
+    benefits: [
       'Decentralized solutions',;
       'Enhanced security',;
       'Transparency and trust',;
-      'Future of digital assets';
+      'Future of digital assets'
     ],;
-    useCases: [;
+    useCases: [
       'DeFi applications',;
       'NFT marketplaces',;
       'Supply chain tracking',;
-      'Digital identity';
+      'Digital identity'
     ],;
     icon: '⛓️',;
     popular: false,;
     new: true,;
     path: '/blockchain-solutions',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/blockchain-solutions';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 2000,;
       max: 8000,;
       currency: 'USD';}
@@ -1289,54 +1288,54 @@ export const services: Service[] = [;
     category: 'emerging-tech',;
     subcategory: 'IoT',;
     description: 'Complete IoT and edge computing solution with real-time data processing and analytics.',;
-    features: [;
+    features: [
       'IoT device management',;
       'Edge computing infrastructure',;
       'Real-time data processing',;
       'Predictive maintenance',;
       'Device security',;
-      'Analytics dashboard';
+      'Analytics dashboard'
     ],;
-    pricing: {;
+    pricing: {
       starting: 1299,;
       currency: 'USD',;
       period: 'month';}
     },;
-    benefits: [;
+    benefits: [
       'Real-time data processing',;
       'Reduced latency',;
       'Cost-effective data management',;
-      'Scalable IoT solutions';
+      'Scalable IoT solutions'
     ],;
-    useCases: [;
+    useCases: [
       'Smart manufacturing',;
       'Smart cities',;
       'Healthcare monitoring',;
-      'Agriculture automation';
+      'Agriculture automation'
     ],;
     icon: '🌐',;
     popular: false,;
     path: '/iot-edge-computing',;
-    contact: {;
+    contact: {
       phone: '+1 (302) 464-0950',;
       email: 'kleber@ziontechgroup.com',;
       demo: 'https://ziontechgroup.com/demo/iot-edge-computing';}
     },;
-    marketPrice: {;
+    marketPrice: {
       min: 800,;
       max: 2500,;
       currency: 'USD';}
     }
   }
 ];
-;
-export const serviceCategories = [;
-  {;
-    id: 'ai',;
-    name: 'AI Services',;
-    description: 'Advanced artificial intelligence solutions',;
-    icon: '🤖',;
-    color: 'text-purple-400',;
+
+export const serviceCategories = [
+  {
+    id: 'ai',
+    name: 'AI Services',
+    description: 'Advanced artificial intelligence solutions',
+    icon: '🤖',
+    color: 'text-purple-400',
     bgColor: 'bg-purple-500/10';}
   },;
   {;
@@ -1363,13 +1362,11 @@ export const serviceCategories = [;
     color: 'text-pink-400',;
     bgColor: 'bg-pink-500/10';}
   }
-];
-;
-export const contactInfo = {;
-  phone: '+1 (302) 464-0950',;
-  email: 'kleber@ziontechgroup.com',;
-  address: '364 E Main St STE 1008, Middletown, DE 19709',;
-  website: 'https://ziontechgroup.com',;
+]
+export const contactInfo = {
+  phone: '+1 (302) 464-0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008, Middletown, DE 19709',
+  website: 'https://ziontechgroup.com',
   hours: 'Mon-Fri: 9AM-6PM EST';}
 };
-;
