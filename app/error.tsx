@@ -40,8 +40,8 @@ export default function Error({)}
 }: {
   error: Error & { digest?: string };
   reset: () => void;
-}) {
-  useEffect(() => {
+}) {}
+  useEffect(() => {}
     // Log the error to an error reporting service
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
     console.error(error);

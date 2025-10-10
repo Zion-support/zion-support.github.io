@@ -559,7 +559,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Track scroll depth
     let maxScroll = 0;
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', () => {}
       const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
       if (<<<scrollPercent>maxScroll</scrollPercent></scrollPercent>) {
         maxScroll = scrollPercent;
@@ -575,7 +575,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     });
 
     // Track clicks on important elements
-    document.addEventListener('click', (event) => {
+    document.addEventListener('click', (event) => {}
       const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
       
