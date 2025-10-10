@@ -32,6 +32,33 @@ const CareersPage: React.FC = () => {
       experience: '3+ years',
       description: 'Extract insights from complex datasets to drive business decisions.',
       requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']
+    },
+    {
+      title: 'DevOps Engineer',
+      department: 'Infrastructure',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Build and maintain CI/CD pipelines and cloud infrastructure.',
+      requirements: ['Docker, Kubernetes, AWS', '4+ years DevOps experience', 'Infrastructure as Code']
+    },
+    {
+      title: 'Frontend Developer',
+      department: 'Product',
+      location: 'Austin, TX',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Create beautiful and responsive user interfaces for our AI-powered applications.',
+      requirements: ['React, TypeScript, Tailwind CSS', '3+ years frontend experience', 'UI/UX design skills']
+    },
+    {
+      title: 'Product Manager',
+      department: 'Product',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Lead product strategy and roadmap for our AI and cloud solutions.',
+      requirements: ['Product management experience', 'AI/Cloud domain knowledge', 'Agile methodologies']
     }
   ];
 
@@ -42,7 +69,10 @@ const CareersPage: React.FC = () => {
     'Professional development budget',
     'Top-tier equipment and tools',
     'Team building events',
-    'Career growth opportunities'
+    'Career growth opportunities',
+    '401(k) with company matching',
+    'Unlimited PTO',
+    'Remote work support'
   ];
 
   const values = [
@@ -92,7 +122,7 @@ const CareersPage: React.FC = () => {
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {openPositions.map((position, index) => (
               <div
                 key={index}
@@ -113,7 +143,6 @@ const CareersPage: React.FC = () => {
                     <span>{position.type}</span>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <p className="text-gray-300 mb-4">{position.description}</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
@@ -132,10 +161,6 @@ const CareersPage: React.FC = () => {
                 </button>
               </div>
             ))}
-=======
-              ))}
-            </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
           </div>
         </div>
       </section>
