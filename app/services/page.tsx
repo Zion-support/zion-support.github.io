@@ -13,7 +13,9 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Star,
+  Cpu
 } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -22,43 +24,107 @@ const ServicesPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
+      description: 'Comprehensive artificial intelligence solutions to automate and optimize your business processes with cutting-edge machine learning and deep learning technologies.',
+      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting', 'Custom AI Development', 'Model Training', 'API Integration'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      marketPrice: '$2,500/month',
+      freeTrial: '30 days',
+      rating: 4.9,
+      reviews: 1247,
+      users: 'Up to 100 users'
     },
     {
       icon: Brain,
       title: 'AI Marketing Automation',
-      description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
-      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
+      description: 'Revolutionary AI-powered marketing automation platform that delivers personalized campaigns, intelligent optimization, and unprecedented ROI through advanced machine learning algorithms.',
+      features: ['Campaign Automation', 'AI Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel Integration', 'Customer Segmentation', 'Predictive Analytics', 'Real-time Optimization'],
       price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      marketPrice: '$499/month',
+      freeTrial: '14 days',
+      rating: 4.8,
+      reviews: 892,
+      users: 'Up to 50,000 contacts'
     },
     {
       icon: Brain,
       title: 'AI Customer Support',
-      description: 'Intelligent customer support with chatbots, sentiment analysis, and automated ticket routing.',
-      features: ['AI Chatbots', 'Sentiment Analysis', 'Ticket Routing', 'Knowledge Base', '24/7 Support'],
+      description: 'Intelligent customer support system with advanced chatbots, sentiment analysis, automated ticket routing, and 24/7 multilingual support capabilities.',
+      features: ['AI Chatbots', 'Sentiment Analysis', 'Automated Ticket Routing', 'Knowledge Base', '24/7 Support', 'Multi-language Support', 'Voice Recognition', 'Escalation Management'],
       price: 'Starting at $199/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      marketPrice: '$399/month',
+      freeTrial: '14 days',
+      rating: 4.7,
+      reviews: 567,
+      users: 'Up to 1,000 tickets/month'
     },
     {
       icon: Brain,
       title: 'AI Data Analytics',
-      description: 'Transform your data into actionable insights with AI-powered analytics and predictive modeling.',
-      features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards', 'ML Models'],
+      description: 'Transform your data into actionable insights with AI-powered analytics, predictive modeling, and real-time business intelligence dashboards.',
+      features: ['Predictive Analytics', 'Data Visualization', 'Real-time Insights', 'Custom Dashboards', 'ML Models', 'Data Mining', 'Statistical Analysis', 'Automated Reporting'],
       price: 'Starting at $399/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      marketPrice: '$699/month',
+      freeTrial: '14 days',
+      rating: 4.8,
+      reviews: 743,
+      users: 'Up to 1TB data processing'
     },
     {
       icon: Brain,
       title: 'AI Content Generation',
-      description: 'Create high-quality content at scale with AI-powered writing, image generation, and video production.',
-      features: ['Content Writing', 'Image Generation', 'Video Creation', 'SEO Optimization', 'Multi-language'],
+      description: 'Create high-quality content at scale with AI-powered writing, image generation, video production, and multi-language support.',
+      features: ['Content Writing', 'Image Generation', 'Video Creation', 'SEO Optimization', 'Multi-language', 'Brand Voice Training', 'Content Planning', 'Plagiarism Detection'],
       price: 'Starting at $149/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      marketPrice: '$299/month',
+      freeTrial: '7 days',
+      rating: 4.6,
+      reviews: 1234,
+      users: 'Up to 1,000 content pieces/month'
+    },
+    {
+      icon: Brain,
+      title: 'AI Healthcare Solutions',
+      description: 'HIPAA-compliant AI solutions for medical imaging, drug discovery, patient care optimization, and clinical decision support.',
+      features: ['Medical Imaging AI', 'Drug Discovery', 'Patient Analytics', 'Diagnostic Support', 'HIPAA Compliance', 'Clinical Trials', 'Electronic Health Records', 'Telemedicine'],
+      price: 'Starting at $1,999/month',
+      category: 'AI Services',
+      marketPrice: '$3,999/month',
+      freeTrial: '30 days',
+      rating: 4.9,
+      reviews: 234,
+      users: 'Up to 1,000 patients'
+    },
+    {
+      icon: Brain,
+      title: 'AI Financial Services',
+      description: 'Advanced AI solutions for fraud detection, risk assessment, algorithmic trading, and financial compliance automation.',
+      features: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading', 'Credit Scoring', 'Compliance Automation', 'Portfolio Optimization', 'Market Analysis', 'Regulatory Reporting'],
+      price: 'Starting at $1,499/month',
+      category: 'AI Services',
+      marketPrice: '$2,999/month',
+      freeTrial: '14 days',
+      rating: 4.8,
+      reviews: 456,
+      users: 'Up to 10,000 transactions/month'
+    },
+    {
+      icon: Brain,
+      title: 'AI E-commerce Solutions',
+      description: 'Intelligent e-commerce platform with recommendation engines, dynamic pricing, inventory optimization, and customer behavior analysis.',
+      features: ['Recommendation Engine', 'Dynamic Pricing', 'Inventory Optimization', 'Customer Insights', 'Sales Forecasting', 'Personalization', 'Search Optimization', 'Conversion Analytics'],
+      price: 'Starting at $799/month',
+      category: 'AI Services',
+      marketPrice: '$1,299/month',
+      freeTrial: '14 days',
+      rating: 4.7,
+      reviews: 567,
+      users: 'Up to 10,000 products'
     },
     {
       icon: Brain,
@@ -89,19 +155,29 @@ const ServicesPage: React.FC = () => {
     {
       icon: Cloud,
       title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for enhanced performance and reliability.',
-      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud'],
+      description: 'Comprehensive cloud infrastructure and migration services with 99.9% uptime guarantee, auto-scaling, and multi-cloud support for enhanced performance and reliability.',
+      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud Strategy', 'Cost Optimization', 'Security Compliance', '24/7 Monitoring'],
       price: 'Starting at $1,299/month',
       category: 'Cloud Services',
-      popular: true
+      popular: true,
+      marketPrice: '$2,199/month',
+      freeTrial: '30 days',
+      rating: 4.8,
+      reviews: 892,
+      users: 'Unlimited resources'
     },
     {
       icon: Cloud,
       title: 'Cloud Migration',
-      description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime and data integrity.',
-      features: ['Zero Downtime', 'Data Integrity', 'Cost Optimization', 'Security Compliance', '24/7 Support'],
+      description: 'Seamless migration to AWS, Azure, or Google Cloud with zero downtime, data integrity, and comprehensive testing and validation.',
+      features: ['Zero Downtime Migration', 'Data Integrity Validation', 'Cost Optimization', 'Security Compliance', '24/7 Support', 'Performance Testing', 'Rollback Planning', 'Documentation'],
       price: 'Starting at $2,999/project',
-      category: 'Cloud Services'
+      category: 'Cloud Services',
+      marketPrice: '$4,999/project',
+      freeTrial: 'Assessment included',
+      rating: 4.9,
+      reviews: 234,
+      users: 'Custom scope'
     },
     {
       icon: Cloud,
@@ -262,10 +338,15 @@ const ServicesPage: React.FC = () => {
     {
       icon: Database,
       title: 'IT Infrastructure',
-      description: 'Complete IT infrastructure setup and management for enterprise environments.',
-      features: ['Server Setup', 'Network Configuration', 'Security Implementation', 'Monitoring', 'Maintenance'],
+      description: 'Complete IT infrastructure setup and management for enterprise environments with 24/7 monitoring and proactive maintenance.',
+      features: ['Server Setup', 'Network Configuration', 'Security Implementation', '24/7 Monitoring', 'Proactive Maintenance', 'Backup Solutions', 'Disaster Recovery', 'Performance Optimization'],
       price: 'Starting at $1,499/month',
-      category: 'IT Services'
+      category: 'IT Services',
+      marketPrice: '$2,499/month',
+      freeTrial: '30 days',
+      rating: 4.7,
+      reviews: 456,
+      users: 'Up to 500 endpoints'
     },
     {
       icon: Shield,
@@ -278,10 +359,95 @@ const ServicesPage: React.FC = () => {
     {
       icon: BarChart3,
       title: 'IT Consulting',
-      description: 'Strategic IT consulting to optimize your technology infrastructure and processes.',
-      features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
+      description: 'Strategic IT consulting to optimize your technology infrastructure and processes with expert guidance and digital transformation strategies.',
+      features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training', 'Vendor Management', 'Compliance', 'Risk Assessment'],
       price: 'Starting at $299/hour',
-      category: 'IT Services'
+      category: 'IT Services',
+      marketPrice: '$399/hour',
+      freeTrial: '1-hour consultation',
+      rating: 4.8,
+      reviews: 234,
+      users: 'Custom scope'
+    },
+
+    // Emerging Technologies
+    {
+      icon: Brain,
+      title: 'Quantum Computing Solutions',
+      description: 'Next-generation quantum computing capabilities for complex problem solving, optimization, and advanced cryptography.',
+      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation', 'Research Support', 'Custom Development', 'Training', 'Consulting'],
+      price: 'Custom Pricing',
+      category: 'Emerging Technologies',
+      marketPrice: 'Contact for pricing',
+      freeTrial: 'Pilot project',
+      rating: 4.9,
+      reviews: 45,
+      users: 'Research teams'
+    },
+    {
+      icon: Cpu,
+      title: 'Robotics & Automation',
+      description: 'Intelligent robotic solutions for manufacturing, healthcare, and service industries with AI-powered automation.',
+      features: ['Industrial Robotics', 'Service Robots', 'AI Integration', 'Process Automation', 'Quality Control', 'Safety Systems', 'Maintenance', 'Training'],
+      price: 'Starting at $5,999/month',
+      category: 'Emerging Technologies',
+      marketPrice: '$9,999/month',
+      freeTrial: '30 days',
+      rating: 4.7,
+      reviews: 123,
+      users: 'Custom deployment'
+    },
+    {
+      icon: Globe,
+      title: 'IoT & Edge Computing',
+      description: 'Connected devices and edge computing solutions for smart cities, industrial automation, and real-time data processing.',
+      features: ['IoT Sensors', 'Edge Computing', 'Real-time Processing', 'Data Analytics', 'Device Management', 'Security', 'Integration', 'Monitoring'],
+      price: 'Starting at $1,999/month',
+      category: 'Emerging Technologies',
+      marketPrice: '$3,999/month',
+      freeTrial: '14 days',
+      rating: 4.6,
+      reviews: 189,
+      users: 'Up to 10,000 devices'
+    },
+    {
+      icon: Shield,
+      title: 'Blockchain & Web3',
+      description: 'Decentralized solutions, smart contracts, and Web3 applications for the future of business and digital assets.',
+      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'DApp Development', 'Tokenization', 'Governance', 'Security Audits', 'Integration'],
+      price: 'Starting at $2,999/month',
+      category: 'Emerging Technologies',
+      marketPrice: '$4,999/month',
+      freeTrial: '14 days',
+      rating: 4.8,
+      reviews: 156,
+      users: 'Custom scope'
+    },
+    {
+      icon: Zap,
+      title: '5G Implementation',
+      description: '5G network implementation and optimization for ultra-fast connectivity, IoT, and next-generation applications.',
+      features: ['5G Network Design', 'Infrastructure Setup', 'Performance Optimization', 'IoT Integration', 'Security', 'Testing', 'Monitoring', 'Support'],
+      price: 'Starting at $3,999/month',
+      category: 'Emerging Technologies',
+      marketPrice: '$6,999/month',
+      freeTrial: 'Assessment included',
+      rating: 4.7,
+      reviews: 78,
+      users: 'Custom coverage area'
+    },
+    {
+      icon: Brain,
+      title: 'AI 3D Generation',
+      description: 'Advanced AI-powered 3D content generation for gaming, architecture, manufacturing, and virtual reality applications.',
+      features: ['3D Model Generation', 'Texture Creation', 'Animation', 'VR/AR Content', 'Game Assets', 'Architectural Visualization', 'Product Design', 'Custom Training'],
+      price: 'Starting at $999/month',
+      category: 'Emerging Technologies',
+      marketPrice: '$1,999/month',
+      freeTrial: '7 days',
+      rating: 4.5,
+      reviews: 234,
+      users: 'Up to 1,000 models/month'
     }
   ];
 
@@ -295,7 +461,8 @@ const ServicesPage: React.FC = () => {
     'Database Services',
     'Automation',
     'Web Development',
-    'IT Services'
+    'IT Services',
+    'Emerging Technologies'
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -440,8 +607,28 @@ const ServicesPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-6">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-sm text-gray-300">Contact for custom pricing</div>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                      {service.marketPrice && (
+                        <div className="text-sm text-gray-400 line-through">{service.marketPrice}</div>
+                      )}
+                    </div>
+                    {service.users && (
+                      <div className="text-sm text-gray-300 mb-2">{service.users}</div>
+                    )}
+                    {service.freeTrial && (
+                      <div className="text-sm text-green-400 font-medium mb-2">{service.freeTrial} free trial</div>
+                    )}
+                    {service.rating && (
+                      <div className="flex items-center">
+                        <div className="flex items-center">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400' : 'text-gray-400'}`} />
+                          ))}
+                        </div>
+                        <span className="text-sm text-gray-300 ml-2">{service.rating} ({service.reviews} reviews)</span>
+                      </div>
+                    )}
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
