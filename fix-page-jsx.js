@@ -1,56 +1,56 @@
-import fs from 'fs;
+import fs from fs;
 
-';
+;
 
 function fixPageJSX() {
-  try {';
+  try {;
 
-let content = fs.readFileSync('app/page.tsx', 'utf8);;
+let content = fs.readFileSync('app/page.tsx', utf8);;
 
     // Fix specific malformed patterns;
 
 const fixes = [;;
 
       // Fix malformed closing tags
-      { pattern: /<\/Navigatio>/g, replacement: '</Navigation>' },
-      { pattern: /<\/sectio>/g, replacement: '</section>' },
-      { pattern: /<\/div>/g, replacement: '</div>' },
-      { pattern: /<\/h1>/g, replacement: '</h1>' },
-      { pattern: /<\/h2>/g, replacement: '</h2>' },
-      { pattern: /<\/h3>/g, replacement: '</h3>' },
-      { pattern: /<\/p>/g, replacement: '</p>' },
-      { pattern: /<\/span>/g, replacement: '</span>' },
-      { pattern: /<\/a>/g, replacement: '</a>' },
-      { pattern: /<\/button>/g, replacement: '</button>' },
-      { pattern: /<\/ul>/g, replacement: '</ul>' },
-      { pattern: /<\/li>/g, replacement: '</li>' },
-      { pattern: /<\/main>/g, replacement: '</main>' },
-      { pattern: /<\/footer>/g, replacement: '</footer>' },
+      { pattern: /<\/Navigatio>/g, replacement: '</Navigation> },
+      { pattern: /<\/sectio>/g, replacement: '</section> },
+      { pattern: /<\/div>/g, replacement: '</div> },
+      { pattern: /<\/h1>/g, replacement: '</h1> },
+      { pattern: /<\/h2>/g, replacement: '</h2> },
+      { pattern: /<\/h3>/g, replacement: '</h3> },
+      { pattern: /<\/p>/g, replacement: '</p> },
+      { pattern: /<\/span>/g, replacement: '</span> },
+      { pattern: /<\/a>/g, replacement: '</a> },
+      { pattern: /<\/button>/g, replacement: '</button> },
+      { pattern: /<\/ul>/g, replacement: '</ul> },
+      { pattern: /<\/li>/g, replacement: '</li> },
+      { pattern: /<\/main>/g, replacement: '</main> },
+      { pattern: /<\/footer>/g, replacement: '</footer> },
       
       // Fix malformed opening tags
-      { pattern: /<h1>/g, replacement: '<h1>' },
-      { pattern: /<h2>/g, replacement: '<h2>' },
-      { pattern: /<h3>/g, replacement: '<h3>' },
-      { pattern: /<div>/g, replacement: '<div>' },
-      { pattern: /<section>/g, replacement: '<section>' },
-      { pattern: /<p>/g, replacement: '<p>' },
-      { pattern: /<span>/g, replacement: '<span>' },
-      { pattern: /<a>/g, replacement: '<a>' },
-      { pattern: /<button>/g, replacement: '<button>' },
-      { pattern: /<ul>/g, replacement: '<ul>' },
-      { pattern: /<li>/g, replacement: '<li>' },
-      { pattern: /<main>/g, replacement: '<main>' },
-      { pattern: /<footer>/g, replacement: '<footer>' },
+      { pattern: /<h1>/g, replacement: '<h1> },
+      { pattern: /<h2>/g, replacement: '<h2> },
+      { pattern: /<h3>/g, replacement: '<h3> },
+      { pattern: /<div>/g, replacement: '<div> },
+      { pattern: /<section>/g, replacement: '<section> },
+      { pattern: /<p>/g, replacement: '<p> },
+      { pattern: /<span>/g, replacement: '<span> },
+      { pattern: /<a>/g, replacement: '<a> },
+      { pattern: /<button>/g, replacement: '<button> },
+      { pattern: /<ul>/g, replacement: '<ul> },
+      { pattern: /<li>/g, replacement: '<li> },
+      { pattern: /<main>/g, replacement: '<main> },
+      { pattern: /<footer>/g, replacement: '<footer> },
       
       // Fix specific broken patterns
-      { pattern: /<\/<</g, replacement: '</' },
-      { pattern: /<</g, replacement: '<' },
-      { pattern: />>/g, replacement: '>' },
-      { pattern: /<<</g, replacement: '<' },
-      { pattern: />>>/g, replacement: '>' },
+      { pattern: /<\/<</g, replacement: '</ },
+      { pattern: /<</g, replacement: '< },
+      { pattern: />>/g, replacement: '> },
+      { pattern: /<<</g, replacement: '< },
+      { pattern: />>>/g, replacement: '> },
       
       // Fix malformed JSX expressions
-      { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1>' },
+      { pattern: /<(\w+)><\/\1>/g, replacement: '<$1></$1> },
       
       // Fix broken closing tags
       { pattern: /<\/\w+><\/\w+>/g, replacement: (match) => {
@@ -60,10 +60,10 @@ const fixes = [;;
 
 const firstTag = match.match(/<\/(\w+)>/)[1];;
 
-        return `</${firstTag}>
+        return </${firstTag}>
 );
 
-}`}}
+}}}
 
     ];
 
@@ -83,10 +83,10 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
     }
 
     // Additional specific fixes for common patterns
-    content = content.replace(/<(\w+)([^>]*)>([^<]*?)(?![^<]*<\/\1>)(?=\s*<)/g, '<$1$2>$3</$1>);
+    content = content.replace(/<(\w+)([^>]*)>([^<]*?)(?![^<]*<\/\1>)(?=\s*<)/g, <$1$2>$3</$1>);
 
     if (modified) {
-      fs.writeFileSync('app/page.tsx', content, 'utf8);
+      fs.writeFileSync('app/page.tsx', content, utf8);
 
       // console.log removed for production
 return true}

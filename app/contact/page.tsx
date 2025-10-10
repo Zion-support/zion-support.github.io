@@ -1,19 +1,26 @@
-'use client';
-import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client;
+
+import React, { useState, useCallback } from 'react;
+
+import { Helmet } from 'react-helmet-async;
+
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react;
+
+import Navigation from '../components/Navigation;
+
+import Footer from '../components/Footer;
+
 ;
+
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
-    name: '',    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '';)
+    name: '',    email: ',
+    company: ',
+    phone: ',
+    service: ',
+    message: ';)
 })const [isSubmitting, setIsSubmitting] = useState(false);
 
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle);
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
 
 const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
 
@@ -22,245 +29,253 @@ const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTe
       [e.target.name]: e.target.value;)
 })))
 }, []);
-const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(prev => ({
+
+const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(prev => ({;
       ...prev,
       [e.target.name]: e.target.value]
     });)]
     }, []);
 
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {
-  const handleSubmit = useCallback (async (e: React.FormEvent) => {
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {;
+  const handleSubmit = useCallback (async (e: React.FormEvent) => {;
     e.preventDefault();    setIsSubmitting(true);
 
     try {
       /
       await new Promise(resolve => setTimeout(resolve, 1000));
 
-      setSubmitStatus('success);
+      setSubmitStatus(success);
 
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-message: '']
+        name: ',
+        email: ',
+        company: ',
+        phone: ',
+        service: ',
+message: ']
     });]
     } catch (error) {
-      setSubmitStatus('error')]
+      setSubmitStatus('error)]
     } finally {
       setIsSubmitting(false)]
     }
-        message: '')
+
+        message: ')
       });
+
     } catch (error) {
-      setSubmitStatus('error');
+      setSubmitStatus('error);
+
     } finally {
       setIsSubmitting(false);
+
     }
+
   }, []);
 
-  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
         <title>Contact Us - Zion Tech Group | Get in Touch<
-        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com" 
-        <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support" 
+        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com 
+        <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support 
       <
 
       <Navigation 
       
       {/* Hero Section *
-      <section className="relative py-20 px-4 overflow-hidden">)
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
+      <section className="relative py-20 px-4 overflow-hidden>)
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
+
+        <div className="relative max-w-7xl mx-auto text-center>
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight>
             Get in
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent>
 
             <
           <
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed>
   }, []);
+
   return (
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900></div>
       <Helmet></Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com" />
-        <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support" />
+        <meta name="description" content="Contact Zion Tech Group for AI and IT solutions. Get a free consultation, quote, or support. Call +1-302-464-0950 or email kleber@ziontechgroup.com />
+        <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support />
       </Helmet>
 
       <Navigation />
       
       {/* Hero Section */}
 
-      <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"></h1>
+      <section className="relative py-20 px-4 overflow-hidden></section>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }} />
+        <div className="relative max-w-7xl mx-auto text-center></div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight></h1>
             Get in
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent"></span>
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent></span>
               Touch
             </span>
           </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"></p>
-            Ready to transform your business? Let's discuss your project and explore 
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed></p>
+            Ready to transform your business? Lets discuss your project and explore 
             how our AI and IT solutions can help you achieve your goals.
           <
         <
       <
 
       {/* Contact Form and Info *
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 l,
-    g:grid-cols-2 gap-12">
+      <section className="py-20 px-4>
+        <div className="max-w-7xl mx-auto>
+          <div className=grid grid-cols-1 l,
+    g:grid-cols-2 gap-12>
             {/* Contact Form *
-            <div className="bg-white/5 backdrop-blur-sm border border-white
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a message<
+            <div className=bg-white/5 backdrop-blur-sm border border-white
+              <h2 className="text-3xl font-bold text-white mb-6>Send us a message<
               
-              {submitStatus === 'success' && (<div className="mb-6 p-4 bg-green-500/20 border border-green-500
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2" 
-                  <span className="text-green-400">Message sent successfully!<
+              {submitStatus === 'success' && (<div className=mb-6 p-4 bg-green-500/20 border border-green-500
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-2 
+                  <span className="text-green-400>Message sent successfully!<
                 <)
               )}
 
-              {submitStatus === 'error' && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500
-                  <span className="text-red-400">Failed to send message. Please try again.<
+              {submitStatus === 'error' && (<div className=mb-6 p-4 bg-red-500/20 border border-red-500
+                  <span className="text-red-400>Failed to send message. Please try again.<
                 <)
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-6"></form>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+              <form onSubmit={handleSubmit} className="space-y-6></form>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6></div>
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2"></label>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2></label>
                       Full Name *
                     <
                     <input
-                      type="text"
-                      id="name"
-                      name="name"
+                      type="text
+                      id="name
+                      name="name
                       value = { formData.name };
 
                       onChange = { handleChange };
 
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
-    s:border-transparent"
+                      className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
+    s:border-transparent
                     
                   <
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2>
                       Email Address *                    <
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="email
+                      id="email
+                      name="email
                       value = { formData.email };
 
                       onChange = { handleChange };
 
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent"
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focus:border-transparent
                     
                   <
                 <
 
-                <div className="grid grid-cols-1 m,
-    d:grid-cols-2 gap-6">
+                <div className=grid grid-cols-1 m,
+    d:grid-cols-2 gap-6>
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2>
                       Company Name                    <
                     <input
-                      type="text"
-                      id="company"
-                      name="company"
+                      type="text
+                      id="company
+                      name="company
                       value = { formData.company };
 
                       onChange = { handleChange };
 
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
-    s:border-transparent"
+                      className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
+    s:border-transparent
                     
                   <
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2>
                       Phone Number                    <
                     <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
+                      type="tel
+                      id="phone
+                      name="phone
                       value = { formData.phone };
 
                       onChange = { handleChange };
 
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
-    s:border-transparent"
+                      className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
+    s:border-transparent
                     
                   <
                 <
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2"></label>
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2></label>
                     Service Interest
                   <
                   <select
-                    id="service"
-                    name="service"
+                    id="service
+                    name="service
                     value = { formData.service };
 
                     onChange = { handleChange };
 
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
-    s:border-transparent"
+                    className=w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
+    s:border-transparent
                   >
-                    <option value="">Select a service<
-                    <option value="ai-solutions">AI Solutions<
-                    <option value="it-services">IT Services<
-                    <option value="cloud-migration">Cloud Migration<
-                    <option value="cybersecurity">Cybersecurity<
-                    <option value="digital-transformation">Digital Transformation<
+                    <option value=">Select a service<
+                    <option value="ai-solutions>AI Solutions<
+                    <option value="it-services>IT Services<
+                    <option value="cloud-migration>Cloud Migration<
+                    <option value="cybersecurity>Cybersecurity<
+                    <option value="digital-transformation>Digital Transformation<
                   <
                 <
-                  and we'll get back to you within 24 hours.
+                  and well get back to you within 24 hours.
                 <
               <
 
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <div className="space-y-6>
+                <div className="flex items-start space-x-4>
+                  <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0>
                     
-                    <h3 className="text-lg font-semibold text-white mb-1">Phone<
-                    <p className="text-gray-300">+1-302-464-0950<
-                    <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST<
+                    <h3 className="text-lg font-semibold text-white mb-1>Phone<
+                    <p className="text-gray-300>+1-302-464-0950<
+                    <p className="text-sm text-gray-400>Mon-Fri 9AM-6PM EST<
                   <
                 <
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start space-x-4>
+                  <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0>
                     
-                    <h3 className="text-lg font-semibold text-white mb-1">Email<
-                    <p className="text-gray-300">kleber@ziontechgroup.com<
-                    <p className="text-sm text-gray-400">We'll respond within 24 hours<
+                    <h3 className="text-lg font-semibold text-white mb-1>Email<
+                    <p className="text-gray-300>kleber@ziontechgroup.com<
+                    <p className="text-sm text-gray-400">Well respond within 24 hours<
                   <
                 <
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start space-x-4>
+                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0>
                     
-                    <h3 className="text-lg font-semibold text-white mb-1">Office<
-                    <p className="text-gray-300">364 E Main St STE 1008<
-                    <p className="text-gray-300">Middletown, DE 19709<
+                    <h3 className="text-lg font-semibold text-white mb-1>Office<
+                    <p className="text-gray-300>364 E Main St STE 1008<
+                    <p className="text-gray-300>Middletown, DE 19709<
                   <
                 <
 
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="flex items-start space-x-4>
+                  <div className="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0>
                     
-                    <h3 className="text-lg font-semibold text-white mb-1">Business Hours<
-                    <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM<
-                    <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM<
-                    <p className="text-gray-300">Sunda,
+                    <h3 className="text-lg font-semibold text-white mb-1>Business Hours<
+                    <p className="text-gray-300>Monday - Friday: 9:00 AM - 6:00 PM<
+                    <p className="text-gray-300>Saturday: 10:00 AM - 4:00 PM<
+                    <p className="text-gray-300>Sunda,
     y: Closed<
                   <
                 <
@@ -273,8 +288,10 @@ message: '']
       <Footer 
     <
   );
+
 )]
     };
+
 };
 
 export default ContactPage;}

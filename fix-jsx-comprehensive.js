@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path;
+import path from path;
 
-';
+;
 
 function fixJsxFile(filePath) {
-  try {';
+  try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
@@ -17,7 +17,7 @@ let content = fs.readFileSync(filePath, 'utf8);;
 
 const selfClosingDivPattern = /<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g;;
 
-    const selfClosingDivReplacement = '<div$1>;;
+    const selfClosingDivReplacement = <div$1>;;
 
     ;
 
@@ -39,7 +39,7 @@ const sectionDivPattern = /<section([^>]*)>[\s\S]*?<\/div>/g;;
 
 return (
 
-      return match.replace(/<\/div>$/, '</section>
+      return match.replace(/<\/div>$/, </section>
 );
 
 })};
@@ -81,8 +81,8 @@ const fullPath = path.join(dir, item);;
 
     const stat = fs.statSync(fullPath);;
 
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
+      files.push(...findTsxFiles(fullPath))} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
       files.push(fullPath)}
 
   }
@@ -93,7 +93,7 @@ const fullPath = path.join(dir, item);;
 // console.log removed for production
 ;
 
-const tsxFiles = findTsxFiles('/workspace);;
+const tsxFiles = findTsxFiles(/workspace);;
 
 let fixedCount = 0;;
 

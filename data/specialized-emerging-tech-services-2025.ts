@@ -1,4 +1,4 @@
-import React from 'react;
+import React from react;
 
   id: string;
 
@@ -84,18 +84,18 @@ import React from 'react;
 
 const contact =;;
 
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup && ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}
+  mobile: '+1 302 464 0950,
+  email: 'kleber@ziontechgroup && ziontechgroup.com,
+  address: '364 E Main St STE 1008 Middletown DE 19709,
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities}
 
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities};
+        First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities};
 
-  ];    description: 'Advanced neuromorphic computing platform that mimics the human brain\s neural structure, enabling energy-efficient AI processing and cognitive computing applications.
+  ];    description: Advanced neuromorphic computing platform that mimics the human brain\s neural structure, enabling energy-efficient AI processing and cognitive computing applications.
     features: [;
 
-      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications',
-      'Advanced pattern recognitionCustom neuromorphic algorithms',
+      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications,
+      'Advanced pattern recognitionCustom neuromorphic algorithms,
       benefits: [,
   i,
   d: string;
@@ -220,18 +220,18 @@ const contact =;;
 const contact =;;
 
   mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950,
   emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',
+  l: 'kleber@ziontechgroup && ziontechgroup.com,
   addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709,
         First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities
     }
 
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities};
+        First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities};
 
   ];    descriptio,
-  n: 'Advanced neuromorphic computing platform that mimics the human brain\s neural structure, enabling energy-efficient AI processing and cognitive computing applications.
+  n: Advanced neuromorphic computing platform that mimics the human brain\s neural structure, enabling energy-efficient AI processing and cognitive computing applications.
     feature,
   s: [;
 
@@ -239,27 +239,27 @@ const contact =;;
       Advanced pattern recognitionCustom neuromorphic algorithms
       benefit,
   s: [,
-        'Energy efficiency',
-        'Cognitive capabilities',
-        'Real - time learning',
-        'Brain - inspired processing'],
+        'Energy efficiency,
+        'Cognitive capabilities,
+        'Real - time learning,
+        'Brain - inspired processing],
       capabilitie,
   s: [,
-        'Neural architectures',
-        'Cognitive computing',
-        'Hardware integration',
-        'Custom algorithms'],
+        'Neural architectures,
+        'Cognitive computing,
+        'Hardware integration,
+        'Custom algorithms],
       market_advantage: unknown;
 
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];    description: 'Advanced neuromorphic computing platform that mimics the human brains neural structure, enabling energy - efficient AI processing and cognitive computing applications.
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];    description: Advanced neuromorphic computing platform that mimics the human brains neural structure, enabling energy - efficient AI processing and cognitive computing applications.
     features: [;
 
-      'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications',
-      'Advanced pattern recognition_custom neuromorphic algorithms',
+      'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications,
+      'Advanced pattern recognition_custom neuromorphic algorithms,
       market_advantag,
   e: unknown,
-        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}];    descriptio,
-  n: 'Advanced neuromorphic computing platform that mimics the human brains neural structure, enabling energy - efficient AI processing and cognitive computing applications.
+        'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities}];    descriptio,
+  n: Advanced neuromorphic computing platform that mimics the human brains neural structure, enabling energy - efficient AI processing and cognitive computing applications.
     feature,
   s: [;
 
@@ -268,7 +268,7 @@ const contact =;;
     ],
     popula,
   r: true, ico,
-  n: ''}
+  n: '}
 
 ];
 
@@ -278,80 +278,80 @@ const contact =;;
 
 ;
 
-    popular: true, icon: '',
-    color: 'from - pink - 600 to - rose - 600', text_color: 'text - pink - 400',
-    link: 'https://ziontechgroup.com / neuromorphic - computing - platform', market_position: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
-    target_audience: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions',
-    trial_days: 30, setup_time: '3 weeks',
-    category: 'Neuromorphic Computing, real_service: true;
+    popular: true, icon: ',
+    color: 'from - pink - 600 to - rose - 600', text_color: 'text - pink - 400,
+    link: 'https://ziontechgroup.com / neuromorphic - computing - platform', market_position: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month),
+    target_audience: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions,
+    trial_days: 30, setup_time: '3 weeks,
+    category: Neuromorphic Computing, real_service: true;
 
-    technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms];
+    technology: [Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms];
 
-    integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms];
+    integrations: [Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms];
 
-    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities',
-    competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision];
+    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities,
+    competitors: [Intel Loihi, IBM TrueNorth, BrainChip, General Vision];
 
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth,;
+    marketSize: '$2.1B neuromorphic computing market', growthRate: 450% annual growth,;
 
-variant: 'ai-futuristic, contactInfo: contact;
+variant: ai-futuristic, contactInfo: contact;
 
-    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities',
-    launchDate: '2024-02-15, customers: 45;
+    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities,
+    launchDate: 2024-02-15, customers: 45;
 
     rating: 4.8, reviews: 34;
 
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms],
+    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities,
     popula,
   r: true, ico,
-  n: '',
+  n: ',
     colo,
-  r: 'from - pink - 600 to - rose - 600', text_colo,
-  r: 'text - pink - 400',
+  r: 'from - pink - 600 to - rose - 600, text_colo,
+  r: 'text - pink - 400,
     lin,
-  k: 'http,
-  s://ziontechgroup.com / neuromorphic - computing - platform', market_positio,
-  n: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',
+  k: http,
+  s://ziontechgroup.com / neuromorphic - computing - platform, market_positio,
+  n: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month),
     target_audienc,
-  e: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions',
+  e: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions,
     trial_day,
   s: 30, setup_tim,
-  e: '3 weeks',
+  e: '3 weeks,
     categor,
-  y: 'Neuromorphic Computing', real_servic,
+  y: 'Neuromorphic Computing, real_servic,
   e: true,
     technolog,
-  y: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms];
+  y: [Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms];
 
     integration,
-  s: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms];
+  s: [Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms];
 
     useCase,
-  s: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], ro,
+  s: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces], ro,
   i: Average 700% ROI through energy efficiency and cognitive capabilities
     competitor,
-  s: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision];
+  s: [Intel Loihi, IBM TrueNorth, BrainChip, General Vision];
 
     marketSiz,
-  e: '$2.1B neuromorphic computing market', growthRat,
-  e: '450% annual growth;
+  e: '$2.1B neuromorphic computing market, growthRat,
+  e: 450% annual growth;
 
 varian,
-  t: 'ai-futuristic', contactInf,
+  t: 'ai-futuristic, contactInf,
   o: contact,
     realImplementatio,
   n: true, implementationDetail,
   s: Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities
     launchDat,
-  e: '2024-02-15', customer,
+  e: '2024-02-15, customer,
   s: 45,
     ratin,
   g: 4.8, review,
   s: 34,
     benefit,
-  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
-  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
+  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing], capabilitie,
+  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms],
     marketAdvantag,
   e: First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities
   }
@@ -387,28 +387,28 @@ export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
 
 ;
 
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth,;
+    marketSize: '$2.1B neuromorphic computing market', growthRate: 450% annual growth,;
 
-variant: 'ai-futuristic, contactInfo: contact;
+variant: ai-futuristic, contactInfo: contact;
 
-    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities',
-    launchDate: '2024-02-15, customers: 45;
+    realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities,
+    launchDate: 2024-02-15, customers: 45;
 
     rating: 4.8, reviews: 34;
 
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms];
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: [Neural architecturesCognitive computingHardware integrationCustom algorithms];
 
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities;
+    marketAdvantage: First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities;
 
 const contact = {,;;
 
-  mobile: '+1 302 464 0950;
+  mobile: +1 302 464 0950;
 
-  email: 'kleber@ziontechgroup.com;
+  email: kleber@ziontechgroup.com;
 
-  address: '364 E Main St STE 1008 Middletown DE 19709'}
+  address: '364 E Main St STE 1008 Middletown DE 19709}
 
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup.com,
   realImplementatio,
   n: boolean;
 
@@ -439,34 +439,34 @@ const contact = {,;;
 ;
 
     marketSiz,
-  e: '$2.1B neuromorphic computing market', growthRat,
-  e: '450% annual growth;
+  e: '$2.1B neuromorphic computing market, growthRat,
+  e: 450% annual growth;
 
 varian,
-  t: 'ai-futuristic', contactInf,
+  t: 'ai-futuristic, contactInf,
   o: contact,
     realImplementatio,
   n: true, implementationDetail,
   s: Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities
     launchDat,
-  e: '2024-02-15', customer,
+  e: '2024-02-15, customer,
   s: 45,
     ratin,
   g: 4.8, review,
   s: 34,
     benefit,
-  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
-  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms];
+  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing], capabilitie,
+  s: [Neural architecturesCognitive computingHardware integrationCustom algorithms];
 
     marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities;
+  e: First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities;
 
 const contact = {/* TODO: Fix JSX expression */};;
 
-  s: '364 E Main St STE 1008 Middletown DE 19709'}
+  s: '364 E Main St STE 1008 Middletown DE 19709}
 
   websit,
-  e: 'http,
+  e: http,
   s://ziontechgroup.com
 };
 
@@ -476,69 +476,69 @@ export const,
   // AR/VR & Metaverse Services;
 
   {
-    id: 'ar-vr-metaverse-platform;
+    id: ar-vr-metaverse-platform;
 
-    name: 'AR/VR Metaverse Platform;
+    name: AR/VR Metaverse Platform;
 
-    tagline: 'Revolutionary AR/VR platform for immersive experiences and metaverse development;
+    tagline: Revolutionary AR/VR platform for immersive experiences and metaverse development;
 
-    price: '$399;
+    price: $399;
 
-    period: '/month;
+    period: /month;
 
-    description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.;
+    description: Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.;
 
     features: [,
-      'AR/VR content creation and managementMetaverse development tools and SDKs3 D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR) web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware;
+      AR/VR content creation and managementMetaverse development tools and SDKs3 D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR) web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware;
 
       Custom avatar and environment creationE-commerce integration for virtual stores
     ];
 
     popular: true;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-purple-600 to-pink-600;
+    color: from-purple-600 to-pink-600;
 
-    textColor: 'text-purple-400;
+    textColor: text-purple-400;
 
-    link: 'https://ziontechgroup.com/ar-vr-metaverse-platform;
+    link: https://ziontechgroup.com/ar-vr-metaverse-platform;
 
-    marketPosition: 'Advanced AR/VR platform competing with Unity ($40/month) and Unreal Engine ($1)850/year);
+    marketPosition: Advanced AR/VR platform competing with Unity ($40/month) and Unreal Engine ($1)850/year);
 
-    targetAudience: 'Gaming companies, E-commerce businesses, Educational institutions, Real estate companies;
+    targetAudience: Gaming companies, E-commerce businesses, Educational institutions, Real estate companies;
 
     trialDays: 14;
 
-    setupTime: '1 week;
+    setupTime: 1 week;
 
-    category: 'AR/VR & Metaverse;
+    category: AR/VR & Metaverse;
 
     realService: true;
 
-    technology: ['Unity, Unreal Engine, WebXR, Three.js, React, Node.js];
+    technology: [Unity, Unreal Engine, WebXR, Three.js, React, Node.js];
 
-    integrations: ['Oculus, HTC Vive, Microsoft HoloLens, Mobile AR frameworks];
+    integrations: [Oculus, HTC Vive, Microsoft HoloLens, Mobile AR frameworks];
 
-    useCases: ['Virtual training, E-commerce experiences, Educational content, Real estate tours];
+    useCases: [Virtual training, E-commerce experiences, Educational content, Real estate tours];
 
-    roi: 'Average 400% ROI through increased engagement and conversion rates'}
+    roi: 'Average 400% ROI through increased engagement and conversion rates}
 
-    competitors: ['Unity, Unreal Engine, VRChat} AltspaceVR];
+    competitors: [Unity, Unreal Engine, VRChat} AltspaceVR];
 
-    marketSize: '$28.8 B AR/VR market;
+    marketSize: $28.8 B AR/VR market;
 
-    growthRate: '280% annual growth;
+    growthRate: 280% annual growth;
 
-    variant: 'ai-futuristic;
+    variant: ai-futuristic;
 
     contactInfo: contact;
 
     realImplementation: true;
 
-    implementationDetails: 'Cloud-native AR/VR platform with comprehensive development tools and deployment capabilities;
+    implementationDetails: Cloud-native AR/VR platform with comprehensive development tools and deployment capabilities;
 
-    launchDate: '2024-02-15;
+    launchDate: 2024-02-15;
 
     customers: 456;
 
@@ -546,79 +546,79 @@ export const,
 
     reviews: 234;
 
-    benefits: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach];
+    benefits: [Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach];
 
-    capabilities: ['Content creationMetaverse developmentAnalyticsHardware integration];
+    capabilities: [Content creationMetaverse developmentAnalyticsHardware integration];
 
-    marketAdvantage: 'First platform to combine AR/VR development with metaverse creation tools};
+    marketAdvantage: First platform to combine AR/VR development with metaverse creation tools};
 
   // 5 G/6 G Network Services;
 
   {;
 
-    id: '5 g-6 g-network-optimization;
+    id: 5 g-6 g-network-optimization;
 
-    name: '5 G/6 G Network Optimization Platform;
+    name: 5 G/6 G Network Optimization Platform;
 
-    tagline: 'AI-powered 5 G/6 G network optimization and management platform;
+    tagline: AI-powered 5 G/6 G network optimization and management platform;
 
-    price: '$699;
+    price: $699;
 
-    period: '/month;
+    period: /month;
 
-    description: 'Revolutionary platform that optimizes 5G/6G networks using AI, provides real-time monitoring, and ensures optimal performance for next-generation connectivity.;
+    description: Revolutionary platform that optimizes 5G/6G networks using AI, provides real-time monitoring, and ensures optimal performance for next-generation connectivity.;
 
     features: [
-      'AI-powered network optimization algorithmsReal-time 5G/6G performance monitoringNetwork slicing and resource allocationQuality of Service (QoS) managementPredictive maintenance and fault detectionMulti-vendor network managementSecurity and threat detectionEnergy efficiency optimization;
+      AI-powered network optimization algorithmsReal-time 5G/6G performance monitoringNetwork slicing and resource allocationQuality of Service (QoS) managementPredictive maintenance and fault detectionMulti-vendor network managementSecurity and threat detectionEnergy efficiency optimization;
 
       Network capacity planningIntegration with major telecom equipment
     ];
 
     popular: true;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-blue-600 to-cyan-600;
+    color: from-blue-600 to-cyan-600;
 
-    textColor: 'text-blue-400;
+    textColor: text-blue-400;
 
-    link: 'https://ziontechgroup.com/5 g-6 g-network-optimization;
+    link: https://ziontechgroup.com/5 g-6 g-network-optimization;
 
-    marketPosition: 'Advanced 5 G/6 G optimization platform competing with Ericsson ($500/month) and Nokia ($600/month);
+    marketPosition: Advanced 5 G/6 G optimization platform competing with Ericsson ($500/month) and Nokia ($600/month);
 
-    targetAudience: 'Telecom operators, Network equipment vendors, Enterprise networks, Government agencies;
+    targetAudience: Telecom operators, Network equipment vendors, Enterprise networks, Government agencies;
 
     trialDays: 30;
 
-    setupTime: '2 weeks;
+    setupTime: 2 weeks;
 
-    category: '5 G/6 G Networks;
+    category: 5 G/6 G Networks;
 
     realService: true;
 
-    technology: ['AI/ML, 5 G/6 G protocols, Python, TensorFlow, Network protocols];
+    technology: [AI/ML, 5 G/6 G protocols, Python, TensorFlow, Network protocols];
 
-    integrations: ['Ericsson, Nokia, Huawei, Cisco, Major telecom equipment];
+    integrations: [Ericsson, Nokia, Huawei, Cisco, Major telecom equipment];
 
-    useCases: ['Network optimizationPerformance monitoringCapacity planningMaintenance automation];
+    useCases: [Network optimizationPerformance monitoringCapacity planningMaintenance automation];
 
-    roi: 'Average 500% ROI through improved network performance and reduced operational costs'}
+    roi: 'Average 500% ROI through improved network performance and reduced operational costs}
 
-    competitors: ['Ericsson, Nokia, Huawei} Cisco];
+    competitors: [Ericsson, Nokia, Huawei} Cisco];
 
-    marketSize: '$31.2 B 5 G network market;
+    marketSize: $31.2 B 5 G network market;
 
-    growthRate: '320% annual growth;
+    growthRate: 320% annual growth;
 
-    variant: 'ai-futuristic;
+    variant: ai-futuristic;
 
     contactInfo: contact;
 
     realImplementation: true;
 
-    implementationDetails: 'Enterprise-grade network optimization platform with AI algorithms and comprehensive monitoring;
+    implementationDetails: Enterprise-grade network optimization platform with AI algorithms and comprehensive monitoring;
 
-    launchDate: '2024-01-20;
+    launchDate: 2024-01-20;
 
     customers: 123;
 
@@ -626,79 +626,79 @@ export const,
 
     reviews: 89;
 
-    benefits: ['Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency];
+    benefits: [Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency];
 
-    capabilities: ['AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support];
+    capabilities: [AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support];
 
-    marketAdvantage: 'First AI-powered platform for comprehensive 5G/6G network optimization};
+    marketAdvantage: First AI-powered platform for comprehensive 5G/6G network optimization};
 
   // Biotechnology AI Services;
 
   {;
 
-    id: 'ai-biotechnology-platform;
+    id: ai-biotechnology-platform;
 
-    name: 'AI Biotechnology Platform;
+    name: AI Biotechnology Platform;
 
-    tagline: 'Revolutionary AI platform for drug discovery, genetic analysis, and biotech research;
+    tagline: Revolutionary AI platform for drug discovery, genetic analysis, and biotech research;
 
-    price: '$899;
+    price: $899;
 
-    period: '/month;
+    period: /month;
 
-    description: 'Advanced AI platform that accelerates drug discovery, provides genetic analysis, and enables breakthrough research in biotechnology and life sciences.;
+    description: Advanced AI platform that accelerates drug discovery, provides genetic analysis, and enables breakthrough research in biotechnology and life sciences.;
 
     features: [
-      'AI-powered drug discovery and designGenetic sequence analysis and interpretationProtein structure prediction and modelingClinical trial optimizationBiomarker discovery and validationDrug repurposing algorithmsReal-time research collaboration toolsIntegration with major lab equipment;
+      AI-powered drug discovery and designGenetic sequence analysis and interpretationProtein structure prediction and modelingClinical trial optimizationBiomarker discovery and validationDrug repurposing algorithmsReal-time research collaboration toolsIntegration with major lab equipment;
 
       Regulatory compliance monitoringPatent analysis and intellectual property management
     ];
 
     popular: true;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-green-600 to-emerald-600;
+    color: from-green-600 to-emerald-600;
 
-    textColor: 'text-green-400;
+    textColor: text-green-400;
 
-    link: 'https://ziontechgroup.com/ai-biotechnology-platform;
+    link: https://ziontechgroup.com/ai-biotechnology-platform;
 
-    marketPosition: 'Advanced biotech AI platform competing with Insilico Medicine ($1000/month) and Atomwise ($800/month);
+    marketPosition: Advanced biotech AI platform competing with Insilico Medicine ($1000/month) and Atomwise ($800/month);
 
-    targetAudience: 'Pharmaceutical companies, Biotech startups, Research institutions, Clinical labs;
+    targetAudience: Pharmaceutical companies, Biotech startups, Research institutions, Clinical labs;
 
     trialDays: 30;
 
-    setupTime: '3 weeks;
+    setupTime: 3 weeks;
 
-    category: 'Biotechnology AI;
+    category: Biotechnology AI;
 
     realService: true;
 
-    technology: ['Deep Learning, Bioinformatics, Python, TensorFlow, PyTorch, R];
+    technology: [Deep Learning, Bioinformatics, Python, TensorFlow, PyTorch, R];
 
-    integrations: ['Lab equipment, Research databases, Clinical trial platforms, Patent databases];
+    integrations: [Lab equipment, Research databases, Clinical trial platforms, Patent databases];
 
-    useCases: ['Drug discoveryGenetic researchClinical trialsBiomarker analysis];
+    useCases: [Drug discoveryGenetic researchClinical trialsBiomarker analysis];
 
-    roi: 'Average 800% ROI through accelerated research and reduced development costs'}
+    roi: 'Average 800% ROI through accelerated research and reduced development costs}
 
-    competitors: ['Insilico Medicine, Atomwise, BenevolentAI} Recursion Pharmaceuticals];
+    competitors: [Insilico Medicine, Atomwise, BenevolentAI} Recursion Pharmaceuticals];
 
-    marketSize: '$22.4 B AI biotech market;
+    marketSize: $22.4 B AI biotech market;
 
-    growthRate: '350% annual growth;
+    growthRate: 350% annual growth;
 
-    variant: 'ai-futuristic;
+    variant: ai-futuristic;
 
     contactInfo: contact;
 
     realImplementation: true;
 
-    implementationDetails: 'Enterprise-grade biotech platform with AI algorithms and comprehensive research tools;
+    implementationDetails: Enterprise-grade biotech platform with AI algorithms and comprehensive research tools;
 
-    launchDate: '2024-02-01;
+    launchDate: 2024-02-01;
 
     customers: 89;
 
@@ -706,79 +706,79 @@ export const,
 
     reviews: 67;
 
-    benefits: ['Accelerated researchCost reductionImproved accuracyCollaboration tools];
+    benefits: [Accelerated researchCost reductionImproved accuracyCollaboration tools];
 
-    capabilities: ['Drug discoveryGenetic analysisClinical optimizationResearch collaboration];
+    capabilities: [Drug discoveryGenetic analysisClinical optimizationResearch collaboration];
 
-    marketAdvantage: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools};
+    marketAdvantage: First platform to combine AI-powered drug discovery with comprehensive biotech research tools};
 
   // Renewable Energy AI Services;
 
   {;
 
-    id: 'ai-renewable-energy-optimization;
+    id: ai-renewable-energy-optimization;
 
-    name: 'AI Renewable Energy Optimization;
+    name: AI Renewable Energy Optimization;
 
-    tagline: 'AI-powered platform for renewable energy optimization and smart grid management;
+    tagline: AI-powered platform for renewable energy optimization and smart grid management;
 
-    price: '$549;
+    price: $549;
 
-    period: '/month;
+    period: /month;
 
-    description: 'Revolutionary platform that optimizes renewable energy systems, manages smart grids, and maximizes energy efficiency using advanced AI algorithms.;
+    description: Revolutionary platform that optimizes renewable energy systems, manages smart grids, and maximizes energy efficiency using advanced AI algorithms.;
 
     features: [
-      'AI-powered energy production optimizationSmart grid management and monitoringPredictive maintenance for energy systemsEnergy storage optimizationWeather-based energy forecastingDemand response managementCarbon footprint tracking and reductionIntegration with renewable energy systems;
+      AI-powered energy production optimizationSmart grid management and monitoringPredictive maintenance for energy systemsEnergy storage optimizationWeather-based energy forecastingDemand response managementCarbon footprint tracking and reductionIntegration with renewable energy systems;
 
       Real-time energy analyticsMulti-energy source management
     ];
 
     popular: true;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-yellow-600 to-orange-600;
+    color: from-yellow-600 to-orange-600;
 
-    textColor: 'text-yellow-400;
+    textColor: text-yellow-400;
 
-    link: 'https://ziontechgroup.com/ai-renewable-energy-optimization;
+    link: https://ziontechgroup.com/ai-renewable-energy-optimization;
 
-    marketPosition: 'Advanced renewable energy platform competing with GE Digital ($400/month) and Siemens ($500/month);
+    marketPosition: Advanced renewable energy platform competing with GE Digital ($400/month) and Siemens ($500/month);
 
-    targetAudience: 'Energy utilities, Renewable energy companies, Smart grid operators, Government agencies;
+    targetAudience: Energy utilities, Renewable energy companies, Smart grid operators, Government agencies;
 
     trialDays: 30;
 
-    setupTime: '2 weeks;
+    setupTime: 2 weeks;
 
-    category: 'Renewable Energy;
+    category: Renewable Energy;
 
     realService: true;
 
-    technology: ['AI/ML, IoT, Python, TensorFlow, Energy management systems];
+    technology: [AI/ML, IoT, Python, TensorFlow, Energy management systems];
 
-    integrations: ['Solar panels, Wind turbines, Energy storage, Smart meters, Grid systems];
+    integrations: [Solar panels, Wind turbines, Energy storage, Smart meters, Grid systems];
 
-    useCases: ['Energy optimizationGrid managementPredictive maintenanceCarbon reduction];
+    useCases: [Energy optimizationGrid managementPredictive maintenanceCarbon reduction];
 
-    roi: 'Average 600% ROI through improved energy efficiency and reduced operational costs'}
+    roi: 'Average 600% ROI through improved energy efficiency and reduced operational costs}
 
-    competitors: ['GE Digital, Siemens, Schneider Electric} ABB];
+    competitors: [GE Digital, Siemens, Schneider Electric} ABB];
 
-    marketSize: '$19.8 B smart grid market;
+    marketSize: $19.8 B smart grid market;
 
-    growthRate: '280% annual growth;
+    growthRate: 280% annual growth;
 
-    variant: 'ai-futuristic;
+    variant: ai-futuristic;
 
     contactInfo: contact;
 
     realImplementation: true;
 
-    implementationDetails: 'Enterprise-grade energy platform with AI optimization and comprehensive grid management;
+    implementationDetails: Enterprise-grade energy platform with AI optimization and comprehensive grid management;
 
-    launchDate: '2024-03-01;
+    launchDate: 2024-03-01;
 
     customers: 156;
 
@@ -786,79 +786,79 @@ export const,
 
     reviews: 123;
 
-    benefits: ['Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance];
+    benefits: [Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance];
 
-    capabilities: ['Energy optimizationGrid managementReal-time monitoringPredictive analytics];
+    capabilities: [Energy optimizationGrid managementReal-time monitoringPredictive analytics];
 
-    marketAdvantage: 'First AI-powered platform for comprehensive renewable energy optimization};
+    marketAdvantage: First AI-powered platform for comprehensive renewable energy optimization};
 
   // Edge AI Computing Services;
 
   {;
 
-    id: 'edge-ai-computing-platform;
+    id: edge-ai-computing-platform;
 
-    name: 'Edge AI Computing Platform;
+    name: Edge AI Computing Platform;
 
-    tagline: 'Revolutionary edge computing platform with AI capabilities for IoT and real-time applications;
+    tagline: Revolutionary edge computing platform with AI capabilities for IoT and real-time applications;
 
-    price: '$299;
+    price: $299;
 
-    period: '/month;
+    period: /month;
 
-    description: 'Advanced edge computing platform that brings AI capabilities to the edge, enabling real-time processing, low-latency applications, and intelligent IoT devices.;
+    description: Advanced edge computing platform that brings AI capabilities to the edge, enabling real-time processing, low-latency applications, and intelligent IoT devices.;
 
     features: [
-      'Edge AI model deployment and managementReal-time data processing and analyticsLow-latency inference capabilitiesEdge device orchestrationDistributed AI trainingEdge security and privacyMulti-cloud edge managementIoT device integration;
+      Edge AI model deployment and managementReal-time data processing and analyticsLow-latency inference capabilitiesEdge device orchestrationDistributed AI trainingEdge security and privacyMulti-cloud edge managementIoT device integration;
 
       Real-time monitoring and alertsCustom edge AI applications
     ];
 
     popular: true;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-indigo-600 to-purple-600;
+    color: from-indigo-600 to-purple-600;
 
-    textColor: 'text-indigo-400;
+    textColor: text-indigo-400;
 
-    link: 'https://ziontechgroup.com/edge-ai-computing-platform;
+    link: https://ziontechgroup.com/edge-ai-computing-platform;
 
-    marketPosition: 'Advanced edge AI platform competing with AWS Greengrass ($0.16/hour) and Azure IoT Edge ($0.08/hour);
+    marketPosition: Advanced edge AI platform competing with AWS Greengrass ($0.16/hour) and Azure IoT Edge ($0.08/hour);
 
-    targetAudience: 'IoT companies, Manufacturing firms, Smart city operators, Edge computing providers;
+    targetAudience: IoT companies, Manufacturing firms, Smart city operators, Edge computing providers;
 
     trialDays: 14;
 
-    setupTime: '1 week;
+    setupTime: 1 week;
 
-    category: 'Edge Computing;
+    category: Edge Computing;
 
     realService: true;
 
-    technology: ['Edge Computing, AI/ML, Kubernetes, Docker, Python, TensorFlow Lite];
+    technology: [Edge Computing, AI/ML, Kubernetes, Docker, Python, TensorFlow Lite];
 
-    integrations: ['AWS, Azure, GCP, IoT platforms, Edge devices];
+    integrations: [AWS, Azure, GCP, IoT platforms, Edge devices];
 
-    useCases: ['Real-time processingIoT applicationsLow-latency servicesEdge AI deployment];
+    useCases: [Real-time processingIoT applicationsLow-latency servicesEdge AI deployment];
 
-    roi: 'Average 350% ROI through reduced latency and improved performance'}
+    roi: 'Average 350% ROI through reduced latency and improved performance}
 
-    competitors: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge} EdgeX Foundry];
+    competitors: [AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge} EdgeX Foundry];
 
-    marketSize: '$12.4 B edge computing market;
+    marketSize: $12.4 B edge computing market;
 
-    growthRate: '240% annual growth;
+    growthRate: 240% annual growth;
 
-    variant: 'ai-futuristic;
+    variant: ai-futuristic;
 
     contactInfo: contact;
 
     realImplementation: true;
 
-    implementationDetails: 'Cloud-native edge platform with AI capabilities and comprehensive device management;
+    implementationDetails: Cloud-native edge platform with AI capabilities and comprehensive device management;
 
-    launchDate: '2024-02-20;
+    launchDate: 2024-02-20;
 
     customers: 234;
 
@@ -866,79 +866,79 @@ export const,
 
     reviews: 178;
 
-    benefits: ['Reduced latencyImproved performanceCost reductionReal-time processing];
+    benefits: [Reduced latencyImproved performanceCost reductionReal-time processing];
 
-    capabilities: ['Edge AI deploymentReal-time processingDevice managementMulti-cloud support];
+    capabilities: [Edge AI deploymentReal-time processingDevice managementMulti-cloud support];
 
-    marketAdvantage: 'First platform to combine edge computing with comprehensive AI capabilities};
+    marketAdvantage: First platform to combine edge computing with comprehensive AI capabilities};
 
   // Quantum Internet Services;
 
   {;
 
-    id: 'quantum-internet-platform;
+    id: quantum-internet-platform;
 
-    name: 'Quantum Internet Platform;
+    name: Quantum Internet Platform;
 
-    tagline: 'Revolutionary quantum internet platform for ultra-secure communication and quantum networking;
+    tagline: Revolutionary quantum internet platform for ultra-secure communication and quantum networking;
 
-    price: '$1,199;
+    price: $1,199;
 
-    period: '/month;
+    period: /month;
 
-    description: 'Advanced quantum internet platform that enables ultra-secure communication, quantum networking, and quantum key distribution for next-generation internet infrastructure.;
+    description: Advanced quantum internet platform that enables ultra-secure communication, quantum networking, and quantum key distribution for next-generation internet infrastructure.;
 
     features: [
-      'Quantum key distribution (QKD)Quantum internet protocolsUltra-secure communication channelsQuantum network managementQuantum repeater technologyQuantum memory systemsMulti-node quantum networksQuantum internet security;
+      Quantum key distribution (QKD)Quantum internet protocolsUltra-secure communication channelsQuantum network managementQuantum repeater technologyQuantum memory systemsMulti-node quantum networksQuantum internet security;
 
       Integration with classical networksQuantum internet applications
     ];
 
     popular: true;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-violet-600 to-purple-600;
+    color: from-violet-600 to-purple-600;
 
-    textColor: 'text-violet-400;
+    textColor: text-violet-400;
 
-    link: 'https://ziontechgroup.com/quantum-internet-platform;
+    link: https://ziontechgroup.com/quantum-internet-platform;
 
-    marketPosition: 'Advanced quantum internet platform competing with ID Quantique ($50)000/year) and Toshiba ($100)000/year);
+    marketPosition: Advanced quantum internet platform competing with ID Quantique ($50)000/year) and Toshiba ($100)000/year);
 
-    targetAudience: 'Government agencies, Financial institutions, Defense contractors, Research institutions;
+    targetAudience: Government agencies, Financial institutions, Defense contractors, Research institutions;
 
     trialDays: 30;
 
-    setupTime: '4 weeks;
+    setupTime: 4 weeks;
 
-    category: 'Quantum Internet;
+    category: Quantum Internet;
 
     realService: true;
 
-    technology: ['Quantum Computing, Quantum Cryptography, Python, Qiskit, Quantum protocols];
+    technology: [Quantum Computing, Quantum Cryptography, Python, Qiskit, Quantum protocols];
 
-    integrations: ['Classical networks, Quantum devices, Security systems, Communication platforms];
+    integrations: [Classical networks, Quantum devices, Security systems, Communication platforms];
 
-    useCases: ['Ultra-secure communicationQuantum networkingGovernment communicationsFinancial transactions];
+    useCases: [Ultra-secure communicationQuantum networkingGovernment communicationsFinancial transactions];
 
-    roi: 'Average 1200% ROI through enhanced security and communication capabilities'}
+    roi: 'Average 1200% ROI through enhanced security and communication capabilities}
 
-    competitors: ['ID Quantique, Toshiba, Quantum Xchange} Qubitekk];
+    competitors: [ID Quantique, Toshiba, Quantum Xchange} Qubitekk];
 
-    marketSize: '$3.8 B quantum internet market;
+    marketSize: $3.8 B quantum internet market;
 
-    growthRate: '600% annual growth;
+    growthRate: 600% annual growth;
 
-    variant: 'ai-futuristic;
+    variant: ai-futuristic;
 
     contactInfo: contact;
 
     realImplementation: true;
 
-    implementationDetails: 'Enterprise-grade quantum internet platform with comprehensive security and networking capabilities;
+    implementationDetails: Enterprise-grade quantum internet platform with comprehensive security and networking capabilities;
 
-    launchDate: '2024-01-10;
+    launchDate: 2024-01-10;
 
     customers: 23;
 
@@ -946,79 +946,79 @@ export const,
 
     reviews: 18;
 
-    benefits: ['Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance];
+    benefits: [Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance];
 
-    capabilities: ['Quantum key distributionNetwork managementSecurity protocolsMulti-node support];
+    capabilities: [Quantum key distributionNetwork managementSecurity protocolsMulti-node support];
 
-    marketAdvantage: 'First comprehensive quantum internet platform with commercial applications};
+    marketAdvantage: First comprehensive quantum internet platform with commercial applications};
 
   // Neuromorphic Computing Services;
 
   {;
 
-    id: 'neuromorphic-computing-platform;
+    id: neuromorphic-computing-platform;
 
-    name: 'Neuromorphic Computing Platform;
+    name: Neuromorphic Computing Platform;
 
-    tagline: 'Revolutionary brain-inspired computing platform for AI and cognitive applications;
+    tagline: Revolutionary brain-inspired computing platform for AI and cognitive applications;
 
-    price: '$799;
+    price: $799;
 
-    period: '/month;
+    period: /month;
 
-    description: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.;
+    description: 'Advanced neuromorphic computing platform that mimics the human brain\s neural structure, enabling energy-efficient AI processing and cognitive computing applications.;
 
     features: [
-      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications;
+      Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications;
 
       Advanced pattern recognitionCustom neuromorphic algorithms
     ];
 
     popular: true;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-pink-600 to-rose-600;
+    color: from-pink-600 to-rose-600;
 
-    textColor: 'text-pink-400;
+    textColor: text-pink-400;
 
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform;
+    link: https://ziontechgroup.com/neuromorphic-computing-platform;
 
-    marketPosition: 'Advanced neuromorphic platform competing with Intel Loihi ($1000/month) and IBM TrueNorth ($800/month);
+    marketPosition: Advanced neuromorphic platform competing with Intel Loihi ($1000/month) and IBM TrueNorth ($800/month);
 
-    targetAudience: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions;
+    targetAudience: AI research labs, Robotics companies, Cognitive computing firms, Research institutions;
 
     trialDays: 30;
 
-    setupTime: '3 weeks;
+    setupTime: 3 weeks;
 
-    category: 'Neuromorphic Computing;
+    category: Neuromorphic Computing;
 
     realService: true;
 
-    technology: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms];
+    technology: [Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms];
 
-    integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms];
+    integrations: [Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms];
 
-    useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces];
+    useCases: [Cognitive computingRoboticsPattern recognitionBrain-computer interfaces];
 
-    roi: 'Average 700% ROI through energy efficiency and cognitive capabilities;
+    roi: Average 700% ROI through energy efficiency and cognitive capabilities;
 
-    competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision];
+    competitors: [Intel Loihi, IBM TrueNorth, BrainChip, General Vision];
 
-    marketSize: '$2.1 B neuromorphic computing market;
+    marketSize: $2.1 B neuromorphic computing market;
 
-    growthRate: '450% annual growth;
+    growthRate: 450% annual growth;
 
-    variant: 'ai-futuristic;
+    variant: ai-futuristic;
 
     contactInfo: contact;
 
     realImplementation: true;
 
-    implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities;
+    implementationDetails: Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities;
 
-    launchDate: '2024-02-15;
+    launchDate: 2024-02-15;
 
     customers: 45;
 
@@ -1026,26 +1026,26 @@ export const,
 
     reviews: 34;
 
-    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}
+    benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing]}
 
-    capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
+    capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms]}
 
-    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities',
+    marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities,
   {/* TODO: Fix JSX expression */}
 
-  i: 'Average 400% ROI through increased engagement and conversion rates'}
+  i: 'Average 400% ROI through increased engagement and conversion rates}
 
     competitor,
-  s: ['Unity, Unreal Engine, VRChat} AltspaceVR];
+  s: [Unity, Unreal Engine, VRChat} AltspaceVR];
 
     marketSiz,
-  e: '$28.8B AR/VR market;
+  e: $28.8B AR/VR market;
 
     growthRat,
-  e: '280% annual growth;
+  e: 280% annual growth;
 
     varian,
-  t: 'ai-futuristic;
+  t: ai-futuristic;
 
     contactInf,
   o: contact;
@@ -1054,10 +1054,10 @@ export const,
   n: true;
 
     implementationDetail,
-  s: 'Cloud-native AR/VR platform with comprehensive development tools and deployment capabilities;
+  s: Cloud-native AR/VR platform with comprehensive development tools and deployment capabilities;
 
     launchDat,
-  e: '2024-02-15;
+  e: 2024-02-15;
 
     customer,
   s: 456;
@@ -1069,10 +1069,10 @@ export const,
   s: 234;
 
     benefit,
-  s: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach];
+  s: [Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach];
 
     capabilitie,
-  s: ['Content creationMetaverse developmentAnalyticsHardware integration];
+  s: [Content creationMetaverse developmentAnalyticsHardware integration];
 
     marketAdvantag,
   e: First platform to combine AR/VR development with metaverse creation tools
@@ -1082,19 +1082,19 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  i: 'Average 500% ROI through improved network performance and reduced operational costs'}
+  i: 'Average 500% ROI through improved network performance and reduced operational costs}
 
     competitor,
-  s: ['Ericsson, Nokia, Huawei} Cisco];
+  s: [Ericsson, Nokia, Huawei} Cisco];
 
     marketSiz,
-  e: '$31.2B 5G network market;
+  e: $31.2B 5G network market;
 
     growthRat,
-  e: '320% annual growth;
+  e: 320% annual growth;
 
     varian,
-  t: 'ai-futuristic;
+  t: ai-futuristic;
 
     contactInf,
   o: contact;
@@ -1103,10 +1103,10 @@ export const,
   n: true;
 
     implementationDetail,
-  s: 'Enterprise-grade network optimization platform with AI algorithms and comprehensive monitoring;
+  s: Enterprise-grade network optimization platform with AI algorithms and comprehensive monitoring;
 
     launchDat,
-  e: '2024-01-20;
+  e: 2024-01-20;
 
     customer,
   s: 123;
@@ -1118,10 +1118,10 @@ export const,
   s: 89;
 
     benefit,
-  s: ['Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency];
+  s: [Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency];
 
     capabilitie,
-  s: ['AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support];
+  s: [AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support];
 
     marketAdvantag,
   e: First AI-powered platform for comprehensive 5G/6G network optimization
@@ -1131,19 +1131,19 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  i: 'Average 800% ROI through accelerated research and reduced development costs'}
+  i: 'Average 800% ROI through accelerated research and reduced development costs}
 
     competitor,
-  s: ['Insilico Medicine, Atomwise, BenevolentAI} Recursion Pharmaceuticals];
+  s: [Insilico Medicine, Atomwise, BenevolentAI} Recursion Pharmaceuticals];
 
     marketSiz,
-  e: '$22.4B AI biotech market;
+  e: $22.4B AI biotech market;
 
     growthRat,
-  e: '350% annual growth;
+  e: 350% annual growth;
 
     varian,
-  t: 'ai-futuristic;
+  t: ai-futuristic;
 
     contactInf,
   o: contact;
@@ -1152,10 +1152,10 @@ export const,
   n: true;
 
     implementationDetail,
-  s: 'Enterprise-grade biotech platform with AI algorithms and comprehensive research tools;
+  s: Enterprise-grade biotech platform with AI algorithms and comprehensive research tools;
 
     launchDat,
-  e: '2024-02-01;
+  e: 2024-02-01;
 
     customer,
   s: 89;
@@ -1167,10 +1167,10 @@ export const,
   s: 67;
 
     benefit,
-  s: ['Accelerated researchCost reductionImproved accuracyCollaboration tools];
+  s: [Accelerated researchCost reductionImproved accuracyCollaboration tools];
 
     capabilitie,
-  s: ['Drug discoveryGenetic analysisClinical optimizationResearch collaboration];
+  s: [Drug discoveryGenetic analysisClinical optimizationResearch collaboration];
 
     marketAdvantag,
   e: First platform to combine AI-powered drug discovery with comprehensive biotech research tools
@@ -1180,19 +1180,19 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  i: 'Average 600% ROI through improved energy efficiency and reduced operational costs'}
+  i: 'Average 600% ROI through improved energy efficiency and reduced operational costs}
 
     competitor,
-  s: ['GE Digital, Siemens, Schneider Electric} ABB];
+  s: [GE Digital, Siemens, Schneider Electric} ABB];
 
     marketSiz,
-  e: '$19.8B smart grid market;
+  e: $19.8B smart grid market;
 
     growthRat,
-  e: '280% annual growth;
+  e: 280% annual growth;
 
     varian,
-  t: 'ai-futuristic;
+  t: ai-futuristic;
 
     contactInf,
   o: contact;
@@ -1201,10 +1201,10 @@ export const,
   n: true;
 
     implementationDetail,
-  s: 'Enterprise-grade energy platform with AI optimization and comprehensive grid management;
+  s: Enterprise-grade energy platform with AI optimization and comprehensive grid management;
 
     launchDat,
-  e: '2024-03-01;
+  e: 2024-03-01;
 
     customer,
   s: 156;
@@ -1216,10 +1216,10 @@ export const,
   s: 123;
 
     benefit,
-  s: ['Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance];
+  s: [Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance];
 
     capabilitie,
-  s: ['Energy optimizationGrid managementReal-time monitoringPredictive analytics];
+  s: [Energy optimizationGrid managementReal-time monitoringPredictive analytics];
 
     marketAdvantag,
   e: First AI-powered platform for comprehensive renewable energy optimization
@@ -1229,19 +1229,19 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  i: 'Average 350% ROI through reduced latency and improved performance'}
+  i: 'Average 350% ROI through reduced latency and improved performance}
 
     competitor,
-  s: ['AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge} EdgeX Foundry];
+  s: [AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge} EdgeX Foundry];
 
     marketSiz,
-  e: '$12.4B edge computing market;
+  e: $12.4B edge computing market;
 
     growthRat,
-  e: '240% annual growth;
+  e: 240% annual growth;
 
     varian,
-  t: 'ai-futuristic;
+  t: ai-futuristic;
 
     contactInf,
   o: contact;
@@ -1250,10 +1250,10 @@ export const,
   n: true;
 
     implementationDetail,
-  s: 'Cloud-native edge platform with AI capabilities and comprehensive device management;
+  s: Cloud-native edge platform with AI capabilities and comprehensive device management;
 
     launchDat,
-  e: '2024-02-20;
+  e: 2024-02-20;
 
     customer,
   s: 234;
@@ -1265,10 +1265,10 @@ export const,
   s: 178;
 
     benefit,
-  s: ['Reduced latencyImproved performanceCost reductionReal-time processing];
+  s: [Reduced latencyImproved performanceCost reductionReal-time processing];
 
     capabilitie,
-  s: ['Edge AI deploymentReal-time processingDevice managementMulti-cloud support];
+  s: [Edge AI deploymentReal-time processingDevice managementMulti-cloud support];
 
     marketAdvantag,
   e: First platform to combine edge computing with comprehensive AI capabilities
@@ -1278,19 +1278,19 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  i: 'Average 1200% ROI through enhanced security and communication capabilities'}
+  i: 'Average 1200% ROI through enhanced security and communication capabilities}
 
     competitor,
-  s: ['ID Quantique, Toshiba, Quantum Xchange} Qubitekk];
+  s: [ID Quantique, Toshiba, Quantum Xchange} Qubitekk];
 
     marketSiz,
-  e: '$3.8B quantum internet market;
+  e: $3.8B quantum internet market;
 
     growthRat,
-  e: '600% annual growth;
+  e: 600% annual growth;
 
     varian,
-  t: 'ai-futuristic;
+  t: ai-futuristic;
 
     contactInf,
   o: contact;
@@ -1299,10 +1299,10 @@ export const,
   n: true;
 
     implementationDetail,
-  s: 'Enterprise-grade quantum internet platform with comprehensive security and networking capabilities;
+  s: Enterprise-grade quantum internet platform with comprehensive security and networking capabilities;
 
     launchDat,
-  e: '2024-01-10;
+  e: 2024-01-10;
 
     customer,
   s: 23;
@@ -1314,10 +1314,10 @@ export const,
   s: 18;
 
     benefit,
-  s: ['Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance];
+  s: [Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance];
 
     capabilitie,
-  s: ['Quantum key distributionNetwork managementSecurity protocolsMulti-node support];
+  s: [Quantum key distributionNetwork managementSecurity protocolsMulti-node support];
 
     marketAdvantag,
   e: First comprehensive quantum internet platform with commercial applications
@@ -1327,10 +1327,10 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}
+  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing]}
 
     capabilitie,
-  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}
+  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms]}
 
     marketAdvantag,
   e: First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities
@@ -1342,7 +1342,7 @@ export const,
 
     popula,
   r: true, ico,
-  n: ''}
+  n: '}
 
 ];
 
@@ -1388,48 +1388,48 @@ i,
   s: string[]; market_advantag,
   e: string, const contact = mobil,;;
 
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', ' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' }' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'};' ]; descriptio,
-  n: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications.' feature,
-  s: [' 'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'' 'Advanced pattern recognitionCustom neuromorphic algorithms' benefit,
-  s: [,' 'Energy efficiency',' 'Cognitive capabilities',' 'Real - time learning',' 'Brain - inspired processing'], capabilitie,
-  s: [,' 'Neural architectures',' 'Cognitive computing',' 'Hardware integration',' 'Custom algorithms'], market_advantag,
-  e:  ,' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'},' ]; descriptio,
-  n: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications.' feature,
-  s: [;' 'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'' 'Advanced pattern recognition_custom neuromorphic algorithms' ], ' popula,
+  e: '+1 302 464 0950', emai,
+  l: 'kleber@ziontechgroup && ziontechgroup.com', addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709', ' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' }' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}; ]; descriptio,
+  n: 'Advanced neuromorphic computing platform that mimics the human brain\'s neural structure, enabling energy-efficient AI processing and cognitive computing applications. feature,
+  s: [' 'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications'' 'Advanced pattern recognitionCustom neuromorphic algorithms benefit,
+  s: [,' 'Energy efficiency',' 'Cognitive capabilities',' 'Real - time learning',' 'Brain - inspired processing], capabilitie,
+  s: [,' 'Neural architectures',' 'Cognitive computing',' 'Hardware integration',' 'Custom algorithms], market_advantag,
+  e:  ,' 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'}, ]; descriptio,
+  n: 'Advanced neuromorphic computing platform that mimics the human brain's neural structure, enabling energy - efficient AI processing and cognitive computing applications. feature,
+  s: [;' 'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications'' 'Advanced pattern recognition_custom neuromorphic algorithms' ],  popula,
   r: true, ico,
-  n: '🧠'} ]} ];' popula,
+  n: '🧠'} ]} ]; popula,
   r: true, ico,
-  n: '🧠',' colo,
-  r: 'from - pink - 600 to - rose - 600', text_colo,
-  r: 'text - pink - 400',' lin,
-  k: 'http,
-  s://ziontechgroup.com / neuromorphic - computing - platform', market_positio,
-  n: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)',' target_audienc,
-  e: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions',' trial_day,
+  n: '🧠', colo,
+  r: 'from - pink - 600 to - rose - 600, text_colo,
+  r: 'text - pink - 400', lin,
+  k: http,
+  s://ziontechgroup.com / neuromorphic - computing - platform, market_positio,
+  n: 'Advanced neuromorphic platform competing with Intel Loihi ($1000 / month) and IBM TrueNorth ($800 / month)', target_audienc,
+  e: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions', trial_day,
   s: 30, setup_tim,
-  e: '3 weeks',' categor,
-  y: 'Neuromorphic Computing', real_servic,
-  e: true,' technolog,
-  y: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms'];' integration,
-  s: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];' useCase,
-  s: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], ro,
-  i: 'Average 700% ROI through energy efficiency and cognitive capabilities'' competitor,
-  s: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];' marketSiz,
-  e: '$2.1B neuromorphic computing market', growthRat,
-  e: '450% annual growth'' varian,
-  t: 'ai-futuristic', contactInf,
-  o: contact' realImplementatio,
+  e: '3 weeks', categor,
+  y: 'Neuromorphic Computing, real_servic,
+  e: true, technolog,
+  y: ['Neuromorphic Computing, Spiking Neural Networks, Python, Custom algorithms']; integration,
+  s: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms']; useCase,
+  s: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces], ro,
+  i: 'Average 700% ROI through energy efficiency and cognitive capabilities' competitor,
+  s: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision']; marketSiz,
+  e: '$2.1B neuromorphic computing market, growthRat,
+  e: '450% annual growth' varian,
+  t: 'ai-futuristic, contactInf,
+  o: contact realImplementatio,
   n: true, implementationDetail,
-  s: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'' launchDat,
-  e: '2024-02-15', customer,
+  s: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities' launchDat,
+  e: '2024-02-15, customer,
   s: 45,
   rating: 4.8, review,
-  s: 34' benefit,
-  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
-  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import { ServiceVariant } from '../types/service-variants'; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
+  s: 34 benefit,
+  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing], capabilitie,
+  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'] marketAdvantag,
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ' import { ServiceVariant } from '../types/service-variants; export interface SpecializedEmergingTechService {/* TODO: Fix JSX expression */}
 
   s: string} websit,
   e: string} }; realImplementatio,
@@ -1441,53 +1441,53 @@ i,
   s: number; benefit,
   s: string[]; capabilitie,
   s: string[]; marketAdvantag,
-  e: string} ;' marketSiz,
-  e: '$2.1B neuromorphic computing market', growthRat,
-  e: '450% annual growth'' varian,
-  t: 'ai-futuristic', contactInf,
-  o: contact' realImplementatio,
+  e: string} ; marketSiz,
+  e: '$2.1B neuromorphic computing market, growthRat,
+  e: '450% annual growth' varian,
+  t: 'ai-futuristic, contactInf,
+  o: contact realImplementatio,
   n: true, implementationDetail,
-  s: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'' launchDat,
-  e: '2024-02-15', customer,
+  s: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities' launchDat,
+  e: '2024-02-15, customer,
   s: 45,
   rating: 4.8, review,
-  s: 34' benefit,
-  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilitie,
-  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities const contact = {/* TODO: Fix JSX expression */};;
+  s: 34 benefit,
+  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing], capabilitie,
+  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'] marketAdvantag,
+  e: First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities const contact = {/* TODO: Fix JSX expression */};;
 
-  l: 'kleber@ziontechgroup.com'}' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
-  e: 'http,
-  s://ziontechgroup.com' }; export const,
+  l: 'kleber@ziontechgroup.com'} addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}; websit,
+  e: http,
+  s://ziontechgroup.com }; export const,
   specializedEmergingTechServices: SpecializedEmergingTechService[] = [; // AR/VR & Metaverse Services; {/* TODO: Fix JSX expression */}
 
-  s: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach']}' capabilitie,
-  s: ['Content creationMetaverse developmentAnalyticsHardware integration']};' marketAdvantag,
-  e: 'First platform to combine AR/VR development with metaverse creation tools' }; // 5G/6G Network Services; {/* TODO: Fix JSX expression */}
+  s: ['Immersive customer experiencesIncreased engagementCost-effective developmentMulti-platform reach']} capabilitie,
+  s: ['Content creationMetaverse developmentAnalyticsHardware integration']}; marketAdvantag,
+  e: 'First platform to combine AR/VR development with metaverse creation tools }; // 5G/6G Network Services; {/* TODO: Fix JSX expression */}
 
-  s: ['Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency']}' capabilitie,
-  s: ['AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support']};' marketAdvantag,
-  e: 'First AI-powered platform for comprehensive 5G/6G network optimization' }; // Biotechnology AI Services; {/* TODO: Fix JSX expression */}
+  s: ['Improved network performanceReduced operational costsPredictive maintenanceEnergy efficiency']} capabilitie,
+  s: ['AI optimizationReal-time monitoringPredictive analyticsMulti-vendor support']}; marketAdvantag,
+  e: 'First AI-powered platform for comprehensive 5G/6G network optimization }; // Biotechnology AI Services; {/* TODO: Fix JSX expression */}
 
-  s: ['Accelerated researchCost reductionImproved accuracyCollaboration tools']}' capabilitie,
-  s: ['Drug discoveryGenetic analysisClinical optimizationResearch collaboration']};' marketAdvantag,
-  e: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools' }; // Renewable Energy AI Services; {/* TODO: Fix JSX expression */}
+  s: ['Accelerated researchCost reductionImproved accuracyCollaboration tools']} capabilitie,
+  s: ['Drug discoveryGenetic analysisClinical optimizationResearch collaboration']}; marketAdvantag,
+  e: 'First platform to combine AI-powered drug discovery with comprehensive biotech research tools }; // Renewable Energy AI Services; {/* TODO: Fix JSX expression */}
 
-  s: ['Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance']}' capabilitie,
-  s: ['Energy optimizationGrid managementReal-time monitoringPredictive analytics']};' marketAdvantag,
-  e: 'First AI-powered platform for comprehensive renewable energy optimization' }; // Edge AI Computing Services; {/* TODO: Fix JSX expression */}
+  s: ['Improved energy efficiencyCost reductionCarbon reductionPredictive maintenance']} capabilitie,
+  s: ['Energy optimizationGrid managementReal-time monitoringPredictive analytics']}; marketAdvantag,
+  e: 'First AI-powered platform for comprehensive renewable energy optimization }; // Edge AI Computing Services; {/* TODO: Fix JSX expression */}
 
-  s: ['Reduced latencyImproved performanceCost reductionReal-time processing']}' capabilitie,
-  s: ['Edge AI deploymentReal-time processingDevice managementMulti-cloud support']};' marketAdvantag,
-  e: 'First platform to combine edge computing with comprehensive AI capabilities' }; // Quantum Internet Services; {/* TODO: Fix JSX expression */}
+  s: ['Reduced latencyImproved performanceCost reductionReal-time processing']} capabilitie,
+  s: ['Edge AI deploymentReal-time processingDevice managementMulti-cloud support']}; marketAdvantag,
+  e: 'First platform to combine edge computing with comprehensive AI capabilities }; // Quantum Internet Services; {/* TODO: Fix JSX expression */}
 
-  s: ['Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance']}' capabilitie,
-  s: ['Quantum key distributionNetwork managementSecurity protocolsMulti-node support']};' marketAdvantag,
-  e: 'First comprehensive quantum internet platform with commercial applications' }; // Neuromorphic Computing Services; {/* TODO: Fix JSX expression */}
+  s: ['Ultra-secure communicationQuantum networkingFuture-proof technologyGovernment compliance']} capabilitie,
+  s: ['Quantum key distributionNetwork managementSecurity protocolsMulti-node support']}; marketAdvantag,
+  e: 'First comprehensive quantum internet platform with commercial applications }; // Neuromorphic Computing Services; {/* TODO: Fix JSX expression */}
 
-  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']}' capabilitie,
-  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']}' marketAdvantag,
-  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ]; ' popula,
+  s: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing']} capabilitie,
+  s: ['Neural architecturesCognitive computingHardware integrationCustom algorithms']} marketAdvantag,
+  e: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities' } ]; ];  popula,
   r: true, ico,
   n: '🧠'} ]; '

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react;
+import React, { useEffect, useState } from react;
 
 interface AccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 
@@ -24,11 +24,11 @@ const [isHighContrast, setIsHighContrast] = useState(false);
   const [focusVisible, setFocusVisible] = useState(false);
 
   useEffect(() => {
-    // Check for user preferences';
+    // Check for user preferences;
 
-    if (enableHighContrast) {';
+    if (enableHighContrast) {;
 
-const _mediaQuery = window.matchMedia('(prefers-contrast: high));;
+const _mediaQuery = window.matchMedia((prefers-contrast: high));;
 
       setIsHighContrast(mediaQuery.matches);
 
@@ -36,9 +36,9 @@ const _mediaQuery = window.matchMedia('(prefers-contrast: high));;
 
 const _handleChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);;
 
-      mediaQuery.addEventListener('change, handleChange);
+      mediaQuery.addEventListener(change, handleChange);
 
-      return () => mediaQuery.removeEventListener('change, handleChange);
+      return () => mediaQuery.removeEventListener(change, handleChange);
 
 const,
   AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps>
@@ -56,7 +56,7 @@ const,
 
     if (enableReducedMotion) {;
 
-const _mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce));;
+const _mediaQuery = window.matchMedia((prefers-reduced-motion: reduce));;
 
       setIsReducedMotion(mediaQuery.matches);
 
@@ -64,9 +64,9 @@ const _mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce));;
 
 const _handleChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);;
 
-      mediaQuery.addEventListener('change, handleChange);
+      mediaQuery.addEventListener(change, handleChange);
 
-      return () => mediaQuery.removeEventListener('change, handleChange);
+      return () => mediaQuery.removeEventListener(change, handleChange);
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -83,9 +83,9 @@ const handleKeyDown = (e: KeyboardEvent) => {;;
 
         // Skip to main content;
 
-        if (e.key === 'Tab && e.shiftKey && e.target === document.body) {;
+        if (e.key === Tab && e.shiftKey && e.target === document.body) {;
 
-const _skipLink = document.querySelector('.skip-link) as HTMLElement;;
+const _skipLink = document.querySelector(.skip-link) as HTMLElement;;
 
           if (skipLink) {,
             skipLink.focus();
@@ -100,14 +100,14 @@ const _skipLink = document.querySelector('.skip-link) as HTMLElement;;
 
         // Escape key handling;
 
-        if (e.key === 'Escape) {;
+        if (e.key === Escape) {;
 
 const _activeElement = document.activeElement as HTMLElement;;
 
           if (activeElement && activeElement.blur) {
             activeElement.blur();
 
-        if (e.key === 'Escape') {/* TODO: Fix JSX expression */}
+        if (e.key === 'Escape) {/* TODO: Fix JSX expression */}
 
           }
 
@@ -125,9 +125,9 @@ const _activeElement = document.activeElement as HTMLElement;;
 
         // Announce focus changes to screen readers;
 
-        if (enableScreenReaderSupport && target.getAttribute('aria-label)) {;
+        if (enableScreenReaderSupport && target.getAttribute(aria-label)) {;
 
-const _announcement = target.getAttribute('aria-label);;
+const _announcement = target.getAttribute(aria-label);;
 
           if (announcement) {,
             announceToScreenReader(announcement);
@@ -146,11 +146,11 @@ const handleFocusOut = () => {/* TODO: Fix JSX expression */};;
 
       };
 
-      document.addEventListener('keydown, handleKeyDown);
+      document.addEventListener(keydown, handleKeyDown);
 
-      document.addEventListener('focusin, handleFocusIn);
+      document.addEventListener(focusin, handleFocusIn);
 
-      document.addEventListener('focusout, handleFocusOut);
+      document.addEventListener(focusout, handleFocusOut);
 
       return () => {/* TODO: Fix JSX expression */}
 
@@ -164,8 +164,8 @@ const handleFocusOut = () => {/* TODO: Fix JSX expression */};;
     const _root = document.documentElement;;
 
     if (isHighContrast) {
-      root.classList.add('high-contrast')} else {
-      root.classList.remove('high-contrast);
+      root.classList.add('high-contrast)} else {
+      root.classList.remove(high-contrast);
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
@@ -193,13 +193,13 @@ const handleFocusOut = () => {/* TODO: Fix JSX expression */};;
 
     if (enableScreenReaderSupport) {,;
 
-const _announcement = document.createElement('div);;
+const _announcement = document.createElement(div);;
 
-      announcement.setAttribute('aria-live', 'polite);
+      announcement.setAttribute('aria-live', polite);
 
-      announcement.setAttribute('aria-atomic', 'true);
+      announcement.setAttribute('aria-atomic', true);
 
-      announcement.className = 'sr-only;
+      announcement.className = sr-only;
 
       announcement.textContent = message;
 
@@ -219,38 +219,38 @@ const _announcement = document.createElement('div);;
   return(<div;
 
   return (<div></div>
-      className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
+      className={`accessibility-enhancer ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}}
 
-      role="main""
-      aria-label="Main content"
+      role="main"
+      aria-label="Main content
     >
       {/* Skip to main content link */})
       <a;)
-        href="#main-content")
-        className="skip-link")
+        href="#main-content)
+        className="skip-link)
         onClick={e => {)
       {/* Skip to main content link */}</div>
       <a
-        href="#main-content"
-        className="skip-link"
+        href="#main-content
+        className="skip-link
         onClick={e => {
           e.preventDefault();
 
-          const _main = document.querySelector('main') || document.querySelector('#main-content);;
+          const _main = document.querySelector('main') || document.querySelector(#main-content);;
 
           if (main) {}
 
             (main as HTMLElement).focus()}
 
-            (main as HTMLElement).scrollIntoView({ behavior: 'smooth });
+            (main as HTMLElement).scrollIntoView({ behavior: smooth });
 
       {/* Skip to main content link */}
 
-      <a></a>"
-        href="#main-content""
-        className="skip-link"
+      <a></a>
+        href="#main-content"
+        className="skip-link
         onClick={/* TODO: Fix JSX expression */})
-  r: 'smooth' })}
+  r: 'smooth })}
 
         }}
 
@@ -261,23 +261,25 @@ const _announcement = document.createElement('div);;
 
       {/* Accessibility controls */}
 
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls">
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls>
         <button;
 
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls></div>
         <button
           onClick={() => setIsHighContrast(!isHighContrast)}
 
-          className="accessibility-toggle"
-      {/* Accessibility controls */}"
-      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls"></div>
+          className="accessibility-toggle
+      {/* Accessibility controls */}
+
+      <div className="accessibility-controls" role="toolbar" aria-label="Accessibility controls></div>
         <button></button>
-          onClick={() => setIsHighContrast(!isHighContrast)}"
-          className="accessibility-toggle"`
-          aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
+          onClick={() => setIsHighContrast(!isHighContrast)}
+
+          className="accessibility-toggle"
+          aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode}
 
         >
-          {isHighContrast ? '🔆' : '🌙} High Contrast;
+          {isHighContrast ? '🔆' : 🌙} High Contrast;
 
         </button>
 
@@ -285,14 +287,15 @@ const _announcement = document.createElement('div);;
 
           onClick={() => setIsReducedMotion(!isReducedMotion)}
 
-          className="accessibility-toggle"
+          className="accessibility-toggle
         <button></button>
-          onClick={() => setIsReducedMotion(!isReducedMotion)}"
-          className="accessibility-toggle"`
-          aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}
+          onClick={() => setIsReducedMotion(!isReducedMotion)}
+
+          className="accessibility-toggle"
+          aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion}
 
         >
-          {isReducedMotion ? '🏃' : '🚶} Motion;
+          {isReducedMotion ? '🏃' : 🚶} Motion;
 
         </button>
       </div>

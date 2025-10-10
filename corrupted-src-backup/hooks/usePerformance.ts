@@ -1,4 +1,4 @@
-import React from 'react;
+import React from react;
 
 /**
  * Performance Monitoring Hook;
@@ -58,7 +58,7 @@ const _mountTimeRef = useRef<number>(0);</number>const</number> _renderStartTime
 
   useEffect(() => {/* TODO: Fix JSX expression */}
 
-      analytics.trackPerformance(`${componentName}_mount_time`, mountDuration)}}, [componentName]);
+      analytics.trackPerformance(`${componentName}_mount_time, mountDuration)}}, [componentName]);
 
   // Track render performance;
 
@@ -88,11 +88,11 @@ const metrics: PerformanceMetrics = {,
 
         componentMountTime: performance.now() - mountTimeRef.current;
 
-        isSlowRender}';
+        isSlowRender};
 
-      // Track memory usage if available';
+      // Track memory usage if available;
 
-      if (trackMemoryUsage && 'memory in performance) {;
+      if (trackMemoryUsage && memory in performance) {;
 
 const _memory = (performance as any).memory;;
 
@@ -106,12 +106,13 @@ const _memory = (performance as any).memory;;
 
       // Track memory usage if available;
 
-      if (trackMemoryUsage && 'memory' in performance) {/* TODO: Fix JSX expression */}
+      if (trackMemoryUsage && 'memory in performance) {/* TODO: Fix JSX expression */}
 
       }
 
-      // Send to analytics;`
-      analytics.trackPerformance(`${componentName}_render_time`, renderTime);
+      // Send to analytics;
+
+      analytics.trackPerformance(`${componentName}_render_time, renderTime);
 
       if (isSlowRender) {/* TODO: Fix JSX expression */}
 
@@ -144,9 +145,9 @@ const trackPageLoad = () => {;;
 
       // Wait for page to be fully loaded;
 
-      if (document.readyState === 'complete) {;
+      if (document.readyState === complete) {;
 
-const navigation = performance.getEntriesByType('navigation);;
+const navigation = performance.getEntriesByType(navigation);;
 
         )[0] as PerformanceNavigationTiming;
 
@@ -173,20 +174,21 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
 
           // Track each metric;
 
-          Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
-            analytics.trackPerformance(`page_load_${key}`, value)});
+          Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
+
+            analytics.trackPerformance(`page_load_${key}, value)});
 
           // Track overall page load performance;
 
-          analytics.track('page_load_complete')
-            'performance')
-            'complete')
+          analytics.track('page_load_complete)
+            'performance)
+            'complete)
             undefined)
             metrics.totalLoadTime;
 
-          analytics.track('page_load_complete',
-            'performance',
-            'complete',
+          analytics.track('page_load_complete,
+            'performance,
+            'complete,
             undefined,
             metrics.totalLoadTime;)
           )}
@@ -197,15 +199,15 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
 
     // Track immediately if page is already loaded;
 
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'complete) {
       trackPageLoad()} else {
       // Wait for load event;
 
-      window.addEventListener('load, trackPageLoad);
+      window.addEventListener(load, trackPageLoad);
 
-      return () => window.removeEventListener('load, trackPageLoad);
+      return () => window.removeEventListener(load, trackPageLoad);
 
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
     } else {/* TODO: Fix JSX expression */}
 
@@ -224,15 +226,15 @@ export const useResourcePerformance = () => {;;
 const observer = new PerformanceObserver(list => {);;
 
       list.getEntries().forEach(entry => {)
-        if (entry.entryType === 'resource) {;
+        if (entry.entryType === resource) {;
 
 const _resourceEntry = entry as PerformanceResourceTiming;;
 
           analytics.trackPerformance(
 
-export const useResourcePerformance = () => {/* TODO: Fix JSX expression */}`;;
+export const useResourcePerformance = () => {/* TODO: Fix JSX expression */};;
 
-            `resource_${resourceEntry.name.split('.').pop()}`,
+            `resource_${resourceEntry.name.split('.').pop()},
             resourceEntry.duration,
             ms
           )}
@@ -240,7 +242,7 @@ export const useResourcePerformance = () => {/* TODO: Fix JSX expression */}`;;
       })});
 
     observer.observe({/* TODO: Fix JSX expression */})
-  s: ['resource] });
+  s: [resource] });
 
     return () => observer.disconnect()}, [])};
 
@@ -255,7 +257,7 @@ export const useLongTaskMonitoring = () => {;;
 const observer = performanceOptimizer.monitorLongTasks(entries => {);;
 
       entries.forEach(entry => {)
-        analytics.track('long_task', 'performance', 'detected, undefined, entry.duration);
+        analytics.track('long_task', 'performance', detected, undefined, entry.duration);
 
 export const useLongTaskMonitoring = () => {/* TODO: Fix JSX expression */};;
 

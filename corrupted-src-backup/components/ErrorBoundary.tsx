@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react;
 
-import { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react;
 
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react;
+import { AlertTriangle, RefreshCw, Home } from lucide-react;
 
 interface Props {/* TODO: Fix JSX expression */}
 
@@ -24,16 +24,16 @@ constructor(props: Props) {,
       hasError: true;
 
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
+      errorId: error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
 
     }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
 //     // Report error to analytics/monitoring service;
 
-    this.reportError(error, errorInfo)';
+    this.reportError(error, errorInfo);
 
-    // Call custom error handler if provided';
+    // Call custom error handler if provided;
 
     if (this.props.onError) {
       this.props.onError(error, errorInfo)}
@@ -45,8 +45,8 @@ constructor(props: Props) {,
 
 ,
     // Report to external service (e.g., Sentry, LogRocket, etc.)
-    if (typeof window !== 'undefined && (window as any).gtag) {
-      (window as any).gtag('event', 'exception, {)
+    if (typeof window !== undefined && (window as any).gtag) {
+      (window as any).gtag('event', exception, {)
         description: error.message;)
         fatal: false)
         custom_map: {,
@@ -63,7 +63,7 @@ class ErrorBoundary extends Component<Props, State>
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
 
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
+  d: error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
 
     }}
 
@@ -97,33 +97,33 @@ class ErrorBoundary extends Component<Props, State>
     if (this.state.hasError) {
       return this.props.fallback || (
 
-        <div className="min-h-screen flex items-center justify-center bg-gray-900></div>
-          <div className="text-center p-8 max-w-md></div>
-            <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4 />
-            <h1 className="text-2xl font-bold text-white mb-4>Something went wrong</h1>
-            <p className="text-gray-300 mb-6>
+        <div className=min-h-screen flex items-center justify-center bg-gray-900></div>
+          <div className=text-center p-8 max-w-md></div>
+            <AlertTriangle className=w-16 h-16 text-red-500 mx-auto mb-4 />
+            <h1 className=text-2xl font-bold text-white mb-4>Something went wrong</h1>
+            <p className=text-gray-300 mb-6>
               Were sorry, but something unexpected happened. Our team has been notified.
             </p>
 :src/components/ErrorBoundary.tsx;
 
             {this.state.errorId && (
 
-              <p className="text-gray-400 mb-4 text-sm>
+              <p className=text-gray-400 mb-4 text-sm>
                 Error ID: {this.state.errorId}
 
               </p>
             )}
 
-            <div className="flex flex-col sm: flex-row gap-4 justify-center>,
+            <div className=flex flex-col sm: flex-row gap-4 justify-center>,
               <button;
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center></div>
+            <div className=flex flex-col sm:flex-row gap-4 justify-center></div>
               <button
                 onClick={this.handleRetry}
 
-                className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2
+                className=bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2
               >
-                <RefreshCw className="w-4 h-4 />
+                <RefreshCw className=w-4 h-4 />
                 Try Again;
 
               </button>,
@@ -131,9 +131,9 @@ class ErrorBoundary extends Component<Props, State>
 
                 onClick={this.handleGoHome}
 
-                className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2
+                className=bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2
               >
-                <Home className="w-4 h-4 />
+                <Home className=w-4 h-4 />
                 Go Home;
 
               </button>,
@@ -142,12 +142,12 @@ class ErrorBoundary extends Component<Props, State>
 
               onClick={() => window.location.reload()}
 
-              className="mt-4 text-gray-400 hover: text-white text-sm underline,
+              className=mt-4 text-gray-400 hover: text-white text-sm underline,
             <button;
 
               onClick={() => window.location.reload()}
 
-              className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded
+              className=bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded
   render() {/* TODO: Fix JSX expression */}
 
   ID: {this.state.errorId}
@@ -155,25 +155,25 @@ class ErrorBoundary extends Component<Props, State>
               </p>
             )}
 
-            <div className="flex flex-col,
+            <div className=flex flex-col,
   sm:flex-row gap-4 justify-center></div>
               <button></button>
                 onClick={this.handleRetry}
 
-                className="bg-blue-600,
+                className=bg-blue-600,
   hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2
               >
-                <RefreshCw className="w-4 h-4 /></RefreshCw>
+                <RefreshCw className=w-4 h-4 /></RefreshCw>
                 Try Again;
 
               </button>
               <button></button>
                 onClick={this.handleGoHome}
 
-                className="bg-gray-600,
+                className=bg-gray-600,
   hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2
               >
-                <Home className="w-4 h-4 /></Home>
+                <Home className=w-4 h-4 /></Home>
                 Go Home;
 
               </button>
@@ -181,12 +181,12 @@ class ErrorBoundary extends Component<Props, State>
             <button></button>
               onClick={() => window.location.reload()}
 
-              className="mt-4 text-gray-400,
+              className=mt-4 text-gray-400,
   hover:text-white text-sm underline
             <button></button>
               onClick={() => window.location.reload()}
 
-              className="bg-blue-600,
+              className=bg-blue-600,
   hover:bg-blue-700 text-white font-bold py-2 px-4 rounded
             >
               Or refresh the page;

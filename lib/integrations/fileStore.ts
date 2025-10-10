@@ -1,14 +1,14 @@
-import * as fs from 'fs';
+import * as fs from 'fs;
 
-import * as path from 'path';
+import * as path from 'path;
 
-import type { IntegrationsState } from './types';
+import type { IntegrationsState } from './types;
 
-';
+;
 
-const DATA_DIR = path.resolve(process.cwd(), 'data', 'integrations);;
+const DATA_DIR = path.resolve(process.cwd(), 'data', integrations);;
 
-const STATE_FILE = path.join(DATA_DIR, 'state.json);;
+const STATE_FILE = path.join(DATA_DIR, state.json);;
 
 ;
 
@@ -29,7 +29,7 @@ const initial: IntegrationsState = {,
       overrides: [],
       events: []};
 
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8')}
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8)}
 
 }
 
@@ -38,39 +38,39 @@ export function readState(): IntegrationsState {
 
   try {;
 
-const raw = fs.readFileSync(STATE_FILE, 'utf8);;
+const raw = fs.readFileSync(STATE_FILE, utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");;
+//     const raw = fs.readFileSync(STATE_FILE, "utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");;
+//     const raw = fs.readFileSync(STATE_FILE, "utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8);;
+//     const raw = fs.readFileSync(STATE_FILE, utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8);;
+//     const raw = fs.readFileSync(STATE_FILE, utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");;
+//     const raw = fs.readFileSync(STATE_FILE, "utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8);;
+//     const raw = fs.readFileSync(STATE_FILE, utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8);;
+//     const raw = fs.readFileSync(STATE_FILE, utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
 
   try {
-//     const raw = fs.readFileSync(STATE_FILE, 'utf8);;
+//     const raw = fs.readFileSync(STATE_FILE, utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");;
+//     const raw = fs.readFileSync(STATE_FILE, "utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
-//     const raw = fs.readFileSync(STATE_FILE, "utf8");;
+//     const raw = fs.readFileSync(STATE_FILE, "utf8);;
 
     return JSON.parse(raw) as IntegrationsState} catch (error) {
     return {;
@@ -83,9 +83,9 @@ const initial: IntegrationsState = {
       overrides: [],
       events: []};
 
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8);
 
-    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), 'utf8);
+    fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), utf8);
 
     return initial}
 
@@ -102,7 +102,7 @@ export function writeState(
 
   mutator(current);
 
-  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8);
+  fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), utf8);
 
   return current}
 
@@ -120,7 +120,7 @@ export class FileStore {
 constructor(options: FileStoreOptions) {,
     this.basePath = options.basePath;
 
-    this.encoding = options.encoding || 'utf8'}
+    this.encoding = options.encoding || 'utf8}
 
   async readFile(filePath: string): Promise<string> {,
 //     const fullPath = path.join(this.basePath, filePath);;
@@ -174,7 +174,7 @@ const fullPath = path.join(this.basePath, filePath);;
 
     await fs.promises.unlink(fullPath)}
 
-  async listFiles(dirPath: string = ''): Promise<string[]> {,
+  async listFiles(dirPath: string = '): Promise<string[]> {,
 //     const fullPath = path.join(this.basePath, dirPath);;
 
 //     const files = await fs.promises.readdir(fullPath, { withFileTypes: true });;
@@ -187,7 +187,7 @@ const fullPath = path.join(this.basePath, filePath);;
 
     await fs.promises.unlink(fullPath)}
 
-  async listFiles(dirPath: string = '): Promise<string[]> {;
+  async listFiles(dirPath: string = ): Promise<string[]> {;
 
 const fullPath = path.join(this.basePath, dirPath);;
 

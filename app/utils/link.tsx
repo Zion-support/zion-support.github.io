@@ -10,7 +10,7 @@ interface LinkProps {}
   target?: string
   rel?: string
   onClick?: () => void
-  'aria-label?: string;});
+  aria-label?: string;});
 
 }
 
@@ -29,7 +29,7 @@ export const Link: React.FC<LinkProps></LinkProps> = ({}
 
   onClick?: () => void;
 
-  'aria-label?: string;});
+  aria-label?: string;});
 
 }
 
@@ -41,7 +41,7 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
   target,
   rel,
   onClick,
-  'aria-label': ariaLabel,
+  'aria-label: ariaLabel,
   ...props});
 
 }); => {}
@@ -56,9 +56,9 @@ export const Link: React.FC<LinkProps></LinkProps> = ({,
 
     // Handle internal navigation;
 
-    if (href.startsWith('/') && !href.startsWith('//')) {
+    if (href.startsWith('/') && !href.startsWith('//)) {
     // Handle internal navigation
-    if (href.startsWith('/') && !href.startsWith('//')) {}
+    if (href.startsWith('/') && !href.startsWith('//)) {}
 
       e.preventDefault()
       window.location.href = href;});
@@ -71,7 +71,7 @@ return (<a]
 
   return(<a;
 
-import React from 'react;
+import React from react;
 
 interface LinkProps {/* TODO: Fix JSX expression */});
 
@@ -79,13 +79,13 @@ interface LinkProps {/* TODO: Fix JSX expression */});
 
 export const,
   Link: React.FC<LinkProps></a> = ({/* TODO: Fix JSX expression */});]
-    }); => {/* TODO: Fix JSX expression */})';
+    }); => {/* TODO: Fix JSX expression */});
 
 }
 
-    // Handle internal navigation';
+    // Handle internal navigation;
 
-    if (href.startsWith('/') && !href.startsWith('//)) {/* TODO: Fix JSX expression */});
+    if (href.startsWith('/') && !href.startsWith(//)) {/* TODO: Fix JSX expression */});
 
 }
 

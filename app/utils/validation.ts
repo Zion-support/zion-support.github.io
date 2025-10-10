@@ -17,14 +17,14 @@ export interface ValidationResult {
  */
 export function validateEmail(email: string): ValidationResult {
   if (!email || email.length > 254) {
-    return { isValid: false, error: 'Email is too long };
+    return { isValid: false, error: Email is too long };
 
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;;
 
   if (!emailRegex.test(email)) {
-    return { isValid: false, error: 'Invalid email format };
+    return { isValid: false, error: Invalid email format };
 
   }
 
@@ -37,14 +37,14 @@ export function validateEmail(email: string): ValidationResult {
  */
 export function validatePhone(phone: string): ValidationResult {
   if (!phone) {
-    return { isValid: false, error: 'Phone number is required };
+    return { isValid: false, error: Phone number is required };
 
   }
 
   const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;;
 
-  if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {
-    return { isValid: false, error: 'Invalid phone number format };
+  if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, '))) {
+    return { isValid: false, error: Invalid phone number format };
 
   }
 
@@ -57,19 +57,19 @@ export function validatePhone(phone: string): ValidationResult {
  */
 export function validateName(name: string): ValidationResult {
   if (!name || name.trim().length === 0) {
-    return { isValid: false, error: 'Name is required };
+    return { isValid: false, error: Name is required };
 
   }
 
   if (name.length > 100) {
-    return { isValid: false, error: 'Name is too long };
+    return { isValid: false, error: Name is too long };
 
   }
 
   const nameRegex = /^[a-zA-Z\s\-\.]+$/;;
 
   if (!nameRegex.test(name)) {
-    return { isValid: false, error: 'Name contains invalid characters };
+    return { isValid: false, error: Name contains invalid characters };
 
   }
 
@@ -82,12 +82,12 @@ export function validateName(name: string): ValidationResult {
  */
 export function validateMessage(message: string): ValidationResult {
   if (!message || message.trim().length === 0) {
-    return { isValid: false, error: 'Message is required };
+    return { isValid: false, error: Message is required };
 
   }
 
   if (message.length > 1000) {
-    return { isValid: false, error: 'Message is too long };
+    return { isValid: false, error: Message is too long };
 
   }
 
@@ -100,7 +100,7 @@ export function validateMessage(message: string): ValidationResult {
  */
 export function validateUrl(url: string): ValidationResult {
   if (!url) {
-    return { isValid: false, error: 'URL is required };
+    return { isValid: false, error: URL is required };
 
   }
 
@@ -110,7 +110,7 @@ export function validateUrl(url: string): ValidationResult {
     return { isValid: true };
 
   } catch {
-    return { isValid: false, error: 'Invalid URL format };
+    return { isValid: false, error: Invalid URL format };
 
   }
 
@@ -126,7 +126,7 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
     const emailResult = validateEmail(data.email);;
 
     if (!emailResult.isValid) {
-      errors.push(emailResult.error || 'Invalid email);
+      errors.push(emailResult.error || Invalid email);
 
     }
 
@@ -136,7 +136,7 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
     const phoneResult = validatePhone(data.phone);;
 
     if (!phoneResult.isValid) {
-      errors.push(phoneResult.error || 'Invalid phone);
+      errors.push(phoneResult.error || Invalid phone);
 
     }
 
@@ -146,7 +146,7 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
     const nameResult = validateName(data.name);;
 
     if (!nameResult.isValid) {
-      errors.push(nameResult.error || 'Invalid name);
+      errors.push(nameResult.error || Invalid name);
 
     }
 
@@ -156,7 +156,7 @@ export function validateFormData(data: Record<string, any>): ValidationResult {
     const messageResult = validateMessage(data.message);;
 
     if (!messageResult.isValid) {
-      errors.push(messageResult.error || 'Invalid message);
+      errors.push(messageResult.error || Invalid message);
 
     }
 

@@ -1,30 +1,30 @@
 #!/usr/bin
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
 function fixJSXSyntax(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8);;
+    let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
     // Fix mismatched opening
     const tagMismatches = [;;
 
-      { open: '<>', close: '<
+      { open: '<>', close: <
       { ope,
-    n: '<div>', close: '<
+    n: '<div>', close: <
       { ope,
-    n: '<Fragment>', close: '<
+    n: '<Fragment>', close: <
       { ope,
-    n: '<div>', close: '<
+    n: '<div>', close: <
     ];
 
     tagMismatches.forEach(({ open), close }) => {
       if (content.includes(open) && content.includes(close)) {
-        content = content.replace(new RegExp(close.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), close === '</>' ? '</>' : '<
+        content = content.replace(new RegExp(close.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), close === '</>' ? '</>' : <
         modified = true;
 
       }
@@ -36,7 +36,7 @@ function fixJSXSyntax(filePath) {
     
     /
     content = content.replace(/<>\s*
-    content = content.replace(/<\/Helmet>\s*<\/>/g, '</Helmet><
+    content = content.replace(/<\/Helmet>\s*<\/>/g, </Helmet><
     
     /
     content = content.replace(/^\s*<\/div>\s*$
@@ -45,8 +45,8 @@ function fixJSXSyntax(filePath) {
     
     /
     content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
-      if (!inner.includes('<') && !inner.includes('return') && inner.trim()) {
-        return `return (\n    <div>\n      {${inner.trim()}}\n    <
+      if (!inner.includes('<') && !inner.includes('return) && inner.trim()) {
+        return return (\n    <div>\n      {${inner.trim()}}\n    <
       }
 
       return match;
@@ -56,11 +56,11 @@ function fixJSXSyntax(filePath) {
     /
     const commonPatterns = [;;
 
-      { open: /<div[^>]*>\s*<Helmet>/g, close: '</Helmet><
+      { open: /<div[^>]*>\s*<Helmet>/g, close: </Helmet><
       { ope,
-    n: /<section[^>]*>\s*<Helmet>/g, close: '</Helmet><
+    n: /<section[^>]*>\s*<Helmet>/g, close: </Helmet><
       { ope,
-    n: /<main[^>]*>\s*<Helmet>/g, close: '</Helmet><
+    n: /<main[^>]*>\s*<Helmet>/g, close: </Helmet><
     ];
 
     commonPatterns.forEach(({ open), close }) => {
@@ -74,8 +74,8 @@ function fixJSXSyntax(filePath) {
 
     /
     content = content.replace(/(\w+):\s*([^,}]+)(?=[,}])
-      if (value.includes('(') && !value.includes(')')) {
-        return `${key}: ${value})`;
+      if (value.includes('(') && !value.includes('))) {
+        return `${key}: ${value});
 
       }
 
@@ -95,8 +95,8 @@ function fixJSXSyntax(filePath) {
     
     /)
     content = content.replace(/\(\s*([^)]*)\s*$
-      if (inner && !inner.includes('(') && !inner.includes(')') && inner.trim()) {
-        return `(${inner.trim()})`;
+      if (inner && !inner.includes('(') && !inner.includes(')) && inner.trim()) {
+        return `(${inner.trim()});
 
       }
 
@@ -119,7 +119,7 @@ function fixJSXSyntax(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content);
 
-      console.log(`Fixed JSX syntax in: ${filePath}`);
+      console.log(`Fixed JSX syntax in: ${filePath});
 
       return true;
 
@@ -128,7 +128,7 @@ function fixJSXSyntax(filePath) {
     return false;
 
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:, error.message);
 
     return false;
 
@@ -147,7 +147,7 @@ function findProblematicFiles(dir) {
 
       const stat = fs.statSync(fullPath);;
 
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
+      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git)) {
         searchDir(fullPath);
 
       } else if (stat.isFile() && /\.(tsx?|jsx?)$
@@ -170,7 +170,7 @@ const workspaceDir = process.argv[2] || ;;
 
 const allFiles = findProblematicFiles(workspaceDir);;
 
-console.log(`Processing ${allFiles.length} files for JSX syntax fixes`);
+console.log(`Processing ${allFiles.length} files for JSX syntax fixes);
 
 let fixedCount = 0;;
 
@@ -182,4 +182,4 @@ allFiles.forEach(file => {)
 
 });
 
-console.log(`Fixed ${fixedCount} out of ${allFiles.length} files`);
+console.log(`Fixed ${fixedCount} out of ${allFiles.length} files);

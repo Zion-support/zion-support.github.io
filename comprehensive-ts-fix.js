@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
@@ -19,14 +19,14 @@ const files = [];;
 
   const items = fs.readdirSync(dir);;
 
-  for (const item of items) {';
+  for (const item of items) {;
 
-const fullPath = path.join(dir, item);';
+const fullPath = path.join(dir, item);;;
 
-    const stat = fs.statSync(fullPath);';
+    const stat = fs.statSync(fullPath);;;
 
     if (stat.isDirectory()) {
-      files.push(...getAllTsxFiles(fullPath))} else if (item.endsWith('.tsx')) {
+      files.push(...getAllTsxFiles(fullPath))} else if (item.endsWith('.tsx)) {
       files.push(fullPath)}
 
   }
@@ -38,7 +38,7 @@ const fullPath = path.join(dir, item);';
 function fixTsxFile(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
@@ -52,10 +52,10 @@ const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g;;
       if (text.trim()) {
         modified = true;
 
-        return `<${tagName}${attributes}>
+        return <${tagName}${attributes}>
 );
 
-}${text}</${tagName}>`}
+}${text}</${tagName}>}
 
       return match});
 
@@ -66,13 +66,13 @@ const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;;
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
   return (
 
-      if (text.trim() && !text.includes('<')) {
+      if (text.trim() && !text.includes('<)) {
         modified = true;
 
-        return `<${tagName}${attributes}>
+        return <${tagName}${attributes}>
 );
 
-}${text}</${tagName}>`}
+}${text}</${tagName}>}
 
       return match});
 
@@ -81,16 +81,16 @@ const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g;;
 const missingBracePattern = /(\w+):\s*([^}\n]+)\s*\n\s*(\w+):/g;;
 
     content = content.replace(missingBracePattern, (match, key1, value1, key2) => {
-      if (!value1.trim().endsWith(',') && !value1.trim().endsWith('}')) {
+      if (!value1.trim().endsWith(',') && !value1.trim().endsWith('})) {
         modified = true;
 
-        return `${key1}: ${value1.trim()},\n    ${key2}:`}
+        return `${key1}: ${value1.trim()},\n    ${key2}:}
 
       return match});
 
     // Fix 4: Fix malformed SVG URLs;
 
-const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^']+)\)\]/g;;
+const svgUrlPattern = /bg-\[url\('data:image\/svg\+xml,([^]+)\)\]/g;;
 
     content = content.replace(svgUrlPattern, (match, svgContent) => {;
 
@@ -98,17 +98,17 @@ const encodedSvg = encodeURIComponent(svgContent);;
 
       modified = true;
 
-      return `bg-[url('data:image/svg+xml,${encodedSvg}')]`});
+      return `bg-[url('data:image/svg+xml,${encodedSvg}')]});
 
     // Fix 5: Fix missing closing parentheses in function calls;
 
 const missingParenPattern = /(\w+\([^)]*)\s*\n\s*(\w+)/g;;
 
     content = content.replace(missingParenPattern, (match, funcCall, nextToken) => {
-      if (!funcCall.includes(')') && !nextToken.startsWith(')')) {
+      if (!funcCall.includes(')') && !nextToken.startsWith('))) {
         modified = true;
 
-        return `${funcCall})\n    ${nextToken}`}
+        return `${funcCall})\n    ${nextToken}}
 
       return match});
 
@@ -122,30 +122,30 @@ const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g;;
       if (content.trim()) {
         modified = true;
 
-        return `<${tagName}${attributes}>
+        return <${tagName}${attributes}>
 );
 
-}${content}</${tagName}>`}
+}${content}</${tagName}>}
 
       return match});
 
     // Fix 7: Fix malformed className attributes with quotes;
 
-const malformedClassPattern = /className="([^"]*"[^"]*)"([^>]*)>/g;;
+const malformedClassPattern = /className="([^"]*"[^"]*)([^>]*)>/g;;
 
     content = content.replace(malformedClassPattern, (match, className, rest) => {;
 
-const fixedClassName = className.replace(/"/g, '&quot;);;
+const fixedClassName = className.replace(/"/g, &quot;);;
 
       modified = true;
 
-      return `className="${fixedClassName}"${rest}>`});
+      return `className="${fixedClassName}"${rest}>});
 
     // Fix 8: Fix missing closing tags in JSX;
 
 const unclosedTagPattern = /<(\w+)([^>]*)>\s*$/gm;;
 
-    const lines = content.split('\n);;
+    const lines = content.split(\n);;
 
     let newContent = content;;
 
@@ -169,19 +169,19 @@ let foundClosing = false;;
 
 const nextLine = lines[j].trim();;
 
-          if (nextLine.startsWith(`</${tagName}>`)) {
+          if (nextLine.startsWith(`</${tagName}>)) {
             foundClosing = true;
 
             break}
 
-          if (nextLine.startsWith('<') && !nextLine.startsWith('</')) {
+          if (nextLine.startsWith('<') && !nextLine.startsWith('</)) {
             break}
 
         }
 
         if (!foundClosing) {
           // Add closing tag
-          newContent = newContent.replace(line, line + `</${tagName}>`);
+          newContent = newContent.replace(line, line + `</${tagName}>);
 
           modified = true}
 
@@ -190,10 +190,10 @@ const nextLine = lines[j].trim();;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, newContent, 'utf8);
+      fs.writeFileSync(filePath, newContent, utf8);
 
       // console.log removed for production
-}`);
+});
 
       return true}
 
@@ -206,7 +206,7 @@ return false}
 // console.log removed for production
 ;
 
-const appDir = path.join(__dirname, 'app);;
+const appDir = path.join(__dirname, app);;
 
 const tsxFiles = getAllTsxFiles(appDir);;
 

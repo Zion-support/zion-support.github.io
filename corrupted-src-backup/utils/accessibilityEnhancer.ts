@@ -50,9 +50,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     // Add focus indicators;
 
-    const _style = document.createElement('style);;
+    const _style = document.createElement(style);;
 
-    style.textContent = `
+    style.textContent = 
       *:focus {
         outline: 2px solid #0066cc;
 
@@ -66,15 +66,15 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
       }
 
-    `;
+    ;
 
     document.head.appendChild(style)}
 
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown', event => {)
-      if (event.key === 'Tab') {
+    document.addEventListener('keydown, event => {)
+      if (event.key === 'Tab) {
         this.handleTabNavigation(event);
 
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
@@ -88,15 +88,15 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
     // Add skip links;
 
-    const _skipLink = document.createElement('a);;
+    const _skipLink = document.createElement(a);;
 
-    skipLink.href = '#main-content;
+    skipLink.href = #main-content;
 
-    skipLink.textContent = 'Skip to main content;
+    skipLink.textContent = Skip to main content;
 
-    skipLink.className = 'skip-link;
+    skipLink.className = skip-link;
 
-    skipLink.style.cssText = `
+    skipLink.style.cssText = 
       position: absolute;
 
       top: -40 px;
@@ -113,17 +113,17 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
       z-index: 1000;
 
-    `;
+    ;
 
 ,
-    skipLink.addEventListener('focus', () => {
-      skipLink.style.top = '6px;
+    skipLink.addEventListener('focus, () => {
+      skipLink.style.top = 6px;
 
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
 
     });
 
-    skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
+    skipLink.addEventListener('blur, () => {/* TODO: Fix JSX expression */}
 
     });
 
@@ -134,9 +134,9 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 
 ;
 
-const _style = document.createElement('style);;
+const _style = document.createElement(style);;
 
-    style.textContent = `
+    style.textContent = 
       @media (prefers-contrast: high) {,
         * {,
           background-color: #000 !important;
@@ -147,8 +147,9 @@ const _style = document.createElement('style);;
 
         }
 
-      }`
-    `;
+      }
+
+    ;
 
     document.head.appendChild(style)}
 
@@ -156,8 +157,9 @@ const _style = document.createElement('style);;
 
         }
 
-      }`
-    `;
+      }
+
+    ;
 
     document.head.appendChild(style)}
 
@@ -197,41 +199,41 @@ const _focusableElements = this.getFocusableElements();;
 
   private getFocusableElements(): HTMLElement[] {;
 
-const selectors = [;';
+const selectors = [;;;
 
-      'button: not([disabled])',
-      'input: not([disabled])',
-      'select: not([disabled])',
-      'textarea: not([disabled])',
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])'].join(', );
+      'button: not([disabled]),
+      'input: not([disabled]),
+      'select: not([disabled]),
+      'textarea: not([disabled]),
+      'a[href],
+      '[tabindex]:not([tabindex="-1"])'].join(, );
 
     return Array.from(document.querySelectorAll(selectors)) as HTMLElement[]}
 
   private measureAccessibilityMetrics(): void {
     this.metrics = [
       {
-        name: 'Focusable Elements',
+        name: 'Focusable Elements,
         value:
         value: this.getFocusableElements().length;
 
         threshold: 10;
 
-        status: 'pass'},
+        status: 'pass},
       {
-        name: 'Images with Alt Text',
+        name: 'Images with Alt Text,
         value:
         value: this.getImagesWithAltText().length;
 
         threshold: 0;
 
-        status: 'pass'},
+        status: 'pass},
       {
-        name: 'Headings Structure',
+        name: 'Headings Structure,
         value: this.getHeadingStructureScore(),
         threshold: 80;
 
-        status: 'pass',
+        status: 'pass,
   private getFocusableElements(): HTMLElement[] {/* TODO: Fix JSX expression */}
 
   }
@@ -252,7 +254,7 @@ const selectors = [;';
 
   private getHeadingStructureScore(): number {;
 
-const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6);;
+const _headings = document.querySelectorAll(h1, h2, h3, h4, h5, h6);;
 
     let _score = 100;;
 

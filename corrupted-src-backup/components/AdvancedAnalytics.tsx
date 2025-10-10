@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react;
+import React, { useEffect, useState } from react;
 
 interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */}
 
@@ -51,35 +51,35 @@ const [analytics] = useState({
       //       }
 
     if (enableErrorTracking) {
-      // Track errors';
+      // Track errors;
 
       //       }
 
-  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking])';
+  }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
-  return(<div className="advanced-analytics>)
+  return(<div className=advanced-analytics>)
       <h2>Advanced Analytics Dashboard</h2>)
-      <div className="metrics-grid>)
-        <div className="metric-card>)
+      <div className=metrics-grid>)
+        <div className=metric-card>)
           <h3>Page Views</h3>)
   return (
 
-    <div className="advanced-analytics></div>
+    <div className=advanced-analytics></div>
       <h2>Advanced Analytics Dashboard</h2>
-      <div className="metrics-grid></div>
-        <div className="metric-card></div>
+      <div className=metrics-grid></div>
+        <div className=metric-card></div>
           <h3>Page Views</h3>
-          <p className="metric-value>{analytics.pageViews.toLocaleString()}</p>
+          <p className=metric-value>{analytics.pageViews.toLocaleString()}</p>
         </div>
-        <div className="metric-card></div>
+        <div className=metric-card></div>
           <h3>Unique Visitors</h3>
-          <p className="metric-value>{analytics.uniqueVisitors.toLocaleString()}</p>
+          <p className=metric-value>{analytics.uniqueVisitors.toLocaleString()}</p>
         </div>
-        <div className="metric-card></div>
+        <div className=metric-card></div>
           <h3>Bounce Rate</h3>
-          <p className="metric-value>{analytics.bounceRate.toFixed(1)}%</p>
+          <p className=metric-value>{analytics.bounceRate.toFixed(1)}%</p>
         </div>
-        <div className="metric-card></div>
+        <div className=metric-card></div>
           <h3>Conversion Rate</h3>;
 
 const,
@@ -108,24 +108,24 @@ const,
 
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
-  return (<div className="advanced-analytics></div>
+  return (<div className=advanced-analytics></div>
       <h2>Advanced Analytics Dashboard</h2>
-      <div className="metrics-grid"></div>
-        <div className="metric-card></div>
+      <div className="metrics-grid></div>
+        <div className=metric-card></div>
           <h3>Page Views</h3>)
-          <p className="metric-value>{analytics.pageViews.toLocaleString()}</p>
+          <p className=metric-value>{analytics.pageViews.toLocaleString()}</p>
         </div>
-        <div className="metric-card></div>
+        <div className=metric-card></div>
           <h3>Unique Visitors</h3>
-          <p className="metric-value>{analytics.uniqueVisitors.toLocaleString()}</p>
+          <p className=metric-value>{analytics.uniqueVisitors.toLocaleString()}</p>
         </div>
-        <div className="metric-card></div>
+        <div className=metric-card></div>
           <h3>Bounce Rate</h3>
-          <p className="metric-value>{analytics.bounceRate.toFixed(1)}%</p>
+          <p className=metric-value>{analytics.bounceRate.toFixed(1)}%</p>
         </div>
-        <div className="metric-card></div>
+        <div className=metric-card></div>
           <h3>Conversion Rate</h3>
-          <p className="metric-value>{analytics.conversionRate.toFixed(1)}%</p>
+          <p className=metric-value>{analytics.conversionRate.toFixed(1)}%</p>
         </div>
       </div>
     </div>

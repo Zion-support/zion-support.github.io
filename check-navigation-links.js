@@ -1,34 +1,34 @@
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);';
+const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
-// Read the navigation component to extract all links';
+// Read the navigation component to extract all links;
 
-const navContent = fs.readFileSync('/workspace/src/components/Navigation.tsx', 'utf8);;
+const navContent = fs.readFileSync('/workspace/src/components/Navigation.tsx', utf8);;
 
-// Extract all href values from the navigation';
+// Extract all href values from the navigation;
 
-const hrefMatches = navContent.match(/href: \s*'([^']+)/g);;
+const hrefMatches = navContent.match(/href: \s*'([^]+)/g);;
 
-const navLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*'([^']+)/)[1]) : [];;
+const navLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*'([^]+)/)[1]) : [];;
 
 ,
 // Read the footer component to extract all links;
 
-const footerContent = fs.readFileSync('/workspace/src/components/Footer.tsx', 'utf8);;
+const footerContent = fs.readFileSync('/workspace/src/components/Footer.tsx', utf8);;
 
-// Extract all href values from the footer';
+// Extract all href values from the footer;
 
-const footerHrefMatches = footerContent.match(/href: \s*'([^']+)/g);;
+const footerHrefMatches = footerContent.match(/href: \s*'([^]+)/g);;
 
-const footerLinks = footerHrefMatches ? footerHrefMatches.map(match => match.match(/href:\s*'([^']+)/)[1]) : [];;
+const footerLinks = footerHrefMatches ? footerHrefMatches.map(match => match.match(/href:\s*'([^]+)/)[1]) : [];;
 
 ,
 // Combine all links;
@@ -37,7 +37,7 @@ const allLinks = [...new Set([...navLinks, ...footerLinks])];;
 
 // Get all existing page files in src directory;
 
-const srcDir = '/workspace/src;;
+const srcDir = /workspace/src;;
 
 const existingPages = [];;
 
@@ -54,10 +54,10 @@ const fullPath = path.join(dir, item);;
     const stat = fs.statSync(fullPath);;
 
     if (stat.isDirectory()) {
-      scanDirectory(fullPath)} else if (item === 'page.tsx') {
-      // Extract the route from the path';
+      scanDirectory(fullPath)} else if (item === 'page.tsx) {
+      // Extract the route from the path;
 
-      const route = fullPath.replace('/workspace/src', '').replace('/page.tsx', '') || '/;;
+      const route = fullPath.replace('/workspace/src', '').replace('/page.tsx', '') || /;;
 
       existingPages.push(route)}
 
@@ -96,7 +96,7 @@ allLinks.forEach(link => // console.log removed for production
 
 // Write results to a file;
 
-fs.writeFileSync('/workspace/navigation-analysis.json', JSON.stringify({
+fs.writeFileSync('/workspace/navigation-analysis.json, JSON.stringify({
   totalLinks: allLinks.length;)
   existingPages: existingPages.length;)
   missingPages: missingPages.length;)

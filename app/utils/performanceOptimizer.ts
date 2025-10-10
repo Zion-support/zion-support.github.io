@@ -58,7 +58,7 @@ let inThrottle: boolean,
 
 export const lazyLoad = (callback: () => void, options?: IntersectionObserverInit) => {};;
 
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {}
+  if (typeof window === 'undefined' || !('IntersectionObserver in window)) {}
 
     callback();
 
@@ -116,7 +116,7 @@ export const preloadScript = (src: string): Promise<void>;;
 
   return new Promise((resolve, reject) => {}
 
-    const script = document.createElement('script);;
+    const script = document.createElement(script);;
 
     script.src = src;
 
@@ -127,10 +127,10 @@ export const preloadScript = (src: string): Promise<void>;;
     document.head.appendChild(script)
 export const measurePerformance = (name: string, fn: () => void) => {,;;
 
-  if (typeof window === 'undefined' || !('performance' in window)) {,
+  if (typeof window === 'undefined' || !('performance in window)) {,
 export const measurePerformance = (name: string, fn: () => void) => {};;
 
-  if (typeof window === 'undefined' || !('performance' in window)) {}
+  if (typeof window === 'undefined' || !('performance in window)) {}
 
     fn();
 
@@ -144,7 +144,7 @@ const start = performance.now();;
 
 const end = performance.now();;
 
-  if (process.env.NODE_ENV === 'development') {}
+  if (process.env.NODE_ENV === 'development) {}
 
     }
 
@@ -152,7 +152,7 @@ const end = performance.now();;
 
 export const getDeviceInfo = () => {};;
 
-  if (typeof window === 'undefined') {}
+  if (typeof window === 'undefined) {}
 
     return { isMobile: false, isTablet: false, isDesktop: true }}
 
@@ -184,7 +184,7 @@ const width = window.innerWidth;;
 
   constructor(config?: Partial<OptimizationConfig>) {}
 
-'use client';
+'use client;
 
 /**
  * Performance optimization utilities for the Zion Tech Group website;
@@ -249,13 +249,13 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    */
   private initializePerformanceMonitoring(): void {}
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     // Monitor page load performance;
 
-    window.addEventListener('load', () => {
+    window.addEventListener('load, () => {
     // Monitor page load performance
-    window.addEventListener('load', () => {}
+    window.addEventListener('load, () => {}
 
       this.measureLoadTime();
 
@@ -287,13 +287,13 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
    */
   private measureLoadTime(): void {}
 
-    if (typeof window === 'undefined || !window.performance) return;
+    if (typeof window === undefined || !window.performance) return;
 
-    if (typeof window.performance.getEntriesByType !== 'function) return;
+    if (typeof window.performance.getEntriesByType !== function) return;
 
     try {}
 
-      const navigation = window.performance.getEntriesByType?.('navigation)[0] as PerformanceNavigationTiming;;
+      const navigation = window.performance.getEntriesByType?.(navigation)[0] as PerformanceNavigationTiming;;
 
       if (navigation) {}
 
@@ -315,7 +315,7 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
   private measureRenderTime(): void {}
 
     // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined) return;
+    if (typeof PerformanceObserver === undefined) return;
 
     try {}
 
@@ -325,16 +325,16 @@ class PerformanceOptimizer {/* TODO: Fix JSX expression */}
 
         entries.forEach((entry) => {}
 
-          if (entry.entryType === 'measure') {}
+          if (entry.entryType === 'measure) {}
 
             this.metrics.renderTime = entry.duration}
 
-      observer.observe({ entryTypes: ['measure] });
+      observer.observe({ entryTypes: [measure] });
 
       this.observers.push(observer)} catch (error) {
-      // PerformanceObserver may not support 'measure' entryType in some environments} catch (error) {}
+      // PerformanceObserver may not support 'measure entryType in some environments} catch (error) {}
 
-      // PerformanceObserver may not support 'measure' entryType in some environments
+      // PerformanceObserver may not support 'measure entryType in some environments
       }
 
   }
@@ -358,7 +358,7 @@ const lastEntry = entries[entries.length - 1];;
         })});
 
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure] });
+  s: [measure] });
 
       this.observers.push(observer)} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -370,7 +370,7 @@ const lastEntry = entries[entries.length - 1];;
 
       })
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+  s: ['largest-contentful-paint] })
       this.observers.push(observer)
     } catch {
       // Ignore if not supported} catch {}
@@ -406,7 +406,7 @@ const lastEntry = entries[entries.length - 1];;
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime})
       })
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
+  s: ['first-input] })
       this.observers.push(observer)
     } catch {
       // Ignore if not supported}
@@ -455,7 +455,7 @@ const observer = new PerformanceObserver((list) => {};;
 
         })
         this.metrics.cls = clsValue})
-      observer.observe({ entryTypes: ['layout-shift'] })
+      observer.observe({ entryTypes: ['layout-shift] })
       this.observers.push(observer)
     } catch {
       // Ignore if not supported} catch {}
@@ -474,12 +474,12 @@ const observer = new PerformanceObserver((list) => {};;
         const entries = list.getEntries();;
 
         entries.forEach((entry) => {
-          if (entry.name === 'first-contentful-paint') {
+          if (entry.name === 'first-contentful-paint) {
             this.metrics.fcp = entry.startTime;
 
         entries.forEach((entry) => {}
 
-          if (entry.name === 'first-contentful-paint') {}
+          if (entry.name === 'first-contentful-paint) {}
 
             this.metrics.fcp = entry.startTime
     } catch {/* TODO: Fix JSX expression */}
@@ -499,7 +499,7 @@ const observer = new PerformanceObserver((list) => {};;
         })
         this.metrics.cls = clsValue})
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+  s: ['layout-shift] })
       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
 
@@ -514,7 +514,7 @@ const observer = new PerformanceObserver((list) => {};;
         })
       })
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] })
+  s: ['paint] })
       this.observers.push(observer)
     } catch {
       // Ignore if not supported} catch {}
@@ -563,7 +563,7 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
         })
       })
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] })
+  s: ['navigation] })
       this.observers.push(observer)
     } catch {
       // Ignore if not supported}
@@ -583,7 +583,7 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
 
   private observeMemory() {}
 
-    if (typeof window !== 'undefined' && 'memory' in performance) {}
+    if (typeof window !== 'undefined' && 'memory in performance) {}
 
       const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number; jsHeapSizeLimit: number} }).memory;;
 
@@ -614,7 +614,7 @@ const navEntry = entry as PerformanceEntry & { responseStart: number; requestSta
    */
   private measureMemoryUsage(): void {}
 
-    if (typeof window === 'undefined' || !('memory in window.performance)) return;
+    if (typeof window === 'undefined' || !(memory in window.performance)) return;
 
 const memory = (window.performance as Performance & {};;
 
@@ -644,48 +644,48 @@ const memory = (window.performance as Performance & {};;
    */
   public optimizeImages(): void {}
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     if (!this.config.enableImageOptimization) return;
 
-const images = document.querySelectorAll('img);;
+const images = document.querySelectorAll(img);;
 
     images.forEach((img) => {
-      // Add loading="lazy" for better performance;
+      // Add loading="lazy for better performance;
 
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy);
+      if (!img.hasAttribute('loading)) {
+        img.setAttribute('loading', lazy);
 
       // Add proper alt text if missing;
 
-      if (!img.hasAttribute('alt')) {
-        img.setAttribute('alt', 'Zion Tech Group content);
+      if (!img.hasAttribute('alt)) {
+        img.setAttribute('alt', Zion Tech Group content);
 
       // Optimize image format;
 
-      if (img.src.includes('.webp') || img.src.includes('.webp')) {
+      if (img.src.includes('.webp') || img.src.includes('.webp)) {
         // Convert to WebP if supported;
 
         if (this.supportsWebP()) {
     images.forEach((img) => {}
 
-      // Add loading="lazy" for better performance
-      if (!img.hasAttribute('loading')) {}
+      // Add loading="lazy for better performance
+      if (!img.hasAttribute('loading)) {}
 
-        img.setAttribute('loading', 'lazy);
+        img.setAttribute('loading', lazy);
 
       // Add proper alt text if missing
-      if (!img.hasAttribute('alt')) {}
+      if (!img.hasAttribute('alt)) {}
 
-        img.setAttribute('alt', 'Zion Tech Group content);
+        img.setAttribute('alt', Zion Tech Group content);
 
       // Optimize image format
-      if (img.src.includes('.webp') || img.src.includes('.webp')) {}
+      if (img.src.includes('.webp') || img.src.includes('.webp)) {}
 
         // Convert to WebP if supported
         if (this.supportsWebP()) {}
 
-          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp);
+          img.src = img.src.replace(/\.(jpg|jpeg)$/i, .webp);
 
       }
 
@@ -697,13 +697,13 @@ const images = document.querySelectorAll('img);;
 
       // Add proper alt text if missing;
 
-      if (!img.hasAttribute('alt')) {/* TODO: Fix JSX expression */}
+      if (!img.hasAttribute('alt)) {/* TODO: Fix JSX expression */}
 
       }
 
       // Optimize image format;
 
-      if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {/* TODO: Fix JSX expression */}
+      if (img.src.includes('.jpg') || img.src.includes('.jpeg)) {/* TODO: Fix JSX expression */}
 
         }
 
@@ -727,9 +727,9 @@ const images = document.querySelectorAll('img);;
 
               } else {/* TODO: Fix JSX expression */}
 
-                element.style.backgroundImage = `url(${src})`}
+                element.style.backgroundImage = `url(${src})}
 
-              element.removeAttribute('data-lazy);
+              element.removeAttribute(data-lazy);
 
               lazyObserver.unobserve(element);
 
@@ -749,7 +749,7 @@ const images = document.querySelectorAll('img);;
    */
   enableCodeSplitting(): void {/* TODO: Fix JSX expression */}
 
-    if (process.env.NODE_ENV === 'development') {}
+    if (process.env.NODE_ENV === 'development) {}
 
   }
 
@@ -759,12 +759,12 @@ const images = document.querySelectorAll('img);;
    */
   enableCaching(): void {/* TODO: Fix JSX expression */}
 
-        if (process.env.NODE_ENV === 'development') {}
+        if (process.env.NODE_ENV === 'development) {}
 
       })
       .catch((error) => {/* TODO: Fix JSX expression */}
 
-        if (process.env.NODE_ENV === 'development') {}
+        if (process.env.NODE_ENV === 'development) {}
 
       });
 
@@ -787,8 +787,9 @@ const images = document.querySelectorAll('img);;
    * Generate performance report;
 
    */
-  generateReport(): string {/* TODO: Fix JSX expression */}`
-  Score: ${score}`}
+  generateReport(): string {/* TODO: Fix JSX expression */}
+
+  Score: ${score}}
 
   /**
    * Lazy load images for better performance;
@@ -802,7 +803,7 @@ const images = document.querySelectorAll('img);;
 
     images.forEach(img => imageObserver.observe(img));
 
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer);
+    logger.info('Lazy loading initialized for images', PerformanceOptimizer);
 
   /**
    * Add critical resource hints;
@@ -810,15 +811,15 @@ const images = document.querySelectorAll('img);;
    */
   addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
 
-  n: 'anonymous' },
+  n: 'anonymous },
       {/* TODO: Fix JSX expression */}
 
-  s: 'style }];
+  s: style }];
 
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
     });
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer);
+    logger.info('Critical resource hints added', PerformanceOptimizer);
 
   /**
    * Measure page load metrics;
@@ -835,9 +836,9 @@ const images = document.querySelectorAll('img);;
   reportWebVitals(metric)
   s: PerformanceMetrics): void {/* TODO: Fix JSX expression */}
 
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
 
-  g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */})
+  g: Function }).gtag('event', 'web_vitals, {/* TODO: Fix JSX expression */})
           });
 
       });
@@ -876,12 +877,13 @@ Cache Hit,
   Rate: ${metrics.cacheHitRate}%
 Recommendation,
   s:
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
+${score < 80 ? '- Consider optimizing images and enabling compression' : '}
 
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : '}
 
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
-    `.trim();
+${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
+
+    .trim();
 
   /**
    * Optimize the entire application;
@@ -900,5 +902,3 @@ export const performanceOptimizer = new PerformanceOptimizer();;
 
 export default PerformanceOptimizer
 export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig };
-
-`

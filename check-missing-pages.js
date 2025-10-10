@@ -1,34 +1,34 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);';
+const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
-// Read the footer component to extract all links';
+// Read the footer component to extract all links;
 
-const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', 'utf8);;
+const footerContent = fs.readFileSync('/workspace/app/components/Footer.tsx', utf8);;
 
-// Extract all href values from the footer';
+// Extract all href values from the footer;
 
-const hrefMatches = footerContent.match(/href: \s*'([^']+)/g);;
+const hrefMatches = footerContent.match(/href: \s*'([^]+)/g);;
 
-const footerLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*'([^']+)/)[1]) : [];;
+const footerLinks = hrefMatches ? hrefMatches.map(match => match.match(/href:\s*'([^]+)/)[1]) : [];;
 
 ,
 // Read the navigation component to extract all links;
 
-const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', 'utf8);;
+const navContent = fs.readFileSync('/workspace/app/components/Navigation.tsx', utf8);;
 
-const navMatches = navContent.match(/to="([^"]+)"/g);;
+const navMatches = navContent.match(/to="([^"]+)/g);;
 
-const navLinks = navMatches ? navMatches.map(match => match.match(/to="([^"]+)"/)[1]) : [];;
+const navLinks = navMatches ? navMatches.map(match => match.match(/to="([^"]+)/)[1]) : [];;
 
 // Combine all links;
 
@@ -36,7 +36,7 @@ const allLinks = [...new Set([...footerLinks, ...navLinks])];;
 
 // Get all existing page files;
 
-const appDir = '/workspace/app;;
+const appDir = /workspace/app;;
 
 const existingPages = [];;
 
@@ -53,22 +53,22 @@ const fullPath = path.join(dir, item);;
     const stat = fs.statSync(fullPath);;
 
     if (stat.isDirectory()) {
-      scanDirectory(fullPath)} else if (item === 'page.tsx') {
-      // Extract the route from the path';
+      scanDirectory(fullPath)} else if (item === 'page.tsx) {
+      // Extract the route from the path;
 
-      const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || '/;;
+      const route = fullPath.replace('/workspace/app', '').replace('/page.tsx', '') || /;;
 
       existingPages.push(route);
 
 // Read the App.tsx file to extract routes;
 
-const appTsxContent = fs.readFileSync('src/App.tsx', 'utf8);;
+const appTsxContent = fs.readFileSync('src/App.tsx', utf8);;
 
 // Extract route paths using regex;
 
-const routeMatches = appTsxContent.match(/path="([^"]+)"/g);";;
+const routeMatches = appTsxContent.match(/path="([^"]+)"/g);;;
 
-const routes = routeMatches ? routeMatches.map(match => match.replace('path="', '').replace('"', ')) : [];;
+const routes = routeMatches ? routeMatches.map(match => match.replace('path="', '').replace('"', )) : [];;
 
 // Get existing pages;
 
@@ -76,7 +76,7 @@ const existingPages = [];;
 
 function findPages(dir) {/* TODO: Fix JSX expression */}
 
-    } else if (file === 'page.tsx') {/* TODO: Fix JSX expression */}
+    } else if (file === 'page.tsx) {/* TODO: Fix JSX expression */}
 
     }
 
@@ -112,7 +112,7 @@ existingPages.sort().forEach(page => // console.log removed for production
 
 // Write missing pages to a file;
 
-fs.writeFileSync('/workspace/missing-pages.json', JSON.stringify({
+fs.writeFileSync('/workspace/missing-pages.json, JSON.stringify({
   totalLinks: allLinks.length;)
   existingPages: existingPages.length;)
   missingPages: missingPages.length;)
@@ -134,13 +134,14 @@ pages:);
 missingPages.forEach(page => // console.log removed for production
 );
 
-`
 // console.log removed for production
-`
-  pages: ${missingPages.length}`);`
+
+  pages: ${missingPages.length}`);
+
 // console.log removed for production
-`
-  routes: ${routes.length}`);`
+
+  routes: ${routes.length}`);
+
 // console.log removed for production
-`
-  pages: ${existingPages.length}`);"`
+
+  pages: ${existingPages.length}`);"

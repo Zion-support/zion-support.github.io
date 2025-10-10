@@ -1,4 +1,4 @@
-import React from 'react;
+import React from react;
 
 //Fallback: simple passthrough provider while ThemeContext is absent;
 
@@ -16,6 +16,6 @@ const,
 
 } = ({ children }) => {/* TODO: Fix JSX expression */}
 
-  return <React.Fragment>{children}</React.Fragment>}';
+  return <React.Fragment>{children}</React.Fragment>};
 
-export default ThemeProvider';
+export default ThemeProvider;

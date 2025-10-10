@@ -15,7 +15,7 @@ export function deepClone<T>(obj: T): T {// TODO: Add content}
 
 }
 
-  if (obj === null || typeof obj !== 'object') {/* TODO: Fix JSX expression */}
+  if (obj === null || typeof obj !== 'object) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -92,10 +92,10 @@ export function deepMerge;
 
       if ()
 //         sourceValue &&
-        typeof sourceValue === 'object' &&
+        typeof sourceValue === 'object &&
 //         !Array.isArray(sourceValue) &&
 //         targetValue &&
-        typeof targetValue === 'object' &&
+        typeof targetValue === 'object &&
 //         !Array.isArray(targetValue)
 
       ) {// TODO: Add content}
@@ -135,7 +135,7 @@ export function flattenObject()
   j: Record;
 
           <string, unknown>,
-  prefix = '',
+  prefix = ',
   separator = .
 
 ): Record<string, unknown> {// TODO: Add content}
@@ -161,9 +161,9 @@ export function flattenObject()
 
       const value = obj[key];;
 
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;;
+      const newKey = prefix ? `${prefix}${separator}${key} : key;;
 
-      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
+      if (value && typeof value === 'object && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -354,7 +354,7 @@ export function groupBy<T>()
 
 }
 
-      const groupKey = typeof key === 'function ? String(key(item)) : String(item[key]);;
+      const groupKey = typeof key === function ? String(key(item)) : String(item[key]);;
 
       (result[groupKey] = result[groupKey] || []).push(item);
 
@@ -418,7 +418,7 @@ export function sortBy;
   keys: Array;
 
           <keyof T | ((item: T) => unknown)>,
-  orders: Array<'asc' | 'desc'> = []
+  orders: Array<'asc' | 'desc> = []
 ): T[] {// TODO: Add content}
 
 }
@@ -439,11 +439,11 @@ export function sortBy;
 
       const key = keys[i];;
 
-      const order = orders[i] || 'asc;;
+      const order = orders[i] || asc;;
 
-      const aVal = typeof key === 'function ? key(a) : a[key];;
+      const aVal = typeof key === function ? key(a) : a[key];;
 
-      const bVal = typeof key === 'function ? key(b) : b[key];;
+      const bVal = typeof key === function ? key(b) : b[key];;
 
       // Handle comparison with type safety;
 
@@ -461,22 +461,22 @@ export function sortBy;
 
 const aComp =;;
 
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === boolean
+        typeof aVal === 'string' || typeof aVal === 'number || typeof aVal === boolean
 //           ? aVal;
 
           : String(aVal);
 
       const bComp =;;
 
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === boolean
+        typeof bVal === 'string' || typeof bVal === 'number || typeof bVal === boolean
 //           ? bVal;
 
           : String(bVal);
 
       if (aComp;)
-          < bComp) return order === 'asc ? -1 : 1;
+          < bComp) return order === asc ? -1 : 1;
 
-      if (aComp > bComp) return order === 'asc' ? 1 : -1}
+      if (aComp > bComp) return order === 'asc ? 1 : -1}
 
     return 0}
 
@@ -552,7 +552,7 @@ export function formatBytes(bytes: number, decimals = 2): string {// TODO: Add c
 
 }
 
-  if (bytes === 0) return '0 Bytes;
+  if (bytes === 0) return 0 Bytes;
 
   const k = 1024;;
 
@@ -560,18 +560,18 @@ export function formatBytes(bytes: number, decimals = 2): string {// TODO: Add c
 
           < 0 ? 0 : decimals;
 
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB];;
+  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', PB];;
 
-  const i = Math.floor(Math.log(bytes) / Math.log(k));`;;
+  const i = Math.floor(Math.log(bytes) / Math.log(k));;;
 
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`}
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}}
 
 /**
  * Format number with separators;
 
  */
 
-export function formatNumber(num: number, locale = 'en-US'): string {// TODO: Add content}
+export function formatNumber(num: number, locale = 'en-US): string {// TODO: Add content}
 
 }
 
@@ -582,7 +582,7 @@ export function formatNumber(num: number, locale = 'en-US'): string {// TODO: Ad
 
  */
 
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {// TODO: Add content}
+export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US): string {// TODO: Add content}
 
 }
 
@@ -593,7 +593,7 @@ export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US
 };
 
   styl,
-  e: 'currency',
+  e: 'currency,
 //     currency;)
   }).format(amount)}
 
@@ -612,7 +612,7 @@ export function formatDate()
 
 }
 
-  const d = typeof date === 'string' || typeof date === 'number ? new Date(date) : date;;
+  const d = typeof date === 'string' || typeof date === number ? new Date(date) : date;;
 
   return new Intl.DateTimeFormat(locale, options).format(d)}
 
@@ -625,7 +625,7 @@ export function formatRelativeTime(date: Date | string | number): string {// TOD
 
 }
 
-  const d = typeof date === 'string' || typeof date === 'number ? new Date(date) : date;;
+  const d = typeof date === 'string' || typeof date === number ? new Date(date) : date;;
 
   const now = new Date();;
 
@@ -646,20 +646,26 @@ export function formatRelativeTime(date: Date | string | number): string {// TOD
   const years = Math.floor(days / 365);;
 
   if (seconds;)
-          < 60) return 'just now';`
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;`
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;`
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-  return `${years} year${years > 1 ? 's' : ''} ago`}
+          < 60) return 'just now';
+
+  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+
+  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+
+  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;
+
+  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+
+  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
+
+  return `${years} year${years > 1 ? 's' : ''} ago}
 
 /**
  * Truncate string;
 
  */
 
-export function truncate(str: string, length: number, suffix = '...'): string {// TODO: Add content}
+export function truncate(str: string, length: number, suffix = '...): string {// TODO: Add content}
 
 }
 
@@ -691,9 +697,9 @@ export function titleCase(str: string): string {// TODO: Add content}
   return str;
 
 //     .toLowerCase()
-//     .split(' ')
+//     .split(' )
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
+    .join(' )
 }
 
 /**
@@ -707,8 +713,8 @@ export function kebabCase(str: string): string {// TODO: Add content}
 
   return str;
 
-//     .replace(/([a-z])([A-Z])/g, '$1-$2')
-//     .replace(/[\s_]+/g, '-')
+//     .replace(/([a-z])([A-Z])/g, '$1-$2)
+//     .replace(/[\s_]+/g, '-)
     .toLowerCase()
 }
 
@@ -734,8 +740,8 @@ export function snakeCase(str: string): string {// TODO: Add content}
 
   return str;
 
-//     .replace(/([a-z])([A-Z])/g, '$1_$2')
-//     .replace(/[\s-]+/g, '_')
+//     .replace(/([a-z])([A-Z])/g, '$1_$2)
+//     .replace(/[\s-]+/g, '_)
     .toLowerCase()
 }
 

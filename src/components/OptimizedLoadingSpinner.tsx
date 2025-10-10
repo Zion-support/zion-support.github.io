@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react;
 
-'use client';
+'use client;
 
 interface OptimizedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg;
+  size?: 'sm' | 'md' | lg;
 
-  color?: 'primary' | 'secondary' | 'white;
+  color?: 'primary' | 'secondary' | white;
 
   className?: string;
 
-'use client';
+'use client;
 
 interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 
@@ -17,9 +17,9 @@ interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
 
 }
 
-  size?: 'sm' | 'md' | 'lg;
+  size?: 'sm' | 'md' | lg;
 
-  color?: 'primary' | 'secondary' | 'white;
+  color?: 'primary' | 'secondary' | white;
 
   className?: string}
 
@@ -27,12 +27,12 @@ const,
   OptimizedLoadingSpinner: React.FC;
 
           <OptimizedLoadingSpinnerProps> = memo()
-  ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
+  ({ size = 'md', color = 'primary', className = ' }) => {/* TODO: Fix JSX expression */}
 
-  m: 'w-4 h-4'}
+  m: 'w-4 h-4}
 
       m,
-  d: 'w-8 h-8',
+  d: 'w-8 h-8,
       l,
   g: w-12 h-12
     };
@@ -44,9 +44,9 @@ const,
 };
 
   primar,
-  y: 'text-cyan-400',
+  y: 'text-cyan-400,
       secondar,
-  y: 'text-purple-400',
+  y: 'text-purple-400,
       whit,
   e: text-white
     };
@@ -55,10 +55,10 @@ const,
   )
       
           <div></div>
-className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
+className={`${sizeClasses[size]} ${colorClasses[color]} ${className}}
 
-        role="status""
-        aria-label="Loading"
+        role="status"
+        aria-label="Loading
 // >
         
           
@@ -69,12 +69,12 @@ className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
           
           
           
-          <svg></svg>"
-className="animate-spin""
-          fill="none""
-          viewBox="0 0 24 24""
-          xmlns="htt,"
-  p:// www.w3.org/2000/svg"
+          <svg></svg>
+className="animate-spin"
+          fill="none"
+          viewBox="0 0 24 24"
+          xmlns="htt,
+  p:// www.w3.org/2000/svg
 //         >
           
           
@@ -85,13 +85,13 @@ className="animate-spin""
           
           
           
-          <circle></circle>"
-className="opacity-25""
-            cx="12""
-            cy="12""
-            r="10""
-            stroke="currentColor""
-            strokeWidth="4"
+          <circle></circle>
+className="opacity-25"
+            cx="12"
+            cy="12"
+            r="10"
+            stroke="currentColor"
+            strokeWidth="4
 // />
           
           
@@ -102,10 +102,10 @@ className="opacity-25""
           
           
           
-          <path></path>"
-className="opacity-75""
-            fill="currentColor""
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+          <path></path>
+className="opacity-75"
+            fill="currentColor"
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z
 // />
         
           
@@ -122,7 +122,7 @@ className="opacity-75""
 
 );
 
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner;
+OptimizedLoadingSpinner.displayName = OptimizedLoadingSpinner;
 
 export default OptimizedLoadingSpinner;
 
@@ -130,9 +130,9 @@ export default OptimizedLoadingSpinner;
 
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
 
-  ({ size = 'md', color = 'primary', className = '' }) => {
-      sm: 'w-4 h-4',
-      md: 'w-8 h-8',
+  ({ size = 'md', color = 'primary', className = ' }) => {
+      sm: 'w-4 h-4,
+      md: 'w-8 h-8,
       lg:     ,
 $4};
 
@@ -140,37 +140,37 @@ $4};
 
 const colorClasses = {;;
 
-      primary: 'text-cyan-400',
-      secondary: 'text-purple-400',
+      primary: 'text-cyan-400,
+      secondary: 'text-purple-400,
       white:     ,
 $4};
 
     return (
 
       <div
-        className={`${sizeClasses[size]} ${colorClasses[color]} ${className}`}
+        className={`${sizeClasses[size]} ${colorClasses[color]} ${className}}
 
-        role="status"
-        aria-label="Loading"
+        role="status
+        aria-label="Loading
       >
         <svg
-          className="animate-spin"
-          fill="none"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
+          className="animate-spin
+          fill="none
+          viewBox="0 0 24 24
+          xmlns="http://www.w3.org/2000/svg
         >
           <circle
-            className="opacity-25"
-            cx="12"
-            cy="12"
-            r="10"
-            stroke="currentColor"
-            strokeWidth="4"
+            className="opacity-25
+            cx="12
+            cy="12
+            r="10
+            stroke="currentColor
+            strokeWidth="4
           />
           <path
-            className="opacity-75"
-            fill="currentColor"
-            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            className="opacity-75
+            fill="currentColor
+            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z
           />
         </svg>
       </div>
@@ -178,6 +178,6 @@ $4};
 
 );
 
-OptimizedLoadingSpinner.displayName = 'OptimizedLoadingSpinner;
+OptimizedLoadingSpinner.displayName = OptimizedLoadingSpinner;
 
 export default OptimizedLoadingSpinner;

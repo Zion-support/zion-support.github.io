@@ -1,19 +1,19 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);';
+const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
-// Find all TypeScript and JavaScript files';
+// Find all TypeScript and JavaScript files;
 
-const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', '.jsx]) => {;;
+const findFiles = (dir, extensions = ['.ts', '.tsx', '.js', .jsx]) => {;;
 
 let files = [];;
 
@@ -25,7 +25,7 @@ const fullPath = path.join(dir, item);;
 
     const stat = fs.statSync(fullPath);;
 
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
       files = files.concat(findFiles(fullPath, extensions))} else if (extensions.some(ext => item.endsWith(ext))) {
       files.push(fullPath)}
 
@@ -39,24 +39,24 @@ const fixMergeConflicts = (filePath) => {;;
 
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     const originalContent = content;;
 
     // Remove merge conflict markers and keep the HEAD version;
 
-    const mergeConflictRegex = /\n([\s\S]*?)\n([\s\S]*?)    content = content.replace(mergeConflictRegex, '$1);;
+    const mergeConflictRegex = /\n([\s\S]*?)\n([\s\S]*?)    content = content.replace(mergeConflictRegex, $1);;
 
     // Remove any remaining merge conflict markers;
 
-    const conflictMarkers = /(||    content = content.replace(conflictMarkers, ');;
+    const conflictMarkers = /(||    content = content.replace(conflictMarkers, );;
 
     // Clean up extra whitespace;
 
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n);
+    content = content.replace(/\n\s*\n\s*\n/g, \n\n);
 
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, utf8);
 
       // console.log removed for production
 return true}
@@ -69,9 +69,9 @@ return false}
 
 // Main execution;
 
-const srcDir = path.join(__dirname, '..', 'src);;
+const srcDir = path.join(__dirname, '..', src);;
 
-const appDir = path.join(__dirname, '..', 'app);;
+const appDir = path.join(__dirname, '..', app);;
 
 // console.log removed for production
 // Find all files;

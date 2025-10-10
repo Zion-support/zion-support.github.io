@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react;
 
-#!/usr/bin/env node';
+#!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-// // Read the file';
+// // Read the file;
 
-// const content = fs.readFileSync('src/hooks/usePerformance.ts', 'utf8);;
+// const content = fs.readFileSync('src/hooks/usePerformance.ts', utf8);;
 
 // Fix the duplicate analytics definitions and syntax errors;
 
-const fixedContent = `/**;;
+const fixedContent = /**;;
 
  * Performance Monitoring Hook;
 
  * Provides React hooks for performance monitoring and optimization;
 
  */
-import { analytics } from '../utils/analytics;
+import { analytics } from ../utils/analytics;
 
 /**
  * Hook for monitoring page load performance;
@@ -25,11 +25,11 @@ import { analytics } from '../utils/analytics;
  */
 export const usePageLoadPerformance = () => {;;
 
-  useEffect(() => {';
+  useEffect(() => {;
 
-const trackPageLoad = () => {;';
+const trackPageLoad = () => {;;;
 
-      if (typeof window !== 'undefined' && window.performance) {
+      if (typeof window !== 'undefined && window.performance) {
         if (navigation) {;
 
 const metrics = {;;
@@ -45,8 +45,8 @@ const metrics = {;;
           // Track paint metrics if available;
 
           paintEntries.forEach(entry => {)
-            if (entry.name === 'first-paint') {
-              metrics.firstPaint = entry.startTime} else if (entry.name === 'first-contentful-paint') {
+            if (entry.name === 'first-paint) {
+              metrics.firstPaint = entry.startTime} else if (entry.name === 'first-contentful-paint) {
               metrics.firstContentfulPaint = entry.startTime;
 
 export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
@@ -56,7 +56,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
           // Track paint metrics if available;
 
           paintEntries.forEach(entry => {/* TODO: Fix JSX expression */})
-            } else if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
+            } else if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
             }
 
@@ -64,13 +64,13 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
 
           // Track performance metrics;
 
-          analytics.trackPerformance('page_load, metrics.loadComplete);
+          analytics.trackPerformance(page_load, metrics.loadComplete);
 
-          analytics.trackPerformance('dom_content_loaded, metrics.domContentLoaded);
+          analytics.trackPerformance(dom_content_loaded, metrics.domContentLoaded);
 
-          analytics.trackPerformance('first_paint, metrics.firstPaint);
+          analytics.trackPerformance(first_paint, metrics.firstPaint);
 
-          analytics.trackPerformance('first_contentful_paint', metrics.firstContentfulPaint)}
+          analytics.trackPerformance('first_contentful_paint, metrics.firstContentfulPaint)}
 
       }
 
@@ -88,7 +88,7 @@ export const usePageLoadPerformance = () => {/* TODO: Fix JSX expression */};;
 
     };
 
-    window.addEventListener('popstate, handleNavigation);
+    window.addEventListener(popstate, handleNavigation);
 
     return () => {/* TODO: Fix JSX expression */}
 
@@ -113,10 +113,11 @@ export const useComponentPerformance = (componentName: string) => {;;
       ,
 export const useComponentPerformance = (componentNam);;
 
-  e: string) => {/* TODO: Fix JSX expression */}`
-      analytics.trackPerformance(\`\${componentName}_render\`, renderTime);
+  e: string) => {/* TODO: Fix JSX expression */}
 
-      analytics.track('component_performance', 'render, componentName, undefined, renderTime)}});
+      analytics.trackPerformance(\`\${componentName}_render\, renderTime);
+
+      analytics.track('component_performance', render, componentName, undefined, renderTime)}});
 
   return {
     renderCount: renderCount.current;
@@ -140,7 +141,7 @@ const trackClick = useCallback((element: string) => {,;;
     return () => {,
 //       const duration = performance.now() - startTime;;
 
-      trackInteraction('click, element, duration)}}, [trackInteraction]);
+      trackInteraction(click, element, duration)}}, [trackInteraction]);
 
 ;
 
@@ -149,7 +150,7 @@ const trackHover = useCallback((element: string) => {,;;
     return () => {,
 //       const duration = performance.now() - startTime;;
 
-      trackInteraction('hover, element, duration)}}, [trackInteraction]);
+      trackInteraction(hover, element, duration)}}, [trackInteraction]);
 
   return {
     trackInteraction,
@@ -184,7 +185,7 @@ export const useMemoryMonitoring = () => {;;
 
 const checkMemory = () => {;;
 
-      if ('memory in performance) {;
+      if (memory in performance) {;
 
 const metrics = {;;
 
@@ -198,11 +199,11 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
 
         };
 
-        analytics.trackPerformance('memory_used, metrics.used);
+        analytics.trackPerformance(memory_used, metrics.used);
 
-        analytics.trackPerformance('memory_total, metrics.total);
+        analytics.trackPerformance(memory_total, metrics.total);
 
-        analytics.trackPerformance('memory_limit', metrics.limit)}
+        analytics.trackPerformance('memory_limit, metrics.limit)}
 
     };
 
@@ -224,7 +225,7 @@ export const useNetworkPerformance = () => {;;
 
 const trackNetworkTiming = () => {;;
 
-      if (typeof window !== 'undefined' && window.performance) {
+      if (typeof window !== 'undefined && window.performance) {
         if (navigation) {;
 
 const networkMetrics = {;;
@@ -243,8 +244,9 @@ export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */};;
 
           };
 
-          Object.entries(networkMetrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}`
-            analytics.trackPerformance(\`network_\${key}\`, value)})}
+          Object.entries(networkMetrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
+
+            analytics.trackPerformance(\`network_\${key}\, value)})}
 
       }
 
@@ -252,10 +254,10 @@ export const useNetworkPerformance = () => {/* TODO: Fix JSX expression */};;
 
     // Track network timing after page load;
 
-    if (document.readyState === 'complete') {} else {
-      window.addEventListener('load, trackNetworkTiming);
+    if (document.readyState === 'complete) {} else {
+      window.addEventListener(load, trackNetworkTiming);
 
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
     } else {/* TODO: Fix JSX expression */}
 
@@ -300,7 +302,7 @@ let scrollTimeout: NodeJS.Timeout;
 
     };
 
-    window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
+    window.addEventListener('scroll, handleScroll, {/* TODO: Fix JSX expression */})
   e: true });
 
     return () => {/* TODO: Fix JSX expression */}
@@ -314,7 +316,7 @@ let scrollTimeout: NodeJS.Timeout;
 export const usePerformanceMonitoring = () => {;;
 
   return {
-    trackCustomMetric: (name: string, value: number, unit: string = 'ms') => {,
+    trackCustomMetric: (name: string, value: number, unit: string = 'ms) => {,
       analytics.trackPerformance(name, value, unit);
 
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
@@ -322,10 +324,10 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
     }
 
   }};`
-`;
+;
 
 // Write the fixed content;
 
-fs.writeFileSync('src/hooks/usePerformance.ts, fixedContent);
+fs.writeFileSync(src/hooks/usePerformance.ts, fixedContent);
 
 // `

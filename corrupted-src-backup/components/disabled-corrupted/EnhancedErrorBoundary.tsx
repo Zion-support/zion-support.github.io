@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react;
 
-import type { ErrorInfo, ReactNode } from 'react;
+import type { ErrorInfo, ReactNode } from react;
 
 interface Props {/* TODO: Fix JSX expression */}
 
@@ -36,7 +36,7 @@ constructor(props: Props) {
       hasError: true;
 
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}}}
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log error details;
@@ -57,7 +57,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   static getDerivedStateFromError(erro)
   r: Error): Partial<State> {/* TODO: Fix JSX expression */}
 
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}}
+  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}}}
 
   override componentDidCatch(erro,
   r: Error, errorInf)
@@ -92,15 +92,15 @@ const errorReport = {;;
 
       url: window.location.href;
 
-      retryCount: this.retryCount}';
+      retryCount: this.retryCount};
 
-    // Send to error reporting service';
+    // Send to error reporting service;
 
-    if (typeof window !== 'undefined' && 'fetch' in window) {
-      fetch('/api/errors', {)
-        method: 'POST')
+    if (typeof window !== 'undefined' && 'fetch in window) {
+      fetch('/api/errors, {)
+        method: 'POST)
         headers: {)
-          'Content-Type': 'application/json')})
+          'Content-Type': 'application/json)})
         body: JSON.stringify(errorReport),
   private reportError = (erro,
   r: Error, errorInf)
@@ -110,7 +110,7 @@ const errorReport = {;;
 
     // Send to error reporting service;
 
-    if (typeof window !== 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && 'fetch in window) {/* TODO: Fix JSX expression */}
 
         },
         bod,
@@ -123,7 +123,7 @@ const errorReport = {;;
 
 const existingErrors = JSON.parse(;;
 
-        localStorage.getItem('errorLogs') || []
+        localStorage.getItem('errorLogs) || []
       );
 
       existingErrors.push(errorReport);
@@ -137,7 +137,7 @@ const existingErrors = JSON.parse(;;
 
       }
 
-      localStorage.setItem('errorLogs', JSON.stringify(existingErrors))} catch (e) {/* TODO: Fix JSX expression */}
+      localStorage.setItem('errorLogs, JSON.stringify(existingErrors))} catch (e) {/* TODO: Fix JSX expression */}
 
 //       }
 
@@ -184,26 +184,29 @@ const errorDetails = {;;
 
     // Create a mailto link with error details;
 
-//     const subject = `Bug Report - Error ID: ${this.state.errorId}`;;
+//     const subject = `Bug Report - Error ID: ${this.state.errorId};;
 
-//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;;
+//     const body = `Error Details:\n\n${JSON.stringify(errorDetails, null, 2)};;
 
-//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;;
+//     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)};;
 
   private handleReportBug = () => {/* TODO: Fix JSX expression */}
 
     };
 
-    // Create a mailto link with error details;`
-//     const subject = `Bug Report - Error,`;;
+    // Create a mailto link with error details;
 
-  ID: ${this.state.errorId}`;`
-//     const body = `Error,`;;
+//     const subject = `Bug Report - Error,;;
 
-  Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;`
-//     const mailtoLink = `mailt,`;;
+  ID: ${this.state.errorId}`;
 
-  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+//     const body = `Error,;;
+
+  Details:\n\n${JSON.stringify(errorDetails, null, 2)}`;
+
+//     const mailtoLink = `mailt,;;
+
+  o:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)};
 
     window.open(mailtoLink)};
 
@@ -216,22 +219,22 @@ const errorDetails = {;;
 
       // Default error UI;
 
-      return(<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8'>
-          <div className='max-w-md w-full space-y-8'>
-            <div className='text-center'>)
-              <div className='mx-auto h-12 w-12 text-red-500'>)
-                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>)
+      return(<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8>
+          <div className='max-w-md w-full space-y-8>
+            <div className='text-center>)
+              <div className='mx-auto h-12 w-12 text-red-500>)
+                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24>)
                   <path;)
-                    strokeLinecap='round'),
-                    strokeLinejoin='round'),
+                    strokeLinecap='round),
+                    strokeLinejoin='round),
       // Default error UI
       return (
 
-        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'></div>
-          <div className='max-w-md w-full space-y-8'></div>
-            <div className='text-center'></div>
-              <div className='mx-auto h-12 w-12 text-red-500'></div>
-                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+        <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8></div>
+          <div className='max-w-md w-full space-y-8></div>
+            <div className='text-center></div>
+              <div className='mx-auto h-12 w-12 text-red-500></div>
+                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24>
                   <path
   override render() {/* TODO: Fix JSX expression */}
 
@@ -239,13 +242,13 @@ const errorDetails = {;;
 
       // Default error UI;
 
-      return (<div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,
+      return (<div className=min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4,
   sm:px-6,
-  lg:px-8'></div>
-          <div className='max-w-md w-full space-y-8'></div>
-            <div className='text-center'></div>
-              <div className='mx-auto h-12 w-12 text-red-500'></div>
-                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24'></svg>
+  lg:px-8></div>
+          <div className='max-w-md w-full space-y-8></div>
+            <div className='text-center></div>
+              <div className='mx-auto h-12 w-12 text-red-500></div>
+                <svg fill='none' stroke='currentColor' viewBox='0 0 24 24></svg>
                   <path></path>
                     strokeLinecap=round
                     strokeLinejoin=round
@@ -255,16 +258,16 @@ const errorDetails = {;;
                   /></p>
                 </svg>
               </div>
-              <h2 className='mt-6 text-3xl font-extrabold text-gray-900'>
+              <h2 className='mt-6 text-3xl font-extrabold text-gray-900>
                 Oops! Something went wrong;
 
               </h2>
-              <p className='mt-2 text-sm text-gray-600'>
-              <h2 className='mt-6 text-3xl font-extrabold text-gray-900'></h2>
+              <p className='mt-2 text-sm text-gray-600>
+              <h2 className='mt-6 text-3xl font-extrabold text-gray-900></h2>
                 Oops! Something went wrong;
 
               </h2>
-              <p className='mt-2 text-sm text-gray-600'></p>
+              <p className='mt-2 text-sm text-gray-600></p>
                 Were sorry, but something unexpected happened. Our team has;
 
                 been notified.
@@ -278,8 +281,8 @@ const errorDetails = {;;
 
             </div>
 
-            <div className='space-y-4'></div>
-              <div className='flex space-x-4'>
+            <div className='space-y-4></div>
+              <div className='flex space-x-4>
                 {this.retryCount < this.maxRetries && (
 
                   <button;
@@ -289,7 +292,7 @@ const errorDetails = {;;
                   <button
                     onClick={this.handleRetry}
 
-                    className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover: bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
+                    className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover: bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500,
                   >,
                     Try Again({this.maxRetries - this.retryCount} attempts;)
                     left)
@@ -301,12 +304,12 @@ const errorDetails = {;;
                   onClick={this.handleReload}
 
                   className=group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-              <div className='flex space-x-4'></div>
+              <div className='flex space-x-4></div>
                 {/* TODO: Fix JSX expression */}
 
                     onClick={this.handleRetry}
 
-                    className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600,
+                    className=group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600,
   hover:bg-indigo-700,
   focus:outline-none,
   focus:ring-2,
@@ -321,7 +324,7 @@ const errorDetails = {;;
                 <button></button>
                   onClick={this.handleReload}
 
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
+                  className=group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
@@ -333,10 +336,10 @@ const errorDetails = {;;
                 </button>
               </div>
 ,
-              <div className='flex space-x-4'>,
+              <div className='flex space-x-4>,
                 <button;
 
-              <div className='flex space-x-4'></div>
+              <div className='flex space-x-4></div>
                 <button
                   onClick={this.handleReportBug}
 
@@ -353,7 +356,7 @@ const errorDetails = {;;
                 <button></button>
                   onClick={this.handleReportBug}
 
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
+                  className=group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
@@ -366,7 +369,7 @@ const errorDetails = {;;
                 <button></button>
                   onClick={() => window.history.back()}
 
-                  className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
+                  className=group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white,
   hover:bg-gray-50,
   focus:outline-none,
   focus:ring-2,
@@ -381,26 +384,26 @@ const errorDetails = {;;
 
             {this.props.showDetails && this.state.error && (
 
-              <details className='mt-8'>
-                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
+              <details className='mt-8>
+                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900>
                   Technical Details;
 
                 </summary>,
-                <div className='mt-2 p-4 bg-gray-100 rounded-md'>,
-                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,
+                <div className='mt-2 p-4 bg-gray-100 rounded-md>,
+                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto>,
                   Technical Details
                 </summary>
-                <div className='mt-2 p-4 bg-gray-100 rounded-md'></div>
-                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>
+                <div className='mt-2 p-4 bg-gray-100 rounded-md></div>
+                  <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto>
             {/* TODO: Fix JSX expression */}
 
                     {this.state.error.message}
 
-                    {'\n\n'}
+                    {'\n\n}
 
                     {this.state.error.stack}
 
-                    {'\n\n'}
+                    {'\n\n}
 
                     {this.state.errorInfo?.componentStack}
 

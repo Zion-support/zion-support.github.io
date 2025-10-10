@@ -1,32 +1,32 @@
 #!/usr/bin
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
 function fixJSXErrors(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8);;
+    let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
     /
-    const jsxElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'Helmet', 'Fragment];;
+    const jsxElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside', 'Helmet', Fragment];;
 
     jsxElements.forEach(element => {
       /)
-      const openTags = (content.match(new RegExp(`<${element}[^>]*>`, 'g)) || []).length;;
+      const openTags = (content.match(new RegExp(`<${element}[^>]*>`, g)) || []).length;;
 
-      const closeTags = (content.match(new RegExp(`<;;
+      const closeTags = (content.match(new RegExp(<;;
 
       if (openTags > closeTags) {
         const missing = openTags - closeTags;;
 
         /
-        if (element === 'Fragment') {
-          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<
+        if (element === 'Fragment) {
+          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, $1<
         } else {
-          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, `$1<
+          content = content.replace(/(\s*)(<\/[A-Z][a-zA-Z0-9]*>\s*)$/, $1<
         }
 
         modified = true;
@@ -41,8 +41,8 @@ function fixJSXErrors(filePath) {
     
     /
     content = content.replace(/return\s*\(\s*([^<][^)]*)\s*\)\s*;?\s*$
-      if (!content.includes('<') && !content.includes('return')) {
-        return `return (\n    <div>\n      ${content}\n    <
+      if (!content.includes('<') && !content.includes('return)) {
+        return return (\n    <div>\n      ${content}\n    <
       }
 
       return match;)
@@ -73,8 +73,8 @@ function fixJSXErrors(filePath) {
     
     /)
     content = content.replace(/\(\s*([^)]*)\s*$
-      if (inner && !inner.includes('(') && !inner.includes(')')) {
-        return `(${inner})`;
+      if (inner && !inner.includes('(') && !inner.includes('))) {
+        return `(${inner});
 
       }
 
@@ -85,7 +85,7 @@ function fixJSXErrors(filePath) {
     if (modified) {
       fs.writeFileSync(filePath, content);
 
-      console.log(`Fixed JSX errors in: ${filePath}`);
+      console.log(`Fixed JSX errors in: ${filePath});
 
       return true;
 
@@ -94,7 +94,7 @@ function fixJSXErrors(filePath) {
     return false;
 
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:, error.message);
 
     return false;
 
@@ -113,18 +113,18 @@ function findFilesWithJSXErrors(dir) {
 
       const stat = fs.statSync(fullPath);;
 
-      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git')) {
+      if (stat.isDirectory() && !item.includes('node_modules') && !item.includes('.git)) {
         searchDir(fullPath);
 
       } else if (stat.isFile() && /\.(tsx?|jsx?)$
         try {
-          const content = fs.readFileSync(fullPath, 'utf8);;
+          const content = fs.readFileSync(fullPath, utf8);;
 
           /
-          if (content.includes('Expected corresponding closing tag') || 
-              content.includes('JSX expressions must have one parent element') ||
-              content.includes('Declaration or statement expected') ||
-              content.includes('Expression expected')) {
+          if (content.includes('Expected corresponding closing tag) || 
+              content.includes('JSX expressions must have one parent element) ||
+              content.includes('Declaration or statement expected) ||
+              content.includes('Expression expected)) {
             files.push(fullPath);
 
           }
@@ -132,9 +132,13 @@ function findFilesWithJSXErrors(dir) {
         } catch (error) {
           /
         }
+
       }
+
     }
+
   }
+
     searchDir(dir);
 
   return files;
@@ -147,25 +151,25 @@ const workspaceDir = process.argv[2] || ;;
 /
 const problematicFiles = [;;
 
-  '/workspace/app/ai-analytics
-  '/workspace/app/ai-api-management
-  '/workspace/app/ai-api-manager
-  '/workspace/app/ai-autonomous-systems
-  '/workspace/app/ai-blockchain-analytics
-  '/workspace/app/ai-blockchain-solutions
-  '/workspace/app/ai-climate-solutions-pro
-  '/workspace/app/ai-cloud-infrastructure
-  '/workspace/app/ai-code-assistant
-  '/workspace/app/ai-code-security-auditor
-  '/workspace/app/ai-computer-vision
-  '/workspace/app/ai-content-delivery-network
-  '/workspace/app/ai-content-generation
-  '/workspace/app/ai-content-studio
-  '/workspace/app/ai-content-writer
-  '/workspace/app/ai-crm-assistant
+  /workspace/app/ai-analytics
+  /workspace/app/ai-api-management
+  /workspace/app/ai-api-manager
+  /workspace/app/ai-autonomous-systems
+  /workspace/app/ai-blockchain-analytics
+  /workspace/app/ai-blockchain-solutions
+  /workspace/app/ai-climate-solutions-pro
+  /workspace/app/ai-cloud-infrastructure
+  /workspace/app/ai-code-assistant
+  /workspace/app/ai-code-security-auditor
+  /workspace/app/ai-computer-vision
+  /workspace/app/ai-content-delivery-network
+  /workspace/app/ai-content-generation
+  /workspace/app/ai-content-studio
+  /workspace/app/ai-content-writer
+  /workspace/app/ai-crm-assistant
 ];
 
-console.log(`Processing ${problematicFiles.length} files with JSX errors`);
+console.log(`Processing ${problematicFiles.length} files with JSX errors);
 
 let fixedCount = 0;;
 
@@ -177,4 +181,4 @@ problematicFiles.forEach(file => {)
 
 });
 
-console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files`);
+console.log(`Fixed ${fixedCount} out of ${problematicFiles.length} files);

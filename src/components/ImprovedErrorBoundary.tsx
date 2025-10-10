@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react;
 
-'use client';
+'use client;
 
 /**
  * Improved Error Boundary
@@ -67,10 +67,10 @@ constructor(props: Props) {
     }));
 
     // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {}
+    if (process.env['NODE_ENV'] === 'development) {}
 
     // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
+    if (typeof window !== 'undefined && (window as unknown as { Sentry: unknown }).Sentry) {
       (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
         contexts: {
           react: {
@@ -183,7 +183,7 @@ p: Date.now(),
 
     // Log to console in development;
 
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env['NODE_ENV'] === 'development) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -192,7 +192,7 @@ p: Date.now(),
     }
 
     // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as {/* TODO: Fix JSX expression */})
+    if (typeof window !== 'undefined && (window as unknown as {/* TODO: Fix JSX expression */})
   y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -269,7 +269,7 @@ p: Date.now(),
     window.location.reload()};
 
   handleGoHome = (): void => {
-    window.location.href = '/};
+    window.location.href = /};
 
   render(): ReactNode {
     if (this.state.hasError) {
@@ -280,14 +280,15 @@ p: Date.now(),
       // Default error UI
       return (
 
-        <div className="error-boundary-container" style={styles.container}>
+        <div className="error-boundary-container style={styles.container}>
           <div style={styles.content}>
             <div style={styles.icon}>⚠️</div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
             <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
+              Were sorry for the inconvenience. The application encountered an unexpected error.
             </p>
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
+            {process.env['NODE_ENV'] === 'development && this.state.error && (
+
               <details style={styles.details}>
 
   resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
@@ -324,7 +325,7 @@ p: Date.now(),
 
 }
 
-    window.location.href = '/};
+    window.location.href = /};
 
   render(): ReactNode {/* TODO: Fix JSX expression */}
 
@@ -353,14 +354,14 @@ p: Date.now(),
       return (<div>Coming Soon</div>)
   )
         
-          <div className="error-boundary-container" style={styles.container}></div>
+          <div className="error-boundary-container style={styles.container}></div>
           <div style={styles.content}></div>
             <div style={styles.icon}></div>
             <h1 style={styles.title}>Oops! Something went wrong</h1>
             <p style={styles.message}></p>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
+              Were sorry for the inconvenience. The application encountered an unexpected error.
             </p>
-            {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
+            {process.env['NODE_ENV'] === 'development && this.state.error && ()}
 
           <details style={styles.details}></details>
 
@@ -411,8 +412,9 @@ p: Date.now(),
               <button></button>
                 onClick={this.resetErrorBoundary}
 
-                style={styles.button}"
-                aria-label="Try Again"
+                style={styles.button}
+
+                aria-label="Try Again
               >
                 Try Again
               </button>
@@ -426,8 +428,9 @@ p: Date.now(),
 
                 onClick={this.handleReload}
 
-                style={{...styles.button, ...styles.secondaryButton}}"
-                aria-label="Reload Page"
+                style={{...styles.button, ...styles.secondaryButton}}
+
+                aria-label="Reload Page
               >
                 Reload Page
               </button>
@@ -441,8 +444,9 @@ p: Date.now(),
 
                 onClick={this.handleGoHome}
 
-                style={{...styles.button, ...styles.secondaryButton}}"
-                aria-label="Go to Homepage"
+                style={{...styles.button, ...styles.secondaryButton}}
+
+                aria-label="Go to Homepage
               >
                 Go Home
               </button>
@@ -471,93 +475,93 @@ p: Date.now(),
 const styles = {;;
 
   container: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue, Arial, sans-serif
+    minHeight: '100vh,
+    display: 'flex,
+    alignItems: 'center,
+    justifyContent: 'center,
+    padding: '20px,
+    backgroundColor: '#f5f5f5,
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica Neue, Arial, sans-serif
   },
   content: {
-    maxWidth: '600px',
-    width: '100%',
-    backgroundColor: 'white',
-    borderRadius: '8px',
-    padding: '40px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center' as const
+    maxWidth: '600px,
+    width: '100%,
+    backgroundColor: 'white,
+    borderRadius: '8px,
+    padding: '40px,
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1),
+    textAlign: 'center as const
   },
   icon: {
-    fontSize: '48px',
+    fontSize: '48px,
     marginBottom:   ,
 $4},
   title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#333',
+    fontSize: '24px,
+    fontWeight: 'bold,
+    color: '#333,
     marginBottom:   ,
 $4},
   message: {
-    fontSize: '16px',
-    color: '#666',
-    marginBottom: '32px',
+    fontSize: '16px,
+    color: '#666,
+    marginBottom: '32px,
     lineHeight:   ,
 $4},
   details: {
-    textAlign: 'left' as const,
-    marginBottom: '24px',
-    backgroundColor: '#f9f9f9',
-    padding: '16px',
-    borderRadius: '4px',
+    textAlign: 'left as const,
+    marginBottom: '24px,
+    backgroundColor: '#f9f9f9,
+    padding: '16px,
+    borderRadius: '4px,
     border:   ,
 $4},
   summary: {
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    marginBottom: '12px',
-    userSelect: 'none' as const
+    cursor: 'pointer,
+    fontWeight: 'bold,
+    marginBottom: '12px,
+    userSelect: 'none as const
   },
   errorDetails: {
     fontSize:   ,
 $4},
   errorMessage: {
-    marginBottom: '12px',
+    marginBottom: '12px,
     color:   ,
 $4},
   stack: {
-    backgroundColor: '#f5f5f5',
-    padding: '12px',
-    borderRadius: '4px',
-    fontSize: '12px',
-    overflowX: 'auto' as const,
-    fontFamily: 'monospace',
-    whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const
+    backgroundColor: '#f5f5f5,
+    padding: '12px,
+    borderRadius: '4px,
+    fontSize: '12px,
+    overflowX: 'auto as const,
+    fontFamily: 'monospace,
+    whiteSpace: 'pre-wrap as const,
+    wordBreak: 'break-all as const
   },
   actions: {
-    display: 'flex',
-    gap: '12px',
-    justifyContent: 'center',
-    flexWrap: 'wrap' as const
+    display: 'flex,
+    gap: '12px,
+    justifyContent: 'center,
+    flexWrap: 'wrap as const
   },
   button: {
-    padding: '12px 24px',
-    fontSize: '16px',
-    fontWeight: '500',
-    color: 'white',
-    backgroundColor: '#007bff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
+    padding: '12px 24px,
+    fontSize: '16px,
+    fontWeight: '500,
+    color: 'white,
+    backgroundColor: '#007bff,
+    border: 'none,
+    borderRadius: '4px,
+    cursor: 'pointer,
     transition:   ,
 $4},
   secondaryButton: {
     backgroundColor:   ,
 $4},
   errorCount: {
-    marginTop: '24px',
-    fontSize: '14px',
+    marginTop: '24px,
+    fontSize: '14px,
     color:   ,
 $4}
 
@@ -583,19 +587,19 @@ const styles = {// TODO: Add content};;
 };
 
   minHeigh,
-  t: '100vh',
+  t: '100vh,
     displa,
-  y: 'flex',
+  y: 'flex,
     alignItem,
-  s: 'center',
+  s: 'center,
     justifyConten,
-  t: 'center',
+  t: 'center,
     paddin,
-  g: '20px',
+  g: '20px,
     backgroundColo,
-  r: '#f5f5f5',
-    fontFamil,"
-  y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue, Arial, sans-serif
+  r: '#f5f5f5,
+    fontFamil,
+  y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica Neue, Arial, sans-serif
   },
   conten,
   t: {/* TODO: Fix JSX expression */}
@@ -605,19 +609,19 @@ const styles = {// TODO: Add content};;
 };
 
   maxWidt,
-  h: '600px',
+  h: '600px,
     widt,
-  h: '100%',
+  h: '100%,
     backgroundColo,
-  r: 'white',
+  r: 'white,
     borderRadiu,
-  s: '8px',
+  s: '8px,
     paddin,
-  g: '40px',
+  g: '40px,
     boxShado,
-  w: '0 4px 6px rgba(0, 0, 0, 0.1)',
+  w: '0 4px 6px rgba(0, 0, 0, 0.1),
     textAlig,
-  n: 'center' as const},
+  n: 'center as const},
   ico,
   n: {/* TODO: Fix JSX expression */}
 
@@ -626,7 +630,7 @@ const styles = {// TODO: Add content};;
 };
 
   fontSiz,
-  e: '48px',
+  e: '48px,
     marginBotto,
   m: 20px
   },
@@ -638,11 +642,11 @@ const styles = {// TODO: Add content};;
 };
 
   fontSiz,
-  e: '24px',
+  e: '24px,
     fontWeigh,
-  t: 'bold',
+  t: 'bold,
     colo,
-  r: '#333',
+  r: '#333,
     marginBotto,
   m: 16px
   },
@@ -654,11 +658,11 @@ const styles = {// TODO: Add content};;
 };
 
   fontSiz,
-  e: '16px',
+  e: '16px,
     colo,
-  r: '#666',
+  r: '#666,
     marginBotto,
-  m: '32px',
+  m: '32px,
     lineHeigh,
   t: 1.6
   },
@@ -670,15 +674,15 @@ const styles = {// TODO: Add content};;
 };
 
   textAlig,
-  n: 'left' as const,
+  n: 'left as const,
     marginBotto,
-  m: '24px',
+  m: '24px,
     backgroundColo,
-  r: '#f9f9f9',
+  r: '#f9f9f9,
     paddin,
-  g: '16px',
+  g: '16px,
     borderRadiu,
-  s: '4px',
+  s: '4px,
     borde,
   r: 1px solid #e0e0e0
   },
@@ -690,13 +694,13 @@ const styles = {// TODO: Add content};;
 };
 
   curso,
-  r: 'pointer',
+  r: 'pointer,
     fontWeigh,
-  t: 'bold',
+  t: 'bold,
     marginBotto,
-  m: '12px',
+  m: '12px,
     userSelec,
-  t: 'none' as const},
+  t: 'none as const},
   errorDetail,
   s: {/* TODO: Fix JSX expression */}
 
@@ -715,7 +719,7 @@ const styles = {// TODO: Add content};;
 };
 
   marginBotto,
-  m: '12px',
+  m: '12px,
     colo,
   r: #d32f2f
   },
@@ -727,21 +731,21 @@ const styles = {// TODO: Add content};;
 };
 
   backgroundColo,
-  r: '#f5f5f5',
+  r: '#f5f5f5,
     paddin,
-  g: '12px',
+  g: '12px,
     borderRadiu,
-  s: '4px',
+  s: '4px,
     fontSiz,
-  e: '12px',
+  e: '12px,
     overflow,
-  X: 'auto' as const,
+  X: 'auto as const,
     fontFamil,
-  y: 'monospace',
+  y: 'monospace,
     whiteSpac,
-  e: 'pre-wrap' as const,
+  e: 'pre-wrap as const,
     wordBrea,
-  k: 'break-all' as const},
+  k: 'break-all as const},
   action,
   s: {/* TODO: Fix JSX expression */}
 
@@ -750,13 +754,13 @@ const styles = {// TODO: Add content};;
 };
 
   displa,
-  y: 'flex',
+  y: 'flex,
     ga,
-  p: '12px',
+  p: '12px,
     justifyConten,
-  t: 'center',
+  t: 'center,
     flexWra,
-  p: 'wrap' as const},
+  p: 'wrap as const},
   butto,
   n: {/* TODO: Fix JSX expression */}
 
@@ -765,21 +769,21 @@ const styles = {// TODO: Add content};;
 };
 
   paddin,
-  g: '12px 24px',
+  g: '12px 24px,
     fontSiz,
-  e: '16px',
+  e: '16px,
     fontWeigh,
-  t: '500',
+  t: '500,
     colo,
-  r: 'white',
+  r: 'white,
     backgroundColo,
-  r: '#007bff',
+  r: '#007bff,
     borde,
-  r: 'none',
+  r: 'none,
     borderRadiu,
-  s: '4px',
+  s: '4px,
     curso,
-  r: 'pointer',
+  r: 'pointer,
     transitio,
   n: background-color 0.2s
   },
@@ -801,9 +805,9 @@ const styles = {// TODO: Add content};;
 };
 
   marginTo,
-  p: '24px',
+  p: '24px,
     fontSiz,
-  e: '14px',
+  e: '14px,
     colo,
   r: #999
   }

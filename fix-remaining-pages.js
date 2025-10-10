@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react;
 
-#!/usr/bin/env node';
+#!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from fs;
 
-// List of page files that still need fixing';
+// List of page files that still need fixing;
 
-const filesToFix = [;';
+const filesToFix = [;;;
 
-  '/workspace/app/offline/page.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx];
+  '/workspace/app/offline/page.tsx,
+  '/workspace/app/privacy/page.tsx,
+  '/workspace/app/team/page.tsx,
+  /workspace/app/terms/page.tsx];
 
 // // Function to process a single file;
 
@@ -25,34 +25,34 @@ function processFile(filePath) {
 
       if (
 
-        line.includes('const metadata: Metadata = {') ||
-        line.includes('const metadata = {) ||;;
+        line.includes('const metadata: Metadata = {) ||
+        line.includes(const metadata = {) ||;;
 
-        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||</title>
-        (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||
-        (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('openGraph:') && !line.includes('//')) ||,
-        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
-        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata)) ||,;
+        (line.includes('title:') && !line.includes('<title>') && !line.includes('//)) ||</title>
+        (line.includes('description:') && !line.includes('<meta') && !line.includes('//)) ||
+        (line.includes('type:') && !line.includes('<meta') && !line.includes('//)) ||
+        (line.includes('url:') && !line.includes('<meta') && !line.includes('//)) ||
+        (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//)) ||,
+        (line.includes('openGraph:') && !line.includes('//)) ||,
+        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//)) ||,
+        (line.includes('images:') && !line.includes('<meta') && !line.includes('//)) ||,
+        (line.trim() === '{' && i > 0 && lines[i - 1].includes(metadata)) ||,;
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
-        (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
-        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
+        (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata)) ||
+        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata))
       ) {/* TODO: Fix JSX expression */}
 
       }
 
       filteredLines.push(line)}
 
-    content = filteredLines.join('\n);
+    content = filteredLines.join(\n);
 
     // Clean up extra empty lines;
 
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n);
+    content = content.replace(/\n\s*\n\s*\n/g, \n\n);
 
     // Fix function declarations;
 
@@ -64,20 +64,20 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Add proper export at the end if missing;
 
-    if (!content.includes('export default') && content.includes('const ')) {,
+    if (!content.includes('export default') && content.includes('const )) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,;;
 
       if (componentName) {,
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
 
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
+        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};);
 
         modified = true}
 
     }
 
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
+    if (modified || content !== fs.readFileSync(filePath, 'utf8)) {/* TODO: Fix JSX expression */}
 
     }
 

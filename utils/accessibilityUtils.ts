@@ -13,7 +13,7 @@ export const focusManagement = {;;
 
 const focusableElements = element.querySelectorAll();;
 
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1])
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
     );
 
     const _firstElement = focusableElements[0] as HTMLElement;;
@@ -28,7 +28,7 @@ const focusableElements = element.querySelectorAll();;
 
 const handleKeyDown = (e: KeyboardEvent) => {;;
 
-      if (e.key === 'Tab') {,
+      if (e.key === 'Tab) {,
         if (e.shiftKey) {,
           if (document.activeElement === firstElement) {,
             lastElement.focus();
@@ -49,7 +49,7 @@ export const focusManagement = {/* TODO: Fix JSX expression */};;
 
     };
 
-    element.addEventListener('keydown, handleKeyDown);
+    element.addEventListener(keydown, handleKeyDown);
 
     firstElement?.focus();
 
@@ -66,7 +66,7 @@ export const focusManagement = {/* TODO: Fix JSX expression */};;
 
   skipToMain: (): void => {;
 
-const _mainElement = document.querySelector('main) as HTMLElement;;
+const _mainElement = document.querySelector(main) as HTMLElement;;
 
     if (mainElement) {,
       mainElement.focus();
@@ -92,10 +92,10 @@ export const ariaUtils = {;;
 
   // Generate unique IDs for ARIA relationships;
 
-  generateId: (prefix: string = 'aria'): string => {,
+  generateId: (prefix: string = 'aria): string => {,
 export const ariaUtils = {/* TODO: Fix JSX expression */};;
 
-    return `${prefix}-${Math.random().toString(36).substr(2, 9)}`},
+    return `${prefix}-${Math.random().toString(36).substr(2, 9)}},
 
   // Set ARIA attributes;
 
@@ -108,13 +108,13 @@ export const ariaUtils = {/* TODO: Fix JSX expression */};;
 
   // Announce to screen readers;
 
-    const _announcement = document.createElement('div);;
+    const _announcement = document.createElement(div);;
 
-    announcement.setAttribute('aria-live, priority);
+    announcement.setAttribute(aria-live, priority);
 
-    announcement.setAttribute('aria-atomic', 'true);
+    announcement.setAttribute('aria-atomic', true);
 
-    announcement.className = 'sr-only;
+    announcement.className = sr-only;
 
     announcement.textContent = message;
 
@@ -136,22 +136,22 @@ export const keyboardNavigation = {;;
     currentIndex: number;
 
     switch (event.key) {,
-      case isVertical ? 'ArrowDown' : 'ArrowRight':,
+      case isVertical ? 'ArrowDown' : 'ArrowRight:,
         event.preventDefault();
 
         return Math.min(currentIndex + 1, items.length - 1);
 
-      case isVertical ? 'ArrowUp' : 'ArrowLeft':
+      case isVertical ? 'ArrowUp' : 'ArrowLeft:
         event.preventDefault();
 
         return Math.max(currentIndex - 1, 0);
 
-      case 'Home':
+      case 'Home:
         event.preventDefault();
 
         return 0;
 
-      case 'End':
+      case 'End:
         event.preventDefault();
 
         return items.length - 1;
@@ -162,7 +162,7 @@ export const keyboardNavigation = {;;
   // Handle Enter and Space key activation;
 
   handleActivation: (event: KeyboardEvent, callback: () => void): void => {,
-    if (event.key === 'Enter' || event.key === ' ') {,
+    if (event.key === 'Enter' || event.key === ' ) {,
       event.preventDefault();
 
       callback();
@@ -212,11 +212,11 @@ export const colorContrast = {/* TODO: Fix JSX expression */};;
 
   // Check if contrast meets WCAG standards;
 
-  meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA'): boolean =>
+  meetsWCAG: (contrastRatio: number, level: 'AA' | 'AAA' = 'AA): boolean =>
 );
 
 } {,
-    return level === 'AA ? contrastRatio >= 4.5 : contrastRatio >= 7}};
+    return level === AA ? contrastRatio >= 4.5 : contrastRatio >= 7}};
 
 // Motion and animation utilities;
 
@@ -225,19 +225,19 @@ export const motionUtils = {;;
   // Check if user prefers reduced motion;
 
   prefersReducedMotion: (): boolean => {,
-    return window.matchMedia('(prefers-reduced-motion: reduce)').matches},
+    return window.matchMedia('(prefers-reduced-motion: reduce)).matches},
   // Apply reduced motion styles;
 
   applyReducedMotion: (element: HTMLElement): void => {,
     if (motionUtils.prefersReducedMotion()) {,
-      element.style.animation = 'none;
+      element.style.animation = none;
 
-      element.style.transition = 'none'}
+      element.style.transition = 'none}
 
   },
   // Respect users motion preferences;
 
-  conditionalAnimation: (animation: string, fallback: string = ''): string => {,
+  conditionalAnimation: (animation: string, fallback: string = '): string => {,
     return motionUtils.prefersReducedMotion() ? fallback : animation}};
 
 // Form accessibility utilities;
@@ -252,19 +252,19 @@ export const formAccessibility = {;;
 
   ): HTMLLabelElement => {,;
 
-const _label = document.createElement('label);;
+const _label = document.createElement(label);;
 
     label.textContent = labelText;
 
-    label.setAttribute('for, input.id || formAccessibility.generateInputId());
+    label.setAttribute(for, input.id || formAccessibility.generateInputId());
 
     if (!input.id) {
-      input.id = label.getAttribute('for)!;
+      input.id = label.getAttribute(for)!;
 
   // Check if contrast meets WCAG standards,
   meetsWCAG: (contrastRati,
   o: number, leve)
-  l: 'AA' | 'AAA' = 'AA'): boolean => {/* TODO: Fix JSX expression */}
+  l: 'AA' | 'AAA' = 'AA): boolean => {/* TODO: Fix JSX expression */}
 
   }};
 
@@ -280,10 +280,10 @@ export const motionUtils = {/* TODO: Fix JSX expression */};;
     }
 
   },
-  // Respect user's motion preferences,
+  // Respect users motion preferences,
   conditionalAnimation: (animatio,
   n: string, fallbac)
-  k: string = ''): string => {/* TODO: Fix JSX expression */}
+  k: string = '): string => {/* TODO: Fix JSX expression */}
 
   }};
 
@@ -299,8 +299,9 @@ export const formAccessibility = {/* TODO: Fix JSX expression */};;
 
   generateInputId: (): string => {,
   // Generate unique input ID,
-  generateInputId: (): string => {/* TODO: Fix JSX expression */}`
-    return `input-${Math.random().toString(36).substr(2, 9)}`},
+  generateInputId: (): string => {/* TODO: Fix JSX expression */}
+
+    return `input-${Math.random().toString(36).substr(2, 9)}},
 
   // Check color contrast;
 
@@ -323,20 +324,20 @@ export const screenReaderUtils = {;;
   // Hide element from screen readers;
 
   hideFromScreenReader: (element: HTMLElement): void => {,
-    element.setAttribute('aria-hidden', 'true')},
+    element.setAttribute('aria-hidden', 'true)},
   // Show element to screen readers;
 
   showToScreenReader: (element: HTMLElement): void => {,
-    element.removeAttribute('aria-hidden')},
+    element.removeAttribute('aria-hidden)},
   // Create screen reader only text;
 
   createScreenReaderText: (text: string): HTMLElement => {;
 
-const _element = document.createElement('span);;
+const _element = document.createElement(span);;
 
     element.textContent = text;
 
-    element.className = 'sr-only;
+    element.className = sr-only;
 
     return element}};
 
@@ -351,11 +352,11 @@ export const accessibilityTesting = {;;
 
     empty: HTMLImageElement[]} => {;
 
-const _images = Array.from(document.querySelectorAll('img));;
+const _images = Array.from(document.querySelectorAll(img));;
 
-    const _missing = images.filter(img => !img.hasAttribute('alt));;
+    const _missing = images.filter(img => !img.hasAttribute(alt));;
 
-    const _empty = images.filter(img => img.getAttribute('alt') === ');;
+    const _empty = images.filter(img => img.getAttribute('alt') === );;
 
     return { missing, empty }});
 
@@ -384,13 +385,13 @@ export const accessibilityTesting = {/* TODO: Fix JSX expression */};;
 
     return { missing, empty }});
 
-    return inputs.filter(input => {/* TODO: Fix JSX expression */})`;
+    return inputs.filter(input => {/* TODO: Fix JSX expression */});
 
-const _label = id ? document.querySelector(`label[for="${id}"]`) : null;;
+const _label = id ? document.querySelector(`label[for="${id}"]) : null;;
 
-//       const ariaLabel = input.getAttribute('aria-label);;
+//       const ariaLabel = input.getAttribute(aria-label);;
 
-//       const ariaLabelledBy = input.getAttribute('aria-labelledby);;
+//       const ariaLabelledBy = input.getAttribute(aria-labelledby);;
 
       return !label && !ariaLabel && !ariaLabelledBy}) as HTMLInputElement[]});
 
@@ -403,7 +404,7 @@ const _label = id ? document.querySelector(`label[for="${id}"]`) : null;;
     let _previousLevel = 0;;
 
       if (index === 0 && level !== 1) {,
-        issues.push('First heading should be h1);
+        issues.push(First heading should be h1);
 
       if (index === 0 && level !== 1) {/* TODO: Fix JSX expression */}
 
@@ -482,11 +483,11 @@ const _imageCheck = accessibilityTesting.checkImageAltText();;
 
 const focusableSelectors = [,;;
 
-      'button:not([disabled])',
-      'input: not([disabled])',
-      'select: not([disabled])',
-      'textarea: not([disabled])',
-      'a[href]];
+      'button:not([disabled]),
+      'input: not([disabled]),
+      'select: not([disabled]),
+      'textarea: not([disabled]),
+      a[href]];
 
     return focusableSelectors.some(selector => element.matches(selector));
 
@@ -502,15 +503,15 @@ export const initAccessibility = (): void => {;;
 
   // Add skip links;
 
-  const _skipLink = document.createElement('a);;
+  const _skipLink = document.createElement(a);;
 
-  skipLink.href = '#main-content;
+  skipLink.href = #main-content;
 
-  skipLink.textContent = 'Skip to main content;
+  skipLink.textContent = Skip to main content;
 
-  skipLink.className = 'skip-link;
+  skipLink.className = skip-link;
 
-  skipLink.style.cssText = `
+  skipLink.style.cssText = 
     position: absolute;
 
     top: -40 px;
@@ -529,16 +530,16 @@ export const initAccessibility = (): void => {;;
 
     transition: top 0.3 s;
 
-  `;
+  ;
 
-  skipLink.addEventListener('focus', () => {
-    skipLink.style.top = '6px;
+  skipLink.addEventListener('focus, () => {
+    skipLink.style.top = 6px;
 
 export const initAccessibility = (): void => {/* TODO: Fix JSX expression */};;
 
   });
 
-  skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
+  skipLink.addEventListener('blur, () => {/* TODO: Fix JSX expression */}
 
   });
 

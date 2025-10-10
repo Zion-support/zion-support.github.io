@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from fs;
 
-import { glob } from 'glob;
+import { glob } from glob;
 
 // Function to process a file;
 
@@ -10,41 +10,41 @@ function processFile(filePath) {
   try {
     // Fix malformed closing tags;
 
-    if (content.includes('</div>})) {;
+    if (content.includes(</div>})) {;
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
-    if (content.includes('</div>}')) {/* TODO: Fix JSX expression */}
+    if (content.includes('</div>})) {/* TODO: Fix JSX expression */}
 
-      content = content.replace(/<\/div>\}/g, '});
+      content = content.replace(/<\/div>\}/g, });
 
       modified = true}
 
     // Fix malformed closing tags with semicolons;
 
-    if (content.includes('</div>;')) {
-      content = content.replace(/<\/div>;/g, ';);
+    if (content.includes('</div>;)) {
+      content = content.replace(/<\/div>;/g, ;);
 
       modified = true}
 
     // Fix malformed closing tags with commas;
 
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {
-      content = content.replace(/<\/div>,/g, ',);
+    if (content.includes('</div>,') && !content.includes('</div>, )) {
+      content = content.replace(/<\/div>,/g, ,);
 
       modified = true}
 
     // Fix unterminated regular expressions;
 
-    if (content.includes('const regex = /)) {;;
+    if (content.includes(const regex = /)) {;;
 
-      content = content.replace(/const regex = \/([^/]*)$/gm, 'const regex = /$1/;);;
+      content = content.replace(/const regex = \/([^/]*)$/gm, const regex = /$1/;);;
 
       modified = true}
 
     // Fix malformed object properties;
 
-    if (content.includes('const config = {)) {;;
+    if (content.includes(const config = {)) {;;
 
       // Look for lines that might be missing colons;
 
@@ -61,19 +61,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
           modified = true}
 
-    if (content.includes('</div>;')) {/* TODO: Fix JSX expression */}
+    if (content.includes('</div>;)) {/* TODO: Fix JSX expression */}
 
     }
 
     // Fix malformed closing tags with commas;
 
-    if (content.includes('</div>,') && !content.includes('</div>, ')) {/* TODO: Fix JSX expression */}
+    if (content.includes('</div>,') && !content.includes('</div>, )) {/* TODO: Fix JSX expression */}
 
     }
 
     // Fix unterminated regular expressions;
 
-    if (content.includes('const regex = /)) {/* TODO: Fix JSX expression */};;
+    if (content.includes(const regex = /)) {/* TODO: Fix JSX expression */};;
 
     }
 

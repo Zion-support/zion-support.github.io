@@ -1,4 +1,4 @@
-'use client';
+'use client;
 
 /**
  * Data Transformation Utilities;
@@ -68,17 +68,17 @@ return output]
  */
 export function flattenObject(ob,
   j: Record<string, unknown></string>,
-  prefix = '',
-  separator = '.')
+  prefix = ',
+  separator = '.)
 ): Record<string, unknown></string> {/* TODO: Fix JSX expression */}
 
   flattened: Record<string, unknown></string> = {};
 
   for (const key in obj) {/* TODO: Fix JSX expression */}
 
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;;
+      const newKey = prefix ? `${prefix}${separator}${key} : key;;
 
-      if (value && typeof value === 'object && !Array.isArray(value)) {/* TODO: Fix JSX expression */});
+      if (value && typeof value === object && !Array.isArray(value)) {/* TODO: Fix JSX expression */});
 
 } else {/* TODO: Fix JSX expression */});
 
@@ -97,7 +97,7 @@ return flattened]
  */
 export function unflattenObject(ob,
   j: Record<string, unknown></string>,
-  separator = '.')
+  separator = '.)
 ): Record<string, unknown></string> {/* TODO: Fix JSX expression */}
 
   result: Record<string, unknown></string> = {};
@@ -115,7 +115,9 @@ export function unflattenObject(ob,
 }
 
   }
+
   return result;);
+
 /** * Pick specific keys from an object;
 
  */
@@ -144,10 +146,14 @@ export function omit<T extends Record<string, unknown></T>, K extends keyof T>(o
   key,
   s: K[])
 ): Omit<T, K></T> {/* TODO: Fix JSX expression */}
-  const result = { ...obj };
-  keys.forEach(key => {/* TODO: Fix JSX expression */});;)
-});;
+
+  const result = { ...obj };;
+
+  keys.forEach(key => {/* TODO: Fix JSX expression */});)
+});
+
   return result as Omit<T, K></T>;);
+
 /** * Group array items by a key;
 
  */
@@ -185,7 +191,7 @@ return true]
     }
 
 /**
- * Sort array by multiple keys';
+ * Sort array by multiple keys;
 
  */
 export function sortBy<T></T>(arra,
@@ -194,7 +200,7 @@ export function sortBy<T></T>(arra,
   s: Array<keyof T | ((ite),
   m: T) =></keyof> unknown)>,
   order,
-  s: Array<'asc' | 'desc'> = []
+  s: Array<'asc' | 'desc> = []
 ): T[] {/* TODO: Fix JSX expression */});
 
 }
@@ -203,21 +209,25 @@ export function sortBy<T></T>(arra,
 
 const aComp =;;
 
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === boolean
+        typeof aVal === 'string' || typeof aVal === 'number || typeof aVal === boolean
           ? aVal;
 
           : String(aVal);
 
 const bComp =;;
 
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === boolean
+        typeof bVal === 'string' || typeof bVal === 'number || typeof bVal === boolean
           ? bVal;
 
           : String(bVal);
-      if (aComp < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;);
+
+      if (aComp < bComp) return order === 'asc ? -1 : 1;
+
+      if (aComp > bComp) return order === 'asc ? 1 : -1;);
+
     return 0;)
-});;);
+}););
+
 /** * Chunk array into smaller arrays;
 
  */
@@ -247,8 +257,9 @@ return result]
 
  */
 export function formatBytes(byte)
-  s: number, decimals = 2): string {/* TODO: Fix JSX expression */}`
-return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}`]
+  s: number, decimals = 2): string {/* TODO: Fix JSX expression */}
+
+return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}]
     }
 
 /**
@@ -256,7 +267,7 @@ return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm)); ${sizes[i]}`]
 
  */
 export function formatNumber(nu)
-  m: number, locale = 'en-US): string {/* TODO: Fix JSX expression */});
+  m: number, locale = en-US): string {/* TODO: Fix JSX expression */});
 
 }
 
@@ -265,7 +276,7 @@ export function formatNumber(nu)
 
  */
 export function formatCurrency(amoun)
-  t: number, currency = 'USD', locale = 'en-US): string {/* TODO: Fix JSX expression */});
+  t: number, currency = 'USD', locale = en-US): string {/* TODO: Fix JSX expression */});
 
 });.format(amount)]
     }
@@ -278,7 +289,7 @@ export function formatDate(dat,
   e: Date | string | number,
   option,
   s: Intl.DateTimeFormatOptions = {},
-  locale = 'en-US')
+  locale = 'en-US)
 ): string {/* TODO: Fix JSX expression */});
 
 }
@@ -288,19 +299,26 @@ export function formatDate(dat,
 
  */
 export function formatRelativeTime(dat)
-  e: Date | string | number): string {/* TODO: Fix JSX expression */}`
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;`
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;`
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-  return `${years} year${years > 1 ? 's' : ''} ago`;);
+  e: Date | string | number): string {/* TODO: Fix JSX expression */}
+
+  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+
+  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+
+  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;
+
+  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+
+  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;
+
+  return `${years} year${years > 1 ? 's' : ''} ago;);
+
 /** * Truncate string;
 
  */
 export function truncate(st,
   r: string, lengt)
-  h: number, suffix = '...): string {/* TODO: Fix JSX expression */});
+  h: number, suffix = ...): string {/* TODO: Fix JSX expression */});
 
 }
 
@@ -352,6 +370,7 @@ export function snakeCase(st)
 export default {/* TODO: Fix JSX expression */});
 
 };
-`
+
     return clonedObj;);
+
   return obj;);

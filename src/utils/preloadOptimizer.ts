@@ -10,7 +10,7 @@ export const _preloadCriticalResources = () => {// TODO: Add content};;
 
 }
 
-  if (typeof window === 'undefined) return;
+  if (typeof window === undefined) return;
 
   // Preload critical fonts;
 
@@ -21,10 +21,10 @@ const fontPreloads = [;;
 
 ];
 
-    'http,
+    http,
   s://fonts.googleapis.com/css2?family=Inte,
-  r:wght@400;500;600;700&display=swap',
-    'http,
+  r:wght@400;500;600;700&display=swap,
+    http,
   s://fonts.googleapis.com/css2?family=JetBrains+Mon,
   o:wght@400;500;600&display=swap
   ];
@@ -35,7 +35,7 @@ const fontPreloads = [;;
 
 ;
 
-const link = document.createElement('link);;
+const link = document.createElement(link);;
 
     link.rel = preload
     link.as = style
@@ -54,8 +54,8 @@ const criticalImages = [;;
 
 ];
 
-//     '/images/hero-bg.jpg',
-//     '/images/logo.png',
+//     '/images/hero-bg.jpg,
+//     '/images/logo.png,
 //     /images/favicon.ico
   ];
 
@@ -65,7 +65,7 @@ const criticalImages = [;;
 
 ;
 
-const link = document.createElement('link);;
+const link = document.createElement(link);;
 
     link.rel = preload
     link.as = image
@@ -81,7 +81,7 @@ export const preloadRoute = (route: string) => {// TODO: Add content};;
 
 }
 
-  if (typeof window === 'undefined) return;
+  if (typeof window === undefined) return;
 
   // Preload route-specific resources;
 
@@ -91,9 +91,9 @@ const routeResources = {/* TODO: Fix JSX expression */};;
 
 }
 
-    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
-    '/services': ['/api/services', '/images/services-hero.jpg'],
-    '/contact': ['/api/contact', '/images/contact-hero.jpg']
+    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg],
+    '/services': ['/api/services', '/images/services-hero.jpg],
+    '/contact': ['/api/contact', '/images/contact-hero.jpg]
   }
 
   const resources = routeResources[route as keyof typeof routeResources];;
@@ -108,7 +108,7 @@ const routeResources = {/* TODO: Fix JSX expression */};;
 
 ;
 
-const link = document.createElement('link);;
+const link = document.createElement(link);;
 
       link.rel = prefetch
       link.href = resource;
@@ -125,22 +125,22 @@ export const optimizeImages = () => {// TODO: Add content};;
 
 }
 
-  if (typeof window === 'undefined) return;
+  if (typeof window === undefined) return;
 
-  // Add loading="lazy" to images below the fold;
+  // Add loading="lazy to images below the fold;
 
-const images = document.querySelectorAll('img[data-lazy]);;
+const images = document.querySelectorAll(img[data-lazy]);;
 
   images.forEach(img => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 })
-//     img.setAttribute('loading', 'lazy')
+//     img.setAttribute('loading', 'lazy)
   })
   // Add intersection observer for lazy loading;
 
-  if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
+  if ('IntersectionObserver in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -165,14 +165,14 @@ const images = document.querySelectorAll('img[data-lazy]);;
 
           const img = entry.target as HTMLImageElement;;
 
-          if (img.dataset['src']) {/* TODO: Fix JSX expression */}
+          if (img.dataset['src]) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-            img['src'] = img.dataset['src']
-//             img.removeAttribute('data-src')
+            img['src'] = img.dataset['src]
+//             img.removeAttribute('data-src)
 //             imageObserver.unobserve(img)
           }
 
@@ -185,7 +185,7 @@ const images = document.querySelectorAll('img[data-lazy]);;
 
   );
 
-const lazyImages = document.querySelectorAll('img[data-src]);;
+const lazyImages = document.querySelectorAll(img[data-src]);;
 
     lazyImages.forEach(img => imageObserver.observe(img))
   }
@@ -196,28 +196,28 @@ export const optimizeThirdPartyScripts = () => {// TODO: Add content};;
 
 }
 
-  if (typeof window === 'undefined) return;
+  if (typeof window === undefined) return;
 
   // Defer non-critical scripts;
 
-const scripts = document.querySelectorAll('script[data-defer]);;
+const scripts = document.querySelectorAll(script[data-defer]);;
 
   scripts.forEach(script => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 })
-//     script.setAttribute('defer', '')
+//     script.setAttribute('defer', ')
   })
   // Load analytics after page load;
 
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
+  if (document.readyState === 'loading) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-    document.addEventListener('DOMContentLoaded', () => {}
+    document.addEventListener('DOMContentLoaded, () => {}
 
   )
   } else {/* TODO: Fix JSX expression */}
@@ -234,14 +234,11 @@ const loadAnalytics = () => {// TODO: Add content};;
 
   // Load Google Analytics after page load;
 
-const gaScript = document.createElement('script);;
+const gaScript = document.createElement(script);;
 
   gaScript.async = true;
 
-  gaScript['src'] = 'http,
+  gaScript['src'] = http,
   s://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID
 //   document.head.appendChild(gaScript)
-}"
-
-
-
+}

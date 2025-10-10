@@ -1,12 +1,12 @@
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'url;
 
-// Get all blog files';
+// Get all blog files;
 
-const blogDir = path.join(__dirname, 'src', 'blog);;
+const blogDir = path.join(__dirname, 'src', blog);;
 
 const blogFiles = [];;
 
@@ -14,7 +14,7 @@ const blogFiles = [];;
 
 function findBlogFiles(dir) {/* TODO: Fix JSX expression */}
 
-    } else if (file === 'page.tsx' || file === 'page.ts') {/* TODO: Fix JSX expression */}
+    } else if (file === 'page.tsx' || file === 'page.ts) {/* TODO: Fix JSX expression */}
 
     }
 
@@ -29,13 +29,13 @@ findBlogFiles(blogDir);
 function fixParsingErrors(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
     // Fix missing closing parenthesis before closing brace;
 
-    const lines = content.split('\n);;
+    const lines = content.split(\n);;
 
     const newLines = [];;
 
@@ -45,16 +45,16 @@ const line = lines[i];;
 
       // Check if this line ends with }; and the previous line doesnt have a closing parenthesis;
 
-      if (line.trim() === '}; && i > 0) {;
+      if (line.trim() === }; && i > 0) {;
 
 const prevLine = lines[i - 1];;
 
-        // If previous line doesn't end with ) or );, add missing )
-        if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(');')) {
+        // If previous line doesnt end with ) or );, add missing )
+        if (!prevLine.trim().endsWith(')') && !prevLine.trim().endsWith(');)) {
           // Check if this looks like a JSX return statement that needs closing;
 
-          if (prevLine.includes('</') || prevLine.includes('>')) {
-            newLines.push('  ););
+          if (prevLine.includes('</') || prevLine.includes('>)) {
+            newLines.push(  ););
 
             modified = true;
 
@@ -64,7 +64,7 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 
       // Check if this line ends with }; and the previous line doesnt have a closing parenthesis;
 
-      if (line.trim() === '};' && i > 0) {/* TODO: Fix JSX expression */}
+      if (line.trim() === '}; && i > 0) {/* TODO: Fix JSX expression */}
 
           }
 
@@ -76,9 +76,10 @@ function fixParsingErrors(filePath) {/* TODO: Fix JSX expression */}
 
     if (modified) {/* TODO: Fix JSX expression */}
 
-  errors: ${path.relative(__dirname, filePath)}`)}
+  errors: ${path.relative(__dirname, filePath)})}
 
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */}
+
     // console.error removed for production
 }
 
@@ -92,6 +93,5 @@ blogFiles.forEach(file => {)
 blogFiles.forEach(file => {/* TODO: Fix JSX expression */})
 });
 
-`
 // console.log removed for production
 `

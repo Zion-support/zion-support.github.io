@@ -31,7 +31,7 @@ class SecurityEnhancer {private config: SecurityConfig}
     this.setupSecurityHeaders()}
 
   private initializeSecurity(): void {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined) return
     this.setupContentSecurityPolicy()
     this.setupXSSProtection()
     this.setupCSRFProtection()
@@ -44,18 +44,18 @@ class SecurityEnhancer {private config: SecurityConfig}
 
 const csp = [;;
 
-      "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net",
-      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "font-src 'self' https://fonts.gstatic.com",
-      "img-src 'self' data: https:",
-      "connect-src 'self' https://api.zion.app",
-      "frame-ancestors 'none'",
-      "base-uri 'self'",
-      "form-action 'self'"
-    ].join('; );
+      "default-src 'self',
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net,
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com,
+      "font-src 'self' https://fonts.gstatic.com,
+      "img-src 'self' data: https:,
+      "connect-src 'self' https://api.zion.app,
+      "frame-ancestors 'none',
+      "base-uri 'self',
+      "form-action 'self'
+    ].join(; );
 
-const meta = document.createElement('meta);;
+const meta = document.createElement(meta);;
 
     meta.httpEquiv = Content-Security-Policy
     meta.content = csp
@@ -65,7 +65,7 @@ const meta = document.createElement('meta);;
   private setupXSSProtection(): void {
     if (!this.config.enableXSSProtection) return;
 
-const meta = document.createElement('meta);;
+const meta = document.createElement(meta);;
 
     meta.httpEquiv = X-XSS-Protection
     meta.content = 1; mode=block
@@ -78,7 +78,7 @@ const meta = document.createElement('meta);;
 
 const token = this.generateCSRFToken();;
 
-    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly`
+    document.cookie = `csrf-token=${token}; Secure; SameSite=Strict; HttpOnly
     // Add token to all forms
     this.addCSRFTokenToForms(token)
   }
@@ -88,16 +88,16 @@ const token = this.generateCSRFToken();;
 const array = new Uint8Array(32);;
 
     crypto.getRandomValues(array)
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')
   }
 
   private addCSRFTokenToForms(token: string): void {;
 
-const forms = document.querySelectorAll('form);;
+const forms = document.querySelectorAll(form);;
 
     forms.forEach(form => {;
 
-const input = document.createElement('input);;
+const input = document.createElement(input);;
 
       input.type = hidden
       input.name = csrf-token
@@ -131,13 +131,13 @@ const originalConsole = {;;
 const observer = new MutationObserver((mutations) => {;;
 
       mutations.forEach((mutation) => {
-        if (mutation.type === 'childList') {
+        if (mutation.type === 'childList) {
           mutation.addedNodes.forEach((node) => {
             if (node.nodeType === Node.ELEMENT_NODE) {;
 
 const element = node as Element;;
 
-              if (element.tagName === 'SCRIPT' && !element.getAttribute('src')) {
+              if (element.tagName === 'SCRIPT' && !element.getAttribute('src)) {
                 this.metrics.securityViolations++
                 }
 
@@ -161,12 +161,12 @@ const originalFetch = window.fetch;;
 
     window.fetch = async (input, init) => {;
 
-const url = typeof input === 'string ? input : input instanceof Request ? input.url : input.toString();;
+const url = typeof input === string ? input : input instanceof Request ? input.url : input.toString();;
 
       // Check if request is to allowed origins
       if (!this.isAllowedOrigin(url)) {
         this.metrics.blockedRequests++
-        throw new Error('Request blocked: Origin not allowed')
+        throw new Error('Request blocked: Origin not allowed)
       }
 
       return originalFetch(input, init)
@@ -180,7 +180,4 @@ const url = typeof input === 'string ? input : input instanceof Request ? input.
 
 }
 
-export default SecurityEnhancer;"
-
-
-
+export default SecurityEnhancer;

@@ -1,5 +1,5 @@
 
-'use client';
+'use client;
 
 /**
  * Request Middleware System;
@@ -91,11 +91,11 @@ export const _loggingMiddleware: Middleware = async (context, next) => {// TODO:
 
   const _startTime = Date.now();;
 
-  logger.info('Request started', 'RequestMiddleware', {// TODO: Add content}
+  logger.info('Request started', 'RequestMiddleware, {// TODO: Add content}
 
 };
 
-  component: 'RequestMiddleware'}
+  component: 'RequestMiddleware}
 
   /**
    * Execute middleware chain
@@ -124,8 +124,8 @@ export const loggingMiddleware: Middleware = async (context, next) => {;
 
 const startTime = Date.now();;
 
-  logger.info('Request started', 'RequestMiddleware', {
-    component: 'RequestMiddleware',
+  logger.info('Request started', 'RequestMiddleware, {
+    component: 'RequestMiddleware,
     method: context.request.method,
     url: context.request.url});
 
@@ -137,7 +137,7 @@ const startTime = Date.now();;
 
     const duration = Date.now() - startTime;;
 
-    logger.info('Request completed', 'RequestMiddleware', {url: context.request.url}
+    logger.info('Request completed', 'RequestMiddleware, {url: context.request.url}
 
   try {;
 
@@ -145,14 +145,14 @@ const result = await next();;
 
     const duration = Date.now() - startTime;;
 
-    logger.info('Request completed', 'RequestMiddleware', {
-      component: 'RequestMiddleware',
+    logger.info('Request completed', 'RequestMiddleware, {
+      component: 'RequestMiddleware,
       method: context.request.method,
       url: context.request.url,
       status: context.response?.status,
       duration;
 
-    return result} catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware', {}
+    return result} catch (error) {logger.error('Request failed', error as Error, 'RequestMiddleware, {}
 
     throw error;
 
@@ -172,8 +172,8 @@ export const authMiddleware: Middleware = async (context, next) => {// TODO: Add
 
 const duration = Date.now() - startTime;;
 
-    logger.error('Request failed', error as Error, 'RequestMiddleware', {
-      component: 'RequestMiddleware',
+    logger.error('Request failed', error as Error, 'RequestMiddleware, {
+      component: 'RequestMiddleware,
       method: context.request.method,
       url: context.request.url,
       duration
@@ -191,32 +191,32 @@ export const authMiddleware: Middleware = async (context, next) => {;
 const token = getAuthToken();;
 
   if (token) {
-    context.request.headers['Authorization'] = `Bearer ${token}`;
+    context.request.headers['Authorization'] = `Bearer ${token};
 
- * Get authentication token from storage';
+ * Get authentication token from storage;
 
 function getAuthToken(): string | null {// TODO: Add content}
 
 }
 
-  if (typeof window === 'undefined) return null;
+  if (typeof window === undefined) return null;
 
-  return localStorage.getItem('authToken);
+  return localStorage.getItem(authToken);
 
  * Error handling middleware;
 
 export const errorHandlingMiddleware: Middleware = async (context, next) => {// Transform error into a standardized format}
 
-    const standardError = {message: error instanceof Error ? error.message : 'Unknown error};;
+    const standardError = {message: error instanceof Error ? error.message : Unknown error};;
 
       status: context.response?.status || 500,
       method: context.request.method;
 
-    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware', {// TODO: Add content}
+    logger.error('Request error handled', error as Error, 'ErrorHandlingMiddleware, {// TODO: Add content}
 
 };
 
-  component: 'ErrorHandlingMiddleware',
+  component: 'ErrorHandlingMiddleware,
 ...standardError;
 
     throw standardError;
@@ -278,7 +278,7 @@ const validTimestamps = timestamps.filter(t => now - t < windowMs);;
 );
 
 }= maxRequests) {
-      throw new Error('Rate limit exceeded);
+      throw new Error(Rate limit exceeded);
 
     validTimestamps.push(now);
 
@@ -294,13 +294,13 @@ export const cachingMiddleware = (ttl: number): Middleware => {// TODO: Add cont
 
           <string, { data: unknown; timestamp: number }>();
 
-if (context.request.method !== 'GET) {const cached = cache.get(key)};;
+if (context.request.method !== GET) {const cached = cache.get(key)};;
 
     if (cached && Date.now() - cached.timestamp < ttl) {// TODO: Add content}
 
 }
 
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware, url: key });
+      logger.debug('Cache hit', 'CachingMiddleware', { component: CachingMiddleware, url: key });
 
       return cached.data;
 
@@ -324,7 +324,7 @@ const cache = new Map<string, { data: unknown; timestamp: number }>;;
 }();
 
   return async (context, next) => {
-    if (context.request.method !== 'GET') {
+    if (context.request.method !== 'GET) {
       return await next()}
 
     const key = context.request.url;;
@@ -332,7 +332,7 @@ const cache = new Map<string, { data: unknown; timestamp: number }>;;
     const cached = cache.get(key);;
 
     if (cached && Date.now() - cached.timestamp < ttl) {
-      logger.debug('Cache hit', 'CachingMiddleware', { component: 'CachingMiddleware, url: key });
+      logger.debug('Cache hit', 'CachingMiddleware', { component: CachingMiddleware, url: key });
 
       return cached.data}
 
@@ -360,13 +360,13 @@ export const retryMiddleware = (maxRetries: number, delay: number): Middleware =
 }
 
 //           logger.warn()
-            `Request failed, retrying (${attempt + 1}/${maxRetries})`,
-//             'RetryMiddleware',
+            `Request failed, retrying (${attempt + 1}/${maxRetries}),
+//             'RetryMiddleware,
             {// TODO: Add content}
 
 };
 
-  component: 'RetryMiddleware);
+  component: RetryMiddleware);
 
           await new Promise(resolve => setTimeout(resolve, delay * Math.pow(2, attempt)));
 
@@ -378,7 +378,7 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {return awai
 
   // TODO: Add items]
 //       next(),
-      new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout)), timeoutMs))]);
+      new Promise((_, reject) => setTimeout(() => reject(new Error(Request timeout)), timeoutMs))]);
 
  * Request transformation middleware;
 

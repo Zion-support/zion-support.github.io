@@ -1,20 +1,20 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
+import React, { Suspense, lazy, ComponentType } from 'react;
 
 interface LazyComponentProps {
-  fallback?: React.ReactNode';
+  fallback?: React.ReactNode;
 
   children: React.ReactNode}
 
 export default function LazyComponent({
-  className = '',
+  className = ',
   children
 }: LazyComponentProps) {;
 
 const DefaultFallback = () => (;;
 
-  <div className="flex items-center justify-center p-8"></div>
-    <div className="cyber-loader"></div>
-    <span className="ml-3 text-cyan-400">Loading...</span>
+  <div className="flex items-center justify-center p-8></div>
+    <div className="cyber-loader></div>
+    <span className="ml-3 text-cyan-400>Loading...</span>
   </div>
 );
 
@@ -51,7 +51,7 @@ const LazyWrappedComponent = (props: P) => (;;
     </LazyComponent>
   );
 
-  LazyWrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
+  LazyWrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name});
 
   return LazyWrappedComponent};
 
@@ -75,9 +75,9 @@ const LazyComponent = lazy(importFunc);;
     </LazyComponent>
   )};
 
-export default LazyComponent';
+export default LazyComponent;
 
-import LoadingSpinner from './LoadingSpinner;
+import LoadingSpinner from ./LoadingSpinner;
 
 interface LazyComponentProps {/* TODO: Fix JSX expression */}
 
@@ -127,10 +127,10 @@ export const _withLazyLoading = {};;
     </Suspense>
   )};
 
-// Lazy component wrapper with intersection observer';
+// Lazy component wrapper with intersection observer;
 
 const,
-  LazyComponent: React.FC';
+  LazyComponent: React.FC;
 
           <LazyComponentProps> = ({/* TODO: Fix JSX expression */}
 
@@ -151,7 +151,7 @@ const,
           <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
-  rootMargin = '50px')
+  rootMargin = '50px)
 }) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
@@ -295,13 +295,13 @@ export const createLazyComponent = {};;
 
 // Critical resource preloader;
 
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};';
+export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};;;
 
   O: Add content}
 
 }
 
-  if (typeof window === 'undefined) return;
+  if (typeof window === undefined) return;
 
   // Preload critical fonts;
 
@@ -312,10 +312,10 @@ const fontPreloads = [;;
 
 ];
 
-    'http,
+    http,
   s://fonts.googleapis.com/css2?family=Orbitro,
-  n:wght@400;700;900&display=swap',
-    'http,
+  n:wght@400;700;900&display=swap,
+    http,
   s://fonts.googleapis.com/css2?family=Rajdhan,
   i:wght@300;400;500;600;700&display=swap];
 
@@ -325,11 +325,11 @@ const fontPreloads = [;;
 
 }
 
-    const link = document.createElement('link);;
+    const link = document.createElement(link);;
 
-    link.rel = 'preload;
+    link.rel = preload;
 
-    link.as = 'style;
+    link.as = style;
 
     link.href = href;
 
@@ -344,8 +344,8 @@ const imagePreloads = [;;
 
 ];
 
-//     '/og-image.jpg',
-//     '/favicon.ico];
+//     '/og-image.jpg,
+//     /favicon.ico];
 
   imagePreloads.forEach((src) => {/* TODO: Fix JSX expression */}
 
@@ -353,11 +353,11 @@ const imagePreloads = [;;
 
 }
 
-    const link = document.createElement('link);;
+    const link = document.createElement(link);;
 
-    link.rel = 'preload;
+    link.rel = preload;
 
-    link.as = 'image;
+    link.as = image;
 
     link.href = src;
 

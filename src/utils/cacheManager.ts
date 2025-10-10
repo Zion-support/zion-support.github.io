@@ -11,8 +11,8 @@ export enum CacheStorage {// TODO: Add content}
 
 }
 
-  Memory = 'memory',
-  LocalStorage = 'localStorage',
+  Memory = 'memory,
+  LocalStorage = 'localStorage,
   SessionStorage = sessionStorage
 }
 
@@ -104,7 +104,7 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     this.cleanupInterval = setInterval(() => {/* TODO: Fix JSX expression */}
 
@@ -159,7 +159,7 @@ export class CacheManager {// TODO: Add content}
 
     // Clean localStorage;
 
-    if (typeof window !== 'undefined' && window.localStorage) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined && window.localStorage) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -178,7 +178,7 @@ export class CacheManager {// TODO: Add content}
 
         const key = localStorage.key(i);;
 
-        if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
+        if (key && key.startsWith('cache_)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -227,7 +227,7 @@ export class CacheManager {// TODO: Add content}
       keysToRemove.forEach(key => localStorage.removeItem(key))
     }
 
-    logger.debug('Cache cleanup completed')
+    logger.debug('Cache cleanup completed)
   }
 
   /**
@@ -254,7 +254,7 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-    return `cache_${key}`}
+    return `cache_${key}}
 
   /**
    * Set cache entry;
@@ -285,8 +285,9 @@ export class CacheManager {// TODO: Add content}
 //       value,
       timestam,
   p: Date.now(),
-//       ttl};`
-    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, 'count);
+//       ttl};
+
+    performanceMonitoring.recordCustomMetric(`cache_set_${key}`, 1, count);
 
     if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */}
 
@@ -296,7 +297,7 @@ export class CacheManager {// TODO: Add content}
 
       this.memoryCache.set(key, entry)} else if ()
       this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
+      typeof window !== 'undefined &&
 //       window.localStorage) {// TODO: Add content}
 
 }
@@ -313,7 +314,7 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-        logger.error('Failed to set localStorage cache, error);
+        logger.error(Failed to set localStorage cache, error);
 
         // Fallback to memory cache;
 
@@ -321,7 +322,7 @@ export class CacheManager {// TODO: Add content}
 
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
+      typeof window !== 'undefined &&
 //       window.sessionStorage) {// TODO: Add content}
 
 }
@@ -338,7 +339,7 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-        logger.error('Failed to set sessionStorage cache, error);
+        logger.error(Failed to set sessionStorage cache, error);
 
         // Fallback to memory cache;
 
@@ -359,8 +360,9 @@ export class CacheManager {// TODO: Add content}
 
   O: Add content}
 
-}`
-    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, 'count);
+}
+
+    performanceMonitoring.recordCustomMetric(`cache_get_${key}`, 1, count);
 
     let,
   entry: CacheEntry;
@@ -377,7 +379,7 @@ export class CacheManager {// TODO: Add content}
 
           <T> | undefined) || null} else if ()
       this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
+      typeof window !== 'undefined &&
 // window.localStorage) {// TODO: Add content}
 
 }
@@ -406,11 +408,11 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-        logger.error('Failed to get localStorage cache', error)}
+        logger.error('Failed to get localStorage cache, error)}
 
     } else if ()
       this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
+      typeof window !== 'undefined &&
 //       window.sessionStorage) {// TODO: Add content}
 
 }
@@ -439,7 +441,7 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-        logger.error('Failed to get sessionStorage cache', error)}
+        logger.error('Failed to get sessionStorage cache, error)}
 
     }
 
@@ -449,8 +451,9 @@ export class CacheManager {// TODO: Add content}
 
 }
 
-      this.stats.misses++;`
-      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, 'count);
+      this.stats.misses++;
+
+      performanceMonitoring.recordCustomMetric(`cache_miss_${key}`, 1, count);
 
       return undefined}
 
@@ -462,13 +465,14 @@ export class CacheManager {// TODO: Add content}
 
       this.delete(key);
 
-      this.stats.misses++;`
-      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, 'count);
+      this.stats.misses++;
+
+      performanceMonitoring.recordCustomMetric(`cache_expired_${key}`, 1, count);
 
       return undefined}
 
-    this.stats.hits++`
-    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count')
+    this.stats.hits++
+    performanceMonitoring.recordCustomMetric(`cache_hit_${key}`, 1, 'count)
     return entry.value}
 
   /**
@@ -499,14 +503,14 @@ export class CacheManager {// TODO: Add content}
 
       this.memoryCache.delete(key)} else if ()
       this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
+      typeof window !== 'undefined &&
 //       window.localStorage) {// TODO: Add content}
 
 }
 
       localStorage.removeItem(this.getStorageKey(key))} else if ()
       this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
+      typeof window !== 'undefined &&
 //       window.sessionStorage) {// TODO: Add content}
 
 }
@@ -534,7 +538,7 @@ export class CacheManager {// TODO: Add content}
 
     if ()
       this.storage === CacheStorage.LocalStorage &&
-      typeof window !== 'undefined' &&
+      typeof window !== 'undefined &&
 //       window.localStorage) {// TODO: Add content}
 
 }
@@ -552,7 +556,7 @@ export class CacheManager {// TODO: Add content}
 
         const key = localStorage.key(i);;
 
-        if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
+        if (key && key.startsWith('cache_)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -567,7 +571,7 @@ export class CacheManager {// TODO: Add content}
 
     if ()
       this.storage === CacheStorage.SessionStorage &&
-      typeof window !== 'undefined' &&
+      typeof window !== 'undefined &&
 //       window.sessionStorage) {// TODO: Add content}
 
 }
@@ -585,7 +589,7 @@ export class CacheManager {// TODO: Add content}
 
         const key = sessionStorage.key(i);;
 
-        if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
+        if (key && key.startsWith('cache_)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -598,7 +602,7 @@ export class CacheManager {// TODO: Add content}
       keysToRemove.forEach(key => sessionStorage.removeItem(key))
     }
 
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */}
+    logger.info('Cache cleared', 'CacheManager, {/* TODO: Fix JSX expression */}
 
   e: this.storage })
   )
@@ -639,9 +643,9 @@ export class CacheManager {// TODO: Add content}
 
     const value = fn();;
 
-    const duration = performance.now() - start;`;;
+    const duration = performance.now() - start;;;
 
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms);
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, ms);
 
     // Handle both sync and async values;
 
@@ -699,9 +703,9 @@ export class CacheManager {// TODO: Add content}
 
 const value = await fn();;
 
-const duration = performance.now() - start;`;;
+const duration = performance.now() - start;;;
 
-    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms')
+    performanceMonitoring.recordCustomMetric(`cache_compute_${key}`, duration, 'ms)
     this.set(key, value, options)
     return value}
 
@@ -733,7 +737,8 @@ const duration = performance.now() - start;`;;
 
 //         ? keyGenerator(...args)
 
-        : `memoize_${fn.name}_${JSON.stringify(args)}`
+        : `memoize_${fn.name}_${JSON.stringify(args)}
+
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult}
 
   }
@@ -785,7 +790,7 @@ const duration = performance.now() - start;`;;
 
     let sessionStorageSize = 0;;
 
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -807,7 +812,7 @@ const duration = performance.now() - start;`;;
 
           const key = localStorage.key(i);;
 
-          if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
+          if (key && key.startsWith('cache_)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -835,7 +840,7 @@ const duration = performance.now() - start;`;;
 
           const key = sessionStorage.key(i);;
 
-          if (key && key.startsWith('cache_')) {/* TODO: Fix JSX expression */}
+          if (key && key.startsWith('cache_)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -860,4 +865,4 @@ const duration = performance.now() - start;`;;
 
 }
 
-export const cacheManager = new CacheManager()`;;
+export const cacheManager = new CacheManager();;

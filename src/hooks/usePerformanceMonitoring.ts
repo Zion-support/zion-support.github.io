@@ -1,6 +1,6 @@
 
 
-'use client';
+'use client;
 
 // PerformanceMetrics interface removed as its not used in this hook;
 
@@ -32,7 +32,7 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};
 
 }
 
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
+    if (typeof window === 'undefined' || !('PerformanceObserver in window)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -58,10 +58,10 @@ const entries = list.getEntries();;
 
         const lastEntry = entries[entries.length - 1];;
 
-        reportMetric('LCP, lastEntry.startTime)});
+        reportMetric(LCP, lastEntry.startTime)});
 
       lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint] });
+  s: [largest-contentful-paint] });
 
       // FID - First Input Delay;
 
@@ -85,13 +85,13 @@ const entries = list.getEntries();;
 
               (entry.processingStart || entry.startTime) - entry.startTime;
 
-            reportMetric('FID', fid)
+            reportMetric('FID, fid)
           }
 
         )});
 
       fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input] });
+  s: [first-input] });
 
 // CLS - Cumulative Layout Shift;
 
@@ -134,10 +134,10 @@ const entries = list.getEntries();;
 
         );
 
-        reportMetric('CLS, clsValue)});
+        reportMetric(CLS, clsValue)});
 
       clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift] });
+  s: [layout-shift] });
 
       // FCP - First Contentful Paint;
 
@@ -154,18 +154,18 @@ const entries = list.getEntries();;
   O: Add content}
 
 })
-          if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
+          if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-            reportMetric('FCP', entry.startTime)}
+            reportMetric('FCP, entry.startTime)}
 
         })});
 
       fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint] });
+  s: [paint] });
 
       // TTFB - Time to First Byte;
 
@@ -183,7 +183,7 @@ const entries = list.getEntries();;
 
 }
 
-          if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}
+          if (entry.entryType === 'navigation) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -193,12 +193,12 @@ const entries = list.getEntries();;
 
             const ttfb = navEntry.responseStart - navEntry.requestStart;;
 
-            reportMetric('TTFB', ttfb)}
+            reportMetric('TTFB, ttfb)}
 
         })});
 
       navigationObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation] });
+  s: [navigation] });
 
       // Resource timing;
 
@@ -216,7 +216,7 @@ const entries = list.getEntries();;
 
 }
 
-          if (entry.entryType === 'resource') {/* TODO: Fix JSX expression */}
+          if (entry.entryType === 'resource) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -234,14 +234,14 @@ const entries = list.getEntries();;
 
               // Only track slow resources;
 
-              reportMetric('SLOW_RESOURCE', loadTime)}
+              reportMetric('SLOW_RESOURCE, loadTime)}
 
           }
 
         })});
 
       resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource] });
+  s: [resource] });
 
       // Cleanup;
 
@@ -285,7 +285,7 @@ const entries = list.getEntries();;
 
 }
 
-      if (typeof window === 'undefined) return;
+      if (typeof window === undefined) return;
 
       const navigation = performance.getEntriesByType();;
 
@@ -321,9 +321,9 @@ const entries = list.getEntries();;
 
     };
 
-    window.addEventListener('load, handleLoad);
+    window.addEventListener(load, handleLoad);
 
-    return () => window.removeEventListener('load, handleLoad)}, [reportMetric]);
+    return () => window.removeEventListener(load, handleLoad)}, [reportMetric]);
 
   return {/* TODO: Fix JSX expression */}
 

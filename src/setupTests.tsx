@@ -1,14 +1,14 @@
 
-import React from 'react';
+import React from 'react;
 
-'use client';
+'use client;
 
 /**
  * Jest setup file for testing environment;
 
  */
 /* eslint-disable no-console */
-import '@testing-library/jest-dom;
+import @testing-library/jest-dom;
 
 // Polyfill for TextEncoder/TextDecoder;
 
@@ -34,12 +34,12 @@ console.error = (...args) => {// TODO: Add content}
 const originalConsoleError = console.error;;
 
 // eslint-disable-next-line no-console
-console.error = (...args) => {';
+console.error = (...args) => {;
 
-const message = args[0]?.toString?.() || args[0]?.message || ';;
+const message = args[0]?.toString?.() || args[0]?.message || ;;
 
-  if (message.includes('Not implemented: navigation') ||
-      message.includes('navigation (except hash changes)')) {// TODO: Add content}
+  if (message.includes('Not implemented: navigation) ||
+      message.includes('navigation (except hash changes))) {// TODO: Add content}
 
 }
 
@@ -49,7 +49,7 @@ const message = args[0]?.toString?.() || args[0]?.message || ';;
 
 // Mock window.matchMedia;
 
-Object.defineProperty(window, 'matchMedia', {// TODO: Add content}
+Object.defineProperty(window, 'matchMedia, {// TODO: Add content}
 
 };
 
@@ -85,7 +85,7 @@ const localStorageMock = {// TODO: Add content};;
   setItem: jest.fn(),
   removeItem: jest.fn(),
   clear: jest.fn()
-Object.defineProperty(window, 'localStorage', {// TODO: Add content}
+Object.defineProperty(window, 'localStorage, {// TODO: Add content}
 
 };
 
@@ -93,7 +93,7 @@ Object.defineProperty(window, 'localStorage', {// TODO: Add content}
 
 // Mock sessionStorage;
 
-const sessionStorageMock = {Object.defineProperty(window, 'sessionStorage, {};;
+const sessionStorageMock = {Object.defineProperty(window, sessionStorage, {};;
 
   // TODO: Add content};
 
@@ -121,9 +121,9 @@ console.warn = (...args) => {// TODO: Add content}
 // eslint-disable-next-line no-console
 console.warn = (...args) => {;
 
-const message = args[0]?.toString?.() || ';;
+const message = args[0]?.toString?.() || ;;
 
-  if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {}
+  if (message.includes('Warning: ReactDOM.render is no longer supported')) {if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation)) {}
 
   // TODO: Add content}
 
@@ -142,16 +142,16 @@ delete (window as unknown as Record;
 // eslint-disable-next-line no-console
 console.info = (...args) => {;
 
-const message = args[0]?.toString?.() || ';;
+const message = args[0]?.toString?.() || ;;
 
-  if (message.includes('ReactDOM.render is no longer supported')) {
+  if (message.includes('ReactDOM.render is no longer supported)) {
     return}
 
   originalConsoleInfo(...args)};
 
 // Mock PerformanceObserver
 global.PerformanceObserver = class MockPerformanceObserver {
-  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift];
+  static readonly supportedEntryTypes: readonly string[] = ['navigation', 'paint', 'largest-contentful-paint', 'first-input', layout-shift];
 
   constructor(public callback: PerformanceObserverCallback) {}
 
@@ -167,7 +167,7 @@ global.PerformanceObserver = class MockPerformanceObserver {
 // Suppress JSDOM navigation warnings
 // eslint-disable-next-line no-console
 console.error = (...args) => {
-  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation')) {
+  if (args[0] && args[0].type === 'not implemented' && args[0].message?.includes('navigation)) {
     return; // Suppress JSDOM navigation warnings
   }
 
@@ -177,15 +177,15 @@ console.error = (...args) => {
 delete (window as unknown as Record<string, unknown>).location;
 
 (window as unknown as Record<string, unknown>).location = {
-  href: 'http://localhost:3000',
-  origin: 'http://localhost:3000',
-  protocol: 'http:',
-  host: 'localhost:3000',
-  hostname: 'localhost',
-  port: '3000',
-  pathname: '/',
-  search: '',
-  hash: '',
+  href: 'http://localhost:3000,
+  origin: 'http://localhost:3000,
+  protocol: 'http:,
+  host: 'localhost:3000,
+  hostname: 'localhost,
+  port: '3000,
+  pathname: '/,
+  search: ',
+  hash: ',
   reload: jest.fn(),
   assign: jest.fn(),
   replace: jest.fn()

@@ -1,67 +1,67 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { glob } from 'glob;
+import { glob } from glob;
 
 // Function to fix emoji characters in JSX;
 
-function fixEmojis(content) {';
+function fixEmojis(content) {;
 
-const emojiMap = {;';
+const emojiMap = {;;;
 
-    '🎧': 'headphones',
-    '📈': 'trending-up',
-    '💰': 'dollar-sign',
-    '👥': 'users',
-    '📧': 'Email:',
-    '📍': 'Address:',
-    '🚀': 'rocket',
-    '⚡': 'zap',
-    '🔒': 'lock',
-    '💡': 'lightbulb',
-    '🎯': 'target',
-    '📊': 'bar-chart',
-    '🔧': 'settings',
-    '🌟': 'star',
-    '💼': 'briefcase',
-    '🎨': 'palette',
-    '📱': 'smartphone',
-    '💻': 'laptop',
-    '🌐': 'globe',
-    '🔍': 'search',
-    '📝': 'edit',
-    '✅': 'check',
-    '❌': 'x',
-    '⚠️': 'alert-triangle',
-    'ℹ️': 'info',
-    '🎉': 'party-popper',
-    '🔥': 'flame',
-    '💪': 'muscle',
-    '🎪': 'circus-tent',
-    '🎭': 'theater-masks',
-    '🎨': 'art-palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'bullseye',
-    '🎪': 'circus-tent',
-    '🎨': 'palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': 'target',
-    '🎪': 'circus-tent',
-    '🎨': 'palette',
-    '🎵': 'music',
-    '🎬': 'film',
-    '🎮': 'gamepad',
-    '🎲': 'dice',
-    '🎯': target
+    '🎧': 'headphones,
+    '📈': 'trending-up,
+    '💰': 'dollar-sign,
+    '👥': 'users,
+    '📧': 'Email:,
+    '📍': 'Address:,
+    '🚀': 'rocket,
+    '⚡': 'zap,
+    '🔒': 'lock,
+    '💡': 'lightbulb,
+    '🎯': 'target,
+    '📊': 'bar-chart,
+    '🔧': 'settings,
+    '🌟': 'star,
+    '💼': 'briefcase,
+    '🎨': 'palette,
+    '📱': 'smartphone,
+    '💻': 'laptop,
+    '🌐': 'globe,
+    '🔍': 'search,
+    '📝': 'edit,
+    '✅': 'check,
+    '❌': 'x,
+    '⚠️': 'alert-triangle,
+    'ℹ️': 'info,
+    '🎉': 'party-popper,
+    '🔥': 'flame,
+    '💪': 'muscle,
+    '🎪': 'circus-tent,
+    '🎭': 'theater-masks,
+    '🎨': 'art-palette,
+    '🎵': 'music,
+    '🎬': 'film,
+    '🎮': 'gamepad,
+    '🎲': 'dice,
+    '🎯': 'bullseye,
+    '🎪': 'circus-tent,
+    '🎨': 'palette,
+    '🎵': 'music,
+    '🎬': 'film,
+    '🎮': 'gamepad,
+    '🎲': 'dice,
+    '🎯': 'target,
+    '🎪': 'circus-tent,
+    '🎨': 'palette,
+    '🎵': 'music,
+    '🎬': 'film,
+    '🎮': 'gamepad,
+    '🎲': 'dice,
+    '🎯: target
   };
 
 ;
@@ -69,7 +69,7 @@ const emojiMap = {;';
 let fixed = content;;
 
   for (const [emoji, replacement] of Object.entries(emojiMap)) {
-    fixed = fixed.replace(new RegExp(emoji, 'g'), replacement)}
+    fixed = fixed.replace(new RegExp(emoji, 'g), replacement)}
 
   return fixed}
 
@@ -86,8 +86,8 @@ let fixed = content;;
   fixed = fixEmojis(fixed);
 
   // Fix common syntax issues
-  fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"'); // Fix single quotes in JSX expressions
-  fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"'); // Normalize quotes
+  fixed = fixed.replace(/\{\s*'([^']*)'\s*\}/g, '"$1"); // Fix single quotes in JSX expressions
+  fixed = fixed.replace(/\{\s*"([^"]*)"\s*\}/g, '"$1"); // Normalize quotes
   
   return fixed}
 
@@ -95,7 +95,7 @@ let fixed = content;;
 
 function fixJSXStructure(content) {;
 
-const lines = content.split('\n);;
+const lines = content.split(\n);;
 
   let fixed = content;;
 
@@ -117,8 +117,8 @@ async function processFiles() {;
 
 const patterns = [;;
 
-    'app/**/*.tsx',
-    'app/**/*.ts',
+    'app/**/*.tsx,
+    'app/**/*.ts,
     App.tsx
   ];
 
@@ -133,10 +133,10 @@ let processedCount = 0;;
 const files = await glob(pattern, {;;
 
       ignore: [
-        'node_modules/**',
-        'dist/**',
-        'build/**',
-        '**/*.d.ts',
+        'node_modules/**,
+        'dist/**,
+        'build/**,
+        '**/*.d.ts,
         **/node_modules/**
       ]
     });
@@ -144,7 +144,7 @@ const files = await glob(pattern, {;;
     for (const file of files) {
       try {;
 
-const content = fs.readFileSync(file, 'utf8);;
+const content = fs.readFileSync(file, utf8);;
 
         let fixed = content;;
 
@@ -155,7 +155,7 @@ const content = fs.readFileSync(file, 'utf8);;
 
         // Only write if content changed
         if (fixed !== content) {
-          fs.writeFileSync(file, fixed, 'utf8);
+          fs.writeFileSync(file, fixed, utf8);
 
           // console.log removed for production
 processedCount++}

@@ -1,14 +1,14 @@
-import React from 'react;
+import React from react;
 
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from fs;
 
-import path from 'path;
+import path from path;
 
-import { execSync } from 'child_process;
+import { execSync } from child_process;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
@@ -20,25 +20,26 @@ const __filename = fileURLToPath(import.meta.url);;
 function fixFile(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let originalContent = content;;
 
     // Remove duplicate function declarations;
 
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/g, (match, name) => {
-      return `const ${name}: React.FC = () => {`;
+      return `const ${name}: React.FC = () => {;
 
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     content = content.replace(/const\s+(\w+)\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*:\s*React\.FC\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
 
-      return `const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
+      return const ${name}: React.FC = () => {/* TODO: Fix JSX expression */}
 
     });
 
-    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}`
-      return `const ${name} = () => {/* TODO: Fix JSX expression */}
+    content = content.replace(/const\s+(\w+)\s*=\s*\(\)\s*=>\s*{[\s\S]*?};\s*const\s+\1\s*=\s*\(\)\s*=>\s*{/* TODO: Fix JSX expression */}
+
+      return const ${name} = () => {/* TODO: Fix JSX expression */}
 
     });
 
@@ -46,7 +47,7 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
     content = content.replace(/(\w+)\s*=\s*\(\)\s*=>\s*{([\s\S]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, name, body) => {;
 
-const lines = body.split('\n);;
+const lines = body.split(\n);;
 
       let openBraces = 0;;
 
@@ -59,16 +60,17 @@ const lines = body.split('\n);;
 
         closeBraces += (line.match(/}/g) || []).length}
 
-      if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}`
-        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}`}
+      if (openBraces > closeBraces) {/* TODO: Fix JSX expression */}
+
+        return `${name} = () => {${body}${'  '.repeat(missingBraces).replace(/  /g, '}\n')}}
 
       return match});
 
     // Fix missing semicolons;
 
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {
-      if (!match.endsWith(';')) {
-        return match + ';;
+      if (!match.endsWith(';)) {
+        return match + ;
 
     content = content.replace(/(\w+)\s*=\s*\[[\s\S]*?\]\s*(?=\n\s*const|\n\s*export|\n\s*$)/g, (match) => {/* TODO: Fix JSX expression */}
 
@@ -81,8 +83,8 @@ const lines = body.split('\n);;
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) => {
   return (
 
-      if (tag.includes('<div') && !match.includes('</div>')) {
-        return match + '</div>;
+      if (tag.includes('<div') && !match.includes('</div>)) {
+        return match + </div>;
 
     content = content.replace(/(<[^>]*>)([^<]*?)(?=\n\s*const|\n\s*export|\n\s*$)/g, (match, tag, body) =>
 );
@@ -96,15 +98,17 @@ const lines = body.split('\n);;
     // Only write if content changed;
 
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, utf8);
 
       // console.log removed for production
-if (content !== originalContent) {/* TODO: Fix JSX expression */}`
-  d: ${filePath}`);
+if (content !== originalContent) {/* TODO: Fix JSX expression */}
+
+  d: ${filePath});
 
       return true}
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}`
+    return false} catch (error) {/* TODO: Fix JSX expression */}
+
     // console.error removed for production
 return false}
 
@@ -130,7 +134,7 @@ const fullPath = path.join(currentPath, item);;
         const stat = fs.statSync(fullPath);;
 
         if (stat.isDirectory()) {
-          if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
             walkDir(fullPath);
 
 function findFiles(dir) {/* TODO: Fix JSX expression */}
@@ -146,7 +150,7 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
       }
 
     } catch (error) {
-      // Skip directories that can't be read} catch (error) {/* TODO: Fix JSX expression */}
+      // Skip directories that cant be read} catch (error) {/* TODO: Fix JSX expression */}
 
     }
 
@@ -159,11 +163,10 @@ function findFiles(dir) {/* TODO: Fix JSX expression */}
 // Main execution;
 
 // console.log removed for production
-const srcDir = path.join(__dirname, 'src);;
+const srcDir = path.join(__dirname, src);;
 
 const files = findFiles(srcDir);;
 
-`
 // console.log removed for production
 ;
 
@@ -175,14 +178,13 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 
 }
 
-`
 // console.log removed for production
 // Run build to check if issues are resolved;
 
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: 'pipe });
+  o: pipe });
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}

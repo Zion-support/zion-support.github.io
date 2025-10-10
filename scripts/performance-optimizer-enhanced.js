@@ -1,12 +1,12 @@
-import React from 'react;
+import React from react;
 
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from fs;
 
-import path from 'path;
+import path from path;
 
-import { glob } from 'glob;
+import { glob } from glob;
 
 // Performance optimization patterns;
 
@@ -25,52 +25,52 @@ const optimizations = {;;
 
     return content;
 
-      .replace(/\.jpg/g, '.webp')
-      .replace(/\.png/g, '.webp')
-      .replace(/\.jpeg/g, '.webp')},
+      .replace(/\.jpg/g, '.webp)
+      .replace(/\.png/g, '.webp)
+      .replace(/\.jpeg/g, '.webp)},
 
   // Minify inline styles;
 
   minifyInlineStyles: (content) => {,
-    return content.replace(/style="([^"]*)"/g, (match, styles) => {;
+    return content.replace(/style="([^"]*)/g, (match, styles) => {;
 
 const minified = styles;;
 
-        .replace(/\s+/g, ' ')
-        .replace(/;\s*/g, ';')
-        .replace(/:\s*/g, ':')
+        .replace(/\s+/g, ' )
+        .replace(/;\s*/g, ';)
+        .replace(/:\s*/g, ':)
         .trim();
 
-      return `style="${minified}"`})},
+      return `style="${minified}"})},
 
   // Remove empty lines and extra whitespace;
 
   removeExtraWhitespace: (content) => {,
     return content;
 
-      .replace(/\n\s*\n\s*\n/g, '\n\n')
-      .replace(/[ \t]+$/gm, '')
-      .replace(/\n{3}/g, '\n\n')},
+      .replace(/\n\s*\n\s*\n/g, '\n\n)
+      .replace(/[ \t]+$/gm, ')
+      .replace(/\n{3}/g, '\n\n)},
 
   // Optimize React components;
 
   optimizeReactComponents: (content) => {
     // Add React.memo to functional components;
 
-    if (content.includes('const ') && content.includes(': React.FC')) {
+    if (content.includes('const ') && content.includes(': React.FC)) {
       content = content.replace(
 
         /const (\w+): React\.FC = \(/g;
 
-        'const $1: React.FC = React.memo((')
+        'const $1: React.FC = React.memo(()
       );
 
       // Add closing parenthesis for React.memo;
 
       content = content.replace()
-        /(\w+)\.displayName = '\w+;/g;
+        /(\w+)\.displayName = \w+;/g;
 
-        '$1.displayName = \'$1\;\n});
+        '$1.displayName = \$1\;\n});
 
       )}
 
@@ -83,18 +83,18 @@ const minified = styles;;
 
     // Add preload hints for critical resources;
 
-    if (content.includes('<head>)) {;
+    if (content.includes(<head>)) {;
 
-const preloadHints = `;;
+const preloadHints = ;;
 
-    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script" crossorigin>,
-    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">`;
+    <link rel="preload" href="/assets/vendor-ConSr3PY.js" as="script crossorigin>,
+    <link rel="preload" href="/assets/index-BRi0Fmgq.js" as="script crossorigin>,
+    <link rel="preload" href="/assets/index-C1QbpZNs.css" as="style">;
 
-      content = content.replace('<head>', `<head>
+      content = content.replace('<head>', <head>
 );
 
-}${preloadHints}`)}
+}${preloadHints})}
 
     return content}
 
@@ -104,13 +104,13 @@ const preloadHints = `;;
 
 const filePatterns = [;;
 
-  'app/**/*.{ts,tsx,js,jsx}',
-  'src/**/*.{ts,tsx,js,jsx}',
-  'components/**/*.{ts,tsx,js,jsx}',
-  'pages/**/*.{ts,tsx,js,jsx}',
-  'utils/**/*.{ts,tsx,js,jsx}',
-  'hooks/**/*.{ts,tsx,js,jsx}',
-  'lib/**/*.{ts,tsx,js,jsx}',
+  'app/**/*.{ts,tsx,js,jsx},
+  'src/**/*.{ts,tsx,js,jsx},
+  'components/**/*.{ts,tsx,js,jsx},
+  'pages/**/*.{ts,tsx,js,jsx},
+  'utils/**/*.{ts,tsx,js,jsx},
+  'hooks/**/*.{ts,tsx,js,jsx},
+  'lib/**/*.{ts,tsx,js,jsx},
   dist/**/*.{html,css,js}
 
 ];
@@ -119,17 +119,17 @@ const filePatterns = [;;
 
 const excludePatterns = [;;
 
-  '**/node_modules/**',
-  '**/.next/**',
-  '**/build/**',
-  '**/coverage/**',
-  '**/*.test.{ts,tsx,js,jsx}',
-  '**/*.spec.{ts,tsx,js,jsx}',
-  '**/scripts/**',
-  '**/automation/**',
-  '**/backup*/**',
-  '**/disabled*/**',
-  '**/corrupted*/**',
+  '**/node_modules/**,
+  '**/.next/**,
+  '**/build/**,
+  '**/coverage/**,
+  '**/*.test.{ts,tsx,js,jsx},
+  '**/*.spec.{ts,tsx,js,jsx},
+  '**/scripts/**,
+  '**/automation/**,
+  '**/backup*/**,
+  '**/disabled*/**,
+  '**/corrupted*/**,
   **/temp*/**
 ];
 
@@ -146,7 +146,7 @@ let optimizationsApplied = 0;;
 function processFile(filePath) {
   try {;
 
-const content = fs.readFileSync(filePath, 'utf8);;
+const content = fs.readFileSync(filePath, utf8);;
 
     let newContent = content;;
 
@@ -166,7 +166,7 @@ const before = newContent;;
     });
 
     if (fileOptimizations > 0) {
-      fs.writeFileSync(filePath, newContent, 'utf8);
+      fs.writeFileSync(filePath, newContent, utf8);
 
       // console.log removed for production
 optimizationsApplied += fileOptimizations}
@@ -209,7 +209,7 @@ const files = await glob(pattern, {);;
 // console.log removed for production
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
 export { processFile, optimizations };

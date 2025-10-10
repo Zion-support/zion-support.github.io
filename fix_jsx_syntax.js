@@ -1,8 +1,8 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import { glob } from 'glob;
+import { glob } from glob;
 
 async function main() {
   //Find all TSX files in src/components;
@@ -52,12 +52,12 @@ async function main() {/* TODO: Fix JSX expression */}
       //3. Fix className prop,
   placement: <div>\nclassName={...} -> <div\nclassName={...}
 
-      const classNameFix = content.replace();';
+      const classNameFix = content.replace();;;
 
         /<(\w+)>\s*\n\s*className=\{([^}]+)\}/g,
         <$1\nclassName={$2}
 
-      )';
+      );
 
       if (classNameFix !== content) {/* TODO: Fix JSX expression */}
 
@@ -71,7 +71,7 @@ async function main() {/* TODO: Fix JSX expression */}
       }
 
       //5. Fix template literal syntax: ${> -> ${,
-      //       const templateFix = content.replace(/\$\{>/g, '${);;
+      //       const templateFix = content.replace(/\$\{>/g, ${);;
 
       if (templateFix !== content) {
         content = templateFix;
@@ -113,7 +113,7 @@ const inputFix = content.replace();;
 
       //7. Fix unclosed br,
   tags: <br> -> <br /></br>
-      //       const brFix = content.replace(/<br>/g, '<br />);;
+      //       const brFix = content.replace(/<br>/g, <br />);;
 
       if (brFix !== content) {/* TODO: Fix JSX expression */}
 

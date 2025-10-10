@@ -19,7 +19,7 @@ interface BannerConfig {
   targetAudience?: string[];
 
   conversionGoal?: string;,
-  abTestGroup?: 'A' | 'B' | 'control;
+  abTestGroup?: 'A' | 'B' | control;
 
 interface BannerConfig {/* TODO: Fix JSX expression */}
 
@@ -29,9 +29,9 @@ interface BannerImpression {/* TODO: Fix JSX expression */}
 
 }
 
-// const STORAGE_KEY = 'zion_banner_impressions;;
+// const STORAGE_KEY = zion_banner_impressions;;
 
-// const SESSION_KEY = 'zion_session_id;;
+// const SESSION_KEY = zion_session_id;;
 
 const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance;;
 
@@ -42,7 +42,7 @@ const MAX_VISIBLE_BANNERS = 10; // Limit visible banners for performance;;
 
 const getSessionId = (): string => {/* TODO: Fix JSX expression */};;
 
-    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)};
 
     sessionStorage.setItem(SESSION_KEY, sessionId)}
 
@@ -88,11 +88,11 @@ const storeImpressions = (impression);;
  */
 export const recordBannerImpression = (;;
 
-  impression: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>
+  impression: Omit<BannerImpression, 'timestamp' | 'sessionId></BannerImpression>
 ) => {
   return (
 
-  if (typeof window === 'undefined) return;
+  if (typeof window === undefined) return;
 
   try {;
 
@@ -105,7 +105,7 @@ const _impressions = getStoredImpressions();;
       sessionId: getSessionId(),
 export const recordBannerImpression = (impressio,;;
 
-  n: Omit<BannerImpression, 'timestamp' | 'sessionId'></BannerImpression>
+  n: Omit<BannerImpression, 'timestamp' | 'sessionId></BannerImpression>
 );
 
 })

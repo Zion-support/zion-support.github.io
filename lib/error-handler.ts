@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next;
+import { NextApiRequest, NextApiResponse } from next;
 
 export interface ApiError extends Error {/* TODO: Fix JSX expression */}
 
@@ -46,26 +46,26 @@ export const errorHandler = (er,;;
   s: NextApiResponse;)
 ) => {/* TODO: Fix JSX expression */}
 
-  const { statusCode = 500, message } = err';
+  const { statusCode = 500, message } = err;
 
-  // Log error for monitoring';
+  // Log error for monitoring;
 
-  if (process.env['NODE_ENV'] === 'development') {
+  if (process.env['NODE_ENV'] === 'development) {
     // eslint-disable-next-line no-console;
 
 //     // .toISOString(),
-    userAgent: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for] || req.connection.remoteAddress});
+    userAgent: req.headers['user-agent],
+    ip: req.headers[x-forwarded-for] || req.connection.remoteAddress});
 
     timestamp: new Date().toISOString(),
-    userAgent: req.headers['user-agent'],
-    ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress})}
+    userAgent: req.headers['user-agent],
+    ip: req.headers['x-forwarded-for] || req.connection.remoteAddress})}
 
   res.status(statusCode).json({)
     error: {)
       message:)
-        process.env['NODE_ENV'] === 'production')
-          ? 'Internal Server Error')
+        process.env['NODE_ENV'] === 'production)
+          ? 'Internal Server Error)
           : message)
       statusCode)
       timestamp: new Date().toISOString()
@@ -95,21 +95,21 @@ export const errorHandler = (er,;;
 
 
   // Log error for monitoring
-  if (process.env['NODE_ENV'] === 'development') {
+  if (process.env['NODE_ENV'] === 'development) {
     // eslint-disable-next-line no-console
     // console.error removed for production
 .toISOString(),
-      userAgent: req.headers['user-agent'],
-      ip: req.headers['x-forwarded-for'] || req.connection.remoteAddress
+      userAgent: req.headers['user-agent],
+      ip: req.headers['x-forwarded-for] || req.connection.remoteAddress
 
   });
 
     timestam,
   p: new Date().toISOString(),
     userAgen,
-  t: req.headers['user-agent'],
+  t: req.headers['user-agent],
     i,
-  p: req.headers['x-forwarded-for'] || req.connection.remoteAddress})}
+  p: req.headers['x-forwarded-for] || req.connection.remoteAddress})}
 
   res.status(statusCode).json({/* TODO: Fix JSX expression */}
 
@@ -147,9 +147,9 @@ export const asyncHandler =;;
 
   res.status(statusCode).json({)
     error: {)
-      message: message || 'Internal Server Error'),
+      message: message || 'Internal Server Error),
       statusCode),
-      ...(process.env['NODE_ENV'] === 'development' && { stack: err.stack })
+      ...(process.env['NODE_ENV'] === 'development && { stack: err.stack })
 export const asyncHandler = {};;
 
   (f)
@@ -329,5 +329,3 @@ export const asyncHandler = {};;
   t: Function) => {/* TODO: Fix JSX expression */}
 
   };
-
-`

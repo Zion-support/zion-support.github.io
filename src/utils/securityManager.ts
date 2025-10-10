@@ -55,10 +55,10 @@ export class SecurityManager {// TODO: Add content}
           
           
           )
-          <React.Fragment>]/g, '')
+          <React.Fragment>]/g, ')
       .replace(/javascrip)
-  t:/gi, '')
-      .replace(/on\w+=/gi, '')
+  t:/gi, ')
+      .replace(/on\w+=/gi, ')
       .trim()
   }
 
@@ -73,12 +73,12 @@ export class SecurityManager {// TODO: Add content}
 
     try {/* TODO: Fix JSX expression */}
 
-  s:'].includes(parsed.protocol)) {}
+  s:].includes(parsed.protocol)) {}
 
   // TOD,
   O: Add content}
 
-        throw new Error('Invalid protocol')}
+        throw new Error('Invalid protocol)}
 
       return parsed.toString()} catch {/* TODO: Fix JSX expression */}
 
@@ -86,7 +86,7 @@ export class SecurityManager {// TODO: Add content}
 
 }
 
-      return ''}
+      return '}
 
   }
 
@@ -101,7 +101,7 @@ export class SecurityManager {// TODO: Add content}
 
     const array = new Uint8Array(length);;
 
-    if (typeof window !== 'undefined' && window.crypto) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined && window.crypto) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -115,11 +115,11 @@ export class SecurityManager {// TODO: Add content}
 
       // Fallback for Node.js environment;
 
-const crypto = require('crypto);;
+const crypto = require(crypto);;
 
       crypto.randomFillSync(array)}
 
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')
   }
 
   /**

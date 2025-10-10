@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react;
 
-'use client';
+'use client;
 
-export type ToastType = 'success' | 'error' | 'warning' | 'info;
+export type ToastType = 'success' | 'error' | 'warning' | info;
 
 export interface ToastProps {/* TODO: Fix JSX expression */}
 
@@ -31,7 +31,7 @@ const,
 }
 
 //   message,
-  type = 'success',
+  type = 'success,
   duration = 3000,
 //   onClose,
 //   show;)
@@ -77,21 +77,21 @@ const,
 
 }
 
-      case 'success':
-        return 'bg-green-600 text-white;
+      case 'success:
+        return bg-green-600 text-white;
 
-      case 'error':
-        return 'bg-red-600 text-white;
+      case 'error:
+        return bg-red-600 text-white;
 
-      case 'warning':
-        return 'bg-yellow-500 text-white;
+      case 'warning:
+        return bg-yellow-500 text-white;
 
-      case 'info':
-        return 'bg-blue-600 text-white;
+      case 'info:
+        return bg-blue-600 text-white;
 
       defaul,
   t:
-        return 'bg-gray-800 text-white'}
+        return 'bg-gray-800 text-white}
 
   };
 
@@ -107,21 +107,21 @@ const,
 
 }
 
-      case 'success':
-        return ';
+      case 'success:
+        return ;
 
-      case 'error':
-        return ';
+      case 'error:
+        return ;
 
-      case 'warning':
-        return ';
+      case 'warning:
+        return ;
 
-      case 'info':
-        return ';
+      case 'info:
+        return ;
 
       defaul,
   t:
-        return ''}
+        return '}
 
   };
 
@@ -129,10 +129,10 @@ const,
   )
     
           <div></div>
-className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}`}
+className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-2 animate-fade-in ${getToastStyles()}}
 
-      role="alert""
-      aria-live="polite"
+      role="alert"
+      aria-live="polite
 // >
       
           
@@ -142,8 +142,8 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
           
           
           
-          "
-          <span className="text-xl font-bold">{getIcon()}</span>
+          
+          <span className="text-xl font-bold>{getIcon()}</span>
       <span>{message}</span>
       <button></button>
         onClick={() => {}
@@ -153,10 +153,11 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
 
           setIsVisible(false);
 
-          if (onClose) onClose()}}"
-        className="ml-4,"
-  hover:opacity-80 transition-opacity""
-        aria-label="Close notification"
+          if (onClose) onClose()}}
+
+        className="ml-4,
+  hover:opacity-80 transition-opacity"
+        aria-label="Close notification
 //       >
 //
       
@@ -172,7 +173,7 @@ className={`fixed top-4 right-4 px-6 py-3 rounded-lg shadow-lg z-50 flex items-c
     </div>
   )};
 
-export default Toast;"`
+export default Toast;"
 
 
 

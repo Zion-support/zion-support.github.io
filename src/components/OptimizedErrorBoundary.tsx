@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react;
 
-'use client';
+'use client;
 
 interface OptimizedErrorBoundaryProps {
   children: ReactNode;
@@ -42,7 +42,8 @@ $4}}
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}
+
     }}
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -52,14 +53,14 @@ $4}}
     });
 
     // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {}
+    if (process.env['NODE_ENV'] === 'development) {}
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo)}
 
     // Send error to monitoring service in production
-    if (process.env['NODE_ENV'] === 'production') {
+    if (process.env['NODE_ENV'] === 'production) {
       this.reportError(error, errorInfo)}
 
   }
@@ -102,7 +103,7 @@ const { resetKeys, resetOnPropsChange } = this.props;
   return (
 
     // Report to error monitoring service
-    if (typeof window !== 'undefined' && 'gtag in window) {;
+    if (typeof window !== 'undefined' && gtag in window) {;
 
 const gtag = (;;
 
@@ -120,7 +121,7 @@ const gtag = (;;
 
       ).gtag;
 
-      gtag('event', 'exception', {
+      gtag('event', 'exception, {
         description: error.message,
         fatal: false,
         custom_map: {
@@ -183,10 +184,10 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
 
   ({ error, errorInfo, errorId, onRetry }) => (
 
-    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
-      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
-        <div className='mb-4'>
-          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'>
+    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4>
+      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center>
+        <div className='mb-4>
+          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center>
             <svg
               className=w-6 h-6 text-red-600
               fill=none
@@ -205,27 +206,28 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
         </div>
 
 
-        <h1 className='text-xl font-semibold text-gray-900 mb-2'>
+        <h1 className='text-xl font-semibold text-gray-900 mb-2>
           Something went wrong
         </h1>
-        <p className='text-gray-600 mb-4'>
+        <p className='text-gray-600 mb-4>
 
           We&apos;re sorry, but something unexpected happened. Please try again.
         </p>
-        {process.env['NODE_ENV'] === 'development' && error && (
-          <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
+        {process.env['NODE_ENV'] === 'development && error && (
+
+          <details className='mb-4 text-left>
+            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700>
               Error Details (Development)
             </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
-              <div className='mb-2'>
+            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto>
+              <div className='mb-2>
                 <strong>Error:</strong> {error.message}
 
-        {process.env['NODE_ENV'] === 'development' && error && ()}
+        {process.env['NODE_ENV'] === 'development && error && ()}
 
-          <details className='mb-4 text-left'></details>
-            <summary className='cursor-pointer text-sm text-gray-500,
-  hover:text-gray-700'></summary>
+          <details className='mb-4 text-left></details>
+            <summary className=cursor-pointer text-sm text-gray-500,
+  hover:text-gray-700></summary>
 // Error Details (Development)
             
           
@@ -237,29 +239,29 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
           
           
           </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div>
-              <div className='mb-2'></div>
+            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto></div>
+              <div className='mb-2></div>
                 <strong>Erro,
   r:</strong> {error.message}
 
               </div>
-              <div className='mb-2'></div>
+              <div className='mb-2></div>
                 <strong>Stac,
   k:</strong>
-                <pre className='whitespace-pre-wrap'>{error.stack}</pre>
+                <pre className='whitespace-pre-wrap>{error.stack}</pre>
               </div>
               {errorInfo && (
 
                 <div>
                   <strong>Component Stack:</strong>
-                  <pre className='whitespace-pre-wrap'>
+                  <pre className='whitespace-pre-wrap>
 
               {errorInfo && ()}
 
           <div></div>
                   <strong>Component,
   Stack:</strong>
-                  <pre className='whitespace-pre-wrap'></pre>
+                  <pre className='whitespace-pre-wrap></pre>
 
                     {errorInfo.componentStack}
 
@@ -271,8 +273,8 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
           </details>
         )}
 
-        <div className='flex flex-col,
-  sm:flex-row gap-2 justify-center'></div>
+        <div className=flex flex-col,
+  sm:flex-row gap-2 justify-center></div>
           <button></button>
             onClick={onRetry}
 
@@ -280,7 +282,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
           >
             Try Again
 
-            className='px-4 py-2 bg-blue-600 text-white rounded-md,
+            className=px-4 py-2 bg-blue-600 text-white rounded-md,
   hover:bg-blue-700,
   focus:outline-none,
   focus:ring-2,
@@ -300,7 +302,7 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
         </div>
         {errorId && (
 
-          <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
+          <p className='mt-4 text-xs text-gray-400>Error ID: {errorId}</p>
         )}
 
       </div>
@@ -308,9 +310,9 @@ const ErrorFallback = memo<ErrorFallbackProps>(;;
   )
 );
 
-ErrorFallback.displayName = 'ErrorFallback;
+ErrorFallback.displayName = ErrorFallback;
 
-            className='px-4 py-2 bg-gray-600 text-white rounded-md,
+            className=px-4 py-2 bg-gray-600 text-white rounded-md,
   hover:bg-gray-700,
   focus:outline-none,
   focus:ring-2,
@@ -323,7 +325,7 @@ ErrorFallback.displayName = 'ErrorFallback;
         </div>
         {errorId && ()}
 
-          <p className='mt-4 text-xs text-gray-400'>Error,
+          <p className='mt-4 text-xs text-gray-400>Error,
   ID: {errorId}</p>
         )}
 
@@ -332,4 +334,4 @@ ErrorFallback.displayName = 'ErrorFallback;
 //   )
 );
 
-ErrorFallback.displayName = 'ErrorFallback;
+ErrorFallback.displayName = ErrorFallback;

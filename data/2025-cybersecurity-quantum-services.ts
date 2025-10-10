@@ -1,4 +1,4 @@
-import React from 'react;
+import React from react;
 
 export interface CybersecurityQuantumService;
 
@@ -26,13 +26,13 @@ export interface CybersecurityQuantumService {;
 
     setupTime: string;
 
-    id: 'quantum - resistant - encryption - platform,
-    name: 'Quantum - Resistant Encryption Platform,
-    tagline: 'Future - proof security with post - quantum cryptography,
+    id: quantum - resistant - encryption - platform,
+    name: Quantum - Resistant Encryption Platform,
+    tagline: Future - proof security with post - quantum cryptography,
     description: unknown;
 
-      'Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.,
-    category: 'Quantum Security & Cryptography,
+      Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.,
+    category: Quantum Security & Cryptography,
     price:
         price: unknown;
 
@@ -40,11 +40,11 @@ export interface CybersecurityQuantumService {;
 
       yearly: 4990;
 
-      currency: 'USD,
+      currency: USD,
       trial_days: 30;
 
-      setup_time: '1 - 2 weeks,
-      enterprise: 'Custom pricing}
+      setup_time: 1 - 2 weeks,
+      enterprise: Custom pricing}
 
 export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 
@@ -53,16 +53,16 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     setupTim,
   e: string,
     i,
-  d: 'quantum - resistant - encryption - platform,
+  d: quantum - resistant - encryption - platform,
     nam,
-  e: 'Quantum - Resistant Encryption Platform,
+  e: Quantum - Resistant Encryption Platform,
     taglin,
-  e: 'Future - proof security with post - quantum cryptography,
+  e: Future - proof security with post - quantum cryptography,
     descriptio,
   n: unknown,
-      'Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.,
+      Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.,
     categor,
-  y: 'Quantum Security & Cryptography,
+  y: Quantum Security & Cryptography,
     pric,
   e: unknown,
       monthl,
@@ -70,48 +70,48 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       yearl,
   y: 4990,
       currenc,
-  y: 'USD,
+  y: USD,
       trial_day,
   s: 30,
       setup_tim,
-  e: '1 - 2 weeks,
+  e: 1 - 2 weeks,
       enterpris,
-  e: 'Custom pricing}
+  e: Custom pricing}
 
     },
     feature,
   s: [,
-      'Post - quantum cryptography algorithms,
-      'Hybrid classical - quantum encryption,
-      'Real - time threat assessment,
-      'Automated key rotation,
-      'Multi - layer security architecture,
-      'Zero - trust implementation,
-      'Advanced key management,
-      'Compliance monitoring,
-      'API for integration,
-      'Mobile SDK support],
+      Post - quantum cryptography algorithms,
+      Hybrid classical - quantum encryption,
+      Real - time threat assessment,
+      Automated key rotation,
+      Multi - layer security architecture,
+      Zero - trust implementation,
+      Advanced key management,
+      Compliance monitoring,
+      API for integration,
+      Mobile SDK support],
     benefit,
   s: [,
-      'Future - proof against quantum attacks,
-      'Reduce security breach risks by 99.9%,
-      'Ensure long - term data protection,
-      'Meet regulatory compliance requirements,
-      'Protect against emerging threats],
+      Future - proof against quantum attacks,
+      Reduce security breach risks by 99.9%,
+      Ensure long - term data protection,
+      Meet regulatory compliance requirements,
+      Protect against emerging threats],
     target_audienc,
   e: [,
-      'Financial institutions,
-      'Government agencies,
-      'Healthcare organizations,
-      'Defense contractors,
-      'Technology companies,
-      'Critical infrastructure],
+      Financial institutions,
+      Government agencies,
+      Healthcare organizations,
+      Defense contractors,
+      Technology companies,
+      Critical infrastructure],
     market_position: unknown;
 
-      'Leading quantum - resistant encryption platform. Competes with RSA ($1000 - 5000 / user), Thales ($500 - 2000 / user), and Entrust ($200 - 1000 / user). Our advantage: Quantum - resistant algorithms and hybrid security.,
-    competitors: ['RSA, Thales, Entrust, Gemalto, Utimaco],
+      Leading quantum - resistant encryption platform. Competes with RSA ($1000 - 5000 / user), Thales ($500 - 2000 / user), and Entrust ($200 - 1000 / user). Our advantage: Quantum - resistant algorithms and hybrid security.,
+    competitors: [RSA, Thales, Entrust, Gemalto, Utimaco],
     tech_stack: [,
-      'NIST PQC algorithms, Lattice - based cryptography, React, Node.js, PostgreSQL, Redis],
+      NIST PQC algorithms, Lattice - based cryptography, React, Node.js, PostgreSQL, Redis],
     real_implementation: true;
 
     implementation_details: unknown;
@@ -121,43 +121,43 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       Leading quantum - resistant encryption platform. Competes with RSA ($1000 - 5000 / user), Thales ($500 - 2000 / user), and Entrust ($200 - 1000 / user). Our,
   advantage: Quantum - resistant algorithms and hybrid security.,
     competitor,
-  s: ['RSA, Thales, Entrust, Gemalto, Utimaco],
+  s: [RSA, Thales, Entrust, Gemalto, Utimaco],
     tech_stac,
   k: [,
-      'NIST PQC algorithms, Lattice - based cryptography, React, Node.js, PostgreSQL, Redis],
+      NIST PQC algorithms, Lattice - based cryptography, React, Node.js, PostgreSQL, Redis],
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
-      'Production - ready quantum - resistant encryption platform with enterprise - grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.,
+      Production - ready quantum - resistant encryption platform with enterprise - grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.,
     ro,
-  i: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.,
+  i: Organizations achieve 500% ROI through reduced security risks and compliance cost savings.,
     use_case,
   s: [,
-      'Data encryption at rest,
-      'Secure communications,
-      'Digital signatures,
-      'Key management,
-      'Compliance monitoring,
-      'Threat detection],
+      Data encryption at rest,
+      Secure communications,
+      Digital signatures,
+      Key management,
+      Compliance monitoring,
+      Threat detection],
     integration,
   s: [,
-      'Active Directory, LDAP, SAML, OAuth, Custom enterprise systems],
+      Active Directory, LDAP, SAML, OAuth, Custom enterprise systems],
     support: unknown;
 
     suppor,
   t: unknown,
-      '24 / 7 technical support, security consulting, custom development, and dedicated security manager.,
+      24 / 7 technical support, security consulting, custom development, and dedicated security manager.,
     complianc,
   e: [,
-      'SOC 2 Type II, ISO 27001, FIPS 140 - 2, Common Criteria, FedRAMP],
-    link: 'https://ziontechgroup.com / quantum - resistant - encryption - platform,
-    icon: ',
-    color: 'from - red - 500 to - orange - 600,
+      SOC 2 Type II, ISO 27001, FIPS 140 - 2, Common Criteria, FedRAMP],
+    link: https://ziontechgroup.com / quantum - resistant - encryption - platform,
+    icon: ,
+    color: from - red - 500 to - orange - 600,
     popular:
         popular: true;
 
-    launch_date: '2024 - 01 - 15,
+    launch_date: 2024 - 01 - 15,
     customers:
         customers: 650;
 
@@ -169,13 +169,13 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   k: http,
   s://ziontechgroup.com / quantum - resistant - encryption - platform,
     ico,
-  n: ',
+  n: ,
     colo,
-  r: 'from - red - 500 to - orange - 600,
+  r: from - red - 500 to - orange - 600,
     popula,
   r: true,
     launch_dat,
-  e: '2024 - 01 - 15,
+  e: 2024 - 01 - 15,
     customer,
   s: 650,
     ratin,
@@ -185,51 +185,51 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our,
   advantage: Autonomous threat hunting and AI intelligence.,
     competitor,
-  s: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace],
+  s: [CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace],
     techStac,
   k: [,
-      'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch],
+      OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch],
     realImplementation: true;
 
-    implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.,
-    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.,
+    implementationDetails: Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.,
+    roi: Security teams achieve 400% ROI through improved threat detection and reduced incident response time.,
     useCases: [;
 
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.
+  s: Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.
     ro,
-  i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.
+  i: Security teams achieve 400% ROI through improved threat detection and reduced incident response time.
     useCase,
   s: [;
 
-      'Advanced persistent threat detection
-      'Malware analysis and classification
-      'Network security monitoring
-      'Endpoint threat detection
-      'Security incident investigation
-      'Threat intelligence sharing],
+      Advanced persistent threat detection
+      Malware analysis and classification
+      Network security monitoring
+      Endpoint threat detection
+      Security incident investigation
+      Threat intelligence sharing],
     integrations: [,
-      'Threat intelligence sharing
+      Threat intelligence sharing
     ]
     integration,
   s: [,
-      'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools
+      SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools
     ]
     suppor,
-  t: '24/7 security support, threat hunting training, custom development, and dedicated security manager.
+  t: 24/7 security support, threat hunting training, custom development, and dedicated security manager.
     complianc,
   e: [,
-      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA],
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform,
-    id: 'ai - powered - threat - hunting - platform,
-    name: 'AI - Powered Threat Hunting Platform,
-    tagline: 'Proactive threat detection with autonomous security intelligence,
+      SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA],
+    link: https://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform,
+    id: ai - powered - threat - hunting - platform,
+    name: AI - Powered Threat Hunting Platform,
+    tagline: Proactive threat detection with autonomous security intelligence,
     description: unknown;
 
-      'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.,
-    category: 'AI Cybersecurity & Threat Intelligence,
+      Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.,
+    category: AI Cybersecurity & Threat Intelligence,
     price:
         price: unknown;
 
@@ -237,26 +237,26 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 
       yearly: 3990;
 
-      currency: 'USD,
+      currency: USD,
       trial_days:
         trial_days: 21;
 
-      setup_time: '1 - 2 weeks,
-      enterprise: 'Custom pricing,
+      setup_time: 1 - 2 weeks,
+      enterprise: Custom pricing,
     lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform,
     i,
-  d: 'ai - powered - threat - hunting - platform,
+  d: ai - powered - threat - hunting - platform,
     nam,
-  e: 'AI - Powered Threat Hunting Platform,
+  e: AI - Powered Threat Hunting Platform,
     taglin,
-  e: 'Proactive threat detection with autonomous security intelligence,
+  e: Proactive threat detection with autonomous security intelligence,
     descriptio,
   n: unknown,
-      'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.,
+      Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.,
     categor,
-  y: 'AI Cybersecurity & Threat Intelligence,
+  y: AI Cybersecurity & Threat Intelligence,
     pric,
   e: unknown,
       monthl,
@@ -264,46 +264,46 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       yearl,
   y: 3990,
       currenc,
-  y: 'USD,
+  y: USD,
       trial_day,
   s: 21,
       setup_tim,
-  e: '1 - 2 weeks,
+  e: 1 - 2 weeks,
       enterpris,
-  e: 'Custom pricing},
+  e: Custom pricing},
     feature,
   s: [,
-      'Autonomous threat hunting,
-      'AI - powered attack pattern analysis,
-      'Real - time threat intelligence,
-      'Behavioral anomaly detection,
-      'Predictive threat modeling,
-      'Automated incident response,
-      'Advanced analytics dashboard,
-      'Multi - source data correlation,
-      'Custom threat hunting rules,
-      'API for security tools integration],
+      Autonomous threat hunting,
+      AI - powered attack pattern analysis,
+      Real - time threat intelligence,
+      Behavioral anomaly detection,
+      Predictive threat modeling,
+      Automated incident response,
+      Advanced analytics dashboard,
+      Multi - source data correlation,
+      Custom threat hunting rules,
+      API for security tools integration],
     benefit,
   s: [,
-      'Detect threats 10x faster than traditional methods,
-      'Reduce false positives by 80%,
-      'Prevent 95% of cyber attacks,
-      'Automate 70% of security operations,
-      'Improve incident response time by 90%],
+      Detect threats 10x faster than traditional methods,
+      Reduce false positives by 80%,
+      Prevent 95% of cyber attacks,
+      Automate 70% of security operations,
+      Improve incident response time by 90%],
     target_audienc,
   e: [,
-      'Security operations centers,
-      'Cybersecurity teams,
-      'IT security professionals,
-      'Managed security providers,
-      'Government agencies,
-      'Financial institutions],
+      Security operations centers,
+      Cybersecurity teams,
+      IT security professionals,
+      Managed security providers,
+      Government agencies,
+      Financial institutions],
     market_position: unknown;
 
-      'Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our advantage: Autonomous threat hunting and AI intelligence.,
-    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace],
+      Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our advantage: Autonomous threat hunting and AI intelligence.,
+    competitors: [CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace],
     tech_stack: [,
-      'OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch],
+      OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch],
     real_implementation: true;
 
     implementation_details: unknown;
@@ -313,105 +313,105 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our,
   advantage: Autonomous threat hunting and AI intelligence.,
     competitor,
-  s: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace],
+  s: [CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace],
     tech_stac,
   k: [,
-      'OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch],
+      OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch],
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
-      'Production - ready threat hunting platform with real - time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.,
+      Production - ready threat hunting platform with real - time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.,
     ro,
-  i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.,
+  i: Security teams achieve 400% ROI through improved threat detection and reduced incident response time.,
     use_case,
   s: [,
-      'Advanced persistent threat detection,
-      'Malware analysis and classification,
-      'Network security monitoring,
-      'Endpoint threat detection,
-      'Security incident investigation,
-      'Threat intelligence sharing],
+      Advanced persistent threat detection,
+      Malware analysis and classification,
+      Network security monitoring,
+      Endpoint threat detection,
+      Security incident investigation,
+      Threat intelligence sharing],
     integration,
   s: [,
-      'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Custom security tools],
+      SIEM systems, EDR platforms, Firewalls, IDS / IPS, Custom security tools],
     support: unknown;
 
     suppor,
   t: unknown,
-      '24 / 7 security support, threat hunting training, custom development, and dedicated security manager.,
+      24 / 7 security support, threat hunting training, custom development, and dedicated security manager.,
     complianc,
   e: [,
-      'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA],
-    link: 'https://ziontechgroup.com / ai - powered - threat - hunting - platform,
-    icon: ',
-    color: 'from - purple - 500 to - indigo - 600,
+      SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA],
+    link: https://ziontechgroup.com / ai - powered - threat - hunting - platform,
+    icon: ,
+    color: from - purple - 500 to - indigo - 600,
     popular:
         popular: true;
 
-    launch_date: '2024 - 02 - 01,
+    launch_date: 2024 - 02 - 01,
     customers:
         customers: 1200;
 
     rating: 4 && 4.8;
 
     reviews: 950},
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security],
-    techStack: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes],
+      Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security],
+    techStack: [OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes],
     realImplementation: true;
 
-    implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.,
-    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.,
+    implementationDetails: Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.,
+    roi: Organizations achieve 300% ROI through reduced security incidents and simplified access management.,
     useCases: [;
 
     lin,
   k: http,
   s://ziontechgroup.com / ai - powered - threat - hunting - platform,
     ico,
-  n: ',
+  n: ,
     colo,
-  r: 'from - purple - 500 to - indigo - 600,
+  r: from - purple - 500 to - indigo - 600,
     popula,
   r: true,
     launch_dat,
-  e: '2024 - 02 - 01,
+  e: 2024 - 02 - 01,
     customer,
   s: 1200,
     ratin,
   g: 4 && 4.8,
     review,
   s: 950},
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security],
+      Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security],
     techStac,
-  k: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes],
+  k: [OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes],
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.
+  s: Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.
     ro,
-  i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.
+  i: Organizations achieve 300% ROI through reduced security incidents and simplified access management.
     useCase,
   s: [;
 
-      'Secure remote access
-      'Application access control
-      'Cloud security
-      'Compliance management
-      'Identity governance
-      'Risk management],
+      Secure remote access
+      Application access control
+      Cloud security
+      Compliance management
+      Identity governance
+      Risk management],
     integrations: [,
-      'Active Directory, LDAP, SAML, OAuth, Custom identity providers
+      Active Directory, LDAP, SAML, OAuth, Custom identity providers
     ]
-    support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.,
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP],
-    link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform,
-    id: 'zero - trust - network - access - platform,
-    name: 'Zero - Trust Network Access Platform,
-    tagline: 'Secure access with continuous verification and least privilege,
+    support: 24/7 technical support, implementation consulting, custom development, and dedicated success manager.,
+    compliance: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP],
+    link: https://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform,
+    id: zero - trust - network - access - platform,
+    name: Zero - Trust Network Access Platform,
+    tagline: Secure access with continuous verification and least privilege,
     description: unknown;
 
-      'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.,
-    category: 'Zero - Trust Security & Access Control,
+      Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.,
+    category: Zero - Trust Security & Access Control,
     price:
         price: unknown;
 
@@ -419,36 +419,36 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 
       yearly: 2990;
 
-      currency: 'USD,
+      currency: USD,
       trial_days:
         trial_days: 21;
 
-      setup_time: '1 - 2 weeks,
-      enterprise: 'Custom pricing,
-      'Risk management
+      setup_time: 1 - 2 weeks,
+      enterprise: Custom pricing,
+      Risk management
     ]
     integration,
   s: [,
-      'Active Directory, LDAP, SAML, OAuth, Custom identity providers
+      Active Directory, LDAP, SAML, OAuth, Custom identity providers
     ]
     suppor,
-  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.,
+  t: 24/7 technical support, implementation consulting, custom development, and dedicated success manager.,
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP],
+  e: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP],
     lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform,
     i,
-  d: 'zero - trust - network - access - platform,
+  d: zero - trust - network - access - platform,
     nam,
-  e: 'Zero - Trust Network Access Platform,
+  e: Zero - Trust Network Access Platform,
     taglin,
-  e: 'Secure access with continuous verification and least privilege,
+  e: Secure access with continuous verification and least privilege,
     descriptio,
   n: unknown,
-      'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.,
+      Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.,
     categor,
-  y: 'Zero - Trust Security & Access Control,
+  y: Zero - Trust Security & Access Control,
     pric,
   e: unknown,
       monthl,
@@ -456,46 +456,46 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       yearl,
   y: 2990,
       currenc,
-  y: 'USD,
+  y: USD,
       trial_day,
   s: 21,
       setup_tim,
-  e: '1 - 2 weeks,
+  e: 1 - 2 weeks,
       enterpris,
-  e: 'Custom pricing},
+  e: Custom pricing},
     feature,
   s: [,
-      'Continuous identity verification,
-      'Context - aware access control,
-      'Device health monitoring,
-      'Least privilege access,
-      'Micro - segmentation,
-      'Real - time risk assessment,
-      'Multi - factor authentication,
-      'Single sign - on integration,
-      'Advanced analytics,
-      'API for enterprise systems],
+      Continuous identity verification,
+      Context - aware access control,
+      Device health monitoring,
+      Least privilege access,
+      Micro - segmentation,
+      Real - time risk assessment,
+      Multi - factor authentication,
+      Single sign - on integration,
+      Advanced analytics,
+      API for enterprise systems],
     benefit,
   s: [,
-      'Reduce security breaches by 90%,
-      'Eliminate VPN vulnerabilities,
-      'Improve user experience,
-      'Simplify compliance management,
-      'Enable secure remote work],
+      Reduce security breaches by 90%,
+      Eliminate VPN vulnerabilities,
+      Improve user experience,
+      Simplify compliance management,
+      Enable secure remote work],
     target_audienc,
   e: [,
-      'Enterprise organizations,
-      'Healthcare providers,
-      'Financial institutions,
-      'Government agencies,
-      'Educational institutions,
-      'Remote workforces],
+      Enterprise organizations,
+      Healthcare providers,
+      Financial institutions,
+      Government agencies,
+      Educational institutions,
+      Remote workforces],
     market_position: unknown;
 
-      'Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our advantage: AI - powered risk assessment and continuous verification.,
+      Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our advantage: AI - powered risk assessment and continuous verification.,
     competitors: [,
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security],
-    tech_stack: ['OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes],
+      Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security],
+    tech_stack: [OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes],
     real_implementation: true;
 
     implementation_details: unknown;
@@ -506,53 +506,53 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   advantage: AI - powered risk assessment and continuous verification.,
     competitor,
   s: [,
-      'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security],
+      Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security],
     tech_stac,
-  k: ['OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes],
+  k: [OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes],
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
-      'Production - ready zero - trust platform with enterprise - grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.,
+      Production - ready zero - trust platform with enterprise - grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.,
     ro,
-  i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.,
+  i: Organizations achieve 300% ROI through reduced security incidents and simplified access management.,
     use_case,
   s: [,
-      'Secure remote access,
-      'Application access control,
-      'Cloud security,
-      'Compliance management,
-      'Identity governance,
-      'Risk management],
+      Secure remote access,
+      Application access control,
+      Cloud security,
+      Compliance management,
+      Identity governance,
+      Risk management],
     integration,
   s: [,
-      'Active Directory, LDAP, SAML, OAuth, Custom identity providers],
+      Active Directory, LDAP, SAML, OAuth, Custom identity providers],
     support: unknown;
 
-      '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.,
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP],
-    link: 'https://ziontechgroup.com / zero - trust - network - access - platform,
-    icon: ',
-    color: 'from - blue - 500 to - cyan - 600,
+      24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.,
+    compliance: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP],
+    link: https://ziontechgroup.com / zero - trust - network - access - platform,
+    icon: ,
+    color: from - blue - 500 to - cyan - 600,
     popular:
         popular: true;
 
-    launch_date: '2024 - 01 - 20,
+    launch_date: 2024 - 01 - 20,
     customers:
         customers: 1800;
 
     rating: 4 && 4.7;
 
     reviews: 1400},
-      'Highest security standards, Government security requirements, Industry-specific standards],
-    link: 'https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network,
-    id: 'quantum - key - distribution - network,
-    name: 'Quantum Key Distribution Network,
-    tagline: 'Unhackable communication with quantum entanglement,
+      Highest security standards, Government security requirements, Industry-specific standards],
+    link: https://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network,
+    id: quantum - key - distribution - network,
+    name: Quantum Key Distribution Network,
+    tagline: Unhackable communication with quantum entanglement,
     description: unknown;
 
-      'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.,
-    category: 'Quantum Communications & Security,
+      Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.,
+    category: Quantum Communications & Security,
     price:
         price: unknown;
 
@@ -560,49 +560,49 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 
       yearly: 9990;
 
-      currency: 'USD,
+      currency: USD,
       trial_days:
         trial_days: 30;
 
-      setup_time: '2 - 4 weeks,
-      enterprise: 'Custom pricing,
+      setup_time: 2 - 4 weeks,
+      enterprise: Custom pricing,
     suppor,
   t: unknown,
-      '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.,
+      24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.,
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP],
+  e: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP],
     lin,
   k: http,
   s://ziontechgroup.com / zero - trust - network - access - platform,
     ico,
-  n: ',
+  n: ,
     colo,
-  r: 'from - blue - 500 to - cyan - 600,
+  r: from - blue - 500 to - cyan - 600,
     popula,
   r: true,
     launch_dat,
-  e: '2024 - 01 - 20,
+  e: 2024 - 01 - 20,
     customer,
   s: 1800,
     ratin,
   g: 4 && 4.7,
     review,
   s: 1400},
-      'Highest security standards, Government security requirements, Industry-specific standards],
+      Highest security standards, Government security requirements, Industry-specific standards],
     lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network,
     i,
-  d: 'quantum - key - distribution - network,
+  d: quantum - key - distribution - network,
     nam,
-  e: 'Quantum Key Distribution Network,
+  e: Quantum Key Distribution Network,
     taglin,
-  e: 'Unhackable communication with quantum entanglement,
+  e: Unhackable communication with quantum entanglement,
     descriptio,
   n: unknown,
-      'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.,
+      Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.,
     categor,
-  y: 'Quantum Communications & Security,
+  y: Quantum Communications & Security,
     pric,
   e: unknown,
       monthl,
@@ -610,43 +610,43 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       yearl,
   y: 9990,
       currenc,
-  y: 'USD,
+  y: USD,
       trial_day,
   s: 30,
       setup_tim,
-  e: '2 - 4 weeks,
+  e: 2 - 4 weeks,
       enterpris,
-  e: 'Custom pricing},
+  e: Custom pricing},
     feature,
   s: [,
-      'Quantum key distribution,
-      'Quantum entanglement networks,
-      'Real - time key generation,
-      'Multi - node quantum network,
-      'Quantum repeaters,
-      'Advanced quantum protocols,
-      'Network monitoring,
-      'Key management system,
-      'API for integration,
-      'Custom quantum protocols],
+      Quantum key distribution,
+      Quantum entanglement networks,
+      Real - time key generation,
+      Multi - node quantum network,
+      Quantum repeaters,
+      Advanced quantum protocols,
+      Network monitoring,
+      Key management system,
+      API for integration,
+      Custom quantum protocols],
     benefit,
   s: [,
-      'Provide mathematically unbreakable security,
-      'Enable ultra - secure communications,
-      'Future - proof against quantum attacks,
-      'Meet highest security requirements,
-      'Enable quantum internet development],
+      Provide mathematically unbreakable security,
+      Enable ultra - secure communications,
+      Future - proof against quantum attacks,
+      Meet highest security requirements,
+      Enable quantum internet development],
     target_audienc,
   e: [,
-      'Government agencies,
-      'Military organizations,
-      'Financial institutions,
-      'Healthcare providers,
-      'Research institutions,
-      'Critical infrastructure],
+      Government agencies,
+      Military organizations,
+      Financial institutions,
+      Healthcare providers,
+      Research institutions,
+      Critical infrastructure],
     market_position: unknown;
 
-      'First - to - market quantum key distribution network. No direct competitors in commercial QKD space. Traditional competitors: Classical encryption providers. Our advantage: Quantum entanglement security.,
+      First - to - market quantum key distribution network. No direct competitors in commercial QKD space. Traditional competitors: Classical encryption providers. Our advantage: Quantum entanglement security.,
     competitors: [,
     market_positio,
   n: unknown,
@@ -655,10 +655,10 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   advantage: Quantum entanglement security.,
     competitor,
   s: [,
-      'Classical encryption providers, Quantum computing companies],
+      Classical encryption providers, Quantum computing companies],
     tech_stac,
   k: [,
-      'Quantum hardware, Quantum protocols, Python, C++, Custom quantum software],
+      Quantum hardware, Quantum protocols, Python, C++, Custom quantum software],
     real_implementation: true;
 
     implementation_details: unknown;
@@ -667,61 +667,61 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   n: true,
     implementation_detail,
   s: unknown,
-      'Production - ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.,
+      Production - ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.,
     ro,
-  i: 'Organizations achieve unlimited ROI through unbreakable security and future - proof communications.,
+  i: Organizations achieve unlimited ROI through unbreakable security and future - proof communications.,
     use_case,
   s: [,
-      'Government communications,
-      'Military communications,
-      'Financial transactions,
-      'Healthcare data transmission,
-      'Critical infrastructure,
-      'Research collaboration],
+      Government communications,
+      Military communications,
+      Financial transactions,
+      Healthcare data transmission,
+      Critical infrastructure,
+      Research collaboration],
     integration,
   s: [,
-      'Custom quantum protocols, Classical encryption systems, Network infrastructure],
+      Custom quantum protocols, Classical encryption systems, Network infrastructure],
     support: unknown;
 
     suppor,
   t: unknown,
-      'Quantum experts, implementation consulting, custom protocol development, and 24 / 7 technical support.,
+      Quantum experts, implementation consulting, custom protocol development, and 24 / 7 technical support.,
     complianc,
   e: [,
-      'Highest security standards, Government security requirements, Industry - specific standards],
-    link: 'https://ziontechgroup.com / quantum - key - distribution - network,
-    icon: ',
-    color: 'from - purple - 500 to - pink - 600,
+      Highest security standards, Government security requirements, Industry - specific standards],
+    link: https://ziontechgroup.com / quantum - key - distribution - network,
+    icon: ,
+    color: from - purple - 500 to - pink - 600,
     popular:
         popular: true;
 
-    launch_date: '2024 - 03 - 01,
+    launch_date: 2024 - 03 - 01,
     customers:
         customers: 120;
 
     rating: 4 && 4.9;
 
     reviews: 95},
-      'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our advantage: AI intelligence and automated remediation.,
-    competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix],
-    techStack: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis],
+      Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our advantage: AI intelligence and automated remediation.,
+    competitors: [Nessus, Qualys, Rapid7, OpenVAS, Acunetix],
+    techStack: [OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis],
     realImplementation: true;
 
-    implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.,
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.,
+    implementationDetails: Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.,
+    roi: Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.,
     useCases: [;
 
     lin,
   k: http,
   s://ziontechgroup.com / quantum - key - distribution - network,
     ico,
-  n: ',
+  n: ,
     colo,
-  r: 'from - purple - 500 to - pink - 600,
+  r: from - purple - 500 to - pink - 600,
     popula,
   r: true,
     launch_dat,
-  e: '2024 - 03 - 01,
+  e: 2024 - 03 - 01,
     customer,
   s: 120,
     ratin,
@@ -731,42 +731,42 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our,
   advantage: AI intelligence and automated remediation.,
     competitor,
-  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix],
+  s: [Nessus, Qualys, Rapid7, OpenVAS, Acunetix],
     techStac,
-  k: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis],
+  k: [OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis],
     realImplementatio,
   n: true,
     implementationDetail,
-  s: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.
+  s: Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.
     ro,
-  i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.
+  i: Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.
     useCase,
   s: [;
 
-      'Application security testing
-      'Network vulnerability assessment
-      'Cloud security scanning
-      'Compliance auditing
-      'Penetration testing
-      'Security monitoring],
+      Application security testing
+      Network vulnerability assessment
+      Cloud security scanning
+      Compliance auditing
+      Penetration testing
+      Security monitoring],
     integrations: [,
-      'Security monitoring
+      Security monitoring
     ]
     integration,
   s: [,
-      'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools
+      Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools
     ]
     suppor,
-  t: '24/7 technical support, security consulting, custom development, and dedicated success manager.,
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.,
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment,
-    icon: ',
-    color: 'from-green-500 to-emerald-600,
+  t: 24/7 technical support, security consulting, custom development, and dedicated success manager.,
+      24/7 technical support, security consulting, custom development, and dedicated success manager.,
+    compliance: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
+    link: https://ziontechgroup.com/ai-powered-vulnerability-assessment,
+    icon: ,
+    color: from-green-500 to-emerald-600,
     popular:
         popular: true;
 
-    launchDate: '2024-02-15,
+    launchDate: 2024-02-15,
     customers:
         customers: 2500;
 
@@ -775,18 +775,18 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     reviews: 1900;
 
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
+  e: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
     lin,
   k: http,
   s://ziontechgroup.com/ai-powered-vulnerability-assessment,
     ico,
-  n: ',
+  n: ,
     colo,
-  r: 'from-green-500 to-emerald-600,
+  r: from-green-500 to-emerald-600,
     popula,
   r: true,
     launchDat,
-  e: '2024-02-15,
+  e: 2024-02-15,
     customer,
   s: 2500,
     ratin,
@@ -794,23 +794,23 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
     review,
   s: 1900};
 
-];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring
+];      Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring
     ];
 
     integration,
-  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools],
+  s: [Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools],
     suppor,
-  t: '24/7 technical support, security consulting, custom development, and dedicated success manager.,
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.,
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment,
-    id: 'ai - powered - vulnerability - assessment,
-    name: 'AI - Powered Vulnerability Assessment Platform,
-    tagline: 'Intelligent security scanning with AI - driven risk analysis,
+  t: 24/7 technical support, security consulting, custom development, and dedicated success manager.,
+      24/7 technical support, security consulting, custom development, and dedicated success manager.,
+    compliance: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
+    link: https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment,
+    id: ai - powered - vulnerability - assessment,
+    name: AI - Powered Vulnerability Assessment Platform,
+    tagline: Intelligent security scanning with AI - driven risk analysis,
     description: unknown;
 
-      'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.,
-    category: 'Vulnerability Management & Security Testing,
+      Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.,
+    category: Vulnerability Management & Security Testing,
     price:
         price: unknown;
 
@@ -818,28 +818,28 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 
       yearly: 1990;
 
-      currency: 'USD,
+      currency: USD,
       trial_days:
         trial_days: 14;
 
-      setup_time: '1 - 3 days,
-      enterprise: 'Custom pricing,
+      setup_time: 1 - 3 days,
+      enterprise: Custom pricing,
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
+  e: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
     lin,
   k: http,
   s://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment,
     i,
-  d: 'ai - powered - vulnerability - assessment,
+  d: ai - powered - vulnerability - assessment,
     nam,
-  e: 'AI - Powered Vulnerability Assessment Platform,
+  e: AI - Powered Vulnerability Assessment Platform,
     taglin,
-  e: 'Intelligent security scanning with AI - driven risk analysis,
+  e: Intelligent security scanning with AI - driven risk analysis,
     descriptio,
   n: unknown,
-      'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.,
+      Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.,
     categor,
-  y: 'Vulnerability Management & Security Testing,
+  y: Vulnerability Management & Security Testing,
     pric,
   e: unknown,
       monthl,
@@ -847,45 +847,45 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       yearl,
   y: 1990,
       currenc,
-  y: 'USD,
+  y: USD,
       trial_day,
   s: 14,
       setup_tim,
-  e: '1 - 3 days,
+  e: 1 - 3 days,
       enterpris,
-  e: 'Custom pricing},
+  e: Custom pricing},
     feature,
   s: [,
-      'AI - powered vulnerability scanning,
-      'Intelligent risk prioritization,
-      'Automated remediation guidance,
-      'Continuous security monitoring,
-      'Custom scan policies,
-      'Advanced reporting,
-      'Integration with security tools,
-      'Mobile app support,
-      'API for automation,
-      'Compliance reporting],
+      AI - powered vulnerability scanning,
+      Intelligent risk prioritization,
+      Automated remediation guidance,
+      Continuous security monitoring,
+      Custom scan policies,
+      Advanced reporting,
+      Integration with security tools,
+      Mobile app support,
+      API for automation,
+      Compliance reporting],
     benefit,
   s: [,
-      'Reduce false positives by 70%,
-      'Improve vulnerability detection by 40%,
-      'Speed up remediation by 60%,
-      'Reduce security assessment costs,
-      'Improve compliance posture],
+      Reduce false positives by 70%,
+      Improve vulnerability detection by 40%,
+      Speed up remediation by 60%,
+      Reduce security assessment costs,
+      Improve compliance posture],
     target_audienc,
   e: [,
-      'Security teams,
-      'DevOps engineers,
-      'Compliance officers,
-      'IT managers,
-      'Security consultants,
-      'Penetration testers],
+      Security teams,
+      DevOps engineers,
+      Compliance officers,
+      IT managers,
+      Security consultants,
+      Penetration testers],
     market_position: unknown;
 
-      'Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6) 570 / year), Qualys ($2, 000 - 5) 000 / year), and Rapid7 ($2, 000 - 8) 000 / year). Our advantage: AI intelligence and automated remediation.,
-    competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix],
-    tech_stack: ['OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis],
+      Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6) 570 / year), Qualys ($2, 000 - 5) 000 / year), and Rapid7 ($2, 000 - 8) 000 / year). Our advantage: AI intelligence and automated remediation.,
+    competitors: [Nessus, Qualys, Rapid7, OpenVAS, Acunetix],
+    tech_stack: [OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis],
     real_implementation: true;
 
     implementation_details: unknown;
@@ -895,38 +895,38 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
       Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6) 570 / year), Qualys ($2, 000 - 5) 000 / year), and Rapid7 ($2, 000 - 8) 000 / year). Our,
   advantage: AI intelligence and automated remediation.,
     competitor,
-  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix],
+  s: [Nessus, Qualys, Rapid7, OpenVAS, Acunetix],
     tech_stac,
-  k: ['OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis],
+  k: [OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis],
     real_implementatio,
   n: true,
     implementation_detail,
   s: unknown,
-      'Production - ready vulnerability assessment platform with AI - powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.,
+      Production - ready vulnerability assessment platform with AI - powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.,
     ro,
-  i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.,
+  i: Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.,
     use_case,
   s: [,
-      'Application security testing,
-      'Network vulnerability assessment,
-      'Cloud security scanning,
-      'Compliance auditing,
-      'Penetration testing,
-      'Security monitoring],
+      Application security testing,
+      Network vulnerability assessment,
+      Cloud security scanning,
+      Compliance auditing,
+      Penetration testing,
+      Security monitoring],
     integration,
   s: [,
-      'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools],
+      Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools],
     support: unknown;
 
-      '24 / 7 technical support, security consulting, custom development, and dedicated success manager.,
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
-    link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment,
-    icon: ',
-    color: 'from - green - 500 to - emerald - 600,
+      24 / 7 technical support, security consulting, custom development, and dedicated success manager.,
+    compliance: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
+    link: https://ziontechgroup.com / ai - powered - vulnerability - assessment,
+    icon: ,
+    color: from - green - 500 to - emerald - 600,
     popular:
         popular: true;
 
-    launch_date: '2024 - 02 - 15,
+    launch_date: 2024 - 02 - 15,
     customers:
         customers: 2500;
 
@@ -967,22 +967,22 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 
   reviews: number}
 
-];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring
+];      Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring
     ];
 
-    integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools];
+    integrations: [Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools];
 
-    support: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.,
+    support: 24 / 7 technical support, security consulting, custom development, and dedicated success manager.,
     compliance:
-        compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];
+        compliance: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];
 
-    icon: ';
+    icon: ;
 
-    color: 'from - green - 500 to - emerald - 600,
+    color: from - green - 500 to - emerald - 600,
     popular:
         popular: true;
 
-    launch_date: '2024 - 02 - 15,
+    launch_date: 2024 - 02 - 15,
     customers:
         customers: 2500;
 
@@ -996,20 +996,20 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
 
     suppor,
   t: unknown,
-      '24 / 7 technical support, security consulting, custom development, and dedicated success manager.,
+      24 / 7 technical support, security consulting, custom development, and dedicated success manager.,
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
+  e: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS],
     lin,
   k: http,
   s://ziontechgroup.com / ai - powered - vulnerability - assessment,
     ico,
-  n: ',
+  n: ,
     colo,
-  r: 'from - green - 500 to - emerald - 600,
+  r: from - green - 500 to - emerald - 600,
     popula,
   r: true,
     launch_dat,
-  e: '2024 - 02 - 15,
+  e: 2024 - 02 - 15,
     customer,
   s: 2500,
     ratin,
@@ -1069,27 +1069,27 @@ export interface CybersecurityQuantumService {/* TODO: Fix JSX expression */}
   review,
   s: number}
 
-];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring
+];      Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring
     ];
 
     integration,
-  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools];
+  s: [Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools];
 
     suppor,
-  t: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.
+  t: 24 / 7 technical support, security consulting, custom development, and dedicated success manager.
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];
+  e: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];
 
     ico,
-  n: ';
+  n: ;
 
     colo,
-  r: 'from - green - 500 to - emerald - 600
+  r: from - green - 500 to - emerald - 600
     popula,
   r: true;
 
     launch_dat,
-  e: '2024 - 02 - 15
+  e: 2024 - 02 - 15
     customer,
   s: 2500,
     ratin,
@@ -1187,15 +1187,15 @@ export interface CybersecurityQuantumService {;
 export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [;
 
   {
-    id: 'quantum-resistant-encryption-platform;
+    id: quantum-resistant-encryption-platform;
 
-    name: 'Quantum-Resistant Encryption Platform;
+    name: Quantum-Resistant Encryption Platform;
 
-    tagline: 'Future-proof security with post-quantum cryptography;
+    tagline: Future-proof security with post-quantum cryptography;
 
-    description: 'Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.;
+    description: Revolutionary encryption platform that implements quantum-resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.;
 
-    category: 'Quantum Security & Cryptography}
+    category: Quantum Security & Cryptography}
 
     price: {}
 
@@ -1203,55 +1203,55 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
       yearly: 4990;
 
-      currency: 'USD;
+      currency: USD;
 
       trialDays: 30;
 
-      setupTime: '1-2 weeks;
+      setupTime: 1-2 weeks;
 
-      enterprise: 'Custom pricing};
+      enterprise: Custom pricing};
 
     features: [
-      'Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotationMulti-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring;
+      Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotationMulti-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring;
 
-      'API for integrationMobile SDK support
+      API for integrationMobile SDK support
     ];
 
     benefits: [
-      'Future-proof against quantum attacksReduce security breach risks by 99.9%Ensure long-term data protectionMeet regulatory compliance requirementsProtect against emerging threats
+      Future-proof against quantum attacksReduce security breach risks by 99.9%Ensure long-term data protectionMeet regulatory compliance requirementsProtect against emerging threats
     ];
 
     targetAudience: [,
-      'Financial institutionsGovernment agenciesHealthcare organizationsDefense contractorsTechnology companiesCritical infrastructure];,
-    marketPosition: 'Leading quantum-resistant encryption platform. Competes with RSA ($1000-5000/user), Thales ($500-2000/user), and Entrust ($200-1000/user). Our advantage: Quantum-resistant algorithms and hybrid security.;
+      Financial institutionsGovernment agenciesHealthcare organizationsDefense contractorsTechnology companiesCritical infrastructure];,
+    marketPosition: Leading quantum-resistant encryption platform. Competes with RSA ($1000-5000/user), Thales ($500-2000/user), and Entrust ($200-1000/user). Our advantage: Quantum-resistant algorithms and hybrid security.;
 
-    competitors: ['RSA, Thales, Entrust, Gemalto, Utimaco];
+    competitors: [RSA, Thales, Entrust, Gemalto, Utimaco];
 
-    techStack: ['NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis];
+    techStack: [NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis];
 
     realImplementation: true;
 
-    implementationDetails: 'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.;
+    implementationDetails: Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.;
 
-    roi: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.;
+    roi: Organizations achieve 500% ROI through reduced security risks and compliance cost savings.;
 
     useCases: [,
-      'Data encryption at restSecure communicationsDigital signaturesKey managementCompliance monitoringThreat detection];,
-    integrations: ['Active Directory, LDAP, SAML, OAuth, Custom enterprise systems];
+      Data encryption at restSecure communicationsDigital signaturesKey managementCompliance monitoringThreat detection];,
+    integrations: [Active Directory, LDAP, SAML, OAuth, Custom enterprise systems];
 
-    support: '24/7 technical support, security consulting, custom development, and dedicated security manager.;
+    support: 24/7 technical support, security consulting, custom development, and dedicated security manager.;
 
-    compliance: ['SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP];
+    compliance: [SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP];
 
-    link: 'https://ziontechgroup.com/quantum-resistant-encryption-platform;
+    link: https://ziontechgroup.com/quantum-resistant-encryption-platform;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-red-500 to-orange-600;
+    color: from-red-500 to-orange-600;
 
     popular: true;
 
-    launchDate: '2024-01-15;
+    launchDate: 2024-01-15;
 
     customers: 650;
 
@@ -1261,15 +1261,15 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
   {;
 
-    id: 'ai-powered-threat-hunting-platform;
+    id: ai-powered-threat-hunting-platform;
 
-    name: 'AI-Powered Threat Hunting Platform;
+    name: AI-Powered Threat Hunting Platform;
 
-    tagline: 'Proactive threat detection with autonomous security intelligence;
+    tagline: Proactive threat detection with autonomous security intelligence;
 
-    description: 'Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.;
+    description: Advanced AI-powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real-time security intelligence to prevent cyber attacks.;
 
-    category: 'AI Cybersecurity & Threat Intelligence}
+    category: AI Cybersecurity & Threat Intelligence}
 
     price: {}
 
@@ -1277,55 +1277,55 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
       yearly: 3990;
 
-      currency: 'USD;
+      currency: USD;
 
       trialDays: 21;
 
-      setupTime: '1-2 weeks;
+      setupTime: 1-2 weeks;
 
-      enterprise: 'Custom pricing};
+      enterprise: Custom pricing};
 
     features: [
-      'Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation;
+      Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation;
 
-      'Custom threat hunting rulesAPI for security tools integration
+      Custom threat hunting rulesAPI for security tools integration
     ];
 
     benefits: [
-      'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%
+      Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%
     ];
 
     targetAudience: [,
-      'Security operations centersCybersecurity teamsIT security professionalsManaged security providersGovernment agenciesFinancial institutions];,
-    marketPosition: 'Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8.99-15/user), SentinelOne ($4.99-8.99/user), and Carbon Black ($6.27-8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.;
+      Security operations centersCybersecurity teamsIT security professionalsManaged security providersGovernment agenciesFinancial institutions];,
+    marketPosition: Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8.99-15/user), SentinelOne ($4.99-8.99/user), and Carbon Black ($6.27-8.57/user). Our advantage: Autonomous threat hunting and AI intelligence.;
 
-    competitors: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace];
+    competitors: [CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace];
 
-    techStack: ['OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch];
+    techStack: [OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch];
 
     realImplementation: true;
 
-    implementationDetails: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.;
+    implementationDetails: Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.;
 
-    roi: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.;
+    roi: Security teams achieve 400% ROI through improved threat detection and reduced incident response time.;
 
     useCases: [,
-      'Advanced persistent threat detectionMalware analysis and classificationNetwork security monitoringEndpoint threat detectionSecurity incident investigationThreat intelligence sharing];,
-    integrations: ['SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools];
+      Advanced persistent threat detectionMalware analysis and classificationNetwork security monitoringEndpoint threat detectionSecurity incident investigationThreat intelligence sharing];,
+    integrations: [SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools];
 
-    support: '24/7 security support, threat hunting training, custom development, and dedicated security manager.;
+    support: 24/7 security support, threat hunting training, custom development, and dedicated security manager.;
 
-    compliance: ['SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA];
+    compliance: [SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA];
 
-    link: 'https://ziontechgroup.com/ai-powered-threat-hunting-platform;
+    link: https://ziontechgroup.com/ai-powered-threat-hunting-platform;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-purple-500 to-indigo-600;
+    color: from-purple-500 to-indigo-600;
 
     popular: true;
 
-    launchDate: '2024-02-01;
+    launchDate: 2024-02-01;
 
     customers: 1200;
 
@@ -1335,15 +1335,15 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
   {;
 
-    id: 'zero-trust-network-access-platform;
+    id: zero-trust-network-access-platform;
 
-    name: 'Zero-Trust Network Access Platform;
+    name: Zero-Trust Network Access Platform;
 
-    tagline: 'Secure access with continuous verification and least privilege;
+    tagline: Secure access with continuous verification and least privilege;
 
-    description: 'Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.;
+    description: Comprehensive zero-trust platform that provides secure, context-aware access to applications and resources while continuously verifying user identity and device health.;
 
-    category: 'Zero-Trust Security & Access Control}
+    category: Zero-Trust Security & Access Control}
 
     price: {}
 
@@ -1351,55 +1351,55 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
       yearly: 2990;
 
-      currency: 'USD;
+      currency: USD;
 
       trialDays: 21;
 
-      setupTime: '1-2 weeks;
+      setupTime: 1-2 weeks;
 
-      enterprise: 'Custom pricing};
+      enterprise: Custom pricing};
 
     features: [
-      'Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege accessMicro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration;
+      Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege accessMicro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration;
 
-      'Advanced analyticsAPI for enterprise systems
+      Advanced analyticsAPI for enterprise systems
     ];
 
     benefits: [
-      'Reduce security breaches by 90%Eliminate VPN vulnerabilitiesImprove user experienceSimplify compliance managementEnable secure remote work
+      Reduce security breaches by 90%Eliminate VPN vulnerabilitiesImprove user experienceSimplify compliance managementEnable secure remote work
     ];
 
     targetAudience: [,
-      'Enterprise organizationsHealthcare providersFinancial institutionsGovernment agenciesEducational institutionsRemote workforces];,
-    marketPosition: 'Leading zero-trust platform. Competes with Zscaler ($5-15/user), Palo Alto Prisma ($7-15/user), and Cloudflare Access ($3-7/user). Our advantage: AI-powered risk assessment and continuous verification.;
+      Enterprise organizationsHealthcare providersFinancial institutionsGovernment agenciesEducational institutionsRemote workforces];,
+    marketPosition: Leading zero-trust platform. Competes with Zscaler ($5-15/user), Palo Alto Prisma ($7-15/user), and Cloudflare Access ($3-7/user). Our advantage: AI-powered risk assessment and continuous verification.;
 
-    competitors: ['Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security];
+    competitors: [Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security];
 
-    techStack: ['OpenAI GPT-4, React, Node.js, PostgreSQL, Redis, Kubernetes];
+    techStack: [OpenAI GPT-4, React, Node.js, PostgreSQL, Redis, Kubernetes];
 
     realImplementation: true;
 
-    implementationDetails: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.;
+    implementationDetails: Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.;
 
-    roi: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.;
+    roi: Organizations achieve 300% ROI through reduced security incidents and simplified access management.;
 
     useCases: [,
-      'Secure remote accessApplication access controlCloud securityCompliance managementIdentity governanceRisk management];,
-    integrations: ['Active Directory, LDAP, SAML, OAuth, Custom identity providers];
+      Secure remote accessApplication access controlCloud securityCompliance managementIdentity governanceRisk management];,
+    integrations: [Active Directory, LDAP, SAML, OAuth, Custom identity providers];
 
-    support: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.;
+    support: 24/7 technical support, implementation consulting, custom development, and dedicated success manager.;
 
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP];
+    compliance: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP];
 
-    link: 'https://ziontechgroup.com/zero-trust-network-access-platform;
+    link: https://ziontechgroup.com/zero-trust-network-access-platform;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-blue-500 to-cyan-600;
+    color: from-blue-500 to-cyan-600;
 
     popular: true;
 
-    launchDate: '2024-01-20;
+    launchDate: 2024-01-20;
 
     customers: 1800;
 
@@ -1409,15 +1409,15 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
   {;
 
-    id: 'quantum-key-distribution-network;
+    id: quantum-key-distribution-network;
 
-    name: 'Quantum Key Distribution Network;
+    name: Quantum Key Distribution Network;
 
-    tagline: 'Unhackable communication with quantum entanglement;
+    tagline: Unhackable communication with quantum entanglement;
 
-    description: 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.;
+    description: Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.;
 
-    category: 'Quantum Communications & Security}
+    category: Quantum Communications & Security}
 
     price: {}
 
@@ -1425,55 +1425,55 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
       yearly: 9990;
 
-      currency: 'USD;
+      currency: USD;
 
       trialDays: 30;
 
-      setupTime: '2-4 weeks;
+      setupTime: 2-4 weeks;
 
-      enterprise: 'Custom pricing};
+      enterprise: Custom pricing};
 
     features: [
-      'Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum networkQuantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system;
+      Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum networkQuantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system;
 
-      'API for integrationCustom quantum protocols
+      API for integrationCustom quantum protocols
     ];
 
     benefits: [
-      'Provide mathematically unbreakable securityEnable ultra-secure communicationsFuture-proof against quantum attacksMeet highest security requirementsEnable quantum internet development
+      Provide mathematically unbreakable securityEnable ultra-secure communicationsFuture-proof against quantum attacksMeet highest security requirementsEnable quantum internet development
     ];
 
     targetAudience: [
-      'Government agenciesMilitary organizationsFinancial institutionsHealthcare providersResearch institutionsCritical infrastructure];,
-    marketPosition: 'First-to-market quantum key distribution network. No direct competitors in commercial QKD space. Traditional competitors: Classical encryption providers. Our advantage: Quantum entanglement security.;
+      Government agenciesMilitary organizationsFinancial institutionsHealthcare providersResearch institutionsCritical infrastructure];,
+    marketPosition: First-to-market quantum key distribution network. No direct competitors in commercial QKD space. Traditional competitors: Classical encryption providers. Our advantage: Quantum entanglement security.;
 
-    competitors: ['Classical encryption providers, Quantum computing companies];
+    competitors: [Classical encryption providers, Quantum computing companies];
 
-    techStack: ['Quantum hardware, Quantum protocols, Python, C++, Custom quantum software];
+    techStack: [Quantum hardware, Quantum protocols, Python, C++, Custom quantum software];
 
     realImplementation: true;
 
-    implementationDetails: 'Production-ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.;
+    implementationDetails: Production-ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.;
 
-    roi: 'Organizations achieve unlimited ROI through unbreakable security and future-proof communications.;
+    roi: Organizations achieve unlimited ROI through unbreakable security and future-proof communications.;
 
     useCases: [,
-      'Government communicationsMilitary communicationsFinancial transactionsHealthcare data transmissionCritical infrastructureResearch collaboration];,
-    integrations: ['Custom quantum protocols, Classical encryption systems, Network infrastructure];
+      Government communicationsMilitary communicationsFinancial transactionsHealthcare data transmissionCritical infrastructureResearch collaboration];,
+    integrations: [Custom quantum protocols, Classical encryption systems, Network infrastructure];
 
-    support: 'Quantum experts, implementation consulting, custom protocol development, and 24/7 technical support.;
+    support: Quantum experts, implementation consulting, custom protocol development, and 24/7 technical support.;
 
-    compliance: ['Highest security standards, Government security requirements, Industry-specific standards];
+    compliance: [Highest security standards, Government security requirements, Industry-specific standards];
 
-    link: 'https://ziontechgroup.com/quantum-key-distribution-network;
+    link: https://ziontechgroup.com/quantum-key-distribution-network;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-purple-500 to-pink-600;
+    color: from-purple-500 to-pink-600;
 
     popular: true;
 
-    launchDate: '2024-03-01;
+    launchDate: 2024-03-01;
 
     customers: 120;
 
@@ -1483,15 +1483,15 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
   {;
 
-    id: 'ai-powered-vulnerability-assessment;
+    id: ai-powered-vulnerability-assessment;
 
-    name: 'AI-Powered Vulnerability Assessment Platform;
+    name: AI-Powered Vulnerability Assessment Platform;
 
-    tagline: 'Intelligent security scanning with AI-driven risk analysis;
+    tagline: Intelligent security scanning with AI-driven risk analysis;
 
-    description: 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.;
+    description: Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.;
 
-    category: 'Vulnerability Management & Security Testing}
+    category: Vulnerability Management & Security Testing}
 
     price: {}
 
@@ -1499,55 +1499,55 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
       yearly: 1990;
 
-      currency: 'USD;
+      currency: USD;
 
       trialDays: 14;
 
-      setupTime: '1-3 days;
+      setupTime: 1-3 days;
 
-      enterprise: 'Custom pricing};
+      enterprise: Custom pricing};
 
     features: [
-      'AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support;
+      AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support;
 
-      'API for automationCompliance reporting
+      API for automationCompliance reporting
     ];
 
     benefits: [
-      'Reduce false positives by 70%Improve vulnerability detection by 40%Speed up remediation by 60%Reduce security assessment costsImprove compliance posture
+      Reduce false positives by 70%Improve vulnerability detection by 40%Speed up remediation by 60%Reduce security assessment costsImprove compliance posture
     ];
 
     targetAudience: [,
-      'Security teamsDevOps engineersCompliance officersIT managersSecurity consultantsPenetration testers];,
-    marketPosition: 'Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our advantage: AI intelligence and automated remediation.;
+      Security teamsDevOps engineersCompliance officersIT managersSecurity consultantsPenetration testers];,
+    marketPosition: Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our advantage: AI intelligence and automated remediation.;
 
-    competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix];
+    competitors: [Nessus, Qualys, Rapid7, OpenVAS, Acunetix];
 
-    techStack: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis];
+    techStack: [OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis];
 
     realImplementation: true;
 
-    implementationDetails: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.;
+    implementationDetails: Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.;
 
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.;
+    roi: Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.;
 
     useCases: [,
-      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring];,
-    integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools];
+      Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring];,
+    integrations: [Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools];
 
-    support: '24/7 technical support, security consulting, custom development, and dedicated success manager.;
+    support: 24/7 technical support, security consulting, custom development, and dedicated success manager.;
 
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];
+    compliance: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];
 
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment;
+    link: https://ziontechgroup.com/ai-powered-vulnerability-assessment;
 
-    icon: ';
+    icon: ;
 
-    color: 'from-green-500 to-emerald-600;
+    color: from-green-500 to-emerald-600;
 
     popular: true;
 
-    launchDate: '2024-02-15;
+    launchDate: 2024-02-15;
 
     customers: 2500;
 
@@ -1640,7 +1640,7 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  y: 'Quantum Security & Cryptography}
+  y: Quantum Security & Cryptography}
 
     pric,
   e: {}
@@ -1652,33 +1652,33 @@ export const,
   y: 4990;
 
       currenc,
-  y: 'USD;
+  y: USD;
 
       trialDay,
   s: 30;
 
       setupTim,
-  e: '1-2 weeks;
+  e: 1-2 weeks;
 
       enterpris,
-  e: 'Custom pricing
+  e: Custom pricing
     };
 
     feature,
   s: [,
-      'Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotationMulti-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring;
+      Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotationMulti-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring;
 
-      'API for integrationMobile SDK support
+      API for integrationMobile SDK support
     ];
 
     benefit,
   s: [,
-      'Future-proof against quantum attacksReduce security breach risks by 99.9%Ensure long-term data protectionMeet regulatory compliance requirementsProtect against emerging threats
+      Future-proof against quantum attacksReduce security breach risks by 99.9%Ensure long-term data protectionMeet regulatory compliance requirementsProtect against emerging threats
     ];
 
     targetAudienc,
   e: [,
-      'Financial institutionsGovernment agenciesHealthcare organizationsDefense contractorsTechnology companiesCritical infrastructure
+      Financial institutionsGovernment agenciesHealthcare organizationsDefense contractorsTechnology companiesCritical infrastructure
     ];
 
     marketPositio,
@@ -1686,49 +1686,49 @@ export const,
   advantage: Quantum-resistant algorithms and hybrid security.;
 
     competitor,
-  s: ['RSA, Thales, Entrust, Gemalto, Utimaco];
+  s: [RSA, Thales, Entrust, Gemalto, Utimaco];
 
     techStac,
-  k: ['NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis];
+  k: [NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis];
 
     realImplementatio,
   n: true;
 
     implementationDetail,
-  s: 'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.;
+  s: Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.;
 
     ro,
-  i: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.;
+  i: Organizations achieve 500% ROI through reduced security risks and compliance cost savings.;
 
     useCase,
   s: [,
-      'Data encryption at restSecure communicationsDigital signaturesKey managementCompliance monitoringThreat detection
+      Data encryption at restSecure communicationsDigital signaturesKey managementCompliance monitoringThreat detection
     ];
 
     integration,
-  s: ['Active Directory, LDAP, SAML, OAuth, Custom enterprise systems];
+  s: [Active Directory, LDAP, SAML, OAuth, Custom enterprise systems];
 
     suppor,
-  t: '24/7 technical support, security consulting, custom development, and dedicated security manager.;
+  t: 24/7 technical support, security consulting, custom development, and dedicated security manager.;
 
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP];
+  e: [SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP];
 
     lin,
   k: http,
   s://ziontechgroup.com/quantum-resistant-encryption-platform;
 
     ico,
-  n: ';
+  n: ;
 
     colo,
-  r: 'from-red-500 to-orange-600;
+  r: from-red-500 to-orange-600;
 
     popula,
   r: true;
 
     launchDat,
-  e: '2024-01-15;
+  e: 2024-01-15;
 
     customer,
   s: 650;
@@ -1741,7 +1741,7 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  y: 'AI Cybersecurity & Threat Intelligence}
+  y: AI Cybersecurity & Threat Intelligence}
 
     pric,
   e: {}
@@ -1753,33 +1753,33 @@ export const,
   y: 3990;
 
       currenc,
-  y: 'USD;
+  y: USD;
 
       trialDay,
   s: 21;
 
       setupTim,
-  e: '1-2 weeks;
+  e: 1-2 weeks;
 
       enterpris,
-  e: 'Custom pricing
+  e: Custom pricing
     };
 
     feature,
   s: [,
-      'Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation;
+      Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation;
 
-      'Custom threat hunting rulesAPI for security tools integration
+      Custom threat hunting rulesAPI for security tools integration
     ];
 
     benefit,
   s: [,
-      'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%
+      Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90%
     ];
 
     targetAudienc,
   e: [,
-      'Security operations centersCybersecurity teamsIT security professionalsManaged security providersGovernment agenciesFinancial institutions
+      Security operations centersCybersecurity teamsIT security professionalsManaged security providersGovernment agenciesFinancial institutions
     ];
 
     marketPositio,
@@ -1787,49 +1787,49 @@ export const,
   advantage: Autonomous threat hunting and AI intelligence.;
 
     competitor,
-  s: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace];
+  s: [CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace];
 
     techStac,
-  k: ['OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch];
+  k: [OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch];
 
     realImplementatio,
   n: true;
 
     implementationDetail,
-  s: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.;
+  s: Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.;
 
     ro,
-  i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.;
+  i: Security teams achieve 400% ROI through improved threat detection and reduced incident response time.;
 
     useCase,
   s: [,
-      'Advanced persistent threat detectionMalware analysis and classificationNetwork security monitoringEndpoint threat detectionSecurity incident investigationThreat intelligence sharing
+      Advanced persistent threat detectionMalware analysis and classificationNetwork security monitoringEndpoint threat detectionSecurity incident investigationThreat intelligence sharing
     ];
 
     integration,
-  s: ['SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools];
+  s: [SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools];
 
     suppor,
-  t: '24/7 security support, threat hunting training, custom development, and dedicated security manager.;
+  t: 24/7 security support, threat hunting training, custom development, and dedicated security manager.;
 
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA];
+  e: [SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA];
 
     lin,
   k: http,
   s://ziontechgroup.com/ai-powered-threat-hunting-platform;
 
     ico,
-  n: ';
+  n: ;
 
     colo,
-  r: 'from-purple-500 to-indigo-600;
+  r: from-purple-500 to-indigo-600;
 
     popula,
   r: true;
 
     launchDat,
-  e: '2024-02-01;
+  e: 2024-02-01;
 
     customer,
   s: 1200;
@@ -1842,7 +1842,7 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  y: 'Zero-Trust Security & Access Control}
+  y: Zero-Trust Security & Access Control}
 
     pric,
   e: {}
@@ -1854,33 +1854,33 @@ export const,
   y: 2990;
 
       currenc,
-  y: 'USD;
+  y: USD;
 
       trialDay,
   s: 21;
 
       setupTim,
-  e: '1-2 weeks;
+  e: 1-2 weeks;
 
       enterpris,
-  e: 'Custom pricing
+  e: Custom pricing
     };
 
     feature,
   s: [,
-      'Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege accessMicro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration;
+      Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege accessMicro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration;
 
-      'Advanced analyticsAPI for enterprise systems
+      Advanced analyticsAPI for enterprise systems
     ];
 
     benefit,
   s: [,
-      'Reduce security breaches by 90%Eliminate VPN vulnerabilitiesImprove user experienceSimplify compliance managementEnable secure remote work
+      Reduce security breaches by 90%Eliminate VPN vulnerabilitiesImprove user experienceSimplify compliance managementEnable secure remote work
     ];
 
     targetAudienc,
   e: [,
-      'Enterprise organizationsHealthcare providersFinancial institutionsGovernment agenciesEducational institutionsRemote workforces
+      Enterprise organizationsHealthcare providersFinancial institutionsGovernment agenciesEducational institutionsRemote workforces
     ];
 
     marketPositio,
@@ -1888,49 +1888,49 @@ export const,
   advantage: AI-powered risk assessment and continuous verification.;
 
     competitor,
-  s: ['Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security];
+  s: [Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security];
 
     techStac,
-  k: ['OpenAI GPT-4, React, Node.js, PostgreSQL, Redis, Kubernetes];
+  k: [OpenAI GPT-4, React, Node.js, PostgreSQL, Redis, Kubernetes];
 
     realImplementatio,
   n: true;
 
     implementationDetail,
-  s: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.;
+  s: Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.;
 
     ro,
-  i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.;
+  i: Organizations achieve 300% ROI through reduced security incidents and simplified access management.;
 
     useCase,
   s: [,
-      'Secure remote accessApplication access controlCloud securityCompliance managementIdentity governanceRisk management
+      Secure remote accessApplication access controlCloud securityCompliance managementIdentity governanceRisk management
     ];
 
     integration,
-  s: ['Active Directory, LDAP, SAML, OAuth, Custom identity providers];
+  s: [Active Directory, LDAP, SAML, OAuth, Custom identity providers];
 
     suppor,
-  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.;
+  t: 24/7 technical support, implementation consulting, custom development, and dedicated success manager.;
 
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP];
+  e: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP];
 
     lin,
   k: http,
   s://ziontechgroup.com/zero-trust-network-access-platform;
 
     ico,
-  n: ';
+  n: ;
 
     colo,
-  r: 'from-blue-500 to-cyan-600;
+  r: from-blue-500 to-cyan-600;
 
     popula,
   r: true;
 
     launchDat,
-  e: '2024-01-20;
+  e: 2024-01-20;
 
     customer,
   s: 1800;
@@ -1943,7 +1943,7 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  y: 'Quantum Communications & Security}
+  y: Quantum Communications & Security}
 
     pric,
   e: {}
@@ -1955,33 +1955,33 @@ export const,
   y: 9990;
 
       currenc,
-  y: 'USD;
+  y: USD;
 
       trialDay,
   s: 30;
 
       setupTim,
-  e: '2-4 weeks;
+  e: 2-4 weeks;
 
       enterpris,
-  e: 'Custom pricing
+  e: Custom pricing
     };
 
     feature,
   s: [,
-      'Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum networkQuantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system;
+      Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum networkQuantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system;
 
-      'API for integrationCustom quantum protocols
+      API for integrationCustom quantum protocols
     ];
 
     benefit,
   s: [,
-      'Provide mathematically unbreakable securityEnable ultra-secure communicationsFuture-proof against quantum attacksMeet highest security requirementsEnable quantum internet development
+      Provide mathematically unbreakable securityEnable ultra-secure communicationsFuture-proof against quantum attacksMeet highest security requirementsEnable quantum internet development
     ];
 
     targetAudienc,
   e: [,
-      'Government agenciesMilitary organizationsFinancial institutionsHealthcare providersResearch institutionsCritical infrastructure
+      Government agenciesMilitary organizationsFinancial institutionsHealthcare providersResearch institutionsCritical infrastructure
     ];
 
     marketPositio,
@@ -1990,49 +1990,49 @@ export const,
   advantage: Quantum entanglement security.;
 
     competitor,
-  s: ['Classical encryption providers, Quantum computing companies];
+  s: [Classical encryption providers, Quantum computing companies];
 
     techStac,
-  k: ['Quantum hardware, Quantum protocols, Python, C++, Custom quantum software];
+  k: [Quantum hardware, Quantum protocols, Python, C++, Custom quantum software];
 
     realImplementatio,
   n: true;
 
     implementationDetail,
-  s: 'Production-ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.;
+  s: Production-ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.;
 
     ro,
-  i: 'Organizations achieve unlimited ROI through unbreakable security and future-proof communications.;
+  i: Organizations achieve unlimited ROI through unbreakable security and future-proof communications.;
 
     useCase,
   s: [,
-      'Government communicationsMilitary communicationsFinancial transactionsHealthcare data transmissionCritical infrastructureResearch collaboration
+      Government communicationsMilitary communicationsFinancial transactionsHealthcare data transmissionCritical infrastructureResearch collaboration
     ];
 
     integration,
-  s: ['Custom quantum protocols, Classical encryption systems, Network infrastructure];
+  s: [Custom quantum protocols, Classical encryption systems, Network infrastructure];
 
     suppor,
-  t: 'Quantum experts, implementation consulting, custom protocol development, and 24/7 technical support.;
+  t: Quantum experts, implementation consulting, custom protocol development, and 24/7 technical support.;
 
     complianc,
-  e: ['Highest security standards, Government security requirements, Industry-specific standards];
+  e: [Highest security standards, Government security requirements, Industry-specific standards];
 
     lin,
   k: http,
   s://ziontechgroup.com/quantum-key-distribution-network;
 
     ico,
-  n: ';
+  n: ;
 
     colo,
-  r: 'from-purple-500 to-pink-600;
+  r: from-purple-500 to-pink-600;
 
     popula,
   r: true;
 
     launchDat,
-  e: '2024-03-01;
+  e: 2024-03-01;
 
     customer,
   s: 120;
@@ -2045,7 +2045,7 @@ export const,
 
   {/* TODO: Fix JSX expression */}
 
-  y: 'Vulnerability Management & Security Testing}
+  y: Vulnerability Management & Security Testing}
 
     pric,
   e: {}
@@ -2057,33 +2057,33 @@ export const,
   y: 1990;
 
       currenc,
-  y: 'USD;
+  y: USD;
 
       trialDay,
   s: 14;
 
       setupTim,
-  e: '1-3 days;
+  e: 1-3 days;
 
       enterpris,
-  e: 'Custom pricing
+  e: Custom pricing
     };
 
     feature,
   s: [,
-      'AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support;
+      AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support;
 
-      'API for automationCompliance reporting
+      API for automationCompliance reporting
     ];
 
     benefit,
   s: [,
-      'Reduce false positives by 70%Improve vulnerability detection by 40%Speed up remediation by 60%Reduce security assessment costsImprove compliance posture
+      Reduce false positives by 70%Improve vulnerability detection by 40%Speed up remediation by 60%Reduce security assessment costsImprove compliance posture
     ];
 
     targetAudienc,
   e: [,
-      'Security teamsDevOps engineersCompliance officersIT managersSecurity consultantsPenetration testers
+      Security teamsDevOps engineersCompliance officersIT managersSecurity consultantsPenetration testers
     ];
 
     marketPositio,
@@ -2091,49 +2091,49 @@ export const,
   advantage: AI intelligence and automated remediation.;
 
     competitor,
-  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix];
+  s: [Nessus, Qualys, Rapid7, OpenVAS, Acunetix];
 
     techStac,
-  k: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis];
+  k: [OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis];
 
     realImplementatio,
   n: true;
 
     implementationDetail,
-  s: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.;
+  s: Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.;
 
     ro,
-  i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.;
+  i: Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.;
 
     useCase,
   s: [,
-      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring
+      Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring
     ];
 
     integration,
-  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools];
+  s: [Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools];
 
     suppor,
-  t: '24/7 technical support, security consulting, custom development, and dedicated success manager.;
+  t: 24/7 technical support, security consulting, custom development, and dedicated success manager.;
 
     complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];
+  e: [SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];
 
     lin,
   k: http,
   s://ziontechgroup.com/ai-powered-vulnerability-assessment;
 
     ico,
-  n: ';
+  n: ;
 
     colo,
-  r: 'from-green-500 to-emerald-600;
+  r: from-green-500 to-emerald-600;
 
     popula,
   r: true;
 
     launchDat,
-  e: '2024-02-15;
+  e: 2024-02-15;
 
     customer,
   s: 2500;
@@ -2157,227 +2157,227 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
 
   s: number} setupTim,
   e: string, i,
-  d: 'quantum - resistant - encryption - platform', nam,
-  e: 'Quantum - Resistant Encryption Platform', taglin,
-  e: 'Future - proof security with post - quantum cryptography, descriptio,
-  n:  ,' 'Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream.', categor,
-  y: 'Quantum Security & Cryptography, pric,
+  d: 'quantum - resistant - encryption - platform, nam,
+  e: 'Quantum - Resistant Encryption Platform, taglin,
+  e: Future - proof security with post - quantum cryptography, descriptio,
+  n:  ,' 'Revolutionary encryption platform that implements quantum - resistant algorithms, ensuring data security remains impenetrable even when quantum computers become mainstream., categor,
+  y: Quantum Security & Cryptography, pric,
   e: monthl,
   y: 499, yearl,
   y: 4990, currenc,
-  y: 'USD, trial_day,
+  y: USD, trial_day,
   s: 30, setup_tim,
-  e: '1 - 2 weeks', enterpris,
-  e: 'Custom pricing} }, feature,
-  s: [,' 'Post - quantum cryptography algorithms',' 'Hybrid classical - quantum encryption',' 'Real - time threat assessment',' 'Automated key rotation',' 'Multi - layer security architecture',' 'Zero - trust implementation',' 'Advanced key management',' 'Compliance monitoring',' 'API for integration',' 'Mobile SDK support], benefit,
-  s: [,' 'Future - proof against quantum attacks',' 'Reduce security breach risks by 99.9%',' 'Ensure long - term data protection',' 'Meet regulatory compliance requirements',' 'Protect against emerging threats], target_audienc,
-  e: [,' 'Financial institutions',' 'Government agencies',' 'Healthcare organizations',' 'Defense contractors',' 'Technology companies',' 'Critical infrastructure], market_positio,
-  n:  ,' Leading quantum - resistant encryption platform. Competes with RSA ($1000 - 5000 / user), Thales ($500 - 2000 / user), and Entrust ($200 - 1000 / user). Our,
-  advantage: Quantum - resistant algorithms and hybrid security.', competitor,
-  s: ['RSA, Thales, Entrust, Gemalto, Utimaco], tech_stac,
-  k: [,' 'NIST PQC algorithms, Lattice - based cryptography, React, Node.js, PostgreSQL, Redis], real_implementatio,
+  e: '1 - 2 weeks, enterpris,
+  e: Custom pricing} }, feature,
+  s: [,' 'Post - quantum cryptography algorithms',' 'Hybrid classical - quantum encryption',' 'Real - time threat assessment',' 'Automated key rotation',' 'Multi - layer security architecture',' 'Zero - trust implementation',' 'Advanced key management',' 'Compliance monitoring',' 'API for integration',' Mobile SDK support], benefit,
+  s: [,' 'Future - proof against quantum attacks',' 'Reduce security breach risks by 99.9%',' 'Ensure long - term data protection',' 'Meet regulatory compliance requirements',' Protect against emerging threats], target_audienc,
+  e: [,' 'Financial institutions',' 'Government agencies',' 'Healthcare organizations',' 'Defense contractors',' 'Technology companies',' Critical infrastructure], market_positio,
+  n:  , Leading quantum - resistant encryption platform. Competes with RSA ($1000 - 5000 / user), Thales ($500 - 2000 / user), and Entrust ($200 - 1000 / user). Our,
+  advantage: Quantum - resistant algorithms and hybrid security., competitor,
+  s: [RSA, Thales, Entrust, Gemalto, Utimaco], tech_stac,
+  k: [,' NIST PQC algorithms, Lattice - based cryptography, React, Node.js, PostgreSQL, Redis], real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready quantum - resistant encryption platform with enterprise - grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.', ro,
-  i: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings., use_case,
-  s: [,' 'Data encryption at rest',' 'Secure communications',' 'Digital signatures',' 'Key management',' 'Compliance monitoring',' 'Threat detection], integration,
-  s: [,' 'Active Directory, LDAP, SAML, OAuth, Custom enterprise systems], suppor,
-  t:  ,' '24 / 7 technical support, security consulting, custom development, and dedicated security manager., complianc,
-  e: [,' 'SOC 2 Type II, ISO 27001, FIPS 140 - 2, Common Criteria, FedRAMP'], lin,
+  s:  ,' 'Production - ready quantum - resistant encryption platform with enterprise - grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools., ro,
+  i: Organizations achieve 500% ROI through reduced security risks and compliance cost savings., use_case,
+  s: [,' 'Data encryption at rest',' 'Secure communications',' 'Digital signatures',' 'Key management',' 'Compliance monitoring',' Threat detection], integration,
+  s: [,' Active Directory, LDAP, SAML, OAuth, Custom enterprise systems], suppor,
+  t:  ,' 24 / 7 technical support, security consulting, custom development, and dedicated security manager., complianc,
+  e: [,' 'SOC 2 Type II, ISO 27001, FIPS 140 - 2, Common Criteria, FedRAMP], lin,
   k: http,
-  s://ziontechgroup.com / quantum - resistant - encryption - platform', ico,
-  n: '🔐', colo,
-  r: 'from - red - 500 to - orange - 600, popula,
+  s://ziontechgroup.com / quantum - resistant - encryption - platform, ico,
+  n: '🔐, colo,
+  r: from - red - 500 to - orange - 600, popula,
   r: true, launch_dat,
-  e: '2024 - 01 - 15, customer,
+  e: 2024 - 01 - 15, customer,
   s: 650, ratin,
   g: 4 && 4.9, review,
-  s: 480}, ' Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our,
-  advantage: Autonomous threat hunting and AI intelligence.', competitor,
-  s: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace], techStac,
-  k: [' 'OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch], realImplementatio,
+  s: 480},  Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8 && 8.99-15/user), SentinelOne ($4 && 4.99-8 && 8.99/user), and Carbon Black ($6 && 6.27-8 && 8.57/user). Our,
+  advantage: Autonomous threat hunting and AI intelligence., competitor,
+  s: [CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace], techStac,
+  k: [' OpenAI GPT-4, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Elasticsearch], realImplementatio,
   n: true, implementationDetail,
-  s: ' 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.' ro,
-  i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time. useCase,
-  s: [' 'Advanced persistent threat detection'' 'Malware analysis and classification'' 'Network security monitoring'' 'Endpoint threat detection'' 'Security incident investigation'' 'Threat intelligence sharing ] integration,
-  s: [' 'SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools ] suppor,
-  t: ' '24/7 security support, threat hunting training, custom development, and dedicated security manager. complianc,
-  e: [ ' 'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'], lin,
+  s: ' 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard. ro,
+  i: Security teams achieve 400% ROI through improved threat detection and reduced incident response time. useCase,
+  s: [' 'Advanced persistent threat detection'' 'Malware analysis and classification'' 'Network security monitoring'' 'Endpoint threat detection'' 'Security incident investigation'' Threat intelligence sharing ] integration,
+  s: [' SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools ] suppor,
+  t: ' 24/7 security support, threat hunting training, custom development, and dedicated security manager. complianc,
+  e: [ ' 'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA], lin,
   k: http,
-  s://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform', i,
-  d: 'ai - powered - threat - hunting - platform', nam,
-  e: 'AI - Powered Threat Hunting Platform', taglin,
-  e: 'Proactive threat detection with autonomous security intelligence, descriptio,
-  n:  ,' 'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks.', categor,
-  y: 'AI Cybersecurity & Threat Intelligence, pric,
+  s://ziontechgroup && ziontechgroup.com/ai-powered-threat-hunting-platform, i,
+  d: 'ai - powered - threat - hunting - platform, nam,
+  e: 'AI - Powered Threat Hunting Platform, taglin,
+  e: Proactive threat detection with autonomous security intelligence, descriptio,
+  n:  ,' 'Advanced AI - powered cybersecurity platform that autonomously hunts for threats, analyzes attack patterns, and provides real - time security intelligence to prevent cyber attacks., categor,
+  y: AI Cybersecurity & Threat Intelligence, pric,
   e: monthl,
   y: 399, yearl,
   y: 3990, currenc,
-  y: 'USD, trial_day,
+  y: USD, trial_day,
   s: 21, setup_tim,
-  e: '1 - 2 weeks', enterpris,
-  e: 'Custom pricing}, feature,
-  s: [,' 'Autonomous threat hunting',' 'AI - powered attack pattern analysis',' 'Real - time threat intelligence',' 'Behavioral anomaly detection',' 'Predictive threat modeling',' 'Automated incident response',' 'Advanced analytics dashboard',' 'Multi - source data correlation',' 'Custom threat hunting rules',' 'API for security tools integration], benefit,
-  s: [,' 'Detect threats 10x faster than traditional methods',' 'Reduce false positives by 80%',' 'Prevent 95% of cyber attacks',' 'Automate 70% of security operations',' 'Improve incident response time by 90%], target_audienc,
-  e: [,' 'Security operations centers',' 'Cybersecurity teams',' 'IT security professionals',' 'Managed security providers',' 'Government agencies',' 'Financial institutions], market_positio,
-  n:  ,' Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our,
-  advantage: Autonomous threat hunting and AI intelligence.', competitor,
-  s: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace], tech_stac,
-  k: [,' 'OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch], real_implementatio,
+  e: '1 - 2 weeks, enterpris,
+  e: Custom pricing}, feature,
+  s: [,' 'Autonomous threat hunting',' 'AI - powered attack pattern analysis',' 'Real - time threat intelligence',' 'Behavioral anomaly detection',' 'Predictive threat modeling',' 'Automated incident response',' 'Advanced analytics dashboard',' 'Multi - source data correlation',' 'Custom threat hunting rules',' API for security tools integration], benefit,
+  s: [,' 'Detect threats 10x faster than traditional methods',' 'Reduce false positives by 80%',' 'Prevent 95% of cyber attacks',' 'Automate 70% of security operations',' Improve incident response time by 90%], target_audienc,
+  e: [,' 'Security operations centers',' 'Cybersecurity teams',' 'IT security professionals',' 'Managed security providers',' 'Government agencies',' Financial institutions], market_positio,
+  n:  , Leading AI - powered threat hunting platform. Competes with CrowdStrike ($8.99 - 15 / user), SentinelOne ($4.99 - 8.99 / user), and Carbon Black ($6.27 - 8.57 / user). Our,
+  advantage: Autonomous threat hunting and AI intelligence., competitor,
+  s: [CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace], tech_stac,
+  k: [,' OpenAI GPT - 4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch], real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready threat hunting platform with real - time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.', ro,
-  i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time., use_case,
-  s: [,' 'Advanced persistent threat detection',' 'Malware analysis and classification',' 'Network security monitoring',' 'Endpoint threat detection',' 'Security incident investigation',' 'Threat intelligence sharing], integration,
-  s: [,' 'SIEM systems, EDR platforms, Firewalls, IDS / IPS, Custom security tools], suppor,
-  t:  ,' '24 / 7 security support, threat hunting training, custom development, and dedicated security manager., complianc,
-  e: [,' 'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA'], lin,
+  s:  ,' 'Production - ready threat hunting platform with real - time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard., ro,
+  i: Security teams achieve 400% ROI through improved threat detection and reduced incident response time., use_case,
+  s: [,' 'Advanced persistent threat detection',' 'Malware analysis and classification',' 'Network security monitoring',' 'Endpoint threat detection',' 'Security incident investigation',' Threat intelligence sharing], integration,
+  s: [,' SIEM systems, EDR platforms, Firewalls, IDS / IPS, Custom security tools], suppor,
+  t:  ,' 24 / 7 security support, threat hunting training, custom development, and dedicated security manager., complianc,
+  e: [,' 'SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA], lin,
   k: http,
-  s://ziontechgroup.com / ai - powered - threat - hunting - platform',  ico,
-  n: '🕵️', colo,
-  r: 'from - purple - 500 to - indigo - 600, popula,
+  s://ziontechgroup.com / ai - powered - threat - hunting - platform,  ico,
+  n: '🕵️, colo,
+  r: from - purple - 500 to - indigo - 600, popula,
   r: true, launch_dat,
-  e: '2024 - 02 - 01, customer,
+  e: 2024 - 02 - 01, customer,
   s: 1200, ratin,
   g: 4 && 4.8, review,
-  s: 950}, ' 'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security'], techStac,
-  k: ['OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes], realImplementatio,
+  s: 950}, ' 'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security], techStac,
+  k: [OpenAI GPT-4, React, Node && Node.js, PostgreSQL, Redis, Kubernetes], realImplementatio,
   n: true, implementationDetail,
-  s: ' 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.' ro,
-  i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management. useCase,
-  s: [' 'Secure remote access'' 'Application access control'' 'Cloud security'' 'Compliance management'' 'Identity governance'' 'Risk management ] integration,
-  s: [' 'Active Directory, LDAP, SAML, OAuth, Custom identity providers ] suppor,
-  t: ' '24/7 technical support, implementation consulting, custom development, and dedicated success manager.', complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'], lin,
+  s: ' 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools. ro,
+  i: Organizations achieve 300% ROI through reduced security incidents and simplified access management. useCase,
+  s: [' 'Secure remote access'' 'Application access control'' 'Cloud security'' 'Compliance management'' 'Identity governance'' Risk management ] integration,
+  s: [' Active Directory, LDAP, SAML, OAuth, Custom identity providers ] suppor,
+  t: ' '24/7 technical support, implementation consulting, custom development, and dedicated success manager., complianc,
+  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP], lin,
   k: http,
-  s://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform', i,
-  d: 'zero - trust - network - access - platform', nam,
-  e: 'Zero - Trust Network Access Platform', taglin,
-  e: 'Secure access with continuous verification and least privilege, descriptio,
-  n:  ,' 'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health.', categor,
-  y: 'Zero - Trust Security & Access Control, pric,
+  s://ziontechgroup && ziontechgroup.com/zero-trust-network-access-platform, i,
+  d: 'zero - trust - network - access - platform, nam,
+  e: 'Zero - Trust Network Access Platform, taglin,
+  e: Secure access with continuous verification and least privilege, descriptio,
+  n:  ,' 'Comprehensive zero - trust platform that provides secure, context - aware access to applications and resources while continuously verifying user identity and device health., categor,
+  y: Zero - Trust Security & Access Control, pric,
   e: monthl,
   y: 299, yearl,
   y: 2990, currenc,
-  y: 'USD, trial_day,
+  y: USD, trial_day,
   s: 21, setup_tim,
-  e: '1 - 2 weeks', enterpris,
-  e: 'Custom pricing}, feature,
-  s: [,' 'Continuous identity verification',' 'Context - aware access control',' 'Device health monitoring',' 'Least privilege access',' 'Micro - segmentation',' 'Real - time risk assessment',' 'Multi - factor authentication',' 'Single sign - on integration',' 'Advanced analytics',' 'API for enterprise systems], benefit,
-  s: [,' 'Reduce security breaches by 90%',' 'Eliminate VPN vulnerabilities',' 'Improve user experience',' 'Simplify compliance management',' 'Enable secure remote work], target_audienc,
-  e: [,' 'Enterprise organizations',' 'Healthcare providers',' 'Financial institutions',' 'Government agencies',' 'Educational institutions',' 'Remote workforces], market_positio,
-  n:  ,' Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our,
+  e: '1 - 2 weeks, enterpris,
+  e: Custom pricing}, feature,
+  s: [,' 'Continuous identity verification',' 'Context - aware access control',' 'Device health monitoring',' 'Least privilege access',' 'Micro - segmentation',' 'Real - time risk assessment',' 'Multi - factor authentication',' 'Single sign - on integration',' 'Advanced analytics',' API for enterprise systems], benefit,
+  s: [,' 'Reduce security breaches by 90%',' 'Eliminate VPN vulnerabilities',' 'Improve user experience',' 'Simplify compliance management',' Enable secure remote work], target_audienc,
+  e: [,' 'Enterprise organizations',' 'Healthcare providers',' 'Financial institutions',' 'Government agencies',' 'Educational institutions',' Remote workforces], market_positio,
+  n:  , Leading zero - trust platform. Competes with Zscaler ($5 - 15 / user), Palo Alto Prisma ($7 - 15 / user), and Cloudflare Access ($3 - 7/user). Our,
   advantage: AI - powered risk assessment and continuous verification., competitor,
-  s: [,' 'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security'], tech_stac,
-  k: ['OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes], real_implementatio,
+  s: [,' 'Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security], tech_stac,
+  k: [OpenAI GPT - 4, React, Node.js, PostgreSQL, Redis, Kubernetes], real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready zero - trust platform with enterprise - grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.', ro,
-  i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management., use_case,
-  s: [,' 'Secure remote access',' 'Application access control',' 'Cloud security',' 'Compliance management',' 'Identity governance',' 'Risk management], integration,
-  s: [,' 'Active Directory, LDAP, SAML, OAuth, Custom identity providers], suppor,
-  t:  ,' '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.', complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'], lin,
+  s:  ,' 'Production - ready zero - trust platform with enterprise - grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools., ro,
+  i: Organizations achieve 300% ROI through reduced security incidents and simplified access management., use_case,
+  s: [,' 'Secure remote access',' 'Application access control',' 'Cloud security',' 'Compliance management',' 'Identity governance',' Risk management], integration,
+  s: [,' Active Directory, LDAP, SAML, OAuth, Custom identity providers], suppor,
+  t:  ,' '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager., complianc,
+  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP], lin,
   k: http,
-  s://ziontechgroup.com / zero - trust - network - access - platform',  ico,
-  n: '🛡️', colo,
-  r: 'from - blue - 500 to - cyan - 600, popula,
+  s://ziontechgroup.com / zero - trust - network - access - platform,  ico,
+  n: '🛡️, colo,
+  r: from - blue - 500 to - cyan - 600, popula,
   r: true, launch_dat,
-  e: '2024 - 01 - 20, customer,
+  e: 2024 - 01 - 20, customer,
   s: 1800, ratin,
   g: 4 && 4.7, review,
-  s: 1400}, ' 'Highest security standards, Government security requirements, Industry-specific standards'], lin,
+  s: 1400}, ' 'Highest security standards, Government security requirements, Industry-specific standards], lin,
   k: http,
-  s://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network', i,
-  d: 'quantum - key - distribution - network', nam,
-  e: 'Quantum Key Distribution Network', taglin,
-  e: 'Unhackable communication with quantum entanglement, descriptio,
-  n:  ,' 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications.', categor,
-  y: 'Quantum Communications & Security, pric,
+  s://ziontechgroup && ziontechgroup.com/quantum-key-distribution-network, i,
+  d: 'quantum - key - distribution - network, nam,
+  e: 'Quantum Key Distribution Network, taglin,
+  e: Unhackable communication with quantum entanglement, descriptio,
+  n:  ,' 'Revolutionary quantum key distribution network that uses quantum entanglement to create unbreakable encryption keys, ensuring absolutely secure communications., categor,
+  y: Quantum Communications & Security, pric,
   e: monthl,
   y: 999, yearl,
   y: 9990, currenc,
-  y: 'USD, trial_day,
+  y: USD, trial_day,
   s: 30, setup_tim,
-  e: '2 - 4 weeks', enterpris,
-  e: 'Custom pricing}, feature,
-  s: [,' 'Quantum key distribution',' 'Quantum entanglement networks',' 'Real - time key generation',' 'Multi - node quantum network',' 'Quantum repeaters',' 'Advanced quantum protocols',' 'Network monitoring',' 'Key management system',' 'API for integration',' 'Custom quantum protocols], benefit,
-  s: [,' 'Provide mathematically unbreakable security',' 'Enable ultra - secure communications',' 'Future - proof against quantum attacks',' 'Meet highest security requirements',' 'Enable quantum internet development], target_audienc,
-  e: [,' 'Government agencies',' 'Military organizations',' 'Financial institutions',' 'Healthcare providers',' 'Research institutions',' 'Critical infrastructure], market_positio,
-  n:  ,' First - to - market quantum key distribution network. No direct competitors in commercial QKD space. Traditional,
+  e: '2 - 4 weeks, enterpris,
+  e: Custom pricing}, feature,
+  s: [,' 'Quantum key distribution',' 'Quantum entanglement networks',' 'Real - time key generation',' 'Multi - node quantum network',' 'Quantum repeaters',' 'Advanced quantum protocols',' 'Network monitoring',' 'Key management system',' 'API for integration',' Custom quantum protocols], benefit,
+  s: [,' 'Provide mathematically unbreakable security',' 'Enable ultra - secure communications',' 'Future - proof against quantum attacks',' 'Meet highest security requirements',' Enable quantum internet development], target_audienc,
+  e: [,' 'Government agencies',' 'Military organizations',' 'Financial institutions',' 'Healthcare providers',' 'Research institutions',' Critical infrastructure], market_positio,
+  n:  , First - to - market quantum key distribution network. No direct competitors in commercial QKD space. Traditional,
   competitors: Classical encryption providers. Our,
   advantage: Quantum entanglement security., competitor,
-  s: [,' 'Classical encryption providers, Quantum computing companies], tech_stac,
-  k: [,' 'Quantum hardware, Quantum protocols, Python, C++, Custom quantum software], real_implementatio,
+  s: [,' Classical encryption providers, Quantum computing companies], tech_stac,
+  k: [,' Quantum hardware, Quantum protocols, Python, C++, Custom quantum software], real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.', ro,
-  i: 'Organizations achieve unlimited ROI through unbreakable security and future - proof communications., use_case,
-  s: [,' 'Government communications',' 'Military communications',' 'Financial transactions',' 'Healthcare data transmission',' 'Critical infrastructure',' 'Research collaboration], integration,
-  s: [,' 'Custom quantum protocols, Classical encryption systems, Network infrastructure], suppor,
-  t:  ,' 'Quantum experts, implementation consulting, custom protocol development, and 24 / 7 technical support., complianc,
-  e: [,' 'Highest security standards, Government security requirements, Industry - specific standards'], lin,
+  s:  ,' 'Production - ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools., ro,
+  i: Organizations achieve unlimited ROI through unbreakable security and future - proof communications., use_case,
+  s: [,' 'Government communications',' 'Military communications',' 'Financial transactions',' 'Healthcare data transmission',' 'Critical infrastructure',' Research collaboration], integration,
+  s: [,' Custom quantum protocols, Classical encryption systems, Network infrastructure], suppor,
+  t:  ,' Quantum experts, implementation consulting, custom protocol development, and 24 / 7 technical support., complianc,
+  e: [,' 'Highest security standards, Government security requirements, Industry - specific standards], lin,
   k: http,
-  s://ziontechgroup.com / quantum - key - distribution - network',  ico,
-  n: '🔮', colo,
-  r: 'from - purple - 500 to - pink - 600, popula,
+  s://ziontechgroup.com / quantum - key - distribution - network,  ico,
+  n: '🔮, colo,
+  r: from - purple - 500 to - pink - 600, popula,
   r: true, launch_dat,
-  e: '2024 - 03 - 01, customer,
+  e: 2024 - 03 - 01, customer,
   s: 120, ratin,
   g: 4 && 4.9, review,
-  s: 95}, ' Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our,
-  advantage: AI intelligence and automated remediation.', competitor,
-  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'], techStac,
-  k: ['OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis], realImplementatio,
+  s: 95},  Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our,
+  advantage: AI intelligence and automated remediation., competitor,
+  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix], techStac,
+  k: [OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis], realImplementatio,
   n: true, implementationDetail,
-  s: ' 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.' ro,
-  i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs. useCase,
-  s: [' 'Application security testing'' 'Network vulnerability assessment'' 'Cloud security scanning'' 'Compliance auditing'' 'Penetration testing'' 'Security monitoring ] integration,
-  s: [' 'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools ] suppor,
-  t: ' '24/7 technical support, security consulting, custom development, and dedicated success manager.',' '24/7 technical support, security consulting, custom development, and dedicated success manager.', complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'], lin,
+  s: ' 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools. ro,
+  i: Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs. useCase,
+  s: [' 'Application security testing'' 'Network vulnerability assessment'' 'Cloud security scanning'' 'Compliance auditing'' 'Penetration testing'' Security monitoring ] integration,
+  s: [' Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools ] suppor,
+  t: ' '24/7 technical support, security consulting, custom development, and dedicated success manager.',' '24/7 technical support, security consulting, custom development, and dedicated success manager., complianc,
+  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS], lin,
   k: http,
-  s://ziontechgroup.com/ai-powered-vulnerability-assessment', ico,
-  n: '🔍', colo,
-  r: 'from-green-500 to-emerald-600, popula,
+  s://ziontechgroup.com/ai-powered-vulnerability-assessment, ico,
+  n: '🔍, colo,
+  r: from-green-500 to-emerald-600, popula,
   r: true, launchDat,
-  e: '2024-02-15, customer,
+  e: 2024-02-15, customer,
   s: 2500, ratin,
   g: 4.8, review,
-  s: 1900};' ]; 'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring' ]; integration,
-  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'], suppor,
-  t: '24/7 technical support, security consulting, custom development, and dedicated success manager.', ' '24/7 technical support, security consulting, custom development, and dedicated success manager.', complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'], lin,
+  s: 1900};' ]; 'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring ]; integration,
+  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools], suppor,
+  t: '24/7 technical support, security consulting, custom development, and dedicated success manager.', ' '24/7 technical support, security consulting, custom development, and dedicated success manager., complianc,
+  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS], lin,
   k: http,
-  s://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment', i,
-  d: 'ai - powered - vulnerability - assessment', nam,
-  e: 'AI - Powered Vulnerability Assessment Platform', taglin,
-  e: 'Intelligent security scanning with AI - driven risk analysis, descriptio,
-  n:  ,' 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.', categor,
-  y: 'Vulnerability Management & Security Testing, pric,
+  s://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment, i,
+  d: 'ai - powered - vulnerability - assessment, nam,
+  e: 'AI - Powered Vulnerability Assessment Platform, taglin,
+  e: Intelligent security scanning with AI - driven risk analysis, descriptio,
+  n:  ,' 'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed., categor,
+  y: Vulnerability Management & Security Testing, pric,
   e: monthl,
   y: 199, yearl,
   y: 1990, currenc,
-  y: 'USD, trial_day,
+  y: USD, trial_day,
   s: 14, setup_tim,
-  e: '1 - 3 days', enterpris,
-  e: 'Custom pricing}, feature,
-  s: [,' 'AI - powered vulnerability scanning',' 'Intelligent risk prioritization',' 'Automated remediation guidance',' 'Continuous security monitoring',' 'Custom scan policies',' 'Advanced reporting',' 'Integration with security tools',' 'Mobile app support',' 'API for automation',' 'Compliance reporting], benefit,
-  s: [,' 'Reduce false positives by 70%',' 'Improve vulnerability detection by 40%',' 'Speed up remediation by 60%',' 'Reduce security assessment costs',' 'Improve compliance posture], target_audienc,
-  e: [,' 'Security teams',' 'DevOps engineers',' 'Compliance officers',' 'IT managers',' 'Security consultants',' 'Penetration testers], market_positio,
-  n:  ,' Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6) 570 / year), Qualys ($2, 000 - 5) 000 / year), and Rapid7 ($2, 000 - 8) 000 / year). Our,
-  advantage: AI intelligence and automated remediation.', competitor,
-  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'], tech_stac,
-  k: ['OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis], real_implementatio,
+  e: '1 - 3 days, enterpris,
+  e: Custom pricing}, feature,
+  s: [,' 'AI - powered vulnerability scanning',' 'Intelligent risk prioritization',' 'Automated remediation guidance',' 'Continuous security monitoring',' 'Custom scan policies',' 'Advanced reporting',' 'Integration with security tools',' 'Mobile app support',' 'API for automation',' Compliance reporting], benefit,
+  s: [,' 'Reduce false positives by 70%',' 'Improve vulnerability detection by 40%',' 'Speed up remediation by 60%',' 'Reduce security assessment costs',' Improve compliance posture], target_audienc,
+  e: [,' 'Security teams',' 'DevOps engineers',' 'Compliance officers',' 'IT managers',' 'Security consultants',' Penetration testers], market_positio,
+  n:  , Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6) 570 / year), Qualys ($2, 000 - 5) 000 / year), and Rapid7 ($2, 000 - 8) 000 / year). Our,
+  advantage: AI intelligence and automated remediation., competitor,
+  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix], tech_stac,
+  k: [OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis], real_implementatio,
   n: true, implementation_detail,
-  s:  ,' 'Production - ready vulnerability assessment platform with AI - powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.', ro,
-  i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs., use_case,
-  s: [,' 'Application security testing',' 'Network vulnerability assessment',' 'Cloud security scanning',' 'Compliance auditing',' 'Penetration testing',' 'Security monitoring], integration,
-  s: [,' 'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools], suppor,
-  t:  ,' '24 / 7 technical support, security consulting, custom development, and dedicated success manager.', complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'], lin,
+  s:  ,' 'Production - ready vulnerability assessment platform with AI - powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools., ro,
+  i: Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs., use_case,
+  s: [,' 'Application security testing',' 'Network vulnerability assessment',' 'Cloud security scanning',' 'Compliance auditing',' 'Penetration testing',' Security monitoring], integration,
+  s: [,' Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools], suppor,
+  t:  ,' '24 / 7 technical support, security consulting, custom development, and dedicated success manager., complianc,
+  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS], lin,
   k: http,
-  s://ziontechgroup.com / ai - powered - vulnerability - assessment',  ico,
-  n: '🔍', colo,
-  r: 'from - green - 500 to - emerald - 600, popula,
+  s://ziontechgroup.com / ai - powered - vulnerability - assessment,  ico,
+  n: '🔍, colo,
+  r: from - green - 500 to - emerald - 600, popula,
   r: true, launch_dat,
-  e: '2024 - 02 - 15, customer,
+  e: 2024 - 02 - 15, customer,
   s: 2500, ratin,
   g: 4 && 4.8, review,
   s: 1900}, i,
@@ -2413,14 +2413,14 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number } ' ]; 'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring' ];  integration,
-  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools']; suppor,
-  t: '24 / 7 technical support, security consulting, custom development, and dedicated success manager.' complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'];  ico,
-  n: '🔍' colo,
-  r: 'from - green - 500 to - emerald - 600 popula,
+  s: number } ' ]; 'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring ];  integration,
+  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools]; suppor,
+  t: '24 / 7 technical support, security consulting, custom development, and dedicated success manager. complianc,
+  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS];  ico,
+  n: '🔍 colo,
+  r: from - green - 500 to - emerald - 600 popula,
   r: true; launch_dat,
-  e: '2024 - 02 - 15 customer,
+  e: 2024 - 02 - 15 customer,
   s: 2500, ratin,
   g: 4 && 4.8, review,
   s: 1900,
@@ -2453,137 +2453,137 @@ export interface CybersecurityQuantumService export interface CybersecurityQuant
   cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [; {/* TODO: Fix JSX expression */}
 
   s: 30} setupTim,
-  e: '1-2 weeks'}; enterpris,
-  e: 'Custom pricing }; feature,
-  s: [,' 'Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotationMulti-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring';' 'API for integrationMobile SDK support ]; benefit,
-  s: [,' 'Future-proof against quantum attacksReduce security breach risks by 99.9%Ensure long-term data protectionMeet regulatory compliance requirementsProtect against emerging threats ]; targetAudienc,
-  e: [,' 'Financial institutionsGovernment agenciesHealthcare organizationsDefense contractorsTechnology companiesCritical infrastructure' ]; marketPositio,
+  e: '1-2 weeks}; enterpris,
+  e: Custom pricing }; feature,
+  s: [,' 'Post-quantum cryptography algorithmsHybrid classical-quantum encryptionReal-time threat assessmentAutomated key rotationMulti-layer security architectureZero-trust implementationAdvanced key managementCompliance monitoring';' API for integrationMobile SDK support ]; benefit,
+  s: [,' Future-proof against quantum attacksReduce security breach risks by 99.9%Ensure long-term data protectionMeet regulatory compliance requirementsProtect against emerging threats ]; targetAudienc,
+  e: [,' 'Financial institutionsGovernment agenciesHealthcare organizationsDefense contractorsTechnology companiesCritical infrastructure ]; marketPositio,
   n: Leading quantum-resistant encryption platform. Competes with RSA ($1000-5000/user), Thales ($500-2000/user), and Entrust ($200-1000/user). Our,
-  advantage: Quantum-resistant algorithms and hybrid security.'; competitor,
-  s: ['RSA, Thales, Entrust, Gemalto, Utimaco']; techStac,
-  k: ['NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis]; realImplementatio,
+  advantage: Quantum-resistant algorithms and hybrid security.; competitor,
+  s: ['RSA, Thales, Entrust, Gemalto, Utimaco]; techStac,
+  k: [NIST PQC algorithms, Lattice-based cryptography, React, Node.js, PostgreSQL, Redis]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.'; ro,
-  i: 'Organizations achieve 500% ROI through reduced security risks and compliance cost savings.; useCase,
-  s: [,' 'Data encryption at restSecure communicationsDigital signaturesKey managementCompliance monitoringThreat detection' ]; integration,
-  s: ['Active Directory, LDAP, SAML, OAuth, Custom enterprise systems']; suppor,
-  t: '24/7 technical support, security consulting, custom development, and dedicated security manager.'; complianc,
-  e: ['SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP']; lin,
+  s: 'Production-ready quantum-resistant encryption platform with enterprise-grade security, comprehensive API, and mobile SDK. Includes admin dashboard and compliance tools.; ro,
+  i: Organizations achieve 500% ROI through reduced security risks and compliance cost savings.; useCase,
+  s: [,' 'Data encryption at restSecure communicationsDigital signaturesKey managementCompliance monitoringThreat detection ]; integration,
+  s: ['Active Directory, LDAP, SAML, OAuth, Custom enterprise systems]; suppor,
+  t: '24/7 technical support, security consulting, custom development, and dedicated security manager.; complianc,
+  e: ['SOC 2 Type II, ISO 27001, FIPS 140-2, Common Criteria, FedRAMP]; lin,
   k: http,
-  s://ziontechgroup.com/quantum-resistant-encryption-platform'; ico,
-  n: '🔐'; colo,
-  r: 'from-red-500 to-orange-600; popula,
+  s://ziontechgroup.com/quantum-resistant-encryption-platform; ico,
+  n: '🔐; colo,
+  r: from-red-500 to-orange-600; popula,
   r: true; launchDat,
-  e: '2024-01-15; customer,
+  e: 2024-01-15; customer,
   s: 650; ratin,
   g: 4.9; review,
   s: 480}; {/* TODO: Fix JSX expression */}
 
   s: 21} setupTim,
-  e: '1-2 weeks'}; enterpris,
-  e: 'Custom pricing }; feature,
-  s: [,' 'Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation';' 'Custom threat hunting rulesAPI for security tools integration ]; benefit,
-  s: [,' 'Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90% ]; targetAudienc,
-  e: [,' 'Security operations centersCybersecurity teamsIT security professionalsManaged security providersGovernment agenciesFinancial institutions' ]; marketPositio,
+  e: '1-2 weeks}; enterpris,
+  e: Custom pricing }; feature,
+  s: [,' 'Autonomous threat huntingAI-powered attack pattern analysisReal-time threat intelligenceBehavioral anomaly detectionPredictive threat modelingAutomated incident responseAdvanced analytics dashboardMulti-source data correlation';' Custom threat hunting rulesAPI for security tools integration ]; benefit,
+  s: [,' Detect threats 10x faster than traditional methodsReduce false positives by 80%Prevent 95% of cyber attacksAutomate 70% of security operationsImprove incident response time by 90% ]; targetAudienc,
+  e: [,' 'Security operations centersCybersecurity teamsIT security professionalsManaged security providersGovernment agenciesFinancial institutions ]; marketPositio,
   n: Leading AI-powered threat hunting platform. Competes with CrowdStrike ($8.99-15/user), SentinelOne ($4.99-8.99/user), and Carbon Black ($6.27-8.57/user). Our,
-  advantage: Autonomous threat hunting and AI intelligence.'; competitor,
-  s: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace']; techStac,
-  k: ['OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch]; realImplementatio,
+  advantage: Autonomous threat hunting and AI intelligence.; competitor,
+  s: ['CrowdStrike, SentinelOne, Carbon Black, Cylance, Darktrace]; techStac,
+  k: [OpenAI GPT-4, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Elasticsearch]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.'; ro,
-  i: 'Security teams achieve 400% ROI through improved threat detection and reduced incident response time.; useCase,
-  s: [,' 'Advanced persistent threat detectionMalware analysis and classificationNetwork security monitoringEndpoint threat detectionSecurity incident investigationThreat intelligence sharing' ]; integration,
-  s: ['SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools']; suppor,
-  t: '24/7 security support, threat hunting training, custom development, and dedicated security manager.'; complianc,
-  e: ['SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA']; lin,
+  s: 'Production-ready threat hunting platform with real-time monitoring, automated response, and comprehensive analytics. Includes mobile app and security dashboard.; ro,
+  i: Security teams achieve 400% ROI through improved threat detection and reduced incident response time.; useCase,
+  s: [,' 'Advanced persistent threat detectionMalware analysis and classificationNetwork security monitoringEndpoint threat detectionSecurity incident investigationThreat intelligence sharing ]; integration,
+  s: ['SIEM systems, EDR platforms, Firewalls, IDS/IPS, Custom security tools]; suppor,
+  t: '24/7 security support, threat hunting training, custom development, and dedicated security manager.; complianc,
+  e: ['SOC 2 Type II, ISO 27001, NIST Cybersecurity Framework, FedRAMP, FISMA]; lin,
   k: http,
-  s://ziontechgroup.com/ai-powered-threat-hunting-platform'; ico,
-  n: '🕵️'; colo,
-  r: 'from-purple-500 to-indigo-600; popula,
+  s://ziontechgroup.com/ai-powered-threat-hunting-platform; ico,
+  n: '🕵️; colo,
+  r: from-purple-500 to-indigo-600; popula,
   r: true; launchDat,
-  e: '2024-02-01; customer,
+  e: 2024-02-01; customer,
   s: 1200; ratin,
   g: 4.8; review,
   s: 950}; {/* TODO: Fix JSX expression */}
 
   s: 21} setupTim,
-  e: '1-2 weeks'}; enterpris,
-  e: 'Custom pricing }; feature,
-  s: [,' 'Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege accessMicro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration';' 'Advanced analyticsAPI for enterprise systems ]; benefit,
-  s: [,' 'Reduce security breaches by 90%Eliminate VPN vulnerabilitiesImprove user experienceSimplify compliance managementEnable secure remote work ]; targetAudienc,
-  e: [,' 'Enterprise organizationsHealthcare providersFinancial institutionsGovernment agenciesEducational institutionsRemote workforces' ]; marketPositio,
+  e: '1-2 weeks}; enterpris,
+  e: Custom pricing }; feature,
+  s: [,' 'Continuous identity verificationContext-aware access controlDevice health monitoringLeast privilege accessMicro-segmentationReal-time risk assessmentMulti-factor authenticationSingle sign-on integration';' Advanced analyticsAPI for enterprise systems ]; benefit,
+  s: [,' Reduce security breaches by 90%Eliminate VPN vulnerabilitiesImprove user experienceSimplify compliance managementEnable secure remote work ]; targetAudienc,
+  e: [,' 'Enterprise organizationsHealthcare providersFinancial institutionsGovernment agenciesEducational institutionsRemote workforces ]; marketPositio,
   n: Leading zero-trust platform. Competes with Zscaler ($5-15/user), Palo Alto Prisma ($7-15/user), and Cloudflare Access ($3-7/user). Our,
-  advantage: AI-powered risk assessment and continuous verification.'; competitor,
-  s: ['Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security']; techStac,
-  k: ['OpenAI GPT-4, React, Node.js, PostgreSQL, Redis, Kubernetes]; realImplementatio,
+  advantage: AI-powered risk assessment and continuous verification.; competitor,
+  s: ['Zscaler, Palo Alto Prisma, Cloudflare Access, Okta, Duo Security]; techStac,
+  k: [OpenAI GPT-4, React, Node.js, PostgreSQL, Redis, Kubernetes]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.'; ro,
-  i: 'Organizations achieve 300% ROI through reduced security incidents and simplified access management.; useCase,
-  s: [,' 'Secure remote accessApplication access controlCloud securityCompliance managementIdentity governanceRisk management' ]; integration,
-  s: ['Active Directory, LDAP, SAML, OAuth, Custom identity providers']; suppor,
-  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.'; complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP']; lin,
+  s: 'Production-ready zero-trust platform with enterprise-grade security, comprehensive monitoring, and mobile applications. Includes admin dashboard and compliance tools.; ro,
+  i: Organizations achieve 300% ROI through reduced security incidents and simplified access management.; useCase,
+  s: [,' 'Secure remote accessApplication access controlCloud securityCompliance managementIdentity governanceRisk management ]; integration,
+  s: ['Active Directory, LDAP, SAML, OAuth, Custom identity providers]; suppor,
+  t: '24/7 technical support, implementation consulting, custom development, and dedicated success manager.; complianc,
+  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP]; lin,
   k: http,
-  s://ziontechgroup.com/zero-trust-network-access-platform'; ico,
-  n: '🛡️'; colo,
-  r: 'from-blue-500 to-cyan-600; popula,
+  s://ziontechgroup.com/zero-trust-network-access-platform; ico,
+  n: '🛡️; colo,
+  r: from-blue-500 to-cyan-600; popula,
   r: true; launchDat,
-  e: '2024-01-20; customer,
+  e: 2024-01-20; customer,
   s: 1800; ratin,
   g: 4.7; review,
   s: 1400}; {/* TODO: Fix JSX expression */}
 
   s: 30} setupTim,
-  e: '2-4 weeks'}; enterpris,
-  e: 'Custom pricing }; feature,
-  s: [,' 'Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum networkQuantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system';' 'API for integrationCustom quantum protocols ]; benefit,
-  s: [,' 'Provide mathematically unbreakable securityEnable ultra-secure communicationsFuture-proof against quantum attacksMeet highest security requirementsEnable quantum internet development ]; targetAudienc,
-  e: [,' 'Government agenciesMilitary organizationsFinancial institutionsHealthcare providersResearch institutionsCritical infrastructure' ]; marketPositio,
+  e: '2-4 weeks}; enterpris,
+  e: Custom pricing }; feature,
+  s: [,' 'Quantum key distributionQuantum entanglement networksReal-time key generationMulti-node quantum networkQuantum repeatersAdvanced quantum protocolsNetwork monitoringKey management system';' API for integrationCustom quantum protocols ]; benefit,
+  s: [,' Provide mathematically unbreakable securityEnable ultra-secure communicationsFuture-proof against quantum attacksMeet highest security requirementsEnable quantum internet development ]; targetAudienc,
+  e: [,' 'Government agenciesMilitary organizationsFinancial institutionsHealthcare providersResearch institutionsCritical infrastructure ]; marketPositio,
   n: First-to-market quantum key distribution network. No direct competitors in commercial QKD space. Traditional,
   competitors: Classical encryption providers. Our,
-  advantage: Quantum entanglement security.'; competitor,
-  s: ['Classical encryption providers, Quantum computing companies']; techStac,
-  k: ['Quantum hardware, Quantum protocols, Python, C++, Custom quantum software]; realImplementatio,
+  advantage: Quantum entanglement security.; competitor,
+  s: ['Classical encryption providers, Quantum computing companies]; techStac,
+  k: [Quantum hardware, Quantum protocols, Python, C++, Custom quantum software]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.'; ro,
-  i: 'Organizations achieve unlimited ROI through unbreakable security and future-proof communications.; useCase,
-  s: [,' 'Government communicationsMilitary communicationsFinancial transactionsHealthcare data transmissionCritical infrastructureResearch collaboration' ]; integration,
-  s: ['Custom quantum protocols, Classical encryption systems, Network infrastructure']; suppor,
-  t: 'Quantum experts, implementation consulting, custom protocol development, and 24/7 technical support.'; complianc,
-  e: ['Highest security standards, Government security requirements, Industry-specific standards']; lin,
+  s: 'Production-ready quantum key distribution network with quantum hardware, network infrastructure, and comprehensive monitoring. Includes quantum network management tools.; ro,
+  i: Organizations achieve unlimited ROI through unbreakable security and future-proof communications.; useCase,
+  s: [,' 'Government communicationsMilitary communicationsFinancial transactionsHealthcare data transmissionCritical infrastructureResearch collaboration ]; integration,
+  s: ['Custom quantum protocols, Classical encryption systems, Network infrastructure]; suppor,
+  t: 'Quantum experts, implementation consulting, custom protocol development, and 24/7 technical support.; complianc,
+  e: ['Highest security standards, Government security requirements, Industry-specific standards]; lin,
   k: http,
-  s://ziontechgroup.com/quantum-key-distribution-network'; ico,
-  n: '🔮'; colo,
-  r: 'from-purple-500 to-pink-600; popula,
+  s://ziontechgroup.com/quantum-key-distribution-network; ico,
+  n: '🔮; colo,
+  r: from-purple-500 to-pink-600; popula,
   r: true; launchDat,
-  e: '2024-03-01; customer,
+  e: 2024-03-01; customer,
   s: 120; ratin,
   g: 4.9; review,
   s: 95}; {/* TODO: Fix JSX expression */}
 
   s: 14} setupTim,
-  e: '1-3 days'}; enterpris,
-  e: 'Custom pricing }; feature,
-  s: [,' 'AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support';' 'API for automationCompliance reporting ]; benefit,
-  s: [,' 'Reduce false positives by 70%Improve vulnerability detection by 40%Speed up remediation by 60%Reduce security assessment costsImprove compliance posture ]; targetAudienc,
-  e: [,' 'Security teamsDevOps engineersCompliance officersIT managersSecurity consultantsPenetration testers' ]; marketPositio,
+  e: '1-3 days}; enterpris,
+  e: Custom pricing }; feature,
+  s: [,' 'AI-powered vulnerability scanningIntelligent risk prioritizationAutomated remediation guidanceContinuous security monitoringCustom scan policiesAdvanced reportingIntegration with security toolsMobile app support';' API for automationCompliance reporting ]; benefit,
+  s: [,' Reduce false positives by 70%Improve vulnerability detection by 40%Speed up remediation by 60%Reduce security assessment costsImprove compliance posture ]; targetAudienc,
+  e: [,' 'Security teamsDevOps engineersCompliance officersIT managersSecurity consultantsPenetration testers ]; marketPositio,
   n: Leading AI-powered vulnerability assessment platform. Competes with Nessus ($2,190-6)570/year), Qualys ($2,000-5)000/year), and Rapid7 ($2,000-8)000/year). Our,
-  advantage: AI intelligence and automated remediation.'; competitor,
-  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix']; techStac,
-  k: ['OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis]; realImplementatio,
+  advantage: AI intelligence and automated remediation.; competitor,
+  s: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix]; techStac,
+  k: [OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis]; realImplementatio,
   n: true; implementationDetail,
-  s: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.'; ro,
-  i: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.; useCase,
-  s: [,' 'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring' ]; integration,
-  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools']; suppor,
-  t: '24/7 technical support, security consulting, custom development, and dedicated success manager.'; complianc,
-  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS']; lin,
+  s: 'Production-ready vulnerability assessment platform with AI-powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.; ro,
+  i: Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.; useCase,
+  s: [,' 'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring ]; integration,
+  s: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools]; suppor,
+  t: '24/7 technical support, security consulting, custom development, and dedicated success manager.; complianc,
+  e: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS]; lin,
   k: http,
-  s://ziontechgroup.com/ai-powered-vulnerability-assessment'; ico,
-  n: '🔍'; colo,
-  r: 'from-green-500 to-emerald-600; popula,
+  s://ziontechgroup.com/ai-powered-vulnerability-assessment; ico,
+  n: '🔍; colo,
+  r: from-green-500 to-emerald-600; popula,
   r: true; launchDat,
-  e: '2024-02-15; customer,
+  e: 2024-02-15; customer,
   s: 2500; ratin,
   g: 4.8; review,
   s: 1900} ]; ratin,

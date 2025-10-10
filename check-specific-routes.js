@@ -1,21 +1,21 @@
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);';
+const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
-// Read the current App.tsx';
+// Read the current App.tsx;
 
-const appContent = fs.readFileSync('/workspace/src/App.tsx', 'utf8);;
+const appContent = fs.readFileSync('/workspace/src/App.tsx', utf8);;
 
-// Read the missing pages from the analysis';
+// Read the missing pages from the analysis;
 
-const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', 'utf8));;
+const analysisData = JSON.parse(fs.readFileSync('/workspace/navigation-analysis.json', utf8));;
 
 const missingPages = analysisData.missingPagesList;;
 
@@ -23,9 +23,9 @@ const missingPages = analysisData.missingPagesList;;
 
 const missingRoutes = [];;
 
-for (const route of missingPages) {';
+for (const route of missingPages) {;
 
-const routePattern = `path="${route}"`;;
+const routePattern = `path="${route}";;
 
   if (!appContent.includes(routePattern)) {
     missingRoutes.push(route)}
@@ -38,11 +38,11 @@ missingRoutes.forEach(route => // console.log removed for production
 
 // Generate import statements for missing routes;
 
-const generateImportStatement = (route) => {;';
+const generateImportStatement = (route) => {;;;
 
-const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page;;
+const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + Page;;
 
-  return `const ${componentName} = lazy(() => import('.${route}/page'));`};
+  return `const ${componentName} = lazy(() => import('.${route}/page'));};
 
 // Generate route statements;
 
@@ -52,12 +52,12 @@ return (
 
 ;
 
-const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + 'Page;;
+const componentName = route.split('/').pop().replace(/-/g, '').replace(/\b\w/g, l => l.toUpperCase()) + Page;;
 
-  return `            <Route path="${route}" element={<${componentName} />
+  return `            <Route path="${route} element={<${componentName} />
 );
 
-}} />`;</Route>
+}} />;</Route>
 };
 
 if (missingRoutes.length > 0) {
@@ -71,9 +71,9 @@ missingRoutes.forEach(route => // console.log removed for production
 
 // Write missing routes to a file;
 
-fs.writeFileSync('/workspace/missing-routes.json', JSON.stringify({)
+fs.writeFileSync('/workspace/missing-routes.json, JSON.stringify({)
   missingRoutes: missingRoutes),
   importStatements: missingRoutes.map(generateImportStatement),
-  routeStatements: missingRoutes.map(generateRouteStatement)}, null, 2))';
+  routeStatements: missingRoutes.map(generateRouteStatement)}, null, 2));
 
 // console.log removed for production

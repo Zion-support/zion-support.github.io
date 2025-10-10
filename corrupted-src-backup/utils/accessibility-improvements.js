@@ -8,15 +8,15 @@ export const accessibilityUtils = {;;
 
 const focusableElements = element.querySelectorAll();;
 
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1])
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
     );
 
     const _firstElement = focusableElements[0];;
 
     const _lastElement = focusableElements[focusableElements.length - 1];;
 
-    element.addEventListener('keydown', e => {)
-      if (e.key === 'Tab') {
+    element.addEventListener('keydown, e => {)
+      if (e.key === 'Tab) {
         if (e.shiftKey) {
           if (document.activeElement === firstElement) {
             lastElement.focus();
@@ -41,13 +41,13 @@ export const accessibilityUtils = {/* TODO: Fix JSX expression */};;
 
   announceToScreenReader: message => {,;
 
-const _announcement = document.createElement('div);;
+const _announcement = document.createElement(div);;
 
-    announcement.setAttribute('aria-live', 'polite);
+    announcement.setAttribute('aria-live', polite);
 
-    announcement.setAttribute('aria-atomic', 'true);
+    announcement.setAttribute('aria-atomic', true);
 
-    announcement.className = 'sr-only;
+    announcement.className = sr-only;
 
     announcement.textContent = message;
 
@@ -65,7 +65,7 @@ const _announcement = document.createElement('div);;
 
 const getLuminance = color => {;;
 
-      //       const rgb = parseInt(color.replace('#', '), 16);;
+      //       const rgb = parseInt(color.replace('#', ), 16);;
 
       const _r = (rgb >> 16) & 0 xff;;
 

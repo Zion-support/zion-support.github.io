@@ -1,6 +1,6 @@
-'use client';
+'use client;
 
-import React, { useState, useCallback } from 'react;
+import React, { useState, useCallback } from react;
 
 ;
 
@@ -16,11 +16,11 @@ interface ImageProps {
 
   className?: string;
 
-  priority?: boolean';
+  priority?: boolean;
 
-  _quality?: number';
+  _quality?: number;
 
-  _placeholder?: 'blur' | 'empty;
+  _placeholder?: 'blur' | empty;
 
   _blurDataURL?: string;
 
@@ -42,7 +42,7 @@ export const Image: React.FC<ImageProps> = ({
   className,
   priority = false,
   quality = 75,
-  placeholder = 'empty',
+  placeholder = 'empty,
   blurDataURL,
   fill = false,
   sizes,
@@ -71,11 +71,11 @@ const [, setIsLoaded] = useState(false);
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
-      position: 'absolute',
+      position: 'absolute,
       top: 0,
       left: 0,
-      width: '100%',
-      height: '100%',
+      width: '100%,
+      height: '100%,
       objectFit:     ,
 $4})
   };
@@ -84,14 +84,14 @@ $4})
   return (
 
       <div
-        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        className={`bg-gray-200 flex items-center justify-center ${className}}
 
         style={imageStyle}
 
         {...props}
 
       >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
+        <span className="text-gray-500 text-sm>Failed to load image</span>
       </div>
     )}
 
@@ -112,7 +112,7 @@ $4})
 
       sizes={sizes}
 
-      loading={priority ? 'eager' : 'lazy'}
+      loading={priority ? 'eager' : 'lazy}
 
       onLoad={handleLoad}
 
@@ -125,15 +125,15 @@ $4})
 
 export default Image;
 
-'use client';
+'use client;
 
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react;
 
 const,
   Image: React.FC = () => {interface ImageProps {}
 
   // TOD,
-  O: Add content}';
+  O: Add content};
 
   src: string;,
     alt: string
@@ -143,7 +143,7 @@ const,
   priority?: boolean
   _quality?: number
 
-  _placeholder?: 'blur' | empty
+  _placeholder?: 'blur | empty
   _blurDataURL?: string;
 
   fill?: boolean;
@@ -169,7 +169,7 @@ export const Image: React.FC;
 //   className,
   priority = false,
 quality = 75,
-  placeholder = 'empty',
+  placeholder = 'empty,
   blurDataURL,
   fill = false,
 //   sizes,
@@ -219,11 +219,11 @@ quality = 75,
 
 };
 
-  position: 'absolute',
+  position: 'absolute,
       top: 0,
       left: 0,
-      width: '100%',
-      height: '100%',
+      width: '100%,
+      height: '100%,
       objectFit: cover
 
     })
@@ -242,7 +242,7 @@ quality = 75,
   )
       
           <div></div>
-className={`bg-gray-200 flex items-center justify-center ${className}`}
+className={`bg-gray-200 flex items-center justify-center ${className}}
 
         style={imageStyle}
 
@@ -258,7 +258,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
           
           
           
-          <span className="text-gray-500 text-sm">Failed to load image</span>
+          <span className="text-gray-500 text-sm>Failed to load image</span>
       </div>
     )
   }
@@ -281,7 +281,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
 
       sizes={sizes}
 
-      loading={priority ? 'eager' : 'lazy'}
+      loading={priority ? 'eager' : 'lazy}
 
       onLoad={handleLoad}
 
@@ -293,7 +293,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   )
 }
 
-export default Image;"`
+export default Image;"
 
 
 

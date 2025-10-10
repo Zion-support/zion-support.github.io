@@ -1,6 +1,6 @@
-'use client';
+'use client;
 
-import React, { Component, ErrorInfo, ReactNode } from 'react;
+import React, { Component, ErrorInfo, ReactNode } from react;
 
 interface Props {/* TODO: Fix JSX expression */}
 
@@ -23,11 +23,11 @@ constructor(props: Props) {,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.setState({)
       error),
-      errorInfo})';
+      errorInfo});
 
-    // Log error to console in development';
+    // Log error to console in development;
 
-    if (process.env.NODE_ENV === 'development) {
+    if (process.env.NODE_ENV === development) {
       // // console.error removed for production
 }
 
@@ -43,42 +43,42 @@ constructor(props: Props) {,
 
     // Log to console in development;
 
-    if (process.env.NODE_ENV === 'development) {
+    if (process.env.NODE_ENV === development) {
       // eslint-disable-next-line no-console;
 
-      console.group('🚨 Error Boundary Caught Error);
+      console.group(🚨 Error Boundary Caught Error);
 
     // In production, you might want to send this to an error reporting service;
 
-    if (process.env.NODE_ENV === 'production) {
+    if (process.env.NODE_ENV === production) {
       // Example: send to error reporting service;
 
       // errorReportingService.captureException(error, { extra: errorInfo })}
 
   }
 
-      return(<div className="min-h-screen flex items-center justify-center bg-gray-50>
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center>
+      return(<div className=min-h-screen flex items-center justify-center bg-gray-50>
+          <div className=max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center>
       return (
 
-        <div className="min-h-screen flex items-center justify-center bg-gray-50></div>
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center></div>
-            <div className="text-6xl mb-4>⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4>
+        <div className=min-h-screen flex items-center justify-center bg-gray-50></div>
+          <div className=max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center></div>
+            <div className=text-6xl mb-4>⚠️</div>
+            <h1 className=text-2xl font-bold text-gray-900 mb-4>
               Oops! Something went wrong;
 
             </h1>
-            <p className="text-gray-600 mb-6>
+            <p className=text-gray-600 mb-6>
               Were sorry, but something unexpected happened. Please try refreshing the page.
             </p>)
-            <div className="space-y-4>)
+            <div className=space-y-4>)
               <button;)
             </p>
-            <div className="space-y-4></div>
+            <div className=space-y-4></div>
               <button
                 onClick={() => window.location.reload()}
 
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors
+                className=w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors
               >
                 Refresh Page;
 
@@ -87,7 +87,7 @@ constructor(props: Props) {,
 
                 onClick={() => window.history.back()}
 
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors
+                className=w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors
 class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
 
   r: false }}
@@ -105,7 +105,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
     // Log error to console in development;
 
-    if (process.env.NODE_ENV === 'development) {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === development) {/* TODO: Fix JSX expression */}
 
     }
 
@@ -123,27 +123,27 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 
     // Log to console in development;
 
-    if (process.env.NODE_ENV === 'development) {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === development) {/* TODO: Fix JSX expression */}
 
   a: errorInfo })}
 
   }
 
-      return (<div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
-            <div className="text-6xl mb-4">⚠️</div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4></h1>
+      return (<div className="min-h-screen flex items-center justify-center bg-gray-50></div>
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center></div>
+            <div className="text-6xl mb-4>⚠️</div>
+            <h1 className=text-2xl font-bold text-gray-900 mb-4></h1>
               Oops! Something went wrong;
 
             </h1>
-            <p className="text-gray-600 mb-6></p>
+            <p className=text-gray-600 mb-6></p>
               Were sorry, but something unexpected happened. Please try refreshing the page.
             </p>
-            <div className="space-y-4></div>
+            <div className=space-y-4></div>
               <button></button>)
                 onClick={() => window.location.reload()}
 
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,
+                className=w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,
   hover:bg-indigo-700 transition-colors
               >
                 Refresh Page;
@@ -152,20 +152,20 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
               <button></button>
                 onClick={() => window.history.back()}
 
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,
+                className=w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,
   hover:bg-gray-300 transition-colors
               >
                 Go Back;
 
               </button>
             </div>
-            {process.env.NODE_ENV === 'development && this.state.error && (
+            {process.env.NODE_ENV === development && this.state.error && (
 
-              <details className="mt-6 text-left>
-                <summary className="cursor-pointer text-sm text-gray-500>
+              <details className=mt-6 text-left>
+                <summary className=cursor-pointer text-sm text-gray-500>
                   Error Details (Development),
                 </summary>,
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto>,
+                <pre className=mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto>,
             {/* TODO: Fix JSX expression */}
 
                   {this.state.error.toString()}

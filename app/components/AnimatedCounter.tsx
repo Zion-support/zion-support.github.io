@@ -1,6 +1,6 @@
-'use client';
+'use client;
 
-import React, { useState, useEffect } from 'react;
+import React, { useState, useEffect } from react;
 
 interface AnimatedCounterProps {
   end: number;
@@ -9,17 +9,17 @@ interface AnimatedCounterProps {
 
   prefix?: string;
 
-  suffix?: string';
+  suffix?: string;
 
   className?: string}
 
-';
+;
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
-  prefix = '',
-  suffix = '',
+  prefix = ',
+  suffix = ',
   className = 
 }) => {
 return (;

@@ -1,21 +1,21 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { glob } from 'glob;
+import { glob } from glob;
 
-// Files to process';
+// Files to process;
 
-const filePatterns = [;';
+const filePatterns = [;;;
 
-  'app/**/*.{ts,tsx}',
-  'src/**/*.{ts,tsx}',
-  'components/**/*.{ts,tsx}',
-  'pages/**/*.{ts,tsx}',
-  'utils/**/*.{ts,tsx}',
-  'hooks/**/*.{ts,tsx}',
+  'app/**/*.{ts,tsx},
+  'src/**/*.{ts,tsx},
+  'components/**/*.{ts,tsx},
+  'pages/**/*.{ts,tsx},
+  'utils/**/*.{ts,tsx},
+  'hooks/**/*.{ts,tsx},
   lib/**/*.{ts,tsx}
 
 ];
@@ -24,18 +24,18 @@ const filePatterns = [;';
 
 const excludePatterns = [;;
 
-  '**/node_modules/**',
-  '**/dist/**',
-  '**/.next/**',
-  '**/build/**',
-  '**/coverage/**',
-  '**/*.test.{ts,tsx}',
-  '**/*.spec.{ts,tsx}',
-  '**/scripts/**',
-  '**/automation/**',
-  '**/backup*/**',
-  '**/disabled*/**',
-  '**/corrupted*/**',
+  '**/node_modules/**,
+  '**/dist/**,
+  '**/.next/**,
+  '**/build/**,
+  '**/coverage/**,
+  '**/*.test.{ts,tsx},
+  '**/*.spec.{ts,tsx},
+  '**/scripts/**,
+  '**/automation/**,
+  '**/backup*/**,
+  '**/disabled*/**,
+  '**/corrupted*/**,
   **/temp*/**
 ];
 
@@ -55,9 +55,9 @@ let newContent = content;;
 
   let removedCount = 0;;
 
-  // Find all import statements';
+  // Find all import statements;
 
-  const importRegex = /import\s+.*?from\s+['"][^'"]+['"];?\s*\n/g;;
+  const importRegex = /import\s+.*?from\s+['"][^'"]+['];?\s*\n/g;;
 
   const imports = content.match(importRegex) || [];;
 
@@ -68,22 +68,22 @@ const importMatch = importStatement.match(/import\s+{([^}]+)}/);;
 
     if (importMatch) {;
 
-const importedNames = importMatch[1];';
+const importedNames = importMatch[1];;;
 
-        .split(',')
-        .map(name => name.trim().split(' as ')[0].trim())
+        .split(',)
+        .map(name => name.trim().split(' as )[0].trim())
         .filter(name => name);
 
       // Check if any of these names are used in the file;
 
-      const usedNames = importedNames.filter(name => {);';
+      const usedNames = importedNames.filter(name => {);;;
 
         // Skip default imports and special cases;)
-        if (name === 'default' || name === '*' || name.includes(' )) return true;
+        if (name === 'default' || name === '*' || name.includes( )) return true;
 
         // Create regex to find usage of this name;
 
-        const usageRegex = new RegExp(`\\b${name}\\b`, 'g);;
+        const usageRegex = new RegExp(`\\b${name}\\b`, g);;
 
         const matches = newContent.match(usageRegex) || [];;
 
@@ -95,18 +95,19 @@ const importedNames = importMatch[1];';
 
         return totalOccurrences>importOccurrences</totalOccurrences>});
 
-      // If no names are used, remove the entire import';
+      // If no names are used, remove the entire import;
 
       if (usedNames.length === 0) {
-        newContent = newContent.replace(importStatement, ');
+        newContent = newContent.replace(importStatement, );
 
         removedCount++} else if (usedNames.length < importedNames.length) {
         // Some names are unused, update the import;
 
-        const newImportStatement = importStatement.replace(;';
+        const newImportStatement = importStatement.replace(;;;
 
           /{([^}]+)}/,
-          `{ ${usedNames.join(', ')} }`
+          `{ ${usedNames.join(', ')} }
+
         );
 
         newContent = newContent.replace(importStatement, newImportStatement);
@@ -120,16 +121,16 @@ const importedNames = importMatch[1];';
 
       if (defaultImportMatch) {;
 
-const importName = defaultImportMatch[1];';
+const importName = defaultImportMatch[1];;;
 
-        const usageRegex = new RegExp(`\\b${importName}\\b`, 'g);;
+        const usageRegex = new RegExp(`\\b${importName}\\b`, g);;
 
         const matches = newContent.match(usageRegex) || [];;
 
-        const importOccurrences = (importStatement.match(usageRegex) || []).length;';
+        const importOccurrences = (importStatement.match(usageRegex) || []).length;;;
 
         if (matches.length <= importOccurrences) {
-          newContent = newContent.replace(importStatement, ');
+          newContent = newContent.replace(importStatement, );
 
           removedCount++}
 
@@ -141,7 +142,7 @@ const importName = defaultImportMatch[1];';
 
   // Clean up multiple empty lines;
 
-  newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n);
+  newContent = newContent.replace(/\n\s*\n\s*\n/g, \n\n);
 
   return { content: newContent, removedCount }}
 
@@ -150,12 +151,12 @@ const importName = defaultImportMatch[1];';
 function processFile(filePath) {
   try {;
 
-const content = fs.readFileSync(filePath, 'utf8);;
+const content = fs.readFileSync(filePath, utf8);;
 
     const result = removeUnusedImports(content);;
 
     if (result.removedCount > 0) {
-      fs.writeFileSync(filePath, result.content, 'utf8);
+      fs.writeFileSync(filePath, result.content, utf8);
 
       // console.log removed for production
 removedImports += result.removedCount}
@@ -198,7 +199,7 @@ const files = await glob(pattern, {);;
 // console.log removed for production
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
-export { processFile, removeUnusedImports }';
+export { processFile, removeUnusedImports };

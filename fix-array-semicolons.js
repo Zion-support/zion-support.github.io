@@ -1,18 +1,18 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from fs;
 
 // Function to fix semicolons in arrays;
 
 function fixArraySemicolons(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     // Fix semicolons after arrays in object properties;
 
     content = content.replace(/:\s*\[[^\]]+\];/g, (match) => {
-      return match.replace(';', ');
+      return match.replace(';', );
 
 function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
 
@@ -21,10 +21,11 @@ function fixArraySemicolons(filePath) {/* TODO: Fix JSX expression */}
     fs.writeFileSync(filePath, content);
 
     // console.log removed for production
-`
-  in: ${filePath}`);
 
-    return true} catch (error) {/* TODO: Fix JSX expression */}`
+  in: ${filePath});
+
+    return true} catch (error) {/* TODO: Fix JSX expression */}
+
     // console.error removed for production
 return false}
 
@@ -40,16 +41,16 @@ function main() {/* TODO: Fix JSX expression */}
 
   const files = [;;
 
-    'src/ai-ab-testing/page.tsx',
-    'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx',
-    'src/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx',
-    'src/blog/ai-enterprise-transformation-2025/page.tsx',
-    'src/blog/ai-innovation-labs-product-development-2025/page.tsx',
-    'src/enterprise/page.tsx',
-    'src/gdpr/page.tsx',
-    'src/marketing-tools/page.tsx',
-    'src/security/page.tsx',
-    'src/system-status/page.tsx',
+    'src/ai-ab-testing/page.tsx,
+    'src/blog/ai-2025-2026-mega-trends-breakthrough/page.tsx,
+    'src/blog/ai-2025-sept-30-operational-trust-scorecards-v3/page.tsx,
+    'src/blog/ai-enterprise-transformation-2025/page.tsx,
+    'src/blog/ai-innovation-labs-product-development-2025/page.tsx,
+    'src/enterprise/page.tsx,
+    'src/gdpr/page.tsx,
+    'src/marketing-tools/page.tsx,
+    'src/security/page.tsx,
+    'src/system-status/page.tsx,
     src/test-page.tsx
   ];
 
@@ -70,7 +71,6 @@ let fixedCount = 0;;
     })
   });
 
-  `
   // console.log removed for production
 }
 

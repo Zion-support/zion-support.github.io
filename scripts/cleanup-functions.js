@@ -1,23 +1,23 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);';
+const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
-// Essential functions that should be kept';
+// Essential functions that should be kept;
 
-const essentialFunctions = [;';
+const essentialFunctions = [;;;
 
-  'test-function.js, // Keep for testing;
+  test-function.js, // Keep for testing;
 
-  'scheduled-nudges.ts, // Keep for scheduled tasks;
+  scheduled-nudges.ts, // Keep for scheduled tasks;
 
 ];
 
@@ -26,127 +26,127 @@ const essentialFunctions = [;';
 const functionsToRemove = [;;
 
   // AI and automation functions (most are test/development)
-  'ai-changelog-',
-  'ai-trends-',
-  'ai-innovator',
-  'ai-issue-labeler',
-  'ai-alt-text-',
-  'ai_changelog_',
-  'ai_trends_',
+  'ai-changelog-,
+  'ai-trends-,
+  'ai-innovator,
+  'ai-issue-labeler,
+  'ai-alt-text-,
+  'ai_changelog_,
+  'ai_trends_,
   
   // Autonomous functions (test/development)
-  'autonomous-',
-  'autonomous_',
+  'autonomous-,
+  'autonomous_,
   
   // Audit and analysis functions (test/development)
-  'a11 y-',
-  'a11 y_',
-  'accessibility-',
-  'audit-',
-  'audit_',
-  'canonical-',
-  'canonical_',
-  'code-',
-  'code_',
-  'component-',
-  'component_',
-  'content-',
-  'content_',
-  'docs-',
-  'docs_',
-  'performance-',
-  'performance_',
-  'seo-',
-  'seo_',
-  'security-',
-  'security_',
+  'a11 y-,
+  'a11 y_,
+  'accessibility-,
+  'audit-,
+  'audit_,
+  'canonical-,
+  'canonical_,
+  'code-,
+  'code_,
+  'component-,
+  'component_,
+  'content-,
+  'content_,
+  'docs-,
+  'docs_,
+  'performance-,
+  'performance_,
+  'seo-,
+  'seo_,
+  'security-,
+  'security_,
   
   // Cron functions (test/development)
-  'cron-',
+  'cron-,
   
   // Frontend functions (test/development)
-  'front-',
-  'front_',
-  'frontend-',
-  'frontpage-',
-  'frontpage_',
-  'home-',
-  'home_',
-  'homepage-',
+  'front-,
+  'front_,
+  'frontend-,
+  'frontpage-,
+  'frontpage_,
+  'home-,
+  'home_,
+  'homepage-,
   
   // Optimization functions (test/development)
-  'optimize-',
-  'optimize_',
-  'perf-',
-  'perf_',
-  'ultrafast-',
-  'ultrafast_',
-  'hyper-',
-  'hyper_',
-  'fast-',
-  'fast_',
+  'optimize-,
+  'optimize_,
+  'perf-,
+  'perf_,
+  'ultrafast-,
+  'ultrafast_,
+  'hyper-,
+  'hyper_,
+  'fast-,
+  'fast_,
   
   // Report functions (test/development)
-  'report-',
-  'report_',
-  'runner-',
-  'runner_',
-  'scheduler-',
-  'scheduler_',
+  'report-,
+  'report_,
+  'runner-,
+  'runner_,
+  'scheduler-,
+  'scheduler_,
   
   // Other test/development functions;
 
-  'auto-',
-  'auto_',
-  'adaptive-',
-  'adaptive_',
-  'cache-',
-  'edge-',
-  'guardian-',
-  'innovation-',
-  'innovation_',
-  'knowledge-',
-  'knowledge_',
-  'link-',
-  'media-',
-  'meta-',
-  'newsroom-',
-  'newsroom_',
-  'og-',
-  'og_',
-  'orphan-',
-  'revenue-',
-  'revenue_',
-  'roadmap-',
-  'roadmap_',
-  'robots-',
-  'robots_',
-  'sitemap-',
-  'sitemap_',
-  'smart-',
-  'stale-',
-  'stale_',
-  'structured-',
-  'tech-',
-  'todo-',
-  'todo_',
-  'topic-',
-  'topic_',
-  'topics-',
-  'topics_',
-  'trigger-',
-  'trigger_',
-  'ui-',
-  'unused-',
-  'unused_',
-  'user-',
-  'ux-',
-  'venture-',
-  'venture_];
+  'auto-,
+  'auto_,
+  'adaptive-,
+  'adaptive_,
+  'cache-,
+  'edge-,
+  'guardian-,
+  'innovation-,
+  'innovation_,
+  'knowledge-,
+  'knowledge_,
+  'link-,
+  'media-,
+  'meta-,
+  'newsroom-,
+  'newsroom_,
+  'og-,
+  'og_,
+  'orphan-,
+  'revenue-,
+  'revenue_,
+  'roadmap-,
+  'roadmap_,
+  'robots-,
+  'robots_,
+  'sitemap-,
+  'sitemap_,
+  'smart-,
+  'stale-,
+  'stale_,
+  'structured-,
+  'tech-,
+  'todo-,
+  'todo_,
+  'topic-,
+  'topic_,
+  'topics-,
+  'topics_,
+  'trigger-,
+  'trigger_,
+  'ui-,
+  'unused-,
+  'unused_,
+  'user-,
+  'ux-,
+  'venture-,
+  venture_];
 
 ;
 
-const _functionsDir = path.join(process.cwd(), 'netlify', 'functions);;
+const _functionsDir = path.join(process.cwd(), 'netlify', functions);;
 
 ;
 
@@ -183,7 +183,7 @@ const _files = fs.readdirSync(functionsDir);;
   let _keptCount = 0;;
 
   files.forEach(file => {)
-    if (file.endsWith('.js') || file.endsWith('.ts')) {
+    if (file.endsWith('.js') || file.endsWith('.ts)) {
       if (shouldRemoveFunction(file)) {;
 
 const _filePath = path.join(functionsDir, file);;

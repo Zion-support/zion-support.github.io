@@ -1,12 +1,12 @@
-import React from 'react;
+import React from react;
 
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from fs;
 
-import path from 'path;
+import path from path;
 
-import { execSync } from 'child_process;
+import { execSync } from child_process;
 
 // Function to fix common syntax patterns;
 
@@ -20,18 +20,21 @@ const importFixes = [;;
 
     // Fix malformed import statements with missing commas
     {
-      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1, $2, $3 } from '$4';"
+      pattern: /import\s+{([^}]*),\s*([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
+      replacement: "import { $1, $2, $3 } from '$4';
+
     },
     // Fix malformed import statements with missing commas
     {
-      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1, $2 } from '$3';"
+      pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
+      replacement: "import { $1, $2 } from '$3';
+
     },
     // Fix malformed import statements
     {
-      pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
-      replacement: "import { $1 } from '$2';"
+      pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+      replacement: "import { $1 } from '$2';
+
     }
 
   ];
@@ -66,7 +69,7 @@ const functionFixes = [;;
     // Fix malformed function with missing return
     {
       pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*}\s*<div/g,
-      replacement: 'const $1: React.FC = () => {
+      replacement: const $1: React.FC = () => {
   return (
 
 \n  return (\n    <div
@@ -124,8 +127,8 @@ const jsxFixes = [;;
 
     // Fix malformed JSX attributes
     {
-      pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
-      replacement: '$1="$2 $3
+      pattern: /(\w+)="([^"]*)\s*(\w+)/g,
+      replacement: '$1=$2 $3
     },
     // Fix malformed JSX closing tags
     {
@@ -189,7 +192,7 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
 function fixSyntaxErrors(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
@@ -202,7 +205,7 @@ const result = fixCommonSyntaxErrors(content);;
     modified = result.modified;
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, utf8);
 
       // console.log removed for production
 return true}
@@ -218,9 +221,9 @@ return false}
 function findFilesWithSyntaxErrors() {
   try {;
 
-const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: 'utf8 });;
+const result = execSync('npm run lint 2>&1 | grep -B1 "error.*Parsing error" | grep "^/workspace" | sort -u 2>/dev/null || true', { encoding: utf8 });;
 
-    return result.trim().split('\n').filter(file => file.length > 0)} catch (error) {
+    return result.trim().split('\n).filter(file => file.length > 0)} catch (error) {
     // console.error removed for production
 return []}
 
@@ -247,7 +250,7 @@ for (const file of filesWithErrors) {
 // Verify no more syntax errors exist
 try {;
 
-const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: 'utf8 });;
+const remainingErrors = execSync('npm run lint 2>&1 | grep -c "error.*Parsing error" 2>/dev/null || echo "0"', { encoding: utf8 });;
 
   const count = parseInt(remainingErrors.trim());;
 

@@ -1,12 +1,13 @@
-import { glob } from 'glob';
+import { glob } from 'glob;
+
 // Function to fix JSX syntax errors
 function fixJSXSyntax(content) {
-  let fixed = content;';
+  let fixed = content;;;
 
   // Fix missing closing tags by analyzing the structure
-  const openTags = [];';
+  const openTags = [];;;
 
-  const lines = fixed.split('\n);;
+  const lines = fixed.split(\n);;
 
   let result = [];;
 
@@ -23,7 +24,7 @@ function fixJSXSyntax(content) {
       for (const tag of openTagMatch) {
         const tagName = tag.match(/<(\w+)/)?.[1];;
 
-        if (tagName && !tag.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link'].includes(tagName)) {
+        if (tagName && !tag.includes('/>') && !['img', 'br', 'hr', 'input', 'meta', 'link].includes(tagName)) {
           openTags.push(tagName);
 
         }
@@ -58,11 +59,11 @@ function fixJSXSyntax(content) {
   // Add missing closing tags at the end
   for (let i = openTags.length - 1; i >= 0; i--) {;;
 
-    result.push(`</${openTags[i]}>`);
+    result.push(`</${openTags[i]}>);
 
   }
 
-  return result.join('\n);
+  return result.join(\n);
 
 }
 
@@ -71,16 +72,16 @@ function fixTypeScriptSyntax(content) {
   let fixed = content;;
 
   // Fix missing commas in interfaces
-  fixed = fixed.replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, '$1,\n  $2);
+  fixed = fixed.replace(/(\w+:\s*[^,;}\n]+)\n\s*(\w+:\s*)/g, $1,\n  $2);
 
   // Fix missing semicolons
-  fixed = fixed.replace(/([^;}])\n\s*}/g, '$1;\n});
+  fixed = fixed.replace(/([^;}])\n\s*}/g, $1;\n});
 
   // Fix missing closing braces
-  fixed = fixed.replace(/([^}])\n\s*$/g, '$1\n});
+  fixed = fixed.replace(/([^}])\n\s*$/g, $1\n});
 
   // Fix property signature issues
-  fixed = fixed.replace(/(\w+)\s*:\s*([^,;}\n]+)(?=\n\s*[^:])/g, '$1: $2;);
+  fixed = fixed.replace(/(\w+)\s*:\s*([^,;}\n]+)(?=\n\s*[^:])/g, $1: $2;);
 
   return fixed;
 
@@ -91,24 +92,24 @@ function fixParsingErrors(content) {
   let fixed = content;;
 
   // Fix JSX expressions must have one parent element
-  fixed = fixed.replace(/(\s*)<(\w+)([^>]*)>\s*\n\s*<(\w+)([^>]*)>/g, '$1<>\n$1  <$2$3>\n$1    <$4$5>);
+  fixed = fixed.replace(/(\s*)<(\w+)([^>]*)>\s*\n\s*<(\w+)([^>]*)>/g, $1<>\n$1  <$2$3>\n$1    <$4$5>);
 
-  fixed = fixed.replace(/(\s*)<\/\w+>\s*\n\s*<\/\w+>\s*\n\s*<\/\w+>/g, '$1    </div>\n$1  </div>\n$1</>);
+  fixed = fixed.replace(/(\s*)<\/\w+>\s*\n\s*<\/\w+>\s*\n\s*<\/\w+>/g, $1    </div>\n$1  </div>\n$1</>);
 
   // Fix missing closing tags for common elements
-  const commonElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', 'aside];;
+  const commonElements = ['div', 'section', 'main', 'article', 'header', 'footer', 'nav', aside];;
 
   for (const element of commonElements) {
-    const regex = new RegExp(`<${element}([^>]*)>(?!.*</${element}>)`, 'g);;
+    const regex = new RegExp(`<${element}([^>]*)>(?!.*</${element}>)`, g);;
 
     fixed = fixed.replace(regex, (match, attrs) => {
       // Count opening and closing tags
-      const openMatches = (fixed.match(new RegExp(`<${element}`, 'g)) || []).length;;
+      const openMatches = (fixed.match(new RegExp(`<${element}`, g)) || []).length;;
 
-      const closeMatches = (fixed.match(new RegExp(`</${element}>`, 'g)) || []).length;;
+      const closeMatches = (fixed.match(new RegExp(`</${element}>`, g)) || []).length;;
 
       if (openMatches > closeMatches) {
-        return match + `</${element}>`;
+        return match + `</${element}>;
 
       }
 
@@ -119,10 +120,10 @@ function fixParsingErrors(content) {
   }
 
   // Fix missing commas in object literals
-  fixed = fixed.replace(/([^,}])\n\s*}/g, '$1,\n});
+  fixed = fixed.replace(/([^,}])\n\s*}/g, $1,\n});
 
   // Fix missing parentheses
-  fixed = fixed.replace(/([^)])\n\s*}/g, '$1)\n});
+  fixed = fixed.replace(/([^)])\n\s*}/g, $1)\n});
 
   return fixed;
 
@@ -130,11 +131,11 @@ function fixParsingErrors(content) {
 
 // Main function to process files
 async function processFiles() {
-  console.log('Starting syntax error fixes...);
+  console.log(Starting syntax error fixes...);
 
   const patterns = [;;
 
-    'app/**/*.tsx',
+    'app/**/*.tsx,
     app/**/*.ts
   ];
 
@@ -146,27 +147,27 @@ async function processFiles() {
     const files = await glob(pattern, {;;
 
       ignore: [
-        'node_modules/**',
-        'dist/**',
-        '*.disabled/**',
-        '*-disabled/**',
-        'backup*/**',
-        '**/*.backup',
+        'node_modules/**,
+        'dist/**,
+        '*.disabled/**,
+        '*-disabled/**,
+        'backup*/**,
+        '**/*.backup,
         **/*.broken
       ]
     });
 
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file, 'utf8);;
+        const content = fs.readFileSync(file, utf8);;
 
         // Check if file has syntax issues
-        if (content.includes('JSX expressions must have one parent element') || 
-            content.includes('Property or signature expected') ||
-            content.includes('Expected corresponding JSX closing tag') ||
-            content.includes('Declaration or statement expected')) {
+        if (content.includes('JSX expressions must have one parent element) || 
+            content.includes('Property or signature expected) ||
+            content.includes('Expected corresponding JSX closing tag) ||
+            content.includes('Declaration or statement expected)) {
           
-          console.log(`Processing syntax errors in: ${file}`);
+          console.log(`Processing syntax errors in: ${file});
 
           let fixed = fixJSXSyntax(content);;
 
@@ -181,8 +182,10 @@ async function processFiles() {
         }
 
       } catch (error) {
-        console.error(`Error processing ${file}:`, error.message);
+        console.error(`Error processing ${file}:, error.message);
+
         errorCount++;
+
       }    }
 
   }
@@ -194,9 +197,9 @@ traverse(dir);
 }
 
 // Main execution
-const files = findFilesWithSyntaxErrors('/workspace);;
+const files = findFilesWithSyntaxErrors(/workspace);;
 
-console.log(`Checking ${files.length} files for syntax errors`);
+console.log(`Checking ${files.length} files for syntax errors);
 
 let fixedCount = 0;;
 
@@ -208,4 +211,4 @@ for (const file of files) {
 
 }
 
-console.log(`Fixed ${fixedCount} files`);
+console.log(`Fixed ${fixedCount} files);

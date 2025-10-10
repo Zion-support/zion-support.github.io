@@ -7,18 +7,18 @@
 
  */
 
-import fs from 'fs/promises';
+import fs from 'fs/promises;
 
-import path from 'path';
+import path from 'path;
 
-import { execSync } from 'child_process';
+import { execSync } from 'child_process;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
-// const __filename = fileURLToPath(import.meta.url);';
+// const __filename = fileURLToPath(import.meta.url);;;
 
 // // __dirname removed
-class PerformanceEnhancer {';
+class PerformanceEnhancer {;
 
 constructor() {
     this.report = {
@@ -35,7 +35,7 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 
   async enhance() {/* TODO: Fix JSX expression */}
 
-  to: ${path.join(process.cwd(), 'performance-enhancement-report.json')}`)} catch (error) {/* TODO: Fix JSX expression */}
+  to: ${path.join(process.cwd(), 'performance-enhancement-report.json')})} catch (error) {/* TODO: Fix JSX expression */}
 
     }
 
@@ -45,13 +45,13 @@ class PerformanceEnhancer {/* TODO: Fix JSX expression */}
 //     try {
       // Build with analysis;
 
-      execSync('npm run build:analyze', { stdio: 'pipe });
+      execSync('npm run build:analyze', { stdio: pipe });
 
   async analyzeBundle() {/* TODO: Fix JSX expression */}
 
-  o: 'pipe });
+  o: pipe });
 
-//       const distPath = path.join(process.cwd(), 'dist);;
+//       const distPath = path.join(process.cwd(), dist);;
 
 //       const files = await fs.readdir(distPath);;
 
@@ -75,24 +75,23 @@ let _totalSize = 0;;
 
       if (totalSize > 1024 * 1024) { // 1MB;
 
-        this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.')}
+        this.report.recommendations.push('Bundle size is large (>1MB). Consider code splitting.)}
 
       this.report.optimizations.push({)
-        type: 'bundle-analysis'),
-        status: 'completed'),
-        details: `Total bundle size: ${(totalSize / 1024).toFixed(2)} KB`
+        type: 'bundle-analysis),
+        status: 'completed),
+        details: `Total bundle size: ${(totalSize / 1024).toFixed(2)} KB
       if (totalSize > 1024 * 1024) {/* TODO: Fix JSX expression */}
 
       }
 
-      this.report.optimizations.push({/* TODO: Fix JSX expression */})`
-  size: ${(totalSize / 1024).toFixed(2)} KB`
+      this.report.optimizations.push({/* TODO: Fix JSX expression */})
+  size: ${(totalSize / 1024).toFixed(2)} KB
       });
 
-      `
 //       // // console.log removed for production
-`
-  size: ${(totalSize / 1024).toFixed(2)} KB`)} catch (error) {/* TODO: Fix JSX expression */}
+
+  size: ${(totalSize / 1024).toFixed(2)} KB)} catch (error) {/* TODO: Fix JSX expression */}
 
 //       }
 
@@ -100,9 +99,9 @@ let _totalSize = 0;;
 
   async optimizeImages() {
 //     try {
-//       const publicPath = path.join(process.cwd(), 'public);;
+//       const publicPath = path.join(process.cwd(), public);;
 
-//       const imagesPath = path.join(publicPath, 'images);;
+//       const imagesPath = path.join(publicPath, images);;
 
       // Check if images directory exists;
 
@@ -122,19 +121,21 @@ const _images = await fs.readdir(imagesPath);;
 
       let _optimizedCount = 0;;
 
-      for (const image of images) {/* TODO: Fix JSX expression */}`
-  detected: ${image} (${(stats.size / 1024).toFixed(2)} KB)`)}
+      for (const image of images) {/* TODO: Fix JSX expression */}
+
+  detected: ${image} (${(stats.size / 1024).toFixed(2)} KB))}
 
           optimizedCount++}
 
       }
 
       this.report.optimizations.push({)
-        type: 'image-optimization'),
-        status: 'completed'),
-        details: `Processed ${optimizedCount} images`
-      this.report.optimizations.push({/* TODO: Fix JSX expression */}`
-  s: `Processed ${optimizedCount} images`)
+        type: 'image-optimization),
+        status: 'completed),
+        details: `Processed ${optimizedCount} images
+      this.report.optimizations.push({/* TODO: Fix JSX expression */}
+
+  s: `Processed ${optimizedCount} images)
       });
 
 //       } catch (error) {/* TODO: Fix JSX expression */}
@@ -147,7 +148,7 @@ const _images = await fs.readdir(imagesPath);;
 //     try {
       // Generate critical CSS;
 
-      const criticalCSS = `;;
+      const criticalCSS = ;;
 
 /* Critical CSS for above-the-fold content */
 .min-h-screen { min-height: 100 vh}
@@ -209,16 +210,16 @@ const _images = await fs.readdir(imagesPath);;
 .rounded {/* TODO: Fix JSX expression */}
 
   s: 0.25rem}`
-`;
+;
 
-//       const criticalCSSPath = path.join(process.cwd(), 'public', 'critical.css);;
+//       const criticalCSSPath = path.join(process.cwd(), 'public', critical.css);;
 
       await fs.writeFile(criticalCSSPath, criticalCSS);
 
       this.report.optimizations.push({)
-        type: 'css-optimization'),
-        status: 'completed'),
-        details: 'Critical CSS generated',
+        type: 'css-optimization),
+        status: 'completed),
+        details: 'Critical CSS generated,
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
       });
 
@@ -232,17 +233,17 @@ const _images = await fs.readdir(imagesPath);;
 //     try {
       // Generate performance monitoring script;
 
-      const performanceScript = `;;
+      const performanceScript = ;;
 
 // Performance monitoring script;
 
 (function() {
-  'use strict;
+  use strict;
 
   // Monitor Core Web Vitals;
 
   function observeWebVitals() {
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver in window) {
       // LCP;
 
       new PerformanceObserver((list) => {;
@@ -251,7 +252,7 @@ const _entries = list.getEntries();;
 
         const _lastEntry = entries[entries.length - 1];;
 
-//         }).observe({ entryTypes: ['largest-contentful-paint] });
+//         }).observe({ entryTypes: [largest-contentful-paint] });
 
       // FID;
 
@@ -264,17 +265,17 @@ const _entries = list.getEntries();;
 
 }
 
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+    if ('PerformanceObserver in window) {/* TODO: Fix JSX expression */}
 
 //         }).observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint] });
+  s: [largest-contentful-paint] });
 
       // FID;
 
       new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
 
 //           })}).observe({/* TODO: Fix JSX expression */})
-  s: ['first-input] });
+  s: [first-input] });
 
       // CLS;
 
@@ -287,33 +288,33 @@ const _entries = list.getEntries();;
         });
 
 //         }).observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })}
+  s: ['layout-shift] })}
 
   }
 
   // Start monitoring when DOM is ready;
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', observeWebVitals)} else {
+  if (document.readyState === 'loading) {
+    document.addEventListener('DOMContentLoaded, observeWebVitals)} else {
     observeWebVitals();
 
-  if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
+  if (document.readyState === 'loading) {/* TODO: Fix JSX expression */}
 
   } else {/* TODO: Fix JSX expression */}
 
   }
 
 })();`
-`;
+;
 
-//       const performanceScriptPath = path.join(process.cwd(), 'public', 'performance-monitor.js);;
+//       const performanceScriptPath = path.join(process.cwd(), 'public', performance-monitor.js);;
 
       await fs.writeFile(performanceScriptPath, performanceScript);
 
       this.report.optimizations.push({)
-        type: 'javascript-optimization'),
-        status: 'completed'),
-        details: 'Performance monitoring script generated',
+        type: 'javascript-optimization),
+        status: 'completed),
+        details: 'Performance monitoring script generated,
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
       });
 
@@ -326,28 +327,28 @@ const _entries = list.getEntries();;
   async generateServiceWorker() {
 //     try {;
 
-const serviceWorkerScript = `;;
+const serviceWorkerScript = ;;
 
 // Service Worker for caching and offline support;
 
-// const CACHE_NAME = 'zion-app-v1;;
+// const CACHE_NAME = zion-app-v1;;
 
 const urlsToCache = [;;
 
-  '/',
-  '/static/css/main.css',
-  '/static/js/main.js',
+  '/,
+  '/static/css/main.css,
+  '/static/js/main.js,
   /static/js/vendor.js
 ];
 
-self.addEventListener('install', (event) => {
+self.addEventListener('install, (event) => {
   event.waitUntil(
 
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(urlsToCache))
   )});
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('fetch, (event) => {
   event.respondWith(
 
     caches.match(event.request)
@@ -358,30 +359,30 @@ self.addEventListener('fetch', (event) => {
 
   async generateServiceWorker() {/* TODO: Fix JSX expression */}
 
-})';
+});
 
-self.addEventListener('fetch', (event) => {/* TODO: Fix JSX expression */}
+self.addEventListener('fetch, (event) => {/* TODO: Fix JSX expression */}
 
       })
   )});
 
-self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
+self.addEventListener('activate, (event) => {/* TODO: Fix JSX expression */}
 
           }
 
         })
       )})
   )});`
-`;
+;
 
-//       const serviceWorkerPath = path.join(process.cwd(), 'public', 'sw.js);;
+//       const serviceWorkerPath = path.join(process.cwd(), 'public', sw.js);;
 
       await fs.writeFile(serviceWorkerPath, serviceWorkerScript);
 
       this.report.optimizations.push({)
-        type: 'service-worker'),
-        status: 'completed'),
-        details: 'Service worker generated for offline support',
+        type: 'service-worker),
+        status: 'completed),
+        details: 'Service worker generated for offline support,
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
       });
 
@@ -395,25 +396,25 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
 //     try {
       // Check if vite.config.js exists;
 
-//       const viteConfigPath = path.join(process.cwd(), 'vite.config.js);;
+//       const viteConfigPath = path.join(process.cwd(), vite.config.js);;
 
       try {
         await fs.access(viteConfigPath);
 
         // Read current config;
 
-        const _configContent = await fs.readFile(viteConfigPath, 'utf8);;
+        const _configContent = await fs.readFile(viteConfigPath, utf8);;
 
         // Add optimization plugins if not present;
 
-        if (!configContent.includes('rollup-plugin-visualizer')) {
-          this.report.recommendations.push('Consider adding bundle analyzer to vite.config.js);
+        if (!configContent.includes('rollup-plugin-visualizer)) {
+          this.report.recommendations.push(Consider adding bundle analyzer to vite.config.js);
 
   async optimizeBuild() {/* TODO: Fix JSX expression */}
 
         }
 
-        if (!configContent.includes('terser')) {/* TODO: Fix JSX expression */}
+        if (!configContent.includes('terser)) {/* TODO: Fix JSX expression */}
 
         }
 
@@ -422,9 +423,9 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
 //         }
 
       this.report.optimizations.push({)
-        type: 'build-optimization'),
-        status: 'completed'),
-        details: 'Build configuration analyzed',
+        type: 'build-optimization),
+        status: 'completed),
+        details: 'Build configuration analyzed,
       this.report.optimizations.push({/* TODO: Fix JSX expression */})
       });
 
@@ -435,7 +436,7 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
   }
 
   async generateReport() {
-//     //     const reportPath = path.join(process.cwd(), 'performance-enhancement-report.json);;
+//     //     const reportPath = path.join(process.cwd(), performance-enhancement-report.json);;
 
     await fs.writeFile(reportPath, JSON.stringify(this.report, null, 2));
 
@@ -443,14 +444,14 @@ self.addEventListener('activate', (event) => {/* TODO: Fix JSX expression */}
 
 //     const markdownReport = this.generateMarkdownReport();;
 
-//     const markdownPath = path.join(process.cwd(), 'performance-enhancement-report.md);;
+//     const markdownPath = path.join(process.cwd(), performance-enhancement-report.md);;
 
     await fs.writeFile(markdownPath, markdownReport);
 
 //     }
 
   generateMarkdownReport() {
-    return `# Performance Enhancement Report;
+    return # Performance Enhancement Report;
 
 Generated: ${this.report.timestamp}
 
@@ -469,26 +470,29 @@ This report contains the results of the performance enhancement process.
 ## Optimizations Applied;
 
 ${this.report.optimizations.map(opt => )
-  `- **${opt.type}**: ${opt.status} - ${opt.details}`)
-).join('\n')}
+  `- **${opt.type}**: ${opt.status} - ${opt.details})
+).join('\n)}
 
 ## Metrics;
 
-- Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
+- Bundle Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured}
 
 ## Recommendations;
 
-${/* TODO: Fix JSX expression */}`
-  `- **${opt.type}**: ${opt.status} - ${opt.details}`
-).join('\n')}
+${/* TODO: Fix JSX expression */}
+
+  `- **${opt.type}**: ${opt.status} - ${opt.details}
+
+).join('\n)}
 
 ## Metrics;
 
-- Bundle,`
-  Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured'}
+- Bundle,
+  Size: ${this.report.metrics.bundleSize ? `${(this.report.metrics.bundleSize / 1024).toFixed(2)} KB` : 'Not measured}
 
-## Recommendations;`
-${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}
+## Recommendations;
+
+${this.report.recommendations.map(rec => `- ${rec}`).join('\n)}
 
 ## Next Steps;
 
@@ -502,7 +506,7 @@ ${this.report.recommendations.map(rec => `- ${rec}`).join('\n')}
 
 ---
 *Generated by Performance Enhancer Script*`
-`}
+}
 
 }
 

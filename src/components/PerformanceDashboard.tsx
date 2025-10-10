@@ -1,6 +1,6 @@
 
 
-'use client';
+'use client;
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 
@@ -42,12 +42,14 @@ const,
   useEffect(() => {/* TODO: Fix JSX expression */}
 
   p: entry.startTime }));
+
         }
+
       });    });
 
     try {/* TODO: Fix JSX expression */}
 
-  s: ['paint] });
+  s: [paint] });
 
       return () => observer.disconnect();
 

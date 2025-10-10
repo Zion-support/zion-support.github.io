@@ -1,5 +1,5 @@
 
-'use client';
+'use client;
 
 // Performance optimization utilities;
 
@@ -85,7 +85,7 @@ export const useIntersectionObserver = ();;
   threshol,
   d: 0.1,
             rootMargi,
-  n: '50px',
+  n: '50px,
 //             ...options;)
           })
         : null,
@@ -150,7 +150,7 @@ export const useLazyImage = (sr);;
 
 }
 
-  const [imageSrc, setImageSrc] = useState(placeholder || ');
+  const [imageSrc, setImageSrc] = useState(placeholder || );
 
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -240,7 +240,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     const updateMetrics = () => {/* TODO: Fix JSX expression */};;
 
@@ -248,13 +248,13 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-      const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+      const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
-      const paint = performance.getEntriesByType('paint);;
+      const paint = performance.getEntriesByType(paint);;
 
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint)?.startTime;;
+      const fcp = paint.find(entry => entry.name === first-contentful-paint)?.startTime;;
 
-      const lcp = performance.getEntriesByType('largest-contentful-paint)[0]?.startTime;;
+      const lcp = performance.getEntriesByType(largest-contentful-paint)[0]?.startTime;;
 
       setMetrics({/* TODO: Fix JSX expression */}
 
@@ -270,7 +270,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 
     // Monitor performance after page load;
 
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
     } else {/* TODO: Fix JSX expression */}
 
@@ -278,17 +278,17 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-      window.addEventListener('load', updateMetrics)}
+      window.addEventListener('load, updateMetrics)}
 
     // Monitor Core Web Vitals;
 
-    if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
+    if ('web-vitals in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+      import('web-vitals).then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -315,7 +315,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-      window.removeEventListener('load, updateMetrics)}}, []);
+      window.removeEventListener(load, updateMetrics)}}, []);
 
   return metrics};
 
@@ -347,7 +347,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    if (typeof window === 'undefined' || !('memory in performance)) return;
+    if (typeof window === 'undefined' || !(memory in performance)) return;
 
     const updateMemoryInfo = () => {/* TODO: Fix JSX expression */};;
 
@@ -396,11 +396,11 @@ export const preloadResource = (hre,;;
 
 }
 
-  if (typeof window === 'undefined) return;
+  if (typeof window === undefined) return;
 
-  const link = document.createElement('link);;
+  const link = document.createElement(link);;
 
-  link.rel = 'preload;
+  link.rel = preload;
 
   link.href = href;
 
@@ -416,23 +416,23 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-  if (typeof window === 'undefined) return;
+  if (typeof window === undefined) return;
 
   // Preload critical fonts;
 
-  preloadResource('/fonts/inter-var.woff2', 'font);
+  preloadResource('/fonts/inter-var.woff2', font);
 
-  preloadResource('/fonts/inter-var.woff', 'font);
+  preloadResource('/fonts/inter-var.woff', font);
 
   // Preload critical images;
 
-  preloadResource('/images/hero-bg.webp', 'image);
+  preloadResource('/images/hero-bg.webp', image);
 
-  preloadResource('/images/logo.svg', 'image);
+  preloadResource('/images/logo.svg', image);
 
   // Preload critical CSS;
 
-  preloadResource('/styles/critical.css', 'style)};
+  preloadResource('/styles/critical.css', style)};
 
 // Bundle size monitoring;
 
@@ -464,7 +464,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     const calculateBundleSize = () => {/* TODO: Fix JSX expression */};;
 
@@ -472,7 +472,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-      const resources = performance.getEntriesByType('resource);;
+      const resources = performance.getEntriesByType(resource);;
 
       let jsSize = 0;;
 
@@ -490,13 +490,13 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
         totalSize += size;
 
-        if (resource.name.includes('.js')) {/* TODO: Fix JSX expression */}
+        if (resource.name.includes('.js)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-          jsSize += size} else if (resource.name.includes('.css')) {/* TODO: Fix JSX expression */}
+          jsSize += size} else if (resource.name.includes('.css)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -526,7 +526,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
     // Calculate after page load;
 
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+    if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
     } else {/* TODO: Fix JSX expression */}
 
@@ -534,7 +534,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-      window.addEventListener('load', calculateBundleSize)}
+      window.addEventListener('load, calculateBundleSize)}
 
     return () => {/* TODO: Fix JSX expression */}
 
@@ -542,7 +542,7 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */};;
 
 }
 
-      window.removeEventListener('load, calculateBundleSize)}}, []);
+      window.removeEventListener(load, calculateBundleSize)}}, []);
 
   return bundleSize};
 

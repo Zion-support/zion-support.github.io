@@ -240,7 +240,7 @@ const duration = performance.now() - startTime;;
 
       if (!response.ok) {/* TODO: Fix JSX expression */}
 
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        throw new Error(`HTTP ${response.status}: ${response.statusText});
 
       // Apply response interceptor;
 
@@ -280,7 +280,7 @@ const data = await this.parseResponse<T>(finalResponse);;
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
 
-  d: 'GET });
+  d: GET });
 
   /**
    * POST request;
@@ -293,7 +293,7 @@ const data = await this.parseResponse<T>(finalResponse);;
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
 
-  d: 'POST, body });
+  d: POST, body });
 
   /**
    * PUT request;
@@ -306,7 +306,7 @@ const data = await this.parseResponse<T>(finalResponse);;
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
 
-  d: 'PUT, body });
+  d: PUT, body });
 
   /**
    * DELETE request;
@@ -318,7 +318,7 @@ const data = await this.parseResponse<T>(finalResponse);;
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
 
-  d: 'DELETE });
+  d: DELETE });
 
   /**
    * PATCH request;
@@ -331,7 +331,7 @@ const data = await this.parseResponse<T>(finalResponse);;
   g: Partial<RequestConfig> = {})
   ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
 
-  d: 'PATCH, body });
+  d: PATCH, body });
 
   /**
    * Prepare request configuration;
@@ -353,14 +353,15 @@ const data = await this.parseResponse<T>(finalResponse);;
 
    */
   private buildURL(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`;
+  g: RequestConfig): string {/* TODO: Fix JSX expression */};
 
-let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;;
+let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url};;
 
     if (config.params) {/* TODO: Fix JSX expression */}
 
-      });`
-      url += `?${params.toString()}`}
+      });
+
+      url += `?${params.toString()}}
 
     return url}
 
@@ -395,7 +396,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
     }
 
-    if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
+    if (contentType?.includes('text/)) {/* TODO: Fix JSX expression */}
 
     }
 
@@ -406,8 +407,9 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
    */
   private getCacheKey(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`
-    return `${config.method}:${url}`}
+  g: RequestConfig): string {/* TODO: Fix JSX expression */}
+
+    return `${config.method}:${url}}
 
   /**
    * Get response from cache;
@@ -490,5 +492,3 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 export const apiInterceptor = APIInterceptor.getInstance();;
 
 export default APIInterceptor;
-
-`

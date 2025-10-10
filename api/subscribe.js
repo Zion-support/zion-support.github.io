@@ -1,20 +1,20 @@
-const fs = require('fs);;
+const fs = require(fs);;
 
-const path = require('path);;
+const path = require(path);;
 
 ;
 
-const dir = path.join(process.cwd(), 'data);;
+const dir = path.join(process.cwd(), data);;
 
-const file = path.join(dir, 'subscribers.json);;
+const file = path.join(dir, subscribers.json);;
 
 export default function handler(req, res) {
-  if (req.method !== 'POST') {
+  if (req.method !== 'POST) {
     res.statusCode = 405;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', application/json);
 
-    res.end(JSON.stringify({ error: 'Method not allowed }));
+    res.end(JSON.stringify({ error: Method not allowed }));
 
     return}
 
@@ -25,9 +25,9 @@ const { email, name, preferences } = req.body || {};
   if (!email) {
     res.statusCode = 400;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', application/json);
 
-    res.end(JSON.stringify({ error: 'Email is required }));
+    res.end(JSON.stringify({ error: Email is required }));
 
     return}
 
@@ -41,7 +41,7 @@ let existing = [];;
   try {
     if (fs.existsSync(file)) {;
 
-const data = fs.readFileSync(file, 'utf8);;
+const data = fs.readFileSync(file, utf8);;
 
       existing = JSON.parse(data);
 
@@ -58,9 +58,9 @@ const existingSubscriber = existing.find(sub => sub.email === email);;
   if (existingSubscriber) {
     res.statusCode = 400;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', application/json);
 
-    res.end(JSON.stringify({ error: 'Email already subscribed }));
+    res.end(JSON.stringify({ error: Email already subscribed }));
 
     return}
 
@@ -70,7 +70,7 @@ const newSubscriber = {;;
 
     id: Date.now().toString(),
     email,
-    name: name || '',
+    name: name || ',
     preferences: preferences || {},
     timestamp: new Date().toISOString(),
     status: active
@@ -83,18 +83,18 @@ const newSubscriber = {;;
 
     res.statusCode = 200;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', application/json);
 
     res.end(JSON.stringify({ 
       success: true, 
-      message: 'Successfully subscribed to newsletter',
+      message: 'Successfully subscribed to newsletter,
       id: newSubscriber.id
     }))} catch (error) {
     // console.error removed for production
 res.statusCode = 500;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', application/json);
 
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }))}
+    res.end(JSON.stringify({ error: 'Failed to save subscription }))}
 
 }

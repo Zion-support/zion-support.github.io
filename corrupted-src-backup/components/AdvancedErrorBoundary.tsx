@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react;
+import React, { Component, ErrorInfo, ReactNode } from react;
 
 interface Props {/* TODO: Fix JSX expression */}
 
@@ -34,16 +34,16 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
 
     this.setState({ error, errorInfo });
 
-    // Log error to monitoring service';
+    // Log error to monitoring service;
 
-    //     // Send to error tracking service';
+    //     // Send to error tracking service;
 
-    if (typeof window !== 'undefined' && 'gtag in window) {
-      (window as any).gtag('event', 'exception, {)
+    if (typeof window !== 'undefined' && gtag in window) {
+      (window as any).gtag('event', exception, {)
         description: error.toString(),
         fatal: false;
 
-    if (typeof window !== 'undefined' && 'gtag in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && gtag in window) {/* TODO: Fix JSX expression */}
 
       })}
 
@@ -52,19 +52,19 @@ export class AdvancedErrorBoundary extends Component<Props, State> {/* TODO: Fix
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || ()
-          <div className="error-boundary>)
+          <div className=error-boundary>)
             <h2>Something went wrong.</h2>)
-            <details style={{ whiteSpace: 'pre-wrap }}>)
+            <details style={{ whiteSpace: pre-wrap }}>)
       return (
 
         this.props.fallback || (
 
-          <div className="error-boundary></div>
+          <div className=error-boundary></div>
             <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap }}>
+            <details style={{ whiteSpace: pre-wrap }}>
   render() {/* TODO: Fix JSX expression */}
 
-  e: 'pre-wrap }}></details>
+  e: pre-wrap }}></details>
               {this.state.error && this.state.error.toString()}
 
               <br /></br>

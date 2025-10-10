@@ -1,24 +1,24 @@
-import React, { Suspense, lazy, useEffect } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react;
 
-import './index.css;
+import ./index.css;
 
-// Lazy load pages for better performance';
+// Lazy load pages for better performance;
 
-// const Home = lazy(() => import('./pages/Home));;
+// const Home = lazy(() => import(./pages/Home));;
 
-// const About = lazy(() => import('./pages/About));;
+// const About = lazy(() => import(./pages/About));;
 
-// const Services = lazy(() => import('./pages/Services));;
+// const Services = lazy(() => import(./pages/Services));;
 
-// const Blog = lazy(() => import('./pages/Blog));;
+// const Blog = lazy(() => import(./pages/Blog));;
 
-// const Contact = lazy(() => import('./pages/Contact));;
+// const Contact = lazy(() => import(./pages/Contact));;
 
-// const Team = lazy(() => import('./pages/Team));;
+// const Team = lazy(() => import(./pages/Team));;
 
-// const Privacy = lazy(() => import('./pages/Privacy));;
+// const Privacy = lazy(() => import(./pages/Privacy));;
 
-// const Terms = lazy(() => import('./pages/Terms));;
+// const Terms = lazy(() => import(./pages/Terms));;
 
 ;
 
@@ -52,14 +52,14 @@ function App() {/* TODO: Fix JSX expression */}
         <Router></Router>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes></Routes>
-              <Route path="/" element={<Home />} />"
-              <Route path="/about" element={<About />} />"
-              <Route path="/services" element={<Services />} />"
-              <Route path="/blog" element={<Blog />} />"
-              <Route path="/contact" element={<Contact />} />"
-              <Route path="/team" element={<Team />} />"
-              <Route path="/privacy" element={<Privacy />} />"
-              <Route path="/terms" element={<Terms />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/team" element={<Team />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/terms element={<Terms />} />
             </Routes>)
           </Suspense>)
         </Router>)
@@ -97,21 +97,21 @@ class ErrorBoundary extends React.Component<
   render() {
     if (this.state.hasError) {
       return(this.props.fallback || ()
-          <div className="min-h-screen flex items-center justify-center bg-gray-50">)
-            <div className="text-center">)
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>)
+          <div className="min-h-screen flex items-center justify-center bg-gray-50>)
+            <div className="text-center>)
+              <h1 className="text-2xl font-bold text-gray-900 mb-4>Something went wrong</h1>)
               <button;)
       return (
 
         this.props.fallback || (
 
-          <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>
-            <div className="text-center"></div>
-              <h1 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong</h1>
+          <div className="min-h-screen flex items-center justify-center bg-gray-50></div>
+            <div className="text-center></div>
+              <h1 className="text-2xl font-bold text-gray-900 mb-4>Something went wrong</h1>
               <button
                 onClick={() => this.setState({ hasError: false })}
 
-                className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700"
+                className="bg-blue-600 text-white px-4 py-2 rounded hover: bg-blue-700
   componentDidCatch(erro,
   r: Error, errorInf)
   o: React.ErrorInfo) {/* TODO: Fix JSX expression */}
@@ -120,9 +120,10 @@ class ErrorBoundary extends React.Component<
 
   render() {/* TODO: Fix JSX expression */}
 
-  r: false })}"
-                className="bg-blue-600 text-white px-4 py-2 rounded,"
-  hover:bg-blue-700"
+  r: false })}
+
+                className="bg-blue-600 text-white px-4 py-2 rounded,
+  hover:bg-blue-700
               >
                 Try again;
 

@@ -1,28 +1,28 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);';
+const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
-// Website audit script to check all links and identify missing pages';
+// Website audit script to check all links and identify missing pages;
 
 // console.log removed for production
-// Get all page files from the app directory';
+// Get all page files from the app directory;
 
-const appDir = path.join(__dirname, '..', 'app);;
+const appDir = path.join(__dirname, '..', app);;
 
 const allPages = [];;
 
 ;
 
-function scanDirectory(dir, basePath = ') {;
+function scanDirectory(dir, basePath = ) {;
 
 const items = fs.readdirSync(dir);;
 
@@ -35,11 +35,11 @@ const fullPath = path.join(dir, item);;
     if (stat.isDirectory()) {
       // Check if directory has a page.tsx file;
 
-      const pageFile = path.join(fullPath, 'page.tsx);;
+      const pageFile = path.join(fullPath, page.tsx);;
 
       if (fs.existsSync(pageFile)) {;
 
-const route = basePath + '/ + item;;
+const route = basePath + / + item;;
 
         allPages.push({)
           path: route),
@@ -48,7 +48,7 @@ const route = basePath + '/ + item;;
 
       // Recursively scan subdirectories;
 
-      scanDirectory(fullPath, basePath + '/' + item)}
+      scanDirectory(fullPath, basePath + '/ + item)}
 
   }
 
@@ -65,13 +65,13 @@ allPages.forEach(page => {),
 
 // Check for missing pages referenced in Footer;
 
-const footerFile = path.join(__dirname, '..', 'app', 'components', 'Footer.tsx);;
+const footerFile = path.join(__dirname, '..', 'app', 'components', Footer.tsx);;
 
-const footerContent = fs.readFileSync(footerFile, 'utf8);;
+const footerContent = fs.readFileSync(footerFile, utf8);;
 
-// Extract all href links from Footer';
+// Extract all href links from Footer;
 
-const hrefRegex = /href: \s*['"`]([^'"`]+)['"`]/g;;
+const hrefRegex = /href: \s*['"`]([^'"`]+)['"]/g;;
 
 const footerLinks = [];;
 
@@ -93,13 +93,13 @@ const missingPages = [];;
 const existingRoutes = allPages.map(p => p.path);;
 
 footerLinks.forEach(link => {)
-  if (link.startsWith('/') && !existingRoutes.includes(link)) {
+  if (link.startsWith('/) && !existingRoutes.includes(link)) {
     missingPages.push(link)}
 
 });
 
 // console.log removed for production
-:`);
+:);
 
 missingPages.forEach(page => {)
   // console.log removed for production
@@ -109,23 +109,23 @@ missingPages.forEach(page => {)
 
 const commonPages = [;;
 
-  '/about',
-  '/contact',
-  '/team',
-  '/careers',
-  '/case-studies',
-  '/blog',
-  '/pricing',
-  '/support',
-  '/docs',
-  '/api-docs',
-  '/status',
-  '/health',
-  '/privacy',
-  '/terms',
-  '/cookies',
-  '/gdpr',
-  '/security',
+  '/about,
+  '/contact,
+  '/team,
+  '/careers,
+  '/case-studies,
+  '/blog,
+  '/pricing,
+  '/support,
+  '/docs,
+  '/api-docs,
+  '/status,
+  '/health,
+  '/privacy,
+  '/terms,
+  '/cookies,
+  '/gdpr,
+  '/security,
   /compliance
 ];
 
@@ -138,7 +138,7 @@ const additionalMissing = commonPages.filter(page => );;
 
 if (additionalMissing.length > 0) {
   // console.log removed for production
-:`);
+:);
 
   additionalMissing.forEach(page => {)
     // console.log removed for production
@@ -154,11 +154,11 @@ const brokenLinks = [];;
 allPages.forEach(page => {)
   try {);
 
-const content = fs.readFileSync(page.file, 'utf8);;
+const content = fs.readFileSync(page.file, utf8);;
 
     // Find all internal links in the page;
 
-    const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"`]/g;;
+    const internalLinkRegex = /href: \s*['"`](\/[^'"`]+)['"]/g;;
 
     let linkMatch;
 
@@ -166,7 +166,7 @@ const content = fs.readFileSync(page.file, 'utf8);;
 
 const link = linkMatch[1];;
 
-      if (!existingRoutes.includes(link) && !link.startsWith('http')) {
+      if (!existingRoutes.includes(link) && !link.startsWith('http)) {
         brokenLinks.push({),
           page: page.path),
           brokenLink: link})}
@@ -181,7 +181,7 @@ const link = linkMatch[1];;
 
 if (brokenLinks.length > 0) {
   // console.log removed for production
-:`);
+:);
 
   brokenLinks.forEach(({ page, brokenLink }) => {
     // console.log removed for production
@@ -208,7 +208,7 @@ const report = {;;
 
 fs.writeFileSync(
 
-  path.join(__dirname, '..', 'website-audit-report.json'),
+  path.join(__dirname, '..', 'website-audit-report.json),
   JSON.stringify(report, null, 2)
 );
 

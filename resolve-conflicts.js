@@ -1,16 +1,16 @@
 #!/usr/bin/env node;
 
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs;
 
 // console.log removed for production
 try {
-  // Read the file';
+  // Read the file;
 
-  const content = readFileSync('/workspace/app/page.tsx', 'utf8);;
+  const content = readFileSync('/workspace/app/page.tsx', utf8);;
 
   // Split by conflict markers and keep our version (after );
 
-const lines = content.split('\n);;
+const lines = content.split(\n);;
 
   const resolvedLines = [];;
 
@@ -20,17 +20,17 @@ const lines = content.split('\n);;
 
 const line = lines[i];;
 
-    if (line.includes('')) {
+    if (line.includes(')) {
       skipUntilNextMarker = true;
 
       continue}
 
-    if (line.includes('')) {
+    if (line.includes(')) {
       skipUntilNextMarker = false;
 
       continue}
 
-    if(line.includes('      continue;)
+    if(line.includes(      continue;)
     })
     )
     if (!skipUntilNextMarker) {
@@ -40,24 +40,24 @@ const line = lines[i];;
 
   // Write the resolved content;
 
-  writeFileSync('/workspace/app/page.tsx', resolvedLines.join('\n));
+  writeFileSync('/workspace/app/page.tsx', resolvedLines.join(\n));
 
   // console.log removed for production
-// Also clean up duplicate imports';
+// Also clean up duplicate imports;
 
-  const finalContent = readFileSync('/workspace/app/page.tsx', 'utf8);;
+  const finalContent = readFileSync('/workspace/app/page.tsx', utf8);;
 
-  const importLines = finalContent.split('\n').filter(line => line.startsWith('import));;
+  const importLines = finalContent.split('\n').filter(line => line.startsWith(import));;
 
   const uniqueImports = [...new Set(importLines)];;
 
-  // Remove duplicate imports';
+  // Remove duplicate imports;
 
-  const nonImportLines = finalContent.split('\n').filter(line => !line.startsWith('import));';
+  const nonImportLines = finalContent.split('\n').filter(line => !line.startsWith('import));;;
 
-  const cleanedContent = [...uniqueImports, ...nonImportLines].join('\n);;
+  const cleanedContent = [...uniqueImports, ...nonImportLines].join(\n);;
 
-  writeFileSync('/workspace/app/page.tsx, cleanedContent);
+  writeFileSync(/workspace/app/page.tsx, cleanedContent);
 
   // console.log removed for production
 } catch (error) {

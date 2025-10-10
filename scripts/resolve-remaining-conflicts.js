@@ -1,20 +1,20 @@
 #!/usr/bin/env node;
 
-import { execSync } from 'child_process';
+import { execSync } from 'child_process;
 
-import fs from 'fs;
+import fs from fs;
 
 // console.log removed for production
-// Function to resolve merge conflicts in a file';
+// Function to resolve merge conflicts in a file;
 
 function resolveMergeConflicts(filePath) {
-  try {';
+  try {;
 
-const content = fs.readFileSync(filePath, 'utf8);;
+const content = fs.readFileSync(filePath, utf8);;
 
     // Check if file has merge conflicts;
 
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
       // console.log removed for production
 // Advanced conflict resolution strategy;
 
@@ -22,7 +22,7 @@ const content = fs.readFileSync(filePath, 'utf8);;
 
         // Handle standard merge conflicts - prefer incoming changes;
 
-        .replace(/[\s\S]*?[\s\S]*?          const parts = match.split(');;
+        .replace(/[\s\S]*?[\s\S]*?          const parts = match.split();;
 
           if (parts.length > 1) {;
 
@@ -42,7 +42,7 @@ const incoming = parts[1].replace(/            return incoming;);;
         })
         // Clean up any remaining conflict markers;
 
-        .replace(/        .replace(//g, '')
+        .replace(/        .replace(//g, ')
         .replace(/      )
       fs.writeFileSync(filePath, resolvedContent);
 
@@ -59,11 +59,11 @@ return false}
 
 const conflictedFiles = [;;
 
-  'App.tsx',
-  'app/ai-services/page.tsx',
-  'app/components/Navigation.tsx',
-  'app/it-services/page.tsx',
-  'app/micro-saas/page.tsx',
+  'App.tsx,
+  'app/ai-services/page.tsx,
+  'app/components/Navigation.tsx,
+  'app/it-services/page.tsx,
+  'app/micro-saas/page.tsx,
   public/sitemap.xml
 ];
 
@@ -85,7 +85,7 @@ if (resolvedCount > 0) {
 
     // console.log removed for production
 try {
-      execSync('git add .', { encoding: 'utf8, cwd: process.cwd() });
+      execSync('git add .', { encoding: utf8, cwd: process.cwd() });
 
       // console.log removed for production
 } catch (error) {
@@ -96,7 +96,7 @@ try {
 
     // console.log removed for production
 try {
-      execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: 'utf8, cwd: process.cwd() });
+      execSync('git commit -m "Resolve remaining merge conflicts and integrate all changes"', { encoding: utf8, cwd: process.cwd() });
 
       // console.log removed for production
 } catch (error) {
@@ -110,7 +110,7 @@ try {
   // console.log removed for production
 try {,;
 
-const status = execSync('git status', { encoding: 'utf8, cwd: process.cwd() });;
+const status = execSync('git status', { encoding: utf8, cwd: process.cwd() });;
 
     // console.log removed for production
 } catch (error) {

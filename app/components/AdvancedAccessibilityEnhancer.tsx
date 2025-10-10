@@ -1,6 +1,6 @@
-'use client';
+'use client;
 
-import React, { useEffect, useState } from 'react;
+import React, { useEffect, useState } from react;
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -16,31 +16,31 @@ const [isEnhanced, setIsEnhanced] = useState(false);
   useEffect(() => {
     // Initialize accessibility enhancements;
 
-const initAccessibility = () => {;';
+const initAccessibility = () => {;;;
 
-      // Add high contrast mode support';
+      // Add high contrast mode support;
 
-const prefersHighContrast = window.matchMedia('(prefers-contrast: high)).matches;;
+const prefersHighContrast = window.matchMedia((prefers-contrast: high)).matches;;
 
       if (prefersHighContrast) {
-        document.documentElement.classList.add('high-contrast);
+        document.documentElement.classList.add(high-contrast);
 
       }
 
       // Add reduced motion support;
 
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)).matches;;
+const prefersReducedMotion = window.matchMedia((prefers-reduced-motion: reduce)).matches;;
 
       if (prefersReducedMotion) {
-        document.documentElement.classList.add('reduced-motion);
+        document.documentElement.classList.add(reduced-motion);
 
       }
 
       // Add focus indicators;
 
-const style = document.createElement('style);;
+const style = document.createElement(style);;
 
-      style.textContent = `
+      style.textContent = 
         .focus-visible {
           outline: 2px solid #3b82f6;
 
@@ -62,16 +62,16 @@ const style = document.createElement('style);;
 
         }
 
-      `;
+      ;
 
       document.head.appendChild(style);
 
       // Add keyboard navigation support;
 
-const handleKeyDown = (e: KeyboardEvent) => {;';
+const handleKeyDown = (e: KeyboardEvent) => {;;;
 
-        if (e.key === 'Tab') {
-          document.body.classList.add('keyboard-navigation);
+        if (e.key === 'Tab) {
+          document.body.classList.add(keyboard-navigation);
 
         }
 
@@ -79,20 +79,20 @@ const handleKeyDown = (e: KeyboardEvent) => {;';
 
 const handleMouseDown = () => {;;
 
-        document.body.classList.remove('keyboard-navigation);
+        document.body.classList.remove(keyboard-navigation);
 
       };
 
-      document.addEventListener('keydown, handleKeyDown);
+      document.addEventListener(keydown, handleKeyDown);
 
-      document.addEventListener('mousedown, handleMouseDown);
+      document.addEventListener(mousedown, handleMouseDown);
 
       setIsEnhanced(true);
 
       return () => {
-        document.removeEventListener('keydown, handleKeyDown);
+        document.removeEventListener(keydown, handleKeyDown);
 
-        document.removeEventListener('mousedown, handleMouseDown);
+        document.removeEventListener(mousedown, handleMouseDown);
 
         document.head.removeChild(style);
 
@@ -113,8 +113,9 @@ const cleanup = initAccessibility();;
 
   return (
 
-    <div className="accessibility-enhanced">
+    <div className="accessibility-enhanced>
       {children}
+
     </div>
   );}
 

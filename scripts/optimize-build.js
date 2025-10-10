@@ -1,10 +1,10 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { glob } from 'glob;
+import { glob } from glob;
 
 // Function to optimize images;
 
@@ -63,56 +63,57 @@ function generateSitemap() {/* TODO: Fix JSX expression */}
 }
 
   // // console.log removed for production
-';
+;
 
-const pages = [;';
+const pages = [;;;
 
     {/* TODO: Fix JSX expression */}
 
-  q: 'daily' },
+  q: 'daily },
     {/* TODO: Fix JSX expression */}
 
-  q: 'monthly' },
+  q: 'monthly },
     {/* TODO: Fix JSX expression */}
 
-  q: 'weekly' },
+  q: 'weekly },
     {/* TODO: Fix JSX expression */}
 
-  q: 'weekly' },
+  q: 'weekly },
     {/* TODO: Fix JSX expression */}
 
-  q: 'weekly' },
+  q: 'weekly },
     {/* TODO: Fix JSX expression */}
 
-  q: 'monthly' },
+  q: 'monthly },
     {/* TODO: Fix JSX expression */}
 
-  q: 'weekly' }
+  q: 'weekly }
 
   ];
 
 ;
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;;
+const sitemap = `<?xml version="1.0" encoding="UTF-8?>;;
 
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,
-${pages.map(page => `  <url>),
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9>,
+${pages.map(page =>   <url>),
     <loc>https://ziontechgroup.com${page.url}</loc>;
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>";;
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>;;
 
-<urlset xmlns="htt,"
-  p://www.sitemaps.org/schemas/sitemap/0.9"></urlset>
+<urlset xmlns="htt,
+  p://www.sitemaps.org/schemas/sitemap/0.9></urlset>
 ${/* TODO: Fix JSX expression */}
 
   s://ziontechgroup.com${page.url}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+    <lastmod>${new Date().toISOString().split('T)[0]}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
-    <priority>${page.priority}</priority>`
-  </url>`).join('\n')}`
-</urlset>`;
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
 
-  fs.writeFileSync('public/sitemap.xml, sitemap);
+</urlset>;
+
+  fs.writeFileSync(public/sitemap.xml, sitemap);
 
   // // console.log removed for production
 }
@@ -126,9 +127,9 @@ function generateRobots() {/* TODO: Fix JSX expression */}
 }
 
   // // console.log removed for production
-`;
+;
 
-const robots = `User-agen,;;
+const robots = User-agen,;;
 
   t: *
 Allo,
@@ -138,7 +139,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml;
 
 # Crawl-delay for better server performance;
 
-Crawl-delay: 1`;
+Crawl-delay: 1;
 
 ,
 Sitema,
@@ -147,10 +148,10 @@ Sitema,
 
 # Crawl-delay for better server performance;
 
-Crawl-dela,`
-  y: 1`;
+Crawl-dela,
+  y: 1;
 
-  fs.writeFileSync('public/robots.txt, robots);
+  fs.writeFileSync(public/robots.txt, robots);
 
   // // console.log removed for production
 }
@@ -169,7 +170,7 @@ const issues = [];;
 
   // Check for large files;
 
-  const files = await glob('app/**/*.{ts,tsx,js,jsx});;
+  const files = await glob(app/**/*.{ts,tsx,js,jsx});;
 
   for (const file of files) {;
 
@@ -177,22 +178,23 @@ const stats = fs.statSync(file);;
 
     if (stats.size > 100000) { // 100KB;
 
-      issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB)`)}
+      issues.push(`Large file detected: ${file} (${Math.round(stats.size / 1024)}KB))}
 
   }
 
   if (issues.length > 0) {
-// console.log('⚠️  Performance issues found: );
+// console.log(⚠️  Performance issues found: );
 
-  for (const file of files) {/* TODO: Fix JSX expression */}',
+  for (const file of files) {/* TODO: Fix JSX expression */},
   detected:
-        detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
+        detected: ${file} (${Math.round(stats.size / 1024)}KB));
 
     }
 
   }
 
-  if (issues.length > 0) {/* TODO: Fix JSX expression */}`
+  if (issues.length > 0) {/* TODO: Fix JSX expression */}
+
     issues.forEach(issue => // // console.log removed for production
 )} else {/* TODO: Fix JSX expression */}
 
@@ -207,8 +209,8 @@ async function optimize() {
 try {
     // Create public directory if it doesnt exist;
 
-    if (!fs.existsSync('public')) {
-      fs.mkdirSync('public);
+    if (!fs.existsSync('public)) {
+      fs.mkdirSync(public);
 
 async function optimize() {/* TODO: Fix JSX expression */}
 
@@ -253,4 +255,4 @@ process.exit(1)} catch (error) {/* TODO: Fix JSX expression */}
 
 optimize();
 
-optimize();"`
+optimize();"

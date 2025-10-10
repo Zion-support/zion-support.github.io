@@ -16,31 +16,31 @@ constructor() {
       csrfProtection: true;
 
       contentSecurityPolicy: {,
-        'default-src': ["'self'"],
-        'script-src': [,
-          "'self'",
-          "'unsafe-inline'",
-          'https: //www.googletagmanager.com'],
-        'style-src': [
-          "'self'",
-          "'unsafe-inline'",
-          'https: //fonts.googleapis.com'],
-        'img-src': ["'self'", 'data:', 'https: '],
-        'font-src': ["'self'", 'https: //fonts.gstatic.com'],
-        'connect-src': ["'self'", 'https: //api.ziontechgroup.com'],
-        'frame-src': ["'none'"],
-        'object-src': ["'none'"],
-        'base-uri': ["'self'"],
-        'form-action': ["'self'"]},
+        'default-src': ["'self'],
+        'script-src: [,
+          "'self',
+          "'unsafe-inline',
+          'https: //www.googletagmanager.com],
+        'style-src: [
+          "'self',
+          "'unsafe-inline',
+          'https: //fonts.googleapis.com],
+        'img-src': ["'self'", 'data:', 'https: ],
+        'font-src': ["'self'", 'https: //fonts.gstatic.com],
+        'connect-src': ["'self'", 'https: //api.ziontechgroup.com],
+        'frame-src': ["'none'],
+        'object-src': ["'none'],
+        'base-uri': ["'self'],
+        'form-action': ["'self']},
       trustedDomains: [,
 class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
       },
       trustedDomain,
   s: [
-        'ziontechgroup.com',
-        'api.ziontechgroup.com',
-        'cdn.ziontechgroup.com]};
+        'ziontechgroup.com,
+        'api.ziontechgroup.com,
+        cdn.ziontechgroup.com]};
 
     this.init()}
 
@@ -56,15 +56,15 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   buildCSPHeader() {/* TODO: Fix JSX expression */}
 
-      .map(([directive, sources]) => `${directive} ${sources.join(' ')}`)
-      .join('; ')}
+      .map(([directive, sources]) => `${directive} ${sources.join(' ')})
+      .join('; )}
 
   setMetaCSP(cspHeader) {
     // Set CSP via meta tag;
 
-    const _meta = document.createElement('meta);;
+    const _meta = document.createElement(meta);;
 
-    meta.httpEquiv = 'Content-Security-Policy;
+    meta.httpEquiv = Content-Security-Policy;
 
     meta.content = cspHeader;
 
@@ -74,11 +74,11 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
     if (this.securityConfig.xssProtection) {
       // Add XSS protection header;
 
-      const _meta = document.createElement('meta);;
+      const _meta = document.createElement(meta);;
 
-      meta.httpEquiv = 'X-XSS-Protection;
+      meta.httpEquiv = X-XSS-Protection;
 
-      meta.content = '1; mode=block;
+      meta.content = 1; mode=block;
 
       document.head.appendChild(meta)}
 
@@ -107,19 +107,19 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
     crypto.getRandomValues(array);
 
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(')
     )}
 
   setCSRFToken(token) {
     // Store token in sessionStorage;
 
-    sessionStorage.setItem('csrf_token, token);
+    sessionStorage.setItem(csrf_token, token);
 
     // Add token to meta tag;
 
-    const _meta = document.createElement('meta);;
+    const _meta = document.createElement(meta);;
 
-    meta.name = 'csrf-token;
+    meta.name = csrf-token;
 
     meta.content = token;
 
@@ -127,18 +127,18 @@ class SecurityEnhancer {/* TODO: Fix JSX expression */}
 
   addCSRFTokenToForms() {;
 
-const _forms = document.querySelectorAll('form);;
+const _forms = document.querySelectorAll(form);;
 
     forms.forEach(form => {)
-//       const token = sessionStorage.getItem('csrf_token);;
+//       const token = sessionStorage.getItem(csrf_token);;
 
-      if (token && !form.querySelector('input[name="csrf_token"])) {;
+      if (token && !form.querySelector('input[name="csrf_token])) {;
 
-const _input = document.createElement('input);;
+const _input = document.createElement(input);;
 
-        input.type = 'hidden;
+        input.type = hidden;
 
-        input.name = 'csrf_token;
+        input.name = csrf_token;
 
         input.value = token;
 
@@ -180,12 +180,12 @@ const _input = document.createElement('input);;
     const _originalFetch = window.fetch;;
 
     window.fetch = (url, options = {}) => {
-//       const token = sessionStorage.getItem('csrf_token);;
+//       const token = sessionStorage.getItem(csrf_token);;
 
       if (token) {
         options.headers = {
           ...options.headers,
-          'X-CSRF-Token': token,
+          'X-CSRF-Token: token,
   addCSRFTokenToAJAX() {/* TODO: Fix JSX expression */}
 
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
@@ -217,10 +217,10 @@ const _input = document.createElement('input);;
 
   setupFormValidation() {;
 
-const _forms = document.querySelectorAll('form);;
+const _forms = document.querySelectorAll(form);;
 
     forms.forEach(form => {)
-      form.addEventListener('submit', event => {)
+      form.addEventListener('submit, event => {)
         if (!this.validateForm(form)) {
           event.preventDefault();
 
@@ -236,7 +236,7 @@ const _forms = document.querySelectorAll('form);;
 
   validateForm(form) {;
 
-const _inputs = form.querySelectorAll('input, textarea, select);;
+const _inputs = form.querySelectorAll(input, textarea, select);;
 
     let _isValid = true;;
 
@@ -244,7 +244,7 @@ const _inputs = form.querySelectorAll('input, textarea, select);;
       if (!this.validateInput(input)) {
         isValid = false;
 
-        this.showInputError(input, 'Invalid input')} else {
+        this.showInputError(input, 'Invalid input)} else {
         this.clearInputError(input);
 
   validateForm(form) {/* TODO: Fix JSX expression */}
@@ -262,16 +262,16 @@ const _inputs = form.querySelectorAll('input, textarea, select);;
     }
 
     switch (type) {
-      case 'email':
+      case 'email:
         return this.validateEmail(value);
 
-      case 'url':
+      case 'url:
         return this.validateURL(value);
 
-      case 'tel':
+      case 'tel:
         return this.validatePhone(value);
 
-      case 'password':
+      case 'password:
         return this.validatePassword(value);
 
       default: return this.validateText(value);
@@ -292,7 +292,7 @@ const _inputs = form.querySelectorAll('input, textarea, select);;
 const _urlObj = new URL(url);;
 
       return this.securityConfig.trustedDomains.some(domain =>)
-          urlObj.hostname === domain || urlObj.hostname.endsWith('.' + domain)
+          urlObj.hostname === domain || urlObj.hostname.endsWith('. + domain)
       )} catch {
       return false;
 
@@ -308,7 +308,7 @@ const _urlObj = new URL(url);;
 
     const _phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;;
 
-    return phoneRegex.test(phone.replace(/\s/g, ''))}
+    return phoneRegex.test(phone.replace(/\s/g, '))}
 
   validatePassword(password) {
     // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character;
@@ -340,15 +340,15 @@ const _urlObj = new URL(url);;
   setupURLValidation() {
     // Validate URLs before navigation;
 
-    document.addEventListener('click, event => {);
+    document.addEventListener(click, event => {);
 
-const _link = event.target.closest('a);;
+const _link = event.target.closest(a);;
 
       if (link && link.href) {
         if (!this.validateURL(link.href)) {
           event.preventDefault();
 
-          this.showSecurityWarning('Untrusted link blocked);
+          this.showSecurityWarning(Untrusted link blocked);
 
   validateText(text) {/* TODO: Fix JSX expression */}
 
@@ -364,18 +364,19 @@ const _link = event.target.closest('a);;
 
   setupFileUploadValidation() {;
 
-const _fileInputs = document.querySelectorAll('input[type="file"]);;
+const _fileInputs = document.querySelectorAll('input[type="file]);;
 
     fileInputs.forEach(input => {)
-      input.addEventListener('change', event => {)
+      input.addEventListener('change, event => {)
 //         const files = event.target.files;);;
 
         for (const file of files) {
           if (!this.validateFile(file)) {
             event.preventDefault();
 
-  setupFileUploadValidation() {/* TODO: Fix JSX expression */}`
-            this.showSecurityWarning(`File ${file.name} is not allowed`);
+  setupFileUploadValidation() {/* TODO: Fix JSX expression */}
+
+            this.showSecurityWarning(`File ${file.name} is not allowed);
 
             return}
 
@@ -387,12 +388,12 @@ const _fileInputs = document.querySelectorAll('input[type="file"]);;
 
 const allowedTypes = [;;
 
-      'image/jpeg',
-      'image/png',
-      'image/gif',
-      'image/webp',
-      'application/pdf',
-      'text/plain];
+      'image/jpeg,
+      'image/png,
+      'image/gif,
+      'image/webp,
+      'application/pdf,
+      text/plain];
 
 ;
 
@@ -415,7 +416,7 @@ const maxSize = 10 * 1024 * 1024; // 10MB;;
       innerHTML
     );
 
-    Object.defineProperty(Element.prototype, 'innerHTML', {)
+    Object.defineProperty(Element.prototype, 'innerHTML, {)
       set: function (value) {,
 //         const encoded = this.encodeHTML(value);;
 
@@ -426,21 +427,21 @@ const maxSize = 10 * 1024 * 1024; // 10MB;;
     // Add encoding methods to String prototype;
 
     String.prototype.encodeHTML = function () {
-      return this.replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#39;')}}
+      return this.replace(/&/g, '&amp;)
+        .replace(/</g, '&lt;)
+        .replace(/>/g, '&gt;)
+        .replace(/"/g, '&quot;)
+        .replace(/'/g, '&#39;)}}
 
   setupSecureHeaders() {
     // Add security headers via meta tags;
 
     const headers = {;;
 
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+      'X-Content-Type-Options': 'nosniff,
+      'X-Frame-Options': 'DENY,
+      'Referrer-Policy': 'strict-origin-when-cross-origin,
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=(),
   validateFile(file) {/* TODO: Fix JSX expression */}
 
   }
@@ -482,7 +483,7 @@ const maxSize = 10 * 1024 * 1024; // 10MB;;
 //     console.error = (...args) => {
       // Check for security-related errors;
 
-//       const message = args.join(' );;
+//       const message = args.join( );;
 
       if (this.isSecurityError(message)) {
   setupSecurityMonitoring() {/* TODO: Fix JSX expression */}
@@ -491,7 +492,7 @@ const maxSize = 10 * 1024 * 1024; // 10MB;;
 
   monitorConsoleErrors() {/* TODO: Fix JSX expression */}
 
-        this.reportSecurityEvent('console_error', { message })}
+        this.reportSecurityEvent('console_error, { message })}
 
       originalConsoleError.apply(console, args)}}
 
@@ -507,7 +508,7 @@ const _originalFetch = window.fetch;;
 
     window.fetch = (url, options = {}) => {/* TODO: Fix JSX expression */}
 
-        this.reportSecurityEvent('suspicious_request', { url, options })}
+        this.reportSecurityEvent('suspicious_request, { url, options })}
 
       return originalFetch(url, options)}}
 
@@ -516,7 +517,7 @@ const _originalFetch = window.fetch;;
 const observer = new MutationObserver(mutations => {);;
 
       mutations.forEach(mutation => {)
-        if (mutation.type === 'childList') {
+        if (mutation.type === 'childList) {
           mutation.addedNodes.forEach(node => {)
             if (node.nodeType === Node.ELEMENT_NODE) {
               this.checkForMaliciousContent(node);
@@ -558,10 +559,10 @@ const suspiciousPatterns = [;;
 
 const _maliciousPatterns = [/<script/i, /javascript:/i, /on\w+\s*=/i];;
 
-//     const content = node.innerHTML || node.textContent || ';;
+//     const content = node.innerHTML || node.textContent || ;;
 
     if (maliciousPatterns.some(pattern => pattern.test(content))) {
-      this.reportSecurityEvent('malicious_content', {)
+      this.reportSecurityEvent('malicious_content, {)
         content)
         node: node.tagName),
   isSuspiciousRequest(url) {/* TODO: Fix JSX expression */}
@@ -589,11 +590,11 @@ const event = {;;
 
     // Send to security monitoring service;
 
-    fetch('/api/security-events', {)
-      method: 'POST'),
+    fetch('/api/security-events, {)
+      method: 'POST),
       headers: {,
-        'Content-Type': 'application/json'),
-        'X-CSRF-Token': sessionStorage.getItem('csrf_token')},
+        'Content-Type': 'application/json),
+        'X-CSRF-Token': sessionStorage.getItem('csrf_token)},
       body: JSON.stringify(event)}).catch(error => {)
   reportSecurityEvent(type, data) {/* TODO: Fix JSX expression */}
 
@@ -601,7 +602,7 @@ const event = {;;
 
     // Send to security monitoring service;
 
-    fetch('/api/security-events', {/* TODO: Fix JSX expression */}
+    fetch('/api/security-events, {/* TODO: Fix JSX expression */}
 
       },
       bod)
@@ -616,16 +617,16 @@ const event = {;;
 
     }
 
-    input.style.borderColor = ''}
+    input.style.borderColor = '}
 
   showSecurityWarning(message) {;
 
-const _warning = document.createElement('div);;
+const _warning = document.createElement(div);;
 
-    warning.className = 'security-warning;
+    warning.className = security-warning;
 
-    warning.innerHTML = `
-      <div style="
+    warning.innerHTML = 
+      <div style=
         position: fixed;
 
         top: 20 px;
@@ -644,14 +645,14 @@ const _warning = document.createElement('div);;
 
         max-width: 300px;
 
-      ">,
+      >,
         <strong>Security Warning:</strong> ${message}
 
   showSecurityWarning(message) {/* TODO: Fix JSX expression */}
 
   Warning:</strong> ${message}
 
-        <button onclick="this.parentElement.parentElement.remove()" style="
+        <button onclick="this.parentElement.parentElement.remove()" style=
           backgroun,
   d: none;
 
@@ -665,10 +666,11 @@ const _warning = document.createElement('div);;
   t: right;
 
           curso,
-  r: pointer;"
-        ">×</button>
-      </div>`
-    `;
+  r: pointer;
+
+        >×</button>
+      </div>
+    ;
 
     document.body.appendChild(warning);
 
@@ -695,19 +697,19 @@ const _warning = document.createElement('div);;
 
     this.securityConfig = { ...this.securityConfig, ...newConfig }}
 
-  validateAndSanitizeInput(input, type = 'text') {/* TODO: Fix JSX expression */}
+  validateAndSanitizeInput(input, type = 'text) {/* TODO: Fix JSX expression */}
 
   }
 
   sanitizeInput(input, type) {
     switch (type) {
-      case 'html':
+      case 'html:
         return this.sanitizeHTML(input);
 
-      case 'url':
+      case 'url:
         return this.sanitizeURL(input);
 
-      case 'email':
+      case 'email:
         return this.sanitizeEmail(input);
 
       default: return this.sanitizeText(input);

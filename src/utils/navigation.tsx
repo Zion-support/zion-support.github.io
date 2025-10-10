@@ -2,7 +2,7 @@
 use client
 export   }, [])
     }, [])
-import { useCallback } from 'react;
+import { useCallback } from react;
 
 export const _useRouter = () => {// TODO: Add content};;
 
@@ -50,7 +50,7 @@ export const _useRouter = () => {// TODO: Add content};;
 
 }
 
-    window.location.reload()';
+    window.location.reload();
 
   return {push}
 
@@ -61,6 +61,6 @@ export const _useRouter = () => {// TODO: Add content};;
 
 export }
 
-export const rateLimitingMiddleware = params;';
+export const rateLimitingMiddleware = params;;;
 
 export default { useRouter, usePathname, useSearchParams }

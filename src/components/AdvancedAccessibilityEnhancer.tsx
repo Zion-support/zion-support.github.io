@@ -1,6 +1,6 @@
-'use client';
+'use client;
 
-import React, { useEffect, useState, useCallback } from 'react;
+import React, { useEffect, useState, useCallback } from react;
 
 interface AdvancedAccessibilityEnhancerProps {/* TODO: Fix JSX expression */}
 
@@ -38,13 +38,13 @@ const handleMotionChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX express
 
     ;
 
-const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */};';
+const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expression */};;;
 
-  t: e.matches }))}';
+  t: e.matches }))};
 
-    motionQuery.addEventListener('change, handleMotionChange);
+    motionQuery.addEventListener(change, handleMotionChange);
 
-    contrastQuery.addEventListener('change, handleContrastChange);
+    contrastQuery.addEventListener(change, handleContrastChange);
 
     return () => {/* TODO: Fix JSX expression */}
 
@@ -68,7 +68,7 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
 
     // Apply font scaling;
 
-    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1)}, [accessibilitySettings]);
+    root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : 1)}, [accessibilitySettings]);
 
   // Keyboard navigation enhancement;
 
@@ -80,7 +80,7 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
 
       // Escape key to close modals/dropdowns;
 
-      if (event.key === 'Escape') {/* TODO: Fix JSX expression */}
+      if (event.key === 'Escape) {/* TODO: Fix JSX expression */}
 
         }
 
@@ -88,7 +88,7 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
 
       // Arrow keys for menu navigation;
 
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {/* TODO: Fix JSX expression */}
+      if (event.key === 'ArrowDown' || event.key === 'ArrowUp) {/* TODO: Fix JSX expression */}
 
         }
 
@@ -96,9 +96,9 @@ const handleContrastChange = (e: MediaQueryListEvent) => {/* TODO: Fix JSX expre
 
     };
 
-    document.addEventListener('keydown, handleKeyDown);
+    document.addEventListener(keydown, handleKeyDown);
 
-    return () => document.removeEventListener('keydown, handleKeyDown)}, []);
+    return () => document.removeEventListener(keydown, handleKeyDown)}, []);
 
   // Screen reader enhancements;
 
@@ -138,15 +138,15 @@ const originalPushState = history.pushState;;
 
       };
 
-      element.addEventListener('keydown, handleTabKey);
+      element.addEventListener(keydown, handleTabKey);
 
       firstElement?.focus();
 
-      return () => element.removeEventListener('keydown, handleTabKey)};
+      return () => element.removeEventListener(keydown, handleTabKey)};
 
     // Apply focus trap to modals;
 
-    const modals = document.querySelectorAll('[role="dialog"]);;
+    const modals = document.querySelectorAll('[role="dialog]);;
 
     modals.forEach(modal => {/* TODO: Fix JSX expression */})
     })}, []);
@@ -157,7 +157,7 @@ const originalPushState = history.pushState;;
 
       } else {/* TODO: Fix JSX expression */}
 
-        button.setAttribute('aria-label', `Button ${index + 1}`)}
+        button.setAttribute('aria-label', `Button ${index + 1})}
 
     });
 
@@ -167,8 +167,9 @@ const originalPushState = history.pushState;;
 
   g:not([alt]));
 
-    images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
-      img.setAttribute('alt', `Image ${index + 1}`)});
+    images.forEach((img, index) => {/* TODO: Fix JSX expression */}
+
+      img.setAttribute('alt', `Image ${index + 1})});
 
     // Add ARIA labels to form inputs;
 
@@ -180,8 +181,9 @@ const originalPushState = history.pushState;;
 
       } else if (label) {/* TODO: Fix JSX expression */}
 
-      } else {/* TODO: Fix JSX expression */}`
-        input.setAttribute('aria-label', `Input ${index + 1}`)}
+      } else {/* TODO: Fix JSX expression */}
+
+        input.setAttribute('aria-label', `Input ${index + 1})}
 
     })}, []);
 
@@ -189,23 +191,23 @@ const originalPushState = history.pushState;;
 
   const addSkipLinks = useCallback(() => {/* TODO: Fix JSX expression */};;
 
-  t: 'Skip to main content' },
+  t: 'Skip to main content },
       {/* TODO: Fix JSX expression */}
 
-  t: 'Skip to navigation' },
+  t: 'Skip to navigation },
       {/* TODO: Fix JSX expression */}
 
-  t: 'Skip to footer' }
+  t: 'Skip to footer }
 
     ];
 
 ;
 
-const skipLinksContainer = document.createElement('div);;
+const skipLinksContainer = document.createElement(div);;
 
-    skipLinksContainer.className = 'skip-links;
+    skipLinksContainer.className = skip-links;
 
-    skipLinksContainer.setAttribute('aria-label', 'Skip links);
+    skipLinksContainer.setAttribute('aria-label', Skip links);
 
     skipLinks.forEach(({ href, text }) => {/* TODO: Fix JSX expression */}
 
@@ -223,7 +225,7 @@ const skipLinksContainer = document.createElement('div);;
 
 ;
 
-const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div);;
+const elements = document.querySelectorAll(p, h1, h2, h3, h4, h5, h6, span, div);;
 
     elements.forEach(element => checkElementContrast(element as HTMLElement))}, []);
 
@@ -231,15 +233,15 @@ const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div
 
   const setupVoiceNavigation = useCallback(() => {/* TODO: Fix JSX expression */};;
 
-      } else if (command.includes('go to about')) {/* TODO: Fix JSX expression */}
+      } else if (command.includes('go to about)) {/* TODO: Fix JSX expression */}
 
-      } else if (command.includes('go to contact')) {/* TODO: Fix JSX expression */}
+      } else if (command.includes('go to contact)) {/* TODO: Fix JSX expression */}
 
-      } else if (command.includes('go to services')) {/* TODO: Fix JSX expression */}
+      } else if (command.includes('go to services)) {/* TODO: Fix JSX expression */}
 
-      } else if (command.includes('call phone')) {/* TODO: Fix JSX expression */}
+      } else if (command.includes('call phone)) {/* TODO: Fix JSX expression */}
 
-      } else if (command.includes('send email')) {/* TODO: Fix JSX expression */}
+      } else if (command.includes('send email)) {/* TODO: Fix JSX expression */}
 
       }
 
@@ -247,19 +249,19 @@ const elements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div
 
     // Add voice navigation button;
 
-    const voiceButton = document.createElement('button);;
+    const voiceButton = document.createElement(button);;
 
-    voiceButton.textContent = 'Voice Navigation;
+    voiceButton.textContent = Voice Navigation;
 
-    voiceButton.className = 'voice-navigation-button;
+    voiceButton.className = voice-navigation-button;
 
-    voiceButton.setAttribute('aria-label', 'Start voice navigation);
+    voiceButton.setAttribute('aria-label', Start voice navigation);
 
     voiceButton.onclick = () => recognition.start();
 
     ;
 
-const header = document.querySelector('header') || document.querySelector('nav);;
+const header = document.querySelector('header') || document.querySelector(nav);;
 
     if (header) {/* TODO: Fix JSX expression */}
 

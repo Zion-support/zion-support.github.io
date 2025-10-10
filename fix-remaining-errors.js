@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);';
+const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
-// Get all files with errors';
+// Get all files with errors;
 
-const getAllFilesWithErrors = () => {;';
+const getAllFilesWithErrors = () => {;;;
 
-const srcDir = path.join(__dirname, 'src);;
+const srcDir = path.join(__dirname, src);;
 
   const files = [];;
 
@@ -32,7 +32,7 @@ const fullPath = path.join(dir, item);;
       const stat = fs.statSync(fullPath);;
 
       if (stat.isDirectory()) {
-        scanDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+        scanDirectory(fullPath)} else if (item.endsWith('.tsx') || item.endsWith('.ts)) {
         files.push(fullPath)}
 
     }
@@ -54,7 +54,7 @@ const files = getAllFilesWithErrors();;
   for (const filePath of files) {
     try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
       let modified = false;;
 
@@ -68,14 +68,14 @@ const oldName = componentNameMatch[1];,;;
 
 const newName = oldName;;
 
-          .replace(/\s+/g, '')
-          .replace(/\-/g, '')
+          .replace(/\s+/g, ')
+          .replace(/\-/g, ')
           .replace(/^([a-z])/, (match, letter) => letter.toUpperCase());
 
         if (oldName !== newName) {
-          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC`);
+          content = content.replace(new RegExp(`const\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page:\\s*React\\.FC`, 'g'), `const ${newName}Page: React.FC);
 
-          content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page`);
+          content = content.replace(new RegExp(`export\\s+default\\s+${oldName.replace(/[\s\-]/g, '\\s+')}Page`, 'g'), `export default ${newName}Page);
 
           modified = true}
 
@@ -83,33 +83,33 @@ const newName = oldName;;
 
       // Fix any remaining TODO comments that might cause issues;
 
-      content = content.replace(/\/\/\s*TODO:.*$/gm, ');
+      content = content.replace(/\/\/\s*TODO:.*$/gm, );
 
-      content = content.replace(/{\s*\/\/\s*TODO:.*?}/g, '{});
+      content = content.replace(/{\s*\/\/\s*TODO:.*?}/g, {});
 
-      content = content.replace(/\[\s*\/\/\s*TODO:.*?]/g, '[]);
+      content = content.replace(/\[\s*\/\/\s*TODO:.*?]/g, []);
 
-      content = content.replace(/\(\s*\/\/\s*TODO:.*?\)/g, '());
+      content = content.replace(/\(\s*\/\/\s*TODO:.*?\)/g, ());
 
       // Fix any malformed JSX;
 
-      content = content.replace(/\/\/\s*[^/]/g, ');
+      content = content.replace(/\/\/\s*[^/]/g, );
 
-      content = content.replace(/<[^>]*\/\/[^>]*>/g, (match) => match.replace(/\/\/.*/, '));
+      content = content.replace(/<[^>]*\/\/[^>]*>/g, (match) => match.replace(/\/\/.*/, ));
 
       // Fix any incomplete function calls or objects;
 
-      content = content.replace(/{\s*}\s*$/gm, '{});
+      content = content.replace(/{\s*}\s*$/gm, {});
 
-      content = content.replace(/\[\s*\]\s*$/gm, '[]);
+      content = content.replace(/\[\s*\]\s*$/gm, []);
 
-      content = content.replace(/\(\s*\)\s*$/gm, '());
+      content = content.replace(/\(\s*\)\s*$/gm, ());
 
       if (modified) {
         fs.writeFileSync(filePath, content);
 
         // console.log removed for production
-}`);
+});
 
         fixedCount++}
 

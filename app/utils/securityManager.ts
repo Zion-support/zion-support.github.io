@@ -49,9 +49,9 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
   sanitizeInput(input: string): string {}
 
     return input
-      .replace(/[<React.Fragment>]/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+=/gi, '')
+      .replace(/[<React.Fragment>]/g, ')
+      .replace(/javascript:/gi, ')
+      .replace(/on\w+=/gi, ')
       .trim();
 
   sanitizeInput(inpu)
@@ -68,23 +68,23 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
 
 const parsed = new URL(url),;;
 
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,
+      if (!['http:', 'https: ].includes(parsed.protocol)) {,
   sanitizeUrl(url: string): string {}
 
     try {}
 
       const parsed = new URL(url);;
 
-      if (!['http:', 'https:'].includes(parsed.protocol)) {}
+      if (!['http:', 'https:].includes(parsed.protocol)) {}
 
-        throw new Error('Invalid protocol);
+        throw new Error(Invalid protocol);
 
       }
 
       return parsed.toString()
     } catch {}
 
-      return ''}
+      return '}
 
   sanitizeUrl(ur)
   l: string): string {/* TODO: Fix JSX expression */}
@@ -105,7 +105,7 @@ const parsed = new URL(url),;;
 
 const array = new Uint8Array(length),;;
 
-    if (typeof window !== 'undefined' && window.crypto) {,
+    if (typeof window !== 'undefined && window.crypto) {,
       window.crypto.getRandomValues(array);
 
     } else {
@@ -115,7 +115,7 @@ const array = new Uint8Array(length),;;
 
     const array = new Uint8Array(length);;
 
-    if (typeof window !== 'undefined' && window.crypto) {}
+    if (typeof window !== 'undefined && window.crypto) {}
 
       window.crypto.getRandomValues(array);
 
@@ -123,7 +123,7 @@ const array = new Uint8Array(length),;;
 
       // Fallback for Node.js environment;
 
-const crypto = import("crypto");;
+const crypto = import("crypto);;
 
       crypto.randomFillSync(array);
 
@@ -134,7 +134,7 @@ const crypto = import("crypto");;
 
     }
 
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(');
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join();
 
   /**
    * Implement rate limiting;

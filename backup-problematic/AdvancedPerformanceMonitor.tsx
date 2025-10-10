@@ -1,6 +1,6 @@
-'use client';
+'use client;
 
-import React, { useEffect, useState, useCallback } from 'react;
+import React, { useEffect, useState, useCallback } from react;
 
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 
@@ -36,13 +36,13 @@ const [metrics, setMetrics] = useState<PerformanceMetrics>
 
  memory: null});
 
-';
+;
 
-const measureWebVitals = useCallback(() => {;';
+const measureWebVitals = useCallback(() => {;;;
 
- if (typeof window === 'undefined' || !('performance in window)) return;
+ if (typeof window === 'undefined' || !(performance in window)) return;
 
- if (typeof PerformanceObserver === 'undefined) return;
+ if (typeof PerformanceObserver === undefined) return;
 
 ;
 
@@ -50,12 +50,12 @@ const observers: PerformanceObserver[] = [];
 
  // Measure First Contentful Paint (FCP);
 
-const _fcpEntries = performance.getEntriesByName('first-contentful-paint) || [];;
+const _fcpEntries = performance.getEntriesByName(first-contentful-paint) || [];;
 
  const _fcp = fcpEntries.length > 0 ? fcpEntries[0].startTime : null;;
 
  // Measure Largest Contentful Paint (LCP)
- if ('PerformanceObserver' in window) {
+ if ('PerformanceObserver in window) {
  try {;
 
 const lcpObserver = new PerformanceObserver(list => {),;;
@@ -79,7 +79,7 @@ const measureWebVitals = useCallback(() => {/* TODO: Fix JSX expression */};;
   p: lastEntry.startTime }))});
 
  lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint] });
+  s: [largest-contentful-paint] });
 
  observers.push(lcpObserver)} catch (error) {
  // eslint-disable-next-line no-console;
@@ -93,7 +93,7 @@ origin/
  }
 
  // Measure First Input Delay (FID)
- if ('PerformanceObserver' in window) {
+ if ('PerformanceObserver in window) {
  try {;
 
 const fidObserver = new PerformanceObserver(list => {);;
@@ -102,9 +102,9 @@ const _entries = list.getEntries();;
 
  entries.forEach(entry => {)
  if ()
- entry.entryType === 'first-input' &&)
- 'processingStart' in entry &&)
- 'startTime' in entry;)
+ entry.entryType === 'first-input &&)
+ 'processingStart in entry &&)
+ 'startTime in entry;)
  ) {;
 
 const _fidEntry = entry as PerformanceEventTiming;;
@@ -112,14 +112,14 @@ const _fidEntry = entry as PerformanceEventTiming;;
  setMetrics(prev => ({)
  ...prev)
  fid: fidEntry.processingStart - fidEntry.startTime),
- if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+ if ('PerformanceObserver in window) {/* TODO: Fix JSX expression */}
 
  }))}
 
  })});
 
  fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input] });
+  s: [first-input] });
 
  observers.push(fidObserver)} catch (error) {
  // eslint-disable-next-line no-console;
@@ -133,7 +133,7 @@ origin/
  }
 
  // Measure Cumulative Layout Shift (CLS)
- if ('PerformanceObserver' in window) {
+ if ('PerformanceObserver in window) {
  try {;
 
 let _clsValue = 0;;
@@ -144,9 +144,9 @@ const _entries = list.getEntries();;
 
  entries.forEach(entry => {)
  if ()
- entry.entryType === 'layout-shift' &&)
- 'hadRecentInput' in entry &&)
- 'value' in entry;)
+ entry.entryType === 'layout-shift &&)
+ 'hadRecentInput in entry &&)
+ 'value in entry;)
  ) {;
 
 const _clsEntry = entry as LayoutShift;;
@@ -156,7 +156,7 @@ const _clsEntry = entry as LayoutShift;;
 
  setMetrics(prev => ({ ...prev, cls: clsValue }));
 
- if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
+ if ('PerformanceObserver in window) {/* TODO: Fix JSX expression */}
 
   s: clsValue }))}
 
@@ -165,7 +165,7 @@ const _clsEntry = entry as LayoutShift;;
  })});
 
  clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift] });
+  s: [layout-shift] });
 
  observers.push(clsObserver)} catch (error) {
  // eslint-disable-next-line no-console;
@@ -181,7 +181,7 @@ origin/
  // Measure Time to First Byte (TTFB)
  try {;
 
-const _navigationEntries = performance.getEntriesByType?.('navigation) || [];;
+const _navigationEntries = performance.getEntriesByType?.(navigation) || [];;
 
  const _navigationEntry = navigationEntries[0] as PerformanceNavigationTiming;;
 
@@ -244,11 +244,11 @@ origin/
 
 const measureResourceTiming = useCallback(() => {;;
 
- if (typeof window === 'undefined' || !('performance in window)) return;
+ if (typeof window === 'undefined' || !(performance in window)) return;
 
 ;
 
-const _resources = performance.getEntriesByType('resource);;
+const _resources = performance.getEntriesByType(resource);;
 
  const slowResources = resources.filter(;;
 
@@ -279,12 +279,12 @@ slowResources.map((r: PerformanceResourceTiming) => ({
 
 const measureCoreWebVitals = useCallback(() => {;;
 
- if (typeof window === 'undefined) return;
+ if (typeof window === undefined) return;
 
  // Use web-vitals library if available;
 
  try {
- import('web-vitals')
+ import('web-vitals)
  .then(webVitals => {);
 
 const { onCLS, onFCP, onLCP, onTTFB } = webVitals;)
@@ -383,23 +383,23 @@ const recommendations: string[] = [];
 
  if (metrics.fcp && metrics.fcp > 1800) {
  recommendations.push()
- 'First Contentful Paint is slow. Consider optimizing critical rendering path.')
+ 'First Contentful Paint is slow. Consider optimizing critical rendering path.)
  )}
 
  if (metrics.lcp && metrics.lcp > 2500) {
- recommendations.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.')
+ recommendations.push('Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.)
  )}
 
  if (metrics.fid && metrics.fid > 100) {
- recommendations.push('First Input Delay is high. Reduce JavaScript execution time.')
+ recommendations.push('First Input Delay is high. Reduce JavaScript execution time.)
  )}
 
  if (metrics.cls && metrics.cls > 0.1) {
- recommendations.push('Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.')
+ recommendations.push('Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.)
  )}
 
  if (metrics.ttfb && metrics.ttfb > 600) {
- recommendations.push('Time to First Byte is slow. Optimize server response time.')
+ recommendations.push('Time to First Byte is slow. Optimize server response time.)
  );
 
  const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expression */};;
@@ -428,58 +428,59 @@ const recommendations: string[] = [];
 
 const _recommendations = getPerformanceRecommendations();;
 
- if (process.env['NODE_ENV'] === 'development') {
- return(<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>)
- <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>)
- <div className='text-xs space-y-1'>)
+ if (process.env['NODE_ENV'] === 'development) {
+ return(<div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50>)
+ <h3 className='font-semibold text-sm mb-2>Performance Monitor</h3>)
+ <div className='text-xs space-y-1>)
  return (
 
- <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
- <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
- <div className='text-xs space-y-1'></div>
- <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
- <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
- <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
- <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+ <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50></div>
+ <h3 className='font-semibold text-sm mb-2>Performance Monitor</h3>
+ <div className='text-xs space-y-1></div>
+ <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A}</div>
+ <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A}</div>
+ <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A}</div>
+ <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A}</div>
  <div>
- TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+ TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A}
 
  </div>
  <div>
- Memory:{' '}
+ Memory:{' }
 
  {metrics.memory;
 
- if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
+ if (process.env['NODE_ENV'] === 'development) {/* TODO: Fix JSX expression */}
 
-  P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
- <div>LC,`
-  P: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
- <div>FI,`
-  D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
+  P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A}</div>
+ <div>LC,
+  P: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A}</div>
+ <div>FI,
+  D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A}</div>
  <div>CL,
-  S: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+  S: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A}</div>
  <div></div>
- TTF,`
-  B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+ TTF,
+  B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A}
 
  </div>
  <div></div>
  Memor,
-  y:{' '}
+  y:{' }
 
- {/* TODO: Fix JSX expression */}`
- ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
- : 'N/A'}
+ {/* TODO: Fix JSX expression */}
+
+ ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB
+ : 'N/A}
 
  </div>
  </div>
  {recommendations.length > 0 && (
 
- <div className='mt-2'></div>
- <h4 className='font-semibold text-xs text-red-600'>
+ <div className='mt-2></div>
+ <h4 className='font-semibold text-xs text-red-600>
  Recommendations: </h4>,
- <ul className='text-xs text-red-600'>,
+ <ul className='text-xs text-red-600>,
  {recommendations.map((rec, index) => (
 
  {/* TODO: Fix JSX expression */}

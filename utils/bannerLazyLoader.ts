@@ -47,10 +47,10 @@ export const preloadBanner = (importFn: () => Promise<BannerModule>): void => {;
 
 return (
 
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined) {
     // Preload on idle;
 
-    if ('requestIdleCallback' in window) {
+    if ('requestIdleCallback in window) {
       requestIdleCallback(() => {,
         importFn().catch(() => {,
           // Silently fail for preload;
@@ -85,7 +85,7 @@ const _element = entry.target as HTMLElement;;
 
             eval(importFn)();
 
-export const createBannerLoader = () => {/* TODO: Fix JSX expression */};';
+export const createBannerLoader = () => {/* TODO: Fix JSX expression */};;;
 
           }
 
@@ -94,7 +94,7 @@ export const createBannerLoader = () => {/* TODO: Fix JSX expression */};';
       })},
     {/* TODO: Fix JSX expression */}
 
-  n: '50px' }
+  n: '50px }
 
   );
 

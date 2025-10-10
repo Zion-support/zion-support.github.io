@@ -34,10 +34,10 @@ export const extraServices: ExtraService[] = [;
 ;
 
 export const extra_services: ExtraService[] = [
-    id: 'cloud - migration - expert,
-    name: 'Cloud Migration Expert,
-    tagline: 'Seamless cloud migration and optimization,
-    price: '$99 / hour,
+    id: cloud - migration - expert,
+    name: Cloud Migration Expert,
+    tagline: Seamless cloud migration and optimization,
+    price: $99 / hour,
     description: unknown;
 
 export interface ExtraService {/* TODO: Fix JSX expression */}
@@ -63,32 +63,32 @@ export const,
 export const,
   extra_services: ExtraService[] = [,
     i,
-  d: 'cloud - migration - expert,
+  d: cloud - migration - expert,
     nam,
-  e: 'Cloud Migration Expert,
+  e: Cloud Migration Expert,
     taglin,
-  e: 'Seamless cloud migration and optimization,
+  e: Seamless cloud migration and optimization,
     pric,
-  e: '$99 / hour,
+  e: $99 / hour,
     descriptio,
   n: unknown,
-      'Professional cloud migration services for businesses looking to modernize their infrastructure.,
+      Professional cloud migration services for businesses looking to modernize their infrastructure.,
     feature,
   s: [,
-      'AWS / Azure / GCP migration,
-      'Performance optimization,
-      'Cost analysis,
-      'Security implementation,
-      '24 / 7 support],
-    link: '/services / cloud - migration - expert,
-    category: 'Cloud Services,
+      AWS / Azure / GCP migration,
+      Performance optimization,
+      Cost analysis,
+      Security implementation,
+      24 / 7 support],
+    link: /services / cloud - migration - expert,
+    category: Cloud Services,
     real_implementation: true;
 
     contact_info: unknown;
 
-      mobile: '+1 302 464 0950,
-      email: 'kleber@ziontechgroup && ziontechgroup.com,
-      address: '364 E Main St STE 1008 Middletown DE 19709}},
+      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup && ziontechgroup.com,
+      address: 364 E Main St STE 1008 Middletown DE 19709}},
   id: string, name: string;
 
   tagline: string, price: string;
@@ -135,19 +135,19 @@ export const,
     address: string;
 
     lin,
-  k: '/services / cloud - migration - expert,
+  k: /services / cloud - migration - expert,
     categor,
-  y: 'Cloud Services,
+  y: Cloud Services,
     real_implementatio,
   n: true,
     contact_inf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950,
+  e: +1 302 464 0950,
       emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com,
+  l: kleber@ziontechgroup && ziontechgroup.com,
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}},
+  s: 364 E Main St STE 1008 Middletown DE 19709}},
   i,
   d: string, nam,
   e: string,
@@ -216,256 +216,256 @@ export const,
   extraServices: ExtraService[] = [;
 
     i,
-  d: 'cloud-migration-expert
+  d: cloud-migration-expert
     nam,
-  e: 'Cloud Migration Expert
+  e: Cloud Migration Expert
     taglin,
-  e: 'Seamless cloud migration and optimization
+  e: Seamless cloud migration and optimization
     pric,
-  e: '$99/hour
+  e: $99/hour
     descriptio,
-  n: 'Professional cloud migration services for businesses looking to modernize their infrastructure.
+  n: Professional cloud migration services for businesses looking to modernize their infrastructure.
     feature,
   s: [;
 
-      'AWS/Azure/GCP migration
-      'Performance optimization
-      'Cost analysis
-      'Security implementation
-      '24/7 support
+      AWS/Azure/GCP migration
+      Performance optimization
+      Cost analysis
+      Security implementation
+      24/7 support
     ]
-    link: '/services/cloud-migration-expert,
-    category: 'Cloud Services,
+    link: /services/cloud-migration-expert,
+    category: Cloud Services,
     realImplementation: true;
 
-    contactInfo: mobile: '+1 302 464 0950,
-      email: 'kleber@ziontechgroup.com,
-      address: '364 E Main St STE 1008 Middletown DE 19709,
+    contactInfo: mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+      address: 364 E Main St STE 1008 Middletown DE 19709,
     lin,
-  k: '/services/cloud-migration-expert
+  k: /services/cloud-migration-expert
     categor,
-  y: 'Cloud Services
+  y: Cloud Services
     realImplementatio,
   n: true,
     contactInf,
   o: mobil,
-  e: '+1 302 464 0950
+  e: +1 302 464 0950
       emai,
-  l: 'kleber@ziontechgroup.com
+  l: kleber@ziontechgroup.com
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709
+  s: 364 E Main St STE 1008 Middletown DE 19709
     }
 
   }
 
     i,
-  d: 'cybersecurity-audit
+  d: cybersecurity-audit
     nam,
-  e: 'Cybersecurity Audit Pro
+  e: Cybersecurity Audit Pro
     taglin,
-  e: 'Comprehensive security assessment and protection
+  e: Comprehensive security assessment and protection
     pric,
-  e: '$199/hour
+  e: $199/hour
     descriptio,
-  n: 'Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.
+  n: Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.
     feature,
   s: [;
 
-      'Vulnerability assessment
-      'Penetration testing
-      'Security policy review
-      'Compliance audit
-      'Remediation guidance
+      Vulnerability assessment
+      Penetration testing
+      Security policy review
+      Compliance audit
+      Remediation guidance
     ]
-    link: '/services/cybersecurity-audit,
-    category: 'Security,
+    link: /services/cybersecurity-audit,
+    category: Security,
     realImplementation: true;
 
-    contactInfo: mobile: '+1 302 464 0950,
-      email: 'kleber@ziontechgroup.com,
-      address: '364 E Main St STE 1008 Middletown DE 19709}
+    contactInfo: mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+      address: 364 E Main St STE 1008 Middletown DE 19709}
 
   }
 
-];      mobile: '+1 302 464 0950,
-      email: 'kleber@ziontechgroup.com,
-    id: 'cybersecurity - audit,
-    name: 'Cybersecurity Audit Pro,
-    tagline: 'Comprehensive security assessment and protection,
-    price: '$199 / hour,
+];      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+    id: cybersecurity - audit,
+    name: Cybersecurity Audit Pro,
+    tagline: Comprehensive security assessment and protection,
+    price: $199 / hour,
     description: unknown;
 
     lin,
-  k: '/services/cybersecurity-audit
+  k: /services/cybersecurity-audit
     categor,
-  y: 'Security
+  y: Security
     realImplementatio,
   n: true,
     contactInf,
   o: mobil,
-  e: '+1 302 464 0950
+  e: +1 302 464 0950
       emai,
-  l: 'kleber@ziontechgroup.com
+  l: kleber@ziontechgroup.com
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709
+  s: 364 E Main St STE 1008 Middletown DE 19709
     }
 
   }
 
 ];      mobil,
-  e: "+1 302 464 0950,
+  e: +1 302 464 0950,
   emai,
-  l: "kleber@ziontechgroup.com
+  l: kleber@ziontechgroup.com
     i,
-  d: 'cybersecurity - audit,
+  d: cybersecurity - audit,
     nam,
-  e: 'Cybersecurity Audit Pro,
+  e: Cybersecurity Audit Pro,
     taglin,
-  e: 'Comprehensive security assessment and protection,
+  e: Comprehensive security assessment and protection,
     pric,
-  e: '$199 / hour,
+  e: $199 / hour,
     descriptio,
   n: unknown,
-      'Complete cybersecurity audit and vulnerability assessment for enterprise - level protection.,
+      Complete cybersecurity audit and vulnerability assessment for enterprise - level protection.,
     feature,
   s: [,
-      'Vulnerability assessment,
-      'Penetration testing,
-      'Security policy review,
-      'Compliance audit,
-      'Remediation guidance],
-    link: '/services / cybersecurity - audit,
-    category: 'Security,
+      Vulnerability assessment,
+      Penetration testing,
+      Security policy review,
+      Compliance audit,
+      Remediation guidance],
+    link: /services / cybersecurity - audit,
+    category: Security,
     real_implementation: true;
 
     contact_info: unknown;
 
-      mobile: '+1 302 464 0950,
-      email: 'kleber@ziontechgroup && ziontechgroup.com,
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: '+1 302 464 0950,
-    id: 'cloud-migration-expert,
-    name: "Cloud Migration Expert,
-    tagline: "Seamless cloud migration and optimization,
-    price: "$99/hour,
-    description: "Professional cloud migration services for businesses looking to modernize their infrastructure.,
+      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup && ziontechgroup.com,
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: +1 302 464 0950,
+    id: cloud-migration-expert,
+    name: Cloud Migration Expert,
+    tagline: Seamless cloud migration and optimization,
+    price: $99/hour,
+    description: Professional cloud migration services for businesses looking to modernize their infrastructure.,
     features: [,
-      "AWS/Azure/GCP migration,
-      "Performance optimization,
-      "Cost analysis,
-      "Security implementation,
-      "24/7 support
+      AWS/Azure/GCP migration,
+      Performance optimization,
+      Cost analysis,
+      Security implementation,
+      24/7 support
     ],
-    link: '/services/cloud-migration-expert,
-    category: 'Cloud Services,
+    link: /services/cloud-migration-expert,
+    category: Cloud Services,
     realImplementation: true;
 
     contactInfo: unknown;
 
-      mobile: "+1 302 464 0950,
-      email: "kleber@ziontechgroup.com,
-      address: "364 E Main St STE 1008 Middletown DE 19709}
+      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+      address: 364 E Main St STE 1008 Middletown DE 19709}
 
   },
-    id: 'cybersecurity-audit,
-    name: 'Cybersecurity Audit Pro,
-    tagline: "Comprehensive security assessment and protection,
-    price: "$199/hour,
-    description: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.,
+    id: cybersecurity-audit,
+    name: Cybersecurity Audit Pro,
+    tagline: Comprehensive security assessment and protection,
+    price: $199/hour,
+    description: Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.,
     features: [,
-      "Vulnerability assessment,
-      "Penetration testing,
-      "Security policy review,
-      "Compliance audit,
-      "Remediation guidance
+      Vulnerability assessment,
+      Penetration testing,
+      Security policy review,
+      Compliance audit,
+      Remediation guidance
     ],
-    link: '/services/cybersecurity-audit,
-    category: 'Security,
+    link: /services/cybersecurity-audit,
+    category: Security,
     realImplementation: true;
 
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709,
-      email: "kleber@ziontechgroup.com,
-      address: "364 E Main St STE 1008 Middletown DE 19709,
+    contactInfo: address: 364 E Main St STE 1008 Middletown DE 19709,
+      email: kleber@ziontechgroup.com,
+      address: 364 E Main St STE 1008 Middletown DE 19709,
     lin,
-  k: '/services / cybersecurity - audit,
+  k: /services / cybersecurity - audit,
     categor,
-  y: 'Security,
+  y: Security,
     real_implementatio,
   n: true,
     contact_inf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950,
+  e: +1 302 464 0950,
       emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com,
+  l: kleber@ziontechgroup && ziontechgroup.com,
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,
-  e: "+1 302 464 0950,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}];      mobil,
+  e: +1 302 464 0950,
   i,
-  d: "cloud-migration-expert,
+  d: cloud-migration-expert,
     nam,
-  e: "Cloud Migration Expert,
+  e: Cloud Migration Expert,
     taglin,
-  e: "Seamless cloud migration and optimization,
+  e: Seamless cloud migration and optimization,
     pric,
-  e: "$99/hour,
+  e: $99/hour,
     descriptio,
-  n: "Professional cloud migration services for businesses looking to modernize their infrastructure.,
+  n: Professional cloud migration services for businesses looking to modernize their infrastructure.,
     feature,
   s: [,
-      "AWS/Azure/GCP migration",
-      "Performance optimization",
-      "Cost analysis",
-      "Security implementation",
-      "24/7 support
+      "AWS/Azure/GCP migration,
+      "Performance optimization,
+      "Cost analysis,
+      "Security implementation,
+      24/7 support
     ],
     lin,
-  k: "/services/cloud-migration-expert,
+  k: /services/cloud-migration-expert,
     categor,
-  y: "Cloud Services,
+  y: Cloud Services,
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
       mobil,
-  e: "+1 302 464 0950,
+  e: +1 302 464 0950,
       emai,
-  l: "kleber@ziontechgroup.com,
+  l: kleber@ziontechgroup.com,
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709
+  s: 364 E Main St STE 1008 Middletown DE 19709
     }
 
   },
     i,
-  d: "cybersecurity-audit,
+  d: cybersecurity-audit,
     nam,
-  e: "Cybersecurity Audit Pro,
+  e: Cybersecurity Audit Pro,
     taglin,
-  e: "Comprehensive security assessment and protection,
+  e: Comprehensive security assessment and protection,
     pric,
-  e: "$199/hour,
+  e: $199/hour,
     descriptio,
-  n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.,
+  n: Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.,
     feature,
   s: [,
-      "Vulnerability assessment",
-      "Penetration testing",
-      "Security policy review",
-      "Compliance audit",
-      "Remediation guidance
+      "Vulnerability assessment,
+      "Penetration testing,
+      "Security policy review,
+      "Compliance audit,
+      Remediation guidance
     ],
     lin,
-  k: "/services/cybersecurity-audit,
+  k: /services/cybersecurity-audit,
     categor,
-  y: "Security,
+  y: Security,
     realImplementatio,
   n: true,
     contactInf,
   o: addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709,
+  s: 364 E Main St STE 1008 Middletown DE 19709,
   emai,
-  l: "kleber@ziontechgroup.com
+  l: kleber@ziontechgroup.com
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709
+  s: 364 E Main St STE 1008 Middletown DE 19709
     }
 
   }
@@ -476,140 +476,140 @@ export const,
 
 ];
 
-    id: 'cloud-migration-expert,
-    name: 'Cloud Migration Expert,
-    tagline: "Seamless cloud migration and optimization,
-    price: "$99/hour,
-    description: "Professional cloud migration services for businesses looking to modernize their infrastructure.,
+    id: cloud-migration-expert,
+    name: Cloud Migration Expert,
+    tagline: Seamless cloud migration and optimization,
+    price: $99/hour,
+    description: Professional cloud migration services for businesses looking to modernize their infrastructure.,
     features: [,
+      AWS/Azure/GCP migration,
+      Performance optimization,
+      Cost analysis,
+      Security implementation,
+      24/7 support
+    ],
+    link: /services/cloud-migration-expert,
+    category: Cloud Services,
+    realImplementation: true;
+
+    contactInfo: unknown;
+
+      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+      address: 364 E Main St STE 1008 Middletown DE 19709}
+
+  },
+    id: cybersecurity-audit,
+    name: Cybersecurity Audit Pro,
+    tagline: Comprehensive security assessment and protection,
+    price: $199/hour,
+    description: Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.,
+    features: [,
+      Vulnerability assessment,
+      Penetration testing,
+      Security policy review,
+      Compliance audit,
+      Remediation guidance
+    ],
+    link: /services/cybersecurity-audit,
+    category: Security,
+    realImplementation: true;
+
+    contactInfo: unknown;
+
+      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+      address: 364 E Main St STE 1008 Middletown DE 19709}};
+
+];      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+      mobile: +1 302 464 0950,
+      email: kleber@ziontechgroup.com,
+      address: 364 E Main St STE 1008 Middletown DE 19709,
+    i,
+  d: cloud-migration-expert,
+    nam,
+  e: Cloud Migration Expert,
+    taglin,
+  e: Seamless cloud migration and optimization,
+    pric,
+  e: $99/hour,
+    descriptio,
+  n: Professional cloud migration services for businesses looking to modernize their infrastructure.,
+    feature,
+  s: [,
       "AWS/Azure/GCP migration,
       "Performance optimization,
       "Cost analysis,
       "Security implementation,
-      "24/7 support
-    ],
-    link: '/services/cloud-migration-expert,
-    category: 'Cloud Services,
-    realImplementation: true;
-
-    contactInfo: unknown;
-
-      mobile: "+1 302 464 0950,
-      email: "kleber@ziontechgroup.com,
-      address: "364 E Main St STE 1008 Middletown DE 19709}
-
-  },
-    id: 'cybersecurity-audit,
-    name: 'Cybersecurity Audit Pro,
-    tagline: "Comprehensive security assessment and protection,
-    price: "$199/hour,
-    description: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.,
-    features: [,
-      "Vulnerability assessment,
-      "Penetration testing,
-      "Security policy review,
-      "Compliance audit,
-      "Remediation guidance
-    ],
-    link: '/services/cybersecurity-audit,
-    category: 'Security,
-    realImplementation: true;
-
-    contactInfo: unknown;
-
-      mobile: '+1 302 464 0950,
-      email: 'kleber@ziontechgroup.com,
-      mobile: '+1 302 464 0950,
-      email: 'kleber@ziontechgroup.com,
-      address: '364 E Main St STE 1008 Middletown DE 19709}};
-
-];      mobile: "+1 302 464 0950,
-      email: "kleber@ziontechgroup.com,
-      mobile: "+1 302 464 0950,
-      email: "kleber@ziontechgroup.com,
-      address: "364 E Main St STE 1008 Middletown DE 19709,
-    i,
-  d: "cloud-migration-expert,
-    nam,
-  e: "Cloud Migration Expert,
-    taglin,
-  e: "Seamless cloud migration and optimization,
-    pric,
-  e: "$99/hour,
-    descriptio,
-  n: "Professional cloud migration services for businesses looking to modernize their infrastructure.,
-    feature,
-  s: [,
-      "AWS/Azure/GCP migration",
-      "Performance optimization",
-      "Cost analysis",
-      "Security implementation",
-      "24/7 support
+      24/7 support
     ],
     lin,
-  k: "/services/cloud-migration-expert,
+  k: /services/cloud-migration-expert,
     categor,
-  y: "Cloud Services,
+  y: Cloud Services,
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
       mobil,
-  e: "+1 302 464 0950,
+  e: +1 302 464 0950,
       emai,
-  l: "kleber@ziontechgroup.com,
+  l: kleber@ziontechgroup.com,
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709
+  s: 364 E Main St STE 1008 Middletown DE 19709
     }
 
   },
     i,
-  d: "cybersecurity-audit,
+  d: cybersecurity-audit,
     nam,
-  e: "Cybersecurity Audit Pro,
+  e: Cybersecurity Audit Pro,
     taglin,
-  e: "Comprehensive security assessment and protection,
+  e: Comprehensive security assessment and protection,
     pric,
-  e: "$199/hour,
+  e: $199/hour,
     descriptio,
-  n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.,
+  n: Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.,
     feature,
   s: [,
-      "Vulnerability assessment",
-      "Penetration testing",
-      "Security policy review",
-      "Compliance audit",
-      "Remediation guidance
+      "Vulnerability assessment,
+      "Penetration testing,
+      "Security policy review,
+      "Compliance audit,
+      Remediation guidance
     ],
     lin,
-  k: "/services/cybersecurity-audit,
+  k: /services/cybersecurity-audit,
     categor,
-  y: "Security,
+  y: Security,
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
       mobil,
-  e: "+1 302 464 0950,
+  e: +1 302 464 0950,
       emai,
-  l: "kleber@ziontechgroup.com,
+  l: kleber@ziontechgroup.com,
       mobil,
-  e: '+1 302 464 0950,
+  e: +1 302 464 0950,
       emai,
-  l: 'kleber@ziontechgroup.com,
+  l: kleber@ziontechgroup.com,
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}};
+  s: 364 E Main St STE 1008 Middletown DE 19709}};
 
 ];      mobil,
-  e: "+1 302 464 0950,
+  e: +1 302 464 0950,
   emai,
-  l: "kleber@ziontechgroup.com
+  l: kleber@ziontechgroup.com
       mobil,
-  e: "+1 302 464 0950,
+  e: +1 302 464 0950,
       emai,
-  l: "kleber@ziontechgroup.com,
+  l: kleber@ziontechgroup.com,
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709
+  s: 364 E Main St STE 1008 Middletown DE 19709
     }
 
   }
@@ -633,19 +633,19 @@ export interface ExtraService,
   extraServices: ExtraService[] = [ addres,
   s: string} ; export const,
   extra_services: ExtraService[] = [, i,
-  d: 'cloud - migration - expert', nam,
-  e: 'Cloud Migration Expert', taglin,
-  e: 'Seamless cloud migration and optimization', pric,
-  e: '$99 / hour, descriptio,
-  n:  ,' 'Professional cloud migration services for businesses looking to modernize their infrastructure., feature,
-  s: [,' 'AWS / Azure / GCP migration',' 'Performance optimization',' 'Cost analysis',' 'Security implementation',' '24 / 7 support'], lin,
-  k: '/services / cloud - migration - expert', categor,
-  y: 'Cloud Services, real_implementatio,
+  d: 'cloud - migration - expert, nam,
+  e: 'Cloud Migration Expert, taglin,
+  e: 'Seamless cloud migration and optimization, pric,
+  e: $99 / hour, descriptio,
+  n:  ,' Professional cloud migration services for businesses looking to modernize their infrastructure., feature,
+  s: [,' 'AWS / Azure / GCP migration',' 'Performance optimization',' 'Cost analysis',' 'Security implementation',' '24 / 7 support], lin,
+  k: '/services / cloud - migration - expert, categor,
+  y: Cloud Services, real_implementatio,
   n: true, contact_inf,
   o:  mobil,
-  e: '+1 302 464 0950', emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709}}, i,
+  e: '+1 302 464 0950, emai,
+  l: 'kleber@ziontechgroup && ziontechgroup.com, addres,
+  s: 364 E Main St STE 1008 Middletown DE 19709}}, i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -674,108 +674,108 @@ export interface ExtraService,
   s: string}} } addres,
   s: string} export const,
   extraServices: ExtraService[] = [  i,
-  d: 'cloud-migration-expert' nam,
-  e: 'Cloud Migration Expert' taglin,
-  e: 'Seamless cloud migration and optimization' pric,
-  e: '$99/hour descriptio,
-  n:' 'Professional cloud migration services for businesses looking to modernize their infrastructure. feature,
-  s: [' 'AWS/Azure/GCP migration'' 'Performance optimization'' 'Cost analysis'' 'Security implementation'' '24/7 support' ] lin,
-  k: '/services/cloud-migration-expert' categor,
-  y: 'Cloud Services realImplementatio,
+  d: 'cloud-migration-expert nam,
+  e: 'Cloud Migration Expert taglin,
+  e: 'Seamless cloud migration and optimization pric,
+  e: $99/hour descriptio,
+  n:' Professional cloud migration services for businesses looking to modernize their infrastructure. feature,
+  s: [' 'AWS/Azure/GCP migration'' 'Performance optimization'' 'Cost analysis'' 'Security implementation'' '24/7 support ] lin,
+  k: '/services/cloud-migration-expert categor,
+  y: Cloud Services realImplementatio,
   n: true,
   contactInfo:  mobil,
-  e: '+1 302 464 0950' emai,
-  l: 'kleber@ziontechgroup.com' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } }  i,
-  d: 'cybersecurity-audit' nam,
-  e: 'Cybersecurity Audit Pro' taglin,
-  e: 'Comprehensive security assessment and protection' pric,
-  e: '$199/hour descriptio,
-  n:' 'Complete cybersecurity audit and vulnerability assessment for enterprise-level protection. feature,
-  s: [' 'Vulnerability assessment'' 'Penetration testing'' 'Security policy review'' 'Compliance audit'' 'Remediation guidance' ] lin,
-  k: '/services/cybersecurity-audit' categor,
-  y: 'Security realImplementatio,
+  e: '+1 302 464 0950 emai,
+  l: 'kleber@ziontechgroup.com addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } }  i,
+  d: 'cybersecurity-audit nam,
+  e: 'Cybersecurity Audit Pro taglin,
+  e: 'Comprehensive security assessment and protection pric,
+  e: $199/hour descriptio,
+  n:' Complete cybersecurity audit and vulnerability assessment for enterprise-level protection. feature,
+  s: [' 'Vulnerability assessment'' 'Penetration testing'' 'Security policy review'' 'Compliance audit'' 'Remediation guidance ] lin,
+  k: '/services/cybersecurity-audit categor,
+  y: Security realImplementatio,
   n: true,
   contactInfo:  mobil,
-  e: '+1 302 464 0950' emai,
-  l: 'kleber@ziontechgroup.com' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709' } } ]; mobil,
-  e: "+1 302 464 0950,
+  e: '+1 302 464 0950 emai,
+  l: 'kleber@ziontechgroup.com addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709 } } ]; mobil,
+  e: +1 302 464 0950,
   emai,
-  l: "kleber@ziontechgroup.com" i,
-  d: 'cybersecurity - audit', nam,
-  e: 'Cybersecurity Audit Pro', taglin,
-  e: 'Comprehensive security assessment and protection', pric,
-  e: '$199 / hour, descriptio,
-  n:  ,' 'Complete cybersecurity audit and vulnerability assessment for enterprise - level protection., feature,
-  s: [,' 'Vulnerability assessment',' 'Penetration testing',' 'Security policy review',' 'Compliance audit',' 'Remediation guidance'], lin,
-  k: '/services / cybersecurity - audit', categor,
-  y: 'Security, real_implementatio,
+  l: "kleber@ziontechgroup.com i,
+  d: 'cybersecurity - audit, nam,
+  e: 'Cybersecurity Audit Pro, taglin,
+  e: 'Comprehensive security assessment and protection, pric,
+  e: $199 / hour, descriptio,
+  n:  ,' Complete cybersecurity audit and vulnerability assessment for enterprise - level protection., feature,
+  s: [,' 'Vulnerability assessment',' 'Penetration testing',' 'Security policy review',' 'Compliance audit',' 'Remediation guidance], lin,
+  k: '/services / cybersecurity - audit, categor,
+  y: Security, real_implementatio,
   n: true, contact_inf,
   o:  mobil,
-  e: '+1 302 464 0950', emai,
-  l: 'kleber@ziontechgroup && ziontechgroup.com', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,
-  e: "+1 302 464 0950,
+  e: '+1 302 464 0950, emai,
+  l: 'kleber@ziontechgroup && ziontechgroup.com, addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}]; mobil,
+  e: +1 302 464 0950,
   i,
-  d: "cloud-migration-expert", nam,
-  e: "Cloud Migration Expert", taglin,
-  e: "Seamless cloud migration and optimization", pric,
-  e: "$99/hour", descriptio,
-  n: "Professional cloud migration services for businesses looking to modernize their infrastructure.", feature,
-  s: [ "AWS/Azure/GCP migration", "Performance optimization", "Cost analysis", "Security implementation", "24/7 support" ], lin,
-  k: "/services/cloud-migration-expert", categor,
-  y: "Cloud Services, realImplementatio,
+  d: "cloud-migration-expert, nam,
+  e: "Cloud Migration Expert, taglin,
+  e: "Seamless cloud migration and optimization, pric,
+  e: "$99/hour, descriptio,
+  n: "Professional cloud migration services for businesses looking to modernize their infrastructure., feature,
+  s: [ "AWS/Azure/GCP migration", "Performance optimization", "Cost analysis", "Security implementation", "24/7 support ], lin,
+  k: "/services/cloud-migration-expert, categor,
+  y: Cloud Services, realImplementatio,
   n: true, contactInf,
   o: mobil,
-  e: "+1 302 464 0950", emai,
-  l: "kleber@ziontechgroup.com", addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709" } }, i,
-  d: "cybersecurity-audit", nam,
-  e: "Cybersecurity Audit Pro", taglin,
-  e: "Comprehensive security assessment and protection", pric,
-  e: "$199/hour", descriptio,
-  n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.", feature,
-  s: [ "Vulnerability assessment", "Penetration testing", "Security policy review", "Compliance audit", "Remediation guidance" ], lin,
-  k: "/services/cybersecurity-audit", categor,
-  y: "Security, realImplementatio,
+  e: "+1 302 464 0950, emai,
+  l: "kleber@ziontechgroup.com, addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709 } }, i,
+  d: "cybersecurity-audit, nam,
+  e: "Cybersecurity Audit Pro, taglin,
+  e: "Comprehensive security assessment and protection, pric,
+  e: "$199/hour, descriptio,
+  n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection., feature,
+  s: [ "Vulnerability assessment", "Penetration testing", "Security policy review", "Compliance audit", "Remediation guidance ], lin,
+  k: "/services/cybersecurity-audit, categor,
+  y: Security, realImplementatio,
   n: true, contactInf,
   o: addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709,
+  s: 364 E Main St STE 1008 Middletown DE 19709,
   emai,
-  l: "kleber@ziontechgroup.com" addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; ]; i,
-  d: "cloud-migration-expert", nam,
-  e: "Cloud Migration Expert", taglin,
-  e: "Seamless cloud migration and optimization", pric,
-  e: "$99/hour", descriptio,
-  n: "Professional cloud migration services for businesses looking to modernize their infrastructure.", feature,
-  s: [ "AWS/Azure/GCP migration", "Performance optimization", "Cost analysis", "Security implementation", "24/7 support" ], lin,
-  k: "/services/cloud-migration-expert", categor,
-  y: "Cloud Services, realImplementatio,
+  l: "kleber@ziontechgroup.com addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709 } } ]; ]; i,
+  d: "cloud-migration-expert, nam,
+  e: "Cloud Migration Expert, taglin,
+  e: "Seamless cloud migration and optimization, pric,
+  e: "$99/hour, descriptio,
+  n: "Professional cloud migration services for businesses looking to modernize their infrastructure., feature,
+  s: [ "AWS/Azure/GCP migration", "Performance optimization", "Cost analysis", "Security implementation", "24/7 support ], lin,
+  k: "/services/cloud-migration-expert, categor,
+  y: Cloud Services, realImplementatio,
   n: true, contactInf,
   o: mobil,
-  e: "+1 302 464 0950", emai,
-  l: "kleber@ziontechgroup.com", addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709" } }, i,
-  d: "cybersecurity-audit", nam,
-  e: "Cybersecurity Audit Pro", taglin,
-  e: "Comprehensive security assessment and protection", pric,
-  e: "$199/hour", descriptio,
-  n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection.", feature,
-  s: [ "Vulnerability assessment", "Penetration testing", "Security policy review", "Compliance audit", "Remediation guidance" ], lin,
-  k: "/services/cybersecurity-audit", categor,
-  y: "Security, realImplementatio,
+  e: "+1 302 464 0950, emai,
+  l: "kleber@ziontechgroup.com, addres,
+  s: "364 E Main St STE 1008 Middletown DE 19709 } }, i,
+  d: "cybersecurity-audit, nam,
+  e: "Cybersecurity Audit Pro, taglin,
+  e: "Comprehensive security assessment and protection, pric,
+  e: "$199/hour, descriptio,
+  n: "Complete cybersecurity audit and vulnerability assessment for enterprise-level protection., feature,
+  s: [ "Vulnerability assessment", "Penetration testing", "Security policy review", "Compliance audit", "Remediation guidance ], lin,
+  k: "/services/cybersecurity-audit, categor,
+  y: Security, realImplementatio,
   n: true, contactInf,
   o: mobil,
-  e: "+1 302 464 0950", emai,
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950', emai,
-  l: 'kleber@ziontechgroup.com', addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,
-  e: "+1 302 464 0950,
+  e: "+1 302 464 0950, emai,
+  l: "kleber@ziontechgroup.com, mobil,
+  e: '+1 302 464 0950, emai,
+  l: 'kleber@ziontechgroup.com, addres,
+  s: '364 E Main St STE 1008 Middletown DE 19709}}; ]; mobil,
+  e: +1 302 464 0950,
   emai,
-  l: "kleber@ziontechgroup.com" mobil,
-  e: "+1 302 464 0950", emai,
-  l: "kleber@ziontechgroup.com", addres,
+  l: "kleber@ziontechgroup.com mobil,
+  e: "+1 302 464 0950, emai,
+  l: "kleber@ziontechgroup.com, addres,
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"

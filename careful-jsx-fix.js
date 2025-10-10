@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import { glob } from 'glob;
+import { glob } from glob;
 
 // Very specific and safe JSX fixes;
 
@@ -39,21 +39,21 @@ const fixes = [;;
 
 const firstTag = match.match(/<\/(\w+)>/)[1];;
 
-      return `</${firstTag}>
+      return </${firstTag}>
 );
 
-}`}
+}}
 
   }
 
 ];
 
-';
+;
 
 function fixFile(filePath) {
-  try {';
+  try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
@@ -70,7 +70,7 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, utf8);
 
       // console.log removed for production
 return true}
@@ -87,8 +87,8 @@ async function main() {
 
 const priorityFiles = [;;
 
-    'app/**/*.tsx',
-    'app/**/*.ts',
+    'app/**/*.tsx,
+    'app/**/*.ts,
     App.tsx
   ];
 
@@ -100,7 +100,7 @@ let allFiles = [];;
 
 const files = await glob(pattern, {;;
 
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**]
     });
 
     allFiles = [...allFiles, ...files]}

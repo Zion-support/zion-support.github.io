@@ -1,22 +1,22 @@
 #!/usr/bin/env node;
 
-import { execSync } from 'child_process';
+import { execSync } from 'child_process;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path;
+import path from path;
 
 // console.log removed for production
-// Function to execute git commands safely';
+// Function to execute git commands safely;
 
 function execGitCommand(command, description) {
   try {
     // console.log removed for production
-const result = execSync(command, { );';
+const result = execSync(command, { );;;
 
-      encoding: 'utf8'),
+      encoding: 'utf8),
       cwd: process.cwd(),
-      stdio: 'pipe});
+      stdio: pipe});
 
     // console.log removed for production
 return result} catch (error) {
@@ -30,11 +30,11 @@ return null}
 function resolveMergeConflicts(filePath) {
   try {;
 
-const content = fs.readFileSync(filePath, 'utf8);;
+const content = fs.readFileSync(filePath, utf8);;
 
     // Check if file has merge conflicts;
 
-    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>')) {
+    if (content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>)) {
       // console.log removed for production
 // Simple conflict resolution strategy;
 
@@ -42,7 +42,7 @@ const content = fs.readFileSync(filePath, 'utf8);;
 
         .replace(/[\s\S]*?[\s\S]*?          // Extract the content after  (usually the incoming changes);
 
-const parts = match.split(');;
+const parts = match.split();;
 
           if (parts.length > 1) {;
 
@@ -51,7 +51,7 @@ const incoming = parts[1].replace(/            return incoming;);;
           })
           return match;)
         })
-        .replace(/          const parts = match.split(');;
+        .replace(/          const parts = match.split();;
 
           if (parts.length > 1) {;
 
@@ -79,9 +79,9 @@ function resolveAllMergeConflicts() {
 try {
     // Find all files with merge conflicts;
 
-    const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8 });;
+    const result = execSync('git diff --name-only --diff-filter=U', { encoding: utf8 });;
 
-    const conflictedFiles = result.trim().split('\n).filter(file => file.length > 0);;
+    const conflictedFiles = result.trim().split(\n).filter(file => file.length > 0);;
 
     if (conflictedFiles.length === 0) {
       // console.log removed for production
@@ -115,16 +115,16 @@ async function main() {
 // Step 1: Check current status;
 
   // console.log removed for production
-execGitCommand('git status --porcelain', 'Checking git status);
+execGitCommand('git status --porcelain', Checking git status);
 
   // Step 2: Fetch latest changes;
 
-  execGitCommand('git fetch origin', 'Fetching latest changes from origin);
+  execGitCommand('git fetch origin', Fetching latest changes from origin);
 
-  // Step 3: Try to merge with main';
+  // Step 3: Try to merge with main;
 
   // console.log removed for production
-const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging with origin/main);;
+const mergeResult = execGitCommand('git merge origin/main --no-edit', Merging with origin/main);;
 
   if (mergeResult) {
     // console.log removed for production
@@ -137,11 +137,11 @@ const mergeResult = execGitCommand('git merge origin/main --no-edit', 'Merging w
 ,
       // Step 5: Add resolved files;
 
-      execGitCommand('git add .', 'Adding resolved files);
+      execGitCommand('git add .', Adding resolved files);
 
       // Step 6: Commit the merge;
 
-      execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', 'Committing merge resolution);
+      execGitCommand('git commit -m "Resolve merge conflicts and integrate latest changes"', Committing merge resolution);
 
       // console.log removed for production
 } else {
@@ -157,10 +157,10 @@ return}
 
 const branchesToMerge = [,;;
 
-    'cursor/website-audit-and-update-with-deployment-f31a',
-    'add-new-2026-content',
-    'add-revolutionary-content-2026',
-    'ai-2027-content-integration',
+    'cursor/website-audit-and-update-with-deployment-f31a,
+    'add-new-2026-content,
+    'add-revolutionary-content-2026,
+    'ai-2027-content-integration,
     ai-dashboard-improvements
   ];
 
@@ -169,20 +169,20 @@ const branchesToMerge = [,;;
 try {
       // Check if branch exists;
 
-      const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists`);;
+      const branchExists = execGitCommand(`git show-ref --verify --quiet refs/remotes/origin/${branch}`, `Checking if ${branch} exists);;
 
       if (branchExists !== null) {;
 
-const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch}`);;
+const mergeResult = execGitCommand(`git merge origin/${branch} --no-edit`, `Merging ${branch});;
 
         if (mergeResult) {
           // console.log removed for production
 } else {
           // console.log removed for production
 if (resolveAllMergeConflicts()) {
-            execGitCommand('git add .', `Adding resolved files from ${branch}`)';
+            execGitCommand('git add .', `Adding resolved files from ${branch}`);
 
-            execGitCommand(`git commit -m "Resolve merge conflicts from ${branch}"`, `Committing merge resolution for ${branch}`);
+            execGitCommand(`git commit -m "Resolve merge conflicts from ${branch}"`, `Committing merge resolution for ${branch});
 
             // console.log removed for production
 } else {
@@ -204,9 +204,9 @@ if (resolveAllMergeConflicts()) {
   // Step 8: Final status check;
 
   // console.log removed for production
-execGitCommand('git status', 'Final git status);
+execGitCommand('git status', Final git status);
 
-  execGitCommand('git log --oneline -5', 'Recent commits);
+  execGitCommand('git log --oneline -5', Recent commits);
 
   // console.log removed for production
 }

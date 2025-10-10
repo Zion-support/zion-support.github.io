@@ -1,4 +1,4 @@
-import React from 'react;
+import React from react;
 
 interface ResponsiveContainerProps {// TODO: Add content}
 
@@ -23,7 +23,7 @@ interface ResponsiveContainerProps {// TODO: Add content}
 
     xl?: string;
 
-    '2xl?: string};
+    2xl?: string};
 
   fallback?: React.ReactNode}
 
@@ -37,7 +37,7 @@ const,
 }
 
 //   children,
-  className = '',
+  className = ',
   breakpoints = {},
 //   fallback)
 }) => {/* TODO: Fix JSX expression */}
@@ -50,7 +50,7 @@ const,
 
   const [screenSize, setScreenSize] = useState;
 
-          <'sm' | 'md' | 'lg' | 'xl' | '2xl'>('lg);
+          <'sm' | 'md' | 'lg' | 'xl' | '2xl'>(lg);
 
   const isTablet = useMediaQuery({/* TODO: Fix JSX expression */});;
 
@@ -86,25 +86,25 @@ const,
 
 }
 
-      setScreenSize('2xl')} else if (isDesktop) {/* TODO: Fix JSX expression */}
+      setScreenSize('2xl)} else if (isDesktop) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-      setScreenSize('xl')} else if (isTablet) {/* TODO: Fix JSX expression */}
+      setScreenSize('xl)} else if (isTablet) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-      setScreenSize('md')} else {/* TODO: Fix JSX expression */}
+      setScreenSize('md)} else {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-      setScreenSize('sm')}
+      setScreenSize('sm)}
 
   }, [isClient, isMobile, isTablet, isDesktop, isLargeDesktop]);
 
@@ -133,13 +133,13 @@ const,
 
     const baseClasses = className;;
 
-    const responsiveClasses = breakpoints[screenSize] || ';;
+    const responsiveClasses = breakpoints[screenSize] || ;;
 
-    return `${baseClasses} ${responsiveClasses}`.trim()};
+    return `${baseClasses} ${responsiveClasses}.trim()};
 
   return (
 
-    <div className="responsivecontainer">
+    <div className="responsivecontainer>
 
       {/* Component content */}
 
@@ -159,7 +159,7 @@ export const useResponsiveValue = {};;
 
 // xl?: T;
 
-// '2xl?: T;
+// 2xl?: T;
 
 // default?: T;)
 }): T => {/* TODO: Fix JSX expression */}
@@ -184,13 +184,13 @@ export const useResponsiveValue = {};;
 
   h: 1280 });
 
-  if (isLargeDesktop && values['2xl'] !== undefined) {/* TODO: Fix JSX expression */}
+  if (isLargeDesktop && values['2xl] !== undefined) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-    return values['2xl']}
+    return values['2xl]}
 
   if (isDesktop && values.xl !== undefined) {/* TODO: Fix JSX expression */}
 
@@ -253,6 +253,6 @@ export const useBreakpoint = () => {/* TODO: Fix JSX expression */};;
 //     isDesktop,
 //     isLargeDesktop,
     curren,
-  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : 'sm}};
+  t: isLargeDesktop ? '2xl' : isDesktop ? 'xl' : isTablet ? 'md' : sm}};
 
 export default ResponsiveContainer;

@@ -7,26 +7,26 @@
 
  */
 
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync } from 'fs;
 
-import { resolve } from 'path;
+import { resolve } from path;
 
 ;
 
 const _errors = [];;
 
-const _warnings = [];';
+const _warnings = [];;;
 
-// // Check Node version';
+// // Check Node version;
 
-// const requiredNodeVersion = '18.0.0;;
+// const requiredNodeVersion = 18.0.0;;
 
 // const currentNodeVersion = process.version.slice(1);;
 
 if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
 
-  errors.push(`Node.js version ${requiredNodeVersion} or higher is required (curren)`
-  t: ${currentNodeVersion})`)} else {/* TODO: Fix JSX expression */}
+  errors.push(`Node.js version ${requiredNodeVersion} or higher is required (curren)
+  t: ${currentNodeVersion}))} else {/* TODO: Fix JSX expression */}
 
 //   }
 
@@ -34,14 +34,15 @@ if (currentNodeVersion < requiredNodeVersion) {/* TODO: Fix JSX expression */}
 
 const requiredFiles = [;;
 
-  'package.json',
-  'next.config.js',
-  'tsconfig.json',
-  'tailwind.config.cjs',
-  'postcss.config.cjs];
+  'package.json,
+  'next.config.js,
+  'tsconfig.json,
+  'tailwind.config.cjs,
+  postcss.config.cjs];
 
-requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
-  missing: ${file}`)} else {/* TODO: Fix JSX expression */}
+requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}
+
+  missing: ${file})} else {/* TODO: Fix JSX expression */}
 
 //     }
 
@@ -51,16 +52,17 @@ requiredFiles.forEach((file) => {/* TODO: Fix JSX expression */}`
 
 try {;
 
-const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), 'utf-8));;
+const _packageJson = JSON.parse(readFileSync(resolve(process.cwd(), 'package.json'), utf-8));;
 
-  const _requiredDeps = ['next', 'react', 'react-dom];;
+  const _requiredDeps = ['next', 'react', react-dom];;
 
   requiredDeps.forEach((dep) => {
     if (!packageJson.dependencies[dep]) {
-      errors.push(`Missing required dependency: ${dep}`);
+      errors.push(`Missing required dependency: ${dep});
 
-try {/* TODO: Fix JSX expression */}`
-  dependency: ${dep}`)}
+try {/* TODO: Fix JSX expression */}
+
+  dependency: ${dep})}
 
   });
 
@@ -72,10 +74,10 @@ try {/* TODO: Fix JSX expression */}`
 
 try {;
 
-const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), 'utf-8));;
+const _tsConfig = JSON.parse(readFileSync(resolve(process.cwd(), 'tsconfig.json'), utf-8));;
 
   if (!tsConfig.compilerOptions) {
-    warnings.push('tsconfig.json missing compilerOptions')} else {
+    warnings.push('tsconfig.json missing compilerOptions)} else {
 try {/* TODO: Fix JSX expression */}
 
   } else {/* TODO: Fix JSX expression */}
@@ -88,14 +90,14 @@ try {/* TODO: Fix JSX expression */}
 
 // Check environment variables setup;
 
-if (!existsSync(resolve(process.cwd(), '.env.example'))) {
-  warnings.push('.env.example file not found - consider adding environment variable documentation')} else {
+if (!existsSync(resolve(process.cwd(), '.env.example))) {
+  warnings.push('.env.example file not found - consider adding environment variable documentation)} else {
 //   }
 
 // Report results;
 
 // if (errors.length > 0) {
-if (!existsSync(resolve(process.cwd(), '.env.example'))) {/* TODO: Fix JSX expression */}
+if (!existsSync(resolve(process.cwd(), '.env.example))) {/* TODO: Fix JSX expression */}
 
 } else {/* TODO: Fix JSX expression */}
 
@@ -103,11 +105,13 @@ if (!existsSync(resolve(process.cwd(), '.env.example'))) {/* TODO: Fix JSX expre
 
 // Report results;
 
-// if (errors.length > 0) {/* TODO: Fix JSX expression */}`
+// if (errors.length > 0) {/* TODO: Fix JSX expression */}
+
 //   //   errors.forEach((error) => // // console.log removed for production
 )}
 
-if (warnings.length > 0) {/* TODO: Fix JSX expression */}`
+if (warnings.length > 0) {/* TODO: Fix JSX expression */}
+
 //   //   warnings.forEach((warning) => // // console.log removed for production
 )}
 

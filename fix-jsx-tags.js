@@ -1,10 +1,10 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
@@ -20,7 +20,7 @@ function fixJSXTags(content) {
 
 function fixJSXTags(content) {/* TODO: Fix JSX expression */}
 
-    return `<${tagName.substring(1)}`; // Remove the underscore});
+    return `<${tagName.substring(1)}; // Remove the underscore});
 
   // Fix JSX closing tags;
 
@@ -30,8 +30,9 @@ function fixJSXTags(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>
 );
 
-}/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
-    return `</${tagName.substring(1)}>`; // Remove the underscore});
+}/g, (match, tagName) => {/* TODO: Fix JSX expression */}
+
+    return `</${tagName.substring(1)}>; // Remove the underscore});
 
   // Fix self-closing JSX tags;
 
@@ -41,33 +42,34 @@ function fixJSXTags(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>
 );
 
-}/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
-    return `<${tagName.substring(1)} />`; // Remove the underscore})';
+}/g, (match, tagName) => {/* TODO: Fix JSX expression */}
+
+    return `<${tagName.substring(1)} />`; // Remove the underscore});
 
   return content}
 
-// Function to fix variable names that were incorrectly prefixed with underscores in destructuring';
+// Function to fix variable names that were incorrectly prefixed with underscores in destructuring;
 
 function fixDestructuringVariables(content) {
-  // Fix destructuring in function parameters';
+  // Fix destructuring in function parameters;
 
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
-    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1)});
+    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, $1)});
 
   // Fix arrow function parameters;
 
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
-    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1)});
+    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, $1)});
 
   // Fix destructuring assignments;
 
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {;
 
-const fixedVars = vars.split(',).map(v => {);;
+const fixedVars = vars.split(,).map(v => {);;
 
 const trimmed = v.trim();;
 
-      if (trimmed.startsWith('_') && trimmed.length > 1) {
+      if (trimmed.startsWith('_) && trimmed.length > 1) {
         return trimmed.substring(1);
 
 function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
@@ -86,8 +88,9 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
 
       }
 
-      return trimmed}).join(', ');`
-    return `const { ${fixedVars} } = ${assignment};`});
+      return trimmed}).join(', ');
+
+    return `const { ${fixedVars} } = ${assignment};});
 
   return content}
 
@@ -96,7 +99,7 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
 function processFile(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
@@ -109,7 +112,7 @@ let content = fs.readFileSync(filePath, 'utf8);;
     content = fixDestructuringVariables(content);
 
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, utf8);
 
       modified = true;
 
@@ -117,7 +120,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     }
 
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    return modified} catch (error) {/* TODO: Fix JSX expression */}
+
     // console.error removed for production
 return false}
 
@@ -144,7 +148,7 @@ const fullPath = path.join(currentPath, item);;
       if (stat.isDirectory()) {
         // Skip node_modules and other common directories;
 
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+        if (!['node_modules', '.git', 'dist', 'build', '.next].includes(item)) {
           walkDir(fullPath)}
 
       } else if (stat.isFile()) {
@@ -176,31 +180,31 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 // console.log removed for production
 ;
 
-const srcDir = path.join(__dirname, 'src);;
+const srcDir = path.join(__dirname, src);;
 
-const appDir = path.join(__dirname, 'app);;
+const appDir = path.join(__dirname, app);;
 
 const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)];;
 
-`
 // console.log removed for production
 ;
 
 let processedCount = 0;;
 
-for (const file of files) {/* TODO: Fix JSX expression */}`
-  d: ${file}`)}
+for (const file of files) {/* TODO: Fix JSX expression */}
+
+  d: ${file})}
 
 }
 
-`
 // console.log removed for production
 // Also process root level files;
 
-const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx];;
+const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', layout.tsx];;
 
-for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
-  d: ${file}`)}
+for (const file of rootFiles) {/* TODO: Fix JSX expression */}
+
+  d: ${file})}
 
   }
 

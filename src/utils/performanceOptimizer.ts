@@ -112,11 +112,11 @@ class PerformanceOptimizer {// TODO: Add content}
 
 }
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     // Monitor page load performance;
 
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
+    window.addEventListener('load, () => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -150,9 +150,9 @@ class PerformanceOptimizer {// TODO: Add content}
 
 }
 
-    if (typeof window === 'undefined || !window.performance) return;
+    if (typeof window === undefined || !window.performance) return;
 
-    if (typeof window.performance.getEntriesByType !== 'function) return;
+    if (typeof window.performance.getEntriesByType !== function) return;
 
     try {/* TODO: Fix JSX expression */}
 
@@ -160,7 +160,7 @@ class PerformanceOptimizer {// TODO: Add content}
 
 }
 
-      const navigation = window.performance.getEntriesByType?.('navigation)[0] as PerformanceNavigationTiming;;
+      const navigation = window.performance.getEntriesByType?.(navigation)[0] as PerformanceNavigationTiming;;
 
       if (navigation) {/* TODO: Fix JSX expression */}
 
@@ -190,7 +190,7 @@ class PerformanceOptimizer {// TODO: Add content}
 }
 
     // Check if PerformanceObserver exists (may not be available in test environments)
-    if (typeof PerformanceObserver === 'undefined) return;
+    if (typeof PerformanceObserver === undefined) return;
 
     try {/* TODO: Fix JSX expression */}
 
@@ -212,7 +212,7 @@ class PerformanceOptimizer {// TODO: Add content}
 
 }
 
-          if (entry.entryType === 'measure') {/* TODO: Fix JSX expression */}
+          if (entry.entryType === 'measure) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -223,7 +223,7 @@ class PerformanceOptimizer {// TODO: Add content}
         })});
 
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure] });
+  s: [measure] });
 
       this.observers.push(observer)} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -231,7 +231,7 @@ class PerformanceOptimizer {// TODO: Add content}
 
 }
 
-      // PerformanceObserver may not support 'measure' entryType in some environments}
+      // PerformanceObserver may not support 'measure entryType in some environments}
 
   }
 
@@ -259,7 +259,7 @@ const lastEntry = entries[entries.length - 1];;
 
         this.metrics.lcp = lastEntry.startTime})
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
+  s: ['largest-contentful-paint] })
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
 
@@ -305,7 +305,7 @@ const lastEntry = entries[entries.length - 1];;
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime})
       })
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
+  s: ['first-input] })
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
 
@@ -349,7 +349,7 @@ const lastEntry = entries[entries.length - 1];;
         })
         this.metrics.cls = clsValue})
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
+  s: ['layout-shift] })
 //       this.observers.push(observer)
     } catch {/* TODO: Fix JSX expression */}
 
@@ -387,7 +387,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-          if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
+          if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -403,7 +403,7 @@ const lastEntry = entries[entries.length - 1];;
   )
       observer.observe({/* TODO: Fix JSX expression */}
 
-  s: ['paint'] })
+  s: ['paint] })
   )
 //       this.observers.push(observer)
 
@@ -462,7 +462,7 @@ const lastEntry = entries[entries.length - 1];;
   )
       observer.observe({/* TODO: Fix JSX expression */}
 
-  s: ['navigation'] })
+  s: ['navigation] })
   )
 //       this.observers.push(observer)
 
@@ -480,7 +480,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (typeof window !== 'undefined' && 'memory' in performance) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && 'memory in performance) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -511,7 +511,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (typeof window === 'undefined' || !('memory in window.performance)) return;
+    if (typeof window === 'undefined' || !(memory in window.performance)) return;
 
     const memory = (window.performance as Performance & {/* TODO: Fix JSX expression */};;
 
@@ -553,11 +553,11 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     if (!this.config.enableImageOptimization) return;
 
-    const images = document.querySelectorAll('img);;
+    const images = document.querySelectorAll(img);;
 
     images.forEach((img) => {/* TODO: Fix JSX expression */}
 
@@ -565,29 +565,29 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-      // Add loading="lazy" for better performance;
+      // Add loading="lazy for better performance;
 
-      if (!img.hasAttribute('loading')) {/* TODO: Fix JSX expression */}
+      if (!img.hasAttribute('loading)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-        img.setAttribute('loading', 'lazy')}
+        img.setAttribute('loading', 'lazy)}
 
       // Add proper alt text if missing;
 
-      if (!img.hasAttribute('alt')) {/* TODO: Fix JSX expression */}
+      if (!img.hasAttribute('alt)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-        img.setAttribute('alt', 'Zion Tech Group content')}
+        img.setAttribute('alt', 'Zion Tech Group content)}
 
       // Optimize image format;
 
-      if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {/* TODO: Fix JSX expression */}
+      if (img.src.includes('.jpg') || img.src.includes('.jpeg)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -601,7 +601,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp')}
+          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp)}
 
       }
 
@@ -619,15 +619,15 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (typeof window === 'undefined) return false;
+    if (typeof window === undefined) return false;
 
-    const canvas = document.createElement('canvas);;
+    const canvas = document.createElement(canvas);;
 
     canvas.width = 1;
 
     canvas.height = 1;
 
-    return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0}
+    return canvas.toDataURL('image/webp').indexOf('data:image/webp) === 0}
 
   /**
    * Setup lazy loading for better performance;
@@ -638,19 +638,19 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     if (!this.config.enableLazyLoading) return;
 
     // Intersection Observer for lazy loading;
 
-    if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
+    if ('IntersectionObserver in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-      const lazyElements = document.querySelectorAll('[data-lazy]);;
+      const lazyElements = document.querySelectorAll([data-lazy]);;
 
       const lazyObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */};;
 
@@ -672,7 +672,7 @@ const lastEntry = entries[entries.length - 1];;
 
             const element = entry.target as HTMLElement;;
 
-            const src = element.getAttribute('data-lazy);;
+            const src = element.getAttribute(data-lazy);;
 
             if (src) {/* TODO: Fix JSX expression */}
 
@@ -680,7 +680,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-              if (element.tagName === 'IMG') {/* TODO: Fix JSX expression */}
+              if (element.tagName === 'IMG) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -692,9 +692,9 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-                element.style.backgroundImage = `url(${src})`}
+                element.style.backgroundImage = `url(${src})}
 
-              element.removeAttribute('data-lazy')
+              element.removeAttribute('data-lazy)
               lazyObserver.unobserve(element)
             }
 
@@ -726,7 +726,7 @@ const lastEntry = entries[entries.length - 1];;
     // This would typically be handled by the bundler (Vite/Webpack)
     // Here we can add runtime optimizations;
 
-    if (process.env.NODE_ENV === 'development') {}
+    if (process.env.NODE_ENV === 'development) {}
 
   }
 
@@ -741,18 +741,18 @@ const lastEntry = entries[entries.length - 1];;
 
     if (!this.config.enableCaching) return;
 
-    if (typeof window === 'undefined' || !('serviceWorker in navigator)) return;
+    if (typeof window === 'undefined' || !(serviceWorker in navigator)) return;
 
     // Register service worker for caching;
 
-//     navigator.serviceWorker.register('/sw.js')
+//     navigator.serviceWorker.register('/sw.js)
       .then((registration) => {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-        if (process.env.NODE_ENV === 'development') {}
+        if (process.env.NODE_ENV === 'development) {}
 
       })
       .catch((error) => {/* TODO: Fix JSX expression */}
@@ -761,7 +761,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-        if (process.env.NODE_ENV === 'development') {}
+        if (process.env.NODE_ENV === 'development) {}
 
       }
 
@@ -820,7 +820,7 @@ const lastEntry = entries[entries.length - 1];;
 
     const score = this.getPerformanceScore();;
 
-    return `Performance Score: ${score}`}
+    return `Performance Score: ${score}}
 
   /**
    * Lazy load images for better performance;
@@ -831,9 +831,9 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
-    const images = document.querySelectorAll('img[data-src]);;
+    const images = document.querySelectorAll(img[data-src]);;
 
     const imageObserver = new IntersectionObserver((entries) => {/* TODO: Fix JSX expression */};;
 
@@ -854,9 +854,9 @@ const lastEntry = entries[entries.length - 1];;
 
           const img = entry.target as HTMLImageElement;;
 
-          img.src = img.dataset.src || ';
+          img.src = img.dataset.src || ;
 
-          img.removeAttribute('data-src);
+          img.removeAttribute(data-src);
 
           imageObserver.unobserve(img)}
 
@@ -867,7 +867,7 @@ const lastEntry = entries[entries.length - 1];;
 
   )
     images.forEach(img => imageObserver.observe(img))
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer')
+    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer)
   }
 
   /**
@@ -879,7 +879,7 @@ const lastEntry = entries[entries.length - 1];;
 
 }
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
     const criticalResources = [;;
 
@@ -890,10 +890,10 @@ const lastEntry = entries[entries.length - 1];;
 
       {/* TODO: Fix JSX expression */}
 
-  n: 'anonymous' },
+  n: 'anonymous },
       {/* TODO: Fix JSX expression */}
 
-  s: 'style }];
+  s: style }];
 
     criticalResources.forEach(resource => {/* TODO: Fix JSX expression */}
 
@@ -901,9 +901,9 @@ const lastEntry = entries[entries.length - 1];;
 
 });
 
-const link = document.createElement('link);;
+const link = document.createElement(link);;
 
-      link.rel = 'preload;
+      link.rel = preload;
 
       link.href = resource.href;
 
@@ -915,7 +915,7 @@ const link = document.createElement('link);;
 
       document.head.appendChild(link)});
 
-    logger.info('Critical resource hints added', 'PerformanceOptimizer')}
+    logger.info('Critical resource hints added', 'PerformanceOptimizer)}
 
   /**
    * Measure page load metrics;
@@ -926,9 +926,9 @@ const link = document.createElement('link);;
 
 }
 
-    if (typeof window === 'undefined' || !('performance in window)) return null;
+    if (typeof window === 'undefined' || !(performance in window)) return null;
 
-    const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+    const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
     if (!navigation) return null;
 
@@ -960,12 +960,12 @@ const link = document.createElement('link);;
 
 }
 
-    logger.performance('Web Vitals reported', metrics as unknown as Record;)
-          <string, unknown>, 'PerformanceOptimizer);
+    logger.performance('Web Vitals reported, metrics as unknown as Record;)
+          <string, unknown>, PerformanceOptimizer);
 
     // Send to analytics if available;
 
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -977,14 +977,14 @@ const link = document.createElement('link);;
 
 }
 
-        if (typeof value === 'number') {/* TODO: Fix JSX expression */}
+        if (typeof value === 'number) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
           (window as unknown as {/* TODO: Fix JSX expression */})
-  g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */}
+  g: Function }).gtag('event', 'web_vitals, {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -994,7 +994,7 @@ const link = document.createElement('link);;
             metric_value: value,
             metric_rating: value;
 
-          < 100 ? 'good' : value < 300 ? 'needs-improvement' : poor
+          < 100 ? 'good' : value < 300 ? 'needs-improvement : poor
           })
   )
         }
@@ -1032,9 +1032,9 @@ const link = document.createElement('link);;
 
     const score = this.getPerformanceScore();;
 
-    const metrics = this.getMetrics();`;;
+    const metrics = this.getMetrics();;;
 
-    return `
+    return 
 // Performance Report - Zion Tech Group Website;
 
 Performance Score: ${score}/100;
@@ -1053,12 +1053,13 @@ Cache Hit Rate: ${metrics.cacheHitRate}%;
 
 ${score}
 
-          < 80 ? '- Consider optimizing images and enabling compression' : ''}
+          < 80 ? '- Consider optimizing images and enabling compression' : '}
 
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
+${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : '}
 
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
-    `.trim()
+${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}
+
+    .trim()
   }
 
   /**
@@ -1076,13 +1077,13 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 
     this.enableCaching();
 
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
+    if (process.env.NODE_ENV === 'development) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-      logger.info('Performance optimization completed')}
+      logger.info('Performance optimization completed)}
 
   }
 
@@ -1092,7 +1093,7 @@ ${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize c
 
 export const performanceOptimizer = new PerformanceOptimizer();;
 
-export default PerformanceOptimizer;"`
+export default PerformanceOptimizer;"
 
 
 

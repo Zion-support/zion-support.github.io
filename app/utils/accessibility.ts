@@ -7,16 +7,16 @@ export interface AccessibilityConfig {
 
   enableKeyboardNavigation: boolean;
 
-  fontSize: 'small' | 'medium' | 'large;
+  fontSize: 'small' | 'medium' | large;
 
-  colorScheme: 'light' | 'dark' | 'auto'}
+  colorScheme: 'light' | 'dark' | 'auto}
 
 export const defaultAccessibilityConfig: AccessibilityConfig = {
   enableHighContrast: false,
   enableScreenReader: true,
   enableKeyboardNavigation: true,
-  fontSize: 'medium',
-  colorScheme: 'auto'}
+  fontSize: 'medium,
+  colorScheme: 'auto}
 
 export class AccessibilityManager {
   private config: AccessibilityConfig;
@@ -35,7 +35,7 @@ constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {
     return { ...this.config }}
 
   private applyConfig(): void {
-    if (typeof document === 'undefined) return;
+    if (typeof document === undefined) return;
 
 ;
 
@@ -43,27 +43,27 @@ const root = document.documentElement;;
 
     // Apply high contrast
     if (this.config.enableHighContrast) {
-      root.classList.add('high-contrast')} else {
-      root.classList.remove('high-contrast);
+      root.classList.add('high-contrast)} else {
+      root.classList.remove(high-contrast);
 
     // Apply font size
-    root.setAttribute('data-font-size, this.config.fontSize);
+    root.setAttribute(data-font-size, this.config.fontSize);
 
     // Apply color scheme
-    root.setAttribute('data-color-scheme, this.config.colorScheme);
+    root.setAttribute(data-color-scheme, this.config.colorScheme);
 
   public announceToScreenReader(message: string): void {
-    if (typeof document === 'undefined || !this.config.enableScreenReader) return;
+    if (typeof document === undefined || !this.config.enableScreenReader) return;
 
 ;
 
-const announcement = document.createElement('div);;
+const announcement = document.createElement(div);;
 
-    announcement.setAttribute('aria-live', 'polite);
+    announcement.setAttribute('aria-live', polite);
 
-    announcement.setAttribute('aria-atomic', 'true);
+    announcement.setAttribute('aria-atomic', true);
 
-    announcement.className = 'sr-only;
+    announcement.className = sr-only;
 
     announcement.textContent = message;
 
@@ -73,7 +73,7 @@ const announcement = document.createElement('div);;
       document.body.removeChild(announcement)}, 1000);
 
   public focusElement(selector: string): boolean {
-    if (typeof document === 'undefined) return false;
+    if (typeof document === undefined) return false;
 
 ;
 
@@ -90,7 +90,7 @@ const element = document.querySelector(selector) as HTMLElement;;
 
 const focusableElements = container.querySelectorAll(;;
 
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1])
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
     ) as NodeListOf<HTMLElement>;
 
 ;
@@ -103,7 +103,7 @@ const lastElement = focusableElements[focusableElements.length - 1];;
 
 const handleTabKey = (e: KeyboardEvent) => {;;
 
-      if (e.key !== 'Tab) return;
+      if (e.key !== Tab) return;
 
       if (e.shiftKey) {
         if (document.activeElement === firstElement) {
@@ -121,12 +121,12 @@ const handleTabKey = (e: KeyboardEvent) => {;;
 
     };
 
-    container.addEventListener('keydown, handleTabKey);
+    container.addEventListener(keydown, handleTabKey);
 
     firstElement?.focus();
 
     return () => {
-      container.removeEventListener('keydown', handleTabKey)}}
+      container.removeEventListener('keydown, handleTabKey)}}
 
 }
 
@@ -135,22 +135,22 @@ export const accessibilityManager = new AccessibilityManager();;
 // Utility functions
 export const isAccessible = (element: HTMLElement): boolean => {;;
 
-const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby);;
+const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute(aria-labelledby);;
 
 const hasTextContent = element.textContent?.trim().length > 0;;
 
-const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex);;
+const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute(tabindex);;
 
   return isInteractive && (hasAriaLabel || hasTextContent)
 export const addAriaLabel = (element: HTMLElement, label: string): void => {;;
 
-  element.setAttribute('aria-label', label)
+  element.setAttribute('aria-label, label)
 export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {;;
 
-  element.setAttribute('aria-describedby', descriptionId)
+  element.setAttribute('aria-describedby, descriptionId)
 export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {;;
 
-  element.setAttribute('tabindex', tabIndex.toString())
+  element.setAttribute('tabindex, tabIndex.toString())
 export const removeElementFocus = (element: HTMLElement): void => {;;
 
-  element.setAttribute('tabindex', '-1');
+  element.setAttribute('tabindex', '-1);

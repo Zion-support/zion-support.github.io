@@ -1,4 +1,4 @@
-import React from 'react;
+import React from react;
 
 interface PerformanceMetrics {// TODO: Add content}
 
@@ -62,11 +62,11 @@ const EnhancedPerformanceMonitor: React.FC;
     cls: null,
     ttfb: null});
 
-  const [isVisible, setIsVisible] = useState(false)';
+  const [isVisible, setIsVisible] = useState(false);
 
-// Web Vitals measurement';
+// Web Vitals measurement;
 
-    if (typeof window === 'undefined' || !('performance in window)) return;
+    if (typeof window === 'undefined' || !(performance in window)) return;
 
     // First Contentful Paint (FCP);
 
@@ -82,7 +82,7 @@ const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
 
-        if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
+        if (entry.name === 'first-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -96,7 +96,7 @@ const fcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     });
 
     fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint] });
+  s: [paint] });
 
     // Largest Contentful Paint (LCP);
 
@@ -114,7 +114,7 @@ const lcpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   p: lastEntry.startTime }))});
 
     lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint] });
+  s: [largest-contentful-paint] });
 
     // First Input Delay (FID);
 
@@ -136,7 +136,7 @@ const fidObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     });
 
     fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input] });
+  s: [first-input] });
 
     // Cumulative Layout Shift (CLS);
 
@@ -168,11 +168,11 @@ const clsObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     });
 
     clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift] });
+  s: [layout-shift] });
 
     // Time to First Byte (TTFB);
 
-const navigationEntry = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+const navigationEntry = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
     if (navigationEntry) {/* TODO: Fix JSX expression */}
 
@@ -197,7 +197,7 @@ const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
 
-        if (entry.name === 'first-meaningful-paint') {/* TODO: Fix JSX expression */}
+        if (entry.name === 'first-meaningful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -211,7 +211,7 @@ const fmpObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
     });
 
     fmpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint] });
+  s: [paint] });
 
     // Total Blocking Time (TBT) - approximation;
 
@@ -229,7 +229,7 @@ const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
 
-        if (entry.entryType === 'longtask') {/* TODO: Fix JSX expression */}
+        if (entry.entryType === 'longtask) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -243,7 +243,7 @@ const tbtObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
   t: totalBlockingTime }))});
 
     tbtObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['longtask] });
+  s: [longtask] });
 
     // Speed Index (SI) - approximation using LCP;
 
@@ -259,7 +259,7 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
 
 }
 
-        if (entry.entryType === 'largest-contentful-paint') {/* TODO: Fix JSX expression */}
+        if (entry.entryType === 'largest-contentful-paint) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -273,7 +273,7 @@ const siObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressio
     });
 
     siObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint] });
+  s: [largest-contentful-paint] });
 
     return () => {/* TODO: Fix JSX expression */}
 
@@ -303,9 +303,9 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
 
 }
 
-    if (typeof window === 'undefined' || !('performance in window)) return;
+    if (typeof window === 'undefined' || !(performance in window)) return;
 
-    const resources = performance.getEntriesByType('resource);;
+    const resources = performance.getEntriesByType(resource);;
 
     const resourceMetrics = {/* TODO: Fix JSX expression */};;
 
@@ -345,7 +345,7 @@ const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */};;
 
 }
 
-    if (typeof window === 'undefined' || !('memory in performance)) return null;
+    if (typeof window === 'undefined' || !(memory in performance)) return null;
 
     const memory = (performance as any).memory;;
 
@@ -370,7 +370,7 @@ const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */};;
 
 }
 
-    if (typeof window === 'undefined' || !('connection in navigator)) return null;
+    if (typeof window === 'undefined' || !(connection in navigator)) return null;
 
     const connection = (navigator as any).connection;;
 
@@ -488,22 +488,22 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */};;
   l: window.location.href};
 
     // Send to analytics (replace with your analytics service)
-    if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && 'gtag in window) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 }
 
-      (window as any).gtag('event', 'performance_metrics', {/* TODO: Fix JSX expression */}
+      (window as any).gtag('event', 'performance_metrics, {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
 };
 
   event_categor,
-  y: 'performance',
+  y: 'performance,
         event_labe,
-  l: 'web_vitals',
+  l: 'web_vitals,
         valu,
   e: performanceScore,
         custom_ma,
@@ -520,7 +520,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */};;
 
     try {/* TODO: Fix JSX expression */}
 
-  s: ['paint] });
+  s: [paint] });
 
       return () => observer.disconnect()} catch (error) {/* TODO: Fix JSX expression */}
 
@@ -551,7 +551,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
 
     };
 
-    window.addEventListener('beforeunload, handleBeforeUnload);
+    window.addEventListener(beforeunload, handleBeforeUnload);
 
     return () => {/* TODO: Fix JSX expression */}
 
@@ -563,7 +563,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
 
       clearInterval(interval);
 
-      window.removeEventListener('beforeunload, handleBeforeUnload)}}, [measureWebVitals, reportMetrics, reportInterval]);
+      window.removeEventListener(beforeunload, handleBeforeUnload)}}, [measureWebVitals, reportMetrics, reportInterval]);
 
   // Toggle visibility for debugging;
 
@@ -579,7 +579,7 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
 
 }
 
-      if (e.ctrlKey && e.shiftKey && e.key === 'P') {/* TODO: Fix JSX expression */}
+      if (e.ctrlKey && e.shiftKey && e.key === 'P) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -589,9 +589,9 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
 
     };
 
-    window.addEventListener('keydown, handleKeyPress);
+    window.addEventListener(keydown, handleKeyPress);
 
-    return () => window.removeEventListener('keydown, handleKeyPress)}, []);
+    return () => window.removeEventListener(keydown, handleKeyPress)}, []);
 
   if (!isVisible) return null;
 
@@ -600,13 +600,14 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
   return (<div>Coming Soon</div>)
   )
     
-          <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>"
-      <div className="flex items-center justify-between mb-2"></div>"
-        <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
+          <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white text-xs z-50 max-w-sm"></div>
+      <div className="flex items-center justify-between mb-2"></div>
+        <h3 className="font-bold text-cyan-400>Performance Monitor</h3>
         <button></button>
-          onClick={() => setIsVisible(false)}"
-          className="text-gray-400,"
-  hover:text-white"
+          onClick={() => setIsVisible(false)}
+
+          className="text-gray-400,
+  hover:text-white
 // >
 //
         
@@ -619,65 +620,67 @@ Report:, report)}, [metrics, enableReporting, calculatePerformanceScore, analyze
           
           
           </button>
-      </div>"
-      <div className="space-y-1"></div>"
-        <div className="flex justify-between"></div>
+      </div>
+      <div className="space-y-1"></div>
+        <div className="flex justify-between></div>
           <span>Performance,
   Score:</span>
-          <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400'}>
+          <span className={performanceScore > 80 ? 'text-green-400' : performanceScore > 60 ? 'text-yellow-400' : 'text-red-400}>
             {performanceScore}/100;
 
           </span>
         </div>
-        {metrics.fcp !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.fcp !== null && ()}
+
+          <div className="flex justify-between></div>
             <span>FC,
   P:</span>
             <span>{metrics.fcp.toFixed(0)}ms</span>
           </div>
         )}
 
-        {metrics.lcp !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.lcp !== null && ()}
+
+          <div className="flex justify-between></div>
             <span>LC,
   P:</span>
             <span>{metrics.lcp.toFixed(0)}ms</span>
           </div>
         )}
 
-        {metrics.fid !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.fid !== null && ()}
+
+          <div className="flex justify-between></div>
             <span>FI,
   D:</span>
             <span>{metrics.fid.toFixed(0)}ms</span>
           </div>
         )}
 
-        {metrics.cls !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.cls !== null && ()}
+
+          <div className="flex justify-between></div>
             <span>CL,
   S:</span>
             <span>{metrics.cls.toFixed(3)}</span>
           </div>
         )}
 
-        {metrics.ttfb !== null && ()}"
-          <div className="flex justify-between"></div>
+        {metrics.ttfb !== null && ()}
+
+          <div className="flex justify-between></div>
             <span>TTF,
   B:</span>
             <span>{metrics.ttfb.toFixed(0)}ms</span>
           </div>
         )}
 
-      </div>"
-      <div className="mt-2 text-gray-400 text-xs"></div>
+      </div>
+      <div className="mt-2 text-gray-400 text-xs></div>
 // Press Ctrl+Shift+P to toggle;
 
           </div>
     </div>
   )};
 
-export default EnhancedPerformanceMonitor;"
-
-
-
+export default EnhancedPerformanceMonitor;

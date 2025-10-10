@@ -1,6 +1,6 @@
-'use client';
+'use client;
 
-import React, { useEffect, useState } from 'react;
+import React, { useEffect, useState } from react;
 
 interface PerformanceOptimizerProps {
   enableImageOptimization?: boolean;
@@ -56,31 +56,31 @@ const [optimizationStatus, setOptimizationStatus] = useState({
 
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting, enableResourceHints, enableServiceWorker]);
 
-';
+;
 
-const optimizeImages = () => {;';
+const optimizeImages = () => {;;;
 
-const images = document.querySelectorAll('img);;
+const images = document.querySelectorAll(img);;
 
     let optimized = 0;;
 
     images.forEach((img) => {
-      // Add loading="lazy" for images below the fold
+      // Add loading="lazy for images below the fold
       if (img.getBoundingClientRect().top > window.innerHeight) {
-        img.setAttribute('loading', 'lazy);
+        img.setAttribute('loading', lazy);
 
         optimized++}
 
-      // Add decoding="async" for better performance
-      img.setAttribute('decoding', 'async);
+      // Add decoding="async for better performance
+      img.setAttribute('decoding', async);
 
-      // Add fetchpriority="high" for above-the-fold images
+      // Add fetchpriority="high for above-the-fold images
       if (img.getBoundingClientRect().top <= window.innerHeight) {
-        img.setAttribute('fetchpriority', 'high')}
+        img.setAttribute('fetchpriority', 'high)}
 
       // Add proper alt text if missing
-      if (!img.getAttribute('alt')) {
-        img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions')}
+      if (!img.getAttribute('alt)) {
+        img.setAttribute('alt', 'Zion Tech Group - AI and IT Solutions)}
 
     });
 
@@ -90,7 +90,7 @@ const images = document.querySelectorAll('img);;
 
 const setupLazyLoading = () => {;;
 
-    if ('IntersectionObserver in window) {;
+    if (IntersectionObserver in window) {;
 
 const observer = new IntersectionObserver((entries) => {;;
 
@@ -102,20 +102,20 @@ const img = entry.target as HTMLImageElement;;
             if (img.dataset.src) {
               img.src = img.dataset.src;
 
-              img.removeAttribute('data-src);
+              img.removeAttribute(data-src);
 
               observer.unobserve(img)}
 
           }
 
         })}, {
-        rootMargin: '50px 0px',
+        rootMargin: '50px 0px,
         threshold: 0.1
       });
 
       ;
 
-const lazyImages = document.querySelectorAll('img[data-src]);;
+const lazyImages = document.querySelectorAll(img[data-src]);;
 
       lazyImages.forEach((img) => observer.observe(img));
 
@@ -130,13 +130,13 @@ const preloadCriticalResources = () => {;;
 const criticalResources = [;;
 
       {
-        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
-        as: 'style',
+        href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap,
+        as: 'style,
         type: text/css
       },
       {
-        href: '/styles/critical.css',
-        as: 'style',
+        href: '/styles/critical.css,
+        as: 'style,
         type: text/css
       }
 
@@ -144,9 +144,9 @@ const criticalResources = [;;
 
     criticalResources.forEach((resource) => {;
 
-const link = document.createElement('link);;
+const link = document.createElement(link);;
 
-      link.rel = 'preload;
+      link.rel = preload;
 
       link.href = resource.href;
 
@@ -170,20 +170,20 @@ const setupCodeSplitting = () => {;;
 
 const addResourceHints = () => {;;
 
-const hints = [;';
+const hints = [;;;
 
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' }
+      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com },
+      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com },
+      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com },
+      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous }
 
     ];
 
     hints.forEach((hint) => {;
 
-const link = document.createElement('link);;
+const link = document.createElement(link);;
 
       link.rel = hint.rel;
 
@@ -200,10 +200,10 @@ const link = document.createElement('link);;
 
 const registerServiceWorker = async () => {;;
 
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker in navigator) {
       try {;
 
-const registration = await navigator.serviceWorker.register('/sw.js);;
+const registration = await navigator.serviceWorker.register(/sw.js);;
 
         setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }))} catch (error) {
           // Service Worker registration failed - handled silently in production
@@ -215,16 +215,16 @@ const registration = await navigator.serviceWorker.register('/sw.js);;
 
   // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance in window) {;
+    if (typeof window !== 'undefined' && performance in window) {;
 
 const observer = new PerformanceObserver((list) => {;;
 
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
+          if (entry.entryType === 'largest-contentful-paint) {
             // Track LCP
-            if (typeof window !== 'undefined' && 'gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
+            if (typeof window !== 'undefined' && 'gtag in window) {
+              (window as any).gtag('event', 'web_vitals, {
+                name: 'LCP,
                 value: Math.round(entry.startTime),
                 event_category: Performance
               })}
@@ -235,7 +235,7 @@ const observer = new PerformanceObserver((list) => {;;
 
       });
 
-      observer.observe({ entryTypes: ['largest-contentful-paint'] })}
+      observer.observe({ entryTypes: ['largest-contentful-paint] })}
 
   }, []);
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react;
+import React, { useState, useEffect, useRef } from react;
 
 interface AnimatedCounterProps {
   end: number;
@@ -7,16 +7,16 @@ interface AnimatedCounterProps {
 
   prefix?: string;
 
-  suffix?: string';
+  suffix?: string;
 
   className?: string}
 
-';
+;
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps>end</AnimatedCounterProps>,
   duration = 2000,
-  prefix = '',
-  suffix = '',
+  prefix = ',
+  suffix = ',
   className = 
 }) => {
   return (

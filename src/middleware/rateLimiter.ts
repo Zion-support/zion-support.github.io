@@ -1,5 +1,5 @@
 
-'use client';
+'use client;
 
 /**
  * Rate Limiting Middleware;
@@ -32,11 +32,11 @@ interface RequestRecord {
 export class RateLimiter {
   private requests: Map<string, RequestRecord> = new Map();
 
-  private config: RateLimitConfig';
+  private config: RateLimitConfig;
 
   constructor(config: RateLimitConfig) {
     this.config = {
-      message: 'Too many requests, please try again later.',
+      message: 'Too many requests, please try again later.,
 interface RequestRecord {// TODO: Add content}
 
 };
@@ -66,7 +66,7 @@ export class RateLimiter {// TODO: Add content}
 
 };
 
-  message: 'Too many requests, please try again later.',
+  message: 'Too many requests, please try again later.,
       skipSuccessfulRequests: false,
       skipFailedRequests: false,
 //       ...config};
@@ -188,7 +188,7 @@ $4}),
   // Authentication: 5 login attempts per 15 minutes
   auth: new RateLimiter({
     max: 5,
-    message: 'Too many login attempts. Please try again later.',
+    message: 'Too many login attempts. Please try again later.,
     skipSuccessfulRequests: true
   })
  * Get client identifier from request
@@ -261,7 +261,7 @@ export const rateLimiters = {// TODO: Add content};;
 };
 
   windowMs: 60 * 60 * 1000,
-    max: 1000';
+    max: 1000;
 
 // API: 60 requests per minute,
 
@@ -270,7 +270,7 @@ export const rateLimiters = {// TODO: Add content};;
   // Authentication: 5 login attempts per 15 minutes,
 
     auth: new RateLimiter({max: 5,
-    message: 'Too many login attempts. Please try again later.',
+    message: 'Too many login attempts. Please try again later.,
     skipSuccessfulRequests: true})
  * Get client identifier from request;
 
@@ -283,22 +283,22 @@ export function getClientIdentifier(request: Request): string {// TODO: Add cont
 
   // Try to get real IP from headers (for proxied requests);
 
-const headers = request.headers;';
+const headers = request.headers;;;
 
-  const forwardedFor = headers.get('x-forwarded-for);;
+  const forwardedFor = headers.get(x-forwarded-for);;
 
-  const realIp = headers.get('x-real-ip);;
+  const realIp = headers.get(x-real-ip);;
 
-  const cfConnectingIp = headers.get('cf-connecting-ip);;
+  const cfConnectingIp = headers.get(cf-connecting-ip);;
 
   if (cfConnectingIp) return cfConnectingIp;
 
   if (realIp) return realIp;
 
-  if (forwardedFor) return forwardedFor.split(',)[0].trim();
+  if (forwardedFor) return forwardedFor.split(,)[0].trim();
 
   // Fallback to a default identifier
-  return 'unknown;
+  return unknown;
 
  * Create rate limit middleware
  * @param limiter - Rate limiter instance
@@ -314,14 +314,14 @@ const identifier = getClientIdentifier(request);;
       return new Response(
 
         JSON.stringify({
-          error: 'Rate limit exceeded',
+          error: 'Rate limit exceeded,
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
         {
           status: 429,
           headers: {
   // Fallback to a default identifier;
 
-  return 'unknown;
+  return unknown;
 
  * Create rate limit middleware;
 
@@ -352,7 +352,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
 
 };
 
-  error: 'Rate limit exceeded',
+  error: 'Rate limit exceeded,
           retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
         {// TODO: Add content}
 
@@ -363,11 +363,11 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add co
 
 }
 
-            'Content-Type': 'application/json',
-            'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),
-            'X-RateLimit-Limit': String(limiter['config'].max),
-            'X-RateLimit-Remaining': String(remaining),
-            'X-RateLimit-Reset': String(resetTime)
+            'Content-Type': 'application/json,
+            'Retry-After: String(Math.ceil((resetTime - Date.now()) / 1000)),
+            'X-RateLimit-Limit': String(limiter['config].max),
+            'X-RateLimit-Remaining: String(remaining),
+            'X-RateLimit-Reset: String(resetTime)
       );
 
     // Request allowed - headers can be added to response later

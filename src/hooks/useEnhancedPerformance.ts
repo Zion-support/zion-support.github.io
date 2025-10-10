@@ -32,7 +32,7 @@ export function useEnhancedPerformance(__option)
 
 }
 
-    component = 'Unknown',
+    component = 'Unknown,
     trackErrors = true,
     trackPerformance = true,
     trackAnalytics = true} = _options;
@@ -65,7 +65,7 @@ export function useEnhancedPerformance(__option)
 
 }
 
-      analytics.trackCustomEvent('Component', 'Mounted, component);
+      analytics.trackCustomEvent('Component', Mounted, component);
 
     return () => {/* TODO: Fix JSX expression */}
 
@@ -92,15 +92,15 @@ export function useEnhancedPerformance(__option)
           // Long-lived component;
 
 //           analytics.trackCustomEvent()
-//             'Performance',
-//             'Long Component Lifetime',
+//             'Performance,
+//             'Long Component Lifetime,
 //             component,
 //             Math.round(duration)
           );
 
       // Track component unmount;
 
-        analytics.trackCustomEvent('Component', 'Unmounted, component)}}, [component, trackAnalytics, trackPerformance]);
+        analytics.trackCustomEvent('Component', Unmounted, component)}}, [component, trackAnalytics, trackPerformance]);
 
   // Track render performance;
 
@@ -114,7 +114,7 @@ export function useEnhancedPerformance(__option)
 
       // Many re-renders detected;
 
-'High Render Count',
+'High Render Count,
         renderCountRef.current});
 
   const trackError = useCallback();;
@@ -142,7 +142,7 @@ const trackUserAction = useCallback();;
 
     (actio,
   n: string, metadata?: Record;)
-          <string, unknown>) => {analytics.trackCustomEvent('User Action', action, component, undefined, metadata)}
+          <string, unknown>) => {analytics.trackCustomEvent('User Action, action, component, undefined, metadata)}
 
     [component, trackAnalytics];
 
@@ -155,7 +155,7 @@ const measureOperation = useCallback();;
 
 }
 
-      const markName = `${component}-${operationName}`;;
+      const markName = `${component}-${operationName};;
 
       const startTime = performance.now();;
 
@@ -178,16 +178,16 @@ const duration = performance.now() - startTime;;
 
 analytics.trackPerformance(
 
-              `${component}-${operationName}`,
+              `${component}-${operationName},
 
 //               duration,
-              duration > 1000 ? 'slow' : fast
+              duration > 1000 ? 'slow : fast
           return duration;
 
 [component, trackPerformance]
     trackError,
     trackUserAction,
-    measureOperation;)`
+    measureOperation;)
 
 
 

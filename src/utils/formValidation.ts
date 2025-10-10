@@ -43,7 +43,7 @@ export const _validationRules = {// TODO: Add content};;
 
    */
 
-  required: (message = 'This field is required): ValidationRule;
+  required: (message = This field is required): ValidationRule;
 
           <string> => ({// TODO: Add content}
 
@@ -57,7 +57,7 @@ export const _validationRules = {// TODO: Add content};;
 
    */
 
-  email: (message = 'Please enter a valid email address): ValidationRule;
+  email: (message = Please enter a valid email address): ValidationRule;
 
           <string> => ({// TODO: Add content}
 
@@ -87,7 +87,7 @@ export const _validationRules = {// TODO: Add content};;
 };
 
   validate: (value: string) => value.length >= min,
-    message: message || `Must be at least ${min} characters`
+    message: message || `Must be at least ${min} characters
 
   }),
   /**
@@ -104,14 +104,14 @@ export const _validationRules = {// TODO: Add content};;
   validate: (value: string) => value.length;
 
           <= max,
-    messag,`
-  e: message || `Must be no more than ${max} characters`
+    messag,
+  e: message || `Must be no more than ${max} characters
   }),
   /**
    * Validate phone number (US format)
    */
 
-  phoneUS: (message = 'Please enter a valid US phone number'): ValidationRule<string> => ({// TODO: Add content}
+  phoneUS: (message = 'Please enter a valid US phone number): ValidationRule<string> => ({// TODO: Add content}
 
 };
 
@@ -125,14 +125,14 @@ export const _validationRules = {// TODO: Add content};;
 
       const phoneRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;;
 
-      return phoneRegex.test(value.replace(/\s/g, ''))},
+      return phoneRegex.test(value.replace(/\s/g, '))},
 //     message}),
   /**
    * Validate URL format;
 
    */
 
-  url: (message = 'Please enter a valid URL): ValidationRule;
+  url: (message = Please enter a valid URL): ValidationRule;
 
           <string> => ({// TODO: Add content}
 
@@ -178,15 +178,16 @@ export const _validationRules = {// TODO: Add content};;
   validate: (value: number) => value >= min && value;
 
           <= max,
-    messag,`
-  e: message || `Must be between ${min} and ${max}`
+    messag,
+  e: message || `Must be between ${min} and ${max}
+
   }),
   /**
    * Validate pattern match;
 
    */
 
-  pattern: (regex: RegExp, message = 'Invalid format'): ValidationRule<string> => ({// TODO: Add content}
+  pattern: (regex: RegExp, message = 'Invalid format): ValidationRule<string> => ({// TODO: Add content}
 
 };
 
@@ -243,7 +244,7 @@ export const _validationRules = {// TODO: Add content};;
 
       const hasNumber = /[0-9]/.test(value);;
 
-      const hasSpecialChar = /[!@#$%^&*(),.?":{}|;;
+      const hasSpecialChar = /[!@#$%^&*(),.?:{}|;;
 
           <React.Fragment>]/.test(value);
 
@@ -262,7 +263,7 @@ const hasMinLength = value.length >= 8;;
 };
 
   validate: (value: string) => value === otherFieldValue,
-    message: `Must match ${fieldName}`
+    message: `Must match ${fieldName}
 
   }),
   /**
@@ -289,8 +290,8 @@ const hasMinLength = value.length >= 8;;
       return file.size;
 
           <= maxSizeInBytes},
-    messag,`
-  e: message || `File size must not exceed ${maxSizeInMB}MB`
+    messag,
+  e: message || `File size must not exceed ${maxSizeInMB}MB
   }),
   /**
    * Validate file type;
@@ -302,7 +303,7 @@ const hasMinLength = value.length >= 8;;
 };
 
   validate: (file: File) => allowedTypes.includes(file.type),
-    message: message || `File type must be one of: ${allowedTypes.join(', ')}`
+    message: message || `File type must be one of: ${allowedTypes.join(', ')}
 
   }
 
@@ -470,9 +471,9 @@ export function sanitizeInput(input: string): string {// TODO: Add content}
           
           
           )
-          <React.Fragment>]/g, ') // Remove potential HTML tags;
+          <React.Fragment>]/g, ) // Remove potential HTML tags;
 
-    .replace(/[^\w\s@.-]/gi, ''); // Keep only alphanumeric, spaces, @, ., -
+    .replace(/[^\w\s@.-]/gi, '); // Keep only alphanumeric, spaces, @, ., -
 }
 
 /**
@@ -528,7 +529,7 @@ export function debounce;
     timeout = setTimeout(later, wait)
   }
 
-}"`
+}"
 
 
 

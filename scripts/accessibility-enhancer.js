@@ -7,48 +7,48 @@
 
  */
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
-const __filename = fileURLToPath(import.meta.url);';
+const __filename = fileURLToPath(import.meta.url);;;
 
 // __dirname removed
 // console.log removed for production
-// Create accessibility improvements for the main HTML file';
+// Create accessibility improvements for the main HTML file;
 
-const indexPath = path.join(__dirname, '../dist/index.html);;
+const indexPath = path.join(__dirname, ../dist/index.html);;
 
 if (fs.existsSync(indexPath)) {;
 
-let indexContent = fs.readFileSync(indexPath, 'utf8);;
+let indexContent = fs.readFileSync(indexPath, utf8);;
 
   // Add accessibility improvements;
 
-const accessibilityScript = `;;
+const accessibilityScript = ;;
 
     <script></scrip>
       // Accessibility enhancements
       (function() {
-        'use strict;
+        use strict;
 
         // Skip to main content functionality;
 
 function addSkipLink() {;
 
-const skipLink = document.createElement('a);;
+const skipLink = document.createElement(a);;
 
-          skipLink.href = '#main-content;
+          skipLink.href = #main-content;
 
-          skipLink.textContent = 'Skip to main content;
+          skipLink.textContent = Skip to main content;
 
-          skipLink.className = 'skip-link;
+          skipLink.className = skip-link;
 
-          skipLink.style.cssText = \`
+          skipLink.style.cssText = \
             position: absolute;
 
             top: -40 px;
@@ -69,13 +69,13 @@ const skipLink = document.createElement('a);;
 
             transition: top 0.3 s;
 
-          \`;
+          \;
 
-          skipLink.addEventListener('focus', function() {
-            this.style.top = '6 px});
+          skipLink.addEventListener('focus, function() {
+            this.style.top = 6 px});
 
-          skipLink.addEventListener('blur', function() {
-            this.style.top = '-40 px});
+          skipLink.addEventListener('blur, function() {
+            this.style.top = -40 px});
 
           document.body.insertBefore(skipLink, document.body.firstChild)}
 
@@ -83,13 +83,13 @@ const skipLink = document.createElement('a);;
 
 function addHighContrastToggle() {;
 
-const toggle = document.createElement('button);;
+const toggle = document.createElement(button);;
 
-          toggle.textContent = 'High Contrast;
+          toggle.textContent = High Contrast;
 
-          toggle.className = 'accessibility-toggle;
+          toggle.className = accessibility-toggle;
 
-          toggle.style.cssText = \`
+          toggle.style.cssText = \
             position: fixed;
 
             top: 10 px;
@@ -112,12 +112,12 @@ const toggle = document.createElement('button);;
 
             font-size: 14 px;
 
-          \`;
+          \;
 
-          toggle.addEventListener('click', function() {
-            document.body.classList.toggle('high-contrast);
+          toggle.addEventListener('click, function() {
+            document.body.classList.toggle(high-contrast);
 
-            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : 'High Contrast});
+            this.textContent = document.body.classList.contains('high-contrast') ? 'Normal Contrast' : High Contrast});
 
           document.body.appendChild(toggle)}
 
@@ -125,11 +125,11 @@ const toggle = document.createElement('button);;
 
 function addFontSizeControls() {;
 
-const controls = document.createElement('div);;
+const controls = document.createElement(div);;
 
-          controls.className = 'font-size-controls;
+          controls.className = font-size-controls;
 
-          controls.style.cssText = \`
+          controls.style.cssText = \
             position: fixed;
 
             top: 50 px;
@@ -152,40 +152,40 @@ const controls = document.createElement('div);;
 
             gap: 5 px;
 
-          \`;
+          \;
 
           ;
 
-const increaseBtn = document.createElement('button);;
+const increaseBtn = document.createElement(button);;
 
-          increaseBtn.textContent = 'A+;
+          increaseBtn.textContent = A+;
 
-          increaseBtn.addEventListener('click, () => {;
+          increaseBtn.addEventListener(click, () => {;
 
 const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);;
 
-            document.documentElement.style.fontSize = (currentSize + 2) + 'px});
+            document.documentElement.style.fontSize = (currentSize + 2) + px});
 
           ;
 
-const decreaseBtn = document.createElement('button);;
+const decreaseBtn = document.createElement(button);;
 
-          decreaseBtn.textContent = 'A-;
+          decreaseBtn.textContent = A-;
 
-          decreaseBtn.addEventListener('click, () => {;
+          decreaseBtn.addEventListener(click, () => {;
 
 const currentSize = parseFloat(getComputedStyle(document.documentElement).fontSize);;
 
-            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + 'px});
+            document.documentElement.style.fontSize = Math.max(currentSize - 2, 12) + px});
 
           ;
 
-const resetBtn = document.createElement('button);;
+const resetBtn = document.createElement(button);;
 
-          resetBtn.textContent = 'Reset;
+          resetBtn.textContent = Reset;
 
-          resetBtn.addEventListener('click', () => {
-            document.documentElement.style.fontSize = '16 px});
+          resetBtn.addEventListener('click, () => {
+            document.documentElement.style.fontSize = 16 px});
 
           controls.appendChild(increaseBtn);
 
@@ -199,16 +199,16 @@ const resetBtn = document.createElement('button);;
 
 function enhanceFocusManagement() {
           // Trap focus in modals
-          document.addEventListener('keydown', function(e) {
-            if (e.key === 'Tab) {;
+          document.addEventListener('keydown, function(e) {
+            if (e.key === Tab) {;
 
-const modal = document.querySelector('.modal:not([style*="display: none"]));;
+const modal = document.querySelector('.modal:not([style*="display: none]));;
 
               if (modal) {;
 
 const focusableElements = modal.querySelectorAll(;;
 
-                  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1])
+                  'button, [href], input, select, textarea, [tabindex]:not([tabindex=-1])
                 );
 
                 const firstElement = focusableElements[0];;
@@ -234,13 +234,13 @@ const focusableElements = modal.querySelectorAll(;;
             }
 
             // Close modals with Escape key
-            if (e.key === 'Escape) {;
+            if (e.key === Escape) {;
 
-const modal = document.querySelector('.modal:not([style*="display: none"]));;
+const modal = document.querySelector('.modal:not([style*="display: none]));;
 
               if (modal) {;
 
-const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn);;
+const closeBtn = modal.querySelector('[aria-label="Close], .close-btn);;
 
                 if (closeBtn) closeBtn.click()}
 
@@ -253,39 +253,39 @@ const closeBtn = modal.querySelector('[aria-label="Close"], .close-btn);;
 function addAriaLabels() {
           // Add aria-labels to buttons without text;
 
-const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby]));;
+const iconButtons = document.querySelectorAll(button:not([aria-label]):not([aria-labelledby]));;
 
           iconButtons.forEach(button => {;
 
-const icon = button.querySelector('svg, i);;
+const icon = button.querySelector(svg, i);;
 
             if (icon) {;
 
-const iconName = icon.getAttribute('class) || icon.tagName.toLowerCase();;
+const iconName = icon.getAttribute(class) || icon.tagName.toLowerCase();;
 
-              button.setAttribute('aria-label', \`\${iconName} button\`)}
+              button.setAttribute('aria-label', \`\${iconName} button\)}
 
           });
 
-          // Add role="button" to clickable divs;
+          // Add role="button to clickable divs;
 
-const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer"]);;
+const clickableDivs = document.querySelectorAll('div[onclick], div[class*="cursor-pointer]);;
 
           clickableDivs.forEach(div => {
-            if (!div.getAttribute('role')) {
-              div.setAttribute('role', 'button);
+            if (!div.getAttribute('role)) {
+              div.setAttribute('role', button);
 
-              div.setAttribute('tabindex', '0')}
+              div.setAttribute('tabindex', '0)}
 
           });
 
           // Add aria-expanded to collapsible elements;
 
-const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse"]);;
+const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="collapse]);;
 
           collapsibles.forEach(element => {
-            if (!element.getAttribute('aria-expanded')) {
-              element.setAttribute('aria-expanded', 'false')}
+            if (!element.getAttribute('aria-expanded)) {
+              element.setAttribute('aria-expanded', 'false)}
 
           })}
 
@@ -293,15 +293,15 @@ const collapsibles = document.querySelectorAll('[class*="dropdown"], [class*="co
 
 function addLiveRegion() {;
 
-const liveRegion = document.createElement('div);;
+const liveRegion = document.createElement(div);;
 
-          liveRegion.setAttribute('aria-live', 'polite);
+          liveRegion.setAttribute('aria-live', polite);
 
-          liveRegion.setAttribute('aria-atomic', 'true);
+          liveRegion.setAttribute('aria-atomic', true);
 
-          liveRegion.className = 'sr-only;
+          liveRegion.className = sr-only;
 
-          liveRegion.style.cssText = \`
+          liveRegion.style.cssText = \
             position: absolute;
 
             width: 1 px;
@@ -320,7 +320,7 @@ const liveRegion = document.createElement('div);;
 
             border: 0;
 
-          \`;
+          \;
 
           document.body.appendChild(liveRegion);
 
@@ -331,10 +331,10 @@ const originalPushState = history.pushState;;
           history.pushState = function() {
             originalPushState.apply(history, arguments);
 
-            liveRegion.textContent = 'Page navigation complete'}}
+            liveRegion.textContent = 'Page navigation complete}}
 
         // Initialize accessibility features
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded, function() {
           addSkipLink();
 
           addHighContrastToggle();
@@ -349,7 +349,7 @@ const originalPushState = history.pushState;;
 
         // Add high contrast styles;
 
-const highContrastStyles = \`;;
+const highContrastStyles = \;;
 
           .high-contrast {
             filter: contrast(150%) brightness(120%)}
@@ -361,21 +361,21 @@ const highContrastStyles = \`;;
           .high-contrast a {
             border: 2 px solid currentColor !important}
 
-        \`;
+        \;
 
-        ';
+        ;
 
-const styleSheet = document.createElement('style);;
+const styleSheet = document.createElement(style);;
 
         styleSheet.textContent = highContrastStyles;
 
         document.head.appendChild(styleSheet)})();
 
     </script>
-  `;
+  ;
 
   // Insert accessibility script before closing body tag
-  indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>`);
+  indexContent = indexContent.replace('</body>', `${accessibilityScript}</body>);
 
   fs.writeFileSync(indexPath, indexContent);
 
@@ -384,7 +384,7 @@ const styleSheet = document.createElement('style);;
 
 // Create accessibility statement;
 
-const accessibilityStatement = `# Accessibility Statement;;
+const accessibilityStatement = # Accessibility Statement;;
 
 // 1. Generate accessibility report;
 
@@ -395,7 +395,7 @@ function generateAccessibilityReport() {
 const accessibilityReport = {;;
 
     timestamp: new Date().toISOString()
-    version: '1.0.0',
+    version: '1.0.0,
     summary:
         summary: {
       totalIssues: 0;
@@ -407,60 +407,60 @@ const accessibilityReport = {;;
       passed: 0},
     checks: [
       {,
-        id: "alt-text",
-        name: "Alt text for images",
-        status: "passed",
-        description: "All images have appropriate alt text"},
+        id: "alt-text,
+        name: "Alt text for images,
+        status: "passed,
+        description: "All images have appropriate alt text},
       {
-        id: "heading-structure",
-        name: "Heading structure",
-        status: "passed",
-        description: "Proper heading hierarchy (h1, h2, h3, etc.)"
+        id: "heading-structure,
+        name: "Heading structure,
+        status: "passed,
+        description: "Proper heading hierarchy (h1, h2, h3, etc.)
       },
       {
-        id: "color-contrast",
-        name: "Color contrast",
-        status: "passed",
-        description: "Sufficient color contrast ratios"},
+        id: "color-contrast,
+        name: "Color contrast,
+        status: "passed,
+        description: "Sufficient color contrast ratios},
       {
-        id: "keyboard-navigation",
-        name: "Keyboard navigation",
-        status: "passed",
-        description: "All interactive elements are keyboard accessible"},
+        id: "keyboard-navigation,
+        name: "Keyboard navigation,
+        status: "passed,
+        description: "All interactive elements are keyboard accessible},
       {
-        id: "focus-management",
-        name: "Focus management",
-        status: "passed",
-        description: "Proper focus management and visible focus indicators"},
+        id: "focus-management,
+        name: "Focus management,
+        status: "passed,
+        description: "Proper focus management and visible focus indicators},
       {
-        id: "aria-labels",
-        name: "ARIA labels",
-        status: "passed",
-        description: "Appropriate ARIA labels and roles"},
+        id: "aria-labels,
+        name: "ARIA labels,
+        status: "passed,
+        description: "Appropriate ARIA labels and roles},
       {
-        id: "semantic-html",
-        name: "Semantic HTML",
-        status: "passed",
-        description: "Proper use of semantic HTML elements"},
+        id: "semantic-html,
+        name: "Semantic HTML,
+        status: "passed,
+        description: "Proper use of semantic HTML elements},
       {
-        id: "skip-links",
-        name: "Skip links",
-        status: "passed",
-        description: "Skip links for keyboard navigation"}
+        id: "skip-links,
+        name: "Skip links,
+        status: "passed,
+        description: "Skip links for keyboard navigation}
 
     ],
     recommendations: [,
-      "Continue regular accessibility audits",
-      "Test with screen readers",
-      "Ensure keyboard-only navigation works",
-      "Maintain color contrast standards",
-      "Keep ARIA labels up to date"
+      "Continue regular accessibility audits,
+      "Test with screen readers,
+      "Ensure keyboard-only navigation works,
+      "Maintain color contrast standards,
+      "Keep ARIA labels up to date
     ]
   };
 
   fs.writeFileSync(
 
-    path.join(__dirname, '../public/accessibility-report.json'), 
+    path.join(__dirname, '../public/accessibility-report.json), 
     JSON.stringify(accessibilityReport, null, 2)
   );
 
@@ -475,5 +475,5 @@ function generateAccessibilityChecklist() {
 
 const checklist = {;;
 
-    title: "Zion Tech Group Accessibility Checklist"
+    title: "Zion Tech Group Accessibility Checklist
     version: "1.0.0"

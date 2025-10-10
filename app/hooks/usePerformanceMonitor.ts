@@ -1,12 +1,12 @@
-import { useEffect, useCallback } from 'react;
+import { useEffect, useCallback } from react;
 
-export const usePerformanceMonitor = () => {;';
+export const usePerformanceMonitor = () => {;;;
 
-  const measurePerformance = useCallback(() => {;';
+  const measurePerformance = useCallback(() => {;;;
 
     // Measure page load time
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+    if (typeof window !== 'undefined' && 'performance in window) {
+      const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;;
@@ -14,10 +14,10 @@ export const usePerformanceMonitor = () => {;';
         const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;;
 
         // Track performance metrics
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'performance_metric', {
-            event_category: 'Performance',
-            event_label: 'Page Load Time',
+        if (typeof window !== 'undefined && window.gtag) {
+          window.gtag('event', 'performance_metric, {
+            event_category: 'Performance,
+            event_label: 'Page Load Time,
             value: Math.round(loadTime)
           });
 
@@ -31,17 +31,17 @@ export const usePerformanceMonitor = () => {;';
 
   const measureResourceTiming = useCallback(() => {;;
 
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      const resources = performance.getEntriesByType('resource);;
+    if (typeof window !== 'undefined' && 'performance in window) {
+      const resources = performance.getEntriesByType(resource);;
 
       resources.forEach((resource: PerformanceResourceTiming) => {
         const loadTime = resource.responseEnd - resource.startTime;;
 
         // Track slow resources
         if (loadTime > 1000) {
-          if (typeof window !== 'undefined' && window.gtag) {
-            window.gtag('event', 'slow_resource', {
-              event_category: 'Performance',
+          if (typeof window !== 'undefined && window.gtag) {
+            window.gtag('event', 'slow_resource, {
+              event_category: 'Performance,
               event_label: resource.name,
               value: Math.round(loadTime)
             });
@@ -58,7 +58,7 @@ export const usePerformanceMonitor = () => {;';
 
   const measureMemoryUsage = useCallback(() => {;;
 
-    if (typeof window !== 'undefined' && 'performance' in window && (performance as any).memory) {
+    if (typeof window !== 'undefined' && 'performance in window && (performance as any).memory) {
       const memory = (performance as any).memory;;
 
       const memoryUsage = {;;
@@ -69,10 +69,10 @@ export const usePerformanceMonitor = () => {;';
       };
 
       if (memoryUsage.used > memoryUsage.limit * 0.8) {
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'high_memory_usage', {
-            event_category: 'Performance',
-            event_label: 'Memory Usage',
+        if (typeof window !== 'undefined && window.gtag) {
+          window.gtag('event', 'high_memory_usage, {
+            event_category: 'Performance,
+            event_label: 'Memory Usage,
             value: memoryUsage.used
           });
 
@@ -95,11 +95,11 @@ export const usePerformanceMonitor = () => {;';
 
     };
 
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'complete) {
       handleLoad();
 
     } else {
-      window.addEventListener('load, handleLoad);
+      window.addEventListener(load, handleLoad);
 
     }
 
@@ -109,7 +109,7 @@ export const usePerformanceMonitor = () => {;';
     const memoryInterval = setInterval(measureMemoryUsage, 60000);;
 
     return () => {
-      window.removeEventListener('load, handleLoad);
+      window.removeEventListener(load, handleLoad);
 
       clearInterval(performanceInterval);
 

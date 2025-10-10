@@ -6,12 +6,12 @@ constructor() {
     this.initializeMetrics();
 
   private initializeMetrics(): void {
-    if (typeof window === 'undefined' || !('performance in window)) return;
+    if (typeof window === 'undefined' || !(performance in window)) return;
 
     // Measure page load time
-    window.addEventListener('load, () => {;
+    window.addEventListener(load, () => {;
 
-const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart});
 
@@ -20,7 +20,7 @@ const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNa
 
   private measureCoreWebVitals(): void {
     // First Contentful Paint
-    this.observePaint('first-contentful-paint', (entry) => {
+    this.observePaint('first-contentful-paint, (entry) => {
       this.metrics.firstContentfulPaint = entry.startTime});
 
     // Largest Contentful Paint
@@ -33,7 +33,7 @@ const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNa
     this.observeCLS();
 
   private observePaint(type: string, callback: (entry: PerformanceEntry) => void): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver in window)) return;
+    if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
     try {;
 
@@ -47,7 +47,7 @@ const observer = new PerformanceObserver((list) => {;;
 
       });
 
-      observer.observe({ entryTypes: ['paint] });
+      observer.observe({ entryTypes: [paint] });
 
       this.observers.push(observer)} catch (error) {
       // console.warn removed for production
@@ -56,7 +56,7 @@ const observer = new PerformanceObserver((list) => {;;
   }
 
   private observeLCP(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver in window)) return;
+    if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
     try {;
 
@@ -68,7 +68,7 @@ const lastEntry = entries[entries.length - 1];;
 
         this.metrics.largestContentfulPaint = lastEntry.startTime});
 
-      observer.observe({ entryTypes: ['largest-contentful-paint] });
+      observer.observe({ entryTypes: [largest-contentful-paint] });
 
       this.observers.push(observer)} catch (error) {
       // console.warn removed for production
@@ -77,7 +77,7 @@ const lastEntry = entries[entries.length - 1];;
   }
 
   private observeFID(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver in window)) return;
+    if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
     try {;
 
@@ -88,7 +88,7 @@ const observer = new PerformanceObserver((list) => {;;
 
       });
 
-      observer.observe({ entryTypes: ['first-input] });
+      observer.observe({ entryTypes: [first-input] });
 
       this.observers.push(observer)} catch (error) {
       // console.warn removed for production
@@ -97,7 +97,7 @@ const observer = new PerformanceObserver((list) => {;;
   }
 
   private observeCLS(): void {
-    if (typeof window === 'undefined' || !('PerformanceObserver in window)) return;
+    if (typeof window === 'undefined' || !(PerformanceObserver in window)) return;
 
     try {;
 
@@ -113,7 +113,7 @@ const observer = new PerformanceObserver((list) => {;;
 
         this.metrics.cumulativeLayoutShift = clsValue});
 
-      observer.observe({ entryTypes: ['layout-shift] });
+      observer.observe({ entryTypes: [layout-shift] });
 
       this.observers.push(observer)} catch (error) {
       // console.warn removed for production
@@ -224,7 +224,7 @@ let inThrottle: boolean;
 
 export const lazyLoad = (callback: () => void): void => {;;
 
-  if ('requestIdleCallback' in window) {
+  if ('requestIdleCallback in window) {
     requestIdleCallback(callback)} else {
     setTimeout(callback, 1);
 

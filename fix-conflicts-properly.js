@@ -1,12 +1,12 @@
 #!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from fs;
 
-import path from 'path;
+import path from path;
 
-import { execSync } from 'child_process;
+import { execSync } from child_process;
 
-import { fileURLToPath } from 'url;
+import { fileURLToPath } from url;
 
 ;
 
@@ -18,7 +18,7 @@ const __filename = fileURLToPath(import.meta.url);;
 function fixFile(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
@@ -45,66 +45,66 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
       .replace(/[\s\S]*?)
       // Fix common syntax patterns;)
-      .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n}')
-      .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]'),
-      .replace(/\(\s*$/gm, '(\n  // TODO: Add parameters\n)'),
+      .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n})
+      .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]),
+      .replace(/\(\s*$/gm, '(\n  // TODO: Add parameters\n)),
       // Fix missing semicolons;
 
-      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')
+      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2)
       // Fix missing commas in object literals;
 
-      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: '),
+      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: ),
       .replace(/[\s\S]*?
       // Fix common syntax patterns;
 
       .replace(/\{/* TODO: Fix JSX expression */})
-  O: Add content\n}')
-      .replace(/\[\s*$/gm, '[\n  // TOD)
-  O: Add items\n]')
-      .replace(/\(\s*$/gm, '(\n  // TOD)
-  O: Add parameters\n)')
+  O: Add content\n})
+      .replace(/\[\s*$/gm, [\n  // TOD)
+  O: Add items\n])
+      .replace(/\(\s*$/gm, (\n  // TOD)
+  O: Add parameters\n))
       // Fix missing semicolons;
 
-      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')
+      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2)
       // Fix missing commas in object literals;
 
-      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:')
+      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:)
       // Fix missing commas in arrays;
 
-      .replace(/(\w+)\s*\n\s*\]/g, '$1,\n]')
+      .replace(/(\w+)\s*\n\s*\]/g, '$1,\n])
       // Fix missing commas in function parameters;
 
-      .replace(/(\w+)\s*\n\s*\)/g, '$1,\n)')
+      .replace(/(\w+)\s*\n\s*\)/g, '$1,\n))
       // Fix invalid characters;
 
-      .replace(/[^\x00-\x7F]/g, '')
-      // Fix duplicate 'use client directives;
+      .replace(/[^\x00-\x7F]/g, ')
+      // Fix duplicate use client directives;
 
-      .replace(/'use client';\s*'use client';/g, "'use client';")
+      .replace(/'use client';\s*'use client';/g, "'use client';)
       // Fix duplicate React imports;
 
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {;
 
-const lines = match.split('\n);;
+const lines = match.split(\n);;
 
-        return lines[0] + ';;
+        return lines[0] + ;
 
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
 
       })
       // Remove empty lines with just spaces;
 
-      .replace(/^\s*\n/gm, '\n')
+      .replace(/^\s*\n/gm, '\n)
       // Fix missing closing braces;
 
-      .replace(/\{\s*$/, '{\n  // TODO: Add content\n});
+      .replace(/\{\s*$/, {\n  // TODO: Add content\n});
 
       .replace(/\{/* TODO: Fix JSX expression */})
   O: Add content\n});
 
     // Additional specific fixes for common patterns;
 
-    const lines = content.split('\n);;
+    const lines = content.split(\n);;
 
     const cleanedLines = [];;
 
@@ -124,14 +124,14 @@ let line = lines[i];;
 
       // Track JSX state;
 
-      if (trimmed.includes('<') && !trimmed.includes('</')) {
+      if (trimmed.includes('<') && !trimmed.includes('</)) {
         inJSX = true;
 
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */};;
 
       }
 
-      if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */}
+      if (trimmed.includes('</') || trimmed.includes('/>)) {/* TODO: Fix JSX expression */}
 
       }
 
@@ -152,12 +152,12 @@ let line = lines[i];;
 
       // Fix common issues;
 
-      if (trimmed === '') {
+      if (trimmed === ') {
         cleanedLines.push(line);
 
         continue;
 
-      if (trimmed === '') {/* TODO: Fix JSX expression */}
+      if (trimmed === ') {/* TODO: Fix JSX expression */}
 
       }
 
@@ -170,13 +170,13 @@ let line = lines[i];;
 
       // Fix missing semicolons;
 
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {
+      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while)) {
         if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
-          line = line.replace(/\s*$/, ';);
+          line = line.replace(/\s*$/, ;);
 
           modified = true;
 
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}
+      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while)) {/* TODO: Fix JSX expression */}
 
         }
 
@@ -189,7 +189,7 @@ let line = lines[i];;
 
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
 
-          line += '\n}'}
+          line += '\n}}
 
         modified = true}
 
@@ -198,7 +198,7 @@ let line = lines[i];;
       if (bracketCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < bracketCount; j++) {;;
 
-          line += '\n];
+          line += \n];
 
       if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
 
@@ -211,7 +211,7 @@ let line = lines[i];;
       if (parenCount > 0 && i === lines.length - 1) {
         for (let j = 0; j < parenCount; j++) {;;
 
-          line += '\n);
+          line += \n);
 
       if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
 
@@ -221,29 +221,30 @@ let line = lines[i];;
 
       cleanedLines.push(line)}
 
-    content = cleanedLines.join('\n);
+    content = cleanedLines.join(\n);
 
     // Final cleanup;
 
     content = content;
 
-      .replace(/\n\s*\n\s*\n/g, '\n\n) // Remove excessive empty lines;
+      .replace(/\n\s*\n\s*\n/g, \n\n) // Remove excessive empty lines;
 
-      .replace(/^\s*\n/gm, '\n) // Remove empty lines with just spaces;
+      .replace(/^\s*\n/gm, \n) // Remove empty lines with just spaces;
 
-      .replace(/\s+$/gm, '); // Remove trailing spaces;
+      .replace(/\s+$/gm, ); // Remove trailing spaces;
 
     if (modified || content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, utf8);
 
       // console.log removed for production
 if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
 
-  d: ${filePath}`);
+  d: ${filePath});
 
       return true}
 
-    return false} catch (error) {/* TODO: Fix JSX expression */}`
+    return false} catch (error) {/* TODO: Fix JSX expression */}
+
     // console.error removed for production
 return false}
 
@@ -251,7 +252,7 @@ return false}
 
 // Function to find all TypeScript/React files;
 
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js]) {;
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', .js]) {;
 
 const files = [];;
 
@@ -267,11 +268,11 @@ const fullPath = path.join(currentDir, item);;
 
       const stat = fs.statSync(fullPath);;
 
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules) {
         traverse(fullPath)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
 
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js]) {/* TODO: Fix JSX expression */}
 
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
 
@@ -290,7 +291,7 @@ function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: F
 // console.log removed for production
 ;
 
-const srcDir = path.join(__dirname, 'src);;
+const srcDir = path.join(__dirname, src);;
 
 const files = findFiles(srcDir);;
 
@@ -304,25 +305,28 @@ for (const file of files) {/* TODO: Fix JSX expression */}
 
     }
 
-  } catch (error) {/* TODO: Fix JSX expression */}`
+  } catch (error) {/* TODO: Fix JSX expression */}
+
     // console.error removed for production
 errorCount++}
 
 }
 
-`
 // console.log removed for production
-`
-  complete:`);`
+
+  complete:`);
+
 // console.log removed for production
-`
-  processed: ${files.length}`);`
+
+  processed: ${files.length}`);
+
 // console.log removed for production
-`
-  fixed: ${fixedCount}`);`
+
+  fixed: ${fixedCount}`);
+
 // console.log removed for production
-`
-  s: ${errorCount}`);
+
+  s: ${errorCount});
 
 // console.log removed for production
 // console.log removed for production
@@ -333,7 +337,7 @@ errorCount++}
 // console.log removed for production
 try {/* TODO: Fix JSX expression */}
 
-  o: 'inherit });
+  o: inherit });
 
   // console.log removed for production
 } catch (error) {/* TODO: Fix JSX expression */}

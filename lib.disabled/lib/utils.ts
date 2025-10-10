@@ -4,7 +4,7 @@ export function cn(...inputs: ClassValue[]) {,
 
 export function formatPhoneNumber(phone: string): string {,;
 
-const _cleaned = phone.replace(/\D/g, ');;
+const _cleaned = phone.replace(/\D/g, );;
 
 export function cn(...input)
   s: ClassValue[]) {/* TODO: Fix JSX expression */}
@@ -18,7 +18,7 @@ export function formatPhoneNumber(phon)
 
   if (match) {/* TODO: Fix JSX expression */}
 
-    return `(${match[1]}) ${match[2]}-${match[3]}`}
+    return `(${match[1]}) ${match[2]}-${match[3]}}
 
   return phone}
 

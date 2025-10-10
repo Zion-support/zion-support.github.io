@@ -1,10 +1,10 @@
 #!/usr/bin/env node;
 
-import fs from 'fs';
+import fs from 'fs;
 
-import path from 'path';
+import path from 'path;
 
-import { glob } from 'glob;
+import { glob } from glob;
 
 // Patterns to match console statements;
 
@@ -26,16 +26,16 @@ const consolePatterns = [;;
 
 ];
 
-// Files to process';
+// Files to process;
 
-const filePatterns = [;';
+const filePatterns = [;;;
 
-  'app/**/*.{ts,tsx,js,jsx}',
-  'src/**/*.{ts,tsx,js,jsx}',
-  'components/**/*.{ts,tsx,js,jsx}',
-  'pages/**/*.{ts,tsx,js,jsx}',
-  'utils/**/*.{ts,tsx,js,jsx}',
-  'hooks/**/*.{ts,tsx,js,jsx}',
+  'app/**/*.{ts,tsx,js,jsx},
+  'src/**/*.{ts,tsx,js,jsx},
+  'components/**/*.{ts,tsx,js,jsx},
+  'pages/**/*.{ts,tsx,js,jsx},
+  'utils/**/*.{ts,tsx,js,jsx},
+  'hooks/**/*.{ts,tsx,js,jsx},
   lib/**/*.{ts,tsx,js,jsx}
 
 ];
@@ -44,18 +44,18 @@ const filePatterns = [;';
 
 const excludePatterns = [;;
 
-  '**/node_modules/**',
-  '**/dist/**',
-  '**/.next/**',
-  '**/build/**',
-  '**/coverage/**',
-  '**/*.test.{ts,tsx,js,jsx}',
-  '**/*.spec.{ts,tsx,js,jsx}',
-  '**/scripts/**',
-  '**/automation/**',
-  '**/backup*/**',
-  '**/disabled*/**',
-  '**/corrupted*/**',
+  '**/node_modules/**,
+  '**/dist/**,
+  '**/.next/**,
+  '**/build/**,
+  '**/coverage/**,
+  '**/*.test.{ts,tsx,js,jsx},
+  '**/*.spec.{ts,tsx,js,jsx},
+  '**/scripts/**,
+  '**/automation/**,
+  '**/backup*/**,
+  '**/disabled*/**,
+  '**/corrupted*/**,
   **/temp*/**
 ];
 
@@ -72,7 +72,7 @@ let removedStatements = 0;;
 function processFile(filePath) {
   try {;
 
-const content = fs.readFileSync(filePath, 'utf8);;
+const content = fs.readFileSync(filePath, utf8);;
 
     let newContent = content;;
 
@@ -87,15 +87,16 @@ const matches = newContent.match(pattern);;
       if (matches) {
         fileRemovedCount += matches.length;
 
-        newContent = newContent.replace(pattern, ');
+        newContent = newContent.replace(pattern, );
 
 // Function to remove console statements from a file;
 
 function removeConsoleStatements(filePath) {/* TODO: Fix JSX expression */}
 
-  from: ${filePath}`)}
+  from: ${filePath})}
 
-    return modified} catch (error) {/* TODO: Fix JSX expression */}`
+    return modified} catch (error) {/* TODO: Fix JSX expression */}
+
     // // console.error removed for production
 return false}
 
@@ -110,13 +111,13 @@ async function main() {/* TODO: Fix JSX expression */}
   // // console.log removed for production
 // Get all TypeScript and JavaScript files in the app directory;
 
-  const patterns = [;';
+  const patterns = [;;;
 
-    'app/**/*.{ts,tsx,js,jsx}',
-    '!app/**/*.test.{ts,tsx,js,jsx}',
-    '!app/**/*.spec.{ts,tsx,js,jsx}',
-    '!**/node_modules/**',
-    '!**/.next/**',
+    'app/**/*.{ts,tsx,js,jsx},
+    '!app/**/*.test.{ts,tsx,js,jsx},
+    '!app/**/*.spec.{ts,tsx,js,jsx},
+    '!**/node_modules/**,
+    '!**/.next/**,
     !**/dist/**
   ];
 
@@ -134,10 +135,10 @@ let totalFiles = 0;;
 
     // Clean up empty lines that might be left behind;
 
-    newContent = newContent.replace(/\n\s*\n\s*\n/g, '\n\n);
+    newContent = newContent.replace(/\n\s*\n\s*\n/g, \n\n);
 
     if (fileRemovedCount > 0) {
-      fs.writeFileSync(filePath, newContent, 'utf8);
+      fs.writeFileSync(filePath, newContent, utf8);
 
       // console.log removed for production
 removedStatements += fileRemovedCount}
@@ -180,24 +181,26 @@ const files = await glob(pattern, {);;
 // console.log removed for production
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (import.meta.url === `file://${process.argv[1]}) {
   main()}
 
 export { processFile, consolePatterns }}
 
-  `
   // // console.log removed for production
-`
-  y:`);`
+
+  y:`);
+
   // // console.log removed for production
-`
-  processed: ${totalFiles}`);`
+
+  processed: ${totalFiles}`);
+
   // // console.log removed for production
-`
-  modified: ${modifiedFiles}`);`
+
+  modified: ${modifiedFiles}`);
+
   // // console.log removed for production
-`
-  removed: ${modifiedFiles > 0 ? 'Yes' : 'No'}`);
+
+  removed: ${modifiedFiles > 0 ? 'Yes' : 'No'});
 
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
 
@@ -211,4 +214,4 @@ export { processFile, consolePatterns }}
 
 main().catch(console.error);
 
-export { removeConsoleStatements };`
+export { removeConsoleStatements };

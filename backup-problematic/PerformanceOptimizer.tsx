@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react;
 
-'use client';
+'use client;
 
 ;
 
@@ -16,14 +16,14 @@ const preloadCriticalResources = () => {;;
 
  // Preload critical fonts;
 
- const _fontLink = document.createElement('link);;
+ const _fontLink = document.createElement(link);;
 
- fontLink.rel = 'preload;
+ fontLink.rel = preload;
 
  fontLink.href =
- 'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap;
+ https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap;
 
- fontLink.as = 'style;
+ fontLink.as = style;
 
  document.head.appendChild(fontLink);origin/
 
@@ -32,17 +32,17 @@ const preloadCriticalResources = () => {;;
 
  const measurePerformance = () => {;;
 
- if ('performance in window) {;
+ if (performance in window) {;
 
-const navigation = performance.getEntriesByType('navigation)[0] as PerformanceNavigationTiming;;
+const navigation = performance.getEntriesByType(navigation)[0] as PerformanceNavigationTiming;;
 
- const paintEntries = performance.getEntriesByType('paint);;
+ const paintEntries = performance.getEntriesByType(paint);;
 
  ;
 
-const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint);;
+const fcp = paintEntries.find(entry => entry.name === first-contentful-paint);;
 
- const lcp = performance.getEntriesByType('largest-contentful-paint)[0];;
+ const lcp = performance.getEntriesByType(largest-contentful-paint)[0];;
 
  ;
 
@@ -81,9 +81,9 @@ const,
 
  // Measure after page load;
 
- if (document.readyState === 'complete') {
+ if (document.readyState === 'complete) {
  measurePerformance()} else {
- window.addEventListener('load', measurePerformance)}
+ window.addEventListener('load, measurePerformance)}
 
  // Preload critical resources;
 
@@ -91,23 +91,23 @@ const,
 
 const criticalImages = [;;
 
- '/og-image.jpg',
- '/logo.png',
+ '/og-image.jpg,
+ '/logo.png,
  /favicon.ico
  ];
 
  criticalImages.forEach(src => {);
 
-const link = document.createElement('link);;
+const link = document.createElement(link);;
 
- link.rel = 'preload;
+ link.rel = preload;
 
- link.as = 'image;
+ link.as = image;
 
  link.href = src;
 
  document.head.appendChild(link);origin/
- if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
+ if (document.readyState === 'complete) {/* TODO: Fix JSX expression */}
 
  } else {/* TODO: Fix JSX expression */}
 
@@ -123,25 +123,25 @@ const link = document.createElement('link);;
 
  const optimizeImages = () => {;;
 
-const images = document.querySelectorAll('img);;
+const images = document.querySelectorAll(img);;
 
  images.forEach(img => {)
- // Add loading="lazy" to non-critical images;)
- if (!img.hasAttribute('loading')) {
- img.setAttribute('loading', 'lazy')}
+ // Add loading="lazy to non-critical images;)
+ if (!img.hasAttribute('loading)) {
+ img.setAttribute('loading', 'lazy)}
 
- // Add decoding="async" for better performance;
+ // Add decoding="async for better performance;
 
- if (!img.hasAttribute('decoding')) {
- img.setAttribute('decoding', 'async);
+ if (!img.hasAttribute('decoding)) {
+ img.setAttribute('decoding', async);
 
  const optimizeImages = () => {/* TODO: Fix JSX expression */};;
 
  }
 
- // Add decoding="async" for better performance;
+ // Add decoding="async for better performance;
 
- if (!img.hasAttribute('decoding')) {/* TODO: Fix JSX expression */}
+ if (!img.hasAttribute('decoding)) {/* TODO: Fix JSX expression */}
 
  }
 
@@ -156,7 +156,7 @@ const observer = new IntersectionObserver(;;
  (entries) => {
  entries.forEach(entry => {)
  if (entry.isIntersecting) {
- entry.target.classList.add('animate-fade-in);
+ entry.target.classList.add(animate-fade-in);
 
  const setupIntersectionObserver = () => {/* TODO: Fix JSX expression */};;
 
@@ -171,7 +171,7 @@ const observer = new IntersectionObserver(;;
 
 ;
 
-const elements = document.querySelectorAll('.animate-on-scroll);;
+const elements = document.querySelectorAll(.animate-on-scroll);;
 
  elements.forEach(el => observer.observe(el))};
 

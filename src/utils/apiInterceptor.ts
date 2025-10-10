@@ -85,7 +85,7 @@ export interface RequestConfig {/* TODO: Fix JSX expression */}
   ur,
   l: string;,
     metho,
-  d: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH;
+  d: 'GET' | 'POST' | 'PUT' | 'DELETE' | PATCH;
 
   headers?: Record;
 
@@ -160,7 +160,7 @@ export class APIInterceptor {// TODO: Add content}
 
 };
 
-  baseURL: config.baseURL || '',
+  baseURL: config.baseURL || ',
       timeout: config.timeout || 30000,
       retryAttempts: config.retryAttempts || 3,
       retryDelay: config.retryDelay || 1000,
@@ -201,7 +201,7 @@ export class APIInterceptor {// TODO: Add content}
 
     // Check cache for GET requests;
 
-    if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
+    if (fullConfig.method === 'GET && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -251,7 +251,7 @@ const requestPromise = this.executeRequest;;
 
       // Cache successful GET requests;
 
-      if (fullConfig.method === 'GET' && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
+      if (fullConfig.method === 'GET && fullConfig.cache !== false && this.config.enableCaching) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -312,7 +312,7 @@ const requestPromise = this.executeRequest;;
 
 }
 
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`)}
+        throw new Error(`HTTP ${response.status}: ${response.statusText})}
 
       // Apply response interceptor;
 
@@ -412,7 +412,7 @@ const data = await this.parseResponse;;
 
     return this.request;
 
-          <T>({ ...config, url, method: 'GET' })}
+          <T>({ ...config, url, method: 'GET })}
 
   /**
    * POST request;
@@ -433,7 +433,7 @@ const data = await this.parseResponse;;
 
     return this.request;
 
-          <T>({ ...config, url, method: 'POST', body })}
+          <T>({ ...config, url, method: 'POST, body })}
 
   /**
    * PUT request;
@@ -454,7 +454,7 @@ const data = await this.parseResponse;;
 
     return this.request;
 
-          <T>({ ...config, url, method: 'PUT', body })}
+          <T>({ ...config, url, method: 'PUT, body })}
 
   /**
    * DELETE request;
@@ -474,7 +474,7 @@ const data = await this.parseResponse;;
 
     return this.request;
 
-          <T>({ ...config, url, method: 'DELETE' })}
+          <T>({ ...config, url, method: 'DELETE })}
 
   /**
    * PATCH request;
@@ -495,7 +495,7 @@ const data = await this.parseResponse;;
 
     return this.request;
 
-          <T>({ ...config, url, method: 'PATCH', body })}
+          <T>({ ...config, url, method: 'PATCH, body })}
 
   /**
    * Prepare request configuration;
@@ -538,7 +538,7 @@ const data = await this.parseResponse;;
 
 ;
 
-let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;;
+let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url};;
 
     if (config.params) {/* TODO: Fix JSX expression */}
 
@@ -554,8 +554,9 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-        params.append(key, String(value))});`
-      url += `?${params.toString()}`}
+        params.append(key, String(value))});
+
+      url += `?${params.toString()}}
 
     return url}
 
@@ -572,7 +573,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
     // Add default headers;
 
-    headers.set('Content-Type', 'application/json);
+    headers.set('Content-Type', application/json);
 
     // Add config headers;
 
@@ -614,9 +615,9 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-    const contentType = response.headers.get('content-type);;
+    const contentType = response.headers.get(content-type);;
 
-    if (contentType?.includes('application/json')) {/* TODO: Fix JSX expression */}
+    if (contentType?.includes('application/json)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -624,7 +625,7 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
       return await response.json()}
 
-    if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
+    if (contentType?.includes('text/)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 
@@ -643,9 +644,9 @@ let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${
 
 }
 
-    const url = this.buildURL(config);`;;
+    const url = this.buildURL(config);;;
 
-    return `${config.method}:${url}`}
+    return `${config.method}:${url}}
 
   /**
    * Get response from cache;

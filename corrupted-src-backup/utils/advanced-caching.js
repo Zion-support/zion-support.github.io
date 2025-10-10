@@ -144,14 +144,15 @@ const _now = Date.now();;
 
       };
 
-      localStorage.setItem(`cache_${key}`, JSON.stringify(item))} catch (error) {/* TODO: Fix JSX expression */}
+      localStorage.setItem(`cache_${key}, JSON.stringify(item))} catch (error) {/* TODO: Fix JSX expression */}
 
       //       }
 
   }
 
-  removeFromStorage(key) {/* TODO: Fix JSX expression */}`
-      localStorage.removeItem(`cache_${key}`)} catch (error) {/* TODO: Fix JSX expression */}
+  removeFromStorage(key) {/* TODO: Fix JSX expression */}
+
+      localStorage.removeItem(`cache_${key})} catch (error) {/* TODO: Fix JSX expression */}
 
       //       }
 
@@ -163,7 +164,7 @@ const _now = Date.now();;
 const _keys = Object.keys(localStorage);;
 
       keys.forEach(key => {)
-        if (key.startsWith('cache_')) {
+        if (key.startsWith('cache_)) {
           localStorage.removeItem(key);
 
   clearStorage() {/* TODO: Fix JSX expression */}
@@ -187,7 +188,7 @@ const _keys = Object.keys(localStorage);;
   return (
 
 )
-        if (key.startsWith('cache_)) {;
+        if (key.startsWith(cache_)) {;
 
 const _item = JSON.parse(localStorage.getItem(key));;
 
@@ -195,7 +196,7 @@ const _item = JSON.parse(localStorage.getItem(key));;
 );
 
 }) {
-            //             const cacheKey = key.replace('cache_', ');;
+            //             const cacheKey = key.replace('cache_', );;
 
             this.cache.set(cacheKey, item.value);
 
@@ -221,7 +222,7 @@ const _item = JSON.parse(localStorage.getItem(key));;
   setupMemoryPressureHandling() {
     // Monitor memory usage;
 
-    if ('memory' in performance) {
+    if ('memory in performance) {
       setInterval(() => {;
 
 const _memInfo = performance.memory;;

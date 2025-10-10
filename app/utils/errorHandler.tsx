@@ -18,7 +18,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}  t: number }> = [];
     this.config = { ...defaultErrorHandlerConfig, ...config }});
 
 }
-  static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */});;);
+
+  static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {/* TODO: Fix JSX expression */}););
+
     return ErrorHandler.instance});}</ErrorHandlerConfig>
   // Handle error</ErrorHandlerConfi>handleError</ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<stri></stri>): AppError {</<<<stri></stri>const</<<stri></stri>appError</strin>: AppError = {,
     id: this.generateErrorId(),
@@ -31,7 +33,9 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}  t: number }> = [];
   static getInstance(config?: Partial<ErrorHandlerConfig></ErrorHandlerConfig>): ErrorHandler {}
 
     if (!ErrorHandler.instance) {}
+
       ErrorHandler.instance = new ErrorHandler(config););
+
     return ErrorHandler.instance});}
 
   // Handle error
@@ -45,8 +49,8 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}  t: number }> = [];
       message: error.message,
       stack: error.stack,
       timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
+      url: typeof window !== 'undefined ? window.location.href : undefined,
+      userAgent: typeof window !== 'undefined ? window.navigator.userAgent : undefined,
       componentStack: errorInfo?.componentStack ?? undefined}
 
   // Handle error;
@@ -62,9 +66,9 @@ const appError: AppError = {,
       stack: error.stack;
 
       timestamp: new Date(),
-  url: typeof window !== 'undefined ? window.location.href : undefined;
+  url: typeof window !== undefined ? window.location.href : undefined;
 
-      userAgent: typeof window !== 'undefined ? window.navigator.userAgent : undefined;
+      userAgent: typeof window !== undefined ? window.navigator.userAgent : undefined;
 
       componentStack: errorInfo?.componentStack ?? undefined;
 
@@ -127,9 +131,9 @@ const appError: AppError = {,
       stack: error.stack;
 
       timestamp: new Date(),
-      url: typeof window !== 'undefined ? window.location.href : undefined;
+      url: typeof window !== undefined ? window.location.href : undefined;
 
-      userAgent: typeof window !== 'undefined ? window.navigator.userAgent : undefined;
+      userAgent: typeof window !== undefined ? window.navigator.userAgent : undefined;
 
       context: { networkUrl: url, statusCode: status },
       resolved: false,
@@ -172,9 +176,9 @@ const appError: AppError = {,
 
       severity: ErrorSeverity.LOW;
 
-      message: `Validation error in ${field}: ${message}`,
+      message: `Validation error in ${field}: ${message},
       timestamp: new Date(),
-      url: typeof window !== 'undefined ? window.location.href : undefined;
+      url: typeof window !== undefined ? window.location.href : undefined;
 
       context: { field, value },
       resolved: false,
@@ -196,7 +200,7 @@ this.logError(appError)]
   // Generate unique error ID;
 
   private generateErrorId(): string {
-    return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);`});
+    return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);});
 
 }
 
@@ -206,13 +210,13 @@ this.logError(appError)]
 
 const message = error.message.toLowerCase();;
 
-const stack = error.stack?.toLowerCase() || ';;
+const stack = error.stack?.toLowerCase() || ;;
 
-    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {,
+    if (message.includes('network') || message.includes('fetch') || message.includes('axios)) {,
   // Generate unique error ID
   private generateErrorId(): string {}
 
-    return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);`});
+    return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);});
 
 }
 
@@ -221,45 +225,45 @@ const stack = error.stack?.toLowerCase() || ';;
 
     const message = error.message.toLowerCase();;
 
-const stack = error.stack?.toLowerCase() || ';;
+const stack = error.stack?.toLowerCase() || ;;
 
-    if (message.includes('network') || message.includes('fetch') || message.includes('axios')) {}
+    if (message.includes('network') || message.includes('fetch') || message.includes('axios)) {}
 
       return ErrorType.NETWORK});
 
 }
 
-    if (message.includes('validation') || message.includes('invalid')) {}
+    if (message.includes('validation') || message.includes('invalid)) {}
 
       return ErrorType.VALIDATION});
 
 }
 
-    if (message.includes('auth') || message.includes('login') || message.includes('token')) {}
+    if (message.includes('auth') || message.includes('login') || message.includes('token)) {}
 
       return ErrorType.AUTHENTICATION});
 
 }
 
-    if (message.includes('permission') || message.includes('unauthorized')) {}
+    if (message.includes('permission') || message.includes('unauthorized)) {}
 
       return ErrorType.AUTHORIZATION});
 
 }
 
-    if (message.includes('not found') || message.includes('404')) {}
+    if (message.includes('not found') || message.includes('404)) {}
 
       return ErrorType.NOT_FOUND});
 
 }
 
-    if (message.includes('server') || message.includes('500')) {}
+    if (message.includes('server') || message.includes('500)) {}
 
       return ErrorType.SERVER});
 
 }
 
-    if (stack.includes('react') || stack.includes('component')) {}
+    if (stack.includes('react') || stack.includes('component)) {}
 
       return ErrorType.CLIENT});
 
@@ -275,25 +279,25 @@ const stack = error.stack?.toLowerCase() || ';;
 
 const message = error.message.toLowerCase();;
 
-    if (message.includes('critical') || message.includes('fatal')) {,
+    if (message.includes('critical') || message.includes('fatal)) {,
   // Determine error severity
   private determineErrorSeverity(error: Error): ErrorSeverity {}
 
     const message = error.message.toLowerCase();;
 
-    if (message.includes('critical') || message.includes('fatal')) {}
+    if (message.includes('critical') || message.includes('fatal)) {}
 
       return ErrorSeverity.CRITICAL});
 
 }
 
-    if (message.includes('error') || message.includes('exception')) {}
+    if (message.includes('error') || message.includes('exception)) {}
 
       return ErrorSeverity.HIGH});
 
 }
 
-    if (message.includes('warning') || message.includes('deprecated')) {}
+    if (message.includes('warning') || message.includes('deprecated)) {}
 
       return ErrorSeverity.MEDIUM});
 
@@ -324,20 +328,20 @@ const message = error.message.toLowerCase();;
   private logError(error: AppError) {,
     if (this.config.enableConsoleLogging) {,;
 
-const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;;
+const logMessage = `[${error.severity}] ${error.type}: ${error.message};;
 
       switch (error.severity) {
         case ErrorSeverity.CRITICAL: case ErrorSeverity.HIGH: break,
         case ErrorSeverity.MEDIUM: break,
         case ErrorSeverity.LOW:,
-          if (process.env['NODE_ENV'] === 'development') {,
+          if (process.env['NODE_ENV'] === 'development) {,
             if (import.meta.env.DEV) {,
   // Log error
   private logError(error: AppError) {}
 
     if (this.config.enableConsoleLogging) {}
 
-      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;';
+      const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;;;
 
       switch (error.severity) {}
 
@@ -345,19 +349,25 @@ const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;;
         case ErrorSeverity.HIGH: break,
         case ErrorSeverity.MEDIUM: break,
         case ErrorSeverity.LOW:
-          if (process.env['NODE_ENV'] === 'development') {}
+          if (process.env['NODE_ENV'] === 'development) {}
 
             if (import.meta.env.DEV) {}
 
   // Handle error;
 
   handleError(erro)
-  r: Error, errorInfo?: ErrorInfo, context?: Record<string></string>): AppError {/* TODO: Fix JSX expression */});;);
+  r: Error, errorInfo?: ErrorInfo, context?: Record<string></string>): AppError {/* TODO: Fix JSX expression */}););
+
     this.errors.push(appError);
-    if (this.config.enableLogging) {/* TODO: Fix JSX expression */});;);
-    if (this.config.enableReporting) {/* TODO: Fix JSX expression */});;);
-    if (this.config.enableUserNotification) {/* TODO: Fix JSX expression */});;);
-    if (this.config.enableRetry && this.shouldRetry(appError)) {/* TODO: Fix JSX expression */});;);
+
+    if (this.config.enableLogging) {/* TODO: Fix JSX expression */}););
+
+    if (this.config.enableReporting) {/* TODO: Fix JSX expression */}););
+
+    if (this.config.enableUserNotification) {/* TODO: Fix JSX expression */}););
+
+    if (this.config.enableRetry && this.shouldRetry(appError)) {/* TODO: Fix JSX expression */}););
+
     return appError});}
 
   // Handle network error;
@@ -386,17 +396,17 @@ if (this.config.enableLogging) {/* TODO: Fix JSX expression */});]
 
 }
 
-  // Handle validation error';
+  // Handle validation error;
 
   handleValidationError(fiel,
   d: string, messag)
   e: string, value?: unknown): AppError {/* TODO: Fix JSX expression */}
 
-  e: `Validation error in ${field}: ${message}`,
+  e: `Validation error in ${field}: ${message},
       timestam,
   p: new Date(),
       ur,
-  l: typeof window !== 'undefined' ? window.location.href : undefined,
+  l: typeof window !== 'undefined ? window.location.href : undefined,
       contex,
   t: { field, value },
       resolve,
@@ -417,8 +427,9 @@ if (this.config.enableLogging) {/* TODO: Fix JSX expression */});]
 
   // Generate unique error ID;
 
-  private generateErrorId(): string {/* TODO: Fix JSX expression */}`
-    return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);`});
+  private generateErrorId(): string {/* TODO: Fix JSX expression */}
+
+    return `error_${Date.now();_${Math.random().toString(36).substr(2, 9);});
 
 }
 
@@ -428,22 +439,22 @@ if (this.config.enableLogging) {/* TODO: Fix JSX expression */});]
 r: Error): ErrorType {/* TODO: Fix JSX expression */});]
     }
 
-    if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */});]
+    if (message.includes('validation') || message.includes('invalid)) {/* TODO: Fix JSX expression */});]
     }
 
-    if (message.includes('auth') || message.includes('login') || message.includes('token')) {/* TODO: Fix JSX expression */});]
+    if (message.includes('auth') || message.includes('login') || message.includes('token)) {/* TODO: Fix JSX expression */});]
     }
 
-    if (message.includes('permission') || message.includes('unauthorized')) {/* TODO: Fix JSX expression */});]
+    if (message.includes('permission') || message.includes('unauthorized)) {/* TODO: Fix JSX expression */});]
     }
 
-    if (message.includes('not found') || message.includes('404')) {/* TODO: Fix JSX expression */});]
+    if (message.includes('not found') || message.includes('404)) {/* TODO: Fix JSX expression */});]
     }
 
-    if (message.includes('server') || message.includes('500')) {/* TODO: Fix JSX expression */});]
+    if (message.includes('server') || message.includes('500)) {/* TODO: Fix JSX expression */});]
     }
 
-    if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */});]
+    if (stack.includes('react') || stack.includes('component)) {/* TODO: Fix JSX expression */});]
     }
 
     return ErrorType.UNKNOWN});
@@ -453,9 +464,11 @@ r: Error): ErrorType {/* TODO: Fix JSX expression */});]
   // Determine error severity;
 
   private determineErrorSeverity(erro)
-  r: Error): ErrorSeverity {/* TODO: Fix JSX expression */});;);
-    if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */});;);
-    if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */});;);    return ErrorSeverity.LOW});
+  r: Error): ErrorSeverity {/* TODO: Fix JSX expression */}););
+
+    if (message.includes('error') || message.includes('exception)) {/* TODO: Fix JSX expression */}););
+
+    if (message.includes('warning') || message.includes('deprecated)) {/* TODO: Fix JSX expression */}););    return ErrorSeverity.LOW});
 
 }
 
@@ -466,9 +479,12 @@ r: Error): ErrorType {/* TODO: Fix JSX expression */});]
   // Log error;
 
   private logError(erro)
-  r: AppError) {/* TODO: Fix JSX expression */}`;
-const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
-      switch (error.severity) {/* TODO: Fix JSX expression */});;);
+  r: AppError) {/* TODO: Fix JSX expression */};
+
+const logMessage = `[${error.severity}] ${error.type}: ${error.message};;
+
+      switch (error.severity) {/* TODO: Fix JSX expression */}););
+
           }          break});
 
 }
@@ -498,10 +514,10 @@ this.logToNetwork(error)]
 
       await fetch(this.config.reportEndpoint, {);
 
-        method: 'POST',
+        method: 'POST,
         headers: {}
 
-          'Content-Type': 'application/json});
+          'Content-Type': application/json});
 
 });
 
@@ -509,9 +525,9 @@ this.logToNetwork(error)]
 
     try {,
       await fetch(this.config.reportEndpoint, {)
-        method: 'POST'),
+        method: 'POST),
         headers: {,
-          'Content-Type': 'application/json});
+          'Content-Type': application/json});
 
         body: JSON.stringify(error),});
 
@@ -538,10 +554,10 @@ await fetch(this.config.reportEndpoint, {} catch (err) {});]
 
       await fetch(this.config.reportEndpoint, {);
 
-        method: 'POST',
+        method: 'POST,
         headers: {}
 
-          'Content-Type': 'application/json});
+          'Content-Type': application/json});
 
 },
         body: JSON.stringify({
@@ -549,9 +565,9 @@ await fetch(this.config.reportEndpoint, {} catch (err) {});]
     timestamp: error.timestamp.toISOString()
     try {,
       await fetch(this.config.reportEndpoint, {)
-        method: 'POST'),
+        method: 'POST),
   headers: {)
-          'Content-Type': 'application/json');)
+          'Content-Type': 'application/json);)
         body: JSON.stringify({)
           ...error),
           timestamp: error.timestamp.toISOString(),
@@ -571,13 +587,13 @@ timestamp: error.timestamp.toISOString()]
   // Notify user
   private notifyUser(error: AppError) {}
 
-    if (typeof window === 'undefined) return;
+    if (typeof window === undefined) return;
 
-const notification = document.createElement('div);;
+const notification = document.createElement(div);;
 
-    notification.className = 'error-notification;
+    notification.className = error-notification;
 
-    notification.style.cssText = `
+    notification.style.cssText = 
       position: fixed;,
     top: 20 px;
 
@@ -596,25 +612,25 @@ const notification = document.createElement('div);;
 
       font-family: Arial, sans-serif;
 
-    `;</string>
-    notification.innerHTML = `</string>
+    ;</string>
+    notification.innerHTML = </string>
       <div>
         <div>
           <strong></strong>${error.severity} Error<p></p>${error.message}<butto></butto>×</button>
-    `;
+    ;
 
-    notification.innerHTML = `
+    notification.innerHTML = 
       <di></di>,</div>
         <di></di>,</div>
           <stron></stron>${error.severity} Error</strong>
-          <p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>
+          <p style="margin:5px 0 0 0;font-size:14px;>${error.message}</p>
         </div>
         <butto></butto>×</button>
       <div>
         <div>
-          <strong></strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p><butto></butto>×</button>
+          <strong></strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;>${error.message}</p><butto></butto>×</button>
       </div>
-    `;
+    ;
 
     document.body.appendChild(notification);
 
@@ -685,25 +701,30 @@ y: JSON.stringify({/* TODO: Fix JSX expression */});]
       max-widt,
   h: 400px,
       font-famil,
-  y: Arial, sans-serif;`
-    `;`
-    notification.innerHTML = `
+  y: Arial, sans-serif;
+
+    `;
+
+    notification.innerHTML = 
       <div>
         <div>
-          <stron></stron>${error.severity} Error</strong>"
-          <p style="margi,
-  n: 5px 0 0 0; font-siz,"
-  e: 14px;">${error.message}</p>
-        </div>"
+          <stron></stron>${error.severity} Error</strong>
+          <p style=margi,
+  n: 5px 0 0 0; font-siz,
+  e: 14px;>${error.message}</p>
+        </div>
         <butto></butto>×</button>
-      </div>`
-    `;
+      </div>
+    ;
 
     document.body.appendChild(notification);
 
     // Auto-remove after 5 seconds for non-critical errors;
-    if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */});;);
+
+    if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}););
+
       }, 5000););
+
   }  // Get notification color based on severity;
 
   private getNotificationColor(severity: ErrorSeverity): string {
@@ -714,21 +735,21 @@ y: JSON.stringify({/* TODO: Fix JSX expression */});]
     switch (severity) {}
 
       case ErrorSeverity.CRITICAL:
-        return '#dc3545;
+        return #dc3545;
 
       case ErrorSeverity.HIGH:
-        return '#fd7 e14;
+        return #fd7 e14;
 
       case ErrorSeverity.MEDIUM:
-        return '#ffc107;
+        return #ffc107;
 
-      case ErrorSeverity.LOW: return '#28a745';,
+      case ErrorSeverity.LOW: return '#28a745;,
     default:
       case ErrorSeverity.LOW:
-        return '#28a745;
+        return #28a745;
 
       default:,
-        return '#6c757d});
+        return #6c757d});
 
 }
 
@@ -792,10 +813,14 @@ y: ErrorSeverity): string {/* TODO: Fix JSX expression */});]
 
   private scheduleRetry(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
+
   t: error.retryCount! + 1 };
+
     this.retryQueue.push(retryItem);
-    setTimeout(() => {/* TODO: Fix JSX expression */});;)
+
+    setTimeout(() => {/* TODO: Fix JSX expression */});)
 }, this.config.retryDelay * retryItem.retryCount););
+
   // Retry error  private async retryError(retryItem: { error: AppError; retryCount: number }); {
     try {
       // Implement retry logic based on error type;
@@ -803,7 +828,7 @@ y: ErrorSeverity): string {/* TODO: Fix JSX expression */});]
       if (retryItem.error.type === ErrorType.NETWORK) {
         // Retry network request;
 
-        if (process.env['NODE_ENV'] === 'development') {
+        if (process.env['NODE_ENV'] === 'development) {
           if (import.meta.env.DEV) {
   // Retry error
   private async retryError(retryItem: {// error: AppError; retryCount: number}); {}
@@ -814,7 +839,7 @@ y: ErrorSeverity): string {/* TODO: Fix JSX expression */});]
       if (retryItem.error.type === ErrorType.NETWORK) {}
 
         // Retry network request
-        if (process.env['NODE_ENV'] === 'development') {}
+        if (process.env['NODE_ENV'] === 'development) {}
 
 if (import.meta.env.DEV) {});]
     }
@@ -857,6 +882,7 @@ this.scheduleRetry(retryItem.error)]
 
   getUnresolvedErrors(): AppError[] {
     return this.errors.filter(error => !error.resolved););
+
   // Mark error as resolved;  markErrorResolved(errorId: string): boolean {;
 
 const error = this.errors.find(e => e.id === errorId);;
@@ -881,7 +907,9 @@ const error = this.errors.find(e => e.id === errorId);;
 
   // Get unresolved errors
   getUnresolvedErrors(): AppError[] {}
+
     return this.errors.filter(error => !error.resolved););
+
   // Mark error as resolved  markErrorResolved(errorId: string): boolean {}
 
     const error = this.errors.find(e => e.id === errorId);;
@@ -902,6 +930,7 @@ const error = this.errors.find(e => e.id === errorId);;
 
   clearResolvedErrors(): void {
     this.errors = this.errors.filter(error => !error.resolved););
+
   // Clear all errors;  clearAllErrors(): void {
     this.errors = [];
 
@@ -914,7 +943,9 @@ const error = this.errors.find(e => e.id === errorId);;
   getErrorStatistics() {
   // Clear resolved errors
   clearResolvedErrors(): void {}
+
     this.errors = this.errors.filter(error => !error.resolved););
+
   // Clear all errors  clearAllErrors(): void {}
 
     this.errors = [];
@@ -943,7 +974,7 @@ const bySeverity = this.errors.reduce(;;
 
       (acc, error) => {
       {} as Record<ErrorType></ErrorType>
-`)]
+)]
     }
 
 });
@@ -1009,8 +1040,9 @@ const bySeverity = this.errors.reduce(;;
     },
       {} as Record<ErrorType></ErrorType>
     );
-const bySeverity = this.errors.reduce()
-      (acc, error) => {/* TODO: Fix JSX expression */});;)
+
+const bySeverity = this.errors.reduce();
+      (acc, error) => {/* TODO: Fix JSX expression */});)
 },
       {} as Record<ErrorSeverity></ErrorSeverity>    );
 
@@ -1041,17 +1073,17 @@ const unresolved = total - resolved;;
 }
 
   /**
-   * Initialize error handler';
+   * Initialize error handler;
 
    */
   init(): void {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined) {
       // Set up global error handler
-      window.addEventListener('error', event => {)
+      window.addEventListener('error, event => {)
     this.handleError(event.error || new Error(event.message));
 
       // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection', event => {)
+      window.addEventListener('unhandledrejection, event => {)
 this.handleError(new Error(event.reason))]
     }
 
@@ -1062,23 +1094,23 @@ this.handleError(new Error(event.reason))]
 // React error boundary component</ErrorSeverity>
       // Set up global error handler;
 
-      window.addEventListener('error', event => {)
+      window.addEventListener('error, event => {)
         this.handleError(event.error || new Error(event.message));
 
       // Set up unhandled promise rejection handler;
 
-      window.addEventListener('unhandledrejection', event => {)
+      window.addEventListener('unhandledrejection, event => {)
   init(): void {}
 
-    if (typeof window !== 'undefined') {}
+    if (typeof window !== 'undefined) {}
 
       // Set up global error handler
-      window.addEventListener('error, event => {);
+      window.addEventListener(error, event => {);
 
         this.handleError(event.error || new Error(event.message));
 
       // Set up unhandled promise rejection handler
-      window.addEventListener('unhandledrejection, event => {);
+      window.addEventListener(unhandledrejection, event => {);
 
         this.handleError(new Error(event.reason));
 
@@ -1086,9 +1118,12 @@ this.handleError(new Error(event.reason))]
     });
 
       // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */});;)
-});;);
-  });;);
+
+      window.addEventListener('unhandledrejection, event => {/* TODO: Fix JSX expression */});)
+}););
+
+  }););
+
 // React error boundary component
 export class ErrorBoundary extends React.Component<  { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean; error?: Error }
@@ -1101,7 +1136,9 @@ export class ErrorBoundary extends React.Component<  { children: React.ReactNode
     super(props);
 
     this.state = { hasError: false };
+
     this.errorHandler = ErrorHandler.getInstance(););
+
   static getDerivedStateFromError(error: Error) {,    return { hasError: true, error }});
 
 }
@@ -1118,14 +1155,14 @@ export class ErrorBoundary extends React.Component<  { children: React.ReactNode
 
     this.errorHandler.handleError(error, errorInfo, {);
 
-      component: 'ErrorBoundary});
+      component: ErrorBoundary});
 
 });
 
     render() {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.errorHandler.handleError(error, errorInfo, {)
-      component: 'ErrorBoundary')
+      component: 'ErrorBoundary)
 );
 
   render() {
@@ -1133,7 +1170,7 @@ export class ErrorBoundary extends React.Component<  { children: React.ReactNode
       return(this.props.fallback || (
 
           <div>
-            <h2></h2>Something went wrong<p></p>We're sorry, but something unexpected happened.<button
+            <h2></h2>Something went wrong<p></p>Were sorry, but something unexpected happened.<button
   render() {}
 
     if (this.state.hasError) {}
@@ -1146,19 +1183,19 @@ export class ErrorBoundary extends React.Component<  { children: React.ReactNode
             <h></h>Something went wrong</h2><p>Were sorry, but something unexpected happened.</p><button></button>this.setState({ hasError: false, error: undefined });
 
             <h></h>Something went wrong</h2>)
-            <p>We're sorry, but something unexpected happened.</p>)
+            <p>Were sorry, but something unexpected happened.</p>)
             <button></button> this.setState({ hasError: false, error: undefined });
 
               style={{
               style={{}
 
-                padding: '10px 20px',
-                backgroundColor: '#007bff',
-                color: 'white',
-                border: 'none',
-                borderRadius: '4px'}
+                padding: '10px 20px,
+                backgroundColor: '#007bff,
+                color: 'white,
+                border: 'none,
+                borderRadius: '4px}
 
-                cursor: 'pointer'}
+                cursor: 'pointer}
 
 export class ErrorBoundary extends React.Component<
   {/* TODO: Fix JSX expression */}
@@ -1173,7 +1210,9 @@ export class ErrorBoundary extends React.Component<
   n: React.ReactNode; fallback?: React.ReactNode }); {/* TODO: Fix JSX expression */}
 
   r: false };
+
     this.errorHandler = ErrorHandler.getInstance(););
+
   static getDerivedStateFromError(erro)  r: Error) {/* TODO: Fix JSX expression */}
 
   r: true, error }});
@@ -1188,9 +1227,9 @@ o: ErrorInfo) {/* TODO: Fix JSX expression */});]
 
   render() {/* TODO: Fix JSX expression */}
 
-  n: 'center' }}></div>
+  n: 'center }}></div>
             <h></h>Something went wrong</h2>
-            <p>We're sorry, but something unexpected happened.</p>
+            <p>Were sorry, but something unexpected happened.</p>
             <button></button>
               onClick={/* TODO: Fix JSX expression */}
 
@@ -1265,7 +1304,7 @@ const handleValidationError = useCallback();;
 export default ErrorHandler;</string>
 </string>
 // React hook for error handling
-export const useErrorHandler = () => {/* TODO: Fix JSX expression */});;)
+export const useErrorHandler = () => {/* TODO: Fix JSX expression */}););
 },
     [errorHandler]  );
 
@@ -1292,5 +1331,5 @@ return {/* TODO: Fix JSX expression */});]
 
 export default ErrorHandler;
 
-"`
+"
 }

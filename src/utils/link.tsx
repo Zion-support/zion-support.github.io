@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react;
 
 interface LinkProps {// TODO: Add content}
 
-}';
+};
 
   href: string;,
     children: React.ReactNode
@@ -10,7 +10,7 @@ interface LinkProps {// TODO: Add content}
   target?: string
   rel?: string
   onClick?: () => void
-  'aria-label?: string
+  aria-label?: string
 }
 
 export const Link: React.FC;
@@ -25,7 +25,7 @@ export const Link: React.FC;
 //   target,
 //   rel,
 //   onClick,
-  'aria-label: ariaLabel,
+  aria-label: ariaLabel,
 //   ...props;)
 }) => {if (onClick) {}
 
@@ -33,7 +33,7 @@ export const Link: React.FC;
 
     // Handle internal navigation;
 
-    if (href.startsWith('/') && !href.startsWith('//)) {/* TODO: Fix JSX expression */}
+    if (href.startsWith('/') && !href.startsWith(//)) {/* TODO: Fix JSX expression */}
 
   O: Add content}
 

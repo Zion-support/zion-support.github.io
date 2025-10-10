@@ -24,10 +24,10 @@ class Logger {
   private constructor(config: Partial<LoggerConfig> = {}) {
     this.config = {
       level: this.getLogLevelFromEnv(),
-      prefix: config.prefix || 'APP',
+      prefix: config.prefix || 'APP,
       timestamp: config.timestamp !== false;
 
-      colorize: config.colorize !== false && typeof window !== 'undefined',
+      colorize: config.colorize !== false && typeof window !== 'undefined,
 class Logger {/* TODO: Fix JSX expression */}
 
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
@@ -48,24 +48,24 @@ class Logger {/* TODO: Fix JSX expression */}
 
     // Default to INFO in production, DEBUG in development;
 
-    return process.env['NODE_ENV'] === 'production' ? LogLevel.INFO : LogLevel.DEBUG}
+    return process.env['NODE_ENV'] === 'production ? LogLevel.INFO : LogLevel.DEBUG}
 
   private formatMessage(level: string, message: string, ...args: unknown[]): string {,;
 
-const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : ';;
+const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : ;;
 
   private formatMessage(leve,
   l: string, messag,
   e: string, ...arg)
   s: unknown[]): string {/* TODO: Fix JSX expression */}
 
-    const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';`;;
+    const _timestamp = this.config.timestamp ? `[${new Date().toISOString()}]` : '';;;
 
-    //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : ';;
+    //     const prefix = this.config.prefix ? `[${this.config.prefix}]` : ;;
 
-    //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';`;;
+    //     const formattedArgs = args.length > 0 ? JSON.stringify(args, null, 2) : '';;;
 
-    return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}`.trim()}
+    return `${timestamp}${prefix}[${level}] ${message} ${formattedArgs}.trim()}
 
   private shouldLog(level: LogLevel): boolean {,
     return level >= this.config.level}

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react;
 
-'use client';
+'use client;
 
 interface UserExperienceEnhancerProps {
   enableSmoothScrolling?: boolean;
@@ -38,22 +38,22 @@ const [isOnline, setIsOnline] = useState(true);
 
 const handleOffline = () => setIsOnline(false);;
 
-    window.addEventListener('online, handleOnline);
+    window.addEventListener(online, handleOnline);
 
-    window.addEventListener('offline, handleOffline);
+    window.addEventListener(offline, handleOffline);
 
     return () => {
-      window.removeEventListener('online, handleOnline);
+      window.removeEventListener(online, handleOnline);
 
-      window.removeEventListener('offline, handleOffline)}}, []);
+      window.removeEventListener(offline, handleOffline)}}, []);
 
   // Smooth scrolling
   useEffect(() => {
     if (enableSmoothScrolling) {;
 
-const style = document.createElement('style);;
+const style = document.createElement(style);;
 
-      style.textContent = `
+      style.textContent = 
         html {
           scroll-behavior: smooth}
 
@@ -92,7 +92,7 @@ const,
 
         }
 
-      `;
+      ;
 
       document.head.appendChild(style)}
 
@@ -109,14 +109,14 @@ const setLoading = useCallback((key: string, loading: boolean) => {;;
     if (enableLoadingStates) {
       // Add loading state to all links;
 
-const links = document.querySelectorAll('a[href]);;
+const links = document.querySelectorAll(a[href]);;
 
       links.forEach(link => {
-        link.addEventListener('click, (e) => {;
+        link.addEventListener(click, (e) => {;
 
-const href = link.getAttribute('href);;
+const href = link.getAttribute(href);;
 
-          if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:')) {
+          if (href && !href.startsWith('#') && !href.startsWith('mailto:') && !href.startsWith('tel:)) {
   // Loading states management;
 
   const setLoading = useCallback((ke,;;
@@ -128,8 +128,9 @@ const href = link.getAttribute('href);;
 
   // Global loading state;
 
-  useEffect(() => {/* TODO: Fix JSX expression */}`
-            setLoading(`link-${href}`, true)}
+  useEffect(() => {/* TODO: Fix JSX expression */}
+
+            setLoading(`link-${href}, true)}
 
         })})}
 
@@ -143,9 +144,9 @@ const handleError = (event: ErrorEvent) => {;;
 
         // // console.error removed for production
 // Send error to analytics if available
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'exception', {
-            description: event.error?.message || 'Unknown error',
+        if (typeof window !== 'undefined' && 'gtag in window) {
+          (window as any).gtag('event', 'exception, {
+            description: event.error?.message || 'Unknown error,
             fatal: false
   // Error boundary enhancement;
 
@@ -160,9 +161,9 @@ const handleError = (event: ErrorEvent) => {;;
 const handleUnhandledRejection = (event: PromiseRejectionEvent) => {;;
 
         // // console.error removed for production
-if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'exception', {
-            description: event.reason?.message || 'Unhandled promise rejection',
+if (typeof window !== 'undefined' && 'gtag in window) {
+          (window as any).gtag('event', 'exception, {
+            description: event.reason?.message || 'Unhandled promise rejection,
             fatal: false;
 
 const handleUnhandledRejection = (even);;
@@ -173,14 +174,14 @@ const handleUnhandledRejection = (even);;
 
       };
 
-      window.addEventListener('error, handleError);
+      window.addEventListener(error, handleError);
 
-      window.addEventListener('unhandledrejection, handleUnhandledRejection);
+      window.addEventListener(unhandledrejection, handleUnhandledRejection);
 
       return () => {
-        window.removeEventListener('error, handleError);
+        window.removeEventListener(error, handleError);
 
-        window.removeEventListener('unhandledrejection, handleUnhandledRejection);
+        window.removeEventListener(unhandledrejection, handleUnhandledRejection);
 
       return () => {/* TODO: Fix JSX expression */}
 
@@ -190,20 +191,20 @@ const handleUnhandledRejection = (even);;
 
   // Analytics enhancement
   useEffect(() => {
-    if (enableAnalytics && typeof window !== 'undefined') {
+    if (enableAnalytics && typeof window !== 'undefined) {
       // Track page visibility changes;
 
 const handleVisibilityChange = () => {;;
 
         if (document.hidden) {
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'page_hidden', {
+          if ('gtag in window) {
+            (window as any).gtag('event', 'page_hidden, {
               event_category:             ,
 $4})}
 
         } else {
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'page_visible', {
+          if ('gtag in window) {
+            (window as any).gtag('event', 'page_visible, {
               event_category:             ,
 $4});
 
@@ -239,9 +240,9 @@ const scrollDepth = Math.round(;;
 
           // Track milestone scroll depths
           if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
+            if ('gtag in window) {
+              (window as any).gtag('event', 'scroll, {
+                event_category: 'engagement,
                 value: 25
               })}
 
@@ -249,23 +250,23 @@ const scrollDepth = Math.round(;;
 );
 
 }= 50 && maxScrollDepth < 75) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
+            if ('gtag in window) {
+              (window as any).gtag('event', 'scroll, {
+                event_category: 'engagement,
                 value: 50
               })}
 
           } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
+            if ('gtag in window) {
+              (window as any).gtag('event', 'scroll, {
+                event_category: 'engagement,
                 value: 75
               })}
 
           } else if (maxScrollDepth >= 90) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
+            if ('gtag in window) {
+              (window as any).gtag('event', 'scroll, {
+                event_category: 'engagement,
                 value: 90
       // Track scroll depth;
 
@@ -301,9 +302,9 @@ const startTime = Date.now();;
 
 const timeOnPage = Math.round((Date.now() - startTime) / 1000);;
 
-        if ('gtag' in window) {
-          (window as any).gtag('event', 'timing_complete', {
-            name: 'time_on_page',
+        if ('gtag in window) {
+          (window as any).gtag('event', 'timing_complete, {
+            name: 'time_on_page,
             value: timeOnPage,
             event_category:           ,
 $4});
@@ -318,23 +319,23 @@ $4});
 
       };
 
-      document.addEventListener('visibilitychange, handleVisibilityChange);
+      document.addEventListener(visibilitychange, handleVisibilityChange);
 
-      window.addEventListener('scroll, handleScroll, { passive: true });
+      window.addEventListener(scroll, handleScroll, { passive: true });
 
-      window.addEventListener('beforeunload, handleBeforeUnload);
+      window.addEventListener(beforeunload, handleBeforeUnload);
 
       return () => {
-        document.removeEventListener('visibilitychange, handleVisibilityChange);
+        document.removeEventListener(visibilitychange, handleVisibilityChange);
 
-        window.removeEventListener('scroll, handleScroll);
+        window.removeEventListener(scroll, handleScroll);
 
-        window.removeEventListener('beforeunload, handleBeforeUnload);
+        window.removeEventListener(beforeunload, handleBeforeUnload);
 
-      window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
+      window.addEventListener('scroll, handleScroll, {/* TODO: Fix JSX expression */})
   e: true });
 
-      window.addEventListener('beforeunload, handleBeforeUnload);
+      window.addEventListener(beforeunload, handleBeforeUnload);
 
       return () => {/* TODO: Fix JSX expression */}
 
@@ -347,11 +348,11 @@ $4});
     if (enableNotifications && !isOnline) {
       // Show offline notification;
 
-const notification = document.createElement('div);;
+const notification = document.createElement(div);;
 
-      notification.className = 'fixed top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-lg z-50;
+      notification.className = fixed top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-lg z-50;
 
-      notification.textContent = 'You are currently offline. Some features may not be available.;
+      notification.textContent = You are currently offline. Some features may not be available.;
 
       document.body.appendChild(notification);
 
@@ -380,33 +381,33 @@ const timer = setTimeout(() => {;;
 
   // Performance monitoring
   useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
+    if (typeof window !== 'undefined' && 'performance in window) {
       // Monitor Core Web Vitals;
 
 const observer = new PerformanceObserver((list) => {;;
 
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
+          if (entry.entryType === 'largest-contentful-paint) {
+            if ('gtag in window) {
+              (window as any).gtag('event', 'web_vitals, {
+                name: 'LCP,
                 value: Math.round(entry.startTime),
                 event_category:               ,
 $4})}
 
-          } else if (entry.entryType === 'first-input') {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'FID',
+          } else if (entry.entryType === 'first-input) {
+            if ('gtag in window) {
+              (window as any).gtag('event', 'web_vitals, {
+                name: 'FID,
                 value: Math.round(entry.processingStart - entry.startTime),
                 event_category:               ,
 $4})}
 
-          } else if (entry.entryType === 'layout-shift') {
+          } else if (entry.entryType === 'layout-shift) {
             if (!(entry as any).hadRecentInput) {
-              if ('gtag' in window) {
-                (window as any).gtag('event', 'web_vitals', {
-                  name: 'CLS',
+              if ('gtag in window) {
+                (window as any).gtag('event', 'web_vitals, {
+                  name: 'CLS,
                   value: Math.round((entry as any).value * 1000),
                   event_category:                 ,
 $4});
@@ -417,11 +418,11 @@ $4});
 
               })}
 
-          } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
+          } else if (entry.entryType === 'first-input) {/* TODO: Fix JSX expression */}
 
               })}
 
-          } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
+          } else if (entry.entryType === 'layout-shift) {/* TODO: Fix JSX expression */}
 
                 })}
 
@@ -433,13 +434,13 @@ $4});
 
       });
 
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift] });
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', layout-shift] });
 
       return () => {
         observer.disconnect();
 
       observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift] });
+  s: ['largest-contentful-paint', 'first-input', layout-shift] });
 
       return () => {/* TODO: Fix JSX expression */}
 
@@ -451,4 +452,4 @@ $4});
 
 export default UserExperienceEnhancer};
 
-export default UserExperienceEnhancer;`
+export default UserExperienceEnhancer;

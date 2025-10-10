@@ -1,25 +1,25 @@
-import React from 'react';
+import React from 'react;
 
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom;
 
-import Navigation from '../components/Navigation';
+import Navigation from '../components/Navigation;
 
-import Footer from '../components/Footer';
+import Footer from '../components/Footer;
 
-';
+;
 
 const AgentReleaseRunbooksV22026Page: React.FC = () => {
   return (
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <main className="container mx-auto px-4 py-16 pt-24>
+        <section className="text-center mb-16>
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6>
             Page
 
           </h1>
-<p className='text-lg md:text-xl text-white/80 max-w-3xl>Ship autonomous agents with budgeted actions, KPI;
+<p className=text-lg md:text-xl text-white/80 max-w-3xl>Ship autonomous agents with budgeted actions, KPI;
 
             canaries, approvals and one‑click rollback.
           </p>
@@ -35,7 +35,7 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           </div>
         </div>
       </header>
-      <section className='py-16'></section>
+      <section className='py-16></section>
         <div></div>
           <h2>Release Safety Model</h2>
 <p>Operational safety hinges on three,
@@ -54,11 +54,11 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           </ol>
         </div>
       </section>
-      <section className='py-12 bg-white'></section>
+      <section className='py-12 bg-white></section>
 <div></div>
           <div></div>
             <div>Budgets</div>
-            <div className='text-slate-600'>Max cost, time, scope per release</div>
+            <div className='text-slate-600>Max cost, time, scope per release</div>
           </div>
           <div></div>
             <div>Canaries</div>
@@ -66,17 +66,17 @@ const AgentReleaseRunbooksV22026Page: React.FC = () => {
           </div>
           <div></div>
             <div>Rollback</div>
-            <div className='text-slate-600'>One click, under 60s MTR</div>
+            <div className='text-slate-600>One click, under 60s MTR</div>
           </div>
         </div>
       </section>
-      <section className='py-16'></section>
+      <section className='py-16></section>
         <div></div>
           <div></div>
             <div></div>
-              <h3 className='text-2xl font-bold flex items-center gap-2'></h3>
+              <h3 className='text-2xl font-bold flex items-center gap-2></h3>
                 <FileWarning />Prevent Regressions</h3>
-              <p className='text-white/90'></p>
+              <p className='text-white/90></p>
 // We implement v2 runbooks in 46 weeks with audits and training.
               
           

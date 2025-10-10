@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react;
 
-#!/usr/bin/env node';
+#!/usr/bin/env node;
 
-import fs from 'fs;
+import fs from fs;
 
-// List of files that still have metadata issues';
+// List of files that still have metadata issues;
 
-const filesToFix = [;';
+const filesToFix = [;;;
 
-  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx',
-  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx',
-  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx',
-  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx',
-  '/workspace/app/offline/page.tsx',
-  '/workspace/app/page-minimal.tsx',
-  '/workspace/app/page-optimized.tsx',
-  '/workspace/app/privacy/page.tsx',
-  '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx];
+  '/workspace/app/blog/ai-autonomous-business-systems-2026/page.tsx,
+  '/workspace/app/blog/ai-cost-optimization-breakthrough-2026/page.tsx,
+  '/workspace/app/guides/ai-2026-implementation-roadmap/page.tsx,
+  '/workspace/app/guides/ai-2027-implementation-roadmap/page.tsx,
+  '/workspace/app/offline/page.tsx,
+  '/workspace/app/page-minimal.tsx,
+  '/workspace/app/page-optimized.tsx,
+  '/workspace/app/privacy/page.tsx,
+  '/workspace/app/team/page.tsx,
+  /workspace/app/terms/page.tsx];
 
 // // Function to process a single file;
 
@@ -37,8 +37,8 @@ function processFile(filePath) {
         // If parsing fails, use defaults;
 
         metadata = {
-          title: 'Zion Tech Group',
-          description: 'Advanced AI and IT Solutions,;
+          title: 'Zion Tech Group,
+          description: Advanced AI and IT Solutions,;
 
 function processFile(filePath) {/* TODO: Fix JSX expression */}
 
@@ -50,7 +50,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Remove the entire metadata export;
 
-    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, ');;
+    content = content.replace(/export const metadata = \{[\s\S]*?\};/g, );;
 
     // Remove any remaining broken metadata lines;
 
@@ -58,7 +58,7 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
       // Skip broken metadata lines;
 
-      if (line.includes('title: ') && !line.includes('//') && !line.includes('<title>')) {,
+      if (line.includes('title: ') && !line.includes('//') && !line.includes('<title>)) {,
         skipUntilSemicolon = true;
 
         continue}
@@ -69,10 +69,10 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
       }
 
       if (skipUntilSemicolon &&)
-        (line.trim() === '};' ||
-          line.trim() === '}' ||
-          line.includes('const ') ||
-          line.includes('function '))
+        (line.trim() === '}; ||
+          line.trim() === '} ||
+          line.includes('const ) ||
+          line.includes('function ))
       ) {/* TODO: Fix JSX expression */}
 
         }
@@ -85,11 +85,11 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     }
 
-    content = filteredLines.join('\n);
+    content = filteredLines.join(\n);
 
     // Clean up extra empty lines;
 
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n);
+    content = content.replace(/\n\s*\n\s*\n/g, \n\n);
 
     // Fix function declarations;
 
@@ -101,14 +101,14 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
     // Add proper export at the end if missing;
 
-    if (!content.includes('export default') && content.includes('const ')) {,
+    if (!content.includes('export default') && content.includes('const )) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,;;
 
       if (componentName) {,
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
 
-        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
+        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};);
 
         modified = true}
 
@@ -121,18 +121,19 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 
       if (helmetMatch) {;
 
-const newHelmet = `<Helmet>;;
+const newHelmet = <Helmet>;;
 
     if (metadata.title || metadata.description) {/* TODO: Fix JSX expression */}
 
-        <title>${metadata.title || 'Zion Tech Group'}</title>
-        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'}" /></meta>
-        ${/* TODO: Fix JSX expression */}"`
-  g:type" content="${metadata.type}" />` : ''}
+        <title>${metadata.title || 'Zion Tech Group}</title>
+        <meta name="description" content="${metadata.description || 'Advanced AI and IT Solutions'} /></meta>
+        ${/* TODO: Fix JSX expression */}"
+  g:type" content="${metadata.type}" />` : '}
 
-        ${/* TODO: Fix JSX expression */}"`
-  g:url" content="${metadata.url}" />` : ''}`
-      </Helmet>`;
+        ${/* TODO: Fix JSX expression */}"
+  g:url" content="${metadata.url}" />` : ''}
+
+      </Helmet>;
 
         content = content.replace(/(<Helmet></Helmet>[\s\S]*?<\/Helmet>)/, newHelmet);
 
@@ -140,7 +141,7 @@ const newHelmet = `<Helmet>;;
 
     }
 
-    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}
+    if (modified || content !== fs.readFileSync(filePath, 'utf8)) {/* TODO: Fix JSX expression */}
 
     }
 

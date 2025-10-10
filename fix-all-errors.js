@@ -1,10 +1,10 @@
-import React from 'react;
+import React from react;
 
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from fs;
 
-import { execSync } from 'child_process;
+import { execSync } from child_process;
 
 // Fix common syntax errors in a file;
 
@@ -14,7 +14,7 @@ function fixFile(filePath) {
 
 ;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
   let modified = false;;
 
@@ -23,7 +23,7 @@ let content = fs.readFileSync(filePath, 'utf8);;
 const objectInArrayPattern = /\[\s*\{\}\s*(\w+):/g;;
 
   if (objectInArrayPattern.test(content)) {
-    content = content.replace(objectInArrayPattern, '[\n    {\n      $1:);
+    content = content.replace(objectInArrayPattern, [\n    {\n      $1:);
 
     modified = true}
 
@@ -32,7 +32,7 @@ const objectInArrayPattern = /\[\s*\{\}\s*(\w+):/g;;
 const objectPattern = /\{\}\s*(\w+):/g;;
 
   if (objectPattern.test(content)) {
-    content = content.replace(objectPattern, '{\n      $1:);
+    content = content.replace(objectPattern, {\n      $1:);
 
     modified = true}
 
@@ -41,7 +41,7 @@ const objectPattern = /\{\}\s*(\w+):/g;;
 const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;;
 
   if (funcPattern.test(content)) {
-    content = content.replace(funcPattern, 'const $1: React.FC = () => {);
+    content = content.replace(funcPattern, const $1: React.FC = () => {);
 
     modified = true}
 
@@ -50,7 +50,7 @@ const funcPattern = /const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{\}/g;;
 const memoPattern = /const\s+(\w+):\s*React\.FC\s*=\s*memo\(\(\)\s*=>\s*\{\}/g;;
 
   if (memoPattern.test(content)) {
-    content = content.replace(memoPattern, 'const $1: React.FC = memo(() => {);
+    content = content.replace(memoPattern, const $1: React.FC = memo(() => {);
 
     modified = true}
 
@@ -59,8 +59,8 @@ const memoPattern = /const\s+(\w+):\s*React\.FC\s*=\s*memo\(\(\)\s*=>\s*\{\}/g;;
 const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;;
 
   content = content.replace(missingClosePattern, (match, key, value) => {
-    if (!match.includes('}') && !match.includes(',') && !match.includes(';') && !match.includes(')')) {
-      return `${key}: ${value},`}
+    if (!match.includes('}') && !match.includes(',') && !match.includes(';') && !match.includes('))) {
+      return `${key}: ${value},}
 
     return match});
 
@@ -69,7 +69,7 @@ const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;;
 const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;;
 
   if (missingCommaPattern.test(content)) {
-    content = content.replace(missingCommaPattern, '$1: $2,\n      $3:);
+    content = content.replace(missingCommaPattern, $1: $2,\n      $3:);
 
     modified = true}
 
@@ -78,7 +78,7 @@ const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;;
 const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;;
 
   if (arrayClosePattern.test(content)) {
-    content = content.replace(arrayClosePattern, '$1: $2\n    });
+    content = content.replace(arrayClosePattern, $1: $2\n    });
 
     modified = true}
 
@@ -87,7 +87,7 @@ const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;;
 const jsxPattern = /(\w+)\.map\(\([^)]+\)\s*=>\s*\(\}/g;;
 
   if (jsxPattern.test(content)) {
-    content = content.replace(jsxPattern, '$1.map(($2) => ();
+    content = content.replace(jsxPattern, $1.map(($2) => ();
 
     modified = true}
 
@@ -96,7 +96,7 @@ const jsxPattern = /(\w+)\.map\(\([^)]+\)\s*=>\s*\(\}/g;;
 const mapPattern = /\.map\(\([^)]+\)\s*=>\s*\(\}/g;;
 
   if (mapPattern.test(content)) {
-    content = content.replace(mapPattern, '.map(($1) => ();
+    content = content.replace(mapPattern, .map(($1) => ();
 
     modified = true}
 
@@ -105,7 +105,7 @@ const mapPattern = /\.map\(\([^)]+\)\s*=>\s*\(\}/g;;
 const functionClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;;
 
   if (functionClosePattern.test(content)) {
-    content = content.replace(functionClosePattern, '$1: $2\n    }););
+    content = content.replace(functionClosePattern, $1: $2\n    }););
 
     modified = true}
 
@@ -114,7 +114,7 @@ const functionClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;;
 const memoClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;;
 
   if (memoClosePattern.test(content)) {
-    content = content.replace(memoClosePattern, '$1: $2\n  }););
+    content = content.replace(memoClosePattern, $1: $2\n  }););
 
     modified = true}
 
@@ -131,11 +131,11 @@ return true}
 function getFilesWithErrors() {
   try {;
 
-const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8 });;
+const output = execSync('pnpm run type-check 2>&1', { encoding: utf8 });;
 
     const files = new Set();;
 
-    output.split('\n).forEach(line => {;
+    output.split(\n).forEach(line => {;
 
 const match = line.match(/^([^(]+)\((\d+),(\d+)\):/);;
 
@@ -172,7 +172,7 @@ let fixedCount = 0;;
 // Run type check again
   // console.log removed for production
 try {
-    execSync('pnpm run type-check', { stdio: 'inherit });
+    execSync('pnpm run type-check', { stdio: inherit });
 
     // console.log removed for production
 } catch (error) {

@@ -1,34 +1,34 @@
-import React from 'react;
+import React from react;
 
 #!/usr/bin/env node
 
-import fs from 'fs;
+import fs from fs;
 
-import path from 'path;
+import path from path;
 
 // List of files with syntax errors;
 
 const filesToFix = [;;
 
-  '/workspace/src/about/page.tsx',
-  '/workspace/src/ai-ab-testing/page.tsx',
-  '/workspace/src/ai-analytics-dashboard/page.tsx',
-  '/workspace/src/ai-analytics/page.tsx',
-  '/workspace/src/ai-automation/page.tsx',
-  '/workspace/src/ai-computer-vision/page.tsx',
-  '/workspace/src/ai-content-generation/page.tsx',
-  '/workspace/src/ai-content-studio/page.tsx',
-  '/workspace/src/ai-crm/page.tsx',
-  '/workspace/src/ai-customer-insights/page.tsx',
-  '/workspace/src/ai-customer-support-bot/page.tsx',
-  '/workspace/src/ai-customer-support/page.tsx',
-  '/workspace/src/ai-cybersecurity/page.tsx',
-  '/workspace/src/ai-data-analytics/page.tsx',
-  '/workspace/src/ai-data-visualization/page.tsx',
-  '/workspace/src/ai-design-assistant/page.tsx',
-  '/workspace/src/ai-document-processing/page.tsx',
-  '/workspace/src/ai-document-processor/page.tsx',
-  '/workspace/src/ai-ecommerce-optimizer/page.tsx',
+  '/workspace/src/about/page.tsx,
+  '/workspace/src/ai-ab-testing/page.tsx,
+  '/workspace/src/ai-analytics-dashboard/page.tsx,
+  '/workspace/src/ai-analytics/page.tsx,
+  '/workspace/src/ai-automation/page.tsx,
+  '/workspace/src/ai-computer-vision/page.tsx,
+  '/workspace/src/ai-content-generation/page.tsx,
+  '/workspace/src/ai-content-studio/page.tsx,
+  '/workspace/src/ai-crm/page.tsx,
+  '/workspace/src/ai-customer-insights/page.tsx,
+  '/workspace/src/ai-customer-support-bot/page.tsx,
+  '/workspace/src/ai-customer-support/page.tsx,
+  '/workspace/src/ai-cybersecurity/page.tsx,
+  '/workspace/src/ai-data-analytics/page.tsx,
+  '/workspace/src/ai-data-visualization/page.tsx,
+  '/workspace/src/ai-design-assistant/page.tsx,
+  '/workspace/src/ai-document-processing/page.tsx,
+  '/workspace/src/ai-document-processor/page.tsx,
+  '/workspace/src/ai-ecommerce-optimizer/page.tsx,
   /workspace/src/ai-ecommerce-solutions/page.tsx
 ];
 
@@ -37,7 +37,7 @@ const filesToFix = [;;
 function fixSyntaxErrors(filePath) {
   try {;
 
-let content = fs.readFileSync(filePath, 'utf8);;
+let content = fs.readFileSync(filePath, utf8);;
 
     let modified = false;;
 
@@ -47,18 +47,21 @@ const importFixes = [;;
 
       // Fix malformed import statements
       {
-        pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
-        replacement: "import { $1 } from '$2';"
+        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+        replacement: "import { $1 } from '$2';
+
       },
       // Fix missing commas in imports
       {
-        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*)';\s*}/g,
-        replacement: "import { $1, $2 } from '$3';"
+        pattern: /import\s+{([^}]*),\s*([^}]*)\s+from\s+'([^']*);\s*}/g,
+        replacement: "import { $1, $2 } from '$3';
+
       },
       // Fix malformed import with semicolon
       {
-        pattern: /import\s+{([^}]*)\s+from\s+'([^']*)';\s*}/g,
-        replacement: "import { $1 } from '$2';"
+        pattern: /import\s+{([^}]*)\s+from\s+'([^']*);\s*}/g,
+        replacement: "import { $1 } from '$2';
+
       }
 
     ];
@@ -81,7 +84,7 @@ const functionFixes = [;;
       // Fix malformed function with missing return
       {
         pattern: /const\s+(\w+):\s*React\.FC\s*=\s*\(\s*\)\s*=>\s*{\s*return\s*\(\s*}\s*<div/g,
-        replacement: 'const $1: React.FC = () => {
+        replacement: const $1: React.FC = () => {
   return (
 
 \n  return (\n    <div
@@ -149,8 +152,8 @@ const jsxFixes = [;;
 
       // Fix malformed JSX attributes
       {
-        pattern: /(\w+)="([^"]*)"\s*(\w+)/g,
-        replacement: '$1="$2 $3
+        pattern: /(\w+)="([^"]*)\s*(\w+)/g,
+        replacement: '$1=$2 $3
       },
       // Fix malformed JSX closing tags
       {
@@ -172,7 +175,7 @@ const newContent = content.replace(fix.pattern, fix.replacement);;
     }
 
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8);
+      fs.writeFileSync(filePath, content, utf8);
 
       // console.log removed for production
 return true}
