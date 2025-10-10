@@ -151,4 +151,4 @@ export class SecurityManager {/* TODO: Fix JSX expression */}
     return global._rateLimitStorage;
   }
 }
-export default SecurityManager.getInstance()
+export default SecurityManager.getInstance();
