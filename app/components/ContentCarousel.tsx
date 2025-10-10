@@ -1,6 +1,5 @@
 'use client';
-import React from 'react';
-'use client';
+
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -59,6 +58,30 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="w-full">
+      {/* Main Carousel */}
+      <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl overflow-hidden">
+        <div className="relative h-96">
+          {/* Slide Content */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center max-w-4xl mx-auto px-8">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <slides[currentSlide].icon className="w-10 h-10 text-cyan-400" />
+              </div>
+              <h2 className="text-4xl font-bold text-white mb-4">
+                {slides[currentSlide].title}
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                {slides[currentSlide].description}
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                {slides[currentSlide].features.map((feature, index) => (
+                  <div key={index} className="flex items-center text-gray-300">
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                    <span className="text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -77,7 +100,7 @@ const ContentCarousel: React.FC = () => {
           </button>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-6 space-x-2">
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
             {slides.map((_, index) => (
               <button
                 key={index}
@@ -88,6 +111,21 @@ const ContentCarousel: React.FC = () => {
               />
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Benefits Section */}
+      <div className="mt-12">
+        <h3 className="text-2xl font-bold text-white mb-6 text-center">
+          Why Choose <span className="text-cyan-400">Zion Tech Group</span>?
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="flex items-center text-gray-300">
+              <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+              <span className="text-sm">{benefit}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
