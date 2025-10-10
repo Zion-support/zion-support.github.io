@@ -2,13 +2,30 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-const EnhancedSEOHead: React.FC = () => {
-  return (;
-const EnhancedSEOHead: React.FC = () => {
-return (
-    <Helmet>
-);
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  noIndex?: boolean;
 }
+
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  description = "Leading provider of AI-powered solutions, cloud services, and digital transformation for businesses worldwide.",
+  keywords = ["AI solutions", "cloud services", "IT consulting", "digital transformation", "machine learning", "artificial intelligence"],
+  canonicalUrl = "https://ziontechgroup.com",
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  noIndex = false
+}) => {
+  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+  const fullDescription = description;
+  const fullKeywords = keywords;
+  const author = "Zion Tech Group";
+
+  return (
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -57,12 +74,13 @@ return (
       {section && <meta property="article:section" content={section} />}
       {tags.map((tag, index) => (
         <meta key={index} property="article:tag" content={tag} />
-      ));
+      ))}
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(structuredData);
-        </script>);
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
       {/* Default Organization Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -94,11 +112,11 @@ return (
             'https://linkedin.com/company/ziontechgroup',
             'https://twitter.com/ziontechgroup'
           ]
-        });
+        })}
       </script>
       
       <script type="application/ld+json">
-        {JSON.stringify(breadcrumbStructuredData);
+          {JSON.stringify(breadcrumbStructuredData)}
       </script>
       
       {/* Additional SEO Meta Tags */}
