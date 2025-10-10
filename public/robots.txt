@@ -11,21 +11,38 @@ Crawl-delay: 1
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /backup/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /ai-services
-Allow: /it-services
-Allow: /pricing
-Allow: /blog
-Allow: /case-studies
-Allow: /careers
-Allow: /partners
-Allow: /support
-Allow: /faq
-Allow: /demo
-Allow: /consultation
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /about/
+Allow: /contact/
+Allow: /pricing/
+Allow: /blog/
+Allow: /case-studies/
+
+# Block common bot traps
+Disallow: /*.json$
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+Disallow: /*?*msclkid=
+
+# Allow specific file types
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.webp
+Allow: /*.ico
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot

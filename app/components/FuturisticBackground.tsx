@@ -1,7 +1,7 @@
 'use client';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, memo } from 'react';
 
-const FuturisticBackground: React.FC = () => {
+const FuturisticBackground: React.FC = memo(() => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -11,118 +11,79 @@ const FuturisticBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    let animationId: number;
+
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-    }
+    };
 
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
+    const drawGrid = () => {
+      const gridSize = 50;
+      const offsetX = (Date.now() * 0.01) % gridSize;
+      const offsetY = (Date.now() * 0.005) % gridSize;
 
-    // Quantum particles
-    const particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-    }> = []
+      ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)';
+      ctx.lineWidth = 1;
 
-    const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6']
-
-    // Create particles
-    for (let i = 0; i < 50; i++) {
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.5,
-        vy: (Math.random() - 0.5) * 0.5,
-        size: Math.random() * 3 + 1,
-        opacity: Math.random() * 0.5 + 0.2,
-        color: colors[Math.floor(Math.random() * colors.length)]
-      })
-    }
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.x += particle.vx;
-        particle.y += particle.vy;
-
-        // Wrap around screen
-        if (particle.x < 0) particle.x = canvas.width;
-        if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
-        // Draw particle
-        ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
-
-        // Draw connections
-        particles.forEach((otherParticle, otherIndex) => {
-          if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
-            if (distance < 100) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
-              ctx.lineTo(otherParticle.x, otherParticle.y);
-              ctx.strokeStyle = particle.color;
-              ctx.globalAlpha = (100 - distance) / 100 * 0.1;
-              ctx.lineWidth = 0.5;
-              ctx.stroke();
-            }
-          }
-        })
-      })
-
-      // Draw cyber grid
-      ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 0.5;
-
-      for (let x = 0; x < canvas.width; x += 20) {
+      for (let x = -offsetX; x < canvas.width + gridSize; x += gridSize) {
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
       }
 
-      for (let y = 0; y < canvas.height; y += 20) {
+      for (let y = -offsetY; y < canvas.height + gridSize; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
       }
+    };
 
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(animate);
-    }
+    const drawParticles = () => {
+      const particleCount = 50;
+      const time = Date.now() * 0.001;
 
+      for (let i = 0; i < particleCount; i++) {
+        const x = (Math.sin(time + i * 0.1) * 0.5 + 0.5) * canvas.width;
+        const y = (Math.cos(time * 0.7 + i * 0.15) * 0.5 + 0.5) * canvas.height;
+        const size = Math.sin(time + i) * 2 + 3;
+
+        ctx.fillStyle = `rgba(0, 255, 255, ${Math.sin(time + i) * 0.3 + 0.4})`;
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    };
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      drawGrid();
+      drawParticles();
+      animationId = requestAnimationFrame(animate);
+    };
+
+    resizeCanvas();
     animate();
+
+    window.addEventListener('resize', resizeCanvas);
 
     return () => {
       window.removeEventListener('resize', resizeCanvas);
-    }
+      cancelAnimationFrame(animationId);
+    };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
+      className="fixed inset-0 pointer-events-none z-0"
       style={{ background: 'transparent' }}
     />
   );
-};
+});
+
+FuturisticBackground.displayName = 'FuturisticBackground';
 
 export default FuturisticBackground;
