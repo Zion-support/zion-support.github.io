@@ -1,13 +1,10 @@
 'use client';
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 import { Search, Calendar, User, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
@@ -20,30 +17,23 @@ interface BlogPost {
   readTime: string;
   category: string;
   tags: string[];
-<<<<<<< HEAD
   image: string;
   featured: boolean;
-=======
   featured: boolean;
   image: string;
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 }
 
 const BlogPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-<<<<<<< HEAD
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);
 
-=======
 
   // Sample blog posts data
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
   const blogPosts: BlogPost[] = [
     {
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
-<<<<<<< HEAD
       excerpt: 'Exploring how artificial intelligence is transforming business operations and creating new opportunities for growth.',
       content: 'Full article content...',
       author: 'Dr. Sarah Chen',
@@ -114,7 +104,6 @@ const BlogPage: React.FC = () => {
 
     setFilteredPosts(filtered);
   }, [searchTerm, selectedCategory]);
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search, User, Calendar, Clock, ArrowRight } from 'lucide-react';
@@ -171,7 +160,6 @@ const BlogPage: React.FC = () => {
   };
 
   const displayPosts = searchQuery ? searchResults : blogPosts;
-=======
       excerpt: 'Exploring how artificial intelligence is transforming enterprise operations and driving innovation across industries.',
       content: 'Full article content here...',
       author: 'Dr. Sarah Chen',
@@ -263,16 +251,13 @@ const BlogPage: React.FC = () => {
 
   const featuredPosts = filteredPosts.filter(post => post.featured);
   const regularPosts = filteredPosts.filter(post => !post.featured);
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights on AI, blockchain, cloud computing, and IT solutions from Zion Tech Group experts." />
         <meta name="keywords" content="tech blog, AI insights, blockchain news, cloud computing, IT solutions" />
-=======
         <title>Blog - Zion Tech Group | AI & IT Solutions Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and digital transformation from Zion Tech Group experts." />
         <meta name="keywords" content="AI blog, technology insights, quantum computing, cybersecurity, digital transformation" />
@@ -280,12 +265,10 @@ const BlogPage: React.FC = () => {
         <meta property="og:description" content="Latest insights on AI and IT solutions" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/blog" />
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="relative py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
@@ -307,7 +290,6 @@ const BlogPage: React.FC = () => {
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
                 />
               </div>
-=======
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -347,14 +329,11 @@ const BlogPage: React.FC = () => {
                   </button>
                 ))}
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Blog Posts */}
-=======
         {/* Featured Posts */}
         {featuredPosts.length > 0 && (
           <section className="py-16 px-4">
@@ -406,14 +385,12 @@ const BlogPage: React.FC = () => {
         )}
 
         {/* Regular Posts */}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">
               Latest Articles
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
               {displayPosts.map((post) => (
                 <article key={post.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
@@ -501,7 +478,6 @@ const BlogPage: React.FC = () => {
                 Subscribe
               </button>
             </div>
-=======
         <title>Blog - Zion Tech Group | AI & IT Insights</title>
         <meta name="description" content="Stay updated with the latest insights on AI, cloud computing, cybersecurity, and IT solutions from our expert team." />
         <meta name="keywords" content="AI blog, IT insights, technology trends, cloud computing, cybersecurity, software development" />
@@ -617,7 +593,6 @@ const BlogPage: React.FC = () => {
                       Read More <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
-=======
               {regularPosts.map((post) => (
                 <article key={post.id} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl overflow-hidden hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="aspect-video bg-gradient-to-br from-cyan-400/20 to-purple-400/20 flex items-center justify-center">
@@ -653,16 +628,12 @@ const BlogPage: React.FC = () => {
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                 </article>
               ))}
             </div>
             
-<<<<<<< HEAD
             {searchResults.length === 0 && searchQuery && (
-=======
             {filteredPosts.length === 0 && (
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
               <div className="text-center py-12">
                 <p className="text-gray-400 text-lg">No articles found matching your search criteria.</p>
               </div>
@@ -674,9 +645,6 @@ const BlogPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default BlogPage;
 
-=======
 export default BlogPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-a851

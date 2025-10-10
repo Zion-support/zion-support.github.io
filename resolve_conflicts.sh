@@ -1,41 +1,26 @@
 #!/bin/bash
 
-# Script to resolve merge conflicts by choosing the Next.js version (pr-26771)
-
+# Script to resolve merge conflicts by keeping our enhanced versions
 echo "Resolving merge conflicts..."
 
-# List of files with conflicts
-files=(
-  "app/App.tsx"
-  "app/components/PWAInstaller.tsx"
-  "app/components/AccessibilityEnhancer.tsx"
-  "app/components/GlobalErrorBoundary.tsx"
-  "app/components/Footer.tsx"
-  "app/components/PerformanceMonitor.tsx"
-  "app/components/AnalyticsProvider.tsx"
-  "app/components/OptimizedImage.tsx"
-  "app/components/Navigation.tsx"
-  "app/components/EnhancedErrorBoundary.tsx"
-  "app/autonomous-systems/page.tsx"
-  "app/business-intelligence/page.tsx"
-  "app/quantum-computing/page.tsx"
-  "app/ai-content-generation/page.tsx"
-  "app/sitemap/page.tsx"
-  "app/utils/accessibilityChecker.ts"
-  "app/utils/logger.ts"
-  "app/globals.css"
-)
+# Find all files with merge conflicts
+files_with_conflicts=$(grep -r "<<<<<<< HEAD" app/ | cut -d: -f1 | sort -u)
 
-for file in "${files[@]}"; do
-  if [ -f "$file" ]; then
+for file in $files_with_conflicts; do
     echo "Processing $file..."
     
-    # Use git checkout to get the version from pr-26771 (the Next.js version)
-    git checkout --theirs "$file" 2>/dev/null || echo "Could not resolve $file automatically"
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Add the resolved file
-    git add "$file"
-  fi
+    # Use git checkout to get our version (HEAD)
+    git checkout --ours "$file"
+    
+    # Clean up any remaining conflict markers
+    sed -i '/^<<<<<<< HEAD$/d' "$file"
+    sed -i '/^=======$/d' "$file"
+    sed -i '/^>>>>>>> .*$/d' "$file"
+    
+    echo "Resolved $file"
 done
 
-echo "Conflict resolution complete!"
+echo "All merge conflicts resolved!"
