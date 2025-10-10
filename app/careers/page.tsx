@@ -53,7 +53,7 @@ const CareersPage: React.FC = () => {
       type: 'Full-time',
       experience: '7+ years',
       description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
-      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});)
 }
   ];
 
@@ -75,25 +75,25 @@ const CareersPage: React.FC = () => {
       icon: Lightbulb,
       title: 'Innovation',
       description: 'We push the boundaries of what\'s possible with technology',
-      color: 'text-yellow-400'});;)
+      color: 'text-yellow-400'});)
 },
     {
       icon: Users,
       title: 'Collaboration',
       description: 'We work together to achieve extraordinary results',
-      color: 'text-blue-400'});;)
+      color: 'text-blue-400'});)
 },
     {
       icon: Target,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do',
-      color: 'text-green-400'});;)
+      color: 'text-green-400'});)
 },
     {
       icon: Heart,
       title: 'Integrity',
       description: 'We build trust through transparency and honesty',
-      color: 'text-red-400'});;)
+      color: 'text-red-400'});)
 }
   ];
 
@@ -101,28 +101,28 @@ const CareersPage: React.FC = () => {
     {
       stat: '98%',
       label: 'Employee Satisfaction',
-      description: 'Our team loves working here'});;)
+      description: 'Our team loves working here'});)
 },
     {
       stat: '50+',
       label: 'Team Members',
-      description: 'Growing team of experts'});;)
+      description: 'Growing team of experts'});)
 },
     {
       stat: '15+',
       label: 'Countries',
-      description: 'Global remote team'});;)
+      description: 'Global remote team'});)
 },
     {
       stat: '4.9/5',
       label: 'Glassdoor Rating',
-      description: 'Highly rated workplace'});;)
+      description: 'Highly rated workplace'});)
 }
   ];
 
   return (
     <>
-      <Helmet></Helmet>
+      <Helmet>
         <titl></titl>Careers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join our team of AI and IT experts. Explore career opportunities at Zion Tech Group and be part of the future of technology." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, cybersecurity, remote work, technology careers" />
@@ -246,13 +246,7 @@ const CareersPage: React.FC = () => {
                       <spa></spa>Posted {position.posted}</span>
                     </div>
                   </div>
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  <div className="mb-6">
+<div className="mb-6">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Requirements:</h4>
                     <ul className="space-y-1">
                       {position.requirements.slice(0, 3).map((req, index) => (
@@ -281,14 +275,7 @@ const CareersPage: React.FC = () => {
                 </div>
               ))}
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
-                </div>
-              ))}
-            </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
           </div>
         </section>
 
@@ -311,10 +298,7 @@ const CareersPage: React.FC = () => {
                   Contact Us
                 </Link>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-                  {position.requirements && (
+{position.requirements && (
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-2">Key Requirements:</h4>
                       <ul className="space-y-1">
@@ -335,53 +319,11 @@ const CareersPage: React.FC = () => {
                     Apply Now
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Link>
-=======
-                  <div className="mb-6">
-                    <h4 className="text-white font-semibold mb-2 text-sm">Key Requirements:</h4>
-                    <ul className="space-y-1">
-                      {position.requirements.map((req, reqIndex) => (
-                        <li key={reqIndex} className="text-gray-300 text-xs flex items-start">
-                          <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 mt-0.5 flex-shrink-0" />
-                          {req}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
 
-                  <button className="w-full bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 font-semibold py-2 px-4 rounded-lg hover:from-cyan-300 hover:to-purple-300 transition-all duration-200 flex items-center justify-center gap-2">
-                    Apply Now
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
                 </div>
               ));
             </div>
-<<<<<<< HEAD
-          </div>
-        </section>
 
-        {/* Benefits Section */}
-        <section></section>
-          <div></div>
-            <h></h>Why Work With Us?</h2>
-            <div></div>
-              {values.map((value, index) => (
-                <div></div>
-                  <div></div>
-                    <value.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h></h>{value.title}</h3>
-                  <p className="text-gray-300">{value.description}</p>
-                </div>
-<<<<<<< HEAD
-              ))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-550e
-=======
-              ));
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
             </div>
           </div>
         </section>
@@ -415,8 +357,7 @@ const CareersPage: React.FC = () => {
               Get in Touch
               <ArrowRight className="w-4 h-4" />
             </Link>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
           </div>
         </section>
       </div>

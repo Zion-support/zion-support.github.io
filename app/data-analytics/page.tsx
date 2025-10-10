@@ -166,7 +166,7 @@ const DataAnalyticsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
+</>
   );
 };
 

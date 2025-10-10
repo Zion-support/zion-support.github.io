@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiContentGenerationPage: React.FC = () => {
@@ -32,7 +30,7 @@ const AiContentGenerationPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -55,9 +53,7 @@ const PagePage: React.FC = () => {
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
-    'Increase efficiency by up to 50%',
+'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -174,7 +170,7 @@ const PagePage: React.FC = () => {
                 <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
                 </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
     'Benefit 1',
     'Benefit 2',
     'Benefit 3',
@@ -248,11 +244,9 @@ const PagePage: React.FC = () => {
               </div>
             ))}
           </div>
-<<<<<<< HEAD
-=======
-        </section>
+</section>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
         </div>
       </section>
 
@@ -302,8 +296,6 @@ const PagePage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
 export default AiContentGenerationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
 export default PagePage;

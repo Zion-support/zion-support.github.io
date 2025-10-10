@@ -4,8 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiContentWriterPage: React.FC = () => {
@@ -33,7 +31,7 @@ const AiContentWriterPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const AIContentWriterPage: React.FC = () => {
@@ -56,9 +54,7 @@ const AIContentWriterPage: React.FC = () => {
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
-    'Increase efficiency by up to 50%',
+'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
@@ -96,7 +92,7 @@ const AIContentWriterPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
     'Increase content production by 10x',
     'Improve engagement by 200%',
     'Save 50+ hours per week',
@@ -107,10 +103,7 @@ const AIContentWriterPage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
       <Helmet>
         <title>AI Content Writer | Zion Tech Group</title>
         <meta name="description" content="Professional AI content writer solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -304,17 +297,11 @@ const AIContentWriterPage: React.FC = () => {
         </section>
         <Footer />
       </div>
-<<<<<<< HEAD
-      <Footer />
-      </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
     </>
   );
 };
 
-<<<<<<< HEAD
-=======
 export default AiContentWriterPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
 export default AIContentWriterPage;

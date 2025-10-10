@@ -1,14 +1,13 @@
-// Global type definitions for the application
-
-declare global {
+// Global type definitions for the application,
+    declare global {
   interface Window {
     gtag?: (...args: any[]) => void;
     dataLayer?: any[];
   }
 }
 
-// Environment variables
-declare namespace NodeJS {
+// Environment variables,
+    declare namespace NodeJS {
   interface ProcessEnv {
     NODE_ENV: 'development' | 'production' | 'test';
     NEXT_PUBLIC_GA_ID?: string;
@@ -16,8 +15,8 @@ declare namespace NodeJS {
   }
 }
 
-// Component props interfaces
-export interface BaseComponentProps {
+// Component props interfaces,
+    export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
 }
@@ -27,16 +26,16 @@ export interface PageProps {
   searchParams: { [key: string]: string | string[] | undefined };
 }
 
-// API response types
-export interface ApiResponse<T = any> {
+// API response types,
+    export interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
   error?: string;
   message?: string;
 }
 
-// Form types
-export interface ContactFormData {
+// Form types,
+    export interface ContactFormData {
   name: string;
   email: string;
   company?: string;
@@ -49,8 +48,8 @@ export interface NewsletterFormData {
   name?: string;
 }
 
-// Service types
-export interface Service {
+// Service types,
+    export interface Service {
   id: string;
   title: string;
   description: string;
@@ -71,15 +70,15 @@ export interface BlogPost {
   featuredImage?: string;
 }
 
-// Navigation types
-export interface NavigationItem {
+// Navigation types,
+    export interface NavigationItem {
   label: string;
   href: string;
   children?: NavigationItem[];
 }
 
-// Analytics types
-export interface AnalyticsEvent {
+// Analytics types,
+    export interface AnalyticsEvent {
   action: string;
   category: string;
   label?: string;

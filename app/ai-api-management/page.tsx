@@ -3,8 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiApiManagementPage: React.FC = () => {
@@ -32,8 +30,34 @@ const AiApiManagementPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-import { CheckCircle, ArrowRight } from 'lucide-react';
+    },
+    {
+      icon: Zap,
+      title: 'Fast Processing',
+      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
+      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
+    },
+    {
+      icon: Eye,
+      title: 'Visual Analytics',
+      description: 'Transform complex data into intuitive visualizations and interactive charts.',
+      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
+    },
+    {
+      icon: Shield,
+      title: 'Data Security',
+      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
+      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
+    }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
 const PagePage: React.FC = () => {
   const features = [
@@ -55,47 +79,24 @@ const PagePage: React.FC = () => {
   ];
 
   const benefits = [
-<<<<<<< HEAD
-=======
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-    'Benefit 1',
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
   ];
 
   return (
     <>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
       <Helmet>
-<<<<<<< HEAD
-=======
-        <title>Ai Api Management - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai api management solution for modern businesses." />
-        <meta name="keywords" content="AI ai api management, artificial intelligence, ai api management, AI solutions, intelligent automation" />
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional page solutions by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group" />
+        <title>AI API Management - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered API management solution for modern businesses." />
+        <meta name="keywords" content="AI API management, artificial intelligence, API management, AI solutions, intelligent automation" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <Navigation />
-
-<<<<<<< HEAD
-=======
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -117,7 +118,7 @@ const PagePage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -301,17 +302,9 @@ const PagePage: React.FC = () => {
         </section>
         <Footer />
       </div>
-<<<<<<< HEAD
-      <Footer />
-      </div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
     </>
   );
 };
 
-<<<<<<< HEAD
-=======
 export default AiApiManagementPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-export default PagePage;

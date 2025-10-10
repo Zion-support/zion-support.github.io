@@ -1,13 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
 import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
 
 interface Partner {
@@ -16,7 +10,7 @@ interface Partner {
   description: string;
   category: string;
   website?: string;
-  tier: 'strategic' | 'preferred' | 'certified'});;)
+  tier: 'strategic' | 'preferred' | 'certified'});)
 }
 
 const PartnersPage: React.FC = () => {
@@ -27,7 +21,7 @@ const PartnersPage: React.FC = () => {
       description: 'Strategic partnership for Azure cloud solutions and AI services',
       category: 'Cloud & AI',
       website: 'https://microsoft.com',
-      tier: 'strategic'});;)
+      tier: 'strategic'});)
 },
     {
       name: 'Amazon Web Services',
@@ -35,26 +29,17 @@ const PartnersPage: React.FC = () => {
       description: 'Leading cloud infrastructure and machine learning platform provider',
       category: 'Cloud Computing',
       website: 'https://aws.amazon.com',
-<<<<<<< HEAD
-      tier: 'strategic'
-<<<<<<< HEAD
-=======
-      website: 'https://aws.amazon.com'
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+website: 'https://aws.amazon.com'
+
     },
-=======
-      tier: 'strategic'});;)
-},
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
     {
       name: 'Google Cloud',
       logo: '/images/partners/google-cloud.png',
       description: 'Advanced AI and machine learning platform with global reach',
       category: 'Cloud & AI',
       website: 'https://cloud.google.com',
-      tier: 'strategic'});;)
+      tier: 'strategic'});)
 },
     {
       name: 'IBM',
@@ -62,33 +47,25 @@ const PartnersPage: React.FC = () => {
       description: 'Enterprise AI solutions and hybrid cloud platform',
       category: 'Enterprise AI',
       website: 'https://ibm.com',
-      tier: 'preferred'});;)
+      tier: 'preferred'});)
 },
     {
       name: 'Salesforce',
       logo: '/images/partners/salesforce.png',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
       description: 'Customer relationship management and business automation',
-=======
-      description: 'Customer relationship management and business automation platform',
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
       category: 'CRM & Automation',
       website: 'https://salesforce.com',
-      tier: 'preferred'});;)
+      tier: 'preferred'});)
 },
     {
-<<<<<<< HEAD
-=======
-      name: 'Oracle',
+name: 'Oracle',
       logo: '/images/partners/oracle.png',
       description: 'Database solutions and enterprise applications',
       category: 'Database & Enterprise',
       website: 'https://oracle.com',
-      tier: 'preferred'});;)
+      tier: 'preferred'});)
 },
     {
       name: 'ServiceNow',
@@ -96,16 +73,16 @@ const PartnersPage: React.FC = () => {
       description: 'IT service management and workflow automation',
       category: 'IT Management',
       website: 'https://servicenow.com',
-      tier: 'certified'});;)
+      tier: 'certified'});)
 },
     {
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
       name: 'Splunk',
       logo: '/images/partners/splunk.png',
       description: 'Data analytics and security monitoring platform',
       category: 'Analytics & Security',
       website: 'https://splunk.com',
-      tier: 'certified'});;)
+      tier: 'certified'});)
 }
   ];
 
@@ -120,34 +97,12 @@ const PartnersPage: React.FC = () => {
 
   const partnershipTiers = [
     {
-<<<<<<< HEAD
-      name: 'Strategic',
-      description: 'Deep integration and co-innovation',
-      bgColor: 'bg-gradient-to-br from-purple-500/20 to-blue-500/20',
-      borderColor: 'border-purple-400/50',
-      icon: Award
-    },
-    {
-      name: 'Preferred',
-      description: 'Enhanced support and collaboration',
-      bgColor: 'bg-gradient-to-br from-blue-500/20 to-cyan-500/20',
-      borderColor: 'border-blue-400/50',
-      icon: Handshake
-    },
-    {
-      name: 'Certified',
-      description: 'Verified expertise and capabilities',
-      bgColor: 'bg-gradient-to-br from-green-500/20 to-emerald-500/20',
-      borderColor: 'border-green-400/50',
-      icon: CheckCircle
-    }
-=======
-      name: 'Strategic Partners',
+name: 'Strategic Partners',
       description: 'Deep integration and joint development',
       icon: Award,
       color: 'text-yellow-400',
       bgColor: 'bg-yellow-400/10',
-      borderColor: 'border-yellow-400/30'});;)
+      borderColor: 'border-yellow-400/30'});)
 },
     {
       name: 'Preferred Partners',
@@ -155,7 +110,7 @@ const PartnersPage: React.FC = () => {
       icon: Handshake,
       color: 'text-blue-400',
       bgColor: 'bg-blue-400/10',
-      borderColor: 'border-blue-400/30'});;)
+      borderColor: 'border-blue-400/30'});)
 },
     {
       name: 'Certified Partners',
@@ -163,28 +118,21 @@ const PartnersPage: React.FC = () => {
       icon: CheckCircle,
       color: 'text-green-400',
       bgColor: 'bg-green-400/10',
-      borderColor: 'border-green-400/30'});;)
+      borderColor: 'border-green-400/30'});)
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
   ];
 
   const getTierInfo = (tier: string) => {
-    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});;)
+    return partnershipTiers.find(t => t.name.toLowerCase().includes(tier)) || partnershipTiers[2]});)
 };
 
   return (
     <>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+<div></div>
       <Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
-=======
-      <div></div>
-      <Helmet></Helmet>
         <titl></titl>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
       </Helmet>
@@ -276,9 +224,8 @@ const PartnersPage: React.FC = () => {
                       );
                     </div>
                   </div>
-                ););)
-});;
-            </div>
+                );)
+});</div>
           </div>
         </section>
 
@@ -329,9 +276,7 @@ const PartnersPage: React.FC = () => {
       </div>
       </div>
     </>
-<<<<<<< HEAD
-=======
-        <title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
+<title>Partners - Zion Tech Group | Strategic Technology Partnerships</title>
         <meta name="description" content="Explore our strategic partnerships with leading technology companies. We work with Microsoft, AWS, Google Cloud, and more to deliver cutting-edge solutions." />
         <meta name="keywords" content="technology partners, strategic partnerships, Microsoft, AWS, Google Cloud, IBM, enterprise solutions" />
       </Helmet>
@@ -431,11 +376,9 @@ const PartnersPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-8a15
+
   );
-=======
-  ););)
->>>>>>> cursor/fix-errors-and-merge-to-main-bba0
+
 };
 
 export default PartnersPage;
