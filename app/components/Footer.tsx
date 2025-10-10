@@ -21,97 +21,116 @@ const Footer: React.FC = () => {
   const microSaasServices = {
     'Productivity': [
       { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
+      { name: 'AI Task Manager Pro', url: '/ai-task-manager', description: 'Smart task management' },
       { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' },
+      { name: 'AI Meeting Intelligence Pro', url: '/ai-meeting-intelligence', description: 'Advanced meeting analytics' },
+      { name: 'AI Time Tracker Pro', url: '/ai-time-tracker', description: 'Intelligent time tracking' }
     ],
     'Content & Marketing': [
       { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
       { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
       { name: 'AI Email Marketing Suite', url: '/ai-email-marketing', description: 'Smart email campaigns' },
       { name: 'AI SEO Optimizer', url: '/ai-seo-optimizer', description: 'SEO automation' },
-      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' }
+      { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'Automated lead generation' },
+      { name: 'AI Customer Journey Mapper Pro', url: '/ai-customer-journey-mapper', description: 'Customer journey optimization' }
     ],
     'Business & Finance': [
       { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
-      { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
       { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
-      { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
+      { name: 'AI Invoice Generator Pro', url: '/ai-invoice-generator', description: 'Automated invoicing' },
+      { name: 'AI Expense Tracker Pro', url: '/ai-expense-tracker', description: 'Smart expense tracking' },
+      { name: 'AI Inventory Optimizer Pro', url: '/ai-inventory-optimizer', description: 'Inventory management' },
+      { name: 'AI Personal Finance Pro', url: '/ai-personal-finance', description: 'Personal finance management' }
     ],
     'Customer Service': [
       { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
       { name: 'AI Chatbot Builder', url: '/ai-chatbot-builder', description: 'Custom chatbot creation' },
-      { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' }
+      { name: 'AI Email Assistant', url: '/ai-email-assistant', description: 'Smart email management' },
+      { name: 'AI Voice Analytics Pro', url: '/ai-voice-analytics', description: 'Voice analysis & insights' }
     ],
     'Development': [
       { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
       { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile app development' },
-      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' }
+      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' },
+      { name: 'AI Cybersecurity Shield Pro', url: '/ai-cybersecurity', description: 'AI-powered security' }
     ],
     'Analytics': [
-      { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
+      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' },
       { name: 'AI Data Visualization Pro', url: '/ai-data-visualization', description: 'Interactive dashboards' },
-      { name: 'AI Data Analytics Pro', url: '/ai-data-analytics', description: 'Advanced data analysis' }
+      { name: 'AI Market Research Pro', url: '/ai-market-research', description: 'Market intelligence' },
+      { name: 'AI Time Series Analysis', url: '/ai-time-series-analysis', description: 'Time series forecasting' }
     ],
     'Creative': [
       { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
       { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
       { name: 'AI Music Composition Suite', url: '/ai-music-composition', description: 'AI-generated music' },
       { name: 'AI Fashion Design Studio', url: '/ai-fashion-design', description: 'AI fashion design' },
-      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' },
+      { name: 'AI Image Generation Studio', url: '/ai-image-generation-studio', description: 'AI image creation' }
     ],
     'Health & Wellness': [
       { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },
-      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' }
+      { name: 'AI Fitness Coach Pro', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
+      { name: 'AI Meditation Coach Pro', url: '/ai-meditation-coach', description: 'Mindfulness & meditation' },
+      { name: 'AI Pet Care Assistant Pro', url: '/ai-pet-care-assistant', description: 'Pet health monitoring' }
     ],
-    'Sales': [
-      { name: 'AI Sales Automation Hub', url: '/ai-sales-automation', description: 'Sales optimization' }
+    'Specialized': [
+      { name: 'AI Contract Analyzer Pro', url: '/ai-contract-analyzer', description: 'Contract analysis & risk assessment' },
+      { name: 'AI Compliance Monitor Pro', url: '/ai-compliance-monitor', description: 'Automated compliance monitoring' },
+      { name: 'AI Talent Acquisition Pro', url: '/ai-talent-acquisition', description: 'Intelligent recruitment' },
+      { name: 'AI Energy Management Pro', url: '/ai-energy-management', description: 'Smart energy optimization' }
     ]
   };
 
   const aiServices = [
-    { name: 'Machine Learning', href: '/machine-learning' },
-    { name: 'Natural Language Processing', href: '/nlp' },
-    { name: 'Computer Vision', href: '/computer-vision' },
-    { name: 'AI Automation', href: '/ai-automation' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation' },
-    { name: 'AI Voice Cloning', href: '/ai-voice-cloning' },
-    { name: 'AI Fraud Detection', href: '/ai-cybersecurity' },
-    { name: 'AI Quantum Computing', href: '/ai-quantum-computing' },
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },
-    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions' },
-    { name: 'AI Robotics', href: '/ai-robotics' },
+    { name: 'Machine Learning Solutions', href: '/machine-learning' },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain' },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare' },
+    { name: 'AI Financial Services', href: '/ai-financial-services' },
+    { name: 'AI Natural Language Processing', href: '/ai-nlp' },
+    { name: 'AI Computer Vision', href: '/computer-vision' },
+    { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery' },
+    { name: 'AI Climate Intelligence', href: '/ai-climate-intelligence' },
+    { name: 'AI Space Technology Solutions', href: '/ai-space-technology' },
+    { name: 'AI Metaverse Development', href: '/ai-metaverse-development' },
+    { name: 'AI Biotechnology Solutions', href: '/ai-biotechnology' },
+    { name: 'AI Quantum Machine Learning', href: '/ai-quantum-ml' },
+    { name: 'AI Autonomous Vehicle Systems', href: '/ai-autonomous-vehicles' },
+    { name: 'AI Smart City Solutions', href: '/ai-smart-cities' },
+    { name: 'AI Financial Trading Systems', href: '/ai-trading-systems' },
+    { name: 'AI Cybersecurity Intelligence', href: '/ai-cybersecurity-intelligence' },
+    { name: 'AI Content Moderation Pro', href: '/ai-content-moderation' },
+    { name: 'AI Voice Synthesis Studio', href: '/ai-voice-synthesis-studio' },
+    { name: 'AI Recommendation Engine Pro', href: '/ai-recommendation-engine' }
   ];
 
   const itServices = [
-    { name: 'Cloud Migration', href: '/cloud-migration' },
-    { name: 'IT Consulting', href: '/it-consulting' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Migration Services', href: '/cloud-migration' },
+    { name: 'Cybersecurity Solutions', href: '/cybersecurity' },
     { name: 'DevOps & CI/CD', href: '/devops' },
-    { name: 'Database Services', href: '/database' },
-    { name: 'Mobile App Development', href: '/ai-mobile-app-development' },
-    { name: 'Web Development', href: '/web-development' },
-    { name: 'Network Infrastructure', href: '/network-infrastructure' },
-    { name: 'IT Support', href: '/it-support' },
-    { name: 'Business Intelligence', href: '/business-intelligence' },
+    { name: 'Database Services', href: '/database-services' },
     { name: 'Enterprise Solutions', href: '/enterprise' },
-    { name: 'Blockchain Solutions', href: '/blockchain' },
+    { name: 'AI-Powered IT Operations', href: '/ai-powered-it-operations' },
     { name: 'Quantum Computing Infrastructure', href: '/quantum-computing-infrastructure' },
-    { name: 'Autonomous Systems Development', href: '/autonomous-systems-development' },
-    { name: 'Metaverse Development', href: '/metaverse-development' },
     { name: 'Edge Computing Solutions', href: '/edge-computing-solutions' },
-    { name: 'Climate Technology Solutions', href: '/climate-technology-solutions' },
-    { name: 'Space Technology Services', href: '/space-technology-services' },
-    { name: 'Biotechnology IT Solutions', href: '/biotechnology-it-solutions' },
-    { name: 'Advanced Robotics Systems', href: '/advanced-robotics-systems' },
-    { name: 'Digital Twin Development', href: '/digital-twin-development' },
-    { name: 'Advanced Cybersecurity', href: '/advanced-cybersecurity' },
-    { name: 'Smart City Solutions', href: '/smart-city-solutions' },
-    { name: 'FinTech Solutions', href: '/fintech-solutions' },
-    { name: 'HealthTech Infrastructure', href: '/healthtech-infrastructure' },
-    { name: 'EdTech Solutions', href: '/edtech-solutions' },
-    { name: 'RetailTech Solutions', href: '/retailtech-solutions' },
+    { name: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
+    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure' },
+    { name: 'IoT Platform Solutions', href: '/iot-platform-solutions' },
+    { name: 'Microservices Architecture', href: '/microservices-architecture' },
+    { name: 'Data Lake Solutions', href: '/data-lake-solutions' },
+    { name: 'API Management Platform', href: '/api-management-platform' },
+    { name: 'Disaster Recovery Solutions', href: '/disaster-recovery-solutions' },
+    { name: 'Hybrid Cloud Solutions', href: '/hybrid-cloud-solutions' },
+    { name: 'Serverless Computing Platform', href: '/serverless-computing-platform' },
+    { name: 'Container Orchestration', href: '/container-orchestration' },
+    { name: 'Network Security Solutions', href: '/network-security-solutions' },
+    { name: 'Data Center Solutions', href: '/data-center-solutions' },
+    { name: 'IT Asset Management', href: '/it-asset-management' },
+    { name: 'IT Service Management', href: '/it-service-management' },
+    { name: 'IT Compliance Solutions', href: '/it-compliance-solutions' },
+    { name: 'IT Training & Certification', href: '/it-training-certification' }
   ];
 
   const socialLinks = [
