@@ -1,17 +1,16 @@
-'use client';
-
 import React, { useEffect } from 'react';
 
-const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
-    const preloadResources = () => {
+    const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png'
+        '/og-image.jpg',
+        '/logo.png',
+        '/favicon.ico'
       ];
 
-      criticalImages.forEach((src) => {
+      criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
@@ -23,7 +22,7 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
     // Optimize images
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
-      images.forEach((img) => {
+      images.forEach(img => {
         if (!img.loading) {
           img.loading = 'lazy';
         }
@@ -33,18 +32,37 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
       });
     };
 
+    // Preconnect to external domains
+    const preconnectExternal = () => {
+      const domains = [
+        'https://fonts.googleapis.com',
+        'https://fonts.gstatic.com',
+        'https://www.google-analytics.com',
+        'https://www.googletagmanager.com'
+      ];
+
+      domains.forEach(domain => {
+        const link = document.createElement('link');
+        link.rel = 'preconnect';
+        link.href = domain;
+        document.head.appendChild(link);
+      });
+    };
+
     // Initialize optimizations
-    preloadResources();
-    optimizeImages();
+    preloadCriticalResources();
+    preconnectExternal();
+    
+    // Delay image optimization to avoid blocking initial render
+    setTimeout(optimizeImages, 100);
 
-    // Re-optimize on route changes
-    const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
-
-    return () => observer.disconnect();
+    // Cleanup function
+    return () => {
+      // Remove any event listeners if needed
+    };
   }, []);
 
-  return <>{children}</>;
+  return null;
 };
 
 export default PerformanceOptimizer;
