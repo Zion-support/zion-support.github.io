@@ -1,132 +1,91 @@
-#!/usr/bin/env node;
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { glob } from 'glob';
 
-//Function to fix JSX syntax errors;
-function fixJSXSyntax(content) {
-
-  //Fix function declarations with malformed comments;
-  fixed = fixed.replace(
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {'
-  );
-,
-  //Fix malformed JSX elements that are self-closing but shouldn't be;
-  //Pattern: <div></div> followed by content that should be inside;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*([^<]+)/g, '<$1$2>$3</$1>');
-
-  //Fix malformed JSX elements with attributes;
-  fixed = fixed.replace(/<(\w+)([^>]*?)><\/\1>\s*<(\w+)([^>]*?)><\/\3>/g, '<$1$2><$3$4></$3></$1>');
-
-  //Fix array syntax issues;
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{');
-
-  //Fix object syntax issues;
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{');
-
-  //Fix missing closing braces for objects;
-  fixed = fixed.replace(
-function fixJSXSyntax(content) {/* TODO: Fix JSX expression */}
-    /const\s+(\w+):\s+React\.FC\s*=\s*\(\)\s*=>\s*\{\/\*\s*content\s*\/\}/g,
-    'const $1: React.FC = () => {/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\[\s*\{\/\*\s*content\s*\/\}/g, '[{/* TODO: Fix JSX expression */}
-  fixed = fixed.replace(/\{\/\*\s*content\s*\/\}/g, '{/* TODO: Fix JSX expression */})
-    /(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*(\w+):\s*'([^']*)',?\s*\}/g,
-    "$1: '$2',\n      $3: '$4',\n      $5: '$6',\n      $7: '$8'\n    }"
-  );
-
-  return fixed;
-}
-
-//Function to process a single file;
-function processFile(filePath) {
-  try {
-    //     const content = fs.readFileSync(filePath, 'utf8');
-
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      //       return true;
-function processFile(filePath) {/* TODO: Fix JSX expression */}
-    }
-  },
-  // Fix malformed JSX fragments
-  {
-    pattern: /<>\s*<div([^>]*)>([^<]*?)<\/div>\s*<\/>/g,
-    replacement: '<div$1>$2</div>'
-  }
-];
-
-function fixFile(filePath) {
+function fixJsxSyntax(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    fixes.forEach(fix => {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+    // Fix stray > characters in JSX
+    const lines = content.split('\n');
+    const fixedLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      // Check if this is a stray > character on its own line
+      if (line.trim() === '>') {
+        // Check if the previous line ends with a JSX tag opening
+        if (i > 0 && lines[i-1].trim().endsWith('>')) {
+          // Skip this line (it's a stray >)
+          modified = true;
+          continue;
+        }
       }
-    });
+      
+      // Fix mismatched closing tags
+      if (line.includes('</div>') && line.includes('</p>')) {
+        // This looks like a malformed closing tag
+        const fixedLine = line.replace(/<\/div>.*<\/p>/, '</p>');
+        if (fixedLine !== line) {
+          fixedLines.push(fixedLine);
+          modified = true;
+          continue;
+        }
+      }
+      
+      // Fix incomplete JSX attributes
+      if (line.includes('className=') && line.includes('>') && !line.includes('</')) {
+        // Check if this line has a proper JSX structure
+        const openTags = (line.match(/</g) || []).length;
+        const closeTags = (line.match(/>/g) || []).length;
+        
+        if (openTags > closeTags) {
+          // This might be an incomplete JSX element
+          const fixedLine = line.replace(/(className="[^"]*")>\s*>\s*/, '$1>');
+          if (fixedLine !== line) {
+            fixedLines.push(fixedLine);
+            modified = true;
+            continue;
+          }
+        }
+      }
+      
+      fixedLines.push(line);
+    }
     
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      fs.writeFileSync(filePath, fixedLines.join('\n'));
+      console.log(`Fixed JSX syntax in: ${filePath}`);
       return true;
     }
     
     return false;
-  } catch (error) {/* TODO: Fix JSX expression */}
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-//Main function;
-async function main() {
-  // Get all TSX files in the app directory
-  const files = await glob('app/**/*.tsx', { cwd: process.cwd() });
+// Fix specific files that have JSX syntax errors
+const filesToFix = [
+  '/workspace/app/components/Footer.tsx',
+  '/workspace/app/5g-implementation/page.tsx',
+  '/workspace/app/App.tsx',
+  '/workspace/app/about/page.tsx',
+  '/workspace/app/accessibility/page.tsx'
+];
 
-  console.log(`Found ${files.length} TSX files to check...`);
+let fixedCount = 0;
 
-  for (const pattern of patterns) {
-    const files = await glob(pattern, {
-      ignore: [,
-        '**/node_modules/**',
-        '**/dist/**',
-        '**/build/**',
-        '**/__tests__/**',
-        '**/_app_disabled/**',
-        '**/_conflicted_disabled/**',
-        '**/_pages_api_disabled/**',
-        '**/_pages_disabled/**',
-        '**/admin-api-disabled/**',
-        '**/api-disabled/**',
-        '**/api.disabled/**',
-        '**/api.disabled.temp/**',
-        '**/api-backup/**',
-        '**/apps.backup/**',
-        '**/automation_backup/**')
-        '**/ai-optimization-backups/**')
-        '**/automation_logs/**')
-        '**/all-automations-reports/**')
-        '**/accessibility-reports/**')
-      ])
-async function main() {/* TODO: Fix JSX expression */}
-}
-  for (const pattern of patterns) {/* TODO: Fix JSX expression */}
-    });
-
-    for (const file of files) {/* TODO: Fix JSX expression */}
-      }
+for (const file of filesToFix) {
+  if (fs.existsSync(file)) {
+    if (fixJsxSyntax(file)) {
+      fixedCount++;
     }
-  });
-
-  //   }
-
-if (import.meta.url === `fil)`
-  e://${process.argv[1]}`) {/* TODO: Fix JSX expression */}
+  }
 }
 
-export { fixJSXSyntax, processFile };
-
-}"`
+console.log(`Fixed JSX syntax in ${fixedCount} files.`);
