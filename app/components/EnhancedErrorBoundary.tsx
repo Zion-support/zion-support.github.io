@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import { RefreshCw, Home } from 'lucide-react';
-=======
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-87e5
 
 interface Props {
   children: ReactNode;
@@ -40,6 +36,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.setState({
       error,
       errorInfo
+    });
 
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
