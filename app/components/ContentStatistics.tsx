@@ -123,7 +123,7 @@ const ContentStatistics: React.FC = () => {
             }));
           }
         }, stepDuration);
-      });
+      }
     }
   }, [isVisible, stats]);
 

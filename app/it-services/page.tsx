@@ -853,7 +853,7 @@ name: 'AI-Powered Infrastructure Management',
                           </a>
                         </div>
                       </div>
-<div className="space-y-2">
+                      <div className="space-y-2">
                         <a
                           href={service.link}
                           className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
