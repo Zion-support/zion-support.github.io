@@ -7,25 +7,25 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
+    { name: 'AI Sales Predictor', url: '/ai-sales-predictor', description: '95% accurate forecasting' },
+    { name: 'AI Customer Insights', url: '/ai-customer-insights', description: 'Behavioral analytics' },
+    { name: 'AI Inventory Optimizer', url: '/ai-inventory-optimizer', description: 'Smart inventory management' },
+    { name: 'AI Social Media Scheduler', url: '/ai-social-media-scheduler', description: 'Automated posting' },
+    { name: 'AI Email Marketing', url: '/ai-email-marketing-automation', description: 'Intelligent campaigns' },
     { name: 'AI Chatbots & NLP', url: '/ai-chatbot-builder', description: 'Conversational AI' },
-    { name: 'AI Content Generation', url: '/ai-content-writer', description: 'Automated content' },
     { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Business intelligence' },
-    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image analysis' },
-    { name: 'AI Voice Processing', url: '/ai-voice-processing', description: 'Speech recognition' },
-    { name: 'AI Workflow Automation', url: '/ai-automation', description: 'Process automation' },
-    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI' },
-    { name: 'AI Financial Services', url: '/ai-fintech', description: 'Fintech AI' }
+    { name: 'AI Computer Vision', url: '/ai-computer-vision', description: 'Image analysis' }
   ];
 
   const itServices = [
+    { name: 'AI DevOps Automation', url: '/ai-devops-automation', description: 'Intelligent CI/CD' },
+    { name: 'AI Network Optimizer', url: '/ai-network-optimizer', description: 'Smart network management' },
     { name: 'Cloud Infrastructure', url: '/ai-cloud-infrastructure', description: 'AWS, Azure, GCP' },
-    { name: 'DevOps & CI/CD', url: '/devops-ci-cd', description: 'Automation pipelines' },
     { name: 'Cybersecurity Solutions', url: '/ai-cybersecurity-suite', description: 'Security solutions' },
     { name: 'Web Development', url: '/web-development', description: 'Modern web apps' },
     { name: 'Mobile Development', url: '/mobile-development', description: 'iOS & Android' },
     { name: 'API Development', url: '/ai-api-management', description: 'API solutions' },
-    { name: 'Server Management', url: '/server-management', description: '24/7 monitoring' },
-    { name: 'IT Consulting', url: '/it-consulting', description: 'Strategic planning' }
+    { name: 'Server Management', url: '/server-management', description: '24/7 monitoring' }
   ];
 
   const microSaasServices = [
@@ -71,7 +71,9 @@ const Footer: React.FC = memo(() => {
             </div>
             <p className="text-gray-300 text-sm">
               Leading provider of AI and IT solutions for modern businesses. 
-              We help companies transform their operations with cutting-edge technology.
+              We help companies transform their operations with cutting-edge technology, 
+              delivering innovative micro SAAS solutions, comprehensive IT services, 
+              and advanced AI capabilities that drive real business results.
             </p>
             <div className="space-y-3">
               <div className="flex items-center text-sm text-gray-300">
@@ -169,6 +171,49 @@ const Footer: React.FC = memo(() => {
                 </Link>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Services Overview Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-4">Our Comprehensive Solutions</h2>
+            <p className="text-gray-300 max-w-3xl mx-auto">
+              From AI-powered micro SAAS applications to enterprise IT infrastructure, 
+              we provide end-to-end technology solutions that drive business growth and innovation.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Brain className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">AI Services</h3>
+              <p className="text-gray-300 text-sm">
+                Advanced artificial intelligence solutions including sales prediction, 
+                customer insights, inventory optimization, and automated marketing.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Cloud className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">IT Services</h3>
+              <p className="text-gray-300 text-sm">
+                Complete IT infrastructure solutions including DevOps automation, 
+                network optimization, cloud migration, and cybersecurity.
+              </p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Code className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-2">Micro SAAS</h3>
+              <p className="text-gray-300 text-sm">
+                Ready-to-use software solutions including analytics platforms, 
+                chat systems, security monitoring, and cloud backup services.
+              </p>
+            </div>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Share2, 
+  TrendingUp, 
   BarChart3, 
   Target, 
   Zap, 
@@ -11,53 +11,53 @@ import {
   ArrowRight, 
   Star, 
   Clock,
-  TrendingUp,
+  Users,
+  DollarSign,
   Brain,
-  Calendar,
-  Users
+  PieChart
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AiSocialMediaSchedulerPage: React.FC = () => {
+const AiSalesPredictorPage: React.FC = () => {
   const features = [
-    'AI-powered optimal posting time detection',
-    'Automated content scheduling across 8+ platforms',
-    'Smart hashtag research and optimization',
-    'Visual content calendar with drag-and-drop',
-    'Engagement prediction and performance analytics',
-    'Bulk content upload and batch scheduling',
-    'Team collaboration and approval workflows',
-    'Integration with 20+ design and content tools'
+    'AI-powered sales forecasting with 95% accuracy',
+    'Real-time pipeline analysis and risk assessment',
+    'Automated lead scoring and qualification',
+    'Revenue prediction with confidence intervals',
+    'Seasonal trend analysis and market insights',
+    'Integration with 50+ CRM and sales tools',
+    'Custom ML models for your industry',
+    'Automated sales reports and dashboards'
   ];
 
   const benefits = [
-    'Increase engagement by 45%',
-    'Save 10+ hours per week',
-    'Boost reach and visibility',
-    'Streamline team collaboration'
+    'Increase sales accuracy by 40%',
+    'Reduce forecasting time by 80%',
+    'Identify high-value opportunities',
+    'Optimize sales team performance'
   ];
 
   const pricing = [
     {
       name: 'Starter',
-      price: '$29/month',
-      description: 'Perfect for individuals and small businesses',
-      features: ['3 social accounts', '50 posts/month', 'Basic analytics', 'Email support'],
+      price: '$99/month',
+      description: 'Perfect for small sales teams',
+      features: ['Up to 5 users', 'Basic forecasting', 'CRM integration', 'Email support'],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79/month',
-      description: 'Advanced features for growing businesses',
-      features: ['10 social accounts', 'Unlimited posts', 'Advanced analytics', 'Priority support'],
+      price: '$299/month',
+      description: 'Advanced features for growing teams',
+      features: ['Up to 25 users', 'Advanced AI models', 'Custom dashboards', 'Priority support'],
       popular: true
     },
     {
-      name: 'Agency',
-      price: '$199/month',
-      description: 'Complete solution for agencies and teams',
-      features: ['Unlimited accounts', 'Team collaboration', 'White-label options', 'Dedicated support'],
+      name: 'Enterprise',
+      price: '$799/month',
+      description: 'Complete solution for large organizations',
+      features: ['Unlimited users', 'Custom AI training', 'API access', 'Dedicated support'],
       popular: false
     }
   ];
@@ -65,8 +65,8 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>AI Social Media Scheduler - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered social media scheduling and management platform. Optimize posting times, boost engagement, and streamline your social media strategy." />
+        <title>AI Sales Predictor - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered sales forecasting and revenue prediction platform with 95% accuracy. Transform your sales strategy with intelligent predictions." />
       </Helmet>
       
       <Navigation />
@@ -77,27 +77,27 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
             {/* Header */}
             <div className="text-center mb-16">
               <div className="flex items-center justify-center mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-600 rounded-lg flex items-center justify-center mr-4">
-                  <Share2 className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white">
-                  AI Social Media Scheduler
+                  AI Sales Predictor
                 </h1>
               </div>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                Transform your social media strategy with AI-powered scheduling and optimization. 
-                Boost engagement, save time, and grow your audience across all platforms.
+                Transform your sales strategy with AI-powered forecasting that delivers 95% accuracy. 
+                Predict revenue, identify opportunities, and optimize your sales team performance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
                   Start Free Trial
                 </Link>
                 <a
                   href="tel:+13024640950"
-                  className="border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                  className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
                   Call: (302) 464-0950
                 </a>
@@ -107,26 +107,26 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
             {/* Key Stats */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">45%</div>
-                <div className="text-gray-300">Engagement Increase</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
+                <div className="text-gray-300">Forecasting Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">10+</div>
-                <div className="text-gray-300">Hours Saved Weekly</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+                <div className="text-gray-300">Sales Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">8+</div>
-                <div className="text-gray-300">Platform Support</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+                <div className="text-gray-300">Time Saved</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">20+</div>
-                <div className="text-gray-300">Tool Integrations</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-300">CRM Integrations</div>
               </div>
             </div>
 
             {/* Features Section */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Social Media Management</h2>
+              <h2 className="text-3xl font-bold text-white text-center mb-12">Powerful Features</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-6">
                   {features.slice(0, 4).map((feature, index) => (
@@ -149,11 +149,11 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
 
             {/* Benefits Section */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12">Grow Your Social Presence</h2>
+              <h2 className="text-3xl font-bold text-white text-center mb-12">Why Choose AI Sales Predictor?</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {benefits.map((benefit, index) => (
                   <div key={index} className="text-center">
-                    <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <Brain className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
@@ -164,20 +164,20 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
 
             {/* Pricing Section */}
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-white text-center mb-12">Affordable Pricing Plans</h2>
+              <h2 className="text-3xl font-bold text-white text-center mb-12">Simple, Transparent Pricing</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {pricing.map((plan, index) => (
-                  <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-pink-500' : ''}`}>
+                  <div key={index} className={`bg-slate-800/50 rounded-lg p-6 ${plan.popular ? 'ring-2 ring-cyan-500' : ''}`}>
                     {plan.popular && (
                       <div className="text-center mb-4">
-                        <span className="bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                           Most Popular
                         </span>
                       </div>
                     )}
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="text-3xl font-bold text-pink-400 mb-6">{plan.price}</div>
+                    <div className="text-3xl font-bold text-cyan-400 mb-6">{plan.price}</div>
                     <ul className="space-y-3 mb-8">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center space-x-2">
@@ -190,8 +190,8 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
                       to="/contact"
                       className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                         plan.popular
-                          ? 'bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white'
-                          : 'border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
+                          ? 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white'
+                          : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                       }`}
                     >
                       Get Started
@@ -205,22 +205,22 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
             <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-white mb-4">
-                  Ready to Master Social Media?
+                  Ready to Transform Your Sales Forecasting?
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                  Join thousands of businesses using AI Social Media Scheduler to grow their audience and engagement. 
-                  Start your free trial today.
+                  Join thousands of sales teams who trust AI Sales Predictor for accurate forecasting. 
+                  Start your free trial today and see the difference AI can make.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
                     to="/contact"
-                    className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     Start Free Trial
                   </Link>
                   <a
                     href="tel:+13024640950"
-                    className="border-2 border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+                    className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
                     Call: (302) 464-0950
                   </a>
@@ -236,4 +236,4 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
   );
 };
 
-export default AiSocialMediaSchedulerPage;
+export default AiSalesPredictorPage;

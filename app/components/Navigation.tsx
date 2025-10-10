@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Share2, Wifi } from 'lucide-react';
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,21 +73,23 @@ const Navigation: React.FC = () => {
 
   // Service data
   const aiServices = [
+    { name: 'AI Sales Predictor', href: '/ai-sales-predictor', icon: TrendingUp, description: '95% accurate forecasting' },
+    { name: 'AI Customer Insights', href: '/ai-customer-insights', icon: Users, description: 'Behavioral analytics' },
+    { name: 'AI Inventory Optimizer', href: '/ai-inventory-optimizer', icon: Package, description: 'Smart inventory management' },
+    { name: 'AI Social Media Scheduler', href: '/ai-social-media-scheduler', icon: Share2, description: 'Automated posting' },
+    { name: 'AI Email Marketing', href: '/ai-email-marketing-automation', icon: Mail, description: 'Intelligent campaigns' },
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
     { name: 'AI CRM', href: '/ai-crm', icon: Users, description: 'Customer relationship management' },
     { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield, description: 'Advanced threat protection' },
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
-    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
-    { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' },
-    { name: 'AI Computer Vision', href: '/ai-computer-vision', icon: Eye, description: 'Image & video analysis' },
-    { name: 'AI Voice Processing', href: '/ai-voice-processing', icon: Mic, description: 'Speech recognition' },
-    { name: 'AI E-commerce', href: '/ai-ecommerce-optimizer', icon: Globe, description: 'E-commerce optimization' },
-    { name: 'AI HR Solutions', href: '/ai-hr', icon: Users, description: 'Human resources AI' }
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' }
   ];
 
   const itServices = [
+    { name: 'AI DevOps Automation', href: '/ai-devops-automation', icon: Settings, description: 'Intelligent CI/CD' },
+    { name: 'AI Network Optimizer', href: '/ai-network-optimizer', icon: Wifi, description: 'Smart network management' },
     { name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' },
     { name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' },
     { name: 'Cybersecurity', href: '/ai-cybersecurity-suite', icon: Shield, description: 'Comprehensive security' },
@@ -95,9 +97,7 @@ const Navigation: React.FC = () => {
     { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'iOS & Android apps' },
     { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Modern web applications' },
     { name: 'DevOps & CI/CD', href: '/devops-ci-cd', icon: Settings, description: 'Development operations' },
-    { name: 'Server Management', href: '/server-management', icon: Server, description: '24/7 server monitoring' },
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Wifi, description: 'Network design & setup' },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Package, description: 'Strategic IT planning' }
+    { name: 'Server Management', href: '/server-management', icon: Server, description: '24/7 server monitoring' }
   ];
 
   const microSaasServices = [

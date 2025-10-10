@@ -37,6 +37,13 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const AiSalesPredictorPage = React.lazy(() => import('./app/ai-sales-predictor/page'));
+const AiCustomerInsightsPage = React.lazy(() => import('./app/ai-customer-insights/page'));
+const AiInventoryOptimizerPage = React.lazy(() => import('./app/ai-inventory-optimizer/page'));
+const AiSocialMediaSchedulerPage = React.lazy(() => import('./app/ai-social-media-scheduler/page'));
+const AiEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'));
+const AiDevopsAutomationPage = React.lazy(() => import('./app/ai-devops-automation/page'));
+const AiNetworkOptimizerPage = React.lazy(() => import('./app/ai-network-optimizer/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -80,6 +87,13 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/ai-sales-predictor" element={<AiSalesPredictorPage />} />
+                            <Route path="/ai-customer-insights" element={<AiCustomerInsightsPage />} />
+                            <Route path="/ai-inventory-optimizer" element={<AiInventoryOptimizerPage />} />
+                            <Route path="/ai-social-media-scheduler" element={<AiSocialMediaSchedulerPage />} />
+                            <Route path="/ai-email-marketing-automation" element={<AiEmailMarketingAutomationPage />} />
+                            <Route path="/ai-devops-automation" element={<AiDevopsAutomationPage />} />
+                            <Route path="/ai-network-optimizer" element={<AiNetworkOptimizerPage />} />
                           </Routes>
                         </Suspense>
                       </main>

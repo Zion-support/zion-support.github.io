@@ -13,7 +13,14 @@ import {
   CheckCircle,
   ArrowRight,
   Search,
-  Filter
+  Filter,
+  Users,
+  Package,
+  Share2,
+  Mail,
+  Settings,
+  Wifi,
+  MessageCircle
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -26,34 +33,66 @@ const ServicesPage: React.FC = () => {
     // AI Services
     {
       icon: Brain,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
+      title: 'AI Sales Predictor',
+      description: 'Advanced AI-powered sales forecasting with 95% accuracy for revenue prediction and opportunity identification.',
       category: 'ai',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $299/month'
+      features: ['95% Forecasting Accuracy', 'Real-time Pipeline Analysis', 'Automated Lead Scoring', 'Revenue Prediction'],
+      price: 'Starting at $99/month'
     },
     {
-      icon: BarChart3,
-      title: 'AI Data Analytics',
-      description: 'Transform your data into actionable insights with our AI-powered analytics platform.',
+      icon: Users,
+      title: 'AI Customer Insights',
+      description: 'Transform customer data into actionable insights with AI-powered behavioral analysis and churn prediction.',
       category: 'ai',
-      features: ['Real-time Dashboards', 'Predictive Modeling', 'Automated Reporting', 'Custom Visualizations'],
-      price: 'Starting at $399/month'
+      features: ['Behavioral Analysis', 'Churn Prediction', 'Customer Segmentation', 'Lifetime Value Modeling'],
+      price: 'Starting at $149/month'
     },
     {
-      icon: Zap,
-      title: 'AI Automation',
-      description: 'Streamline your workflows with intelligent automation solutions.',
+      icon: Package,
+      title: 'AI Inventory Optimizer',
+      description: 'Intelligent inventory management with AI-powered demand forecasting and automated optimization.',
       category: 'ai',
-      features: ['Process Automation', 'Workflow Optimization', 'Task Scheduling', 'Exception Handling'],
-      price: 'Starting at $349/month'
+      features: ['92% Demand Accuracy', 'Automated Reordering', 'Dead Stock Detection', 'Cost Optimization'],
+      price: 'Starting at $199/month'
+    },
+    {
+      icon: Share2,
+      title: 'AI Social Media Scheduler',
+      description: 'Automated social media management with AI-powered optimal posting times and engagement optimization.',
+      category: 'ai',
+      features: ['Optimal Posting Times', 'Multi-platform Scheduling', 'Hashtag Optimization', 'Engagement Analytics'],
+      price: 'Starting at $29/month'
+    },
+    {
+      icon: Mail,
+      title: 'AI Email Marketing',
+      description: 'Intelligent email marketing automation with AI-powered content generation and personalization.',
+      category: 'ai',
+      features: ['Content Generation', 'Personalization Engine', 'A/B Testing', 'Performance Optimization'],
+      price: 'Starting at $49/month'
     },
     
     // IT Services
     {
+      icon: Settings,
+      title: 'AI DevOps Automation',
+      description: 'Revolutionary AI-powered DevOps automation for streamlined deployments and intelligent CI/CD pipelines.',
+      category: 'it',
+      features: ['CI/CD Optimization', 'Automated Deployments', 'Performance Monitoring', 'Cost Optimization'],
+      price: 'Starting at $299/month'
+    },
+    {
+      icon: Wifi,
+      title: 'AI Network Optimizer',
+      description: 'Intelligent network management with AI-powered optimization and predictive maintenance.',
+      category: 'it',
+      features: ['Performance Analysis', 'Predictive Maintenance', 'Traffic Optimization', 'Security Monitoring'],
+      price: 'Starting at $199/month'
+    },
+    {
       icon: Cloud,
       title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions for modern businesses.',
+      description: 'Scalable and secure cloud solutions for modern businesses with AI-powered optimization.',
       category: 'it',
       features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery'],
       price: 'Starting at $2,500/month'
@@ -61,44 +100,36 @@ const ServicesPage: React.FC = () => {
     {
       icon: Shield,
       title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
+      description: 'Comprehensive security solutions with AI-powered threat detection and automated response.',
       category: 'it',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Compliance'],
+      features: ['AI Threat Detection', 'Automated Response', 'Vulnerability Assessment', 'Compliance Management'],
       price: 'Starting at $1,800/month'
-    },
-    {
-      icon: Database,
-      title: 'Database Management',
-      description: 'Expert database design, optimization, and management services.',
-      category: 'it',
-      features: ['Performance Tuning', 'Backup & Recovery', 'Data Migration', 'Security Hardening'],
-      price: 'Starting at $1,200/month'
     },
     
     // Micro SaaS
     {
+      icon: BarChart3,
+      title: 'Zion Analytics Pro',
+      description: 'Advanced business intelligence platform with AI-powered insights and real-time dashboards.',
+      category: 'saas',
+      features: ['Real-time Dashboards', 'AI Insights', 'Custom Reports', 'Multi-tenant Architecture'],
+      price: 'Starting at $89/month'
+    },
+    {
+      icon: MessageCircle,
+      title: 'Zion Chat AI',
+      description: 'Next-generation AI customer support platform with advanced NLP and sentiment analysis.',
+      category: 'saas',
+      features: ['GPT-4 Powered', 'Multi-channel Support', 'Sentiment Analysis', 'Live Agent Handoff'],
+      price: 'Starting at $149/month'
+    },
+    {
       icon: Globe,
       title: 'Web Development',
-      description: 'Modern, responsive web applications built with cutting-edge technologies.',
+      description: 'Modern, responsive web applications built with cutting-edge technologies and AI integration.',
       category: 'saas',
-      features: ['React/Next.js', 'Responsive Design', 'SEO Optimization', 'Performance Tuning'],
+      features: ['React/Next.js', 'AI Integration', 'SEO Optimization', 'Performance Tuning'],
       price: 'Starting at $5,000/project'
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications for iOS and Android.',
-      category: 'saas',
-      features: ['iOS/Android Apps', 'Cross-platform', 'App Store Optimization', 'Push Notifications'],
-      price: 'Starting at $8,000/project'
-    },
-    {
-      icon: BarChart3,
-      title: 'Business Intelligence',
-      description: 'Custom analytics and reporting solutions for data-driven decisions.',
-      category: 'saas',
-      features: ['Custom Dashboards', 'Data Visualization', 'Report Automation', 'KPI Tracking'],
-      price: 'Starting at $89/month'
     }
   ];
 

@@ -6,7 +6,7 @@ import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 // import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
-import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic, Share2 } from 'lucide-react';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -62,6 +62,61 @@ const HomePage: React.FC = () => {
   // Real AI Services with actual capabilities and pricing
   const aiServices = [
     {
+      icon: TrendingUp,
+      title: 'AI Sales Predictor',
+      description: 'Advanced AI-powered sales forecasting with 95% accuracy for revenue prediction and opportunity identification',
+      price: '$99/month',
+      marketPrice: '$200-800/month',
+      features: ['95% Forecasting Accuracy', 'Real-time Pipeline Analysis', 'Automated Lead Scoring', 'Revenue Prediction', 'Seasonal Trend Analysis'],
+      benefits: ['Increase sales accuracy by 40%', 'Reduce forecasting time by 80%', 'Identify high-value opportunities', 'Optimize sales team performance'],
+      category: 'Sales Intelligence',
+      popular: true
+    },
+    {
+      icon: Users,
+      title: 'AI Customer Insights',
+      description: 'Transform customer data into actionable insights with AI-powered behavioral analysis and churn prediction',
+      price: '$149/month',
+      marketPrice: '$300-1000/month',
+      features: ['Behavioral Analysis', 'Churn Prediction', 'Customer Segmentation', 'Lifetime Value Modeling', 'Sentiment Analysis'],
+      benefits: ['Increase retention by 35%', 'Boost satisfaction scores', 'Identify high-value segments', 'Reduce churn by 50%'],
+      category: 'Customer Intelligence',
+      popular: true
+    },
+    {
+      icon: Package,
+      title: 'AI Inventory Optimizer',
+      description: 'Intelligent inventory management with AI-powered demand forecasting and automated optimization',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: ['92% Demand Accuracy', 'Automated Reordering', 'Dead Stock Detection', 'Cost Optimization', 'Multi-location Management'],
+      benefits: ['Reduce costs by 25%', 'Increase turnover by 40%', 'Eliminate stockouts', 'Optimize cash flow'],
+      category: 'Supply Chain',
+      popular: true
+    },
+    {
+      icon: Share2,
+      title: 'AI Social Media Scheduler',
+      description: 'Automated social media management with AI-powered optimal posting times and engagement optimization',
+      price: '$29/month',
+      marketPrice: '$50-200/month',
+      features: ['Optimal Posting Times', 'Multi-platform Scheduling', 'Hashtag Optimization', 'Engagement Analytics', 'Content Calendar'],
+      benefits: ['Increase engagement by 45%', 'Save 10+ hours per week', 'Boost reach and visibility', 'Streamline team collaboration'],
+      category: 'Social Media',
+      popular: true
+    },
+    {
+      icon: Mail,
+      title: 'AI Email Marketing',
+      description: 'Intelligent email marketing automation with AI-powered content generation and personalization',
+      price: '$49/month',
+      marketPrice: '$100-400/month',
+      features: ['Content Generation', 'Personalization Engine', 'A/B Testing', 'Performance Optimization', 'Compliance Management'],
+      benefits: ['Increase open rates by 35%', 'Boost click rates by 50%', 'Save 15+ hours per week', 'Improve customer lifetime value'],
+      category: 'Email Marketing',
+      popular: true
+    },
+    {
       icon: Brain,
       title: 'AI-Powered Chatbots',
       description: 'Advanced conversational AI with natural language processing and sentiment analysis',
@@ -70,7 +125,7 @@ const HomePage: React.FC = () => {
       features: ['Natural language processing', 'Multi-language support', 'Sentiment analysis', 'CRM integration', 'Real-time learning'],
       benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
       category: 'Customer Service',
-      popular: true
+      popular: false
     },
     {
       icon: FileText,
@@ -198,6 +253,28 @@ const HomePage: React.FC = () => {
   // Real IT Services with actual capabilities and pricing
   const itServices = [
     {
+      icon: Settings,
+      title: 'AI DevOps Automation',
+      description: 'Revolutionary AI-powered DevOps automation for streamlined deployments and intelligent CI/CD pipelines',
+      price: '$299/month',
+      marketPrice: '$500-1500/month',
+      features: ['CI/CD Optimization', 'Automated Deployments', 'Performance Monitoring', 'Cost Optimization', 'Predictive Maintenance'],
+      benefits: ['Reduce deployment time by 70%', 'Increase reliability by 60%', 'Cut costs by 35%', 'Eliminate manual errors'],
+      category: 'DevOps',
+      popular: true
+    },
+    {
+      icon: Wifi,
+      title: 'AI Network Optimizer',
+      description: 'Intelligent network management with AI-powered optimization and predictive maintenance',
+      price: '$199/month',
+      marketPrice: '$400-1200/month',
+      features: ['Performance Analysis', 'Predictive Maintenance', 'Traffic Optimization', 'Security Monitoring', 'Capacity Planning'],
+      benefits: ['Improve performance by 50%', 'Reduce downtime by 80%', 'Cut costs by 30%', 'Enhance security posture'],
+      category: 'Network',
+      popular: true
+    },
+    {
       icon: Cloud,
       title: 'Cloud Infrastructure & Migration',
       description: 'Complete cloud solutions including AWS, Azure, and GCP with seamless migration services',
@@ -206,7 +283,7 @@ const HomePage: React.FC = () => {
       features: ['Cloud architecture design', 'Multi-cloud strategies', 'Cost optimization', 'Disaster recovery', 'Auto-scaling solutions', 'Security compliance'],
       benefits: ['99.9% uptime guarantee', 'Cost reduction up to 40%', 'Scalable infrastructure', 'Expert migration support'],
       category: 'Cloud',
-      popular: true
+      popular: false
     },
     {
       icon: Shield,
