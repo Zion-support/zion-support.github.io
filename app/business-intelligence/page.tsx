@@ -121,7 +121,8 @@ const BusinessIntelligencePage: React.FC = () => {
               Call (302) 464-0950
             </a>
           </div>
-        </section>
+        </div>
+      </section>
 
         {/* Features Section */}
         <section className="mb-16">
@@ -234,8 +235,7 @@ const BusinessIntelligencePage: React.FC = () => {
               <p>364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

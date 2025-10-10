@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // Performance utilities for optimizing React components and application performance
 
 export const debounce = <T extends (...args: any[]) => any>(
@@ -349,8 +347,6 @@ export const scheduleCleanup = () => {
   // Schedule cleanup every 5 minutes
   setInterval(cleanupMemory, 5 * 60 * 1000);
 };
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0e35
 /**
  * Performance Utilities
  * Provides performance monitoring, optimization, and metrics collection

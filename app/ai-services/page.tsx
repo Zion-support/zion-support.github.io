@@ -77,169 +77,9 @@ const AIServicesPage: React.FC = () => {
         'ROI Tracking & Analytics',
         'Cross-Platform Integration'
       ],
-<<<<<<< HEAD
-=======
-      icon: <Target className="w-8 h-8" />,
-      category: 'Marketing',
-      popular: true,
-      rating: 4.8,
-      users: '2,800+',
-      color: 'from-purple-500 to-pink-600',
-      capabilities: [
-        '300% increase in conversion rates',
-        'Automated campaign optimization',
-        'Real-time performance tracking',
-        'Predictive customer behavior'
-      ],
-      category: 'AI Automation & Workflow',
-      icon: Zap,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10',
-      services: [
-        {
-          name: 'AI Workflow Automation Platform',
-          description: 'End-to-end business process automation with intelligent decision-making and self-optimization',
-          features: ['Visual Workflow Builder', 'Smart Process Optimization', 'Error Detection & Correction', 'Cost Reduction', 'Scalable Architecture'],
-          pricing: 'Starting at $5,000/month',
-          trial: '30-day free trial',
-          roi: '200-400% ROI',
-          link: 'https://ziontechgroup.com/ai-workflow-automation',
-          popular: true
-        },
-        {
-          name: 'AI Customer Support Suite',
-          description: 'Advanced 24/7 customer support with natural language processing, sentiment analysis, and human handoff',
-          features: ['Multi-language NLP', 'Sentiment Analysis', 'Escalation Management', 'Knowledge Base Integration', 'Performance Analytics'],
-          pricing: 'Starting at $3,000/month',
-          trial: '14-day free trial',
-          roi: '150-300% ROI',
-          link: 'https://ziontechgroup.com/ai-customer-support',
-          popular: true
-        },
-        {
-          name: 'AI Sales Automation Engine',
-          description: 'Intelligent sales process automation with lead scoring, automated follow-ups, and predictive analytics',
-          features: ['AI Lead Scoring', 'Automated Outreach', 'Sales Forecasting', 'CRM Integration', 'Revenue Optimization'],
-          pricing: 'Starting at $4,000/month',
-          trial: '14-day free trial',
-          roi: '250-500% ROI',
-          link: 'https://ziontechgroup.com/ai-sales-automation',
-          popular: true
-        },
-        {
-          name: 'AI Document Processing System',
-          description: 'Intelligent document analysis, extraction, and processing with OCR and natural language understanding',
-          features: ['OCR Technology', 'Data Extraction', 'Document Classification', 'Workflow Integration', 'Compliance Tracking'],
-          pricing: 'Starting at $2,500/month',
-          trial: '7-day free trial',
-          roi: '180-350% ROI',
-          link: 'https://ziontechgroup.com/ai-document-processing',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'AI Analytics & Business Intelligence',
-      icon: BarChart,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      services: [
-        {
-          name: 'AI Data Analytics Platform',
-          description: 'Advanced analytics and insights with machine learning-powered predictions and real-time dashboards',
-          features: ['Real-time Analytics', 'Predictive Modeling', 'Custom Dashboards', 'Data Visualization', 'Automated Insights'],
-          pricing: 'Starting at $6,000/month',
-          trial: '14-day free trial',
-          roi: '300-600% ROI',
-          link: 'https://ziontechgroup.com/ai-data-analytics',
-          popular: true
-        },
-        {
-          name: 'AI Business Intelligence Suite',
-          description: 'Transform raw data into actionable business insights with AI-powered analysis and recommendations',
-          features: ['KPI Tracking', 'Trend Analysis', 'Performance Metrics', 'Strategic Planning', 'ROI Measurement'],
-          pricing: 'Starting at $7,000/month',
-          trial: '14-day free trial',
-          roi: '400-700% ROI',
-          link: 'https://ziontechgroup.com/ai-business-intelligence',
-          popular: true
-        },
-        {
-          name: 'AI Predictive Analytics Engine',
-          description: 'Forecast future trends, outcomes, and opportunities with advanced machine learning models',
-          features: ['Demand Forecasting', 'Risk Assessment', 'Market Analysis', 'Scenario Planning', 'Anomaly Detection'],
-          pricing: 'Starting at $8,000/month',
-          trial: '14-day free trial',
-          roi: '500-800% ROI',
-          link: 'https://ziontechgroup.com/ai-predictive-analytics',
-          popular: true
-        },
-        {
-          name: 'AI Real-time Monitoring System',
-          description: 'Continuous monitoring and alerting system with AI-powered anomaly detection and automated responses',
-          features: ['Real-time Monitoring', 'Anomaly Detection', 'Automated Alerts', 'Performance Tracking', 'Predictive Maintenance'],
-          pricing: 'Starting at $4,500/month',
-          trial: '7-day free trial',
-          roi: '250-450% ROI',
-          link: 'https://ziontechgroup.com/ai-monitoring',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'AI Content & Marketing Solutions',
-      icon: FileText,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      services: [
-        {
-          name: 'AI Content Generation Studio',
-          description: 'Complete content creation suite with AI writing, editing, optimization, and multi-format support',
-          features: ['AI Writing Assistant', 'Content Optimization', 'SEO Analysis', 'Brand Voice Training', 'Multi-format Support'],
-          pricing: 'Starting at $2,000/month',
-          trial: '7-day free trial',
-          roi: '100-300% ROI',
-          link: 'https://ziontechgroup.com/ai-content-generation',
-          popular: true
-        },
-        {
-          name: 'AI Email Marketing Platform',
-          description: 'Intelligent email campaigns with personalization, A/B testing, and performance optimization',
-          features: ['Smart Personalization', 'A/B Testing', 'Send Time Optimization', 'Performance Analytics', 'List Segmentation'],
-          pricing: 'Starting at $3,500/month',
-          trial: '7-day free trial',
-          roi: '200-400% ROI',
-          link: 'https://ziontechgroup.com/ai-email-marketing',
-          popular: true
-        },
-        {
-          name: 'AI SEO Optimization Suite',
-          description: 'Comprehensive SEO analysis, keyword research, and content optimization with AI recommendations',
-          features: ['Keyword Research', 'Content Analysis', 'Technical SEO', 'Competitor Analysis', 'Rank Tracking'],
-          pricing: 'Starting at $4,500/month',
-          trial: '7-day free trial',
-          roi: '250-500% ROI',
-          link: 'https://ziontechgroup.com/ai-seo-optimizer',
-          popular: true
-        },
-        {
-          name: 'AI Social Media Manager',
-          description: 'Automated social media content creation, scheduling, and engagement optimization across platforms',
-          features: ['Content Generation', 'Post Scheduling', 'Engagement Analytics', 'Hashtag Optimization', 'Multi-platform Management'],
-          pricing: 'Starting at $1,500/month',
-          trial: '7-day free trial',
-          roi: '150-300% ROI',
-          link: 'https://ziontechgroup.com/ai-social-media-manager',
-          popular: false
-        }
-      ]
-    },
-    {
-      category: 'AI Industry-Specific Solutions',
->>>>>>> cursor/fix-errors-and-merge-to-main-90b7
       icon: Target,
-      color: 'text-orange-600',
-      bgColor: 'bg-orange-50'
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50'
     },
     {
       id: 5,
@@ -250,11 +90,11 @@ const AIServicesPage: React.FC = () => {
         'Big Data Processing',
         'Real-time Analytics',
         'Predictive Modeling',
+        'Custom Dashboard Creation',
         'Data Visualization',
         'Automated Insights',
-        'Data Quality Management',
-        'Custom Algorithm Development',
-        'Enterprise Security'
+        'Multi-Format Data Support',
+        'Advanced Security & Compliance'
       ],
       icon: Database,
       color: 'text-indigo-600',
@@ -262,22 +102,22 @@ const AIServicesPage: React.FC = () => {
     },
     {
       id: 6,
-      name: 'AI Voice & Speech Processing',
-      description: 'Advanced voice recognition, synthesis, and processing capabilities',
-      price: '$1,799/month',
+      name: 'AI Workflow Automation',
+      description: 'Intelligent business process automation with self-optimizing workflows',
+      price: '$1,899/month',
       features: [
-        'Speech-to-Text Conversion',
-        'Text-to-Speech Synthesis',
-        'Voice Cloning',
-        'Language Translation',
-        'Sentiment Analysis',
-        'Voice Command Processing',
-        'Multi-Language Support',
-        'Real-time Processing'
+        'Visual Workflow Builder',
+        'Smart Process Optimization',
+        'Error Detection & Correction',
+        'Cost Reduction Analysis',
+        'Scalable Architecture',
+        'Integration Management',
+        'Performance Monitoring',
+        'Custom Rule Engine'
       ],
-      icon: Headphones,
-      color: 'text-pink-600',
-      bgColor: 'bg-pink-50'
+      icon: Zap,
+      color: 'text-yellow-600',
+      bgColor: 'bg-yellow-50'
     }
   ];
 
@@ -292,24 +132,9 @@ const AIServicesPage: React.FC = () => {
               AI Services
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Transform your business with our comprehensive suite of AI-powered solutions. 
-              From automation to analytics, we deliver cutting-edge technology that drives results.
+              Transform your business with our comprehensive suite of AI-powered services. 
+              From analytics to automation, we provide cutting-edge solutions tailored to your needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold text-lg"
-              >
-                Get Started Today
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
-                href="/case-studies"
-                className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-slate-900 transition-colors font-semibold text-lg"
-              >
-                View Case Studies
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -318,19 +143,13 @@ const AIServicesPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {aiServices.map((service) => (
-            <div
-              key={service.id}
-              className={`relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ${
-                service.popular ? 'ring-2 ring-blue-500' : ''
-              }`}
-            >
+            <div key={service.id} className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
               {service.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
-<<<<<<< HEAD
               )}
               
               <div className="p-8">
@@ -349,18 +168,18 @@ const AIServicesPage: React.FC = () => {
                 <div className="mb-6">
                   <div className="text-3xl font-bold text-gray-900 mb-2">
                     {service.price}
-=======
-                <div className="flex items-center space-x-2">
-                  {service.popular && (
-                    <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </span>
-                  )}
-                  <div className="flex items-center text-yellow-400">
-                    <Star className="w-4 h-4 fill-current" />
-                    <span className="ml-1 text-sm font-medium">{service.rating}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-90b7
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    {service.popular && (
+                      <span className="px-2 py-1 bg-orange-500 text-white text-xs rounded-full flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-center text-yellow-400">
+                      <Star className="w-4 h-4 fill-current" />
+                      <span className="ml-1 text-sm font-medium">4.8</span>
+                    </div>
                   </div>
                   <div className="text-sm text-gray-500">per month</div>
                 </div>
@@ -374,9 +193,14 @@ const AIServicesPage: React.FC = () => {
                   ))}
                 </ul>
                 
-                <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
-                  Get Started
-                </button>
+                <div className="space-y-3">
+                  <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 group-hover:shadow-lg">
+                    Get Started
+                  </button>
+                  <button className="w-full border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+                    Learn More
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -386,27 +210,19 @@ const AIServicesPage: React.FC = () => {
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business with AI?
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join thousands of businesses already using our AI solutions to drive growth, 
-            efficiency, and innovation.
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Join thousands of businesses already using our AI services to drive growth and efficiency.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg"
-            >
-              Schedule Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
-            <a
-              href="tel:+13024640950"
-              className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg"
-            >
-              Call (302) 464-0950
-            </a>
+            <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+              Start Free Trial
+            </button>
+            <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-300">
+              Schedule Demo
+            </button>
           </div>
         </div>
       </div>

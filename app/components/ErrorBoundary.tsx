@@ -101,7 +101,7 @@ class ErrorBoundary extends Component<Props, State> {
               >
                 <RefreshCw className="w-4 h-4" />
                 Reload Page
-              </button>
+              </Link>
               
               <a
                 href="/"
