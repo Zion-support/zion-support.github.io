@@ -41,7 +41,7 @@ try {
       observer.observe({ entryTypes: ['paint'] })
       this.observers.push(observer);
     } catch (error) {
-    console.warn('PerformanceObserver not supported:', error)
+    // PerformanceObserver not supported in this environment
   }
     }
   }
@@ -57,7 +57,7 @@ try {
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer);
     } catch (error) {
-    console.warn('LCP observer not supported:', error)
+    // LCP observer not supported in this environment
   }
     }
   }
@@ -73,7 +73,7 @@ try {
       observer.observe({ entryTypes: ['first-input'] })
       this.observers.push(observer);
     } catch (error) {
-    console.warn('FID observer not supported:', error)
+    // FID observer not supported in this environment
   }
     }
   }
@@ -93,7 +93,7 @@ try {
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer);
     } catch (error) {
-    console.warn('CLS observer not supported:', error)
+    // CLS observer not supported in this environment
   }
     }
   }
@@ -146,7 +146,7 @@ export const measureFunction = <T extends (...args: any[]) => any>(,
     const result = fn(...args)
     const end = performance.now(),
 if (name) {}
-      console.log(`${name} took ${end - start} milliseconds`);
+      // Performance measurement: ${name} took ${end - start} milliseconds
     }
 return result;
   }) as T;
