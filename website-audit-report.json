@@ -1,10 +1,15 @@
 {
-  "timestamp": "2025-10-10T05:50:41.585Z",
+  "timestamp": "2025-10-10T06:15:54.704Z",
   "totalPages": 226,
-  "totalFooterLinks": 64,
+  "totalFooterLinks": 66,
   "missingPages": [],
   "additionalMissing": [],
-  "brokenLinks": [],
+  "brokenLinks": [
+    {
+      "page": "/micro-saas",
+      "brokenLink": "/ai-energy-grid-management"
+    }
+  ],
   "existingPages": [
     "/5g-implementation",
     "/about",

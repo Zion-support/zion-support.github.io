@@ -376,7 +376,7 @@ name: 'AI Holographic Workspace',
     },
     { 
       name: 'AI Energy Grid Management', 
-      href: '/ai-energy-grid-management', 
+      href: '/ai-energy', 
       icon: Zap, 
       category: 'Energy AI', 
       price: '$6,500/mo',
