@@ -1,604 +1,257 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-<<<<<<< HEAD
-
-const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 1, 2024';
-  
-=======
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle, Settings, BarChart, Users, Building, Clock, MapPin, PhoneCall, Mail as MailIcon, ExternalLink, Trash2 } from 'lucide-react';
 
-export default function PrivacyPage() {
-  const lastUpdated = 'January 1, 2024';
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
-  const dataTypes = [
+const PrivacyPage: React.FC = () => {
+  const privacySections = [
     {
-      category: 'Personal Information',
-      icon: User,
-<<<<<<< HEAD
-      items: [
-        'Name and contact information',
-        'Email address and phone number',
-        'Company and job title',
-        'Account credentials'
-      ]
-=======
-      description: 'Name, email address, phone number, company information',
-      examples: ['Contact forms', 'Newsletter signups', 'Account creation']
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
-    },
-    {
-      category: 'Usage Data',
+      title: 'Information We Collect',
       icon: Database,
-<<<<<<< HEAD
-      items: [
-        'Website usage patterns',
-        'Service interaction data',
-        'Device and browser information',
-        'IP address and location data'
+      content: [
+        'Personal information (name, email, phone number)',
+        'Business information (company name, job title)',
+        'Usage data and analytics',
+        'Communication preferences',
+        'Payment and billing information'
       ]
-=======
-      description: 'Information about how you use our website and services',
-      examples: ['Page views', 'Time spent', 'Features used', 'Device information']
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
     },
     {
-      category: 'Technical Data',
-      icon: Server,
-<<<<<<< HEAD
-      items: [
-        'Log files and error reports',
-        'Performance metrics',
-        'Security event data',
-        'System configuration information'
+      title: 'How We Use Your Information',
+      icon: Settings,
+      content: [
+        'Provide and improve our services',
+        'Process transactions and payments',
+        'Send important updates and notifications',
+        'Personalize your experience',
+        'Comply with legal obligations'
       ]
-=======
-      description: 'IP address, browser type, operating system, cookies',
-      examples: ['IP addresses', 'Browser fingerprints', 'Device identifiers', 'Cookies and tracking pixels']
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
-    }
-  ];
-
-  const purposes = [
-    {
-<<<<<<< HEAD
-      title: 'Service Delivery',
-      description: 'To provide and maintain our AI and IT services',
-      icon: CheckCircle
     },
     {
-      title: 'Communication',
-      description: 'To respond to inquiries and provide customer support',
-      icon: Mail
+      title: 'Information Sharing',
+      icon: Users,
+      content: [
+        'We do not sell your personal information',
+        'Share only with trusted service providers',
+        'Disclose when required by law',
+        'Protect our rights and safety',
+        'With your explicit consent'
+      ]
     },
     {
-      title: 'Security',
-      description: 'To protect against fraud and ensure system security',
-      icon: Shield
-    },
-    {
-      title: 'Improvement',
-      description: 'To analyze usage patterns and improve our services',
-      icon: Eye
-=======
-      title: 'Service Provision',
-      icon: Globe,
-      description: 'To provide and maintain our services'
-    },
-    {
-      title: 'Communication',
-      icon: Mail,
-      description: 'To communicate with you about our services'
-    },
-    {
-      title: 'Improvement',
-      icon: ArrowRight,
-      description: 'To improve and develop new features'
-    },
-    {
-      title: 'Security',
+      title: 'Data Security',
       icon: Shield,
-      description: 'To protect against fraud and abuse'
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
+      content: [
+        'Encryption in transit and at rest',
+        'Regular security audits',
+        'Access controls and monitoring',
+        'Secure data centers',
+        'Employee training and awareness'
+      ]
     }
   ];
 
   const rights = [
     {
-      title: 'Access',
-      description: 'Request access to your personal data',
-      icon: Eye
+      icon: Eye,
+      title: 'Right to Access',
+      description: 'Request a copy of your personal data'
     },
     {
-      title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-<<<<<<< HEAD
-      icon: FileText
-=======
-      icon: CheckCircle
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
+      icon: Settings,
+      title: 'Right to Rectification',
+      description: 'Correct inaccurate personal information'
     },
     {
-      title: 'Erasure',
-      description: 'Request deletion of your personal data',
-<<<<<<< HEAD
-      icon: AlertTriangle
-=======
-      icon: Lock
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
+      icon: Trash2,
+      title: 'Right to Erasure',
+      description: 'Request deletion of your personal data'
     },
     {
-      title: 'Portability',
-      description: 'Receive your data in a structured format',
-      icon: Database
-<<<<<<< HEAD
+      icon: Lock,
+      title: 'Right to Restrict Processing',
+      description: 'Limit how we process your data'
     },
     {
-      title: 'Restriction',
-      description: 'Limit how we process your data',
-      icon: Lock
+      icon: FileText,
+      title: 'Right to Data Portability',
+      description: 'Receive your data in a structured format'
     },
     {
-      title: 'Objection',
-      description: 'Object to certain types of processing',
-      icon: Shield
+      icon: AlertTriangle,
+      title: 'Right to Object',
+      description: 'Object to certain types of processing'
     }
   ];
 
-  const contactInfo = {
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  };
-
-=======
-    }
-  ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
   return (
-    <>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Privacy Policy - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information and data." />
-        <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, data security" />
-        <link rel="canonical" href="https://ziontechgroup.com/privacy" />
+        <title>Privacy Policy | Zion Tech Group</title>
+        <meta name="description" content="Learn how Zion Tech Group protects your privacy and handles your personal information. Our comprehensive privacy policy." />
+        <meta name="keywords" content="privacy policy, data protection, GDPR, privacy rights, Zion Tech Group" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
-                Privacy Policy
-              </h1>
-            </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information 
-              when you use our AI and IT services.
-            </p>
-            <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
+      
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-6">
+            Privacy Policy
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Your privacy is important to us. Learn how we collect, use, and protect your personal information.
+          </p>
+          <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
+            <div className="flex items-center space-x-2">
               <Calendar className="w-4 h-4" />
-              <span>Last updated: {lastUpdated}</span>
+              <span>Last updated: January 15, 2024</span>
             </div>
-          </div>
-
-          {/* Quick Overview */}
-          <div className="cyber-card-enhanced p-8 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">Privacy Overview</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <Lock className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Secure by Design</h3>
-                <p className="text-gray-300 text-sm">
-                  We implement industry-standard security measures to protect your data
-                </p>
-              </div>
-              <div className="text-center">
-                <Eye className="w-12 h-12 text-green-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Transparent</h3>
-                <p className="text-gray-300 text-sm">
-                  We clearly explain what data we collect and how we use it
-                </p>
-              </div>
-              <div className="text-center">
-                <User className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">Your Control</h3>
-                <p className="text-gray-300 text-sm">
-                  You have full control over your personal data and privacy settings
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Information We Collect */}
-          <div className="cyber-card-enhanced p-8 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">Information We Collect</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {dataTypes.map((type, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
-                    <type.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">{type.category}</h3>
-                  </div>
-                  <ul className="space-y-2">
-                    {type.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* How We Use Information */}
-          <div className="cyber-card-enhanced p-8 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">How We Use Your Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {purposes.map((purpose, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                      <purpose.icon className="w-6 h-6 text-white" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">{purpose.title}</h3>
-                    <p className="text-gray-300">{purpose.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Data Sharing */}
-          <div className="cyber-card-enhanced p-8 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">Data Sharing and Disclosure</h2>
-            <div className="space-y-6">
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-3">We Do Not Sell Your Data</h3>
-                <p className="text-gray-300">
-                  We do not sell, trade, or rent your personal information to third parties. Your data is only shared 
-                  in the following limited circumstances:
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-slate-800 rounded-lg p-6">
-                  <h4 className="text-white font-semibold mb-3">Service Providers</h4>
-                  <p className="text-gray-300 text-sm">
-                    We may share data with trusted service providers who assist us in operating our services, 
-                    subject to strict confidentiality agreements.
-                  </p>
-                </div>
-                <div className="bg-slate-800 rounded-lg p-6">
-                  <h4 className="text-white font-semibold mb-3">Legal Requirements</h4>
-                  <p className="text-gray-300 text-sm">
-                    We may disclose data when required by law or to protect our rights, property, or safety.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Your Rights */}
-          <div className="cyber-card-enhanced p-8 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">Your Privacy Rights</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rights.map((right, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-6">
-                  <div className="flex items-center mb-3">
-                    <right.icon className="w-6 h-6 text-cyan-400 mr-3" />
-                    <h3 className="text-lg font-semibold text-white">{right.title}</h3>
-                  </div>
-                  <p className="text-gray-300 text-sm">{right.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Data Security */}
-          <div className="cyber-card-enhanced p-8 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">Data Security</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-4">Security Measures</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    End-to-end encryption for data transmission
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Secure data storage with access controls
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Regular security audits and penetration testing
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    Employee training on data protection
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-white mb-4">Compliance</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    GDPR compliance for EU users
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    CCPA compliance for California users
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    SOC 2 Type II certification
-                  </li>
-                  <li className="flex items-center text-gray-300">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    ISO 27001 information security management
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Information */}
-          <div className="cyber-card-enhanced p-8 mb-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Privacy Questions?</h2>
-            <p className="text-gray-300 mb-8">
-              If you have any questions about this Privacy Policy or our data practices, please contact our privacy team.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Email</div>
-                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
-                    {contactInfo.email}
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Phone</div>
-                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300">
-                    {contactInfo.phone}
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Globe className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Address</div>
-                  <div className="text-gray-300">{contactInfo.address}</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Related Links */}
-          <div className="cyber-card-enhanced p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Related Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <a
-                href="/terms"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
-              >
-                <FileText className="w-8 h-8 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Terms of Service</div>
-                  <div className="text-gray-300 text-sm">Our terms and conditions</div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
-              </a>
-              <a
-                href="/cookies"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
-              >
-                <Database className="w-8 h-8 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Cookie Policy</div>
-                  <div className="text-gray-300 text-sm">Information about our use of cookies</div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
-              </a>
-              <a
-                href="/contact"
-                className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
-              >
-                <Mail className="w-8 h-8 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Contact Us</div>
-                  <div className="text-gray-300 text-sm">Get in touch with our team</div>
-                </div>
-                <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
-              </a>
+            <div className="flex items-center space-x-2">
+              <Globe className="w-4 h-4" />
+              <span>GDPR Compliant</span>
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+
+      {/* Privacy Overview */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Privacy Overview
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We are committed to protecting your privacy and ensuring the security of your personal information.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {privacySections.map((section, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                  <section.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 text-center">{section.title}</h3>
+                <ul className="space-y-3">
+                  {section.content.map((item, itemIndex) => (
+                    <li key={itemIndex} className="flex items-start space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-300 text-sm">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Your Rights */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Your Privacy Rights
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              You have certain rights regarding your personal information under applicable privacy laws.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {rights.map((right, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <right.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white">{right.title}</h3>
+                </div>
+                <p className="text-gray-300 text-sm">{right.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Contact Us About Privacy
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              If you have any questions about this privacy policy or your personal data, please contact us.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <MailIcon className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Email Us</h3>
+              <p className="text-gray-300 mb-4">Send us a detailed message</p>
+              <a href="mailto:privacy@ziontechgroup.com" className="text-cyan-400 font-medium">
+                privacy@ziontechgroup.com
+              </a>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <PhoneCall className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Call Us</h3>
+              <p className="text-gray-300 mb-4">Speak with our privacy team</p>
+              <a href="tel:+13024640950" className="text-cyan-400 font-medium">
+                +1 (302) 464-0950
+              </a>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <MapPin className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-4">Visit Us</h3>
+              <p className="text-gray-300 mb-4">Our office location</p>
+              <address className="text-cyan-400 font-medium not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Legal Information */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h2 className="text-2xl font-bold text-white mb-6">Legal Information</h2>
+            <div className="space-y-4 text-gray-300">
+              <p>
+                This privacy policy is effective as of January 15, 2024, and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.
+              </p>
+              <p>
+                We reserve the right to update or change our privacy policy at any time and you should check this privacy policy periodically. Your continued use of our service after we post any modifications to the privacy policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified privacy policy.
+              </p>
+              <p>
+                If we make any material changes to this privacy policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
   );
 };
 
 export default PrivacyPage;
-=======
-        <meta name="description" content="Privacy Policy for Zion Tech Group. Learn about how we collect, use, and protect your information." />
-        <meta name="keywords" content="privacy policy, data protection, GDPR, privacy rights, Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-white">
-        <Navigation />
-        
-        <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Privacy Policy
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Your privacy is important to us. Learn how we collect, use, and protect your information.
-            </p>
-            <div className="flex items-center justify-center text-sm text-blue-200">
-              <Calendar className="h-4 w-4 mr-2" />
-              Last updated: {lastUpdated}
-            </div>
-          </div>
-        </div>
-        
-        <div className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto space-y-12">
-              {/* Introduction */}
-              <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Introduction</h2>
-                <p className="text-gray-700 leading-relaxed mb-4">
-                  At Zion Tech Group, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
-                </p>
-                <p className="text-gray-700 leading-relaxed">
-                  By using our services, you agree to the collection and use of information in accordance with this policy.
-                </p>
-              </section>
-
-              {/* Information We Collect */}
-              <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {dataTypes.map((type, index) => (
-                    <div key={index} className="bg-gray-50 rounded-lg p-6">
-                      <div className="flex items-center mb-4">
-                        <type.icon className="h-6 w-6 text-blue-600 mr-3" />
-                        <h3 className="text-lg font-semibold text-gray-900">{type.category}</h3>
-                      </div>
-                      <p className="text-gray-700 mb-3">{type.description}</p>
-                      <ul className="text-sm text-gray-600 space-y-1">
-                        {type.examples.map((example, idx) => (
-                          <li key={idx}>• {example}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* How We Use Information */}
-              <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {purposes.map((purpose, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="flex-shrink-0 mr-4">
-                        <purpose.icon className="h-6 w-6 text-blue-600" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-gray-900 mb-2">{purpose.title}</h3>
-                        <p className="text-gray-700">{purpose.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Data Security */}
-              <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                  <div className="flex items-start">
-                    <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Measures</h3>
-                      <p className="text-gray-700 mb-4">
-                        We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
-                      </p>
-                      <ul className="text-gray-700 space-y-2">
-                        <li>• Encryption of data in transit and at rest</li>
-                        <li>• Regular security audits and assessments</li>
-                        <li>• Access controls and authentication systems</li>
-                        <li>• Employee training on data protection</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* Your Rights */}
-              <section>
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {rights.map((right, index) => (
-                    <div key={index} className="bg-white border border-gray-200 rounded-lg p-6">
-                      <div className="flex items-center mb-3">
-                        <right.icon className="h-6 w-6 text-green-600 mr-3" />
-                        <h3 className="text-lg font-semibold text-gray-900">{right.title}</h3>
-                      </div>
-                      <p className="text-gray-700">{right.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Contact Information */}
-              <section className="bg-gray-50 rounded-lg p-8">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Us</h2>
-                <p className="text-gray-700 mb-6">
-                  If you have any questions about this Privacy Policy or our data practices, please contact us:
-                </p>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="flex items-center">
-                    <Mail className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">privacy@ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Phone className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">+1 (555) 123-4567</span>
-                  </div>
-                  <div className="flex items-center">
-                    <Globe className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">ziontechgroup.com</span>
-                  </div>
-                  <div className="flex items-center">
-                    <User className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="text-gray-700">Zion Tech Group Privacy Team</span>
-                  </div>
-                </div>
-              </section>
-
-              {/* Updates */}
-              <section>
-                <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
-                  <div className="flex items-start">
-                    <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
-                    <div>
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates</h3>
-                      <p className="text-gray-700">
-                        We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-        
-        <Footer />
-      </div>
-    </>
-  );
-}
->>>>>>> cursor/website-audit-and-update-with-deployment-3540
