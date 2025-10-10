@@ -225,6 +225,9 @@ const Navigation: React.FC = () => {
             <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
+            <Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Micro SAAS
+            </Link>
             
             {/* AI Services Dropdown */}
             <div className="relative group">
@@ -464,6 +467,9 @@ const Navigation: React.FC = () => {
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
+              </Link>
+              <Link to="/micro-saas" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+                Micro SAAS
               </Link>
               
               {/* Mobile AI Services */}

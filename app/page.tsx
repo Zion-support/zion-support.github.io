@@ -70,7 +70,9 @@ const HomePage: React.FC = () => {
       features: ['Natural language processing', 'Multi-language support', 'Sentiment analysis', 'CRM integration', 'Real-time learning'],
       benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions'],
       category: 'Customer Service',
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-chatbots',
+      contact: '+1 302 464 0950'
     },
     {
       icon: FileText,
@@ -298,7 +300,74 @@ description: 'AI-powered solutions for product recommendations, pricing, and cus
       features: ['Decentralized AI model training', 'Blockchain-based data verification', 'Smart contract AI integration', 'Cryptocurrency trading algorithms', 'NFT generation and analysis', 'DeFi protocol optimization', 'Supply chain transparency', 'Secure multi-party computation'],
       benefits: ['Enhanced security', 'Transparent operations', 'Decentralized control', 'Innovation leadership'],
       category: 'Blockchain AI',
-      popular: false
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-blockchain',
+      contact: '+1 302 464 0950'
+    },
+    {
+      icon: Cpu,
+      title: 'AI Edge Computing Platform',
+      description: 'Distributed AI processing at the edge for real-time decision making and reduced latency',
+      price: '$1,299/month',
+      marketPrice: '$2500-8000/month',
+      features: ['Edge AI model deployment', 'Real-time inference processing', 'Distributed computing orchestration', 'IoT device integration', 'Low-latency processing', 'Offline AI capabilities', 'Edge-to-cloud synchronization', 'Autonomous decision making'],
+      benefits: ['Ultra-low latency processing', 'Reduced bandwidth costs', 'Offline AI capabilities', 'Scalable edge deployment'],
+      category: 'Edge Computing',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-edge-computing',
+      contact: '+1 302 464 0950'
+    },
+    {
+      icon: Globe,
+      title: 'AI Climate Intelligence',
+      description: 'Advanced climate modeling and environmental monitoring using AI for sustainability solutions',
+      price: '$1,599/month',
+      marketPrice: '$3000-10000/month',
+      features: ['Climate pattern prediction', 'Carbon footprint analysis', 'Renewable energy optimization', 'Environmental impact assessment', 'Weather forecasting AI', 'Sustainability reporting', 'Green energy grid management', 'Climate risk analysis'],
+      benefits: ['Accurate climate predictions', 'Optimized energy usage', 'Reduced environmental impact', 'Compliance with green regulations'],
+      category: 'Climate AI',
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-climate',
+      contact: '+1 302 464 0950'
+    },
+    {
+      icon: Heart,
+      title: 'AI Drug Discovery Platform',
+      description: 'Accelerated pharmaceutical research using AI for drug design and molecular analysis',
+      price: '$2,999/month',
+      marketPrice: '$5000-20000/month',
+      features: ['Molecular structure analysis', 'Drug-target interaction prediction', 'Side effect prediction', 'Clinical trial optimization', 'Biomarker discovery', 'Personalized medicine AI', 'Drug repurposing analysis', 'Toxicity prediction'],
+      benefits: ['Faster drug development', 'Reduced research costs', 'Higher success rates', 'Personalized treatments'],
+      category: 'Pharmaceutical AI',
+      popular: false,
+      link: 'https://ziontechgroup.com/ai-drug-discovery',
+      contact: '+1 302 464 0950'
+    },
+    {
+      icon: Shield,
+      title: 'AI Cybersecurity Defense',
+      description: 'Next-generation AI-powered cybersecurity with threat hunting and automated response',
+      price: '$1,199/month',
+      marketPrice: '$2000-8000/month',
+      features: ['AI threat detection', 'Behavioral analysis', 'Automated incident response', 'Zero-day exploit detection', 'Network anomaly detection', 'Malware classification', 'Security orchestration', 'Compliance monitoring'],
+      benefits: ['99.9% threat detection rate', 'Automated response', 'Reduced false positives', '24/7 security monitoring'],
+      category: 'Cybersecurity',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-cybersecurity',
+      contact: '+1 302 464 0950'
+    },
+    {
+      icon: BarChart3,
+      title: 'AI Financial Trading',
+      description: 'Algorithmic trading platform with AI-powered market analysis and automated trading strategies',
+      price: '$1,799/month',
+      marketPrice: '$3000-15000/month',
+      features: ['Market sentiment analysis', 'Algorithmic trading strategies', 'Risk management AI', 'Portfolio optimization', 'Real-time market monitoring', 'News impact analysis', 'Trading pattern recognition', 'Automated execution'],
+      benefits: ['Higher trading returns', 'Reduced human error', '24/7 market monitoring', 'Data-driven decisions'],
+      category: 'Financial AI',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-trading',
+      contact: '+1 302 464 0950'
     },
     {
       icon: Server,
@@ -761,6 +830,58 @@ description: 'Custom API development, third-party integrations, and microservice
       benefits: ['Cloud-native protection', 'Container security', 'Compliance assurance', 'Scalable security'],
       category: 'Cloud Security',
       popular: false
+    },
+    {
+      icon: Cpu,
+      title: 'AI-Powered Infrastructure Monitoring',
+      description: 'Intelligent monitoring and alerting system with predictive analytics and automated incident response',
+      price: '$1,399/month',
+      marketPrice: '$2500-8000/month',
+      features: ['AI-powered anomaly detection', 'Predictive maintenance', 'Automated incident response', 'Performance optimization', 'Capacity planning', 'Root cause analysis', 'Custom dashboards', 'Integration with ITSM tools'],
+      benefits: ['Proactive issue detection', 'Reduced downtime', 'Automated responses', 'Cost optimization'],
+      category: 'Monitoring',
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-monitoring',
+      contact: '+1 302 464 0950'
+    },
+    {
+      icon: Wifi,
+      title: '5G Network Implementation',
+      description: 'Complete 5G network deployment and optimization for ultra-fast connectivity and IoT enablement',
+      price: '$2,999/month',
+      marketPrice: '$5000-20000/month',
+      features: ['5G network design', 'Small cell deployment', 'Network slicing', 'Edge computing integration', 'IoT connectivity', 'Performance optimization', 'Security implementation', 'Compliance management'],
+      benefits: ['Ultra-fast speeds', 'Low latency', 'Massive IoT support', 'Future-ready infrastructure'],
+      category: '5G Technology',
+      popular: false,
+      link: 'https://ziontechgroup.com/5g-implementation',
+      contact: '+1 302 464 0950'
+    },
+    {
+      icon: Lock,
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with continuous verification and micro-segmentation',
+      price: '$2,199/month',
+      marketPrice: '$4000-15000/month',
+      features: ['Identity verification', 'Micro-segmentation', 'Continuous monitoring', 'Threat detection', 'Access management', 'Network security', 'Data protection', 'Compliance automation'],
+      benefits: ['Enhanced security posture', 'Reduced attack surface', 'Continuous protection', 'Regulatory compliance'],
+      category: 'Security',
+      popular: true,
+      link: 'https://ziontechgroup.com/zero-trust',
+      contact: '+1 302 464 0950'
+    },
+    {
+      icon: Globe,
+      title: 'Multi-Cloud Management Platform',
+      description: 'Unified management across AWS, Azure, and GCP with cost optimization and security compliance',
+      price: '$1,799/month',
+      marketPrice: '$3000-10000/month',
+      features: ['Multi-cloud orchestration', 'Cost optimization', 'Security compliance', 'Resource monitoring', 'Disaster recovery', 'Workload migration', 'Performance analytics', 'Automated scaling'],
+      benefits: ['Vendor independence', 'Cost reduction', 'Risk mitigation', 'Operational efficiency'],
+      category: 'Cloud Management',
+      popular: true,
+      link: 'https://ziontechgroup.com/multi-cloud',
+      contact: '+1 302 464 0950'
     }
   ]
 
