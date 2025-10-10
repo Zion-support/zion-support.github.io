@@ -1,8 +1,7 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award, ArrowRight, ExternalLink } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -12,6 +11,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in AI/ML preferred']
     },
     {
       title: 'Cloud Architect',
@@ -23,6 +24,40 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
+      title: 'Data Scientist',
+      department: 'Data Analytics',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Extract insights from complex datasets and build predictive models.',
+      requirements: ['Python, R, SQL', '4+ years data science', 'Statistics background']
+    },
+    {
+      title: 'DevOps Engineer',
+      department: 'Infrastructure',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Automate deployment pipelines and manage cloud infrastructure.',
+      requirements: ['Docker, Kubernetes', '3+ years DevOps', 'CI/CD experience']
+    },
+    {
+      title: 'Frontend Developer',
+      department: 'Web Development',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Build responsive and interactive user interfaces for our applications.',
+      requirements: ['React, TypeScript', '3+ years frontend', 'UI/UX experience']
+    },
+    {
+      title: 'Cybersecurity Specialist',
+      department: 'Security',
+      location: 'Washington, DC',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Protect our systems and client data from cyber threats.',
+      requirements: ['Security certifications', '5+ years security', 'Penetration testing']
     }
   ];
 
@@ -33,7 +68,10 @@ const CareersPage: React.FC = () => {
     'Professional development budget',
     'Top-tier equipment and tools',
     'Team building events',
-    'Career growth opportunities'
+    'Career growth opportunities',
+    '401k with company matching',
+    'Unlimited PTO',
+    'Remote work options'
   ];
 
   const values = [
@@ -68,6 +106,7 @@ const CareersPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
@@ -78,9 +117,20 @@ const CareersPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                View Open Positions
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </button>
+              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
+                Learn About Culture
+                <ExternalLink className="w-5 h-5 ml-2 inline" />
+              </button>
+            </div>
           </div>
         </section>
 
+        {/* Open Positions */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Open Positions</h2>
@@ -127,10 +177,89 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
+                    Apply Now
+                    <ArrowRight className="w-4 h-4 ml-2 inline" />
+                  </button>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
+        {/* Company Values */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Benefits & Perks</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-gray-300">{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Culture Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Our Culture</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              At Zion Tech Group, we believe in creating an environment where innovation thrives and every team member can reach their full potential. We're committed to diversity, inclusion, and providing opportunities for growth.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">50+</div>
+                <div className="text-gray-300">Team Members</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">15+</div>
+                <div className="text-gray-300">Countries</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">95%</div>
+                <div className="text-gray-300">Employee Satisfaction</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to Join Us?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Don't see a position that matches your skills? We're always looking for talented individuals to join our team.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Send Your Resume
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </button>
+              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
+                Contact HR Team
+                <ExternalLink className="w-5 h-5 ml-2 inline" />
+              </button>
             </div>
           </div>
         </section>

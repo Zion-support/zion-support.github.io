@@ -282,6 +282,404 @@ const ServicesPage: React.FC = () => {
       features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
       price: 'Starting at $299/hour',
       category: 'IT Services'
+    },
+
+    // Advanced AI Services
+    {
+      icon: Brain,
+      title: 'AI Voice Assistant',
+      description: 'Custom AI voice assistants with natural language processing and multi-language support.',
+      features: ['Voice Recognition', 'Natural Language Processing', 'Multi-language Support', 'Custom Commands', 'Integration APIs'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Predictive Maintenance',
+      description: 'Predict equipment failures before they happen with AI-powered predictive analytics.',
+      features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'Real-time Alerts'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Supply Chain Optimization',
+      description: 'Optimize your supply chain with AI-driven demand forecasting and inventory management.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management', 'Risk Assessment', 'Cost Reduction'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Quality Control',
+      description: 'Automated quality control using computer vision and machine learning for manufacturing.',
+      features: ['Computer Vision', 'Defect Detection', 'Quality Metrics', 'Real-time Monitoring', 'Automated Reporting'],
+      price: 'Starting at $699/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Energy Management',
+      description: 'Smart energy management systems that optimize consumption and reduce costs.',
+      features: ['Energy Monitoring', 'Consumption Optimization', 'Cost Analysis', 'Renewable Integration', 'Smart Grid'],
+      price: 'Starting at $499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Talent Acquisition',
+      description: 'Revolutionary AI-powered recruitment and talent acquisition solutions.',
+      features: ['Resume Screening', 'Candidate Matching', 'Interview Scheduling', 'Skills Assessment', 'Bias Reduction'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Risk Management',
+      description: 'Advanced risk assessment and management using AI and machine learning.',
+      features: ['Risk Assessment', 'Fraud Detection', 'Compliance Monitoring', 'Predictive Analytics', 'Automated Alerts'],
+      price: 'Starting at $899/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Content Moderation',
+      description: 'Automated content moderation for social media, forums, and user-generated content.',
+      features: ['Text Analysis', 'Image Recognition', 'Video Processing', 'Real-time Moderation', 'Custom Rules'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Translation Services',
+      description: 'Real-time translation services with context-aware AI for 100+ languages.',
+      features: ['100+ Languages', 'Context Awareness', 'Real-time Translation', 'Document Processing', 'API Integration'],
+      price: 'Starting at $149/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Personalization Engine',
+      description: 'Create personalized experiences for users with AI-driven recommendation systems.',
+      features: ['User Profiling', 'Recommendation Engine', 'A/B Testing', 'Behavioral Analysis', 'Real-time Adaptation'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Sentiment Analysis',
+      description: 'Analyze customer sentiment across all channels with advanced AI algorithms.',
+      features: ['Multi-channel Analysis', 'Real-time Processing', 'Emotion Detection', 'Trend Analysis', 'Custom Dashboards'],
+      price: 'Starting at $249/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Video Analytics',
+      description: 'Extract insights from video content using computer vision and AI analysis.',
+      features: ['Object Detection', 'Activity Recognition', 'Face Recognition', 'Scene Analysis', 'Real-time Processing'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Chatbot Pro',
+      description: 'Advanced conversational AI chatbots with multi-turn dialogue and context awareness.',
+      features: ['Multi-turn Dialogue', 'Context Awareness', 'Intent Recognition', 'Integration APIs', 'Analytics Dashboard'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Code Review',
+      description: 'Automated code review and quality assurance using AI and machine learning.',
+      features: ['Code Analysis', 'Bug Detection', 'Security Scanning', 'Performance Optimization', 'Best Practices'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Market Research',
+      description: 'Automated market research and competitive analysis using AI and big data.',
+      features: ['Market Analysis', 'Competitor Tracking', 'Trend Identification', 'Consumer Insights', 'Report Generation'],
+      price: 'Starting at $499/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Legal Document Analysis',
+      description: 'AI-powered legal document review, contract analysis, and compliance checking.',
+      features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Clause Extraction', 'Legal Research'],
+      price: 'Starting at $699/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Weather Prediction',
+      description: 'Advanced weather forecasting and climate analysis using AI and satellite data.',
+      features: ['Weather Forecasting', 'Climate Analysis', 'Disaster Prediction', 'Agricultural Insights', 'API Integration'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Traffic Optimization',
+      description: 'Smart traffic management and optimization for cities and transportation systems.',
+      features: ['Traffic Analysis', 'Route Optimization', 'Congestion Prediction', 'Signal Control', 'Real-time Updates'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Gaming Solutions',
+      description: 'AI-powered game development tools, NPCs, and intelligent game mechanics.',
+      features: ['NPC AI', 'Procedural Generation', 'Player Behavior Analysis', 'Game Balancing', 'Multiplayer AI'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Real Estate Analytics',
+      description: 'Property valuation, market analysis, and investment insights using AI.',
+      features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Price Prediction', 'Risk Assessment'],
+      price: 'Starting at $349/month',
+      category: 'AI Services'
+    },
+
+    // Advanced Micro SAAS Solutions
+    {
+      icon: Zap,
+      title: 'AI Meeting Scheduler',
+      description: 'Intelligent meeting scheduling that finds optimal times for all participants.',
+      features: ['Calendar Integration', 'Time Zone Handling', 'Conflict Resolution', 'Meeting Optimization', 'Reminder System'],
+      price: '$29/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Social Media Scheduler',
+      description: 'Smart social media content scheduling with optimal posting times and engagement prediction.',
+      features: ['Multi-platform Support', 'Optimal Timing', 'Content Suggestions', 'Engagement Analytics', 'Auto-posting'],
+      price: '$39/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Password Manager',
+      description: 'Secure password management with AI-powered security recommendations and breach monitoring.',
+      features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Multi-device Sync', '2FA Integration'],
+      price: '$19/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Time Tracker',
+      description: 'Intelligent time tracking with automatic project detection and productivity insights.',
+      features: ['Automatic Tracking', 'Project Detection', 'Productivity Analytics', 'Invoice Generation', 'Team Management'],
+      price: '$25/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Note Taker',
+      description: 'Smart note-taking with voice-to-text, automatic summarization, and intelligent organization.',
+      features: ['Voice-to-Text', 'Auto Summarization', 'Smart Organization', 'Search & Retrieval', 'Collaboration'],
+      price: '$35/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Habit Tracker',
+      description: 'Personal habit tracking with AI insights, motivation, and goal achievement strategies.',
+      features: ['Habit Tracking', 'AI Insights', 'Motivation System', 'Goal Setting', 'Progress Analytics'],
+      price: '$15/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Recipe Generator',
+      description: 'Personalized recipe generation based on ingredients, dietary preferences, and nutritional goals.',
+      features: ['Ingredient-based Recipes', 'Dietary Preferences', 'Nutritional Analysis', 'Meal Planning', 'Shopping Lists'],
+      price: '$22/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Fitness Coach',
+      description: 'Personalized fitness coaching with workout plans, nutrition advice, and progress tracking.',
+      features: ['Workout Plans', 'Nutrition Advice', 'Progress Tracking', 'Form Analysis', 'Goal Setting'],
+      price: '$45/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Language Learning',
+      description: 'Personalized language learning with AI tutors, conversation practice, and progress tracking.',
+      features: ['AI Tutoring', 'Conversation Practice', 'Progress Tracking', 'Adaptive Learning', 'Multi-language Support'],
+      price: '$32/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Budget Planner',
+      description: 'Smart budget planning with expense categorization, savings goals, and financial insights.',
+      features: ['Expense Categorization', 'Savings Goals', 'Financial Insights', 'Bill Reminders', 'Investment Tracking'],
+      price: '$28/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Travel Planner',
+      description: 'Intelligent travel planning with itinerary optimization, booking assistance, and local insights.',
+      features: ['Itinerary Planning', 'Booking Assistance', 'Local Insights', 'Budget Optimization', 'Real-time Updates'],
+      price: '$38/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Home Automation',
+      description: 'Smart home control with AI optimization, energy management, and security monitoring.',
+      features: ['Device Control', 'Energy Management', 'Security Monitoring', 'Voice Commands', 'Automation Rules'],
+      price: '$55/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Study Assistant',
+      description: 'AI-powered study companion with flashcard generation, quiz creation, and progress tracking.',
+      features: ['Flashcard Generation', 'Quiz Creation', 'Progress Tracking', 'Study Plans', 'Knowledge Gaps'],
+      price: '$26/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Pet Care Tracker',
+      description: 'Comprehensive pet care management with health tracking, feeding schedules, and vet reminders.',
+      features: ['Health Tracking', 'Feeding Schedules', 'Vet Reminders', 'Vaccination Records', 'Behavior Analysis'],
+      price: '$18/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Plant Care Assistant',
+      description: 'Smart plant care with watering reminders, growth tracking, and plant identification.',
+      features: ['Watering Reminders', 'Growth Tracking', 'Plant Identification', 'Care Tips', 'Health Monitoring'],
+      price: '$12/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Mood Tracker',
+      description: 'Personal mood tracking with AI insights, pattern recognition, and wellness recommendations.',
+      features: ['Mood Tracking', 'Pattern Recognition', 'Wellness Recommendations', 'Journal Integration', 'Progress Reports'],
+      price: '$20/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Sleep Optimizer',
+      description: 'Sleep analysis and optimization with personalized recommendations and tracking.',
+      features: ['Sleep Analysis', 'Personalized Recommendations', 'Sleep Tracking', 'Environment Optimization', 'Progress Reports'],
+      price: '$24/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Meditation Guide',
+      description: 'Personalized meditation and mindfulness guidance with AI-adapted sessions.',
+      features: ['Personalized Sessions', 'Progress Tracking', 'Guided Meditations', 'Mood Adaptation', 'Achievement System'],
+      price: '$16/month',
+      category: 'Micro SAAS'
+    },
+    {
+      icon: Zap,
+      title: 'AI Reading Assistant',
+      description: 'Smart reading companion with speed optimization, comprehension analysis, and note-taking.',
+      features: ['Speed Optimization', 'Comprehension Analysis', 'Note-taking', 'Reading Plans', 'Progress Tracking'],
+      price: '$30/month',
+      category: 'Micro SAAS'
+    },
+
+    // Advanced IT Services
+    {
+      icon: Cloud,
+      title: 'Cloud Security Audit',
+      description: 'Comprehensive cloud security assessment and compliance verification.',
+      features: ['Security Assessment', 'Compliance Verification', 'Vulnerability Scanning', 'Penetration Testing', 'Remediation Plan'],
+      price: 'Starting at $1,999/audit',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Disaster Recovery Planning',
+      description: 'Complete disaster recovery strategy and implementation for business continuity.',
+      features: ['Risk Assessment', 'Recovery Planning', 'Backup Strategy', 'Testing & Validation', 'Documentation'],
+      price: 'Starting at $2,499/project',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Network Security Implementation',
+      description: 'Enterprise-grade network security with firewalls, VPNs, and intrusion detection.',
+      features: ['Firewall Configuration', 'VPN Setup', 'Intrusion Detection', 'Network Monitoring', 'Security Policies'],
+      price: 'Starting at $1,299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'IT Asset Management',
+      description: 'Comprehensive IT asset tracking, lifecycle management, and optimization.',
+      features: ['Asset Tracking', 'Lifecycle Management', 'License Management', 'Cost Optimization', 'Compliance Reporting'],
+      price: 'Starting at $199/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Remote Work Solutions',
+      description: 'Complete remote work infrastructure with security, collaboration, and productivity tools.',
+      features: ['VPN Setup', 'Collaboration Tools', 'Security Policies', 'Device Management', 'Support Services'],
+      price: 'Starting at $299/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs and certification preparation for your team.',
+      features: ['Custom Training', 'Certification Prep', 'Hands-on Labs', 'Progress Tracking', 'Certification Support'],
+      price: 'Starting at $149/person/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'API Development & Management',
+      description: 'Custom API development with documentation, testing, and lifecycle management.',
+      features: ['API Development', 'Documentation', 'Testing & Validation', 'Version Management', 'Monitoring'],
+      price: 'Starting at $799/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'IT Performance Optimization',
+      description: 'System performance analysis and optimization for maximum efficiency and speed.',
+      features: ['Performance Analysis', 'Bottleneck Identification', 'Optimization Implementation', 'Monitoring Setup', 'Reporting'],
+      price: 'Starting at $599/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Cost Optimization',
+      description: 'Reduce cloud costs by 30-50% with intelligent resource optimization and right-sizing.',
+      features: ['Cost Analysis', 'Resource Optimization', 'Right-sizing', 'Reserved Instances', 'Cost Monitoring'],
+      price: 'Starting at $399/month',
+      category: 'IT Services'
+    },
+    {
+      icon: Cloud,
+      title: 'IT Compliance Management',
+      description: 'Ensure compliance with industry standards and regulations (SOX, HIPAA, GDPR, etc.).',
+      features: ['Compliance Assessment', 'Policy Development', 'Audit Preparation', 'Monitoring', 'Documentation'],
+      price: 'Starting at $699/month',
+      category: 'IT Services'
     }
   ];
 
@@ -295,7 +693,8 @@ const ServicesPage: React.FC = () => {
     'Database Services',
     'Automation',
     'Web Development',
-    'IT Services'
+    'IT Services',
+    'Micro SAAS'
   ];
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');

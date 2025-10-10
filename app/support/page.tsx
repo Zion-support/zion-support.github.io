@@ -1,13 +1,19 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, BookOpen, FileText, Video, Download } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All' },
+    { id: 'general', name: 'General' },
+    { id: 'technical', name: 'Technical' },
+    { id: 'billing', name: 'Billing' },
+    { id: 'api', name: 'API' }
+  ];
 
   const faqs = [
     {
@@ -27,11 +33,28 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.'
+      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.',
+      category: 'general'
     },
     {
       question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
+      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.',
+      category: 'technical'
+    },
+    {
+      question: 'How do I integrate your API?',
+      answer: 'We provide comprehensive API documentation, SDKs, and integration guides. Our technical team can also assist with custom integrations.',
+      category: 'api'
+    },
+    {
+      question: 'What are your pricing models?',
+      answer: 'We offer flexible pricing including monthly subscriptions, usage-based pricing, and custom enterprise solutions. Contact us for a detailed quote.',
+      category: 'billing'
+    },
+    {
+      question: 'Is my data secure?',
+      answer: 'Yes, we implement enterprise-grade security measures including encryption, access controls, and compliance with industry standards.',
+      category: 'technical'
     }
   ];
 
@@ -40,23 +63,56 @@ const SupportPage: React.FC = () => {
       icon: Phone,
       title: 'Phone Support',
       description: 'Call us for immediate assistance',
-      contact: '+1-302-464-0950',
+      contact: '+1 (302) 464-0950',
       availability: '24/7'
     },
     {
       icon: Mail,
       title: 'Email Support',
       description: 'Get detailed responses to your questions',
-      contact: 'support@ziontechgroup.com',
-      hours: '24/7'
+      contact: 'kleber@ziontechgroup.com',
+      availability: '24/7'
     },
     {
       icon: MessageCircle,
       title: 'Live Chat',
+      description: 'Chat with our support team in real-time',
       contact: 'Available on website',
       availability: '24/7'
     }
   ];
+
+  const resources = [
+    {
+      icon: BookOpen,
+      title: 'Documentation',
+      description: 'Comprehensive guides and API references',
+      link: '/docs'
+    },
+    {
+      icon: Video,
+      title: 'Video Tutorials',
+      description: 'Step-by-step video guides',
+      link: '/tutorials'
+    },
+    {
+      icon: FileText,
+      title: 'Knowledge Base',
+      description: 'Searchable articles and FAQs',
+      link: '/knowledge-base'
+    },
+    {
+      icon: Download,
+      title: 'Downloads',
+      description: 'SDKs, tools, and resources',
+      link: '/downloads'
+    }
+  ];
+
+  const filteredFaqs = faqs.filter(faq => 
+    (selectedCategory === 'all' || faq.category === selectedCategory) &&
+    (searchQuery === '' || faq.question.toLowerCase().includes(searchQuery.toLowerCase()) || faq.answer.toLowerCase().includes(searchQuery.toLowerCase()))
+  );
 
   return (
     <>
@@ -65,8 +121,6 @@ const SupportPage: React.FC = () => {
         <meta name="description" content="Get technical support and help for your AI and IT solutions. 24/7 support, documentation, and expert assistance from Zion Tech Group." />
         <meta name="keywords" content="technical support, AI support, IT help, customer service, documentation, troubleshooting" />
       </Helmet>
-      
-      <Navigation />
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -102,7 +156,7 @@ const SupportPage: React.FC = () => {
                   placeholder="Search for help articles, guides, and solutions..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-colors"
                 />
               </div>
             </div>
@@ -125,6 +179,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Support Channels */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -137,13 +193,42 @@ const SupportPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {supportChannels.map((channel, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
-                  <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <channel.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{channel.title}</h3>
                   <p className="text-gray-300 mb-4">{channel.description}</p>
                   <p className="text-cyan-400 font-medium">{channel.contact}</p>
                   <p className="text-sm text-gray-400 mt-2">{channel.availability}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Resources */}
+        <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-white mb-4">Resources</h2>
+              <p className="text-gray-300">Access our comprehensive support resources</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {resources.map((resource, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300 group">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <resource.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
+                    {resource.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
+                  <a 
+                    href={resource.link}
+                    className="text-cyan-400 hover:text-cyan-300 font-medium text-sm"
+                  >
+                    Access Resource →
+                  </a>
                 </div>
               ))}
             </div>
@@ -158,8 +243,8 @@ const SupportPage: React.FC = () => {
               <p className="text-xl text-gray-300">Find answers to common questions</p>
             </div>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
+              {filteredFaqs.map((faq, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
                 </div>
@@ -178,22 +263,26 @@ const SupportPage: React.FC = () => {
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">Emergency Support</h3>
-                  <p className="text-gray-300">24/7 for critical issues</p>
+                  <h3 className="text-lg font-semibold text-white mb-2 flex items-center">
+                    <Clock className="w-5 h-5 mr-2 text-cyan-400" />
+                    Emergency Support
+                  </h3>
+                  <p className="text-gray-300 mb-2">24/7 for critical issues</p>
                   <p className="text-gray-300">Emergency support included</p>
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-white mb-2">General Inquiries</h3>
-                  <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
+                  <h3 className="text-lg font-semibold text-white mb-2 flex items-center">
+                    <Clock className="w-5 h-5 mr-2 text-cyan-400" />
+                    General Inquiries
+                  </h3>
+                  <p className="text-gray-300 mb-2">Monday - Friday: 9:00 AM - 6:00 PM EST</p>
+                  <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM EST</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
       </div>
-      
-      <Footer />
     </>
   );
 };
