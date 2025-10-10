@@ -504,8 +504,7 @@ const ITConsultingPage: React.FC = () => {
               >
                 {category.name}
               </button>
-            ))}
-          </div>
+            </div>
         </div>
       </section>
 
@@ -593,10 +592,8 @@ const ITConsultingPage: React.FC = () => {
                   </a>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">

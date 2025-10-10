@@ -105,10 +105,8 @@ export default function DocsPage() {
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Documentation Categories */}
       <section className="py-16 px-4">
@@ -144,13 +142,10 @@ export default function DocsPage() {
                         <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                       </div>
                     </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+                  </div>
         </div>
-      </section>
+              </div>
+          </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">

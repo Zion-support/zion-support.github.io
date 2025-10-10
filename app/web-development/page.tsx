@@ -220,8 +220,8 @@ const $1: React.FC = () => {
                   >
                     Get Started;
                   </a>,
-                </div>))}
-            </div>
+                </div>
+              ))}
           </section>
 
           {/* Technologies */}
@@ -246,7 +246,6 @@ const $1: React.FC = () => {
                   <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3><p className="text-sm text-gray-300">{tech.description}</p>
                 </div>
               ))}
-            </div>
           </section>
 
           {/* Process */}
@@ -273,7 +272,6 @@ const $1: React.FC = () => {
                     <span className="text-2xl font-bold text-white">{step.step}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}</h3><p className="text-gray-300">{step.description}</p>
                 </div>
               ))}
-            </div>
           </section>
 
           {/* CTA Section */}

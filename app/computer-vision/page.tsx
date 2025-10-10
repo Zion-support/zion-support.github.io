@@ -27,16 +27,12 @@ import React from 'react';
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

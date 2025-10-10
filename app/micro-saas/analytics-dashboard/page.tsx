@@ -109,10 +109,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* Metrics Section */}
         <section className="py-16 px-4 bg-slate-800/30">
@@ -132,10 +130,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
                   <div className="text-gray-300">{metric.label}</div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* Benefits Section */}
         <section className="py-16 px-4">
@@ -153,8 +149,7 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                     <span className="text-gray-300 text-lg">{benefit}</span>
                   </div>
-                ))}
-              </div>
+              ))}
               <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
                 <div className="space-y-4"></div>

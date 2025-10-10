@@ -69,10 +69,8 @@ const DemoPage: React.FC = () => {
                     Watch Demo
                   </button>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">

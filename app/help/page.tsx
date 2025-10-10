@@ -19,10 +19,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits
@@ -31,10 +29,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
               Experience the power of our page solutions for your business.
             </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
     </div>
   );

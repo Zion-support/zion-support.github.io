@@ -49,16 +49,12 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
       </section>
 
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

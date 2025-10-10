@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
@@ -110,85 +109,6 @@ const ConsultationPage: React.FC = () => {
     setSelectedType(typeId);
     // In a real app, this would open a booking modal or redirect to a booking page
     console.log(`Booking consultation: ${typeId}`);
-=======
-import { Calendar, Clock, User, Mail, Phone, MessageCircle, CheckCircle, ArrowRight, Zap, Target, Users, Award } from 'lucide-react';
-
-const ConsultationPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    preferredTime: '',
-    urgency: 'medium'
-  });
-
-  const services = [
-    {
-      icon: Zap,
-      title: 'AI Strategy & Implementation',
-      description: 'Develop and implement AI solutions tailored to your business needs',
-      duration: '60-90 minutes'
-    },
-    {
-      icon: Target,
-      title: 'Cloud Migration Planning',
-      description: 'Plan and execute seamless cloud migration strategies',
-      duration: '45-60 minutes'
-    },
-    {
-      icon: Users,
-      title: 'Digital Transformation',
-      description: 'Guide your organization through comprehensive digital transformation',
-      duration: '90-120 minutes'
-    },
-    {
-      icon: Award,
-      title: 'Cybersecurity Assessment',
-      description: 'Evaluate and strengthen your cybersecurity posture',
-      duration: '60-90 minutes'
-    }
-  ];
-
-  const consultationTypes = [
-    {
-      title: 'Discovery Call',
-      description: 'Free 30-minute consultation to understand your needs',
-      duration: '30 minutes',
-      price: 'Free',
-      features: ['Needs assessment', 'Solution overview', 'Next steps planning']
-    },
-    {
-      title: 'Strategy Session',
-      description: 'Comprehensive consultation with detailed recommendations',
-      duration: '90 minutes',
-      price: '$500',
-      features: ['Detailed analysis', 'Custom recommendations', 'Implementation roadmap', 'Follow-up support']
-    },
-    {
-      title: 'Executive Briefing',
-      description: 'High-level strategic consultation for leadership teams',
-      duration: '2 hours',
-      price: '$1,000',
-      features: ['Executive summary', 'Strategic recommendations', 'Risk assessment', 'ROI analysis']
-    }
-  ];
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
   };
 
   return (
@@ -207,8 +127,7 @@ const ConsultationPage: React.FC = () => {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Consultation</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
@@ -235,40 +154,9 @@ const ConsultationPage: React.FC = () => {
                 <div className="text-left">
                   <div className="text-2xl font-bold">Proven Results</div>
                   <div className="text-gray-400">98% client satisfaction</div>
-=======
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Expert Consultation
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get personalized guidance from our expert team. Whether you need AI strategy, 
-              cloud migration, or digital transformation, we're here to help.
-            </p>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-12 text-center">Consultation Services</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="w-6 h-6 text-slate-900" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-300 mb-3">{service.description}</p>
-                  <p className="text-cyan-400 text-sm font-medium">{service.duration}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* Consultation Types */}
         <section className="py-16 px-4">
@@ -300,10 +188,8 @@ const ConsultationPage: React.FC = () => {
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* Contact Form */}
         <section className="py-16 px-4">
@@ -544,10 +430,8 @@ const ConsultationPage: React.FC = () => {
                     Book Consultation
                   </button>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* Expert Team */}
         <section className="py-16 px-4">
@@ -573,13 +457,10 @@ const ConsultationPage: React.FC = () => {
                       <span key={skillIndex} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-xs">
                         {skill}
                       </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+                    </div>
+        </div>
+              </div>
+          </section>
 
         {/* Contact Information */}
         <section className="py-16 px-4">
@@ -653,10 +534,8 @@ const ConsultationPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{service}</h3>
                 <p className="text-gray-300">Expert guidance and strategic planning for your technology initiatives.</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Process Section */}
       <section className="py-16 px-4 bg-white/5">

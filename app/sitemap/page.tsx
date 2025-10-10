@@ -60,8 +60,7 @@ const SitemapPage: React.FC = () => {
                   {page.path}
                 </p>
               </div>
-            ))}
-          </div>
+              ))}
         </div>
 
         <div className="mt-12 bg-blue-50 rounded-lg p-8"></div>

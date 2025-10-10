@@ -138,10 +138,8 @@ const EnterprisePage: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -169,10 +167,8 @@ const EnterprisePage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Solutions
@@ -186,10 +182,8 @@ const EnterprisePage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4">

@@ -267,9 +267,8 @@ const BlockchainPage: React.FC = () => {
                             <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          ))}
-                        </div>
-                      </div>
+                          </div>
+        </div>
 
                       <div className="mb-6">
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
@@ -287,9 +286,7 @@ const BlockchainPage: React.FC = () => {
                         Get Blockchain Quote
                       </button>
                     </div>
-                  ))}
               </div>
-            </div>
           </section>
         ))}
 

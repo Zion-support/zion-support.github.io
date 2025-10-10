@@ -77,8 +77,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 Learn More <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
-          ))}
-        </div>
+              ))}
 
         <div className="text-center mt-12">
           <a

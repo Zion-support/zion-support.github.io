@@ -52,10 +52,8 @@ const PageBackupPage: React.FC = () => {
                 <p className="text-gray-300">{feature.description}</p>
               </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

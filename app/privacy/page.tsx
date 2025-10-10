@@ -120,8 +120,7 @@ export default function PrivacyPage() {
                       ))}
                     </ul>
                   </div>
-                ))}
-              </div>
+              ))}
             </section>
 
             {/* How We Use Information */}
@@ -138,8 +137,7 @@ export default function PrivacyPage() {
                       <p className="text-gray-700">{purpose.description}</p>
                     </div>
                   </div>
-                ))}
-              </div>
+              ))}
             </section>
 
             {/* Data Security */}
@@ -176,8 +174,7 @@ export default function PrivacyPage() {
                     </div>
                     <p className="text-gray-700">{right.description}</p>
                   </div>
-                ))}
-              </div>
+              ))}
             </section>
 
             {/* Contact Information */}

@@ -25,10 +25,8 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                   ))}
                 </ul>
 </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Use Cases Section */}
       <section className="py-20 px-4">
@@ -50,10 +48,8 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -76,10 +72,8 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* CTA Section */}
           <p className="text-xl text-gray-300 mb-8">

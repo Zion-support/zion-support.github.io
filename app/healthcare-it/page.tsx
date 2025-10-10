@@ -43,7 +43,6 @@ import SEOOptimizer from '../components/SEOOptimizer';
     }
   ];
 
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
       <SEOOptimizer 
@@ -91,10 +90,8 @@ import SEOOptimizer from '../components/SEOOptimizer';
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -117,10 +114,8 @@ import SEOOptimizer from '../components/SEOOptimizer';
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
 
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* CTA Section */}
 <section className="py-20 px-4">

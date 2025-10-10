@@ -86,7 +86,6 @@ export default function TermsPage() {
                   </div>
                 </div>
               ))}
-            </div>
 
             <div className="mt-16 bg-gray-50 rounded-lg p-8"></div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Contact Information</h3>

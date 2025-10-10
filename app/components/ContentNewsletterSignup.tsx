@@ -68,6 +68,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
 
   if (isSubscribed) {
     return (
+    <>
       <div className="bg-gradient-to-r from-green-500 to-blue-600 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -91,6 +92,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   }
 
   return (
+    <>
     <div className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -112,7 +114,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
                   <span className="text-blue-100">{feature.text}</span>
                 </div>
               ))}
-            </div>
           </div>
 
           {/* Newsletter Form */}

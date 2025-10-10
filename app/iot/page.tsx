@@ -267,9 +267,8 @@ const IoTPage: React.FC = () => {
                             <span key={techIndex} className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">
                               {tech}
                             </span>
-                          ))}
-                        </div>
-                      </div>
+                          </div>
+        </div>
 
                       <div className="mb-6"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Business Benefits:</h4>
@@ -287,9 +286,7 @@ const IoTPage: React.FC = () => {
                         Get IoT Quote
                       </button>
                     </div>
-                  ))}
               </div>
-            </div>
           </section>
         ))}
 

@@ -104,10 +104,8 @@ const AiSalesAutomationPage: React.FC = () => {
                     </ul>
                   )}
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* Benefits Section */}
         <section className="py-20 px-4">
@@ -129,10 +127,8 @@ const AiSalesAutomationPage: React.FC = () => {
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">

@@ -135,10 +135,8 @@ const AccessibilityPage: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* Standards Compliance */}
         <section className="py-20 px-4">
@@ -167,10 +165,8 @@ const AccessibilityPage: React.FC = () => {
                     {standard.status}
                   </span>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">

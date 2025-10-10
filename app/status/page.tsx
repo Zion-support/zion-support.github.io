@@ -201,10 +201,8 @@ export default function StatusPage() {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Recent Incidents */}
       <section className="py-16 px-4">
@@ -242,10 +240,8 @@ export default function StatusPage() {
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')}</span>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              </div>
+          </section>
 
       {/* Performance Metrics */}
       <section className="py-16 px-4">

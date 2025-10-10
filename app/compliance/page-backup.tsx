@@ -95,10 +95,8 @@ const PageBackupPage: React.FC = () => {
                     </ul>
                   )}
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+              </div>
+          </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4">

@@ -107,6 +107,7 @@ export default function APIDocsPage() {
   })).filter(category => category.endpoints.length > 0);
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
         title="API Documentation - Zion Tech Group"
@@ -226,13 +227,9 @@ export default function APIDocsPage() {
                         </pre>
                       </div>
                     </div>
-                  ))}
-                </div>
               </div>
-            ))}
-          </div>
         </div>
-      </section>
+          </section>
 
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
