@@ -324,14 +324,10 @@
   .neon-glow-pink {
     animation: none !important;
     text-shadow: none !important;
-<<<<<<< HEAD
-=======
   }
   
   .text-6xl {
     font-size: 2.5rem;
-
->>>>>>> origin/main
   }
 }
 
