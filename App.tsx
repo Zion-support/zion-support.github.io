@@ -125,6 +125,10 @@ const AISupplyChainOptimizationProPage = React.lazy(() => import('./app/ai-suppl
 const AIVideoGeneratorPage = React.lazy(() => import('./app/ai-video-generator/page'));
 const AIWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'));
 
+// New AI Services
+const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AIDocumentScannerPage = React.lazy(() => import('./app/ai-document-scanner/page'));
+
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
@@ -260,6 +264,8 @@ const App: React.FC = memo(() => {
                       <Route path="/ai-supply-chain-optimization-pro" element={<AISupplyChainOptimizationProPage />} />
                       <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                      <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                      <Route path="/ai-document-scanner" element={<AIDocumentScannerPage />} />
 
                       {/* IT Services Pages */}
                       <Route path="/cloud-migration" element={<CloudMigrationPage />} />
