@@ -119,15 +119,7 @@ export class AccessibilityEnhancer {
       const nextIndex = currentIndex < this.focusableElements.length - 1 ? currentIndex + 1 : 0;
       this.focusableElements[nextIndex]?.focus();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-    focusableElements[nextIndex]?.focus();
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     event.preventDefault();
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
   }
 
   /**
@@ -362,28 +354,3 @@ export class AccessibilityEnhancer {
     this.skipLinks = [];
     this.landmarks = [];
   }
-<<<<<<< HEAD
-}
-=======
-}
-
-// Create global instance
-export const accessibilityEnhancer = new AccessibilityEnhancer();
-
-// Export utility functions
-export const announceToScreenReader = (message: string) => {
-  accessibilityEnhancer.announce(message);
-};
-
-export const updateFocusableElements = () => {
-  accessibilityEnhancer.updateFocusableElements();
-};
-
-export const focusFirstElement = () => {
-  accessibilityEnhancer.focusFirst();
-};
-
-export const focusLastElement = () => {
-  accessibilityEnhancer.focusLast();
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
