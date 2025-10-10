@@ -1,169 +1,49 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {,
-=======
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
-import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
-=======
-import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
-import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
-
-const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
-  const features = [
-    {
-      title: 'AI-Powered Solutions',
-      description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
-      icon: Zap;,},
-    {title: 'Enterprise Security',
-      description: 'Bank-level security and compliance to protect your data and operations.',
-      icon: Shield;,},
-    {title: 'Proven Results',
-      description: 'Join 500+ companies that have transformed their operations with our solutions.',
-      icon: Star;,},
-    {title: 'Expert Support',
-      description: '24/7 support from our team of AI and IT specialists.',
-<<<<<<< HEAD
-      icon: Users;,}];
-=======
-      icon: Users
-    }
-  ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
-=======
-
-  const benefits = [
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
-
-<<<<<<< HEAD
-  return(<div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">)</div>
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md: text-4xl font-bold mb-4">,</h2>
-            Transform Your Business with AI;
-          </h2>
-          <p className="text-xl text-purple-100 max-w-3xl mx-auto">Discover how our AI-powered solutions can revolutionize your operations and drive growth.</p>
-          </p>
-        </div>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {/* Features Section */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12">,</div>
-=======
-        {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
-          {features.map((feature, index) => (
-            <div key={index}className="text-center">
-              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <p className="text-purple-100 text-sm">{feature.description</p>}</p>
-=======
-              <p className="text-purple-100 text-sm">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
-        {/* Features Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
-          {features.map((feature, index) => (
-            <div key={index} className="text-center">
-              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <feature.icon className="w-8 h-8 text-cyan-400" />
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
-=======
-              <p className="text-purple-100 text-sm">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
-              <p className="text-purple-100 text-sm">{feature.description}</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
-            </div>
-          ))}
-        </div>
-
-<<<<<<< HEAD
-        {/* CTA Section */} <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-=======
-        {/* CTA Section */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Get Started?
-          </h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Schedule a free consultation with our AI experts and discover how we can transform your business.</p>
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2">,</button>
-              Schedule Free Consultation;
-              <ArrowRight className="w-4 h-4" />
-            </button>
-            <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-bold hover: bg-white/10 transition-all duration-300">,</button>
-              Download Case Study;
-            </button>
-          </div>
-        </div>
-=======
   return (
-    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
-        <p className="text-xl text-gray-300 mb-6">
-          Join thousands of businesses already using our AI and IT solutions
-        </p>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {features.map((feature, index) => (
-          <div key={index} className="text-center">
-            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
-              <feature.icon className="w-8 h-8 text-white" />
+    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-cyan-500/20 py-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between">
+          <div className="flex items-center space-x-4 mb-4 md:mb-0">
+            <div className="flex items-center space-x-2">
+              <Zap className="w-5 h-5 text-cyan-400" />
+              <span className="text-white font-semibold">New AI Solutions Available</span>
             </div>
-            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-            <p className="text-gray-300 text-sm">{feature.description}</p>
+            <div className="hidden md:flex items-center space-x-4 text-sm text-gray-300">
+              <div className="flex items-center space-x-1">
+                <Shield className="w-4 h-4 text-green-400" />
+                <span>Enterprise Security</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Star className="w-4 h-4 text-yellow-400" />
+                <span>5-Star Rated</span>
+              </div>
+              <div className="flex items-center space-x-1">
+                <Users className="w-4 h-4 text-blue-400" />
+                <span>500+ Clients</span>
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
-
-      <div className="text-center">
-        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
-          Get Started Now
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
+          
+          <div className="flex items-center space-x-4">
+            <a
+              href="/consultation"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center space-x-2"
+            >
+              <span>Get Free Consultation</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <a
+              href="tel:+13024640950"
+              className="text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+            >
+              (302) 464-0950
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

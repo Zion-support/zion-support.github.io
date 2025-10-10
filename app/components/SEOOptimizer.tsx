@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-'use client';
-interface SEOOptimizerProps {title: string;,}
-  description: string;,
-  keywords?: string[]
-=======
 'use client';
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -13,45 +6,77 @@ interface SEOOptimizerProps {
   title: string;
   description: string;
   keywords?: string[];
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
   canonicalUrl?: string;
-  structuredData?: object;}const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
+  structuredData?: object;
+}
+
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
   description,
   keywords = [],
   canonicalUrl,
-  structuredData;}) => {
-  const keywordsString = keywords.join(', ');
+  structuredData
+}) => {
+  useEffect(() => {
+    // Update page title
+    document.title = title;
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', description);
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = description;
+      document.head.appendChild(meta);
+    }
 
-  return(<Helmet />)
+    // Update meta keywords
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', keywords.join(', '));
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = keywords.join(', ');
+      document.head.appendChild(meta);
+    }
+
+    // Update canonical URL
+    if (canonicalUrl) {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', canonicalUrl);
+      } else {
+        const link = document.createElement('link');
+        link.rel = 'canonical';
+        link.href = canonicalUrl;
+        document.head.appendChild(link);
+      }
+    }
+
+    // Add structured data
+    if (structuredData) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(structuredData);
+      document.head.appendChild(script);
+    }
+  }, [title, description, keywords, canonicalUrl, structuredData]);
+
+  return (
+    <Helmet>
       <title>{title}</title>
-      <meta name="description" content={description}/>
-      <meta name="keywords" content={keywordsString}/>
-      <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={canonicalUrl}/>
-      
-      {/* Open Graph */} <meta property="og: title" content={title,}/>
-      <meta property="og: description" content={description,}/>
-      <meta property="og: type" content="website" />,
-      <meta property="og: url" content={canonicalUrl,}/>
-      
-<<<<<<< HEAD
-      {/* Twitter Card */} <meta name="twitter: card" content="summary_large_image" />,
-      <meta name="twitter: title" content={title,}/>
-      <meta name="twitter: description" content={description,}/>
-=======
-      {/* Twitter Card */}
+      <meta name="description" content={description} />
+      <meta name="keywords" content={keywords.join(', ')} />
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
     </Helmet>
   );
 };
