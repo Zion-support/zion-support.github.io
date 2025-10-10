@@ -1,7 +1,7 @@
 'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+import React, { useCallback, useState, useEffect, memo } from 'react';
 import { 
-  Phone, Mail, MapPin, Clock, Zap, Shield, Brain, Cpu, Target, BarChart, 
+  Phone, Mail, MapPin, Zap, Shield, Brain, Cpu, Target, BarChart, 
   MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Users, Award, 
   Lock, Database, Cloud, Code, Smartphone, Settings, FileText, Search, Bot, Palette, 
   Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, 
