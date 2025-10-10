@@ -40,6 +40,7 @@ const ItServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const itServices = [
+<<<<<<< HEAD
     {
       id: 1,
       title: 'Cloud Infrastructure & Migration',
@@ -255,6 +256,103 @@ const ItServicesPage: React.FC = () => {
       price: 'Starting at $1,500/month',
       marketPrice: '$2500-8000/month',
       benefits: ['Improved efficiency', 'Reduced errors', 'Cost savings', 'Scalable automation']
+=======
+    { 
+      name: 'Cloud Infrastructure & Migration', 
+      href: '/cloud-services', 
+      icon: Cloud, 
+      description: 'Complete cloud solutions including AWS, Azure, and GCP migration and management',
+      price: 'Starting at $2,500/month',
+      features: ['Cloud architecture design', 'Migration planning & execution', 'Cost optimization', 'Security compliance', '24/7 monitoring', 'Disaster recovery']
+    },
+    { 
+      name: 'DevOps & CI/CD Pipeline', 
+      href: '/devops', 
+      icon: Settings, 
+      description: 'Automated development workflows and deployment pipelines for faster delivery',
+      price: 'Starting at $3,000/month',
+      features: ['CI/CD pipeline setup', 'Container orchestration', 'Infrastructure as Code', 'Automated testing', 'Deployment automation', 'Performance monitoring']
+    },
+    { 
+      name: 'Database Management & Optimization', 
+      href: '/database', 
+      icon: Database, 
+      description: 'Comprehensive database services including design, optimization, and maintenance',
+      price: 'Starting at $1,800/month',
+      features: ['Database design & architecture', 'Performance optimization', 'Backup & recovery', 'Security hardening', 'Migration services', '24/7 support']
+    },
+    { 
+      name: 'Cybersecurity Solutions', 
+      href: '/cybersecurity', 
+      icon: Shield, 
+      description: 'Advanced security solutions to protect your digital assets and ensure compliance',
+      price: 'Starting at $4,000/month',
+      features: ['Security assessment', 'Threat detection', 'Vulnerability management', 'Compliance auditing', 'Incident response', 'Security training']
+    },
+    { 
+      name: 'Managed IT Services', 
+      href: '/managed-it', 
+      icon: Settings, 
+      description: 'Complete IT management including helpdesk, monitoring, and maintenance',
+      price: 'Starting at $2,200/month',
+      features: ['24/7 helpdesk support', 'Proactive monitoring', 'Patch management', 'Asset management', 'User training', 'Vendor management']
+    },
+    { 
+      name: 'IT Strategy & Consulting', 
+      href: '/it-consulting', 
+      icon: Globe, 
+      description: 'Strategic IT consulting to align technology with business objectives',
+      price: 'Starting at $1,500/month',
+      features: ['Technology roadmap', 'Vendor evaluation', 'Cost analysis', 'Digital transformation', 'Change management', 'Training programs']
+    },
+    { 
+      name: 'Data Analytics & Business Intelligence', 
+      href: '/data-analytics', 
+      icon: Database, 
+      description: 'Transform your data into actionable insights with advanced analytics solutions',
+      price: 'Starting at $2,800/month',
+      features: ['Data warehouse design', 'ETL/ELT processes', 'Dashboard development', 'Predictive analytics', 'Data governance', 'Real-time reporting']
+    },
+    { 
+      name: 'Mobile Application Development', 
+      href: '/mobile-development', 
+      icon: Smartphone, 
+      description: 'Native and cross-platform mobile applications for iOS and Android',
+      price: 'Starting at $8,000/project',
+      features: ['Native iOS/Android apps', 'Cross-platform development', 'UI/UX design', 'API integration', 'App store deployment', 'Maintenance & updates']
+    },
+    { 
+      name: 'Web Application Development', 
+      href: '/web-development', 
+      icon: Globe, 
+      description: 'Custom web applications and e-commerce solutions built with modern technologies',
+      price: 'Starting at $6,000/project',
+      features: ['Custom web applications', 'E-commerce solutions', 'API development', 'Responsive design', 'Performance optimization', 'SEO optimization']
+    },
+    { 
+      name: 'Process Automation & RPA', 
+      href: '/process-automation', 
+      icon: Zap, 
+      description: 'Automate repetitive business processes to improve efficiency and reduce costs',
+      price: 'Starting at $3,500/month',
+      features: ['Process analysis', 'Automation design', 'RPA implementation', 'Workflow optimization', 'Integration services', 'Training & support']
+    },
+    { 
+      name: 'Network Infrastructure & Security', 
+      href: '/network-solutions', 
+      icon: Globe, 
+      description: 'Complete network design, implementation, and security solutions',
+      price: 'Starting at $2,000/month',
+      features: ['Network design & implementation', 'Firewall configuration', 'VPN setup', 'Wireless solutions', 'Network monitoring', 'Security hardening']
+    },
+    { 
+      name: 'IT Support & Helpdesk', 
+      href: '/it-support', 
+      icon: Settings, 
+      description: 'Comprehensive IT support services for all your technology needs',
+      price: 'Starting at $1,200/month',
+      features: ['24/7 technical support', 'Remote assistance', 'Hardware maintenance', 'Software installation', 'User training', 'Issue resolution']
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
     }
   ];
 
@@ -323,15 +421,29 @@ const ItServicesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {itServices.map((service, index) => (
-                <Link
+                <div
                   key={index}
+<<<<<<< HEAD
                   to={service.href}
                   className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
+=======
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group"
+                >
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                   <service.icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {service.name}
                   </h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
                   <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
                     <span className="text-sm font-medium">Learn More</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -347,8 +459,11 @@ const ItServicesPage: React.FC = () => {
                     {stat.icon}
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
+<<<<<<< HEAD
                   <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300">{stat.label}</div>
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                 </div>
               ))}
             </div>

@@ -1230,6 +1230,7 @@ const HomePage: React.FC = memo(() => {
               improve efficiency, and stay ahead of the competition.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <button 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                 aria-label="Get started with our AI and IT solutions"
@@ -1243,6 +1244,15 @@ const HomePage: React.FC = memo(() => {
               >
                 View Our Work
               </button>
+=======
+              <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
+                Call +1 302 464 0950
+                <ArrowRight className="inline-block ml-2 w-5 h-5" />
+              </a>
+              <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
+                Email Us
+              </a>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
             </div>
           </div>
         </section>
@@ -1306,6 +1316,7 @@ const HomePage: React.FC = memo(() => {
                 Let's discuss how our AI and IT solutions can help you achieve your goals.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                 <button 
                   className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
                   aria-label="Contact us to discuss your business transformation needs"
@@ -1321,6 +1332,14 @@ const HomePage: React.FC = memo(() => {
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 =======
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-4e58
+=======
+                <a href="tel:+13024640950" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center">
+                  Call +1 302 464 0950
+                </a>
+                <a href="mailto:kleber@ziontechgroup.com" className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 text-center">
+                  Email kleber@ziontechgroup.com
+                </a>
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
               </div>
             </div>
           </div>
