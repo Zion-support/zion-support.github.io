@@ -59,12 +59,35 @@ const CareersPage: React.FC = () => {
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
       </Helmet>
-              </div>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Join Our
+              <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Team
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Work on cutting-edge AI and IT solutions that shape the future of technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white font-bold py-4 px-8 rounded-lg hover:from-purple-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                View Open Positions
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn About Culture
+              </button>
             </div>
           </div>
+        </section>
 
-          {/* Open Positions */}
-          <div className="mb-16">
+        {/* Open Positions */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Open Positions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {openPositions.map((position, index) => (
@@ -103,13 +126,30 @@ const CareersPage: React.FC = () => {
               ))}
             </div>
           </div>
+        </section>
 
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Don't See Your Role?
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-8 text-center">Why Join Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                  <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-4" />
+                  <p className="text-gray-300">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Join Our Team?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-300 mb-8">
               We're always looking for talented individuals to join our team. 
               Send us your resume and let's discuss how you can contribute.
             </p>
@@ -128,7 +168,7 @@ const CareersPage: React.FC = () => {
               </a>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );
