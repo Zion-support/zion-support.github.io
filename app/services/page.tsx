@@ -30,6 +30,158 @@ const ServicesPage: React.FC = () => {
     },
     {
       icon: Brain,
+      title: 'AI Voice Synthesis',
+      description: 'Create natural-sounding voiceovers and speech synthesis with AI-powered voice cloning technology.',
+      features: ['Voice Cloning', 'Text-to-Speech', 'Multi-language Support', 'Emotion Control', 'Real-time Synthesis'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Video Generation',
+      description: 'Generate professional videos from text prompts with AI-powered video creation and editing tools.',
+      features: ['Text-to-Video', 'Scene Generation', 'Voice Integration', 'Custom Branding', 'Multiple Formats'],
+      price: 'Starting at $299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Code Assistant',
+      description: 'Intelligent code completion, debugging, and optimization for multiple programming languages.',
+      features: ['Code Completion', 'Bug Detection', 'Performance Optimization', 'Documentation Generation', 'Multi-language Support'],
+      price: 'Starting at $99/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Quality Assurance',
+      description: 'Automated testing and quality assurance with AI-powered test case generation and execution.',
+      features: ['Test Generation', 'Automated Testing', 'Bug Detection', 'Performance Testing', 'Regression Testing'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Sentiment Analysis',
+      description: 'Analyze customer sentiment and emotions across all communication channels in real-time.',
+      features: ['Real-time Analysis', 'Multi-channel Support', 'Emotion Detection', 'Trend Analysis', 'Custom Dashboards'],
+      price: 'Starting at $149/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Mental Health Companion',
+      description: 'AI-powered mental health support with personalized therapy sessions and wellness tracking.',
+      features: ['Personalized Therapy', 'Mood Tracking', 'Crisis Intervention', 'Progress Monitoring', 'HIPAA Compliant'],
+      price: 'Starting at $79/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Space Technology',
+      description: 'Advanced AI solutions for space exploration, satellite management, and space data analysis.',
+      features: ['Satellite Management', 'Space Data Analysis', 'Mission Planning', 'Orbital Mechanics', 'Space Weather'],
+      price: 'Starting at $2,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Transportation',
+      description: 'Intelligent transportation systems with autonomous vehicle management and traffic optimization.',
+      features: ['Autonomous Vehicles', 'Traffic Optimization', 'Route Planning', 'Fleet Management', 'Safety Systems'],
+      price: 'Starting at $1,999/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Telepathic Interface',
+      description: 'Revolutionary brain-computer interface technology for direct neural communication.',
+      features: ['Neural Interface', 'Thought Recognition', 'Direct Control', 'Medical Applications', 'Research Tools'],
+      price: 'Custom Pricing',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Smart Calendar',
+      description: 'Intelligent calendar management with AI-powered scheduling and meeting optimization.',
+      features: ['Smart Scheduling', 'Meeting Optimization', 'Conflict Resolution', 'Time Blocking', 'Integration'],
+      price: 'Starting at $29/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Project Manager',
+      description: 'AI-powered project management with intelligent resource allocation and timeline optimization.',
+      features: ['Resource Allocation', 'Timeline Optimization', 'Risk Assessment', 'Team Coordination', 'Progress Tracking'],
+      price: 'Starting at $199/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Task Manager',
+      description: 'Intelligent task management with AI prioritization and automated workflow optimization.',
+      features: ['Task Prioritization', 'Workflow Automation', 'Deadline Management', 'Team Collaboration', 'Progress Analytics'],
+      price: 'Starting at $49/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Ops',
+      description: 'AI-powered IT operations with intelligent monitoring, incident response, and system optimization.',
+      features: ['Intelligent Monitoring', 'Incident Response', 'System Optimization', 'Predictive Maintenance', 'Automated Recovery'],
+      price: 'Starting at $599/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Voice Processing',
+      description: 'Advanced voice processing with speech recognition, voice analysis, and audio enhancement.',
+      features: ['Speech Recognition', 'Voice Analysis', 'Audio Enhancement', 'Noise Reduction', 'Multi-language'],
+      price: 'Starting at $179/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Social Media Manager',
+      description: 'Automated social media management with AI content creation and engagement optimization.',
+      features: ['Content Creation', 'Post Scheduling', 'Engagement Analysis', 'Trend Monitoring', 'Multi-platform'],
+      price: 'Starting at $89/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI ML Platform',
+      description: 'Comprehensive machine learning platform with model training, deployment, and management tools.',
+      features: ['Model Training', 'Model Deployment', 'Data Processing', 'Experiment Tracking', 'Model Monitoring'],
+      price: 'Starting at $799/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI NLP',
+      description: 'Natural language processing solutions with text analysis, language understanding, and translation.',
+      features: ['Text Analysis', 'Language Understanding', 'Translation', 'Sentiment Analysis', 'Entity Recognition'],
+      price: 'Starting at $249/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Voice Cloning',
+      description: 'High-quality voice cloning technology for creating realistic voice replicas and synthetic speech.',
+      features: ['Voice Replication', 'Synthetic Speech', 'Emotion Control', 'Multi-language', 'Real-time Processing'],
+      price: 'Starting at $399/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
+      title: 'AI Insurance',
+      description: 'AI-powered insurance solutions with risk assessment, claims processing, and fraud detection.',
+      features: ['Risk Assessment', 'Claims Processing', 'Fraud Detection', 'Policy Optimization', 'Customer Service'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services'
+    },
+    {
+      icon: Brain,
       title: 'AI Marketing Automation',
       description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
       features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
