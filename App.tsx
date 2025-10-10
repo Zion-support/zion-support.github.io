@@ -4,15 +4,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
-import { PageLoader } from './src/components/LoadingStates';
+import { PageLoader } from './src/components/EnhancedLoadingStates';
 import EnhancedErrorBoundary from './src/components/EnhancedErrorBoundary';
-import SEOHead from './src/components/SEOHead';
+import SEOHead from './src/components/EnhancedSEOHead';
 import SkipLink from './src/components/SkipLink';
 import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
 import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
 import ContentShowcase from './src/components/ContentShowcase';
 import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
+import { AnalyticsProvider } from './src/components/Analytics';
 
 // Structured data for SEO
 const structuredData = {
@@ -88,9 +89,10 @@ const App: React.FC = memo(() => {
   return (
     <EnhancedErrorBoundary>
       <HelmetProvider>
-        <AppWithPerformanceMonitoring>
-          <SEOHead />
-          <Router>
+        <AnalyticsProvider>
+          <AppWithPerformanceMonitoring>
+            <SEOHead />
+            <Router>
             <div className="min-h-screen bg-white">
               <SkipLink to="#main-content">Skip to main content</SkipLink>
               <Navigation />
@@ -130,8 +132,9 @@ const App: React.FC = memo(() => {
               </main>
               <Footer />
             </div>
-          </Router>
-        </AppWithPerformanceMonitoring>
+            </Router>
+          </AppWithPerformanceMonitoring>
+        </AnalyticsProvider>
       </HelmetProvider>
     </EnhancedErrorBoundary>
   );

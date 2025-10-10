@@ -1,11 +1,9 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { AlertTriangle, RefreshCw, Home, MessageCircle, Bug } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -22,22 +20,23 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: '',
+      errorId: ''
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
       error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      errorInfo: null,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo
     });
 
     // Log error to console in development
@@ -45,14 +44,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       console.error('Error Boundary caught an error:', error, errorInfo);
     }
 
-    // Call custom error handler if provided
-    this.props.onError?.(error, errorInfo);
-
     // In production, you might want to send this to an error reporting service
-    if (process.env.NODE_ENV === 'production') {
-      // Example: Send to error reporting service
-      // errorReportingService.captureException(error, { extra: errorInfo });
-    }
+    // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
 
   handleRetry = () => {
@@ -60,12 +53,16 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: '',
+      errorId: ''
     });
   };
 
   handleReload = () => {
     window.location.reload();
+  };
+
+  handleGoHome = () => {
+    window.location.href = '/';
   };
 
   render() {
@@ -75,84 +72,107 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 p-4">
-          <div className="max-w-2xl w-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 text-center">
-            <div className="mb-6">
-              <div className="w-20 h-20 mx-auto bg-red-500/20 rounded-full flex items-center justify-center mb-4">
-                <AlertTriangle className="w-10 h-10 text-red-400" />
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+          <div className="max-w-2xl mx-auto px-4">
+            <div className="bg-white/5 backdrop-blur-sm border border-red-400/20 rounded-2xl p-8 text-center">
+              {/* Error Icon */}
+              <div className="relative mb-8">
+                <div className="w-20 h-20 mx-auto bg-gradient-to-r from-red-400 to-orange-500 rounded-full flex items-center justify-center animate-pulse">
+                  <AlertTriangle className="w-10 h-10 text-white" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-red-400 to-orange-500 rounded-full blur opacity-30 animate-pulse"></div>
               </div>
-              <h1 className="text-3xl font-bold text-white mb-2">
+
+              {/* Error Message */}
+              <h1 className="text-3xl font-bold text-white mb-4">
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                We're sorry, but something unexpected happened. Our team has been notified 
+                and we're working to fix this issue.
               </p>
-            </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
-                <pre className="text-sm text-gray-300 whitespace-pre-wrap">
-                  {this.state.error.toString()}
-                </pre>
-                {this.state.errorInfo && (
-                  <details className="mt-2">
-                    <summary className="text-red-400 font-semibold cursor-pointer">
-                      Component Stack
-                    </summary>
-                    <pre className="text-xs text-gray-400 mt-2 whitespace-pre-wrap">
-                      {this.state.errorInfo.componentStack}
-                    </pre>
-                  </details>
-                )}
-              </div>
-            )}
+              {/* Error Details (Development Only) */}
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <div className="bg-slate-800/50 rounded-lg p-4 mb-6 text-left">
+                  <h3 className="text-red-400 font-semibold mb-2 flex items-center">
+                    <Bug className="w-4 h-4 mr-2" />
+                    Error Details (Development)
+                  </h3>
+                  <div className="text-sm text-gray-300 space-y-2">
+                    <div>
+                      <strong>Error:</strong> {this.state.error.message}
+                    </div>
+                    <div>
+                      <strong>Error ID:</strong> {this.state.errorId}
+                    </div>
+                    {this.state.error.stack && (
+                      <div>
+                        <strong>Stack Trace:</strong>
+                        <pre className="mt-1 text-xs text-gray-400 overflow-auto max-h-32">
+                          {this.state.error.stack}
+                        </pre>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
 
-            <div className="space-y-4">
+              {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button
                   onClick={this.handleRetry}
-                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  <RefreshCw className="w-5 h-5 mr-2" />
+                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
                   Try Again
                 </button>
-                
+
+                <button
+                  onClick={this.handleGoHome}
+                  className="group inline-flex items-center px-6 py-3 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >
+                  <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                  Go Home
+                </button>
+
                 <button
                   onClick={this.handleReload}
-                  className="inline-flex items-center px-6 py-3 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
+                  className="group inline-flex items-center px-6 py-3 border-2 border-gray-400 text-gray-400 font-semibold rounded-lg hover:bg-gray-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  <RefreshCw className="w-5 h-5 mr-2" />
+                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
                   Reload Page
                 </button>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/"
-                  className="inline-flex items-center px-6 py-3 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  <Home className="w-5 h-5 mr-2" />
-                  Go Home
-                </Link>
-                
-                <a
-                  href="mailto:kleber@ziontechgroup.com?subject=Error Report&body=Error ID: {this.state.errorId}"
-                  className="inline-flex items-center px-6 py-3 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-slate-900 transition-all duration-300"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
-                  Report Issue
-                </a>
+              {/* Contact Support */}
+              <div className="mt-8 pt-6 border-t border-gray-700">
+                <p className="text-gray-400 text-sm mb-4">
+                  If this problem persists, please contact our support team.
+                </p>
+                <div className="flex justify-center space-x-6">
+                  <a
+                    href="mailto:support@ziontechgroup.com"
+                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    support@ziontechgroup.com
+                  </a>
+                  <a
+                    href="tel:+13024640950"
+                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    <MessageCircle className="w-4 h-4 mr-2" />
+                    +1 (302) 464-0950
+                  </a>
+                </div>
               </div>
-            </div>
 
-            <div className="mt-8 pt-6 border-t border-white/10">
-              <p className="text-sm text-gray-400">
+              {/* Error ID for Support */}
+              <div className="mt-4 text-xs text-gray-500">
                 Error ID: {this.state.errorId}
-              </p>
-              <p className="text-xs text-gray-500 mt-2">
-                If this problem persists, please contact our support team with the error ID above.
-              </p>
+              </div>
             </div>
           </div>
         </div>
