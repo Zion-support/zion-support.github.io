@@ -50,8 +50,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
-      }
+              }
     }
 
     // Measure First Input Delay (FID)
@@ -76,22 +75,21 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         fidObserver.observe({ entryTypes: ['first-input'] });
         observers.push(fidObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
-      }
+              }
     }
 
     // Measure Cumulative Layout Shift (CLS)
     if ('PerformanceObserver' in window) {
       try {
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
+        const clsObserver = new PerformanceObserver(list => {,
           const entries = list.getEntries();
-          entries.forEach(entry => {
-            if (
+          entries.forEach(entry = > {
+            if (,
               entry.entryType === 'layout-shift' &&
               'hadRecentInput' in entry &&
               'value' in entry
-            ) {
+            ) {,
               const clsEntry = entry as LayoutShift;
               if (!clsEntry.hadRecentInput) {
                 clsValue += clsEntry.value;
@@ -103,8 +101,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         observers.push(clsObserver);
       } catch (error) {
-        // eslint-disable-next-line no-console
-      }
+              }
     }
 
     // Measure Time to First Byte (TTFB)
@@ -127,17 +124,15 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         memory,
       }));
     } catch (error) {
-      // eslint-disable-next-line no-console
-    }
+          }
 
     // Cleanup observers
     return () => {
-      observers.forEach(observer => {
-        try {
+      observers.forEach(observer = > {,
+        try {,
           observer.disconnect();
         } catch (error) {
-          // eslint-disable-next-line no-console
-        }
+                  }
       });
     };
   }, []);
@@ -152,9 +147,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
     if (slowResources.length > 0) {
        
-      // eslint-disable-next-line no-console
-      console.log(
-        'Slow resources detected:',
+            console.log(
+        'Slow resources detected: ',
         slowResources.map((r: PerformanceResourceTiming) => ({
           name: r.name,
           duration: r.duration,
@@ -170,7 +164,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Use web-vitals library if available
     try {
       import('web-vitals')
-        .then(webVitals => {
+        .then(webVitals = > {,
           const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
 
           if (onCLS) {
@@ -270,30 +264,45 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   const _recommendations = getPerformanceRecommendations();
 
-  if (process.env.NODE_ENV === 'development') {
-    return (
-      <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'>
-          <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-          <div>
-            Memory:{' '}
+  if (process.env.NODE_ENV = == 'development') {
+    return (</PerformanceMetrics>
+      <>
+        <>
+          <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
+          <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
+        </>
+      </>
+        <>
+          <>
+            <div className='text-xs space-y-1'></div>
+            <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
+          </>
+        </>
+          <>
+            <>
+              <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
+              <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
+            </>
+          </>
+          <>
+            <>
+              <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
+              <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
+            </>
+          </>
+          <div>,
+            Memory: {' '}
             {metrics.memory
               ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
               : 'N/A'}
           </div>
         </div>
         {_recommendations.length > 0 && (
-          <div className='mt-2'>
-            <h4 className='font-semibold text-xs text-red-600'>
-              Recommendations:
-            </h4>
+          <div className='mt-2'></div>
+            <h4 className='font-semibold text-xs text-red-600'>,
+              Recommendations: </h4>
             <ul className='text-xs text-red-600'>
-              {_recommendations.map((rec, index) => (
+              {_recommendations.map((rec, index) => (</ul>
                 <li key={index}>• {rec}</li>
               ))}
             </ul>

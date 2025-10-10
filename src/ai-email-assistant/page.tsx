@@ -5,18 +5,20 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-  return (
+  return(
 
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
 
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
+      <>
+        <main className="container mx-auto px-4 py-16 pt-24"></main>
+        <section className="text-center mb-16"></section>
+      </>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 holographic-text cyber-text">
 
 // AI Email Assistant;
           </h1>"
-          <p className="text-xl,"
+          <p className="text-xl,";)
   md:text-2xl text-cyan-400 mb-8 font-medium neon-glow"></p>
 // Smart Email Management with AI-Powered Intelligence;
 
@@ -24,12 +26,12 @@ import Footer from '../components/Footer';
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-12"></div>
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 
 // >,
- Cal)
+ Cal);
   l: (302) 464-0950;
           </a>
 
@@ -47,7 +49,7 @@ import Footer from '../components/Footer';
 // Key Features;
           </h2>"
           <div className="grid grid-cols-1,
-  md:grid-cols-2,"
+  md:grid-cols-2,";
   lg:grid-cols-3 gap-8"></div>"
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
@@ -103,7 +105,7 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-6"></div>"
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>"
-              <p className="text-gray-300"></p>
+              <p className="text-gray-300"></p>;
                 Automated follow-up sequences for sales, customer service, and project management;
 // with personalized timing and content.
               
@@ -158,17 +160,23 @@ import Footer from '../components/Footer';
           <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"></h2>
 // Pricing Plans;
           </h2>"
-          <div className="grid grid-cols-1,"
+          <div className="grid grid-cols-1,";
   md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>"
             <div className="cyber-card hologram-card p-8 text-center"></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
               <div className="text-4xl font-bold text-cyan-400 mb-6">$29<span className="text-lg text-gray-400">/month</span></div>"
-              <ul className="text-gray-300 space-y-3 mb-8"></ul>
+              <>
+                <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Up to 1,000 emails/month</li>
-                <li> Basic AI responses</li>
-                <li> Priority sorting</li>
-                <li> Email templates</li>
-                <li> Basic analytics</li>
+              </>
+                <>
+                  <li> Basic AI responses</li>
+                  <li> Priority sorting</li>
+                </>
+                <>
+                  <li> Email templates</li>
+                  <li> Basic analytics</li>
+                </>
               </ul>"
               <a href="/contact" className="cyber-button w-full text-center"></a>
 // Get Started;
@@ -178,12 +186,18 @@ import Footer from '../components/Footer';
               <div className="text-sm font-bold text-cyan-400 mb-2">MOST POPULAR</div>"
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>"
               <div className="text-4xl font-bold text-cyan-400 mb-6">$79<span className="text-lg text-gray-400">/month</span></div>"
-              <ul className="text-gray-300 space-y-3 mb-8"></ul>
+              <>
+                <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Up to 10,000 emails/month</li>
-                <li> Advanced AI responses</li>
-                <li> Smart scheduling</li>
-                <li> Auto follow-ups</li>
-                <li> Advanced analytics</li>
+              </>
+                <>
+                  <li> Advanced AI responses</li>
+                  <li> Smart scheduling</li>
+                </>
+                <>
+                  <li> Auto follow-ups</li>
+                  <li> Advanced analytics</li>
+                </>
                 <li> Team collaboration</li>
               </ul>"
               <a href="/contact" className="cyber-button w-full text-center"></a>
@@ -193,12 +207,18 @@ import Footer from '../components/Footer';
             <div className="cyber-card hologram-card p-8 text-center"></div>"
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>"
               <div className="text-4xl font-bold text-cyan-400 mb-6">$199<span className="text-lg text-gray-400">/month</span></div>"
-              <ul className="text-gray-300 space-y-3 mb-8"></ul>
+              <>
+                <ul className="text-gray-300 space-y-3 mb-8"></ul>
                 <li> Unlimited emails</li>
-                <li> Custom AI training</li>
-                <li> Advanced integrations</li>
-                <li> White-label options</li>
-                <li> Dedicated support</li>
+              </>
+                <>
+                  <li> Custom AI training</li>
+                  <li> Advanced integrations</li>
+                </>
+                <>
+                  <li> White-label options</li>
+                  <li> Dedicated support</li>
+                </>
                 <li> Custom analytics</li>
               </ul>"
               <a href="/contact" className="cyber-button w-full text-center"></a>
@@ -235,12 +255,12 @@ import Footer from '../components/Footer';
           
 
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center items-center"></div>
             <a
               href="tel:+13024640950" className="cyber-button w-full sm:w-auto text-center"
 
 // >,
- Cal,
+ Cal,;
   l: (302) 464-0950;
           </a>
 

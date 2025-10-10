@@ -8,8 +8,7 @@ interface AnalyticsContextType {
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const useAnalytics = () => {
-  const context = useContext(AnalyticsContext);
+
   if (!context) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
@@ -34,7 +33,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   };
 
   const trackPageView = (pageName: string) => {
-    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {
+    if (typeof window !== 'undefined' && typeof gtag !== 'undefined') {,
       gtag('event', 'page_view', {
         page_title: pageName,
         page_location: window.location.href,
@@ -42,12 +41,12 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
     }
   };
 
-  const value = {
+  const value = {,
     trackEvent,
     trackPageView,
   };
 
-  return (
+  return (</string>
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>

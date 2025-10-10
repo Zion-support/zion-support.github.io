@@ -6,8 +6,8 @@ import Footer from '../../components/Footer';
 import SEOOptimizer from '../../components/SEOOptimizer';
 
 
-const AIInvoiceGeneratorPage: React.FC = memo(() => {
-  const features = [
+const AIInvoiceGeneratorPage: React.FC="memo(()" => {
+  const features="["
     {
       icon: Brain,
       title: 'AI-Powered Invoice Generation',
@@ -32,12 +32,12 @@ const AIInvoiceGeneratorPage: React.FC = memo(() => {
       benefits: ['150+ currencies', 'Real-time rates', 'Local formatting', 'Tax calculations']
       icon: Smartphone,
       title: 'Mobile Optimized',
-      description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',
+      description: 'Create, send, and manage invoices on any device with our responsive mobile interface.',;
       benefits: ['Mobile-first design', 'Offline capability', 'Touch optimization', 'Push notifications']
     }
   ];
 
-  const pricingPlans = [
+  const pricingPlans="["
       name: 'Starter',
       price: '$29',
       period: '/month',
@@ -78,7 +78,7 @@ namename: 'Enterprise',
         'On-premise deployment'
       color: 'green'
 
-  const testimonials = [
+  const testimonials="["
       name: 'Sarah Johnson',
       role: 'Freelance Designer',
       company: 'Creative Studio',
@@ -96,7 +96,7 @@ namename: 'Emily Rodriguez',
       content: 'Compliance features are outstanding. Never worry about tax calculations or regulatory requirements again.',
       avatar: '👩‍💻'
 
-  const useCases = [
+  const useCases="["
       title: 'Freelancers & Consultants',
       description: 'Streamline invoicing for project-based work with AI that understands your service offerings.',
       icon: Briefcase,
@@ -114,29 +114,30 @@ namename: 'Emily Rodriguez',
       icon: Building,
       benefits: ['Multi-client management', 'Project tracking', 'Team collaboration', 'Advanced reporting']
 
-  return (
-    <>
-      <SEOOptimizer
+  return(
+    <><SEOOptimizer)
         title="AI Invoice Generator - Automated Invoice Creation | Zion Tech Group"
         description="Generate professional invoices instantly with AI-powered automation. Save time, reduce errors, and improve cash flow with our intelligent invoice generation platform."
         keywords={['AI invoice generator', 'automated invoicing', 'invoice automation', 'AI billing', 'smart invoicing', 'invoice management', 'business automation']}
         canonicalUrl="https://ziontechgroup.com/ai-invoice-generator"
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <Navigation />
         
         <main className="pt-24">
-          {/* Hero Section */}
-          <section className="container mx-auto px-4 py-16">
-            <div className="text-center max-w-4xl mx-auto">
-              <div className="inline-flex items-center bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6">
+          {/* Hero Section */}</main>
+          <>
+            <section className="container mx-auto px-4 py-16"></section>
+            <div className="text-center max-w-4xl mx-auto"></div>
+          </>
+              <div className="inline-flex items-center bg-purple-500/10 border border-purple-500/20 rounded-full px-4 py-2 mb-6"></div>
                 <Receipt className="w-5 h-5 text-purple-400 mr-2" />
                 <span className="text-purple-400 text-sm font-medium">AI Invoice Generator</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Generate Professional Invoices with{' '}
+                Generate Professional Invoices with{' '}</h1>
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   AI Intelligence
                 </span>
@@ -147,11 +148,16 @@ namename: 'Emily Rodriguez',
                 effortlessly while gaining valuable insights into your business performance.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+              <>
+              
+                <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12"></div>
+              
                 <a
                   href="#pricing"
                   className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 inline-flex items-center"
-                >
+                ></a>
+              
+              </>
                   <Calculator className="w-5 h-5 mr-2" />
                   Start Free Trial
                 </a>
@@ -161,37 +167,49 @@ namename: 'Emily Rodriguez',
                   Watch Demo
               
               {/* Key Stats */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-                <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-                  <div className="text-gray-300">Time Saved</div>
-                  <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>
-                  <div className="text-gray-300">Invoices Generated</div>
-                  <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
-                  <div className="text-gray-300">Faster Payments</div>
+              <>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto"></div>
+                <div className="text-center"></div>
+              </>
+                  <>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                    <div className="text-gray-300">Time Saved</div>
+                  </>
+                  <>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">10K+</div>
+                    <div className="text-gray-300">Invoices Generated</div>
+                  </>
+                  <>
+                    <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+                    <div className="text-gray-300">Faster Payments</div>
+                  </>
           </section>
 
           {/* Features Section */}
-          <section className="py-16 bg-slate-800/30">
-            <div className="container mx-auto px-4">
-              <div className="text-center mb-16">
+          <section className="py-16 bg-slate-800/30"></section>
+            <>
+              <div className="container mx-auto px-4"></div>
+              <div className="text-center mb-16"></div>
+            </>
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                   Powerful AI Features
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                   Our AI invoice generator combines cutting-edge technology with user-friendly design 
-                  to revolutionize your billing process.
+                  to revolutionize your billing process.</p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {features.map((feature, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
-                    <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
+                {features.map((feature, index) => (}</div>
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300"></div>
+                    <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4"></div>
                       <feature.icon className="w-6 h-6 text-purple-400" />
-                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <>
+                      <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                      <p className="text-gray-300 mb-4">{feature.description}</p>
+                    </>
                     <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
+                      {feature.benefits.map((benefit, benefitIndex) => (}</ul>
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </li>
@@ -202,54 +220,67 @@ namename: 'Emily Rodriguez',
           <section className="py-16">
                   Perfect for Every Business
                   Whether you're a freelancer or a large enterprise, our AI invoice generator 
-                  adapts to your specific needs and industry requirements.
+                  adapts to your specific needs and industry requirements.</section>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {useCases.map((useCase, index) => (
-                  <div key={index} className="text-center group">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                {useCases.map((useCase, index) => (}</div>
+                  <>
+                    <div key={index} className="text-center group"></div>
+                    <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
+                  </>
                       <useCase.icon className="w-8 h-8 text-white" />
-                    <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                    <p className="text-gray-300 mb-4">{useCase.description}</p>
+                    <>
+                      <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
+                      <p className="text-gray-300 mb-4">{useCase.description}</p>
+                    </>
                     <ul className="space-y-2 text-left">
                       {useCase.benefits.map((benefit, benefitIndex) => (
 
-          {/* Pricing Section */}
+          {/* Pricing Section */}</ul>
           <section id="pricing" className="py-16 bg-slate-800/30">
                   Simple, Transparent Pricing
                   Choose the plan that fits your business needs. All plans include our core AI features 
-                  with no hidden fees or setup costs.
+                  with no hidden fees or setup costs.</section>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {pricingPlans.map((plan, index) => (
+                {pricingPlans.map((plan, index) => (}</div>
                   <div key={index} className={`relative rounded-lg p-8 ${
                     plan.popular 
                       ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400' 
                       : 'bg-slate-800/50 border border-slate-700'
                   }`}>
-                    {plan.popular && (
-                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    {plan.popular && (</div>
+                      <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
                         <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-medium">
                           Most Popular
-                    )}
+                    )}</span>
                     
-                    <div className="text-center mb-6">
+                    <>
+                    
+                      <div className="text-center mb-6"></div>
+                    
                       <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                      <p className="text-gray-400 mb-4">{plan.description}</p>
-                      <div className="flex items-baseline justify-center">
-                        <span className="text-4xl font-bold text-white">{plan.price}</span>
-                        <span className="text-gray-400 ml-1">{plan.period}</span>
+                    
+                    </>
+                      <>
+                        <p className="text-gray-400 mb-4">{plan.description}</p>
+                        <div className="flex items-baseline justify-center"></div>
+                      </>
+                        <>
+                          <span className="text-4xl font-bold text-white">{plan.price}</span>
+                          <span className="text-gray-400 ml-1">{plan.period}</span>
+                        </>
                     
                     <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center">
+                      {plan.features.map((feature, featureIndex) => (}</ul>
+                        <li key={featureIndex} className="flex items-center"></li>
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                           <span className="text-gray-300">{feature}</span>
                     
                     <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white, hover:from-purple-600 hover:to-pink-600'
                         : 'bg-slate-700 text-white hover:bg-slate-600'
-                      Get Started
+                      Get Started}
                     </button>
 
           {/* Testimonials Section */}
@@ -257,35 +288,39 @@ namename: 'Emily Rodriguez',
                   See how our AI invoice generator is transforming businesses across industries.
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {testimonials.map((testimonial, index) => (
-                  <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                    <div className="flex items-center mb-4">
+                {testimonials.map((testimonial, index) => (}</div>
+                  <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                    <>
+                      <div className="flex items-center mb-4"></div>
                       <div className="text-2xl mr-3">{testimonial.avatar}</div>
-                      <div>
+                    </>
+                      <>
+                        <div></div>
                         <div className="font-semibold text-white">{testimonial.name}</div>
+                      </>
                         <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                     <div className="flex mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
+                      {[...Array(testimonial.rating)].map((_, i) => (}</div>
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     <p className="text-gray-300 italic">"{testimonial.content}"</p>
 
           {/* CTA Section */}
-          <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
+          <section className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></section>
             <div className="container mx-auto px-4 text-center">
-                Ready to Transform Your Invoicing?
+                Ready to Transform Your Invoicing?</div>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Join thousands of businesses already using AI to streamline their invoicing process. 
-                Start your free trial today and experience the difference.
+                Start your free trial today and experience the difference.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  href="/contact"
+                  href="/contact"</div>
                   <Phone className="w-5 h-5 mr-2" />
-                  Get Free Consultation
+                  Get Free Consultation;
                   href="tel:+13024640950"
                   <Phone className="w-4 h-4 mr-2" />
                   (302) 464-0950
         </main>
         
-        <Footer />
+        <Footer /></>
     </>
   );
 });

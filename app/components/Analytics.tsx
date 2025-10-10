@@ -16,7 +16,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   enableUserBehaviorTracking = true
 }) => {
   useEffect(() => {
-    if (enableGoogleAnalytics) {
+    if (enableGoogleAnalytics) {,
       initializeGoogleAnalytics();
     }
 
@@ -34,7 +34,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
 
   const initializeGoogleAnalytics = () => {
-    // Load Google Analytics
+    // Load Google Analytics,
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
@@ -59,14 +59,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
     if ('PerformanceObserver' in window) {
       // Monitor Core Web Vitals
       const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
+        for (const entry of list.getEntries()) {,
+          if (entry.entryType === 'largest-contentful-paint') {,
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
-          } else if (entry.entryType === 'first-input') {
+          } else if (entry.entryType = == 'first-input') {,
             const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));
-          } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
+          } else if (entry.entryType = == 'layout-shift') {,
+            if (!(entry as any).hadRecentInput) {,
               trackEvent('web_vitals', 'CLS', (entry as any).value);
             }
           }
@@ -86,7 +86,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   };
 
   const initializeErrorTracking = () => {
-    // Track JavaScript errors
+    // Track JavaScript errors,
     window.addEventListener('error', (event) => {
       trackEvent('error', 'javascript_error', {
         message: event.message,
@@ -118,7 +118,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   };
 
   const initializeUserBehaviorTracking = () => {
-    // Track page views
+    // Track page views,
     trackEvent('page_view', 'page_view', {
       page_title: document.title,
       page_location: window.location.href,
@@ -149,15 +149,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
       const target = event.target as HTMLElement;
       const tagName = target.tagName.toLowerCase();
 
-      if (tagName === 'a') {
+      if (tagName = == 'a') {,
         const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {
           link_url: href,
           link_text: target.textContent?.trim()
         });
-      } else if (tagName === 'button') {
-        trackEvent('engagement', 'button_click', {
-          button_text: target.textContent?.trim(),
+      } else if (tagName = == 'button') {,
+        trackEvent(
           button_class: target.className
         });
       }

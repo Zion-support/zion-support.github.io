@@ -1,12 +1,12 @@
 'use client';
 
 
-interface SEOOptimizerProps {/* TODO: Fix JSX expression */}
+interface SEOOptimizerProps {/*, TODO: Fix JSX expression */}
 }
 
 const,
-  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+  SEOOptimizer: React.FC<SEOOptimizerProps> = memo(({/*, TODO: Fix JSX expression */})
+}) => {/*, TODO: Fix JSX expression */}
     }
     
     // Add breadcrumb structured data;
@@ -19,83 +19,83 @@ const,
     addOrganizationStructuredData();
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
 
-  const updateMetaTag = (nam,
+  const updateMetaTag="(nam,"
   e: string, conten,
   t: string, attribut)
-  e: string = 'name') => {/* TODO: Fix JSX expression */}
-    let meta = document.querySelector(`meta[${attribute}="${name}"]`);
-    if (!meta) {/* TODO: Fix JSX expression */}
+  e: string = 'name') => {/*, TODO: Fix JSX expression */};
+    let meta="document.querySelector(`meta[${attribute}=""${name}"]`);
+    if (!meta) {/*, TODO: Fix JSX expression */}
     }
     meta.setAttribute('content', content);
   };
 
-  const updateCanonicalUrl = (ur)
-  l: string) => {/* TODO: Fix JSX expression */}
-    }
+  const updateCanonicalUrl="(ur)"
+  l: string) => {/*, TODO: Fix JSX expression */}
+    };
     canonical.setAttribute('href', url);
   };
 
-  const addStructuredData = (dat)
-  a: any) => {/* TODO: Fix JSX expression */}
-    }
+  const addStructuredData="(dat)"
+  a: any) => {/*, TODO: Fix JSX expression */}
+    };
     document.head.appendChild(script);
   };
 
-  const addBreadcrumbStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addBreadcrumbStructuredData="()" => {/*, TODO: Fix JSX expression */}
         }
       ]
     };
-    const script = document.createElement('script');
+    const script="document.createElement("'script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(breadcrumbData);
+    script.textContent="JSON.stringify(breadcrumbData);"
     script.id = 'breadcrumb-structured-data';
     // Remove existing breadcrumb data;
-    const existing = document.getElementById('breadcrumb-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    const existing="document.getElementById("'breadcrumb-structured-data');
+    if (existing) {/*, TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
   };
 
-  const addFAQStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addFAQStructuredData="()" => {/*, TODO: Fix JSX expression */}
           }
         },
-        {/* TODO: Fix JSX expression */}
+        {/*, TODO: Fix JSX expression */}
           }
         },
-        {/* TODO: Fix JSX expression */}
+        {/*, TODO: Fix JSX expression */}
           }
         }
       ]
     };
-    const script = document.createElement('script');
+    const script="document.createElement("'script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(faqData);
+    script.textContent="JSON.stringify(faqData);"
     script.id = 'faq-structured-data';
     // Remove existing FAQ data;
-    const existing = document.getElementById('faq-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    const existing="document.getElementById("'faq-structured-data');
+    if (existing) {/*, TODO: Fix JSX expression */}
     }
     document.head.appendChild(script);
   };
 
-  const addOrganizationStructuredData = () => {/* TODO: Fix JSX expression */}
+  const addOrganizationStructuredData="()" => {/*, TODO: Fix JSX expression */}
       },
-      'address': {/* TODO: Fix JSX expression */}
+      'address': {/*, TODO: Fix JSX expression */}
       },
       'sameAs': [
         'http,
   s://twitter.com/ziontechgroup',
-        'http,
+        'http,;
   s://linkedin.com/company/ziontechgroup'
       ]
     };
-    const script = document.createElement('script');
+    const script="document.createElement("'script');
     script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(organizationData);
+    script.textContent="JSON.stringify(organizationData);"
     script.id = 'organization-structured-data';
     // Remove existing organization data;
-    const existing = document.getElementById('organization-structured-data');
-    if (existing) {/* TODO: Fix JSX expression */}
+    const existing="document.getElementById("'organization-structured-data');
+    if (existing) {/*, TODO: Fix JSX expression */}
 
     }
   };
@@ -104,7 +104,7 @@ const,
 
   useEffect(() => {
     // Log SEO optimization
-    logger.info('SEO optimization applied', { 
+    logger.info('SEO optimization applied', {) 
       page, 
       title: mergedSEOData.title,
       description: mergedSEOData.description 
@@ -112,7 +112,7 @@ const,
 
     // Track page view for analytics
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
+      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {)
         page_title: mergedSEOData.title,
         page_location: mergedSEOData.canonical,
         custom_map: {
@@ -122,17 +122,17 @@ const,
     }
   }, [mergedSEOData, page]);
 
-  return (
+  return (</SEOOptimizerProps>
     <Helmet>
-      {/* Basic Meta Tags */}
+      {/* Basic Meta Tags */}</Helmet>
       <title>{mergedSEOData.title}</title>
       <meta name="description" content={mergedSEOData.description} />
       <meta name="keywords" content={mergedSEOData.keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
+      <meta name="viewport" content="width="device-width," initial-scale="1," viewport-fit="cover"" />
+      <meta httpEquiv="X-UA-Compatible" content="IE="edge"" />
+      <meta name="format-detection" content="telephone="no,address=no,email=no"" />
       <meta name="color-scheme" content="dark light" />
 
       {/* Canonical URL */}
@@ -189,8 +189,8 @@ const,
       {/* Additional structured data for services */}
       <script type="application/ld+json">
         {JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Service',
+          '@context': ',https://schema.org',
+          '@type': 'Service',)
           name: 'AI and IT Solutions',
           provider: {
             '@type': 'Organization',
@@ -223,7 +223,7 @@ const,
                 '@type': 'Offer',
                 itemOffered: {
                   '@type': 'Service',
-                  name: 'Cloud Infrastructure',
+                  name: 'Cloud Infrastructure',;
                   description: 'Scalable cloud infrastructure solutions'
                 }
               }

@@ -92,31 +92,14 @@ const DynamicContentShowcase: React.FC = () => {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
-<<<<<<< HEAD
       content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-=======
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
-<<<<<<< HEAD
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-=======
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       rating: 5
     }
   ];
@@ -125,7 +108,6 @@ const DynamicContentShowcase: React.FC = () => {
     if (!isPlaying) return;
     
     const timer = setInterval(() => {
-<<<<<<< HEAD
       setCurrentIndex((prev) => (prev + 1) % features.length);
     }, 3000);
 
@@ -133,70 +115,24 @@ const DynamicContentShowcase: React.FC = () => {
   }, [features.length]);
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8"></div>
+      <div className="max-w-7xl mx-auto"></div>
+        <div className="text-center mb-16"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
             Dynamic Content Showcase
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
             Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
           </p>
-=======
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
-            and interactive showcases that bring your business to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Play className="w-5 h-5" />
-              Start Demo
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-            </button>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
 
-<<<<<<< HEAD
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"></div>
           {features.map((feature, index) => (
             <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
+              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4"></div>
                 <feature.icon className="h-6 w-6 text-white" />
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
@@ -206,9 +142,9 @@ const DynamicContentShowcase: React.FC = () => {
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"></div>
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
+              <div key={index} className="flex items-center"></div>
                 <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
               </div>
@@ -217,18 +153,18 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="text-center">
+        <div className="text-center"></div>
           <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-4"></div>
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
+                <div className="text-center"></div>
                   <p className="text-white font-semibold">{testimonial.name}</p>
                   <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
                 </div>
@@ -237,40 +173,33 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
       {/* Features Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>
               Why Choose Our Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our solutions deliver unmatched performance, security, and scalability for modern businesses.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
+                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6"></div>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors"></h3>
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 
                 {feature.stats && (
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-3 gap-4">}</div>
                     {feature.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="text-center">
+                      <div key={statIndex} className="text-center"></div>
                         <div className="text-lg font-bold text-white">{stat.value}</div>
                         <div className="text-gray-400 text-xs">{stat.label}</div>
                       </div>
@@ -284,33 +213,33 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-6xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl font-bold text-white mb-6">What Our Customers Say</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Don't just take our word for it. Here's what our satisfied customers have to say about their experience.
             </p>
           </div>
 
-          <div className="relative">
+          <div className="relative"></div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
-              <div className="text-center">
-                <div className="flex justify-center mb-6">
+              <div className="text-center"></div>
+                <div className="flex justify-center mb-6"></div>
                   {[...Array(currentTestimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 
-                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
+                <blockquote className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto"></blockquote>
                   "{currentTestimonial.content}"
                 </blockquote>
                 
-                <div className="flex items-center justify-center gap-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                <div className="flex items-center justify-center gap-4"></div>
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center"></div>
                     <Users className="w-8 h-8 text-white" />
                   </div>
-                  <div className="text-left">
+                  <div className="text-left"></div>
                     <div className="text-lg font-semibold text-white">{currentTestimonial.name}</div>
                     <div className="text-gray-400">{currentTestimonial.role}</div>
                     <div className="text-purple-400 text-sm">{currentTestimonial.company}</div>
@@ -320,7 +249,7 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
 
             {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
+            <div className="flex items-center justify-center gap-4 mt-8"></div>
               <button
                 onClick={prevTestimonial}
                 className="p-3 bg-white/10 hover:bg-white/20 text-white rounded-full transition-colors duration-200"
@@ -344,7 +273,7 @@ const DynamicContentShowcase: React.FC = () => {
             </div>
 
             {/* Dots Indicator */}
-            <div className="flex justify-center mt-6 space-x-2">
+            <div className="flex justify-center mt-6 space-x-2"></div>
               {testimonials.map((_, index) => (
                 <button
                   key={index}
@@ -360,19 +289,19 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl font-bold text-white mb-6">Comprehensive Benefits</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
               Our solutions provide a complete package of benefits designed to accelerate your business growth.
             </p>
           </div>
 
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
               {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
+                <div key={index} className="flex items-start space-x-3"></div>
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                   <span className="text-gray-300">{benefit}</span>
                 </div>
@@ -383,17 +312,17 @@ const DynamicContentShowcase: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
+      <section className="py-16 px-4"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-12"></div>
+            <h2 className="text-3xl font-bold text-white mb-6"></h2>
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses that have already transformed their operations with our cutting-edge solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"></button>
                 <Zap className="w-5 h-5" />
                 <span>Start Free Trial</span>
               </button>
@@ -404,7 +333,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     </div>
   );
 };

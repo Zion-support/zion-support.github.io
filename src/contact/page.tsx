@@ -5,11 +5,11 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
 
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC="()" => {;
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({)
     name: '',
     email: '',
     company: '',
@@ -20,16 +20,16 @@ $4});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleInputChange="(e:" React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
-    budget: '',
+    budget: '',;
     timeline: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange="(e:" React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -37,16 +37,16 @@ $4});
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit="(e:" React.FormEvent) => {;
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
+    // console.log('Form, submitted:', formData);
     setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({}, 3000);
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit="async" (e: React.FormEvent) => {;
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -60,11 +60,11 @@ $4});
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
+    address: '364 E Main St STE 1008, Middletown, DE 19709',;
     hours: 'Mon-Fri: 9AM-6PM EST'
   };
 
-  const services = [
+  const services="["
     'AI Services',
     'IT Services',
     'Micro SAAS Solutions',
@@ -77,18 +77,22 @@ $4});
     'Other'
   ];
 
-  const achievements = [
+  const achievements="["
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
     { icon: TrendingUp, text: '300% Average ROI' },
     { icon: Shield, text: '99.9% Uptime Guarantee' }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
-        <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>
-        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+  return(</HTMLInputElement>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center"></div>
+      <div className="text-center"></div>
+    </>
+        <>
+          <h1 className="text-4xl font-bold text-white mb-4">Contact</h1>
+          <p className="text-gray-300 mb-8">Coming Soon - Advanced contact solutions</p>
+        </>
+        <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">;)
           Contact Us
         </a>
       </div>
@@ -104,7 +108,7 @@ export default ContactPage;
     'Other'
   ];
 
-  const budgetRanges = [
+  const budgetRanges="["
     'Under $10K',
     '$10K - $50K',
     '$50K - $100K',
@@ -113,7 +117,7 @@ export default ContactPage;
     'Not sure'
   ];
 
-  const timelines = [
+  const timelines="["
     'ASAP',
     'Within 1 month',
     '1-3 months',
@@ -122,7 +126,7 @@ export default ContactPage;
     'Just exploring'
   ];
 
-  const offices = [
+  const offices="["
     {
       city: 'Middletown, DE',
       address: '364 E Main St STE 1008, Middletown, DE 19709',
@@ -144,12 +148,12 @@ export default ContactPage;
       address: '456 Innovation Lane, London EC1A 4HD',
       phone: '+44 20 7946 0958',
       email: 'london@ziontechgroup.com',
-      hours: 'Mon-Fri: 9AM-6PM GMT',
+      hours: 'Mon-Fri: 9AM-6PM GMT',;
       timezone: 'Greenwich Mean Time'
     }
   ];
 
-  const faqs = [
+  const faqs="["
     {
       question: 'How quickly can you start my project?',
       answer: 'We can typically begin most projects within 1-2 weeks of contract signing. For urgent projects, we offer expedited onboarding.'
@@ -163,47 +167,53 @@ export default ContactPage;
       answer: 'We serve clients across healthcare, finance, manufacturing, retail, education, and government sectors.'
     },
     {
-      question: 'Do you work with small businesses?',
+      question: 'Do you work with small businesses?',;
       answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
     }
   ];
 
   if (isSubmitted) {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="max-w-2xl mx-auto text-center p-8">
-          <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+    return(
+      <>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">}</div>
+        <div className="max-w-2xl mx-auto text-center p-8"></div>
+      </>
+          <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6"></div>
             <CheckCircle className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-3xl font-bold text-white mb-4">Thank You!</h1>
-          <p className="text-xl text-gray-300 mb-6">
+          <p className="text-xl text-gray-300 mb-6">)
             Your message has been sent successfully. Our team will get back to you within 24 hours.
           </p>
-          <div className="space-y-4">
-            <p className="text-gray-400">
+          <>
+            <div className="space-y-4"></div>
+            <p className="text-gray-400"></p>
+          </>
               <strong>What happens next?</strong>
             </p>
-            <div className="space-y-2 text-left max-w-md mx-auto">
-              <div className="flex items-center space-x-3">
+            <>
+              <div className="space-y-2 text-left max-w-md mx-auto"></div>
+              <div className="flex items-center space-x-3"></div>
+            </>
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">We'll review your requirements</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3"></div>
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">Schedule a consultation call</span>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3"></div>
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">Provide a detailed proposal</span>
               </div>
             </div>
           </div>
-          <div className="mt-8">
+          <div className="mt-8"></div>
             <a
               href="/"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
             >
-              <ArrowRight className="w-5 h-5 mr-2" />
+              <ArrowRight className="w-5 h-5 mr-2" />;
               Back to Home
             </a>
           </div>
@@ -212,26 +222,30 @@ export default ContactPage;
     );
   }
 
-  return (
+  return(
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative py-20 lg:py-32 overflow-hidden">
+      {/* Hero Section */}</div>
+      <>
+        <section className="relative py-20 lg:py-32 overflow-hidden"></section>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
+      </>
+        <>
+          <div className="container mx-auto px-4 relative z-10"></div>
+          <div className="max-w-4xl mx-auto text-center"></div>
+        </>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">)
               Get In Touch
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Ready to transform your business with AI? Let's discuss your project and explore 
               how we can help you achieve your goals.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
-              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
+            <div className="flex flex-wrap justify-center gap-6"></div>
+              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg"></div>
                 <Phone className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">{contactInfo.phone}</span>
               </div>
-              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
+              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg"></div>
                 <Mail className="w-5 h-5 text-purple-400" />
                 <span className="text-white font-medium">{contactInfo.email}</span>
               </div>
@@ -241,15 +255,21 @@ export default ContactPage;
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <>
+        <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+      </>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div className="bg-slate-800/50 rounded-lg p-8">
-              <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+            {/* Contact Form */}</div>
+            <div className="bg-slate-800/50 rounded-lg p-8"></div>
+              <>
+                <h2 className="text-2xl font-bold text-white mb-6">Send us a message</h2>
+                <form onSubmit={handleSubmit} className="space-y-6"></form>
+              </>
+                <>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+                  <div></div>
+                </>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
@@ -263,7 +283,7 @@ export default ContactPage;
                       placeholder="Your full name"
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
@@ -279,8 +299,13 @@ export default ContactPage;
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                <>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+                  <div></div>
+
+                </>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Company
                     </label>
@@ -293,7 +318,7 @@ export default ContactPage;
                       placeholder="Your company name"
                     />
                   </div>
-                  <div>
+                  <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
                     </label>
@@ -308,34 +333,43 @@ export default ContactPage;
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
+                <>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+
+                  <div></div>
+
+                </>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
                     </label>
-                    <select
+                    <>
+                      <select
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                    >
+                    ></select>
                       <option value="">Select a service</option>
+                    </>
                       {services.map((service, index) => (
                         <option key={index} value={service}>{service}</option>
                       ))}
                     </select>
                   </div>
-                  <div>
+                  <div></div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
                       Budget Range
                     </label>
-                    <select
+                    <>
+                      <select
                       name="budget"
                       value={formData.budget}
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                    >
+                    ></select>
                       <option value="">Select budget range</option>
+                    </>
                       {budgetRanges.map((range, index) => (
                         <option key={index} value={range}>{range}</option>
                       ))}
@@ -343,24 +377,26 @@ export default ContactPage;
                   </div>
                 </div>
 
-                <div>
+                <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Timeline
                   </label>
-                  <select
+                  <>
+                    <select
                     name="timeline"
                     value={formData.timeline}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                  >
+                  ></select>
                     <option value="">Select timeline</option>
+                  </>
                     {timelines.map((timeline, index) => (
                       <option key={index} value={timeline}>{timeline}</option>
                     ))}
                   </select>
                 </div>
 
-                <div>
+                <div></div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
                   </label>
@@ -380,15 +416,13 @@ export default ContactPage;
                   disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-600 hover:to-purple-700 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending...
+                  {isSubmitting ? (}</button>
+                    <><div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                      Sending...</>
                     </>
                   ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2" />
-                      Send Message
+                    <><Send className="w-5 h-5 mr-2" />
+                      Send Message</>
                     </>
                   )}
                 </button>
@@ -396,66 +430,82 @@ export default ContactPage;
             </div>
 
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div>
-                <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
+            <>
+              <div className="space-y-8"></div>
+              <div></div>
+            </>
+                <>
+                  <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
+                  <div className="space-y-6"></div>
+                </>
+                  <div className="flex items-start space-x-4"></div>
                     <Phone className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0" />
-                    <div>
+                    <>
+                      <div></div>
                       <div className="text-white font-medium">{contactInfo.phone}</div>
+                    </>
                       <div className="text-gray-400 text-sm">Call us anytime</div>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4"></div>
                     <Mail className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0" />
-                    <div>
+                    <>
+                      <div></div>
                       <div className="text-white font-medium">{contactInfo.email}</div>
+                    </>
                       <div className="text-gray-400 text-sm">Email us</div>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4"></div>
                     <MapPin className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <div>
+                    <>
+                      <div></div>
                       <div className="text-white font-medium">Middletown, DE</div>
+                    </>
                       <div className="text-gray-400 text-sm">{contactInfo.address}</div>
                     </div>
                   </div>
-                  <div className="flex items-start space-x-4">
+                  <div className="flex items-start space-x-4"></div>
                     <Clock className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
-                    <div>
+                    <>
+                      <div></div>
                       <div className="text-white font-medium">{contactInfo.hours}</div>
+                    </>
                       <div className="text-gray-400 text-sm">Business hours</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
+              <div className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 p-6 rounded-lg"></div>
+                <>
+                  <h3 className="text-xl font-bold text-white mb-4">Why Choose Us?</h3>
+                  <div className="space-y-3"></div>
+                </>
+                  <div className="flex items-center space-x-3"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">300% Average ROI</span>
                   </div>
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-3"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">99.9% Uptime Guarantee</span>
                   </div>
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-3"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">24/7 Support</span>
                   </div>
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-3"></div>
                     <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                     <span className="text-gray-300">Enterprise Security</span>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-slate-800/50 p-6 rounded-lg">
-                <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
-                <div className="space-y-3">
+              <div className="bg-slate-800/50 p-6 rounded-lg"></div>
+                <>
+                  <h3 className="text-xl font-bold text-white mb-4">Quick Actions</h3>
+                  <div className="space-y-3"></div>
+                </>
                   <a
                     href="/consultation"
                     className="block w-full bg-cyan-500 text-white py-3 px-4 rounded-lg font-medium hover:bg-cyan-600 transition-colors text-center"
@@ -478,9 +528,11 @@ export default ContactPage;
       </section>
 
       {/* Global Offices */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <section className="py-20 bg-slate-800/50"></section>
+        <>
+          <div className="container mx-auto px-4"></div>
+          <div className="text-center mb-16"></div>
+        </>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Our Global Offices
             </h2>
@@ -489,23 +541,25 @@ export default ContactPage;
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {offices.map((office, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-center space-x-2">
+            {offices.map((office, index) => (}</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
+                <>
+                  <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
+                  <div className="space-y-3"></div>
+                </>
+                  <div className="flex items-center justify-center space-x-2"></div>
                     <MapPin className="w-4 h-4 text-cyan-400" />
                     <span className="text-gray-300 text-sm">{office.address}</span>
                   </div>
-                  <div className="flex items-center justify-center space-x-2">
+                  <div className="flex items-center justify-center space-x-2"></div>
                     <Phone className="w-4 h-4 text-purple-400" />
                     <span className="text-gray-300 text-sm">{office.phone}</span>
                   </div>
-                  <div className="flex items-center justify-center space-x-2">
+                  <div className="flex items-center justify-center space-x-2"></div>
                     <Mail className="w-4 h-4 text-green-400" />
                     <span className="text-gray-300 text-sm">{office.email}</span>
                   </div>
-                  <div className="flex items-center justify-center space-x-2">
+                  <div className="flex items-center justify-center space-x-2"></div>
                     <Clock className="w-4 h-4 text-yellow-400" />
                     <span className="text-gray-300 text-sm">{office.hours}</span>
                   </div>
@@ -518,22 +572,26 @@ export default ContactPage;
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+      <>
+        <section className="py-20"></section>
+        <div className="container mx-auto px-4"></div>
+      </>
+          <div className="text-center mb-16"></div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">;
               Common questions about our services and process
             </p>
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto"></div>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
-                  <p className="text-gray-300">{faq.answer}</p>
+              {faqs.map((faq, index) => (}</div>
+                <div key={index} className="bg-slate-800/50 rounded-lg p-6"></div>
+                  <>
+                    <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+                    <p className="text-gray-300">{faq.answer}</p>
+                  </>
                 </div>
               ))}
             </div>

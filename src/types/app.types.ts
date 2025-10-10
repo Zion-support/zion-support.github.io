@@ -21,9 +21,9 @@ export interface PerformanceMetrics {fcp?: number; // First Contentful Paint;}
  * Complete performance report structure;
  */
 
-export interface PerformanceReport {// TODO: Add content;}
+export interface PerformanceReport {//, TODO: Add content;}
 };
-  webVitals: Partial;
+  webVitals: Partial;</string>
 
           <PerformanceMetrics>;,
     resource,
@@ -38,7 +38,7 @@ export interface PerformanceReport {// TODO: Add content;}
  * Tracks resource loading statistics;
  */
 
-export interface ResourceStats {// TODO: Add content;}
+export interface ResourceStats {//, TODO: Add content;}
 };
   total: number;,
     scripts: number;,
@@ -52,7 +52,7 @@ export interface ResourceStats {// TODO: Add content;}
  * Browser memory usage statistics;
  */
 
-export interface MemoryStats {// TODO: Add content;}
+export interface MemoryStats {//, TODO: Add content;}
 };
   usedJSHeapSize: number;,
     totalJSHeapSize: number;,
@@ -64,7 +64,7 @@ export interface MemoryStats {// TODO: Add content;}
  * Structure for performance alerts and warnings;
  */
 
-export interface PerformanceAlert {// TODO: Add content;}
+export interface PerformanceAlert {//, TODO: Add content;}
 };
   type: 'warning' | 'error' | 'info';,
     message: string;,
@@ -79,7 +79,7 @@ export interface PerformanceAlert {// TODO: Add content;}
  * Extends PerformanceEntry for layout shift tracking;
  */
 
-export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
+export interface LayoutShift extends PerformanceEntry {//, TODO: Add content;}
 };
   value: number;,
     hadRecentInput: boolean
@@ -90,11 +90,11 @@ export interface LayoutShift extends PerformanceEntry {// TODO: Add content;}
  * Extends Performance API with memory information;
  */
 
-export interface PerformanceWithMemory extends Performance {// TODO: Add content;}
+export interface PerformanceWithMemory extends Performance {//, TODO: Add content;}
 
 }
   memor,
-  y: {/* TODO: Fix JSX expression */}
+  y: {/*, TODO: Fix JSX expression */}
   O: Add content;}
 };
 
@@ -107,3 +107,4 @@ export interface PerformanceWithMemory extends Performance {// TODO: Add content
 
 
 
+</PerformanceMetrics>

@@ -1,22 +1,26 @@
 import React, { Component, type ErrorInfo, type ReactNode } from 'react';
 
-interface ErrorFallbackProps {
+interface ErrorFallbackProps {}
   error: Error;
   resetError: () => void;
 }
 
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-        <div className="flex items-center mb-4">
-          <div className="flex-shrink-0">
-            <svg
+  return(
+    <>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50">}</div>
+      <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6"></div>
+    </>
+        <>
+          <div className="flex items-center mb-4"></div>
+          <div className="flex-shrink-0"></div>
+        </>
+            <svg)
               className="h-8 w-8 text-red-600"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-            >
+            ></svg>
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -25,17 +29,21 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
               />
             </svg>
           </div>
-          <div className="ml-3">
+          <>
+            <div className="ml-3"></div>
             <h3 className="text-lg font-medium text-gray-900">Something went wrong</h3>
+          </>
           </div>
         </div>
-        <div className="mb-4">
+        <>
+          <div className="mb-4"></div>
           <p className="text-sm text-gray-600 mb-2">An unexpected error occurred:</p>
+        </>
           <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">
             {error.message}
           </pre>
         </div>
-        <div className="flex space-x-3">
+        <div className="flex space-x-3"></div>
           <button
             onClick={resetError}
             className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -45,7 +53,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
           <button
             onClick={() => window?.location.reload()}
             className="bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500"
-          >
+          >;
             Reload page
           </button>
         </div>
@@ -54,17 +62,17 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   );
 }
 
-interface AppErrorBoundaryProps {
+interface AppErrorBoundaryProps {}
   children: ReactNode;
 }
 
-interface AppErrorBoundaryState {
+interface AppErrorBoundaryState {}
   hasError: boolean;
   error: Error | undefined;
 }
 
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
-  constructor(props: AppErrorBoundaryProps) {
+  constructor(,props: AppErrorBoundaryProps) {
     super(props);
     this.state = { hasError: false, error: undefined };
   }
@@ -75,12 +83,12 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by, boundary:', error, errorInfo);
     }
     // Here you could send error to monitoring service
   }
 
-  resetError = () => {
+  resetError="()" => {;
     this.setState({ hasError: false, error: undefined });
   };
 

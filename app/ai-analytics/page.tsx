@@ -1,119 +1,17 @@
 'use client';
+
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AiAnalyticsPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-<<<<<<< HEAD
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimize your business performance with AI-driven recommendations and insights.',
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
-    },
-    {
-      icon: Zap,
-      title: 'Fast Processing',
-      description: 'Process large datasets in seconds with our optimized AI analytics engine.',
-      benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
-    },
-    {
-      icon: Eye,
-      title: 'Visual Analytics',
-      description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
-    },
-    {
-      icon: Shield,
-      title: 'Data Security',
-      description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
-      benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
-    }
-  ];
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
-  ];
-
-  const useCases = [
-    {
-      title: 'Business Intelligence',
-      description: 'Transform raw data into actionable business insights',
-      icon: '📊'
-    },
-    {
-      title: 'Marketing Analytics',
-      description: 'Optimize marketing campaigns with AI-powered insights',
-      icon: '📈'
-    },
-    {
-      title: 'Financial Analysis',
-      description: 'Monitor financial performance and identify trends',
-      icon: '💰'
-    },
-    {
-      title: 'Customer Analytics',
-      description: 'Understand customer behavior and preferences',
-      icon: '👥'
-    },
-    {
-      title: 'Operations Monitoring',
-      description: 'Track operational metrics and optimize processes',
-      icon: '⚙️'
-    },
-    {
-      title: 'Risk Management',
-      description: 'Identify and mitigate business risks proactively',
-      icon: '🛡️'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-    }
-  ];
-
+export default function AIAnalyticsPage() {
   return (
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
         <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
-=======
-        <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       </Helmet>
       
       <Navigation />
@@ -149,40 +47,43 @@ const AiAnalyticsPage: React.FC = () => {
                 Powerful AI Analytics Features
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Discover how our AI analytics platform can revolutionize your business intelligence.
+                Our AI analytics platform provides comprehensive insights and predictions to drive your business forward.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="flex items-center mb-4">
-                    <feature.icon className="h-8 w-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
-                  </div>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Real-time Analytics</h3>
+                <p className="text-gray-600">
+                  Get instant insights from your data with our real-time analytics engine powered by advanced AI algorithms.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Predictive Modeling</h3>
+                <p className="text-gray-600">
+                  Forecast future trends and outcomes using machine learning models trained on your historical data.
+                </p>
+              </div>
+              
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">Automated Reporting</h3>
+                <p className="text-gray-600">
+                  Generate comprehensive reports automatically with AI-powered insights and recommendations.
+                </p>
+              </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-blue-600">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <div className="max-w-7xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Analytics?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Join thousands of businesses already using our AI analytics platform.
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+              Get started with our AI analytics platform and unlock the power of intelligent data insights.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
               Start Your Free Trial
@@ -194,6 +95,4 @@ const AiAnalyticsPage: React.FC = () => {
       <Footer />
     </>
   );
-};
-
-export default AiAnalyticsPage;
+}

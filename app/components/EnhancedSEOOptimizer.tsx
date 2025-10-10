@@ -92,8 +92,10 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </>
               </div>
             ))}
           </div>

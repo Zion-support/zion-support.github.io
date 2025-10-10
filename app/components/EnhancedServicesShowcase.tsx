@@ -54,8 +54,10 @@ const EnhancedServicesShowcase: React.FC = () => {
             <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
-                <div></div>
+                <>
+                  <div></div>
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
+                </>
                   <div className="text-sm text-cyan-400 font-semibold">{service.stats}</div>
               </div>
               

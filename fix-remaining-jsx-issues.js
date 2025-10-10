@@ -3,13 +3,20 @@
 import fs from 'fs';
 import path from 'path';
 
-// Function to fix malformed JSX elements
-function fixMalformedJSX(filePath) {
+// Function to fix JSX expressions that need parent elements
+function fixJSXParentElements(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-    // Fix 1: Fix unclosed JSX elements
+    // Fix 1: Fix JSX expressions that need one parent element
+    const multipleRootPattern = /^(\s*)(<[^>]+>.*?<\/[^>]+>)\s*\n\s*(<[^>]+>.*?<\/[^>]+>)/gm;
+    content = content.replace(multipleRootPattern, (match, indent, firstElement, secondElement) => {
+      modified = true;
+      return `${indent}<>\n${indent}  ${firstElement}\n${indent}  ${secondElement}\n${indent}</>`;
+    });
+    
+    // Fix 2: Fix unclosed JSX elements
     const unclosedTagPattern = /<(\w+)([^>]*?)(?<!\/)>([^<]*?)(?=\n\s*<[^\/]|$)/g;
     content = content.replace(unclosedTagPattern, (match, tagName, attributes, innerContent) => {
       if (!innerContent.includes(`</${tagName}>`) && !attributes.includes('/')) {
@@ -19,27 +26,27 @@ function fixMalformedJSX(filePath) {
       return match;
     });
     
-    // Fix 2: Fix specific malformed patterns
+    // Fix 3: Fix specific malformed patterns
     const patterns = [
       // Fix empty self-closing tags that should have content
       {
-        regex: /<div([^>]*)><\/div>\s*<h1([^>]*)><\/h1>\s*([^<]+)\s*<\/h1>/g,
-        replacement: '<div$1>\n              <h1$2>\n                $3\n              </h1>'
+        regex: /<(\w+)([^>]*)><\/\1>\s*([^<]+)\s*<\/\1>/g,
+        replacement: '<$1$2>\n                $3\n              </$1>'
       },
       // Fix malformed button elements
       {
         regex: /<button([^>]*)><\/button>\s*([^<]+)\s*<\/button>/g,
         replacement: '<button$1>\n                  $2\n                </button>'
       },
+      // Fix malformed heading elements
+      {
+        regex: /<h([1-6])([^>]*)><\/h[1-6]>\s*([^<]+)\s*<\/h[1-6]>/g,
+        replacement: '<h$1$2>\n                $3\n              </h$1>'
+      },
       // Fix malformed paragraph elements
       {
         regex: /<p([^>]*)><\/p>\s*([^<]+)\s*<\/p>/g,
         replacement: '<p$1>\n                $2\n              </p>'
-      },
-      // Fix malformed div elements
-      {
-        regex: /<div([^>]*)><\/div>\s*<div([^>]*)><\/div>\s*<button([^>]*)><\/button>\s*([^<]+)\s*<\/button>/g,
-        replacement: '<div$1>\n                <div$2>\n                  <button$3>\n                    $4\n                  </button>'
       }
     ];
     
@@ -51,7 +58,7 @@ function fixMalformedJSX(filePath) {
       }
     });
     
-    // Fix 3: Fix JSX fragments
+    // Fix 4: Fix JSX fragments
     const lines = content.split('\n');
     const fixedLines = [];
     let inFragment = false;
@@ -110,68 +117,58 @@ function fixMalformedJSX(filePath) {
       content = fixedLines.join('\n');
     }
     
-    // Fix 4: Fix specific malformed JSX patterns in page files
-    if (filePath.includes('/page.tsx')) {
-      // Look for the common pattern where there's malformed JSX structure
-      const malformedPattern = /<div([^>]*)><\/div>\s*<h1([^>]*)><\/h1>\s*([^<]+)\s*<\/h1>\s*<p([^>]*)><\/p>\s*([^<]+)\s*<\/p>/g;
-      content = content.replace(malformedPattern, (match, divAttrs, h1Attrs, h1Content, pAttrs, pContent) => {
-        modified = true;
-        return `<div${divAttrs}>\n              <h1${h1Attrs}>\n                ${h1Content}\n              </h1>\n              <p${pAttrs}>\n                ${pContent}\n              </p>`;
-      });
-    }
-    
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed malformed JSX in: ${filePath}`);
+      console.log(`Fixed JSX parent elements in: ${filePath}`);
       return true;
     }
     
     return false;
   } catch (error) {
-    console.error(`Error fixing malformed JSX in ${filePath}:`, error.message);
+    console.error(`Error fixing JSX parent elements in ${filePath}:`, error.message);
     return false;
   }
 }
 
 // Main execution
-console.log('Starting comprehensive JSX fixes...');
+console.log('Starting remaining JSX fixes...');
 
-// Get all problematic files
+// Get all files that still have JSX issues
 const problematicFiles = [
-  'app/ai-analytics/page.tsx',
-  'app/ai-api-management/page.tsx',
-  'app/ai-api-manager/page.tsx',
-  'app/ai-autonomous-systems/page.tsx',
-  'app/ai-blockchain-analytics/page.tsx',
-  'app/ai-blockchain-solutions/page.tsx',
-  'app/ai-climate-solutions-pro/page.tsx',
-  'app/ai-cloud-infrastructure/page.tsx',
-  'app/ai-code-assistant/page.tsx',
-  'app/ai-code-security-auditor/page.tsx',
-  'app/ai-computer-vision/page.tsx',
-  'app/ai-content-delivery-network/page.tsx',
-  'app/ai-content-generation/page.tsx',
-  'app/ai-content-studio/page.tsx',
-  'app/ai-content-writer/page.tsx',
-  'app/ai-crm-assistant/page.tsx'
+  'app/analytics-tools/page.tsx',
+  'app/api-docs/page.tsx',
+  'app/ar-vr-platform/page.tsx',
+  'app/backup-recovery/page.tsx',
+  'app/blockchain-integration-services/page.tsx',
+  'app/blockchain/page.tsx',
+  'app/blog/page.tsx',
+  'app/business-apps/page.tsx',
+  'app/business-intelligence/page.tsx',
+  'app/careers/page.tsx',
+  'app/case-studies/page.tsx',
+  'app/cloud-infrastructure/page.tsx',
+  'app/cloud-migration-services/page.tsx',
+  'app/cloud-migration/page.tsx',
+  'app/cloud-security/page.tsx',
+  'app/cloud-services/page.tsx'
 ];
 
 let fixedCount = 0;
 problematicFiles.forEach(file => {
   if (fs.existsSync(file)) {
-    if (fixMalformedJSX(file)) {
+    if (fixJSXParentElements(file)) {
       fixedCount++;
     }
   }
 });
 
-console.log(`Fixed malformed JSX in ${fixedCount} files`);
+console.log(`Fixed JSX parent elements in ${fixedCount} files`);
 
-// Also run a comprehensive fix for all page files
-console.log('Running comprehensive fix for all page files...');
+// Also run a comprehensive fix for all remaining page files
+console.log('Running comprehensive fix for all remaining page files...');
 try {
   const { execSync } = require('child_process');
-  const result = execSync('find app -name "page.tsx" | head -30', { 
+  const result = execSync('find app -name "page.tsx" | head -50', { 
     encoding: 'utf8',
     cwd: process.cwd()
   });
@@ -199,6 +196,13 @@ try {
           {
             regex: /<h([1-6])([^>]*)><\/h[1-6]>\s*([^<]+)\s*<\/h[1-6]>/g,
             replacement: '<h$1$2>\n                $3\n              </h$1>'
+          },
+          // Fix multiple root elements
+          {
+            regex: /^(\s*)(<[^>]+>.*?<\/[^>]+>)\s*\n\s*(<[^>]+>.*?<\/[^>]+>)/gm,
+            replacement: (match, indent, first, second) => {
+              return `${indent}<>\n${indent}  ${first}\n${indent}  ${second}\n${indent}</>`;
+            }
           }
         ];
         
@@ -223,4 +227,4 @@ try {
   console.error('Error finding page files:', error.message);
 }
 
-console.log('Comprehensive JSX fixes completed!');
+console.log('Remaining JSX fixes completed!');
