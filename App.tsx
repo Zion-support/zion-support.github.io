@@ -1,10 +1,15 @@
 
+<<<<<<< HEAD
 import React, { Suspense, memo, useEffect } from 'react';
+=======
+import React, { Suspense, memo, lazy } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+<<<<<<< HEAD
 import HomePage from './app/page';
 import { PageLoader } from './src/components/EnhancedLoadingStates';
 import EnhancedErrorBoundary from './src/components/EnhancedErrorBoundary';
@@ -14,6 +19,17 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
+=======
+import LoadingSpinner from './src/components/LoadingSpinner';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
+
+// Lazy load heavy components for better performance
+const UnifiedContentPromotion = lazy(() => import('./src/components/UnifiedContentPromotion'));
+const InteractiveAIROICalculator = lazy(() => import('./src/components/InteractiveAIROICalculator'));
+const ContentShowcase = lazy(() => import('./src/components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(() => import('./src/components/InteractiveContentShowcase2026'));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
 
 // Structured data for SEO
 const structuredData = {
@@ -253,6 +269,7 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
 
 const App: React.FC = memo(() => {
   return (
+<<<<<<< HEAD
     <EnhancedErrorBoundary>
       <HelmetProvider>
 <<<<<<< HEAD
@@ -437,42 +454,83 @@ const App: React.FC = memo(() => {
 =======
         <Helmet>
           <title>Zion Tech Group - AI & IT Solutions</title>
+=======
+    <AccessibilityEnhancer>
+      <PerformanceMonitor>
+        <ErrorBoundary>
+          <HelmetProvider>
+          <Helmet>
+          <title>Zion Tech Group - AI & IT Solutions | Enterprise AI Services</title>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
           <meta
             name="description"
-            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
+            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology. Quantum computing, automation, and micro SAAS solutions."
           />
           <meta
             name="keywords"
-            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
+            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services, quantum computing, automation, micro SAAS, machine learning, business intelligence"
           />
-          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+          <meta name="author" content="Zion Tech Group" />
+          <meta name="robots" content="index, follow" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="theme-color" content="#0f172a" />
+          
+          {/* Open Graph */}
+          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions | Enterprise AI Services" />
           <meta
             property="og:description"
-            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains. Quantum computing, automation, and micro SAAS solutions."
           />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com" />
+          <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:site_name" content="Zion Tech Group" />
+          <meta property="og:locale" content="en_US" />
+          
+          {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
           <meta
             name="twitter:description"
             content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
           />
+          <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />
+          <meta name="twitter:site" content="@ziontechgroup" />
+          <meta name="twitter:creator" content="@ziontechgroup" />
+          
+          {/* Additional SEO */}
+          <link rel="canonical" href="https://ziontechgroup.com" />
+          <link rel="alternate" hrefLang="en" href="https://ziontechgroup.com" />
+          <meta name="geo.region" content="US-DE" />
+          <meta name="geo.placename" content="Middletown" />
+          <meta name="geo.position" content="39.4496;-75.7163" />
+          <meta name="ICBM" content="39.4496, -75.7163" />
+          
+          {/* Structured Data */}
           <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
         </Helmet>
         <Router>
           <div className="min-h-screen bg-white">
             <Navigation />
             <main>
-              <Suspense fallback={<LoadingSpinner />}>
+              <Suspense fallback={
+                <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <div className="text-center">
+                    <div className="w-16 h-16 border-4 border-cyan-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+                    <p className="text-white text-lg">Loading Zion Tech Group...</p>
+                  </div>
+                </div>
+              }>
                 <Routes>
                   <Route path="/" element={
-                    <>
+                    <Suspense fallback={<LoadingSpinner />}>
                       <UnifiedContentPromotion />
                       <InteractiveAIROICalculator />
                       <ContentShowcase />
                       <InteractiveContentShowcase2026 />
-                    </>
+                    </Suspense>
                   } />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
@@ -508,6 +566,7 @@ const App: React.FC = memo(() => {
         </Router>
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-3064
       </HelmetProvider>
+<<<<<<< HEAD
     </EnhancedErrorBoundary>
   );
 <<<<<<< HEAD
@@ -519,3 +578,12 @@ const App: React.FC = memo(() => {
 =======
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
+=======
+    </ErrorBoundary>
+    </PerformanceMonitor>
+    </AccessibilityEnhancer>
+  );
+};
+
+export default App;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25

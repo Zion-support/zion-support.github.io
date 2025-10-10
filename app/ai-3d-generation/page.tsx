@@ -491,4 +491,8 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Cube, ArrowRight } from '
   );
 };
 
+<<<<<<< HEAD
 export default AI3DGenerationPage;
+=======
+export default AI3DGenerationPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25

@@ -94,6 +94,9 @@ const AIServicesPage: React.FC = () => {
         'Predictive customer behavior'
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
       ],
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -643,6 +646,7 @@ const AIServicesPage: React.FC = () => {
       ]
     },
     {
+<<<<<<< HEAD
       id: 30,
       name: 'AI Language Learning Pro',
       description: 'AI-powered language learning with personalized curriculum, pronunciation analysis, and cultural context',
@@ -828,6 +832,77 @@ const AIServicesPage: React.FC = () => {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
       ]
+=======
+      category: 'AI Advanced Technologies',
+      icon: Cpu,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      services: [
+        {
+          name: 'AI Computer Vision Platform',
+          description: 'Advanced computer vision solutions for image recognition, object detection, and visual analysis',
+          features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Visual Search', 'Quality Inspection'],
+          pricing: 'Starting at $8,000/month',
+          trial: '14-day free trial',
+          roi: '300-600% ROI',
+          link: 'https://ziontechgroup.com/ai-computer-vision',
+          popular: true
+        },
+        {
+          name: 'AI Natural Language Processing',
+          description: 'Advanced NLP solutions for text analysis, language understanding, and conversational AI',
+          features: ['Text Analysis', 'Language Understanding', 'Sentiment Analysis', 'Translation', 'Conversational AI'],
+          pricing: 'Starting at $6,500/month',
+          trial: '14-day free trial',
+          roi: '250-500% ROI',
+          link: 'https://ziontechgroup.com/ai-nlp',
+          popular: true
+        },
+        {
+          name: 'AI Machine Learning Platform',
+          description: 'Complete ML platform with model training, deployment, and management capabilities',
+          features: ['Model Training', 'Model Deployment', 'Model Management', 'AutoML', 'MLOps'],
+          pricing: 'Starting at $9,000/month',
+          trial: '14-day free trial',
+          roi: '400-700% ROI',
+          link: 'https://ziontechgroup.com/ai-ml-platform',
+          popular: true
+        },
+        {
+          name: 'AI Quantum Computing Solutions',
+          description: 'Next-generation quantum computing solutions for complex optimization and simulation problems',
+          features: ['Quantum Optimization', 'Quantum Simulation', 'Quantum Machine Learning', 'Quantum Security', 'Hybrid Computing'],
+          pricing: 'Starting at $20,000/month',
+          trial: '30-day free trial',
+          roi: '500-1000% ROI',
+          link: 'https://ziontechgroup.com/ai-quantum-computing',
+          popular: false
+        }
+      ],
+      icon: Target,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50'
+    },
+    {
+      id: 5,
+      name: 'AI Document Processing',
+      description: 'Intelligent document processing and data extraction with OCR and NLP',
+      price: '$799/month',
+      icon: FileText,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+      features: [
+        'OCR Processing',
+        'Data Extraction',
+        'Document Classification',
+        'Automated Workflows'
+      ],
+      category: 'AI Document Processing',
+      popular: false,
+      rating: 4.6,
+      users: '1,800+',
+      color: 'from-green-500 to-emerald-600'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
     },
     {
       id: 2,
@@ -3647,6 +3722,7 @@ const AIServicesPage: React.FC = () => {
                 service.popular ? 'ring-2 ring-purple-500 neon-glow-purple' : ''
               }`}
             >
+<<<<<<< HEAD
               {/* Animated Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
@@ -3655,6 +3731,22 @@ const AIServicesPage: React.FC = () => {
                   <div className={`p-4 rounded-xl bg-gradient-to-r ${service.color} text-white group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                     <service.icon className="h-8 w-8" />
                   </div>
+=======
+              <div className="p-8">
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl ${service.bgColor} mb-6`}>
+                  <service.icon className={`h-8 w-8 ${service.color}`} />
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  {service.name}
+                </h3>
+                
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="mb-6">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
                   <div className="flex items-center space-x-2">
                     {service.popular && (
                       <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">

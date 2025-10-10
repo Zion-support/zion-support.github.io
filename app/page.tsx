@@ -281,6 +281,7 @@ const HomePage: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
+<<<<<<< HEAD
   const services = [
     {
 <<<<<<< HEAD
@@ -291,6 +292,18 @@ const HomePage: React.FC = () => {
       originalPrice: '$149/month',
       features: ['Smart scheduling', 'Conflict resolution', 'Productivity analytics', 'Team coordination', 'Meeting optimization', 'Time blocking', 'Priority management', 'Integration support'],
       benefits: ['40% time savings', 'Zero scheduling conflicts', 'Improved productivity', 'Better work-life balance'],
+=======
+  // Micro SAAS services data
+  const microSAASServices = [
+    {
+      title: 'AI Smart Calendar Pro',
+      description: 'Intelligent calendar management with AI-powered scheduling, conflict resolution, and productivity insights. Perfect for busy professionals and teams.',
+      icon: '📅',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Smart scheduling', 'Conflict resolution', 'Productivity analytics', 'Team coordination', 'Meeting optimization', 'Time blocking', 'Deadline tracking', 'Calendar sync'],
+      benefits: ['40% time saved', 'Zero scheduling conflicts', 'Better productivity', 'Team alignment'],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
       link: '/ai-smart-calendar',
       popular: true,
       category: 'Productivity',
@@ -300,6 +313,7 @@ const HomePage: React.FC = () => {
       realFeatures: ['Google Calendar sync', 'Outlook integration', 'Zoom scheduling', 'Calendly automation', 'Time zone management', 'Recurring events', 'Conflict resolution', 'Mobile notifications']
     },
     {
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2efa
       title: 'AI Project Manager Pro',
@@ -319,6 +333,22 @@ const HomePage: React.FC = () => {
     },
 <<<<<<< HEAD
 =======
+=======
+      title: 'AI Voice Cloning Studio Pro',
+      description: 'Professional voice cloning and synthesis platform for content creators, marketers, and businesses. Create natural-sounding voiceovers in minutes.',
+      icon: '🎤',
+      price: '$149/month',
+      originalPrice: '$199/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Voice customization', 'Multi-language support', 'High-quality audio', 'Batch processing', 'API integration', 'Voice analytics'],
+      benefits: ['90% cost reduction', '10x faster production', 'Professional quality', 'Scalable solution'],
+      link: '/ai-voice-cloning',
+      popular: true,
+      category: 'Content Creation',
+      rating: 4.9,
+      users: '2,500+',
+      freeTrial: '14 days'
+    },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-fb25
     {
       title: 'AI Smart Calendar Pro',
       description: 'Intelligent calendar management with AI-powered scheduling, conflict resolution, and productivity optimization.',
