@@ -195,7 +195,7 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={service.url}
+                    to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
                   >
                     <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
