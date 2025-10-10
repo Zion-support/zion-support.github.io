@@ -3,213 +3,303 @@
  * Validation Utilities
  * Provides common validation functions for forms and data
  */
+
 export interface ValidationResult {
   isValid: boolean
-  errors: string[];}
+  errors: string[]
 }
+
 /**
  * Email validation regex pattern
  */
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 /**
  * Phone number validation regex (US format)
  */
+const PHONE_REGEX = /^[\+]?[1-9][\d]{0,15}$/
 
 /**
  * URL validation regex
  */
+const URL_REGEX = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/
 
 /**
  * Validate email address
  */
 export function isValidEmail(email: string): boolean {
-  return EMAIL_REGEX.test(email.trim());}
+  return EMAIL_REGEX.test(email.trim())
 }
+
 /**
  * Validate phone number
  */
 export function isValidPhone(phone: string): boolean {
-  return PHONE_REGEX.test(phone.trim());}
+  return PHONE_REGEX.test(phone.trim())
 }
+
 /**
  * Validate URL
  */
 export function isValidUrl(url: string): boolean {
-  return URL_REGEX.test(url.trim());}
+  return URL_REGEX.test(url.trim())
 }
+
 /**
  * Validate required field
  */
 export function isRequired(value: string | null | undefined): boolean {
   if (value === null || value === undefined) {
-    return false;}
+    return false
   }
   return value.toString().trim().length > 0
 }
+
 /**
  * Validate minimum length
  */
-export function minLength(value: string, min: number): boolean {
-  return value.trim().length >= min;}
+export function hasMinLength(value: string, minLength: number): boolean {
+  return value.trim().length >= minLength
 }
+
 /**
  * Validate maximum length
  */
-export function maxLength(value: string, max: number): boolean {
-  return value.trim().length <= max;}
+export function hasMaxLength(value: string, maxLength: number): boolean {
+  return value.trim().length <= maxLength
 }
+
 /**
- * Validate string contains only alphanumeric characters
+ * Validate string length range
  */
-export function isAlphanumeric(value: string): boolean {
-  return /^[a-zA-Z0-9]+$/.test(value);}
+export function hasValidLength(value: string, minLength: number, maxLength: number): boolean {
+  const trimmed = value.trim()
+  return trimmed.length >= minLength && trimmed.length <= maxLength
 }
+
 /**
- * Validate string contains only letters
- */
-export function isAlpha(value: string): boolean {
-  return /^[a-zA-Z]+$/.test(value);}
-}
-/**
- * Validate string contains only numbers
+ * Validate numeric value
  */
 export function isNumeric(value: string): boolean {
-  return /^[0-9]+$/.test(value);}
+  return !isNaN(Number(value)) && !isNaN(parseFloat(value))
 }
+
+/**
+ * Validate integer value
+ */
+export function isInteger(value: string): boolean {
+  return Number.isInteger(Number(value))
+}
+
+/**
+ * Validate positive number
+ */
+export function isPositive(value: string): boolean {
+  const num = Number(value)
+  return !isNaN(num) && num > 0
+}
+
+/**
+ * Validate negative number
+ */
+export function isNegative(value: string): boolean {
+  const num = Number(value)
+  return !isNaN(num) && num < 0
+}
+
+/**
+ * Validate number range
+ */
+export function isInRange(value: string, min: number, max: number): boolean {
+  const num = Number(value)
+  return !isNaN(num) && num >= min && num <= max
+}
+
+/**
+ * Validate alphanumeric string
+ */
+export function isAlphanumeric(value: string): boolean {
+  return /^[a-zA-Z0-9]+$/.test(value)
+}
+
+/**
+ * Validate alphabetic string
+ */
+export function isAlphabetic(value: string): boolean {
+  return /^[a-zA-Z]+$/.test(value)
+}
+
+/**
+ * Validate string contains only letters and spaces
+ */
+export function isLettersAndSpaces(value: string): boolean {
+  return /^[a-zA-Z\s]+$/.test(value)
+}
+
+/**
+ * Validate string contains only letters, numbers, and spaces
+ */
+export function isLettersNumbersAndSpaces(value: string): boolean {
+  return /^[a-zA-Z0-9\s]+$/.test(value)
+}
+
+/**
+ * Validate string contains only letters, numbers, spaces, and common punctuation
+ */
+export function isLettersNumbersSpacesAndPunctuation(value: string): boolean {
+  return /^[a-zA-Z0-9\s.,!?\-_()]+$/.test(value)
+}
+
 /**
  * Validate password strength
- * Requirements: at least 8 characters, 1 uppercase, 1 lowercase, 1 number
  */
 export function isStrongPassword(password: string): boolean {
-  const hasMinLength = password.length >= 8
-  const hasUpperCase = /[A-Z]/.test(password)
-  const hasLowerCase = /[a-z]/.test(password)
-  const hasNumber = /[0-9]/.test(password)
-  return hasMinLength && hasUpperCase && hasLowerCase && hasNumber;}
+  // At least 8 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character
+  const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+  return strongPasswordRegex.test(password)
 }
+
 /**
- * Get password strength score (0-4)
+ * Validate password meets minimum requirements
  */
-export function getPasswordStrength(password: string): number {
-  let score = 0
-  if (password.length >= 8) score++
-  if (password.length >= 12) score++
-  if (/[A-Z]/.test(password) && /[a-z]/.test(password)) score++
-  if (/[0-9]/.test(password)) score++
-  if (/[^a-zA-Z0-9]/.test(password)) score++
-  return Math.min(score, 4);}
+export function isMinimumPassword(password: string, minLength: number = 8): boolean {
+  return password.length >= minLength
 }
+
 /**
- * Validate credit card number using Luhn algorithm
+ * Validate date string (YYYY-MM-DD format)
  */
-export function isValidCreditCard(cardNumber: string): boolean {
-  const cleaned = cardNumber.replace(/\s/g, '');}
-  if (!/^\d{13,19}$/.test(cleaned)) {
-    return false;}
-  }
-  let sum = 0
-  let isEven = false
-  for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned.charAt(i), 10)
-    if (isEven) {
-      digit *= 2
-      if (digit > 9) {
-        digit -= 9;}
-      }
-    }
-    sum += digit
-    isEven = !isEven
-  }
-  return sum % 10 === 0
+export function isValidDate(dateString: string): boolean {
+  const date = new Date(dateString)
+  return date instanceof Date && !isNaN(date.getTime()) && dateString.match(/^\d{4}-\d{2}-\d{2}$/)
 }
+
+/**
+ * Validate time string (HH:MM format)
+ */
+export function isValidTime(timeString: string): boolean {
+  return /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/.test(timeString)
+}
+
+/**
+ * Validate datetime string (ISO format)
+ */
+export function isValidDateTime(dateTimeString: string): boolean {
+  const date = new Date(dateTimeString)
+  return date instanceof Date && !isNaN(date.getTime())
+}
+
 /**
  * Validate US ZIP code
  */
-export function isValidZipCode(zipCode: string): boolean {}
+export function isValidZipCode(zipCode: string): boolean {
   return /^\d{5}(-\d{4})?$/.test(zipCode)
 }
+
 /**
- * Sanitize HTML to prevent XSS
+ * Validate US state abbreviation
  */
-export function sanitizeHtml(html: string): string {
-  const div = document.createElement('div')
-  div.textContent = html
-  return div.innerHTML;}
+export function isValidStateAbbreviation(state: string): boolean {
+  const states = [
+    'AL', 'AK', 'AZ', 'AR', 'CA', 'CO', 'CT', 'DE', 'FL', 'GA',
+    'HI', 'ID', 'IL', 'IN', 'IA', 'KS', 'KY', 'LA', 'ME', 'MD',
+    'MA', 'MI', 'MN', 'MS', 'MO', 'MT', 'NE', 'NV', 'NH', 'NJ',
+    'NM', 'NY', 'NC', 'ND', 'OH', 'OK', 'OR', 'PA', 'RI', 'SC',
+    'SD', 'TN', 'TX', 'UT', 'VT', 'VA', 'WA', 'WV', 'WI', 'WY'
+  ]
+  return states.includes(state.toUpperCase())
 }
+
 /**
- * Validate object against schema
+ * Validate credit card number (Luhn algorithm)
  */
-export function validateObject<T extends Record<string, unknown>>(
-  obj: T,
-  schema: Record<keyof T, (value: unknown) => boolean>
-): ValidationResult {
-  const errors: string[] = []
-  for (const key in schema) {
-    const validator = schema[key]
-    const value = obj[key]
-    if (!validator(value)) {}
-      errors.push(`Invalid value for field: ${String(key)}`)
-    }
-  }
-  return {
-    isValid: errors.length === 0,
-    errors}
-  }
-}
-/**
- * Validate form data
- */
-export interface FormField {
-  value: string
-  validators: Array<{
-    validate: (value: string) => boolean
-    message: string;}
-  }>
-}
-export function validateForm(
-  fields: Record<string, FormField>
-): Record<string, string[]> {}
-  const errors: Record<string, string[]> = {}
-  for (const fieldName in fields) {
-    const field = fields[fieldName]
-    const fieldErrors: string[] = []
-    for (const validator of field.validators) {
-      if (!validator.validate(field.value)) {
-        fieldErrors.push(validator.message);}
+export function isValidCreditCard(cardNumber: string): boolean {
+  const cleaned = cardNumber.replace(/\D/g, '')
+  if (cleaned.length < 13 || cleaned.length > 19) return false
+  
+  let sum = 0
+  let isEven = false
+  
+  for (let i = cleaned.length - 1; i >= 0; i--) {
+    let digit = parseInt(cleaned[i])
+    
+    if (isEven) {
+      digit *= 2
+      if (digit > 9) {
+        digit -= 9
       }
     }
-    if (fieldErrors.length > 0) {
-      errors[fieldName] = fieldErrors;}
+    
+    sum += digit
+    isEven = !isEven
+  }
+  
+  return sum % 10 === 0
+}
+
+/**
+ * Validate form field with multiple rules
+ */
+export function validateField(
+  value: string,
+  rules: {
+    required?: boolean
+    minLength?: number
+    maxLength?: number
+    pattern?: RegExp
+    custom?: (value: string) => boolean
+  }
+): ValidationResult {
+  const errors: string[] = []
+  
+  if (rules.required && !isRequired(value)) {
+    errors.push('This field is required')
+  }
+  
+  if (rules.minLength && !hasMinLength(value, rules.minLength)) {
+    errors.push(`Must be at least ${rules.minLength} characters long`)
+  }
+  
+  if (rules.maxLength && !hasMaxLength(value, rules.maxLength)) {
+    errors.push(`Must be no more than ${rules.maxLength} characters long`)
+  }
+  
+  if (rules.pattern && !rules.pattern.test(value)) {
+    errors.push('Invalid format')
+  }
+  
+  if (rules.custom && !rules.custom(value)) {
+    errors.push('Invalid value')
+  }
+  
+  return {
+    isValid: errors.length === 0,
+    errors
+  }
+}
+
+/**
+ * Validate entire form
+ */
+export function validateForm(
+  formData: Record<string, string>,
+  validationRules: Record<string, Parameters<typeof validateField>[1]>
+): ValidationResult {
+  const allErrors: string[] = []
+  let isFormValid = true
+  
+  for (const [fieldName, rules] of Object.entries(validationRules)) {
+    const fieldValue = formData[fieldName] || ''
+    const fieldResult = validateField(fieldValue, rules)
+    
+    if (!fieldResult.isValid) {
+      isFormValid = false
+      allErrors.push(...fieldResult.errors.map(error => `${fieldName}: ${error}`))
     }
   }
-  return errors
-}
-/**
- * Common form validators
- */
-export const validators = {
-  required: (message = 'This field is required') => ({
-    validate: isRequired,
-    message}
-  }),
-  email: (message = 'Please enter a valid email address') => ({
-    validate: isValidEmail,
-    message}
-  }),
-  phone: (message = 'Please enter a valid phone number') => ({
-    validate: isValidPhone,
-    message}
-  }),
-  minLength: (min: number, message = `Minimum length is ${min} characters`) => ({
-    validate: (value: string) => minLength(value, min),
-    message}
-  }),
-  maxLength: (max: number, message = `Maximum length is ${max} characters`) => ({
-    validate: (value: string) => maxLength(value, max),
-    message}
-  }),
-  password: (message = 'Password must be at least 8 characters with uppercase, lowercase, and number') => ({
-    validate: isStrongPassword,
-    message}
-  })
+  
+  return {
+    isValid: isFormValid,
+    errors: allErrors
+  }
 }
