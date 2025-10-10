@@ -169,8 +169,8 @@ const AISocialMediaScheduler: React.FC = memo(() => {}
     { name: 'Instagram', icon: '📸', color: 'text-pink-400' },
     { name: 'Facebook', icon: '📘', color: 'text-blue-400' },
     { name: 'Twitter', icon: '🐦', color: 'text-sky-400' },
-    { name: 'LinkedIn', icon: '💼', color: 'text-blue-600' },
-    { name: 'TikTok', icon: '🎵', color: 'text-black' },
+    { name: 'LinkedIn', icon: 'briefcase', color: 'text-blue-600' },
+    { name: 'TikTok', icon: 'music', color: 'text-black' },
     { name: 'YouTube', icon: '📺', color: 'text-red-400' }
   ];
 

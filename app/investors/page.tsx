@@ -78,19 +78,19 @@ const InvestorsPage: React.FC = () => {}
     },
     {}
       name: 'Andreessen Horowitz',
-      logo: '🚀',
+      logo: 'rocket',
       type: 'Series B',
       description: 'Strategic partner for enterprise growth',
     },
     {}
       name: 'Accel Partners',
-      logo: '⚡',
+      logo: 'zap',
       type: 'Growth Capital',
       description: 'Supporting international expansion',
     },
     {}
       name: 'GV (Google Ventures)',
-      logo: '🔍',
+      logo: 'search',
       type: 'Strategic',
       description: 'Technology and market access partnership',
     }

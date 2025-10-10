@@ -123,25 +123,25 @@ const AIAutomationPage: React.FC = () => {
     {
       title: 'Customer Service',
       description: 'Automate customer inquiries, ticket routing, and response generation',
-      icon: '🎧',
+      icon: 'headphones',
       examples: ['Chatbot responses', 'Ticket classification', 'Escalation routing', 'Knowledge base updates']
     },
     {
       title: 'Sales & Marketing',
       description: 'Automate lead scoring, email campaigns, and customer segmentation',
-      icon: '📈',
+      icon: 'trending-up',
       examples: ['Lead qualification', 'Email sequences', 'Social media posting', 'Campaign optimization']
     },
     {
       title: 'Finance & Accounting',
       description: 'Automate invoice processing, expense management, and financial reporting',
-      icon: '💰',
+      icon: 'dollar-sign',
       examples: ['Invoice processing', 'Expense categorization', 'Financial reporting', 'Compliance checks']
     },
     {
       title: 'HR & Operations',
       description: 'Automate recruitment, onboarding, and employee management processes',
-      icon: '👥',
+      icon: 'users',
       examples: ['Resume screening', 'Interview scheduling', 'Onboarding workflows', 'Performance tracking']
     }
   ];

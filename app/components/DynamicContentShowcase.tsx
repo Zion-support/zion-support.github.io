@@ -30,7 +30,7 @@ const DynamicContentShowcase: React.FC = () => {,
           { name: 'Machine Learning Models', description: 'Custom ML models for your specific needs', icon: '🧠' },
           { name: 'Natural Language Processing', description: 'Advanced text analysis and understanding', icon: '💬' },
           { name: 'Computer Vision', description: 'Image and video analysis capabilities', icon: '👁️' },
-          { name: 'Predictive Analytics', description: 'Forecast trends and make data-driven decisions', icon: '📊' }
+          { name: 'Predictive Analytics', description: 'Forecast trends and make data-driven decisions', icon: 'bar-chart' }
         ],
         stats: [,
           { label: 'Accuracy', value: '99.5%', icon: TrendingUp },
@@ -60,8 +60,8 @@ const DynamicContentShowcase: React.FC = () => {,
         description: 'Comprehensive IT services to keep your business running smoothly',
         features: [,
           { name: 'Cloud Infrastructure', description: 'Scalable and secure cloud solutions', icon: '☁️' },
-          { name: 'Cybersecurity', description: 'Advanced security measures and monitoring', icon: '🔒' },
-          { name: 'Network Management', description: 'Optimized network performance and reliability', icon: '🌐' },
+          { name: 'Cybersecurity', description: 'Advanced security measures and monitoring', icon: 'lock' },
+          { name: 'Network Management', description: 'Optimized network performance and reliability', icon: 'globe' },
           { name: '24/7 Support', description: 'Round-the-clock technical assistance', icon: '🛠️' }
         ],
         stats: [,
@@ -94,7 +94,7 @@ const DynamicContentShowcase: React.FC = () => {,
           { name: 'Process Automation', description: 'Streamline workflows with intelligent automation', icon: '⚙️' },
           { name: 'Legacy Modernization', description: 'Update outdated systems and technologies', icon: '🔄' },
           { name: 'Data Migration', description: 'Secure and efficient data transfer solutions', icon: '📦' },
-          { name: 'Change Management', description: 'Support your team through digital transitions', icon: '👥' }
+          { name: 'Change Management', description: 'Support your team through digital transitions', icon: 'users' }
         ],
         stats: [,
           { label: 'Efficiency Gain', value: '300%', icon: TrendingUp },

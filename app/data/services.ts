@@ -11,7 +11,7 @@ export const microSAASServices = [
   {
     title: 'AI Project Manager Pro',
     description: 'Intelligent project planning with AI-powered resource optimization, timeline prediction, and risk assessment. Trusted by 10,000+ teams worldwide.',
-    icon: '📊',
+    icon: 'bar-chart',
     price: '$99/month',
     originalPrice: '$149/month',
     features: ['AI-powered planning', 'Smart task management', 'Predictive analytics', 'Team collaboration', 'Risk assessment', 'Resource optimization', 'Gantt charts', 'Time tracking'],
@@ -26,7 +26,7 @@ export const microSAASServices = [
   {
     title: 'AI Meeting Assistant Pro',
     description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',
-    icon: '🎯',
+    icon: 'target',
     price: '$79/month',
     originalPrice: '$119/month',
     features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Voice recognition', 'Multi-language support', 'Meeting analytics'],
@@ -71,7 +71,7 @@ export const microSAASServices = [
   {
     title: 'AI Team Collaboration Hub',
     description: 'Advanced team collaboration platform with AI-powered insights, smart notifications, and productivity analytics.',
-    icon: '👥',
+    icon: 'users',
     price: '$99/month',
     originalPrice: '$149/month',
     features: ['Team analytics', 'Smart notifications', 'Project tracking', 'Communication tools', 'File sharing', 'Video conferencing', 'Task management', 'Performance insights'],
@@ -86,7 +86,7 @@ export const microSAASServices = [
   {
     title: 'AI Task Manager Pro',
     description: 'Smart task management with AI prioritization, deadline prediction, and productivity insights. Boost your productivity by 60%.',
-    icon: '✅',
+    icon: 'check',
     price: '$49/month',
     originalPrice: '$79/month',
     features: ['AI task prioritization', 'Smart scheduling', 'Progress tracking', 'Team collaboration', 'Deadline alerts', 'Productivity analytics', 'Habit tracking', 'Goal setting'],
@@ -101,7 +101,7 @@ export const microSAASServices = [
   {
     title: 'AI Workflow Automation Pro',
     description: 'Automate repetitive tasks with AI-powered workflow optimization. Save 20+ hours per week with intelligent automation.',
-    icon: '⚡',
+    icon: 'zap',
     price: '$79/month',
     originalPrice: '$119/month',
     features: ['Visual workflow builder', 'AI optimization', '500+ integrations', 'Custom triggers', 'Error handling', 'Analytics dashboard', 'Team collaboration', 'API access'],
@@ -162,7 +162,7 @@ export const microSAASServices = [
   {
     title: 'AI Video Creator Pro',
     description: 'Professional video creation with AI-powered editing, voice synthesis, and automated production. Create studio-quality videos in minutes.',
-    icon: '🎬',
+    icon: 'film',
     price: '$149/month',
     originalPrice: '$199/month',
     features: ['AI video editing', 'Voice synthesis', 'Auto-captions', 'Template library', 'Music generation', 'Color correction', 'Motion graphics', 'Multi-format export'],
@@ -192,7 +192,7 @@ export const microSAASServices = [
   {
     title: 'AI Graphic Design Studio',
     description: 'Professional graphic design with AI-powered tools, templates, and brand consistency. Create stunning visuals without design skills.',
-    icon: '🎨',
+    icon: 'palette',
     price: '$69/month',
     originalPrice: '$99/month',
     features: ['AI design generation', 'Brand kit management', 'Template library', 'Logo creation', 'Social media graphics', 'Print design', 'Color palette generator', 'Font pairing'],
@@ -207,7 +207,7 @@ export const microSAASServices = [
   {
     title: 'AI Website Builder Pro',
     description: 'Intelligent website builder with AI-powered design, content generation, and SEO optimization. Launch your site in minutes.',
-    icon: '🌐',
+    icon: 'globe',
     price: '$89/month',
     originalPrice: '$129/month',
     features: ['AI design generation', 'Content optimization', 'SEO tools', 'Mobile optimization', 'E-commerce integration', 'Analytics dashboard', 'Custom domains', 'SSL certificates'],
@@ -222,7 +222,7 @@ export const microSAASServices = [
   {
     title: 'AI Social Media Manager Pro',
     description: 'Automated social media management with AI-powered content creation, scheduling, and analytics. Grow your audience by 300%.',
-    icon: '📱',
+    icon: 'smartphone',
     price: '$69/month',
     originalPrice: '$99/month',
     features: ['Auto content creation', 'Smart scheduling', 'Hashtag optimization', 'Engagement tracking', 'Competitor analysis', 'Trend monitoring', 'Multi-platform posting', 'Analytics dashboard'],
@@ -237,7 +237,7 @@ export const microSAASServices = [
   {
     title: 'AI Email Marketing Suite',
     description: 'Intelligent email marketing with AI-powered personalization, A/B testing, and automation. Increase open rates by 150%.',
-    icon: '📧',
+    icon: 'Email:',
     price: '$59/month',
     originalPrice: '$89/month',
     features: ['AI personalization', 'A/B testing', 'Email automation', 'Segmentation', 'Analytics dashboard', 'Template library', 'Deliverability optimization', 'List management'],
@@ -252,7 +252,7 @@ export const microSAASServices = [
   {
     title: 'AI SEO Optimizer Pro',
     description: 'Advanced SEO optimization with AI-powered keyword research, content analysis, and ranking tracking. Boost organic traffic by 200%.',
-    icon: '🔍',
+    icon: 'search',
     price: '$79/month',
     originalPrice: '$119/month',
     features: ['Keyword research', 'Content optimization', 'Ranking tracking', 'Competitor analysis', 'Technical SEO audit', 'Link building', 'Local SEO', 'Schema markup'],
