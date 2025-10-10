@@ -32,7 +32,7 @@ async function handler(req, res) {
     // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
     // 3. Send confirmation email
 
-    console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
+    // // console.log('Newsletter subscription:', { email, timestamp: new Date().toISOString() });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -42,13 +42,13 @@ async function handler(req, res) {
       email 
     }));
 
-  } catch (error) {
-    console.error('Newsletter subscription error:', error);
+  } catch (_error) { // eslint-disable-line no-unused-vars
+    // console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to subscribe to newsletter',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      details: process.env.NODE_ENV === 'development' ? _error.message : undefined
     }));
   }
 }

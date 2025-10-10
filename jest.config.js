@@ -15,7 +15,7 @@ export default {
   },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.json'
+      tsconfig: 'tsconfig.jest.json'
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
   },

@@ -3,6 +3,38 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+const SEOEnhancerPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered SEO',
+      description: 'Advanced AI technology to optimize your website for search engines'
+    },
+    {
+      icon: Zap,
+      title: 'Fast Results',
+      description: 'See improvements in search rankings within weeks, not months'
+    },
+    {
+      icon: Shield,
+      title: 'White-Hat Techniques',
+      description: 'Ethical SEO practices that build lasting authority'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Optimize for international markets and languages'
+    }
+  ];
+
+  const benefits = [
+    'Improved search rankings',
+    'Increased organic traffic',
+    'Better user experience',
+    'Higher conversion rates',
+    'Competitive advantage',
+    'Long-term growth'
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
