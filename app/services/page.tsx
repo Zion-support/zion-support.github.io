@@ -15,7 +15,6 @@ import {
   Search,
   Filter
 } from 'lucide-react';
-<<<<<<< HEAD
 const ServicesPage: React.FC = () => {
   const services = [
     // AI Services
@@ -515,8 +514,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $499/month',
       category: 'IT Services'
     },
-    // Micro SAAS Services
-=======
+    // Micro SAAS Services,
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -525,7 +523,6 @@ const ServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const services = [
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     {
       id: 1,
       title: 'AI Solutions',
@@ -581,8 +578,7 @@ const ServicesPage: React.FC = () => {
       price: 'Starting at $1,000/month'
     }
   ];
-<<<<<<< HEAD
-  const categories = [
+const categories = [
     'All',
     'AI Services',
     'Cloud Services',
@@ -598,20 +594,15 @@ const ServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [searchTerm, setSearchTerm] = React.useState('');
   const [currentPage, setCurrentPage] = React.useState(1);
-  const servicesPerPage = 12;
-=======
-
-  const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+  const servicesPerPage = 12;,
+const categories = ['all', 'AI', 'Cloud', 'Security', 'Analytics', 'Development', 'Database'];
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-<<<<<<< HEAD
-  const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
+const totalPages = Math.ceil(filteredServices.length / servicesPerPage);
   const startIndex = (currentPage - 1) * servicesPerPage;
   const endIndex = startIndex + servicesPerPage;
   const currentServices = filteredServices.slice(startIndex, endIndex);
@@ -620,25 +611,15 @@ const ServicesPage: React.FC = () => {
     setCurrentPage(1);
   }, [selectedCategory, searchTerm]);
   return (
-    <React.Fragment>
-=======
-
-  return (
+    <React.Fragment>,
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI and IT services including AI solutions, cloud services, cybersecurity, data analytics, and more." />
         <meta name="keywords" content="services, AI solutions, cloud services, cybersecurity, data analytics, mobile development, database services" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
-      
-      <Navigation />
-      
-      <main className="pt-20">
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -652,8 +633,7 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
         {/* Search and Filter Section */}
-<<<<<<< HEAD
-        <section className="py-8 px-4">
+<section className="py-8 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
               <div className="flex flex-col md:flex-row gap-4 mb-6">
@@ -698,9 +678,8 @@ const ServicesPage: React.FC = () => {
                   >
                     {category}
                   </button>
-                ))}
-=======
-        <section className="py-10 px-4 sm:px-6 lg:px-8">
+                ))},
+<section className="py-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4 mb-8">
               <div className="relative flex-1">
@@ -726,7 +705,6 @@ const ServicesPage: React.FC = () => {
                     </option>
                   ))}
                 </select>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               </div>
             </div>
           </div>
@@ -734,8 +712,7 @@ const ServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-            <div className="flex justify-between items-center mb-8">
+<div className="flex justify-between items-center mb-8">
               <h2 className="text-3xl font-bold text-white">
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
               </h2>
@@ -792,9 +769,8 @@ const ServicesPage: React.FC = () => {
                     </button>
                     <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
                       Learn More;
-  </
-=======
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  </,
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredServices.map((service) => (
                 <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -816,13 +792,11 @@ const ServicesPage: React.FC = () => {
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   </div>
                 </div>
               ))}
             </div>
-<<<<<<< HEAD
-            {/* Pagination */}
+{/* Pagination */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center mt-12 space-x-2">
                 <button
@@ -853,8 +827,7 @@ const ServicesPage: React.FC = () => {
                   Next;
   </
               </div>
-            )}
-=======
+            )},
 >>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           </div>
         </section>
@@ -919,4 +892,3 @@ export default ServicesPage;
 };
 
 export default ServicesPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

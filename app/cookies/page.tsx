@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 const CookiesPage: React.FC = () => {
   return (
     <React.Fragment>
@@ -43,8 +42,7 @@ const CookiesPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-};
-=======
+};,
 ;
 const CookiesPage: React.FC = () => {;
   return (;
@@ -87,5 +85,4 @@ const CookiesPage: React.FC = () => {;
   );
 };
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 export default CookiesPage;

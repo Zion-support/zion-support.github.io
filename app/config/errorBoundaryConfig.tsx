@@ -1,91 +1,9 @@
-<<<<<<< HEAD
-/**
- * Error Boundary Configuration
- * Centralized configuration for error handling across the application
- */
 import React from 'react';
-export interface ErrorBoundaryConfig {
-  /**
-   * Whether to log errors to console
-   */
-  logErrors: boolean,
-  /**
-   * Whether to show detailed error messages
-   */
-  showDetails: boolean,
-  /**
-   * Whether to send errors to external service
-   */
-  reportErrors: boolean,
-  /**
-   * Error reporting endpoint
-   */
-  reportingEndpoint?: string;
-  /**
-   * Whether to show error overlay in development
-   */
-  showErrorOverlay: boolean,
-  /**
-   * Maximum number of errors to store
-   */
-  maxStoredErrors: number,
-  /**
-   * Custom error messages by error type
-   */
-  customMessages: Record<string, string>;
-  /**
-   * Fallback UI components
-   */
-  fallbackComponents: {
-=======
-/**;
- * Error Boundary Configuration;
- * Centralized configuration for error handling across the application;
- */;
-import React from 'react';
-;
-export interface ErrorBoundaryConfig {;
-  /**;
-   * Whether to log errors to console;
-   */;
-  logErrors: boolean,;
-  /**;
-   * Whether to show detailed error messages;
-   */;
-  showDetails: boolean,;
-  /**;
-   * Whether to send errors to external service;
-   */;
-  reportErrors: boolean,;
-  /**;
-   * Error reporting endpoint;
-   */;
-  reportingEndpoint?: string;
-;
-  /**;
-   * Whether to show error overlay in development;
-   */;
-  showErrorOverlay: boolean,;
-  /**;
-   * Maximum number of errors to store;
-   */;
-  maxStoredErrors: number,;
-  /**;
-   * Custom error messages by error type;
-   */;
-  customMessages: Record<string, string>;
-;
-  /**;
-   * Fallback UI components;
-   */;
-  fallbackComponents: {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     default: React.ComponentType<{ error: Error; resetError: () => void }>;
     network: React.ComponentType<{ error: Error; resetError: () => void }>;
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
   };
 }
-<<<<<<< HEAD
 /**
  * Default error messages
  */
@@ -140,8 +58,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
           Oops! Something went wrong;
   </
-        <p className="mt-2 text-center text-gray-600">
-=======
+        <p className="mt-2 text-center text-gray-600">,
 ;
 /**;
  * Default error messages;
@@ -200,7 +117,6 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
           Oops! Something went wrong;
         </h2>;
         <p className="mt-2 text-center text-gray-600">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {error.message || 'An unexpected error occurred'}
         </p>;
         {process.env['NODE_ENV'] === 'development' && (;}
@@ -209,8 +125,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         <div className="mt-6 flex gap-4"></div>;
           <button;
             onClick={resetError}
-<<<<<<< HEAD
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
             Try Again;
   </
           <button
@@ -239,9 +154,8 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
           >
             <path
               strokeLinecap="round"
-              strokeLinejoin="round"
-=======
-            className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors";
+              strokeLinejoin="round",
+className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors";
           >;
             Try Again;
           </button>;
@@ -274,7 +188,6 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             <path;
               strokeLinecap="round";
               strokeLinejoin="round";}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               strokeWidth={2}
               d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414";
             />;
@@ -287,8 +200,7 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
         <div className="mt-6"></div>;
           <button;
             onClick={resetError}
-<<<<<<< HEAD
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
             Retry Connection;
   </
         </div>
@@ -329,9 +241,8 @@ function NotFoundFallback(): JSX.Element {
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
-    return 'network';
-=======
-            className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors";
+    return 'network';,
+className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors";
           >;
             Retry Connection;
           </button>;
@@ -378,7 +289,6 @@ function NotFoundFallback(): JSX.Element {;
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {;
   if (error.message.includes('Network') || error.message.includes('fetch')) {;
     return 'network';}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   }
   if (error.message.includes('404') || error.message.includes('not found')) {;
     return 'notFound';}
@@ -394,7 +304,6 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
   return 'default';
 }
-<<<<<<< HEAD
 /**
  * Format error for logging
  */
@@ -417,8 +326,7 @@ export default getErrorBoundaryConfig;
   </button>
   </button>
   </h2>
-  </path>
-=======
+  </path>,
 ;
 /**;
  * Format error for logging;
@@ -437,4 +345,3 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {;
 ;
 export default getErrorBoundaryConfig;
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
-<<<<<<< HEAD
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {
@@ -60,8 +59,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
+                    <CheckCircle className="w-4 h-4 text-green-400 mr-2" />,
 ;
 const EnhancedServicesShowcase: React.FC = () => {;
   const services = [;
@@ -124,12 +122,10 @@ const EnhancedServicesShowcase: React.FC = () => {;
                 {service.features.map((feature, featureIndex) => (;}
                   <li key={featureIndex} className="flex items-center text-sm text-gray-400">;
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {feature}
                   </li>;
                 ))}
-<<<<<<< HEAD
-              </ul>
+</ul>
               <a
                 href="/services"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform">
@@ -152,30 +148,3 @@ const EnhancedServicesShowcase: React.FC = () => {;
 export default EnhancedServicesShowcase;
   </p>
   </h2>
-=======
-              </ul>;
-              <a;
-                href="/services";
-                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform";
-              >;
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />;
-              </a>;
-            </div>;
-          ))}
-        </div>;
-        <div className="text-center mt-12"></div>;
-          <a;
-            href="/services";
-            className="cyber-button inline-flex items-center";
-          >;
-            View All Services;
-            <ArrowRight className="w-5 h-5 ml-2" />;
-          </a>;
-        </div>;
-    </section>;
-  );
-};
-;
-export default EnhancedServicesShowcase;
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

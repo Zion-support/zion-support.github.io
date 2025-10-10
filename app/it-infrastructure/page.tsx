@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-    {
+{
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -83,8 +82,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 };
 export default PagePage;
   </button>
-  </button>
-=======
+  </button>,
 ;
     {;
       icon: Brain,;
@@ -168,4 +166,3 @@ export default PagePage;
 };
 ;
 export default PagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

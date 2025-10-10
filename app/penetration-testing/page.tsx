@@ -24,7 +24,6 @@ import {;
   Target,;
   Eye;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const PenetrationTestingPage: React.FC = () => {
   const features = [
     {
@@ -169,8 +168,7 @@ export default PenetrationTestingPage;
   </h2>
   </button>
   </button>
-  </h1>
-=======
+  </h1>,
 ;
 const PenetrationTestingPage: React.FC = () => {;
   const features = [;
@@ -313,4 +311,3 @@ const PenetrationTestingPage: React.FC = () => {;
 };
 ;
 export default PenetrationTestingPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

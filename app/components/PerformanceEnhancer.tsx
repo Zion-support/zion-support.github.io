@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-    }
+}
   ];
   const benefits = [
     'Advanced AI technology integration',
@@ -99,8 +98,7 @@ export default PerformanceEnhancerPage;
   </h2>
   </button>
   </span>
-  </div>
-=======
+  </div>,
 ;
     }
   ];
@@ -198,4 +196,3 @@ export default PerformanceEnhancerPage;
 };
 ;
 export default PerformanceEnhancerPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

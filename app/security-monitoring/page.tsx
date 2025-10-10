@@ -22,7 +22,6 @@ import {;
   Settings,;
   Database;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const SecurityMonitoringPage: React.FC = () => {
   const features = [
     {
@@ -166,8 +165,7 @@ export default SecurityMonitoringPage;
   </h2>
   </button>
   </button>
-  </h1>
-=======
+  </h1>,
 ;
 const SecurityMonitoringPage: React.FC = () => {;
   const features = [;
@@ -310,4 +308,3 @@ const SecurityMonitoringPage: React.FC = () => {;
 };
 ;
 export default SecurityMonitoringPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

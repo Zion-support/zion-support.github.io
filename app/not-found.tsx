@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
-<<<<<<< HEAD
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
@@ -34,8 +33,7 @@ export default function NotFound() {
           If you believe this is an error, please contact our support team.
         </div>
       </div>
-    </div>
-=======
+    </div>,
 ;
 export default function NotFound() {;
   return (;
@@ -73,7 +71,6 @@ export default function NotFound() {;
         </div>;
       </div>;
     </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 }
   </button>

@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
-<<<<<<< HEAD
 const FiveGImplementationPage: React.FC = () => {
   const features = [
     {
@@ -98,8 +97,7 @@ const FiveGImplementationPage: React.FC = () => {
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />,
 ;
 const FiveGImplementationPage: React.FC = () => {;
   const features = [;
@@ -198,7 +196,6 @@ const FiveGImplementationPage: React.FC = () => {;
                       {feature.benefits.map((benefit, idx) => (;}
                         <li key={idx} className="flex items-center text-sm text-gray-400">;
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                           {benefit}
                         </li>;
                       ))}
@@ -206,8 +203,7 @@ const FiveGImplementationPage: React.FC = () => {;
                   )}
                 </div>;
               ))}
-<<<<<<< HEAD
-            </div>
+</div>
           </div>
         </section>
         {/* CTA Section */}
@@ -242,9 +238,8 @@ export default FiveGImplementationPage;
   </h2>
   </button>
   </button>
-  </span>
-=======
-            </div>;
+  </span>,
+</div>;
           </div>;
         </section>;
         {/* CTA Section */}
@@ -274,4 +269,3 @@ export default FiveGImplementationPage;
 };
 ;
 export default FiveGImplementationPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

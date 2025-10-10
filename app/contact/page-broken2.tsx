@@ -1,10 +1,7 @@
 'use client';
 import React from 'react';
 'use client';
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import {;
@@ -29,8 +26,7 @@ phone: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
 ;
 const ContactPage: React.FC = () => {;
   const [formData, setFormData] = useState({;
@@ -48,30 +44,18 @@ phone: '',;
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 ;
   const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev,;
       [name]: value;}
     }));
   }, []);
-<<<<<<< HEAD
-  const handleSubmit = async (e: React.FormEvent) => {
+const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('idle');
     try {
       // Simulate form submission
-=======
-;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
-;
-    try {;
-      // Simulate form submission;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
       setFormData({;
@@ -90,8 +74,7 @@ phone: '',;
       setIsSubmitting(false);}
     }
   };
-<<<<<<< HEAD
-  const services = [
+const services = [
     'AI Solutions',
     'Cloud Computing',
     'Mobile App Development',
@@ -250,8 +233,7 @@ phone: '',;
                       className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white focus:outline-none focus:border-cyan-500">
                       <option value="">Select a service</option>
                       {services.map((service) => (
-                        <option key={service} value={service}>
-=======
+                        <option key={service} value={service}>,
 ;
   const services = [;
     'AI Solutions',;
@@ -418,12 +400,10 @@ phone: '',;
                       <option value="">Select a service</option>;
                       {services.map((service) => (;}
                         <option key={service} value={service}>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                           {service}
                         </option>;
                       ))}
-<<<<<<< HEAD
-                    </select>
+</select>
                   </div>
                 </div>
                 <div>
@@ -434,25 +414,11 @@ phone: '',;
                     <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />
                     <textarea
                       name="message"
-=======
-                    </select>;
-                  </div>;
-                </div>;
-                <div></div>;
-                  <label className="block text-sm font-medium text-gray-300 mb-2">;
-                    Message *;
-                  </label>;
-                  <div className="relative"></div>;
-                    <MessageCircle className="absolute left-3 top-3 w-5 h-5 text-gray-400" />;
-                    <textarea;
-                      name="message";
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                       value={formData.message}
                       onChange={handleInputChange}
                       required;
                       rows={6}
-<<<<<<< HEAD
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none"
                       placeholder="Tell us about your project, goals, or any questions you have..."
                     />
                   </div>
@@ -498,9 +464,8 @@ phone: '',;
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-<h3 className="text-lg font-semibold text-white mb-1">
-=======
-                      className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none";
+<h3 className="text-lg font-semibold text-white mb-1">,
+className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500 resize-none";
                       placeholder="Tell us about your project, goals, or any questions you have...";
                     />;
                   </div>;
@@ -548,7 +513,6 @@ phone: '',;
                     </div>;
                     <div></div>;
 <h3 className="text-lg font-semibold text-white mb-1">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                         {info.title}
                       </h3>;
                       <p className="text-cyan-400 font-medium mb-1">;
@@ -556,8 +520,7 @@ phone: '',;
                       </p>;
                       <p className="text-gray-300 text-sm">;
                         {info.description}
-<<<<<<< HEAD
-                      </p>
+</p>
                     </div>
                   </div>
                   <div className="flex items-center">
@@ -603,46 +566,3 @@ export default ContactPage;
   </label>
   </span>
   </HTMLInputElement>
-=======
-                      </p>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center"></div>;
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>;
-                      <Mail className="w-6 h-6 text-white" />;
-                    </div>;
-                    <div></div>;
-                      <h3 className="text-lg font-semibold text-white">Email</h3>;
-                      <p className="text-gray-300">info@ziontechgroup.com</p>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center"></div>;
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>;
-                      <MapPin className="w-6 h-6 text-white" />;
-                    </div>;
-                    <div></div>;
-                      <h3 className="text-lg font-semibold text-white">Address</h3>;
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>;
-                    </div>;
-                  </div>;
-                  <div className="flex items-center"></div>;
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>;
-                      <Clock className="w-6 h-6 text-white" />;
-                    </div>;
-                    <div></div>;
-                      <h3 className="text-lg font-semibold text-white">Business Hours</h3>;
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>;
-                    </div>;
-                  </div>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </section>;
-      </div>;
-</div>;
-  );
-};
-;
-export default ContactPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

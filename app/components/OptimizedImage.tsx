@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-  return (
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>OptimizedImage | Zion Tech Group</title>
@@ -113,8 +112,7 @@ export default OptimizedImagePage;
   </button>
   </h2>
   </button>
-  </span>
-=======
+  </span>,
 ;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
@@ -223,4 +221,3 @@ export default OptimizedImagePage;
 };
 ;
 export default OptimizedImagePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

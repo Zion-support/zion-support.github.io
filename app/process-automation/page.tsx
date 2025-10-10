@@ -23,7 +23,6 @@ import {;
   Workflow,;
   Bot;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const ProcessAutomationPage: React.FC = () => {
   const features = [
     {
@@ -168,8 +167,7 @@ export default ProcessAutomationPage;
   </h2>
   </button>
   </button>
-  </h1>
-=======
+  </h1>,
 ;
 const ProcessAutomationPage: React.FC = () => {;
   const features = [;
@@ -312,4 +310,3 @@ const ProcessAutomationPage: React.FC = () => {;
 };
 ;
 export default ProcessAutomationPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

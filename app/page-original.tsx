@@ -42,12 +42,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 const HomePage: React.FC = memo(() => {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
-  useEffect(() => {
-=======
-;
-  useEffect(() => {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+useEffect(() => {
     setIsLoaded(true);
     // Trigger visibility animation;
     const timer = setTimeout(() => setIsVisible(true), 100);
@@ -64,19 +59,11 @@ const HomePage: React.FC = memo(() => {;
       });
     }
   }, []);
-<<<<<<< HEAD
-  return (
+return (
     <React.Fragment>
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
-=======
-  return (;
-    <></>;
-      <SEOOptimizer;
-        title="Zion Tech Group - Advanced AI and IT Solutions";
-        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.";
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
         canonicalUrl="https://ziontechgroup.com";
         structuredData={{;
@@ -145,20 +132,11 @@ const HomePage: React.FC = memo(() => {;
         {/* Navigation */}</div>;
         <Navigation />;
         {/* Skip to main content for accessibility */}
-<<<<<<< HEAD
-        <a
+<a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
           Skip to main content;
   </
-=======
-        <a;
-          href="#main-content";
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50";
-        >;
-          Skip to main content;
-        </a>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>;
         <ContentPromotionBanner />;
@@ -171,8 +149,7 @@ const HomePage: React.FC = memo(() => {;
               ? 'opacity-100 translate-y-0';
               : 'opacity-0 translate-y-8';}
           }`}
-<<<<<<< HEAD
-          aria-labelledby="hero-heading"
+aria-labelledby="hero-heading"
         >
           <div className="max-w-6xl mx-auto"></div>
             <h1 
@@ -211,9 +188,8 @@ const HomePage: React.FC = memo(() => {;
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
               </div>
-            </div>
-=======
-          aria-labelledby="hero-heading";
+            </div>,
+aria-labelledby="hero-heading";
         ></section>;
           <div className="max-w-6xl mx-auto"></div>;
             <h1;
@@ -253,14 +229,12 @@ const HomePage: React.FC = memo(() => {;
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>;
               </div>;
             </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {/* CTA Buttons */}
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center"></div>;
               <a;
                 href="tel:+13024640950";
                 onClick={handlePhoneClick}
-<<<<<<< HEAD
-                className="cyber-button w-full sm:w-auto text-center"
+className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
             >
               📞 Call: (302) 464-0950;
@@ -280,9 +254,8 @@ const HomePage: React.FC = memo(() => {;
   </
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
             Comprehensive AI and IT solutions designed to transform your business operations;
-  </
-=======
-                className="cyber-button w-full sm:w-auto text-center";
+  </,
+className="cyber-button w-full sm:w-auto text-center";
                 aria-label="Call us at (302) 464-0950";
             >;
               📞 Call: (302) 464-0950;
@@ -304,7 +277,6 @@ const HomePage: React.FC = memo(() => {;
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">;
             Comprehensive AI and IT solutions designed to transform your business operations;
           </p>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* Primary Services Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>;
             <Suspense fallback={<ServiceCardSkeleton />}>;
@@ -402,8 +374,7 @@ const HomePage: React.FC = memo(() => {;
             </Suspense>;
           </div>;
           {/* Micro SAAS Services Grid */}
-<<<<<<< HEAD
-          <div className="mb-12"></div>
+<div className="mb-12"></div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
               Micro SAAS Solutions;
   </
@@ -1380,9 +1351,8 @@ const HomePage: React.FC = memo(() => {;
               </article>
             </div>
           </div>
-        </section>
-=======
-          <div className="mb-12"></div>;
+        </section>,
+<div className="mb-12"></div>;
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">;
               Micro SAAS Solutions;
             </h3>;
@@ -2360,7 +2330,6 @@ const HomePage: React.FC = memo(() => {;
             </div>;
           </div>;
         </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         {/* Statistics Section */}
         <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>;
           <ContentStatistics />;
@@ -2374,8 +2343,7 @@ const HomePage: React.FC = memo(() => {;
           <DynamicContentShowcase />;
         </Suspense>;
         {/* Newsletter Signup */}
-<<<<<<< HEAD
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
+<Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>
           <ContentNewsletterSignup />
         </Suspense>
         {/* Contact Section */}
@@ -2526,9 +2494,8 @@ const HomePage: React.FC = memo(() => {;
     </div>
     </React.Fragment>
   );
-});
-=======
-        <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>;
+});,
+<Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>;
           <ContentNewsletterSignup />;
         </Suspense>;
         {/* Contact Section */}
@@ -2683,7 +2650,6 @@ const HomePage: React.FC = memo(() => {;
   );
 });
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 HomePage.displayName = 'HomePage';
 export default HomePage;
   </button>

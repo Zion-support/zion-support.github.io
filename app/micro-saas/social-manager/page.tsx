@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Share2, ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
 const SocialMediaManagerPage: React.FC = () => {
   return (
     <React.Fragment>
@@ -51,8 +50,7 @@ const SocialMediaManagerPage: React.FC = () => {
   );
 };
 export default SocialMediaManagerPage;
-  </button>
-=======
+  </button>,
 ;
 const SocialMediaManagerPage: React.FC = () => {;
   return (;
@@ -104,4 +102,3 @@ const SocialMediaManagerPage: React.FC = () => {;
 };
 ;
 export default SocialMediaManagerPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

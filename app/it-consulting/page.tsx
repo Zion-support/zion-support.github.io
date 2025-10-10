@@ -74,7 +74,6 @@ import {;
   Keyboard as KeyboardIcon, Mouse as MouseIcon,;
   Webcam as WebcamIcon, Speaker as SpeakerIcon;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const ITConsultingPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -414,8 +413,7 @@ const ITConsultingPage: React.FC = () => {
     { id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw },
     { id: 'compliance', name: 'Compliance', icon: CheckSquare }
   ];
-  const filteredServices = itServices.filter(service => {
-=======
+  const filteredServices = itServices.filter(service => {,
 ;
 const ITConsultingPage: React.FC = () => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -760,14 +758,12 @@ const ITConsultingPage: React.FC = () => {;
   ];
 ;
   const filteredServices = itServices.filter(service => {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;}
   });
-<<<<<<< HEAD
-  return (
+return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}</div>
       <section className="relative py-20 px-4 sm:px-6 lg:px-8 cyber-grid">
@@ -795,8 +791,7 @@ const ITConsultingPage: React.FC = () => {;
   </
           </div>
         </div>
-      </section>
-=======
+      </section>,
 ;
   return (;
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>;
@@ -829,7 +824,6 @@ const ITConsultingPage: React.FC = () => {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -843,44 +837,28 @@ const ITConsultingPage: React.FC = () => {;
                   placeholder="Search IT services...";
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
                 />
               </div>
             </div>
-=======
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
-                />;
-              </div>;
-            </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             {/* Category Filter */}
             <div className="lg:w-64"></div>;
               <select;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-<<<<<<< HEAD
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
+className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
                 {categories.map((category) => (
-                  <option key={category.id} value={category.id}>
-=======
-                className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
+                  <option key={category.id} value={category.id}>,
+className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20";
               >;
                 {categories.map((category) => (;}
                   <option key={category.id} value={category.id}>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                     {category.name}
                   </option>;
                 ))}
-<<<<<<< HEAD
-              </select>
+</select>
             </div>
           </div>
-=======
-              </select>;
-            </div>;
-          </div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           {/* Category Pills */}
           <div className="flex flex-wrap gap-2 mb-8"></div>;
             {categories.map((category) => (</div>;
@@ -896,8 +874,7 @@ const ITConsultingPage: React.FC = () => {;
                 {category.name}
               </button>;
             ))}
-<<<<<<< HEAD
-          </div>
+</div>
         </div>
       </section>
       {/* Services Grid */}
@@ -1015,9 +992,8 @@ export default ITConsultingPage;
   </a>
   </a>
   </a>
-  </a>
-=======
-          </div>;
+  </a>,
+</div>;
         </div>;
       </section>;
       {/* Services Grid */}
@@ -1136,4 +1112,3 @@ export default ITConsultingPage;
 };
 ;
 export default ITConsultingPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

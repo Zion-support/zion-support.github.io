@@ -1,18 +1,12 @@
 'use client';
 import React from 'react';
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 interface AnalyticsProps {
-=======
-;
-interface AnalyticsProps {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   enableGoogleAnalytics?: boolean;
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;
   enableUserBehaviorTracking?: boolean;}
 }
-<<<<<<< HEAD
 const Analytics: React.FC<AnalyticsProps> = ({
   enableGoogleAnalytics = true,
   enablePerformanceMonitoring = true,
@@ -34,8 +28,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     }
   }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
   const initializeGoogleAnalytics = () => {
-    // Load Google Analytics
-=======
+    // Load Google Analytics,
 ;
 const Analytics: React.FC<AnalyticsProps> = ({;
   enableGoogleAnalytics = true,;
@@ -63,17 +56,11 @@ const Analytics: React.FC<AnalyticsProps> = ({;
 ;
   const initializeGoogleAnalytics = (;
     // Load Google Analytics;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     const script = document.createElement('script');
     script.async = true;
     script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
     document.head.appendChild(script);
-<<<<<<< HEAD
-    // Initialize gtag
-=======
-;
-    // Initialize gtag;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+// Initialize gtag
     (window as any).dataLayer = (window as any).dataLayer || [];
     function gtag(...args: any[]) {;) => {
   return (
@@ -83,10 +70,7 @@ const Analytics: React.FC<AnalyticsProps> = ({;
       (window as any).dataLayer.push(args);}
     }
     (window as any).gtag = gtag;
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
     gtag('js', new Date());
     gtag('config', 'GA_MEASUREMENT_ID', {;
       page_title: document.title,;
@@ -102,8 +86,7 @@ const Analytics: React.FC<AnalyticsProps> = ({;
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'largest-contentful-paint') {
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));
-          } else if (entry.entryType === 'first-input') {
-=======
+          } else if (entry.entryType === 'first-input') {,
 ;
   const initializePerformanceMonitoring = (;
     if ('PerformanceObserver' in window) {;
@@ -117,7 +100,6 @@ const Analytics: React.FC<AnalyticsProps> = ({;
 };
             trackEvent('web_vitals', 'LCP', Math.round(entry.startTime));}
           } else if (entry.entryType === 'first-input') {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             const fid = (entry as any).processingStart - entry.startTime;
             trackEvent('web_vitals', 'FID', Math.round(fid));}
           } else if (entry.entryType === 'layout-shift') {;
@@ -127,17 +109,14 @@ const Analytics: React.FC<AnalyticsProps> = ({;
           }
         }
       });
-<<<<<<< HEAD
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
       // Monitor page load time
-      window.addEventListener('load', () => {
-=======
+      window.addEventListener('load', () => {,
 ;
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 ;
       // Monitor page load time;
       window.addEventListener('load', () => {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {;
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));}
@@ -145,8 +124,7 @@ const Analytics: React.FC<AnalyticsProps> = ({;
       });
     }
   };
-<<<<<<< HEAD
-  const initializeErrorTracking = () => {
+const initializeErrorTracking = () => {
     // Track JavaScript errors
     window.addEventListener('error', (event) => {
       trackEvent('error', 'javascript_error', {
@@ -170,8 +148,7 @@ const Analytics: React.FC<AnalyticsProps> = ({;
         trackEvent('error', 'resource_error', {
           type: (event.target as any).tagName,
           src: (event.target as any).src || (event.target as any).href,
-          error: event.type
-=======
+          error: event.type,
 ;
   const initializeErrorTracking = (;
     // Track JavaScript errors;
@@ -204,21 +181,18 @@ const Analytics: React.FC<AnalyticsProps> = ({;
           type: (event.target as any).tagName,;
           src: (event.target as any).src || (event.target as any).href,;
           error: event.type;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         });
       }
     }, true);
   };
-<<<<<<< HEAD
-  const initializeUserBehaviorTracking = () => {
+const initializeUserBehaviorTracking = () => {
     // Track page views
     trackEvent('page_view', 'page_view', {
       page_title: document.title,
       page_location: window.location.href,
       page_path: window.location.pathname
     });
-    // Track scroll depth
-=======
+    // Track scroll depth,
 ;
   const initializeUserBehaviorTracking = (;
     // Track page views;
@@ -233,7 +207,6 @@ const Analytics: React.FC<AnalyticsProps> = ({;
     });
 ;
     // Track scroll depth;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     let maxScroll = 0;
     window.addEventListener('scroll', () => {;
       const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
@@ -244,32 +217,16 @@ const Analytics: React.FC<AnalyticsProps> = ({;
         }
       }
     });
-<<<<<<< HEAD
-    // Track time on page
-=======
-;
-    // Track time on page;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+// Track time on page
     const startTime = Date.now();
     window.addEventListener('beforeunload', () => {;
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       trackEvent('engagement', 'time_on_page', timeOnPage);}
     });
-<<<<<<< HEAD
-    // Track clicks on important elements
+important elements
     document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
-      const tagName = target.tagName.toLowerCase();
-      if (tagName === 'a') {
-=======
-;
-    // Track clicks on important elements;
-    document.addEventListener('click', (event) => {;
-      const target = event.target as HTMLElement;
-      const tagName = target.tagName.toLowerCase();
-;
-      if (tagName === 'a') {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+important elements;
         const href = (target as HTMLAnchorElement).href;
         trackEvent('engagement', 'link_click', {;
           link_url: href,;
@@ -282,14 +239,8 @@ const Analytics: React.FC<AnalyticsProps> = ({;
         });
       }
     });
-<<<<<<< HEAD
-    // Track form submissions
+// Track form submissions
     document.addEventListener('submit', (event) => {
-=======
-;
-    // Track form submissions;
-    document.addEventListener('submit', (event) => {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       const form = event.target as HTMLFormElement;
       trackEvent('engagement', 'form_submit', {;
         form_id: form.id,;
@@ -298,8 +249,7 @@ const Analytics: React.FC<AnalyticsProps> = ({;
       });
     });
   };
-<<<<<<< HEAD
-  const trackEvent = (category: string, action: string, value?: any) => {
+const trackEvent = (category: string, action: string, value?: any) => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
       (window as any).gtag('event', action, {
         event_category: category,
@@ -312,8 +262,7 @@ const Analytics: React.FC<AnalyticsProps> = ({;
 };
 // Extend Window interface for gtag
 declare global {
-  interface Window {
-=======
+  interface Window {,
 ;
   const trackEvent = (;
     if (typeof window !== 'undefined' && 'gtag' in window) {;
@@ -335,12 +284,10 @@ declare global {
 // Extend Window interface for gtag;
 declare global {;
   interface Window {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     dataLayer: any[];
     gtag: (...args: any[]) => void;}
   }
 }
-<<<<<<< HEAD
 export default Analytics;
 // Analytics Provider for context
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -351,8 +298,7 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </React.Fragment>
   );
 };
-  </AnalyticsProps>
-=======
+  </AnalyticsProps>,
 ;
 export default Analytics;
 ;
@@ -366,4 +312,3 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   );
 };
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

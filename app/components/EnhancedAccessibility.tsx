@@ -1,22 +1,8 @@
 'use client';
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-<<<<<<< HEAD
-=======
-import { useEffect, useState } from 'react';
 import { useAnalytics } from './EnhancedAnalytics';
+import React, { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
-  fontSize: 'normal' | 'large' | 'extra-large';
-  focusVisible: boolean;
-}
-
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
 const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -27,8 +13,7 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   const { trackEvent } = useAnalytics();
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Add ARIA landmarks
+// Add ARIA landmarks
     const addLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
@@ -118,14 +103,8 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     enhanceFocusManagement();
     const cleanup = addKeyboardNavigation();
 
-<<<<<<< HEAD
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-      }
-=======
-    // Check for user preferences
+      },
+// Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
 
@@ -149,7 +128,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
     const handleMotionChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
       applyAccessibilitySettings({ ...settings, reducedMotion: e.matches });
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
     };
 
     const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -171,16 +149,9 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
       contrastQuery.removeEventListener('change', handleContrastChange);
     };
   }, []);
-<<<<<<< HEAD
-=======
-    return cleanup;
-  }, []);
 
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+  return <React.Fragment>{children}</React.Fragment>;,
+const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
     // Apply high contrast
@@ -313,7 +284,6 @@ const EnhancedAccessibility: React.FC<{ children: React.ReactNode }> = ({ childr
   }, [settings]);
 
   return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-5431
 };
 
 export default EnhancedAccessibility;

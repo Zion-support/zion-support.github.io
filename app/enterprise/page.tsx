@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
 const EnterprisePage: React.FC = () => {
   const features = [
     {
@@ -119,8 +118,7 @@ const EnterprisePage: React.FC = () => {
   </
           </div>
         </div>
-      </section>
-=======
+      </section>,
 ;
 const EnterprisePage: React.FC = () => {;
   const features = [;
@@ -241,7 +239,6 @@ const EnterprisePage: React.FC = () => {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Stats Section */}
       <section className="py-20 px-4"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -255,8 +252,7 @@ const EnterprisePage: React.FC = () => {;
                 <div className="text-gray-300 text-sm">{stat.label}</div>;
               </div>;
             ))}
-<<<<<<< HEAD
-          </div>
+</div>
         </div>
       </section>
       {/* Features Section */}
@@ -278,9 +274,8 @@ const EnterprisePage: React.FC = () => {;
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-=======
-          </div>;
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />,
+</div>;
         </div>;
       </section>;
       {/* Features Section */}
@@ -303,15 +298,13 @@ const EnterprisePage: React.FC = () => {;
                   {feature.benefits.map((benefit, idx) => (;}
                     <li key={idx} className="flex items-center text-sm text-gray-400">;
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                       {benefit}
                     </li>;
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
-          </div>
+</div>
         </div>
       </section>
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -322,25 +315,11 @@ const EnterprisePage: React.FC = () => {;
             </p>
           </div>
                     </li>
-=======
-          </div>;
-        </div>;
-      </section>;
-            <h2 className="text-4xl font-bold text-white mb-4">;
-              Comprehensive Solutions;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              End-to-end enterprise solutions that address every aspect of your business operations.;
-            </p>;
-          </div>;
-                    </li>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   ))}
                 </ul>;
               </div>;
             ))}
-<<<<<<< HEAD
-          </div>
+</div>
         </div>
       </section>
       {/* Benefits Section */}
@@ -380,9 +359,8 @@ export default EnterprisePage;
   </h2>
   </h2>
   </span>
-  </SEOOptimizer>
-=======
-          </div>;
+  </SEOOptimizer>,
+</div>;
         </div>;
       </section>;
       {/* Benefits Section */}
@@ -419,4 +397,3 @@ export default EnterprisePage;
 };
 ;
 export default EnterprisePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

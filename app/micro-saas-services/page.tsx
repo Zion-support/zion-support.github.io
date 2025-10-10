@@ -38,12 +38,9 @@ export interface MicroSaasService {;
     features: string[];}
   };
 }
-<<<<<<< HEAD
-export const microSaasServices: MicroSaasService[] = [
-=======
+export const microSaasServices: MicroSaasService[] = [,
 ;
 export const microSaasServices: MicroSaasService[] = [;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   // AI-Powered Productivity Tools;
   {,;
     id: 'ai-project-manager-pro',;
@@ -116,8 +113,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 299,;
       features: ['Unlimited projects', 'Advanced AI features', 'Priority support', 'Custom integrations'];}
     }
-<<<<<<< HEAD
-  },
+},
   {
     id: 'ai-task-manager-pro',
     title: 'AI Task Manager Pro',
@@ -146,9 +142,8 @@ export const microSaasServices: MicroSaasService[] = [;
     ],
     link: '/ai-task-manager'
     popular: true,
-    category: 'Productivity',
-=======
-  },;
+    category: 'Productivity',,
+},;
   {;
     id: 'ai-task-manager-pro',;
     title: 'AI Task Manager Pro',;
@@ -178,7 +173,6 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-task-manager';
     popular: true,;
     category: 'Productivity',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     rating: 4.8;
     users: '25,000+',;
     freeTrial: '14 days',;
@@ -220,11 +214,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 149,;
       features: ['Unlimited tasks', 'Team collaboration', 'Advanced analytics', 'API access'];}
     }
-<<<<<<< HEAD
-  },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+},
   // AI Content & Marketing Tools;
   {;
     id: 'ai-content-writer-pro',;
@@ -296,8 +286,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 199,;
       features: ['Unlimited content', 'Brand voice training', 'API access', 'Priority support'];}
     }
-<<<<<<< HEAD
-  },
+},
   {
     id: 'ai-social-media-manager',
     title: 'AI Social Media Manager',
@@ -326,9 +315,8 @@ export const microSaasServices: MicroSaasService[] = [;
     ],
     link: '/ai-social-media-manager'
     popular: true,
-    category: 'Content & Marketing',
-=======
-  },;
+    category: 'Content & Marketing',,
+},;
   {;
     id: 'ai-social-media-manager',;
     title: 'AI Social Media Manager',;
@@ -358,7 +346,6 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-social-media-manager';
     popular: true,;
     category: 'Content & Marketing',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     rating: 4.6;
     users: '30,000+',;
     freeTrial: '14 days',;
@@ -401,11 +388,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 249,;
       features: ['Unlimited posts', 'Advanced analytics', 'White-label options', 'API access'];}
     }
-<<<<<<< HEAD
-  },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+},
   // AI Business & Finance Tools;
   {;
     id: 'ai-crm-intelligence',;
@@ -478,8 +461,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 399,;
       features: ['Unlimited contacts', 'Advanced AI features', 'Custom integrations', 'Dedicated support'];}
     }
-<<<<<<< HEAD
-  },
+},
   {
     id: 'ai-financial-analyzer',
     title: 'AI Financial Analyzer',
@@ -508,9 +490,8 @@ export const microSaasServices: MicroSaasService[] = [;
     ],
     link: '/ai-financial-analyzer'
     popular: true,
-    category: 'Business & Finance',
-=======
-  },;
+    category: 'Business & Finance',,
+},;
   {;
     id: 'ai-financial-analyzer',;
     title: 'AI Financial Analyzer',;
@@ -540,7 +521,6 @@ export const microSaasServices: MicroSaasService[] = [;
     link: '/ai-financial-analyzer';
     popular: true,;
     category: 'Business & Finance',;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     rating: 4.9;
     users: '12,000+',;
     freeTrial: '14 days',;
@@ -583,11 +563,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 599,;
       features: ['Unlimited analysis', 'Real-time data', 'Custom models', 'Dedicated support'];}
     }
-<<<<<<< HEAD
-  },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+},
   // AI Customer Service Tools;
   {;
     id: 'ai-customer-support-bot',;
@@ -660,11 +636,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 199,;
       features: ['Unlimited conversations', 'Advanced AI features', 'Custom training', 'API access'];}
     }
-<<<<<<< HEAD
-  },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+},
   // AI Development Tools;
   {;
     id: 'ai-code-review-assistant',;
@@ -737,11 +709,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 249,;
       features: ['Unlimited repositories', 'Advanced analysis', 'Custom rules', 'API access'];}
     }
-<<<<<<< HEAD
-  },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+},
   // AI Healthcare Tools;
   {;
     id: 'ai-healthcare-assistant',;
@@ -814,11 +782,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 499,;
       features: ['Unlimited patients', 'Advanced AI features', 'Custom integrations', 'Compliance support'];}
     }
-<<<<<<< HEAD
-  },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+},
   // AI E-commerce Tools;
   {;
     id: 'ai-ecommerce-optimizer',;
@@ -891,11 +855,7 @@ export const microSaasServices: MicroSaasService[] = [;
       enterprise: 399,;
       features: ['Unlimited products', 'Advanced AI features', 'Custom integrations', 'Priority support'];}
     }
-<<<<<<< HEAD
-  },
-=======
-  },;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+},
   // AI Education Tools;
   {;
     id: 'ai-education-platform',;
@@ -970,10 +930,7 @@ export const microSaasServices: MicroSaasService[] = [;
     }
   }
 ];
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
 // Service categories for filtering and organization;
 export const serviceCategories = [;
   'All',;
@@ -989,32 +946,7 @@ export const serviceCategories = [;
   'Analytics',;
   'Automation';
 ];
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-// Pricing tiers for comparison;
-export const pricingTiers = {;
-  starter: {,;
-    name: 'Starter',;
-    price: '$29-99/month',;
-    features: ['Basic AI features', 'Standard support', 'Limited integrations', 'Basic analytics'];}
-  },;
-  professional: {,;
-    name: 'Professional',;
-    price: '$99-299/month',;
-    features: ['Advanced AI features', 'Priority support', 'Full integrations', 'Advanced analytics', 'API access'];}
-  },;
-  enterprise: {,;
-    name: 'Enterprise',;
-    price: '$299-999/month',;
-    features: ['Custom AI models', '24/7 support', 'White-label options', 'Custom integrations', 'Dedicated support', 'SLA guarantees'];}
-  }
-};
-<<<<<<< HEAD
-=======
-;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
 // Contact information;
 export const contactInfo = {;
   phone: '+1 302 464 0950',;

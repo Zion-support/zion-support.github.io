@@ -24,7 +24,6 @@ import {;
   Target,;
   Monitor;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const SecurityMonitoringSuitePage: React.FC = () => {
   const features = [
     {
@@ -168,8 +167,7 @@ export default SecurityMonitoringSuitePage;
   </h2>
   </button>
   </button>
-  </h1>
-=======
+  </h1>,
 ;
 const SecurityMonitoringSuitePage: React.FC = () => {;
   const features = [;
@@ -312,4 +310,3 @@ const SecurityMonitoringSuitePage: React.FC = () => {;
 };
 ;
 export default SecurityMonitoringSuitePage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

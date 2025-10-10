@@ -2,8 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-<<<<<<< HEAD
-  const benefits = [
+const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -52,8 +51,7 @@ export default FuturisticServiceCardPage;
   </button>
   </span>
   </section>
-  </div>
-=======
+  </div>,
 ;
   const benefits = [;
     'Advanced AI technology integration',;
@@ -103,4 +101,3 @@ export default FuturisticServiceCardPage;
 };
 ;
 export default FuturisticServiceCardPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

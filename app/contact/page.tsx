@@ -15,13 +15,7 @@ const ContactPage: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-<<<<<<< HEAD
-  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
-
-  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -30,11 +24,7 @@ const ContactPage: React.FC = () => {
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-<<<<<<< HEAD
-=======
-    setSubmitStatus('idle');
 
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -56,10 +46,8 @@ const ContactPage: React.FC = () => {
       setIsSubmitting(false);
     }
   }, []);
-<<<<<<< HEAD
-=======
-
-  const services = [
+<<<<<<< HEAD,
+const services = [
     'AI Solutions',
     'IT Consulting',
     'Cloud Services',
@@ -68,8 +56,6 @@ const ContactPage: React.FC = () => {
     'Data Analytics',
     'Other'
   ];
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -77,8 +63,7 @@ const ContactPage: React.FC = () => {
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Contact our experts for consultation and support." />
         <meta name="keywords" content="contact, AI solutions, IT consulting, support, consultation" />
       </Helmet>
-<<<<<<< HEAD
-      <Navigation />
+<Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -115,10 +100,8 @@ const ContactPage: React.FC = () => {
                 </div>
               )}
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-=======
-      
-      <Navigation />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">,
+<Navigation />
       
       <main className="pt-20">
         {/* Hero Section */}
@@ -219,8 +202,6 @@ const ContactPage: React.FC = () => {
                       />
                     </div>
                   </div>
-
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                   <div>
                     <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                       Service Interest
@@ -256,8 +237,7 @@ const ContactPage: React.FC = () => {
                       placeholder="Tell us about your project..."
                     />
                   </div>
-<<<<<<< HEAD
-                  <div>
+<div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
                     </label>
@@ -400,10 +380,8 @@ const ContactPage: React.FC = () => {
                     <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
                     <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
                     <p className="text-gray-300">Sunday: Closed</p>
-                  </div>
-=======
-
-                  <button
+                  </div>,
+<button
                     type="submit"
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
@@ -495,24 +473,16 @@ const ContactPage: React.FC = () => {
                       Proven track record of success
                     </li>
                   </ul>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
                 </div>
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-        </div>
+</div>
       </section>
-=======
-        </section>
-      </main>
-      
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       <Footer />
     </div>
   );
 };
-<<<<<<< HEAD
 export default ContactPage;
   </textarea>
   </label>
@@ -520,7 +490,3 @@ export default ContactPage;
   </label>
   </span>
   </HTMLInputElement>
-=======
-
-export default ContactPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

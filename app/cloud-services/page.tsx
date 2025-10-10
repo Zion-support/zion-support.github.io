@@ -1,62 +1,11 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
-const CloudServicesPage: React.FC = () => {
-const features = [
-    {
-      icon: Shield,
-      title: 'Secure Cloud Services',
-      description: 'Comprehensive cloud services with enterprise-grade security and reliability'
-    },
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast cloud services with optimized performance and scalability'
-    },
-    {
-      icon: Brain,
-      title: 'AI-Powered Management',
-      description: 'Intelligent cloud management powered by advanced AI technology'
-    },
-    {
-      icon: Globe,
-      title: 'Global Deployment',
-      description: 'Worldwide cloud services deployment and support'
-=======
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
-
-const CloudServicesPage: React.FC = () => {
-  const services = [
-    {
-      icon: Cloud,
-      title: 'Cloud Migration',
-      description: 'Seamlessly migrate your infrastructure to the cloud with zero downtime and maximum security.',
-      features: ['AWS, Azure, GCP expertise', 'Zero-downtime migration', 'Cost optimization', 'Security compliance']
-    },
-    {
-      icon: Server,
-      title: 'Cloud Infrastructure',
-      description: 'Design and deploy scalable, secure, and cost-effective cloud infrastructure solutions.',
-      features: ['Auto-scaling', 'Load balancing', 'High availability', 'Disaster recovery']
-    },
-    {
-      icon: Database,
-      title: 'Database Solutions',
-      description: 'Managed database services with automated backups, monitoring, and optimization.',
-      features: ['MySQL, PostgreSQL, MongoDB', 'Automated backups', 'Performance tuning', '24/7 monitoring']
-    },
-    {
-      icon: Shield,
-      title: 'Cloud Security',
-      description: 'Comprehensive security solutions to protect your cloud infrastructure and data.',
-      features: ['Identity management', 'Data encryption', 'Compliance auditing', 'Threat detection']
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
     }
   ];
   const benefits = [
-<<<<<<< HEAD
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
     'Enterprise-grade security and compliance',
@@ -65,65 +14,9 @@ const CloudServicesPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-=======
-    'Reduced infrastructure costs by up to 40%',
-    'Improved scalability and flexibility',
-    'Enhanced security and compliance',
-    '24/7 monitoring and support',
-    'Faster deployment and updates',
-    'Disaster recovery and backup solutions',
-    'Global availability and performance',
-    'Expert cloud architecture guidance'
-  ];
-
-  const pricing = [
-    {
-      name: 'Starter',
-      price: '$2,999',
-      period: 'per month',
-      description: 'Perfect for small businesses getting started with cloud',
-      features: [
-        'Basic cloud setup',
-        'Email support',
-        'Monthly monitoring',
-        'Standard security',
-        'Up to 5 users'
-      ]
-    },
-    {
-      name: 'Professional',
-      price: '$7,999',
-      period: 'per month',
-      description: 'Ideal for growing businesses with complex needs',
-      features: [
-        'Advanced cloud architecture',
-        'Priority support',
-        '24/7 monitoring',
-        'Enhanced security',
-        'Up to 25 users',
-        'Custom integrations'
-      ],
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: 'Custom',
-      period: 'pricing',
-      description: 'Tailored solutions for large organizations',
-      features: [
-        'Custom cloud strategy',
-        'Dedicated support team',
-        'Real-time monitoring',
-        'Enterprise security',
-        'Unlimited users',
-        'Custom development'
-      ]
-    }
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   ];
   return (
-<<<<<<< HEAD
-    <React.Fragment>
+<React.Fragment>
       <Helmet>
 <title>Cloud Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -147,9 +40,8 @@ const CloudServicesPage: React.FC = () => {
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+              <p className="text-gray-300">{feature.description}</p>,
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Cloud Services - Zion Tech Group | Cloud Solutions & Migration</title>
         <meta name="description" content="Expert cloud services including migration, infrastructure, security, and database solutions. Transform your business with our cloud expertise." />
@@ -185,12 +77,10 @@ const CloudServicesPage: React.FC = () => {
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
                 Learn More
               </button>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
             </div>
           </div>
         </div>
-<<<<<<< HEAD
-        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+<div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">
             Why Choose Our Cloud Services?
           </h2>
@@ -276,9 +166,8 @@ const CloudServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </React.Fragment>
-=======
-      </section>
+    </React.Fragment>,
+</section>
 
       {/* Services Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -414,7 +303,6 @@ const CloudServicesPage: React.FC = () => {
         </div>
       </section>
     </div>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
   );
 };
 export default CloudServicesPage;

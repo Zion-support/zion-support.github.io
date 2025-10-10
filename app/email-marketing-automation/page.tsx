@@ -22,7 +22,6 @@ import {;
   Send,;
   PieChart;}
 } from 'lucide-react';
-<<<<<<< HEAD
 const EmailMarketingAutomationPage: React.FC = () => {
   const features = [
     {
@@ -167,8 +166,7 @@ export default EmailMarketingAutomationPage;
   </h2>
   </button>
   </button>
-  </h1>
-=======
+  </h1>,
 ;
 const EmailMarketingAutomationPage: React.FC = () => {;
   const features = [;
@@ -311,4 +309,3 @@ const EmailMarketingAutomationPage: React.FC = () => {;
 };
 ;
 export default EmailMarketingAutomationPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

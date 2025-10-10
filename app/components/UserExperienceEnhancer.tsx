@@ -2,7 +2,6 @@
 import React from 'react';
 'use client';
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 interface UserExperienceEnhancerProps {
   children: React.ReactNode;
 }
@@ -13,8 +12,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
     const enhanceUX = () => {
       // Add smooth scrolling
       document.documentElement.style.scrollBehavior = 'smooth';
-      // Add loading states for interactive elements
-=======
+      // Add loading states for interactive elements,
 ;
 interface UserExperienceEnhancerProps {;
   children: React.ReactNode;}
@@ -30,7 +28,6 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       document.documentElement.style.scrollBehavior = 'smooth';
 ;
       // Add loading states for interactive elements;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       const interactiveElements = document.querySelectorAll('button, a, input');
       interactiveElements.forEach((element, index) => {;) => {
   return (
@@ -44,12 +41,7 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
           }, 1000);
         });
       });
-<<<<<<< HEAD
-      // Add focus indicators
-=======
-;
-      // Add focus indicators;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+// Add focus indicators
       const style = document.createElement('style');
       style.textContent = `;
         *:focus {;
@@ -59,14 +51,12 @@ const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ childre
       `;
       document.head.appendChild(style);
     };
-<<<<<<< HEAD
-    enhanceUX();
+enhanceUX();
   }, []);
   return <React.Fragment>{children}</React.Fragment>;
 };
 export default UserExperienceEnhancer;
-  </UserExperienceEnhancerProps>
-=======
+  </UserExperienceEnhancerProps>,
 ;
     enhanceUX();
   }, []);
@@ -75,4 +65,3 @@ export default UserExperienceEnhancer;
 };
 ;
 export default UserExperienceEnhancer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16

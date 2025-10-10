@@ -4,27 +4,23 @@ import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, D
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
-<<<<<<< HEAD
 export default function StatusPage() {
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
-  const refreshStatus = async () => {
-=======
+  const refreshStatus = async () => {,
 ;
 export default function StatusPage() {;
   const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
 ;
   const refreshStatus = async () => {;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
     setLastUpdated(new Date());
     setIsRefreshing(false);}
   };
-<<<<<<< HEAD
-  const services = [
+const services = [
     {
       name: 'API Services',
       status: 'operational',
@@ -98,8 +94,7 @@ export default function StatusPage() {;
   ];
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'operational':
-=======
+      case 'operational':,
 ;
   const services = [;
     {;
@@ -178,14 +173,12 @@ export default function StatusPage() {;
   const getStatusIcon = (;
     switch (status) {;
       case 'operational':;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
         return <CheckCircle className="w-5 h-5 text-green-400" />;
       case 'degraded':;
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'outage':;
         return <XCircle className="w-5 h-5 text-red-400" />;
-<<<<<<< HEAD
-      default:
+default:
         return <Clock className="w-5 h-5 text-gray-400" />;
     }
   };
@@ -225,9 +218,8 @@ export default function StatusPage() {;
             high-performance AI and IT solutions.
           </p>
           <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="flex items-center gap-2">
-=======
-      default:;) => {
+            <div className="flex items-center gap-2">,
+default:;) => {
   return (
     $3
   );
@@ -284,7 +276,6 @@ export default function StatusPage() {;
           </p>;
           <div className="flex items-center justify-center gap-4 mb-8"></div>;
             <div className="flex items-center gap-2"></div>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
               {getStatusIcon(overallStatus)}
               <span className={`text-2xl font-bold ${getStatusColor(overallStatus)}`}>;
                 {overallStatus === 'operational' ? 'All Systems Operational' :;}
@@ -294,8 +285,7 @@ export default function StatusPage() {;
             <button;
               onClick={refreshStatus}
               disabled={isRefreshing}
-<<<<<<< HEAD
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
+className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50">
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />
               Refresh;
   </
@@ -304,9 +294,8 @@ export default function StatusPage() {;
             Last updated: {lastUpdated.toLocaleString()}
           </p>
         </div>
-      </section>
-=======
-              className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50";
+      </section>,
+className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors disabled:opacity-50";
             >;
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? 'animate-spin' : ''}`} />;
               Refresh;
@@ -317,7 +306,6 @@ export default function StatusPage() {;
           </p>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Services Status */}
       <section className="py-16 px-4"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -332,8 +320,7 @@ export default function StatusPage() {;
                   </div>;
                   <span className={`px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(service.status)}`}>;
                     {service.status}
-<<<<<<< HEAD
-                  </span>
+</span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                 <div className="space-y-2 text-sm">
@@ -354,9 +341,8 @@ export default function StatusPage() {;
             ))}
           </div>
         </div>
-      </section>
-=======
-                  </span>;
+      </section>,
+</span>;
                 </div>;
                 <p className="text-gray-300 text-sm mb-4">{service.description}</p>;
                 <div className="space-y-2 text-sm"></div>;
@@ -378,7 +364,6 @@ export default function StatusPage() {;
           </div>;
         </div>;
       </section>;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
       {/* Recent Incidents */}
       <section className="py-16 px-4"></section>;
         <div className="max-w-7xl mx-auto"></div>;
@@ -404,8 +389,7 @@ export default function StatusPage() {;
                         : 'bg-yellow-500/20 text-yellow-400';}
                     }`}>;
                       {incident.status}
-<<<<<<< HEAD
-                    </span>
+</span>
                   </div>
                 </div>
                 <p className="text-gray-300 mb-4">{incident.description}</p>
@@ -479,9 +463,8 @@ export default function StatusPage() {;
 }
   </button>
   </button>
-  </button>
-=======
-                    </span>;
+  </button>,
+</span>;
                   </div>;
                 </div>;
                 <p className="text-gray-300 mb-4">{incident.description}</p>;
@@ -554,4 +537,3 @@ export default function StatusPage() {;
   );
 }
 ;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
