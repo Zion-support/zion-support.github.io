@@ -6,8 +6,8 @@ import './src/styles/futuristic.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import { PageLoader } from './src/components/EnhancedLoadingStates';
-import EnhancedErrorBoundary from './src/components/EnhancedErrorBoundary';
-import SEOHead from './src/components/EnhancedSEOHead';
+import ErrorBoundary from './src/components/ErrorBoundary';
+import SEOOptimizer from './src/components/SEOOptimizer';
 import SkipLink from './src/components/SkipLink';
 import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
 import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
@@ -15,6 +15,7 @@ import ContentShowcase from './src/components/ContentShowcase';
 import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
 import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
 
@@ -167,13 +168,14 @@ const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({
 
 const App: React.FC = memo(() => {
   return (
-    <EnhancedErrorBoundary>
+    <ErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
           <PerformanceOptimizer>
             <AccessibilityEnhancer>
               <AppWithPerformanceMonitoring>
-                <SEOHead />
+                <SEOOptimizer />
+                <PerformanceMonitor />
                 <Router>
                 <div className="min-h-screen bg-white overflow-x-hidden">
                   <SkipLink to="#main-content">Skip to main content</SkipLink>
@@ -301,6 +303,6 @@ const App: React.FC = memo(() => {
           </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
-    </EnhancedErrorBoundary>
+    </ErrorBoundary>
   );
 }

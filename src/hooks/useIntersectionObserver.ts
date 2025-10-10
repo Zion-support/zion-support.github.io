@@ -35,25 +35,9 @@ export const useIntersectionObserver = ({
     currentObserver.observe(node);
 
     return () => {
-      if (currentObserver) {
-        currentObserver.disconnect();
-      }
+      currentObserver.disconnect();
     };
   }, [node, threshold, root, rootMargin, frozen]);
-
-  const prevNode = useRef<Element | null>(null);
-
-  useEffect(() => {
-    if (prevNode.current) {
-      observer.current?.unobserve(prevNode.current);
-    }
-
-    if (node) {
-      observer.current?.observe(node);
-    }
-
-    prevNode.current = node;
-  }, [node]);
 
   return [setNode, entry] as const;
 };

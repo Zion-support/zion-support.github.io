@@ -1,142 +1,97 @@
-'use client';
 import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  totalBlockingTime: number;
-  speedIndex: number;
-  timeToInteractive: number;
+  cls: number | null;
+  inp: number | null;
+  fcp: number | null;
+  lcp: number | null;
+  ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+interface PerformanceMonitorProps {
+  onMetricsUpdate?: (metrics: PerformanceMetrics) => void;
+  reportToAnalytics?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  onMetricsUpdate,
+  reportToAnalytics = true,
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    inp: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+  });
 
   useEffect(() => {
-    // Only show in development
-    if (process.env.NODE_ENV !== 'development') {
-      return;
-    }
+    const updateMetrics = (metric: any) => {
+      setMetrics(prev => ({
+        ...prev,
+        [metric.name]: metric.value,
+      }));
 
-    const collectMetrics = () => {
-      if (typeof window === 'undefined' || !('performance' in window)) {
-        return;
-      }
+      onMetricsUpdate?.({
+        ...metrics,
+        [metric.name]: metric.value,
+      });
 
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paintEntries = performance.getEntriesByType('paint');
-
-      const firstContentfulPaint = paintEntries.find(
-        (entry) => entry.name === 'first-contentful-paint'
-      )?.startTime || 0;
-
-      const largestContentfulPaint = paintEntries.find(
-        (entry) => entry.name === 'largest-contentful-paint'
-      )?.startTime || 0;
-
-      const performanceMetrics: PerformanceMetrics = {
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-        firstContentfulPaint,
-        largestContentfulPaint,
-        firstInputDelay: 0, // Would need to be measured separately
-        cumulativeLayoutShift: 0, // Would need to be measured separately
-        totalBlockingTime: 0, // Would need to be measured separately
-        speedIndex: 0, // Would need to be measured separately
-        timeToInteractive: navigation.domInteractive - navigation.navigationStart,
-      };
-
-      setMetrics(performanceMetrics);
-    };
-
-    // Collect metrics after page load
-    const timer = setTimeout(collectMetrics, 1000);
-
-    // Show/hide with keyboard shortcut
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
-        event.preventDefault();
-        setIsVisible(prev => !prev);
+      if (reportToAnalytics) {
+        // Report to analytics service
+        if (typeof window !== 'undefined' && (window as any).gtag) {
+          (window as any).gtag('event', metric.name, {
+            event_category: 'Web Vitals',
+            event_label: metric.id,
+            value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+            non_interaction: true,
+          });
+        }
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
+    // Measure Core Web Vitals
+    onCLS(updateMetrics);
+    onINP(updateMetrics);
+    onFCP(updateMetrics);
+    onLCP(updateMetrics);
+    onTTFB(updateMetrics);
+
+    // Monitor resource loading
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        if (entry.entryType === 'navigation') {
+          const navEntry = entry as PerformanceNavigationTiming;
+          console.log('Navigation timing:', {
+            domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+            loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
+            totalTime: navEntry.loadEventEnd - navEntry.fetchStart,
+          });
+        }
+      }
+    });
+
+    observer.observe({ entryTypes: ['navigation', 'resource'] });
 
     return () => {
-      clearTimeout(timer);
-      document.removeEventListener('keydown', handleKeyDown);
+      observer.disconnect();
     };
+  }, [onMetricsUpdate, reportToAnalytics, metrics]);
+
+  // Monitor memory usage
+  useEffect(() => {
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      console.log('Memory usage:', {
+        used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+        total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+        limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB',
+      });
+    }
   }, []);
 
-  if (process.env.NODE_ENV !== 'development' || !isVisible || !metrics) {
-    return null;
-  }
-
-  const getScore = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'good';
-    if (value <= thresholds.needsImprovement) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getScoreColor = (score: string) => {
-    switch (score) {
-      case 'good': return 'text-green-400';
-      case 'needs-improvement': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
-    }
-  };
-
-  return (
-    <div className="fixed bottom-4 right-4 bg-black/90 backdrop-blur-lg rounded-lg p-4 text-white text-xs font-mono max-w-sm z-50 border border-white/20">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="font-bold text-cyan-400">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span>Load Time:</span>
-          <span className={getScoreColor(getScore(metrics.loadTime, { good: 2000, needsImprovement: 4000 }))}>
-            {metrics.loadTime.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(getScore(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 }))}>
-            {metrics.firstContentfulPaint.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(getScore(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 }))}>
-            {metrics.largestContentfulPaint.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>TTI:</span>
-          <span className={getScoreColor(getScore(metrics.timeToInteractive, { good: 3800, needsImprovement: 7300 }))}>
-            {metrics.timeToInteractive.toFixed(0)}ms
-          </span>
-        </div>
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-white/20 text-gray-400">
-        Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
-  );
+  return null;
 };
 
 export default PerformanceMonitor;

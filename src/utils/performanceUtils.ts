@@ -1,78 +1,105 @@
-// Performance monitoring utilities
+// Performance utility functions
+
 export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
   fn();
   const end = performance.now();
-  const duration = end - start;
-  
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
-  }
-  
-  return duration;
+  console.log(`${name} took ${end - start} milliseconds`);
+  return end - start;
 };
 
-export const measureAsyncPerformance = async (name: string, fn: () => Promise<any>) => {
-  const start = performance.now();
-  const result = await fn();
-  const end = performance.now();
-  const duration = end - start;
-  
-  if (process.env.NODE_ENV === 'development') {
-    console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`);
-  }
-  
-  return { result, duration };
+export const debounce = <T extends (...args: any[]) => any>(
+  func: T,
+  wait: number
+): ((...args: Parameters<T>) => void) => {
+  let timeout: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func(...args), wait);
+  };
 };
 
-export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {
-  if ('PerformanceObserver' in window) {
-    const observer = new PerformanceObserver((list) => {
-      callback(list.getEntries());
-    });
-    
-    observer.observe({ entryTypes: ['measure', 'navigation', 'resource'] });
-    
-    return observer;
-  }
-  return null;
+export const throttle = <T extends (...args: any[]) => any>(
+  func: T,
+  limit: number
+): ((...args: Parameters<T>) => void) => {
+  let inThrottle: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
 };
 
-export const measureWebVitals = () => {
-  if ('web-vitals' in window) {
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      const sendToAnalytics = (metric: any) => {
-        if (process.env.NODE_ENV === 'development') {
-          console.log('Web Vital:', metric);
-        }
-        // Send to analytics in production
-      };
-      
-      getCLS(sendToAnalytics);
-      getFID(sendToAnalytics);
-      getFCP(sendToAnalytics);
-      getLCP(sendToAnalytics);
-      getTTFB(sendToAnalytics);
-    });
-  }
-};
-
-export const preloadResource = (href: string, as: string) => {
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
-  document.head.appendChild(link);
-};
-
-export const preloadCriticalResources = () => {
-  const criticalResources = [
-    { href: '/images/hero-bg.jpg', as: 'image' },
-    { href: '/images/logo.png', as: 'image' },
-    { href: '/fonts/inter.woff2', as: 'font' }
-  ];
-  
-  criticalResources.forEach(resource => {
-    preloadResource(resource.href, resource.as);
+export const preloadImage = (src: string): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve();
+    img.onerror = reject;
+    img.src = src;
   });
+};
+
+export const preloadImages = async (srcs: string[]): Promise<void> => {
+  await Promise.all(srcs.map(preloadImage));
+};
+
+export const isElementInViewport = (element: Element): boolean => {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
+
+export const getImageOptimizedSrc = (src: string, width?: number, quality: number = 80): string => {
+  if (src.startsWith('http') || src.startsWith('data:')) {
+    return src;
+  }
+  
+  // Add WebP support and optimization parameters
+  const baseSrc = src.replace(/\.(jpg|jpeg|png)$/i, '');
+  const params = new URLSearchParams();
+  
+  if (width) params.set('w', width.toString());
+  params.set('q', quality.toString());
+  params.set('f', 'webp');
+  
+  return `${baseSrc}.webp?${params.toString()}`;
+};
+
+export const lazyLoadScript = (src: string): Promise<void> => {
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = reject;
+    document.head.appendChild(script);
+  });
+};
+
+export const getDeviceType = (): 'mobile' | 'tablet' | 'desktop' => {
+  const width = window.innerWidth;
+  if (width < 768) return 'mobile';
+  if (width < 1024) return 'tablet';
+  return 'desktop';
+};
+
+export const isSlowConnection = (): boolean => {
+  if ('connection' in navigator) {
+    const connection = (navigator as any).connection;
+    return connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g';
+  }
+  return false;
+};
+
+export const optimizeForConnection = (): 'low' | 'medium' | 'high' => {
+  if (isSlowConnection()) return 'low';
+  if (getDeviceType() === 'mobile') return 'medium';
+  return 'high';
 };

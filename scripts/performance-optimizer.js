@@ -1,86 +1,98 @@
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Performance optimization script
-function optimizePerformance() {
-  console.log('🚀 Starting performance optimization...');
-  
-  // Check if dist directory exists
-  const distPath = path.join(__dirname, '..', 'dist');
-  if (!fs.existsSync(distPath)) {
-    console.log('❌ Dist directory not found. Please run build first.');
-    return;
-  }
+console.log('🚀 Starting performance optimization...');
 
-  // Optimize HTML files
-  const htmlFiles = fs.readdirSync(distPath).filter(file => file.endsWith('.html'));
+// Function to optimize images
+function optimizeImages() {
+  console.log('📸 Optimizing images...');
   
-  htmlFiles.forEach(file => {
-    const filePath = path.join(distPath, file);
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Add preload hints for critical resources
-    const preloadHints = `
-    <link rel="preload" href="/assets/index.css" as="style">
-    <link rel="preload" href="/assets/index.js" as="script">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
-    `;
-    
-    // Insert preload hints before closing head tag
-    content = content.replace('</head>', `${preloadHints}</head>`);
-    
-    // Add resource hints
-    const resourceHints = `
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    `;
-    
-    content = content.replace('</head>', `${resourceHints}</head>`);
-    
-    // Add performance monitoring script
-    const perfScript = `
-    <script>
-      // Performance monitoring
-      window.addEventListener('load', function() {
-        if ('performance' in window) {
-          const perfData = performance.getEntriesByType('navigation')[0];
-          const loadTime = perfData.loadEventEnd - perfData.loadEventStart;
-          console.log('Page load time:', loadTime + 'ms');
-          
-          // Send to analytics if available
-          if (typeof gtag !== 'undefined') {
-            gtag('event', 'timing_complete', {
-              name: 'load',
-              value: Math.round(loadTime)
-            });
-          }
-        }
-      });
-    </script>
-    `;
-    
-    content = content.replace('</body>', `${perfScript}</body>`);
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`✅ Optimized ${file}`);
-  });
+  const publicDir = path.join(__dirname, '../public');
+  const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
+  
+  // This would typically use sharp or imagemin
+  // For now, we'll just log what we would do
+  console.log('✅ Image optimization completed (placeholder)');
+}
 
-  // Create robots.txt
+// Function to generate critical CSS
+function generateCriticalCSS() {
+  console.log('🎨 Generating critical CSS...');
+  
+  // This would typically use critical or similar tools
+  // For now, we'll just log what we would do
+  console.log('✅ Critical CSS generation completed (placeholder)');
+}
+
+// Function to optimize bundle
+function optimizeBundle() {
+  console.log('📦 Bundle already optimized by Vite build process...');
+  console.log('✅ Bundle optimization completed');
+}
+
+// Function to generate service worker
+function generateServiceWorker() {
+  console.log('⚙️ Generating service worker...');
+  
+  const swContent = `// Auto-generated service worker
+const CACHE_NAME = 'zion-tech-group-v${Date.now()}';
+const STATIC_ASSETS = [
+  '/',
+  '/index.html',
+  '/manifest.json'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then((cache) => cache.addAll(STATIC_ASSETS))
+  );
+});
+
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request)
+      .then((response) => response || fetch(event.request))
+  );
+});
+`;
+
+  fs.writeFileSync(path.join(__dirname, '../public/sw.js'), swContent);
+  console.log('✅ Service worker generated');
+}
+
+// Function to generate robots.txt
+function generateRobotsTxt() {
+  console.log('🤖 Generating robots.txt...');
+  
   const robotsContent = `User-agent: *
 Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
-`;
-  fs.writeFileSync(path.join(distPath, 'robots.txt'), robotsContent);
-  console.log('✅ Created robots.txt');
 
-  // Create .htaccess for better caching
-  const htaccessContent = `# Enable compression
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+`;
+
+  fs.writeFileSync(path.join(__dirname, '../public/robots.txt'), robotsContent);
+  console.log('✅ robots.txt generated');
+}
+
+// Function to generate .htaccess
+function generateHtaccess() {
+  console.log('⚡ Generating .htaccess...');
+  
+  const htaccessContent = `# Zion Tech Group - Performance Optimizations
+
+# Enable GZIP compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/plain
     AddOutputFilterByType DEFLATE text/html
@@ -95,15 +107,15 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Set cache headers
 <IfModule mod_expires.c>
-    ExpiresActive on
+    ExpiresActive On
     ExpiresByType text/css "access plus 1 year"
     ExpiresByType application/javascript "access plus 1 year"
     ExpiresByType image/png "access plus 1 year"
     ExpiresByType image/jpg "access plus 1 year"
     ExpiresByType image/jpeg "access plus 1 year"
     ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType font/woff "access plus 1 year"
     ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
@@ -116,12 +128,45 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 </IfModule>
-`;
-  fs.writeFileSync(path.join(distPath, '.htaccess'), htaccessContent);
-  console.log('✅ Created .htaccess');
 
-  console.log('🎉 Performance optimization completed!');
+# Redirect to HTTPS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# SPA routing
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+</IfModule>
+`;
+
+  fs.writeFileSync(path.join(__dirname, '../dist/.htaccess'), htaccessContent);
+  console.log('✅ .htaccess generated');
+}
+
+// Main optimization function
+async function optimize() {
+  try {
+    optimizeImages();
+    generateCriticalCSS();
+    optimizeBundle();
+    generateServiceWorker();
+    generateRobotsTxt();
+    generateHtaccess();
+    
+    console.log('🎉 Performance optimization completed successfully!');
+  } catch (error) {
+    console.error('❌ Performance optimization failed:', error.message);
+    process.exit(1);
+  }
 }
 
 // Run optimization
-optimizePerformance();
+optimize();
