@@ -36,6 +36,27 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 
+// AI Services Pages
+const AIQualityControlPage = React.lazy(() => import('./app/ai-quality-control/page'));
+const AIEnergyManagementPage = React.lazy(() => import('./app/ai-energy-management/page'));
+const AILegalAnalysisPage = React.lazy(() => import('./app/ai-legal-analysis/page'));
+const AIEnvironmentalPage = React.lazy(() => import('./app/ai-environmental/page'));
+const AIRetailPage = React.lazy(() => import('./app/ai-retail/page'));
+const AISportsPage = React.lazy(() => import('./app/ai-sports/page'));
+const AIMentalHealthPage = React.lazy(() => import('./app/ai-mental-health/page'));
+
+// IT Services Pages
+const DataBackupPage = React.lazy(() => import('./app/data-backup/page'));
+const WebsiteHostingPage = React.lazy(() => import('./app/website-hosting/page'));
+
+// Micro SAAS Pages
+const SocialMediaManagerPage = React.lazy(() => import('./app/social-media-manager/page'));
+const AdCampaignManagerPage = React.lazy(() => import('./app/ad-campaign-manager/page'));
+
+// Company Pages
+const TeamPage = React.lazy(() => import('./app/team/page'));
+const NewsPage = React.lazy(() => import('./app/news/page'));
+
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -76,6 +97,27 @@ const App: React.FC = () => {
                             <Route path="/demo" element={<DemoPage />} />
                             <Route path="/consultation" element={<ConsultationPage />} />
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            
+                            {/* AI Services Routes */}
+                            <Route path="/ai-quality-control" element={<AIQualityControlPage />} />
+                            <Route path="/ai-energy-management" element={<AIEnergyManagementPage />} />
+                            <Route path="/ai-legal-analysis" element={<AILegalAnalysisPage />} />
+                            <Route path="/ai-environmental" element={<AIEnvironmentalPage />} />
+                            <Route path="/ai-retail" element={<AIRetailPage />} />
+                            <Route path="/ai-sports" element={<AISportsPage />} />
+                            <Route path="/ai-mental-health" element={<AIMentalHealthPage />} />
+                            
+                            {/* IT Services Routes */}
+                            <Route path="/data-backup" element={<DataBackupPage />} />
+                            <Route path="/website-hosting" element={<WebsiteHostingPage />} />
+                            
+                            {/* Micro SAAS Routes */}
+                            <Route path="/social-media-manager" element={<SocialMediaManagerPage />} />
+                            <Route path="/ad-campaign-manager" element={<AdCampaignManagerPage />} />
+                            
+                            {/* Company Routes */}
+                            <Route path="/team" element={<TeamPage />} />
+                            <Route path="/news" element={<NewsPage />} />
                           </Routes>
                         </Suspense>
                       </main>

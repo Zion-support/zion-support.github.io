@@ -1,126 +1,108 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
+import { ArrowRight, Star, Users, Zap } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time'
-    },
-    {
       icon: Zap,
-      title: 'Lightning Fast Performance',
-      description: 'Optimized for speed with sub-second response times and seamless user experience'
+      title: 'AI-Powered Automation',
+      description: 'Streamline your workflows with intelligent automation solutions',
+      stats: '90% efficiency increase'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards'
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Enhance team productivity with advanced collaboration tools',
+      stats: '50% faster project delivery'
     },
     {
-      icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing'
-    }
-  ];
-
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300%.',
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month.',
-      rating: 5
+      icon: Star,
+      title: 'Quality Assurance',
+      description: 'Ensure top-quality deliverables with automated testing and monitoring',
+      stats: '99.9% uptime guarantee'
     }
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % features.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [features.length]);
 
   return (
-    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Dynamic <span className="text-cyan-400">Content Showcase</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
-            and interactive showcases that bring your business to life.
+    <div className="py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Dynamic Content
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+              Showcase
+            </span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Experience our cutting-edge solutions through interactive demonstrations 
+            and real-time content updates.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
-              <span>Start Demo</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-              Learn More
-            </button>
-          </div>
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Why Choose Our Solutions?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions deliver unmatched performance, security, and scalability for modern businesses.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content Display */}
+          <div className="relative">
+            <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
+              <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg mb-6 flex items-center justify-center">
+                <div className="text-6xl">🚀</div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                {features[currentIndex].title}
+              </h3>
+              <p className="text-gray-300 text-lg mb-4">
+                {features[currentIndex].description}
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-cyan-400 font-semibold">
+                  {features[currentIndex].stats}
+                </span>
+                <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <span>Learn More</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
             </div>
-          ))}
+          </div>
+
+          {/* Feature List */}
+          <div className="space-y-6">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className={`p-6 rounded-lg border transition-all duration-300 cursor-pointer ${
+                  index === currentIndex
+                    ? 'bg-cyan-500/10 border-cyan-400/50'
+                    : 'bg-slate-800/30 border-slate-700 hover:border-cyan-500/30'
+                }`}
+                onClick={() => setCurrentIndex(index)}
+              >
+                <div className="flex items-start space-x-4">
+                  <feature.icon className={`w-8 h-8 mt-1 ${
+                    index === currentIndex ? 'text-cyan-400' : 'text-gray-400'
+                  }`} />
+                  <div>
+                    <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+                    <p className="text-gray-300">{feature.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+      </div>
     </div>
   );
 };
 
+export default DynamicContentShowcase;
