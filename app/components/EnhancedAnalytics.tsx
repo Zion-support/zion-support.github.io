@@ -1,149 +1,153 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-interface EnhancedAnalyticsProps {}
-  enableGoogleAnalytics?: boolean;
-  enableGoogleTagManager?: boolean;
-  enableFacebookPixel?: boolean;
-  enableCustomEvents?: boolean;
-  enablePerformanceTracking?: boolean;
-  enableUserBehaviorTracking?: boolean;
-  enableConversionTracking?: boolean;
-  enableHeatmapTracking?: boolean;
-}
-
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({}
-  enableGoogleAnalytics = true,
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
-  enableGoogleAnalytics = true;
-  enableGoogleTagManager = true,
-  enableFacebookPixel = false,
-  enableCustomEvents = true,
-  enablePerformanceTracking = true,
-  enableUserBehaviorTracking = true,
-  enableConversionTracking = true,
-  enableHeatmapTracking = false}) => {
-  // Google Analytics setup;
-  const setupGoogleAnalytics = useCallback(() => {}) => {}
-  // Google Analytics setup
-  const setupGoogleAnalytics = useCallback(() => {}
-    if (typeof window === 'undefined' || !enableGoogleAnalytics) return;
-
-    const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; // Replace with actual GA4 ID;
-    // Load Google Analytics;
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-    document.head.appendChild(script);
-
-    // Initialize gtag;
-    window.dataLayer = window.dataLayer || [];
-    function gtag(...args: unknown[]) {,
-    function gtag(...args: unknown[]) {}
-      window.dataLayer?.push(args);
+const EnhancedAnalyticsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology to transform your business operations and improve efficiency'
+    },
+    {
+      icon: Zap,
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards'
+    },
+    {
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
     }
-    window.gtag = gtag;
+  ];
 
-    gtag('js', new Date());
-    gtag('config', GA_MEASUREMENT_ID, {
-      page_title: document.title,
-      page_location: window.location.href,
-      send_page_view: true
-    });
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
 
-    // Enhanced ecommerce tracking
-    gtag('config', GA_MEASUREMENT_ID, {)
-    custom_map: {
-    gtag('config', GA_MEASUREMENT_ID, {)}
-      page_title: document.title,
-      page_location: window.location.href,
-      send_page_view: true,
-      custom_map: {}
-        'custom_parameter_1': 'service_category',
-        'custom_parameter_2': 'service_type',
-        'custom_parameter_3': 'user_type'
-      page_title: document.title;)
-      page_location: window.location.href;)
-      send_page_view: true;)
-    // Enhanced ecommerce tracking;),
-    gtag('config', GA_MEASUREMENT_ID, {)
-      custom_map: {)
-        'custom_parameter_1': 'service_category'),
-        'custom_parameter_2': 'service_type'),
-        'custom_parameter_3': 'user_type'}
-    });
-  }, [enableGoogleAnalytics]);
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>EnhancedAnalytics | Zion Tech Group</title>
+        <meta name="description" content="Professional EnhancedAnalytics services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <meta name="keywords" content="EnhancedAnalytics, AI solutions, IT services, Zion Tech Group, enhancedanalytics" />
+      </Helmet>
 
-  // Google Tag Manager setup;
-  const setupGoogleTagManager = useCallback(() => {
-  // Google Tag Manager setup
-  const setupGoogleTagManager = useCallback(() => {}
-    if (typeof window === 'undefined' || !enableGoogleTagManager) return;
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+                EnhancedAnalytics
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced enhancedanalytics solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    const GTM_ID = 'GTM-XXXXXXX'; // Replace with actual GTM ID;
-    // GTM script;
-    const gtmScript = document.createElement('script');
-    gtmScript.innerHTML = `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':)
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':)}
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l: '';j.async=true;j.src=,
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','${GTM_ID}');
-    `;
-    document.head.appendChild(gtmScript);
+      {/* Features Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our EnhancedAnalytics?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our enhancedanalytics solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
 
-    // GTM noscript;
-    const noscript = document.createElement('noscript');
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://www.googletagmanager.com/ns.html?id=${GTM_ID}`;
-    iframe.height = '0';
-    iframe.width = '0';
-    iframe.style.display = 'none';
-    iframe.style.visibility = 'hidden';
-    noscript.appendChild(iframe);
-    document.body.insertBefore(noscript, document.body.firstChild);
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
+                  <feature.icon className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-  }, [enableGoogleTagManager]);
+      {/* Benefits Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the power of our enhancedanalytics solutions for your business.
+            </p>
+          </div>
 
-  // Facebook Pixel setup;
-  const setupFacebookPixel = useCallback(() => {
-    if (typeof window === 'undefined' || !enableFacebookPixel) return;
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-start space-x-3">
+                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <p className="text-gray-300 text-lg">{benefit}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-    const PIXEL_ID = 'XXXXXXXXXXXXXXX'; // Replace with actual Pixel ID;
-    // Facebook Pixel initialization;
-    (function(f: Window, b: Document, e: string, v: string, n: unknown, t: HTMLScriptElement, s: HTMLScriptElement | null) {,
-      if (f.fbq) return;
-      n = f.fbq = function() {,
-  // Facebook Pixel setup
-  const setupFacebookPixel = useCallback(() => {}
-    if (typeof window === 'undefined' || !enableFacebookPixel) return;
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your enhancedanalytics needs and get a customized solution.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
+                <Mail className="mr-2 h-5 w-5" />
+                Email Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
 
-    const PIXEL_ID = 'XXXXXXXXXXXXXXX'; // Replace with actual Pixel ID
-
-    // Facebook Pixel initialization
-    (function(f: Window, b: Document, e: string, v: string, n: unknown, t: HTMLScriptElement, s: HTMLScriptElement | null) {}
-      if (f.fbq) return;
-      n = f.fbq = function() {}
-        n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
-    
-    (window as any).fbq('init', PIXEL_ID);
-    (window as any).fbq('track', 'PageView');
-
-  }, [enableFacebookPixel]);
+export default EnhancedAnalyticsPage;

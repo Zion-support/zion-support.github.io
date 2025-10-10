@@ -154,7 +154,6 @@ $4]
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
-=======
         {/* Enhanced Twitter Card tags */}
         <meta name='twitter:card' content='summary_large_image' />
         <meta name='twitter:title' content='Zion Tech Group - AI & Technology Solutions' />
