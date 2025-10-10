@@ -1,9 +1,56 @@
 
-import React, { Suspense, memo, useMemo } from 'react';
+import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import LoadingSpinner from './src/components/LoadingSpinner';
+import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
+import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
+import ContentShowcase from './src/components/ContentShowcase';
+import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+
+// Structured data for SEO
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Zion Tech Group",
+  "url": "https://ziontechgroup.com",
+  "logo": "https://ziontechgroup.com/logo.png",
+  "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Transform your business with our advanced AI capabilities.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "364 E Main St STE 1008",
+    "addressLocality": "Middletown",
+    "addressRegion": "DE",
+    "postalCode": "19709",
+    "addressCountry": "US"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-302-464-0950",
+    "contactType": "customer service",
+    "email": "kleber@ziontechgroup.com"
+  },
+  "sameAs": [
+    "https://linkedin.com/company/zion-tech-group",
+    "https://twitter.com/ziontechgroup",
+    "https://github.com/zion-tech-group"
+  ],
+  "foundingDate": "2020",
+  "numberOfEmployees": "50-100",
+  "industry": "Information Technology",
+  "services": [
+    "AI Solutions",
+    "Machine Learning",
+    "Quantum Computing",
+    "Digital Transformation",
+    "IT Services",
+    "Cybersecurity",
+    "Cloud Computing",
+    "Automation"
+  ]
+};
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
