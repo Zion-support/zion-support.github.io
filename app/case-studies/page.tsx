@@ -75,7 +75,6 @@ return (
         <meta name="description" content="Explore our success stories and case studies showcasing how we've helped businesses transform with AI and technology solutions." />
         <meta name="keywords" content="case studies, success stories, AI solutions, business transformation, Zion Tech Group" />
       </Helmet>
-<<<<<<< HEAD
 
 {/* Stats Section */}
       <section className="py-20 px-4">

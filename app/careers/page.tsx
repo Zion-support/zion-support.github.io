@@ -59,11 +59,9 @@ const CareersPage: React.FC = () => {
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
       </Helmet>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
-          {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
               Join Our
@@ -77,7 +75,6 @@ const CareersPage: React.FC = () => {
             </p>
           </div>
 
-          {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Why Work With Us?</h2>
@@ -132,32 +129,10 @@ const CareersPage: React.FC = () => {
                     <span className="text-gray-300">{benefit}</span>
                   </div>
                 ))}
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Careers</h1>
-              </h1>
-              
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
-                  Join our growing team of innovators.
-                </p>
-                
-                <p className="text-gray-700 mb-6">
-                  Coming soon - stay tuned for career opportunities!
-                </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
               </div>
             </div>
           </div>
 
-          {/* Open Positions */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Open Positions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -198,7 +173,6 @@ const CareersPage: React.FC = () => {
             </div>
           </div>
 
-          {/* CTA Section */}
           <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
             <h2 className="text-4xl font-bold text-white mb-4">
               Don't See Your Role?
@@ -208,18 +182,18 @@ const CareersPage: React.FC = () => {
               Send us your resume and let's discuss how you can contribute.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
                 Send Your Resume
-              </a>
-              <a
-                href="/about"
+              </Link>
+              <Link
+                to="/about"
                 className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Learn About Us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

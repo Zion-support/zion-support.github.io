@@ -6,7 +6,6 @@ import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const BlogPage: React.FC = () => {
-<<<<<<< HEAD
   const blogPosts = [
     {
       title: 'The Future of AI in Business',
