@@ -131,10 +131,10 @@ const standards = [
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
                       </li>
-                    ));
+                    ))}
                   </ul>
                 </div>
-              ));
+              ))}
             </div>
           </div>
         </section>
