@@ -3,7 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const PagePage: React.FC = () => {
+const ARVRPlatformPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -39,7 +39,7 @@ const PagePage: React.FC = () => {
   ];
 
   return (
-
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -132,4 +132,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default ARVRPlatformPage;

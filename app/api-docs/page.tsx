@@ -115,8 +115,16 @@ export default function APIDocsPage() {
       />
       <Navigation />
       
-            </div>
-          </div>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20">
+        <div className="absolute inset-0 bg-black opacity-30"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            API Documentation
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Comprehensive API documentation for all our services and endpoints
+          </p>
         </div>
       </section>
 

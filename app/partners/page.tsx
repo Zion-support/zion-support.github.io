@@ -20,10 +20,15 @@ const PartnersPage: React.FC = () => {
     {
       name: 'Google Cloud',
       logo: '/api/placeholder/200/100',
+      description: 'Advanced cloud computing and AI platform services',
+      category: 'Cloud Computing'
     },
     {
       name: 'IBM',
       logo: '/api/placeholder/200/100',
+      description: 'Enterprise AI and quantum computing solutions',
+      category: 'AI & Quantum'
+    }
   ];
 
   return (
