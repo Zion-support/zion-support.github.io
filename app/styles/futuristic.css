@@ -861,3 +861,556 @@ body {
     animation: none;
   }
 }
+
+/* Advanced Cyber Effects */
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: scanLine 3s linear infinite;
+}
+
+@keyframes scanLine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.energy-pulse {
+  animation: energyPulse 2s ease-in-out infinite;
+}
+
+@keyframes energyPulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px var(--neon-cyan);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+    transform: scale(1.02);
+  }
+}
+
+.quantum-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+.quantum-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent,
+    rgba(139, 92, 246, 0.1),
+    transparent
+  );
+  animation: quantumShift 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+.quantum-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes quantumShift {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.hologram-card {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 50%, 
+    rgba(236, 72, 153, 0.1) 100%
+  );
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  animation: holographicFlicker 3s ease-in-out infinite;
+}
+
+@keyframes holographicFlicker {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.01);
+  }
+}
+
+.cyber-button {
+  position: relative;
+  background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+  color: var(--bg-primary);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--animation-duration) var(--animation-easing);
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cyber-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.cyber-button:hover::before {
+  left: 100%;
+}
+
+.cyber-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.neural-network-bg {
+  position: relative;
+  background: var(--bg-primary);
+}
+
+.neural-network-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 50% 20%, rgba(236, 72, 153, 0.1) 2px, transparent 2px),
+    radial-gradient(circle at 30% 80%, rgba(16, 185, 129, 0.1) 2px, transparent 2px);
+  background-size: 100px 100px, 80px 80px, 120px 120px, 90px 90px;
+  animation: neuralPulse 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+.matrix-rain {
+  position: relative;
+  background: var(--bg-primary);
+  color: var(--neon-green);
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(16, 185, 129, 0.03) 2px,
+      rgba(16, 185, 129, 0.03) 4px
+    );
+  animation: matrixRain 3s linear infinite;
+  z-index: -1;
+}
+
+.cyber-text {
+  position: relative;
+  color: var(--neon-cyan);
+  text-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+  animation: cyberFlicker 2s ease-in-out infinite alternate;
+}
+
+@keyframes cyberFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 5px var(--neon-cyan),
+      0 0 10px var(--neon-cyan),
+      0 0 15px var(--neon-cyan),
+      0 0 20px var(--neon-cyan);
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+.cyber-glow {
+  box-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+}
+
+.neon-glow {
+  box-shadow: 
+    0 0 5px var(--neon-cyan),
+    0 0 10px var(--neon-cyan),
+    0 0 15px var(--neon-cyan),
+    0 0 20px var(--neon-cyan);
+}
+
+/* Advanced Hover Effects */
+.cyber-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    var(--shadow-neon);
+}
+
+.hologram-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    var(--shadow-neon-purple);
+}
+
+.quantum-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    var(--shadow-neon-pink);
+}
+
+/* Loading States */
+.loading-cyber {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.loading-cyber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent
+  );
+  animation: loadingSweep 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingSweep {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    margin: 8px;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  .cyber-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .neon-text {
+    font-size: 1.5rem;
+  }
+  
+  .cyber-text {
+    font-size: 1.5rem;
+  }
+  
+  /* Mobile-specific grid adjustments */
+  .grid {
+    gap: 12px;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-menu {
+    background: rgba(15, 15, 35, 0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(0, 255, 255, 0.2);
+  }
+  
+  /* Mobile text sizing */
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .text-7xl {
+    font-size: 3.5rem;
+  }
+  
+  /* Mobile spacing */
+  .py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  /* Mobile card adjustments */
+  .hologram-card,
+  .cyber-card,
+  .quantum-card {
+    margin-bottom: 16px;
+  }
+  
+  /* Mobile button groups */
+  .flex-col {
+    gap: 12px;
+  }
+  
+  /* Mobile form elements */
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}
+
+/* Tablet responsive design */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    margin: 12px;
+    border-radius: 16px;
+    padding: 20px;
+  }
+  
+  .cyber-button {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  
+  /* Tablet grid adjustments */
+  .grid {
+    gap: 16px;
+  }
+  
+  /* Tablet text sizing */
+  .text-4xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-5xl {
+    font-size: 3rem;
+  }
+  
+  .text-6xl {
+    font-size: 3.5rem;
+  }
+  
+  .text-7xl {
+    font-size: 4rem;
+  }
+}
+
+/* Large desktop responsive design */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    margin: 14px;
+    border-radius: 18px;
+    padding: 24px;
+  }
+  
+  .cyber-button {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    margin: 16px;
+    border-radius: 24px;
+    padding: 32px;
+  }
+  
+  .cyber-button {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+  
+  /* Large screen grid adjustments */
+  .grid {
+    gap: 24px;
+  }
+  
+  /* Large screen text sizing */
+  .text-4xl {
+    font-size: 3rem;
+  }
+  
+  .text-5xl {
+    font-size: 3.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 4rem;
+  }
+  
+  .text-7xl {
+    font-size: 5rem;
+  }
+}
+
+/* Ultra-wide screen support */
+@media (min-width: 2560px) {
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    margin: 20px;
+    border-radius: 28px;
+    padding: 40px;
+  }
+  
+  .cyber-button {
+    padding: 20px 40px;
+    font-size: 18px;
+  }
+  
+  /* Ultra-wide grid adjustments */
+  .grid {
+    gap: 32px;
+  }
+  
+  /* Ultra-wide text sizing */
+  .text-4xl {
+    font-size: 3.5rem;
+  }
+  
+  .text-5xl {
+    font-size: 4rem;
+  }
+  
+  .text-6xl {
+    font-size: 5rem;
+  }
+  
+  .text-7xl {
+    font-size: 6rem;
+  }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .py-20 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .py-16 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .text-4xl {
+    font-size: 1.75rem;
+  }
+  
+  .text-5xl {
+    font-size: 2rem;
+  }
+  
+  .text-6xl {
+    font-size: 2.25rem;
+  }
+  
+  .text-7xl {
+    font-size: 2.5rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cyber-scan-line::before,
+  .neural-network-bg::before,
+  .matrix-rain::before {
+    background-size: 50px 50px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .cyber-card,
+  .hologram-card,
+  .quantum-card {
+    background: white !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+  
+  .neon-text,
+  .cyber-text {
+    color: black !important;
+    text-shadow: none !important;
+  }
+  
+  .cyber-button {
+    background: #f0f0f0 !important;
+    color: black !important;
+    border: 1px solid #ccc !important;
+  }
+}
