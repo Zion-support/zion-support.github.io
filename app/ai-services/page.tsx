@@ -736,10 +736,1053 @@ const AIServicesPage: React.FC = () => {
         'Adaptive memory patterns',
         'Cognitive enhancement'
       ]
+<<<<<<< HEAD
+    },
+    {
+      id: 16,
+      name: 'AI Quantum Computing Platform Pro',
+      description: 'Revolutionary quantum computing platform with AI optimization for complex problem solving and advanced simulations',
+      icon: Brain,
+      features: [
+        'Quantum Algorithm Development',
+        'AI-Powered Optimization',
+        'Quantum Machine Learning',
+        'Hybrid Classical-Quantum Computing',
+        'Quantum Simulation',
+        'Error Correction',
+        'Performance Monitoring',
+        'Custom Development'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      rating: 4.9,
+      users: '120+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '1000x faster computations',
+        'Quantum advantage in ML',
+        'Advanced problem solving',
+        'Unbreakable encryption'
+      ]
+    },
+    {
+      id: 17,
+      name: 'AI Holographic Interface Suite',
+      description: 'Immersive 3D holographic interface with AI-powered gesture recognition and spatial computing',
+      icon: Globe,
+      features: [
+        '3D Holographic Display',
+        'Gesture Recognition',
+        'Spatial Computing',
+        'AI-Powered Interactions',
+        'Mixed Reality Integration',
+        'Real-time Rendering',
+        'Multi-user Collaboration',
+        'Custom Applications'
+      ],
+      category: 'Immersive Technology',
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,599/mo',
+      capabilities: [
+        'Immersive 3D interactions',
+        'Gesture-based control',
+        'Spatial computing',
+        'Mixed reality integration'
+      ]
+    },
+    {
+      id: 18,
+      name: 'AI Neural Network Architect',
+      description: 'Advanced AI system for designing and optimizing neural network architectures with automated search and optimization',
+      icon: Brain,
+      features: [
+        'Architecture Search',
+        'Automated Design',
+        'Performance Optimization',
+        'Hyperparameter Tuning',
+        'Model Compression',
+        'Deployment Optimization',
+        'Custom Architectures',
+        'Performance Analytics'
+      ],
+      category: 'AI Development',
+      popular: true,
+      rating: 4.8,
+      users: '450+',
+      color: 'from-indigo-500 to-purple-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        'Automated architecture design',
+        'Performance optimization',
+        'Model compression',
+        'Deployment optimization'
+      ]
+    },
+    {
+      id: 19,
+      name: 'AI Quantum Machine Learning Pro',
+      description: 'Quantum-enhanced machine learning with exponential speedup and advanced pattern recognition capabilities',
+      icon: Brain,
+      features: [
+        'Quantum ML Algorithms',
+        'Exponential Speedup',
+        'Pattern Recognition',
+        'Quantum Neural Networks',
+        'Optimization Problems',
+        'Feature Selection',
+        'Model Training',
+        'Performance Analytics'
+      ],
+      category: 'Quantum ML',
+      popular: true,
+      rating: 4.9,
+      users: '180+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $2,299/mo',
+      capabilities: [
+        'Exponential speedup',
+        'Advanced pattern recognition',
+        'Quantum neural networks',
+        'Optimization solutions'
+      ]
+    },
+    {
+      id: 20,
+      name: 'AI Space Technology Suite',
+      description: 'Comprehensive AI solutions for space exploration, satellite management, and space mission optimization',
+      icon: Rocket,
+      features: [
+        'Satellite Management',
+        'Mission Planning',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Navigation Systems',
+        'Space Mission Analytics'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      rating: 4.9,
+      users: '75+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Advanced orbital calculations',
+        'Space debris mitigation'
+      ]
+    },
+    {
+      id: 21,
+      name: 'AI Molecular Design Studio',
+      description: 'Advanced AI platform for molecular design, drug discovery, and chemical property prediction',
+      icon: FileText,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Chemical Simulation',
+        'Property Prediction',
+        'Reaction Planning',
+        'Toxicity Analysis',
+        'Patent Search',
+        'Collaboration Tools'
+      ],
+      category: 'Scientific AI',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '90% accuracy in predictions',
+        'Faster drug discovery',
+        'Chemical property analysis',
+        'Patent-safe designs'
+      ]
+    },
+    {
+      id: 22,
+      name: 'AI Holographic Data Visualization',
+      description: 'Immersive 3D data visualization with AI-powered insights and interactive holographic displays',
+      icon: BarChart,
+      features: [
+        '3D Data Visualization',
+        'Holographic Display',
+        'AI Insights',
+        'Interactive Exploration',
+        'Real-time Updates',
+        'Custom Dashboards',
+        'Collaboration Tools',
+        'Export Options'
+      ],
+      category: 'Data Visualization',
+      popular: true,
+      rating: 4.8,
+      users: '320+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $1,199/mo',
+      capabilities: [
+        'Immersive 3D visualization',
+        'Holographic data display',
+        'AI-powered insights',
+        'Interactive exploration'
+      ]
+    },
+    {
+      id: 23,
+      name: 'AI Quantum Security Suite',
+      description: 'Quantum-resistant security solutions with unbreakable encryption and advanced threat protection',
+      icon: Shield,
+      features: [
+        'Quantum Encryption',
+        'Zero-knowledge Architecture',
+        'Advanced Threat Detection',
+        'Biometric Authentication',
+        'Multi-factor Security',
+        'Audit Logging',
+        'Compliance Tools',
+        'API Security'
+      ],
+      category: 'Quantum Security',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        'Unbreakable quantum encryption',
+        'Zero-knowledge security',
+        'Advanced threat protection',
+        'Compliance automation'
+      ]
+    },
+    {
+      id: 24,
+      name: 'AI Neural Interface Pro',
+      description: 'Advanced neural interface with brain-computer interaction, thought-to-text, and cognitive enhancement',
+      icon: Brain,
+      features: [
+        'Brain-Computer Interface',
+        'Thought-to-Text',
+        'Cognitive Enhancement',
+        'Neural Training',
+        'Mind Mapping',
+        'Memory Augmentation',
+        'Focus Optimization',
+        'Mental Health Monitoring'
+      ],
+      category: 'Neural Interface',
+      popular: false,
+      rating: 4.8,
+      users: '120+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $2,799/mo',
+      capabilities: [
+        'Direct brain interaction',
+        'Thought-to-text conversion',
+        'Cognitive enhancement',
+        'Mental health insights'
+      ]
+    },
+    {
+      id: 25,
+      name: 'AI Quantum Optimization Engine',
+      description: 'Quantum-powered optimization engine for complex problems with exponential speedup and advanced algorithms',
+      icon: Zap,
+      features: [
+        'Quantum Optimization',
+        'Complex Problem Solving',
+        'Exponential Speedup',
+        'Advanced Algorithms',
+        'Real-time Processing',
+        'API Integration',
+        'Custom Solutions',
+        'Performance Analytics'
+      ],
+      category: 'Quantum Optimization',
+      popular: true,
+      rating: 4.9,
+      users: '160+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        'Exponential speedup',
+        'Complex problem solving',
+        'Quantum algorithms',
+        'Real-time optimization'
+      ]
+    },
+    {
+      id: 26,
+      name: 'AI Holographic Training Simulator',
+      description: 'Immersive 3D training simulator with AI-powered personalized learning and virtual reality integration',
+      icon: Users,
+      features: [
+        '3D Training Environment',
+        'AI Personalization',
+        'Virtual Reality',
+        'Skill Assessment',
+        'Progress Tracking',
+        'Interactive Scenarios',
+        'Multi-user Support',
+        'Analytics Dashboard'
+      ],
+      category: 'Immersive Learning',
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,399/mo',
+      capabilities: [
+        'Immersive 3D training',
+        'AI personalization',
+        'Virtual reality integration',
+        'Skill assessment'
+      ]
+    },
+    {
+      id: 27,
+      name: 'AI Quantum Neural Networks',
+      description: 'Quantum-enhanced neural networks with exponential computational power and advanced learning capabilities',
+      icon: Brain,
+      features: [
+        'Quantum Neural Networks',
+        'Exponential Power',
+        'Advanced Learning',
+        'Pattern Recognition',
+        'Optimization',
+        'Training Acceleration',
+        'Model Deployment',
+        'Performance Monitoring'
+      ],
+      category: 'Quantum AI',
+      popular: false,
+      rating: 4.9,
+      users: '90+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $3,499/mo',
+      capabilities: [
+        'Exponential computational power',
+        'Advanced learning',
+        'Pattern recognition',
+        'Training acceleration'
+      ]
+    },
+    {
+      id: 28,
+      name: 'AI Autonomous Systems Pro',
+      description: 'Advanced AI platform for autonomous vehicle and drone management with real-time decision making',
+      icon: Settings,
+      features: [
+        'Autonomous Vehicle AI',
+        'Drone Fleet Management',
+        'Real-time Decision Making',
+        'Path Optimization',
+        'Collision Avoidance',
+        'Weather Adaptation',
+        'Fleet Coordination',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.9,
+      users: '180+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $2,799/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ]
+    },
+    {
+      id: 29,
+      name: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
+      icon: DollarSign,
+      features: [
+        'Quantum Market Analysis',
+        'Ultra-fast Predictions',
+        'Risk Assessment',
+        'Portfolio Optimization',
+        'Cryptocurrency Analysis',
+        'Real-time Trading Signals',
+        'Quantum Computing',
+        'Advanced Analytics'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '140+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '1000x faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ]
+    },
+    {
+      id: 30,
+      name: 'AI Holographic Workspace Pro',
+      description: 'Immersive 3D workspace with AI-powered collaboration, virtual meetings, and spatial computing',
+      icon: Globe,
+      features: [
+        '3D Workspace',
+        'Virtual Collaboration',
+        'Spatial Computing',
+        'AI Gestures',
+        'Mixed Reality',
+        'Real-time Translation',
+        'Virtual Whiteboarding',
+        'Immersive Presentations'
+      ],
+      category: 'Immersive Workspace',
+      popular: true,
+      rating: 4.7,
+      users: '250+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $1,799/mo',
+      capabilities: [
+        'Immersive 3D collaboration',
+        'Spatial computing',
+        'AI-powered gestures',
+        'Mixed reality integration'
+      ]
+    },
+    {
+      id: 31,
+      name: 'AI Code Security Auditor Pro',
+      description: 'Advanced AI-powered code security auditing with vulnerability detection, compliance checking, and automated fixes',
+      icon: Shield,
+      features: [
+        'Vulnerability Detection',
+        'Compliance Checking',
+        'Automated Fixes',
+        'Security Scoring',
+        'Code Review',
+        'Threat Modeling',
+        'Penetration Testing',
+        'Security Training'
+      ],
+      category: 'Security AI',
+      popular: true,
+      rating: 4.9,
+      users: '1,200+',
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '99.8% vulnerability detection',
+        'Automated security fixes',
+        'Real-time threat analysis',
+        'Compliance automation'
+      ]
+    },
+    {
+      id: 32,
+      name: 'AI Investment Optimizer Pro',
+      description: 'AI-powered investment portfolio optimization with real-time market analysis and risk management',
+      icon: BarChart,
+      features: [
+        'Portfolio Optimization',
+        'Risk Management',
+        'Market Analysis',
+        'Asset Allocation',
+        'Performance Tracking',
+        'Tax Optimization',
+        'Rebalancing',
+        'Alerts'
+      ],
+      category: 'Financial AI',
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        '25% better returns',
+        'Risk reduction',
+        'Real-time optimization',
+        'Tax-efficient strategies'
+      ]
+    },
+    {
+      id: 33,
+      name: 'AI Mental Health Companion',
+      description: 'AI-powered mental health companion with mood tracking, therapy sessions, and wellness recommendations',
+      icon: Stethoscope,
+      features: [
+        'Mood Tracking',
+        'Therapy Sessions',
+        'Wellness Recommendations',
+        'Crisis Intervention',
+        'Progress Monitoring',
+        'Meditation Guides',
+        'Sleep Analysis',
+        'Stress Management'
+      ],
+      category: 'Healthcare AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,500+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        '24/7 mental health support',
+        'Personalized therapy',
+        'Mood improvement tracking',
+        'Crisis prevention'
+      ]
+    },
+    {
+      id: 34,
+      name: 'AI Smart Home Controller Pro',
+      description: 'Intelligent smart home automation with AI-powered energy management and security monitoring',
+      icon: Settings,
+      features: [
+        'Home Automation',
+        'Energy Management',
+        'Security Monitoring',
+        'Voice Control',
+        'Predictive Maintenance',
+        'Climate Control',
+        'Lighting Control',
+        'Appliance Management'
+      ],
+      category: 'IoT AI',
+      popular: true,
+      rating: 4.6,
+      users: '3,200+',
+      color: 'from-blue-500 to-cyan-600',
+      pricing: 'Starting at $149/mo',
+      capabilities: [
+        '40% energy savings',
+        'Smart automation',
+        'Security monitoring',
+        'Predictive maintenance'
+      ]
+    },
+    {
+      id: 35,
+      name: 'AI Voice Cloning Studio Pro',
+      description: 'Professional voice cloning and synthesis with AI-powered voice generation and customization',
+      icon: FileText,
+      features: [
+        'Voice Cloning',
+        'Voice Synthesis',
+        'Emotion Control',
+        'Language Translation',
+        'Voice Conversion',
+        'Audio Editing',
+        'Real-time Processing',
+        'API Integration'
+      ],
+      category: 'Audio AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        '99% voice accuracy',
+        'Real-time synthesis',
+        'Emotion control',
+        'Multi-language support'
+      ]
+    },
+    {
+      id: 36,
+      name: 'AI Blockchain Analytics Pro',
+      description: 'Advanced blockchain analytics with transaction monitoring, fraud detection, and compliance reporting',
+      icon: Shield,
+      features: [
+        'Transaction Monitoring',
+        'Fraud Detection',
+        'Compliance Reporting',
+        'Risk Assessment',
+        'Address Analysis',
+        'Smart Contract Auditing',
+        'DeFi Analytics',
+        'Regulatory Compliance'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      rating: 4.9,
+      users: '600+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        'Real-time monitoring',
+        'Fraud prevention',
+        'Compliance automation',
+        'Risk assessment'
+      ]
+    },
+    {
+      id: 37,
+      name: 'AI Space Mission Planner',
+      description: 'AI-powered space mission planning with orbital mechanics, trajectory optimization, and mission simulation',
+      icon: Rocket,
+      features: [
+        'Orbital Mechanics',
+        'Trajectory Optimization',
+        'Mission Simulation',
+        'Risk Assessment',
+        'Resource Planning',
+        'Launch Window Analysis',
+        'Satellite Management',
+        'Space Weather Integration'
+      ],
+      category: 'Space AI',
+      popular: false,
+      rating: 4.9,
+      users: '25+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Optimal trajectory planning',
+        'Real-time space monitoring',
+        'Advanced orbital calculations'
+      ]
+    },
+    {
+      id: 38,
+      name: 'AI Climate Prediction Engine',
+      description: 'Advanced climate modeling and prediction with AI-powered environmental analysis and sustainability planning',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Weather Prediction',
+        'Environmental Analysis',
+        'Carbon Tracking',
+        'Sustainability Planning',
+        'Risk Assessment',
+        'Real-time Monitoring',
+        'Policy Recommendations'
+      ],
+      category: 'Climate AI',
+      popular: true,
+      rating: 4.8,
+      users: '280+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '95% prediction accuracy',
+        'Real-time climate monitoring',
+        'Carbon footprint optimization',
+        'Sustainability insights'
+      ]
+    },
+    {
+      id: 39,
+      name: 'AI Molecular Designer Pro',
+      description: 'AI-powered molecular design and drug discovery with advanced chemistry modeling and simulation',
+      icon: FileText,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Chemical Simulation',
+        'Property Prediction',
+        'Reaction Planning',
+        'Toxicity Analysis',
+        'Patent Search',
+        'Collaboration Tools'
+      ],
+      category: 'Scientific AI',
+      popular: false,
+      rating: 4.9,
+      users: '80+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $2,499/mo',
+      capabilities: [
+        '90% accuracy in predictions',
+        'Faster drug discovery',
+        'Chemical property analysis',
+        'Patent-safe designs'
+      ]
+    },
+    {
+      id: 31,
+      name: 'AI Quantum Financial Oracle Pro',
+      description: 'Revolutionary quantum-powered financial analysis with ultra-fast market predictions and risk assessment',
+      icon: Brain,
+      features: [
+        'Quantum Market Analysis',
+        'Ultra-fast Predictions',
+        'Risk Assessment',
+        'Portfolio Optimization',
+        'Cryptocurrency Analysis',
+        'Real-time Trading Signals',
+        'Quantum Computing',
+        'Advanced Analytics'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '120+',
+      color: 'from-emerald-500 to-green-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '1000x faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ]
+    },
+    {
+      id: 32,
+      name: 'AI Neural Interface Pro',
+      description: 'Advanced neural interface with brain-computer interaction, thought-to-text, and cognitive enhancement',
+      icon: Brain,
+      features: [
+        'Brain-Computer Interface',
+        'Thought-to-Text',
+        'Cognitive Enhancement',
+        'Neural Training',
+        'Mind Mapping',
+        'Memory Augmentation',
+        'Focus Optimization',
+        'Mental Health Monitoring'
+      ],
+      category: 'Neural Interface',
+      popular: false,
+      rating: 4.8,
+      users: '90+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $2,799/mo',
+      capabilities: [
+        'Direct brain interaction',
+        'Thought-to-text conversion',
+        'Cognitive enhancement',
+        'Mental health insights'
+      ]
+    },
+    {
+      id: 33,
+      name: 'AI Quantum Computing Cloud Pro',
+      description: 'Access to quantum computing power with AI optimization and hybrid classical-quantum algorithms',
+      icon: Brain,
+      features: [
+        'Quantum Computing Access',
+        'Hybrid Algorithms',
+        'AI Optimization',
+        'Quantum Simulation',
+        'Error Correction',
+        'Performance Monitoring',
+        'API Integration',
+        'Custom Development'
+      ],
+      category: 'Quantum Computing',
+      popular: true,
+      rating: 4.9,
+      users: '60+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        'Quantum computing access',
+        'Hybrid algorithms',
+        'AI optimization',
+        'Quantum simulation'
+      ]
+    },
+    {
+      id: 34,
+      name: 'AI Autonomous Vehicle Fleet Pro',
+      description: 'AI-powered autonomous vehicle fleet management with real-time coordination and safety monitoring',
+      icon: Truck,
+      features: [
+        'Fleet Management',
+        'Autonomous Navigation',
+        'Real-time Coordination',
+        'Safety Monitoring',
+        'Route Optimization',
+        'Weather Adaptation',
+        'Maintenance Prediction',
+        'Performance Analytics'
+      ],
+      category: 'Autonomous Systems',
+      popular: false,
+      rating: 4.9,
+      users: '40+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $5,999/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time fleet coordination',
+        'Weather-adaptive navigation',
+        'Predictive maintenance'
+      ]
+    },
+    {
+      id: 35,
+      name: 'AI Holographic Design Studio Pro',
+      description: 'Immersive 3D design studio with AI-powered creativity tools and holographic visualization',
+      icon: Palette,
+      features: [
+        '3D Design Tools',
+        'Holographic Visualization',
+        'AI Creativity Assistant',
+        'Real-time Collaboration',
+        'Material Simulation',
+        'Lighting Analysis',
+        'Animation Tools',
+        'Export Options'
+      ],
+      category: 'Immersive Design',
+      popular: true,
+      rating: 4.8,
+      users: '180+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Immersive 3D design',
+        'Holographic visualization',
+        'AI creativity assistance',
+        'Real-time collaboration'
+      ]
+    },
+    {
+      id: 36,
+      name: 'AI Quantum Machine Learning Pro',
+      description: 'Quantum-enhanced machine learning with exponential speedup and advanced pattern recognition',
+      icon: Brain,
+      features: [
+        'Quantum ML Algorithms',
+        'Exponential Speedup',
+        'Pattern Recognition',
+        'Quantum Neural Networks',
+        'Optimization Problems',
+        'Feature Selection',
+        'Model Training',
+        'Performance Analytics'
+      ],
+      category: 'Quantum ML',
+      popular: true,
+      rating: 4.9,
+      users: '110+',
+      color: 'from-cyan-500 to-blue-600',
+      pricing: 'Starting at $2,299/mo',
+      capabilities: [
+        'Exponential speedup',
+        'Advanced pattern recognition',
+        'Quantum neural networks',
+        'Optimization solutions'
+      ]
+    },
+    {
+      id: 37,
+      name: 'AI Space Debris Tracker Pro',
+      description: 'AI-powered space debris tracking and collision avoidance with real-time monitoring and prediction',
+      icon: Globe,
+      features: [
+        'Debris Tracking',
+        'Collision Prediction',
+        'Real-time Monitoring',
+        'Orbital Analysis',
+        'Risk Assessment',
+        'Alert System',
+        'Historical Data',
+        'API Integration'
+      ],
+      category: 'Space Technology',
+      popular: false,
+      rating: 4.8,
+      users: '35+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $1,499/mo',
+      capabilities: [
+        'Real-time debris tracking',
+        'Collision prediction',
+        'Risk assessment',
+        'Alert system'
+      ]
+    },
+    {
+      id: 38,
+      name: 'AI Quantum Cryptography Suite Pro',
+      description: 'Quantum-resistant cryptography with unbreakable encryption and secure communication protocols',
+      icon: Shield,
+      features: [
+        'Quantum Encryption',
+        'Secure Communication',
+        'Key Distribution',
+        'Digital Signatures',
+        'Authentication',
+        'Compliance Tools',
+        'API Security',
+        'Audit Logging'
+      ],
+      category: 'Quantum Security',
+      popular: true,
+      rating: 4.9,
+      users: '85+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,699/mo',
+      capabilities: [
+        'Unbreakable encryption',
+        'Secure communication',
+        'Quantum key distribution',
+        'Compliance automation'
+      ]
+    },
+    {
+      id: 39,
+      name: 'AI Neural Network Optimizer Pro',
+      description: 'Advanced neural network optimization with automated architecture search and performance tuning',
+      icon: Settings,
+      features: [
+        'Architecture Search',
+        'Performance Tuning',
+        'Hyperparameter Optimization',
+        'Model Compression',
+        'Quantization',
+        'Pruning',
+        'Training Acceleration',
+        'Deployment Optimization'
+      ],
+      category: 'AI Development',
+      popular: true,
+      rating: 4.7,
+      users: '320+',
+      color: 'from-orange-500 to-red-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        'Automated architecture search',
+        'Performance optimization',
+        'Model compression',
+        'Training acceleration'
+      ]
+    },
+    {
+      id: 40,
+      name: 'AI Holographic Data Visualization Pro',
+      description: 'Immersive 3D data visualization with AI-powered insights and interactive holographic displays',
+      icon: BarChart,
+      features: [
+        '3D Data Visualization',
+        'Holographic Display',
+        'AI Insights',
+        'Interactive Exploration',
+        'Real-time Updates',
+        'Custom Dashboards',
+        'Collaboration Tools',
+        'Export Options'
+      ],
+      category: 'Immersive Analytics',
+      popular: true,
+      rating: 4.8,
+      users: '220+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $1,199/mo',
+      capabilities: [
+        'Immersive 3D visualization',
+        'Holographic data display',
+        'AI-powered insights',
+        'Interactive exploration'
+      ]
+    },
+    {
+      id: 41,
+      name: 'AI Quantum Optimization Engine Pro',
+      description: 'Quantum-powered optimization engine for complex problems with exponential speedup and advanced algorithms',
+      icon: Zap,
+      features: [
+        'Quantum Optimization',
+        'Complex Problem Solving',
+        'Exponential Speedup',
+        'Advanced Algorithms',
+        'Real-time Processing',
+        'API Integration',
+        'Custom Solutions',
+        'Performance Analytics'
+      ],
+      category: 'Quantum Optimization',
+      popular: true,
+      rating: 4.9,
+      users: '95+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        'Exponential speedup',
+        'Complex problem solving',
+        'Quantum algorithms',
+        'Real-time optimization'
+      ]
+    },
+    {
+      id: 42,
+      name: 'AI Holographic Training Simulator Pro',
+      description: 'Immersive 3D training simulator with AI-powered personalized learning and virtual reality integration',
+      icon: Users,
+      features: [
+        '3D Training Environment',
+        'AI Personalization',
+        'Virtual Reality',
+        'Skill Assessment',
+        'Progress Tracking',
+        'Interactive Scenarios',
+        'Multi-user Support',
+        'Analytics Dashboard'
+      ],
+      category: 'Immersive Learning',
+      popular: true,
+      rating: 4.8,
+      users: '160+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,399/mo',
+      capabilities: [
+        'Immersive 3D training',
+        'AI personalization',
+        'Virtual reality integration',
+        'Skill assessment'
+      ]
+    },
+    {
+      id: 43,
+      name: 'AI Quantum Neural Networks Pro',
+      description: 'Quantum-enhanced neural networks with exponential computational power and advanced learning capabilities',
+      icon: Brain,
+      features: [
+        'Quantum Neural Networks',
+        'Exponential Power',
+        'Advanced Learning',
+        'Pattern Recognition',
+        'Optimization',
+        'Training Acceleration',
+        'Model Deployment',
+        'Performance Monitoring'
+      ],
+      category: 'Quantum AI',
+      popular: false,
+      rating: 4.9,
+      users: '50+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $3,499/mo',
+      capabilities: [
+        'Exponential computational power',
+        'Advanced learning',
+        'Pattern recognition',
+        'Training acceleration'
+      ]
+    }
+  ];
+
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Immersive Learning', 'Security AI', 'IoT AI', 'Audio AI', 'Space AI', 'Climate AI'];
+=======
 }
   ];
 
 const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI'];
+>>>>>>> origin/main
 
   if (!isLoaded) {
     return (
