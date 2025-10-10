@@ -12,7 +12,7 @@ export default function HomePage() {
             <div className="flex items-center">
               <Link to="/" className="text-2xl font-bold text-gray-900">
                 Zion Tech Group
-              </a>
+              </Link>
             </div>
             <nav className="hidden md:flex space-x-8">
               <Link to="/" className="text-gray-900 hover:text-blue-600">
@@ -26,7 +26,7 @@ export default function HomePage() {
               </Link>
               <Link to="/contact" className="text-gray-900 hover:text-blue-600">
                 Contact
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function HomePage() {
               >
                 View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </a>
+              </Link>
             </div>
           </div>
         </section>
