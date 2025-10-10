@@ -10,20 +10,24 @@ interface AnalyticsEvent {
   value?: number;
   nonInteraction?: boolean;
 }
+
 interface PerformanceMetrics {
   metric: string;
   value: number;
   rating?: 'good' | 'needs-improvement' | 'poor';
 }
+
 interface ErrorReport {
   message: string;
   stack?: string;
   componentStack?: string;
   severity: 'low' | 'medium' | 'high' | 'critical';
 }
+
 class AnalyticsTracker {
   private isInitialized = false;
   private queue: Array<() => void> = [];
+
   /**
    * Initialize the analytics tracker
    */
@@ -36,6 +40,7 @@ class AnalyticsTracker {
     // Track initial page view
     this.trackPageView(window.location.pathname);
   }
+
   /**
    * Track a custom event
    */
@@ -60,6 +65,7 @@ class AnalyticsTracker {
       this.queue.push(track);
     }
   }
+
   /**
    * Track page views
    */
@@ -82,6 +88,7 @@ class AnalyticsTracker {
       this.queue.push(track);
     }
   }
+
   /**
    * Track performance metrics
    */
@@ -105,6 +112,7 @@ class AnalyticsTracker {
       this.queue.push(track);
     }
   }
+
   /**
    * Track errors
    */
@@ -119,13 +127,14 @@ class AnalyticsTracker {
         });
       }
       // Always log errors to console
-      // };
+      };
     if (this.isInitialized) {
       track();
     } else {
       this.queue.push(track);
     }
   }
+
   /**
    * Track user timing
    */
@@ -149,6 +158,7 @@ class AnalyticsTracker {
       this.queue.push(track);
     }
   }
+
   /**
    * Track conversions
    */
@@ -172,8 +182,10 @@ class AnalyticsTracker {
     }
   }
 }
+
 // Export singleton instance
 export const analyticsTracker = new AnalyticsTracker();
+
 // Auto-initialize when window is available
 if (typeof window !== 'undefined') {
   if (document.readyState === 'complete') {
@@ -184,4 +196,5 @@ if (typeof window !== 'undefined') {
     });
   }
 }
+
 export default analyticsTracker;

@@ -25,120 +25,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   locale = 'en-US',
   alternateLanguages = [],
 }) => {
-<<<<<<< HEAD
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
-  
-  const generateStructuredData = useCallback(() => {
-    if (!enableStructuredData || !seoData.structuredData) return null;
-    const baseStructuredData = {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Zion Tech Group',
-      url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-      description: 'Advanced AI and IT Solutions',
-      address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'US'
-      },
-      sameAs: [
-        'https://www.linkedin.com/company/zion-tech-group',
-        'https://twitter.com/ziontechgroup',
-        'https://github.com/zion-tech-group',
-      ],
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-      ...seoData.structuredData
-    };
-    return baseStructuredData;
-  }, [enableStructuredData, seoData.structuredData]);
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup) return null;
-    const breadcrumbData = {
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: '+1-555-ZION-TECH',
-        contactType: 'customer service',
-        availableLanguage: 'English',
-      },
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '123 Tech Innovation Drive',
-        addressLocality: 'San Francisco',
-        addressRegion: 'CA',
-        postalCode: '94105',
-        addressCountry: 'US',
-      },
-    };
-
-    return {
-      ...baseStructuredData,
-      ...seoData.structuredData,
-    };
-  }, [seoData, enableStructuredData]);
-
-  const generateBreadcrumbStructuredData = useCallback(() => {
-    if (!enableSchemaMarkup || !seoData.breadcrumbData) return null;
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: 'https://ziontechgroup.com'
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: seoData.title,
-          item: seoData.canonicalUrl
-        },
-      ]
-    };
-    return breadcrumbData;
-  }, [enableSchemaMarkup, seoData.title, seoData.canonicalUrl]);
-  const generateFAQStructuredData = useCallback(() => {
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-    if (!enableSchemaMarkup) return null;
-    const faqData = {
-    if (!enableSchemaMarkup || !seoData.faqData) return null;
-
-    return {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'What services does Zion Tech Group offer?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-            text: 'Zion Tech Group offers advanced AI and IT solutions including custom software development, AI integration, cloud solutions, and digital transformation services.'
-          }
-            text: 'Zion Tech Group offers advanced AI solutions, quantum computing, and autonomous systems for enterprise clients.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'How can I contact Zion Tech Group?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-            text: 'You can contact us through our website contact form, email, or phone. Visit our contact page for more information.'
-          }
-        },
-      ]
-    };
-    return faqData;
-  }, [enableSchemaMarkup]);
-  const _structuredData = generateStructuredData();
-  const _breadcrumbData = generateBreadcrumbStructuredData();
-  const _faqData = generateFAQStructuredData();
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-bf94
   useEffect(() => {
     // Update document title with dynamic suffix
     const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -167,90 +53,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
     
     // Update canonical URL
-<<<<<<< HEAD
-    const canonicalLink = document.querySelector('link[rel="canonical"]');
-    if (canonicalLink) {
-            text: 'You can contact us through our website, email, or phone for consultation and support.',
-          },
-        },
-      ],
-    };
-  }, [enableSchemaMarkup]);
-
-  const structuredData = generateStructuredData();
-  const breadcrumbData = generateBreadcrumbStructuredData();
-  const faqData = generateFAQStructuredData();
-
-  useEffect(() => {
-    // Update page title and meta description for better SEO
-    if (typeof document !== 'undefined') {
-      document.title = seoData.title;
-      
-      let metaDescription = document.querySelector('meta[name="description"]');
-      if (!metaDescription) {
-        metaDescription = document.createElement('meta');
-        metaDescription.setAttribute('name', 'description');
-        document.head.appendChild(metaDescription);
-      }
-      metaDescription.setAttribute('content', seoData.description);
-
-      // Update canonical URL
-      let canonicalLink = document.querySelector('link[rel="canonical"]');
-      if (!canonicalLink) {
-        canonicalLink = document.createElement('link');
-        canonicalLink.setAttribute('rel', 'canonical');
-        document.head.appendChild(canonicalLink);
-      }
-      canonicalLink.setAttribute('href', seoData.canonicalUrl);
-=======
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
       canonical.setAttribute('href', canonicalUrl);
->>>>>>> cursor/fix-errors-and-merge-to-main-bf94
     } else {
       const link = document.createElement('link');
       link.rel = 'canonical';
       link.href = canonicalUrl;
       document.head.appendChild(link);
     }
-<<<<<<< HEAD
-  }, [seoData]);
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-  const _addStructuredData = (data: Record<string, unknown>) => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    script.id = 'structured-data';
-    document.head.appendChild(script);
-    _structuredDataRef.current = script;
-  };
-  const _trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-
-  const trackPageView = (config: SEOData) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: config.title,
-        page_location: config.canonicalUrl
-      });
-    }
-  };
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-  const _trackPerformanceMetrics = () => {
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      window.addEventListener('load', () => {
-        const _perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (_perfData) {
-          (window as any).gtag('event', 'page_load_performance', {
-            event_category: 'Performance',
-            event_label: 'Page Load',
-            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart)
-          });
-        }
-      });
-    }
-  };
-=======
 
     // Add robots meta tag
     const robots = document.querySelector('meta[name="robots"]');
@@ -262,7 +73,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       meta.content = noIndex ? 'noindex,nofollow' : 'index,follow';
       document.head.appendChild(meta);
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-bf94
 
     // Add language meta tag
     const html = document.documentElement;
@@ -306,11 +116,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <meta name="copyright" content="Zion Tech Group" />
       <meta name="revisit-after" content="7 days" />
       <meta name="rating" content="general" />
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-      <meta name="theme-color" content="#4F46E5" />
-
-=======
       <meta name="distribution" content="global" />
       <meta name="target" content="all" />
       <meta name="HandheldFriendly" content="true" />
@@ -327,38 +132,12 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         <link key={alt.hreflang} rel="alternate" hrefLang={alt.hreflang} href={alt.href} />
       ))}
       
->>>>>>> cursor/fix-errors-and-merge-to-main-bf94
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-      {enableSchemaMarkup && _breadcrumbData && (
-      {enableSchemaMarkup && breadcrumbData && (
-        <script type="application/ld+json">
-          {JSON.stringify(_breadcrumbData)}
-        </script>
-      )}
-<<<<<<< HEAD:src/components/AdvancedSEOOptimizer.tsx
-      {enableSchemaMarkup && _faqData && (
-      {enableSchemaMarkup && faqData && (
-        <script type="application/ld+json">
-          {JSON.stringify(_faqData)}
-        </script>
-      )}
-      {/* Preconnect to external domains for performance */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
-      {/* DNS Prefetch for better performance */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-=======
       
       {/* Additional Schema.org markup */}
       <script type="application/ld+json">
@@ -397,6 +176,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           ]
         })}
       </script>
+      
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
+      {/* DNS Prefetch for better performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
   );
 };

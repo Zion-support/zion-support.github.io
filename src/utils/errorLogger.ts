@@ -67,7 +67,7 @@ class ErrorLogger {
     };
     console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity]);
     if (entry.error) {
-      // }
+      }
     if (entry.context) {
       }
     if (entry.stackTrace) {
@@ -102,7 +102,7 @@ class ErrorLogger {
       });
     } catch (error) {
       // Silently fail to avoid infinite loop
-      // }
+      }
   }
   /**
    * Get recent logs

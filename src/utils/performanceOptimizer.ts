@@ -6,11 +6,11 @@
 // Simple logger for performance optimizer
 const logger = {
   info: (message: string, context?: string) => {
-    // },
+    },
   performance: (message: string, data: Record<string, unknown>, context?: string) => {
-    // },
+    },
   error: (message: string, error: Error) => {
-    // }
+    }
 };
 interface PerformanceMetrics {
   loadTime: number;

@@ -92,7 +92,7 @@ class MonitoringService {
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
       } catch (error) {
-        // }
+        }
     }
   }
 
@@ -101,7 +101,7 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // }
+            }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -118,12 +118,12 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration > 1000) {
-              // }
+              }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
       } catch (_error) {
-        // }
+        }
     }
   }
 
@@ -158,7 +158,8 @@ class MonitoringService {
     const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
     if (thresholds) {
       const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-      // }
+      `);
+    }
     // Send to analytics (if configured)
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('event', name, {
