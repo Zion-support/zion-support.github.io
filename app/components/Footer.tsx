@@ -171,7 +171,7 @@ const Footer: React.FC = memo(() => {
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
                   <Phone className="w-4 h-4 text-white" />
                 </div>
-                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">+1 302 464 0950</a>
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors font-medium">+1 (302) 464-0950</a>
               </div>
               <div className="flex items-center text-sm text-gray-300 group">
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
@@ -183,13 +183,13 @@ const Footer: React.FC = memo(() => {
                 <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3 mt-0.5 group-hover:scale-110 transition-transform">
                   <MapPin className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-medium">364 E Main St STE 1008<br />Middletown DE 19709</span>
+                <span className="font-medium">364 E Main St STE 1008<br />Middletown, DE 19709<br />United States</span>
               </div>
               <div className="flex items-center text-sm text-gray-300 group">
                 <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform">
                   <Clock className="w-4 h-4 text-white" />
                 </div>
-                <span className="font-medium">Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support</span>
+                <span className="font-medium">Mon-Fri: 9AM-6PM EST<br />24/7 Emergency Support Available</span>
               </div>
             </div>
           </div>
