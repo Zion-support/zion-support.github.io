@@ -41,12 +41,7 @@ function resolveMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      if (line.trim() === '<<<<<<< HEAD') {
-        inConflict = true;
-        inHead = true;
-        inSeparator = false;
-        continue;
-      } else if (line.trim() === '=======') {
+      if (line.trim() === '') {
         inHead = false;
         inSeparator = true;
         continue;

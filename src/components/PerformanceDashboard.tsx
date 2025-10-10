@@ -23,12 +23,11 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     fps: 0
   });
 
-<<<<<<< HEAD
-=======
+
   const [isMonitoring, setIsMonitoring] = useState(false);
   const [alerts, setAlerts] = useState<string[]>([]);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -77,9 +76,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
         loadTime,
         renderTime,
         memoryUsage,
-<<<<<<< HEAD
-        fps
-=======
+
         fps
       };
       
@@ -218,4 +215,4 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
 };
 
 export default PerformanceDashboard;
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+
