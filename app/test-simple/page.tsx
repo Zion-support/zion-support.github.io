@@ -147,6 +147,10 @@ const PagePage: React.FC = () => {
         </div>
       </section>
     </div>
+  return(<div>)</div>
+      <h1>Test Page</h1>)
+      <p>This is a simple test page</p>)
+    </div>)
   );
 };
 

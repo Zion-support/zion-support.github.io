@@ -95,9 +95,9 @@ class APIInterceptor {
 
   // Get interceptor counts;
   getInterceptorCounts(): {
-    request: number;
-    response: number;
-    error: number;
+    request: number,
+    response: number,
+    error: number,
   } {
     return {
       request: this.requestInterceptors.length;

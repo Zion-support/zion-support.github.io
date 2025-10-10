@@ -1,10 +1,10 @@
 // SEO utilities for optimizing search engine visibility and performance
 
 export interface SEOData {
-  title: string;
-  description: string;
+  title: string,
+  description: string,
   keywords: string[];
-  canonicalUrl: string;
+  canonicalUrl: string,
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;,
@@ -36,20 +36,20 @@ export const generateMetaTags = (data: SEOData): string => {
 };
 
 export const generateStructuredData = (data: {
-  name: string;
-  description: string;
-  url: string;
+  name: string,
+  description: string,
+  url: string,
   logo?: string;
   address?: {
-    streetAddress: string;
-    addressLocality: string;
-    addressRegion: string;
-    postalCode: string;
-    addressCountry: string;
+    streetAddress: string,
+    addressLocality: string,
+    addressRegion: string,
+    postalCode: string,
+    addressCountry: string,
   };
   contactPoint?: {
-    telephone: string;
-    contactType: string;
+    telephone: string,
+    contactType: string,
   };
 }): string => {
   const structuredData = {
@@ -67,10 +67,10 @@ export const generateStructuredData = (data: {
 };
 
 export const generateSitemap = (pages: Array<{
-  url: string;
-  lastModified: string;
+  url: string,
+  lastModified: string,
   changeFrequency: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
-  priority: number;
+  priority: number,
 }>): string => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -100,13 +100,13 @@ Sitemap: ${sitemapUrl}`;
 };
 
 export const optimizeImages = (images: Array<{
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
 }>): Array<{
-  src: string;
-  alt: string;
+  src: string,
+  alt: string,
   width?: number;
   height?: number;
   loading: 'lazy' | 'eager';
@@ -120,8 +120,8 @@ export const optimizeImages = (images: Array<{
 };
 
 export const generateBreadcrumbs = (items: Array<{
-  name: string;
-  url: string;
+  name: string,
+  url: string,
 }>): string => {
   const structuredData = {
     "@context": "https://schema.org",
@@ -160,10 +160,10 @@ export const validateSEO = (data: SEOData): string[] => {
 };
 
 export const generatePageSpeedInsights = (url: string): Promise<{
-  performance: number;
-  accessibility: number;
-  bestPractices: number;
-  seo: number;
+  performance: number,
+  accessibility: number,
+  bestPractices: number,
+  seo: number,
 }> => {
   // This would typically call the PageSpeed Insights API
   return Promise.resolve({

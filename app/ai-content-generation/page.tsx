@@ -7,6 +7,30 @@ import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Za
 
 const AIContentGenerationPage: React.FC = () => {
   const features = [
+const $1: React.FC = () => {
+  const contentServices = [,
+    {,
+      title: 'AI Blog Content Generator Pro',
+      description: 'Advanced AI-powered blog content creation with SEO optimization, research integration, and brand voice consistency.',
+      icon: '✍️',
+      price: '$199/month',
+      features: [,
+        'SEO-optimized content generation',
+        'Research integration',
+        'Brand voice consistency',
+        'Multi-language support',
+        'Content calendar automation',
+        'Performance analytics'
+      ],
+      benefits: [,
+        'Create 10x more content',
+        'Improve SEO rankings by 150%',
+        'Save 40+ hours per week',
+        'Increase organic traffic by 200%'
+      ],
+      marketPrice: '$500-1000/month',
+      technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'},
     {
       icon: FileText,
       title: 'AI Blog Content Generator',
@@ -155,6 +179,115 @@ const AIContentGenerationPage: React.FC = () => {
                 </div>
               ))}
             </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">{/* Hero Section */}</div>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto"></section>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">AI Content Generation</h1><span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">Services</span><p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your content strategy with our AI-powered content generation services.</p>
+              Create high-quality blog posts, social media content, and marketing copy 10x faster.</p>
+  return(<div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Hero Section */}</div>
+      <section className="pt-20 pb-16 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+              AI Content Generation;</h1>
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">)
+                Services;)
+              </span>)
+            </h1>)
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">),
+              Transform your content strategy with our AI-powered content generation services.),
+              Create high-quality blog posts, social media content, and marketing copy 10x faster.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <a;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <a
+                href="tel:+13024640950"
+        className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
+      >
+                <span>Call Now: (302) 464-0950</span>
+                <ArrowRight className="w-5 h-5" />
+              <a
+                href="/contact"
+                className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+              >Get Free Consultation</a>
+              </a>
+              <a;
+                href="/contact"
+                className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                Get Free Consultation;
+              </a>
+            </div>
+          </div>
+        </div>,
+      </section>,
+,
+      {/* Services Section */}
+      <section className="py-16 px-4 sm: px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center mb-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Content Services<p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive suite of AI-powered content generation services<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{contentServices.map((service, index) => (</div>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
+                <div className="flex items-center mb-4"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our AI Content Services;
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Choose from our comprehensive suite of AI-powered content generation services;
+            </p>,
+          </div>,
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
+            {contentServices.map((service, index) => (</div>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover: shadow-xl transition-shadow">,</div>
+                <div className="flex items-center mb-4">,</div>
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto"></section>
+          <div className="text-center mb-12"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our AI Content Services</h2><p className="text-xl text-gray-600 max-w-3xl mx-auto">Choose from our comprehensive suite of AI-powered content generation services</p><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{contentServices.map((service, index) => (</div>
+              <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow"></div>
+                <div className="flex items-center mb-4"></div>
+                  <span className="text-4xl mr-4">{service.icon}</span>
+                  <div></div>
+                    <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3><p className="text-gray-600">{service.description}</p>
+                  </div>
+                </div>
+                <div className="mb-6"></div>
+                  <div className="flex items-center justify-between mb-2"></div>
+                    <span className="text-3xl font-bold text-blue-600">{service.price}</span><span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
+                  </div>
+                </div>
+                <div className="mb-6"></div>
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Features:<ul className="space-y-2">{service.features.map((feature, idx) => (</ul>
+                  <h4 className="font-semibold text-gray-900 mb-3">Features: </h4>,
+                  <ul className="space-y-2">,
+                    {service.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" >{feature}</CheckCircle>
+                      </CheckCircle>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mb-6"></div>
+                <div className="mb-6"></div>
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:<ul className="space-y-2">{service.benefits.map((benefit, idx) => (</ul>
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits: </h4>,
+                  <ul className="space-y-2">,
+                    {service.benefits.map((benefit, idx) => (
+                      <li key={idx} className="flex items-center text-gray-600">
+                        <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" >{benefit}</Star>
+                      </Star>
+                    ))}
+                  </ul>
+                </div>
+                <div className="border-t pt-4"></div>
+                  <p className="text-sm text-gray-600">{service.contactInfo}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

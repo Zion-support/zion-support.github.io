@@ -1,11 +1,11 @@
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react';
+import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Search, BookOpen, Code, FileText, Download, ArrowRight, ChevronRight, Globe, Brain, Cloud, Shield, Settings, Users, Database, Zap, Eye, Sparkles } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer';
 
-const DocsPage: React.FC = () => {
+export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const docCategories = [
@@ -22,98 +22,57 @@ const DocsPage: React.FC = () => {
     {
       title: 'API Reference',
       icon: 'code',
-      description: 'Complete API documentation and examples',
+      description: 'Complete API documentation and endpoints',
       docs: [
-        { title: 'Authentication', description: 'API authentication and security', link: '/docs/api/auth' },
+        { title: 'Authentication', description: 'API authentication methods', link: '/docs/api/auth' },
         { title: 'Endpoints', description: 'All available API endpoints', link: '/docs/api/endpoints' },
-        { title: 'SDKs', description: 'Software development kits', link: '/docs/api/sdks' }
+        { title: 'SDKs', description: 'Client SDKs and libraries', link: '/docs/api/sdks' }
       ]
     },
     {
-      title: 'Guides',
-      icon: 'book',
-      description: 'Comprehensive guides and tutorials',
+      title: 'AI Solutions',
+      icon: 'brain',
+      description: 'AI and machine learning documentation',
       docs: [
-        { title: 'Best Practices', description: 'Recommended practices and patterns', link: '/docs/guides/best-practices' },
-        { title: 'Troubleshooting', description: 'Common issues and solutions', link: '/docs/guides/troubleshooting' },
-        { title: 'Examples', description: 'Real-world examples and use cases', link: '/docs/guides/examples' }
+        { title: 'AI Models', description: 'Available AI models and capabilities', link: '/docs/ai/models' },
+        { title: 'Training Data', description: 'Data preparation and training', link: '/docs/ai/training' },
+        { title: 'Deployment', description: 'Deploying AI models to production', link: '/docs/ai/deployment' }
       ]
     },
     {
-      title: 'Deployment',
+      title: 'Cloud Services',
       icon: 'cloud',
-      description: 'Deployment guides and infrastructure setup',
+      description: 'Cloud infrastructure and services',
       docs: [
-        { title: 'Production Setup', description: 'Deploy to production environment', link: '/docs/deployment/production' },
-        { title: 'Docker', description: 'Container deployment with Docker', link: '/docs/deployment/docker' },
-        { title: 'Cloud Platforms', description: 'Deploy to AWS, Azure, and GCP', link: '/docs/deployment/cloud' }
+        { title: 'Infrastructure', description: 'Cloud infrastructure setup', link: '/docs/cloud/infrastructure' },
+        { title: 'Security', description: 'Cloud security best practices', link: '/docs/cloud/security' },
+        { title: 'Monitoring', description: 'Monitoring and logging', link: '/docs/cloud/monitoring' }
       ]
     }
   ];
 
   const popularDocs = [
-    {
-      title: 'Quick Start Guide',
-      description: 'Get started with our platform in just a few minutes',
-      category: 'Getting Started',
-      readTime: '5 min read',
-      icon: BookOpen
-    },
-    {
-      title: 'API Authentication',
-      description: 'Learn how to authenticate with our API',
-      category: 'API Reference',
-      readTime: '3 min read',
-      icon: Shield
-    },
-    {
-      title: 'Deployment Guide',
-      description: 'Deploy your application to production',
-      category: 'Deployment',
-      readTime: '10 min read',
-      icon: Cloud
-    },
-    {
-      title: 'Best Practices',
-      description: 'Follow these practices for optimal performance',
-      category: 'Guides',
-      readTime: '7 min read',
-      icon: Star
-    }
+    { title: 'Quick Start Guide', description: 'Get started in minutes', category: 'Getting Started', link: '/docs/quick-start' },
+    { title: 'API Authentication', description: 'Learn how to authenticate', category: 'API Reference', link: '/docs/api/auth' },
+    { title: 'AI Model Training', description: 'Train your own models', category: 'AI Solutions', link: '/docs/ai/training' },
+    { title: 'Cloud Security', description: 'Secure your cloud infrastructure', category: 'Cloud Services', link: '/docs/cloud/security' }
   ];
 
-  const features = [
-    {
-      icon: BookOpen,
-      title: 'Comprehensive Documentation',
-      description: 'Detailed guides covering every aspect of our platform'
-    },
-    {
-      icon: Code,
-      title: 'Code Examples',
-      description: 'Real-world code examples and snippets'
-    },
-    {
-      icon: Search,
-      title: 'Smart Search',
-      description: 'Find what you need quickly with our intelligent search'
-    },
-    {
-      icon: Download,
-      title: 'Offline Access',
-      description: 'Download documentation for offline reference'
-    }
-  ];
-
-  const stats = [
-    { number: '100+', label: 'Documentation Pages', icon: FileText },
-    { number: '50+', label: 'Code Examples', icon: Code },
-    { number: '10+', label: 'Languages', icon: Globe },
-    { number: '24/7', label: 'Updated Content', icon: Clock }
-  ];
+  const filteredDocs = docCategories.map(category => ({
+    ...category,
+    docs: category.docs.filter(doc => 
+      doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      doc.description.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+  })).filter(category => category.docs.length > 0);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer 
+        title="Documentation - Zion Tech Group"
+        description="Complete documentation for Zion Tech Group's AI and IT solutions. Find guides, tutorials, API references, and best practices."
+        keywords="documentation, API docs, guides, tutorials, AI solutions, cloud services, technical documentation"
+      />
       <Navigation />
       
       {/* Hero Section */}
@@ -128,7 +87,8 @@ const DocsPage: React.FC = () => {
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Everything you need to know about our platform. From quick start guides to advanced API documentation.
+            Everything you need to know about our AI and IT solutions. 
+            Comprehensive guides, API references, and best practices.
           </p>
           
           {/* Search Bar */}
@@ -140,47 +100,67 @@ const DocsPage: React.FC = () => {
                 placeholder="Search documentation..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               />
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
+        <Navigation />
+        
+        <main className="pt-20">
+          <div className="container mx-auto px-4 py-16"></div>
+            <div className="max-w-4xl mx-auto"></div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+                Documentation</h1>
+              </h1>
+              
+              <div className="prose prose-lg max-w-none"></div>
+                <p className="text-xl text-gray-600 mb-8">
+                  Welcome to our documentation center. Find everything you need to get started with our services.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Getting Started</h2>
+                <p className="text-gray-700 mb-6">
+                  Learn how to set up and configure our AI and IT services for your business.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">API Reference</h2>
+                <p className="text-gray-700 mb-6">
+                  Complete API documentation with examples and code snippets.
+                </p>
+                
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Tutorials</h2>
+                <p className="text-gray-700 mb-6">
+                  Step-by-step guides to help you make the most of our platform.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  <stat.icon className="w-12 h-12 text-purple-400" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Popular Docs */}
-      <section className="py-20 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularDocs.map((doc, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <doc.icon className="w-8 h-8 text-purple-400 mr-3" />
-                  <span className="text-sm text-purple-400">{doc.category}</span>
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{doc.title}</h3>
-                <p className="text-gray-400 text-sm mb-3">{doc.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-500">{doc.readTime}</span>
-                  <ArrowRight className="w-4 h-4 text-gray-400" />
-                </div>
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                  {doc.title}
+                </h3>
+                <p className="text-gray-300 text-sm mb-4">{doc.description}</p>
+                <a
+                  href={doc.link}
+                  className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors text-sm"
+                >
+                  Read More
+                  <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             ))}
           </div>
@@ -188,31 +168,39 @@ const DocsPage: React.FC = () => {
       </section>
 
       {/* Documentation Categories */}
-      <section className="py-20 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Browse by Category</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {docCategories.map((category, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
-                    <BookOpen className="w-6 h-6 text-purple-400" />
+          <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {filteredDocs.map((category, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+                    <BookOpen className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">{category.title}</h3>
-                    <p className="text-gray-400 text-sm">{category.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
+                    <p className="text-gray-300">{category.description}</p>
                   </div>
                 </div>
                 
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {category.docs.map((doc, docIndex) => (
-                    <div key={docIndex} className="flex items-center justify-between p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-                      <div>
-                        <h4 className="text-white font-medium">{doc.title}</h4>
-                        <p className="text-gray-400 text-sm">{doc.description}</p>
+                    <a
+                      key={docIndex}
+                      href={doc.link}
+                      className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
+                    >
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
+                            {doc.title}
+                          </h4>
+                          <p className="text-gray-300 text-sm">{doc.description}</p>
+                        </div>
+                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
                       </div>
-                      <ChevronRight className="w-5 h-5 text-gray-400" />
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -221,46 +209,21 @@ const DocsPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-4">Why Our Documentation?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We've designed our documentation to be comprehensive, easy to follow, and always up-to-date.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 text-sm">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Can't Find What You're Looking For?
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Need Help?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Our support team is here to help. Get in touch and we'll assist you with any questions.
+          <p className="text-xl text-purple-100 mb-8">
+            Can't find what you're looking for? Our support team is here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+            <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Contact Support
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
             </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Request Feature
+            <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors">
+              Join Community
             </button>
           </div>
         </div>
@@ -269,6 +232,4 @@ const DocsPage: React.FC = () => {
       <Footer />
     </div>
   );
-};
-
-export default DocsPage;
+}

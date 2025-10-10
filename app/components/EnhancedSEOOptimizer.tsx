@@ -111,6 +111,26 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
               Experience the power of our enhancedseooptimizer solutions for your business.
             </p>
           </div>
+  const addBreadcrumbStructuredData = (): void => {
+    const breadcrumbData = {
+      '@context': 'https: //schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem'
+          position: 1,
+  const addBreadcrumbStructuredData = (): void => {}
+    const breadcrumbData = {}
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {}
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: 'https://ziontechgroup.com'}
+      ]
+    };
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (

@@ -16,29 +16,29 @@ export enum ErrorCategory {
 }
 
 export interface ErrorMetadata {
-  category: ErrorCategory;
-  severity: ErrorSeverity;
+  category: ErrorCategory,
+  severity: ErrorSeverity,
   userId?: string;
   sessionId?: string;
   context?: Record<string, unknown>
   tags?: string[]
-  timestamp: number;
+  timestamp: number,
   stackTrace?: string;
   userAgent?: string;,
   url?: string;
 }
 
 export interface TrackedError {
-  id: string;
-  message: string;
-  metadata: ErrorMetadata;
-  occurrences: number;
-  firstSeen: number;
-  lastSeen: number;
+  id: string,
+  message: string,
+  metadata: ErrorMetadata,
+  occurrences: number,
+  firstSeen: number,
+  lastSeen: number,
 }
 
 class ErrorTrackingService {
-  private static instance: ErrorTrackingService;
+  private static instance: ErrorTrackingService,
   private errors: Map<string, TrackedError> = new Map()
   private errorListeners: Array<(error: TrackedError) => void> = []
   private maxStoredErrors = 1000;
@@ -84,7 +84,7 @@ class ErrorTrackingService {
     const now = Date.now()
 
     const trackedError: TrackedError = {
-      id: errorId;
+      id: errorId,
       message: error.message;
       metadata: {
         category: metadata.category;
@@ -93,14 +93,14 @@ class ErrorTrackingService {
         sessionId: metadata.sessionId;
         context: metadata.context;
         tags: metadata.tags;
-        timestamp: now;
+        timestamp: now,
         stackTrace: error.stack;
         userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
         url: typeof window !== 'undefined' ? window.location.href : undefined;
       },
-      occurrences: 1;
-      firstSeen: now;
-      lastSeen: now;
+      occurrences: 1,
+      firstSeen: now,
+      lastSeen: now,
     }
 
     // Check if error already exists;
@@ -270,7 +270,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   }
 
   getErrorStats(): {
-    total: number;
+    total: number,
     byCategory: Record<ErrorCategory, number>
     bySeverity: Record<ErrorSeverity, number>
   } {

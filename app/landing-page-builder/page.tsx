@@ -25,6 +25,30 @@ const PagePage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
+      icon: Wand2,
+      title: 'AI-Powered Design',
+      description: 'Generate stunning landing pages with AI assistance in minutes'},
+    {
+      icon: Palette,
+      title: 'Drag & Drop Builder',
+      description: 'Easy-to-use visual editor with no coding required'},
+    {
+      icon: Zap,
+      title: 'Lightning Fast',
+      description: 'Optimized for speed with 99.9% uptime guarantee'},
+    {
+      icon: Monitor,
+      title: 'Responsive Design',
+      description: 'Perfect on all devices - desktop, tablet, and mobile'
+    },
+    {
+      icon: Globe,
+      title: 'SEO Optimized',
+      description: 'Built-in SEO tools to rank higher in search results'},
+    {
+      icon: CheckCircle,
+      title: 'A/B Testing',
+      description: 'Test different versions to maximize conversions'}
   ];
 
   const benefits = [
@@ -70,6 +94,32 @@ const PagePage: React.FC = () => {
                 Learn More
               </button>
             </div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */}</div>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+      <div className="container mx-auto px-4 py-16"></div>
+        <div className="text-center mb-16"></div>
+          <h1 className="text-5xl font-bold text-white mb-6"></h1>
+            Landing Page</h1> <span className="text-cyan-400">Builder</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Create high-converting landing pages in minutes with our AI-powered builder.</p>
+            No coding required - just drag, drop, and launch.</p>
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <Link;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              <Layout className="w-5 h-5 mr-2" >Start Building</Layout>
+            </Layout>
+            <Link
+              href="/demo"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+            ></Lin>
+              <Monitor className="w-5 h-5 mr-2" >View Templates</Monito>
+            </Monitor>
           </div>
         </div>
       </section>
@@ -92,6 +142,44 @@ const PagePage: React.FC = () => {
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
+        {/* Features Section */}
+        <div className="mb-16"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Powerful</h2> <span className="text-cyan-400">Features</span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ></div>
+                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
+                  <feature.icon className="w-6 h-6 text-white" />
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
+              <Layout className="w-5 h-5 mr-2" />
+              Start Building;
+            </Link>
+            <Link;
+              href="/demo"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+            >
+              <Monitor className="w-5 h-5 mr-2" />
+              View Templates;
+            </Link>
+          </div>,
+        </div>,
+,
+        {/* Features Section */}
+        <div className="mb-16"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">)
+            Powerful <span className="text-cyan-400">Features</span>)
+          </h2>)
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">),
+            {features.map((feature, index) => (</div>
+              <div;
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover: border-cyan-400/50 transition-all duration-300",
+              >,</div>
+                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">,</div>
+                  <feature.icon className="w-6 h-6 text-white" />,
+                </div>,
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -117,6 +205,32 @@ const PagePage: React.FC = () => {
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
+        {/* Templates Section */}
+        <div className="mb-16"></div>
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Professional <span className="text-cyan-400">Templates<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{templates.map((template, index) => (</div>
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ></div>
+                <h3 className="text-xl font-semibold text-white mb-2">{template.category}<div className="text-cyan-400 font-bold text-lg mb-2">{template.count}<p className="text-gray-300 text-sm">{template.description}</p>
+            Professional <span className="text-cyan-400">Templates</span>
+          </h2>
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
+            {templates.map((template, index) => (</div>
+              <div;
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-gray-600 hover: border-cyan-400/50 transition-all duration-300",
+              >,</div>
+                <h3 className="text-xl font-semibold text-white mb-2">{template.category}</h3>
+                <div className="text-cyan-400 font-bold text-lg mb-2">{template.count}</div>
+                <p className="text-gray-300 text-sm">{template.description}</p>
+            Professional</h2> <span className="text-cyan-400">Templates</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{templates.map((template, index) => (</div>
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ></div>
+                <h3 className="text-xl font-semibold text-white mb-2">{template.category}</h3><div className="text-cyan-400 font-bold text-lg mb-2">{template.count}</div><p className="text-gray-300 text-sm">{template.description}</p>
               </div>
             ))}
           </div>
@@ -143,6 +257,35 @@ const PagePage: React.FC = () => {
                 Email Us
               </button>
             </div>
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
+          <h2 className="text-3xl font-bold text-white mb-4">Ready to Build Your Landing Page?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses creating high-converting landing pages with our builder.</p>
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <Link;
+          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            >
+              <ArrowRight className="w-5 h-5 mr-2" >Get Started Now</ArrowRight>
+            </ArrowRight>
+            <Link
+              href="/pricing"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+            ></Lin>
+              <Layout className="w-5 h-5 mr-2" >View Pricing</Layou>
+            </Layout>
+              <ArrowRight className="w-5 h-5 mr-2" />
+              Get Started Now;
+            </Link>
+            <Link;
+              href="/pricing"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+            >
+              <Layout className="w-5 h-5 mr-2" />
+              View Pricing;
+            </Link>
           </div>
         </div>
       </section>

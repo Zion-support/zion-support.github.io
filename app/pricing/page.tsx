@@ -124,10 +124,10 @@ const PricingPage: React.FC = () => {
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                      : 'border border-white/20 text-white hover:bg-white/10'
+                      : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                   }`}
                 >
-                  <span>Get Started</span>
+                  <span>{plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -136,66 +136,80 @@ const PricingPage: React.FC = () => {
 
           {/* Additional Info */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-4">What's Included</h3>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Zap className="w-6 h-6 text-cyan-400 mr-3" />
+                What's Included
+              </h3>
               <ul className="space-y-3">
-                <li className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  <span className="text-gray-300">Free initial consultation</span>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Free initial consultation
                 </li>
-                <li className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  <span className="text-gray-300">30-day money-back guarantee</span>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  No setup fees
                 </li>
-                <li className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  <span className="text-gray-300">No setup fees</span>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Cancel anytime
                 </li>
-                <li className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400" />
-                  <span className="text-gray-300">Flexible payment options</span>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Regular updates and improvements
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10">
-              <h3 className="text-2xl font-bold text-white mb-4">Custom Solutions</h3>
-              <p className="text-gray-300 mb-4">
-                Need something specific? We offer custom AI and IT solutions 
-                tailored to your unique business requirements.
-              </p>
-              <Link
-                to="/contact"
-                className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center space-x-2"
-              >
-                <span>Contact us for a quote</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
+                <Star className="w-6 h-6 text-cyan-400 mr-3" />
+                Why Choose Us
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Proven track record
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Expert team of developers
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Cutting-edge technology
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3" />
+                  Dedicated support
+                </li>
+              </ul>
             </div>
           </div>
 
           {/* CTA Section */}
-          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join hundreds of companies already achieving remarkable results with our AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
-              >
-                <Zap className="w-5 h-5" />
-                <span>Start Free Trial</span>
-              </Link>
-              <Link
-                to="/contact"
-                className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
-              >
-                Talk to Sales
-              </Link>
+          <div className="text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Contact us today for a free consultation and discover how our AI and IT solutions can transform your business.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Free Consultation
+                </Link>
+                <Link
+                  to="/services"
+                  className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"
+                >
+                  View Our Services
+                </Link>
+              </div>
             </div>
           </div>
         </div>

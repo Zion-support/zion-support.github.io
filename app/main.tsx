@@ -2,6 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './globals.css';
 
 const MainPage: React.FC = () => {
   const features = [

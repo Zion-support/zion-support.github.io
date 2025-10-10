@@ -26,6 +26,34 @@ const GlobalErrorPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
+export default function GlobalError({)
+  error)
+  reset)
+}: {
+  error: Error & { digest?: string };)
+    reset: () => void;
+}) {
+  return (
+    <html>
+      <body>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
+          <div className="text-center"></div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2><button
+              onClick={() =>reset()}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            ></button>
+              Try again</button>
+  return(<html>
+      <body>)
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center">)</div>
+          <div className="text-center">)</div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>)
+            <button;)
+              onClick={() => reset()}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700"
+            >
+              Try again;
+import { useEffect } from 'react';
 
   const benefits = [
     'Advanced AI technology integration',
@@ -70,6 +98,17 @@ const GlobalErrorPage: React.FC = () => {
                 Learn More
               </button>
             </div>
+    <html>
+      <body>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
+          <div className="text-center"></div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>
+            <button
+              onClick={() => reset()}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              Try again
+            </button>
           </div>
         </div>
       </section>

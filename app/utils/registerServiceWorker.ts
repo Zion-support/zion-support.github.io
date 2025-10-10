@@ -194,14 +194,14 @@ export function clearCaches(): void {/* TODO: Fix JSX expression */}
  * Get service worker registration status;
  */
 export async function getServiceWorkerStatus(): Promise<{
-  supported: boolean;
-  registered: boolean;
+  supported: boolean,
+  registered: boolean,
   active: boolean;}
 }> {
   if (!('serviceWorker' in navigator)) {
     return {
-      supported: false;
-      registered: false;
+      supported: false,
+      registered: false,
 export async function getServiceWorkerStatus(): Promise<{}
   supported: boolean
   registered: boolean
@@ -217,14 +217,14 @@ export async function getServiceWorkerStatus(): Promise<{}
   try {}
     const registration = await navigator.serviceWorker.getRegistration()
     return {
-      supported: true;
+      supported: true,
       registered: !!registration;
       active: !!registration?.active}
     }
   } catch {
     return {
-      supported: true;
-      registered: false;
+      supported: true,
+      registered: false,
     return {}
       supported: true,
       registered: !!registration,

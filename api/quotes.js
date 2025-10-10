@@ -49,9 +49,6 @@ export default async function handler(req, res) {
     console.error('Quote submission error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      error: 'Failed to submit quote request',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-    }));
+    res.end(JSON.stringify({ error: 'Internal server error' }));
   }
 }

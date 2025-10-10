@@ -50,14 +50,13 @@ const EnhancedServicesShowcase: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+          {services.map((service, index) => (</div>
             <div key={index} className="cyber-card hologram-card p-6 group hover:scale-105 transition-all duration-300">
               <div className="flex items-center mb-4">
                 <service.icon className={`w-12 h-12 ${service.color} mr-4`} />
-                <div>
+                <div></div>
                   <h3 className="text-xl font-bold text-white">{service.title}</h3>
                   <div className="text-sm text-cyan-400 font-semibold">{service.stats}</div>
-                </div>
               </div>
               
               <p className="text-gray-300 mb-4">{service.description}</p>
@@ -90,7 +89,6 @@ const EnhancedServicesShowcase: React.FC = () => {
             <ArrowRight className="w-5 h-5 ml-2" />
           </a>
         </div>
-      </div>
     </section>
   );
 };

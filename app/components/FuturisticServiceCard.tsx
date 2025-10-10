@@ -26,6 +26,15 @@ const FuturisticServiceCardPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
+interface FuturisticServiceCardProps {
+  title: string,
+  description: string,
+  features: string[];
+  price: string,
+  popular?: boolean;
+  icon: React.ComponentType<{ className?: string }>;
+  onSelect: () => void;
+}
 
   const benefits = [
     'Advanced AI technology integration',
