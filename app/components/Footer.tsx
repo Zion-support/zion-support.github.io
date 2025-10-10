@@ -16,6 +16,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI SEO Optimizer', url: '/ai-marketing', description: 'AI-driven SEO', icon: '🎯', popular: false }
   ];
 
+const Footer: React.FC = memo(() => {
   const aiServices = [
     { name: 'AI Services', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -116,7 +117,7 @@ const Footer: React.FC = memo(() => {
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid">
+    <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -138,21 +139,10 @@ const Footer: React.FC = memo(() => {
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.
             </p>
-
-            {/* Social Links */}
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:bg-slate-700 transition-all duration-300 group"
-                  aria-label={social.name}
-                >
-                  <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-                </a>
-              ))}
+            <div className="text-gray-300">
+              <p>364 E Main St STE 1008</p>
+              <p>Middletown, DE 19709</p>
+              <p>United States</p>
             </div>
           </div>
 
@@ -238,129 +228,64 @@ const Footer: React.FC = memo(() => {
           </div>
         </div>
 
-        {/* Contact Information */}
-        <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-6 mb-8 cyber-card">
-          <h3 className="text-xl font-bold text-white mb-4 text-center neon-text">Get In Touch</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.phone}</div>
-                <div className="text-gray-400 text-sm">Call us anytime</div>
-              </div>
+      {/* Stats Section */}
+      <div className="border-t border-gray-700 py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="cyber-card">
+              <div className="text-4xl font-bold text-cyan-400 mb-2">500+</div>
+              <div className="text-gray-300">Enterprise Clients</div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.email}</div>
-                <div className="text-gray-400 text-sm">Email us</div>
-              </div>
+            <div className="cyber-card">
+              <div className="text-4xl font-bold text-green-400 mb-2">$2.5B+</div>
+              <div className="text-gray-300">Cost Savings Delivered</div>
             </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">Middletown, DE</div>
-                <div className="text-gray-400 text-sm">{contactInfo.address}</div>
-              </div>
+            <div className="cyber-card">
+              <div className="text-4xl font-bold text-purple-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Uptime Guarantee</div>
             </div>
-            <div className="flex items-center space-x-3">
-              <Clock className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.hours}</div>
-                <div className="text-gray-400 text-sm">Business hours</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Company Links */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Company</h4>
-            <ul className="space-y-2">
-              {companyLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    href={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Support</h4>
-            <ul className="space-y-2">
-              {supportLinks.map((link, index) => (
-                <li key={index}>
-                  <Link 
-                    href={link.url}
-                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><Link href="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link></li>
-              <li><Link href="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link></li>
-              <li><Link href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link></li>
-              <li><Link href="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="text-sm font-semibold text-white mb-4">Newsletter</h4>
-            <p className="text-gray-400 text-sm mb-4">Stay updated with our latest news and offers.</p>
-            <div className="flex space-x-2">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-3 py-2 bg-slate-800 border border-gray-600 rounded-lg text-white text-sm focus:outline-none focus:border-cyan-400"
-              />
-              <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all text-sm">
-                Subscribe
-              </button>
+            <div className="cyber-card">
+              <div className="text-4xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Support Available</div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="border-t border-gray-700/50">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-gray-400">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </div>
-            <div className="flex space-x-6">
-              <Link href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </Link>
-            </div>
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <div className="flex items-center space-x-2">
-                <Shield className="w-4 h-4 text-green-400" />
-                <span>Enterprise Security</span>
+      {/* Bottom Footer */}
+      <div className="border-t border-gray-700 py-8">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col lg:flex-row justify-between items-center">
+            <div className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-8 mb-4 lg:mb-0">
+              <p className="text-gray-300 text-sm">
+                &copy; 2024 Zion Tech Group. All rights reserved.
+              </p>
+              <div className="flex space-x-6">
+                <Link to="/privacy" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Terms of Service
+                </Link>
+                <Link to="/sitemap" className="text-gray-300 hover:text-white transition-colors text-sm">
+                  Sitemap
+                </Link>
               </div>
-              <div className="flex items-center space-x-2">
-                <Award className="w-4 h-4 text-yellow-400" />
-                <span>ISO 27001 Certified</span>
+            </div>
+            
+            {/* Contact Info */}
+            <div className="flex flex-col items-center lg:items-end space-y-2">
+              <div className="flex items-center">
+                <Phone className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
+                  +1 302 464 0950
+                </a>
               </div>
-              <div className="flex items-center space-x-2">
-                <Globe className="w-4 h-4 text-blue-400" />
-                <span>Global Reach</span>
+              <div className="flex items-center">
+                <Mail className="w-5 h-5 mr-3 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
             </div>
           </div>
@@ -371,4 +296,5 @@ const Footer: React.FC = memo(() => {
 });
 
 Footer.displayName = 'Footer';
+
 export default Footer;
