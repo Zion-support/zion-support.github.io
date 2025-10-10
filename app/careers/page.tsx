@@ -3,6 +3,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { CheckCircle, MapPin, Clock, Star, Users, Heart, Award, ArrowRight } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -12,6 +15,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in CS or related field']
     },
     {
       title: 'Cloud Architect',
@@ -23,6 +28,13 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
+      title: 'Data Scientist',
+      department: 'Data Analytics',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Extract insights from complex datasets to drive business decisions.',
+      requirements: ['R, Python, SQL', '3+ years data science experience', 'Statistics background']
     }
   ];
 
@@ -67,6 +79,7 @@ const CareersPage: React.FC = () => {
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs" />
       </Helmet>
 
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -127,14 +140,67 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group">
+                    Apply Now
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </button>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                    <CheckCircle className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold">{benefit}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Values</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl mx-auto mb-4 flex items-center justify-center">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-cyan-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-6">Ready to Join Us?</h2>
+              <p className="text-xl text-purple-100 mb-8">
+                Don't see a position that fits? We're always looking for talented individuals to join our team.
+              </p>
+              <button className="bg-white text-purple-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300">
+                Send Us Your Resume
+              </button>
             </div>
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 };

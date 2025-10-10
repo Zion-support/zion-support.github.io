@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
@@ -8,6 +6,15 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const categories = [
+    { id: 'all', name: 'All' },
+    { id: 'general', name: 'General' },
+    { id: 'support', name: 'Support' },
+    { id: 'implementation', name: 'Implementation' }
+  ];
 
   const faqs = [
     {
@@ -27,11 +34,13 @@ const SupportPage: React.FC = () => {
     },
     {
       question: 'Do you offer training for our team?',
-      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.'
+      answer: 'Yes, we provide comprehensive training programs to ensure your team can effectively use and maintain the AI solutions.',
+      category: 'general'
     },
     {
       question: 'What if we need custom modifications?',
-      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.'
+      answer: 'Our team can develop custom features and modifications to meet your specific business requirements.',
+      category: 'implementation'
     }
   ];
 
@@ -125,6 +134,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Contact Channels */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
