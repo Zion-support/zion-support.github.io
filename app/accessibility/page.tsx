@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, Eye, MousePointer, Volume2, Shield, Users, Globe, Zap, ArrowRight, Star } from 'lucide-react'
 const AccessibilityPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +40,7 @@ const AccessibilityPage: React.FC = () => {
       description: 'Compliance with international accessibility standards including WCAG 2.1 AA and Section 508.',
       benefits: ['WCAG 2.1 AA', 'Section 508', 'ADA compliance', 'International standards']
     }
-  ];
+  ]
   const standards = [
     {
       name: 'WCAG 2.1 AA',
@@ -62,14 +62,14 @@ const AccessibilityPage: React.FC = () => {
       description: 'European accessibility standard for ICT products and services',
       status: 'Fully Compliant'
     }
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
         <title>Accessibility Solutions - Zion Tech Group | Inclusive Digital Experiences</title>
         <meta name="description" content="Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure your applications are usable by people of all abilities." />
         <meta name="keywords" content="accessibility, WCAG, ADA compliance, inclusive design, digital accessibility, Zion Tech Group" />
-      </Helmet>
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
@@ -79,34 +79,30 @@ const AccessibilityPage: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Accessibility
               <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                Solutions;
-  </
-            </h1>
+                Solutions
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Creating inclusive digital experiences that work for everyone. Our accessibility solutions ensure 
               your applications are usable by people of all abilities and comply with international standards.
-            </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-                Get Accessibility Audit;
-  </
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More;
-  </
-            </div>
-          </div>
-        </section>
+                Get Accessibility Audit
+
+                Learn More
+
+
+
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Comprehensive Accessibility Features;
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive Accessibility Features
+
                 Our solutions cover all aspects of digital accessibility to ensure inclusive experiences for all users.
-              </p>
-            </div>
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -114,35 +110,33 @@ const AccessibilityPage: React.FC = () => {
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
-                  </div>
+
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                     {feature.title}
-                  </h3>;
-                  <p className="text-gray-300 mb-6">{feature.description}</p>;
-                  <ul className="space-y-2">;
+
+                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (;}
-                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">;
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />;
+                      <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" />
                         {benefit}
-                      </li>;
+
                     ))}
-                  </ul>;
-                </div>;
+                  </ul></$1>
               ))}
-            </div>
-          </div>
-        </section>
+
+
+
         {/* Standards Compliance */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Standards Compliance;
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Standards Compliance
+
                 We ensure full compliance with international accessibility standards and regulations.
-              </p>
-            </div>
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standards.map((standard, index) => (
                 <div
@@ -150,47 +144,43 @@ const AccessibilityPage: React.FC = () => {
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
+
                   <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>
                   <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>
                   <span className="inline-block px-4 py-2 bg-green-500/20 text-green-400 text-sm rounded-full font-semibold">
                     {standard.status}
-                  </span>;
-                </div>;
+                  </span></$1>
               ))}
-            </div>
-          </div>
-        </section>
+
+
+
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Make Your Digital Experience Accessible?
-              </h2>
+
               <p className="text-xl text-gray-300 mb-8">
                 Contact us today for a comprehensive accessibility audit and implementation plan.
-              </p>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Get Accessibility Audit;
-  </
-                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Contact Us;
-  </
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
-  );
-};
-export default AccessibilityPage;
-  </button>
-  </button>
-  </h2>
-  </h2>
-  </button>
-  </button>
-  </span>
+                  Get Accessibility Audit
+
+                  Contact Us
+
+
+
+
+
+
+  )
+}
+export default AccessibilityPage
+
+
+
+
+
+

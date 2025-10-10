@@ -1,7 +1,7 @@
-'use client';
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client'
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   MessageSquare, 
@@ -38,10 +38,10 @@ import {
   Headphones,
   Mail,
   MapPin
-} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AIServicesPagePage: React.FC = () => {
   const features = [
     {
@@ -214,33 +214,32 @@ const AIServicesPagePage: React.FC = () => {
       marketPrice: '$300-1200/month',
       benefits: ['Faster design process', 'Consistent branding', 'Creative inspiration', 'Cost-effective solutions']
     }
-  ];
+  ]
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
-  ];
+  ]
   return (
     <React.Fragment>
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced Artificial Intelligence Solutions</title>
         <meta name="description" content="Comprehensive AI services including chatbots, content generation, data analytics, computer vision, and more. Transform your business with cutting-edge AI technology." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, chatbots, content generation, data analytics, computer vision, AI automation" />
-      </Helmet>
+
       <Navigation />
       
       <main className="pt-20">
-  ];
-
+  ]
   return (
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered services for modern businesses." />
         <meta name="keywords" content="AI services, artificial intelligence, automation, AI solutions, intelligent automation" />
-      </Helmet>
+
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -249,43 +248,37 @@ const AIServicesPagePage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Services;
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              AI Services
+
               Transform your business with cutting-edge artificial intelligence solutions. 
               From chatbots to computer vision, we deliver AI that drives real results.
-            </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started;
-  </
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo;
-  </
-            </div>
-          </div>
-        </section>
+                Get Started
+
+                View Demo
+
+
+
         {/* Features Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features;
-  </
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results;
-  </
-            </div>
+                Key Features
+
+                Advanced AI technology that drives results
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
-                </div>
+
               ))}
-            </div>
-          </div>
-        </section>
+
+
 
         {/* Search and Filter Section */}
         <section className="py-10 px-4 sm:px-6 lg:px-8">
@@ -300,7 +293,7 @@ const AIServicesPagePage: React.FC = () => {
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
-              </div>
+
               <div className="relative">
                 <Settings className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <select
@@ -311,13 +304,12 @@ const AIServicesPagePage: React.FC = () => {
                   {categories.map(category => (
                     <option key={category} value={category} className="bg-slate-800">
                       {category === 'all' ? 'All Categories' : category}
-                    </option>
+
                   ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
+
+
+
+
 
         {/* Services Grid */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -327,34 +319,31 @@ const AIServicesPagePage: React.FC = () => {
                 <div key={service.id} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/10 transition-all duration-300 group">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <service.icon className="w-8 h-8 text-white" />
-                  </div>
+
                   <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
                   
                   <div className="mb-4">
                     <span className="text-sm text-gray-400">Category: </span>
                     <span className="text-sm text-purple-400 font-medium">{service.category}</span>
-                  </div>
 
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
-                      </li>
+
                     ))}
-                  </ul>
 
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center justify-between">
                       <span className="text-purple-400 font-semibold">Our Price:</span>
                       <span className="text-white font-bold">{service.price}</span>
-                    </div>
+
                     <div className="flex items-center justify-between">
                       <span className="text-gray-400 text-sm">Market Price:</span>
                       <span className="text-gray-300 text-sm line-through">{service.marketPrice}</span>
-                    </div>
-                  </div>
+
 
                   <div className="flex items-center justify-between">
                     <Link 
@@ -363,103 +352,97 @@ const AIServicesPagePage: React.FC = () => {
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-1" />
-                    </Link>
+
                     <Link 
                       to="/contact"
                       className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
                       Get Quote
-                    </Link>
-                  </div>
-                </div>
+
+
+
               ))}
-            </div>
-          </div>
-        </section>
+
+
+
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Why Choose Our AI Services?
-              </h2>
+
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency;
-  </
-            </div>
+                Proven results that drive business growth and efficiency
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <TrendingUp className="w-8 h-8 text-white" />
-                </div>
+
                 <h3 className="text-xl font-bold text-white mb-4">Increase Efficiency by 60%</h3>
                 <p className="text-gray-300">Our AI solutions automate repetitive tasks and optimize workflows, delivering measurable efficiency gains.</p>
-              </div>
+
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <DollarSign className="w-8 h-8 text-white" />
-                </div>
+
                 <h3 className="text-xl font-bold text-white mb-4">Reduce Costs by 40%</h3>
                 <p className="text-gray-300">Automation and AI-driven optimization significantly reduce operational costs and resource requirements.</p>
-              </div>
+
               <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Brain className="w-8 h-8 text-white" />
-                </div>
+
                 <h3 className="text-xl font-bold text-white mb-4">Enhanced Decision Making</h3>
                 <p className="text-gray-300">AI-powered insights and predictive analytics enable data-driven decision making at scale.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+
+
+
+
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
-              </h2>
+
               <p className="text-xl text-gray-300 mb-8">
                 Contact our AI experts to discuss your requirements and get a customized solution that drives real results.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us;
-  </
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More;
-  </
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Contact Us
-                </button>
+
+                  Learn More
+
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+
                 <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                   Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      
+
+
+
+
+
+
       <Footer />
-    </React.Fragment>
-  );
-};
-export default AIServicesPagePage;
-  </button>
-  </button>
-  </p>
-  </p>
-  </h2>
-  </button>
-  </button>
-  </h1>
+
+  )
+}
+export default AIServicesPagePage
+
+
+
+
+
+
+
 
 const AIServicesPage: React.FC = () => {
   const features = [
@@ -499,8 +482,7 @@ const AIServicesPage: React.FC = () => {
       description: 'Advanced AI security solutions for threat detection, fraud prevention, and risk management.',
       benefits: ['Real-time threat detection', 'Fraud pattern recognition', 'Behavioral analysis', 'Risk assessment', 'Security monitoring', 'Compliance automation', 'Incident response', 'Threat intelligence']
     }
-  ];
-
+  ]
   const services = [
     {
       icon: Zap,
@@ -558,8 +540,7 @@ const AIServicesPage: React.FC = () => {
       price: 'Starting at $12,000/project',
       features: ['Object detection', 'Image classification', 'OCR solutions', 'Quality inspection', 'Real-time processing']
     }
-  ];
-
+  ]
   const benefits = [
     'Increased operational efficiency',
     'Better decision making with data insights',
@@ -569,23 +550,20 @@ const AIServicesPage: React.FC = () => {
     'Scalable AI solutions',
     '24/7 AI-powered support',
     'Continuous learning and improvement'
-  ];
-
+  ]
   const stats = [
     { icon: Brain, value: '95%', label: 'Accuracy Rate' },
     { icon: Zap, value: '10x', label: 'Faster Processing' },
     { icon: Shield, value: '99.9%', label: 'Uptime' },
     { icon: TrendingUp, value: '300%', label: 'Efficiency Gain' }
-  ];
-
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Zion Tech Group | Advanced AI Solutions</title>
         <meta name="description" content="Comprehensive AI services including machine learning, natural language processing, computer vision, and AI consulting. Transform your business with our AI expertise." />
         <meta name="keywords" content="AI services, machine learning, NLP, computer vision, AI consulting, artificial intelligence, Zion Tech Group" />
-      </Helmet>
-      
+
       <Navigation />
 
       {/* Hero Section */}
@@ -595,20 +573,19 @@ const AIServicesPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI Services
-          </h1>
+
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Transform your business with cutting-edge artificial intelligence solutions. From machine learning to computer vision, we deliver AI that works.
-          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Get Started
-            </button>
+
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Learn More
-            </button>
-          </div>
-        </div>
-      </section>
+
+
+
 
       {/* Stats Section */}
       <section className="py-16 px-4">
@@ -618,14 +595,13 @@ const AIServicesPage: React.FC = () => {
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
                   <stat.icon className="w-8 h-8 text-blue-400" />
-                </div>
+
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300">{stat.label}</div>
-              </div>
+
             ))}
-          </div>
-        </div>
-      </section>
+
+
 
       {/* Features Section */}
       <section className="py-20 px-4">
@@ -633,18 +609,17 @@ const AIServicesPage: React.FC = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our AI Capabilities
-            </h2>
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive AI solutions designed to solve complex business challenges
-            </p>
-          </div>
-          
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-white" />
-                </div>
+
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description}</p>
                 <ul className="space-y-2">
@@ -652,14 +627,13 @@ const AIServicesPage: React.FC = () => {
                     <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span>{benefit}</span>
-                    </li>
+
                   ))}
-                </ul>
-              </div>
+
+
             ))}
-          </div>
-        </div>
-      </section>
+
+
 
       {/* Services Section */}
       <section className="py-20 px-4">
@@ -668,15 +642,14 @@ const AIServicesPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">Our AI Services</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               End-to-end AI solutions tailored to your business needs
-            </p>
-          </div>
-          
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((service, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 group hover:scale-105">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                   <service.icon className="w-8 h-8 text-white" />
-                </div>
+
                 <h3 className="text-xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 <div className="text-2xl font-bold text-cyan-400 mb-4">{service.price}</div>
@@ -685,17 +658,16 @@ const AIServicesPage: React.FC = () => {
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span>{feature}</span>
-                    </li>
+
                   ))}
-                </ul>
+
                 <button className="w-full mt-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Learn More
-                </button>
-              </div>
+
+
             ))}
-          </div>
-        </div>
-      </section>
+
+
 
       {/* Benefits Section */}
       <section className="py-20 px-4">
@@ -704,19 +676,17 @@ const AIServicesPage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Services?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of our proven AI solutions
-            </p>
-          </div>
-          
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-lg p-4">
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
-              </div>
+
             ))}
-          </div>
-        </div>
-      </section>
+
+
 
       {/* CTA Section */}
       <section className="py-20 px-4">
@@ -724,32 +694,29 @@ const AIServicesPage: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with AI?
-            </h2>
+
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss how our AI services can help you achieve your business goals.
-            </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Started Today
-              </button>
+
               <button className="border border-white text-white hover:bg-white hover:text-gray-900 font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Schedule Consultation
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+
+
+
+
 
       <Footer />
-    </div>
-  );
-};
 
-export default AIServicesPage;
-      </div>
+  )
+}
+export default AIServicesPage
+
       <Footer />
     </>
-  );
-};
-
-export default AIServicesPage;
+  )
+}
+export default AIServicesPage
