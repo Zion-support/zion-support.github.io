@@ -1,10 +1,10 @@
 'use client';
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, ReactNode } from 'react';
 
 interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
+  enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
   enableFocusManagement?: boolean;
 }
@@ -12,26 +12,25 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
   enableKeyboardNavigation = true,
-  enableScreenReader = true,
+  enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
 }) => {
   // Keyboard navigation enhancements
   useEffect(() => {
-    if (enableKeyboardNavigation) {
+    if (enableKeyboardNavigation && typeof window !== 'undefined') {
       const handleKeyDown = (event: KeyboardEvent) => {
-        // Skip to main content
-        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        // Skip to main content with Tab
+        if (event.key === 'Tab' && event.target === document.body) {
           const mainContent = document.getElementById('main-content');
           if (mainContent) {
             mainContent.focus();
             event.preventDefault();
           }
         }
-        
-        // Escape key handling
+
+        // Escape key to close modals/dropdowns
         if (event.key === 'Escape') {
-          // Close any open modals or dropdowns
           const activeElement = document.activeElement as HTMLElement;
           if (activeElement && activeElement.blur) {
             activeElement.blur();
@@ -44,29 +43,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableKeyboardNavigation]);
 
-  // Screen reader enhancements
+  // Screen reader support
   useEffect(() => {
-    if (enableScreenReader) {
-      // Add ARIA live region for announcements
-      const liveRegion = document.createElement('div');
-      liveRegion.id = 'aria-live-region';
-      liveRegion.setAttribute('aria-live', 'polite');
-      liveRegion.setAttribute('aria-atomic', 'true');
-      liveRegion.className = 'sr-only';
-      document.body.appendChild(liveRegion);
+    if (enableScreenReaderSupport && typeof window !== 'undefined') {
+      // Add ARIA landmarks
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
+
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
 
       return () => {
-        const existingLiveRegion = document.getElementById('aria-live-region');
-        if (existingLiveRegion) {
-          existingLiveRegion.remove();
+        if (skipLink.parentNode) {
+          skipLink.parentNode.removeChild(skipLink);
         }
       };
     }
-  }, [enableScreenReader]);
+  }, [enableScreenReaderSupport]);
 
-  // High contrast mode detection
+  // High contrast mode
   useEffect(() => {
-    if (enableHighContrast) {
+    if (enableHighContrast && typeof window !== 'undefined') {
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       
       const handleContrastChange = (e: MediaQueryListEvent) => {
@@ -77,26 +80,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       };
 
-      // Set initial state
-      if (mediaQuery.matches) {
-        document.documentElement.classList.add('high-contrast');
-      }
-
+      // Check initial state
+      handleContrastChange({ matches: mediaQuery.matches } as MediaQueryListEvent);
+      
       mediaQuery.addEventListener('change', handleContrastChange);
       return () => mediaQuery.removeEventListener('change', handleContrastChange);
     }
   }, [enableHighContrast]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return <React.Fragment>{children}</React.Fragment>;
-=======
-  return null;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-9619
-=======
   // Focus management
   useEffect(() => {
-    if (enableFocusManagement) {
+    if (enableFocusManagement && typeof window !== 'undefined') {
       // Store the last focused element before navigation
       let lastFocusedElement: HTMLElement | null = null;
 
@@ -105,11 +99,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       const handleFocusOut = (event: FocusEvent) => {
-        // Ensure focus is visible
         const target = event.target as HTMLElement;
-        if (target && target.style) {
-          target.style.outline = '2px solid #00ffff';
-          target.style.outlineOffset = '2px';
+        if (target && target.classList.contains('focus-trap')) {
+          // Return focus to the last focused element
+          if (lastFocusedElement && lastFocusedElement.focus) {
+            lastFocusedElement.focus();
+          }
         }
       };
 
@@ -123,24 +118,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
   }, [enableFocusManagement]);
 
-  // Announce page changes to screen readers
-  const announcePageChange = useCallback((message: string) => {
-    const liveRegion = document.getElementById('aria-live-region');
-    if (liveRegion) {
-      liveRegion.textContent = message;
-    }
-  }, []);
-
-  // Expose announcement function globally for use in other components
-  useEffect(() => {
-    (window as any).announcePageChange = announcePageChange;
-    return () => {
-      delete (window as any).announcePageChange;
-    };
-  }, [announcePageChange]);
-
-  return <>{children}</>;
->>>>>>> cursor/analyze-improve-and-deploy-application-6516
+  return <React.Fragment>{children}</React.Fragment>;
 };
+
+AccessibilityEnhancer.displayName = 'AccessibilityEnhancer';
 
 export default AccessibilityEnhancer;
