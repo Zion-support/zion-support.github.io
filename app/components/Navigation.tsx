@@ -295,76 +295,10 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
               onClick={closeAllMenus}
             >
               Pricing
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 lg:h-20">
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-white font-bold text-xl cyber-text">Zion Tech Group</span>
-                <span className="text-cyan-400 text-xs font-medium">AI & IT Solutions</span>
-              </div>
-
             </Link>
-
-
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                onClick={() => setServicesOpen(!servicesOpen)}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                aria-expanded={servicesOpen}
-                aria-haspopup="true"
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
-                  <div className="grid grid-cols-2 gap-6 px-6">
-                    {serviceCategories.map((category, index) => (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center space-x-2 mb-3">
-                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
-                            <category.icon className={`w-4 h-4 ${category.color}`} />
-                          </div>
-                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
-                        </div>
-                        <div className="space-y-2">
-                          {category.services.slice(0, 6).map((service, serviceIndex) => (
-                            <Link
-                              key={serviceIndex}
-                              to={service.path}
-                              className="block px-3 py-2 text-sm text-gray-600 hover:bg-cyan-400/20 hover:text-cyan-600 rounded-lg transition-colors"
-                              onClick={closeAllMenus}
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
-                    <Link
-                      to="/services"
-                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
-                      onClick={closeAllMenus}
-                    >
-                      View All Services
-                    </Link>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link
-              to="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+            <Link 
+              to="/contact" 
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium hover:neon-glow-cyan"
               onClick={closeAllMenus}
             >
               Contact
@@ -448,81 +382,28 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
               </Link>
 
               {/* Mobile Services */}
-              <div>
-
-              {/* Services Dropdown */}
-              <div className="relative group">
-
-                <button
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium flex items-center space-x-1"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
-                  <Settings className="w-4 h-4" />
-                  <span>Services</span>
-                  <ChevronDown className="w-4 h-4" />
-                </button>
-
-                {/* Services Dropdown Menu */}
-                {servicesOpen && (
-                  <div
-                    className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl shadow-cyan-400/10 overflow-hidden"
-                    onMouseEnter={() => setServicesOpen(true)}
-                    onMouseLeave={() => setServicesOpen(false)}
-                  >
-                    <div className="p-6">
-                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {serviceCategories.map((category, categoryIndex) => (
-                          <div key={categoryIndex} className="space-y-3">
-                            <div className="flex items-center space-x-2 mb-3">
-                              <category.icon className={`w-5 h-5 ${category.color}`} />
-                              <h3 className="text-white font-semibold text-sm">{category.title}</h3>
-                            </div>
-                            <div className="space-y-2">
-                              {category.services.slice(0, 4).map((service, serviceIndex) => (
-                                <Link
-                                  key={serviceIndex}
-                                  to={service.path}
-                                  className={`block p-2 rounded-lg transition-all duration-200 ${category.hoverColor} group`}
-                                  onClick={closeAllMenus}
-                                >
-                                  <div className="flex items-start space-x-2">
-                                    <span className="text-lg">{service.icon}</span>
-                                    <div className="flex-1 min-w-0">
-                                      <div className="flex items-center space-x-1">
-                                        <span className="text-white text-sm font-medium group-hover:text-cyan-400 transition-colors">
-                                          {service.name}
-                                        </span>
-                                        {service.popular && (
-                                          <span className="px-1.5 py-0.5 bg-orange-500 text-white text-xs rounded-full">
-                                            Popular
-                                          </span>
-                                        )}
-                                      </div>
-                                      <p className="text-gray-400 text-xs mt-1 line-clamp-2">
-                                        {service.description}
-                                      </p>
-                                    </div>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                            {category.services.length > 4 && (
-                              <Link
-                                to={`/services#${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-                                className="text-cyan-400 text-xs hover:text-cyan-300 transition-colors flex items-center space-x-1"
-                                onClick={closeAllMenus}
-                              >
-                                <span>View all {category.title}</span>
-                                <ArrowRight className="w-3 h-3" />
-                              </Link>
-                            )}
-                          </div>
-                        ))}
-                      </div>
+              <div className="space-y-2">
+                <div className="text-gray-300 font-medium py-2">Services</div>
+                {serviceCategories.map((category, categoryIndex) => (
+                  <div key={categoryIndex} className="ml-4 space-y-1">
+                    <div className="flex items-center space-x-2 mb-2">
+                      <category.icon className={`w-4 h-4 ${category.color}`} />
+                      <span className="text-cyan-400 text-sm font-medium">{category.title}</span>
+                    </div>
+                    <div className="ml-6 space-y-1">
+                      {category.services.slice(0, 3).map((service, serviceIndex) => (
+                        <Link
+                          key={serviceIndex}
+                          to={service.path}
+                          className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
+                          onClick={closeAllMenus}
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
                     </div>
                   </div>
-                )}
+                ))}
               </div>
 
 <Link

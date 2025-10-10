@@ -1,10 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code, FileText, Calculator, Scale, Package, ShoppingCart, Music, Eye, Factory, GraduationCap } from 'lucide-react';
 import Header from './components/Header';
-
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code } from 'lucide-react';
 
 import Footer from './components/Footer';
 
@@ -506,6 +504,55 @@ const itServices = [
   }
 ];
 
+// Testimonials data
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CEO",
+    company: "TechCorp Inc.",
+    avatar: "SJ",
+    content: "Zion Tech Group transformed our business operations with their AI solutions. We've seen a 300% increase in efficiency and 70% cost reduction."
+  },
+  {
+    name: "Michael Chen",
+    role: "CTO",
+    company: "InnovateLabs",
+    avatar: "MC",
+    content: "The AI-powered analytics dashboard provided insights we never knew existed. Our decision-making process is now 90% faster and more accurate."
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Operations Director",
+    company: "Global Solutions",
+    avatar: "ER",
+    content: "Their IT infrastructure services are exceptional. We've achieved 99.9% uptime and our systems are more secure than ever before."
+  }
+];
+
+// Stats data
+const stats = [
+  {
+    number: "500+",
+    label: "Happy Clients",
+    icon: Users
+  },
+  {
+    number: "99.9%",
+    label: "Uptime",
+    icon: Shield
+  },
+  {
+    number: "24/7",
+    label: "Support",
+    icon: Clock
+  },
+  {
+    number: "5+",
+    label: "Years Experience",
+    icon: Award
+  }
+];
+
 const HomePage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -564,11 +611,32 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
             <p className="text-xl text-gray-300">Comprehensive AI and IT solutions for modern enterprises</p>
           </div>
-<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+
+          {/* MicroSAAS Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">AI-Powered MicroSAAS Solutions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {microSAASServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative group cursor-pointer"
+                  onClick={() => window.open(service.link, '_blank')}
+                >
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        Popular
+                      </span>
+                    </div>
+                  )}
+                  
                   <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🤖</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <service.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
+                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
@@ -581,121 +649,16 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                      <div className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors group-hover:underline">
                         Learn More →
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* AI Services */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">Enterprise AI Solutions</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {aiServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">🚀</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
-                      <button className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-colors">
-                        Learn More →
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* IT Services */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold text-white mb-8 text-center">IT Infrastructure Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {itServices.map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300">
-                  <div className="text-center mb-4">
-                    <div className="text-4xl mb-4">⚡</div>
-                    <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
-                    <div className="space-y-2 mb-6">
-                      {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </div>
-                      ))}
-                    </div>
-                    
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
-                      <button className="text-green-400 hover:text-green-300 font-medium text-sm transition-colors">
-                        Learn More →
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {microSAASServices.map((service, index) => (
-              <div
-                key={index}
-                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative group cursor-pointer"
-                onClick={() => window.open(service.link, '_blank')}
-              >
-                {service.popular && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
-                      <Star className="w-3 h-3 mr-1" />
-                      Popular
-                    </span>
-                  </div>
-                )}
-                
-                <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                        {feature}
                       </div>
-                    ))}
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors group-hover:underline">
-                      Learn More →
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
+
         </div>
       </section>
 
