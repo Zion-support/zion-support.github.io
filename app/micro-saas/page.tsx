@@ -251,17 +251,10 @@
               Micro SAAS Solutions
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow">
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Micro SaaS Solutions
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Powerful, focused AI tools designed to solve specific business challenges with maximum efficiency
-          </p>
-        </div>
+              Powerful, focused AI tools designed to solve specific business challenges with maximum efficiency
+            </p>
+          </div>
+        </section>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
@@ -289,9 +282,10 @@
                   </div>
                 </div>
               </div>
-              Streamline your business operations with our intelligent micro SAAS applications. 
-              From project management to customer support, we have the tools you need to succeed.
-            </p>
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {service.description}
+              </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
@@ -395,6 +389,9 @@
           ))}
         </div>
 
+        <div className="text-center mt-16">
+          <h2 className="text-3xl font-bold text-white mb-8">
+            Ready to Transform Your Business?
           </h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300">
@@ -410,5 +407,4 @@
   );
 };
 
-}
 export default MicroSaasPage;

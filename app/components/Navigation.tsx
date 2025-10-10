@@ -259,10 +259,6 @@ const Navigation: React.FC = () => {
             >
               Home
             </Link>
-<<<<<<< HEAD
-=======
-            
->>>>>>> main
             <Link 
               to="/about" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"

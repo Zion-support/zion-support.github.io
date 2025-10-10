@@ -1,4 +1,6 @@
-'use client'
+'use client';
+import { useCallback } from 'react';
+
 /**
  * Accessibility (A11Y) Utilities
  * Provides helpers for improving web accessibility
@@ -6,8 +8,8 @@
 /**
  * Generate unique ID for aria-describedby and aria-labelledby
  */
-export function generateId(prefix = 'a11y'): string {}
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`
+export function generateId(prefix = 'a11y'): string {
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
 /**
  * Announce message to screen readers
@@ -29,12 +31,12 @@ export function announceToScreenReader(
   document.body.appendChild(announcement)
   // Set message after a slight delay to ensure screen readers pick it up
   setTimeout(() => {
-    announcement.textContent = message;}
-  }, 100)
+    announcement.textContent = message;
+  }, 100);
   // Remove announcement after it's been read
   setTimeout(() => {
-    document.body.removeChild(announcement);}
-  }, 3000)
+    document.body.removeChild(announcement);
+  }, 3000);
 }
 /**
  * Trap focus within a container (useful for modals)
@@ -45,29 +47,30 @@ export function trapFocus(element: HTMLElement): () => void {
   )
   const firstFocusable = focusableElements[0]
   const lastFocusable = focusableElements[focusableElements.length - 1]
-  const handleKeyDown = useCallback((...args) => {
-    if (e.key !== 'Tab') return
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key !== 'Tab') return;
     if (e.shiftKey) {
       // Shift + Tab
       if (document.activeElement === firstFocusable) {
-        e.preventDefault()
-        lastFocusable?.focus();}
+        e.preventDefault();
+        lastFocusable?.focus();
       }
     } else {
       // Tab
       if (document.activeElement === lastFocusable) {
-        e.preventDefault()
-        firstFocusable?.focus();}
+        e.preventDefault();
+        firstFocusable?.focus();
       }
     }
-  }
-  element.addEventListener('keydown', handleKeyDown)
+  }, [firstFocusable, lastFocusable]);
+  
+  element.addEventListener('keydown', handleKeyDown);
   // Focus first element
-  firstFocusable?.focus()
+  firstFocusable?.focus();
   // Return cleanup function
   return () => {
-    element.removeEventListener('keydown', handleKeyDown);}
-  }
+    element.removeEventListener('keydown', handleKeyDown);
+  };
 }
 /**
  * Check if element is keyboard accessible
