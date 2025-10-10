@@ -1,22 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import React, { useEffect } from 'react';
+import { generateSitemap } from '../utils/sitemapGenerator';
 
 const SitemapPage: React.FC = () => {
+  useEffect(() => {
+    // Generate and display sitemap
+    const sitemap = generateSitemap();
+    
+    // Set content type for XML
+    document.contentType = 'application/xml';
+    
+    // Display sitemap
+    const sitemapElement = document.getElementById('sitemap-content');
+    if (sitemapElement) {
+      sitemapElement.textContent = sitemap;
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Sitemap</h1>
-          <p className="text-gray-300 mb-8">Coming Soon - Advanced sitemap solutions</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-white mb-8 text-center">
+          Sitemap
+        </h1>
+        <div className="bg-slate-800 rounded-lg p-6">
+          <pre id="sitemap-content" className="text-gray-300 text-sm overflow-auto">
+            {/* Sitemap will be populated by useEffect */}
+          </pre>
         </div>
       </div>
       <Footer />

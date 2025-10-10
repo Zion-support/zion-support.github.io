@@ -8,11 +8,29 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+Disallow: /temp/
+Disallow: /test/
 
 # Allow important pages
-Allow: /
-Allow: /about
-Allow: /services
-Allow: /contact
-Allow: /ai-services
-Allow: /it-services
+Allow: /ai-services/
+Allow: /it-services/
+Allow: /blog/
+Allow: /case-studies/
+Allow: /about/
+Allow: /contact/
+Allow: /pricing/
+
+# Block common bot traps
+Disallow: /*?*
+Disallow: /*&*
+Disallow: /*#
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$

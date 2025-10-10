@@ -1,94 +1,94 @@
-'use client';
+import React, { useEffect } from 'react';
 
-import React, { useEffect, useCallback } from 'react';
-import { logger } from '../utils/logger';
+const PerformanceOptimizer: React.FC = () => {
+  useEffect(() => {
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
 
-interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-}
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalResources = [
+        '/fonts/inter-var.woff2',
+        '/css/critical.css',
+        '/js/critical.js'
+      ];
 
-export const PerformanceOptimizer: React.FC = () => {
-  const collectWebVitals = useCallback(() => {
-    if (typeof window === 'undefined') return;
-
-    // Collect Core Web Vitals
-    const vitals: PerformanceMetrics = {
-      lcp: 0,
-      fid: 0,
-      cls: 0,
-      fcp: 0,
-      ttfb: 0,
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'script';
+        document.head.appendChild(link);
+      });
     };
 
-    // LCP - Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      const lastEntry = entries[entries.length - 1];
-      vitals.lcp = lastEntry.startTime;
-      logger.info('LCP measured', { lcp: vitals.lcp });
-    });
-    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // FID - First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        vitals.fid = entry.processingStart - entry.startTime;
-        logger.info('FID measured', { fid: vitals.fid });
+    // Lazy load images
+    const lazyLoadImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
       });
-    });
-    fidObserver.observe({ entryTypes: ['first-input'] });
 
-    // CLS - Cumulative Layout Shift
-    let clsValue = 0;
-    const clsObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (!(entry as any).hadRecentInput) {
-          clsValue += (entry as any).value;
-          vitals.cls = clsValue;
-          logger.info('CLS measured', { cls: vitals.cls });
-        }
-      });
-    });
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+      images.forEach((img) => imageObserver.observe(img));
+    };
 
-    // FCP - First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        vitals.fcp = entry.startTime;
-        logger.info('FCP measured', { fcp: vitals.fcp });
-      });
-    });
-    fcpObserver.observe({ entryTypes: ['paint'] });
+    // Optimize animations
+    const optimizeAnimations = () => {
+      // Reduce motion for users who prefer it
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+        document.documentElement.style.setProperty('--animation-iteration-count', '1');
+      }
+    };
 
-    // TTFB - Time to First Byte
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      vitals.ttfb = navigationEntry.responseStart - navigationEntry.requestStart;
-      logger.info('TTFB measured', { ttfb: vitals.ttfb });
-    }
+    // Initialize performance optimizations
+    preloadCriticalResources();
+    lazyLoadImages();
+    optimizeAnimations();
 
-    // Send metrics to analytics
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'web_vitals', {
-        event_category: 'Performance',
-        event_label: 'Core Web Vitals',
-        value: Math.round(vitals.lcp),
-        custom_map: {
-          lcp: vitals.lcp,
-          fid: vitals.fid,
-          cls: vitals.cls,
-          fcp: vitals.fcp,
-          ttfb: vitals.ttfb,
-        },
-      });
-    }
+    // Performance monitoring
+    const monitorPerformance = () => {
+      // Monitor Core Web Vitals
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.entryType === 'largest-contentful-paint') {
+              console.log('LCP:', entry.startTime);
+            }
+            if (entry.entryType === 'first-input') {
+              console.log('FID:', (entry as any).processingStart - entry.startTime);
+            }
+            if (entry.entryType === 'layout-shift') {
+              console.log('CLS:', (entry as any).value);
+            }
+          });
+        });
+
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      }
+    };
+
+    monitorPerformance();
+
+    // Cleanup function
+    return () => {
+      // Cleanup any observers or timers
+    };
   }, []);
 
   const optimizeImages = useCallback(() => {
