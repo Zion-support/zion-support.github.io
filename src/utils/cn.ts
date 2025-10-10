@@ -4,7 +4,7 @@
 export const cn = {
   // Add utility functions here
   init: () => {
-    console.log('cn initialized');
+
   }
 };
 

@@ -4,7 +4,7 @@
 export const errorReporter = {
   // Add utility functions here
   init: () => {
-    console.log('errorReporter initialized');
+
   }
 };
 

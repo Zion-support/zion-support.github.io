@@ -4,7 +4,7 @@
 export const performanceUtils = {
   // Add utility functions here
   init: () => {
-    console.log('performanceUtils initialized');
+
   }
 };
 

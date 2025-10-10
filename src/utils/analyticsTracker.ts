@@ -4,7 +4,7 @@
 export const analyticsTracker = {
   // Add utility functions here
   init: () => {
-    console.log('analyticsTracker initialized');
+
   }
 };
 

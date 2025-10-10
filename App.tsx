@@ -1,14 +1,17 @@
 
-import React, { Suspense, memo } from 'react';
+import React, { Suspense, memo, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import LoadingSpinner from './src/components/LoadingSpinner';
-import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
-import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
-import ContentShowcase from './src/components/ContentShowcase';
-import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+
+// Lazy load main components for better performance
+const UnifiedContentPromotion = lazy(() => import('./src/components/UnifiedContentPromotion'));
+const InteractiveAIROICalculator = lazy(() => import('./src/components/InteractiveAIROICalculator'));
+const ContentShowcase = lazy(() => import('./src/components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(() => import('./src/components/InteractiveContentShowcase2026'));
 
 // Structured data for SEO
 const structuredData = {
@@ -129,7 +132,8 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 const App: React.FC = memo(() => {
   return (
     <ErrorBoundary>
-      <HelmetProvider>
+      <PerformanceMonitor>
+        <HelmetProvider>
         <Helmet>
           <title>Zion Tech Group - AI & IT Solutions</title>
           <meta
@@ -195,7 +199,8 @@ const App: React.FC = memo(() => {
             <Footer />
           </div>
         </Router>
-      </HelmetProvider>
+        </HelmetProvider>
+      </PerformanceMonitor>
     </ErrorBoundary>
   );
 }

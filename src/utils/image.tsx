@@ -4,7 +4,7 @@
 export const image = {
   // Add utility functions here
   init: () => {
-    console.log('image initialized');
+
   }
 };
 

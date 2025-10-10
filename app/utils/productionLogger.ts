@@ -29,16 +29,16 @@ class ProductionLogger {
     if (this.isDevelopment) {
       switch (level) {
         case 'debug':
-          console.debug(`[${context || 'APP'}] ${message}`, data);
+
           break;
         case 'info':
-          console.info(`[${context || 'APP'}] ${message}`, data);
+
           break;
         case 'warn':
-          console.warn(`[${context || 'APP'}] ${message}`, data);
+
           break;
         case 'error':
-          console.error(`[${context || 'APP'}] ${message}`, data);
+
           break;
       }
     }

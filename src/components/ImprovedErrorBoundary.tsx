@@ -47,16 +47,7 @@ class ImprovedErrorBoundary extends Component<Props, State> {
   // TODO: Add content
 }
     // Log error to console for debugging
-    console.error('Error caught by ImprovedErrorBoundary:', {
-  // TODO: Add content
-}
-      message: error.message,
-      stack: error.stack,
-      component: errorInfo.componentStack ?? undefined,
-      timestamp: Date.now(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    });
+
     // Call custom error handler if provided
     if (this.props.onError) {
   // TODO: Add content

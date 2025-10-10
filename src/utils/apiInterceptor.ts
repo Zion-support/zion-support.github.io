@@ -4,7 +4,7 @@
 export const apiInterceptor = {
   // Add utility functions here
   init: () => {
-    console.log('apiInterceptor initialized');
+
   }
 };
 

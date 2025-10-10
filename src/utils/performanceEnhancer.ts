@@ -4,7 +4,7 @@
 export const performanceEnhancer = {
   // Add utility functions here
   init: () => {
-    console.log('performanceEnhancer initialized');
+
   }
 };
 

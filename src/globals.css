@@ -1,4 +1,6 @@
 /* Preload critical fonts */
+@import './styles/futuristic.css';
+
 @font-face {
   font-family: 'Rajdhani';
   font-style: normal;
@@ -26,8 +28,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import './styles/futuristic.css';
 
 /* Futuristic Design System */
 :root {

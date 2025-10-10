@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const { execSync } = require('child_process');
 
 // Function to remove console.log statements from a file
 function removeConsoleLogs(filePath) {
@@ -36,29 +36,58 @@ function removeConsoleLogs(filePath) {
   }
 }
 
-// Function to process all TypeScript and JavaScript files
+// Function to find all TypeScript and JavaScript files
+function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
+  let files = [];
+  
+  function walkDir(currentPath) {
+    const items = fs.readdirSync(currentPath);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentPath, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules, dist, build directories
+        if (!['node_modules', 'dist', 'build', '.git', '.next'].includes(item)) {
+          walkDir(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  walkDir(dir);
+  return files;
+}
+
+// Function to process all files
 function processFiles() {
-  const patterns = [
-    'src/**/*.{ts,tsx,js,jsx}',
-    'app/**/*.{ts,tsx,js,jsx}',
-    'components/**/*.{ts,tsx,js,jsx}'
-  ];
+  const srcDir = path.join(process.cwd(), 'src');
+  const appDir = path.join(process.cwd(), 'app');
+  
+  let allFiles = [];
+  
+  if (fs.existsSync(srcDir)) {
+    allFiles = allFiles.concat(findFiles(srcDir));
+  }
+  
+  if (fs.existsSync(appDir)) {
+    allFiles = allFiles.concat(findFiles(appDir));
+  }
   
   let totalFiles = 0;
   let modifiedFiles = 0;
   
-  patterns.forEach(async (pattern) => {
-    const files = await glob(pattern, { 
-      cwd: process.cwd(),
-      ignore: ['node_modules/**', 'dist/**', 'build/**', '**/*.d.ts']
-    });
-    
-    files.forEach(file => {
-      totalFiles++;
-      if (removeConsoleLogs(file)) {
-        modifiedFiles++;
-      }
-    });
+  allFiles.forEach(file => {
+    totalFiles++;
+    if (removeConsoleLogs(file)) {
+      modifiedFiles++;
+    }
   });
   
   console.log(`\nProcessed ${totalFiles} files`);

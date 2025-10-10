@@ -4,7 +4,7 @@
 export const enhancedErrorMonitoring = {
   // Add utility functions here
   init: () => {
-    console.log('enhancedErrorMonitoring initialized');
+
   }
 };
 

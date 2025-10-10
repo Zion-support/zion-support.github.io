@@ -25,7 +25,7 @@ export default defineConfig({
       compress: {
         drop_console: true,
         drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.warn'],
+        pure_funcs: ['console.log', 'console.info', 'console.warn', 'console.error'],
         passes: 3,
         unsafe: true,
         unsafe_comps: true,
@@ -46,6 +46,22 @@ export default defineConfig({
         top_ret: true,
         toplevel: true,
         unused: true,
+        hoist_funs: true,
+        hoist_vars: true,
+        collapse_vars: true,
+        reduce_funcs: true,
+        inline: 2,
+        keep_fargs: false,
+        keep_infinity: true,
+        keep_fnames: false,
+        module: true,
+        negate_iife: true,
+        properties: true,
+        pure_getters: true,
+        pure_funcs: ['console.log', 'console.info', 'console.warn', 'console.error'],
+        screw_ie8: true,
+        typeofs: true,
+        warnings: false,
       },
       mangle: {
         safari10: true,
@@ -79,22 +95,46 @@ export default defineConfig({
         wrap_func_args: true,
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: false,
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 2048, // Reduced for better caching
+    assetsInlineLimit: 1024, // Optimized for better caching
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          analytics: ['web-vitals'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'ui-vendor';
+            }
+            if (id.includes('recharts')) {
+              return 'charts-vendor';
+            }
+            if (id.includes('web-vitals')) {
+              return 'analytics-vendor';
+            }
+            return 'vendor';
+          }
+          
+          // App chunks
+          if (id.includes('/app/')) {
+            return 'app';
+          }
+          if (id.includes('/src/components/')) {
+            return 'components';
+          }
+          if (id.includes('/src/utils/')) {
+            return 'utils';
+          }
+          if (id.includes('/src/hooks/')) {
+            return 'hooks';
+          }
         },
-        chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const info = assetInfo.name.split('.');
           const ext = info[info.length - 1];
@@ -111,31 +151,6 @@ export default defineConfig({
         },
       },
     },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.warn'],
-        passes: 3,
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-      },
-      mangle: {
-        safari10: true,
-        properties: {
-          regex: /^_/,
-        },
-      },
-      format: {
-        comments: false,
-      },
-    },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
-    cssCodeSplit: true,
-    assetsInlineLimit: 4096,
   },
   server: {
     port: 3000,

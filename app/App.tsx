@@ -26,7 +26,7 @@ const App: React.FC = () => {
         // Add any initialization logic here
         setIsInitialized(true);
       } catch (error) {
-        console.error('App initialization error:', error);
+
         setIsInitialized(true);
       }
     };

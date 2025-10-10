@@ -4,7 +4,7 @@
 export const usePerformanceOptimization = {
   // Add utility functions here
   init: () => {
-    console.log('usePerformanceOptimization initialized');
+
   }
 };
 

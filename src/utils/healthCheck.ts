@@ -4,7 +4,7 @@
 export const healthCheck = {
   // Add utility functions here
   init: () => {
-    console.log('healthCheck initialized');
+
   }
 };
 

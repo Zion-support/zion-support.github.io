@@ -4,7 +4,7 @@
 export const errorHandling = {
   // Add utility functions here
   init: () => {
-    console.log('errorHandling initialized');
+
   }
 };
 

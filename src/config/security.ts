@@ -4,7 +4,7 @@
 export const security = {
   // Add utility functions here
   init: () => {
-    console.log('security initialized');
+
   }
 };
 

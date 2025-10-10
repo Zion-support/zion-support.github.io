@@ -168,8 +168,7 @@ const SecurityEnhancer: React.FC = () => {
     const addSecurityLogging = () => {
       // Log security events
       const logSecurityEvent = (event: string, details: any) => {
-        console.warn(`Security Event: ${event}`, details);
-        
+
         // Send to security monitoring service if available
         if (window.gtag) {
           window.gtag('event', 'security_event', {

@@ -244,7 +244,7 @@ export const measurePerformance = (name: string, fn: () => void): void => {
     const start = performance.now();
     fn();
     const end = performance.now();
-    // console.log(`${name} took ${end - start} milliseconds`);
+
   } else {
     fn();
   }
@@ -310,7 +310,7 @@ export const optimizeBundleSize = () => {
   // Dynamic imports for heavy components
   const loadHeavyComponent = (componentName: string) => {
     return import(`../components/${componentName}`).catch(() => {
-      // console.warn(`Failed to load component: ${componentName}`);
+
       return null;
     });
   };

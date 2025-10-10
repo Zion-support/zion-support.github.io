@@ -6,10 +6,10 @@ const PerformanceOptimizer: React.FC = () => {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
-          console.log('Service Worker registered successfully:', registration);
+
         })
         .catch((error) => {
-          console.log('Service Worker registration failed:', error);
+
         });
     }
 
@@ -68,13 +68,13 @@ const PerformanceOptimizer: React.FC = () => {
         const observer = new PerformanceObserver((list) => {
           list.getEntries().forEach((entry) => {
             if (entry.entryType === 'largest-contentful-paint') {
-              console.log('LCP:', entry.startTime);
+
             }
             if (entry.entryType === 'first-input') {
-              console.log('FID:', (entry as any).processingStart - entry.startTime);
+
             }
             if (entry.entryType === 'layout-shift') {
-              console.log('CLS:', (entry as any).value);
+
             }
           });
         });

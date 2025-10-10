@@ -16,7 +16,7 @@ export class PerformanceMonitor {
     this.metrics.set(`${componentName}_render`, renderTime);
     
     if (renderTime > 16) { // More than one frame at 60fps
-      console.warn(`Slow render detected for ${componentName}: ${renderTime.toFixed(2)}ms`);
+
     }
   }
 
@@ -26,7 +26,7 @@ export class PerformanceMonitor {
     this.metrics.set(`${endpoint}_api`, duration);
     
     if (duration > 1000) { // More than 1 second
-      console.warn(`Slow API call detected for ${endpoint}: ${duration.toFixed(2)}ms`);
+
     }
   }
 
@@ -64,14 +64,14 @@ export const measureWebVitals = () => {
   new PerformanceObserver((list) => {
     const entries = list.getEntries();
     const lastEntry = entries[entries.length - 1];
-    console.log('LCP:', lastEntry.startTime);
+
   }).observe({ entryTypes: ['largest-contentful-paint'] });
 
   // Measure First Input Delay (FID)
   new PerformanceObserver((list) => {
     const entries = list.getEntries();
     entries.forEach((entry) => {
-      console.log('FID:', entry.processingStart - entry.startTime);
+
     });
   }).observe({ entryTypes: ['first-input'] });
 
@@ -84,7 +84,7 @@ export const measureWebVitals = () => {
         clsValue += (entry as any).value;
       }
     });
-    console.log('CLS:', clsValue);
+
   }).observe({ entryTypes: ['layout-shift'] });
 };
 

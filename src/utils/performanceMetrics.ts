@@ -4,7 +4,7 @@
 export const performanceMetrics = {
   // Add utility functions here
   init: () => {
-    console.log('performanceMetrics initialized');
+
   }
 };
 

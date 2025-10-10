@@ -4,7 +4,7 @@
 export const monitoring = {
   // Add utility functions here
   init: () => {
-    console.log('monitoring initialized');
+
   }
 };
 

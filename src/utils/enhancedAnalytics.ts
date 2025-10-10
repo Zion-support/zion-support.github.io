@@ -4,7 +4,7 @@
 export const enhancedAnalytics = {
   // Add utility functions here
   init: () => {
-    console.log('enhancedAnalytics initialized');
+
   }
 };
 
