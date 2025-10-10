@@ -12,9 +12,9 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     const enhanceSecurity = (;
       // Add security headers;
       const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',;
-        'X-Frame-Options': 'DENY',;
-        'X-XSS-Protection': '1; mode=block',;) => {
+        'X-Content-Type-Options': 'nosniff',
+        'X-Frame-Options': 'DENY',
+        'X-XSS-Protection': '1; mode=block',) => {
   return (
     $3
   )
@@ -43,6 +43,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
 enhanceSecurity();
   }, []);
 return <>{children}</>
-}
+};
+
 export default SecurityEnhancer;
 

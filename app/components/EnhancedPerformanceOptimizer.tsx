@@ -136,6 +136,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, []);
 
   return <>{children}</>;
-}
+};
 
 export default PerformanceOptimizer;

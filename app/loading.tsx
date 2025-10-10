@@ -29,7 +29,7 @@ const LoadingPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    },
   ]
   return (
     <React.Fragment>
@@ -111,8 +111,9 @@ const LoadingPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   ),
-}
-export default LoadingPage;
+};
+
+export default LoadingPage
   </button>
   </h2>
   </button>

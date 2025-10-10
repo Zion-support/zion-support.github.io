@@ -42,8 +42,7 @@ const EnterprisePage: React.FC = () => {
       description: 'Seamless integration with existing enterprise systems and workflows.',
       benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
   }
-    }
-  ]
+    ]
 const solutions = [
     {
     title: 'Enterprise Resource Planning',
@@ -69,22 +68,25 @@ const solutions = [
       icon: Zap,
       benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
   }
-    }
-  ]
+    ]
 const benefits = [
     'Reduce operational costs by 30%',
-    'Improve productivity by 50%',;
-    'Enhance security and compliance',;
-    'Streamline business processes',;
-    'Enable data-driven decisions',;
-    'Scale with business growth',;
-    'Integrate with existing systems',;
-    'Provide 24/7 support and monitoring';
+    'Improve productivity by 50%',
+    'Enhance security and compliance',
+    'Streamline business processes',
+
+    'Enable data-driven decisions',
+
+    'Scale with business growth',
+
+    'Integrate with existing systems',
+
+    'Provide 24/7 support and monitoring'
   ]
 const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },;
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },;
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },;
+    { number: '500+', label: 'Enterprise Clients', icon: Building },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
   ]
 return (
@@ -92,19 +94,26 @@ return (
       <SEOOptimizer>
       <Navigation>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
         <div className="relative max-w-7xl mx-auto text-center"></div>
           <h1>
             Enterprise</h1>
             <span>
-              Solutions;
+              Solutions
             </span>
           </h1>
           <p>
             Comprehensive enterprise-grade solutions designed for large-scale business operations.;
-            Transform your organization with cutting-edge technology and expert implementation.;
+            Transform your organization with cutting-edge technology and expert implementation.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
@@ -119,7 +128,14 @@ return (
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {
@@ -127,8 +143,7 @@ return (
   }
               <div key={index} className="text-center"></div>
                 <div className="flex justify-center mb-4"></div>
-                  <stat>
-                </div>
+                  <stat />
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
@@ -138,14 +153,21 @@ return (
         </div>
       </section>
       {/* Features Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Enterprise-Grade Features;
+              Enterprise-Grade Features
             </h2>
             <p>
-              Built for scale, security, and performance to meet the demands of large organizations.;
+              Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -171,10 +193,10 @@ return (
         </div>
       </section>
             <h2>
-              Comprehensive Solutions;
+              Comprehensive Solutions
             </h2>
             <p>
-              End-to-end enterprise solutions that address every aspect of your business operations.;
+              End-to-end enterprise solutions that address every aspect of your business operations.
             </p>
           </div>
                     </li>
@@ -188,7 +210,14 @@ return (
         </div>
       </section>
       {/* Benefits Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
                 </button>
               </div>
             </div>
@@ -196,13 +225,20 @@ return (
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2>
-            Ready to Transform Your Enterprise?;
+            Ready to Transform Your Enterprise?
           </h2>
           <p>
-            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.;
+            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
@@ -215,9 +251,9 @@ return (
           </div>
         </div>
       </section>
-      <Footer>
-    </div>
+      <Footer />
   ),
-}
+};
+
 export default EnterprisePage;
 

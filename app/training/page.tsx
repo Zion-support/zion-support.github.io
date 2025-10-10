@@ -7,8 +7,8 @@ return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 
       {/* Hero Section */}
@@ -22,20 +22,21 @@ return (
         </div>
       </section>
             <h2>
-              Key Benefits;
+              Key Benefits
             </h2>
             <p>
-              Experience the power of our page solutions for your business.;
+              Experience the power of our page solutions for your business.
             </p>
           </div>
             <h2>
-              Ready to Get Started?;
+              Ready to Get Started?
             </h2>
             <p>
-              Contact our experts to discuss your page needs and get a customized solution.;
+              Contact our experts to discuss your page needs and get a customized solution.
             </p>
     </div>
   );
-}
+};
+
 export default PagePage;
 

@@ -2,173 +2,110 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Function to fix remaining syntax errors
-function fixRemainingErrors(content) {
-  let fixed = content;
+// Get all TSX files in the app directory
+function getAllTsxFiles(dir) {
+  let files = [];
+  const items = fs.readdirSync(dir);
   
-  // Fix semicolons after closing braces in object literals
-  // Pattern: } },; -> } },
-  fixed = fixed.replace(/\}\s*\},;/g, '},');
-  
-  // Fix semicolons after closing braces in arrays
-  // Pattern: } ]; -> } ]
-  fixed = fixed.replace(/\}\s*\];/g, '} ]');
-  
-  // Fix semicolons after closing braces in function parameters
-  // Pattern: } ); -> } )
-  fixed = fixed.replace(/\}\s*\);/g, '} )');
-  
-  // Fix malformed object property assignments with semicolons
-  // Pattern: property: value,; -> property: value,
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix malformed array elements with semicolons
-  // Pattern: [item,; -> [item,
-  fixed = fixed.replace(/\[([^,\]]+),;/g, '[$1,');
-  
-  // Fix malformed function calls with semicolons
-  // Pattern: function(; -> function(
-  fixed = fixed.replace(/function\s*\(;/g, 'function(');
-  
-  // Fix malformed method calls with semicolons
-  // Pattern: .method(; -> .method(
-  fixed = fixed.replace(/\.(\w+)\(;/g, '.$1(');
-  
-  // Fix malformed conditional statements with semicolons
-  // Pattern: if (condition) {; -> if (condition) {
-  fixed = fixed.replace(/if\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed for loops with semicolons
-  // Pattern: for (init; condition; increment) {; -> for (init; condition; increment) {
-  fixed = fixed.replace(/for\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed while loops with semicolons
-  // Pattern: while (condition) {; -> while (condition) {
-  fixed = fixed.replace(/while\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed switch statements with semicolons
-  // Pattern: switch (expression) {; -> switch (expression) {
-  fixed = fixed.replace(/switch\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed try-catch blocks with semicolons
-  // Pattern: try {; -> try {
-  fixed = fixed.replace(/try\s*\{;/g, 'try {');
-  
-  // Fix malformed catch blocks with semicolons
-  // Pattern: catch (error) {; -> catch (error) {
-  fixed = fixed.replace(/catch\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed finally blocks with semicolons
-  // Pattern: finally {; -> finally {
-  fixed = fixed.replace(/finally\s*\{;/g, 'finally {');
-  
-  // Fix malformed JSX with semicolons
-  // Pattern: <Component>; -> <Component>
-  fixed = fixed.replace(/<(\w+)>;/g, '<$1>');
-  
-  // Fix malformed JSX closing with semicolons
-  // Pattern: </Component>; -> </Component>
-  fixed = fixed.replace(/<\/(\w+)>;/g, '</$1>');
-  
-  // Fix malformed JSX fragments with semicolons
-  // Pattern: <></>; -> <>
-  fixed = fixed.replace(/<><\/>;/g, '<>');
-  
-  // Fix malformed return statements with semicolons
-  // Pattern: return (; -> return (
-  fixed = fixed.replace(/return\s*\(;/g, 'return (');
-  
-  // Fix malformed arrow functions with semicolons
-  // Pattern: () => {; -> () => {
-  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed object literals with semicolons
-  // Pattern: { property: value,; -> { property: value,
-  fixed = fixed.replace(/\{\s*(\w+):\s*([^,}]+),;/g, '{ $1: $2,');
-  
-  // Fix malformed array literals with semicolons
-  // Pattern: [item,; -> [item,
-  fixed = fixed.replace(/\[\s*([^,\]]+),;/g, '[$1,');
-  
-  // Fix malformed function expressions with semicolons
-  // Pattern: function() {; -> function() {
-  fixed = fixed.replace(/function\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed class methods with semicolons
-  // Pattern: method() {; -> method() {
-  fixed = fixed.replace(/(\w+)\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed interface properties with semicolons
-  // Pattern: property: type,; -> property: type,
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix malformed type definitions with semicolons
-  // Pattern: type Name = {; -> type Name = {
-  fixed = fixed.replace(/type\s+(\w+)\s*=\s*\{;/g, 'type $1 = {');
-  
-  // Fix malformed interface definitions with semicolons
-  // Pattern: interface Name {; -> interface Name {
-  fixed = fixed.replace(/interface\s+(\w+)\s*\{;/g, 'interface $1 {');
-  
-  // Fix malformed enum definitions with semicolons
-  // Pattern: enum Name {; -> enum Name {
-  fixed = fixed.replace(/enum\s+(\w+)\s*\{;/g, 'enum $1 {');
-  
-  // Fix malformed class definitions with semicolons
-  // Pattern: class Name {; -> class Name {
-  fixed = fixed.replace(/class\s+(\w+)\s*\{;/g, 'class $1 {');
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixRemainingErrors(content);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
+    if (stat.isDirectory()) {
+      files = files.concat(getAllTsxFiles(fullPath));
+    } else if (item.endsWith('.tsx')) {
+      files.push(fullPath);
     }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
   }
+  
+  return files;
 }
 
-// Main function
-function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
-  
-  let totalFiles = 0;
-  let fixedFiles = 0;
-  
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    totalFiles += files.length;
+const appDir = '/workspace/app';
+const tsxFiles = getAllTsxFiles(appDir);
+
+console.log(`Found ${tsxFiles.length} TSX files to process`);
+
+let fixedCount = 0;
+
+tsxFiles.forEach(filePath => {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let originalContent = content;
     
-    files.forEach(file => {
-      if (processFile(file)) {
-        fixedFiles++;
-      }
-    });
-  });
-  
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
-}
+    // Fix extra closing braces in arrays
+    content = content.replace(/(\s+benefits:\s*\[[^\]]+\]\s*)\n(\s+)\}\n(\s+)\}\n(\s+)\]/g, '$1\n$2}\n$3]');
+    
+    // Fix missing comma after last object in array
+    content = content.replace(/(\s+benefits:\s*\[[^\]]+\]\s*)\n(\s+)\}\n(\s+)\}\n(\s+)\]/g, '$1\n$2},\n$3]');
+    
+    // Fix array syntax issues
+    content = content.replace(/(\s+)([^,;]+),;(\s*[^,;]+),;(\s*[^,;]+),;(\s*[^,;]+),;(\s*[^,;]+);/g, 
+      '$1$2,\n$3,\n$4,\n$5,\n$6');
+    
+    // Fix individual semicolons in arrays
+    content = content.replace(/(\s+)([^,;]+),;/g, '$1$2,');
+    
+    // Fix array closing with semicolon
+    content = content.replace(/(\s+)\];\s*$/gm, '$1];');
+    
+    // Fix malformed JSX elements
+    content = content.replace(/<(\w+)>\s*<\/div>/g, '<$1 />');
+    
+    // Fix text content with semicolons
+    content = content.replace(/([^>])\s*;(\s*<\/[^>]+>)/g, '$1$2');
+    
+    // Fix malformed feature mapping
+    content = content.replace(/{\s*features\.map\(\(feature, index\) => \(\s*}\s*<div/g, 
+      '{features.map((feature, index) => (\n                <div');
+    
+    // Fix malformed benefits mapping  
+    content = content.replace(/{\s*benefits\.map\(\(benefit, index\) => \(\s*}\s*<div/g, 
+      '{benefits.map((benefit, index) => (\n                <div');
+    
+    // Fix feature.icon usage
+    content = content.replace(/<feature>\s*<\/div>/g, '<feature.icon className="w-8 h-8 text-white" />');
+    
+    // Fix CheckCircle usage
+    content = content.replace(/<CheckCircle>\s*<\/div>/g, '<CheckCircle className="w-8 h-8 text-white" />');
+    
+    // Fix malformed JSX structure - sections
+    content = content.replace(/<section[^>]*>\s*<\/section>/g, 
+      '<section className="py-20 px-4">\n          <div className="max-w-7xl mx-auto">\n            <div className="text-center mb-16">\n              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>\n              <p className="text-xl text-gray-300">Section description</p>\n            </div>\n          </div>\n        </section>');
+    
+    // Fix return statement formatting
+    content = content.replace(/return \(\s*<>\s*<Helmet>/g, 'return (\n    <>\n      <Helmet>');
+    
+    // Fix export statement
+    content = content.replace(/}\s*export default/g, '};\n\nexport default');
+    
+    // Fix function closing
+    content = content.replace(/,\s*}\s*$/g, ';\n};');
+    
+    // Fix specific patterns for array objects - more comprehensive
+    content = content.replace(/(\s+benefits:\s*\[[^\]]+\]\s*)\n(\s+)\}\n(\s+)\}\n(\s+)\]/g, '$1\n$2},\n$3]');
+    
+    // Fix missing commas in object arrays
+    content = content.replace(/(\s+benefits:\s*\[[^\]]+\]\s*)\n(\s+)\}\n(\s+)\}\n(\s+)\]/g, '$1\n$2},\n$3]');
+    
+    // Fix extra closing braces
+    content = content.replace(/(\s+benefits:\s*\[[^\]]+\]\s*)\n(\s+)\}\n(\s+)\}\n(\s+)\]/g, '$1\n$2}\n$3]');
+    
+    // Fix missing semicolon after array declaration
+    content = content.replace(/(\s+)\]\n(\s+const\s+\w+\s*=\s*\[)/g, '$1];\n$2');
+    
+    // Fix missing semicolon after const declaration
+    content = content.replace(/(\s+const\s+\w+\s*=\s*\[[^\]]+\]\s*)\n(\s+const\s+\w+\s*=\s*\[)/g, '$1;\n$2');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      fixedCount++;
+      console.log(`Fixed: ${path.relative('/workspace', filePath)}`);
+    }
+  } catch (error) {
+    console.error(`Error fixing ${filePath}:`, error.message);
+  }
+});
 
-if (require.main === module) {
-  main();
-}
-
-module.exports = { fixRemainingErrors, processFile };
+console.log(`Fixed ${fixedCount} files`);

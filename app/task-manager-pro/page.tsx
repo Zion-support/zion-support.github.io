@@ -28,28 +28,39 @@ const PagePage: React.FC = () => {
   ]
 const benefits = [
     'Advanced AI technology integration',
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+
+    '24/7 technical support',
+
+    'Easy integration with existing systems',
+
+    'Cost-effective pricing plans',
+
+    'Proven track record of success'
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm: px-6 lg:px-8"></section>
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center"></div>
             <h1>
               <span>
-                Page;
+                Page
               </span>
               <br>
               <span className="text-white">Solutions</span>
@@ -72,7 +83,7 @@ return (
       </section>
             </h2>
             <p>
-              Our page solutions deliver unmatched performance, security, and scalability.;
+              Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
           </div>
@@ -80,16 +91,16 @@ return (
       </section>
             </h2>
             <p>
-              Experience the power of our page solutions for your business.;
+              Experience the power of our page solutions for your business.
             </p>
           </div>
           </div>
         </div>
       </section>
-              Ready to Get Started?;
+              Ready to Get Started?
             </h2>
             <p>
-              Contact our experts to discuss your page needs and get a customized solution.;
+              Contact our experts to discuss your page needs and get a customized solution.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
@@ -106,6 +117,7 @@ return (
       </section>
     </div>
   ),
-}
+};
+
 export default PagePage;
 

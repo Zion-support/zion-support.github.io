@@ -24,7 +24,7 @@ icon: Brain,
       title: 'Global Analytics',
       description: 'Worldwide business intelligence deployment and support'
     }
-  ]
+  ];
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -45,7 +45,7 @@ icon: Brain,
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Business Intelligence;
+            Business Intelligence
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced business intelligence solutions. 
@@ -121,8 +121,9 @@ icon: Brain,
       </section>
     </div>
   ),
-}
-export default BusinessIntelligencePage;
+};
+
+export default BusinessIntelligencePage
   </button>
   </button>
   </h2>

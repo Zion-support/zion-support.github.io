@@ -268,7 +268,8 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     );
   }
   return null;
-}
-export default AdvancedPerformanceMonitor;
+};
+
+export default AdvancedPerformanceMonitor
   </PerformanceMetrics>
   </PerformanceMonitorProps>

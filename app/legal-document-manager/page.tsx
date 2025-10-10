@@ -41,5 +41,6 @@ const LegalDocumentManagerPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-}
+};
+
 export default LegalDocumentManagerPage;

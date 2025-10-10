@@ -1146,8 +1146,7 @@ const AiServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-a8d8
     }
-  ]
-
+  ];
   const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length },
@@ -1318,6 +1317,6 @@ const AiServicesPage: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default AiServicesPage;

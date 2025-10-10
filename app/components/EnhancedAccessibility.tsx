@@ -189,6 +189,6 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
       {children}
     </div>
   );
-}
+};
 
 export default EnhancedAccessibility;

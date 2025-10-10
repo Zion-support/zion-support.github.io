@@ -29,7 +29,7 @@ icon: Brain,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
+    },
   ]
   return (
     <React.Fragment>
@@ -133,7 +133,7 @@ icon: Brain,
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Content Studio?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions;
+              Experience the benefits of our proven solutions
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -153,7 +153,7 @@ icon: Brain,
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your content creation with our AI Content Studio solutions today;
+            Transform your content creation with our AI Content Studio solutions today
   </
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
@@ -168,8 +168,9 @@ icon: Brain,
       <Footer />
     </React.Fragment>
   ),
-}
-export default AiContentStudioPage;
+};
+
+export default AiContentStudioPage
   </button>
   </button>
   </p>

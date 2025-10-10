@@ -87,7 +87,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
           </svg>
         </div>
         <h2>
-          Oops! Something went wrong;
+          Oops! Something went wrong
         </h2>
         <p>
 
@@ -100,7 +100,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error, resetError:
         )}
         <div className="mt-6 flex gap-4"></div>
           <button>
-            Try Again;
+            Try Again
           </button>
           <button;
             onClick={() => (window.location.href = '/')}
@@ -126,11 +126,11 @@ function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => 
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
         <p>
-          Unable to connect to the server. Please check your internet connection and try again.;
+          Unable to connect to the server. Please check your internet connection and try again.
         </p>
         <div className="mt-6"></div>
           <button>
-            Retry Connection;
+            Retry Connection
           </button>
         </div>
       </div>
@@ -146,7 +146,7 @@ function NotFoundFallback(): JSX.Element {
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
         <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
         <p>
-          The page you're looking for doesn't exist or has been moved.;
+          The page you're looking for doesn't exist or has been moved.
         </p>
         <div className="mt-6 flex gap-4 justify-center"></div>
           <button
@@ -208,5 +208,6 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
   }
   }
-}
+};
+
 export default getErrorBoundaryConfig;

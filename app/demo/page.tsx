@@ -107,6 +107,6 @@ const DemoPage: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default DemoPage;

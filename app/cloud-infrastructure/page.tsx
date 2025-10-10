@@ -24,7 +24,7 @@ icon: Shield,
       title: 'Global Deployment',
       description: 'Worldwide cloud infrastructure deployment and support'
     }
-  ]
+  ];
   const benefits = [
 'Advanced cloud technology integration',
     'Real-time monitoring and analytics',
@@ -45,7 +45,7 @@ icon: Shield,
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Infrastructure;
+            Cloud Infrastructure
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions. 
@@ -125,8 +125,9 @@ icon: Shield,
       </div>
     </div>
   ),
-}
-export default CloudInfrastructurePage;
+};
+
+export default CloudInfrastructurePage
   </button>
   </button>
   </section>

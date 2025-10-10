@@ -78,9 +78,8 @@ const HomePage: React.FC = () => {
       title: 'Consulting Services',
       description: 'Expert guidance to help you navigate digital transformation and technology adoption.',
       benefits: ['Strategy Planning', 'Technology Assessment', 'Implementation Support', 'Training']
-    }
-  ]
-
+    },
+  ];
   const services = [
     {
       icon: Brain,
@@ -279,9 +278,8 @@ const HomePage: React.FC = memo(() => {
       title: 'IT Consulting',
       description: 'Expert guidance to help you make the right technology decisions.',
       benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']
-    }
-  ]
-
+    },
+  ];
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },

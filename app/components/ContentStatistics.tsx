@@ -46,8 +46,7 @@ const ContentStatistics: React.FC = () => {
       suffix: '+',
       color: 'text-yellow-400'
     }
-  ]
-
+  ];
   const achievements = [
     {
       icon: Brain,
@@ -140,6 +139,6 @@ const ContentStatistics: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default ContentStatistics;

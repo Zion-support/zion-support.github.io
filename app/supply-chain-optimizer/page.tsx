@@ -41,5 +41,6 @@ const SupplyChainOptimizerPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-}
+};
+
 export default SupplyChainOptimizerPage;

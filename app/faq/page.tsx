@@ -91,5 +91,6 @@ const FAQPage: React.FC = () => {
       </div>
     </React.Fragment>
   );
-}
+};
+
 export default FAQPage;

@@ -33,22 +33,22 @@ interface ImageProps {}
 }
 export const Image: React.FC<ImageProps>= ({}
 export const Image: React.FC<ImageProps> = ({}
-  src,;
+  src,
 export const Image: React.FC<ImageProps> = ({
     ,
   src;
-  alt,;
-  width,;
-  height,;
-  className,;
-  priority = false,;
-  quality = 75,;
-  placeholder = 'empty',;
-  blurDataURL,;
-  fill = false,;
-  sizes,;
-  style,;
-  onLoad,;
+  alt,
+  width,
+  height,
+  className,
+  priority = false,
+  quality = 75,
+  placeholder = 'empty',
+  blurDataURL,
+  fill = false,
+  sizes,
+  style,
+  onLoad,
   onError,
   }
   ...props}
@@ -71,7 +71,7 @@ export const Image: React.FC<ImageProps> = ({
       left: 0,
   }
   const imageStyle: React.CSSProperties = {}
-    ...style,;
+    ...style,
     ...(fill && {}
       position: 'absolute',
       top: 0,
@@ -94,13 +94,13 @@ export const Image: React.FC<ImageProps> = ({
 import React, { useState, useCallback } from 'react';
 interface ImageProps {/* TODO: Fix JSX expression */}
 }
-export const,;
+export const,
   Image: React.FC<ImageProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }, [onLoad]);
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   }, [onError]);
-  const,;
+  const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
     })
   }
@@ -111,7 +111,7 @@ export const,;
       >)</div>
         <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>)
       </div>),
-    ),;
+    ),
         {...props}
       ></div>
         <span className="text-gray-500 text-sm"></span><span className="sr-only">Screen reader: </span>Failed to load image</span>
@@ -140,11 +140,13 @@ export default Image</img>
       {...props})
     />);
   );
-}
+};
+
 export default Image;
     />);
   );
-}
+};
+
 export default Image;
 
 "`;

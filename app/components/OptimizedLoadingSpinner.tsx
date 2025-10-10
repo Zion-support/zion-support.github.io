@@ -11,11 +11,11 @@ interface OptimizedLoadingSpinnerProps {
 }
 const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
   ({
-    size = 'md',;
-    variant = 'spinner',;
-    text = 'Loading...',;
-    className = '',;
-    color = 'blue',;
+    size = 'md',
+    variant = 'spinner',
+    text = 'Loading...',
+    className = '',
+    color = 'blue',
     fullScreen = false,
   }
   }) => {
@@ -27,7 +27,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(,
         lg: 'h-12 w-12',
         xl: 'h-16 w-16',
   }
-      }),;
+      }),
       []
     );
 const textSizeClasses = useMemo(;
@@ -38,7 +38,7 @@ const textSizeClasses = useMemo(;
         lg: 'text-lg',
         xl: 'text-xl',
   }
-      }),;
+      }),
       []
     );
 const colorClasses = useMemo(;
@@ -49,7 +49,7 @@ const colorClasses = useMemo(;
         red: 'border-red-600 bg-red-600',
         purple: 'border-purple-600 bg-purple-600',
   }
-      }),;
+      }),
       []
     );
 const renderSpinner = useMemo(() => {
@@ -103,8 +103,8 @@ case 'bars':;
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
                   style={{}
-                    height: `${12 + i * 4}px`,;
-                    animationDelay: `${i * 0.1}s`,;
+                    height: `${12 + i * 4}px`,
+                    animationDelay: `${i * 0.1}s`,
                   }}
                 /></div>
               ))}</div>

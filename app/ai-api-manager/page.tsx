@@ -24,9 +24,8 @@ const AIApiManagerPage: React.FC = () => {
       title: 'Security & Compliance',
       description: 'Enterprise-grade security with automated compliance monitoring and threat detection.',
       benefits: ['Threat detection', 'Compliance monitoring', 'Security scanning', 'Access control']
-    }
-  ]
-
+    },
+  ];
   const benefits = [
     'Centralized API management',
     'Real-time performance monitoring',
@@ -34,8 +33,7 @@ const AIApiManagerPage: React.FC = () => {
     'Comprehensive analytics',
     'Easy integration',
     '24/7 support'
-  ]
-
+  ];
   const stats = [
     { icon: <Settings className="w-8 h-8 text-blue-500" />, value: '500+', label: 'APIs Managed' },
     { icon: <Zap className="w-8 h-8 text-green-500" />, value: '99.9%', label: 'Uptime' },
@@ -174,7 +172,7 @@ const AIApiManagerPage: React.FC = () => {
       <Footer />
     </div>
   ),
-}
+};
 
 export default AIApiManagerPage;
 

@@ -55,8 +55,7 @@ const CookiesPage: React.FC = () => {
       ],
       required: false
     }
-  ]
-
+  ];
   const purposes = [
     {
       title: 'Website Functionality',
@@ -379,6 +378,6 @@ const CookiesPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
 
 export default CookiesPage;

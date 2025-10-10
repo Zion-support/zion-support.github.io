@@ -52,6 +52,6 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       {prefix}{count.toLocaleString()}{suffix}
     </span>
   );
-}
+};
 
 export default AnimatedCounter;

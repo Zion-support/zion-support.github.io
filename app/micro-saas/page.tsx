@@ -228,8 +228,7 @@ const MicroSaasPage: React.FC = () => {
       category: 'Legal',
       popular: false
     }
-  ]
-
+  ];
   const features = [
     {
       title: 'Rapid Deployment',
@@ -379,6 +378,6 @@ const MicroSaasPage: React.FC = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default MicroSaasPage;

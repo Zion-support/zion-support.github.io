@@ -43,6 +43,7 @@ useEffect(() => {
 enhanceUX();
   }, []);
 return <>{children}</>
-}
+};
+
 export default UserExperienceEnhancer;
 

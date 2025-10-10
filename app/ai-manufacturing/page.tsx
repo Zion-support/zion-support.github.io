@@ -30,34 +30,40 @@ const AiManufacturingPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
   }
-    }
-  ]
+    ]
 const benefits = [
     'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',;
-    'Improve decision-making with AI insights',;
-    'Scale operations without proportional staff increases',;
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology';
   ]
 return (
     <>
       <Helmet>
         <title>Ai Manufacturing - Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
-      <Navigation>
+      <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"></div>
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" /></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
           <div className="relative max-w-7xl mx-auto text-center"></div>
             <h1>
-              Ai Manufacturing;
+              Ai Manufacturing
             </h1>
             <p>
-              Advanced AI-powered ai manufacturing solution for modern businesses.;
+              Advanced AI-powered ai manufacturing solution for modern businesses.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
@@ -70,24 +76,28 @@ return (
           </div>
         </section>
         {/* Features Section */}
-        <section className="py-20 px-4"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>
-                Key Features;
+                Key Features
               </h2>
               <p>
-                Advanced AI technology that drives results;
+                Advanced AI technology that drives results
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {
-    features.map((feature, index) => (
-  }
+              {features.map((feature, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <feature>
-                  </div>
+                    <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {
@@ -110,24 +120,28 @@ return (
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20 px-4"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2>
-                Why Choose Our Solution?;
+                Why Choose Our Solution?
               </h2>
               <p>
-                Proven results that drive business growth and efficiency;
+                Proven results that drive business growth and efficiency
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              {
-    benefits.map((benefit, index) => (
-  }
+              {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <CheckCircle>
-                  </div>
+                    <CheckCircle />
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
               ))}
@@ -135,18 +149,25 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-20 px-4"></section>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
               <h2>
-                Ready to Get Started?;
+                Ready to Get Started?
               </h2>
               <p>
-                Contact our experts to discuss your requirements and get started today.;
+                Contact our experts to discuss your requirements and get started today.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
-                  Contact Us;
+                  Contact Us
                 </button>
                 <button>
                   Learn More
@@ -159,6 +180,7 @@ return (
       <Footer>
     </>
   ),
-}
+};
+
 export default AiManufacturingPage;
 

@@ -143,8 +143,7 @@ const ApiPage: React.FC = () => {
         }
       ]
     }
-  ]
-
+  ];
   const authenticationMethods = [
     {
       name: 'API Key',
@@ -164,8 +163,7 @@ const ApiPage: React.FC = () => {
       example: 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...',
       security: 'High'
     }
-  ]
-
+  ];
   const rateLimits = [
     { tier: 'Free', requests: '1,000/month', burst: '10/minute' },
     { tier: 'Pro', requests: '50,000/month', burst: '100/minute' },
@@ -442,6 +440,6 @@ const ApiPage: React.FC = () => {
       </div>
     </>
   );
-}
+};
 
 export default ApiPage;
