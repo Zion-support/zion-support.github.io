@@ -7,13 +7,16 @@ const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
   
   const aiServices = [
-<<<<<<< HEAD
     { name: 'AI Strategy & Consulting', url: '/ai-services', description: 'Strategic AI consulting' },
     { name: 'Machine Learning Solutions', url: '/ai-services', description: 'Custom ML models' },
     { name: 'Natural Language Processing', url: '/ai-services', description: 'NLP and chatbots' },
     { name: 'Computer Vision', url: '/ai-services', description: 'Image and video analysis' },
     { name: 'AI Automation', url: '/ai-services', description: 'Process automation' },
-    { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' }
+    { name: 'AI Data Analytics', url: '/ai-services', description: 'Intelligent analytics' },
+    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
+    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
+    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI solutions' }
   ];
 
   const itServices = [
@@ -22,24 +25,11 @@ const Footer: React.FC = memo(() => {
     { name: 'Cybersecurity', url: '/it-services', description: 'Security solutions' },
     { name: 'Managed IT Services', url: '/it-services', description: '24/7 IT support' },
     { name: 'Database Management', url: '/it-services', description: 'Database optimization' },
-    { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' }
-=======
-    { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
-    { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
-    { name: 'AI Customer Support', url: '/ai-customer-support', description: 'AI-powered customer service' },
-    { name: 'AI Data Analytics', url: '/ai-data-analytics', description: 'Advanced data insights' },
-    { name: 'AI Content Generation', url: '/ai-content-generation', description: 'AI content creation' },
-    { name: 'AI Healthcare Solutions', url: '/ai-healthcare', description: 'Medical AI solutions' }
-  ];
-
-  const itServices = [
+    { name: 'Network Solutions', url: '/it-services', description: 'Network infrastructure' },
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
-    { name: 'DevOps & CI/CD', url: '/devops', description: 'Development operations' },
-    { name: 'Cybersecurity', url: '/cybersecurity', description: 'Security solutions' },
     { name: 'IT Consulting', url: '/it-consulting', description: 'Expert IT guidance' },
     { name: 'Database Services', url: '/database-services', description: 'Database management' }
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
   ];
 
   const microSaasServices = [
