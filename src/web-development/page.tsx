@@ -105,14 +105,9 @@ const WebDevelopmentPage: React.FC = () => {
           enableImageOptimization={true}
           enableLazyLoading={true}
           enableCodeSplitting={true}
-          enablePrefetching={true}
+          enablePreloading={true}
         />
-      <AccessibilityEnhancer
-        enableKeyboardNavigation={true}
-        enableScreenReaderSupport={true}
-        enableHighContrast={true}
-        enableFocusManagement={true}
-      />
+      <AccessibilityEnhancer />
       <SecurityEnhancer
         enableCSP={true}
         enableHTTPSRedirect={true}
