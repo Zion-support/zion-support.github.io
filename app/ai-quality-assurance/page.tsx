@@ -149,6 +149,7 @@ const AiQualityAssurancePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiQualityAssurancePage
   </button>
   </button>

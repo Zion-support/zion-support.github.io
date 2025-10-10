@@ -149,6 +149,7 @@ const AiSolutionsPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSolutionsPage
   </button>
   </button>

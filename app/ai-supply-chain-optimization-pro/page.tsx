@@ -149,6 +149,7 @@ const AiSupplyChainOptimizationProPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSupplyChainOptimizationProPage
   </button>
   </button>

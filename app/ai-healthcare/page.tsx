@@ -149,6 +149,7 @@ const AiHealthcarePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiHealthcarePage
   </button>
   </button>

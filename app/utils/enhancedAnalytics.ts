@@ -9,10 +9,12 @@
   value?: number}
   metadata?: Record<string, unknown>}
 }
+
 export interface UserProperties {
   userId?: string
   sessionId?: string
   userType?: string}
+
 export interface AnalyticsEvent {}
   category: string
   action: string
@@ -20,6 +22,7 @@ export interface AnalyticsEvent {}
   value?: number
   metadata?: Record<string, unknown>}</strin>
 }
+
 export interface UserProperties {}
   userId?: string
   sessionId?: string
@@ -174,8 +177,10 @@ class EnhancedAnalytics {}
       metadata: {}
         pageTitle: pageTitle || document.title,
         referrer: document.referrer}
+
 export interface AnalyticsEvent {/* TODO: Fix JSX expression */}
 }
+
 export interface UserProperties {/* TODO: Fix JSX expression */}
 }
 class EnhancedAnalytics {/* TODO: Fix JSX expression */}

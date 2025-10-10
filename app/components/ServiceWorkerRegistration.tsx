@@ -137,6 +137,7 @@ const ServiceWorkerRegistrationPage: React.FC = () => {
       </section>
     </div>
   )}
+
 export default ServiceWorkerRegistrationPage
   </button>
   </button>

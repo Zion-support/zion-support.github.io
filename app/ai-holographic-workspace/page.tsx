@@ -149,6 +149,7 @@ const AiHolographicWorkspacePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiHolographicWorkspacePage
   </button>
   </button>

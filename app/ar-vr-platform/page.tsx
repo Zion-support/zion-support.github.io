@@ -1,5 +1,8 @@
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react'const ARVRPlatformPage: React.FC  = () => {
+'use client'
+import React from 'react'
+import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react'
+const ARVRPlatformPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -133,6 +136,7 @@ Experience the power of our AR/VR platform solutions for your business.
       </section>
     </div>
   )}
+
 export default ARVRPlatformPage
   </button>
   </button>

@@ -149,6 +149,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSocialMediaManagerPage
   </button>
   </button>

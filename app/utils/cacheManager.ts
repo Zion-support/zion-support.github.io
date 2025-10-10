@@ -6,25 +6,30 @@
   Memory = 'memory',
   LocalStorage = 'localStorage',
   SessionStorage = 'sessionStorage'}
+
 export interface CacheOptions {
   ttl?: number
 export interface CacheOptions {}
   ttl?: number
   storage?: CacheStorage
   compress?: boolean}
+
 export interface CacheConfig {}
   storage?: CacheStorage
   defaultTTL?: number}
+
 export interface CacheEntry<T> {}
   value: T,
   timestamp: number,
   ttl: number,}
+
 export interface CacheStats {}
   hits: number,
   misses: number,
   hitRate: number,
   count: number,
   entries: number,}
+
 export class CacheManager<T = unknown> {}
   private cache: Map<string, CacheEntry<T>> = new Map()
   private stats: CacheStats = {
@@ -69,14 +74,19 @@ export class CacheManager<T = unknown> {}
     if (this.config.storage !== CacheStorage.Memory) {}
       this.saveToStorage()export enum CacheStorage {/* TODO: Fix JSX expression */}
 }
+
 export interface CacheOptions {/* TODO: Fix JSX expression */}
 }
+
 export interface CacheConfig {/* TODO: Fix JSX expression */}
 }
+
 export interface CacheEntry<T> {/* TODO: Fix JSX expression */}
 }
+
 export interface CacheStats {/* TODO: Fix JSX expression */}
 }
+
 export class CacheManager {/* TODO: Fix JSX expression */}
   s: 0 }
   constructor(confi)
@@ -453,11 +463,13 @@ export class CacheManager {/* TODO: Fix JSX expression */}
     }
   }
 }
+
 export const memoryCache = new CacheManager({ storage: CacheStorage.Memory })export const localStorageCache = new CacheManager({)
   storage: CacheStorage.LocalStorage)
   defaultTTL: 30 * 60 * 1000 // 30 minutesexport const sessionStorageCache = new CacheManager({)
   storage: CacheStorage.SessionStorage),
   defaultTTL: 60 * 60 * 1000 // 1 hour}
+
 export const localStorageCache = new CacheManager({)}
   storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutesexport const sessionStorageCache = new CacheManager({)}
@@ -466,5 +478,6 @@ export const localStorageCache = new CacheManager({)}
     }
   }
 }
+
 export const cacheManager = new CacheManager()export default CacheManager
 `

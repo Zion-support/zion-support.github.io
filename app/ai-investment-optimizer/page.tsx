@@ -149,6 +149,7 @@ const AiInvestmentOptimizerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiInvestmentOptimizerPage
   </button>
   </button>

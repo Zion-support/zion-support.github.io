@@ -106,6 +106,7 @@
     this.observers = []}
   }
 }
+
 export const performanceMonitor = new PerformanceMonitor()
 export const measureFunction = <T extends (...args: any[]) => any>(
   fn: T,
@@ -118,6 +119,7 @@ export const measureFunction = <T extends (...args: any[]) => any>(
       console.log(`${name} took ${end - start} milliseconds`)}
     return result
   }) as T}
+
 export const debounce = <T extends (...args: any[]) => any>(
   func: T,
   wait: number
@@ -127,6 +129,7 @@ return ((...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)}
   }) as T}
+
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number
@@ -139,6 +142,7 @@ return ((...args: Parameters<T>) => {
       setTimeout(() => inThrottle = false, limit)}
     }
   }) as T}
+
 export const lazyLoad = (callback: () => void): void => {
   if ('requestIdleCallback' in window) {
     requestIdleCallback(callback)}
@@ -146,6 +150,7 @@ export const lazyLoad = (callback: () => void): void => {
     setTimeout(callback, 1)}
   }
 }
+
 export const preloadImage = (src: string): Promise<void> => {
   return new Promise((resolve, reject) => {
     const img = new Image()
@@ -153,6 +158,7 @@ export const preloadImage = (src: string): Promise<void> => {
     img.onerror = reject
     img.src = src}
   })}
+
 export const preloadImages = (srcs: string[]): Promise<void[]> => {
   return Promise.all(srcs.map(preloadImage))}
 }

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import { Play, ArrowRight, CheckCircle  } from 'lucide-react'const DemoPage: React.FC  = () => {
-=======
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -24,7 +20,6 @@ const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-chatbot');
   const [isPlaying, setIsPlaying] = useState(false);
 
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
   const demos = [
     {
       id: 'ai-chatbot',
@@ -82,10 +77,6 @@ const DemoPage: React.FC = () => {
       ],
       thumbnail: '/demos/security.jpg'
     }
-<<<<<<< HEAD
-  ]return (
-    <React.Fragment>
-=======
   ];
 
   const testimonials = [
@@ -116,33 +107,11 @@ const DemoPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
       <Helmet>
         <title>Interactive Demos | Zion Tech Group</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business operations." />
         <meta name="keywords" content="demos, AI demos, interactive demos, technology showcase, solution demonstrations" />
       </Helmet>
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              See Our <span className="text-cyan-400">Solutions</span> in Action
-  </
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
-            </p>
-          </div>
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {demos.map((demo, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300">
-                  <div className="flex items-center justify-center w-16 h-16 bg-cyan-500/20 rounded-lg mb-4">
-                    <Play className="w-8 h-8 text-cyan-400" />
-=======
-
       {/* Hero Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -173,7 +142,6 @@ const DemoPage: React.FC = () => {
                 <div className="text-center mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <Play className="w-8 h-8 text-slate-900" />
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{demo.title}</h3>
                   <span className="bg-slate-700 text-cyan-400 text-sm font-medium px-3 py-1 rounded-full">
@@ -261,13 +229,6 @@ const DemoPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
-                  <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
-                    <Play className="w-4 h-4 mr-2" />
-                    Watch Demo
-  </
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-e765
                 </div>
                 <div>
                   <h4 className="text-lg font-bold text-white mb-4">Demo Controls</h4>
@@ -348,31 +309,6 @@ const DemoPage: React.FC = () => {
               </button>
             </div>
           </div>
-<<<<<<< HEAD
-        </section>
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
-              <h2 className="text-2xl font-semibold text-white mb-4">Ready to See More?</h2>
-              <p className="text-gray-300 mb-6">
-                Schedule a personalized demo with our experts to see how our solutions can address your specific business needs.
-              </p>
-              <a 
-                href="/contact" 
-                className="inline-flex items-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-medium rounded-lg transition-colors">
-                Schedule Demo
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
-            </div>
-          </div>
-        </section>
-      </div>
-    </React.Fragment>
-  )}
-export default DemoPage
-  </button>
-  </h1>
-=======
         </div>
       </section>
     </div>
@@ -380,4 +316,3 @@ export default DemoPage
 };
 
 export default DemoPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-e765

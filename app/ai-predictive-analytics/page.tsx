@@ -149,6 +149,7 @@ const AiPredictiveAnalyticsPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiPredictiveAnalyticsPage
   </button>
   </button>

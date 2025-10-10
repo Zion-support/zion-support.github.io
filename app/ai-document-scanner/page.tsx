@@ -149,6 +149,7 @@ const AiDocumentScannerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiDocumentScannerPage
   </button>
   </button>

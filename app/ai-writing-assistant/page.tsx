@@ -149,6 +149,7 @@ const AiWritingAssistantPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiWritingAssistantPage
   </button>
   </button>

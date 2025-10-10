@@ -149,6 +149,7 @@ const AiQuantumTaskOptimizerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiQuantumTaskOptimizerPage
   </button>
   </button>

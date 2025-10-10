@@ -10,6 +10,7 @@ interface UseIntersectionObserverReturn {
   isIntersecting: boolean
   entry: IntersectionObserverEntry | undefined}
 }
+
 export function useIntersectionObserver(
   options: UseIntersectionObserverOptions = {}
 ): UseIntersectionObserverReturn {
@@ -45,4 +46,5 @@ return () => {
     }
   }, [threshold, root, rootMargin, freezeOnceVisible])
 return { ref, isIntersecting, entry }}
+
 export default useIntersectionObserver

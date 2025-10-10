@@ -1,6 +1,9 @@
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import Navigation from '../components/Navigation'
-import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from 'lucide-react'const GlobalErrorPage: React.FC  = () => {
+'use client'
+import React from 'react'
+import { Helmet  } from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings  } from 'lucide-react'
+const GlobalErrorPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -106,6 +109,7 @@ import Footer from '../components/Footer'import { CheckCircle, ArrowRight, Star,
       <Footer />
     </React.Fragment>
   )}
+
 export default GlobalErrorPage
   </button>
   </h2>

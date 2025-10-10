@@ -149,6 +149,7 @@ const AiFinancialCrimeDetectionProPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiFinancialCrimeDetectionProPage
   </button>
   </button>

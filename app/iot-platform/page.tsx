@@ -88,6 +88,7 @@ import { CheckCircle, Zap, Wifi, Clock, Users, Shield, BarChart, ArrowRight } fr
       <Footer />
 </div>
   )}
+
 export default PagePage
   </button>
   </h2>

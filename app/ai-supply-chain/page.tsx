@@ -149,6 +149,7 @@ const AiSupplyChainPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSupplyChainPage
   </button>
   </button>

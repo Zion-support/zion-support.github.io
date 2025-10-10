@@ -149,6 +149,7 @@ const AiEcommerceOptimizerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiEcommerceOptimizerPage
   </button>
   </button>

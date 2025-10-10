@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server } from 'lucide-react';
 
 const Navigation: React.FC = () => {
@@ -16,24 +16,35 @@ const Navigation: React.FC = () => {
       if (window.innerWidth >= 1024) {
         setIsOpen(false)
       }
-    }const handleScroll  = () => {
-      setIsScrolled(window.scrollY > 50)}
+    }
+    
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+    
     window.addEventListener('resize', handleResize)
-    window.addEventListener('scroll', handleScroll)return () => {
+    window.addEventListener('scroll', handleScroll)
+    
+    return () => {
       window.removeEventListener('resize', handleResize)
-      window.removeEventListener('scroll', handleScroll)}
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
+  
   const toggleMenu = () => setIsOpen(!isOpen)
   const toggleServices = () => setServicesOpen(!servicesOpen)
   const toggleAiServices = () => setAiServicesOpen(!aiServicesOpen)
   const toggleItServices = () => setItServicesOpen(!itServicesOpen)
-  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)const closeAllMenus  = () => {
+  const toggleMicroSaas = () => setMicroSaasOpen(!microSaasOpen)
+  
+  const closeAllMenus = () => {
     setServicesOpen(false)
     setAiServicesOpen(false)
     setItServicesOpen(false)
     setMicroSaasOpen(false)
     setIsOpen(false)
   }
+  
   const aiServices = [
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Process automation' },
@@ -75,18 +86,20 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
+            <Link href="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </Link>
           </div>
+          
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
+            
             {/* AI Services Dropdown */}
             <div className="relative group">
               <button
@@ -97,12 +110,12 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4">
                   <div className="grid grid-cols-1 gap-2">
                     {aiServices.map((service) => (
                       <Link
                         key={service.name}
-                        to={service.href}
+                        href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -118,6 +131,7 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
+            
             {/* IT Services Dropdown */}
             <div className="relative group">
               <button
@@ -128,12 +142,12 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4">
                   <div className="grid grid-cols-1 gap-2">
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
-                        to={service.href}
+                        href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -160,12 +174,12 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
               </button>
               {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4">
                   <div className="grid grid-cols-1 gap-2">
                     {microSaasServices.map((service) => (
                       <Link
                         key={service.name}
-                        to={service.href}
+                        href={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -182,16 +196,16 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link to="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/case-studies" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Case Studies
             </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Blog
             </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
 
@@ -211,6 +225,7 @@ const Navigation: React.FC = () => {
               </a>
             </div>
           </div>
+          
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
             <button
@@ -221,13 +236,15 @@ const Navigation: React.FC = () => {
             </button>
           </div>
         </div>
+        
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
-              <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
+              
               {/* Mobile AI Services */}
               <div>
                 <button
@@ -244,7 +261,7 @@ const Navigation: React.FC = () => {
                     {aiServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        to={service.href}
+                        href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -252,7 +269,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      to="/ai-services"
+                      href="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -261,6 +278,7 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
+              
               {/* Mobile IT Services */}
               <div>
                 <button
@@ -277,7 +295,7 @@ const Navigation: React.FC = () => {
                     {itServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        to={service.href}
+                        href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -285,7 +303,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      to="/it-services"
+                      href="/it-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -311,7 +329,7 @@ const Navigation: React.FC = () => {
                     {microSaasServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        to={service.href}
+                        href={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -319,7 +337,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      to="/micro-saas"
+                      href="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -329,18 +347,19 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <Link to="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              <Link href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
               </Link>
-              <Link to="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              <Link href="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Case Studies
               </Link>
-              <Link to="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              <Link href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Blog
               </Link>
-              <Link to="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+              <Link href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </Link>
+              
               {/* Mobile Contact Info */}
               <div className="border-t border-white/10 pt-3 mt-3">
                 <a href="tel:+13024640950" className="flex items-center text-cyan-400 hover:text-cyan-300 px-3 py-2 rounded-md text-base font-medium">
@@ -362,5 +381,7 @@ const Navigation: React.FC = () => {
         )}
       </div>
     </nav>
-  )}
+  )
+}
+
 export default Navigation

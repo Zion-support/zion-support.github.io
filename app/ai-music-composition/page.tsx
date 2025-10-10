@@ -149,6 +149,7 @@ const AiMusicCompositionPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiMusicCompositionPage
   </button>
   </button>

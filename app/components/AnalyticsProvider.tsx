@@ -1,8 +1,10 @@
-'use client'import React, { createContext, useContext, useEffect, ReactNode } from 'react'
+'use client'
+import React, { createContext, useContext, useEffect, ReactNode } from 'react'
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, any>) => void
   trackPageView: (pageName: string, pagePath: string) => void
 }
+
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined)export const useAnalytics = () => {
   const context = useContext(AnalyticsContext)
   if (!context) {
@@ -12,6 +14,7 @@ const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefin
 interface AnalyticsProviderProps {
   children: ReactNode
 }
+
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize Google Analytics if available

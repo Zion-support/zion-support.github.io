@@ -149,6 +149,7 @@ const AiInventoryManagerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiInventoryManagerPage
   </button>
   </button>

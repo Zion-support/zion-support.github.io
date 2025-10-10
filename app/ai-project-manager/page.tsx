@@ -149,6 +149,7 @@ const AiProjectManagerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiProjectManagerPage
   </button>
   </button>

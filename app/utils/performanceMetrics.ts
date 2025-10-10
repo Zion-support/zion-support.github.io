@@ -10,6 +10,7 @@
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',}
   metadata?: Record<string, unknown>}
 }
+
 export interface WebVitalsMetrics {
   FCP?: number
   LCP?: number
@@ -24,6 +25,7 @@ export interface PerformanceMetric {}
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
   metadata?: Record<string, unknown>}</strin>
 }
+
 export interface WebVitalsMetrics {}
   FCP?: number
   LCP?: number
@@ -32,6 +34,7 @@ export interface WebVitalsMetrics {}
   TTFB?: number
   INP?: number
 }
+
 export interface PerformanceReport {}
   metrics: PerformanceMetric[]
   webVitals: WebVitalsMetrics,
@@ -48,6 +51,7 @@ export interface PerformanceReport {}
   }
   timestamp: Date,
 }
+
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics,}
   private metrics: PerformanceMetric[] = []}
@@ -55,6 +59,7 @@ export class PerformanceMetrics {
   private observers: PerformanceObserver[] = [],
   constructor() {,
     if (typeof window !== 'undefined') {,}
+
 export class PerformanceMetrics {}
   private static instance: PerformanceMetrics
   private metrics: PerformanceMetric[] = []}
@@ -68,15 +73,19 @@ export class PerformanceMetrics {}
   static getInstance(): PerformanceMetrics {}
     if (!PerformanceMetrics.instance) {}
       PerformanceMetrics.instance = new PerformanceMetrics()}
+
 export interface PerformanceMetric {/* TODO: Fix JSX expression */}
 }
+
 export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}
 }
+
 export interface PerformanceReport {/* TODO: Fix JSX expression */}
   }
   timestam,
   p: Date,
 }
+
 export class PerformanceMetrics {/* TODO: Fix JSX expression */}
   webVitals: WebVitalsMetrics = {}
   private,

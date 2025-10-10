@@ -544,6 +544,7 @@ export const specializedServices = [
     max: number,
     currency: string,}
   }}
+
 export const services: Service[] = [
   {
     id: 'ai-project-manager',

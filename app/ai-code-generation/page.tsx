@@ -149,6 +149,7 @@ const AiCodeGenerationPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiCodeGenerationPage
   </button>
   </button>

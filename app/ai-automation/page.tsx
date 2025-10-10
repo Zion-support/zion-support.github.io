@@ -149,6 +149,7 @@ const AiAutomationPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiAutomationPage
   </button>
   </button>

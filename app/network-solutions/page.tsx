@@ -118,6 +118,7 @@ const PagePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default PagePage
   </button>
   </button>

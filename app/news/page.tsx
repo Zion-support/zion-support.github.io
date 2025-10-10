@@ -132,6 +132,7 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   )}
+
 export default PagePage
   </button>
   </button>

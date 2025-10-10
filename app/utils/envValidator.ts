@@ -118,7 +118,9 @@ export function validateEnv(): EnvConfig {
 export function validateEnv(): EnvConfig {}
   return envValidator.getConfig()
 }
+
 export default envValidator
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 }
+
 export default envValidator `

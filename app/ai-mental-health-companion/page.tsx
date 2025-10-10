@@ -149,6 +149,7 @@ const AiMentalHealthCompanionPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiMentalHealthCompanionPage
   </button>
   </button>

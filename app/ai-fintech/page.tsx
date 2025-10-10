@@ -149,6 +149,7 @@ const AiFintechPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiFintechPage
   </button>
   </button>

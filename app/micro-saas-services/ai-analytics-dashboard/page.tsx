@@ -149,6 +149,7 @@ const AiAnalyticsDashboardPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiAnalyticsDashboardPage
   </button>
   </button>

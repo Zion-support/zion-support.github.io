@@ -149,6 +149,7 @@ const Ai3dGenerationPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default Ai3dGenerationPage
   </button>
   </button>

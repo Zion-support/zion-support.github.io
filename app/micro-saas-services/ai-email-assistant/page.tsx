@@ -149,6 +149,7 @@ const AiEmailAssistantPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiEmailAssistantPage
   </button>
   </button>

@@ -149,6 +149,7 @@ const AiSentimentAnalyzerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSentimentAnalyzerPage
   </button>
   </button>

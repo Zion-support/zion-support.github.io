@@ -29,6 +29,7 @@
     enableHSTS: boolean,
     enableXSSProtection: boolean,}
   }}
+
 const config: AppConfig = {
   app: {
     name: 'Zion Tech Group',
@@ -90,4 +91,5 @@ const config: AppConfig = {
  */export function isDevelopment(): boolean {
   return config.app.environment === 'development'}
 }
+
 export default config

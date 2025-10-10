@@ -1,4 +1,5 @@
-'use client'import React, { useEffect, useState, useCallback } from 'react'
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react'
 interface PerformanceOptimizerProps {
   children: React.ReactNode
@@ -7,6 +8,7 @@ interface PerformanceOptimizerProps {
   enablePreloading?: boolean
   enableCodeSplitting?: boolean
 }
+
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ 
   children, 
   enableImageOptimization = true,

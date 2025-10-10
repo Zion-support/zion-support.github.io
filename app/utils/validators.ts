@@ -189,6 +189,7 @@ export function isValidPhone(phone: string): boolean {
     message: string,}
   }>
 }
+
 export function validateForm(fields: Record<string, FormField>)
 ): Record<string, string[]> {}
   const errors: Record<string, string[]> = {}
@@ -233,6 +234,7 @@ export function validateForm(fields: Record<string, FormField>)
     validate: isStrongPassword,
     message}
   })}
+
 export function hasMaxLength(value: string, maxLength: number): boolean {
   return value && value.length <= maxLength}
 }

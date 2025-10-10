@@ -149,6 +149,7 @@ const AiQuantumFinancialOraclePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiQuantumFinancialOraclePage
   </button>
   </button>

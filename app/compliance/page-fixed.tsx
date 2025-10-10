@@ -118,6 +118,7 @@ const PageFixedPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default PageFixedPage
   </button>
   </button>

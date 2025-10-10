@@ -149,6 +149,7 @@ const AiLeadGenerationPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiLeadGenerationPage
   </button>
   </button>

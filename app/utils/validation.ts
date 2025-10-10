@@ -5,6 +5,7 @@
   isValid: boolean,
   error?: string
   errors?: string[];,}
+
 export interface ValidationResult {/* TODO: Fix JSX expression */}
 }
 /**
@@ -132,6 +133,7 @@ return {/* TODO: Fix JSX expression */}
  */export function validateDate(dateString: string): ValidationResult {,
   if (!dateString || dateString.trim() === '') {,}
     return { isValid: false, error: 'Date is required' }}
+
 export function validateDate(dateStrin)
   g: string): ValidationResult {/* TODO: Fix JSX expression */}
   r: 'Date is required' }
@@ -263,6 +265,7 @@ return {/* TODO: Fix JSX expression */}
     }
   }
 }
+
 export {
   isValidEmail,
   isValidPhone,

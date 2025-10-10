@@ -9,8 +9,10 @@
   referrerPolicy?: string}
   permissionsPolicy?: string}
 }
+
 export const defaultSecurityHeaders: SecurityHeadersConfig = {
   contentSecurityPolicy: [,}
+
 export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string
   strictTransportSecurity?: string
@@ -19,6 +21,7 @@ export interface SecurityHeadersConfig {}
   referrerPolicy?: string
   permissionsPolicy?: string}
 }
+
 export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy
   contentSecurityPolicy: [
@@ -75,8 +78,10 @@ export function getSecurityHeaders()
   }
   if (config.permissionsPolicy) {}
     headers['Permissions-Policy'] = config.permissionsPolicy}
+
 export interface SecurityHeadersConfig {/* TODO: Fix JSX expression */}
 }
+
 export const,
   defaultSecurityHeaders: SecurityHeadersConfig = {/* TODO: Fix JSX expression */}
 }
@@ -117,4 +122,5 @@ export const,
   e: string }> {/* TODO: Fix JSX expression */}
   }))
 }
+
 export default defaultSecurityHeaders

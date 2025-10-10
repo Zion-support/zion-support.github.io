@@ -1,4 +1,5 @@
-'use client'import React from 'react'
+'use client'
+import React from 'react'
 import { ArrowRight, CheckCircle  } from 'lucide-react'
 interface ServiceCardProps {
   title: string
@@ -9,6 +10,7 @@ interface ServiceCardProps {
   onSelect?: () => void
   className?: string
 }
+
 const ServiceCard: React.FC<ServiceCardProps> = ({
   title,
   description,
@@ -58,5 +60,6 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
       )}
     </div>
   )}
+
 export default ServiceCard
   </ServiceCardProps>

@@ -68,5 +68,6 @@ class ProductionLogger {}
     this.log('error', message, data, context)
   }
 }
+
 export const logger = new ProductionLogger()
 export default logger

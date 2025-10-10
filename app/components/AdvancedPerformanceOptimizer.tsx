@@ -1,8 +1,10 @@
-'use client'import React, { useEffect, useState, useCallback } from 'react'
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
 interface PerformanceOptimizerProps {
   children: React.ReactNode
   enableOptimizations?: boolean
 }
+
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
   enableOptimizations = true
@@ -113,5 +115,6 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       )}
     </div>
   )}
+
 export default AdvancedPerformanceOptimizer
   </PerformanceOptimizerProps>

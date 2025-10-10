@@ -150,6 +150,7 @@ const AiFraudDetectionPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiFraudDetectionPage
   </button>
   </button>

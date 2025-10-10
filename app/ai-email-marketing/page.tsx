@@ -149,6 +149,7 @@ const AiEmailMarketingPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiEmailMarketingPage
   </button>
   </button>

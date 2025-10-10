@@ -149,6 +149,7 @@ const AiDataVisualizationPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiDataVisualizationPage
   </button>
   </button>

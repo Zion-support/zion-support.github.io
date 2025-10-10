@@ -254,11 +254,13 @@ const,
   autho,
   r: 'Zion Holdings'
 }
+
 export const generateStructuredData = (dat,
   a: {/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
   }return { ...baseStructure, ...data }
 }
+
 export class SEOEnhancer {/* TODO: Fix JSX expression */}
   g: Partial<SEOConfig> = {}) {/* TODO: Fix JSX expression */}
     this.config = { ...defaultSEOConfig, ...config }
@@ -652,6 +654,7 @@ Sitemap: ${sitemapUrl}`
   }
   return baseStructure
 }
+
 export const generateSitemapData = (page,
   s: Array<{/* TODO: Fix JSX expression */}
   }>)
@@ -660,6 +663,7 @@ export const generateSitemapData = (page,
     }
   }
 }
+
 export const generateRobotsTxt = (sitemapUr,
   l: string, disallowPath)
   s: string[] = []) => {/* TODO: Fix JSX expression */}`
@@ -670,6 +674,7 @@ export const generateRobotsTxt = (sitemapUr,
 ${disallowRules}
 Sitema,`
   p: ${sitemapUrl}`}
+
 export const validateSEOData = (
   const issues: string[] = []
   if (data.title.length < 30) {,) => {
@@ -677,6 +682,7 @@ export const validateSEOData = (
     $3
   )
 }
+
 export const validateSEOData = (data: {// title: string description: string url: string}) => {}
   const issues: string[] = []
   if (data.title.length < 30) {}
@@ -750,12 +756,14 @@ export const initializeSEOEnhancements = useCallback((...args) => {}
   }
   return issues
 }
+
 export const generateBreadcrumbData = (breadcrumb,
   s: Array<{/* TODO: Fix JSX expression */}
   }>)
 ) => {/* TODO: Fix JSX expression */}
     }))}
 }
+
 export const initializeSEOEnhancements = () => {/* TODO: Fix JSX expression */}
   })
   const script = document.createElement('script')

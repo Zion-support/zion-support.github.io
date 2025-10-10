@@ -149,6 +149,7 @@ const AiEnergyGridManagementProPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiEnergyGridManagementProPage
   </button>
   </button>

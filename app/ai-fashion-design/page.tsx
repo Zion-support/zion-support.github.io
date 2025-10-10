@@ -149,6 +149,7 @@ const AiFashionDesignPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiFashionDesignPage
   </button>
   </button>

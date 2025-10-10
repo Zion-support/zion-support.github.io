@@ -9,12 +9,14 @@
   sessionId?: string}
   metadata?: Record<string, unknown>}
 }
+
 export interface TrackedError {
   message: string,
   stack?: string
   context: ErrorContext,
   timestamp: string,
   userAgent: string,}
+
 export interface ErrorContext {}
   component?: string
   action?: string
@@ -22,6 +24,7 @@ export interface ErrorContext {}
   sessionId?: string
   metadata?: Record<string, unknown>}</strin>
 }
+
 export interface TrackedError {}
   message: string
   stack?: string
@@ -164,6 +167,7 @@ class EnhancedErrorTracker {}
 // Export singleton instanceexport const errorTracker = new EnhancedErrorTracker()
 export default errorTrackerexport interface ErrorContext {/* TODO: Fix JSX expression */}
 }
+
 export interface TrackedError {/* TODO: Fix JSX expression */}
 }
 class EnhancedErrorTracker {/* TODO: Fix JSX expression */}

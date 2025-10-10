@@ -149,6 +149,7 @@ const AiNlpPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiNlpPage
   </button>
   </button>

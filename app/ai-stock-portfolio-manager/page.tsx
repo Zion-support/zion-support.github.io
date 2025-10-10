@@ -149,6 +149,7 @@ const AiStockPortfolioManagerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiStockPortfolioManagerPage
   </button>
   </button>

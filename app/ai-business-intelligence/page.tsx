@@ -149,6 +149,7 @@ const AiBusinessIntelligencePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiBusinessIntelligencePage
   </button>
   </button>

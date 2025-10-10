@@ -149,6 +149,7 @@ const AiTelepathicInterfacePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiTelepathicInterfacePage
   </button>
   </button>

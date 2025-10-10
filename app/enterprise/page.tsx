@@ -209,6 +209,7 @@ const EnterprisePage: React.FC = () => {
       <Footer />
     </div>
   )}
+
 export default EnterprisePage
   </button>
   </h2>

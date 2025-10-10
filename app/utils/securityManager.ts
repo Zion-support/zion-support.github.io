@@ -6,6 +6,7 @@
  * Enhanced Security Utilities
  * Generated: 2025-10-08 T02:06:22.083 Z
  */}
+
 export class SecurityManager {}
   private static instance: SecurityManager}
   private constructor() {}
@@ -112,4 +113,5 @@ export class SecurityManager {}
     return global._rateLimitStorage
   }
 }
+
 export default SecurityManager.getInstance()

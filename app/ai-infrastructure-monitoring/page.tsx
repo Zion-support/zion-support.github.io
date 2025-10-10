@@ -149,6 +149,7 @@ const AiInfrastructureMonitoringPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiInfrastructureMonitoringPage
   </button>
   </button>

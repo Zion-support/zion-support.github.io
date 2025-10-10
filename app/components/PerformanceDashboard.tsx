@@ -1,4 +1,5 @@
-'use client'import React, { useState, useEffect } from 'react'
+'use client'
+import React, { useState, useEffect } from 'react'
 import { Activity, Zap, Cpu, MemoryStick, TrendingUp, AlertTriangle  } from 'lucide-react'
 interface PerformanceMetrics {
   loadTime: number
@@ -10,6 +11,7 @@ interface PerformanceMetrics {
 interface PerformanceProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void
 }
+
 const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
@@ -165,6 +167,7 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
       </div>
     </div>
   )}
+
 export default PerformanceDashboard
   </div>
   </h3>

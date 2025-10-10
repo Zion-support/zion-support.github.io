@@ -157,6 +157,7 @@ const SecurityMonitoringPage: React.FC = () => {
       </div>
     </React.Fragment>
   )}
+
 export default SecurityMonitoringPage
   </button>
   </button>

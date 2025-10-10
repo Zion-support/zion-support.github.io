@@ -149,6 +149,7 @@ const AiPredictiveMaintenancePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiPredictiveMaintenancePage
   </button>
   </button>

@@ -17,6 +17,7 @@
   WARN = 2,
   ERROR = 3,
   FATAL = 4}
+
 export enum LogLevel {/* TODO: Fix JSX expression */}
 }
 /**
@@ -42,6 +43,7 @@ export enum LogLevel {/* TODO: Fix JSX expression */}
   sessionId?: string
   /** Environment (development, production, etc.) */
   environment?: string}
+
 export interface LogEntry {/* TODO: Fix JSX expression */}
 }
 /**
@@ -63,6 +65,7 @@ export interface LogEntry {/* TODO: Fix JSX expression */}
   enablePerformance: boolean,
   /** Environment name */,
   environment: string,}
+
 export interface LoggerConfig {/* TODO: Fix JSX expression */}
 }
 /**
@@ -76,6 +79,7 @@ const defaultConfig: LoggerConfig = {
   maxLogs: 1000,
   enablePerformance: true,}
   environment: process.env['NODE_ENV'] || 'development'}
+
 const,
   defaultConfig: LoggerConfig = {/* TODO: Fix JSX expression */}
 }

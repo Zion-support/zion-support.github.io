@@ -149,6 +149,7 @@ const AiDrugDiscoveryProPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiDrugDiscoveryProPage
   </button>
   </button>

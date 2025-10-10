@@ -149,6 +149,7 @@ const AiSmartHomeControllerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSmartHomeControllerPage
   </button>
   </button>

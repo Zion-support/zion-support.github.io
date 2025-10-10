@@ -149,6 +149,7 @@ const AiEnergyPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiEnergyPage
   </button>
   </button>

@@ -149,6 +149,7 @@ const AiTransportationPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiTransportationPage
   </button>
   </button>

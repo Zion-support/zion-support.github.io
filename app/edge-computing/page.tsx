@@ -249,6 +249,7 @@ const EdgeComputingPage: React.FC = () => {
       <Footer />
     </div>
   )}
+
 export default EdgeComputingPage
   </button>
   </button>

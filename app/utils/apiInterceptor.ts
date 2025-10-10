@@ -81,6 +81,7 @@ class APIInterceptor {
     }
   }
 }
+
 export const apiInterceptor = new APIInterceptor()
 export default APIInterceptor
  * Centralized API request handling with error handling, retry logic, and caching
@@ -94,15 +95,20 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
   l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
     }
 }
+
 export interface APIConfig {/* TODO: Fix JSX expression */}
   }
 }
+
 export interface RequestConfig {/* TODO: Fix JSX expression */}
 }
+
 export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
 }
+
 export interface CacheEntry {/* TODO: Fix JSX expression */}
 }
+
 export class APIInterceptor {/* TODO: Fix JSX expression */}
   g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
   headers: config.headers || {},

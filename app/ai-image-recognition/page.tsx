@@ -149,6 +149,7 @@ const AiImageRecognitionPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiImageRecognitionPage
   </button>
   </button>

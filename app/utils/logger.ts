@@ -9,6 +9,7 @@
   ERROR = 3,
   FATAL = 4}
 }
+
 export interface LogContext {
   userId?: string
   sessionId?: string
@@ -58,10 +59,13 @@ class Logger {
  * Enhanced Logger Utility
  * Provides structured logging with different levels and contexts
  */}
+
 export enum LogLevel {/* TODO: Fix JSX expression */}
 }
+
 export interface LogContext {/* TODO: Fix JSX expression */}
 }
+
 export interface LogMetadata {/* TODO: Fix JSX expression */}
 }
 class Logger {/* TODO: Fix JSX expression */}
@@ -233,6 +237,7 @@ class Logger {/* TODO: Fix JSX expression */}
     return JSON.stringify(this.logs, null, 2)}
   }
 }
+
 export const logger = new Logger()
   private sendToLoggingService(entr)
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
@@ -248,4 +253,5 @@ export const logger = new Logger()
     }
   }
 }
+
 export const logger = new Logger() `

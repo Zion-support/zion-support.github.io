@@ -10,6 +10,7 @@ interface LinkProps {}
   onClick?: () => void
   'aria-label'?: string}
 }
+
 export const Link: React.FC<LinkProps>= ({
 export const Link: React.FC<LinkProps> = ({}
   href,
@@ -21,7 +22,9 @@ export const Link: React.FC<LinkProps> = ({}
   onClick?: () => void;
   'aria-label'?: string;}
 }
+
 export const Link: React.FC<LinkProps>= ({}
+
 export const Link: React.FC<LinkProps> = ({}
   href,
   href: string,
@@ -32,6 +35,7 @@ export const Link: React.FC<LinkProps> = ({}
   onClick?: () => void
   'aria-label'?: string}
 }
+
 export const Link: React.FC<LinkProps> = ({,
   href
   children,
@@ -57,6 +61,7 @@ export const Link: React.FC<LinkProps> = ({,
   return(<aimport React from 'react'
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
+
 export const,
   Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -80,6 +85,7 @@ export const,
       {children})
     </a>))
 }
+
 export default Link
     >
       {children}

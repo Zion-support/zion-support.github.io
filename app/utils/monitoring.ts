@@ -11,6 +11,7 @@ import { performanceConfig  } from '../../performance.config'export interface Pe
   ttfb?: number
   inp?: number}
 }
+
 export interface ErrorReport {
   message: string,
   stack?: string

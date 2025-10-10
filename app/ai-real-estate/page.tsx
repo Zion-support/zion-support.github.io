@@ -149,6 +149,7 @@ const AiRealEstatePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiRealEstatePage
   </button>
   </button>

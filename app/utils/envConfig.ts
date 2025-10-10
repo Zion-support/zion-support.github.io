@@ -40,6 +40,7 @@ class EnvironmentConfig {}
       sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
     }
+
 export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvironmentConfig {/* TODO: Fix JSX expression */}

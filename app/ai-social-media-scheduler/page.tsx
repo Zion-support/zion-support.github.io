@@ -149,6 +149,7 @@ const AiSocialMediaSchedulerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSocialMediaSchedulerPage
   </button>
   </button>

@@ -193,6 +193,7 @@ return (brightest + 0.05) / (darkest + 0.05)}
         break
     }
   }
+
 const hideTooltip  = () => {
   return (
     $3

@@ -149,6 +149,7 @@ const AiOpsPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiOpsPage
   </button>
   </button>

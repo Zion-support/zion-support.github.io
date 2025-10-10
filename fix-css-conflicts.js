@@ -8,8 +8,7 @@ function fixCssConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>> ')) {
-      return false; // No conflicts to fix
+    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('      return false; // No conflicts to fix
     }
     
     console.log(`Fixing CSS merge conflicts in: ${filePath}`);
@@ -34,8 +33,7 @@ function fixCssConflicts(filePath) {
         continue;
       }
       
-      if (line.trim().startsWith('>>>>>>> ')) {
-        inConflict = false;
+      if (line.trim().startsWith('        inConflict = false;
         keepLines = false;
         continue;
       }

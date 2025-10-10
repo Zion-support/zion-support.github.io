@@ -149,6 +149,7 @@ const AiCybersecurityMonitorPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiCybersecurityMonitorPage
   </button>
   </button>

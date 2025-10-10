@@ -12,6 +12,7 @@
   severity: 'low' | 'medium' | 'high' | 'critical',}
   context?: Record<string, unknown>}
 }
+
 export interface ErrorReporterConfig {
   enableConsoleLogging: boolean,
   enableRemoteLogging: boolean,
@@ -19,7 +20,9 @@ export interface ErrorReporterConfig {
   maxErrorsInMemory: number,}
   captureContext: boolean}
 }
+
 const defaultConfig: ErrorReporterConfig = {,}
+
 export interface ErrorReport {}
   message: string
   stack?: string
@@ -30,6 +33,7 @@ export interface ErrorReport {}
   severity: 'low' | 'medium' | 'high' | 'critical'
   context?: Record<string, unknown>}</strin>
 }
+
 export interface ErrorReporterConfig {}
   enableConsoleLogging: boolean
   enableRemoteLogging: boolean
@@ -37,6 +41,7 @@ export interface ErrorReporterConfig {}
   maxErrorsInMemory: number,
     captureContext: boolean}
 }
+
 const defaultConfig: ErrorReporterConfig = {}
   enableConsoleLogging: process.env['NODE_ENV'] === 'development',
   enableRemoteLogging: process.env['NODE_ENV'] === 'production',
@@ -49,6 +54,7 @@ const defaultConfig: ErrorReporterConfig = {}
   private static instance: ErrorReporter,
   private config: ErrorReporterConfig,
   private errorQueue: ErrorReport[] = [],}
+
 export class ErrorReporter {}
   private static instance: ErrorReporter
   private config: ErrorReporterConfig
@@ -56,10 +62,13 @@ export class ErrorReporter {}
   private errorCount: Map<string, number> = new Map()}
   private constructor(config: Partial<ErrorReporterConfig> = {}) {}
     this.config = { ...defaultConfig, ...config }
+
 export interface ErrorReport {/* TODO: Fix JSX expression */}
 }
+
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
 }
+
 const,
   defaultConfig: ErrorReporterConfig = {/* TODO: Fix JSX expression */}
 }
@@ -312,6 +321,7 @@ const,
     componentStack: errorInfo.componentStack}
   })
 }
+
 export default ErrorReporterexport const reportError = (erro,
   r: Error,
   severity?: ErrorReport['severity'],
@@ -329,5 +339,6 @@ export default ErrorReporterexport const reportError = (erro,
   e: string)
 ): void => {/* TODO: Fix JSX expression */}
   })}
+
 export default ErrorReporter
 `

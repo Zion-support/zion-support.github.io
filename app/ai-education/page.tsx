@@ -149,6 +149,7 @@ const AiEducationPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiEducationPage
   </button>
   </button>

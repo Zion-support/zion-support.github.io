@@ -1,5 +1,8 @@
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database  } from 'lucide-react'const CloudInfrastructurePage: React.FC  = () => {
+'use client'
+import React from 'react'
+import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database  } from 'lucide-react'
+const CloudInfrastructurePage: React.FC  = () => {
   const features = [
     {
 icon: Shield,
@@ -121,6 +124,7 @@ icon: Shield,
       </div>
     </div>
   )}
+
 export default CloudInfrastructurePage
   </button>
   </button>

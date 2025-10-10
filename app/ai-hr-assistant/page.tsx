@@ -149,6 +149,7 @@ const AiHrAssistantPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiHrAssistantPage
   </button>
   </button>

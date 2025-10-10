@@ -4,6 +4,7 @@
  * Provides comprehensive error tracking with categorization and analytics
  */export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
+
 export enum ErrorCategory {
   Network = 'network',
   Validation = 'validation',
@@ -12,6 +13,7 @@ export enum ErrorCategory {
   Configuration = 'configuration',
   ExternalService = 'external_service'}
 }
+
 export interface ErrorMetadata {
   category: ErrorCategory,
   severity: ErrorSeverity,
@@ -24,6 +26,7 @@ export interface ErrorMetadata {
   userAgent?: string;,
   url?: string}
 }
+
 export interface TrackedError {
   id: string,
   message: string,
@@ -113,8 +116,10 @@ class ErrorTrackingService {
         logger.error('Failed to report error to external service', { error: err.message })
       })export enum ErrorCategory {/* TODO: Fix JSX expression */}
 }
+
 export interface ErrorMetadata {/* TODO: Fix JSX expression */}
 }
+
 export interface TrackedError {/* TODO: Fix JSX expression */}
 }
 class ErrorTrackingService {/* TODO: Fix JSX expression */}
@@ -247,6 +252,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
     }
   }
 }
+
 export const errorTracking = ErrorTrackingService.getInstance()
   /**
    * Report critical errors to external service
@@ -304,13 +310,16 @@ export const errorTracking = ErrorTrackingService.getInstance()
     }
   }
 }
+
 export const errorTracking = ErrorTrackingService.getInstance()export default ErrorTrackingService
 export const trackError = (erro)
   r: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {/* TODO: Fix JSX expression */}
   })}
+
 export const getErrorStatistics = () => {/* TODO: Fix JSX expression */}
   }))return {/* TODO: Fix JSX expression */}
   }}
+
 export const clearErrorHistory = () => errorTracking.clearErrors()export const addErrorListener = (listene,
   r: (erro)
   r: TrackedError) => void) =>

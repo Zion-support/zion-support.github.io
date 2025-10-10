@@ -86,6 +86,7 @@
       </section>
     </div>
   )}
+
 export default GlobalErrorBoundaryPage
   </button>
   </button>

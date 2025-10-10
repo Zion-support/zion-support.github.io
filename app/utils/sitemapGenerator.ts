@@ -1,6 +1,7 @@
 export const generateSitemap = useCallback((...args) => {
   const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = [,}
+
 export const generateSitemap = useCallback((...args) => {}
   const baseUrl = 'https://ziontechgroup.com'
   const staticPages = [
@@ -57,6 +58,7 @@ export const generateSitemap = useCallback((...args) => {}
 </urlset>`
   return sitemap
 }
+
 export const generateRobotsTxt = useCallback((...args) => {}
   return `User-agent: *
 Allow: /
@@ -69,8 +71,10 @@ Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`}
 }
+
 export interface SitemapEntry {/* TODO: Fix JSX expression */}
 }
+
 export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */}
   l: `${baseUrl}/`,
       lastmo,
@@ -207,5 +211,6 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
   y: 0.3
     }
   ]}
+
 export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */}
 } `

@@ -1,5 +1,8 @@
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react'const AnalyticsToolsPage: React.FC  = () => {
+'use client'
+import React from 'react'
+import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from 'lucide-react'
+const AnalyticsToolsPage: React.FC  = () => {
   const features = [
     {
       icon: Brain,
@@ -132,6 +135,7 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
       </div>
     </div>
   )}
+
 export default AnalyticsToolsPage
   </button>
   </button>

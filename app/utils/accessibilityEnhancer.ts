@@ -306,9 +306,12 @@ focusableElements[nextIndex]?.focus();
 export const accessibilityEnhancer = new AccessibilityEnhancer()
 export const announceToScreenReader = (message: string) => {
   accessibilityEnhancer.announce(message)}
+
 export const updateFocusableElements = () => {
   accessibilityEnhancer.updateFocusableElements()}
+
 export const focusFirstElement = () => {
   accessibilityEnhancer.focusFirst()}
+
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast()}

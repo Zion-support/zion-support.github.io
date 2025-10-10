@@ -149,6 +149,7 @@ const AiAgriculturalIntelligenceProPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiAgriculturalIntelligenceProPage
   </button>
   </button>

@@ -78,10 +78,13 @@ class APIClient {}
  * Enhanced API Client with retry logic, caching, and error handling
  */export interface ApiClientConfig {/* TODO: Fix JSX expression */}
 }
+
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {/* TODO: Fix JSX expression */}
 }
+
 export interface ApiResponse<T = unknown> {/* TODO: Fix JSX expression */}
 }
+
 export class ApiError extends Error {/* TODO: Fix JSX expression */}
   }
 }
@@ -301,6 +304,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     apiCache.clear()
   }
 }
+
 export const apiClient = new APIClient()
 export default APIClient
 const apiClient = new ApiClient({/* TODO: Fix JSX expression */}

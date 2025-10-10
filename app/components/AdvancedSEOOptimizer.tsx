@@ -1,4 +1,5 @@
-'use client'import React, { useEffect, useState, useCallback } from 'react'
+'use client'
+import React, { useEffect, useState, useCallback } from 'react'
 import { Helmet  } from 'react-helmet-async'
 interface SEOOptimizerProps {
   title?: string
@@ -10,6 +11,7 @@ interface SEOOptimizerProps {
   structuredData?: object
   children: React.ReactNode
 }
+
 const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
@@ -142,5 +144,6 @@ const AdvancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       )}
     </React.Fragment>
   )}
+
 export default AdvancedSEOOptimizer
   </SEOOptimizerProps>

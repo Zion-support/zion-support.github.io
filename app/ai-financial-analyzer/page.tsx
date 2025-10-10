@@ -149,6 +149,7 @@ const AiFinancialAnalyzerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiFinancialAnalyzerPage
   </button>
   </button>

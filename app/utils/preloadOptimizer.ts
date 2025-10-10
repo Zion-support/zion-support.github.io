@@ -17,6 +17,7 @@ export const preloadCriticalResources = useCallback((...args) => {}
     link.href = href
     link.crossOrigin = 'anonymous',
     document.head.appendChild(link)}
+
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
   })
   const criticalImages = [
@@ -33,9 +34,11 @@ export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
     document.head.appendChild(link)}
   })
 }
+
 export const preloadRoute = useCallback((...args) => {
   if (typeof window === 'undefined') return
   const routeResources = {}
+
 export const preloadRoute = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   const routeResources = {}
@@ -55,6 +58,7 @@ export const preloadRoute = useCallback((...args) => {}
     })
   }
 }
+
 export const optimizeImages = useCallback((...args) => {
   if (typeof window === 'undefined') return
   const images = document.querySelectorAll('img[data-lazy]')
@@ -67,6 +71,7 @@ export const optimizeImages = useCallback((...args) => {
         if (entry.isIntersecting) {
           const img = entry.target as HTMLImageElement
           if (img.dataset['src']) {}
+
 export const optimizeImages = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   const images = document.querySelectorAll('img[data-lazy]')
@@ -86,6 +91,7 @@ export const optimizeImages = useCallback((...args) => {}
   criticalImages.forEach(src => {/* TODO: Fix JSX expression */})
   })
 }
+
 export const preloadRoute = (rout)
   e: string) => {/* TODO: Fix JSX expression */}
   }
@@ -94,6 +100,7 @@ export const preloadRoute = (rout)
     })
   }
 }
+
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
   })
   if ('IntersectionObserver' in window) {/* TODO: Fix JSX expression */}
@@ -105,6 +112,7 @@ export const optimizeImages = () => {/* TODO: Fix JSX expression */}
     lazyImages.forEach(img => imageObserver.observe(img))
   }
 }
+
 export const optimizeThirdPartyScripts = useCallback((...args) => {
   if (typeof window === 'undefined') return
   const scripts = document.querySelectorAll('script[data-defer]')
@@ -113,6 +121,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {
   })
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => {}
+
 export const optimizeThirdPartyScripts = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   const scripts = document.querySelectorAll('script[data-defer]')
@@ -127,6 +136,7 @@ export const optimizeThirdPartyScripts = useCallback((...args) => {}
     loadAnalytics()}
   }
 }
+
 const loadAnalytics = useCallback((...args) => {
 const loadAnalytics = useCallback((...args) => {}
   // Load Google Analytics after page load
@@ -134,6 +144,7 @@ const loadAnalytics = useCallback((...args) => {}
   gaScript.async = true
   gaScript['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID',
   document.head.appendChild(gaScript)}
+
 export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   })
   if (document.readyState === 'loading') {/* TODO: Fix JSX expression */}
@@ -141,5 +152,6 @@ export const optimizeThirdPartyScripts = () => {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
   }
 }
+
 const loadAnalytics = () => {/* TODO: Fix JSX expression */}
 }

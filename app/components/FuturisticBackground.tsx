@@ -118,6 +118,7 @@ const FuturisticBackgroundPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default FuturisticBackgroundPage
   </button>
   </button>

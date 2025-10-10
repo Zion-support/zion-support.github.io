@@ -157,6 +157,7 @@ const EmailMarketingAutomationPage: React.FC = () => {
       </div>
     </React.Fragment>
   )}
+
 export default EmailMarketingAutomationPage
   </button>
   </button>

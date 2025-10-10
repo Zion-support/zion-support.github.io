@@ -149,6 +149,7 @@ const AiDataAnalyticsPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiDataAnalyticsPage
   </button>
   </button>

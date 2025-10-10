@@ -137,6 +137,7 @@ const MainPage: React.FC = () => {
       </section>
     </div>
   )}
+
 export default MainPage
   </button>
   </button>

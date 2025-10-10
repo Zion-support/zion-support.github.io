@@ -149,6 +149,7 @@ const AiTimeTrackerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiTimeTrackerPage
   </button>
   </button>

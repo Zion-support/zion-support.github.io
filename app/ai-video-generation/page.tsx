@@ -149,6 +149,7 @@ const AiVideoGenerationPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiVideoGenerationPage
   </button>
   </button>

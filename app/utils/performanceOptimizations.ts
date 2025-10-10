@@ -57,6 +57,7 @@
     (element: Element | null) => {}
       if (observer && element) {}
         observer.observe(element)return () => observer.unobserve(element)}
+
 'use client'
 // Debounce utility for performanceexport const debounce = <T extends (...arg)
   s: any[]) => any>(fun,
@@ -67,6 +68,7 @@
   s: Parameters<T>) => void) => {/* TODO: Fix JSX expression */}
   }
 }
+
 export const throttle = <T extends (...arg)
   s: any[]) => any>(fun,
   c: T,
@@ -77,6 +79,7 @@ export const throttle = <T extends (...arg)
     }
   }
 }
+
 export const useIntersectionObserver = (callbac,
   k: (entrie)
   s: IntersectionObserverEntry[]) => void,
@@ -133,6 +136,7 @@ export const useLazyImage = useCallback((...args) => {}
   useEffect(() => {/* TODO: Fix JSX expression */}
   }, [disconnect])return { observe, disconnect }
 }
+
 export const useLazyImage = (sr)
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
   const { observe } = useIntersectionObserver(useCallback()
@@ -245,6 +249,7 @@ export const useMemoryMonitoring = useCallback((...args) => {}
         })
   )return { imageSrc, isLoaded, isError, observe }
 }
+
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   }>({})
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -272,6 +277,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
   }, [])
   return metrics
 }
+
 export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   }>({})
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -296,6 +302,7 @@ export const preloadResource = useCallback((...args) => {}
 // Critical resource preloadingexport const preloadCriticalResources = useCallback((...args) => {
   if (typeof window === 'undefined') return
 // Critical resource preloading}
+
 export const preloadCriticalResources = useCallback((...args) => {}
   if (typeof window === 'undefined') return
   preloadResource('/fonts/inter-var.woff2', 'font')
@@ -377,6 +384,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
   }, [])
   return bundleSize
 }
+
 export default {}
   debounce,
   throttle,
@@ -389,12 +397,15 @@ export default {}
   useBundleSizeMonitoring}
 }
 }
+
 export const preloadResource = (hre,
   f: string, a)
   s: string) => {/* TODO: Fix JSX expression */}
 }
+
 export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
 }
+
 export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
   }>({})
   useEffect(() => {/* TODO: Fix JSX expression */}
@@ -412,5 +423,6 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
     }
   }, [])
   return bundleSize}
+
 export default {/* TODO: Fix JSX expression */}
 }

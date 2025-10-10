@@ -149,6 +149,7 @@ const AiLegalPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiLegalPage
   </button>
   </button>

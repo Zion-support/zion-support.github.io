@@ -149,6 +149,7 @@ const AiExpenseTrackerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiExpenseTrackerPage
   </button>
   </button>

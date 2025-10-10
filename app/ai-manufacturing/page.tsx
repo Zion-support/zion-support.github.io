@@ -149,6 +149,7 @@ const AiManufacturingPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiManufacturingPage
   </button>
   </button>

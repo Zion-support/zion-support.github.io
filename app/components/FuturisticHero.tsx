@@ -66,6 +66,7 @@ const FuturisticHeroPage: React.FC = () => {
   </
             </div>
   )}
+
 export default FuturisticHeroPage
   </button>
   </button>

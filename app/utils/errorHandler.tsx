@@ -65,6 +65,7 @@ export interface ErrorHandlerConfig {}
 }
 // Default configurationexport const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
     enableLogging: true,}
+
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
   enableLogging: true,
   enableReporting: true,
@@ -85,6 +86,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
   enableConsoleLogging: true,
   enableNetworkLogging: true,}
   logLevel: 'error'}
+
 export class ErrorHandler {
 export class ErrorHandler {}
   private static instance: ErrorHandler,
@@ -110,6 +112,7 @@ export interface AppError {/* TODO: Fix JSX expression */}
 export const,
   defaultErrorHandlerConfig: ErrorHandlerConfig = {/* TODO: Fix JSX expression */}
 }
+
 export class ErrorHandler {/* TODO: Fix JSX expression */}
   t: number }> = []
   constructor(confi)
@@ -897,6 +900,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
                 border: 'none',
                 borderRadius: '4px'}
                 cursor: 'pointer'}
+
 export class ErrorBoundary extends React.Component<
   {/* TODO: Fix JSX expression */}
   n: React.ReactNode; fallback?: React.ReactNode },
@@ -941,6 +945,7 @@ export class ErrorBoundary extends React.Component<
     $3
   )
 }
+
 export const useErrorHandler = () => {}
   const errorHandler = ErrorHandler.getInstance()
   const handleError = useCallback()
@@ -965,6 +970,7 @@ export const useErrorHandler = () => {}
     getErrors: () => errorHandler.getErrors(),
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()}}
+
 export default ErrorHandler</string>
 </string>
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */}

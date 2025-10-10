@@ -149,6 +149,7 @@ const AiSchedulerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSchedulerPage
   </button>
   </button>

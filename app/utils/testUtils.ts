@@ -6,6 +6,7 @@
 /**
  * Wait for a specified amount of time
  */export const wait = (ms: number): Promise<void> => {,}
+
 export const wait = (ms: number): Promise<void> => {}
   return new Promise(resolve => setTimeout(resolve, ms))}
 }
@@ -95,6 +96,7 @@ export const wait = (ms: number): Promise<void> => {}
     Object.defineProperty(global, 'window', {)
       value: {)
         ...global.window),}
+
 export const mockWindow = (overrides: Partial<Window> = {}): void => {}
   if (typeof global !== 'undefined') {}
     Object.defineProperty(global, 'window', {)}
@@ -268,6 +270,7 @@ export const mockWindow = (overrides: Partial<Window> = {}): void => {}
   string: (length = 10): string => {,
     return Math.random(),
       .toString(36),}
+
 export const generateTestData = {}
   string: (length = 10): string => {}
     return Math.random()
@@ -320,12 +323,14 @@ export const generateTestData = {}
 /**
  * Deep clone an object
  */export const deepClone = <T>(obj: T): T => {,}
+
 export const deepClone = <T>(obj: T): T => {}
   return JSON.parse(JSON.stringify(obj))}
 }
 /**
  * Compare objects for equality
  */export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,}
+
 export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
   return JSON.stringify(obj1) === JSON.stringify(obj2)}
 }
@@ -336,6 +341,7 @@ export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
   private logs: string[] = [],
   private errors: string[] = [],
   private warnings: string[] = [],}
+
 export class ConsoleSpy {}
   private originalConsole: Console
   private logs: string[] = []
@@ -374,6 +380,7 @@ export class ConsoleSpy {}
     this.logs = []
     this.errors = []
     this.warnings = []}
+
 export const deepClone = <T>(ob)
   j: T): T => {/* TODO: Fix JSX expression */}
 }
@@ -414,16 +421,19 @@ export const deepClone = <T>(ob)
   resolve: (value: T) => void}
   reject: (reason?: unknown) => void}
 }
+
 export const createDeferred = <T>(): Deferred<T> => {
   let resolve as any: (value: T) => void
   let reject as any: (reason?: unknown) => void
   const promise = new Promise<T>((res, rej) => {
     resolve = res}
+
 export interface Deferred<T> {}
   promise: Promise<T>
   resolve: (value: T) => void
   reject: (reason?: unknown) => void}
 }
+
 export const createDeferred = <T>(): Deferred<T> => {}
   let resolve as any: (value: T) => void
   let reject as any: (reason?: unknown) => void
@@ -432,8 +442,10 @@ export const createDeferred = <T>(): Deferred<T> => {}
     reject = rej}
   })return { promise, resolve, reject }
 }
+
 export interface Deferred<T> {/* TODO: Fix JSX expression */}
 }
+
 export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
   })return { promise, resolve, reject }}
 /**
@@ -479,6 +491,7 @@ export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression
   const duration = performance.now() - start}
   return { result, duration }
 }
+
 export default {}
   wait,
   waitFor,
@@ -494,11 +507,13 @@ export default {}
   retryWithBackoff,
   measureExecutionTime}
 }
+
 export const measureExecutionTime = async <T>(f)
   n: () => T | Promise<T></T>
 ): Promise<{/* TODO: Fix JSX expression */}
   n: number }> => {/* TODO: Fix JSX expression */}
   return { result, duration }}
+
 export default {/* TODO: Fix JSX expression */}
 }
 `

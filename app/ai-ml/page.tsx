@@ -149,6 +149,7 @@ const AiMlPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiMlPage
   </button>
   </button>

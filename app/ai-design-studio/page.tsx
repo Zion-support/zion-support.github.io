@@ -149,6 +149,7 @@ const AiDesignStudioPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiDesignStudioPage
   </button>
   </button>

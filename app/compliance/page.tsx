@@ -1,5 +1,8 @@
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award  } from 'lucide-react'const CompliancePage: React.FC  = () => {
+'use client'
+import React from 'react'
+import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award  } from 'lucide-react'
+const CompliancePage: React.FC  = () => {
   const features = [
     {
       icon: FileCheck,
@@ -94,6 +97,7 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
       </div>
     </div>
   )}
+
 export default CompliancePage
   </button>
   </button>

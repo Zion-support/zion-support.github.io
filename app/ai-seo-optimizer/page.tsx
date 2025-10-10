@@ -149,6 +149,7 @@ const AiSeoOptimizerPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiSeoOptimizerPage
   </button>
   </button>

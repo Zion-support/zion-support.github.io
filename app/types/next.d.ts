@@ -145,12 +145,14 @@ export interface Metadata {
     yahoo?: string
     other?: Record<string, string>}
 }
+
 export interface MetadataRoute {
   url: string,
   lastModified?: string | Date
   changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
   priority?: number
 }
+
 export interface MetadataRouteSitemap extends MetadataRoute {
   url: string,
   lastModified?: string | Date

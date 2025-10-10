@@ -149,6 +149,7 @@ const AiFitnessCoachPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiFitnessCoachPage
   </button>
   </button>

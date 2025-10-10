@@ -11,6 +11,7 @@
   modifiedTime?: string
   section?: string
   tags?: string[]}
+
 export class SEOManager {
   private config: SEOConfig
   constructor(config: SEOConfig) {
@@ -112,6 +113,7 @@ export class SEOManager {
     document.head.appendChild(meta)}
   }
 }
+
 export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
   const cleanContent = content.replace(/<[^>]*>/g, '').trim()
   if (cleanContent.length <= maxLength) {
@@ -119,6 +121,7 @@ export const generateMetaDescription = (content: string, maxLength: number = 160
   }
   return cleanContent.substring(0, maxLength - 3) + '...'}
   })}
+
 export const addStructuredData = (data: any): void => {
   if (typeof document === 'undefined') return
   const script = document.createElement('script')

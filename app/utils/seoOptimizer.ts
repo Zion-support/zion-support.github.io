@@ -497,6 +497,7 @@ const defaultConfig: SEOConfig = {}
   googleAnalyticsId: process.env.GOOGLE_ANALYTICS_ID
   googleTagManagerId: process.env.GOOGLE_TAG_MANAGER_ID}
 }
+
 export const seoOptimizer = new SEOOptimizer(defaultConfig)export default seoOptimizer
   getSEOScore(): number {/* TODO: Fix JSX expression */}
   }

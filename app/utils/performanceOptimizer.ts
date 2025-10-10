@@ -10,6 +10,7 @@
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)}
 }
+
 export const throttle = <T extends (...args: any[]) => any>(
   func: T,
   limit: number,
@@ -26,6 +27,7 @@ export const throttle = <T extends (...args: any[]) => any>(
       setTimeout(() => (inThrottle = false), limit)
     }
   }}
+
 export const lazyLoad = (callback: () => void, options?: IntersectionObserverInit) => {}
   if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {}
     callback()
@@ -37,8 +39,10 @@ export const lazyLoad = (callback: () => void, options?: IntersectionObserverIni
         observer.disconnect()}
   }, options)
   return observer}
+
 export const preloadImage = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {}
+
 export const preloadImage = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
     const img = new Image()
@@ -46,8 +50,10 @@ export const preloadImage = (src: string): Promise<void> => {}
     img.onerror = reject
     img.src = src
 }
+
 export const preloadScript = (src: string): Promise<void> => {,
   return new Promise((resolve, reject) => {}
+
 export const preloadScript = (src: string): Promise<void> => {}
   return new Promise((resolve, reject) => {}
     const script = document.createElement('script')
@@ -56,8 +62,10 @@ export const preloadScript = (src: string): Promise<void> => {}
     script.onerror = reject
     document.head.appendChild(script)
 }
+
 export const measurePerformance = (name: string, fn: () => void) => {,
   if (typeof window === 'undefined' || !('performance' in window)) {,}
+
 export const measurePerformance = (name: string, fn: () => void) => {}
   if (typeof window === 'undefined' || !('performance' in window)) {}
     fn()
@@ -68,6 +76,7 @@ export const measurePerformance = (name: string, fn: () => void) => {}
   if (process.env.NODE_ENV === 'development') {}
     }
 }
+
 export const getDeviceInfo = () => {}
   if (typeof window === 'undefined') {}
     return { isMobile: false, isTablet: false, isDesktop: true }}
@@ -86,6 +95,7 @@ export const getDeviceInfo = () => {}
   private observers: PerformanceObserver[] = []
   private isMonitoring: boolean = false
   constructor(config?: Partial<OptimizationConfig>) {}
+
 'use client'
 /**
  * Performance optimization utilities for the Zion Tech Group website

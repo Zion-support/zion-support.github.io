@@ -149,6 +149,7 @@ const AiRecommendationEnginePage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiRecommendationEnginePage
   </button>
   </button>

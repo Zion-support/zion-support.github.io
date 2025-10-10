@@ -149,6 +149,7 @@ const AiVisionPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiVisionPage
   </button>
   </button>

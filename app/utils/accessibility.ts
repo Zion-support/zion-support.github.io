@@ -5,6 +5,7 @@
   fontSize: 'small' | 'medium' | 'large'
   colorScheme: 'light' | 'dark' | 'auto'}
 }
+
 export const defaultAccessibilityConfig: AccessibilityConfig = {
   enableHighContrast: false,
   enableScreenReader: true,
@@ -12,6 +13,7 @@ export const defaultAccessibilityConfig: AccessibilityConfig = {
   fontSize: 'medium',
   colorScheme: 'auto',}
 }
+
 export class AccessibilityManager {
   private config: AccessibilityConfig
   constructor(config: AccessibilityConfig = defaultAccessibilityConfig) {
@@ -81,6 +83,7 @@ return () => {
     }
   }
 }
+
 export const accessibilityManager = new AccessibilityManager()
 export const isAccessible = (element: HTMLElement): boolean => {
   const hasAriaLabel = element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby')
@@ -88,15 +91,19 @@ export const isAccessible = (element: HTMLElement): boolean => {
   const isInteractive = element.tagName === 'BUTTON' || element.tagName === 'A' || element.hasAttribute('tabindex')
   return isInteractive && (hasAriaLabel || hasTextContent)}
 }
+
 export const addAriaLabel = (element: HTMLElement, label: string): void => {
   element.setAttribute('aria-label', label)}
 }
+
 export const addAriaDescribedBy = (element: HTMLElement, descriptionId: string): void => {
   element.setAttribute('aria-describedby', descriptionId)}
 }
+
 export const makeElementFocusable = (element: HTMLElement, tabIndex: number = 0): void => {
   element.setAttribute('tabindex', tabIndex.toString())}
 }
+
 export const removeElementFocus = (element: HTMLElement): void => {
   element.setAttribute('tabindex', '-1')}
 }

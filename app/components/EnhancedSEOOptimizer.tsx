@@ -127,6 +127,7 @@ const EnhancedSEOOptimizerPage: React.FC = () => {
       </section>
     </div>
   )}
+
 export default EnhancedSEOOptimizerPage
   </button>
   </button>

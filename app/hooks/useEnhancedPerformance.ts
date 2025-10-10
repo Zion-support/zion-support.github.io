@@ -9,6 +9,7 @@ export interface UseEnhancedPerformanceOptions {
   trackPerformance?: boolean
   trackAnalytics?: boolean}
 }
+
 export function useEnhancedPerformance(_options: UseEnhancedPerformanceOptions = {}) {
   const {
     component = 'Unknown',
@@ -87,4 +88,5 @@ return {
     trackUserAction,
     measureOperation,}
   }}
+
 export default useEnhancedPerformance

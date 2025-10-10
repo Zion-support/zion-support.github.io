@@ -149,6 +149,7 @@ const AiContentGeneratorPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiContentGeneratorPage
   </button>
   </button>

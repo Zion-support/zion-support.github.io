@@ -42,6 +42,7 @@ export interface AppConfig {
     enableNetwork: boolean,}
   }
 }
+
 const defaultConfig: AppConfig = {
   environment: 'development'
   api: {
@@ -131,6 +132,7 @@ class ConfigManager {
     return this.config.environment === 'staging'}
   }
 }
+
 export const configManager = new ConfigManager()export default configManager
 export type Environment = 'development' | 'staging' | 'production' | 'test'export interface AppConfig {/* TODO: Fix JSX expression */}
   }
@@ -150,6 +152,7 @@ export type Environment = 'development' | 'staging' | 'production' | 'test'expor
   g: {/* TODO: Fix JSX expression */}
   }
 }
+
 const,
   defaultConfig: AppConfig = {/* TODO: Fix JSX expression */}
   },
@@ -169,6 +172,7 @@ const,
   g: {/* TODO: Fix JSX expression */}
   }
 }
+
 const,
   developmentConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
   },
@@ -179,6 +183,7 @@ const,
   g: {/* TODO: Fix JSX expression */}
   }
 }
+
 const,
   stagingConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
   },
@@ -189,6 +194,7 @@ const,
   g: {/* TODO: Fix JSX expression */}
   }
 }
+
 const,
   productionConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
   },
@@ -202,6 +208,7 @@ const,
   y: {/* TODO: Fix JSX expression */}
   }
 }
+
 const,
   testConfig: Partial<AppConfig> = {/* TODO: Fix JSX expression */}
   },

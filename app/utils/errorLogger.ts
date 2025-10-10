@@ -8,11 +8,13 @@
   HIGH = 'high',
   CRITICAL = 'critical'}
 }
+
 export interface ErrorLogEntry {
   timestamp: string,
   severity: ErrorSeverity,
   message: string,
   error?: Error}
+
 export interface ErrorLogEntry {}
   timestamp: string
   severity: ErrorSeverity
@@ -68,8 +70,10 @@ class ErrorLogger {}
     // Send to external logging service in production
     if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
       this.sendToExternalService(entry)}
+
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
+
 export interface ErrorLogEntry {/* TODO: Fix JSX expression */}
 }
 class ErrorLogger {/* TODO: Fix JSX expression */}

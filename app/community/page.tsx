@@ -1,5 +1,8 @@
-'use client'import React from 'react'
-import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, MessageCircle, Calendar  } from 'lucide-react'const CommunityPage: React.FC  = () => {
+'use client'
+import React from 'react'
+import { Helmet  } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Users, MessageCircle, Calendar  } from 'lucide-react'
+const CommunityPage: React.FC  = () => {
   const features = [
     {
       icon: Users,
@@ -94,6 +97,7 @@ import { Helmet  } from 'react-helmet-async'import { CheckCircle, ArrowRight, Ph
       </div>
     </div>
   )}
+
 export default CommunityPage
   </button>
   </button>

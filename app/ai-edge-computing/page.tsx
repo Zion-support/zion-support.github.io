@@ -149,6 +149,7 @@ const AiEdgeComputingPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiEdgeComputingPage
   </button>
   </button>

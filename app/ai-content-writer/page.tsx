@@ -205,6 +205,7 @@ const AIContentWriterPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiContentWriterPage
   </button>
   </h2>

@@ -3,10 +3,12 @@
  */export interface ServiceWorkerConfig {
   onSuccess?: (registration: ServiceWorkerRegistration) => void
   onUpdate?: (registration: ServiceWorkerRegistration) => void}
+
 export interface ServiceWorkerConfig {}
   onSuccess?: (registration: ServiceWorkerRegistration) => void
   onUpdate?: (registration: ServiceWorkerRegistration) => void
   onError?: (error: Error) => void}
+
 export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */}
 }
 /**
@@ -76,6 +78,7 @@ export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */}
             // Content cached for offline use
             if (config.onSuccess) {}
               config.onSuccess(registration)}
+
 export async function registerServiceWorker(confi,
   g: ServiceWorkerConfig = {})
 ): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
@@ -126,6 +129,7 @@ export async function registerServiceWorker(confi,
     return result}
   } catch (error) {}
     return false}
+
 export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */}
   }
   try {/* TODO: Fix JSX expression */}
@@ -144,6 +148,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix 
     const registration = await navigator.serviceWorker.ready
     await registration.update()}
     } catch (error) {}
+
 export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
   }
   try {/* TODO: Fix JSX expression */}
@@ -182,6 +187,7 @@ export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX express
   if (!('serviceWorker' in navigator)) {return {
       supported: false,
       registered: false,}
+
 export async function getServiceWorkerStatus(): Promise<{}
   supported: boolean
   registered: boolean
@@ -214,6 +220,7 @@ export async function getServiceWorkerStatus(): Promise<{}
       registered: false,
       active: false}
     }
+
 export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expression */}
 }> {/* TODO: Fix JSX expression */}
     }
@@ -224,4 +231,5 @@ export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expres
     }
   }
 }
+
 export default registerServiceWorker

@@ -149,6 +149,7 @@ const AiHrPage: React.FC = () => {
       <Footer />
     </React.Fragment>
   )}
+
 export default AiHrPage
   </button>
   </button>
