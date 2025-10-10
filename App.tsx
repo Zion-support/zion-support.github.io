@@ -73,6 +73,21 @@ const StatusPage = React.lazy(() => import('./app/status/page'));
 const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
+const HealthPage = React.lazy(() => import('./app/health/page'));
+const NewsPage = React.lazy(() => import('./app/news/page'));
+const SecurityPage = React.lazy(() => import('./app/security/page'));
+const CompliancePage = React.lazy(() => import('./app/compliance/page'));
+const GDPRPage = React.lazy(() => import('./app/gdpr/page'));
+const AIMarketingPage = React.lazy(() => import('./app/ai-marketing/page'));
+const AIAutomationPage = React.lazy(() => import('./app/ai-automation/page'));
+const AIHealthcarePage = React.lazy(() => import('./app/ai-healthcare/page'));
+const AIFintechPage = React.lazy(() => import('./app/ai-fintech/page'));
+const QuantumComputingPage = React.lazy(() => import('./app/quantum-computing/page'));
+const AutonomousSystemsPage = React.lazy(() => import('./app/autonomous-systems/page'));
+const BlockchainWeb3Page = React.lazy(() => import('./app/blockchain-web3/page'));
+const IoTEdgeComputingPage = React.lazy(() => import('./app/iot-edge-computing/page'));
+const BusinessIntelligencePage = React.lazy(() => import('./app/business-intelligence/page'));
+const RoboticsPage = React.lazy(() => import('./app/robotics/page'));
 
 // Error Boundary Component
 interface ErrorBoundaryState {
@@ -189,6 +204,21 @@ const App: React.FC = memo(() => {
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/health" element={<HealthPage />} />
+                  <Route path="/news" element={<NewsPage />} />
+                  <Route path="/security" element={<SecurityPage />} />
+                  <Route path="/compliance" element={<CompliancePage />} />
+                  <Route path="/gdpr" element={<GDPRPage />} />
+                  <Route path="/ai-marketing" element={<AIMarketingPage />} />
+                  <Route path="/ai-automation" element={<AIAutomationPage />} />
+                  <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
+                  <Route path="/ai-fintech" element={<AIFintechPage />} />
+                  <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                  <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
+                  <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
+                  <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
+                  <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
+                  <Route path="/robotics" element={<RoboticsPage />} />
                 </Routes>
               </Suspense>
             </main>

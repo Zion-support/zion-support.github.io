@@ -187,63 +187,7 @@ const Navigation: React.FC = () => {
         { name: 'Business Intelligence', path: '/business-intelligence' }
       ]
     }
-<<<<<<< HEAD
   ];
-
-=======
-  };
-
-  const toggleServices = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
-
-  const microSAASServices = [
-    { name: 'AI Project Manager Pro', href: '/ai-project-manager', icon: BarChart, category: 'Productivity', price: '$99/mo' },
-    { name: 'AI Smart Calendar Pro', href: '/ai-smart-calendar', icon: Calendar, category: 'Productivity', price: '$59/mo' },
-    { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio', icon: Mic, category: 'Creative', price: '$149/mo' },
-    { name: 'AI Code Security Auditor Pro', href: '/ai-code-security-auditor', icon: Shield, category: 'Security', price: '$199/mo' },
-    { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion', icon: Heart, category: 'Health', price: '$79/mo' },
-    { name: 'AI Smart Home Controller Pro', href: '/ai-smart-home-controller', icon: Home, category: 'IoT', price: '$99/mo' },
-    { name: 'AI Investment Portfolio Optimizer Pro', href: '/ai-investment-optimizer', icon: TrendingUp, category: 'Finance', price: '$199/mo' },
-    { name: 'AI Language Learning Tutor Pro', href: '/ai-language-tutor', icon: GraduationCap, category: 'Education', price: '$69/mo' },
-    { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach', icon: Activity, category: 'Health', price: '$59/mo' },
-    { name: 'AI Email Security Shield Pro', href: '/ai-email-security-shield', icon: Shield, category: 'Security', price: '$89/mo' },
-    { name: 'AI Recipe Generator Pro', href: '/ai-recipe-generator', icon: ChefHat, category: 'Lifestyle', price: '$39/mo' },
-    { name: 'AI Travel Planner Pro', href: '/ai-travel-planner', icon: Plane, category: 'Travel', price: '$79/mo' }
-  ];
-
-  const aiServices = [
-    { name: 'AI-Powered Drug Discovery Pro', href: '/ai-drug-discovery-pro', icon: Stethoscope, price: '$4,500/mo' },
-    { name: 'AI Climate Change Solutions Pro', href: '/ai-climate-solutions-pro', icon: Globe, price: '$3,200/mo' },
-    { name: 'AI-Powered Space Technology Pro', href: '/ai-space-technology-pro', icon: Rocket, price: '$5,500/mo' },
-    { name: 'AI-Powered Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro', icon: Shield, price: '$2,800/mo' },
-    { name: 'AI-Powered Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro', icon: Truck, price: '$2,200/mo' },
-    { name: 'AI-Powered Energy Grid Management Pro', href: '/ai-energy-grid-management-pro', icon: Zap, price: '$3,500/mo' },
-    { name: 'AI-Powered Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro', icon: Sprout, price: '$1,800/mo' },
-    { name: 'AI-Powered Legal Research Pro', href: '/ai-legal-research-pro', icon: Scale, price: '$2,500/mo' }
-  ];
-
-  const itServices = [
-    { name: 'AI-Powered Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring', icon: Activity, price: '$1,800/mo' },
-    { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services', icon: Shield, price: '$2,500/mo' },
-    { name: 'AI-Powered API Management Pro', href: '/ai-api-management', icon: Settings, price: '$1,400/mo' },
-    { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration', icon: Database, price: '$2,200/mo' },
-    { name: 'AI-Powered Load Testing Pro', href: '/ai-load-testing', icon: BarChart, price: '$1,200/mo' },
-    { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit', icon: Shield, price: '$3,000/mo' },
-    { name: 'AI-Powered Content Delivery Network Pro', href: '/ai-content-delivery-network', icon: Globe, price: '$1,600/mo' },
-    { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure', icon: Mail, price: '$1,000/mo' }
-  ];
-
-  const specializedServices = [
-    { name: 'Quantum Computing Solutions', href: '/quantum-computing', icon: Cpu, price: '$5,000/mo' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings, price: '$4,000/mo' },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock, price: '$2,500/mo' },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe, price: '$1,800/mo' },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, price: '$1,500/mo' },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-a74d
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
@@ -281,12 +225,77 @@ const Navigation: React.FC = () => {
             >
               About
             </Link>
+            
+            {/* Solutions Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+                aria-expanded={aiServicesOpen}
+                aria-haspopup="true"
+              >
+                <span>Solutions</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${aiServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {aiServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                  <div className="px-6 space-y-4">
+                    <div>
+                      <h3 className="font-semibold text-gray-900 text-sm mb-3 flex items-center">
+                        <Brain className="w-4 h-4 mr-2 text-purple-600" />
+                        AI Solutions
+                      </h3>
+                      <div className="space-y-2">
+                        <Link to="/ai-services" className="block px-3 py-2 text-sm text-gray-600 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          AI Services Overview
+                        </Link>
+                        <Link to="/ai-marketing" className="block px-3 py-2 text-sm text-gray-600 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          AI Marketing
+                        </Link>
+                        <Link to="/ai-automation" className="block px-3 py-2 text-sm text-gray-600 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          AI Automation
+                        </Link>
+                        <Link to="/ai-healthcare" className="block px-3 py-2 text-sm text-gray-600 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          AI Healthcare
+                        </Link>
+                        <Link to="/ai-fintech" className="block px-3 py-2 text-sm text-gray-600 hover:bg-purple-50 hover:text-purple-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          AI Fintech
+                        </Link>
+                      </div>
+                    </div>
+                    
+                    <div>
+                      <h3 className="font-semibold text-gray-900 text-sm mb-3 flex items-center">
+                        <Cloud className="w-4 h-4 mr-2 text-blue-600" />
+                        IT Services
+                      </h3>
+                      <div className="space-y-2">
+                        <Link to="/it-services" className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          IT Services Overview
+                        </Link>
+                        <Link to="/cybersecurity" className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          Cybersecurity
+                        </Link>
+                        <Link to="/cloud-services" className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          Cloud Services
+                        </Link>
+                        <Link to="/devops" className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 rounded-lg transition-colors" onClick={closeAllMenus}>
+                          DevOps
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
             <Link 
               to="/services" 
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
-              Services
+              All Services
             </Link>
 
             {/* Services Dropdown */}
@@ -355,6 +364,13 @@ const Navigation: React.FC = () => {
               Blog
             </Link>
             <Link
+              to="/pricing"
+              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
+              onClick={closeAllMenus}
+            >
+              Pricing
+            </Link>
+            <Link
               to="/contact"
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
@@ -402,12 +418,46 @@ const Navigation: React.FC = () => {
               >
                 About
               </Link>
+              
+              {/* Mobile Solutions */}
+              <div>
+                <button
+                  onClick={() => setAiServicesOpen(!aiServicesOpen)}
+                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                >
+                  <div className="flex items-center space-x-2">
+                    <Brain className="w-4 h-4" />
+                    <span>Solutions</span>
+                  </div>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${aiServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {aiServicesOpen && (
+                  <div className="ml-4 space-y-2 mt-2">
+                    <Link to="/ai-services" className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1" onClick={closeAllMenus}>
+                      AI Services
+                    </Link>
+                    <Link to="/ai-marketing" className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1" onClick={closeAllMenus}>
+                      AI Marketing
+                    </Link>
+                    <Link to="/ai-automation" className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1" onClick={closeAllMenus}>
+                      AI Automation
+                    </Link>
+                    <Link to="/ai-healthcare" className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1" onClick={closeAllMenus}>
+                      AI Healthcare
+                    </Link>
+                    <Link to="/it-services" className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors py-1" onClick={closeAllMenus}>
+                      IT Services
+                    </Link>
+                  </div>
+                )}
+              </div>
+
               <Link 
                 to="/services" 
                 className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
                 onClick={closeAllMenus}
               >
-                Services
+                All Services
               </Link>
 
               {/* Mobile Services */}
@@ -458,6 +508,13 @@ const Navigation: React.FC = () => {
                 onClick={closeAllMenus}
               >
                 Blog
+              </Link>
+              <Link
+                to="/pricing"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Pricing
               </Link>
               <Link
                 to="/contact"

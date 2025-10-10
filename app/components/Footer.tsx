@@ -10,54 +10,56 @@ const Footer: React.FC = memo(() => {
       title: 'AI Services',
       icon: Brain,
       services: [
-        { name: 'AI Drug Discovery Pro', href: '/ai-drug-discovery-pro' },
-        { name: 'AI Climate Solutions Pro', href: '/ai-climate-solutions-pro' },
-        { name: 'AI Space Technology Pro', href: '/ai-space-technology-pro' },
-        { name: 'AI Financial Crime Detection Pro', href: '/ai-financial-crime-detection-pro' },
-        { name: 'AI Supply Chain Optimization Pro', href: '/ai-supply-chain-optimization-pro' },
-        { name: 'AI Energy Grid Management Pro', href: '/ai-energy-grid-management-pro' },
-        { name: 'AI Agricultural Intelligence Pro', href: '/ai-agricultural-intelligence-pro' },
-        { name: 'AI Legal Research Pro', href: '/ai-legal-research-pro' }
+        { name: 'AI Services Overview', href: '/ai-services' },
+        { name: 'AI Marketing', href: '/ai-marketing' },
+        { name: 'AI Automation', href: '/ai-automation' },
+        { name: 'AI Healthcare', href: '/ai-healthcare' },
+        { name: 'AI Fintech', href: '/ai-fintech' },
+        { name: 'AI Data Analytics', href: '/ai-data-analytics' },
+        { name: 'AI Cybersecurity', href: '/ai-cybersecurity' },
+        { name: 'AI Content Generation', href: '/ai-content-generation' }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
       services: [
-        { name: 'AI Infrastructure Monitoring Pro', href: '/ai-infrastructure-monitoring' },
-        { name: 'Blockchain Integration Services Pro', href: '/blockchain-integration-services' },
-        { name: 'AI API Management Pro', href: '/ai-api-management' },
-        { name: 'Intelligent Database Migration Pro', href: '/intelligent-database-migration' },
-        { name: 'AI Load Testing Pro', href: '/ai-load-testing' },
-        { name: 'Smart Contract Security Audit Pro', href: '/smart-contract-security-audit' },
-        { name: 'AI Content Delivery Network Pro', href: '/ai-content-delivery-network' },
-        { name: 'Intelligent Email Infrastructure Pro', href: '/intelligent-email-infrastructure' }
+        { name: 'IT Services Overview', href: '/it-services' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Cloud Services', href: '/cloud-services' },
+        { name: 'DevOps', href: '/devops' },
+        { name: 'Database Services', href: '/database-services' },
+        { name: 'Network Solutions', href: '/network-solutions' },
+        { name: 'IT Consulting', href: '/it-consulting' },
+        { name: 'Managed IT', href: '/managed-it' }
       ]
     },
     {
       title: 'Micro SAAS',
       icon: Code,
       services: [
-        { name: 'AI Voice Cloning Studio Pro', href: '/ai-voice-cloning-studio' },
-        { name: 'AI Code Security Auditor Pro', href: '/ai-code-security-auditor' },
-        { name: 'AI Mental Health Companion Pro', href: '/ai-mental-health-companion' },
-        { name: 'AI Smart Home Controller Pro', href: '/ai-smart-home-controller' },
-        { name: 'AI Investment Portfolio Optimizer Pro', href: '/ai-investment-optimizer' },
-        { name: 'AI Language Learning Tutor Pro', href: '/ai-language-tutor' },
-        { name: 'AI Fitness Coach Pro', href: '/ai-fitness-coach' },
-        { name: 'AI Email Security Shield Pro', href: '/ai-email-security-shield' }
+        { name: 'Micro SAAS Overview', href: '/micro-saas' },
+        { name: 'AI Project Manager', href: '/ai-project-manager' },
+        { name: 'AI Task Manager', href: '/ai-task-manager' },
+        { name: 'AI Expense Tracker', href: '/ai-expense-tracker' },
+        { name: 'AI Password Manager', href: '/ai-password-manager' },
+        { name: 'AI Invoice Generator', href: '/ai-invoice-generator' },
+        { name: 'AI Email Assistant', href: '/ai-email-assistant' },
+        { name: 'AI Content Writer', href: '/ai-content-writer' }
       ]
     },
     {
       title: 'Specialized',
       icon: Zap,
       services: [
-        { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
+        { name: 'Quantum Computing', href: '/quantum-computing' },
         { name: 'Autonomous Systems', href: '/autonomous-systems' },
         { name: 'Blockchain & Web3', href: '/blockchain-web3' },
         { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
         { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'Robotics Solutions', href: '/robotics' },
+        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
+        { name: 'Smart Cities', href: '/smart-cities' }
       ]
     }
   ];
@@ -68,7 +70,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
-    { name: 'News', href: '/news' }
+    { name: 'News', href: '/news' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Demo', href: '/demo' }
   ];
 
   const supportLinks = [
