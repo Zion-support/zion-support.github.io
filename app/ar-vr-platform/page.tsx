@@ -43,11 +43,7 @@ const ARVRPlatformPage: React.FC = () => {
       <Helmet>
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-<<<<<<< HEAD
         <meta name="keywords" content="AR VR platform, AI solutions, IT services, Zion Tech Group, virtual reality" />
-=======
-        <meta name="keywords" content="AR VR platform, virtual reality, augmented reality, AI solutions, IT services, Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
       </Helmet>
 
       {/* Hero Section */}
@@ -89,20 +85,12 @@ const ARVRPlatformPage: React.FC = () => {
               Our AR/VR platform solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
-=======
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
@@ -122,7 +110,6 @@ const ARVRPlatformPage: React.FC = () => {
               Experience the power of our AR/VR platform solutions for your business.
             </p>
           </div>
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
@@ -130,14 +117,6 @@ const ARVRPlatformPage: React.FC = () => {
                   <CheckCircle className="h-8 w-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
-=======
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-08e7
               </div>
             ))}
           </div>
