@@ -71,7 +71,7 @@ const Navigation: React.FC = () => {
                 </button>
                 
                 {servicesOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                  <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                     <Link href="/ai-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
                       AI Services
                     </Link>
@@ -80,6 +80,123 @@ const Navigation: React.FC = () => {
                     </Link>
                     <Link href="/micro-saas" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
                       Micro SaaS
+                    </Link>
+                    <Link href="/pricing" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Pricing
+                    </Link>
+                    <Link href="/case-studies" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Case Studies
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* AI Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleAiServices}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  AI Solutions
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                
+                {aiServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <Link href="/ai-marketing" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Marketing
+                    </Link>
+                    <Link href="/ai-customer-support" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Customer Support
+                    </Link>
+                    <Link href="/ai-data-analytics" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Data Analytics
+                    </Link>
+                    <Link href="/ai-content-generation" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Content Generation
+                    </Link>
+                    <Link href="/ai-healthcare" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Healthcare
+                    </Link>
+                    <Link href="/ai-fintech" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Fintech
+                    </Link>
+                    <Link href="/ai-cybersecurity" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      AI Cybersecurity
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* IT Services Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleItServices}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  IT Solutions
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                
+                {itServicesOpen && (
+                  <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <Link href="/cloud-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Cloud Services
+                    </Link>
+                    <Link href="/cloud-migration" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Cloud Migration
+                    </Link>
+                    <Link href="/devops" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      DevOps & CI/CD
+                    </Link>
+                    <Link href="/cybersecurity" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Cybersecurity
+                    </Link>
+                    <Link href="/it-consulting" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      IT Consulting
+                    </Link>
+                    <Link href="/database-services" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Database Services
+                    </Link>
+                    <Link href="/network-solutions" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Network Solutions
+                    </Link>
+                    <Link href="/it-support" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      IT Support
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              {/* Micro SaaS Dropdown */}
+              <div className="relative">
+                <button
+                  onClick={toggleMicroSaas}
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                >
+                  Micro SaaS
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                
+                {microSaasOpen && (
+                  <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <Link href="/micro-saas/analytics-dashboard" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Analytics Dashboard
+                    </Link>
+                    <Link href="/micro-saas/content-generator" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Content Generator
+                    </Link>
+                    <Link href="/micro-saas/email-marketing" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Email Marketing
+                    </Link>
+                    <Link href="/micro-saas/social-manager" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Social Manager
+                    </Link>
+                    <Link href="/micro-saas/expense-tracker" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Expense Tracker
+                    </Link>
+                    <Link href="/micro-saas/appointment-scheduler" className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700">
+                      Appointment Scheduler
                     </Link>
                   </div>
                 )}
@@ -114,6 +231,24 @@ const Navigation: React.FC = () => {
               </Link>
               <Link href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
+              </Link>
+              <Link href="/ai-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                AI Services
+              </Link>
+              <Link href="/it-services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                IT Services
+              </Link>
+              <Link href="/micro-saas" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Micro SaaS
+              </Link>
+              <Link href="/pricing" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Pricing
+              </Link>
+              <Link href="/case-studies" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Case Studies
+              </Link>
+              <Link href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
+                Blog
               </Link>
               <Link href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
