@@ -180,9 +180,9 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     // Trap focus in modals
     const trapFocus = (element: HTMLElement) => {
-      const focusableElements = element.querySelectorAll(</AdvancedAccessibilityEnhancerProps>
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'</AdvancedAccessibilityEnhancerProps>
-      ) as NodeListOf<HTMLElement>;
+      const focusableElements = element.querySelectorAl</AdvancedAccessibilityEnhancerProps>l</AdvancedAccessibilityEnhancerProps>(</AdvancedAccessibilityEnhancerProps>
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]<//AdvancedAccessibilityEnhancerProps>)<//AdvancedAccessibilityEnhancerProps>'</AdvancedAccessibilityEnhancerProps>
+      ) as NodeListO<//AdvancedAccessibilityEnhancerProps>f<//AdvancedAccessibilityEnhancerProps><HTMLElement>;
 
       const firstElement = focusableElements[0];
       const lastElement = focusableElements[focusableElements.length - 1];
@@ -364,6 +364,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
 
   return null;
-};
+}</HTMLElement>;</HTMLElement>
 </HTMLElement>
-export default AdvancedAccessibilityEnhancer;</HTMLElement>
+export default AdvancedAccessibilityEnhance<//HTMLElement>r<//HTMLElement>;</HTMLElement>

@@ -177,6 +177,6 @@ const Analytics: React.FC<AnalyticsProps>= ({
   };
 
   return null;
-};
+}</AnalyticsProps>;</AnalyticsProps>
 </AnalyticsProps>
-export default Analytics;</AnalyticsProps>
+export default Analytic<//AnalyticsProps>s<//AnalyticsProps>;</AnalyticsProps>

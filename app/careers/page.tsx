@@ -325,44 +325,51 @@ export default function CareersPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Join Our Team<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Build the future of AI with us. Join a team of passionate innovators</p>
-              working on cutting-edge technology that transforms businesses worldwide.</p>
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Users className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">100+ Open Positions</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Home className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Remote-First</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Award className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">Top Benefits</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">*</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">/</div>}</div>
+     <//div> <//div><section className="relative py-20 lg:py-32 overflow-hidden">
+       </section className="relative py-20 lg:py-32 overflow-hidden"> </section className="relative py-20 lg:py-32 overflow-hidden"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
+         </div className="container mx-auto px-4 relative z-10"> </div className="container mx-auto px-4 relative z-10"><div className="max-w-4xl mx-auto text-center">
+          </div className="max-w-4xl mx-auto text-center"> </div className="max-w-4xl mx-auto text-center"> </div><h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Join Our Te</h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">a</h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">m</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Build the future of AI with us. Join a team of passionate innovato</p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">r</p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">s</p>
+              working on cutting-edge technology that transforms businesses worldwid<//p>e<//p>.</p>
+           <//p> <//p><div className="flex flex-wrap justify-center gap-4">
+             </div className="flex flex-wrap justify-center gap-4"> </div className="flex flex-wrap justify-center gap-4"><div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"> </div><Users className="w-5 h-5 text-cyan-400" />
+               </Users className="w-5 h-5 text-cyan-400" /> </Users className="w-5 h-5 text-cyan-400" /><span className="text-white font-medium">100+ Open Positi</span className="text-white font-medium">o</span className="text-white font-medium">n</span>s</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"> </div><Home className="w-5 h-5 text-purple-400" />
+               </Home className="w-5 h-5 text-purple-400" /> </Home className="w-5 h-5 text-purple-400" /><span className="text-white font-medium">Remote-Fi</span className="text-white font-medium">r</span className="text-white font-medium">s</span>t</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"> </div><Award className="w-5 h-5 text-green-400" />
+               </Award className="w-5 h-5 text-green-400" /> </Award className="w-5 h-5 text-green-400" /><span className="text-white font-medium">Top Benef</span className="text-white font-medium">i</span className="text-white font-medium">t</span>s</span>
+            <//span> <//span> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Filters */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+     <//section> <//section><section className="py-8">
+       </section className="py-8"> </section className="py-8"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="max-w-6xl mx-auto">
+           </div className="max-w-6xl mx-auto"> </div className="max-w-6xl mx-auto"><div className="flex flex-col md:flex-row gap-4 mb-8">
+             </div className="flex flex-col md:flex-row gap-4 mb-8"> </div className="flex flex-col md:flex-row gap-4 mb-8"><div className="flex-1 relative">
+              </div className="flex-1 relative"> </div className="flex-1 relative"> </div><Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+               </Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> </Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /><input
                   type="text"
                   placeholder="Search positions..."
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 />
-              <div className="flex gap-2 overflow-x-auto">{departments.map((dept) => (<button
+             </input
+                  type="text"
+                  placeholder="Search positions..."
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                /> </input
+                  type="text"
+                  placeholder="Search positions..."
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                /><div className="flex gap-2 overflow-x-auto">{departments.map((dept) =></div className="flex gap-2 overflow-x-auto"> </div className="flex gap-2 overflow-x-auto">(</div><button
                     key={dept.name}
                     onClick={() =>setSelectedDepartment(dept.name)}
                     className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
@@ -370,11 +377,15 @@ export default function CareersPage() {
                         ? 'bg-cyan-500 text-white'
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                     }`}
-                  ></button>
-                    {dept.label} ({dept.count})</button>
-                  </button>
+                 </button
+                    key={dept.name}
+                    onClick={() => </button
+                    key={dept.name}
+                    onClick={() =>></button>
+                    {dept.label} ({dept.count<//button>}<//button>)</button>
+                <//button> <//button> </button>
                 ))}
-              <div className="flex gap-2 overflow-x-auto">{locations.map((location) => (<button
+             <//button> <//button><div className="flex gap-2 overflow-x-auto">{locations.map((location) =></div className="flex gap-2 overflow-x-auto"> </div className="flex gap-2 overflow-x-auto">(</div><button
                   key={location.name}
                   onClick={() =>setSelectedLocation(location.name)}
                   className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
@@ -382,11 +393,15 @@ export default function CareersPage() {
                       ? 'bg-purple-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
-                ></button>
-                  {location.label} ({location.count})</button>
-                </button>
+               </button
+                  key={location.name}
+                  onClick={() => </button
+                  key={location.name}
+                  onClick={() =>></button>
+                  {location.label} ({location.count<//button>}<//button>)</button>
+              <//button> <//button> </button>
               ))}
-            <div className="flex gap-2 overflow-x-auto mt-2">{jobTypes.map((type) => (<button
+           <//button> <//button><div className="flex gap-2 overflow-x-auto mt-2">{jobTypes.map((type) =></div className="flex gap-2 overflow-x-auto mt-2"> </div className="flex gap-2 overflow-x-auto mt-2">(</div><button
                   key={type.name}
                   onClick={() =>setSelectedType(type.name)}
                   className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
@@ -394,130 +409,149 @@ export default function CareersPage() {
                       ? 'bg-green-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
-                ></button>
-                  {type.label} ({type.count})</button>
-                </button>
+               </button
+                  key={type.name}
+                  onClick={() => </button
+                  key={type.name}
+                  onClick={() =>></button>
+                  {type.label} ({type.count<//button>}<//button>)</button>
+              <//button> <//button> </button>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+          <//button> <//button> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Open Positions */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8">Open Positions<div className="space-y-6">{filteredPositions.map((position) => (</div>
-                <div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                  <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
-                        <h3 className="text-2xl font-bold text-white">{position.title}<span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">{position.level}</span>
-                        </span>
-                      </div>
-                      <div className="flex items-center space-x-4 text-gray-400 text-sm mb-3">
-                        <div className="flex items-center space-x-1">
-                          <MapPin className="w-4 h-4" />
-                          <span className="capitalize">{position.location.replace('-', ', ')}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
-                          <span className="capitalize">{position.type.replace('-', ' ')}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
-                          <span>Posted {new Date(position.postedDate).toLocaleDateString()}<p className="text-gray-300 mb-4">{position.description}</p>
-                    </div>
-                    <div className="lg:ml-6 lg:text-right">
-                      <div className="text-2xl font-bold text-cyan-400 mb-1">{position.salary}<div className="text-gray-400 text-sm">{position.experience}</div>
-                    </div>
-                  </div>
+     <//section> <//section><section className="py-20">
+       </section className="py-20"> </section className="py-20"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="max-w-6xl mx-auto">
+          </div className="max-w-6xl mx-auto"> </div className="max-w-6xl mx-auto"> </div><h2 className="text-3xl font-bold text-white mb-8">Open Position</h2 className="text-3xl font-bold text-white mb-8">s</h2 className="text-3xl font-bold text-white mb-8"><div className="space-y-6">{filteredPositions.map((position) =</div className="space-y-6">></div className="space-y-6"> </div>(</div>
+               <//div> <//div><div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
+                 </div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"> </div key={position.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"><div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                   </div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4"> </div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4"><div className="flex-1">
+                     </div className="flex-1"> </div className="flex-1"><div className="flex items-center space-x-3 mb-2">
+                      </div className="flex items-center space-x-3 mb-2"> </div className="flex items-center space-x-3 mb-2"> </div><h3 className="text-2xl font-bold text-white">{position.title</h3 className="text-2xl font-bold text-white">}</h3 className="text-2xl font-bold text-white"><span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">{position.lev</span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">e</span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">l</span>}</span>
+                    <//span> <//span> </div>
+                     <//div> <//div><div className="flex items-center space-x-4 text-gray-400 text-sm mb-3">
+                       </div className="flex items-center space-x-4 text-gray-400 text-sm mb-3"> </div className="flex items-center space-x-4 text-gray-400 text-sm mb-3"><div className="flex items-center space-x-1">
+                        </div className="flex items-center space-x-1"> </div className="flex items-center space-x-1"> </div><MapPin className="w-4 h-4" />
+                         </MapPin className="w-4 h-4" /> </MapPin className="w-4 h-4" /><span className="capitalize">{position.location.replace('-', ', </span className="capitalize">'</span className="capitalize">)</span>}</span>
+                      <//span> <//span> </div>
+                       <//div> <//div><div className="flex items-center space-x-1">
+                        </div className="flex items-center space-x-1"> </div className="flex items-center space-x-1"> </div><Clock className="w-4 h-4" />
+                         </Clock className="w-4 h-4" /> </Clock className="w-4 h-4" /><span className="capitalize">{position.type.replace('-', ' </span className="capitalize">'</span className="capitalize">)</span>}</span>
+                      <//span> <//span> </div>
+                       <//div> <//div><div className="flex items-center space-x-1">
+                        </div className="flex items-center space-x-1"> </div className="flex items-center space-x-1"> </div><Calendar className="w-4 h-4" />
+                         </Calendar className="w-4 h-4" /> </Calendar className="w-4 h-4" /><span>Posted {new Date(position.postedDate).toLocaleDateString(</span>)</span>}</span><p className="text-gray-300 mb-4">{position.descriptio</p className="text-gray-300 mb-4">n</p className="text-gray-300 mb-4">}</p>
+                  <//p> <//p> </div>
+                   <//div> <//div><div className="lg:ml-6 lg:text-right">
+                     </div className="lg:ml-6 lg:text-right"> </div className="lg:ml-6 lg:text-right"><div className="text-2xl font-bold text-cyan-400 mb-1">{position.sala</div className="text-2xl font-bold text-cyan-400 mb-1">r</div className="text-2xl font-bold text-cyan-400 mb-1">y</div>}</div>
+               <//div> <//div><div className="text-gray-400 text-sm">{position.experien</div className="text-gray-400 text-sm">c</div className="text-gray-400 text-sm">e</div>}</div>
+                <//div> <//div> </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                    <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:<ul className="space-y-1">{position.requirements.slice(0, 3).map((req, index) => (</ul>
-                          <li key={index} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{req}</CheckCircle>
-                          </CheckCircle>
+                 <//div> <//div><div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                   </div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"> </div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6"><div>
+                    </div> </div> </div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements</h4 className="text-sm font-semibold text-cyan-400 mb-2">:</h4 className="text-sm font-semibold text-cyan-400 mb-2"><ul className="space-y-1">{position.requirements.slice(0, 3).map((req, index) =></ul className="space-y-1"> </ul className="space-y-1">(</ul>
+                         <//ul> <//ul><li key={index} className="flex items-center text-sm text-gray-300">
+                           </li key={index} className="flex items-center text-sm text-gray-300"> </li key={index} className="flex items-center text-sm text-gray-300"><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{re</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >q</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >}</CheckCircle>
+                        <//CheckCircle> <//CheckCircle> </CheckCircle>
                         ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills:<div className="flex flex-wrap gap-2">{position.skills.map((skill, index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{skill}</span>
-                          </span>
+                    <//CheckCircle> <//CheckCircle> </ul>
+                  <//ul> <//ul> </div>
+                   <//div> <//div><div>
+                    </div> </div> </div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Skills</h4 className="text-sm font-semibold text-cyan-400 mb-2">:</h4 className="text-sm font-semibold text-cyan-400 mb-2"><div className="flex flex-wrap gap-2">{position.skills.map((skill, index) =></div className="flex flex-wrap gap-2"> </div className="flex flex-wrap gap-2">(</div><span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{ski</span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">l</span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">l</span>}</span>
                         ))}
-                      </div>
-                    </div>
-                  </div>
+                    <//span> <//span> </div>
+                  <//div> <//div> </div>
+                <//div> <//div> </div>
 
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Link
+                 <//div> <//div><div className="flex flex-col sm:flex-row gap-4">
+                  </div className="flex flex-col sm:flex-row gap-4"> </div className="flex flex-col sm:flex-row gap-4"> </div><Link
                       to={`/careers/${position.id}`}
                       className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all text-center"
-                    >Apply Now</Link>
-                      <ArrowRight className="w-4 h-4 ml-2 inline" />
-                    <button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">Save Job</button>
-                    </button>
-                  </div>
-                </div>
+                    >Apply N</Link
+                      to={`/careers/${position.id}`}
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all text-center"
+                    >o</Link
+                      to={`/careers/${position.id}`}
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all text-center"
+                    >w</Link>
+                     <//Link> <//Link><ArrowRight className="w-4 h-4 ml-2 inline" />
+                   </ArrowRight className="w-4 h-4 ml-2 inline" /> </ArrowRight className="w-4 h-4 ml-2 inline" /><button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">Save J</button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">o</button className="border border-cyan-400 text-cyan-400 py-3 px-6 rounded-lg font-medium hover:bg-cyan-400 hover:text-white transition-all">b</button>
+                  <//button> <//button> </button>
+                <//button> <//button> </div>
+              <//div> <//div> </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Benefits */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Work With Us?<p className="text-lg text-gray-300 max-w-3xl mx-auto">We offer competitive benefits and a culture that values innovation, growth, and work-life balance<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
-              </div>
+     <//section> <//section><section className="py-20 bg-slate-800/50">
+       </section className="py-20 bg-slate-800/50"> </section className="py-20 bg-slate-800/50"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Work With Us</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">?</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"><p className="text-lg text-gray-300 max-w-3xl mx-auto">We offer competitive benefits and a culture that values innovation, growth, and work-life balanc</p className="text-lg text-gray-300 max-w-3xl mx-auto">e</p className="text-lg text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="text-center group">
+               </div key={index} className="text-center group"> </div key={index} className="text-center group"><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"> </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"> </div><benefit.icon className="w-8 h-8 text-white" />
+               </benefit.icon className="w-8 h-8 text-white" /> </benefit.icon className="w-8 h-8 text-white" /><h3 className="text-xl font-bold text-white mb-3">{benefit.title</h3 className="text-xl font-bold text-white mb-3">}</h3 className="text-xl font-bold text-white mb-3"><p className="text-gray-300 text-sm leading-relaxed">{benefit.descriptio</p className="text-gray-300 text-sm leading-relaxed">n</p className="text-gray-300 text-sm leading-relaxed">}</p>
+            <//p> <//p> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Culture */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Culture<p className="text-lg text-gray-300 max-w-3xl mx-auto">The values and principles that shape how we work together<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{culture.map((item, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <item.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-3">{item.title}<p className="text-gray-300 text-sm leading-relaxed">{item.description}</p>
-              </div>
+     <//section> <//section><section className="py-20">
+       </section className="py-20"> </section className="py-20"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Cultur</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">e</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"><p className="text-lg text-gray-300 max-w-3xl mx-auto">The values and principles that shape how we work togethe</p className="text-lg text-gray-300 max-w-3xl mx-auto">r</p className="text-lg text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{culture.map((item, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="text-center group">
+               </div key={index} className="text-center group"> </div key={index} className="text-center group"><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"> </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"> </div><item.icon className="w-8 h-8 text-white" />
+               </item.icon className="w-8 h-8 text-white" /> </item.icon className="w-8 h-8 text-white" /><h3 className="text-xl font-bold text-white mb-3">{item.title</h3 className="text-xl font-bold text-white mb-3">}</h3 className="text-xl font-bold text-white mb-3"><p className="text-gray-300 text-sm leading-relaxed">{item.descriptio</p className="text-gray-300 text-sm leading-relaxed">n</p className="text-gray-300 text-sm leading-relaxed">}</p>
+            <//p> <//p> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Don't See the Right Role?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals. Send us your resume and we'll</p>
-            reach out when we have a position that matches your skills.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+     <//section> <//section><section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+       </section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700"> </section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700"><div className="container mx-auto px-4 text-center">
+        </div className="container mx-auto px-4 text-center"> </div className="container mx-auto px-4 text-center"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Don't See the Right Role</h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">?</h2 className="text-3xl lg:text-4xl font-bold text-white mb-6"><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">We're always looking for talented individuals. Send us your resume and we'</p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">l</p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">l</p>
+            reach out when we have a position that matches your skill<//p>s<//p>.</p>
+         <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div><Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-              <Mail className="w-5 h-5 mr-2" >Send Your Resume</Mail>
-            </Mail>
-            <Link
+             </Link
+              to="/contact"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+            > </Link
+              to="/contact"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+            ><Mail className="w-5 h-5 mr-2" >Send Your Resu</Mail className="w-5 h-5 mr-2" >m</Mail className="w-5 h-5 mr-2" >e</Mail>
+          <//Mail> <//Mail> </Mail>
+           <//Mail> <//Mail><Link
               to="/team"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
-              <Users className="w-5 h-5 mr-2" >Meet Our Team</Users>
-            </Users>
-          </div>
-        </div>
-      </section>
-    </div>
+             </Link
+              to="/team"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+            > </Link
+              to="/team"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+            ><Users className="w-5 h-5 mr-2" >Meet Our Te</Users className="w-5 h-5 mr-2" >a</Users className="w-5 h-5 mr-2" >m</Users>
+          <//Users> <//Users> </Users>
+        <//Users> <//Users> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
+  <//section> <//section> </div>
   );
-}
+<//div>}<//div>

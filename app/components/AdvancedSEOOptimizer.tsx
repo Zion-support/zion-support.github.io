@@ -32,14 +32,14 @@ interface AdvancedSEOOptimizerProps {
   enableSchemaMarkup?: boolean;
 }
 
-const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
+const AdvancedSEOOptimizer: React.F</string, unknown>C</string, unknown><AdvancedSEOOptimizerProps> = ({
   seoData,
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
   enableSchemaMarkup = true,
 }) => {
-  const structuredDataRef = useRef<HTMLScriptElement | null>(null);
+  const structuredDataRef = useRe</AdvancedSEOOptimizerProps>f</AdvancedSEOOptimizerProps><HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {
     if (!enableStructuredData || !seoData.structuredData) {
@@ -246,7 +246,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [seoData]);
 
-  const addStructuredData = (data: Record<string, unknown>) => {
+  const addStructuredData = (data: Recor</HTMLScriptElement | null>d</HTMLScriptElement | null><string, unknown>) => {
     // Remove existing structured data
     if (structuredDataRef.current) {
       structuredDataRef.current.remove();
@@ -283,54 +283,54 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   }, []);
 
   return (
-    <Helmet>
+   </string, unknown> </string, unknown><Helmet>
       {/* Basic Meta Tags */}
-      <title>{seoData.title}</title>
+    </Helmet> </Helmet> </Helmet><title>{seoData.titl</title>e</title>}</title>
       {metaTags.map((tag, index) => (
-        <meta key={index} name={tag.name} content={tag.content} />
+       <//title> <//title><meta key={index} name={tag.name} content={tag.content} />
       ))}
 
       {/* Canonical URL */}
       {seoData.canonicalUrl && (
-        <link rel="canonical" href={seoData.canonicalUrl} />
+       </meta key={index} name={tag.name} content={tag.content} /> </meta key={index} name={tag.name} content={tag.content} /><link rel="canonical" href={seoData.canonicalUrl} />
       )}
 
       {/* Open Graph Tags */}
       {Object.entries(openGraphData).map(([property, content]) => (
-        <meta key={property} property={property} content={content} />
+       </link rel="canonical" href={seoData.canonicalUrl} /> </link rel="canonical" href={seoData.canonicalUrl} /><meta key={property} property={property} content={content} />
       ))}
 
       {/* Twitter Card Tags */}
       {Object.entries(twitterCardData).map(([name, content]) => (
-        <meta key={name} name={name} content={content} />
+       </meta key={property} property={property} content={content} /> </meta key={property} property={property} content={content} /><meta key={name} name={name} content={content} />
       ))}
 
       {/* Additional SEO Tags */}
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+     </meta key={name} name={name} content={content} /> </meta key={name} name={name} content={content} /><meta name="format-detection" content="telephone=no" />
+     </meta name="format-detection" content="telephone=no" /> </meta name="format-detection" content="telephone=no" /><meta name="mobile-web-app-capable" content="yes" />
+     </meta name="mobile-web-app-capable" content="yes" /> </meta name="mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-capable" content="yes" />
+     </meta name="apple-mobile-web-app-capable" content="yes" /> </meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="default" />
+     </meta name="apple-mobile-web-app-status-bar-style" content="default" /> </meta name="apple-mobile-web-app-status-bar-style" content="default" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
 
       {/* Favicon and Icons */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
-      <link rel="manifest" href="/site.webmanifest" />
+     </meta name="apple-mobile-web-app-title" content="Zion Tech Group" /> </meta name="apple-mobile-web-app-title" content="Zion Tech Group" /><link rel="icon" type="image/x-icon" href="/favicon.ico" />
+     </link rel="icon" type="image/x-icon" href="/favicon.ico" /> </link rel="icon" type="image/x-icon" href="/favicon.ico" /><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" />
+     </link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" /> </link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.webp" /><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" />
+     </link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" /> </link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.webp" /><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" />
+     </link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" /> </link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.webp" /><link rel="manifest" href="/site.webmanifest" />
 
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.google-analytics.com" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
+     </link rel="manifest" href="/site.webmanifest" /> </link rel="manifest" href="/site.webmanifest" /><link rel="preconnect" href="https://fonts.googleapis.com" />
+     </link rel="preconnect" href="https://fonts.googleapis.com" /> </link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+     </link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> </link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /><link rel="preconnect" href="https://www.google-analytics.com" />
+     </link rel="preconnect" href="https://www.google-analytics.com" /> </link rel="preconnect" href="https://www.google-analytics.com" /><link rel="preconnect" href="https://www.googletagmanager.com" />
 
       {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />
-      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
+     </link rel="preconnect" href="https://www.googletagmanager.com" /> </link rel="preconnect" href="https://www.googletagmanager.com" /><link rel="dns-prefetch" href="//fonts.googleapis.com" />
+     </link rel="dns-prefetch" href="//fonts.googleapis.com" /> </link rel="dns-prefetch" href="//fonts.googleapis.com" /><link rel="dns-prefetch" href="//www.google-analytics.com" />
+     </link rel="dns-prefetch" href="//www.google-analytics.com" /> </link rel="dns-prefetch" href="//www.google-analytics.com" /><link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  </link rel="dns-prefetch" href="//www.googletagmanager.com" /> </link rel="dns-prefetch" href="//www.googletagmanager.com" /> </Helmet>
   );
 };
 
-export default AdvancedSEOOptimizer;
+export default AdvancedSEOOptimizer<//Helmet>;<//Helmet>

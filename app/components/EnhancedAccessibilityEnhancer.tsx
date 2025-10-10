@@ -408,6 +408,6 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
   ]);
 
   return null;
-};
+}</EnhancedAccessibilityEnhancerProps>;</EnhancedAccessibilityEnhancerProps>
 </EnhancedAccessibilityEnhancerProps>
-export default EnhancedAccessibilityEnhancer;</EnhancedAccessibilityEnhancerProps>
+export default EnhancedAccessibilityEnhance<//EnhancedAccessibilityEnhancerProps>r<//EnhancedAccessibilityEnhancerProps>;</EnhancedAccessibilityEnhancerProps>

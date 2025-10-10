@@ -15,10 +15,10 @@ export const SecurityEnhancer: React.FC = () => {
     cspViolations: 0,
     xssAttempts: 0,
     csrfAttempts: 0,
-    suspiciousActivity: 0,
+    suspiciousActivity: 0</SecurityMetrics>,</SecurityMetrics>
 </SecurityMetrics>
-  const [isSecure, setIsSecure] = useState(true);</SecurityMetrics>
-  const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
+  const [isSecure, setIsSecure] = useState(true<//SecurityMetrics>)<//SecurityMetrics>;</SecurityMetrics>
+  const [securityWarnings, setSecurityWarnings] = useStat<//SecurityMetrics>e<//SecurityMetrics><string[]>([]);
 
   // Content Security Policy monitoring
   const monitorCSP = useCallback(() => {
@@ -64,10 +64,10 @@ export const SecurityEnhancer: React.FC = () => {
   }, []);
 
   // Input sanitization
-  const sanitizeInput = useCallback((input: string): string => {</string>
-    return input</string>
-      .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
-      .replace(/<iframe\b[^<]*(?:(?!<\/iframe>)<[^<]*)*<\/iframe>/gi, '')
+  const sanitizeInput = useCallback((input: string): string =></string[]> </string[]>{</string>
+    return inp<//string>u<//string>t</string>
+      .replace(<//string>/<//string><script\b[^<]*(?:(?!<\/script>)</script\b[^<]*(?:(?!<\/script><[^<]*)*<\/script>/gi, '')
+      .replace(</[^<]*)*<\/script>/</[^<]*)*<\/script><iframe\b[^<]*(?:(?!<\/iframe>)</iframe\b[^<]*(?:(?!<\/iframe><[^<]*)*<\/iframe>/gi, '')
       .replace(/javascript:/gi, '')
       .replace(/on\w+\s*=/gi, '');
   }, []);
@@ -233,34 +233,34 @@ export const SecurityEnhancer: React.FC = () => {
   }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
 
   return (
-    <>
+   </[^<]*)*<\/iframe> </[^<]*)*<\/iframe><>
       {/* Security Status Indicator */}
       {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">⚠️ Security Warning: This site is not served over HTTPS</div>
-        </div>
+        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">⚠️ Security Warning: This site is not served over HT</div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">T</div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">P</div>S</div>
+      <//div> <//div> </div>
       )}
 
       {/* Security Warnings */}
       {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
-          <h4 className="font-bold mb-2">Security Warnings<ul className="text-sm space-y-1">{securityWarnings.map((warning, index) => (<li key={index}>• {warning}</li>
+       <//div> <//div><div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
+        </div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"> </div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md"> </div><h4 className="font-bold mb-2">Security Warning</h4 className="font-bold mb-2">s</h4 className="font-bold mb-2"><ul className="text-sm space-y-1">{securityWarnings.map((warning, index) => </ul className="text-sm space-y-1">(</ul className="text-sm space-y-1"><li key={index}>• {warnin</li key={index}>g</li key={index}>}</li>
             ))}
-          </ul>
-        </div>
+        <//li> <//li> </ul>
+      <//ul> <//ul> </div>
       )}
 
       {/* Security Metrics (Development Only) */}
       {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
-          <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}<div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}<div>Suspicious Activity: {metrics.suspiciousActivity}</div>
-          </div>
-        </div>
+       <//div> <//div><div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
+        </div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"> </div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs"> </div><h4 className="font-bold mb-2">Security Metri</h4 className="font-bold mb-2">c</h4 className="font-bold mb-2">s</h4>
+         <//h4> <//h4><div className="space-y-1">
+           </div className="space-y-1"> </div className="space-y-1"><div>CSP Violations: {metrics.cspViolations}</div><div>XSS Attempts: {metrics.xssAttemp</div>t</div>s</div>}</div>
+           <//div> <//div><div>CSRF Attempts: {metrics.csrfAttemp</div>t</div>s</div>}</div>
+               <//div> <//div><div>Suspicious Activity: {metrics.suspiciousActivi</div>t</div>y</div>}</div>
+      <//div> <//div> </div>
       )}
-    </>
+   <//div> <//div></>
   );
 };
 
-export default SecurityEnhancer;
+export default SecurityEnhancer<//>;<//>

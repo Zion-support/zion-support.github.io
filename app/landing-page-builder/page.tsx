@@ -61,81 +61,116 @@ const LandingPageBuilderPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Landing Page <span className="text-cyan-400">Builder<p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Create high-converting landing pages in minutes with our AI-powered builder.</p>
-            No coding required - just drag, drop, and launch.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">*</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">/</div>}</div>
+     <//div> <//div><div className="container mx-auto px-4 py-16">
+       </div className="container mx-auto px-4 py-16"> </div className="container mx-auto px-4 py-16"><div className="text-center mb-16">
+        </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h1 className="text-5xl font-bold text-white mb-6">
+            Landing Pag</h1 className="text-5xl font-bold text-white mb-6">e</h1 className="text-5xl font-bold text-white mb-6"> </h1><span className="text-cyan-400">Build</span className="text-cyan-400">e</span className="text-cyan-400">r</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Create high-converting landing pages in minutes with our AI-powered builde</p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">r</p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">.</p>
+            No coding required - just drag, drop, and launc<//p>h<//p>.</p>
+         <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div><Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
-              <Layout className="w-5 h-5 mr-2" >Start Building</Layout>
-            </Layout>
-            <Link
+             </Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            > </Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            ><Layout className="w-5 h-5 mr-2" >Start Buildi</Layout className="w-5 h-5 mr-2" >n</Layout className="w-5 h-5 mr-2" >g</Layout>
+          <//Layout> <//Layout> </Layout>
+           <//Layout> <//Layout><Link
               href="/demo"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
-              <Monitor className="w-5 h-5 mr-2" >View Templates</Monitor>
-            </Monitor>
-          </div>
-        </div>
+             </Link
+              href="/demo"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+            > </Link
+              href="/demo"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+            ><Monitor className="w-5 h-5 mr-2" >View Templat</Monitor className="w-5 h-5 mr-2" >e</Monitor className="w-5 h-5 mr-2" >s</Monitor>
+          <//Monitor> <//Monitor> </Monitor>
+        <//Monitor> <//Monitor> </div>
+      <//div> <//div> </div>
 
         {/* Features Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Powerful <span className="text-cyan-400">Features<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div
+       <//div> <//div><div className="mb-16">
+        </div className="mb-16"> </div className="mb-16"> </div><h2 className="text-3xl font-bold text-white text-center mb-12">
+            Powerful</h2 className="text-3xl font-bold text-white text-center mb-12"> </h2 className="text-3xl font-bold text-white text-center mb-12"><span className="text-cyan-400">Featur</span className="text-cyan-400">e</span className="text-cyan-400">s</span><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) =</div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">></div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"> </div>(</div>
+             <//div> <//div><div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
               >
-                <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
-              </div>
+               </div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              > </div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              ><div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4">
+                </div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"> </div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"> </div><feature.icon className="w-6 h-6 text-white" />
+               </feature.icon className="w-6 h-6 text-white" /> </feature.icon className="w-6 h-6 text-white" /><h3 className="text-xl font-semibold text-white mb-3">{feature.title</h3 className="text-xl font-semibold text-white mb-3">}</h3 className="text-xl font-semibold text-white mb-3"><p className="text-gray-300">{feature.descriptio</p className="text-gray-300">n</p className="text-gray-300">}</p>
+            <//p> <//p> </div>
             ))}
-          </div>
-        </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
 
         {/* Templates Section */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Professional <span className="text-cyan-400">Templates<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{templates.map((template, index) => (</div>
-              <div
+       <//div> <//div><div className="mb-16">
+        </div className="mb-16"> </div className="mb-16"> </div><h2 className="text-3xl font-bold text-white text-center mb-12">
+            Professional</h2 className="text-3xl font-bold text-white text-center mb-12"> </h2 className="text-3xl font-bold text-white text-center mb-12"><span className="text-cyan-400">Templat</span className="text-cyan-400">e</span className="text-cyan-400">s</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{templates.map((template, index) =</div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">></div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"> </div>(</div>
+             <//div> <//div><div
                 key={index}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-white mb-2">{template.category}<div className="text-cyan-400 font-bold text-lg mb-2">{template.count}<p className="text-gray-300 text-sm">{template.description}</p>
-              </div>
+              </div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              > </div
+                key={index}
+                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center border border-gray-600 hover:border-cyan-400/50 transition-all duration-300"
+              > </div><h3 className="text-xl font-semibold text-white mb-2">{template.category</h3 className="text-xl font-semibold text-white mb-2">}</h3 className="text-xl font-semibold text-white mb-2"><div className="text-cyan-400 font-bold text-lg mb-2">{template.coun</div className="text-cyan-400 font-bold text-lg mb-2">t</div className="text-cyan-400 font-bold text-lg mb-2">}</div><p className="text-gray-300 text-sm">{template.descriptio</p className="text-gray-300 text-sm">n</p className="text-gray-300 text-sm">}</p>
+            <//p> <//p> </div>
             ))}
-          </div>
-        </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Build Your Landing Page?<p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses creating high-converting landing pages with our builder.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+       <//div> <//div><div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center">
+        </div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"> </div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"> </div><h2 className="text-3xl font-bold text-white mb-4">Ready to Build Your Landing Pag</h2 className="text-3xl font-bold text-white mb-4">e</h2 className="text-3xl font-bold text-white mb-4">?</h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of businesses creating high-converting landing pages with our builde</p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">r</p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">.</p>
+         <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div><Link
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
-              <ArrowRight className="w-5 h-5 mr-2" >Get Started Now</ArrowRight>
-            </ArrowRight>
-            <Link
+             </Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            > </Link
+              href="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+            ><ArrowRight className="w-5 h-5 mr-2" >Get Started N</ArrowRight className="w-5 h-5 mr-2" >o</ArrowRight className="w-5 h-5 mr-2" >w</ArrowRight>
+          <//ArrowRight> <//ArrowRight> </ArrowRight>
+           <//ArrowRight> <//ArrowRight><Link
               href="/pricing"
               className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
             >
-              <Layout className="w-5 h-5 mr-2" >View Pricing</Layout>
-            </Layout>
-          </div>
-        </div>
-      </div>
-    </div>
+             </Link
+              href="/pricing"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+            > </Link
+              href="/pricing"
+              className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-gray-600 hover:border-cyan-400 hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+            ><Layout className="w-5 h-5 mr-2" >View Prici</Layout className="w-5 h-5 mr-2" >n</Layout className="w-5 h-5 mr-2" >g</Layout>
+          <//Layout> <//Layout> </Layout>
+        <//Layout> <//Layout> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
+  <//div> <//div> </div>
   );
 };
 
-export default LandingPageBuilderPage;
+export default LandingPageBuilderPage<//div>;<//div>

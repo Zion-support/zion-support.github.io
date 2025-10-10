@@ -132,24 +132,24 @@ export const SEOOptimizer: React.FC = () => {
 
   return (
     <Helmet>
-      <title>{seoData.title}</title>
-      <meta name="description" content={seoData.description} />
-      <meta name="keywords" content={seoData.keywords.join(', ')} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" >{/* Open Graph */}</meta>
-      </meta><meta property="og:title" content={seoData.title} />
-      <meta property="og:description" content={seoData.description} />
-      <meta property="og:url" content={seoData.canonical} />
-      <meta property="og:image" content={seoData.ogImage} />
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="Zion Tech Group" >{/* Twitter Card */}</meta>
-      </meta><meta name="twitter:card" content={seoData.twitterCard} />
-      <meta name="twitter:title" content={seoData.title} />
-      <meta name="twitter:description" content={seoData.description} />
-      <meta name="twitter:image" content={seoData.ogImage} >{/* Canonical */}</meta>
-      </meta><link rel="canonical" href={seoData.canonical} />
-    </Helmet>
+    </Helmet> </Helmet> </Helmet><title>{seoData.titl</title>e</title>}</title>
+     <//title> <//title><meta name="description" content={seoData.description} />
+     </meta name="description" content={seoData.description} /> </meta name="description" content={seoData.description} /><meta name="keywords" content={seoData.keywords.join(', ')} />
+     </meta name="keywords" content={seoData.keywords.join(', ')} /> </meta name="keywords" content={seoData.keywords.join(', ')} /><meta name="author" content="Zion Tech Group" />
+     </meta name="author" content="Zion Tech Group" /> </meta name="author" content="Zion Tech Group" /><meta name="robots" content="index, follow" >{/* Open Graph *</meta name="robots" content="index, follow" >/</meta name="robots" content="index, follow" >}</meta>
+    <//meta> <//meta> </meta><meta property="og:title" content={seoData.title} />
+     </meta property="og:title" content={seoData.title} /> </meta property="og:title" content={seoData.title} /><meta property="og:description" content={seoData.description} />
+     </meta property="og:description" content={seoData.description} /> </meta property="og:description" content={seoData.description} /><meta property="og:url" content={seoData.canonical} />
+     </meta property="og:url" content={seoData.canonical} /> </meta property="og:url" content={seoData.canonical} /><meta property="og:image" content={seoData.ogImage} />
+     </meta property="og:image" content={seoData.ogImage} /> </meta property="og:image" content={seoData.ogImage} /><meta property="og:type" content="website" />
+     </meta property="og:type" content="website" /> </meta property="og:type" content="website" /><meta property="og:site_name" content="Zion Tech Group" >{/* Twitter Card *</meta property="og:site_name" content="Zion Tech Group" >/</meta property="og:site_name" content="Zion Tech Group" >}</meta>
+    <//meta> <//meta> </meta><meta name="twitter:card" content={seoData.twitterCard} />
+     </meta name="twitter:card" content={seoData.twitterCard} /> </meta name="twitter:card" content={seoData.twitterCard} /><meta name="twitter:title" content={seoData.title} />
+     </meta name="twitter:title" content={seoData.title} /> </meta name="twitter:title" content={seoData.title} /><meta name="twitter:description" content={seoData.description} />
+     </meta name="twitter:description" content={seoData.description} /> </meta name="twitter:description" content={seoData.description} /><meta name="twitter:image" content={seoData.ogImage} >{/* Canonical *</meta name="twitter:image" content={seoData.ogImage} >/</meta name="twitter:image" content={seoData.ogImage} >}</meta>
+    <//meta> <//meta> </meta><link rel="canonical" href={seoData.canonical} />
+  </link rel="canonical" href={seoData.canonical} /> </link rel="canonical" href={seoData.canonical} /> </Helmet>
   );
 };
 
-export default SEOOptimizer;
+export default SEOOptimizer<//Helmet>;<//Helmet>

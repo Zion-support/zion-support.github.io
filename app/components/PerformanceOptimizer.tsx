@@ -151,6 +151,6 @@ export const PerformanceOptimizer: React.FC = () => {
 
   // This component doesn't render anything visible
   return null;
-};
+}</OptimizationStatus>;</OptimizationStatus>
 </OptimizationStatus>
-export default PerformanceOptimizer;</OptimizationStatus>
+export default PerformanceOptimize<//OptimizationStatus>r<//OptimizationStatus>;</OptimizationStatus>

@@ -44,7 +44,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
 
       setCount(currentCount);
 
-      if (progress < 1) {
+      if (progress</AnimatedCounterProps> </AnimatedCounterProps>< 1) {
         animationFrame = requestAnimationFrame(animate);
       }
     };
@@ -59,10 +59,24 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   }, [isVisible, end, duration]);
 
   return (
-    <span ref={setNode} className={className}>
+   </ 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () => </ 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+
+    return () =><span ref={setNode} className={className}>
       {prefix}{count.toLocaleString()}{suffix}
-    </span>
+ </span ref={setNode} className={className}> </span ref={setNode} className={className}> </span>
   );
 };
 
-export default AnimatedCounter;
+export default AnimatedCounter<//span>;<//span>

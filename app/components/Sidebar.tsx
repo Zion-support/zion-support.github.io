@@ -39,9 +39,9 @@ interface SidebarProps {
     onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
-  const location = useLocation();</SidebarProps>
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) =></SidebarProps> </SidebarProps>{</SidebarProps>
+  const location = useLocation(<//SidebarProps>)<//SidebarProps>;</SidebarProps>
+  const [expandedSections, setExpandedSections] = useStat<//SidebarProps>e<//SidebarProps><string[]>([]);
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>)
@@ -152,36 +152,48 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen) return null</string[]>;</string[]>
 </string>
-  return (</string>
-    <>
+  return<//string> <//string>(</string>
+   <//string> <//string><>
       {/* Backdrop */}
       <div
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
         onClick={onClose}
-      >{/* Sidebar */}</div>
-      </div><div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden">
-        <div className="flex flex-col h-full">{/* Header */}</div>
-          <div className="flex items-center justify-between p-6 border-b border-gray-700">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-              <span className="text-white font-bold text-lg">Zion Tech Group</span>
-            </div>
-            <button
+      >{/* Sidebar </div
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+        onClick={onClose}
+      >*</div
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+        onClick={onClose}
+      >/</div>}</div>
+     <//div> <//div><div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden">
+       </div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden"> </div className="fixed top-0 left-0 h-full w-80 bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 z-50 transform transition-transform duration-300 ease-in-out lg:hidden"><div className="flex flex-col h-full">{/* Header </div className="flex flex-col h-full">*</div className="flex flex-col h-full">/</div>}</div>
+         <//div> <//div><div className="flex items-center justify-between p-6 border-b border-gray-700">
+           </div className="flex items-center justify-between p-6 border-b border-gray-700"> </div className="flex items-center justify-between p-6 border-b border-gray-700"><div className="flex items-center space-x-2">
+             </div className="flex items-center space-x-2"> </div className="flex items-center space-x-2"><div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+              </div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center"> </div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center"> </div><Zap className="w-5 h-5 text-white" />
+             </Zap className="w-5 h-5 text-white" /> </Zap className="w-5 h-5 text-white" /><span className="text-white font-bold text-lg">Zion Tech Gr</span className="text-white font-bold text-lg">o</span className="text-white font-bold text-lg">u</span>p</span>
+          <//span> <//span> </div>
+           <//div> <//div><button
               onClick={onClose}
               className="text-gray-400 hover:text-white transition-colors"
             >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
+             </button
+              onClick={onClose}
+              className="text-gray-400 hover:text-white transition-colors"
+            > </button
+              onClick={onClose}
+              className="text-gray-400 hover:text-white transition-colors"
+            ><X className="w-6 h-6" />
+          </X className="w-6 h-6" /> </X className="w-6 h-6" /> </button>
+        <//button> <//button> </div>
 
           {/* Navigation Content */}
-          <div className="flex-1 overflow-y-auto p-6 space-y-6">{/* Main Navigation */}</div>
-            <div>
-              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Main Navigation<nav className="space-y-1">{mainLinks.map((link, index) => (</nav>
-                  <Link
+         <//div> <//div><div className="flex-1 overflow-y-auto p-6 space-y-6">{/* Main Navigation </div className="flex-1 overflow-y-auto p-6 space-y-6">*</div className="flex-1 overflow-y-auto p-6 space-y-6">/</div>}</div>
+           <//div> <//div><div>
+            </div> </div> </div><h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Main Navigatio</h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">n</h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3"><nav className="space-y-1">{mainLinks.map((link, index) =></nav className="space-y-1"> </nav className="space-y-1">(</nav>
+                 <//nav> <//nav><Link
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
@@ -191,31 +203,51 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                     }`}
                     onClick={onClose}
                   >
-                    <link.icon className="w-5 h-5" />
-                    <span>{link.name}</span>
-                  </Link>
+                   </Link
+                    key={index}
+                    to={link.path}
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                      location.pathname === link.path
+                        ? 'bg-cyan-500/20 text-cyan-400'
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                    }`}
+                    onClick={onClose}
+                  > </Link
+                    key={index}
+                    to={link.path}
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                      location.pathname === link.path
+                        ? 'bg-cyan-500/20 text-cyan-400'
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                    }`}
+                    onClick={onClose}
+                  ><link.icon className="w-5 h-5" />
+                   </link.icon className="w-5 h-5" /> </link.icon className="w-5 h-5" /><span>{link.na</span>m</span>e</span>}</span>
+                <//span> <//span> </Link>
                 ))}
-              </nav>
-            </div>
+            <//Link> <//Link> </nav>
+          <//nav> <//nav> </div>
 
             {/* Services */}
-            <div>
-              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Our Services<div className="space-y-2">{serviceCategories.map((category, categoryIndex) => (</div>
-                  <div key={categoryIndex}>
-                    <button
+           <//div> <//div><div>
+            </div> </div> </div><h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Our Service</h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">s</h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3"><div className="space-y-2">{serviceCategories.map((category, categoryIndex) =</div className="space-y-2">></div className="space-y-2"> </div>(</div>
+                 <//div> <//div><div key={categoryIndex}>
+                  </div key={categoryIndex}> </div key={categoryIndex}> </div><button
                       onClick={() =>toggleSection(category.title)}
-                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:bg-gray-700/50 hover:text-white rounded-lg transition-colors"</button>
-                    ></button>
-                      <div className="flex items-center space-x-3">
-                        <category.icon className={`w-5 h-5 ${category.color}`} />
-                        <span>{category.title}</span>
-                      </div>
+                      className="flex items-center justify-between w-full px-3 py-2 text-left text-gray-300 hover:bg-gray-700/50 hover:text-white rounded-lg transition-color</button
+                      onClick={() =>s</button
+                      onClick={() =>"</button>
+                   <//button> <//button>></button>
+                     <//button> <//button><div className="flex items-center space-x-3">
+                      </div className="flex items-center space-x-3"> </div className="flex items-center space-x-3"> </div><category.icon className={`w-5 h-5 ${category.color}`} />
+                       </category.icon className={`w-5 h-5 ${category.color}`} /> </category.icon className={`w-5 h-5 ${category.color}`} /><span>{category.tit</span>l</span>e</span>}</span>
+                    <//span> <//span> </div>
                       {expandedSections.includes(category.title) ? (
-                        <ChevronDown className="w-4 h-4" >) : (<ChevronRight className="w-4 h-4" >)}</ChevronRight>
-                    </ChevronRight>
+                       <//div> <//div><ChevronDown className="w-4 h-4" >) : </ChevronDown className="w-4 h-4" >(</ChevronDown className="w-4 h-4" ><ChevronRight className="w-4 h-4" >)</ChevronRight className="w-4 h-4" >}</ChevronRight>
+                  <//ChevronRight> <//ChevronRight> </ChevronRight>
 
                     {expandedSections.includes(category.title) && (
-                      <div className="ml-8 space-y-1 mt-2">{category.services.map((service, serviceIndex) => (<Link
+                     <//ChevronRight> <//ChevronRight><div className="ml-8 space-y-1 mt-2">{category.services.map((service, serviceIndex) =></div className="ml-8 space-y-1 mt-2"> </div className="ml-8 space-y-1 mt-2">(</div><Link
                             key={serviceIndex}
                             to={service.path}
                             className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
@@ -224,20 +256,38 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                                 : 'text-gray-400 hover:bg-gray-700/50 hover:text-white'
                             }`}
                             onClick={onClose}
-                          >{service.name}</Link>
-                          </Link>
+                          >{service.nam</Link
+                            key={serviceIndex}
+                            to={service.path}
+                            className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
+                              location.pathname === service.path
+                                ? 'bg-cyan-500/20 text-cyan-400'
+                                : 'text-gray-400 hover:bg-gray-700/50 hover:text-white'
+                            }`}
+                            onClick={onClose}
+                          >e</Link
+                            key={serviceIndex}
+                            to={service.path}
+                            className={`block px-3 py-2 text-sm rounded-lg transition-colors ${
+                              location.pathname === service.path
+                                ? 'bg-cyan-500/20 text-cyan-400'
+                                : 'text-gray-400 hover:bg-gray-700/50 hover:text-white'
+                            }`}
+                            onClick={onClose}
+                          >}</Link>
+                        <//Link> <//Link> </Link>
                         ))}
-                      </div>
+                    <//Link> <//Link> </div>
                     )}
-                  </div>
+                <//div> <//div> </div>
                 ))}
-              </div>
-            </div>
+            <//div> <//div> </div>
+          <//div> <//div> </div>
 
             {/* Support */}
-            <div>
-              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Support<nav className="space-y-1">{supportLinks.map((link, index) => (</nav>
-                  <Link
+           <//div> <//div><div>
+            </div> </div> </div><h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Suppor</h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">t</h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3"><nav className="space-y-1">{supportLinks.map((link, index) =></nav className="space-y-1"> </nav className="space-y-1">(</nav>
+                 <//nav> <//nav><Link
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
@@ -247,17 +297,35 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                     }`}
                     onClick={onClose}
                   >
-                    <link.icon className="w-5 h-5" />
-                    <span>{link.name}</span>
-                  </Link>
+                   </Link
+                    key={index}
+                    to={link.path}
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                      location.pathname === link.path
+                        ? 'bg-cyan-500/20 text-cyan-400'
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                    }`}
+                    onClick={onClose}
+                  > </Link
+                    key={index}
+                    to={link.path}
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                      location.pathname === link.path
+                        ? 'bg-cyan-500/20 text-cyan-400'
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                    }`}
+                    onClick={onClose}
+                  ><link.icon className="w-5 h-5" />
+                   </link.icon className="w-5 h-5" /> </link.icon className="w-5 h-5" /><span>{link.na</span>m</span>e</span>}</span>
+                <//span> <//span> </Link>
                 ))}
-              </nav>
-            </div>
+            <//Link> <//Link> </nav>
+          <//nav> <//nav> </div>
 
             {/* Legal */}
-            <div>
-              <h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Legal<nav className="space-y-1">{legalLinks.map((link, index) => (</nav>
-                  <Link
+           <//div> <//div><div>
+            </div> </div> </div><h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">Lega</h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3">l</h3 className="text-gray-400 text-xs font-semibold uppercase tracking-wider mb-3"><nav className="space-y-1">{legalLinks.map((link, index) =></nav className="space-y-1"> </nav className="space-y-1">(</nav>
+                 <//nav> <//nav><Link
                     key={index}
                     to={link.path}
                     className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
@@ -267,54 +335,80 @@ const Sidebar: React.FC<SidebarProps>= ({ isOpen, onClose }) => {</SidebarProps>
                     }`}
                     onClick={onClose}
                   >
-                    <link.icon className="w-5 h-5" />
-                    <span>{link.name}</span>
-                  </Link>
+                   </Link
+                    key={index}
+                    to={link.path}
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                      location.pathname === link.path
+                        ? 'bg-cyan-500/20 text-cyan-400'
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                    }`}
+                    onClick={onClose}
+                  > </Link
+                    key={index}
+                    to={link.path}
+                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg transition-colors ${
+                      location.pathname === link.path
+                        ? 'bg-cyan-500/20 text-cyan-400'
+                        : 'text-gray-300 hover:bg-gray-700/50 hover:text-white'
+                    }`}
+                    onClick={onClose}
+                  ><link.icon className="w-5 h-5" />
+                   </link.icon className="w-5 h-5" /> </link.icon className="w-5 h-5" /><span>{link.na</span>m</span>e</span>}</span>
+                <//span> <//span> </Link>
                 ))}
-              </nav>
-            </div>
-          </div>
+            <//Link> <//Link> </nav>
+          <//nav> <//nav> </div>
+        <//div> <//div> </div>
 
           {/* Footer */}
-          <div className="p-6 border-t border-gray-700">
-            <div className="space-y-4">{/* Contact Info */}</div>
-              <div className="space-y-2">
-                <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                  <Phone className="w-4 h-4" />
-                  <span>+1 (302) 464-0950</span>
-                </div>
-                <div className="flex items-center space-x-2 text-gray-400 text-sm">
-                  <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
-              </div>
+         <//div> <//div><div className="p-6 border-t border-gray-700">
+           </div className="p-6 border-t border-gray-700"> </div className="p-6 border-t border-gray-700"><div className="space-y-4">{/* Contact Info </div className="space-y-4">*</div className="space-y-4">/</div>}</div>
+             <//div> <//div><div className="space-y-2">
+               </div className="space-y-2"> </div className="space-y-2"><div className="flex items-center space-x-2 text-gray-400 text-sm">
+                </div className="flex items-center space-x-2 text-gray-400 text-sm"> </div className="flex items-center space-x-2 text-gray-400 text-sm"> </div><Phone className="w-4 h-4" />
+                 </Phone className="w-4 h-4" /> </Phone className="w-4 h-4" /><span>+1 (302) 464-0</span>9</span>5</span>0</span>
+              <//span> <//span> </div>
+               <//div> <//div><div className="flex items-center space-x-2 text-gray-400 text-sm">
+                </div className="flex items-center space-x-2 text-gray-400 text-sm"> </div className="flex items-center space-x-2 text-gray-400 text-sm"> </div><Mail className="w-4 h-4" />
+                 </Mail className="w-4 h-4" /> </Mail className="w-4 h-4" /><span>kleber@ziontechgroup.</span>c</span>o</span>m</span>
+              <//span> <//span> </div>
+            <//div> <//div> </div>
 
               {/* Social Links */}
-              <div className="flex space-x-4">
-                <a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                  <Github className="w-5 h-5" />
-                </a>
-              </div>
+             <//div> <//div><div className="flex space-x-4">
+              </div className="flex space-x-4"> </div className="flex space-x-4"> </div><a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                 </a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors"> </a href="https://linkedin.com/company/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors"><Linkedin className="w-5 h-5" />
+              </Linkedin className="w-5 h-5" /> </Linkedin className="w-5 h-5" /> </a>
+               <//a> <//a><a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                 </a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors"> </a href="https://twitter.com/ziontechgroup" className="text-gray-400 hover:text-cyan-400 transition-colors"><Twitter className="w-5 h-5" />
+              </Twitter className="w-5 h-5" /> </Twitter className="w-5 h-5" /> </a>
+               <//a> <//a><a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                 </a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors"> </a href="https://github.com/zion-tech-group" className="text-gray-400 hover:text-cyan-400 transition-colors"><Github className="w-5 h-5" />
+              </Github className="w-5 h-5" /> </Github className="w-5 h-5" /> </a>
+            <//a> <//a> </div>
 
               {/* CTA Button */}
-              <Link
+             <//div> <//div><Link
                 to="/contact"
                 className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
                 onClick={onClose}
-              >Get Started Today</Link>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+              >Get Started Tod</Link
+                to="/contact"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
+                onClick={onClose}
+              >a</Link
+                to="/contact"
+                className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
+                onClick={onClose}
+              >y</Link>
+            <//Link> <//Link> </Link>
+          <//Link> <//Link> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
+   <//div> <//div></>
   );
 };
 
-export default Sidebar;
+export default Sidebar<//>;<//>

@@ -46,38 +46,48 @@ class GlobalErrorBoundary extends Component<Props, State>{
         return this.props.fallback;
       }
 
-      // Default error UI</Props>
-      return (</Props>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
-            <div className="text-6xl mb-4">⚠️<h1 className="text-2xl font-bold text-white mb-4">Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the page.</p>
-            </p>
+      // Default error </Props, State>U</Props, State>I</Props>
+      return<//Props> <//Props>(</Props>
+       <//Props> <//Props><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+         </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"> </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"><div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20">
+           </div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"> </div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 text-center border border-white/20"><div className="text-6xl mb-4">⚠</div className="text-6xl mb-4">️</div><h1 className="text-2xl font-bold text-white mb-4">Something went wr</h1 className="text-2xl font-bold text-white mb-4">o</h1 className="text-2xl font-bold text-white mb-4">n</h1>g</h1>
+           <//h1> <//h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Please try refreshing the pag</p className="text-gray-300 mb-6">e</p className="text-gray-300 mb-6">.</p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="text-left bg-black/20 rounded-lg p-4 mb-6">
-                <summary className="cursor-pointer text-cyan-400 font-medium mb-2">Error Details (Development Only)<pre className="text-xs text-red-400 overflow-auto">{this.state.error.toString()}</pre>
-                  {this.state.errorInfo?.componentStack}</pre>
-                </pre>
-              </details>
+             <//p> <//p><details className="text-left bg-black/20 rounded-lg p-4 mb-6">
+               </details className="text-left bg-black/20 rounded-lg p-4 mb-6"> </details className="text-left bg-black/20 rounded-lg p-4 mb-6"><summary className="cursor-pointer text-cyan-400 font-medium mb-2">Error Details (Development Only</summary className="cursor-pointer text-cyan-400 font-medium mb-2">)</summary className="cursor-pointer text-cyan-400 font-medium mb-2"><pre className="text-xs text-red-400 overflow-auto">{this.state.error.toString(</pre className="text-xs text-red-400 overflow-auto">)</pre className="text-xs text-red-400 overflow-auto">}</pre>
+                  {this.state.errorInfo?.componentStac<//pre>k<//pre>}</pre>
+              <//pre> <//pre> </pre>
+            <//pre> <//pre> </details>
             )}
 
-            <div className="space-y-3">
-              <button
+           <//details> <//details><div className="space-y-3">
+            </div className="space-y-3"> </div className="space-y-3"> </div><button
                 onClick={() =>window.location.reload()}
                 className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
-              ></button>
-                Refresh Page<button
+             </button
+                onClick={() => </button
+                onClick={() =>></button>
+                Refresh Pag<//button>e<//button><button
                 onClick={() =>this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
                 className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
-              ></button>
-                Try Again<a
+             </button
+                onClick={() => </button
+                onClick={() =>></button>
+                Try Agai<//button>n<//button><a
                 href="/"
                 className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
-              >Go Home</a>
-              </a>
-            </div>
-          </div>
-        </div>
+              >Go Ho</a
+                href="/"
+                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+              >m</a
+                href="/"
+                className="block w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200"
+              >e</a>
+            <//a> <//a> </a>
+          <//a> <//a> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
       );
     }
 
@@ -85,4 +95,4 @@ class GlobalErrorBoundary extends Component<Props, State>{
   }
 }
 
-export { GlobalErrorBoundary };
+export { GlobalErrorBoundary }<//div>;<//div>

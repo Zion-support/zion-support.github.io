@@ -27,8 +27,8 @@ export const Link: React.FC<LinkProps>= ({
       e.preventDefault()
       window.location.href = href;}
     }
-  }</LinkProps>
-  return (<a
+ </LinkProps> </LinkProps>}</LinkProps>
+  return <//LinkProps>(<//LinkProps><a
       href={href}
       className={className}
       target={target}
@@ -36,8 +36,24 @@ export const Link: React.FC<LinkProps>= ({
       onClick={handleClick}
       aria-label={ariaLabel}
       {...props}
-    >{children}</a>
-    </a>
+    >{childre</a
+      href={href}
+      className={className}
+      target={target}
+      rel={rel}
+      onClick={handleClick}
+      aria-label={ariaLabel}
+      {...props}
+    >n</a
+      href={href}
+      className={className}
+      target={target}
+      rel={rel}
+      onClick={handleClick}
+      aria-label={ariaLabel}
+      {...props}
+    >}</a>
+  <//a> <//a> </a>
   )
 }
-export default Link
+export default Lin<//a>k<//a>

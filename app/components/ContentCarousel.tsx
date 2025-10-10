@@ -66,83 +66,109 @@ const ContentCarousel: React.FC = () => {
 
   return (
     <section className="py-16" aria-labelledby="carousel-heading">
-      <div className="container mx-auto px-4">
-        <h2 id="carousel-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Success Stories</h2>
-        </h2>
+     </section className="py-16" aria-labelledby="carousel-heading"> </section className="py-16" aria-labelledby="carousel-heading"><div className="container mx-auto px-4">
+      </div className="container mx-auto px-4"> </div className="container mx-auto px-4"> </div><h2 id="carousel-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">Success Stori</h2 id="carousel-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">e</h2 id="carousel-heading" className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">s</h2>
+      <//h2> <//h2> </h2>
 
-        <div className="relative max-w-6xl mx-auto">
-          <div className="overflow-hidden rounded-2xl">
-            <div
+       <//h2> <//h2><div className="relative max-w-6xl mx-auto">
+         </div className="relative max-w-6xl mx-auto"> </div className="relative max-w-6xl mx-auto"><div className="overflow-hidden rounded-2xl">
+           </div className="overflow-hidden rounded-2xl"> </div className="overflow-hidden rounded-2xl"><div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-            >{slides.map((slide) => (</div>
-                <div key={slide.id} className="w-full flex-shrink-0">
-                  <div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2xl`}>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                      <div>
-                        <div className="text-6xl mb-6">{slide.image}<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{slide.title}<p className="text-white/90 text-lg mb-6 leading-relaxed">{slide.description}</p>
-                        </p>
-                        <div className="flex items-center space-x-2 text-white">
-                          <slide.icon className="w-6 h-6" />
-                          <span className="text-2xl font-bold">{slide.stats}</span>
-                        </div>
-                      </div>
-                      <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                        <h4 className="text-xl font-semibold text-white mb-4">Key Results</h4>
-                        <ul className="space-y-3 text-white/90">
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"><span>Improved operational efficiency</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"><span>Reduced manual processes</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"><span>Enhanced security measures</span>
-                          </li>
-                          <li className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-white rounded-full"><span>Scalable infrastructure</span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            >{slides.map((slide) =</div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >></div
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            > </div>(</div>
+               <//div> <//div><div key={slide.id} className="w-full flex-shrink-0">
+                 </div key={slide.id} className="w-full flex-shrink-0"> </div key={slide.id} className="w-full flex-shrink-0"><div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2xl`}>
+                   </div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2xl`}> </div className={`bg-gradient-to-br ${slide.color} p-8 md:p-12 rounded-2xl`}><div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                     </div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"> </div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"><div>
+                        </div><div className="text-6xl mb-6">{slide.imag</div className="text-6xl mb-6">e</div className="text-6xl mb-6">}</div><h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{slide.titl</h3 className="text-2xl md:text-3xl font-bold text-white mb-4">e</h3 className="text-2xl md:text-3xl font-bold text-white mb-4">}</h3>
+                 <//h3> <//h3><p className="text-white/90 text-lg mb-6 leading-relaxed">{slide.descriptio</p className="text-white/90 text-lg mb-6 leading-relaxed">n</p className="text-white/90 text-lg mb-6 leading-relaxed">}</p>
+                       <//p> <//p><div className="flex items-center space-x-2 text-white">
+                        </div className="flex items-center space-x-2 text-white"> </div className="flex items-center space-x-2 text-white"> </div><slide.icon className="w-6 h-6" />
+                         </slide.icon className="w-6 h-6" /> </slide.icon className="w-6 h-6" /><span className="text-2xl font-bold">{slide.sta</span className="text-2xl font-bold">t</span className="text-2xl font-bold">s</span>}</span>
+                      <//span> <//span> </div>
+                    <//div> <//div> </div>
+                     <//div> <//div><div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
+                      </div className="bg-white/10 backdrop-blur-sm rounded-xl p-6"> </div className="bg-white/10 backdrop-blur-sm rounded-xl p-6"> </div><h4 className="text-xl font-semibold text-white mb-4">Key Resul</h4 className="text-xl font-semibold text-white mb-4">t</h4 className="text-xl font-semibold text-white mb-4">s</h4>
+                       <//h4> <//h4><ul className="space-y-3 text-white/90">
+                         </ul className="space-y-3 text-white/90"> </ul className="space-y-3 text-white/90"><li className="flex items-center space-x-2">
+                           </li className="flex items-center space-x-2"> </li className="flex items-center space-x-2"><div className="w-2 h-2 bg-white rounded-full"><span>Improved operational efficie</span>n</span>c</span>y</span>
+                        <//span> <//span> </li>
+                         <//li> <//li><li className="flex items-center space-x-2">
+                           </li className="flex items-center space-x-2"> </li className="flex items-center space-x-2"><div className="w-2 h-2 bg-white rounded-full"><span>Reduced manual proces</span>s</span>e</span>s</span>
+                        <//span> <//span> </li>
+                         <//li> <//li><li className="flex items-center space-x-2">
+                           </li className="flex items-center space-x-2"> </li className="flex items-center space-x-2"><div className="w-2 h-2 bg-white rounded-full"><span>Enhanced security measu</span>r</span>e</span>s</span>
+                        <//span> <//span> </li>
+                         <//li> <//li><li className="flex items-center space-x-2">
+                           </li className="flex items-center space-x-2"> </li className="flex items-center space-x-2"><div className="w-2 h-2 bg-white rounded-full"><span>Scalable infrastruct</span>u</span>r</span>e</span>
+                        <//span> <//span> </li>
+                      <//li> <//li> </ul>
+                    <//ul> <//ul> </div>
+                  <//div> <//div> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
               ))}
-            </div>
-          </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
 
           {/* Navigation buttons */}
-          <button
+         <//div> <//div><button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-6 h-6" />
-          </button>
+           </button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+            aria-label="Previous slide"
+          > </button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+            aria-label="Previous slide"
+          ><ChevronLeft className="w-6 h-6" />
+        </ChevronLeft className="w-6 h-6" /> </ChevronLeft className="w-6 h-6" /> </button>
 
-          <button
+         <//button> <//button><button
             onClick={nextSlide}
             className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-6 h-6" />
-          </button>
+           </button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+            aria-label="Next slide"
+          > </button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
+            aria-label="Next slide"
+          ><ChevronRight className="w-6 h-6" />
+        </ChevronRight className="w-6 h-6" /> </ChevronRight className="w-6 h-6" /> </button>
 
           {/* Slide indicators */}
-          <div className="flex justify-center space-x-2 mt-6">{slides.map((_, index) => (<button
+         <//button> <//button><div className="flex justify-center space-x-2 mt-6">{slides.map((_, index) =></div className="flex justify-center space-x-2 mt-6"> </div className="flex justify-center space-x-2 mt-6">(</div><button
                 key={index}
                 onClick={() =>goToSlide(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/50'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
-              /></button>
-            ))}</button>
-          </div>
-        </div>
-      </div>
-    </section>
+              </button
+                key={index}
+                onClick={() =>/</button
+                key={index}
+                onClick={() =>></button>
+            )<//button>)<//button>}</button>
+        <//button> <//button> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
+  <//div> <//div> </section>
   );
 };
 
-export default ContentCarousel;
+export default ContentCarousel<//section>;<//section>

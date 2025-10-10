@@ -305,44 +305,51 @@ export default function CaseStudiesPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Success Stories<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Real results from real clients. Discover how we've helped businesses across</p>
-              industries achieve remarkable transformations with AI and technology.</p>
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Award className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">500+ Projects</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <TrendingUp className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">300% Average ROI</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Star className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">99% Client Satisfaction</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">*</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">/</div>}</div>
+     <//div> <//div><section className="relative py-20 lg:py-32 overflow-hidden">
+       </section className="relative py-20 lg:py-32 overflow-hidden"> </section className="relative py-20 lg:py-32 overflow-hidden"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
+         </div className="container mx-auto px-4 relative z-10"> </div className="container mx-auto px-4 relative z-10"><div className="max-w-4xl mx-auto text-center">
+          </div className="max-w-4xl mx-auto text-center"> </div className="max-w-4xl mx-auto text-center"> </div><h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">Success Stori</h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">e</h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">s</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">Real results from real clients. Discover how we've helped businesses acro</p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">s</p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">s</p>
+              industries achieve remarkable transformations with AI and technolog<//p>y<//p>.</p>
+           <//p> <//p><div className="flex flex-wrap justify-center gap-4">
+             </div className="flex flex-wrap justify-center gap-4"> </div className="flex flex-wrap justify-center gap-4"><div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"> </div><Award className="w-5 h-5 text-cyan-400" />
+               </Award className="w-5 h-5 text-cyan-400" /> </Award className="w-5 h-5 text-cyan-400" /><span className="text-white font-medium">500+ Proje</span className="text-white font-medium">c</span className="text-white font-medium">t</span>s</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"> </div><TrendingUp className="w-5 h-5 text-purple-400" />
+               </TrendingUp className="w-5 h-5 text-purple-400" /> </TrendingUp className="w-5 h-5 text-purple-400" /><span className="text-white font-medium">300% Average </span className="text-white font-medium">R</span className="text-white font-medium">O</span>I</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"> </div><Star className="w-5 h-5 text-green-400" />
+               </Star className="w-5 h-5 text-green-400" /> </Star className="w-5 h-5 text-green-400" /><span className="text-white font-medium">99% Client Satisfact</span className="text-white font-medium">i</span className="text-white font-medium">o</span>n</span>
+            <//span> <//span> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Filters */}
-      <section className="py-8">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
+     <//section> <//section><section className="py-8">
+       </section className="py-8"> </section className="py-8"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="max-w-6xl mx-auto">
+           </div className="max-w-6xl mx-auto"> </div className="max-w-6xl mx-auto"><div className="flex flex-col md:flex-row gap-4 mb-8">
+             </div className="flex flex-col md:flex-row gap-4 mb-8"> </div className="flex flex-col md:flex-row gap-4 mb-8"><div className="flex-1 relative">
+              </div className="flex-1 relative"> </div className="flex-1 relative"> </div><Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+               </Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> </Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /><input
                   type="text"
                   placeholder="Search case studies..."
                   className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
                 />
-              <div className="flex gap-2 overflow-x-auto">{industries.map((industry) => (<button
+             </input
+                  type="text"
+                  placeholder="Search case studies..."
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                /> </input
+                  type="text"
+                  placeholder="Search case studies..."
+                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 transition-colors"
+                /><div className="flex gap-2 overflow-x-auto">{industries.map((industry) =></div className="flex gap-2 overflow-x-auto"> </div className="flex gap-2 overflow-x-auto">(</div><button
                     key={industry.name}
                     onClick={() =>setSelectedIndustry(industry.name)}
                     className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
@@ -350,11 +357,15 @@ export default function CaseStudiesPage() {
                         ? 'bg-cyan-500 text-white'
                         : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                     }`}
-                  ></button>
-                    {industry.label} ({industry.count})</button>
-                  </button>
+                 </button
+                    key={industry.name}
+                    onClick={() => </button
+                    key={industry.name}
+                    onClick={() =>></button>
+                    {industry.label} ({industry.count<//button>}<//button>)</button>
+                <//button> <//button> </button>
                 ))}
-              <div className="flex gap-2 overflow-x-auto">{services.map((service) => (<button
+             <//button> <//button><div className="flex gap-2 overflow-x-auto">{services.map((service) =></div className="flex gap-2 overflow-x-auto"> </div className="flex gap-2 overflow-x-auto">(</div><button
                   key={service.name}
                   onClick={() =>setSelectedService(service.name)}
                   className={`px-4 py-2 rounded-lg font-medium whitespace-nowrap transition-all ${
@@ -362,115 +373,137 @@ export default function CaseStudiesPage() {
                       ? 'bg-purple-500 text-white'
                       : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
                   }`}
-                ></button>
-                  {service.label} ({service.count})</button>
-                </button>
+               </button
+                  key={service.name}
+                  onClick={() => </button
+                  key={service.name}
+                  onClick={() =>></button>
+                  {service.label} ({service.count<//button>}<//button>)</button>
+              <//button> <//button> </button>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+          <//button> <//button> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Case Studies Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredCaseStudies.map((study) => (</div>
-                <div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group">
-                  <div className="relative">
-                    <img
+     <//section> <//section><section className="py-20">
+       </section className="py-20"> </section className="py-20"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="max-w-7xl mx-auto">
+           </div className="max-w-7xl mx-auto"> </div className="max-w-7xl mx-auto"><div className="grid grid-cols-1 lg:grid-cols-2 gap-8">{filteredCaseStudies.map((study) =</div className="grid grid-cols-1 lg:grid-cols-2 gap-8">></div className="grid grid-cols-1 lg:grid-cols-2 gap-8"> </div>(</div>
+               <//div> <//div><div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group">
+                 </div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group"> </div key={study.id} className="bg-slate-800/50 rounded-lg overflow-hidden hover:bg-slate-700/50 transition-all duration-300 group"><div className="relative">
+                  </div className="relative"> </div className="relative"> </div><img
                       src={study.image}
                       alt={study.title}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 left-4">
-                      <div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>{React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' })}</div>
-                      </div>
-                    </div>
-                    <div className="absolute top-4 right-4">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">{study.industry.charAt(0).toUpperCase() + study.industry.slice(1)}</span>
-                      </span>
-                    </div>
-                  </div>
+                   </img
+                      src={study.image}
+                      alt={study.title}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    /> </img
+                      src={study.image}
+                      alt={study.title}
+                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    /><div className="absolute top-4 left-4">
+                   </div className="absolute top-4 left-4"> </div className="absolute top-4 left-4"> </div> </div>
+               <//div> <//div><div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>{React.createElement(getIndustryIcon(study.industry), { className: 'w-8 h-8' </div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>}</div className={`w-8 h-8 ${getIndustryColor(study.industry)}`}>)</div>}</div>
+                  <//div> <//div> </div>
+                   <//div> <//div><div className="absolute top-4 right-4">
+                    </div className="absolute top-4 right-4"> </div className="absolute top-4 right-4"> </div><span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">{study.industry.charAt(0).toUpperCase() + study.industry.slice(</span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">1</span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">)</span>}</span>
+                  <//span> <//span> </div>
+                <//div> <//div> </div>
 
-                  <div className="p-8">
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{study.title}</h3>
-                    </h3>
+                 <//div> <//div><div className="p-8">
+                  </div className="p-8"> </div className="p-8"> </div><h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">{study.titl</h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">e</h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">}</h3>
+                  <//h3> <//h3> </h3>
 
-                    <div className="flex items-center space-x-4 mb-4">
-                      <div className="flex items-center space-x-2">
-                        <Building className="w-4 h-4 text-gray-400" />
-                        <span className="text-gray-300 text-sm">{study.company}</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <Clock className="w-4 h-4 text-gray-400" />
-                        <span className="text-gray-300 text-sm">{study.duration}</span>
-                      </div>
-                    </div>
+                   <//h3> <//h3><div className="flex items-center space-x-4 mb-4">
+                     </div className="flex items-center space-x-4 mb-4"> </div className="flex items-center space-x-4 mb-4"><div className="flex items-center space-x-2">
+                      </div className="flex items-center space-x-2"> </div className="flex items-center space-x-2"> </div><Building className="w-4 h-4 text-gray-400" />
+                       </Building className="w-4 h-4 text-gray-400" /> </Building className="w-4 h-4 text-gray-400" /><span className="text-gray-300 text-sm">{study.compa</span className="text-gray-300 text-sm">n</span className="text-gray-300 text-sm">y</span>}</span>
+                    <//span> <//span> </div>
+                     <//div> <//div><div className="flex items-center space-x-2">
+                      </div className="flex items-center space-x-2"> </div className="flex items-center space-x-2"> </div><Clock className="w-4 h-4 text-gray-400" />
+                       </Clock className="w-4 h-4 text-gray-400" /> </Clock className="w-4 h-4 text-gray-400" /><span className="text-gray-300 text-sm">{study.durati</span className="text-gray-300 text-sm">o</span className="text-gray-300 text-sm">n</span>}</span>
+                    <//span> <//span> </div>
+                  <//div> <//div> </div>
 
-                    <div className="space-y-4 mb-6">
-                      <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge:<p className="text-gray-300 text-sm">{study.challenge}</p>
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution:<p className="text-gray-300 text-sm">{study.solution}</p>
-                      </div>
-                    </div>
+                   <//div> <//div><div className="space-y-4 mb-6">
+                     </div className="space-y-4 mb-6"> </div className="space-y-4 mb-6"><div>
+                      </div> </div> </div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Challenge</h4 className="text-sm font-semibold text-cyan-400 mb-2">:</h4 className="text-sm font-semibold text-cyan-400 mb-2"><p className="text-gray-300 text-sm">{study.challeng</p className="text-gray-300 text-sm">e</p className="text-gray-300 text-sm">}</p>
+                    <//p> <//p> </div>
+                     <//div> <//div><div>
+                      </div> </div> </div><h4 className="text-sm font-semibold text-cyan-400 mb-2">Solution</h4 className="text-sm font-semibold text-cyan-400 mb-2">:</h4 className="text-sm font-semibold text-cyan-400 mb-2"><p className="text-gray-300 text-sm">{study.solutio</p className="text-gray-300 text-sm">n</p className="text-gray-300 text-sm">}</p>
+                    <//p> <//p> </div>
+                  <//div> <//div> </div>
 
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results:<div className="grid grid-cols-2 gap-2">{study.results.slice(0, 4).map((result, index) => (</div>
-                          <div key={index} className="flex items-center text-sm text-gray-300">
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{result}</CheckCircle>
-                          </CheckCircle>
+                   <//div> <//div><div className="mb-6">
+                    </div className="mb-6"> </div className="mb-6"> </div><h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Results</h4 className="text-sm font-semibold text-cyan-400 mb-3">:</h4 className="text-sm font-semibold text-cyan-400 mb-3"><div className="grid grid-cols-2 gap-2">{study.results.slice(0, 4).map((result, index) =</div className="grid grid-cols-2 gap-2">></div className="grid grid-cols-2 gap-2"> </div>(</div>
+                         <//div> <//div><div key={index} className="flex items-center text-sm text-gray-300">
+                          </div key={index} className="flex items-center text-sm text-gray-300"> </div key={index} className="flex items-center text-sm text-gray-300"> </div><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >{resul</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >t</CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" >}</CheckCircle>
+                        <//CheckCircle> <//CheckCircle> </CheckCircle>
                         ))}
-                      </div>
-                    </div>
+                    <//CheckCircle> <//CheckCircle> </div>
+                  <//div> <//div> </div>
 
-                    <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used:<div className="flex flex-wrap gap-2">{study.technologies.map((tech, index) => (<span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{tech}</span>
-                          </span>
+                   <//div> <//div><div className="mb-6">
+                    </div className="mb-6"> </div className="mb-6"> </div><h4 className="text-sm font-semibold text-cyan-400 mb-3">Technologies Used</h4 className="text-sm font-semibold text-cyan-400 mb-3">:</h4 className="text-sm font-semibold text-cyan-400 mb-3"><div className="flex flex-wrap gap-2">{study.technologies.map((tech, index) =></div className="flex flex-wrap gap-2"> </div className="flex flex-wrap gap-2">(</div><span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">{te</span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">c</span key={index} className="px-2 py-1 bg-slate-700 text-gray-300 text-xs rounded">h</span>}</span>
                         ))}
-                      </div>
-                    </div>
+                    <//span> <//span> </div>
+                  <//div> <//div> </div>
 
-                    <div className="border-t border-gray-700 pt-4">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">{study.testimonial.avatar}</div>
-                        </div>
-                        <div className="flex-1">
-                          <p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}"<div className="text-cyan-400 text-xs font-medium">{study.testimonial.author}<div className="text-gray-400 text-xs">{study.testimonial.role}</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                   <//div> <//div><div className="border-t border-gray-700 pt-4">
+                     </div className="border-t border-gray-700 pt-4"> </div className="border-t border-gray-700 pt-4"><div className="flex items-center space-x-4">
+                     </div className="flex items-center space-x-4"> </div className="flex items-center space-x-4"> </div> </div>
+               <//div> <//div><div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">{study.testimonial.avat</div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">a</div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">r</div>}</div>
+                       <//div> <//div><div className="flex-1">
+                        </div className="flex-1"> </div className="flex-1"> </div><p className="text-gray-300 text-sm italic mb-1">"{study.testimonial.quote}</p className="text-gray-300 text-sm italic mb-1">"</p className="text-gray-300 text-sm italic mb-1"><div className="text-cyan-400 text-xs font-medium">{study.testimonial.auth</div className="text-cyan-400 text-xs font-medium">o</div className="text-cyan-400 text-xs font-medium">r</div>}</div>
+               <//div> <//div><div className="text-gray-400 text-xs">{study.testimonial.ro</div className="text-gray-400 text-xs">l</div className="text-gray-400 text-xs">e</div>}</div>
+                    <//div> <//div> </div>
+                  <//div> <//div> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Story?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solutions.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+     <//section> <//section><section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
+       </section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700"> </section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700"><div className="container mx-auto px-4 text-center">
+        </div className="container mx-auto px-4 text-center"> </div className="container mx-auto px-4 text-center"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Create Your Success Stor</h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">y</h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">?</h2>
+           <//h2> <//h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join hundreds of businesses that have already transformed their operations with our AI and technology solution</p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">s</p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">.</p>
+         <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div><Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
             >
-              <MessageSquare className="w-5 h-5 mr-2" >Start Your Project</MessageSquare>
-            </MessageSquare>
-            <Link
+             </Link
+              to="/contact"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+            > </Link
+              to="/contact"
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+            ><MessageSquare className="w-5 h-5 mr-2" >Start Your Proje</MessageSquare className="w-5 h-5 mr-2" >c</MessageSquare className="w-5 h-5 mr-2" >t</MessageSquare>
+          <//MessageSquare> <//MessageSquare> </MessageSquare>
+           <//MessageSquare> <//MessageSquare><Link
               to="/consultation"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
-              <Calendar className="w-5 h-5 mr-2" >Free Consultation</Calendar>
-            </Calendar>
-          </div>
-        </div>
-      </section>
-    </div>
+             </Link
+              to="/consultation"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+            > </Link
+              to="/consultation"
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+            ><Calendar className="w-5 h-5 mr-2" >Free Consultati</Calendar className="w-5 h-5 mr-2" >o</Calendar className="w-5 h-5 mr-2" >n</Calendar>
+          <//Calendar> <//Calendar> </Calendar>
+        <//Calendar> <//Calendar> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
+  <//section> <//section> </div>
   );
-}
+<//div>}<//div>

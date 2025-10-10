@@ -114,120 +114,133 @@ const ContactPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <SEOOptimizer
+    </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div><Navigation />
+     </Navigation /> </Navigation /><SEOOptimizer
         title="Contact Zion Tech Group - AI & IT Solutions"
         description="Get in touch with our AI and IT experts. Contact us for consultations, project inquiries, and enterprise solutions. Call (302) 464-0950 or email kleber@ziontechgroup.com"
         keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
-      >{/* Hero Section */}</SEOOptimizer>
-      </SEOOptimizer><section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
-              <Sparkles className="w-4 h-4 text-cyan-400" />
-              <span className="text-cyan-400 text-sm font-medium">Get In Touch<h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">Let's Build the</h1>
-              <span className="block holographic-text cyber-text">Future Together<p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">Ready to transform your business with AI and cutting-edge technology?</p>
-              Our experts are here to help you achieve your goals.</p>
-            </p>
+      >{/* Hero Section *</SEOOptimizer
+        title="Contact Zion Tech Group - AI & IT Solutions"
+        description="Get in touch with our AI and IT experts. Contact us for consultations, project inquiries, and enterprise solutions. Call (302) 464-0950 or email kleber@ziontechgroup.com"
+        keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
+      >/</SEOOptimizer
+        title="Contact Zion Tech Group - AI & IT Solutions"
+        description="Get in touch with our AI and IT experts. Contact us for consultations, project inquiries, and enterprise solutions. Call (302) 464-0950 or email kleber@ziontechgroup.com"
+        keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
+      >}</SEOOptimizer>
+    <//SEOOptimizer> <//SEOOptimizer> </SEOOptimizer><section className="relative py-20 lg:py-32 overflow-hidden">
+       </section className="relative py-20 lg:py-32 overflow-hidden"> </section className="relative py-20 lg:py-32 overflow-hidden"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"><div className="container mx-auto px-4 relative z-10">
+         </div className="container mx-auto px-4 relative z-10"> </div className="container mx-auto px-4 relative z-10"><div className="max-w-4xl mx-auto text-center">
+           </div className="max-w-4xl mx-auto text-center"> </div className="max-w-4xl mx-auto text-center"><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
+            </div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8"> </div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8"> </div><Sparkles className="w-4 h-4 text-cyan-400" />
+             </Sparkles className="w-4 h-4 text-cyan-400" /> </Sparkles className="w-4 h-4 text-cyan-400" /><span className="text-cyan-400 text-sm font-medium">Get In Tou</span className="text-cyan-400 text-sm font-medium">c</span className="text-cyan-400 text-sm font-medium">h</span><h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">Let's Build </h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">t</h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">h</h1>e</h1>
+             <//h1> <//h1><span className="block holographic-text cyber-text">Future Togeth</span className="block holographic-text cyber-text">e</span className="block holographic-text cyber-text">r</span><p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">Ready to transform your business with AI and cutting-edge technolog</p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">y</p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">?</p>
+              Our experts are here to help you achieve your goal<//p>s<//p>.</p>
 
-            <div className="flex flex-wrap justify-center gap-6">
-              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
-                <Phone className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">+1 (302) 464-0950</span>
-              </div>
-              <div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
-                <Mail className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+           <//p> <//p><div className="flex flex-wrap justify-center gap-6">
+             </div className="flex flex-wrap justify-center gap-6"> </div className="flex flex-wrap justify-center gap-6"><div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
+              </div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg"> </div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg"> </div><Phone className="w-5 h-5 text-cyan-400" />
+               </Phone className="w-5 h-5 text-cyan-400" /> </Phone className="w-5 h-5 text-cyan-400" /><span className="text-white font-medium">+1 (302) 464-0</span className="text-white font-medium">9</span className="text-white font-medium">5</span>0</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg">
+              </div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg"> </div className="flex items-center space-x-3 bg-slate-800/50 px-6 py-3 rounded-lg"> </div><Mail className="w-5 h-5 text-purple-400" />
+               </Mail className="w-5 h-5 text-purple-400" /> </Mail className="w-5 h-5 text-purple-400" /><span className="text-white font-medium">kleber@ziontechgroup.</span className="text-white font-medium">c</span className="text-white font-medium">o</span>m</span>
+            <//span> <//span> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Contact Methods */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{contactMethods.map((method, index) => (</div>
-              <div key={index} className="quantum-card p-6 text-center space-y-4">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
-                  <method.icon className="w-8 h-8 text-cyan-400" />
-                <h3 className="text-xl font-bold text-white">{method.title}</h3>
-                <div className="space-y-2">
-                  <div className="text-cyan-400 font-medium">{method.value}<div className="text-gray-300 text-sm">{method.description}</div>
+     <//section> <//section><section className="py-20">
+       </section className="py-20"> </section className="py-20"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">{contactMethods.map((method, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16"> </div>(</div>
+             <//div> <//div><div key={index} className="quantum-card p-6 text-center space-y-4">
+               </div key={index} className="quantum-card p-6 text-center space-y-4"> </div key={index} className="quantum-card p-6 text-center space-y-4"><div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
+                </div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto"> </div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto"> </div><method.icon className="w-8 h-8 text-cyan-400" />
+               </method.icon className="w-8 h-8 text-cyan-400" /> </method.icon className="w-8 h-8 text-cyan-400" /><h3 className="text-xl font-bold text-white">{method.titl</h3 className="text-xl font-bold text-white">e</h3 className="text-xl font-bold text-white">}</h3>
+               <//h3> <//h3><div className="space-y-2">
+                 </div className="space-y-2"> </div className="space-y-2"><div className="text-cyan-400 font-medium">{method.value</div className="text-cyan-400 font-medium">}</div className="text-cyan-400 font-medium"><div className="text-gray-300 text-sm">{method.descripti</div className="text-gray-300 text-sm">o</div className="text-gray-300 text-sm">n</div>}</div>
                   {method.action && (
-                    <a
+                   <//div> <//div><a
                       href={method.action}
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                     >
-                      <ArrowRight className="w-4 h-4 mr-1" >{method.action.startsWith('tel:') ? 'Call Now' :</ArrowRight>
-                       method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}</ArrowRight>
-                    </ArrowRight>
+                     </a
+                      href={method.action}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+                    > </a
+                      href={method.action}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+                    ><ArrowRight className="w-4 h-4 mr-1" >{method.action.startsWith('tel:') ? 'Call Now'</ArrowRight className="w-4 h-4 mr-1" > </ArrowRight className="w-4 h-4 mr-1" >:</ArrowRight>
+                       method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map<//ArrowRight>'<//ArrowRight>}</ArrowRight>
+                  <//ArrowRight> <//ArrowRight> </ArrowRight>
                   )}
-                </div>
-              </div>
+              <//ArrowRight> <//ArrowRight> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Enhanced Contact Form */}
-      <section className="py-20 bg-gradient-to-br from-slate-800/50 to-purple-900/20">
-        <div className="container mx-auto px-4">
-          <EnhancedContactForm />
-        </div>
-      </section>
+     <//section> <//section><section className="py-20 bg-gradient-to-br from-slate-800/50 to-purple-900/20">
+       </section className="py-20 bg-gradient-to-br from-slate-800/50 to-purple-900/20"> </section className="py-20 bg-gradient-to-br from-slate-800/50 to-purple-900/20"><div className="container mx-auto px-4">
+        </div className="container mx-auto px-4"> </div className="container mx-auto px-4"> </div><EnhancedContactForm />
+      </EnhancedContactForm /> </EnhancedContactForm /> </div>
+    <//div> <//div> </section>
 
       {/* Global Offices */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Offices<p className="text-lg text-gray-300 max-w-3xl mx-auto">We're here to serve you wherever you are in the world<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) => (</div>
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <h3 className="text-xl font-bold text-white mb-4">{office.city}</h3>
-                <div className="space-y-3">
-                  <div className="flex items-center justify-center space-x-2">
-                    <MapPin className="w-4 h-4 text-cyan-400" />
-                    <span className="text-gray-300 text-sm">{office.address}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Phone className="w-4 h-4 text-purple-400" />
-                    <span className="text-gray-300 text-sm">{office.phone}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Mail className="w-4 h-4 text-green-400" />
-                    <span className="text-gray-300 text-sm">{office.email}</span>
-                  </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <Clock className="w-4 h-4 text-yellow-400" />
-                    <span className="text-gray-300 text-sm">{office.hours}<div className="text-cyan-400 text-sm font-medium">{office.timezone}</div>
-                </div>
-              </div>
+     <//section> <//section><section className="py-20 bg-slate-800/50">
+       </section className="py-20 bg-slate-800/50"> </section className="py-20 bg-slate-800/50"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Office</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">s</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"><p className="text-lg text-gray-300 max-w-3xl mx-auto">We're here to serve you wherever you are in the worl</p className="text-lg text-gray-300 max-w-3xl mx-auto">d</p className="text-lg text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{offices.map((office, index) =</div className="grid grid-cols-1 md:grid-cols-3 gap-8">></div className="grid grid-cols-1 md:grid-cols-3 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
+              </div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"> </div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"> </div><h3 className="text-xl font-bold text-white mb-4">{office.cit</h3 className="text-xl font-bold text-white mb-4">y</h3 className="text-xl font-bold text-white mb-4">}</h3>
+               <//h3> <//h3><div className="space-y-3">
+                 </div className="space-y-3"> </div className="space-y-3"><div className="flex items-center justify-center space-x-2">
+                  </div className="flex items-center justify-center space-x-2"> </div className="flex items-center justify-center space-x-2"> </div><MapPin className="w-4 h-4 text-cyan-400" />
+                   </MapPin className="w-4 h-4 text-cyan-400" /> </MapPin className="w-4 h-4 text-cyan-400" /><span className="text-gray-300 text-sm">{office.addre</span className="text-gray-300 text-sm">s</span className="text-gray-300 text-sm">s</span>}</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center justify-center space-x-2">
+                  </div className="flex items-center justify-center space-x-2"> </div className="flex items-center justify-center space-x-2"> </div><Phone className="w-4 h-4 text-purple-400" />
+                   </Phone className="w-4 h-4 text-purple-400" /> </Phone className="w-4 h-4 text-purple-400" /><span className="text-gray-300 text-sm">{office.pho</span className="text-gray-300 text-sm">n</span className="text-gray-300 text-sm">e</span>}</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center justify-center space-x-2">
+                  </div className="flex items-center justify-center space-x-2"> </div className="flex items-center justify-center space-x-2"> </div><Mail className="w-4 h-4 text-green-400" />
+                   </Mail className="w-4 h-4 text-green-400" /> </Mail className="w-4 h-4 text-green-400" /><span className="text-gray-300 text-sm">{office.ema</span className="text-gray-300 text-sm">i</span className="text-gray-300 text-sm">l</span>}</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center justify-center space-x-2">
+                  </div className="flex items-center justify-center space-x-2"> </div className="flex items-center justify-center space-x-2"> </div><Clock className="w-4 h-4 text-yellow-400" />
+                   </Clock className="w-4 h-4 text-yellow-400" /> </Clock className="w-4 h-4 text-yellow-400" /><span className="text-gray-300 text-sm">{office.hour</span className="text-gray-300 text-sm">s</span className="text-gray-300 text-sm">}</span><div className="text-cyan-400 text-sm font-medium">{office.timezo</div className="text-cyan-400 text-sm font-medium">n</div className="text-cyan-400 text-sm font-medium">e</div>}</div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* FAQ Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questions<p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and process</p>
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">{faqs.map((faq, index) => (</div>
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <h3 className="text-xl font-bold text-white mb-3">{faq.question}<p className="text-gray-300">{faq.answer}</p>
-                </div>
+     <//section> <//section><section className="py-20">
+       </section className="py-20"> </section className="py-20"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Frequently Asked Questio</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">n</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">s</h2>
+           <//h2> <//h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Common questions about our services and proce</p className="text-lg text-gray-300 max-w-3xl mx-auto">s</p className="text-lg text-gray-300 max-w-3xl mx-auto">s</p>
+        <//p> <//p> </div>
+         <//div> <//div><div className="max-w-4xl mx-auto">
+           </div className="max-w-4xl mx-auto"> </div className="max-w-4xl mx-auto"><div className="space-y-6">{faqs.map((faq, index) =</div className="space-y-6">></div className="space-y-6"> </div>(</div>
+               <//div> <//div><div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                </div key={index} className="bg-slate-800/50 rounded-lg p-6"> </div key={index} className="bg-slate-800/50 rounded-lg p-6"> </div><h3 className="text-xl font-bold text-white mb-3">{faq.question</h3 className="text-xl font-bold text-white mb-3">}</h3 className="text-xl font-bold text-white mb-3"><p className="text-gray-300">{faq.answe</p className="text-gray-300">r</p className="text-gray-300">}</p>
+              <//p> <//p> </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
-      <Footer />
-    </div>
+     <//section> <//section><Footer />
+  </Footer /> </Footer /> </div>
   );
 };
 
-export default ContactPage;
+export default ContactPage<//div>;<//div>

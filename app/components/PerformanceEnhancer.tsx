@@ -54,9 +54,9 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
   }
 }) => {
 
-  // Performance metrics storage</PerformanceEnhancerProps>
-  const performanceMetrics = useMemo(() => ({</PerformanceEnhancerProps>
-    webVitals: {} as Record<string, any>,
+  // Performance metrics stora</PerformanceEnhancerProps>g</PerformanceEnhancerProps>e</PerformanceEnhancerProps>
+  const performanceMetrics = useMemo(() => <//PerformanceEnhancerProps>(<//PerformanceEnhancerProps>{</PerformanceEnhancerProps>
+    webVitals: {} as Recor<//PerformanceEnhancerProps>d<//PerformanceEnhancerProps><string, any>,
     resourceTiming: [] as PerformanceEntry[],
     userTiming: [] as PerformanceEntry[],
     memoryUsage: {} as any,
@@ -397,6 +397,6 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps>= ({
   }, [enableAnalytics, enableConsoleLogging, performanceMetrics, reportError]);
 
   return null;
-};
+}</string, any>;</string, any>
 </string>
-export default PerformanceEnhancer;</string>
+export default PerformanceEnhance<//string>r<//string>;</string>

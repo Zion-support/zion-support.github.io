@@ -138,54 +138,54 @@ const CommunityPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div><Navigation />
 
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+     </Navigation /> </Navigation /><section className="relative py-20 overflow-hidden">
+       </section className="relative py-20 overflow-hidden"> </section className="relative py-20 overflow-hidden"><div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+       <//div> <//div><div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        </div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> </div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> </div><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Community
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+       </h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> </h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> </h1>
+         <//h1> <//h1><p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Connect, learn, and grow with AI professionals and enthusiasts worldwide
-          </p>
+        </p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"> </p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"> </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+         <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div><button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Join Community
-              <Users className="w-5 h-5 ml-2" />
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+             </button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"> </button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"><Users className="w-5 h-5 ml-2" />
+          </Users className="w-5 h-5 ml-2" /> </Users className="w-5 h-5 ml-2" /> </button>
+           <//button> <//button><button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               Browse Discussions
-            </button>
-          </div>
-        </div>
-      </section>
+          </button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"> </button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"> </button>
+        <//button> <//button> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+     <//section> <//section><section className="py-16 bg-white/5">
+       </section className="py-16 bg-white/5"> </section className="py-16 bg-white/5"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
+             </div className="grid grid-cols-2 md:grid-cols-4 gap-8"> </div className="grid grid-cols-2 md:grid-cols-4 gap-8"><div key={index} className="text-center">
+               </div key={index} className="text-center"> </div key={index} className="text-center"><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                </div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"> </div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"> </div><stat.icon className="w-8 h-8 text-white" />
+              </stat.icon className="w-8 h-8 text-white" /> </stat.icon className="w-8 h-8 text-white" /> </div>
+               <//div> <//div><div className="text-3xl font-bold text-cyan-400 mb-2">{stat.val</div className="text-3xl font-bold text-cyan-400 mb-2">u</div className="text-3xl font-bold text-cyan-400 mb-2">e</div>}</div>
+               <//div> <//div><div className="text-gray-300">{stat.lab</div className="text-gray-300">e</div className="text-gray-300">l</div>}</div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Tabs Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap justify-center mb-8">
-            <button
+     <//section> <//section><section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+       </section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20"> </section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="flex flex-wrap justify-center mb-8">
+          </div className="flex flex-wrap justify-center mb-8"> </div className="flex flex-wrap justify-center mb-8"> </div><button
               onClick={() => setActiveTab('discussions')}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeTab === 'discussions'
@@ -194,8 +194,10 @@ const CommunityPage: React.FC = () => {
               }`}
             >
               Discussions
-            </button>
-            <button
+          </button
+              onClick={() => </button
+              onClick={() => </button>
+           <//button> <//button><button
               onClick={() => setActiveTab('events')}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeTab === 'events'
@@ -204,8 +206,10 @@ const CommunityPage: React.FC = () => {
               }`}
             >
               Events
-            </button>
-            <button
+          </button
+              onClick={() => </button
+              onClick={() => </button>
+           <//button> <//button><button
               onClick={() => setActiveTab('resources')}
               className={`px-6 py-3 rounded-lg font-semibold transition-all ${
                 activeTab === 'resources'
@@ -214,133 +218,135 @@ const CommunityPage: React.FC = () => {
               }`}
             >
               Resources
-            </button>
-          </div>
+          </button
+              onClick={() => </button
+              onClick={() => </button>
+        <//button> <//button> </div>
 
           {/* Discussions Tab */}
           {activeTab === 'discussions' && (
-            <div className="space-y-6">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold text-white">Latest Discussions</h2>
-                <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all flex items-center">
-                  <Plus className="w-4 h-4 mr-2" />
+           <//div> <//div><div className="space-y-6">
+             </div className="space-y-6"> </div className="space-y-6"><div className="flex justify-between items-center mb-6">
+              </div className="flex justify-between items-center mb-6"> </div className="flex justify-between items-center mb-6"> </div><h2 className="text-2xl font-bold text-white">Latest Discussio</h2 className="text-2xl font-bold text-white">n</h2 className="text-2xl font-bold text-white">s</h2>
+               <//h2> <//h2><button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all flex items-center">
+                 </button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all flex items-center"> </button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all flex items-center"><Plus className="w-4 h-4 mr-2" />
                   New Discussion
-                </button>
-              </div>
+              </Plus className="w-4 h-4 mr-2" /> </Plus className="w-4 h-4 mr-2" /> </button>
+            <//button> <//button> </div>
 
               {discussions.map((discussion) => (
-                <div key={discussion.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-start space-x-4">
-                    <div className="text-2xl">{discussion.authorAvatar}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-2 mb-2">
+               <//div> <//div><div key={discussion.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                 </div key={discussion.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300"> </div key={discussion.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300"><div className="flex items-start space-x-4">
+                   </div className="flex items-start space-x-4"> </div className="flex items-start space-x-4"><div className="text-2xl">{discussion.authorAvat</div className="text-2xl">a</div className="text-2xl">r</div>}</div>
+                   <//div> <//div><div className="flex-1">
+                     </div className="flex-1"> </div className="flex-1"><div className="flex items-center space-x-2 mb-2">
                         {discussion.isPinned && (
-                          <span className="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-2 py-1 rounded">
+                        </div className="flex items-center space-x-2 mb-2"> </div className="flex items-center space-x-2 mb-2"> </div><span className="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-2 py-1 rounded">
                             PINNED
-                          </span>
+                       </span className="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-2 py-1 rounded"> </span className="bg-yellow-500/20 text-yellow-400 text-xs font-bold px-2 py-1 rounded"> </span>
                         )}
-                        <span className="bg-cyan-500/20 text-cyan-400 text-xs font-bold px-2 py-1 rounded">
+                       <//span> <//span><span className="bg-cyan-500/20 text-cyan-400 text-xs font-bold px-2 py-1 rounded">
                           {discussion.category}
-                        </span>
-                      </div>
-                      <h3 className="text-xl font-bold text-white mb-2 hover:text-cyan-400 cursor-pointer">
+                     </span className="bg-cyan-500/20 text-cyan-400 text-xs font-bold px-2 py-1 rounded"> </span className="bg-cyan-500/20 text-cyan-400 text-xs font-bold px-2 py-1 rounded"> </span>
+                    <//span> <//span> </div>
+                     <//div> <//div><h3 className="text-xl font-bold text-white mb-2 hover:text-cyan-400 cursor-pointer">
                         {discussion.title}
-                      </h3>
-                      <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
-                        <span>by {discussion.author}</span>
-                        <span>•</span>
-                        <span>{discussion.time}</span>
-                      </div>
-                      <div className="flex items-center space-x-6">
-                        <div className="flex items-center space-x-1">
-                          <MessageSquare className="w-4 h-4 text-gray-400" />
-                          <span className="text-gray-400">{discussion.replies}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <ThumbsUp className="w-4 h-4 text-gray-400" />
-                          <span className="text-gray-400">{discussion.likes}</span>
-                        </div>
-                        <div className="flex space-x-1">
+                    </h3 className="text-xl font-bold text-white mb-2 hover:text-cyan-400 cursor-pointer"> </h3 className="text-xl font-bold text-white mb-2 hover:text-cyan-400 cursor-pointer"> </h3>
+                     <//h3> <//h3><div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
+                      </div className="flex items-center space-x-4 text-sm text-gray-400 mb-3"> </div className="flex items-center space-x-4 text-sm text-gray-400 mb-3"> </div><span>by {discussion.auth</span>o</span>r</span>}</span>
+                       <//span> <//span><span>•</span>
+                       <//span> <//span><span>{discussion.ti</span>m</span>e</span>}</span>
+                    <//span> <//span> </div>
+                     <//div> <//div><div className="flex items-center space-x-6">
+                       </div className="flex items-center space-x-6"> </div className="flex items-center space-x-6"><div className="flex items-center space-x-1">
+                        </div className="flex items-center space-x-1"> </div className="flex items-center space-x-1"> </div><MessageSquare className="w-4 h-4 text-gray-400" />
+                         </MessageSquare className="w-4 h-4 text-gray-400" /> </MessageSquare className="w-4 h-4 text-gray-400" /><span className="text-gray-400">{discussion.repli</span className="text-gray-400">e</span className="text-gray-400">s</span>}</span>
+                      <//span> <//span> </div>
+                       <//div> <//div><div className="flex items-center space-x-1">
+                        </div className="flex items-center space-x-1"> </div className="flex items-center space-x-1"> </div><ThumbsUp className="w-4 h-4 text-gray-400" />
+                         </ThumbsUp className="w-4 h-4 text-gray-400" /> </ThumbsUp className="w-4 h-4 text-gray-400" /><span className="text-gray-400">{discussion.lik</span className="text-gray-400">e</span className="text-gray-400">s</span>}</span>
+                      <//span> <//span> </div>
+                       <//div> <//div><div className="flex space-x-1">
                           {discussion.tags.map((tag, index) => (
-                            <span key={index} className="bg-slate-700 text-gray-300 text-xs px-2 py-1 rounded">
+                          </div className="flex space-x-1"> </div className="flex space-x-1"> </div><span key={index} className="bg-slate-700 text-gray-300 text-xs px-2 py-1 rounded">
                               #{tag}
-                            </span>
+                         </span key={index} className="bg-slate-700 text-gray-300 text-xs px-2 py-1 rounded"> </span key={index} className="bg-slate-700 text-gray-300 text-xs px-2 py-1 rounded"> </span>
                           ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                      <//span> <//span> </div>
+                    <//div> <//div> </div>
+                  <//div> <//div> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
               ))}
-            </div>
+          <//div> <//div> </div>
           )}
 
           {/* Events Tab */}
           {activeTab === 'events' && (
-            <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2>
+           <//div> <//div><div className="space-y-6">
+            </div className="space-y-6"> </div className="space-y-6"> </div><h2 className="text-2xl font-bold text-white mb-6">Upcoming Even</h2 className="text-2xl font-bold text-white mb-6">t</h2 className="text-2xl font-bold text-white mb-6">s</h2>
               {events.map((event, index) => (
-                <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-start justify-between">
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
-                      <p className="text-gray-300 mb-4">{event.description}</p>
-                      <div className="flex items-center space-x-6 text-sm text-gray-400">
-                        <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
-                          <span>{event.date}</span>
-                        </div>
-                        <div className="flex items-center space-x-1">
-                          <Users className="w-4 h-4" />
-                          <span>{event.attendees} attendees</span>
-                        </div>
-                        <span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs">
+               <//h2> <//h2><div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                 </div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"> </div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"><div className="flex items-start justify-between">
+                   </div className="flex items-start justify-between"> </div className="flex items-start justify-between"><div className="flex-1">
+                    </div className="flex-1"> </div className="flex-1"> </div><h3 className="text-xl font-bold text-white mb-2">{event.titl</h3 className="text-xl font-bold text-white mb-2">e</h3 className="text-xl font-bold text-white mb-2">}</h3>
+                     <//h3> <//h3><p className="text-gray-300 mb-4">{event.descriptio</p className="text-gray-300 mb-4">n</p className="text-gray-300 mb-4">}</p>
+                     <//p> <//p><div className="flex items-center space-x-6 text-sm text-gray-400">
+                       </div className="flex items-center space-x-6 text-sm text-gray-400"> </div className="flex items-center space-x-6 text-sm text-gray-400"><div className="flex items-center space-x-1">
+                        </div className="flex items-center space-x-1"> </div className="flex items-center space-x-1"> </div><Calendar className="w-4 h-4" />
+                         </Calendar className="w-4 h-4" /> </Calendar className="w-4 h-4" /><span>{event.da</span>t</span>e</span>}</span>
+                      <//span> <//span> </div>
+                       <//div> <//div><div className="flex items-center space-x-1">
+                        </div className="flex items-center space-x-1"> </div className="flex items-center space-x-1"> </div><Users className="w-4 h-4" />
+                         </Users className="w-4 h-4" /> </Users className="w-4 h-4" /><span>{event.attendees} attend</span>e</span>e</span>s</span>
+                      <//span> <//span> </div>
+                       <//div> <//div><span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs">
                           {event.type}
-                        </span>
-                      </div>
-                    </div>
-                    <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all">
+                     </span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs"> </span className="bg-purple-500/20 text-purple-400 px-2 py-1 rounded text-xs"> </span>
+                    <//span> <//span> </div>
+                  <//div> <//div> </div>
+                   <//div> <//div><button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all">
                       Register
-                    </button>
-                  </div>
-                </div>
+                  </button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all"> </button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-2 px-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all"> </button>
+                <//button> <//button> </div>
+              <//div> <//div> </div>
               ))}
-            </div>
+          <//div> <//div> </div>
           )}
 
           {/* Resources Tab */}
           {activeTab === 'resources' && (
-            <div className="space-y-6">
-              <h2 className="text-2xl font-bold text-white mb-6">Community Resources</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+           <//div> <//div><div className="space-y-6">
+            </div className="space-y-6"> </div className="space-y-6"> </div><h2 className="text-2xl font-bold text-white mb-6">Community Resourc</h2 className="text-2xl font-bold text-white mb-6">e</h2 className="text-2xl font-bold text-white mb-6">s</h2>
+             <//h2> <//h2><div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {resources.map((resource, index) => (
-                  <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
-                    <div className="flex items-center mb-4">
-                      <resource.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                      <h3 className="text-xl font-bold text-white">{resource.title}</h3>
-                    </div>
-                    <p className="text-gray-300 mb-4">{resource.description}</p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-400">
+                 </div className="grid grid-cols-1 md:grid-cols-3 gap-6"> </div className="grid grid-cols-1 md:grid-cols-3 gap-6"><div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
+                   </div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"> </div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300"><div className="flex items-center mb-4">
+                    </div className="flex items-center mb-4"> </div className="flex items-center mb-4"> </div><resource.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                     </resource.icon className="w-8 h-8 text-cyan-400 mr-3" /> </resource.icon className="w-8 h-8 text-cyan-400 mr-3" /><h3 className="text-xl font-bold text-white">{resource.titl</h3 className="text-xl font-bold text-white">e</h3 className="text-xl font-bold text-white">}</h3>
+                  <//h3> <//h3> </div>
+                   <//div> <//div><p className="text-gray-300 mb-4">{resource.descriptio</p className="text-gray-300 mb-4">n</p className="text-gray-300 mb-4">}</p>
+                   <//p> <//p><div className="flex items-center justify-between">
+                    </div className="flex items-center justify-between"> </div className="flex items-center justify-between"> </div><span className="text-sm text-gray-400">
                         {resource.downloads ? `${resource.downloads} downloads` :
                          resource.views ? `${resource.views} views` :
                          `${resource.stars} stars`}
-                      </span>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm">
+                   </span className="text-sm text-gray-400"> </span className="text-sm text-gray-400"> </span>
+                     <//span> <//span><button className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm">
                         View Resource
-                      </button>
-                    </div>
-                  </div>
+                    </button className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm"> </button className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm"> </button>
+                  <//button> <//button> </div>
+                <//div> <//div> </div>
                 ))}
-              </div>
-            </div>
+            <//div> <//div> </div>
+          <//div> <//div> </div>
           )}
-        </div>
-      </section>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
-      <Footer />
-    </div>
+     <//section> <//section><Footer />
+  </Footer /> </Footer /> </div>
   );
 };
 
-export default CommunityPage;
+export default CommunityPage<//div>;<//div>

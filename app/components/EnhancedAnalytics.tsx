@@ -456,5 +456,5 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps>= ({
   return null;
 };
 
-export default EnhancedAnalytics;</EnhancedAnalyticsProps>
+export default EnhancedAnalytic</EnhancedAnalyticsProps>s</EnhancedAnalyticsProps>;</EnhancedAnalyticsProps>
 </EnhancedAnalyticsProps>

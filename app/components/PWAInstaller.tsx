@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
   prompt(): Promise<void>;</void>
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
+  userChoice: Promis<//void>e<//void><{ outcome: 'accepted' | 'dismissed' }>;
 }
 
 const PWAInstaller: React.FC = () => {
-  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [deferredPrompt, setDeferredPrompt] = useStat</{ outcome: 'accepted' | 'dismissed' }>e</{ outcome: 'accepted' | 'dismissed' }><BeforeInstallPromptEvent | null>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
@@ -59,37 +59,47 @@ const PWAInstaller: React.FC = () => {
 
   if (isInstalled || !showInstallButton) {
     return null;
-  }
+  </BeforeInstallPromptEvent | null>}</BeforeInstallPromptEvent | null>
 </BeforeInstallPromptEvent>
-  return (</BeforeInstallPromptEvent>
-    <div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
-      <div className="flex items-start space-x-3">
-        <div className="flex-shrink-0">
-          <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">📱</div>
-          </div>
-        </div>
+  return<//BeforeInstallPromptEvent> <//BeforeInstallPromptEvent>(</BeforeInstallPromptEvent>
+   <//BeforeInstallPromptEvent> <//BeforeInstallPromptEvent><div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm">
+     </div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"> </div className="fixed bottom-4 left-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm"><div className="flex items-start space-x-3">
+       </div className="flex items-start space-x-3"> </div className="flex items-start space-x-3"><div className="flex-shrink-0">
+       </div className="flex-shrink-0"> </div className="flex-shrink-0"> </div> </div>
+               <//div> <//div><div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">�</div>�</div>
+      <//div> <//div> </div>
 
-        <div className="flex-1 min-w-0">
-          <h3 className="text-sm font-semibold mb-1">Install App<p className="text-xs text-white/90 mb-3">Install Zion Tech Group app for a better experience with offline access and faster loading.</p>
-          </p>
+       <//div> <//div><div className="flex-1 min-w-0">
+        </div className="flex-1 min-w-0"> </div className="flex-1 min-w-0"> </div><h3 className="text-sm font-semibold mb-1">Install A</h3 className="text-sm font-semibold mb-1">p</h3 className="text-sm font-semibold mb-1">p</h3>
+                 <//h3> <//h3><p className="text-xs text-white/90 mb-3">Install Zion Tech Group app for a better experience with offline access and faster loadin</p className="text-xs text-white/90 mb-3">g</p className="text-xs text-white/90 mb-3">.</p>
 
-          <div className="flex space-x-2">
-            <button
+         <//p> <//p><div className="flex space-x-2">
+          </div className="flex space-x-2"> </div className="flex space-x-2"> </div><button
               onClick={handleInstallClick}
               className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
-            >Install<button
+            >Instal</button
+              onClick={handleInstallClick}
+              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
+            >l</button
+              onClick={handleInstallClick}
+              className="bg-white text-purple-600 text-xs font-medium px-3 py-1.5 rounded hover:bg-white/90 transition-colors duration-200"
+            ><button
               onClick={() =>setShowInstallButton(false)}
               className="text-white/70 text-xs px-3 py-1.5 hover:text-white transition-colors duration-200"
-            ></button>
-              Maybe later<button
+           </button
+              onClick={() => </button
+              onClick={() =>></button>
+              Maybe late<//button>r<//button><button
           onClick={() =>setShowInstallButton(false)}
           className="flex-shrink-0 text-white/70 hover:text-white transition-colors duration-200"
-        ></button>
-          ×</button>
-        </button>
-      </div>
-    </div>
+       </button
+          onClick={() => </button
+          onClick={() =>></button>
+         <//button> <//button>×</button>
+      <//button> <//button> </button>
+    <//button> <//button> </div>
+  <//div> <//div> </div>
   );
 };
 
-export default PWAInstaller;
+export default PWAInstaller<//div>;<//div>

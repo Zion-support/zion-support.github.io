@@ -811,382 +811,410 @@ export default function InvestmentOptimizer({ className = '' }: InvestmentOptimi
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}>
-      <Helmet>
-        <title>AI Investment Portfolio Optimizer Pro - Advanced Portfolio Management | Zion Tech Group</title>
-        <meta name="description" content="AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform." />
-        <meta name="keywords" content="investment optimization, portfolio management, AI investing, risk assessment, auto rebalancing, financial planning, wealth management" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-investment-optimizer" />
-      </Helmet>
+   </any> </any><div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}>
+    </div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}> </div className={`min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 ${className}`}> </div><Helmet>
+      </Helmet> </Helmet> </Helmet><title>AI Investment Portfolio Optimizer Pro - Advanced Portfolio Management | Zion Tech Gro</title>u</title>p</title>
+       <//title> <//title><meta name="description" content="AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform." />
+       </meta name="description" content="AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform." /> </meta name="description" content="AI-powered investment portfolio optimization with advanced analytics, risk assessment, and auto-rebalancing. Maximize returns and minimize risk with our intelligent investment platform." /><meta name="keywords" content="investment optimization, portfolio management, AI investing, risk assessment, auto rebalancing, financial planning, wealth management" />
+       </meta name="keywords" content="investment optimization, portfolio management, AI investing, risk assessment, auto rebalancing, financial planning, wealth management" /> </meta name="keywords" content="investment optimization, portfolio management, AI investing, risk assessment, auto rebalancing, financial planning, wealth management" /><link rel="canonical" href="https://ziontechgroup.com/ai-investment-optimizer" />
+    </link rel="canonical" href="https://ziontechgroup.com/ai-investment-optimizer" /> </link rel="canonical" href="https://ziontechgroup.com/ai-investment-optimizer" /> </Helmet>
 
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+     <//Helmet> <//Helmet><div className="relative py-20 overflow-hidden">
+       </div className="relative py-20 overflow-hidden"> </div className="relative py-20 overflow-hidden"><div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-blue-500/10 border border-blue-400/20 rounded-full px-6 py-3 mb-8">
-              <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="text-blue-300 font-medium">AI Investment Portfolio Optimizer Pro</span>
-            </div>
+       <//div> <//div><div className="container mx-auto px-4 relative z-10">
+         </div className="container mx-auto px-4 relative z-10"> </div className="container mx-auto px-4 relative z-10"><div className="text-center mb-16">
+           </div className="text-center mb-16"> </div className="text-center mb-16"><div className="inline-flex items-center bg-blue-500/10 border border-blue-400/20 rounded-full px-6 py-3 mb-8">
+            </div className="inline-flex items-center bg-blue-500/10 border border-blue-400/20 rounded-full px-6 py-3 mb-8"> </div className="inline-flex items-center bg-blue-500/10 border border-blue-400/20 rounded-full px-6 py-3 mb-8"> </div><TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
+             </TrendingUp className="w-5 h-5 text-blue-400 mr-2" /> </TrendingUp className="w-5 h-5 text-blue-400 mr-2" /><span className="text-blue-300 font-medium">AI Investment Portfolio Optimizer </span className="text-blue-300 font-medium">P</span className="text-blue-300 font-medium">r</span>o</span>
+          <//span> <//span> </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
+           <//div> <//div><h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text">
               Advanced Portfolio Management
-            </h1>
+         </h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text"> </h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text"> </h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+           <//h1> <//h1><p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Maximize Returns with AI-Powered Investment Optimization
-            </p>
+          </p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light"> </p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light"> </p>
 
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
+           <//p> <//p><p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
               Optimize your investment portfolio with advanced AI analytics, risk assessment,
               and automated rebalancing. Make smarter investment decisions and achieve better returns.
-            </p>
+          </p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed"> </p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed"> </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              </button>
+           <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            </div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"> </div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"> </div><button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+               </button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"> </button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"><span className="relative z-10">Start Free Tr</span className="relative z-10">i</span className="relative z-10">a</span>l</span>
+               <//span> <//span><ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+               </ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /> </ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /><div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+            <//div> <//div> </button>
 
-              <button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+             <//button> <//button><button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
+               </button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"> </button className="group inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-xl hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"><Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
-              </button>
-            </div>
+            </Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> </Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> </button>
+          <//button> <//button> </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">15.2%</div>
-                <div className="text-gray-400">Average Return</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">23%</div>
-                <div className="text-gray-400">Risk Reduction</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">$2.3M</div>
-                <div className="text-gray-400">Assets Managed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">98%</div>
-                <div className="text-gray-400">Accuracy Rate</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+           <//div> <//div><div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+             </div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"> </div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"><div className="text-center">
+               </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-blue-400 mb-2">15</div className="text-3xl font-bold text-blue-400 mb-2">.</div className="text-3xl font-bold text-blue-400 mb-2">2</div>%</div>
+               <//div> <//div><div className="text-gray-400">Average Ret</div className="text-gray-400">u</div className="text-gray-400">r</div>n</div>
+            <//div> <//div> </div>
+             <//div> <//div><div className="text-center">
+               </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-purple-400 mb-2">2</div className="text-3xl font-bold text-purple-400 mb-2">3</div>%</div>
+               <//div> <//div><div className="text-gray-400">Risk Reduct</div className="text-gray-400">i</div className="text-gray-400">o</div>n</div>
+            <//div> <//div> </div>
+             <//div> <//div><div className="text-center">
+               </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-cyan-400 mb-2">$2</div className="text-3xl font-bold text-cyan-400 mb-2">.</div className="text-3xl font-bold text-cyan-400 mb-2">3</div>M</div>
+               <//div> <//div><div className="text-gray-400">Assets Mana</div className="text-gray-400">g</div className="text-gray-400">e</div>d</div>
+            <//div> <//div> </div>
+             <//div> <//div><div className="text-center">
+               </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-yellow-400 mb-2">9</div className="text-3xl font-bold text-yellow-400 mb-2">8</div>%</div>
+               <//div> <//div><div className="text-gray-400">Accuracy R</div className="text-gray-400">a</div className="text-gray-400">t</div>e</div>
+            <//div> <//div> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
 
       {/* Portfolio Dashboard */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+     <//div> <//div><div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
+       </div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800"> </div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Portfolio Dashboard
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Monitor and optimize your investment portfolio with real-time analytics
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
 
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+         <//div> <//div><div className="max-w-7xl mx-auto">
+           </div className="max-w-7xl mx-auto"> </div className="max-w-7xl mx-auto"><div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* Portfolio Overview */}
-              <div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl font-bold text-white flex items-center">
-                    <PieChart className="w-8 h-8 text-blue-400 mr-3" />
+             </div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> </div className="grid grid-cols-1 lg:grid-cols-3 gap-8"><div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+               </div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div className="lg:col-span-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"><div className="flex items-center justify-between mb-6">
+                </div className="flex items-center justify-between mb-6"> </div className="flex items-center justify-between mb-6"> </div><h3 className="text-2xl font-bold text-white flex items-center">
+                   </h3 className="text-2xl font-bold text-white flex items-center"> </h3 className="text-2xl font-bold text-white flex items-center"><PieChart className="w-8 h-8 text-blue-400 mr-3" />
                     Portfolio Holdings
-                  </h3>
-                  <div className="text-right">
-                    <div className="text-3xl font-bold text-white">${totalValue.toLocaleString()}</div>
-                    <div className="text-gray-400">Total Value</div>
-                  </div>
-                </div>
+                </PieChart className="w-8 h-8 text-blue-400 mr-3" /> </PieChart className="w-8 h-8 text-blue-400 mr-3" /> </h3>
+                 <//h3> <//h3><div className="text-right">
+                   </div className="text-right"> </div className="text-right"><div className="text-3xl font-bold text-white">${totalValue.toLocaleString</div className="text-3xl font-bold text-white">(</div className="text-3xl font-bold text-white">)</div>}</div>
+                   <//div> <//div><div className="text-gray-400">Total Va</div className="text-gray-400">l</div className="text-gray-400">u</div>e</div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
 
-                <div className="space-y-4">
+               <//div> <//div><div className="space-y-4">
                   {portfolio.map((stock) => {
                     const ChangeIcon = getChangeIcon(stock.change);
                     return (
-                      <div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center space-x-3">
-                            <div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">
-                              <span className="text-white font-bold text-sm">{stock.symbol.slice(0, 2)}</span>
-                            </div>
-                            <div>
-                              <h4 className="text-white font-semibold">{stock.symbol}</h4>
-                              <p className="text-gray-400 text-sm">{stock.name}</p>
-                            </div>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-white font-semibold">${stock.value.toLocaleString()}</div>
-                            <div className={`flex items-center ${getChangeColor(stock.change)}`}>
-                              <ChangeIcon className="w-4 h-4 mr-1" />
-                              <span className="text-sm">{stock.change > 0 ? '+' : ''}{stock.change}%</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="flex items-center justify-between text-sm text-gray-400">
-                          <span>{stock.shares} shares @ ${stock.price}</span>
-                          <span>{stock.allocation}% allocation</span>
-                        </div>
-                      </div>
+                     </div className="space-y-4"> </div className="space-y-4"><div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10">
+                       </div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10"> </div key={stock.symbol} className="bg-white/5 rounded-lg p-4 border border-white/10"><div className="flex items-center justify-between mb-2">
+                         </div className="flex items-center justify-between mb-2"> </div className="flex items-center justify-between mb-2"><div className="flex items-center space-x-3">
+                           </div className="flex items-center space-x-3"> </div className="flex items-center space-x-3"><div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center">
+                            </div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center"> </div className="w-10 h-10 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center"> </div><span className="text-white font-bold text-sm">{stock.symbol.slice(0, </span className="text-white font-bold text-sm">2</span className="text-white font-bold text-sm">)</span>}</span>
+                          <//span> <//span> </div>
+                           <//div> <//div><div>
+                            </div> </div> </div><h4 className="text-white font-semibold">{stock.symbo</h4 className="text-white font-semibold">l</h4 className="text-white font-semibold">}</h4>
+                             <//h4> <//h4><p className="text-gray-400 text-sm">{stock.nam</p className="text-gray-400 text-sm">e</p className="text-gray-400 text-sm">}</p>
+                          <//p> <//p> </div>
+                        <//div> <//div> </div>
+                         <//div> <//div><div className="text-right">
+                           </div className="text-right"> </div className="text-right"><div className="text-white font-semibold">${stock.value.toLocaleString</div className="text-white font-semibold">(</div className="text-white font-semibold">)</div>}</div>
+                           <//div> <//div><div className={`flex items-center ${getChangeColor(stock.change)}`}>
+                            </div className={`flex items-center ${getChangeColor(stock.change)}`}> </div className={`flex items-center ${getChangeColor(stock.change)}`}> </div><ChangeIcon className="w-4 h-4 mr-1" />
+                             </ChangeIcon className="w-4 h-4 mr-1" /> </ChangeIcon className="w-4 h-4 mr-1" /><span className="text-sm">{stock.change > 0 ? '+' : ''}{stock.chang</span className="text-sm">e</span className="text-sm">}</span>%</span>
+                          <//span> <//span> </div>
+                        <//div> <//div> </div>
+                      <//div> <//div> </div>
+                       <//div> <//div><div className="flex items-center justify-between text-sm text-gray-400">
+                        </div className="flex items-center justify-between text-sm text-gray-400"> </div className="flex items-center justify-between text-sm text-gray-400"> </div><span>{stock.shares} shares @ ${stock.pri</span>c</span>e</span>}</span>
+                         <//span> <//span><span>{stock.allocation}% allocat</span>i</span>o</span>n</span>
+                      <//span> <//span> </div>
+                    <//div> <//div> </div>
                     );
                   })}
-                </div>
-              </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
 
               {/* Optimization Panel */}
-              <div className="space-y-8">
+             <//div> <//div><div className="space-y-8">
                 {/* Risk Profile */}
-                <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                    <Shield className="w-6 h-6 text-blue-400 mr-2" />
+               </div className="space-y-8"> </div className="space-y-8"><div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"> </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"> </div><h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                   </h3 className="text-xl font-bold text-white mb-4 flex items-center"> </h3 className="text-xl font-bold text-white mb-4 flex items-center"><Shield className="w-6 h-6 text-blue-400 mr-2" />
                     Risk Profile
-                  </h3>
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Risk Tolerance</label>
-                      <select
+                </Shield className="w-6 h-6 text-blue-400 mr-2" /> </Shield className="w-6 h-6 text-blue-400 mr-2" /> </h3>
+                 <//h3> <//h3><div className="space-y-4">
+                   </div className="space-y-4"> </div className="space-y-4"><div>
+                    </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">Risk Toleran</label className="block text-sm font-medium text-gray-300 mb-2">c</label className="block text-sm font-medium text-gray-300 mb-2">e</label>
+                     <//label> <//label><select
                         value={riskProfile}
                         onChange={(e) => setRiskProfile(e.target.value)}
                         className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
                       >
-                        <option value="conservative" className="bg-slate-800">Conservative</option>
-                        <option value="moderate" className="bg-slate-800">Moderate</option>
-                        <option value="aggressive" className="bg-slate-800">Aggressive</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Investment Goal</label>
-                      <select
+                       </select
+                        value={riskProfile}
+                        onChange={(e) => </select
+                        value={riskProfile}
+                        onChange={(e) =><option value="conservative" className="bg-slate-800">Conservati</option value="conservative" className="bg-slate-800">v</option value="conservative" className="bg-slate-800">e</option>
+                       <//option> <//option><option value="moderate" className="bg-slate-800">Modera</option value="moderate" className="bg-slate-800">t</option value="moderate" className="bg-slate-800">e</option>
+                       <//option> <//option><option value="aggressive" className="bg-slate-800">Aggressi</option value="aggressive" className="bg-slate-800">v</option value="aggressive" className="bg-slate-800">e</option>
+                    <//option> <//option> </select>
+                  <//select> <//select> </div>
+                   <//div> <//div><div>
+                    </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">Investment Go</label className="block text-sm font-medium text-gray-300 mb-2">a</label className="block text-sm font-medium text-gray-300 mb-2">l</label>
+                     <//label> <//label><select
                         value={investmentGoal}
                         onChange={(e) => setInvestmentGoal(e.target.value)}
                         className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
                       >
-                        <option value="income" className="bg-slate-800">Income</option>
-                        <option value="growth" className="bg-slate-800">Growth</option>
-                        <option value="balanced" className="bg-slate-800">Balanced</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">Time Horizon</label>
-                      <select
+                       </select
+                        value={investmentGoal}
+                        onChange={(e) => </select
+                        value={investmentGoal}
+                        onChange={(e) =><option value="income" className="bg-slate-800">Inco</option value="income" className="bg-slate-800">m</option value="income" className="bg-slate-800">e</option>
+                       <//option> <//option><option value="growth" className="bg-slate-800">Grow</option value="growth" className="bg-slate-800">t</option value="growth" className="bg-slate-800">h</option>
+                       <//option> <//option><option value="balanced" className="bg-slate-800">Balanc</option value="balanced" className="bg-slate-800">e</option value="balanced" className="bg-slate-800">d</option>
+                    <//option> <//option> </select>
+                  <//select> <//select> </div>
+                   <//div> <//div><div>
+                    </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">Time Horiz</label className="block text-sm font-medium text-gray-300 mb-2">o</label className="block text-sm font-medium text-gray-300 mb-2">n</label>
+                     <//label> <//label><select
                         value={timeHorizon}
                         onChange={(e) => setTimeHorizon(e.target.value)}
                         className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-blue-400"
                       >
-                        <option value="1-3 years" className="bg-slate-800">1-3 years</option>
-                        <option value="3-5 years" className="bg-slate-800">3-5 years</option>
-                        <option value="5-10 years" className="bg-slate-800">5-10 years</option>
-                        <option value="10+ years" className="bg-slate-800">10+ years</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
+                       </select
+                        value={timeHorizon}
+                        onChange={(e) => </select
+                        value={timeHorizon}
+                        onChange={(e) =><option value="1-3 years" className="bg-slate-800">1-3 yea</option value="1-3 years" className="bg-slate-800">r</option value="1-3 years" className="bg-slate-800">s</option>
+                       <//option> <//option><option value="3-5 years" className="bg-slate-800">3-5 yea</option value="3-5 years" className="bg-slate-800">r</option value="3-5 years" className="bg-slate-800">s</option>
+                       <//option> <//option><option value="5-10 years" className="bg-slate-800">5-10 yea</option value="5-10 years" className="bg-slate-800">r</option value="5-10 years" className="bg-slate-800">s</option>
+                       <//option> <//option><option value="10+ years" className="bg-slate-800">10+ yea</option value="10+ years" className="bg-slate-800">r</option value="10+ years" className="bg-slate-800">s</option>
+                    <//option> <//option> </select>
+                  <//select> <//select> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
 
                 {/* Optimization Results */}
                 {optimizationResults && (
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                    <h3 className="text-xl font-bold text-white mb-4 flex items-center">
-                      <Target className="w-6 h-6 text-blue-400 mr-2" />
+                 <//div> <//div><div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                  </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"> </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6"> </div><h3 className="text-xl font-bold text-white mb-4 flex items-center">
+                     </h3 className="text-xl font-bold text-white mb-4 flex items-center"> </h3 className="text-xl font-bold text-white mb-4 flex items-center"><Target className="w-6 h-6 text-blue-400 mr-2" />
                       Optimization Results
-                    </h3>
-                    <div className="space-y-4">
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Expected Return</span>
-                        <span className="text-green-400 font-semibold">{optimizationResults.expectedReturn}%</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Risk Level</span>
-                        <span className="text-yellow-400 font-semibold">{optimizationResults.riskLevel}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-300">Sharpe Ratio</span>
-                        <span className="text-blue-400 font-semibold">{optimizationResults.sharpeRatio}</span>
-                      </div>
-                    </div>
-                  </div>
+                  </Target className="w-6 h-6 text-blue-400 mr-2" /> </Target className="w-6 h-6 text-blue-400 mr-2" /> </h3>
+                   <//h3> <//h3><div className="space-y-4">
+                     </div className="space-y-4"> </div className="space-y-4"><div className="flex justify-between">
+                      </div className="flex justify-between"> </div className="flex justify-between"> </div><span className="text-gray-300">Expected Ret</span className="text-gray-300">u</span className="text-gray-300">r</span>n</span>
+                       <//span> <//span><span className="text-green-400 font-semibold">{optimizationResults.expectedRetur</span className="text-green-400 font-semibold">n</span className="text-green-400 font-semibold">}</span>%</span>
+                    <//span> <//span> </div>
+                     <//div> <//div><div className="flex justify-between">
+                      </div className="flex justify-between"> </div className="flex justify-between"> </div><span className="text-gray-300">Risk Le</span className="text-gray-300">v</span className="text-gray-300">e</span>l</span>
+                       <//span> <//span><span className="text-yellow-400 font-semibold">{optimizationResults.riskLev</span className="text-yellow-400 font-semibold">e</span className="text-yellow-400 font-semibold">l</span>}</span>
+                    <//span> <//span> </div>
+                     <//div> <//div><div className="flex justify-between">
+                      </div className="flex justify-between"> </div className="flex justify-between"> </div><span className="text-gray-300">Sharpe Ra</span className="text-gray-300">t</span className="text-gray-300">i</span>o</span>
+                       <//span> <//span><span className="text-blue-400 font-semibold">{optimizationResults.sharpeRat</span className="text-blue-400 font-semibold">i</span className="text-blue-400 font-semibold">o</span>}</span>
+                    <//span> <//span> </div>
+                  <//div> <//div> </div>
+                <//div> <//div> </div>
                 )}
 
                 {/* Optimize Button */}
-                <button
+               <//div> <//div><button
                   onClick={handleOptimizePortfolio}
                   disabled={isOptimizing}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   {isOptimizing ? (
-                    <>
+                   </button
+                  onClick={handleOptimizePortfolio}
+                  disabled={isOptimizing}
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                > </button
+                  onClick={handleOptimizePortfolio}
+                  disabled={isOptimizing}
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                ><>
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
                       Optimizing...
-                    </>
+                   </RefreshCw className="w-5 h-5 mr-2 animate-spin inline" /> </RefreshCw className="w-5 h-5 mr-2 animate-spin inline" /></>
                   ) : (
-                    <>
+                   <//> <//><>
                       <Zap className="w-5 h-5 mr-2 inline" />
                       Optimize Portfolio
-                    </>
+                   </Zap className="w-5 h-5 mr-2 inline" /> </Zap className="w-5 h-5 mr-2 inline" /></>
                   )}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              <//> <//> </button>
+            <//button> <//button> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+     <//div> <//div><div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+       </div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"> </div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Investment Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced AI-powered tools for intelligent portfolio management
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+         <//div> <//div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-blue-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                </div>
-              </div>
+             </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"> </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105">
+               </div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"> </div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 transform hover:scale-105"><div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                </div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4"> </div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-600 rounded-lg flex items-center justify-center mb-4"> </div><feature.icon className="w-6 h-6 text-white" />
+              </feature.icon className="w-6 h-6 text-white" /> </feature.icon className="w-6 h-6 text-white" /> </div>
+               <//div> <//div><h3 className="text-xl font-bold text-white mb-2">{feature.titl</h3 className="text-xl font-bold text-white mb-2">e</h3 className="text-xl font-bold text-white mb-2">}</h3>
+               <//h3> <//h3><p className="text-gray-400 mb-4">{feature.descriptio</p className="text-gray-400 mb-4">n</p className="text-gray-400 mb-4">}</p>
+               <//p> <//p><div className="flex items-center justify-between">
+                </div className="flex items-center justify-between"> </div className="flex items-center justify-between"> </div><span className="text-blue-400 font-semibold">{feature.pri</span className="text-blue-400 font-semibold">c</span className="text-blue-400 font-semibold">e</span>}</span>
+                 <//span> <//span><CheckCircle className="w-5 h-5 text-green-400" />
+              </CheckCircle className="w-5 h-5 text-green-400" /> </CheckCircle className="w-5 h-5 text-green-400" /> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
 
       {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+     <//div> <//div><div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800">
+       </div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800"> </div className="py-20 bg-gradient-to-br from-slate-800 via-blue-900 to-slate-800"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Investment Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the investment optimization plan that fits your portfolio size
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+         <//div> <//div><div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
+             </div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> </div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"><div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
+                 </div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}> </div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-blue-400/50 ring-2 ring-blue-400/30' : 'border-white/10'}`}><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  </div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> </div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> </div><span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular
-                    </span>
-                  </div>
+                 </span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full"> </span className="bg-gradient-to-r from-blue-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full"> </span>
+                <//span> <//span> </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
-                  </div>
-                </div>
+               <//div> <//div><div className="text-center mb-8">
+                </div className="text-center mb-8"> </div className="text-center mb-8"> </div><h3 className="text-2xl font-bold text-white mb-2">{plan.nam</h3 className="text-2xl font-bold text-white mb-2">e</h3 className="text-2xl font-bold text-white mb-2">}</h3>
+                 <//h3> <//h3><p className="text-gray-400 mb-4">{plan.descriptio</p className="text-gray-400 mb-4">n</p className="text-gray-400 mb-4">}</p>
+                 <//p> <//p><div className="flex items-baseline justify-center">
+                  </div className="flex items-baseline justify-center"> </div className="flex items-baseline justify-center"> </div><span className="text-5xl font-bold text-white">{plan.pri</span className="text-5xl font-bold text-white">c</span className="text-5xl font-bold text-white">e</span>}</span>
+                   <//span> <//span><span className="text-gray-400 ml-2">{plan.peri</span className="text-gray-400 ml-2">o</span className="text-gray-400 ml-2">d</span>}</span>
+                <//span> <//span> </div>
+              <//div> <//div> </div>
 
-                <ul className="space-y-4 mb-8">
+               <//div> <//div><ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
+                   </ul className="space-y-4 mb-8"> </ul className="space-y-4 mb-8"><li key={featureIndex} className="flex items-center">
+                     </li key={featureIndex} className="flex items-center"> </li key={featureIndex} className="flex items-center"><CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                     </CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" /><span className="text-gray-300">{featu</span className="text-gray-300">r</span className="text-gray-300">e</span>}</span>
+                  <//span> <//span> </li>
                   ))}
-                </ul>
+              <//li> <//li> </ul>
 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+               <//ul> <//ul><button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
-                </button>
-              </div>
+              </button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transform hover:scale-105'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}> </button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transform hover:scale-105'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}> </button>
+            <//button> <//button> </div>
             ))}
-          </div>
-        </div>
-      </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
 
       {/* Contact Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+     <//div> <//div><div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+       </div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"> </div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Start Optimizing Today
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our investment experts to discuss your portfolio optimization needs
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-blue-400 mr-3" />
-                    <a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors">
+         <//div> <//div><div className="max-w-4xl mx-auto">
+           </div className="max-w-4xl mx-auto"> </div className="max-w-4xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             </div className="grid grid-cols-1 md:grid-cols-2 gap-8"> </div className="grid grid-cols-1 md:grid-cols-2 gap-8"><div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div><h3 className="text-2xl font-bold text-white mb-6">Contact Informati</h3 className="text-2xl font-bold text-white mb-6">o</h3 className="text-2xl font-bold text-white mb-6">n</h3>
+               <//h3> <//h3><div className="space-y-4">
+                 </div className="space-y-4"> </div className="space-y-4"><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><Phone className="w-5 h-5 text-blue-400 mr-3" />
+                   </Phone className="w-5 h-5 text-blue-400 mr-3" /> </Phone className="w-5 h-5 text-blue-400 mr-3" /><a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors">
                       +1 (302) 464-0950
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-blue-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">
+                  </a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors"> </a href="tel:+13024640950" className="text-gray-300 hover:text-blue-400 transition-colors"> </a>
+                <//a> <//a> </div>
+                 <//div> <//div><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><Mail className="w-5 h-5 text-blue-400 mr-3" />
+                   </Mail className="w-5 h-5 text-blue-400 mr-3" /> </Mail className="w-5 h-5 text-blue-400 mr-3" /><a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors">
                       kleber@ziontechgroup.com
-                    </a>
-                  </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
-                      <div>364 E Main St STE 1008</div>
-                      <div>Middletown, DE 19709</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  </a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors"> </a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-blue-400 transition-colors"> </a>
+                <//a> <//a> </div>
+                 <//div> <//div><div className="flex items-start">
+                  </div className="flex items-start"> </div className="flex items-start"> </div><MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" />
+                   </MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" /> </MapPin className="w-5 h-5 text-blue-400 mr-3 mt-1" /><div className="text-gray-300">
+                     </div className="text-gray-300"> </div className="text-gray-300"><div>364 E Main St STE 1</div>0</div>0</div>8</div>
+                     <//div> <//div><div>Middletown, DE 19</div>7</div>0</div>9</div>
+                  <//div> <//div> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
 
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Get Started</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free portfolio analysis</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">No minimum investment</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">30-day money back guarantee</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Expert support</span>
-                  </div>
-                </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+             <//div> <//div><div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div><h3 className="text-2xl font-bold text-white mb-6">Get Start</h3 className="text-2xl font-bold text-white mb-6">e</h3 className="text-2xl font-bold text-white mb-6">d</h3>
+               <//h3> <//h3><div className="space-y-4">
+                 </div className="space-y-4"> </div className="space-y-4"><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-3" /> </CheckCircle className="w-5 h-5 text-green-400 mr-3" /><span className="text-gray-300">Free portfolio analy</span className="text-gray-300">s</span className="text-gray-300">i</span>s</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-3" /> </CheckCircle className="w-5 h-5 text-green-400 mr-3" /><span className="text-gray-300">No minimum investm</span className="text-gray-300">e</span className="text-gray-300">n</span>t</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-3" /> </CheckCircle className="w-5 h-5 text-green-400 mr-3" /><span className="text-gray-300">30-day money back guaran</span className="text-gray-300">t</span className="text-gray-300">e</span>e</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-3" /> </CheckCircle className="w-5 h-5 text-green-400 mr-3" /><span className="text-gray-300">Expert supp</span className="text-gray-300">o</span className="text-gray-300">r</span>t</span>
+                <//span> <//span> </div>
+              <//div> <//div> </div>
+               <//div> <//div><button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Analysis
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"> </button className="w-full mt-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"> </button>
+            <//button> <//button> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
+  <//div> <//div> </div>
   );
-}
+<//div>}<//div>

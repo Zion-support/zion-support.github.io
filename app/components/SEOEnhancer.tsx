@@ -11,10 +11,10 @@ interface SEOEnhancerProps {
   ogImage?: string;
   ogType?: string;
   structuredData?: Record<string, unknown>;
-  noIndex?: boolean;
-}</string>
+  noIndex?: boolean;</string, unknown>
+</string, unknown>}</string>
 </string>
-const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
+const SEOEnhancer: React.F<//string>C<//string><SEOEnhancerProps>= ({
   children,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with cutting-edge technology.',
@@ -60,55 +60,56 @@ const SEOEnhancer: React.FC<SEOEnhancerProps>= ({
     },
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const finalStructuredData = structuredData || defaultStructuredData</SEOEnhancerProps>;</SEOEnhancerProps>
 </SEOEnhancerProps>
-  return (</SEOEnhancerProps>
-    <>
-      <Helmet>{/* Basic Meta Tags */}<title>{title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={keywords.join(', ')} />
-        <meta name="author" content="Zion Tech Group" />
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        <meta name="distribution" content="global" />
-        <meta name="rating" content="general" >{/* Canonical URL */}</meta>
-        {canonicalUrl && <link rel="canonical" href={canonicalUrl} >}
+  return<//SEOEnhancerProps> <//SEOEnhancerProps>(</SEOEnhancerProps>
+   <//SEOEnhancerProps> <//SEOEnhancerProps><>
+      <Helmet>{/* Basic Meta Tags *</Helmet>/</Helmet>}</Helmet><title>{titl</title>e</title>}</title>
+       <//title> <//title><meta name="description" content={description} />
+       </meta name="description" content={description} /> </meta name="description" content={description} /><meta name="keywords" content={keywords.join(', ')} />
+       </meta name="keywords" content={keywords.join(', ')} /> </meta name="keywords" content={keywords.join(', ')} /><meta name="author" content="Zion Tech Group" />
+       </meta name="author" content="Zion Tech Group" /> </meta name="author" content="Zion Tech Group" /><meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
+       </meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} /> </meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       </meta name="viewport" content="width=device-width, initial-scale=1.0" /> </meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+       </meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /> </meta httpEquiv="Content-Type" content="text/html; charset=utf-8" /><meta name="language" content="English" />
+       </meta name="language" content="English" /> </meta name="language" content="English" /><meta name="revisit-after" content="7 days" />
+       </meta name="revisit-after" content="7 days" /> </meta name="revisit-after" content="7 days" /><meta name="distribution" content="global" />
+       </meta name="distribution" content="global" /> </meta name="distribution" content="global" /><meta name="rating" content="general" >{/* Canonical URL *</meta name="rating" content="general" >/</meta name="rating" content="general" >}</meta>
+        {canonicalUrl &&<//meta> <//meta><link rel="canonical" href={canonicalUrl} >}</link rel="canonical" href={canonicalUrl} >
 </link>
-        {/* Open Graph Tags */}</link>
-        </link><meta property="og:type" content={ogType} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
-        <meta property="og:site_name" content="Zion Tech Group" />
-        <meta property="og:locale" content="en_US" >{/* Twitter Card Tags */}</meta>
-        </meta><meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:site" content="@ziontechgroup" />
-        <meta name="twitter:creator" content="@ziontechgroup" >{/* Additional SEO Tags */}</meta>
-        </meta><meta name="theme-color" content="#1f2937" />
-        <meta name="msapplication-TileColor" content="#1f2937" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Structured Data */}<script type="application/ld+json">{JSON.stringify(finalStructuredData)}</script>
+        {/* Open Graph Tags *<//link>/<//link>}</link>
+      <//link> <//link> </link><meta property="og:type" content={ogType} />
+       </meta property="og:type" content={ogType} /> </meta property="og:type" content={ogType} /><meta property="og:title" content={title} />
+       </meta property="og:title" content={title} /> </meta property="og:title" content={title} /><meta property="og:description" content={description} />
+       </meta property="og:description" content={description} /> </meta property="og:description" content={description} /><meta property="og:image" content={ogImage} />
+       </meta property="og:image" content={ogImage} /> </meta property="og:image" content={ogImage} /><meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
+       </meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} /> </meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} /><meta property="og:site_name" content="Zion Tech Group" />
+       </meta property="og:site_name" content="Zion Tech Group" /> </meta property="og:site_name" content="Zion Tech Group" /><meta property="og:locale" content="en_US" >{/* Twitter Card Tags *</meta property="og:locale" content="en_US" >/</meta property="og:locale" content="en_US" >}</meta>
+      <//meta> <//meta> </meta><meta name="twitter:card" content="summary_large_image" />
+       </meta name="twitter:card" content="summary_large_image" /> </meta name="twitter:card" content="summary_large_image" /><meta name="twitter:title" content={title} />
+       </meta name="twitter:title" content={title} /> </meta name="twitter:title" content={title} /><meta name="twitter:description" content={description} />
+       </meta name="twitter:description" content={description} /> </meta name="twitter:description" content={description} /><meta name="twitter:image" content={ogImage} />
+       </meta name="twitter:image" content={ogImage} /> </meta name="twitter:image" content={ogImage} /><meta name="twitter:site" content="@ziontechgroup" />
+       </meta name="twitter:site" content="@ziontechgroup" /> </meta name="twitter:site" content="@ziontechgroup" /><meta name="twitter:creator" content="@ziontechgroup" >{/* Additional SEO Tags *</meta name="twitter:creator" content="@ziontechgroup" >/</meta name="twitter:creator" content="@ziontechgroup" >}</meta>
+      <//meta> <//meta> </meta><meta name="theme-color" content="#1f2937" />
+       </meta name="theme-color" content="#1f2937" /> </meta name="theme-color" content="#1f2937" /><meta name="msapplication-TileColor" content="#1f2937" />
+       </meta name="msapplication-TileColor" content="#1f2937" /> </meta name="msapplication-TileColor" content="#1f2937" /><meta name="apple-mobile-web-app-capable" content="yes" />
+       </meta name="apple-mobile-web-app-capable" content="yes" /> </meta name="apple-mobile-web-app-capable" content="yes" /><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+       </meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /> </meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" /><meta name="apple-mobile-web-app-title" content="Zion Tech Group" >{/* Structured Data */</meta name="apple-mobile-web-app-title" content="Zion Tech Group" >}</meta name="apple-mobile-web-app-title" content="Zion Tech Group" ><script type="application/ld+json">{JSON.stringify(finalStructuredData</script type="application/ld+json">)</script type="application/ld+json">}</script>
 
         {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" >{/* DNS Prefetch */}</link>
-        </link><link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-      </Helmet>
+       <//script> <//script><link rel="preconnect" href="https://fonts.googleapis.com" />
+       </link rel="preconnect" href="https://fonts.googleapis.com" /> </link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+       </link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /> </link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" /><link rel="preconnect" href="https://www.google-analytics.com" />
+       </link rel="preconnect" href="https://www.google-analytics.com" /> </link rel="preconnect" href="https://www.google-analytics.com" /><link rel="preconnect" href="https://www.googletagmanager.com" >{/* DNS Prefetch *</link rel="preconnect" href="https://www.googletagmanager.com" >/</link rel="preconnect" href="https://www.googletagmanager.com" >}</link>
+      <//link> <//link> </link><link rel="dns-prefetch" href="//fonts.googleapis.com" />
+       </link rel="dns-prefetch" href="//fonts.googleapis.com" /> </link rel="dns-prefetch" href="//fonts.googleapis.com" /><link rel="dns-prefetch" href="//www.google-analytics.com" />
+       </link rel="dns-prefetch" href="//www.google-analytics.com" /> </link rel="dns-prefetch" href="//www.google-analytics.com" /><link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    </link rel="dns-prefetch" href="//www.googletagmanager.com" /> </link rel="dns-prefetch" href="//www.googletagmanager.com" /> </Helmet>
       {children}
-    </>
+   <//Helmet> <//Helmet></>
   );
 };
 
-export default SEOEnhancer;
+export default SEOEnhancer;<//>
+<//>

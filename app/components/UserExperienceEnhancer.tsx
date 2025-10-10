@@ -173,10 +173,10 @@ export const UserExperienceEnhancer: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [preferences.theme, handleThemeChange]);
 
-  if (isLoading) return null;
+  if (isLoading) return null</UserPreferences>;</UserPreferences>
 </UserPreferences>
-  return (</UserPreferences>
-    <>
+  return<//UserPreferences> <//UserPreferences>(</UserPreferences>
+   <//UserPreferences> <//UserPreferences><>
       {/* Theme Toggle Button */}
       <button
         onClick={() =>{
@@ -187,64 +187,89 @@ export const UserExperienceEnhancer: React.FC = () => {
         className="fixed bottom-4 right-4 bg-gray-800 text-white p-3 rounded-full shadow-lg hover:bg-gray-700 transition-colors z-40"
         aria-label={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
         title={`Switch to ${preferences.theme === 'dark' ? 'light' : 'dark'} theme`}
-      ></button>
-        {preferences.theme === 'dark' ? '☀️' : '🌙'}</button>
-      </button>
+     </button
+        onClick={() => </button
+        onClick={() =>></button>
+        {preferences.theme === 'dark' ? '☀️' : '🌙<//button>'<//button>}</button>
+    <//button> <//button> </button>
 
       {/* User Preferences Panel */}
-      <div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
-        <h3 className="text-sm font-bold mb-3">Preferences</h3>
+     <//button> <//button><div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs">
+      </div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs"> </div className="fixed bottom-4 left-4 bg-gray-900 text-white p-4 rounded-lg shadow-lg z-40 max-w-xs"> </div><h3 className="text-sm font-bold mb-3">Preferenc</h3 className="text-sm font-bold mb-3">e</h3 className="text-sm font-bold mb-3">s</h3>
 
-        <div className="space-y-2 text-sm">
-          <div>
-            <label className="block text-xs text-gray-300 mb-1">Theme<select
+       <//h3> <//h3><div className="space-y-2 text-sm">
+         </div className="space-y-2 text-sm"> </div className="space-y-2 text-sm"><div>
+          </div> </div> </div><label className="block text-xs text-gray-300 mb-1">Them</label className="block text-xs text-gray-300 mb-1">e</label className="block text-xs text-gray-300 mb-1"><select
               value={preferences.theme}
               onChange={(e) =>handleThemeChange(e.target.value as 'light' | 'dark' | 'auto')}
-              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"</select>
-            ></select>
-              <option value="auto">Auto<option value="light">Light<option value="dark">Dark</option>
-            </select>
-          </div>
+              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-x</select
+              value={preferences.theme}
+              onChange={(e) =>s</select
+              value={preferences.theme}
+              onChange={(e) =>"</select>
+           <//select> <//select>></select>
+             <//select> <//select><option value="auto">Aut</option value="auto">o</option value="auto"><option value="light">Ligh</option value="light">t</option value="light"><option value="dark">Da</option value="dark">r</option value="dark">k</option>
+          <//option> <//option> </select>
+        <//select> <//select> </div>
 
-          <div>
-            <label className="block text-xs text-gray-300 mb-1">Language<select
+         <//div> <//div><div>
+          </div> </div> </div><label className="block text-xs text-gray-300 mb-1">Languag</label className="block text-xs text-gray-300 mb-1">e</label className="block text-xs text-gray-300 mb-1"><select
               value={preferences.language}
               onChange={(e) =>handleLanguageChange(e.target.value)}
-              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-xs"</select>
-            ></select>
-              <option value="en">English<option value="es">Español</option>
-              <option value="fr">Français<option value="de">Deutsch</option>
-            </select>
-          </div>
+              className="w-full bg-gray-800 text-white rounded px-2 py-1 text-x</select
+              value={preferences.language}
+              onChange={(e) =>s</select
+              value={preferences.language}
+              onChange={(e) =>"</select>
+           <//select> <//select>></select>
+             <//select> <//select><option value="en">Englis</option value="en">h</option value="en"><option value="es">Españ</option value="es">o</option value="es">l</option>
+             <//option> <//option><option value="fr">Françai</option value="fr">s</option value="fr"><option value="de">Deuts</option value="de">c</option value="de">h</option>
+          <//option> <//option> </select>
+        <//select> <//select> </div>
 
-          <div className="flex items-center space-x-2">
-            <input
+         <//div> <//div><div className="flex items-center space-x-2">
+          </div className="flex items-center space-x-2"> </div className="flex items-center space-x-2"> </div><input
               type="checkbox"
               id="notifications"
               checked={preferences.notifications}
               onChange={(e) =>handleNotificationChange(e.target.checked)}
-              className="rounded"</input>
-            /><label htmlFor="notifications" className="text-xs">Notifications</label>
-          </div>
+              className="rounde</input
+              type="checkbox"
+              id="notifications"
+              checked={preferences.notifications}
+              onChange={(e) =>d</input
+              type="checkbox"
+              id="notifications"
+              checked={preferences.notifications}
+              onChange={(e) =>"</input>
+            /<//input>><//input><label htmlFor="notifications" className="text-xs">Notificatio</label htmlFor="notifications" className="text-xs">n</label htmlFor="notifications" className="text-xs">s</label>
+        <//label> <//label> </div>
 
-          <div className="flex items-center space-x-2">
-            <input
+         <//div> <//div><div className="flex items-center space-x-2">
+          </div className="flex items-center space-x-2"> </div className="flex items-center space-x-2"> </div><input
               type="checkbox"
               id="analytics"
               checked={preferences.analytics}
               onChange={(e) =>setPreferences(prev => ({ ...prev, analytics: e.target.checked }))}
-              className="rounded"</input>
-            /><label htmlFor="analytics" className="text-xs">Analytics</label>
-          </div>
-        </div>
+              className="rounde</input
+              type="checkbox"
+              id="analytics"
+              checked={preferences.analytics}
+              onChange={(e) =>d</input
+              type="checkbox"
+              id="analytics"
+              checked={preferences.analytics}
+              onChange={(e) =>"</input>
+            /<//input>><//input><label htmlFor="analytics" className="text-xs">Analyti</label htmlFor="analytics" className="text-xs">c</label htmlFor="analytics" className="text-xs">s</label>
+        <//label> <//label> </div>
+      <//div> <//div> </div>
 
-        <div className="mt-3 pt-2 border-t border-gray-700">
-          <p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (theme)</p>
-          </p>
-        </div>
-      </div>
-    </>
+       <//div> <//div><div className="mt-3 pt-2 border-t border-gray-700">
+        </div className="mt-3 pt-2 border-t border-gray-700"> </div className="mt-3 pt-2 border-t border-gray-700"> </div><p className="text-xs text-gray-400">Shortcuts: Ctrl+K (search), Ctrl+D (them</p className="text-xs text-gray-400">e</p className="text-xs text-gray-400">)</p>
+      <//p> <//p> </div>
+    <//div> <//div> </div>
+   <//div> <//div></>
   );
 };
 
-export default UserExperienceEnhancer;
+export default UserExperienceEnhancer<//>;<//>

@@ -143,54 +143,66 @@ const AILogoDesignerPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation >{/* Hero Section */}</Navigation>
-      </Navigation><section className="pt-20 pb-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6">
-              <Palette className="w-10 h-10 text-white" />
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Logo Designer Pro<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning, professional logos in minutes with AI-powered design generation. From concept to completion, get the perfect logo for your brand with unlimited variations and commercial rights.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <div className="flex items-center space-x-2 text-green-400">
-                <CheckCircle className="w-5 h-5" />
-                <span>Free trial available</span>
-              </div>
-              <div className="flex items-center space-x-2 text-blue-400">
-                <Users className="w-5 h-5" />
-                <span>75,000+ logos created</span>
-              </div>
-              <div className="flex items-center space-x-2 text-yellow-400">
-                <Star className="w-5 h-5 fill-current" />
-                <span>4.9/5 rating</span>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+    </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div><Navigation >{/* Hero Section *</Navigation >/</Navigation >}</Navigation>
+    <//Navigation> <//Navigation> </Navigation><section className="pt-20 pb-16 px-4">
+       </section className="pt-20 pb-16 px-4"> </section className="pt-20 pb-16 px-4"><div className="container mx-auto max-w-6xl">
+         </div className="container mx-auto max-w-6xl"> </div className="container mx-auto max-w-6xl"><div className="text-center mb-16">
+           </div className="text-center mb-16"> </div className="text-center mb-16"><div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6">
+            </div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6"> </div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6"> </div><Palette className="w-10 h-10 text-white" />
+           </Palette className="w-10 h-10 text-white" /> </Palette className="w-10 h-10 text-white" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">AI Logo Designer </h1 className="text-4xl md:text-6xl font-bold text-white mb-6">P</h1 className="text-4xl md:text-6xl font-bold text-white mb-6">r</h1>o</h1>
+           <//h1> <//h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Create stunning, professional logos in minutes with AI-powered design generation. From concept to completion, get the perfect logo for your brand with unlimited variations and commercial right</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">s</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">.</p>
+           <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+             </div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"> </div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><div className="flex items-center space-x-2 text-green-400">
+              </div className="flex items-center space-x-2 text-green-400"> </div className="flex items-center space-x-2 text-green-400"> </div><CheckCircle className="w-5 h-5" />
+               </CheckCircle className="w-5 h-5" /> </CheckCircle className="w-5 h-5" /><span>Free trial availa</span>b</span>l</span>e</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-2 text-blue-400">
+              </div className="flex items-center space-x-2 text-blue-400"> </div className="flex items-center space-x-2 text-blue-400"> </div><Users className="w-5 h-5" />
+               </Users className="w-5 h-5" /> </Users className="w-5 h-5" /><span>75,000+ logos crea</span>t</span>e</span>d</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-2 text-yellow-400">
+              </div className="flex items-center space-x-2 text-yellow-400"> </div className="flex items-center space-x-2 text-yellow-400"> </div><Star className="w-5 h-5 fill-current" />
+               </Star className="w-5 h-5 fill-current" /> </Star className="w-5 h-5 fill-current" /><span>4.9/5 rat</span>i</span>n</span>g</span>
+            <//span> <//span> </div>
+          <//div> <//div> </div>
+           <//div> <//div><div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div><a
                 href="#pricing"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
-              >Start Creating Free</a>
-                <ArrowRight className="w-5 h-5 ml-2" />
-              <a
+              >Start Creating Fr</a
+                href="#pricing"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+              >e</a
+                href="#pricing"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
+              >e</a>
+               <//a> <//a><ArrowRight className="w-5 h-5 ml-2" />
+             </ArrowRight className="w-5 h-5 ml-2" /> </ArrowRight className="w-5 h-5 ml-2" /><a
                 href="#demo"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >Watch Demo</a>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+              >Watch De</a
+                href="#demo"
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >m</a
+                href="#demo"
+                className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >o</a>
+            <//a> <//a> </a>
+          <//a> <//a> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Features Section */}
-      <section className="py-16 px-4 bg-slate-800/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Powerful Logo Design Features<p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to create professional logos that represent your brand perfectly.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
-                    <Sparkles className="w-5 h-5 text-white" />
-                  <h3 className="text-lg font-semibold text-white">{feature}<p className="text-gray-300 text-sm">{feature === 'AI-powered logo generation' && 'Advanced AI analyzes your brand description and generates unique, professional logo concepts tailored to your industry.'}
+     <//section> <//section><section className="py-16 px-4 bg-slate-800/50">
+       </section className="py-16 px-4 bg-slate-800/50"> </section className="py-16 px-4 bg-slate-800/50"><div className="container mx-auto max-w-6xl">
+         </div className="container mx-auto max-w-6xl"> </div className="container mx-auto max-w-6xl"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Powerful Logo Design Feature</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">s</h2 className="text-3xl md:text-4xl font-bold text-white mb-6"><p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to create professional logos that represent your brand perfectly</p className="text-xl text-gray-300 max-w-3xl mx-auto">.</p className="text-xl text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
+               </div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300"> </div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300"><div className="flex items-center space-x-3 mb-4">
+                 </div className="flex items-center space-x-3 mb-4"> </div className="flex items-center space-x-3 mb-4"><div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
+                  </div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center"> </div className="w-10 h-10 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg flex items-center justify-center"> </div><Sparkles className="w-5 h-5 text-white" />
+                 </Sparkles className="w-5 h-5 text-white" /> </Sparkles className="w-5 h-5 text-white" /><h3 className="text-lg font-semibold text-white">{feature</h3 className="text-lg font-semibold text-white">}</h3 className="text-lg font-semibold text-white"><p className="text-gray-300 text-sm">{feature === 'AI-powered logo generation' && 'Advanced AI analyzes your brand description and generates unique, professional logo concepts tailored to your industry.'}
                   {feature === 'Unlimited logo variations' && 'Generate unlimited variations of your logo with different colors, fonts, and layouts until you find the perfect match.'}
                   {feature === 'High-resolution downloads' && 'Download your logos in high resolution (up to 4K) for use in print, web, and any other medium.'}
                   {feature === 'Vector format support' && 'Get your logos in vector format (SVG) for infinite scalability without quality loss.'}
@@ -200,149 +212,172 @@ const AILogoDesignerPage: React.FC = () => {
                   {feature === 'Custom logo editing' && 'Fine-tune your logo with our advanced editing tools for perfect customization.'}
                   {feature === 'Brand guidelines generation' && 'Automatically generate comprehensive brand guidelines including logo usage, colors, and typography.'}
                   {feature === 'Social media templates' && 'Get pre-made social media templates featuring your logo for consistent branding.'}
-                  {feature === 'Business card designs' && 'Create matching business cards and stationery with your new logo design.'}</p>
-                  {feature === 'Watermark removal' && 'Remove watermarks from your final logo designs for professional use.'}</p>
-                </p>
-              </div>
+                  {feature === 'Business card designs' && 'Create matching business cards and stationery with your new logo design.</p className="text-gray-300 text-sm">'</p className="text-gray-300 text-sm">}</p>
+                  {feature === 'Watermark removal' && 'Remove watermarks from your final logo designs for professional use.<//p>'<//p>}</p>
+            <//p> <//p> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Logo Styles Section */}
-      <section className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Logo Design Styles<p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose from various design styles or let AI suggest the perfect style for your brand.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{logoStyles.map((style, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
-                <div className="h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <Palette className="w-16 h-16 text-white opacity-50" />
-                </div>
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-semibold text-white">{style.name}<span className="text-purple-400 font-semibold">{style.price}<p className="text-gray-300 text-sm mb-4">{style.description}<ul className="space-y-1">{style.examples.map((example, exampleIndex) => (</ul>
-                    <li key={exampleIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                      <CheckCircle className="w-3 h-3 text-green-400" />
-                      <span>{example}</span>
-                    </li>
+     <//section> <//section><section className="py-16 px-4">
+       </section className="py-16 px-4"> </section className="py-16 px-4"><div className="container mx-auto max-w-6xl">
+         </div className="container mx-auto max-w-6xl"> </div className="container mx-auto max-w-6xl"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Logo Design Style</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">s</h2 className="text-3xl md:text-4xl font-bold text-white mb-6"><p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose from various design styles or let AI suggest the perfect style for your brand</p className="text-xl text-gray-300 max-w-3xl mx-auto">.</p className="text-xl text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{logoStyles.map((style, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300">
+               </div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300"> </div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300"><div className="h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                </div className="h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4"> </div className="h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center mb-4"> </div><Palette className="w-16 h-16 text-white opacity-50" />
+              </Palette className="w-16 h-16 text-white opacity-50" /> </Palette className="w-16 h-16 text-white opacity-50" /> </div>
+               <//div> <//div><div className="flex items-center justify-between mb-2">
+                </div className="flex items-center justify-between mb-2"> </div className="flex items-center justify-between mb-2"> </div><h3 className="text-lg font-semibold text-white">{style.name</h3 className="text-lg font-semibold text-white">}</h3 className="text-lg font-semibold text-white"><span className="text-purple-400 font-semibold">{style.pric</span className="text-purple-400 font-semibold">e</span className="text-purple-400 font-semibold">}</span><p className="text-gray-300 text-sm mb-4">{style.description</p className="text-gray-300 text-sm mb-4">}</p className="text-gray-300 text-sm mb-4"><ul className="space-y-1">{style.examples.map((example, exampleIndex) =></ul className="space-y-1"> </ul className="space-y-1">(</ul>
+                   <//ul> <//ul><li key={exampleIndex} className="flex items-center space-x-2 text-sm text-gray-400">
+                     </li key={exampleIndex} className="flex items-center space-x-2 text-sm text-gray-400"> </li key={exampleIndex} className="flex items-center space-x-2 text-sm text-gray-400"><CheckCircle className="w-3 h-3 text-green-400" />
+                     </CheckCircle className="w-3 h-3 text-green-400" /> </CheckCircle className="w-3 h-3 text-green-400" /><span>{examp</span>l</span>e</span>}</span>
+                  <//span> <//span> </li>
                   ))}
-                <button className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">Try This Style</button>
-                </button>
-              </div>
+               <//li> <//li><button className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">Try This Sty</button className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">l</button className="w-full mt-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300">e</button>
+              <//button> <//button> </button>
+            <//button> <//button> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 bg-slate-800/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose AI Logo Designer Pro?<p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of logo design with AI-powered creativity and professional results.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-semibold text-white mb-2">{benefit}<p className="text-gray-300">{benefit === 'Create logos in minutes' && 'AI-powered generation means you can have a professional logo ready in minutes, not days or weeks.'}
+     <//section> <//section><section className="py-16 px-4 bg-slate-800/50">
+       </section className="py-16 px-4 bg-slate-800/50"> </section className="py-16 px-4 bg-slate-800/50"><div className="container mx-auto max-w-6xl">
+         </div className="container mx-auto max-w-6xl"> </div className="container mx-auto max-w-6xl"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Choose AI Logo Designer Pro</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">?</h2 className="text-3xl md:text-4xl font-bold text-white mb-6"><p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the future of logo design with AI-powered creativity and professional results</p className="text-xl text-gray-300 max-w-3xl mx-auto">.</p className="text-xl text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{benefits.map((benefit, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="text-center">
+               </div key={index} className="text-center"> </div key={index} className="text-center"><div className="w-16 h-16 bg-gradient-to-r from-green-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                </div className="w-16 h-16 bg-gradient-to-r from-green-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"> </div className="w-16 h-16 bg-gradient-to-r from-green-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"> </div><CheckCircle className="w-8 h-8 text-white" />
+               </CheckCircle className="w-8 h-8 text-white" /> </CheckCircle className="w-8 h-8 text-white" /><h3 className="text-xl font-semibold text-white mb-2">{benefit</h3 className="text-xl font-semibold text-white mb-2">}</h3 className="text-xl font-semibold text-white mb-2"><p className="text-gray-300">{benefit === 'Create logos in minutes' && 'AI-powered generation means you can have a professional logo ready in minutes, not days or weeks.'}
                   {benefit === 'Professional quality guaranteed' && 'Our AI is trained on thousands of professional logos to ensure high-quality, industry-standard designs.'}
                   {benefit === 'Unlimited revisions' && 'Generate as many variations as you need until you find the perfect logo for your brand.'}
                   {benefit === 'Commercial use rights' && 'All logos come with full commercial use rights, so you can use them for any business purpose.'}
-                  {benefit === 'Brand consistency tools' && 'Generate brand guidelines and templates to maintain consistency across all your marketing materials.'}</p>
-                  {benefit === '24/7 design support' && 'Get help from our design experts whenever you need assistance with your logo creation process.'}</p>
-                </p>
-              </div>
+                  {benefit === 'Brand consistency tools' && 'Generate brand guidelines and templates to maintain consistency across all your marketing materials.</p className="text-gray-300">'</p className="text-gray-300">}</p>
+                  {benefit === '24/7 design support' && 'Get help from our design experts whenever you need assistance with your logo creation process.<//p>'<//p>}</p>
+            <//p> <//p> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-16 px-4">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Choose Your Design Plan<p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your logo design needs, from personal projects to enterprise branding.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => (<div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}>{plan.popular && (</div>
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
-                    </span>
-                  </div>
+     <//section> <//section><section id="pricing" className="py-16 px-4">
+       </section id="pricing" className="py-16 px-4"> </section id="pricing" className="py-16 px-4"><div className="container mx-auto max-w-6xl">
+         </div className="container mx-auto max-w-6xl"> </div className="container mx-auto max-w-6xl"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Choose Your Design Pla</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">n</h2 className="text-3xl md:text-4xl font-bold text-white mb-6"><p className="text-xl text-gray-300 max-w-3xl mx-auto">Flexible pricing plans designed to meet your logo design needs, from personal projects to enterprise branding</p className="text-xl text-gray-300 max-w-3xl mx-auto">.</p className="text-xl text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{pricingPlans.map((plan, index) => </div className="grid grid-cols-1 md:grid-cols-3 gap-8">(</div className="grid grid-cols-1 md:grid-cols-3 gap-8"><div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}>{plan.popular &</div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}>&</div key={index} className={`bg-slate-800/80 backdrop-blur-sm border rounded-xl p-8 relative ${plan.popular ? 'border-purple-400/40 ring-2 ring-purple-400/20' : 'border-gray-600/40'}`}> </div>(</div>
+                 <//div> <//div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  </div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> </div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> </div><span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popu</span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">l</span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">a</span>r</span>
+                <//span> <//span> </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="flex items-center justify-center space-x-2 mb-2">
-                    <span className="text-4xl font-bold text-white">{plan.price}<span className="text-gray-400">{plan.period}</span>
-                  </div>
+               <//div> <//div><div className="text-center mb-8">
+                </div className="text-center mb-8"> </div className="text-center mb-8"> </div><h3 className="text-2xl font-bold text-white mb-4">{plan.nam</h3 className="text-2xl font-bold text-white mb-4">e</h3 className="text-2xl font-bold text-white mb-4">}</h3>
+                 <//h3> <//h3><div className="flex items-center justify-center space-x-2 mb-2">
+                  </div className="flex items-center justify-center space-x-2 mb-2"> </div className="flex items-center justify-center space-x-2 mb-2"> </div><span className="text-4xl font-bold text-white">{plan.pric</span className="text-4xl font-bold text-white">e</span className="text-4xl font-bold text-white">}</span><span className="text-gray-400">{plan.peri</span className="text-gray-400">o</span className="text-gray-400">d</span>}</span>
+                <//span> <//span> </div>
                   {plan.originalPrice && (
-                    <span className="text-gray-400 line-through text-lg">{plan.originalPrice}</span>
+                   <//div> <//div><span className="text-gray-400 line-through text-lg">{plan.originalPri</span className="text-gray-400 line-through text-lg">c</span className="text-gray-400 line-through text-lg">e</span>}</span>
                   )}
-                <ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) => (</ul>
-                    <li key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
+               <//span> <//span><ul className="space-y-4 mb-8">{plan.features.map((feature, featureIndex) =></ul className="space-y-4 mb-8"> </ul className="space-y-4 mb-8">(</ul>
+                   <//ul> <//ul><li key={featureIndex} className="flex items-center space-x-3">
+                     </li key={featureIndex} className="flex items-center space-x-3"> </li key={featureIndex} className="flex items-center space-x-3"><CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                     </CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" /><span className="text-gray-300">{featu</span className="text-gray-300">r</span className="text-gray-300">e</span>}</span>
+                  <//span> <//span> </li>
                   ))}
-                <a
+               <//li> <//li><a
                   href="#contact"
                   className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
                       : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
                   }`}
-                >Get Started</a>
-                </a>
-              </div>
+                >Get Start</a
+                  href="#contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
+                      : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
+                  }`}
+                >e</a
+                  href="#contact"
+                  className={`block w-full text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'
+                      : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white'
+                  }`}
+                >d</a>
+              <//a> <//a> </a>
+            <//a> <//a> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 bg-slate-800/50">
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Success Stories<p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Logo Designer Pro has helped businesses create amazing brand identities.<div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) => (</div>
-              <div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6">
-                <div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) => (<Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))}<p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold text-white">{testimonial.name}<p className="text-gray-400 text-sm">{testimonial.role}</p>
-                </div>
-              </div>
+     <//section> <//section><section className="py-16 px-4 bg-slate-800/50">
+       </section className="py-16 px-4 bg-slate-800/50"> </section className="py-16 px-4 bg-slate-800/50"><div className="container mx-auto max-w-6xl">
+         </div className="container mx-auto max-w-6xl"> </div className="container mx-auto max-w-6xl"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Success Storie</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">s</h2 className="text-3xl md:text-4xl font-bold text-white mb-6"><p className="text-xl text-gray-300 max-w-3xl mx-auto">See how AI Logo Designer Pro has helped businesses create amazing brand identities</p className="text-xl text-gray-300 max-w-3xl mx-auto">.</p className="text-xl text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-3 gap-8">{testimonials.map((testimonial, index) =</div className="grid grid-cols-1 md:grid-cols-3 gap-8">></div className="grid grid-cols-1 md:grid-cols-3 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6">
+               </div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6"> </div key={index} className="bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6"><div className="flex items-center space-x-1 mb-4">{[...Array(testimonial.rating)].map((_, i) =></div className="flex items-center space-x-1 mb-4"> </div className="flex items-center space-x-1 mb-4">(</div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >))</Star key={i} className="w-5 h-5 text-yellow-400 fill-current" >}</Star key={i} className="w-5 h-5 text-yellow-400 fill-current" ><p className="text-gray-300 mb-4 italic">"{testimonial.content</p className="text-gray-300 mb-4 italic">}</p className="text-gray-300 mb-4 italic">"</p>
+               <//p> <//p><div>
+                </div> </div> </div><p className="font-semibold text-white">{testimonial.name</p className="font-semibold text-white">}</p className="font-semibold text-white"><p className="text-gray-400 text-sm">{testimonial.rol</p className="text-gray-400 text-sm">e</p className="text-gray-400 text-sm">}</p>
+              <//p> <//p> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Create Your Logo?<p className="text-xl text-purple-100 mb-8">Start designing your perfect logo today with AI Logo Designer Pro.</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
+     <//section> <//section><section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600">
+       </section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600"> </section id="contact" className="py-16 px-4 bg-gradient-to-r from-purple-600 to-pink-600"><div className="container mx-auto max-w-4xl text-center">
+        </div className="container mx-auto max-w-4xl text-center"> </div className="container mx-auto max-w-4xl text-center"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Ready to Create Your Log</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">o</h2 className="text-3xl md:text-4xl font-bold text-white mb-6">?</h2>
+           <//h2> <//h2><p className="text-xl text-purple-100 mb-8">Start designing your perfect logo today with AI Logo Designer Pr</p className="text-xl text-purple-100 mb-8">o</p className="text-xl text-purple-100 mb-8">.</p>
+         <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          </div className="flex flex-col sm:flex-row gap-4 justify-center items-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center items-center"> </div><a
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors flex items-center space-x-2"
             >
-              <Phone className="w-5 h-5" />
-              <span>+1 302 464 0950</span>
-            </a>
-            <a
+             </a
+              href="tel:+13024640950"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors flex items-center space-x-2"
+            > </a
+              href="tel:+13024640950"
+              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors flex items-center space-x-2"
+            ><Phone className="w-5 h-5" />
+             </Phone className="w-5 h-5" /> </Phone className="w-5 h-5" /><span>+1 302 464 0</span>9</span>5</span>0</span>
+          <//span> <//span> </a>
+           <//a> <//a><a
               href="mailto:kleber@ziontechgroup.com"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors flex items-center space-x-2"
             >
-              <Mail className="w-5 h-5" />
-              <span>kleber@ziontechgroup.com</span>
-            </a>
-          </div>
-          <div className="mt-8 text-purple-100">
-            <p className="flex items-center justify-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-            </p>
-          </div>
-        </div>
-      </section>
+             </a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors flex items-center space-x-2"
+            > </a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors flex items-center space-x-2"
+            ><Mail className="w-5 h-5" />
+             </Mail className="w-5 h-5" /> </Mail className="w-5 h-5" /><span>kleber@ziontechgroup.</span>c</span>o</span>m</span>
+          <//span> <//span> </a>
+        <//a> <//a> </div>
+         <//div> <//div><div className="mt-8 text-purple-100">
+          </div className="mt-8 text-purple-100"> </div className="mt-8 text-purple-100"> </div><p className="flex items-center justify-center space-x-2">
+             </p className="flex items-center justify-center space-x-2"> </p className="flex items-center justify-center space-x-2"><MapPin className="w-4 h-4" />
+             </MapPin className="w-4 h-4" /> </MapPin className="w-4 h-4" /><span>364 E Main St STE 1008, Middletown, DE 19</span>7</span>0</span>9</span>
+          <//span> <//span> </p>
+        <//p> <//p> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
-      <Footer />
-    </div>
+     <//section> <//section><Footer />
+  </Footer /> </Footer /> </div>
   );
 };
 
-export default AILogoDesignerPage;
+export default AILogoDesignerPage<//div>;<//div>

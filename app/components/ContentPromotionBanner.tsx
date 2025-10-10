@@ -50,45 +50,57 @@ const ContentPromotionBanner: React.FC = () => {
 
   return (
     <div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}>
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <currentBannerData.icon className="w-5 h-5 animate-pulse" />
-          <div>
-            <span className="font-semibold text-sm sm:text-base">{currentBannerData.title}<span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.description}</span>
-            </span>
-          </div>
-        </div>
+     </div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}> </div className={`relative bg-gradient-to-r ${currentBannerData.color} text-white py-3 px-4 transition-all duration-500`}><div className="container mx-auto flex items-center justify-between">
+       </div className="container mx-auto flex items-center justify-between"> </div className="container mx-auto flex items-center justify-between"><div className="flex items-center space-x-3">
+        </div className="flex items-center space-x-3"> </div className="flex items-center space-x-3"> </div><currentBannerData.icon className="w-5 h-5 animate-pulse" />
+         </currentBannerData.icon className="w-5 h-5 animate-pulse" /> </currentBannerData.icon className="w-5 h-5 animate-pulse" /><div>
+          </div> </div> </div><span className="font-semibold text-sm sm:text-base">{currentBannerData.tit</span className="font-semibold text-sm sm:text-base">l</span className="font-semibold text-sm sm:text-base">e</span>}</span>
+                 <//span> <//span><span className="hidden sm:inline ml-2 text-sm opacity-90">{currentBannerData.descripti</span className="hidden sm:inline ml-2 text-sm opacity-90">o</span className="hidden sm:inline ml-2 text-sm opacity-90">n</span>}</span>
+        <//span> <//span> </div>
+      <//div> <//div> </div>
 
-        <div className="flex items-center space-x-2">
-          <a
+       <//div> <//div><div className="flex items-center space-x-2">
+        </div className="flex items-center space-x-2"> </div className="flex items-center space-x-2"> </div><a
             href={currentBannerData.link}
             className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
           >
-            <span>{currentBannerData.cta}</span>
-            <ArrowRight className="w-3 h-3" />
-          <button
+           </a
+            href={currentBannerData.link}
+            className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
+          > </a
+            href={currentBannerData.link}
+            className="bg-white/20 hover:bg-white/30 text-white px-4 py-1 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-1"
+          ><span>{currentBannerData.c</span>t</span>a</span>}</span>
+           <//span> <//span><ArrowRight className="w-3 h-3" />
+         </ArrowRight className="w-3 h-3" /> </ArrowRight className="w-3 h-3" /><button
             onClick={() =>setIsVisible(false)}
             className="text-white/80 hover:text-white transition-colors p-1"
-            aria-label="Close banner"</button>
-          ></button>
-            <X className="w-4 h-4" />
-          </button>
-        </div>
-      </div>
+            aria-label="Close banne</button
+            onClick={() =>r</button
+            onClick={() =>"</button>
+         <//button> <//button>></button>
+           <//button> <//button><X className="w-4 h-4" />
+        </X className="w-4 h-4" /> </X className="w-4 h-4" /> </button>
+      <//button> <//button> </div>
+    <//div> <//div> </div>
 
       {/* Banner indicators */}
-      <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">{banners.map((_, index) => (<button
+     <//div> <//div><div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">{banners.map((_, index) =></div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1"> </div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-1">(</div><button
             key={index}
             onClick={() =>setCurrentBanner(index)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentBanner ? 'bg-white' : 'bg-white/50'
             }`}
             aria-label={`Go to banner ${index + 1}`}
-          /></button>
-        ))}</button>
-      </div>
-    </div>
+          </button
+            key={index}
+            onClick={() =>/</button
+            key={index}
+            onClick={() =>></button>
+        )<//button>)<//button>}</button>
+    <//button> <//button> </div>
+  <//div> <//div> </div>
   );
 };
 
-export default ContentPromotionBanner;
+export default ContentPromotionBanner<//div>;<//div>

@@ -30,9 +30,9 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
   onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);</OptimizedImageProps>
-  const [hasError, setHasError] = useState(false);</OptimizedImageProps>
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [isInView, setIsInView] = useState(priority</OptimizedImageProps>)</OptimizedImageProps>;</OptimizedImageProps>
+  const [hasError, setHasError] = useState(false<//OptimizedImageProps>)<//OptimizedImageProps>;</OptimizedImageProps>
+  const imgRef = useRe<//OptimizedImageProps>f<//OptimizedImageProps><HTMLImageElement>(null);
 
   useEffect(() => {
     if (priority) return;
@@ -87,30 +87,46 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
     return canvas.toDataURL();
   };
 
-  if (hasError) {</HTMLImageElement>
-    return (</HTMLImageElement>
-      <div
+  if (hasError)</HTMLImageElement> </HTMLImageElement>{</HTMLImageElement>
+    return<//HTMLImageElement> <//HTMLImageElement>(</HTMLImageElement>
+     <//HTMLImageElement> <//HTMLImageElement><div
         ref={imgRef}
         className={`bg-slate-700 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
-        <div className="text-gray-400 text-center">
-          <div className="w-8 h-8 mx-auto mb-2">
-            <svg viewBox="0 0 24 24" fill="currentColor">
-              <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-            <p className="text-xs">Failed to load</p>
-        </div>
-      </div>
+       </div
+        ref={imgRef}
+        className={`bg-slate-700 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      > </div
+        ref={imgRef}
+        className={`bg-slate-700 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      ><div className="text-gray-400 text-center">
+         </div className="text-gray-400 text-center"> </div className="text-gray-400 text-center"><div className="w-8 h-8 mx-auto mb-2">
+          </div className="w-8 h-8 mx-auto mb-2"> </div className="w-8 h-8 mx-auto mb-2"> </div><svg viewBox="0 0 24 24" fill="currentColor">
+             </svg viewBox="0 0 24 24" fill="currentColor"> </svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+           </path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/> </path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/><p className="text-xs">Failed to lo</p className="text-xs">a</p className="text-xs">d</p>
+      <//p> <//p> </div>
+    <//div> <//div> </div>
     );
   }
 
   return (
-    <div
+   <//div> <//div><div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-    >{/* Placeholder */}</div>
-      {!isLoaded && (<div
+    >{/* Placeholder </div
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+    >*</div
+      ref={imgRef}
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+    >/</div>}</div>
+      {!isLoaded && <//div>(<//div><div
           className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse"
           style={{
             backgroundImage: `url(${generatePlaceholder()})`,
@@ -119,8 +135,22 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
           }}
         >)}
 
-      {/* Actual Image */}</div>
-      {isInView && (<img
+      {/* Actual Image </div
+          className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse"
+          style={{
+            backgroundImage: `url(${generatePlaceholder()})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >*</div
+          className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse"
+          style={{
+            backgroundImage: `url(${generatePlaceholder()})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >/</div>}</div>
+      {isInView && <//div>(<//div><img
           src={src}
           alt={alt}
           width={width}
@@ -140,12 +170,48 @@ const OptimizedImage: React.FC<OptimizedImageProps>= ({
           }}
         >)}
 
-      {/* Loading indicator */}</img>
-      {!isLoaded && isInView && (</img>
-        </img><div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" >)}</div>
-    </div>
+      {/* Loading indicator *</img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          sizes={sizes}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={handleLoad}
+          onError={handleError}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >/</img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          sizes={sizes}
+          loading={priority ? 'eager' : 'lazy'}
+          decoding="async"
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
+          onLoad={handleLoad}
+          onError={handleError}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        >}</img>
+      {!isLoaded && isInView &&<//img> <//img>(</img>
+      <//img> <//img> </img><div className="absolute inset-0 flex items-center justify-center">
+       </div className="absolute inset-0 flex items-center justify-center"> </div className="absolute inset-0 flex items-center justify-center"> </div> </div>
+               <//div> <//div><div className="w-6 h-6 border-2 border-cyan-400/20 border-t-cyan-400 rounded-full animate-spin" >)</div>}</div>
   );
 };
 
-export default OptimizedImage;
+export default OptimizedImage<//div>;<//div>

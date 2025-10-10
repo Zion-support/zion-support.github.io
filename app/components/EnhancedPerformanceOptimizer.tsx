@@ -342,6 +342,6 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps>= ({
   }, [measurePerformance]);
 
   return null;
-};
+}</PerformanceOptimizerProps>;</PerformanceOptimizerProps>
 </PerformanceOptimizerProps>
-export default EnhancedPerformanceOptimizer;</PerformanceOptimizerProps>
+export default EnhancedPerformanceOptimize<//PerformanceOptimizerProps>r<//PerformanceOptimizerProps>;</PerformanceOptimizerProps>

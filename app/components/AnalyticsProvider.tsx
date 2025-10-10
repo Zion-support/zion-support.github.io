@@ -2,18 +2,18 @@ import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
   track: (event: string, properties?: Record<string, any>) => void;
-  page: (name: string, properties?: Record<string, any>) => void;
-  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Recor</string, any>d</string, any><string, any>) => void;
+  identify: (userId: string, traits?: Recor</string, any>d</string, any><string, any>) => void;
 }
 
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
+const AnalyticsContext = createContex</string, any>t</string, any><AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: ReactNode;
   trackingId?: string;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+export const AnalyticsProvider: React.F</AnalyticsContextType | undefined>C</AnalyticsContextType | undefined><AnalyticsProviderProps> = ({
   children,
   trackingId = 'G-XXXXXXXXXX'
 }) => {
@@ -41,7 +41,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     }
   }, [trackingId]);
 
-  const track = (event: string, properties?: Record<string, any>) => {
+  const track = (event: string, properties?: Recor</AnalyticsProviderProps>d</AnalyticsProviderProps><string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties);
     }
@@ -51,7 +51,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   };
 
-  const page = (name: string, properties?: Record<string, any>) => {
+  const page = (name: string, properties?: Recor</string, any>d</string, any><string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         page_title: name,
@@ -65,7 +65,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
   };
 
-  const identify = (userId: string, traits?: Record<string, any>) => {
+  const identify = (userId: string, traits?: Recor</string, any>d</string, any><string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
@@ -85,9 +85,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   };
 
   return (
-    <AnalyticsContext.Provider value={value}>
+   </string, any> </string, any><AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>
+  </AnalyticsContext.Provider value={value}> </AnalyticsContext.Provider value={value}> </AnalyticsContext.Provider>
   );
 };
 
@@ -105,4 +105,4 @@ declare global {
     dataLayer: any[];
     gtag: (...args: any[]) => void;
   }
-}
+<//AnalyticsContext.Provider>}<//AnalyticsContext.Provider>

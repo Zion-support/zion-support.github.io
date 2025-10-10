@@ -57,16 +57,26 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     }
   }, []);
 
-  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {</PerformanceMetrics>
-    if (value === null) return 'text-gray-400';</PerformanceMetrics>
-    if (value <= thresholds.good) return 'text-green-400';
+  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) =></PerformanceMetrics> </PerformanceMetrics>{</PerformanceMetrics>
+    if (value === null) return 'text-gray-400<//PerformanceMetrics>'<//PerformanceMetrics>;</PerformanceMetrics>
+    if (value<//PerformanceMetrics> <//PerformanceMetrics><= thresholds.good) return 'text-green-400';
     if (value <= thresholds.needsImprovement) return 'text-yellow-400';
     return 'text-red-400';
   };
 
   const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
     if (value === null) return 'Measuring...';
-    if (value <= thresholds.good) return 'Good';
+    if (value</= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => </= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) =><= thresholds.good) return 'Good';
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';
     return 'Poor';
   };
@@ -77,48 +87,69 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm">
-      <div className="flex items-center justify-between mb-3">
-        <h3 className="text-white font-semibold text-sm">Performance Monitor<button
+     </= thresholds.good) return 'Good';
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
+  };
+
+  if (process.env.NODE_ENV !== 'development' || !isVisible) {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm"> </= thresholds.good) return 'Good';
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
+  };
+
+  if (process.env.NODE_ENV !== 'development' || !isVisible) {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 shadow-lg z-50 max-w-sm"><div className="flex items-center justify-between mb-3">
+      </div className="flex items-center justify-between mb-3"> </div className="flex items-center justify-between mb-3"> </div><h3 className="text-white font-semibold text-sm">Performance Monito</h3 className="text-white font-semibold text-sm">r</h3 className="text-white font-semibold text-sm"><button
           onClick={() =>setIsVisible(false)}
           className="text-gray-400 hover:text-white text-xs"
-        ></button>
-          ✕</button>
-        </button>
-      </div>
+       </button
+          onClick={() => </button
+          onClick={() =>></button>
+         <//button> <//button>✕</button>
+      <//button> <//button> </button>
+    <//button> <//button> </div>
       
-      <div className="space-y-2 text-xs">
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">CLS:<span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>{metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })})</span>
-          </span>
-        </div>
+     <//div> <//div><div className="space-y-2 text-xs">
+       </div className="space-y-2 text-xs"> </div className="space-y-2 text-xs"><div className="flex justify-between items-center">
+        </div className="flex justify-between items-center"> </div className="flex justify-between items-center"> </div><span className="text-gray-300">C</span className="text-gray-300">L</span className="text-gray-300">S</span>:</span>
+                 <//span> <//span><span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>{metrics.CLS ? metrics.CLS.toFixed(3) : '...'} ({getScoreText(metrics.CLS, { good: 0.1, needsImprovement: 0.25 }</span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>)</span className={getScoreColor(metrics.CLS, { good: 0.1, needsImprovement: 0.25 })}>}</span>)</span>
+      <//span> <//span> </div>
         
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">FID:<span className={getScoreColor(metrics.FID, { good: 100, needsImprovement: 300 })}>{metrics.FID ? `${metrics.FID.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FID, { good: 100, needsImprovement: 300 })})</span>
-          </span>
-        </div>
+       <//div> <//div><div className="flex justify-between items-center">
+        </div className="flex justify-between items-center"> </div className="flex justify-between items-center"> </div><span className="text-gray-300">F</span className="text-gray-300">I</span className="text-gray-300">D</span>:</span>
+                 <//span> <//span><span className={getScoreColor(metrics.FID, { good: 100, needsImprovement: 300 })}>{metrics.FID ? `${metrics.FID.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FID, { good: 100, needsImprovement: 300 }</span className={getScoreColor(metrics.FID, { good: 100, needsImprovement: 300 })}>)</span className={getScoreColor(metrics.FID, { good: 100, needsImprovement: 300 })}>}</span>)</span>
+      <//span> <//span> </div>
         
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">FCP:<span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}>{metrics.FCP ? `${metrics.FCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FCP, { good: 1800, needsImprovement: 3000 })})</span>
-          </span>
-        </div>
+       <//div> <//div><div className="flex justify-between items-center">
+        </div className="flex justify-between items-center"> </div className="flex justify-between items-center"> </div><span className="text-gray-300">F</span className="text-gray-300">C</span className="text-gray-300">P</span>:</span>
+                 <//span> <//span><span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}>{metrics.FCP ? `${metrics.FCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.FCP, { good: 1800, needsImprovement: 3000 }</span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}>)</span className={getScoreColor(metrics.FCP, { good: 1800, needsImprovement: 3000 })}>}</span>)</span>
+      <//span> <//span> </div>
         
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">LCP:<span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}>{metrics.LCP ? `${metrics.LCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.LCP, { good: 2500, needsImprovement: 4000 })})</span>
-          </span>
-        </div>
+       <//div> <//div><div className="flex justify-between items-center">
+        </div className="flex justify-between items-center"> </div className="flex justify-between items-center"> </div><span className="text-gray-300">L</span className="text-gray-300">C</span className="text-gray-300">P</span>:</span>
+                 <//span> <//span><span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}>{metrics.LCP ? `${metrics.LCP.toFixed(0)}ms` : '...'} ({getScoreText(metrics.LCP, { good: 2500, needsImprovement: 4000 }</span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}>)</span className={getScoreColor(metrics.LCP, { good: 2500, needsImprovement: 4000 })}>}</span>)</span>
+      <//span> <//span> </div>
         
-        <div className="flex justify-between items-center">
-          <span className="text-gray-300">TTFB:<span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>{metrics.TTFB ? `${metrics.TTFB.toFixed(0)}ms` : '...'} ({getScoreText(metrics.TTFB, { good: 800, needsImprovement: 1800 })})</span>
-          </span>
-        </div>
-      </div>
+       <//div> <//div><div className="flex justify-between items-center">
+        </div className="flex justify-between items-center"> </div className="flex justify-between items-center"> </div><span className="text-gray-300">TT</span className="text-gray-300">F</span className="text-gray-300">B</span>:</span>
+                 <//span> <//span><span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>{metrics.TTFB ? `${metrics.TTFB.toFixed(0)}ms` : '...'} ({getScoreText(metrics.TTFB, { good: 800, needsImprovement: 1800 }</span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>)</span className={getScoreColor(metrics.TTFB, { good: 800, needsImprovement: 1800 })}>}</span>)</span>
+      <//span> <//span> </div>
+    <//div> <//div> </div>
       
-      <div className="mt-3 pt-2 border-t border-gray-700">
-        <p className="text-xs text-gray-400">Press Ctrl+Shift+P to toggle</p>
-        </p>
-      </div>
-    </div>
+     <//div> <//div><div className="mt-3 pt-2 border-t border-gray-700">
+      </div className="mt-3 pt-2 border-t border-gray-700"> </div className="mt-3 pt-2 border-t border-gray-700"> </div><p className="text-xs text-gray-400">Press Ctrl+Shift+P to togg</p className="text-xs text-gray-400">l</p className="text-xs text-gray-400">e</p>
+    <//p> <//p> </div>
+  <//div> <//div> </div>
   );
 };
 
-export default EnhancedPerformanceMonitor;
+export default EnhancedPerformanceMonitor<//div>;<//div>

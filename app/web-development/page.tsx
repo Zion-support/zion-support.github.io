@@ -99,132 +99,201 @@ const WebDevelopmentPage: React.FC = () => {
         keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
         canonicalUrl="https://ziontechgroup.com/web-development"
       />
-        <PerformanceOptimizer
+       </SEOOptimizer
+        title="Web Development Services - Zion Tech Group"
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
+        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
+        canonicalUrl="https://ziontechgroup.com/web-development"
+      /> </SEOOptimizer
+        title="Web Development Services - Zion Tech Group"
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
+        keywords={['web development', 'frontend development', 'backend development', 'full-stack', 'e-commerce', 'React', 'Node.js']}
+        canonicalUrl="https://ziontechgroup.com/web-development"
+      /><PerformanceOptimizer
           enableImageOptimization={true}
           enableLazyLoading={true}
           enableCodeSplitting={true}
           enablePrefetching={true}
         />
-      <AccessibilityEnhancer
+     </PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        /> </PerformanceOptimizer
+          enableImageOptimization={true}
+          enableLazyLoading={true}
+          enableCodeSplitting={true}
+          enablePrefetching={true}
+        /><AccessibilityEnhancer
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-      <SecurityEnhancer
+     </AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      /> </AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      /><SecurityEnhancer
         enableCSP={true}
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
         enableClickjackingProtection={true}
       />
-      <Analytics />
+     </SecurityEnhancer
+        enableCSP={true}
+        enableHTTPSRedirect={true}
+        enableXSSProtection={true}
+        enableClickjackingProtection={true}
+      /> </SecurityEnhancer
+        enableCSP={true}
+        enableHTTPSRedirect={true}
+        enableXSSProtection={true}
+        enableClickjackingProtection={true}
+      /><Analytics />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
+     </Analytics /> </Analytics /><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div><Navigation />
 
-        <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Services<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development team.</p>
-              From frontend to backend, we deliver solutions that drive business growth.</p>
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+       </Navigation /> </Navigation /><main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section *</main className="container mx-auto px-4 py-16 pt-24">/</main className="container mx-auto px-4 py-16 pt-24">}</main>
+         <//main> <//main><section className="text-center mb-16">
+           </section className="text-center mb-16"> </section className="text-center mb-16"><h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Web Development Servic</h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">e</h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">s</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Build modern, scalable, and high-performance web applications with our expert development tea</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">m</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">.</p>
+              From frontend to backend, we deliver solutions that drive business growt<//p>h<//p>.</p>
+           <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div><a
                 href="/contact"
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-              >Start Your Project<a
+              >Start Your Projec</a
+                href="/contact"
+                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+              >t</a
+                href="/contact"
+                className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+              ><a
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >Call +1 302 464 0950</a>
-              </a>
-            </div>
-          </section>
+              >Call +1 302 464 09</a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >5</a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >0</a>
+            <//a> <//a> </a>
+          <//a> <//a> </div>
+        <//div> <//div> </section>
 
           {/* Services Grid */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Services<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) => (</div>
-                <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+         <//section> <//section><section className="mb-20">
+           </section className="mb-20"> </section className="mb-20"><h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Web Development Service</h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">s</h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{webServices.map((service, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> </div>(</div>
+               <//div> <//div><div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
+                 </div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"> </div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300"><div className="flex items-center mb-6">
+                   </div className="flex items-center mb-6"> </div className="flex items-center mb-6"><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">
+                    </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"> </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4"> </div><service.icon className="w-8 h-8 text-white" />
+                  </service.icon className="w-8 h-8 text-white" /> </service.icon className="w-8 h-8 text-white" /> </div>
+                   <//div> <//div><div>
+                    </div> </div> </div><h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title</h3 className="text-2xl font-bold text-white mb-2 neon-text">}</h3 className="text-2xl font-bold text-white mb-2 neon-text"><div className={`font-semibold ${service.color}`}>{service.pric</div className={`font-semibold ${service.color}`}>e</div className={`font-semibold ${service.color}`}>}</div><p className="text-gray-300 mb-6 leading-relaxed">{service.descriptio</p className="text-gray-300 mb-6 leading-relaxed">n</p className="text-gray-300 mb-6 leading-relaxed">}</p>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Features<ul className="space-y-2">{service.features.map((feature, featureIndex) => (</ul>
-                        <li key={featureIndex} className="flex items-center text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{feature}</CheckCircle>
-                        </CheckCircle>
+                 <//p> <//p><div className="mb-6">
+                  </div className="mb-6"> </div className="mb-6"> </div><h4 className="text-lg font-semibold text-white mb-3">Feature</h4 className="text-lg font-semibold text-white mb-3">s</h4 className="text-lg font-semibold text-white mb-3"><ul className="space-y-2">{service.features.map((feature, featureIndex) =></ul className="space-y-2"> </ul className="space-y-2">(</ul>
+                       <//ul> <//ul><li key={featureIndex} className="flex items-center text-gray-300">
+                         </li key={featureIndex} className="flex items-center text-gray-300"> </li key={featureIndex} className="flex items-center text-gray-300"><CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >{featur</CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >e</CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" >}</CheckCircle>
+                      <//CheckCircle> <//CheckCircle> </CheckCircle>
                       ))}
-                    </ul>
-                  </div>
+                  <//CheckCircle> <//CheckCircle> </ul>
+                <//ul> <//ul> </div>
 
                   {service.benefits && (
-                    <div className="mb-6">
-                      <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>
-                          <li key={benefitIndex} className="flex items-center text-gray-300">
-                            <ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefit}</ArrowRight>
-                          </ArrowRight>
+                   <//div> <//div><div className="mb-6">
+                    </div className="mb-6"> </div className="mb-6"> </div><h4 className="text-lg font-semibold text-white mb-3">Benefit</h4 className="text-lg font-semibold text-white mb-3">s</h4 className="text-lg font-semibold text-white mb-3"><ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) =></ul className="space-y-2"> </ul className="space-y-2">(</ul>
+                         <//ul> <//ul><li key={benefitIndex} className="flex items-center text-gray-300">
+                           </li key={benefitIndex} className="flex items-center text-gray-300"> </li key={benefitIndex} className="flex items-center text-gray-300"><ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >{benefi</ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >t</ArrowRight className="w-4 h-4 text-cyan-400 mr-3 flex-shrink-0" >}</ArrowRight>
+                        <//ArrowRight> <//ArrowRight> </ArrowRight>
                         ))}
-                      </ul>
-                    </div>
+                    <//ArrowRight> <//ArrowRight> </ul>
+                  <//ul> <//ul> </div>
                   )}
 
-                  <a
+                 <//div> <//div><a
                     href="/contact"
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
-                  >Get Started</a>
-                  </a>
-                </div>
+                  >Get Start</a
+                    href="/contact"
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
+                  >e</a
+                    href="/contact"
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover:scale-105 cyber-button"
+                  >d</a>
+                <//a> <//a> </a>
+              <//a> <//a> </div>
               ))}
-            </div>
-          </section>
+          <//div> <//div> </div>
+        <//div> <//div> </section>
 
           {/* Technologies */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Use<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) => (</div>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{tech.name}<p className="text-sm text-gray-300">{tech.description}</p>
-                </div>
+         <//section> <//section><section className="mb-20">
+           </section className="mb-20"> </section className="mb-20"><h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Technologies We Us</h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">e</h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text"><div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">{technologies.map((tech, index) =</div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">></div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"> </div>(</div>
+               <//div> <//div><div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                </div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"> </div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"> </div><tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                 </tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /> </tech.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" /><h3 className="text-lg font-semibold text-white mb-2">{tech.name</h3 className="text-lg font-semibold text-white mb-2">}</h3 className="text-lg font-semibold text-white mb-2"><p className="text-sm text-gray-300">{tech.descriptio</p className="text-sm text-gray-300">n</p className="text-sm text-gray-300">}</p>
+              <//p> <//p> </div>
               ))}
-            </div>
-          </section>
+          <//div> <//div> </div>
+        <//div> <//div> </section>
 
           {/* Process */}
-          <section className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Process<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) => (</div>
-                <div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl font-bold text-white">{step.step}<h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title}<p className="text-gray-300">{step.description}</p>
-                </div>
+         <//section> <//section><section className="mb-20">
+           </section className="mb-20"> </section className="mb-20"><h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">Our Development Proces</h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">s</h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{process.map((step, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> </div>(</div>
+               <//div> <//div><div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300">
+                 </div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"> </div key={index} className="cyber-card p-6 text-center hover:scale-105 transition-all duration-300"><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"> </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4"> </div><span className="text-2xl font-bold text-white">{step.ste</span className="text-2xl font-bold text-white">p</span className="text-2xl font-bold text-white">}</span><h3 className="text-xl font-bold text-white mb-3 neon-text">{step.title</h3 className="text-xl font-bold text-white mb-3 neon-text">}</h3 className="text-xl font-bold text-white mb-3 neon-text"><p className="text-gray-300">{step.descriptio</p className="text-gray-300">n</p className="text-gray-300">}</p>
+              <//p> <//p> </div>
               ))}
-            </div>
-          </section>
+          <//div> <//div> </div>
+        <//div> <//div> </section>
 
           {/* CTA Section */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+         <//section> <//section><section className="text-center">
+           </section className="text-center"> </section className="text-center"><div className="cyber-card p-12 max-w-4xl mx-auto">
+            </div className="cyber-card p-12 max-w-4xl mx-auto"> </div className="cyber-card p-12 max-w-4xl mx-auto"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Applicatio</h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">n</h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">?</h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forwar</p className="text-xl text-gray-300 mb-8">d</p className="text-xl text-gray-300 mb-8">.</p>
+             <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div className="flex flex-col sm:flex-row gap-4 justify-center"> </div><a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
-                >Start Your Project<a
+                >Start Your Projec</a
+                  href="/contact"
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                >t</a
+                  href="/contact"
+                  className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
+                ><a
                   href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-                >Call +1 302 464 0950</a>
-                </a>
-              </div>
-            </div>
-          </section>
-        </main>
+                >Call +1 302 464 09</a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >5</a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                >0</a>
+              <//a> <//a> </a>
+            <//a> <//a> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </section>
+      <//section> <//section> </main>
 
-        <Footer />
-      </div>
-    </>
+       <//main> <//main><Footer />
+    </Footer /> </Footer /> </div>
+   <//div> <//div></>
   );
 };
 
-export default WebDevelopmentPage;
+export default WebDevelopmentPage<//>;<//>

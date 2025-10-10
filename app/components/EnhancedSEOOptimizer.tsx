@@ -14,10 +14,10 @@ interface SEOOptimizerProps {
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
-  tags?: string[];
-}</string>
+  tags?: string[];</string, unknown>
+</string, unknown>}</string>
 </string>
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
+const EnhancedSEOOptimizer: React.F<//string>C<//string><SEOOptimizerProps>= ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -126,9 +126,9 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
       document.head.appendChild(canonical);
     }
     canonical.setAttribute('href', url);
-  };</SEOOptimizerProps>
+  </SEOOptimizerProps>}</SEOOptimizerProps>;</SEOOptimizerProps>
 </SEOOptimizerProps>
-  const addStructuredData = (data: Record<string, unknown>): void => {
+  const addStructuredData = (data: Recor<//SEOOptimizerProps>d<//SEOOptimizerProps><string, unknown>): void => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -339,6 +339,6 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
   };
 
   return null;
-};
+}</string, unknown>;</string, unknown>
 </string>
-export default EnhancedSEOOptimizer;</string>
+export default EnhancedSEOOptimize<//string>r<//string>;</string>

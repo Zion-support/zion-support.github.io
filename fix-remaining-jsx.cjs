@@ -4,47 +4,32 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-// Comprehensive JSX syntax fixes
+// Additional JSX syntax fixes
 const fixes = [
-  // Fix malformed div tags
+  // Fix malformed Helmet tags
   {
-    pattern: /<\/div><div([^>]*)>/g,
-    replacement: '<div$1>'
+    pattern: /<\/Helmet><title>([^<]+)<\/title>\s*<meta([^>]+)\/>\s*<meta([^>]+)\/>\s*<\/Helmet>/g,
+    replacement: '<title>$1</title>\n        <meta$2/>\n        <meta$3/>\n      </Helmet>'
   },
-  // Fix malformed h1 tags
+  // Fix unclosed div tags
   {
-    pattern: /<\/h1>\s*<\/h1>/g,
-    replacement: '</h1>'
-  },
-  // Fix malformed section tags
-  {
-    pattern: /<\/section>\s*<\/section>/g,
-    replacement: '</section>'
-  },
-  // Fix malformed p tags
-  {
-    pattern: /<\/p>\s*<\/p>/g,
-    replacement: '</p>'
-  },
-  // Fix malformed span tags
-  {
-    pattern: /<\/span>\s*<\/span>/g,
-    replacement: '</span>'
-  },
-  // Fix malformed div tags with content
-  {
-    pattern: /<\/div><div([^>]*)>([^<]+)<\/div>/g,
+    pattern: /<div([^>]*)>([^<]+)(?!<\/div>)/g,
     replacement: '<div$1>$2</div>'
   },
-  // Fix JSX expressions with multiple parent elements
+  // Fix unclosed h1 tags
   {
-    pattern: /<div([^>]*)>([^<]+)<\/div><div([^>]*)>([^<]+)<\/div>/g,
-    replacement: '<div$1>$2</div>\n        <div$3>$4</div>'
+    pattern: /<h1([^>]*)>([^<]+)(?!<\/h1>)/g,
+    replacement: '<h1$1>$2</h1>'
   },
-  // Fix unclosed tags
+  // Fix unclosed span tags
   {
-    pattern: /<([^>]+)>([^<]+)(?!<\/([^>]+)>)/g,
-    replacement: '<$1>$2</$1>'
+    pattern: /<span([^>]*)>([^<]+)(?!<\/span>)/g,
+    replacement: '<span$1>$2</span>'
+  },
+  // Fix JSX fragments
+  {
+    pattern: /<>([^<]+)<\/>/g,
+    replacement: '<div>$1</div>'
   }
 ];
 

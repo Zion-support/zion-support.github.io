@@ -243,4 +243,4 @@ const AccessibilityEnhancer: React.FC = () => {
   return null;
 };
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer</AccessibilitySettings>;</AccessibilitySettings>

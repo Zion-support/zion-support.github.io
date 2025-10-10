@@ -860,135 +860,143 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   };
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}>
-      <Helmet>
-        <title>AI Voice Cloning Studio Pro - Professional Voice Synthesis | Zion Tech Group</title>
-        <meta name="description" content="Create realistic voice clones with AI Voice Cloning Studio Pro. Professional voice synthesis, emotion control, and multi-language support for content creators and businesses." />
-        <meta name="keywords" content="voice cloning, AI voice synthesis, voice generation, text to speech, voice customization, content creation" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-cloning-studio" />
-      </Helmet>
+   </string | null> </string | null><div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}>
+    </div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}> </div className={`min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}> </div><Helmet>
+      </Helmet> </Helmet> </Helmet><title>AI Voice Cloning Studio Pro - Professional Voice Synthesis | Zion Tech Gro</title>u</title>p</title>
+       <//title> <//title><meta name="description" content="Create realistic voice clones with AI Voice Cloning Studio Pro. Professional voice synthesis, emotion control, and multi-language support for content creators and businesses." />
+       </meta name="description" content="Create realistic voice clones with AI Voice Cloning Studio Pro. Professional voice synthesis, emotion control, and multi-language support for content creators and businesses." /> </meta name="description" content="Create realistic voice clones with AI Voice Cloning Studio Pro. Professional voice synthesis, emotion control, and multi-language support for content creators and businesses." /><meta name="keywords" content="voice cloning, AI voice synthesis, voice generation, text to speech, voice customization, content creation" />
+       </meta name="keywords" content="voice cloning, AI voice synthesis, voice generation, text to speech, voice customization, content creation" /> </meta name="keywords" content="voice cloning, AI voice synthesis, voice generation, text to speech, voice customization, content creation" /><link rel="canonical" href="https://ziontechgroup.com/ai-voice-cloning-studio" />
+    </link rel="canonical" href="https://ziontechgroup.com/ai-voice-cloning-studio" /> </link rel="canonical" href="https://ziontechgroup.com/ai-voice-cloning-studio" /> </Helmet>
 
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+     <//Helmet> <//Helmet><div className="relative py-20 overflow-hidden">
+       </div className="relative py-20 overflow-hidden"> </div className="relative py-20 overflow-hidden"><div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8">
-              <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
-              <span className="text-purple-300 font-medium">AI Voice Cloning Studio Pro</span>
-            </div>
+       <//div> <//div><div className="container mx-auto px-4 relative z-10">
+         </div className="container mx-auto px-4 relative z-10"> </div className="container mx-auto px-4 relative z-10"><div className="text-center mb-16">
+           </div className="text-center mb-16"> </div className="text-center mb-16"><div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8">
+            </div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8"> </div className="inline-flex items-center bg-purple-500/10 border border-purple-400/20 rounded-full px-6 py-3 mb-8"> </div><Sparkles className="w-5 h-5 text-purple-400 mr-2" />
+             </Sparkles className="w-5 h-5 text-purple-400 mr-2" /> </Sparkles className="w-5 h-5 text-purple-400 mr-2" /><span className="text-purple-300 font-medium">AI Voice Cloning Studio </span className="text-purple-300 font-medium">P</span className="text-purple-300 font-medium">r</span>o</span>
+          <//span> <//span> </div>
 
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text">
+           <//div> <//div><h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text">
               Professional Voice Synthesis
-            </h1>
+         </h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text"> </h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent neon-text"> </h1>
 
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
+           <//h1> <//h1><p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Clone Any Voice with AI Precision
-            </p>
+          </p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light"> </p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light"> </p>
 
-            <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
+           <//p> <//p><p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
               Create realistic voice clones with just 30 seconds of audio. Perfect for content creators,
               businesses, and developers. Support for 50+ languages with emotion control and real-time processing.
-            </p>
+          </p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed"> </p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed"> </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
-                <span className="relative z-10">Start Free Trial</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-              </button>
+           <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            </div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"> </div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"> </div><button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25">
+               </button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"> </button className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25"><span className="relative z-10">Start Free Tr</span className="relative z-10">i</span className="relative z-10">a</span>l</span>
+               <//span> <//span><ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+               </ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /> </ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /><div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+            <//div> <//div> </button>
 
-              <button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+             <//button> <//button><button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
+               </button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"> </button className="group inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-xl hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105"><Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
-              </button>
-            </div>
+            </Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> </Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" /> </button>
+          <//button> <//button> </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-400">Languages</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
-                <div className="text-gray-400">Accuracy</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">30s</div>
-                <div className="text-gray-400">Sample Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-yellow-400 mb-2">24/7</div>
-                <div className="text-gray-400">Processing</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+           <//div> <//div><div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+             </div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"> </div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"><div className="text-center">
+               </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-purple-400 mb-2">5</div className="text-3xl font-bold text-purple-400 mb-2">0</div>+</div>
+               <//div> <//div><div className="text-gray-400">Langua</div className="text-gray-400">g</div className="text-gray-400">e</div>s</div>
+            <//div> <//div> </div>
+             <//div> <//div><div className="text-center">
+               </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-pink-400 mb-2">99</div className="text-3xl font-bold text-pink-400 mb-2">.</div className="text-3xl font-bold text-pink-400 mb-2">9</div>%</div>
+               <//div> <//div><div className="text-gray-400">Accur</div className="text-gray-400">a</div className="text-gray-400">c</div>y</div>
+            <//div> <//div> </div>
+             <//div> <//div><div className="text-center">
+               </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-cyan-400 mb-2">3</div className="text-3xl font-bold text-cyan-400 mb-2">0</div>s</div>
+               <//div> <//div><div className="text-gray-400">Sample T</div className="text-gray-400">i</div className="text-gray-400">m</div>e</div>
+            <//div> <//div> </div>
+             <//div> <//div><div className="text-center">
+               </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-yellow-400 mb-2">2</div className="text-3xl font-bold text-yellow-400 mb-2">4</div className="text-3xl font-bold text-yellow-400 mb-2">/</div>7</div>
+               <//div> <//div><div className="text-gray-400">Process</div className="text-gray-400">i</div className="text-gray-400">n</div>g</div>
+            <//div> <//div> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
 
       {/* Voice Cloning Interface */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+     <//div> <//div><div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
+       </div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800"> </div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Try Voice Cloning Now
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of AI voice cloning with our interactive demo
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+         <//div> <//div><div className="max-w-6xl mx-auto">
+           </div className="max-w-6xl mx-auto"> </div className="max-w-6xl mx-auto"><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Voice Input Section */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Mic className="w-8 h-8 text-purple-400 mr-3" />
+             </div className="grid grid-cols-1 lg:grid-cols-2 gap-12"> </div className="grid grid-cols-1 lg:grid-cols-2 gap-12"><div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div><h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                 </h3 className="text-2xl font-bold text-white mb-6 flex items-center"> </h3 className="text-2xl font-bold text-white mb-6 flex items-center"><Mic className="w-8 h-8 text-purple-400 mr-3" />
                   Voice Input
-                </h3>
+              </Mic className="w-8 h-8 text-purple-400 mr-3" /> </Mic className="w-8 h-8 text-purple-400 mr-3" /> </h3>
 
-                <div className="space-y-6">
+               <//h3> <//h3><div className="space-y-6">
                   {/* Text Input */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                 </div className="space-y-6"> </div className="space-y-6"><div>
+                  </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">
                       Text to Convert
-                    </label>
-                    <textarea
+                  </label className="block text-sm font-medium text-gray-300 mb-2"> </label className="block text-sm font-medium text-gray-300 mb-2"> </label>
+                   <//label> <//label><textarea
                       value={textToSpeak}
                       onChange={(e) => setTextToSpeak(e.target.value)}
                       placeholder="Enter the text you want to convert to speech..."
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 resize-none"
                       rows={4}
                     />
-                  </div>
+                </textarea
+                      value={textToSpeak}
+                      onChange={(e) => </textarea
+                      value={textToSpeak}
+                      onChange={(e) => </div>
 
                   {/* Voice Selection */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
+                 <//div> <//div><div>
+                  </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">
                       Select Voice
-                    </label>
-                    <select
+                  </label className="block text-sm font-medium text-gray-300 mb-2"> </label className="block text-sm font-medium text-gray-300 mb-2"> </label>
+                   <//label> <//label><select
                       value={currentVoice}
                       onChange={(e) => setCurrentVoice(e.target.value)}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                     >
                       {voices.map((voice) => (
-                        <option key={voice.id} value={voice.id} className="bg-slate-800">
+                       </select
+                      value={currentVoice}
+                      onChange={(e) => </select
+                      value={currentVoice}
+                      onChange={(e) =><option key={voice.id} value={voice.id} className="bg-slate-800">
                           {voice.name} ({voice.gender}, {voice.accent})
-                        </option>
+                      </option key={voice.id} value={voice.id} className="bg-slate-800"> </option key={voice.id} value={voice.id} className="bg-slate-800"> </option>
                       ))}
-                    </select>
-                  </div>
+                  <//option> <//option> </select>
+                <//select> <//select> </div>
 
                   {/* Voice Settings */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                 <//div> <//div><div className="grid grid-cols-2 gap-4">
+                   </div className="grid grid-cols-2 gap-4"> </div className="grid grid-cols-2 gap-4"><div>
+                    </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">
                         Pitch: {voiceSettings.pitch}
-                      </label>
-                      <input
+                    </label className="block text-sm font-medium text-gray-300 mb-2"> </label className="block text-sm font-medium text-gray-300 mb-2"> </label>
+                     <//label> <//label><input
                         type="range"
                         min="-10"
                         max="10"
@@ -996,12 +1004,22 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, pitch: parseInt(e.target.value) }))}
                         className="w-full"
                       />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                  </input
+                        type="range"
+                        min="-10"
+                        max="10"
+                        value={voiceSettings.pitch}
+                        onChange={(e) => </input
+                        type="range"
+                        min="-10"
+                        max="10"
+                        value={voiceSettings.pitch}
+                        onChange={(e) => </div>
+                   <//div> <//div><div>
+                    </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">
                         Speed: {voiceSettings.speed}x
-                      </label>
-                      <input
+                    </label className="block text-sm font-medium text-gray-300 mb-2"> </label className="block text-sm font-medium text-gray-300 mb-2"> </label>
+                     <//label> <//label><input
                         type="range"
                         min="0.5"
                         max="2"
@@ -1010,298 +1028,348 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, speed: parseFloat(e.target.value) }))}
                         className="w-full"
                       />
-                    </div>
-                  </div>
+                  </input
+                        type="range"
+                        min="0.5"
+                        max="2"
+                        step="0.1"
+                        value={voiceSettings.speed}
+                        onChange={(e) => </input
+                        type="range"
+                        min="0.5"
+                        max="2"
+                        step="0.1"
+                        value={voiceSettings.speed}
+                        onChange={(e) => </div>
+                <//div> <//div> </div>
 
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                 <//div> <//div><div className="grid grid-cols-2 gap-4">
+                   </div className="grid grid-cols-2 gap-4"> </div className="grid grid-cols-2 gap-4"><div>
+                    </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">
                         Emotion
-                      </label>
-                      <select
+                    </label className="block text-sm font-medium text-gray-300 mb-2"> </label className="block text-sm font-medium text-gray-300 mb-2"> </label>
+                     <//label> <//label><select
                         value={voiceSettings.emotion}
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, emotion: e.target.value }))}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >
                         {emotions.map((emotion) => (
-                          <option key={emotion} value={emotion} className="bg-slate-800 capitalize">
+                         </select
+                        value={voiceSettings.emotion}
+                        onChange={(e) => </select
+                        value={voiceSettings.emotion}
+                        onChange={(e) =><option key={emotion} value={emotion} className="bg-slate-800 capitalize">
                             {emotion}
-                          </option>
+                        </option key={emotion} value={emotion} className="bg-slate-800 capitalize"> </option key={emotion} value={emotion} className="bg-slate-800 capitalize"> </option>
                         ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
+                    <//option> <//option> </select>
+                  <//select> <//select> </div>
+                   <//div> <//div><div>
+                    </div> </div> </div><label className="block text-sm font-medium text-gray-300 mb-2">
                         Language
-                      </label>
-                      <select
+                    </label className="block text-sm font-medium text-gray-300 mb-2"> </label className="block text-sm font-medium text-gray-300 mb-2"> </label>
+                     <//label> <//label><select
                         value={voiceSettings.language}
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value }))}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >
                         {languages.map((lang) => (
-                          <option key={lang.code} value={lang.code} className="bg-slate-800">
+                         </select
+                        value={voiceSettings.language}
+                        onChange={(e) => </select
+                        value={voiceSettings.language}
+                        onChange={(e) =><option key={lang.code} value={lang.code} className="bg-slate-800">
                             {lang.name}
-                          </option>
+                        </option key={lang.code} value={lang.code} className="bg-slate-800"> </option key={lang.code} value={lang.code} className="bg-slate-800"> </option>
                         ))}
-                      </select>
-                    </div>
-                  </div>
+                    <//option> <//option> </select>
+                  <//select> <//select> </div>
+                <//div> <//div> </div>
 
                   {/* Generate Button */}
-                  <button
+                 <//div> <//div><button
                     onClick={handleGenerateVoice}
                     disabled={!textToSpeak.trim() || isGenerating}
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isGenerating ? (
-                      <>
+                     </button
+                    onClick={handleGenerateVoice}
+                    disabled={!textToSpeak.trim() || isGenerating}
+                    className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  > </button
+                    onClick={handleGenerateVoice}
+                    disabled={!textToSpeak.trim() || isGenerating}
+                    className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                  ><>
                         <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
                         Generating Voice...
-                      </>
+                     </RefreshCw className="w-5 h-5 mr-2 animate-spin inline" /> </RefreshCw className="w-5 h-5 mr-2 animate-spin inline" /></>
                     ) : (
-                      <>
+                     <//> <//><>
                         <Zap className="w-5 h-5 mr-2 inline" />
                         Generate Voice
-                      </>
+                     </Zap className="w-5 h-5 mr-2 inline" /> </Zap className="w-5 h-5 mr-2 inline" /></>
                     )}
-                  </button>
-                </div>
-              </div>
+                <//> <//> </button>
+              <//button> <//button> </div>
+            <//div> <//div> </div>
 
               {/* Audio Output Section */}
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
-                  <Volume2 className="w-8 h-8 text-purple-400 mr-3" />
+             <//div> <//div><div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div><h3 className="text-2xl font-bold text-white mb-6 flex items-center">
+                 </h3 className="text-2xl font-bold text-white mb-6 flex items-center"> </h3 className="text-2xl font-bold text-white mb-6 flex items-center"><Volume2 className="w-8 h-8 text-purple-400 mr-3" />
                   Generated Audio
-                </h3>
+              </Volume2 className="w-8 h-8 text-purple-400 mr-3" /> </Volume2 className="w-8 h-8 text-purple-400 mr-3" /> </h3>
 
-                <div className="space-y-6">
+               <//h3> <//h3><div className="space-y-6">
                   {/* Audio Player */}
-                  <div className="bg-white/5 rounded-lg p-6 text-center">
+                 </div className="space-y-6"> </div className="space-y-6"><div className="bg-white/5 rounded-lg p-6 text-center">
                     {generatedAudio ? (
-                      <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto">
-                          <Play className="w-8 h-8 text-white" />
-                        </div>
-                        <p className="text-gray-300">Audio Generated Successfully!</p>
-                        <div className="flex justify-center space-x-4">
-                          <button
+                     </div className="bg-white/5 rounded-lg p-6 text-center"> </div className="bg-white/5 rounded-lg p-6 text-center"><div className="space-y-4">
+                       </div className="space-y-4"> </div className="space-y-4"><div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto">
+                        </div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto"> </div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto"> </div><Play className="w-8 h-8 text-white" />
+                      </Play className="w-8 h-8 text-white" /> </Play className="w-8 h-8 text-white" /> </div>
+                       <//div> <//div><p className="text-gray-300">Audio Generated Successfull</p className="text-gray-300">y</p className="text-gray-300">!</p>
+                       <//p> <//p><div className="flex justify-center space-x-4">
+                        </div className="flex justify-center space-x-4"> </div className="flex justify-center space-x-4"> </div><button
                             onClick={handlePlayAudio}
                             className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors"
                           >
-                            {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
-                          </button>
-                          <button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors">
-                            <Download className="w-5 h-5" />
-                          </button>
-                        </div>
-                      </div>
+                            {isPlaying ?</button
+                            onClick={handlePlayAudio}
+                            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors"
+                          > </button
+                            onClick={handlePlayAudio}
+                            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-2 rounded-lg transition-colors"
+                          ><Pause className="w-5 h-5" /> :</Pause className="w-5 h-5" /> </Pause className="w-5 h-5" /><Play className="w-5 h-5" />}
+                        </Play className="w-5 h-5" /> </Play className="w-5 h-5" /> </button>
+                         <//button> <//button><button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors">
+                           </button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors"> </button className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-2 rounded-lg transition-colors"><Download className="w-5 h-5" />
+                        </Download className="w-5 h-5" /> </Download className="w-5 h-5" /> </button>
+                      <//button> <//button> </div>
+                    <//div> <//div> </div>
                     ) : (
-                      <div className="space-y-4">
-                        <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto">
-                          <FileAudio className="w-8 h-8 text-gray-400" />
-                        </div>
-                        <p className="text-gray-400">Generate audio to hear the result</p>
-                      </div>
+                     <//div> <//div><div className="space-y-4">
+                       </div className="space-y-4"> </div className="space-y-4"><div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto">
+                        </div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto"> </div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center mx-auto"> </div><FileAudio className="w-8 h-8 text-gray-400" />
+                      </FileAudio className="w-8 h-8 text-gray-400" /> </FileAudio className="w-8 h-8 text-gray-400" /> </div>
+                       <//div> <//div><p className="text-gray-400">Generate audio to hear the resu</p className="text-gray-400">l</p className="text-gray-400">t</p>
+                    <//p> <//p> </div>
                     )}
-                  </div>
+                <//div> <//div> </div>
 
                   {/* Recording Section */}
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-semibold text-white">Record Your Voice</h4>
-                    <p className="text-gray-400 text-sm">
+                 <//div> <//div><div className="space-y-4">
+                  </div className="space-y-4"> </div className="space-y-4"> </div><h4 className="text-lg font-semibold text-white">Record Your Voi</h4 className="text-lg font-semibold text-white">c</h4 className="text-lg font-semibold text-white">e</h4>
+                   <//h4> <//h4><p className="text-gray-400 text-sm">
                       Record 30 seconds of your voice to create a custom voice clone
-                    </p>
-                    <button
+                  </p className="text-gray-400 text-sm"> </p className="text-gray-400 text-sm"> </p>
+                   <//p> <//p><button
                       onClick={handleStartRecording}
                       disabled={isRecording}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                     >
                       {isRecording ? (
-                        <>
+                       </button
+                      onClick={handleStartRecording}
+                      disabled={isRecording}
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    > </button
+                      onClick={handleStartRecording}
+                      disabled={isRecording}
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    ><>
                           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline"></div>
                           Recording... (30s)
-                        </>
+                       <//div> <//div></>
                       ) : (
-                        <>
+                       <//> <//><>
                           <Mic className="w-5 h-5 mr-2 inline" />
                           Start Recording
-                        </>
+                       </Mic className="w-5 h-5 mr-2 inline" /> </Mic className="w-5 h-5 mr-2 inline" /></>
                       )}
-                    </button>
-                  </div>
+                  <//> <//> </button>
+                <//button> <//button> </div>
 
                   {/* Upload Section */}
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-semibold text-white">Upload Audio File</h4>
-                    <p className="text-gray-400 text-sm">
+                 <//div> <//div><div className="space-y-4">
+                  </div className="space-y-4"> </div className="space-y-4"> </div><h4 className="text-lg font-semibold text-white">Upload Audio Fi</h4 className="text-lg font-semibold text-white">l</h4 className="text-lg font-semibold text-white">e</h4>
+                   <//h4> <//h4><p className="text-gray-400 text-sm">
                       Upload an audio file (MP3, WAV, M4A) to create a voice clone
-                    </p>
-                    <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer">
-                      <Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
-                      <p className="text-gray-400">Click to upload or drag and drop</p>
-                      <p className="text-gray-500 text-sm">MP3, WAV, M4A up to 10MB</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                  </p className="text-gray-400 text-sm"> </p className="text-gray-400 text-sm"> </p>
+                   <//p> <//p><div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer">
+                    </div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer"> </div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center hover:border-purple-400 transition-colors cursor-pointer"> </div><Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+                     </Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" /> </Upload className="w-8 h-8 text-gray-400 mx-auto mb-2" /><p className="text-gray-400">Click to upload or drag and dr</p className="text-gray-400">o</p className="text-gray-400">p</p>
+                     <//p> <//p><p className="text-gray-500 text-sm">MP3, WAV, M4A up to 10</p className="text-gray-500 text-sm">M</p className="text-gray-500 text-sm">B</p>
+                  <//p> <//p> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
 
       {/* Features Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+     <//div> <//div><div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+       </div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Powerful Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Everything you need to create professional voice content
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+         <//div> <//div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400 mb-4">{feature.description}</p>
-                <div className="flex items-center justify-between">
-                  <span className="text-purple-400 font-semibold">{feature.price}</span>
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                </div>
-              </div>
+             </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"> </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto"><div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
+               </div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"> </div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105"><div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                </div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4"> </div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4"> </div><feature.icon className="w-6 h-6 text-white" />
+              </feature.icon className="w-6 h-6 text-white" /> </feature.icon className="w-6 h-6 text-white" /> </div>
+               <//div> <//div><h3 className="text-xl font-bold text-white mb-2">{feature.titl</h3 className="text-xl font-bold text-white mb-2">e</h3 className="text-xl font-bold text-white mb-2">}</h3>
+               <//h3> <//h3><p className="text-gray-400 mb-4">{feature.descriptio</p className="text-gray-400 mb-4">n</p className="text-gray-400 mb-4">}</p>
+               <//p> <//p><div className="flex items-center justify-between">
+                </div className="flex items-center justify-between"> </div className="flex items-center justify-between"> </div><span className="text-purple-400 font-semibold">{feature.pri</span className="text-purple-400 font-semibold">c</span className="text-purple-400 font-semibold">e</span>}</span>
+                 <//span> <//span><CheckCircle className="w-5 h-5 text-green-400" />
+              </CheckCircle className="w-5 h-5 text-green-400" /> </CheckCircle className="w-5 h-5 text-green-400" /> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
 
       {/* Pricing Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+     <//div> <//div><div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800">
+       </div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800"> </div className="py-20 bg-gradient-to-br from-slate-800 via-purple-900 to-slate-800"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Simple Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your needs. All plans include our core voice cloning features.
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+         <//div> <//div><div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
+             </div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> </div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"><div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
+                 </div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}> </div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                  </div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> </div className="absolute -top-4 left-1/2 transform -translate-x-1/2"> </div><span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular
-                    </span>
-                  </div>
+                 </span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full"> </span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full"> </span>
+                <//span> <//span> </div>
                 )}
 
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
-                  </div>
-                </div>
+               <//div> <//div><div className="text-center mb-8">
+                </div className="text-center mb-8"> </div className="text-center mb-8"> </div><h3 className="text-2xl font-bold text-white mb-2">{plan.nam</h3 className="text-2xl font-bold text-white mb-2">e</h3 className="text-2xl font-bold text-white mb-2">}</h3>
+                 <//h3> <//h3><p className="text-gray-400 mb-4">{plan.descriptio</p className="text-gray-400 mb-4">n</p className="text-gray-400 mb-4">}</p>
+                 <//p> <//p><div className="flex items-baseline justify-center">
+                  </div className="flex items-baseline justify-center"> </div className="flex items-baseline justify-center"> </div><span className="text-5xl font-bold text-white">{plan.pri</span className="text-5xl font-bold text-white">c</span className="text-5xl font-bold text-white">e</span>}</span>
+                   <//span> <//span><span className="text-gray-400 ml-2">{plan.peri</span className="text-gray-400 ml-2">o</span className="text-gray-400 ml-2">d</span>}</span>
+                <//span> <//span> </div>
+              <//div> <//div> </div>
 
-                <ul className="space-y-4 mb-8">
+               <//div> <//div><ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
+                   </ul className="space-y-4 mb-8"> </ul className="space-y-4 mb-8"><li key={featureIndex} className="flex items-center">
+                     </li key={featureIndex} className="flex items-center"> </li key={featureIndex} className="flex items-center"><CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                     </CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" /><span className="text-gray-300">{featu</span className="text-gray-300">r</span className="text-gray-300">e</span>}</span>
+                  <//span> <//span> </li>
                   ))}
-                </ul>
+              <//li> <//li> </ul>
 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+               <//ul> <//ul><button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}
-                </button>
-              </div>
+              </button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}> </button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  plan.popular
+                    ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}> </button>
+            <//button> <//button> </div>
             ))}
-          </div>
-        </div>
-      </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
 
       {/* Contact Section */}
-      <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
+     <//div> <//div><div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+       </div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
               Ready to Get Started?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Contact our team to discuss your voice cloning needs and get a custom quote.
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-purple-400 mr-3" />
-                    <a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors">
+         <//div> <//div><div className="max-w-4xl mx-auto">
+           </div className="max-w-4xl mx-auto"> </div className="max-w-4xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             </div className="grid grid-cols-1 md:grid-cols-2 gap-8"> </div className="grid grid-cols-1 md:grid-cols-2 gap-8"><div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div><h3 className="text-2xl font-bold text-white mb-6">Contact Informati</h3 className="text-2xl font-bold text-white mb-6">o</h3 className="text-2xl font-bold text-white mb-6">n</h3>
+               <//h3> <//h3><div className="space-y-4">
+                 </div className="space-y-4"> </div className="space-y-4"><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><Phone className="w-5 h-5 text-purple-400 mr-3" />
+                   </Phone className="w-5 h-5 text-purple-400 mr-3" /> </Phone className="w-5 h-5 text-purple-400 mr-3" /><a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors">
                       +1 (302) 464-0950
-                    </a>
-                  </div>
-                  <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-purple-400 mr-3" />
-                    <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors">
+                  </a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors"> </a href="tel:+13024640950" className="text-gray-300 hover:text-purple-400 transition-colors"> </a>
+                <//a> <//a> </div>
+                 <//div> <//div><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><Mail className="w-5 h-5 text-purple-400 mr-3" />
+                   </Mail className="w-5 h-5 text-purple-400 mr-3" /> </Mail className="w-5 h-5 text-purple-400 mr-3" /><a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors">
                       kleber@ziontechgroup.com
-                    </a>
-                  </div>
-                  <div className="flex items-start">
-                    <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" />
-                    <div className="text-gray-300">
-                      <div>364 E Main St STE 1008</div>
-                      <div>Middletown, DE 19709</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                  </a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors"> </a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-purple-400 transition-colors"> </a>
+                <//a> <//a> </div>
+                 <//div> <//div><div className="flex items-start">
+                  </div className="flex items-start"> </div className="flex items-start"> </div><MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" />
+                   </MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" /> </MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1" /><div className="text-gray-300">
+                     </div className="text-gray-300"> </div className="text-gray-300"><div>364 E Main St STE 1</div>0</div>0</div>8</div>
+                     <//div> <//div><div>Middletown, DE 19</div>7</div>0</div>9</div>
+                  <//div> <//div> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
 
-              <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Quick Start</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Free 14-day trial</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">No credit card required</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">Cancel anytime</span>
-                  </div>
-                  <div className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-gray-300">24/7 support</span>
-                  </div>
-                </div>
-                <button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
+             <//div> <//div><div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+              </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8"> </div><h3 className="text-2xl font-bold text-white mb-6">Quick Sta</h3 className="text-2xl font-bold text-white mb-6">r</h3 className="text-2xl font-bold text-white mb-6">t</h3>
+               <//h3> <//h3><div className="space-y-4">
+                 </div className="space-y-4"> </div className="space-y-4"><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-3" /> </CheckCircle className="w-5 h-5 text-green-400 mr-3" /><span className="text-gray-300">Free 14-day tr</span className="text-gray-300">i</span className="text-gray-300">a</span>l</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-3" /> </CheckCircle className="w-5 h-5 text-green-400 mr-3" /><span className="text-gray-300">No credit card requi</span className="text-gray-300">r</span className="text-gray-300">e</span>d</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-3" /> </CheckCircle className="w-5 h-5 text-green-400 mr-3" /><span className="text-gray-300">Cancel anyt</span className="text-gray-300">i</span className="text-gray-300">m</span>e</span>
+                <//span> <//span> </div>
+                 <//div> <//div><div className="flex items-center">
+                  </div className="flex items-center"> </div className="flex items-center"> </div><CheckCircle className="w-5 h-5 text-green-400 mr-3" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-3" /> </CheckCircle className="w-5 h-5 text-green-400 mr-3" /><span className="text-gray-300">24/7 supp</span className="text-gray-300">o</span className="text-gray-300">r</span>t</span>
+                <//span> <//span> </div>
+              <//div> <//div> </div>
+               <//div> <//div><button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105">
                   Start Free Trial
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"> </button className="w-full mt-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"> </button>
+            <//button> <//button> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </div>
+  <//div> <//div> </div>
   );
-}
+<//div>}<//div>

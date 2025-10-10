@@ -136,220 +136,218 @@ const SecurityPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+    </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div><Navigation />
 
-      <main className="container mx-auto px-4 py-16 pt-24">{/* Header */}</main>
-        <section className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Security & Compliance<p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standards.</p>
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-              <Shield className="w-5 h-5 text-green-400" />
-              <span className="text-white font-medium">SOC 2 Type II Certified</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg">
-              <Lock className="w-5 h-5 text-blue-400" />
-              <span className="text-white font-medium">ISO 27001 Compliant</span>
-            </div>
-            <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-              <CheckCircle className="w-5 h-5 text-purple-400" />
-              <span className="text-white font-medium">GDPR Compliant</span>
-            </div>
-          </div>
-        </section>
+     </Navigation /> </Navigation /><main className="container mx-auto px-4 py-16 pt-24">{/* Header *</main className="container mx-auto px-4 py-16 pt-24">/</main className="container mx-auto px-4 py-16 pt-24">}</main>
+       <//main> <//main><section className="text-center mb-16">
+         </section className="text-center mb-16"> </section className="text-center mb-16"><h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">Security & Complia</h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">n</h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">c</h1>e</h1>
+           <//h1> <//h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Your data security is our top priority. We implement industry-leading security measures and maintain compliance with the highest standard</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">s</p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">.</p>
+         <//p> <//p><div className="flex flex-wrap justify-center gap-4">
+           </div className="flex flex-wrap justify-center gap-4"> </div className="flex flex-wrap justify-center gap-4"><div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+            </div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"> </div><Shield className="w-5 h-5 text-green-400" />
+             </Shield className="w-5 h-5 text-green-400" /> </Shield className="w-5 h-5 text-green-400" /><span className="text-white font-medium">SOC 2 Type II Certif</span className="text-white font-medium">i</span className="text-white font-medium">e</span>d</span>
+          <//span> <//span> </div>
+           <//div> <//div><div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg">
+            </div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-blue-500/20 px-4 py-2 rounded-lg"> </div><Lock className="w-5 h-5 text-blue-400" />
+             </Lock className="w-5 h-5 text-blue-400" /> </Lock className="w-5 h-5 text-blue-400" /><span className="text-white font-medium">ISO 27001 Compli</span className="text-white font-medium">a</span className="text-white font-medium">n</span>t</span>
+          <//span> <//span> </div>
+           <//div> <//div><div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+            </div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"> </div><CheckCircle className="w-5 h-5 text-purple-400" />
+             </CheckCircle className="w-5 h-5 text-purple-400" /> </CheckCircle className="w-5 h-5 text-purple-400" /><span className="text-white font-medium">GDPR Compli</span className="text-white font-medium">a</span className="text-white font-medium">n</span>t</span>
+          <//span> <//span> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </section>
 
         {/* Security Measures */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Measures<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityMeasures.map((measure, index) => (</div>
-              <div key={index} className="cyber-card p-6">
-                <div className="flex items-center mb-4">
-                  <measure.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h3 className="text-xl font-bold text-white">{measure.title}<p className="text-gray-300 mb-4">{measure.description}<ul className="space-y-2">{measure.details.map((detail, detailIndex) => (</ul>
-                    <li key={detailIndex} className="flex items-start text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" >{detail}</CheckCircle>
-                    </CheckCircle>
+       <//section> <//section><section className="mb-16">
+         </section className="mb-16"> </section className="mb-16"><h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Measure</h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">s</h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityMeasures.map((measure, index) =</div className="grid grid-cols-1 md:grid-cols-2 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="cyber-card p-6">
+               </div key={index} className="cyber-card p-6"> </div key={index} className="cyber-card p-6"><div className="flex items-center mb-4">
+                </div className="flex items-center mb-4"> </div className="flex items-center mb-4"> </div><measure.icon className="w-8 h-8 text-cyan-400 mr-3" />
+                 </measure.icon className="w-8 h-8 text-cyan-400 mr-3" /> </measure.icon className="w-8 h-8 text-cyan-400 mr-3" /><h3 className="text-xl font-bold text-white">{measure.title</h3 className="text-xl font-bold text-white">}</h3 className="text-xl font-bold text-white"><p className="text-gray-300 mb-4">{measure.description</p className="text-gray-300 mb-4">}</p className="text-gray-300 mb-4"><ul className="space-y-2">{measure.details.map((detail, detailIndex) =></ul className="space-y-2"> </ul className="space-y-2">(</ul>
+                   <//ul> <//ul><li key={detailIndex} className="flex items-start text-sm text-gray-300">
+                     </li key={detailIndex} className="flex items-start text-sm text-gray-300"> </li key={detailIndex} className="flex items-start text-sm text-gray-300"><CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" >{detai</CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" >l</CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" >}</CheckCircle>
+                  <//CheckCircle> <//CheckCircle> </CheckCircle>
                   ))}
-                </ul>
-              </div>
+              <//CheckCircle> <//CheckCircle> </ul>
+            <//ul> <//ul> </div>
             ))}
-          </div>
-        </section>
+        <//div> <//div> </div>
+      <//div> <//div> </section>
 
         {/* Compliance Standards */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certifications<p className="text-gray-300 mb-8">We maintain compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements.<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{complianceStandards.map((standard, index) => (</div>
-                <div key={index} className="bg-slate-800/50 rounded-lg p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-lg font-semibold text-white">{standard.name}</h3>
-                    <standard.icon className="w-6 h-6 text-green-400" />
-                  <p className="text-gray-300 text-sm mb-3">{standard.description}<span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">{standard.status}</span>
-                  </span>
-                </div>
+       <//section> <//section><section className="mb-16">
+         </section className="mb-16"> </section className="mb-16"><div className="cyber-card p-8">
+          </div className="cyber-card p-8"> </div className="cyber-card p-8"> </div><h2 className="text-2xl font-bold text-white mb-6 neon-text">Compliance & Certification</h2 className="text-2xl font-bold text-white mb-6 neon-text">s</h2 className="text-2xl font-bold text-white mb-6 neon-text"><p className="text-gray-300 mb-8">We maintain compliance with industry-leading security and privacy standards to ensure your data is protected according to the highest requirements</p className="text-gray-300 mb-8">.</p className="text-gray-300 mb-8"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">{complianceStandards.map((standard, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> </div>(</div>
+               <//div> <//div><div key={index} className="bg-slate-800/50 rounded-lg p-6">
+                 </div key={index} className="bg-slate-800/50 rounded-lg p-6"> </div key={index} className="bg-slate-800/50 rounded-lg p-6"><div className="flex items-center justify-between mb-3">
+                  </div className="flex items-center justify-between mb-3"> </div className="flex items-center justify-between mb-3"> </div><h3 className="text-lg font-semibold text-white">{standard.nam</h3 className="text-lg font-semibold text-white">e</h3 className="text-lg font-semibold text-white">}</h3>
+                   <//h3> <//h3><standard.icon className="w-6 h-6 text-green-400" />
+                 </standard.icon className="w-6 h-6 text-green-400" /> </standard.icon className="w-6 h-6 text-green-400" /><p className="text-gray-300 text-sm mb-3">{standard.description</p className="text-gray-300 text-sm mb-3">}</p className="text-gray-300 text-sm mb-3"><span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">{standard.stat</span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">u</span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-500/20 text-green-400">s</span>}</span>
+              <//span> <//span> </div>
               ))}
-            </div>
-          </div>
-        </section>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </section>
 
         {/* Security Features */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Features<div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityFeatures.map((feature, index) => (</div>
-              <div key={index} className="cyber-card p-6">
-                <h3 className="text-xl font-bold text-white mb-3">{feature.title}<p className="text-gray-300 mb-4">{feature.description}<ul className="space-y-2">{feature.features.map((item, itemIndex) => (</ul>
-                    <li key={itemIndex} className="flex items-start text-sm text-gray-300">
-                      <span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">{item}</span>
-                    </span>
+       <//section> <//section><section className="mb-16">
+         </section className="mb-16"> </section className="mb-16"><h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">Security Feature</h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">s</h2 className="text-3xl font-bold text-white mb-8 text-center neon-text"><div className="grid grid-cols-1 md:grid-cols-2 gap-8">{securityFeatures.map((feature, index) =</div className="grid grid-cols-1 md:grid-cols-2 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="cyber-card p-6">
+              </div key={index} className="cyber-card p-6"> </div key={index} className="cyber-card p-6"> </div><h3 className="text-xl font-bold text-white mb-3">{feature.title</h3 className="text-xl font-bold text-white mb-3">}</h3 className="text-xl font-bold text-white mb-3"><p className="text-gray-300 mb-4">{feature.description</p className="text-gray-300 mb-4">}</p className="text-gray-300 mb-4"><ul className="space-y-2">{feature.features.map((item, itemIndex) =></ul className="space-y-2"> </ul className="space-y-2">(</ul>
+                   <//ul> <//ul><li key={itemIndex} className="flex items-start text-sm text-gray-300">
+                     </li key={itemIndex} className="flex items-start text-sm text-gray-300"> </li key={itemIndex} className="flex items-start text-sm text-gray-300"><span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">{it</span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">e</span className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 mr-2 flex-shrink-0">m</span>}</span>
                   ))}
-                </ul>
-              </div>
+              <//span> <//span> </ul>
+            <//ul> <//ul> </div>
             ))}
-          </div>
-        </section>
+        <//div> <//div> </div>
+      <//div> <//div> </section>
 
         {/* Security Best Practices */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Best Practices</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">For Our Clients</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Use strong, unique passwords for all accounts</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Enable multi-factor authentication (MFA)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Keep software and systems updated</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Be cautious with email attachments and links</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regularly review account access and permissions</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-xl font-semibold text-cyan-400 mb-4">Our Internal Practices</h3>
-                <ul className="space-y-3 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular security training for all employees</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Background checks for all personnel</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Secure development lifecycle (SDL)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular penetration testing and vulnerability assessments</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Incident response and business continuity planning</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+       <//section> <//section><section className="mb-16">
+         </section className="mb-16"> </section className="mb-16"><div className="cyber-card p-8">
+          </div className="cyber-card p-8"> </div className="cyber-card p-8"> </div><h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Best Practic</h2 className="text-2xl font-bold text-white mb-6 neon-text">e</h2 className="text-2xl font-bold text-white mb-6 neon-text">s</h2>
+           <//h2> <//h2><div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             </div className="grid grid-cols-1 md:grid-cols-2 gap-8"> </div className="grid grid-cols-1 md:grid-cols-2 gap-8"><div>
+              </div> </div> </div><h3 className="text-xl font-semibold text-cyan-400 mb-4">For Our Clien</h3 className="text-xl font-semibold text-cyan-400 mb-4">t</h3 className="text-xl font-semibold text-cyan-400 mb-4">s</h3>
+               <//h3> <//h3><ul className="space-y-3 text-gray-300">
+                 </ul className="space-y-3 text-gray-300"> </ul className="space-y-3 text-gray-300"><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Use strong, unique passwords for all accou</span>n</span>t</span>s</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Enable multi-factor authentication (M</span>F</span>A</span>)</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Keep software and systems upda</span>t</span>e</span>d</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Be cautious with email attachments and li</span>n</span>k</span>s</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Regularly review account access and permissi</span>o</span>n</span>s</span>
+                <//span> <//span> </li>
+              <//li> <//li> </ul>
+            <//ul> <//ul> </div>
+             <//div> <//div><div>
+              </div> </div> </div><h3 className="text-xl font-semibold text-cyan-400 mb-4">Our Internal Practic</h3 className="text-xl font-semibold text-cyan-400 mb-4">e</h3 className="text-xl font-semibold text-cyan-400 mb-4">s</h3>
+               <//h3> <//h3><ul className="space-y-3 text-gray-300">
+                 </ul className="space-y-3 text-gray-300"> </ul className="space-y-3 text-gray-300"><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Regular security training for all employ</span>e</span>e</span>s</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Background checks for all person</span>n</span>e</span>l</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Secure development lifecycle (S</span>D</span>L</span>)</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Regular penetration testing and vulnerability assessme</span>n</span>t</span>s</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Incident response and business continuity plann</span>i</span>n</span>g</span>
+                <//span> <//span> </li>
+              <//li> <//li> </ul>
+            <//ul> <//ul> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </section>
 
         {/* Incident Response */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Incident Response<p className="text-gray-300 mb-6">In the unlikely event of a security incident, we have a comprehensive incident response plan to minimize impact and restore services quickly.</p>
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Response Process</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Immediate detection and assessment</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Containment and mitigation measures</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Investigation and root cause analysis</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Recovery and service restoration</span>
-                  </li>
-                  <li className="flex items-start">
-                    <AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Post-incident review and improvements</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-4">Communication</h3>
-                <ul className="space-y-2 text-gray-300">
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Immediate notification to affected clients</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Regular updates throughout the incident</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Detailed post-incident report</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Lessons learned and preventive measures</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
+       <//section> <//section><section className="mb-16">
+         </section className="mb-16"> </section className="mb-16"><div className="cyber-card p-8">
+          </div className="cyber-card p-8"> </div className="cyber-card p-8"> </div><h2 className="text-2xl font-bold text-white mb-6 neon-text">Incident Respon</h2 className="text-2xl font-bold text-white mb-6 neon-text">s</h2 className="text-2xl font-bold text-white mb-6 neon-text">e</h2>
+           <//h2> <//h2><p className="text-gray-300 mb-6">In the unlikely event of a security incident, we have a comprehensive incident response plan to minimize impact and restore services quickl</p className="text-gray-300 mb-6">y</p className="text-gray-300 mb-6">.</p>
+           <//p> <//p><div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+             </div className="grid grid-cols-1 md:grid-cols-2 gap-8"> </div className="grid grid-cols-1 md:grid-cols-2 gap-8"><div>
+              </div> </div> </div><h3 className="text-lg font-semibold text-cyan-400 mb-4">Response Proce</h3 className="text-lg font-semibold text-cyan-400 mb-4">s</h3 className="text-lg font-semibold text-cyan-400 mb-4">s</h3>
+               <//h3> <//h3><ul className="space-y-2 text-gray-300">
+                 </ul className="space-y-2 text-gray-300"> </ul className="space-y-2 text-gray-300"><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /> </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>Immediate detection and assessm</span>e</span>n</span>t</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /> </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>Containment and mitigation measu</span>r</span>e</span>s</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /> </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>Investigation and root cause analy</span>s</span>i</span>s</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /> </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>Recovery and service restorat</span>i</span>o</span>n</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /> </AlertTriangle className="w-5 h-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>Post-incident review and improveme</span>n</span>t</span>s</span>
+                <//span> <//span> </li>
+              <//li> <//li> </ul>
+            <//ul> <//ul> </div>
+             <//div> <//div><div>
+              </div> </div> </div><h3 className="text-lg font-semibold text-cyan-400 mb-4">Communicati</h3 className="text-lg font-semibold text-cyan-400 mb-4">o</h3 className="text-lg font-semibold text-cyan-400 mb-4">n</h3>
+               <//h3> <//h3><ul className="space-y-2 text-gray-300">
+                 </ul className="space-y-2 text-gray-300"> </ul className="space-y-2 text-gray-300"><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Immediate notification to affected clie</span>n</span>t</span>s</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Regular updates throughout the incid</span>e</span>n</span>t</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Detailed post-incident rep</span>o</span>r</span>t</span>
+                <//span> <//span> </li>
+                 <//li> <//li><li className="flex items-start">
+                   </li className="flex items-start"> </li className="flex items-start"><CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                   </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /> </CheckCircle className="w-5 h-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" /><span>Lessons learned and preventive measu</span>r</span>e</span>s</span>
+                <//span> <//span> </li>
+              <//li> <//li> </ul>
+            <//ul> <//ul> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </section>
 
         {/* Contact Information */}
-        <section className="mb-16">
-          <div className="cyber-card p-8">
-            <h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Questions?<p className="text-gray-300 mb-6">If you have any questions about our security measures or need to report a security concern, please contact our security team:</p>
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Security Team</h3>
-                <div className="space-y-2 text-gray-300">
-                  <p>Chief Information Security Officer<p>Zion Tech Group</p>
-                  <p>364 E Main St STE 1008<p>Middletown, DE 19709</p>
-                </div>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Information</h3>
-                <div className="space-y-2 text-gray-300">
-                  <p>Email: <a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">security@ziontechgroup.com</a>
-                  <p>Phone: <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a>
-                  <p>Emergency: <a href="tel:+13024640951" className="text-red-400 hover:text-red-300">+1 302 464 0951</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
+       <//section> <//section><section className="mb-16">
+         </section className="mb-16"> </section className="mb-16"><div className="cyber-card p-8">
+          </div className="cyber-card p-8"> </div className="cyber-card p-8"> </div><h2 className="text-2xl font-bold text-white mb-6 neon-text">Security Question</h2 className="text-2xl font-bold text-white mb-6 neon-text">s</h2 className="text-2xl font-bold text-white mb-6 neon-text">?</h2>
+           <//h2> <//h2><p className="text-gray-300 mb-6">If you have any questions about our security measures or need to report a security concern, please contact our security tea</p className="text-gray-300 mb-6">m</p className="text-gray-300 mb-6">:</p>
+           <//p> <//p><div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+             </div className="grid grid-cols-1 md:grid-cols-2 gap-6"> </div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div>
+              </div> </div> </div><h3 className="text-lg font-semibold text-cyan-400 mb-3">Security Te</h3 className="text-lg font-semibold text-cyan-400 mb-3">a</h3 className="text-lg font-semibold text-cyan-400 mb-3">m</h3>
+               <//h3> <//h3><div className="space-y-2 text-gray-300">
+                </div className="space-y-2 text-gray-300"> </div className="space-y-2 text-gray-300"> </div><p>Chief Information Security Office</p>r</p><p>Zion Tech Gro</p>u</p>p</p>
+                 <//p> <//p><p>364 E Main St STE 100</p>8</p><p>Middletown, DE 197</p>0</p>9</p>
+              <//p> <//p> </div>
+            <//div> <//div> </div>
+             <//div> <//div><div>
+              </div> </div> </div><h3 className="text-lg font-semibold text-cyan-400 mb-3">Contact Informati</h3 className="text-lg font-semibold text-cyan-400 mb-3">o</h3 className="text-lg font-semibold text-cyan-400 mb-3">n</h3>
+               <//h3> <//h3><div className="space-y-2 text-gray-300">
+                </div className="space-y-2 text-gray-300"> </div className="space-y-2 text-gray-300"> </div><p>Email:</p> </p><a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">security@ziontechgroup.c</a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">o</a href="mailto:security@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">m</a>
+                 <//a> <//a><p>Phone:</p> </p><a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 09</a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">5</a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">0</a>
+                 <//a> <//a><p>Emergency:</p> </p><a href="tel:+13024640951" className="text-red-400 hover:text-red-300">+1 302 464 09</a href="tel:+13024640951" className="text-red-400 hover:text-red-300">5</a href="tel:+13024640951" className="text-red-400 hover:text-red-300">1</a>
+              <//a> <//a> </div>
+            <//div> <//div> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </section>
+    <//section> <//section> </main>
 
-      <Footer />
-    </div>
+     <//main> <//main><Footer />
+  </Footer /> </Footer /> </div>
   );
 };
 
-export default SecurityPage;
+export default SecurityPage<//div>;<//div>

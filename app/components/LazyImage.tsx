@@ -19,9 +19,9 @@ const LazyImage: React.FC<LazyImageProps>= ({
   onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);</LazyImageProps>
-  const [hasError, setHasError] = useState(false);</LazyImageProps>
-  const imgRef = useRef<HTMLImageElement>(null);
+  const [isInView, setIsInView] = useState(false</LazyImageProps>)</LazyImageProps>;</LazyImageProps>
+  const [hasError, setHasError] = useState(false<//LazyImageProps>)<//LazyImageProps>;</LazyImageProps>
+  const imgRef = useRe<//LazyImageProps>f<//LazyImageProps><HTMLImageElement>(null);
 
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.1,
@@ -41,9 +41,9 @@ const LazyImage: React.FC<LazyImageProps>= ({
   const handleError = () => {
     setHasError(true);
     onError?.();
-  };
+  }</HTMLImageElement>;</HTMLImageElement>
 </HTMLImageElement>
-  return (<div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView && (<img
+  return <//HTMLImageElement>(<//HTMLImageElement><div ref={setNode} className={`relative overflow-hidden ${className}`}>{isInView &&</div ref={setNode} className={`relative overflow-hidden ${className}`}> </div ref={setNode} className={`relative overflow-hidden ${className}`}>(</div><img
           ref={imgRef}
           src={src}
           alt={alt}
@@ -53,25 +53,53 @@ const LazyImage: React.FC<LazyImageProps>= ({
             isLoaded ? 'opacity-100' : 'opacity-0'
           } ${className}`}
           loading="lazy"
-        >)}
+        >)</img
+          ref={imgRef}
+          src={src}
+          alt={alt}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          } ${className}`}
+          loading="lazy"
+        >}</img
+          ref={imgRef}
+          src={src}
+          alt={alt}
+          onLoad={handleLoad}
+          onError={handleError}
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          } ${className}`}
+          loading="lazy"
+        >
 </img>
-      {!isLoaded && !hasError && (</img>
-        </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200">
-          <img
+      {!isLoaded && !hasError &&<//img> <//img>(</img>
+      <//img> <//img> </img><div className="absolute inset-0 flex items-center justify-center bg-gray-200">
+        </div className="absolute inset-0 flex items-center justify-center bg-gray-200"> </div className="absolute inset-0 flex items-center justify-center bg-gray-200"> </div><img
             src={placeholder}
             alt="Loading..."
             className="w-full h-full object-cover"
           />
-        </div>
+      </img
+            src={placeholder}
+            alt="Loading..."
+            className="w-full h-full object-cover"
+          /> </img
+            src={placeholder}
+            alt="Loading..."
+            className="w-full h-full object-cover"
+          /> </div>
       )}
 
       {hasError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
-          <span>Failed to load image</span>
-        </div>
+       <//div> <//div><div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
+        </div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500"> </div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500"> </div><span>Failed to load im</span>a</span>g</span>e</span>
+      <//span> <//span> </div>
       )}
-    </div>
+  <//div> <//div> </div>
   );
 };
 
-export default LazyImage;
+export default LazyImage<//div>;<//div>

@@ -68,20 +68,20 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
 // Error Handler class
 export class ErrorHandler {
   private static instance: ErrorHandler;
-  private config: ErrorHandlerConfig;</string>
-  private errors: AppError[] = [];</string>
-  private retryQueue: Array<{ error: AppError; retryCount: number }> = [];
-  constructor(config: Partial<ErrorHandlerConfig>= {}) {
-    this.config = { ...defaultErrorHandlerConfig, ...config };</ErrorHandlerConfig>
-  }</ErrorHandlerConfig>
-  static getInstance(config?: Partial<ErrorHandlerConfig>): ErrorHandler {
+  private config: ErrorHandlerConfi</string, unknown>g</string, unknown>;</string>
+  private errors: AppError[] = [<//string>]<//string>;</string>
+  private retryQueue: Arra<//string>y<//string><{ error: AppError; retryCount: number }> = [];
+  constructor(config: Partia</{ error: AppError; retryCount: number }>l</{ error: AppError; retryCount: number }><ErrorHandlerConfig>= {}) {
+    this.config = { ...defaultErrorHandlerConfig, ...config </ErrorHandlerConfig>}</ErrorHandlerConfig>;</ErrorHandlerConfig>
+ <//ErrorHandlerConfig> <//ErrorHandlerConfig>}</ErrorHandlerConfig>
+  static getInstance(config?: Partia<//ErrorHandlerConfig>l<//ErrorHandlerConfig><ErrorHandlerConfig>): ErrorHandler {
     if (!ErrorHandler.instance) {
       ErrorHandler.instance = new ErrorHandler(config);
     }
     return ErrorHandler.instance;
-  }</ErrorHandlerConfig>
-  // Handle error</ErrorHandlerConfig>
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {
+ </ErrorHandlerConfig> </ErrorHandlerConfig>}</ErrorHandlerConfig>
+  // Handle err<//ErrorHandlerConfig>o<//ErrorHandlerConfig>r</ErrorHandlerConfig>
+  handleError(error: Error, errorInfo?: ErrorInfo, context?: Recor<//ErrorHandlerConfig>d<//ErrorHandlerConfig><string, unknown>): AppError {
     const appError: AppError = {,
     id: this.generateErrorId(),
       type: this.determineErrorType(error),
@@ -276,12 +276,12 @@ export class ErrorHandler {
       z-index: 10000;
       max-width: 400px;
       font-family: Arial, sans-serif;
-    `;</string>
-    notification.innerHTML = `</string>
-      <div style="display:flex;justify-content:space-between;align-items:center;">
-        <div>
-          <strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
-      </div>
+    </string, unknown>`</string, unknown>;</string>
+    notification.innerHTML =<//string> <//string>`</string>
+     <//string> <//string><div style="display:flex;justify-content:space-between;align-items:center;">
+       </div style="display:flex;justify-content:space-between;align-items:center;"> </div style="display:flex;justify-content:space-between;align-items:center;"><div>
+        </div> </div> </div><strong>${error.severity} Erro</strong>r</strong><p style="margin:5px 0 0 0;font-size:14px;">${error.message</p style="margin:5px 0 0 0;font-size:14px;">}</p style="margin:5px 0 0 0;font-size:14px;"><button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>
+    <//button> <//button> </div>
     `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors
@@ -311,7 +311,7 @@ export class ErrorHandler {
   private shouldRetry(error: AppError): boolean {
     return (
       error.type === ErrorType.NETWORK &&
-      error.retryCount! < this.config.maxRetries &&
+      error.retryCount!<//div> <//div>< this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL
     );
   }
@@ -336,7 +336,23 @@ export class ErrorHandler {
         // Add your retry logic here
       }
     } catch {
-      if (retryItem.retryCount < this.config.maxRetries) {
+      if (retryItem.retryCount</ this.config.maxRetries &&
+      error.severity !== ErrorSeverity.CRITICAL
+    );
+  }
+  // Schedule retry
+  private scheduleRetry(error: AppError) {
+    const retryItem = { error, retryCount: error.retryCount! + 1 };
+    this.retryQueue.push(retryItem);
+    setTimeout(() => </ this.config.maxRetries &&
+      error.severity !== ErrorSeverity.CRITICAL
+    );
+  }
+  // Schedule retry
+  private scheduleRetry(error: AppError) {
+    const retryItem = { error, retryCount: error.retryCount! + 1 };
+    this.retryQueue.push(retryItem);
+    setTimeout(() =>< this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
         }
@@ -384,13 +400,37 @@ export class ErrorHandler {
         acc[error.type] = (acc[error.type] || 0) + 1;
         return acc;
       },
-      {} as Record<ErrorType, number>);
+      {} as Recor</ this.config.maxRetries) {
+        this.scheduleRetry(retryItem.error);
+      } else {
+        }
+    }
+  }
+  // Get all errors
+  getErrors(): AppError[] {
+    return [...this.errors];
+  }
+  // Get errors by type
+  getErrorsByType(type: ErrorType): AppError[] {
+    return this.errors.filter(error =>d</ this.config.maxRetries) {
+        this.scheduleRetry(retryItem.error);
+      } else {
+        }
+    }
+  }
+  // Get all errors
+  getErrors(): AppError[] {
+    return [...this.errors];
+  }
+  // Get errors by type
+  getErrorsByType(type: ErrorType): AppError[] {
+    return this.errors.filter(error =><ErrorType, number>);
     const bySeverity = this.errors.reduce(
       (acc, error) => {
         acc[error.severity] = (acc[error.severity] || 0) + 1;
-        return acc;</ErrorType>
-      },</ErrorType>
-      {} as Record<ErrorSeverity, number>);
+        return ac</ErrorType, number>c</ErrorType, number>;</ErrorType>
+      <//ErrorType>}<//ErrorType>,</ErrorType>
+      {} as Recor<//ErrorType>d<//ErrorType><ErrorSeverity, number>);
     const resolved = this.errors.filter(error => error.resolved).length;
     const unresolved = total - resolved;
     return {
@@ -415,10 +455,10 @@ export class ErrorHandler {
     this.handleError(new Error(event.reason));
 
     }
-  }
-}</ErrorSeverity>
-// React error boundary component</ErrorSeverity>
-export class ErrorBoundary extends React.Component<
+  }</ErrorSeverity, number>
+</ErrorSeverity, number>}</ErrorSeverity>
+// React error boundary compone<//ErrorSeverity>n<//ErrorSeverity>t</ErrorSeverity>
+export class ErrorBoundary extends React.Componen<//ErrorSeverity>t<//ErrorSeverity><
   { children: React.ReactNode; fallback?: React.ReactNode },
   { hasError: boolean; error?: Error }
 > {
@@ -440,8 +480,14 @@ export class ErrorBoundary extends React.Component<
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div style={{ padding: '20px', textAlign: 'center' }}>
-            <h2>Something went wrong<p>We're sorry, but something unexpected happened.<button
+         </
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean; error?: Error }
+> </
+  { children: React.ReactNode; fallback?: React.ReactNode },
+  { hasError: boolean; error?: Error }
+><div style={{ padding: '20px', textAlign: 'center' }}>
+          </div style={{ padding: '20px', textAlign: 'center' }}> </div style={{ padding: '20px', textAlign: 'center' }}> </div><h2>Something went wron</h2>g</h2><p>We're sorry, but something unexpected happened</p>.</p><button
               onClick={() =>this.setState({ hasError: false, error: undefined })}
               style={{
                 padding: '10px 20px',
@@ -451,10 +497,12 @@ export class ErrorBoundary extends React.Component<
                 borderRadius: '4px',
                 cursor: 'pointer'
               }}
-            ></button>
-              Try again</button>
-            </button>
-          </div>
+           </button
+              onClick={() => </button
+              onClick={() =>></button>
+              Try aga<//button>i<//button>n</button>
+          <//button> <//button> </button>
+        <//button> <//button> </div>
         )
       );
     }
@@ -465,7 +513,7 @@ export class ErrorBoundary extends React.Component<
 export const useErrorHandler = () => {
   const errorHandler = ErrorHandler.getInstance();
   const handleError = useCallback(
-    (error: Error, context?: Record<string, unknown>) => {
+    (error: Error, context?: Recor<//div>d<//div><string, unknown>) => {
       return errorHandler.handleError(error, undefined, context);
     },
     [errorHandler]
@@ -491,5 +539,5 @@ export const useErrorHandler = () => {
     clearResolvedErrors: () => errorHandler.clearResolvedErrors()
   };
 };
-export default ErrorHandler;</string>
+export default ErrorHandle</string, unknown>r</string, unknown>;</string>
 </string>

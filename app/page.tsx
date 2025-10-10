@@ -4166,11 +4166,11 @@ const itServices: ITService[] = [
 // Loading skeleton component
 const ServiceCardSkeleton = () => (
   <div className="cyber-card p-6 animate-pulse">
-    <div className="h-8 bg-gray-700 rounded mb-4"></div>
-    <div className="h-4 bg-gray-700 rounded mb-2"></div>
-    <div className="h-4 bg-gray-700 rounded mb-4"></div>
-    <div className="h-6 bg-gray-700 rounded"></div>
-  </div>
+    </div className="cyber-card p-6 animate-pulse"><div className="h-8 bg-gray-700 rounded mb-4"></div>
+    <//div><div className="h-4 bg-gray-700 rounded mb-2"></div>
+    <//div><div className="h-4 bg-gray-700 rounded mb-4"></div>
+    <//div><div className="h-6 bg-gray-700 rounded"></div>
+ <//div> </div>
 );
 // Stats data
 const stats = [
@@ -4199,187 +4199,187 @@ const stats = [
 const HomePage: React.FC = () => {
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
+   <//div> <//div><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+     </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"> </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"><Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+     </Navigation /> </Navigation /><section className="relative py-20 overflow-hidden">
+       </section className="relative py-20 overflow-hidden"> </section className="relative py-20 overflow-hidden"><div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 cyber-text-ultra neon-pulse">
+       <//div> <//div><div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        </div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> </div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> </div><h1 className="text-5xl md:text-7xl font-bold mb-6 cyber-text-ultra neon-pulse">
             AI-Powered Enterprise Solutions
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto fade-in-up">
+       </h1 className="text-5xl md:text-7xl font-bold mb-6 cyber-text-ultra neon-pulse"> </h1 className="text-5xl md:text-7xl font-bold mb-6 cyber-text-ultra neon-pulse"> </h1>
+         <//h1> <//h1><p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto fade-in-up">
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
-          </p>
-          
-<div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
+        </p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto fade-in-up"> </p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto fade-in-up"> </p>
+          <//p>
+<//p><div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
+          </div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"> </div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"> </div><button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center">
               Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
-            <button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+             </button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"> </button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center"><ArrowRight className="w-5 h-5 ml-2" />
+          </ArrowRight className="w-5 h-5 ml-2" /> </ArrowRight className="w-5 h-5 ml-2" /> </button>
+           <//button> <//button><button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
               Watch Demo
-            </button>
-          </div>
+          </button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"> </button className="border-2 border-cyan-400 text-cyan-400 font-semibold py-4 px-8 rounded-xl hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"> </button>
+        <//button> <//button> </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-cyan-400 mb-2">300%</div>
-              <div className="text-gray-400">Average ROI</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
-              <div className="text-gray-400">Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-pink-400 mb-2">90%</div>
-              <div className="text-gray-400">Efficiency Gains</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-400">Uptime Guarantee</div>
-            </div>
-          </div>
+         <//div> <//div><div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+           </div className="grid grid-cols-2 md:grid-cols-4 gap-8"> </div className="grid grid-cols-2 md:grid-cols-4 gap-8"><div className="text-center">
+             </div className="text-center"> </div className="text-center"><div className="text-4xl font-bold text-cyan-400 mb-2">3</div className="text-4xl font-bold text-cyan-400 mb-2">0</div className="text-4xl font-bold text-cyan-400 mb-2">0</div>%</div>
+             <//div> <//div><div className="text-gray-400">Average </div className="text-gray-400">R</div className="text-gray-400">O</div>I</div>
+          <//div> <//div> </div>
+           <//div> <//div><div className="text-center">
+             </div className="text-center"> </div className="text-center"><div className="text-4xl font-bold text-purple-400 mb-2">7</div className="text-4xl font-bold text-purple-400 mb-2">0</div>%</div>
+             <//div> <//div><div className="text-gray-400">Cost Reduct</div className="text-gray-400">i</div className="text-gray-400">o</div>n</div>
+          <//div> <//div> </div>
+           <//div> <//div><div className="text-center">
+             </div className="text-center"> </div className="text-center"><div className="text-4xl font-bold text-pink-400 mb-2">9</div className="text-4xl font-bold text-pink-400 mb-2">0</div>%</div>
+             <//div> <//div><div className="text-gray-400">Efficiency Ga</div className="text-gray-400">i</div className="text-gray-400">n</div>s</div>
+          <//div> <//div> </div>
+           <//div> <//div><div className="text-center">
+             </div className="text-center"> </div className="text-center"><div className="text-4xl font-bold text-green-400 mb-2">99</div className="text-4xl font-bold text-green-400 mb-2">.</div className="text-4xl font-bold text-green-400 mb-2">9</div>%</div>
+             <//div> <//div><div className="text-gray-400">Uptime Guaran</div className="text-gray-400">t</div className="text-gray-400">e</div>e</div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
 </div>
-      </section>
+    <//div> <//div> </section>
 
       {/* Services Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-white mb-6">Our Services</h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">Comprehensive AI and IT solutions for modern enterprises. Transform your business with cutting-edge technology and innovative solutions.</p>
-          </div>
+     <//section> <//section><section className="py-24 px-4 sm:px-6 lg:px-8">
+       </section className="py-24 px-4 sm:px-6 lg:px-8"> </section className="py-24 px-4 sm:px-6 lg:px-8"><div className="max-w-7xl mx-auto">
+         </div className="max-w-7xl mx-auto"> </div className="max-w-7xl mx-auto"><div className="text-center mb-20">
+          </div className="text-center mb-20"> </div className="text-center mb-20"> </div><h2 className="text-5xl font-bold text-white mb-6">Our Servic</h2 className="text-5xl font-bold text-white mb-6">e</h2 className="text-5xl font-bold text-white mb-6">s</h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">Comprehensive AI and IT solutions for modern enterprises. Transform your business with cutting-edge technology and innovative solution</p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">s</p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">.</p>
+        <//p> <//p> </div>
           
           {/* Micro SAAS Services */}
-          <div className="mb-24">
-            <h3 className="text-3xl font-bold text-white mb-12 text-center">Micro SAAS Solutions</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+         <//div> <//div><div className="mb-24">
+          </div className="mb-24"> </div className="mb-24"> </div><h3 className="text-3xl font-bold text-white mb-12 text-center">Micro SAAS Solutio</h3 className="text-3xl font-bold text-white mb-12 text-center">n</h3 className="text-3xl font-bold text-white mb-12 text-center">s</h3>
+           <//h3> <//h3><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {microSAASServices.map((service, index) => (
-                <div key={index} className="futuristic-card-ultra p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}>
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+               </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"> </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"><div key={index} className="futuristic-card-ultra p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}>
+                 </div key={index} className="futuristic-card-ultra p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => </div key={index} className="futuristic-card-ultra p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() =><div className="text-center mb-4">
+                   </div className="text-center mb-4"> </div className="text-center mb-4"><div className="w-16 h-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+                    </div className="w-16 h-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25"> </div className="w-16 h-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25"> </div><service.icon className="w-8 h-8 text-white" />
+                  </service.icon className="w-8 h-8 text-white" /> </service.icon className="w-8 h-8 text-white" /> </div>
+                   <//div> <//div><h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.nam</h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">e</h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">}</h3>
+                   <//h3> <//h3><p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.descriptio</p className="text-gray-300 mb-4 text-sm leading-relaxed">n</p className="text-gray-300 mb-4 text-sm leading-relaxed">}</p>
                     
-                    <div className="space-y-2 mb-6">
+                   <//p> <//p><div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                       </div className="space-y-2 mb-6"> </div className="space-y-2 mb-6"><div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        </div key={featureIndex} className="flex items-center text-sm text-gray-300"> </div key={featureIndex} className="flex items-center text-sm text-gray-300"> </div><CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {feature}
-                        </div>
+                      </CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" /> </CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" /> </div>
                       ))}
-                    </div>
+                  <//div> <//div> </div>
                     
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="neon-button-ultra text-sm">
+                   <//div> <//div><div className="text-center">
+                     </div className="text-center"> </div className="text-center"><div className="text-2xl font-bold text-cyan-400 mb-2">{service.pri</div className="text-2xl font-bold text-cyan-400 mb-2">c</div className="text-2xl font-bold text-cyan-400 mb-2">e</div>}</div>
+                     <//div> <//div><button className="neon-button-ultra text-sm">
                         Learn More →
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                    </button className="neon-button-ultra text-sm"> </button className="neon-button-ultra text-sm"> </button>
+                  <//button> <//button> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
               ))}
-            </div>
-          </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
 
           {/* AI Services */}
-          <div className="mb-24">
-            <h3 className="text-3xl font-bold text-white mb-12 text-center">Enterprise AI Solutions</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+         <//div> <//div><div className="mb-24">
+          </div className="mb-24"> </div className="mb-24"> </div><h3 className="text-3xl font-bold text-white mb-12 text-center">Enterprise AI Solutio</h3 className="text-3xl font-bold text-white mb-12 text-center">n</h3 className="text-3xl font-bold text-white mb-12 text-center">s</h3>
+           <//h3> <//h3><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {aiServices.map((service, index) => (
-                <div key={index} className={`holographic-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer ${service.enterprise ? 'ring-2 ring-purple-400/30' : ''}`} onClick={() => window.open(service.link, '_blank')}>
+               </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"> </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"><div key={index} className={`holographic-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer ${service.enterprise ? 'ring-2 ring-purple-400/30' : ''}`} onClick={() => window.open(service.link, '_blank')}>
                   {service.enterprise && (
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                   </div key={index} className={`holographic-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer ${service.enterprise ? 'ring-2 ring-purple-400/30' : ''}`} onClick={() => </div key={index} className={`holographic-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer ${service.enterprise ? 'ring-2 ring-purple-400/30' : ''}`} onClick={() =><div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    </div className="absolute -top-3 left-1/2 transform -translate-x-1/2"> </div className="absolute -top-3 left-1/2 transform -translate-x-1/2"> </div><span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                         Enterprise
-                      </span>
-                    </div>
+                   </span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full"> </span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full"> </span>
+                  <//span> <//span> </div>
                   )}
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                 <//div> <//div><div className="text-center mb-4">
+                   </div className="text-center mb-4"> </div className="text-center mb-4"><div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25">
+                    </div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25"> </div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25"> </div><service.icon className="w-8 h-8 text-white" />
+                  </service.icon className="w-8 h-8 text-white" /> </service.icon className="w-8 h-8 text-white" /> </div>
+                   <//div> <//div><h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.nam</h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">e</h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">}</h3>
+                   <//h3> <//h3><p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.descriptio</p className="text-gray-300 mb-4 text-sm leading-relaxed">n</p className="text-gray-300 mb-4 text-sm leading-relaxed">}</p>
                     
-                    <div className="space-y-2 mb-6">
+                   <//p> <//p><div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                       </div className="space-y-2 mb-6"> </div className="space-y-2 mb-6"><div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        </div key={featureIndex} className="flex items-center text-sm text-gray-300"> </div key={featureIndex} className="flex items-center text-sm text-gray-300"> </div><CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {feature}
-                        </div>
+                      </CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" /> </CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" /> </div>
                       ))}
-                    </div>
+                  <//div> <//div> </div>
                     
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
-                      <button className="neon-button-enhanced text-sm">
+                   <//div> <//div><div className="text-center">
+                     </div className="text-center"> </div className="text-center"><div className="text-2xl font-bold text-purple-400 mb-2">{service.pri</div className="text-2xl font-bold text-purple-400 mb-2">c</div className="text-2xl font-bold text-purple-400 mb-2">e</div>}</div>
+                     <//div> <//div><button className="neon-button-enhanced text-sm">
                         Learn More →
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                    </button className="neon-button-enhanced text-sm"> </button className="neon-button-enhanced text-sm"> </button>
+                  <//button> <//button> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
               ))}
-            </div>
-          </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
 
           {/* IT Services */}
-          <div className="mb-24">
-            <h3 className="text-3xl font-bold text-white mb-12 text-center">IT Infrastructure Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+         <//div> <//div><div className="mb-24">
+          </div className="mb-24"> </div className="mb-24"> </div><h3 className="text-3xl font-bold text-white mb-12 text-center">IT Infrastructure Servic</h3 className="text-3xl font-bold text-white mb-12 text-center">e</h3 className="text-3xl font-bold text-white mb-12 text-center">s</h3>
+           <//h3> <//h3><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {itServices.map((service, index) => (
-                <div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}>
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25">
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
-                    <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+               </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"> </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"><div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}>
+                 </div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => </div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() =><div className="text-center mb-4">
+                   </div className="text-center mb-4"> </div className="text-center mb-4"><div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25">
+                    </div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25"> </div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25"> </div><service.icon className="w-8 h-8 text-white" />
+                  </service.icon className="w-8 h-8 text-white" /> </service.icon className="w-8 h-8 text-white" /> </div>
+                   <//div> <//div><h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.nam</h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">e</h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">}</h3>
+                   <//h3> <//h3><p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.descriptio</p className="text-gray-300 mb-4 text-sm leading-relaxed">n</p className="text-gray-300 mb-4 text-sm leading-relaxed">}</p>
                     
-                    <div className="space-y-2 mb-6">
+                   <//p> <//p><div className="space-y-2 mb-6">
                       {service.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                       </div className="space-y-2 mb-6"> </div className="space-y-2 mb-6"><div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        </div key={featureIndex} className="flex items-center text-sm text-gray-300"> </div key={featureIndex} className="flex items-center text-sm text-gray-300"> </div><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
-                        </div>
+                      </CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /> </CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /> </div>
                       ))}
-                    </div>
+                  <//div> <//div> </div>
                     
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
-                      <button className="neon-button text-sm">
+                   <//div> <//div><div className="text-center">
+                     </div className="text-center"> </div className="text-center"><div className="text-2xl font-bold text-green-400 mb-2">{service.pri</div className="text-2xl font-bold text-green-400 mb-2">c</div className="text-2xl font-bold text-green-400 mb-2">e</div>}</div>
+                     <//div> <//div><button className="neon-button text-sm">
                         Learn More →
-                      </button>
-                    </div>
-                  </div>
-                </div>
+                    </button className="neon-button text-sm"> </button className="neon-button text-sm"> </button>
+                  <//button> <//button> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* AI Services Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+     <//section> <//section><section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+       </section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20"> </section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Enterprise AI Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> </h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced AI solutions for enterprise clients. Transform your industry with cutting-edge artificial intelligence.
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+         <//div> <//div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {aiServices.map((service, index) => (
-              <div
+             </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><div
                 key={index}
                 className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative group cursor-pointer ${
                   service.enterprise ? 'ring-2 ring-purple-400/30' : ''
@@ -4387,199 +4387,216 @@ const HomePage: React.FC = () => {
                 onClick={() => window.open(service.link, '_blank')}
               >
                 {service.enterprise && (
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                 </div
+                key={index}
+                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative group cursor-pointer ${
+                  service.enterprise ? 'ring-2 ring-purple-400/30' : ''
+                }`}
+                onClick={() => </div
+                key={index}
+                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative group cursor-pointer ${
+                  service.enterprise ? 'ring-2 ring-purple-400/30' : ''
+                }`}
+                onClick={() =><div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  </div className="absolute -top-3 left-1/2 transform -translate-x-1/2"> </div className="absolute -top-3 left-1/2 transform -translate-x-1/2"> </div><span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
                       Enterprise
-                    </span>
-                  </div>
+                 </span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full"> </span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full"> </span>
+                <//span> <//span> </div>
                 )}
                 
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+               <//div> <//div><div className="text-center">
+                 </div className="text-center"> </div className="text-center"><div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  </div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"> </div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"> </div><service.icon className="w-8 h-8 text-white" />
+                </service.icon className="w-8 h-8 text-white" /> </service.icon className="w-8 h-8 text-white" /> </div>
+                 <//div> <//div><h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.nam</h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">e</h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">}</h3>
+                 <//h3> <//h3><p className="text-gray-300 mb-6 leading-relaxed">{service.descriptio</p className="text-gray-300 mb-6 leading-relaxed">n</p className="text-gray-300 mb-6 leading-relaxed">}</p>
                   
-                  <div className="grid grid-cols-2 gap-3 mb-6">
+                 <//p> <//p><div className="grid grid-cols-2 gap-3 mb-6">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                     </div className="grid grid-cols-2 gap-3 mb-6"> </div className="grid grid-cols-2 gap-3 mb-6"><div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                      </div key={featureIndex} className="flex items-center text-sm text-gray-300"> </div key={featureIndex} className="flex items-center text-sm text-gray-300"> </div><CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </div>
+                    </CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" /> </CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" /> </div>
                     ))}
-                  </div>
+                <//div> <//div> </div>
                   
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
-                    <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25">
+                 <//div> <//div><div className="text-center">
+                   </div className="text-center"> </div className="text-center"><div className="text-3xl font-bold text-white mb-4">{service.pri</div className="text-3xl font-bold text-white mb-4">c</div className="text-3xl font-bold text-white mb-4">e</div>}</div>
+                   <//div> <//div><div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25">
                       Get Started
-                    </div>
-                  </div>
-                </div>
-              </div>
+                 </div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25"> </div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25"> </div> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* IT Services Section */}
-      <section className="py-16 bg-white/5">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+     <//section> <//section><section className="py-16 bg-white/5">
+       </section className="py-16 bg-white/5"> </section className="py-16 bg-white/5"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               IT Infrastructure Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> </h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive IT solutions to build, secure, and scale your technology infrastructure.
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p className="text-xl text-gray-300 max-w-3xl mx-auto"> </p>
+        <//p> <//p> </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+         <//div> <//div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {itServices.map((service, index) => (
-              <div 
+             </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"> </div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"><div 
                 key={index} 
                 className="cyber-card p-6 hover:scale-105 transition-all duration-300 group cursor-pointer"
                 onClick={() => window.open(service.link, '_blank')}
               >
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
+               </div 
+                key={index} 
+                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group cursor-pointer"
+                onClick={() => </div 
+                key={index} 
+                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group cursor-pointer"
+                onClick={() =><div className="text-center">
+                 </div className="text-center"> </div className="text-center"><div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  </div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"> </div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"> </div><service.icon className="w-6 h-6 text-white" />
+                </service.icon className="w-6 h-6 text-white" /> </service.icon className="w-6 h-6 text-white" /> </div>
+                 <//div> <//div><h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.nam</h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">e</h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">}</h3>
+                 <//h3> <//h3><p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.descriptio</p className="text-gray-300 text-sm mb-4 leading-relaxed">n</p className="text-gray-300 text-sm mb-4 leading-relaxed">}</p>
                   
-                  <div className="space-y-2 mb-4">
+                 <//p> <//p><div className="space-y-2 mb-4">
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
-                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                     </div className="space-y-2 mb-4"> </div className="space-y-2 mb-4"><div key={featureIndex} className="flex items-center text-xs text-gray-300">
+                      </div key={featureIndex} className="flex items-center text-xs text-gray-300"> </div key={featureIndex} className="flex items-center text-xs text-gray-300"> </div><CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </div>
+                    </CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /> </CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /> </div>
                     ))}
-                  </div>
+                <//div> <//div> </div>
                   
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-white mb-2">{service.price}</div>
-                    <div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline">
+                 <//div> <//div><div className="text-center">
+                   </div className="text-center"> </div className="text-center"><div className="text-lg font-bold text-white mb-2">{service.pri</div className="text-lg font-bold text-white mb-2">c</div className="text-lg font-bold text-white mb-2">e</div>}</div>
+                   <//div> <//div><div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline">
                       Learn More →
-                    </div>
-                  </div>
-                </div>
-              </div>
+                 </div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline"> </div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline"> </div> </div>
+                <//div> <//div> </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Testimonials Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+     <//section> <//section><section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+       </section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"> </section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="text-center mb-20">
+          </div className="text-center mb-20"> </div className="text-center mb-20"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Client Success Stories
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          </h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> </h2>
+           <//h2> <//h2><p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Hear from our satisfied clients who have transformed their businesses with our AI solutions.
-            </p>
-          </div>
+          </p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"> </p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"> </p>
+        <//p> <//p> </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+         <//div> <//div><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group">
-                <div className="flex items-center mb-4">
-                  <div className="flex text-yellow-400">
+             </div className="grid grid-cols-1 md:grid-cols-3 gap-8"> </div className="grid grid-cols-1 md:grid-cols-3 gap-8"><div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group">
+               </div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group"> </div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group"><div className="flex items-center mb-4">
+                 </div className="flex items-center mb-4"> </div className="flex items-center mb-4"><div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
+                    </div className="flex text-yellow-400"> </div className="flex text-yellow-400"> </div><Star key={i} className="w-5 h-5 fill-current" />
                     ))}
-                  </div>
-                </div>
-                <p className="text-gray-300 mb-6 italic leading-relaxed">
+                </Star key={i} className="w-5 h-5 fill-current" /> </Star key={i} className="w-5 h-5 fill-current" /> </div>
+              <//div> <//div> </div>
+               <//div> <//div><p className="text-gray-300 mb-6 italic leading-relaxed">
                   "{testimonial.content}"
-                </p>
-                <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
+              </p className="text-gray-300 mb-6 italic leading-relaxed"> </p className="text-gray-300 mb-6 italic leading-relaxed"> </p>
+               <//p> <//p><div className="flex items-center">
+                 </div className="flex items-center"> </div className="flex items-center"><div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
                     {testimonial.avatar}
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">{testimonial.name}</h4>
-                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
-                    <p className="text-gray-500 text-xs">{testimonial.company}</p>
-                  </div>
-                </div>
-              </div>
+               </div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300"> </div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300"> </div> </div>
+                 <//div> <//div><div>
+                  </div> </div> </div><h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">{testimonial.nam</h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">e</h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">}</h4>
+                   <//h4> <//h4><p className="text-gray-400 text-sm">{testimonial.rol</p className="text-gray-400 text-sm">e</p className="text-gray-400 text-sm">}</p>
+                   <//p> <//p><p className="text-gray-500 text-xs">{testimonial.compan</p className="text-gray-500 text-xs">y</p className="text-gray-500 text-xs">}</p>
+                <//p> <//p> </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Stats Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+     <//section> <//section><section className="py-24">
+       </section className="py-24"> </section className="py-24"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300">
-                <div className="relative mb-4">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
-                    <stat.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2 cyber-text-enhanced">{stat.number}</div>
-                <div className="text-gray-400 font-medium">{stat.label}</div>
-              </div>
+             </div className="grid grid-cols-2 md:grid-cols-4 gap-12"> </div className="grid grid-cols-2 md:grid-cols-4 gap-12"><div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300">
+               </div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300"> </div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300"><div className="relative mb-4">
+                 </div className="relative mb-4"> </div className="relative mb-4"><div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+                  </div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25"> </div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25"> </div><stat.icon className="w-8 h-8 text-white" />
+                </stat.icon className="w-8 h-8 text-white" /> </stat.icon className="w-8 h-8 text-white" /> </div>
+                 <//div> <//div><div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
+              <//div> <//div> </div>
+               <//div> <//div><div className="text-3xl md:text-4xl font-bold text-white mb-2 cyber-text-enhanced">{stat.numb</div className="text-3xl md:text-4xl font-bold text-white mb-2 cyber-text-enhanced">e</div className="text-3xl md:text-4xl font-bold text-white mb-2 cyber-text-enhanced">r</div>}</div>
+               <//div> <//div><div className="text-gray-400 font-medium">{stat.lab</div className="text-gray-400 font-medium">e</div className="text-gray-400 font-medium">l</div>}</div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Contact CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+     <//section> <//section><section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+       </section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"> </section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> </div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"> </div><h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
             Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+        </h2 className="text-4xl md:text-5xl font-bold text-white mb-8"> </h2 className="text-4xl md:text-5xl font-bold text-white mb-8"> </h2>
+         <//h2> <//h2><p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
             Contact us today for a free consultation and discover how our AI and IT solutions can revolutionize your operations.
-          </p>
+        </p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"> </p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"> </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="text-2xl mb-2">📞</div>
-              <h3 className="text-lg font-bold text-white mb-2">Phone</h3>
-              <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
+         <//p> <//p><div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+           </div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"> </div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"><div className="text-center">
+             </div className="text-center"> </div className="text-center"><div className="text-2xl mb-2">�</div>�</div>
+             <//div> <//div><h3 className="text-lg font-bold text-white mb-2">Pho</h3 className="text-lg font-bold text-white mb-2">n</h3 className="text-lg font-bold text-white mb-2">e</h3>
+             <//h3> <//h3><a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium">
                 +1 (302) 464-0950
-              </a>
-            </div>
+            </a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium"> </a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 font-medium"> </a>
+          <//a> <//a> </div>
             
-            <div className="text-center">
-              <div className="text-2xl mb-2">✉️</div>
-              <h3 className="text-lg font-bold text-white mb-2">Email</h3>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
+           <//div> <//div><div className="text-center">
+             </div className="text-center"> </div className="text-center"><div className="text-2xl mb-2">✉</div>️</div>
+             <//div> <//div><h3 className="text-lg font-bold text-white mb-2">Ema</h3 className="text-lg font-bold text-white mb-2">i</h3 className="text-lg font-bold text-white mb-2">l</h3>
+             <//h3> <//h3><a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium">
                 kleber@ziontechgroup.com
-              </a>
-            </div>
+            </a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium"> </a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-medium"> </a>
+          <//a> <//a> </div>
             
-            <div className="text-center">
-              <div className="text-2xl mb-2">📍</div>
-              <h3 className="text-lg font-bold text-white mb-2">Location</h3>
-              <p className="text-cyan-400 font-medium">
+           <//div> <//div><div className="text-center">
+             </div className="text-center"> </div className="text-center"><div className="text-2xl mb-2">�</div>�</div>
+             <//div> <//div><h3 className="text-lg font-bold text-white mb-2">Locati</h3 className="text-lg font-bold text-white mb-2">o</h3 className="text-lg font-bold text-white mb-2">n</h3>
+             <//h3> <//h3><p className="text-cyan-400 font-medium">
                 Middletown, DE
-              </p>
+            </p className="text-cyan-400 font-medium"> </p className="text-cyan-400 font-medium"> </p>
 
-            </div>
-          </div>
+          <//p> <//p> </div>
+        <//div> <//div> </div>
           
-          <button className="neon-button-ultra text-lg py-4 px-8">
+         <//div> <//div><button className="neon-button-ultra text-lg py-4 px-8">
             Get Free Consultation
-          </button>
-        </div>
-      </section>
+        </button className="neon-button-ultra text-lg py-4 px-8"> </button className="neon-button-ultra text-lg py-4 px-8"> </button>
+      <//button> <//button> </div>
+    <//div> <//div> </section>
 
-      <Footer />
-    </div>
+     <//section> <//section><Footer />
+  </Footer /> </Footer /> </div>
   );
 };
 
 HomePage.displayName = 'HomePage';
 
-export default HomePage;
+export default HomePage;<//div>
+<//div>

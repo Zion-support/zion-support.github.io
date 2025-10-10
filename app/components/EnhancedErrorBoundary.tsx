@@ -70,70 +70,99 @@ class EnhancedErrorBoundary extends Component<Props, State>{
     if (this.state.hasError) {
       if (this.props.fallback) {
         return this.props.fallback;
-      }
+      </Props, State>}</Props, State>
 </Props>
-      return (</Props>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-red-400/20 rounded-xl p-8 text-center">
-            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-            <h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wrong<p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.</p>
-            </p>
+      return<//Props> <//Props>(</Props>
+       <//Props> <//Props><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+         </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"> </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"><div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-red-400/20 rounded-xl p-8 text-center">
+           </div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-red-400/20 rounded-xl p-8 text-center"> </div className="max-w-md w-full bg-slate-800/50 backdrop-blur-sm border border-red-400/20 rounded-xl p-8 text-center"><div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            </div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"> </div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6"> </div><AlertTriangle className="w-8 h-8 text-red-400" />
+           </AlertTriangle className="w-8 h-8 text-red-400" /> </AlertTriangle className="w-8 h-8 text-red-400" /><h1 className="text-2xl font-bold text-white mb-4">Oops! Something went wr</h1 className="text-2xl font-bold text-white mb-4">o</h1 className="text-2xl font-bold text-white mb-4">n</h1>g</h1>
+           <//h1> <//h1><p className="text-gray-300 mb-6">We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issu</p className="text-gray-300 mb-6">e</p className="text-gray-300 mb-6">.</p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mb-6 text-left">
-                <summary className="text-red-400 cursor-pointer font-medium mb-2">Error Details (Development)</summary>
-                </summary>
-                <div className="bg-slate-900/50 rounded-lg p-4 text-sm">
-                  <pre className="text-red-300 whitespace-pre-wrap">{this.state.error.toString()}</pre>
-                  </pre>
+             <//p> <//p><details className="mb-6 text-left">
+               </details className="mb-6 text-left"> </details className="mb-6 text-left"><summary className="text-red-400 cursor-pointer font-medium mb-2">Error Details (Developmen</summary className="text-red-400 cursor-pointer font-medium mb-2">t</summary className="text-red-400 cursor-pointer font-medium mb-2">)</summary>
+              <//summary> <//summary> </summary>
+               <//summary> <//summary><div className="bg-slate-900/50 rounded-lg p-4 text-sm">
+                </div className="bg-slate-900/50 rounded-lg p-4 text-sm"> </div className="bg-slate-900/50 rounded-lg p-4 text-sm"> </div><pre className="text-red-300 whitespace-pre-wrap">{this.state.error.toString(</pre className="text-red-300 whitespace-pre-wrap">)</pre className="text-red-300 whitespace-pre-wrap">}</pre>
+                <//pre> <//pre> </pre>
                   {this.state.errorInfo && (
-                    <pre className="text-gray-400 whitespace-pre-wrap mt-2">{this.state.errorInfo.componentStack}</pre>
-                    </pre>
+                   <//pre> <//pre><pre className="text-gray-400 whitespace-pre-wrap mt-2">{this.state.errorInfo.componentStac</pre className="text-gray-400 whitespace-pre-wrap mt-2">k</pre className="text-gray-400 whitespace-pre-wrap mt-2">}</pre>
+                  <//pre> <//pre> </pre>
                   )}
-                </div>
-              </details>
+              <//pre> <//pre> </div>
+            <//div> <//div> </details>
             )}
 
-            <div className="space-y-3">
-              <button
+           <//details> <//details><div className="space-y-3">
+            </div className="space-y-3"> </div className="space-y-3"> </div><button
                 onClick={this.handleRetry}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
               >
-                <RefreshCw className="w-4 h-4 mr-2" >Try Again</RefreshCw>
-              </RefreshCw>
+               </button
+                onClick={this.handleRetry}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              > </button
+                onClick={this.handleRetry}
+                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center"
+              ><RefreshCw className="w-4 h-4 mr-2" >Try Aga</RefreshCw className="w-4 h-4 mr-2" >i</RefreshCw className="w-4 h-4 mr-2" >n</RefreshCw>
+            <//RefreshCw> <//RefreshCw> </RefreshCw>
               
-              <button
+             <//RefreshCw> <//RefreshCw><button
                 onClick={this.handleReload}
                 className="w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
-                <RefreshCw className="w-4 h-4 mr-2" >Reload Page</RefreshCw>
-              </RefreshCw>
+               </button
+                onClick={this.handleReload}
+                className="w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+              > </button
+                onClick={this.handleReload}
+                className="w-full bg-slate-700 hover:bg-slate-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+              ><RefreshCw className="w-4 h-4 mr-2" >Reload Pa</RefreshCw className="w-4 h-4 mr-2" >g</RefreshCw className="w-4 h-4 mr-2" >e</RefreshCw>
+            <//RefreshCw> <//RefreshCw> </RefreshCw>
               
-              <button
+             <//RefreshCw> <//RefreshCw><button
                 onClick={this.handleGoHome}
                 className="w-full bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
               >
-                <Home className="w-4 h-4 mr-2" >Go Home</Home>
-              </Home>
-            </div>
+               </button
+                onClick={this.handleGoHome}
+                className="w-full bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+              > </button
+                onClick={this.handleGoHome}
+                className="w-full bg-slate-600 hover:bg-slate-500 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center"
+              ><Home className="w-4 h-4 mr-2" >Go Ho</Home className="w-4 h-4 mr-2" >m</Home className="w-4 h-4 mr-2" >e</Home>
+            <//Home> <//Home> </Home>
+          <//Home> <//Home> </div>
 
-            <div className="mt-6 pt-4 border-t border-gray-700">
-              <p className="text-sm text-gray-400 mb-2">If this problem persists, please contact our support team:</p>
-              </p>
-              <div className="flex flex-col sm:flex-row gap-2 text-sm">
-                <a
+           <//div> <//div><div className="mt-6 pt-4 border-t border-gray-700">
+            </div className="mt-6 pt-4 border-t border-gray-700"> </div className="mt-6 pt-4 border-t border-gray-700"> </div><p className="text-sm text-gray-400 mb-2">If this problem persists, please contact our support tea</p className="text-sm text-gray-400 mb-2">m</p className="text-sm text-gray-400 mb-2">:</p>
+             <//p> <//p><div className="flex flex-col sm:flex-row gap-2 text-sm">
+              </div className="flex flex-col sm:flex-row gap-2 text-sm"> </div className="flex flex-col sm:flex-row gap-2 text-sm"> </div><a
                   href="mailto:support@ziontechgroup.com"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >support@ziontechgroup.com<span className="hidden sm:inline text-gray-500">•<a
+                >support@ziontechgroup.co</a
+                  href="mailto:support@ziontechgroup.com"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                >m</a
+                  href="mailto:support@ziontechgroup.com"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                ><span className="hidden sm:inline text-gray-500">•</span><a
                   href="tel:+13024640950"
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
-                >+1 (302) 464-0950</a>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+                >+1 (302) 464-09</a
+                  href="tel:+13024640950"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                >5</a
+                  href="tel:+13024640950"
+                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                >0</a>
+              <//a> <//a> </a>
+            <//a> <//a> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
       );
     }
 
@@ -141,4 +170,5 @@ class EnhancedErrorBoundary extends Component<Props, State>{
   }
 }
 
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary;<//div>
+<//div>

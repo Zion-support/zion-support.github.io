@@ -54,19 +54,27 @@ export const Image: React.FC<ImageProps>= ({
       objectFit: 'cover'}
     })
   }
-  if (hasError) {</ImageProps>
-    return (</ImageProps>
-      <div}
+  if (hasError)</ImageProps> </ImageProps>{</ImageProps>
+    return<//ImageProps> <//ImageProps>(</ImageProps>
+     <//ImageProps> <//ImageProps><div}
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={imageStyle}
         {...props}
       >
-        <span className="text-gray-500 text-sm"><span className="sr-only">Screen reader: </span>Failed to load image</span>
-      </div>
+      </div}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={imageStyle}
+        {...props}
+      > </div}
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={imageStyle}
+        {...props}
+      > </div><span className="text-gray-500 text-sm"><span className="sr-only">Screen reade</span className="sr-only">r</span className="sr-only">:</span>Failed to load ima<//span>g<//span>e</span>
+    <//span> <//span> </div>
     )
   }
   return (
-    <img
+   <//div> <//div><img
       src={src}
       alt={alt}
       width={width}
@@ -79,5 +87,5 @@ export const Image: React.FC<ImageProps>= ({
       onError={handleError}
       {...props}
     >)</img>
-}</img>
-export default Image</img>
+<//img>}</img>
+export default Ima<//img>g<//img>e</img>

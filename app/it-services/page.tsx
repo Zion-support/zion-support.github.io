@@ -686,249 +686,294 @@ name: 'AI-Powered Infrastructure Management',
   return (
 
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">{/* Hero Section */}</div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"><div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">IT Services<p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.</p>
-              From infrastructure to security, we've got you covered.</p>
-            </p>
+</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg"><div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">{/* Hero Section </div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">*</div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">/</div>}</div>
+     <//div> <//div><section className="relative py-20 lg:py-32 overflow-hidden">
+       </section className="relative py-20 lg:py-32 overflow-hidden"> </section className="relative py-20 lg:py-32 overflow-hidden"><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"><div className="container mx-auto px-4 relative z-10">
+         </div className="container mx-auto px-4 relative z-10"> </div className="container mx-auto px-4 relative z-10"><div className="max-w-4xl mx-auto text-center">
+</div className="max-w-4xl mx-auto text-center">
+</div><h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">IT Servic</h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">e</h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">s</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficientl</p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">y</p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">.</p>
+              From infrastructure to security, we've got you covere<//p>d<//p>.</p>
 
             {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150+<div className="text-gray-300">IT Services</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
-                <div className="text-3xl font-bold text-purple-400 mb-2">750+<div className="text-gray-300">Enterprise Clients</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%<div className="text-gray-300">Uptime SLA</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7<div className="text-gray-300">Support</div>
-              </div>
-            </div>
+           <//p> <//p><div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
+             </div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12"> </div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12"><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
+               </div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20"> </div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20"><div className="text-3xl font-bold text-cyan-400 mb-2">1</div className="text-3xl font-bold text-cyan-400 mb-2">5</div className="text-3xl font-bold text-cyan-400 mb-2">0</div>+</div>
+               <//div> <//div><div className="text-gray-300">IT Servi</div className="text-gray-300">c</div className="text-gray-300">e</div>s</div>
+             <//div> <//div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
+               </div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"> </div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"><div className="text-3xl font-bold text-purple-400 mb-2">7</div className="text-3xl font-bold text-purple-400 mb-2">5</div className="text-3xl font-bold text-purple-400 mb-2">0</div>+</div>
+               <//div> <//div><div className="text-gray-300">Enterprise Clie</div className="text-gray-300">n</div className="text-gray-300">t</div>s</div>
+             <//div> <//div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
+               </div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20"> </div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20"><div className="text-3xl font-bold text-pink-400 mb-2">99</div className="text-3xl font-bold text-pink-400 mb-2">.</div className="text-3xl font-bold text-pink-400 mb-2">9</div>%</div>
+               <//div> <//div><div className="text-gray-300">Uptime </div className="text-gray-300">S</div className="text-gray-300">L</div>A</div>
+             <//div> <//div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
+               </div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20"> </div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20"><div className="text-3xl font-bold text-green-400 mb-2">2</div className="text-3xl font-bold text-green-400 mb-2">4</div className="text-3xl font-bold text-green-400 mb-2">/</div>7</div>
+               <//div> <//div><div className="text-gray-300">Supp</div className="text-gray-300">o</div className="text-gray-300">r</div>t</div>
+          <//div> <//div> </div>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
-                <Shield className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">Enterprise Security</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
-                <Cloud className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Cloud Solutions</span>
-              </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
-                <Settings className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">24/7 Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+           <//div> <//div><div className="flex flex-wrap justify-center gap-4">
+             </div className="flex flex-wrap justify-center gap-4"> </div className="flex flex-wrap justify-center gap-4"><div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"> </div><Shield className="w-5 h-5 text-cyan-400" />
+               </Shield className="w-5 h-5 text-cyan-400" /> </Shield className="w-5 h-5 text-cyan-400" /><span className="text-white font-medium">Enterprise Secur</span className="text-white font-medium">i</span className="text-white font-medium">t</span>y</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"> </div><Cloud className="w-5 h-5 text-purple-400" />
+               </Cloud className="w-5 h-5 text-purple-400" /> </Cloud className="w-5 h-5 text-purple-400" /><span className="text-white font-medium">Cloud Soluti</span className="text-white font-medium">o</span className="text-white font-medium">n</span>s</span>
+            <//span> <//span> </div>
+             <//div> <//div><div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg">
+              </div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"> </div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"> </div><Settings className="w-5 h-5 text-green-400" />
+               </Settings className="w-5 h-5 text-green-400" /> </Settings className="w-5 h-5 text-green-400" /><span className="text-white font-medium">24/7 Supp</span className="text-white font-medium">o</span className="text-white font-medium">r</span>t</span>
+            <//span> <//span> </div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Benefits */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <benefit.icon className="w-10 h-10 text-white" />
-                <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}<p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
-              </div>
+     <//section> <//section><section className="py-20">
+       </section className="py-20"> </section className="py-20"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">?</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"><p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business valu</p className="text-lg text-gray-300 max-w-3xl mx-auto">e</p className="text-lg text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="text-center group">
+               </div key={index} className="text-center group"> </div key={index} className="text-center group"><div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                </div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"> </div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"> </div><benefit.icon className="w-10 h-10 text-white" />
+               </benefit.icon className="w-10 h-10 text-white" /> </benefit.icon className="w-10 h-10 text-white" /><div className="text-4xl font-bold text-white mb-2">{benefit.st</div className="text-4xl font-bold text-white mb-2">a</div className="text-4xl font-bold text-white mb-2">t</div>}</div>
+               <//div> <//div><h3 className="text-xl font-bold text-white mb-3">{benefit.title</h3 className="text-xl font-bold text-white mb-3">}</h3 className="text-xl font-bold text-white mb-3"><p className="text-gray-300 text-sm leading-relaxed">{benefit.descriptio</p className="text-gray-300 text-sm leading-relaxed">n</p className="text-gray-300 text-sm leading-relaxed">}</p>
+            <//p> <//p> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* IT Services */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Services<p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business needs<div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
-              <div key={categoryIndex}>
-                <div className="flex items-center space-x-3 mb-8">
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
-                  <h3 className="text-2xl font-bold text-white">{category.category}<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) => (</div>
+     <//section> <//section><section className="py-20 bg-slate-800/50">
+       </section className="py-20 bg-slate-800/50"> </section className="py-20 bg-slate-800/50"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Service</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">s</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"><p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business need</p className="text-lg text-gray-300 max-w-3xl mx-auto">s</p className="text-lg text-gray-300 max-w-3xl mx-auto"><div className="space-y-16">{itServices.map((category, categoryIndex) =</div className="space-y-16">></div className="space-y-16"> </div>(</div>
+             <//div> <//div><div key={categoryIndex}>
+               </div key={categoryIndex}> </div key={categoryIndex}><div className="flex items-center space-x-3 mb-8">
+                </div className="flex items-center space-x-3 mb-8"> </div className="flex items-center space-x-3 mb-8"> </div><category.icon className={`w-8 h-8 ${category.color}`} />
+                 </category.icon className={`w-8 h-8 ${category.color}`} /> </category.icon className={`w-8 h-8 ${category.color}`} /><h3 className="text-2xl font-bold text-white">{category.category</h3 className="text-2xl font-bold text-white">}</h3 className="text-2xl font-bold text-white"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"> </div>(</div>
 </div>
-<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
-                        </div>
+<//div><div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
+</div key={serviceIndex} className="futuristic-card hover-lift p-6 relative"><div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular &</div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">&</div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative"> </div>(</div>
+               <//div> <//div><div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popu</div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">l</div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">a</div>r</div>
                       )}
 
-                      <div className="relative z-10">
-                        <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                     <//div> <//div><div className="relative z-10">
+                      </div className="relative z-10"> </div className="relative z-10"> </div><h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name</h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">}</h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300"><p className="text-gray-300 mb-6 leading-relaxed">{service.descriptio</p className="text-gray-300 mb-6 leading-relaxed">n</p className="text-gray-300 mb-6 leading-relaxed">}</p>
 
-                        <div className="space-y-4 mb-6">
-                          <h5 className="text-lg font-semibold text-white flex items-center">
-                            <Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features:<ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
-                              <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                                <span>{feature}</span>
-                              </li>
+                       <//p> <//p><div className="space-y-4 mb-6">
+                        </div className="space-y-4 mb-6"> </div className="space-y-4 mb-6"> </div><h5 className="text-lg font-semibold text-white flex items-center">
+                           </h5 className="text-lg font-semibold text-white flex items-center"> </h5 className="text-lg font-semibold text-white flex items-center"><Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features</Zap className="w-4 h-4 mr-2 text-cyan-400" >:</Zap className="w-4 h-4 mr-2 text-cyan-400" ><ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) =></ul className="space-y-2"> </ul className="space-y-2">(</ul>
+                             <//ul> <//ul><li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                               </li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300"> </li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300"><CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                               </CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /> </CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" /><span>{featu</span>r</span>e</span>}</span>
+                            <//span> <//span> </li>
                             ))}
                             {service.features.length > 4 && (
-                              <li className="text-cyan-400 text-sm font-medium">+{service.features.length - 4} more features</li>
-                              </li>
+                             <//li> <//li><li className="text-cyan-400 text-sm font-medium">+{service.features.length - 4} more featur</li className="text-cyan-400 text-sm font-medium">e</li className="text-cyan-400 text-sm font-medium">s</li>
+                            <//li> <//li> </li>
                             )}
-                          </ul>
-                        </div>
+                        <//li> <//li> </ul>
+                      <//ul> <//ul> </div>
 
-                        <div className="space-y-3 mb-6">
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Pricing:<span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Trial:<span className="text-sm font-medium text-green-400">{service.trial}</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Timeline:<span className="text-sm font-medium text-purple-400">{service.timeline}</span>
-                          </div>
-                        </div>
+                       <//div> <//div><div className="space-y-3 mb-6">
+                         </div className="space-y-3 mb-6"> </div className="space-y-3 mb-6"><div className="flex justify-between items-center">
+                          </div className="flex justify-between items-center"> </div className="flex justify-between items-center"> </div><span className="text-sm text-gray-400">Pricin</span className="text-sm text-gray-400">g</span className="text-sm text-gray-400">:</span><span className="text-lg font-bold text-cyan-400">{service.prici</span className="text-lg font-bold text-cyan-400">n</span className="text-lg font-bold text-cyan-400">g</span>}</span>
+                        <//span> <//span> </div>
+                         <//div> <//div><div className="flex justify-between items-center">
+                          </div className="flex justify-between items-center"> </div className="flex justify-between items-center"> </div><span className="text-sm text-gray-400">Tria</span className="text-sm text-gray-400">l</span className="text-sm text-gray-400">:</span><span className="text-sm font-medium text-green-400">{service.tri</span className="text-sm font-medium text-green-400">a</span className="text-sm font-medium text-green-400">l</span>}</span>
+                        <//span> <//span> </div>
+                         <//div> <//div><div className="flex justify-between items-center">
+                          </div className="flex justify-between items-center"> </div className="flex justify-between items-center"> </div><span className="text-sm text-gray-400">Timelin</span className="text-sm text-gray-400">e</span className="text-sm text-gray-400">:</span><span className="text-sm font-medium text-purple-400">{service.timeli</span className="text-sm font-medium text-purple-400">n</span className="text-sm font-medium text-purple-400">e</span>}</span>
+                        <//span> <//span> </div>
+                      <//div> <//div> </div>
 
-                        <div className="space-y-3">
-                          <a
+                       <//div> <//div><div className="space-y-3">
+                        </div className="space-y-3"> </div className="space-y-3"> </div><a
                             href={service.link}
                             className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                          >Learn More</a>
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                          <a
+                          >Learn Mo</a
+                            href={service.link}
+                            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                          >r</a
+                            href={service.link}
+                            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                          >e</a>
+                           <//a> <//a><ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                         </ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" /><a
                             href="/contact"
                             className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-                          >Get Started</a>
-                          </a>
-                        </div>
-                      </div>
-<div className="space-y-2">
-                        <a
+                          >Get Start</a
+                            href="/contact"
+                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+                          >e</a
+                            href="/contact"
+                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+                          >d</a>
+                        <//a> <//a> </a>
+                      <//a> <//a> </div>
+                    <//div> <//div> </div>
+<//div><div className="space-y-2">
+                      </div className="space-y-2"> </div className="space-y-2"> </div><a
                           href={service.link}
                           className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >Learn More<a
+                        >Learn Mor</a
+                          href={service.link}
+                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
+                        >e</a
+                          href={service.link}
+                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
+                        ><a
                           href="/contact"
                           className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >Get Started</a>
-                        </a>
-                      </div>
+                        >Get Start</a
+                          href="/contact"
+                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
+                        >e</a
+                          href="/contact"
+                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
+                        >d</a>
+                      <//a> <//a> </a>
+                    <//a> <//a> </div>
 
-                    </div>
+                  <//div> <//div> </div>
                   ))}
-                </div>
-              </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Technologies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With<p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) => (</div>
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <tech.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
-                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (<div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
-                    </div>
+     <//section> <//section><section className="py-20">
+       </section className="py-20"> </section className="py-20"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work Wit</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">h</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"><p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industr</p className="text-lg text-gray-300 max-w-3xl mx-auto">y</p className="text-lg text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
+               </div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"> </div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"> </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"> </div><tech.icon className="w-8 h-8 text-white" />
+               </tech.icon className="w-8 h-8 text-white" /> </tech.icon className="w-8 h-8 text-white" /><h3 className="text-xl font-bold text-white mb-4">{tech.categor</h3 className="text-xl font-bold text-white mb-4">y</h3 className="text-xl font-bold text-white mb-4">}</h3>
+               <//h3> <//h3><div className="space-y-2">{tech.techs.map((technology, techIndex) =</div className="space-y-2">></div className="space-y-2"> </div>(</div>
+               <//div> <//div><div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technolo</div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">g</div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">y</div>}</div>
                   ))}
-                </div>
-              </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Process */}
-      <section className="py-20 bg-slate-800/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
-                </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                  <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-slate-800/50 p-6 rounded-lg">
-                      <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                      <p className="text-gray-300 mb-2">{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
-                    </div>
-                  </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"><div className="w-1/2">))}</div>
-            </div>
-          </div>
-        </div>
-      </section>
+     <//section> <//section><section className="py-20 bg-slate-800/50">
+       </section className="py-20 bg-slate-800/50"> </section className="py-20 bg-slate-800/50"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Proce</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">s</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">s</h2>
+           <//h2> <//h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementati</p className="text-lg text-gray-300 max-w-3xl mx-auto">o</p className="text-lg text-gray-300 max-w-3xl mx-auto">n</p>
+        <//p> <//p> </div>
+         <//div> <//div><div className="max-w-4xl mx-auto">
+           </div className="max-w-4xl mx-auto"> </div className="max-w-4xl mx-auto"><div className="relative">
+           </div className="relative"> </div className="relative"> </div> </div>
+               <//div> <//div><div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) =</div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">></div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"> </div>(<//div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                 </div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}> </div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}><div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                   </div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}> </div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}><div className="bg-slate-800/50 p-6 rounded-lg">
+                     </div className="bg-slate-800/50 p-6 rounded-lg"> </div className="bg-slate-800/50 p-6 rounded-lg"><div className="text-cyan-400 font-bold text-lg mb-2">Step {step.ste</div className="text-cyan-400 font-bold text-lg mb-2">p</div className="text-cyan-400 font-bold text-lg mb-2">}</div><h3 className="text-xl font-bold text-white mb-2">{step.titl</h3 className="text-xl font-bold text-white mb-2">e</h3 className="text-xl font-bold text-white mb-2">}</h3>
+                     <//h3> <//h3><p className="text-gray-300 mb-2">{step.description</p className="text-gray-300 mb-2">}</p className="text-gray-300 mb-2"><div className="text-sm text-cyan-400 font-medium">{step.durati</div className="text-sm text-cyan-400 font-medium">o</div className="text-sm text-cyan-400 font-medium">n</div>}</div>
+                  <//div> <//div> </div>
+                <//div> <//div> </div>
+                 <//div> <//div><div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"><div className="w-1/2">)</div className="w-1/2">)</div>}</div>
+          <//div> <//div> </div>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* Case Studies */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Stories<p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industries<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2">{study.company}<p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
-                <div className="space-y-3">
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:<p className="text-sm text-gray-400">{study.challenge}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:<p className="text-sm text-gray-400">{study.solution}</p>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:<ul className="space-y-1">{study.results.map((result, resultIndex) => (</ul>
-                        <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400">
-                          <CheckCircle className="w-3 h-3 flex-shrink-0" />
-                          <span>{result}</span>
-                        </li>
+     <//section> <//section><section className="py-20">
+       </section className="py-20"> </section className="py-20"><div className="container mx-auto px-4">
+         </div className="container mx-auto px-4"> </div className="container mx-auto px-4"><div className="text-center mb-16">
+          </div className="text-center mb-16"> </div className="text-center mb-16"> </div><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Storie</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">s</h2 className="text-3xl lg:text-4xl font-bold text-white mb-4"><p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industrie</p className="text-lg text-gray-300 max-w-3xl mx-auto">s</p className="text-lg text-gray-300 max-w-3xl mx-auto"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) =</div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">></div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> </div>(</div>
+             <//div> <//div><div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
+               </div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"> </div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+                </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"> </div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"> </div><span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join(''</span className="text-2xl font-bold text-white">)</span className="text-2xl font-bold text-white">}</span><h3 className="text-xl font-bold text-white mb-2">{study.company</h3 className="text-xl font-bold text-white mb-2">}</h3 className="text-xl font-bold text-white mb-2"><p className="text-cyan-400 text-sm mb-4">{study.industr</p className="text-cyan-400 text-sm mb-4">y</p className="text-cyan-400 text-sm mb-4">}</p>
+               <//p> <//p><div className="space-y-3">
+                 </div className="space-y-3"> </div className="space-y-3"><div>
+                  </div> </div> </div><h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge</h4 className="text-sm font-semibold text-gray-300 mb-1">:</h4 className="text-sm font-semibold text-gray-300 mb-1"><p className="text-sm text-gray-400">{study.challeng</p className="text-sm text-gray-400">e</p className="text-sm text-gray-400">}</p>
+                <//p> <//p> </div>
+                 <//div> <//div><div>
+                  </div> </div> </div><h4 className="text-sm font-semibold text-gray-300 mb-1">Solution</h4 className="text-sm font-semibold text-gray-300 mb-1">:</h4 className="text-sm font-semibold text-gray-300 mb-1"><p className="text-sm text-gray-400">{study.solutio</p className="text-sm text-gray-400">n</p className="text-sm text-gray-400">}</p>
+                <//p> <//p> </div>
+                 <//div> <//div><div>
+                  </div> </div> </div><h4 className="text-sm font-semibold text-gray-300 mb-1">Results</h4 className="text-sm font-semibold text-gray-300 mb-1">:</h4 className="text-sm font-semibold text-gray-300 mb-1"><ul className="space-y-1">{study.results.map((result, resultIndex) =></ul className="space-y-1"> </ul className="space-y-1">(</ul>
+                       <//ul> <//ul><li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400">
+                         </li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400"> </li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400"><CheckCircle className="w-3 h-3 flex-shrink-0" />
+                         </CheckCircle className="w-3 h-3 flex-shrink-0" /> </CheckCircle className="w-3 h-3 flex-shrink-0" /><span>{resu</span>l</span>t</span>}</span>
+                      <//span> <//span> </li>
                       ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                  <//li> <//li> </ul>
+                <//ul> <//ul> </div>
+              <//div> <//div> </div>
+            <//div> <//div> </div>
             ))}
-          </div>
-        </div>
-      </section>
+        <//div> <//div> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
 
       {/* CTA Section */}
-      <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">{/* Animated Background */}</section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+     <//section> <//section><section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">{/* Animated Background *</section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">/</section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">}</section>
+       <//section> <//section><div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
+       </div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" /> </div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" /><div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
 
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a
+       </div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /> </div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /><div className="container mx-auto px-4 text-center relative z-10">
+        </div className="container mx-auto px-4 text-center relative z-10"> </div className="container mx-auto px-4 text-center relative z-10"> </div><h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructur</h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">e</h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">?</h2>
+           <//h2> <//h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started toda</p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">y</p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">!</p>
+         <//p> <//p><div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          </div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"> </div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"> </div><a
               href="https://ziontechgroup.com/contact"
 className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
 
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
 
             >
-              <MessageSquare className="w-5 h-5 mr-2" >Get Started Today</MessageSquare>
-            </MessageSquare>
-            <a
+             </a
+              href="https://ziontechgroup.com/contact"
+className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
+
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+
+            > </a
+              href="https://ziontechgroup.com/contact"
+className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
+
+              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+
+            ><MessageSquare className="w-5 h-5 mr-2" >Get Started Tod</MessageSquare className="w-5 h-5 mr-2" >a</MessageSquare className="w-5 h-5 mr-2" >y</MessageSquare>
+          <//MessageSquare> <//MessageSquare> </MessageSquare>
+           <//MessageSquare> <//MessageSquare><a
               href="tel:+13024640950"
 
 className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
 
             >
-              <Phone className="w-5 h-5 mr-2" >Call: +1 (302) 464-0950</Phone>
-            </Phone>
-          </div>
-          <div className="text-gray-200 text-sm">
-            <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
+             </a
+              href="tel:+13024640950"
 
-          </div>
-        </div>
-      </section>
-    </div>
+className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+
+            > </a
+              href="tel:+13024640950"
+
+className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+
+            ><Phone className="w-5 h-5 mr-2" >Call: +1 (302) 464-09</Phone className="w-5 h-5 mr-2" >5</Phone className="w-5 h-5 mr-2" >0</Phone>
+          <//Phone> <//Phone> </Phone>
+        <//Phone> <//Phone> </div>
+         <//div> <//div><div className="text-gray-200 text-sm">
+          </div className="text-gray-200 text-sm"> </div className="text-gray-200 text-sm"> </div><p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 197</p>0</p>9</p>
+
+        <//p> <//p> </div>
+      <//div> <//div> </div>
+    <//div> <//div> </section>
+  <//section> <//section> </div>
   );
-}
+<//div>}<//div>
