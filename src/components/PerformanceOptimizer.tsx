@@ -22,11 +22,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = memo(({ childr
       }, {
         rootMargin: '50px 0px',
         threshold: 0.01
+      });
 
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img);
-
+      });
     }
   }, []);
 
