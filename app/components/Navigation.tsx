@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,113 +40,113 @@ const Navigation: React.FC = () => {
     }
   };
   const aiServices = [
-    { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
-    { name: 'AI Customer Support', href: '/ai-customer-support', icon: Users, description: 'AI Support Systems' },
-    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
-    { name: 'AI Content Generation', href: '/ai-content-generation', icon: Code, description: 'Content Creation' },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Shield, description: 'Medical AI Solutions' },
-    { name: 'AI Financial Services', href: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
-    { name: 'AI E-commerce Solutions', href: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
-    { name: 'AI Mobile Apps', href: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' },
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, description: 'Sales AI' },
-    { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
-    { name: 'AI Document Processing', href: '/ai-document-processing', icon: Code, description: 'Document AI' },
-    { name: 'AI Process Automation', href: '/ai-automation', icon: Zap, description: 'Process Automation' },
-    { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Brain, description: 'Voice AI Platform' },
-    { name: 'AI Predictive Maintenance', href: '/ai-predictive-maintenance', icon: Settings, description: 'Maintenance AI' },
-    { name: 'AI Supply Chain', href: '/ai-supply-chain', icon: BarChart, description: 'Supply Chain AI' },
-    { name: 'AI Quality Control', href: '/ai-quality-control', icon: Shield, description: 'Quality AI' },
-    { name: 'AI Energy Management', href: '/ai-energy-management', icon: Zap, description: 'Energy AI' },
-    { name: 'AI Legal Analysis', href: '/ai-legal-analysis', icon: FileText, description: 'Legal AI' },
-    { name: 'AI Real Estate', href: '/ai-real-estate', icon: Globe, description: 'Real Estate AI' },
-    { name: 'AI HR Assistant', href: '/ai-hr-assistant', icon: Users, description: 'HR AI' },
-    { name: 'AI Insurance', href: '/ai-insurance', icon: Shield, description: 'Insurance AI' },
-    { name: 'AI Education', href: '/ai-education', icon: Users, description: 'Educational AI' },
-    { name: 'AI Transportation', href: '/ai-transportation', icon: Globe, description: 'Transportation AI' },
-    { name: 'AI Environmental', href: '/ai-environmental', icon: Globe, description: 'Environmental AI' },
-    { name: 'AI Retail', href: '/ai-retail', icon: Globe, description: 'Retail AI' },
-    { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
-    { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
+    { name: 'AI Solutions', to: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
+    { name: 'AI Marketing Automation', to: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
+    { name: 'AI Customer Support', to: '/ai-customer-support', icon: Users, description: 'AI Support Systems' },
+    { name: 'AI Data Analytics', to: '/ai-data-analytics', icon: BarChart, description: 'Data Intelligence' },
+    { name: 'AI Content Generation', to: '/ai-content-generation', icon: Code, description: 'Content Creation' },
+    { name: 'AI Healthcare Solutions', to: '/ai-healthcare', icon: Shield, description: 'Medical AI Solutions' },
+    { name: 'AI Financial Services', to: '/ai-fintech', icon: TrendingUp, description: 'Financial AI' },
+    { name: 'AI E-commerce Solutions', to: '/ai-ecommerce-solutions', icon: Globe, description: 'E-commerce AI' },
+    { name: 'AI Cybersecurity', to: '/ai-cybersecurity', icon: Lock, description: 'Security AI' },
+    { name: 'AI Mobile Apps', to: '/ai-mobile-app-development', icon: Smartphone, description: 'Mobile AI' },
+    { name: 'AI Sales Automation', to: '/ai-sales-automation', icon: Target, description: 'Sales AI' },
+    { name: 'AI Workflow Automation', to: '/ai-workflow-automation', icon: Zap, description: 'Workflow AI' },
+    { name: 'AI Data Visualization', to: '/ai-data-visualization', icon: BarChart, description: 'Data Viz AI' },
+    { name: 'AI Lead Generation', to: '/ai-lead-generation', icon: Target, description: 'Lead Gen AI' },
+    { name: 'AI Document Processing', to: '/ai-document-processing', icon: Code, description: 'Document AI' },
+    { name: 'AI Process Automation', to: '/ai-automation', icon: Zap, description: 'Process Automation' },
+    { name: 'AI Voice Assistant', to: '/ai-voice-assistant', icon: Brain, description: 'Voice AI Platform' },
+    { name: 'AI Predictive Maintenance', to: '/ai-predictive-maintenance', icon: Settings, description: 'Maintenance AI' },
+    { name: 'AI Supply Chain', to: '/ai-supply-chain', icon: BarChart, description: 'Supply Chain AI' },
+    { name: 'AI Quality Control', to: '/ai-quality-control', icon: Shield, description: 'Quality AI' },
+    { name: 'AI Energy Management', to: '/ai-energy-management', icon: Zap, description: 'Energy AI' },
+    { name: 'AI Legal Analysis', to: '/ai-legal-analysis', icon: FileText, description: 'Legal AI' },
+    { name: 'AI Real Estate', to: '/ai-real-estate', icon: Globe, description: 'Real Estate AI' },
+    { name: 'AI HR Assistant', to: '/ai-hr-assistant', icon: Users, description: 'HR AI' },
+    { name: 'AI Insurance', to: '/ai-insurance', icon: Shield, description: 'Insurance AI' },
+    { name: 'AI Education', to: '/ai-education', icon: Users, description: 'Educational AI' },
+    { name: 'AI Transportation', to: '/ai-transportation', icon: Globe, description: 'Transportation AI' },
+    { name: 'AI Environmental', to: '/ai-environmental', icon: Globe, description: 'Environmental AI' },
+    { name: 'AI Retail', to: '/ai-retail', icon: Globe, description: 'Retail AI' },
+    { name: 'AI Sports', to: '/ai-sports', icon: BarChart, description: 'Sports AI' },
+    { name: 'AI Mental Health', to: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
   const itServices = [
-    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
-    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
-    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
-    { name: 'Security Monitoring', href: '/security-monitoring', icon: Shield, description: '24/7 Security' },
-    { name: 'Penetration Testing', href: '/penetration-testing', icon: Shield, description: 'Security Testing' },
-    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Infrastructure Setup' },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' },
-    { name: 'IT Consulting', href: '/it-consulting', icon: Users, description: 'IT Strategy' },
-    { name: 'Data Analytics', href: '/data-analytics', icon: BarChart, description: 'Business Intelligence' },
-    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
-    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
-    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' },
-    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure', icon: Cloud, description: 'Infrastructure Management' },
-    { name: 'Network Security', href: '/network-security', icon: Shield, description: 'Network Protection' },
-    { name: 'Data Backup', href: '/data-backup', icon: Database, description: 'Backup Solutions' },
-    { name: 'IT Asset Management', href: '/it-asset-management', icon: Settings, description: 'Asset Management' },
-    { name: 'Website Hosting', href: '/website-hosting', icon: Globe, description: 'Hosting Services' },
-    { name: 'Mobile Device Management', href: '/mobile-device-management', icon: Smartphone, description: 'Device Management' },
-    { name: 'Compliance Services', href: '/compliance-services', icon: Shield, description: 'Compliance Solutions' },
-    { name: 'IT Performance Monitoring', href: '/it-performance-monitoring', icon: BarChart, description: 'Performance Monitoring' },
-    { name: 'IT Training', href: '/it-training', icon: Users, description: 'Training Services' },
-    { name: 'IT Project Management', href: '/it-project-management', icon: Settings, description: 'Project Management' },
-    { name: 'Vulnerability Assessment', href: '/vulnerability-assessment', icon: Shield, description: 'Security Assessment' },
-    { name: 'Hybrid Cloud', href: '/hybrid-cloud', icon: Cloud, description: 'Hybrid Solutions' },
-    { name: 'Data Migration', href: '/data-migration', icon: Database, description: 'Migration Services' },
-    { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
-    { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
+    { name: 'Cloud Services', to: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
+    { name: 'Cloud Migration', to: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
+    { name: 'DevOps & CI/CD', to: '/devops', icon: Settings, description: 'Development Operations' },
+    { name: 'Database Services', to: '/database', icon: Database, description: 'Data Management' },
+    { name: 'Cybersecurity', to: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
+    { name: 'Security Monitoring', to: '/security-monitoring', icon: Shield, description: '24/7 Security' },
+    { name: 'Penetration Testing', to: '/penetration-testing', icon: Shield, description: 'Security Testing' },
+    { name: 'IT Infrastructure', to: '/it-infrastructure', icon: Cloud, description: 'Infrastructure Setup' },
+    { name: 'Managed IT Services', to: '/managed-it', icon: Settings, description: '24/7 IT Support' },
+    { name: 'IT Consulting', to: '/it-consulting', icon: Users, description: 'IT Strategy' },
+    { name: 'Data Analytics', to: '/data-analytics', icon: BarChart, description: 'Business Intelligence' },
+    { name: 'Mobile Development', to: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
+    { name: 'Web Development', to: '/web-development', icon: Globe, description: 'Web Applications' },
+    { name: 'Process Automation', to: '/process-automation', icon: Zap, description: 'Workflow Automation' },
+    { name: 'Cloud Infrastructure', to: '/cloud-infrastructure', icon: Cloud, description: 'Infrastructure Management' },
+    { name: 'Network Security', to: '/network-security', icon: Shield, description: 'Network Protection' },
+    { name: 'Data Backup', to: '/data-backup', icon: Database, description: 'Backup Solutions' },
+    { name: 'IT Asset Management', to: '/it-asset-management', icon: Settings, description: 'Asset Management' },
+    { name: 'Website Hosting', to: '/website-hosting', icon: Globe, description: 'Hosting Services' },
+    { name: 'Mobile Device Management', to: '/mobile-device-management', icon: Smartphone, description: 'Device Management' },
+    { name: 'Compliance Services', to: '/compliance-services', icon: Shield, description: 'Compliance Solutions' },
+    { name: 'IT Performance Monitoring', to: '/it-performance-monitoring', icon: BarChart, description: 'Performance Monitoring' },
+    { name: 'IT Training', to: '/it-training', icon: Users, description: 'Training Services' },
+    { name: 'IT Project Management', to: '/it-project-management', icon: Settings, description: 'Project Management' },
+    { name: 'Vulnerability Assessment', to: '/vulnerability-assessment', icon: Shield, description: 'Security Assessment' },
+    { name: 'Hybrid Cloud', to: '/hybrid-cloud', icon: Cloud, description: 'Hybrid Solutions' },
+    { name: 'Data Migration', to: '/data-migration', icon: Database, description: 'Migration Services' },
+    { name: 'API Development', to: '/api-development', icon: Globe, description: 'API Services' },
+    { name: 'IT Governance', to: '/it-governance', icon: Settings, description: 'Governance Solutions' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
-    { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management' },
-    { name: 'AI Content Studio', href: '/ai-content-studio', icon: Code, description: 'Content Creation' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Users, description: 'Chatbot Platform' },
-    { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, description: 'Email Marketing' },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-builder', icon: Smartphone, description: 'Mobile Development' },
-    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, description: 'SEO Tools' },
-    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: BarChart, description: 'Invoice Management' },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'Writing Tools' },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Analytics Platform' },
-    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Scheduling Tools' },
-    { name: 'Expense Tracker', href: '/expense-tracker', icon: BarChart, description: 'Expense Management' },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: CheckSquare, description: 'Task Management' },
-    { name: 'CRM Lite', href: '/crm-lite', icon: Users, description: 'Lightweight CRM' },
-    { name: 'Email Optimizer', href: '/email-optimizer', icon: Mail, description: 'Email Optimization' },
-    { name: 'Social Media Manager', href: '/social-media-manager', icon: Globe, description: 'Social Media Tools' },
-    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools' },
-    { name: 'Landing Page Builder', href: '/landing-page-builder', icon: Globe, description: 'Page Builder' },
-    { name: 'SEO Optimizer', href: '/seo-optimizer', icon: Search, description: 'SEO Tools' },
-    { name: 'Ad Campaign Manager', href: '/ad-campaign-manager', icon: BarChart, description: 'Ad Management' },
-    { name: 'Code Assistant', href: '/code-assistant', icon: Code, description: 'Development Tools' },
-    { name: 'API Builder', href: '/api-builder', icon: Settings, description: 'API Development' },
-    { name: 'Bug Tracker Pro', href: '/bug-tracker-pro', icon: Shield, description: 'Bug Tracking' },
-    { name: 'Doc Generator', href: '/doc-generator', icon: FileText, description: 'Documentation' },
-    { name: 'AI Recruitment Assistant', href: '/ai-recruitment-assistant', icon: Users, description: 'HR & Recruitment' },
-    { name: 'Medical Records Manager', href: '/medical-records-manager', icon: Shield, description: 'Healthcare' },
-    { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', icon: BarChart, description: 'Finance & Accounting' },
-    { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
-    { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
-    { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
+    { name: 'Micro SAAS Solutions', to: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
+    { name: 'AI Analytics Dashboard', to: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
+    { name: 'AI-Powered CRM', to: '/ai-crm', icon: Users, description: 'Customer Management' },
+    { name: 'AI Content Studio', to: '/ai-content-studio', icon: Code, description: 'Content Creation' },
+    { name: 'AI Chatbot Builder', to: '/ai-chatbot-builder', icon: Users, description: 'Chatbot Platform' },
+    { name: 'AI Email Marketing', to: '/ai-email-marketing', icon: Mail, description: 'Email Marketing' },
+    { name: 'AI Mobile App Builder', to: '/ai-mobile-app-builder', icon: Smartphone, description: 'Mobile Development' },
+    { name: 'AI SEO Optimizer', to: '/ai-seo-optimizer', icon: Search, description: 'SEO Tools' },
+    { name: 'AI Invoice Generator', to: '/ai-invoice-generator', icon: BarChart, description: 'Invoice Management' },
+    { name: 'AI Writing Assistant', to: '/ai-writing-assistant', icon: Code, description: 'Writing Tools' },
+    { name: 'Smart Analytics', to: '/smart-analytics', icon: BarChart, description: 'Analytics Platform' },
+    { name: 'AI Scheduler', to: '/ai-scheduler', icon: Calendar, description: 'Scheduling Tools' },
+    { name: 'Expense Tracker', to: '/expense-tracker', icon: BarChart, description: 'Expense Management' },
+    { name: 'Task Manager Pro', to: '/task-manager-pro', icon: CheckSquare, description: 'Task Management' },
+    { name: 'CRM Lite', to: '/crm-lite', icon: Users, description: 'Lightweight CRM' },
+    { name: 'Email Optimizer', to: '/email-optimizer', icon: Mail, description: 'Email Optimization' },
+    { name: 'Social Media Manager', to: '/social-media-manager', icon: Globe, description: 'Social Media Tools' },
+    { name: 'AI Design Studio', to: '/ai-design-studio', icon: Sparkles, description: 'Design Tools' },
+    { name: 'Landing Page Builder', to: '/landing-page-builder', icon: Globe, description: 'Page Builder' },
+    { name: 'SEO Optimizer', to: '/seo-optimizer', icon: Search, description: 'SEO Tools' },
+    { name: 'Ad Campaign Manager', to: '/ad-campaign-manager', icon: BarChart, description: 'Ad Management' },
+    { name: 'Code Assistant', to: '/code-assistant', icon: Code, description: 'Development Tools' },
+    { name: 'API Builder', to: '/api-builder', icon: Settings, description: 'API Development' },
+    { name: 'Bug Tracker Pro', to: '/bug-tracker-pro', icon: Shield, description: 'Bug Tracking' },
+    { name: 'Doc Generator', to: '/doc-generator', icon: FileText, description: 'Documentation' },
+    { name: 'AI Recruitment Assistant', to: '/ai-recruitment-assistant', icon: Users, description: 'HR & Recruitment' },
+    { name: 'Medical Records Manager', to: '/medical-records-manager', icon: Shield, description: 'Healthcare' },
+    { name: 'AI Accounting Assistant', to: '/ai-accounting-assistant', icon: BarChart, description: 'Finance & Accounting' },
+    { name: 'Property Management AI', to: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
+    { name: 'Legal Document Manager', to: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
+    { name: 'Online Learning Platform', to: '/online-learning-platform', icon: Users, description: 'Education' },
+    { name: 'Supply Chain Optimizer', to: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
   ];
   const emergingTech = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
-    { name: 'Robotics & Automation', href: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
-    { name: 'IoT & Edge Computing', href: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
-    { name: 'Blockchain & Web3', href: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' },
-    { name: '5G Implementation', href: '/5g-implementation', icon: Globe, description: '5G Solutions' },
-    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
-    { name: 'Holographic Workspace', href: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
+    { name: 'Quantum Computing', to: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
+    { name: 'Robotics & Automation', to: '/robotics', icon: Brain, description: 'Intelligent Robotics' },
+    { name: 'IoT & Edge Computing', to: '/iot-edge-computing', icon: Globe, description: 'Connected Devices' },
+    { name: 'Blockchain & Web3', to: '/blockchain-web3', icon: Shield, description: 'Decentralized Solutions' },
+    { name: 'Business Intelligence', to: '/business-intelligence', icon: BarChart, description: 'Data Insights' },
+    { name: 'Autonomous Systems', to: '/autonomous-systems', icon: Zap, description: 'Self-Managing Systems' },
+    { name: '5G Implementation', to: '/5g-implementation', icon: Globe, description: '5G Solutions' },
+    { name: 'AI 3D Generation', to: '/ai-3d-generation', icon: Brain, description: '3D AI Solutions' },
+    { name: 'Holographic Workspace', to: '/ai-holographic-workspace', icon: Brain, description: 'Holographic AI' }
   ];
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -155,7 +155,7 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
+          <Link to="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
               <Brain className="w-5 h-5 text-white" />
             </div>
@@ -163,7 +163,7 @@ const Navigation: React.FC = () => {
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Home
             </Link>
             {/* AI Services Dropdown */}
@@ -182,7 +182,7 @@ const Navigation: React.FC = () => {
                     {aiServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -214,7 +214,7 @@ const Navigation: React.FC = () => {
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -246,7 +246,7 @@ const Navigation: React.FC = () => {
                     {microSaasServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -278,7 +278,7 @@ const Navigation: React.FC = () => {
                     {emergingTech.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
                         onClick={closeAllMenus}
                       >
@@ -294,19 +294,19 @@ const Navigation: React.FC = () => {
                 </div>
               )}
             </div>
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               About
             </Link>
-            <Link href="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Services
             </Link>
-            <Link href="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Pricing
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Blog
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
               Contact
             </Link>
           </div>
@@ -342,7 +342,7 @@ const Navigation: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
-              <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Home
               </Link>
               {/* Mobile AI Services */}
@@ -362,7 +362,7 @@ const Navigation: React.FC = () => {
                     {aiServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -370,7 +370,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/ai-services"
+                      to="/ai-services"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -396,7 +396,7 @@ const Navigation: React.FC = () => {
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -423,7 +423,7 @@ const Navigation: React.FC = () => {
                     {microSaasServices.slice(0, 8).map((service) => (
                       <Link
                         key={service.name}
-                        href={service.href}
+                        to={service.href}
                         className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-300"
                         onClick={closeAllMenus}
                       >
@@ -431,7 +431,7 @@ const Navigation: React.FC = () => {
                       </Link>
                     ))}
                     <Link
-                      href="/micro-saas"
+                      to="/micro-saas"
                       className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
                       onClick={closeAllMenus}
                     >
@@ -440,19 +440,19 @@ const Navigation: React.FC = () => {
                   </div>
                 )}
               </div>
-              <Link href="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/about" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 About
               </Link>
-              <Link href="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/services" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Services
               </Link>
-              <Link href="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/pricing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Pricing
               </Link>
-              <Link href="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/blog" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Blog
               </Link>
-              <Link href="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
+              <Link to="/contact" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
                 Contact
               </Link>
               {/* Mobile Contact Info */}

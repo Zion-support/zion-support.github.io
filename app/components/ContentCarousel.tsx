@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -59,6 +57,45 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="bg-gradient-to-r from-cyan-600 to-purple-600 py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Why Choose Zion Tech Group?
+          </h2>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            Discover the features and benefits that make us the leading choice for AI and IT solutions.
+          </p>
+        </div>
+
+        <div className="relative">
+          <div className="overflow-hidden rounded-xl">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+            >
+              {slides.map((slide, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8">
+                    <div className="text-center mb-8">
+                      <div className="w-20 h-20 bg-white/20 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <slide.icon className="w-10 h-10 text-white" />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-4">{slide.title}</h3>
+                      <p className="text-white/80 text-lg mb-6">{slide.description}</p>
+                    </div>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {slide.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center space-x-3">
+                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                          <span className="text-white">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -88,6 +125,13 @@ const ContentCarousel: React.FC = () => {
               />
             ))}
           </div>
+        </div>
+
+        <div className="mt-12 text-center">
+          <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2 mx-auto">
+            <span>Get Started Today</span>
+            <ArrowRight className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </div>
