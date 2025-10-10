@@ -26,6 +26,15 @@ const Navigation: React.FC = () => {
     setIsSpecializedOpen(false);
   };
 
+  const handlePhoneClick = () => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'navigation_phone_number'
+      });
+    }
+  };
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
     if (isMenuOpen) {
@@ -207,10 +216,17 @@ const Navigation: React.FC = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
+            <a href="/" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Home
+            </a>
+            <a href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              About
+            </a>
+            
             <div className="relative group">
               <button
                 onClick={toggleServices}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
+                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
               >
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -345,35 +361,33 @@ const Navigation: React.FC = () => {
               )}
             </div>
 
-            <a href="/about" className="text-white hover:text-cyan-400 transition-colors">
-              About
-            </a>
-            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
-            </a>
-            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </a>
-            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/pricing" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Pricing
             </a>
-            <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/case-studies" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Case Studies
+            </a>
+            <a href="/blog" className="text-white hover:text-cyan-400 transition-colors font-medium">
+              Blog
+            </a>
+            <a href="/enterprise" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Enterprise
             </a>
-            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            <a href="/contact" className="text-white hover:text-cyan-400 transition-colors font-medium">
               Contact
             </a>
             
             <div className="flex items-center space-x-4">
               <a
                 href="tel:+13024640950"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
+                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors font-medium"
+                onClick={handlePhoneClick}
               >
                 <Phone className="w-4 h-4" />
                 <span className="hidden sm:inline">+1 302 464 0950</span>
               </a>
               <a href="/contact"
-                className="cyber-button px-4 py-2 text-sm"
+                className="cyber-button px-6 py-2 text-sm font-semibold hover:scale-105 transition-all duration-300"
               >
                 Get Started
               </a>
@@ -444,32 +458,33 @@ const Navigation: React.FC = () => {
                 )}
               </div>
 
-              <a href="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-              </a>
-              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </a>
-              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </a>
-              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/pricing" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
                 Pricing
               </a>
-              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
+              <a href="/case-studies" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+                Case Studies
+              </a>
+              <a href="/blog" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+                Blog
+              </a>
+              <a href="/enterprise" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
+                Enterprise
+              </a>
+              <a href="/contact" className="block text-white hover:text-cyan-400 transition-colors font-medium" onClick={closeAllMenus}>
                 Contact
               </a>
               
               <div className="pt-4 border-t border-gray-700">
                 <a
                   href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4"
+                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-4 font-medium"
+                  onClick={handlePhoneClick}
                 >
                   <Phone className="w-4 h-4" />
                   <span>+1 302 464 0950</span>
                 </a>
                 <a href="/contact"
-                  className="block cyber-button px-4 py-2 text-center"
+                  className="block cyber-button px-6 py-3 text-center font-semibold hover:scale-105 transition-all duration-300"
                   onClick={closeAllMenus}
                 >
                   Get Started
