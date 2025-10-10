@@ -25,7 +25,8 @@ const ServicesPage: React.FC = () => {
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-services'
     },
     {
       icon: Brain,
@@ -516,58 +517,186 @@ const ServicesPage: React.FC = () => {
     },
     // Micro SAAS Services
     {
-      id: 1,
-      title: 'AI Solutions',
-      description: 'Comprehensive artificial intelligence solutions for business automation and optimization.',
-      icon: Brain,
-      category: 'AI',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
-      price: 'Starting at $5,000/month'
-    },
-    {
-      id: 2,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for modern businesses.',
-      icon: Cloud,
-      category: 'Cloud',
-      features: ['AWS/Azure/GCP', 'Cloud Migration', 'Auto-scaling', 'Disaster Recovery'],
-      price: 'Starting at $2,000/month'
-    },
-    {
-      id: 3,
-      title: 'Cybersecurity',
-      description: 'Advanced security solutions to protect your digital assets and data.',
-      icon: Shield,
-      category: 'Security',
-      features: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response'],
-      price: 'Starting at $3,000/month'
-    },
-    {
-      id: 4,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
       icon: BarChart3,
-      category: 'Analytics',
-      features: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting'],
-      price: 'Starting at $1,500/month'
+      title: 'AI-Powered Analytics Dashboard',
+      description: 'Real-time business intelligence dashboard with AI-driven insights and predictive analytics.',
+      features: ['Real-time Data Visualization', 'AI-Powered Insights', 'Custom Reports', 'Mobile App', 'API Integration'],
+      price: 'Starting at $99/month',
+      category: 'Micro SAAS',
+      popular: true,
+      link: 'https://ziontechgroup.com/micro-saas/analytics-dashboard'
     },
     {
-      id: 5,
-      title: 'Mobile Development',
-      description: 'Custom mobile applications for iOS and Android platforms.',
-      icon: Smartphone,
-      category: 'Development',
-      features: ['iOS Apps', 'Android Apps', 'Cross-platform', 'UI/UX Design'],
-      price: 'Starting at $8,000/project'
+      icon: FileText,
+      title: 'AI Content Generator Pro',
+      description: 'Advanced AI-powered content creation tool for blogs, social media, and marketing materials.',
+      features: ['AI Writing Assistant', 'SEO Optimization', 'Multi-language Support', 'Brand Voice Training', 'Content Calendar'],
+      price: 'Starting at $49/month',
+      category: 'Micro SAAS',
+      popular: true,
+      link: 'https://ziontechgroup.com/micro-saas/content-generator'
     },
     {
-      id: 6,
-      title: 'Database Services',
-      description: 'Database design, optimization, and management services.',
+      icon: Mail,
+      title: 'Smart Email Marketing Suite',
+      description: 'Intelligent email marketing platform with AI-driven personalization and automation.',
+      features: ['AI Personalization', 'Automated Campaigns', 'A/B Testing', 'Analytics Dashboard', 'CRM Integration'],
+      price: 'Starting at $79/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/email-marketing'
+    },
+    {
+      icon: DollarSign,
+      title: 'Expense Tracker AI',
+      description: 'Smart expense management with receipt scanning, categorization, and financial insights.',
+      features: ['Receipt Scanning', 'AI Categorization', 'Expense Reports', 'Budget Tracking', 'Tax Preparation'],
+      price: 'Starting at $29/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/expense-tracker'
+    },
+    {
+      icon: Box,
+      title: 'Inventory Management System',
+      description: 'AI-powered inventory tracking with demand forecasting and automated reordering.',
+      features: ['Real-time Tracking', 'Demand Forecasting', 'Automated Reordering', 'Barcode Scanning', 'Multi-location Support'],
+      price: 'Starting at $149/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/inventory-management'
+    },
+    {
+      icon: Target,
+      title: 'Lead Scoring Intelligence',
+      description: 'AI-powered lead qualification and scoring system to maximize conversion rates.',
+      features: ['AI Lead Scoring', 'Behavioral Analysis', 'CRM Integration', 'Automated Follow-ups', 'Conversion Tracking'],
+      price: 'Starting at $89/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/lead-scoring'
+    },
+    {
+      icon: TrendingUp,
+      title: 'SEO Optimizer Pro',
+      description: 'Comprehensive SEO analysis and optimization tool with AI-powered recommendations.',
+      features: ['Keyword Research', 'Site Audit', 'Content Optimization', 'Rank Tracking', 'Competitor Analysis'],
+      price: 'Starting at $69/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/seo-optimizer'
+    },
+    {
+      icon: Globe,
+      title: 'Social Media Manager',
+      description: 'AI-powered social media management with content scheduling and performance analytics.',
+      features: ['Content Scheduling', 'AI Content Suggestions', 'Analytics Dashboard', 'Multi-platform Support', 'Engagement Tracking'],
+      price: 'Starting at $59/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/social-manager'
+    },
+    {
+      icon: Users,
+      title: 'Customer Support Chatbot',
+      description: 'Intelligent customer support chatbot with natural language processing and escalation.',
+      features: ['Natural Language Processing', 'Multi-language Support', 'Escalation to Humans', 'Knowledge Base Integration', 'Analytics'],
+      price: 'Starting at $199/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/ai-customer-support'
+    },
+    {
+      icon: Calendar,
+      title: 'Smart Appointment Scheduler',
+      description: 'AI-powered appointment booking system with calendar integration and automated reminders.',
+      features: ['Calendar Integration', 'Automated Reminders', 'Time Zone Support', 'Payment Processing', 'Custom Forms'],
+      price: 'Starting at $39/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/appointment-scheduler'
+    },
+    {
+      icon: CheckSquare,
+      title: 'Project Management AI',
+      description: 'Intelligent project management tool with AI-powered task prioritization and resource allocation.',
+      features: ['AI Task Prioritization', 'Resource Allocation', 'Progress Tracking', 'Team Collaboration', 'Deadline Management'],
+      price: 'Starting at $79/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/project-management'
+    },
+    {
+      icon: Shield,
+      title: 'Password Manager Pro',
+      description: 'Enterprise-grade password management with AI-powered security recommendations.',
+      features: ['Secure Password Storage', 'AI Security Analysis', 'Multi-device Sync', 'Team Sharing', 'Breach Monitoring'],
+      price: 'Starting at $19/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/password-manager'
+    },
+    {
+      icon: BarChart3,
+      title: 'Financial Analytics Dashboard',
+      description: 'Comprehensive financial tracking and analysis with AI-powered insights and forecasting.',
+      features: ['Financial Tracking', 'AI Forecasting', 'Investment Analysis', 'Tax Preparation', 'Report Generation'],
+      price: 'Starting at $89/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/financial-analytics'
+    },
+    {
+      icon: FileText,
+      title: 'Document Management System',
+      description: 'AI-powered document organization, search, and collaboration platform.',
+      features: ['AI Document Classification', 'Advanced Search', 'Version Control', 'Collaboration Tools', 'OCR Processing'],
+      price: 'Starting at $49/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/document-management'
+    },
+    {
+      icon: Users,
+      title: 'HR Management Suite',
+      description: 'Complete human resources management with AI-powered recruitment and employee analytics.',
+      features: ['Recruitment AI', 'Employee Analytics', 'Performance Tracking', 'Payroll Integration', 'Compliance Management'],
+      price: 'Starting at $129/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/hr-management'
+    },
+    {
+      icon: Globe,
+      title: 'Website Performance Monitor',
+      description: 'Real-time website monitoring with AI-powered performance optimization recommendations.',
+      features: ['Real-time Monitoring', 'AI Optimization Tips', 'Uptime Tracking', 'Performance Reports', 'Alert System'],
+      price: 'Starting at $39/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/website-monitor'
+    },
+    {
+      icon: Target,
+      title: 'Sales Pipeline Manager',
+      description: 'AI-powered sales pipeline tracking with predictive analytics and conversion optimization.',
+      features: ['Pipeline Tracking', 'AI Predictions', 'Conversion Analytics', 'Lead Management', 'Sales Forecasting'],
+      price: 'Starting at $99/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/sales-pipeline'
+    },
+    {
       icon: Database,
-      category: 'Database',
-      features: ['Database Design', 'Performance Optimization', 'Data Migration', 'Backup & Recovery'],
-      price: 'Starting at $1,000/month'
+      title: 'Data Backup & Recovery',
+      description: 'Automated data backup solution with AI-powered recovery and disaster prevention.',
+      features: ['Automated Backups', 'AI Recovery', 'Version Control', 'Cloud Storage', 'Disaster Recovery'],
+      price: 'Starting at $29/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/data-backup'
+    },
+    {
+      icon: Settings,
+      title: 'API Management Platform',
+      description: 'Comprehensive API development, testing, and management with AI-powered optimization.',
+      features: ['API Development', 'Testing Tools', 'AI Optimization', 'Documentation', 'Analytics'],
+      price: 'Starting at $149/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/api-management'
+    },
+    {
+      icon: Brain,
+      title: 'AI Code Assistant',
+      description: 'AI-powered coding assistant with code generation, debugging, and optimization suggestions.',
+      features: ['Code Generation', 'Debugging Help', 'Code Review', 'Documentation', 'Multi-language Support'],
+      price: 'Starting at $79/month',
+      category: 'Micro SAAS',
+      link: 'https://ziontechgroup.com/micro-saas/code-assistant'
     }
   ];
   const categories = [
@@ -613,8 +742,8 @@ const ServicesPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Our Services;
-  </
+              Our Services
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions designed to transform your business 
               and drive growth.
@@ -680,16 +809,16 @@ const ServicesPage: React.FC = () => {
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
               </h2>
               <span className="text-gray-300">
-                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found;
-  </
+                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
+              </span>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentServices.map((service, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Popular;
-  </
+                      Popular
+                    </div>
                   )}
                   <div className="flex items-start mb-6">
                     <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors flex-shrink-0">
@@ -716,8 +845,8 @@ const ServicesPage: React.FC = () => {
                       ))}
                       {service.features.length > 4 && (
                         <li className="text-gray-400 text-sm">
-                          +{service.features.length - 4} more features;
-  </
+                          +{service.features.length - 4} more features
+                        </li>
                       )}
                     </ul>
                   </div>
@@ -726,13 +855,19 @@ const ServicesPage: React.FC = () => {
                     <div className="text-sm text-gray-300">Contact for custom pricing</div>
                   </div>
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
+                    <a 
+                      href={service.link || '/contact'} 
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105"
+                    >
                       Get Quote
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                      Learn More;
-  </
+                    </a>
+                    <a 
+                      href={service.link || '/contact'} 
+                      className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300 text-center"
+                    >
+                      Learn More
+                    </a>
                   </div>
                 </div>
               ))}
@@ -744,8 +879,8 @@ const ServicesPage: React.FC = () => {
                   onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
                   disabled={currentPage === 1}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
-                  Previous;
-  </
+                  Previous
+                </button>
                 <div className="flex space-x-2">
                   {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
                     <button
@@ -765,8 +900,8 @@ const ServicesPage: React.FC = () => {
                   onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
                   disabled={currentPage === totalPages}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white hover:bg-white/20 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300">
-                  Next;
-  </
+                  Next
+                </button>
               </div>
             )}
           </div>
@@ -781,12 +916,18 @@ const ServicesPage: React.FC = () => {
               Let's discuss your project and find the perfect solution for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Free Consultation;
-  </
-              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
-                View Portfolio;
-  </
+              <a 
+                href="/contact" 
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 text-center"
+              >
+                Get Free Consultation
+              </a>
+              <a 
+                href="/case-studies" 
+                className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300 text-center"
+              >
+                View Portfolio
+              </a>
             </div>
           </div>
         </section>
@@ -795,12 +936,3 @@ const ServicesPage: React.FC = () => {
   );
 };
 export default ServicesPage;
-  </button>
-  </button>
-  </button>
-  </button>
-  </button>
-  </li>
-  </span>
-  </h1>
-  </div>
