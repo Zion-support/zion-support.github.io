@@ -1,47 +1,82 @@
 'use client';
-
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
+
+interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
-  const pathnames = location.pathname.split('/').filter((x) => x);
+  
+  const generateBreadcrumbs = (): BreadcrumbItem[] => {
+    const pathSegments = location.pathname.split('/').filter(Boolean);
+    const breadcrumbs: BreadcrumbItem[] = [
+      { label: 'Home', href: '/' }
+    ];
+
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {
+      currentPath += `/${segment}`;
+      const isLast = index === pathSegments.length - 1;
+      
+      // Convert segment to readable label
+      const label = segment
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+
+      breadcrumbs.push({
+        label,
+        href: isLast ? undefined : currentPath
+      });
+    });
+
+    return breadcrumbs;
+  };
+
+  const breadcrumbs = generateBreadcrumbs();
+
+  // Don't show breadcrumb on home page
+  if (breadcrumbs.length <= 1) {
+    return null;
+  }
 
   return (
-    <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-white/10 py-4">
-      <div className="container mx-auto px-4">
+    <nav 
+      className="bg-gray-800/50 backdrop-blur-sm border-b border-gray-700 py-2 px-4"
+      aria-label="Breadcrumb"
+    >
+      <div className="max-w-7xl mx-auto">
         <ol className="flex items-center space-x-2 text-sm">
-          <li>
-            <Link
-              to="/"
-              className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors"
-            >
-              <Home className="w-4 h-4 mr-1" />
-              Home
-            </Link>
-          </li>
-          {pathnames.map((name, index) => {
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
-            const isLast = index === pathnames.length - 1;
-            const displayName = name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ');
-
-            return (
-              <li key={name} className="flex items-center">
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
-                {isLast ? (
-                  <span className="text-white font-medium">{displayName}</span>
-                ) : (
-                  <Link
-                    to={routeTo}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors"
-                  >
-                    {displayName}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
+          {breadcrumbs.map((item, index) => (
+            <li key={index} className="flex items-center">
+              {index === 0 ? (
+                <Home className="w-4 h-4 text-gray-400" />
+              ) : (
+                <ChevronRight className="w-4 h-4 text-gray-500 mx-2" />
+              )}
+              
+              {item.href ? (
+                <a
+                  href={item.href}
+                  className="text-gray-300 hover:text-white transition-colors duration-200"
+                  aria-current={index === breadcrumbs.length - 1 ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <span 
+                  className="text-white font-medium"
+                  aria-current="page"
+                >
+                  {item.label}
+                </span>
+              )}
+            </li>
+          ))}
         </ol>
       </div>
     </nav>

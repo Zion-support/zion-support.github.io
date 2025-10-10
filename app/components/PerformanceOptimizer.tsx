@@ -1,139 +1,91 @@
 'use client';
-import React from 'react';
-'use client';
-
-import React, { useEffect, useState, useCallback } from 'react';
-import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
-  className?: string;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, className = '' }) => {
-  const [isOptimizing, setIsOptimizing] = useState(false);
-  const [optimizations, setOptimizations] = useState<string[]>([]);
-  const [performanceScore, setPerformanceScore] = useState<number | null>(null);
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true
+}) => {
+  useEffect(() => {
+    // Preload critical resources
+    if (enablePreloading) {
+      const criticalResources = [
+        '/fonts/inter-var.woff2',
+        '/css/critical.css'
+      ];
 
-  const optimizeImages = useCallback(() => {
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-      if (!img.loading) {
-        img.loading = 'lazy';
-      }
-      if (!img.decoding) {
-        img.decoding = 'async';
-      }
-    });
-  }, []);
-
-  const optimizeMemory = useCallback(() => {
-    if ('memory' in performance) {
-      const memory = (performance as any).memory;
-      if (memory.usedJSHeapSize > memory.jsHeapSizeLimit * 0.8) {
-        // Trigger garbage collection if available
-        if (window.gc) {
-          window.gc();
+      criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.woff2') ? 'font' : 'style';
+        if (resource.endsWith('.woff2')) {
+          link.crossOrigin = 'anonymous';
         }
-      }
+        document.head.appendChild(link);
+      });
     }
-  }, []);
-
-  const runOptimizations = useCallback(async () => {
-    setIsOptimizing(true);
-    const newOptimizations: string[] = [];
 
     // Optimize images
-    optimizeImages();
-    newOptimizations.push('Images optimized for lazy loading');
+    if (enableImageOptimization) {
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        // Add loading="lazy" for images below the fold
+        if (enableLazyLoading && !img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add decoding="async" for better performance
+        if (!img.hasAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+    }
 
-    // Optimize memory
-    optimizeMemory();
-    newOptimizations.push('Memory optimization applied');
+    // Prefetch next page resources
+    if (enablePreloading) {
+      const prefetchLinks = [
+        '/about',
+        '/services',
+        '/contact'
+      ];
 
-    // Calculate performance score
-    const score = Math.floor(Math.random() * 30) + 70; // Simulate score between 70-100
-    setPerformanceScore(score);
-    newOptimizations.push(`Performance score: ${score}/100`);
+      prefetchLinks.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'prefetch';
+        link.href = href;
+        document.head.appendChild(link);
+      });
+    }
 
-    setOptimizations(newOptimizations);
-    setIsOptimizing(false);
-  }, [optimizeImages, optimizeMemory]);
+    // Optimize scroll performance
+    let ticking = false;
+    const optimizeScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          // Throttle scroll events
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-  useEffect(() => {
-    // Initial optimization
-    optimizeImages();
-    
-    // Re-optimize on route changes
-    const observer = new MutationObserver(optimizeImages);
-    observer.observe(document.body, { childList: true, subtree: true });
+    window.addEventListener('scroll', optimizeScroll, { passive: true });
 
-    return () => observer.disconnect();
-  }, [optimizeImages]);
+    return () => {
+      window.removeEventListener('scroll', optimizeScroll);
+    };
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
-  useEffect(() => {
-    const interval = setInterval(optimizeMemory, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
-  }, [optimizeMemory]);
-
-  return (
-    <>
-      {children}
-      <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-        <div className="flex items-center justify-between mb-4">
-          <h3 className="text-lg font-semibold text-gray-900 flex items-center">
-            <Settings className="h-5 w-5 mr-2 text-blue-600" />
-            Performance Optimizer
-          </h3>
-          <button
-            onClick={runOptimizations}
-            disabled={isOptimizing}
-            className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
-          >
-            <Zap className="h-4 w-4 mr-2" />
-            {isOptimizing ? 'Optimizing...' : 'Optimize'}
-          </button>
-        </div>
-
-        {optimizations.length > 0 && (
-          <div className="space-y-2 mb-4">
-            {optimizations.map((optimization, index) => (
-              <div key={index} className="flex items-center text-sm text-green-600">
-                <CheckCircle className="h-4 w-4 mr-2" />
-                {optimization}
-              </div>
-            ))}
-          </div>
-        )}
-
-        {performanceScore && (
-          <div className="mt-4">
-            <div className="flex items-center justify-between mb-2">
-              <span className="text-sm font-medium text-gray-700">Performance Score</span>
-              <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-500 ${
-                  performanceScore >= 90 ? 'bg-green-500' : 
-                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
-                }`}
-                style={{ width: `${performanceScore}%` }}
-              />
-            </div>
-            {performanceScore < 90 && (
-              <div className="mt-2 flex items-center">
-                <AlertTriangle className="h-4 w-4 text-yellow-600" />
-                <span className="text-sm text-yellow-800 ml-2">
-                  Performance can be improved. Consider additional optimizations.
-                </span>
-              </div>
-            )}
-          </div>
-        )}
-      </div>
-    </>
-  );
+  return null;
 };
 
 export default PerformanceOptimizer;
