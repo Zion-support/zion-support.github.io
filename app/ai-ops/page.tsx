@@ -5,12 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, Settings, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-const AIOpsPage: React.FC = () => {
-  const features = [
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       icon: Settings,
       title: 'Intelligent IT Operations',
       description: 'AI-powered IT operations that automatically detect, diagnose, and resolve issues before they impact your business.',
@@ -30,127 +24,15 @@ const AIOpsPage: React.FC = () => {
     },
     {
       icon: Users,
-<<<<<<< HEAD
-=======
-      title: 'Self-Healing Systems',
-      description: 'Systems that automatically detect and fix issues without human intervention, reducing manual work.',
-      benefits: ['Automatic fixes', 'Reduced manual work', 'Improved reliability']
-    },
-    {
-      icon: Shield,
-      title: 'Security Automation',
-      description: 'AI-driven security operations that automatically detect and respond to threats in real-time.',
-      benefits: ['Threat detection', 'Automated response', 'Security analytics']
-    },
-    {
-      icon: BarChart,
-      title: 'Performance Optimization',
-      description: 'Continuously optimize system performance using AI to analyze patterns and suggest improvements.',
-      benefits: ['Performance insights', 'Optimization recommendations', 'Capacity planning']
-    }
-  ];
-
-  const benefits = [
-    'Reduce IT downtime by up to 90%',
-    'Cut operational costs by 60%',
-    'Improve system reliability by 95%',
-    'Faster incident resolution',
-    'Proactive issue prevention',
-    'Enhanced security posture'
-  ];
-
-  const useCases = [
-    {
-      title: 'Enterprise IT',
-      description: 'Manage complex enterprise IT environments with AI-powered automation',
-      icon: '🏢'
-    },
-    {
-      title: 'Cloud Operations',
-      description: 'Optimize cloud infrastructure and services with intelligent monitoring',
-      icon: '☁️'
-    },
-    {
-      title: 'DevOps Teams',
-      description: 'Accelerate DevOps workflows with automated testing and deployment',
-      icon: '⚙️'
-    },
-    {
-      title: 'Security Teams',
-      description: 'Enhance security operations with AI-driven threat detection and response',
-      icon: '🔒'
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     }
   ];
 
   return (
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Ops - Zion Tech Group | Intelligent IT Operations</title>
-        <meta name="description" content="Transform your IT operations with AI-powered automation, monitoring, and incident response. Reduce downtime and improve efficiency with Zion Tech Group's AI Ops solutions." />
-        <meta name="keywords" content="AI Ops, IT operations, automation, monitoring, incident response, DevOps, cloud operations" />
-      </Helmet>
-      
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            AI Ops
-            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your IT operations with AI-powered automation, monitoring, and incident response. 
-            Reduce downtime, improve efficiency, and enhance security with intelligent operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
-              Get AI Ops Demo
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Learn More
-            </button>
-</div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Intelligent IT Operations
-            </h2>
-            <h2 className="text-4xl font-bold text-white mb-4">AI Ops Features</h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our AI Ops solutions combine machine learning, automation, and intelligent monitoring 
               to revolutionize how you manage your IT infrastructure.
             </p>
           </div>
-<<<<<<< HEAD
-=======
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                   ))}
                 </ul>
 </div>
@@ -209,32 +91,10 @@ const AIOpsPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
           <p className="text-xl text-gray-300 mb-8">
             Discover how AI Ops can revolutionize your IT infrastructure management. 
             Get started with a free consultation and demo.
           </p>
-=======
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your IT Operations?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Discover how AI Ops can revolutionize your IT infrastructure management. 
-            Get started with a free consultation and demo.
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your IT Operations?</h2>
-          <p className="text-xl text-gray-100 mb-8">
-            Get started with AI Ops today and experience the future of intelligent IT operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Get Free Consultation
-            <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </button>
             <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo

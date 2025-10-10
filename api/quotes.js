@@ -1,11 +1,5 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-=======
-    res.statusCode = 405;
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
     return;
   }
 
@@ -13,12 +7,6 @@ export default async function handler(req, res) {
     const { name, email, phone, details } = req.body || {};
 
     if (!name || !email || !phone || !details) {
-<<<<<<< HEAD
-=======
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       return;
     }
 

@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 import {
   BarChart3,
   TrendingUp,
@@ -62,10 +54,6 @@ import {
   Phone as PhoneIcon,
   Mail as MailIcon,
   MapPin as Location
-<<<<<<< HEAD
-=======
-} from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
 
 const AIAnalyticsDashboardPage: React.FC = () => {
   const features = [
@@ -109,77 +97,12 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
   const benefits = [
     'Reduce data analysis time by 90%',
-<<<<<<< HEAD
 
   const useCases = [
     {
     }
   ],
 
-=======
-    'Increase decision-making speed by 75%',
-    'Improve data accuracy by 95%',
-    'Lower operational costs by 40%',
-    'Enable real-time business insights',
-    'Automate routine reporting tasks',
-    'Scale analytics across departments',
-    'Enhance competitive advantage'
-  ];
-
-  const useCases = [
-    {
-      title: 'Business Intelligence',
-      description: 'Transform raw data into actionable business insights',
-      icon: '📊'
-    },
-    {
-      title: 'Financial Analytics',
-      description: 'Monitor financial performance and predict trends',
-      icon: '💰'
-    },
-    {
-      title: 'Marketing Analytics',
-      description: 'Track campaign performance and customer behavior',
-      icon: '📈'
-    },
-    {
-      title: 'Operations Dashboard',
-      description: 'Monitor operational efficiency and KPIs',
-      icon: '⚙️'
-    },
-    {
-      title: 'Customer Analytics',
-      description: 'Understand customer behavior and preferences',
-      icon: '👥'
-    },
-    {
-      title: 'Sales Performance',
-      description: 'Track sales metrics and forecast revenue',
-      icon: '🎯'
-    }
-  ],
-
-  return (
-    <>
-      <Helmet>
-        <title>AI Analytics Dashboard - Zion Tech Group</title>
-        <meta name="description" content="Transform your data into actionable insights with our AI Analytics Dashboard. Real-time analytics, predictive modeling, and custom dashboards for better business decisions." />
-        <meta name="keywords" content="AI analytics, business intelligence, data visualization, predictive analytics, dashboard, data insights" />
-      </Helmet>
-
-      <Navigation />
-
-      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mb-8">
-              <BarChart3 className="w-10 h-10 text-white" />
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Analytics Dashboard
-            </h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your data into actionable insights with our advanced AI Analytics Dashboard. 
               Real-time analytics, predictive modeling, and custom dashboards for better business decisions.
@@ -196,59 +119,6 @@ const AIAnalyticsDashboardPage: React.FC = () => {
           </div>
         </section>
 
-<<<<<<< HEAD
-=======
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Analytics Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Our AI Analytics Dashboard combines cutting-edge technology with intuitive design
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg mb-4">
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  <ul className="space-y-2">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
-                        {benefit}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Applications & Use Cases
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                From startups to enterprises, our AI Analytics Dashboard serves diverse industries
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center">
-                  <div className="text-4xl mb-4">{useCase.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
-                  <p className="text-gray-300">{useCase.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
                 </div>
               ))}
             </div>
@@ -300,15 +170,3 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
-        </section>
-      </main>
-
-      <Footer />
-    </>
-  );
-};
-
-export default AIAnalyticsDashboardPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb

@@ -5,12 +5,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
-const FinancialITPage: React.FC = () => {
-  const features = [
-    {
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
       icon: DollarSign,
       title: 'SOX Compliance',
       description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -89,18 +83,6 @@ const FinancialITPage: React.FC = () => {
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Schedule Demo;
             </button>
-<<<<<<< HEAD
-=======
-</div>
-
-        </div>
-      </section>
-
-      {/* Features Section */}
-<section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions<p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed specifically for financial services industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{features.map((feature, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
@@ -131,51 +113,6 @@ const FinancialITPage: React.FC = () => {
                 </ul>
 </div>
 
-<<<<<<< HEAD
-=======
-            <h2 className="text-4xl font-bold text-white mb-4">Financial IT Features</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive financial technology solutions for modern banking
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Financial IT?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your financial operations with proven technology solutions
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             ))}
           </div>
         </div>
@@ -233,11 +170,6 @@ const FinancialITPage: React.FC = () => {
 
       {/* CTA Section */}
 <section className="py-20 px-4">
-<<<<<<< HEAD
-=======
-
-        <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?<p className="text-xl text-gray-300 mb-8">Join leading financial institutions using our specialized IT solutions for compliance and security</p>
         <div className="max-w-4xl mx-auto text-center"></section>
           <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2><p className="text-xl text-gray-300 mb-8">Join leading financial institutions using our specialized IT solutions for compliance and security</p>
@@ -254,22 +186,6 @@ const FinancialITPage: React.FC = () => {
             </button>
             <button className="border border-green-400 text-green-400 hover:bg-green-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales;
-<<<<<<< HEAD
-=======
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Transform Your Financial Operations?</h2>
-          <p className="text-xl text-gray-100 mb-8">
-            Get started with financial IT solutions today and modernize your banking infrastructure.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
             </button>
           </div>
         </div>

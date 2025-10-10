@@ -150,7 +150,3 @@ const PageOptimizedPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-=======
-export default PageOptimizedPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-a7bb
