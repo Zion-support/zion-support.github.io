@@ -163,10 +163,9 @@ logo: '/images/partners/google-cloud.png',
               </Link>
             </div>
           </div>
-        </div>
+        </section>
       </div>
-    </>
-
+    </div>
   );
 };
 

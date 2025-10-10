@@ -159,7 +159,8 @@ description: 'Create game assets, characters, and environments instantly',
               </button>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
 {/* Applications Section */}
       <section className="py-20 px-4">
@@ -220,9 +221,10 @@ description: 'Create game assets, characters, and environments instantly',
               ))}
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-{/* CTA Section */}
+      {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -289,11 +291,11 @@ description: 'Create game assets, characters, and environments instantly',
               </div>
             </div>
           </div>
-        </section>
-      </main>
+        </div>
+      </section>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

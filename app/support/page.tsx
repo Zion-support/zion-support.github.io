@@ -189,6 +189,6 @@ description: 'Connect with other users and experts',
           </div>
         </section>
       </div>
-    </>
-);
+    </div>
+  );
 }

@@ -219,8 +219,10 @@ const consultationTypes = [
           </div>
         </section>
 
-{/* Consultation Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+      {/* Consultation Form */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl font-bold text-white mb-6">Schedule Your Consultation</h2>
               
               {isSubmitted ? (
@@ -240,9 +242,10 @@ const consultationTypes = [
               </div>
             </div>
           </div>
-</div>
-      </div>
-    </>
+        </div>
+      </section>
 
+      <Footer />
+    </div>
   );
 }
