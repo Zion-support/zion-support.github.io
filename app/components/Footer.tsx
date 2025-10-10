@@ -42,7 +42,7 @@ const Footer: React.FC = memo(() => {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -71,6 +71,19 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
 
+          {/* Company Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="text-gray-300 hover:text-white text-sm transition-colors">About Us</Link></li>
+              <li><Link to="/careers" className="text-gray-300 hover:text-white text-sm transition-colors">Careers</Link></li>
+              <li><Link to="/partners" className="text-gray-300 hover:text-white text-sm transition-colors">Partners</Link></li>
+              <li><Link to="/case-studies" className="text-gray-300 hover:text-white text-sm transition-colors">Case Studies</Link></li>
+              <li><Link to="/blog" className="text-gray-300 hover:text-white text-sm transition-colors">Blog</Link></li>
+              <li><Link to="/contact" className="text-gray-300 hover:text-white text-sm transition-colors">Contact</Link></li>
+            </ul>
+          </div>
+
           {/* AI Services */}
           <div>
             <h3 className="text-lg font-semibold mb-4">AI Services</h3>
@@ -78,7 +91,7 @@ const Footer: React.FC = memo(() => {
               {aiServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
+                    to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
                     {service.name}
@@ -95,7 +108,7 @@ const Footer: React.FC = memo(() => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
+                    to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
                     {service.name}
@@ -112,13 +125,25 @@ const Footer: React.FC = memo(() => {
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-                    href={service.url} 
+                    to={service.url} 
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
                     {service.name}
                   </Link>
                 </li>
               ))}
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <ul className="space-y-2">
+              <li><Link to="/support" className="text-gray-300 hover:text-white text-sm transition-colors">Help Center</Link></li>
+              <li><Link to="/faq" className="text-gray-300 hover:text-white text-sm transition-colors">FAQ</Link></li>
+              <li><Link to="/demo" className="text-gray-300 hover:text-white text-sm transition-colors">Demo</Link></li>
+              <li><Link to="/consultation" className="text-gray-300 hover:text-white text-sm transition-colors">Free Consultation</Link></li>
+              <li><Link to="/pricing" className="text-gray-300 hover:text-white text-sm transition-colors">Pricing</Link></li>
             </ul>
           </div>
         </div>
@@ -130,13 +155,13 @@ const Footer: React.FC = memo(() => {
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Terms of Service
               </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <Link to="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Cookie Policy
               </Link>
             </div>
