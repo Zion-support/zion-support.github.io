@@ -4,10 +4,13 @@
  */
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export class AccessibilityEnhancer {private focusableElements: HTMLElement[] = [],}
   private skipLinks: HTMLElement[] = [],
   private landmarks: HTMLElement[] = [],
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 export class AccessibilityEnhancer {
   private focusableElements: HTMLElement[] = []
   private skipLinks: HTMLElement[] = []
@@ -93,8 +96,13 @@ export class AccessibilityEnhancer {
    * Handle escape key;
    */
 <<<<<<< HEAD
+<<<<<<< HEAD
   private handleEscapeKey(event: KeyboardEvent): void {,}
     // Close any open modals or dropdowns;
+=======
+  private handleEscapeKey(event: KeyboardEvent): void {
+    // Close any open modals or dropdowns
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     const modals = document.querySelectorAll('[role="dialog"][aria-hidden="false"]');
     modals.forEach(modal => {)
 =======
@@ -364,12 +372,15 @@ const liveRegion = document.createElement('div');
 // Create global instance;
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Export utility functions;
 export const announceToScreenReader = (message: string) => {,
   accessibilityEnhancer.announce(message);}export const updateFocusableElements = () => {accessibilityEnhancer.updateFocusableElements();}export const focusFirstElement = () => {accessibilityEnhancer.focusFirst();}export const focusLastElement = () => {accessibilityEnhancer.focusLast();}
 =======
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
 // Export utility functions
 export const announceToScreenReader = (message: string) => {
@@ -387,5 +398,8 @@ export const focusFirstElement = () => {
 export const focusLastElement = () => {
   accessibilityEnhancer.focusLast();
 }
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8

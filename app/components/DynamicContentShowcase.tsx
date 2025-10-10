@@ -8,6 +8,7 @@ const DynamicContentShowcase: React.FC = () => {,
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Cloud, Zap, Shield, Brain, Globe, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
@@ -22,11 +23,17 @@ import { Cloud, Zap, Shield, Brain, Globe, CheckCircle } from 'lucide-react';
 
 const DynamicContentShowcase: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+import { Cloud, Zap, Shield, Globe, Brain, Star, Users, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+
+const DynamicContentShowcase: React.FC = () => {
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   const [currentFeature, setCurrentFeature] = useState(0);
 
   const features = [
     {
       id: 1,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       title: 'AI Solutions',
@@ -68,6 +75,12 @@ const DynamicContentShowcase: React.FC = () => {
       icon: Brain,
       color: 'from-blue-500 to-purple-600'
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+      title: 'AI-Powered Analytics',
+      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+      icon: Brain,
+      color: 'from-cyan-500 to-blue-600'
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     },
     {
       id: 2,
@@ -102,17 +115,34 @@ const DynamicContentShowcase: React.FC = () => {
       title: 'AI Automation',
       description: 'Automate complex business processes with intelligent AI systems.',
       icon: Zap,
+<<<<<<< HEAD
       color: 'from-orange-500 to-red-600'
+=======
+      color: 'from-purple-500 to-pink-600'
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     },
     {
       id: 4,
       title: 'Cybersecurity Solutions',
       description: 'Protect your business with comprehensive AI-powered security solutions.',
       icon: Shield,
+<<<<<<< HEAD
       color: 'from-red-500 to-pink-600'
     }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+      color: 'from-red-500 to-orange-600'
+    },
+    {
+      id: 5,
+      title: 'Global Scalability',
+      description: 'Scale effortlessly across multiple regions with automatic load balancing.',
+      icon: Globe,
+      color: 'from-indigo-500 to-purple-600'
+    }
+  ];
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   const benefits = [
     'Advanced AI technology integration',
@@ -127,10 +157,13 @@ const DynamicContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   const testimonials = [
     {name: 'Sarah Johnson',
@@ -149,6 +182,7 @@ const DynamicContentShowcase: React.FC = () => {
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       rating: 5;,}];
 
   useEffect(() => {const timer = setInterval(() => {
@@ -164,10 +198,16 @@ const DynamicContentShowcase: React.FC = () => {
     }
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+      rating: 5
+    }
+  ];
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     }, 4000);
@@ -178,15 +218,29 @@ const DynamicContentShowcase: React.FC = () => {
 =======
     }, 5000);
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+    }, 5000);
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
     return () => clearInterval(timer);
   }, [features.length]);
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   return(<div className="py-16 px-4">)</div>
       <div className="max-w-7xl mx-auto">{/* Header */</div>} <div className="text-center mb-16">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>
 =======
+=======
+  const nextFeature = () => {
+    setCurrentFeature((prev) => (prev + 1) % features.length);
+  };
+
+  const prevFeature = () => {
+    setCurrentFeature((prev) => (prev - 1 + features.length) % features.length);
+  };
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   return (
     <div className="py-16 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="max-w-7xl mx-auto">
@@ -200,6 +254,7 @@ const DynamicContentShowcase: React.FC = () => {
           </p>
         </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -247,6 +302,32 @@ const DynamicContentShowcase: React.FC = () => {
                 </button>
               ))}
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+        {/* Feature Showcase */}
+        <div className="mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-white mb-4">
+                {features[currentFeature].title}
+              </h3>
+              <p className="text-lg text-gray-300 mb-6">
+                {features[currentFeature].description}
+              </p>
+              <div className="flex space-x-4">
+                <button
+                  onClick={prevFeature}
+                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300"
+                >
+                  <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+                <button
+                  onClick={nextFeature}
+                  className="p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300"
+                >
+                  <ChevronRight className="w-6 h-6 text-white" />
+                </button>
+              </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             </div>
           </div>
 
@@ -315,6 +396,7 @@ const DynamicContentShowcase: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">,</div>
             {benefits.map((benefit, index) => (
               <div key={index}className="flex items-center space-x-3 p-3 rounded-lg bg-white/5">
@@ -341,6 +423,15 @@ const DynamicContentShowcase: React.FC = () => {
                 <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit}</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-6 h-6 text-white" />
+                </div>
+                <p className="text-gray-300">{benefit}</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
               </div>
             ))}
           </div>

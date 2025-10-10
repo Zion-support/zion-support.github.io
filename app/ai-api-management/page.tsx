@@ -39,12 +39,25 @@ const AIApiManagementPage: React.FC = () => {,
   ];
   const stats = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     {icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' ,},
     {icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' ,},
     {icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' ,},
     {icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' ,}]
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">)</div>
       <Helmet />
+=======
+    { icon: <Zap className="w-8 h-8 text-blue-500" />, value: '99.9%', label: 'Uptime' },
+    { icon: <Shield className="w-8 h-8 text-green-500" />, value: '100%', label: 'Security' },
+    { icon: <Users className="w-8 h-8 text-purple-500" />, value: '10K+', label: 'APIs Managed' },
+    { icon: <BarChart3 className="w-8 h-8 text-orange-500" />, value: '50%', label: 'Cost Reduction' }
+
+  ]
+  return (
+
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <Helmet>
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
         <title>AI API Management | Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered API management solutions by Zion Tech Group. Intelligent monitoring, security, and optimization for your APIs." />
         <meta name="keywords" content="API management, AI solutions, API monitoring, rate limiting, API security, Zion Tech Group" />

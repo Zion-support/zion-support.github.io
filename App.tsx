@@ -6,6 +6,7 @@ import './app/styles/futuristic.css';
 import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+import Sidebar from './app/components/Sidebar';
 import HomePage from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
@@ -57,8 +58,9 @@ const App: React.FC = () => {
                       <PerformanceOptimizations />
                       <FuturisticBackground />
                       <Navigation />
+                      <Sidebar />
                       <Breadcrumb />
-                      <main id="main-content" className="flex-1" tabIndex={-1}>
+                      <main id="main-content" className="flex-1 lg:ml-80" tabIndex={-1}>
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />

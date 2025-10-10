@@ -6,6 +6,7 @@ import {Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight}}from
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const SupportPage: React.FC = () => {,
 =======
 const SupportPage: React.FC = () => {
@@ -13,6 +14,9 @@ const SupportPage: React.FC = () => {
 =======
 const SupportPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+const SupportPage: React.FC = () => {
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   const [searchQuery, setSearchQuery] = useState('');
 
   const faqs = [
@@ -43,10 +47,13 @@ const SupportPage: React.FC = () => {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   const supportChannels = [
     {title: 'Email Support',
       description: 'Get help via email within 24 hours',

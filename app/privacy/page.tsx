@@ -23,11 +23,14 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
       description: 'Receive your data in a structured format',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Database;,},
     {title: 'Restriction',
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
       icon: Database
     },
     {
@@ -56,10 +59,13 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
 <<<<<<< HEAD
   }
 
+<<<<<<< HEAD
 
 =======
   };
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
   return (
     <>
       <Helmet></Helmet>

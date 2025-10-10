@@ -109,7 +109,6 @@ export default function APIDocsPage() {
       /></SEOOptimizer>
       <Navigation /></Navigation>
       {/* Hero Section */}
-<<<<<<< HEAD
 <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
@@ -129,8 +128,12 @@ export default function APIDocsPage() {
           <h1 className="text-5xl font-bold text-white mb-6"></h1>
             API Documentation
   </
+<<<<<<< HEAD
 
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
+=======
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
             Explore endpoints, authentication, and integration guides.
           </p>

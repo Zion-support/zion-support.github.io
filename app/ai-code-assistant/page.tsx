@@ -4,9 +4,12 @@ import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
 const AiCodeAssistantPage: React.FC = () => {,
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiCodeAssistantPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
@@ -178,6 +181,9 @@ export default AiCodeAssistantPage;
   </button>
   </h1>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8

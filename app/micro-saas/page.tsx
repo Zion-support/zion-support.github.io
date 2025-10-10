@@ -201,8 +201,11 @@ const MicroSaasPage: React.FC = () => {,
       icon: Shield
     }
   ]
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
@@ -416,7 +419,11 @@ const MicroSaasPage: React.FC = () => {
               <p className="text-xl text-gray-300">Our most popular micro SaaS solutions</p>
             </div>
 
+<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
+=======
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
               {microSaasTools.map((tool, index) => (
                 <div key={index}className={`bg-white/5 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover: scale-105 group ${,
                   tool.popular ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/20' : 'border-white/10 hover: border-cyan-400/30',}`}>{tool.popular && (</div>
@@ -531,6 +538,7 @@ const MicroSaasPage: React.FC = () => {
                       Try Now;
                     </button>
                   </div>
+<<<<<<< HEAD
 =======
                   <div className="flex items-center justify-between"></div>
                     <div className="text-xs text-gray-400"></div>
@@ -542,6 +550,8 @@ const MicroSaasPage: React.FC = () => {
                   </div>
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
                 </div>
               ))}
             </div>

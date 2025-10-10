@@ -259,7 +259,6 @@ const AiContentGenerationPage: React.FC = () => {,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       <Footer />
 =======
       <Footer /></Footer>
@@ -280,6 +279,9 @@ export default AiContentGenerationPage;
   </h1>
   </main>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
