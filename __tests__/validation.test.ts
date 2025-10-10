@@ -1,4 +1,18 @@
 import { describe, it, expect, beforeEach } from '@jest/globals';
+import {
+  isValidUrl,
+  validateURL,
+  validateLength,
+  isValidPassword,
+  validatePassword,
+  sanitizeHTML,
+  validateDate,
+  validateCreditCard,
+  validateJSON,
+  validateRequired,
+  validateComposite,
+  asyncValidator
+} from '../src/utils/validators';
 
 describe('validation', () => {
   beforeEach(() => {
@@ -149,11 +163,7 @@ describe('Composite Validation', () => {
 
 describe('Async Validation', () => {
   test('handles successful async validation', async () => {
-    const asyncValidator = async (val: unknown) => {
-      return { isValid: true, errors: [] };
-    };
-    
-    const result = await asyncFunction();
+    const result = await asyncValidator('test');
     expect(result).toBe('success');
   });
 });
