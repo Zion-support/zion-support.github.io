@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
+import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
 
 interface Partner {
   name: string;
@@ -12,10 +11,6 @@ interface Partner {
   website?: string;
   tier: 'strategic' | 'preferred' | 'certified';
 }
-=======
-import { Link } from 'react-router-dom';
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [

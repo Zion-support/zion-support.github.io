@@ -3,7 +3,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react';
 
 interface MicroSaasProduct {
@@ -17,7 +16,6 @@ interface MicroSaasProduct {
   popular: boolean;
   category: string;
 }
-=======
 import { Zap, CheckCircle, ArrowRight, Star, Users, Shield, Cloud, BarChart3, Target, Rocket } from 'lucide-react';
 >>>>>>> cursor/analyze-improve-and-deploy-application-a851
 
