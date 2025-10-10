@@ -49,7 +49,7 @@ interface PendingRequest;
   O: Add content,}
 }
 
-  promise: Promise,
+  promise: Promise
 
           <T>,
     timestam,
@@ -65,7 +65,7 @@ export class ApiCache {
 
 }
   private,
-  cache: CacheManager,
+  cache: CacheManager
           <unknown>
   private,
   pendingRequests: Map<string, PendingRequest<unknown>> = new Map();
@@ -460,7 +460,7 @@ const requestPromise = this.fetchWithRetry;
    * Delay helper;
    */
 
-  private delay(ms: number): Promise,
+  private delay(ms: number): Promise
           <void> {
     // TODO: Add content
   }

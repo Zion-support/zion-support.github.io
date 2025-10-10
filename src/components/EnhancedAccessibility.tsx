@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface AccessibilitySettings {
     // TODO: Add content
   }
@@ -30,7 +30,7 @@ interface AccessibilityProps {/* TODO: Fix JSX expression */}
   enableZoomControl?: boolean;
 }
 const,
-  EnhancedAccessibility: React.FC,
+  EnhancedAccessibility: React.FC
           <AccessibilityProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }

@@ -1,7 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
@@ -81,7 +81,7 @@ const PagePage: React.FC = () => {
 // AI Computer Vision
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-// Advanced Visual Intelligence Solutions,
+// Advanced Visual Intelligence Solutions
           </p>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
 Transform your business with cutting-edge computer vision technology. From object detection to facial recognition,
@@ -94,14 +94,14 @@ Transform your business with cutting-edge computer vision technology. From objec
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Eye className="w-5 h-5" />
-              +1 302 464 0950,
+              +1 302 464 0950
           </div>
         </section>
         {/* Features Section */}
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
-// Core Capabilities,
+// Core Capabilities
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"

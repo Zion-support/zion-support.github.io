@@ -55,7 +55,7 @@ export class CacheManager {
 
 }
   private,
-  memoryCache: Map,
+  memoryCache: Map
           <string, CacheEntry<unknown>> = new Map();
   private readonly,
   defaultTTL: number,
@@ -164,7 +164,7 @@ export class CacheManager {
    * Check if cache entry is expired;
    */
 
-  private isExpired(entry: CacheEntry,
+  private isExpired(entry: CacheEntry
           <unknown>, now = Date.now()): boolean {
     // TODO: Add content
   }
@@ -196,7 +196,7 @@ export class CacheManager {
 }
     const ttl = options.ttl !== undefined ? options.ttl : this.defaultTTL;
     const,
-  entry: CacheEntry,
+  entry: CacheEntry
           <T> = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -449,7 +449,7 @@ export class CacheManager {
     ke,
   y: string,
     f,
-  n: () => T | Promise,
+  n: () => T | Promise
           <T>,
 
     options: { ttl?: number } = {}
@@ -491,7 +491,7 @@ export class CacheManager {
     ke,
   y: string,
     f,
-  n: () => Promise,
+  n: () => Promise
           <T> | T,
 
     options: { ttl?: number } = {}

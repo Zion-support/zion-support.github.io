@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 const SEOHead = React.memo(function SEOHead({ className = '' }: SEOHeadProps) {

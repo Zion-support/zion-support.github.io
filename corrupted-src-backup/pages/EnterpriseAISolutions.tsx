@@ -1,8 +1,8 @@
-import React from 'react';
+import React  from 'react';
 export default function EnterpriseAISolutions(): React.JSX.Element {
   const solutions = [
     {
-      icon: <Building className="w-8 h-8" />,</Building>title</Building>: 'Enterprise AI Platform',
+      icon: <Building className="w-8 h-8" /></Building>title</Building>: 'Enterprise AI Platform',
       description: 'Comprehensive AI platform designed for large-scale enterprise deployments.',
       features: [,
         'Scalable Infrastructure',
@@ -14,7 +14,7 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
     {/* TODO: Fix JSX expression */}
     },
     {
-      icon: <Zap className="w-8 h-8" />,</Zap>title</Zap>: 'AI Automation Suite',
+      icon: <Zap className="w-8 h-8" /></Zap>title</Zap>: 'AI Automation Suite',
       description: 'Complete automation solutions to streamline enterprise operations.',
       features: [,
         'Process Automation',
@@ -44,8 +44,8 @@ export default function EnterpriseAISolutions(): React.JSX.Element {/* TODO: Fix
           {solutions.map((solution, index) => (
             <div;
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow",
-            >,
+              className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow"
+            >
               <div className="flex items-center mb-4">,
             Comprehensive AI solutions designed for enterprise-scale deployments and large
             organizations.

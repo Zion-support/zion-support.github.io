@@ -2,7 +2,7 @@ import {BarChart, TrendingUp, Target, Zap, Brain, CheckCircle, Phone, Mail, Star
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -21,7 +21,7 @@ const AIAnalyticsPage: React.FC = () => {
       description: 'Interactive dashboards that provide instant insights into your business performance',
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const AIAnalyticsPage: React.FC = () => {
     const features = [],
   return (
@@ -160,7 +160,7 @@ icon$5: Award,
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              AI Analytics Services,
+              AI Analytics Services
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your data into actionable insights with our advanced AI-powered analytics platform. 

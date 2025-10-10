@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Zap, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const AIAutomationPage: React.FC = () => {
   const features = [
     {
@@ -105,7 +105,7 @@ export default function AIAutomationPage() {
               href="/contact"
               className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center">
               <ArrowRight className="w-5 h-5 mr-2" />
-              Contact Us,
+              Contact Us
   </
           </div>
         </div>

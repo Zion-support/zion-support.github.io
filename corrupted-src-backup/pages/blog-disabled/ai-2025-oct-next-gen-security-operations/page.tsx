@@ -16,7 +16,7 @@ export default function NextGenSecurityOperations20, 2, 5() {
         /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-ne x t-g e n-securi t y-operatio n s',
-        />,
+        />
       </Helm, e, t>
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
         <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'></div>

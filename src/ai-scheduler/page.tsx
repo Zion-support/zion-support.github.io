@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 const AISchedulerPage: React.FC = () => {
@@ -104,7 +104,7 @@ $4}
             AI Scheduler
   </
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            Intelligent Meeting & Event Scheduling,
+            Intelligent Meeting & Event Scheduling
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Never miss another meeting with our AI-powered scheduling assistant. Automatically find 
@@ -120,7 +120,7 @@ $4}
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              Start Free Trial,
+              Start Free Trial
   </
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
@@ -140,7 +140,7 @@ $4}
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
-            Smart Scheduling Features,
+            Smart Scheduling Features
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -187,7 +187,7 @@ $4}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started,
+                  Get Started
   </
         {/* Testimonials */}
             What Our Users Say

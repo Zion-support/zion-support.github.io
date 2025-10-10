@@ -1,20 +1,20 @@
-'use client';
-import React from 'react';
-import {ArrowRight, CheckCircle}}from 'lucide-react';
-interface ServiceCardProps {title: string;,}
-  description: string;,
+'use client'
+import React from 'react'
+import {ArrowRight, CheckCircle} from 'lucide-react'
+interface ServiceCardProps {title: string,}
+  description: string,
   features: string[],
   price?: string;
   popular?: boolean;
-  onSelect?: () => void,
+  onSelect?: () => void,;
   className?: string;}const ServiceCard: React.FC<ServiceCardProps> = ({,
-  title,
-  description,
-  features,
-  price,
-  popular = false,
-  onSelect,
-  className = ''}) => {return(<div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300 group ${className,)}${popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''}`}>{popular && (</div>
+  title,;
+  description,;
+  features,;
+  price,;
+  popular = false,;
+  onSelect,;
+  className = ''}) => {return(<div className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: bg-white/10 transition-all duration-300 group ${className,)} ${popular ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : ''}`}>{popular && (</div>
         <div className="flex items-center gap-2 mb-4">
           <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
           <span className="text-purple-400 text-sm font-semibold">Most Popular</span>
@@ -31,22 +31,22 @@ interface ServiceCardProps {title: string;,}
           </div>
         ))}
       </div>
-      {price && (
+      {price && (;
         <div className="mb-6">
           <div className="text-3xl font-bold text-white mb-1">{price</div>}</div>
           <div className="text-gray-400 text-sm">per month</div>
         </div>
       )}
-      {onSelect && (
+      {onSelect && (;
         <button;
-          onClick={onSelect}className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">,</button>
-          Get Started;
-          <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />,
+          onClick={onSelect}className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group"></button>
+          Get Started
+          <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />
         </button>
       )}
     </div>
   );
-};
-
+}
+;
 export default ServiceCard;
   </ServiceCardProps>

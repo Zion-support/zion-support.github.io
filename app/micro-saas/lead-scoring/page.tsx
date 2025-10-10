@@ -1,10 +1,10 @@
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Settings, ArrowRight}}from 'lucide-react';
-const MicroSaaSPage: React.FC = () => {,
-    const serviceName = 'lead-scoring';
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Settings, ArrowRight} from 'lucide-react'
+const MicroSaaSPage: React.FC = () => {
+    const serviceName = 'lead-scoring'
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
-return(<>,)
+return(<>,);
       <Helmet />} <title>{title}| Zion Tech Group - Micro SaaS Solutions</title>
         <meta />
         <link>
@@ -26,14 +26,14 @@ return(<>,)
             <h1>{title</h1>} </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span>
             </h1>
-            <p>Powerful {title.toLowerCase()</p>}}micro SaaS solution designed for modern businesses.
+            <p>Powerful {title.toLowerCase()</p>}}micro SaaS solution designed for modern businesses.;
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>View Demo,</button>
+              <button>View Demo</button>
               </button>
             </div>
           </div>
@@ -49,7 +49,7 @@ return(<>,)
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>We're developing powerful {title.toLowerCase()</p>}}solutions. Stay tuned for updates!
+              <p>We're developing powerful {title.toLowerCase()</p>}}solutions. Stay tuned for updates!;
               </p>
             </div>
           </div>
@@ -57,6 +57,7 @@ return(<>,)
       </div>
     </>
   );
-};
-
+}
+;
 export default MicroSaaSPage;
+;

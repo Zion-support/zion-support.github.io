@@ -310,7 +310,7 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expr
                 PREMIUM, CONTEN, T;
                 PREMIUM, CONTEN, T</span>
             <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
-              Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s,</p> 
+              Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s</p> 
                 <Link, classNam, e="w-5 h-5" />
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
                 <a, hre, f="/bl, o, g"

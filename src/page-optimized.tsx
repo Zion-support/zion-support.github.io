@@ -2,7 +2,7 @@
 import React, { lazy } from 'react';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import PerformanceMonitor  from './components/PerformanceMonitor';
 // Fallback component;
 const EmptyComponent = () => null;
 // Lazy load heavy components - these may not exist, so make them optional;
@@ -48,7 +48,7 @@ export default function OptimizedHomePage() {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
 // AI Enterprise Transformation
           <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-// That Delivers Results,
+// That Delivers Results
           </span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">

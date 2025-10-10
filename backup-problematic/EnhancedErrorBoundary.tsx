@@ -59,7 +59,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 onClick={() => window.location.reload()}
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
                 Refresh Page;
-              </button>,
+              </button>
               <button;
                 onClick={() => window.history.back()}
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold hover: bg-gray-300 transition-colors"
@@ -116,8 +116,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-6 text-left">
                 <summary className="cursor-pointer text-sm text-gray-500">
-                  Error Details (Development),
-                </summary>,
+                  Error Details (Development)
+                </summary>
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">,
             {/* TODO: Fix JSX expression */}
                   {this.state.error.toString()}

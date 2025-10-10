@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface MobileNavigationProps {/* TODO: Fix JSX expression */}
 }
 const MobileNavigation = React.memo(function MobileNavigation({)

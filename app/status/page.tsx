@@ -1,13 +1,12 @@
-'use client';
-import React, {useState, useEffect}from 'react';
-import {CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart}}from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React, {useState, useEffect} from 'react'
+import {CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart} from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer   from '../components/SEOOptimizer'
 export default function StatusPage() {const [lastUpdated, setLastUpdated] = useState(new Date());
   const [isRefreshing, setIsRefreshing] = useState(false);
-const refreshStatus = async () => {
-
+const refreshStatus = async () => {;
     setIsRefreshing(true);
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 1000));
@@ -71,54 +70,52 @@ const incidents = [
   ]
 const getStatusIcon = (;
     switch (status) {case 'operational':;
-
+;
         return <CheckCircle />
       case 'degraded':;
         return <AlertTriangle>
       case 'outage':;
         return <XCircle>
-
-      default: ;) => {,
-  return($3;)
+      default:  ) => {,
+  return($3;);
   )}return <Clock>}
     }
   }
 const getStatusColor = (;
     switch (status) {case 'operational':;
-        return 'text-green-400';
+        return 'text-green-400'
       case 'degraded':;
-        return 'text-yellow-400';
+        return 'text-yellow-400'
       case 'outage':;
-        return 'text-red-400';
-      default: ;) => {,
-  return($3;)
-  )}return 'text-gray-400';}
+        return 'text-red-400'
+      default:  ) => {,
+  return($3;);
+  )}return 'text-gray-400'}
     }
   }
 const getSeverityColor = (;
     switch (severity) {case 'critical':;
-        return 'bg-red-500/20 text-red-400 border-red-500/50';
+        return 'bg-red-500/20 text-red-400 border-red-500/50'
       case 'major':;
-        return 'bg-orange-500/20 text-orange-400 border-orange-500/50';
+        return 'bg-orange-500/20 text-orange-400 border-orange-500/50'
       case 'minor':;
-        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50';
-      default: ;) => {,
-  return($3;)
-  )}return 'bg-gray-500/20 text-gray-400 border-gray-500/50';}
+        return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/50'
+      default:  ) => {,
+  return($3;);
+  )}return 'bg-gray-500/20 text-gray-400 border-gray-500/50'}
     }
   }
 const overallStatus = services.every(service => service.status === 'operational');
-    ? 'operational';
+    ? 'operational'
     : services.some(service => service.status === 'outage');
-      ? 'outage';
-      : 'degraded';
-return(</h1>)
-          <p>Real-time status of all our services. We're committed to providing reliable,</p>
-            high-performance AI and IT solutions.
+      ? 'outage'
+      : 'degraded'
+return(</h1>);
+          <p>Real-time status of all our services. We're committed to providing reliable</p>
+            high-performance AI and IT solutions.;
           </p>
           <div className="flex items-center justify-center gap-4 mb-8"></div>
             <div className="flex items-center gap-2"></div>
-
               {getStatusIcon(overallStatus)} <span>{overallStatus === 'operational' ? 'All Systems Operational' :</span>}overallStatus === 'degraded' ? 'Degraded Performance' : 'Service Outage'}
               </span>
             </div>
@@ -127,10 +124,9 @@ return(</h1>)
               Refresh;
             </button>
           </div>
-          <p>Last updated: {lastUpdated.toLocaleString(),</p>} </p>
+          <p>Last updated: {lastUpdated.toLocaleString()</p>} </p>
         </div>
       </section>
-
       {/* Services Status */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -142,7 +138,7 @@ return(</h1>)
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Status</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300"></div>,
+            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover: border-purple-500/50 transition-all duration-300"></div>
                 <div className="flex items-center justify-between mb-4"></div>
                   <div className="flex items-center gap-3"></div>
                     {getStatusIcon(service.status)} <h3 className="text-lg font-semibold text-white">{service.name}</h3>
@@ -152,15 +148,15 @@ return(</h1>)
                 <p className="text-gray-300 text-sm mb-4">{service.description</p>}</p>
                 <div className="space-y-2 text-sm"></div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Uptime: </span>,
+                    <span className="text-gray-400">Uptime: </span>
                     <span className="text-white">{service.uptime</span>}</span>
                   </div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Response Time: </span>,
+                    <span className="text-gray-400">Response Time: </span>
                     <span className="text-white">{service.responseTime</span>}</span>
                   </div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Last Incident: </span>,
+                    <span className="text-gray-400">Last Incident: </span>
                     <span className="text-white">{service.lastIncident</span>}</span>
                   </div>
                 </div>
@@ -169,7 +165,6 @@ return(</h1>)
           </div>
         </div>
       </section>
-
       {/* Recent Incidents */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -186,8 +181,8 @@ return(</h1>)
                   <div />
                     <h3 className="text-xl font-semibold text-white mb-2">{incident.title}</h3>
                     <div className="flex items-center gap-4 text-sm text-gray-400"></div>
-                      <span>Started: {new Date(incident.startTime).toLocaleString(),</span>}</span>
-                      <span>Ended: {new Date(incident.endTime).toLocaleString(),</span>}</span>
+                      <span>Started: {new Date(incident.startTime).toLocaleString()</span>}</span>
+                      <span>Ended: {new Date(incident.endTime).toLocaleString()</span>}</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2"></div>
@@ -197,7 +192,7 @@ return(</h1>)
                 </div>
                 <p className="text-gray-300 mb-4">{incident.description</p>}</p>
                 <div />
-                  <span className="text-gray-400 text-sm">Affected Services: </span>,
+                  <span className="text-gray-400 text-sm">Affected Services: </span>
                   <span className="text-white text-sm">{incident.affectedServices.join(', ')</span>}</span>
                 </div>
               </div>
@@ -215,7 +210,7 @@ return(</h1>)
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Performance Metrics</h2>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                 <TrendingUp />
@@ -256,14 +251,14 @@ return(</h1>)
           </h2>
           <p>Subscribe to status updates or contact our support team for more details.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-            <button>Subscribe to Updates;</button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <button>Subscribe to Updates</button>
             </button>
-            <button>Contact Support;</button>
+            <button>Contact Support</button>
             </button>
           </div>
         </div>
       </section>
       <Footer />
-  );
-};
+  )
+}

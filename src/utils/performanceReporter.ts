@@ -311,7 +311,7 @@ const slowResources = resources;
 
 }
     const,
-  thresholds: Record,
+  thresholds: Record
           <string, {/* TODO: Fix JSX expression */}
   r: number }> = {/* TODO: Fix JSX expression */}
   O: Add content,}

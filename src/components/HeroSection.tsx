@@ -13,7 +13,7 @@ export default function HeroSection() {
               Zion Tech Group
   </
             <span className="block text-white mt-4">
-              Advanced AI & IT Solutions,
+              Advanced AI & IT Solutions
   </
           </h1>
           {/* Subtitle */}
@@ -61,7 +61,7 @@ export default function HeroSection() {
             <a
               href="#contact"
               className="px-8 py-4 text-lg font-semibold text-cyan-400 border-2 border-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 neon-glow">
-              Get Started,
+              Get Started
   </
           </div>
           {/* Stats */}

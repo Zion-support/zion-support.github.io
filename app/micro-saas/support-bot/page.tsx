@@ -1,8 +1,8 @@
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Bot, ArrowRight}}from 'lucide-react';
-const SmartSupportBotPage: React.FC = () => {,
-    return(<>)
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Bot, ArrowRight} from 'lucide-react'
+const SmartSupportBotPage: React.FC = () => {
+    return(<>);
       <Helmet />
         <title>Smart Support Bot | Zion Tech Group - AI Customer Service Automation</title>
         <meta />
@@ -29,12 +29,12 @@ const SmartSupportBotPage: React.FC = () => {,
             <p>AI-powered customer service automation with intelligent support bot.;</p>
               24/7 customer assistance and automated responses.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>View Demo;</button>
+              <button>View Demo</button>
               </button>
             </div>
           </div>
@@ -57,7 +57,7 @@ const SmartSupportBotPage: React.FC = () => {,
         </section>
       </div>
     </>,
-  )}};
-
+  )}}
+;
 export default SmartSupportBotPage;
-
+;

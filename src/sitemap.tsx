@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 const getAllPages = () => {return [}
     { url: '/', priority: 1.0, changefreq: 'daily' },
     { url: '/services', priority: 0.9, changefreq: 'weekly' },

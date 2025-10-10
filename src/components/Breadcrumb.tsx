@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 interface BreadcrumbItem {
@@ -67,7 +67,7 @@ const Breadcrumb: React.FC = () => {
                 ) : (
                   <Link;
                     to={item.href}
-                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center",
+                    className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center"
                   >,
                     {index === 0 && <Home className="w-4 h-4 mr-1" />}
                     {item.name}

@@ -1,8 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const TeamPage: React.FC = () => {
   const teamMembers = [
     {
@@ -126,7 +126,7 @@ const TeamPage: React.FC = () => {
               Our Leadership Team
   </
             <p className="text-xl text-gray-600">
-              Experienced professionals leading the future of AI and IT solutions,
+              Experienced professionals leading the future of AI and IT solutions
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -179,7 +179,7 @@ const TeamPage: React.FC = () => {
               Our Values
   </
             <p className="text-xl text-gray-600">
-              The principles that guide our team and our work,
+              The principles that guide our team and our work
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

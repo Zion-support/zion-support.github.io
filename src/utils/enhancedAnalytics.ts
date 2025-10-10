@@ -16,7 +16,7 @@ export interface AnalyticsEvent {
   n: string;
   label?: string
   value?: number
-  metadata?: Record,
+  metadata?: Record
           <string>
 }
 export interface UserProperties {/* TODO: Fix JSX expression */}

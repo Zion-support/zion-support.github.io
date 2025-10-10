@@ -19,7 +19,7 @@ export default function AI2026ImplementationRoadmap() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home;
           </Link>
-        </div>,
+        </div>
       </header>,
 ,
       {/* Article Content */}
@@ -124,9 +124,9 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             </div>
             <div className="text-center p-4 bg-orange-50 rounded-lg"></div>
               <div className="text-3xl font-bold text-orange-600">67%</div>
-              <div className="text-sm text-gray-600">Success rate</div>,
-            </div>,
-          </div>,
+              <div className="text-sm text-gray-600">Success rate</div>
+            </div>
+          </div>
         </div>,
 ,
         {/* Article Content */}
@@ -546,11 +546,11 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
                 <li>• Governance issues</li>
                 <li>• Security concerns</li>
               </ul>
-            </div>,
+            </div>
           </div>,
-,
-          <h2>Conclusion</h2>,
-          <p>,
+
+          <h2>Conclusion</h2>
+          <p>
             </div>
           </div>
           <h2>Conclusion</h2>
@@ -606,7 +606,7 @@ export default function AI2026ImplementationRoadmap() {/* TODO: Fix JSX expressi
             </div>
           </div>
         </div>
-      </article>,
+      </article>
     </div>);
 };
 export default AI2026ImplementationRoadmap;

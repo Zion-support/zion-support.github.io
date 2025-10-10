@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 interface ModernLoadingSpinnerProps {
     size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -55,7 +55,7 @@ interface ModernLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   fullScreen?: boolean;
 }
 const,
-  ModernLoadingSpinner: React.FC,
+  ModernLoadingSpinner: React.FC
           <ModernLoadingSpinnerProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }

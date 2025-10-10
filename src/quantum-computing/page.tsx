@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const QuantumComputingPage: React.FC = () => {
     return (
     <React.Fragment>
@@ -77,7 +77,7 @@ const QuantumComputingPage: React.FC = () => {
               <a
                 href="/consultation"
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
-                Schedule Consultation,
+                Schedule Consultation
   </
             </div>
           </div>

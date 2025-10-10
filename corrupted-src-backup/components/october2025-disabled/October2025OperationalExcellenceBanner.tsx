@@ -56,7 +56,7 @@ const October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX express
               {' '}
               Predictive, Maintenanc, e (99.6% Accura, c, y)
             </sp, a, n>
-            ,
+            
             <span, classNam, e = 'te, x, t-te, a, l-300, fon, t-semibo, l, d'></span>
               {' '}
               Autonomous, API, Orchestration (99.8% Upt, i, m, e)

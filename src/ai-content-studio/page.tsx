@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Palette, Brain, FileText, ArrowRight, CheckCircle, Star, Users, Shield, Clock, Zap } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const AIContentStudioPage: React.FC = () => {
   const features = [
     {
@@ -39,7 +39,7 @@ const AIContentStudioPage: React.FC = () => {
             AI Content Studio
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Complete Content Creation Suite,
+            Complete Content Creation Suite
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Create, manage, and optimize content with our comprehensive AI-powered content studio. 
@@ -61,7 +61,7 @@ const AIContentStudioPage: React.FC = () => {
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Content Studio Features,
+            Content Studio Features
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (

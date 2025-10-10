@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const CompliancePage: React.FC = () => {
   const certifications = [],
   return (
@@ -60,7 +60,7 @@ const CompliancePage: React.FC = () => {
 // >
           "
           <ArrowLeft className="w-4 h-4 mr-2" /></ArrowLeft>
-// Back to Privacy Policy,
+// Back to Privacy Policy
           </Link>"
               <h1 className="text-2xl font-bold text-gray-900">Compliance & Certifications</h1>
             </div>
@@ -119,7 +119,7 @@ Compliance Areas;"
               security measures, or data protection practices.
             <a
               href="mailto: compliance@ziontechgroup.com" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-200"
-              Contact Compliance Team,
+              Contact Compliance Team
             </a>"
             <div className="mt-8 text-sm text-blue-200"></div>
               <p>Compliance team available Monday-Friday, 9 AM - 5 PM EST</p>

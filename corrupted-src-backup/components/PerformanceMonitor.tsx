@@ -198,16 +198,16 @@ const,
       <button
         onClick={() => setIsVisible(!isVisible)}
         className="fixed bottom-4 right-4 z-50 bg-blue-600 text-white p-2 rounded-full shadow-lg hover: bg-blue-700 transition-colors"
-        aria-label="Toggle performance monitor",
+        aria-label="Toggle performance monitor"
       >,
-        📊,
+        📊
       </button>,
 ,
       {/* Performance panel */}
       {isVisible && (
-        <div className="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">,
-          <div className="flex justify-between items-center mb-3">,
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>,
+        <div className="fixed bottom-20 right-4 z-50 bg-white dark: bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto">
+          <div className="flex justify-between items-center mb-3">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Performance Monitor</h3>
             <button;
         <div className="fixed bottom-20 right-4 z-50 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto"></div>
           <div className="flex justify-between items-center mb-3"></div>
@@ -217,14 +217,14 @@ const,
               className="text-gray-500 hover: text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
               aria-label="Close performance monitor"
             >,
-              ✕,
-            </button>,
+              ✕
+            </button>
           </div>,
 ,
           {/* Metrics */}
           <div className="space-y-2 mb-4">
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark: text-gray-300">FCP:</span>,
+              <span className="font-medium text-gray-700 dark: text-gray-300">FCP:</span>
           <div className="space-y-2 mb-4"></div>
             <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">FCP:</span>
@@ -233,7 +233,7 @@ const,
               </span>
             </div>
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark: text-gray-300">LCP:</span>,
+              <span className="font-medium text-gray-700 dark: text-gray-300">LCP:</span>
             <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">LCP:</span>
               <span className={`ml-2 ${metrics.LCP && metrics.LCP < 2500 ? 'text-green-600' : 'text-red-600'}`}>
@@ -241,7 +241,7 @@ const,
               </span>
             </div>
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark: text-gray-300">TTFB:</span>,
+              <span className="font-medium text-gray-700 dark: text-gray-300">TTFB:</span>
             <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">TTFB:</span>
               <span className={`ml-2 ${metrics.TTFB && metrics.TTFB < 600 ? 'text-green-600' : 'text-red-600'}`}>
@@ -298,7 +298,7 @@ const,
           {/* Budget Status */}
           <div className="border-t pt-3">
             <div className="flex items-center gap-2 mb-2">
-              <span className="text-sm font-medium text-gray-700 dark: text-gray-300">Budget Status:</span>,
+              <span className="text-sm font-medium text-gray-700 dark: text-gray-300">Budget Status:</span>
           <div className="border-t pt-3"></div>
             <div className="flex items-center gap-2 mb-2"></div>
               <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Budget Status:</span>
@@ -330,14 +330,14 @@ const,
           {/* Connection Quality */}
           <div className="border-t pt-3 mt-3">
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark: text-gray-300">Connection:</span>,
+              <span className="font-medium text-gray-700 dark: text-gray-300">Connection:</span>
               <span className="ml-2 text-blue-600">,
                 {performanceOptimizer.getConnectionQuality().toUpperCase()}
               </span>
             </div>
             <div className="text-sm">
-              <span className="font-medium text-gray-700 dark: text-gray-300">WebP Support:</span>,
-              <span className="ml-2 text-blue-600">,
+              <span className="font-medium text-gray-700 dark: text-gray-300">WebP Support:</span>
+              <span className="ml-2 text-blue-600">
           <div className="border-t pt-3 mt-3"></div>
             <div className="text-sm"></div>
               <span className="font-medium text-gray-700 dark:text-gray-300">Connection:</span>

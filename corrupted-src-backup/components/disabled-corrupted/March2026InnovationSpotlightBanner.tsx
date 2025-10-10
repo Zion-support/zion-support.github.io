@@ -154,7 +154,7 @@ const March2026InnovationSpotlightBanne, r = () => {/* TODO: Fix JSX expression 
                 company: 'NeuroTech, Glo, b, a, l',
                 achieveme, n, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
                 reven, u, e: '$2.1B, Revenue, Growt, h',
-                ic, o, n:</div> <Brain, classNam, e = 'w-8 , h-, 8' / > ,
+                ic, o, n:</div> <Brain, classNam, e = 'w-8 , h-, 8' / > 
           <div, className='grid, m, d:gr, i, d-co, l, s-3, ga, p-8'></div>
             {/* TODO: Fix JSX expression */}
                },

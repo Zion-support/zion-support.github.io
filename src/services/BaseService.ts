@@ -5,7 +5,7 @@
  * Provides common functionality for all service classes;
  */
 import logger from '../utils/logger';
-import axios from 'axios';
+import axios  from 'axios';
 // Create axios instance with default config;
 const apiClient = axios.create({
     // TODO: Add content
@@ -40,7 +40,7 @@ export class BaseService {
 }
   protected baseUrl: string
   protected options: ServiceOptions
-  private cache: Map,
+  private cache: Map
           <string, CacheEntry<unknown>> = new Map();
 constructor(baseUrl: string, options: ServiceOptions = {}) {
     this.baseUrl = baseUrl

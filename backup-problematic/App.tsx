@@ -8,7 +8,7 @@ import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
 import LoadingSpinner from './components/LoadingSpinner';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
+import PerformanceOptimizer  from './components/PerformanceOptimizer';
 // Lazy load components for better performance;
 // const ContentShowcase = lazy(() => import('./components/ContentShowcase'));
 // const InteractiveContentShowcase2026 = lazy()
@@ -49,6 +49,6 @@ import { lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics, pe
 import { logger } from './utils/logger';
 import performanceMonitor from './utils/performanceMonitor';
 import seoOptimizer from './utils/seoOptimizer';
-import accessibilityEnhancer from './utils/accessibilityEnhancer';
+import accessibilityEnhancer  from './utils/accessibilityEnhancer';
 // Styles;
 import './globals.css';

@@ -96,7 +96,7 @@ export function deepMerge;
  */
 export function flattenObject()
   ob,
-  j: Record,
+  j: Record
           <string, unknown>,
   prefix = '',
   separator = '.'
@@ -107,7 +107,7 @@ export function flattenObject()
 
 }
   const,
-  flattened: Record,
+  flattened: Record
           <string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -139,7 +139,7 @@ export function flattenObject()
  */
 export function unflattenObject()
   ob,
-  j: Record,
+  j: Record
           <string, unknown>,
   separator = '.'
 
@@ -149,7 +149,7 @@ export function unflattenObject()
 
 }
   const,
-  result: Record,
+  result: Record
           <string, unknown> = {}
   for (const key in obj) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -187,7 +187,7 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>()
   obj: T,
   keys: K[]
 
-): Pick,
+): Pick
           <T, K> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -214,7 +214,7 @@ export function omit;
   obj: T,
   keys: K[]
 
-): Omit,
+): Omit
           <T, K> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -235,7 +235,7 @@ export function groupBy<T>()
   array: T[],
   key: keyof T | ((item: T) => string | number)
 
-): Record,
+): Record
           <string, T[]> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -287,7 +287,7 @@ export function sortBy;
           <T>()
 
   array: T[],
-  keys: Array,
+  keys: Array
           <keyof T | ((item: T) => unknown)>,
   orders: Array<'asc' | 'desc'> = []
 ): T[] {

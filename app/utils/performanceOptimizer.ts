@@ -6,7 +6,7 @@ export const debounce = <T extends (...args: any[]) => any>(,
     let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,
   func: T,
-  wait: number;,}): ((...args: Parameters<T>) => void) => {,}let timeout: NodeJS.Timeout,
+  wait: number,}): ((...args: Parameters<T>) => void) => {,}let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {,}clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait);
   }
@@ -17,9 +17,9 @@ export const throttle = <T extends (...args: any[]) => any>(,
 ): ((...args: Parameters<T>) => void) => {,
     let inThrottle: boolean,
   return (...args: Parameters<T>) => {,
-    if (!inThrottle) {,
+    if (!inThrottle) {,;
   func: T,
-  limit: number;,}): ((...args: Parameters<T>) => void) => {,}let inThrottle: boolean,
+  limit: number,}): ((...args: Parameters<T>) => void) => {,}let inThrottle: boolean,
   return (...args: Parameters<T>) => {,}if (!inThrottle) {}func(...args);
       inThrottle = true;
       setTimeout(() => (inThrottle = false), limit);
@@ -49,7 +49,7 @@ export const preloadScript = (src: string): Promise<void> => {,
     document.head.appendChild(script);
 }
 export const measurePerformance = (name: string, fn: () => void) => {,
-    ,
+    ,;
   if (typeof window === 'undefined' || !('performance' in window)) {,}export const measurePerformance = (name: string, fn: () => void) => {,}if (typeof window === 'undefined' || !('performance' in window)) {}fn();
     return;
   }
@@ -60,9 +60,9 @@ if (process.env.NODE_ENV === 'development') {}}
 }
 export const getDeviceInfo = () => {}if (typeof window === 'undefined') {}return {isMobile: false, isTablet: false, isDesktop: true ,}}}
 const width = window.innerWidth;
-  return {isMobile: width < 768;,}
+  return {isMobile: width < 768,}
     isTablet: width >= 768 && width < 1024,
-    isDesktop: width >= 1024;,}}
+    isDesktop: width >= 1024,}}
   private observers: PerformanceObserver[] = [],
   private isMonitoring: boolean = false,
   constructor(config?: Partial<OptimizationConfig>) {,}return {}}isMobile: width < 768,
@@ -70,7 +70,7 @@ const width = window.innerWidth;
     isDesktop: width >= 1024,}
   private observers: PerformanceObserver[] = [],
   private isMonitoring: boolean = false,
-  constructor(config?: Partial<OptimizationConfig>) {}'use client';
+  constructor(config?: Partial<OptimizationConfig>) {}'use client'
 /**;
  * Performance optimization utilities for the Zion Tech Group website;
  * Provides tools for monitoring and optimizing application performance;
@@ -104,7 +104,7 @@ interface PerformanceConfig extends OptimizationConfig {}}class PerformanceOptim
     // Monitor page load performance;
     window.addEventListener('load', () => {// Monitor page load performance;}window.addEventListener('load', () => {}this.measureLoadTime();
       this.measureMemoryUsage();
-private initializePerformanceMonitoring(): void {/* TODO: Fix JSX expression */,}}})
+private initializePerformanceMonitoring(): void {/* TODO: Fix JSX expression */,}}});
     // Monitor render performance;
     this.measureRenderTime();
   }
@@ -131,7 +131,7 @@ private initializePerformanceMonitoring(): void {/* TODO: Fix JSX expression */,
     try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
         entries.forEach((entry) => {}if (entry.entryType === 'measure') {}this.metrics.renderTime = entry.duration;
           }
-observer.observe({entryTypes: ['measure'] ,)})
+observer.observe({entryTypes: ['measure'] ,)});
       this.observers.push(observer);
     } catch (error) {// PerformanceObserver may not support 'measure' entryType in some environments;}} catch (error) {}// PerformanceObserver may not support 'measure' entryType in some environments;
       }
@@ -140,16 +140,16 @@ observer.observe({entryTypes: ['measure'] ,)})
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime;
   private measureRenderTime(): void {/* TODO: Fix JSX expression */,}}}
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['measure'] ,})
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['measure'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
-  private observeLCP() {/* TODO: Fix JSX expression */,}})
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['largest-contentful-paint'] ,})
+  private observeLCP() {/* TODO: Fix JSX expression */,}});
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['largest-contentful-paint'] ,});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
     }
@@ -160,15 +160,15 @@ observer.observe({entryTypes: ['measure'] ,)})
   }
   private observeFID() {/* TODO: Fix JSX expression */,}t: number ,}
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['first-input'] ,})
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['first-input'] ,});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}}
   }
   private observeCLS() {try {let clsValue = 0;}
-      const observer = new PerformanceObserver((list) => {
+      const observer = new PerformanceObserver((list) => {;
         const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {,}const clsEntry = entry as PerformanceEntry & {hadRecentInput?: boolean; value: number ,}if (!clsEntry.hadRecentInput) {clsValue += clsEntry.value;}} catch {}}// Ignore if not supported;
     }
@@ -177,34 +177,34 @@ observer.observe({entryTypes: ['measure'] ,)})
       const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
         entries.forEach((entry: PerformanceEntry) => {,}const clsEntry = entry as PerformanceEntry & {hadRecentInput?: boolean; value: number ,}if (!clsEntry.hadRecentInput) {}clsValue += clsEntry.value;
           }
-        })
+        });
         this.metrics.cls = clsValue;
-      })
-      observer.observe({entryTypes: ['layout-shift'] ,)})
+      });
+      observer.observe({entryTypes: ['layout-shift'] ,)});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
     }
   }
   private observeFCP() {}try {}}const observer = new PerformanceObserver((list) => {}const entries = list.getEntries();
-        entries.forEach((entry) => {if (entry.name === 'first-contentful-paint') {
+        entries.forEach((entry) => {if (entry.name === 'first-contentful-paint') {;
             this.metrics.fcp = entry.startTime;}entries.forEach((entry) => {}if (entry.name === 'first-contentful-paint') {}this.metrics.fcp = entry.startTime;
     } catch {/* TODO: Fix JSX expression */,}}}
   }
   private observeCLS() {/* TODO: Fix JSX expression */,}e: number ,}
           if (!clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */,}}
-        })
+        });
         this.metrics.cls = clsValue;
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['layout-shift'] ,})
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['layout-shift'] ,});
       this.observers.push(observer);
     } catch {/* TODO: Fix JSX expression */,}}}
   }
   private observeFCP() {/* TODO: Fix JSX expression */,}}
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['paint'] ,})
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['paint'] ,});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}} catch {}}// Ignore if not supported;
     }
@@ -216,10 +216,10 @@ observer.observe({entryTypes: ['measure'] ,)})
   }
   private observeTTFB() {/* TODO: Fix JSX expression */,}t: number ,}
           if (navEntry.responseStart > 0) {/* TODO: Fix JSX expression */,}}
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['navigation'] ,})
+        });
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['navigation'] ,});
       this.observers.push(observer);
     } catch {// Ignore if not supported;}}}
   }
@@ -256,7 +256,7 @@ observer.observe({entryTypes: ['measure'] ,)})
     if (!this.config.enableImageOptimization) return;
     const images = document.querySelectorAll('img');
     images.forEach((img) => {// Add loading="lazy" for better performance;
-      if (!img.hasAttribute('loading')) {
+      if (!img.hasAttribute('loading')) {;
         img.setAttribute('loading', 'lazy')}}
       // Add proper alt text if missing;
       if (!img.hasAttribute('alt')) {img.setAttribute('alt', 'Zion Tech Group content')}}
@@ -281,7 +281,7 @@ images.forEach((img) => imageObserver.observe(img));
       // Optimize image format;
       if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {/* TODO: Fix JSX expression */,}}
       }
-    })
+    });
   }
   /**;
    * Check if browser supports WebP;
@@ -290,15 +290,15 @@ images.forEach((img) => imageObserver.observe(img));
   /**;
    * Setup lazy loading for better performance;
    */;
-  public setupLazyLoading(): void {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}element.style.backgroundImage = `url(${src)})`;
+  public setupLazyLoading(): void {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}element.style.backgroundImage = `url(${src)})`
               }
               element.removeAttribute('data-lazy');
               lazyObserver.unobserve(element);
             }
           }
-        })
-      })
-      lazyElements.forEach((element) => {/* TODO: Fix JSX expression */,}})
+        });
+      });
+      lazyElements.forEach((element) => {/* TODO: Fix JSX expression */,}});
     }
     this.metrics.lazyLoading = true;
   }
@@ -309,8 +309,8 @@ images.forEach((img) => imageObserver.observe(img));
   /**;
    * Enable caching strategies;
    */;
-  enableCaching(): void {/* TODO: Fix JSX expression */,}}if (process.env.NODE_ENV === 'development') {}})
-      .catch((error) => {/* TODO: Fix JSX expression */,}if (process.env.NODE_ENV === 'development') {}})
+  enableCaching(): void {/* TODO: Fix JSX expression */,}}if (process.env.NODE_ENV === 'development') {}});
+      .catch((error) => {/* TODO: Fix JSX expression */,}if (process.env.NODE_ENV === 'development') {}});
   }
   /**;
    * Get current performance metrics;
@@ -323,25 +323,25 @@ images.forEach((img) => imageObserver.observe(img));
   /**;
    * Generate performance report;
    */;
-  generateReport(): string {/* TODO: Fix JSX expression */,}}`;
-  Score: ${score,}`;
+  generateReport(): string {/* TODO: Fix JSX expression */,}}`
+  Score: ${score,}`
   }
   /**;
    * Lazy load images for better performance;
    */;
   lazyLoadImages(): void {/* TODO: Fix JSX expression */,}}}
-      })
-    })
+      });
+    });
     images.forEach(img => imageObserver.observe(img));
     logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
   }
   /**;
    * Add critical resource hints;
    */;
-  addCriticalResourceHints(): void {/* TODO: Fix JSX expression */,}}n: 'anonymous' ,},;
+  addCriticalResourceHints(): void {/* TODO: Fix JSX expression */,}}n: 'anonymous' ,},
       {/* TODO: Fix JSX expression */,}s: 'style' ,}]
-    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */,)})
-    })
+    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */,)});
+    });
     logger.info('Critical resource hints added', 'PerformanceOptimizer');
   }
   /**;
@@ -353,10 +353,10 @@ images.forEach((img) => imageObserver.observe(img));
    * Report web vitals;
    */;
   reportWebVitals(metric);
-  s: PerformanceMetrics): void {/* TODO: Fix JSX expression */,}}if(typeof window !== 'undefined' && (window as {gtag?: Function)}}).gtag) {/* TODO: Fix JSX expression */,}g: Function ,}).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */,)})
-          })
+  s: PerformanceMetrics): void {/* TODO: Fix JSX expression */,}}if(typeof window !== 'undefined' && (window as {gtag?: Function)}}).gtag) {/* TODO: Fix JSX expression */,}g: Function ,}).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */,)});
+          });
         }
-      })
+      });
     }
   }
   /**;
@@ -378,8 +378,8 @@ Bundle,;
 Cache Hit,;
   Rate: ${metrics.cacheHitRate,}%;
 Recommendation,;
-  s: ;,
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`;
+  s:  ,
+${score < 80 ? '- Consider optimizing images and enabling compression' : ''}${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`
     `.trim();
   }
   /**;
@@ -391,4 +391,4 @@ ${score < 80 ? '- Consider optimizing images and enabling compression' : ''}${me
 // Export singleton instance;
 export const performanceOptimizer = new PerformanceOptimizer();
 export default PerformanceOptimizer;
-export {PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig}}`;
+export {PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig}}`

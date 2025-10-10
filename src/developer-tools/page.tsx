@@ -1,8 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
 const DeveloperToolsPage: React.FC = () => {
   const _devTools = [
@@ -71,7 +71,7 @@ $4}
               Developer Tools
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              AI-powered development tools that accelerate your coding workflow and improve productivity,
+              AI-powered development tools that accelerate your coding workflow and improve productivity
   </
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -228,7 +228,7 @@ $4}
 // Developer Tools
           </h1>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"></p>
-// AI-powered development tools that accelerate your coding workflow and improve productivity,
+// AI-powered development tools that accelerate your coding workflow and improve productivity
           </p>
             {/* Stats */}"
             <div className="grid grid-cols-2,"
@@ -355,7 +355,7 @@ $4}
                     <a
                       href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${tool.title}`}
                       className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
-                      Get Started Now,
+                      Get Started Now
   </
                   </div>"
                   <div className="text-center"></div>
@@ -366,7 +366,7 @@ $4}
   hover:from-purple-700,"
   hover: to-blue-700 transition-all inline-block"
 // >
-//                       Get Started Now,
+//                       Get Started Now
           </a>
                   </div>
                 </div>
@@ -392,7 +392,7 @@ $4}
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
-                Email Us,
+                Email Us
   </
             </div>
           </div>

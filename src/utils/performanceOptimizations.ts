@@ -6,13 +6,13 @@ export const _debounce =
 
           <T extends (...args: any[]) => any>(),
     func: T,
-  wait: number): ((...args: Parameters,
+  wait: number): ((...args: Parameters
           <T>) => void) => {
     // TODO: Add content
   }
 }
   let timeout: NodeJS.Timeout
-  return (...args: Parameters,
+  return (...args: Parameters
           <T>) => {
     // TODO: Add content
   }
@@ -22,7 +22,7 @@ export const throttle =
 
           <T extends (...args: any[]) => any>(),
     func: T,
-  limit: number): ((...args: Parameters,
+  limit: number): ((...args: Parameters
           <T>) => void) => {
     // TODO: Add content
   }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import Reac, t, { useState } fr, o, m 'rea, c, t';
 interface NewContentPromotionBannerProp, s {
   varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';

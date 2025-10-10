@@ -20,7 +20,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               AI Inventory Management
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-              Intelligent inventory optimization powered by AI,
+              Intelligent inventory optimization powered by AI
             </p>"
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Revolutionize your inventory management with AI that predicts demand, optimizes stock levels, and automates reordering to reduce costs by 40% while eliminating stockouts.
@@ -201,7 +201,7 @@ export default function AIInventoryManagementPage() {/* TODO: Fix JSX expression
               <a href="te,"
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
-  l: (302) 464-0950,
+  l: (302) 464-0950
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"

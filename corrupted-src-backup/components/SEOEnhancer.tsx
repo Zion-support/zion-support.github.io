@@ -76,7 +76,7 @@ const,
         <meta property="og:type" content={ogType} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:url" content={canonicalUrl || window.location.href} />
-        <meta property="og: site_name" content="Zion Tech Group" />,
+        <meta property="og: site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />,
 ,
         {/* Twitter Card Meta Tags */}
@@ -84,7 +84,7 @@ const,
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter: site" content="@ziontechgroup" />,
+        <meta name="twitter: site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />,
 ,
         {/* Additional SEO Meta Tags */}
@@ -100,7 +100,7 @@ const,
         {/* Performance Hints */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-        <link rel="preconnect" href="https: //fonts.googleapis.com" />,
+        <link rel="preconnect" href="https: //fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
 ,
         {/* Favicon and Icons */}

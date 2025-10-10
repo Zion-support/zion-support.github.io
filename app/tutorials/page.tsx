@@ -1,18 +1,18 @@
-'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download}}from 'lucide-react';
-
-const TutorialsPage: React.FC = () => {,
+'use client'
+import React, {useState} from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download} from 'lucide-react'
+;
+const TutorialsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
+;
   const categories = [
     { id: 'all', name: 'All Tutorials', icon: BookOpen ,},
     {id: 'ai', name: 'AI Services', icon: Brain ,},
     {id: 'it', name: 'IT Services', icon: Cloud ,},
     {id: 'saas', name: 'Micro SaaS', icon: Zap ,},
     {id: 'security', name: 'Security', icon: Shield ,},
-    {id: 'integration', name: 'Integration', icon: Code ,}];
+    {id: 'integration', name: 'Integration', icon: Code ,}]
   const tutorials = [
     {id: 1,
       title: 'Getting Started with AI Chat API',
@@ -135,52 +135,49 @@ const TutorialsPage: React.FC = () => {,
           'Monitor and debug integrations'
         ]}}
   ]
-
-  const filteredTutorials = selectedCategory === 'all' 
+  const filteredTutorials = selectedCategory === 'all'
     ? tutorials;
     : tutorials.filter(tutorial => tutorial.category === selectedCategory);
-
+;
   const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
-
-  return(<>)
+;
+  return(<>);
       <Helmet />
         <title>Tutorials & Learning Resources - Zion Tech Group</title>
         <meta name="description" content="Learn how to use Zion Tech Group's AI, IT, and Micro SaaS services with our comprehensive tutorials and learning resources." />
         <meta name="keywords" content="tutorials, learning, AI tutorials, IT tutorials, SaaS tutorials, developer resources" />
-        <link rel="canonical" href="https: //ziontechgroup.com/tutorials" />,
+        <link rel="canonical" href="https: //ziontechgroup.com/tutorials" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text-enhanced">,</h1>
-              Tutorials & Learning;
+            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text-enhanced"></h1>
+              Tutorials & Learning
             </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Master our AI, IT, and Micro SaaS services with step-by-step tutorials,</p>
-              code examples, and best practices from our expert team.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Master our AI, IT, and Micro SaaS services with step-by-step tutorials</p>
+              code examples, and best practices from our expert team.;
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a;
                 href="#featured"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300",
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Featured Tutorials;
               </a>
               <a;
                 href="#all-tutorials"
-                className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
+                className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Browse All;
               </a>
-              <a;
+              <a
                 href="/contact"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300",
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Request Tutorial;
+                Request Tutorial
               </a>
             </div>
           </div>
-
-          {/* Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16">,</div>
+          {/* Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16"></div>
             <div className="cyber-card-enhanced p-6 text-center">
               <BookOpen className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">50+</div>
@@ -202,23 +199,22 @@ const TutorialsPage: React.FC = () => {,
               <div className="text-gray-300">Hours of Content</div>
             </div>
           </div>
-
           {/* Featured Tutorials */} <section id="featured" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Tutorials</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {featuredTutorials.map((tutorial) => (
-                <div key={tutorial.id}className="cyber-card-enhanced group hover: scale-105 transition-all duration-300">,</div>
+                <div key={tutorial.id}className="cyber-card-enhanced group hover: scale-105 transition-all duration-300"></div>
                   <div className="relative">
                     <div className="w-full h-48 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-t-lg flex items-center justify-center">
                       <Play className="w-16 h-16 text-white opacity-80" />
                     </div>
                     <div className="absolute top-4 right-4">
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${
-                        tutorial.difficulty === 'Beginner' 
-                          ? 'bg-green-600 text-white' 
+                        tutorial.difficulty === 'Beginner'
+                          ? 'bg-green-600 text-white'
                           : tutorial.difficulty === 'Intermediate'
                           ? 'bg-yellow-600 text-white'
-                          : 'bg-red-600 text-white'}`}>{tutorial.difficulty</span>} </span>
+                          : 'bg-red-600 text-white'} `}>{tutorial.difficulty</span>} </span>
                     </div>
                   </div>
                   <div className="p-6">
@@ -244,9 +240,9 @@ const TutorialsPage: React.FC = () => {,
                     </div>
                     <a;
                       href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center",
+                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                     >
-                      Start Tutorial;
+                      Start Tutorial
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
@@ -254,39 +250,37 @@ const TutorialsPage: React.FC = () => {,
               ))}
             </div>
           </section>
-
           {/* Category Filter */} <section className="mb-12">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Browse by Category</h2>
             <div className="flex flex-wrap justify-center gap-4">{categories.map((category) => (</div>
                 <button;
-                  key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
                     selectedCategory === category.id;
                       ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
-                >
+                      : 'bg-slate-800 text-gray-300 hover: bg-slate-700',} `}
+                >;
                   <category.icon className="w-5 h-5" />
                   <span>{category.name</span>}</span>
                 </button>
               ))}
             </div>
           </section>
-
           {/* All Tutorials */} <section id="all-tutorials" className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">All Tutorials</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               {filteredTutorials.map((tutorial) => (
-                <div key={tutorial.id}className="cyber-card-enhanced group hover: scale-105 transition-all duration-300">,</div>
+                <div key={tutorial.id}className="cyber-card-enhanced group hover: scale-105 transition-all duration-300"></div>
                   <div className="relative">
                     <div className="w-full h-48 bg-gradient-to-r from-purple-500 to-pink-600 rounded-t-lg flex items-center justify-center">
                       <BookOpen className="w-16 h-16 text-white opacity-80" />
                     </div>
                     <div className="absolute top-4 right-4">
                       <span className={`px-2 py-1 rounded text-xs font-semibold ${
-                        tutorial.difficulty === 'Beginner' 
-                          ? 'bg-green-600 text-white' 
+                        tutorial.difficulty === 'Beginner'
+                          ? 'bg-green-600 text-white'
                           : tutorial.difficulty === 'Intermediate'
                           ? 'bg-yellow-600 text-white'
-                          : 'bg-red-600 text-white'}`}>{tutorial.difficulty</span>} </span>
+                          : 'bg-red-600 text-white'} `}>{tutorial.difficulty</span>} </span>
                     </div>
                   </div>
                   <div className="p-6">
@@ -312,9 +306,9 @@ const TutorialsPage: React.FC = () => {,
                     </div>
                     <a;
                       href={`/tutorials/${tutorial.id}`}
-                      className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center",
+                      className="w-full bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
                     >
-                      Start Tutorial;
+                      Start Tutorial
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </a>
                   </div>
@@ -322,10 +316,9 @@ const TutorialsPage: React.FC = () => {,
               ))}
             </div>
           </section>
-
           {/* Learning Paths */} <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Learning Paths</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
               <div className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-4">
                   <Brain className="w-8 h-8 text-cyan-400 mr-3" />
@@ -340,18 +333,17 @@ const TutorialsPage: React.FC = () => {,
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    API Integration;
+                    API Integration
                   </li>
                   <li className="flex items-center text-sm text-gray-300">
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Advanced AI Features;
+                    Advanced AI Features
                   </li>
                 </ul>
                 <a href="#" className="text-cyan-400 hover: text-cyan-300 font-semibold">,
                   Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-
               <div className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-4">
                   <Cloud className="w-8 h-8 text-green-400 mr-3" />
@@ -377,7 +369,6 @@ const TutorialsPage: React.FC = () => {,
                   Start Learning Path <ArrowRight className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-
               <div className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-4">
                   <Zap className="w-8 h-8 text-purple-400 mr-3" />
@@ -405,20 +396,18 @@ const TutorialsPage: React.FC = () => {,
               </div>
             </div>
           </section>
-
           {/* Resources */} <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Additional Resources</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,</div>
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6"></div>
               <div className="cyber-card-enhanced p-6 text-center">
                 <Code className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Code Examples</h3>
-                <p className="text-gray-300 mb-4 text-sm">Ready-to-use code examples for all our services;</p>
+                <p className="text-gray-300 mb-4 text-sm">Ready-to-use code examples for all our services</p>
                 </p>
                 <a href="#" className="text-cyan-400 hover: text-cyan-300 text-sm">,
                   Browse Examples <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-
               <div className="cyber-card-enhanced p-6 text-center">
                 <Download className="w-12 h-12 text-green-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">SDKs & Libraries</h3>
@@ -428,7 +417,6 @@ const TutorialsPage: React.FC = () => {,
                   View SDKs <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-
               <div className="cyber-card-enhanced p-6 text-center">
                 <Users className="w-12 h-12 text-purple-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Community</h3>
@@ -438,7 +426,6 @@ const TutorialsPage: React.FC = () => {,
                   Join Community <ExternalLink className="w-4 h-4 inline ml-1" />
                 </a>
               </div>
-
               <div className="cyber-card-enhanced p-6 text-center">
                 <BookOpen className="w-12 h-12 text-orange-400 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-white mb-2">Documentation</h3>
@@ -450,7 +437,6 @@ const TutorialsPage: React.FC = () => {,
               </div>
             </div>
           </section>
-
           {/* CTA */} <section className="mb-16">
             <div className="cyber-card-enhanced p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
@@ -459,15 +445,15 @@ const TutorialsPage: React.FC = () => {,
               <div className="flex flex-wrap justify-center gap-4">
                 <a;
                   href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300",
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
                 >
                   Get Started Free;
                 </a>
-                <a;
+                <a
                   href="/demo"
-                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
+                  className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
-                  Request Demo;
+                  Request Demo
                 </a>
               </div>
             </div>
@@ -475,7 +461,7 @@ const TutorialsPage: React.FC = () => {,
         </div>
       </div>
     </>
-  );
-};
-
+  )
+}
+;
 export default TutorialsPage;

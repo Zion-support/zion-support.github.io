@@ -62,8 +62,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         <rect x="0" y="98%" width="100%" height="2" fill="#00ffff" opacity="0.3"/>
         <rect x="98%" y="0" width="2" height="100%" fill="#00ffff" opacity="0.3"/>
         <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="monospace" font-size="14">
-          Loading...,
-        </text>,
+          Loading...
+        </text>
       </svg>,
     `;
     ,

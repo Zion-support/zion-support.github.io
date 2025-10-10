@@ -1,10 +1,10 @@
 import React from 'react';
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 const ServicesPage: React.FC = () => {
   const aiServices = [
     {
@@ -230,7 +230,7 @@ const ServicesPage: React.FC = () => {
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Consultation,
+                Get Free Consultation
   </
             </div>
           </div>
@@ -258,7 +258,7 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              AI Services,
+              AI Services
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced artificial intelligence solutions to automate, optimize, and transform your business;
@@ -292,7 +292,7 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-cyan-500 hover: bg-cyan-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More,
+                    Learn More
   </
                 </div>
               </div>
@@ -308,7 +308,7 @@ const ServicesPage: React.FC = () => {
               IT Services
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Robust IT infrastructure and support services to keep your business running smoothly,
+              Robust IT infrastructure and support services to keep your business running smoothly
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -339,7 +339,7 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-blue-500 hover: bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More,
+                    Learn More
   </
                 </div>
               </div>
@@ -352,7 +352,7 @@ const ServicesPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Micro SAAS Solutions,
+              Micro SAAS Solutions
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Affordable, powerful AI-driven tools for modern businesses. 50+ ready-to-use applications.
@@ -386,7 +386,7 @@ const ServicesPage: React.FC = () => {
                   <Link
                     to={service.link}
                     className="bg-purple-500 hover: bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block">
-                    Learn More,
+                    Learn More
   </
                 </div>
               </div>
@@ -402,7 +402,7 @@ const ServicesPage: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We deliver exceptional results with proven expertise and cutting-edge technology,
+              We deliver exceptional results with proven expertise and cutting-edge technology
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

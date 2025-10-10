@@ -705,13 +705,13 @@ Analyzi, n, g...)
                         </d, i, v>
                         <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}</p>
                         <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>",
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>"
                         <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"></div>
                           <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>"
                           <p, className="te, x, t-gre, e, n-700, tex, t-sm">{iss, u, e.f, i, x}</p>
                         <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}</p>";
                         <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">";</div>
-                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>",
+                          <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>"
                         </d, i, v>"
                         <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}</p>"
                         <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3"></div>"

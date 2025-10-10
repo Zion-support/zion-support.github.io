@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 const NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}

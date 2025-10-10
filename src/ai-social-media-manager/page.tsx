@@ -1,6 +1,6 @@
-import React from 'react';
+import React  from 'react';
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
-import React from 'react';
+import React  from 'react';
 const AISocialMediaManagerPage: React.FC = () => {
   const features = [
     {
@@ -80,7 +80,7 @@ $4}
               AI-Powered Social Media Management;
   </
             <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">
-              AI Social Media Manager,
+              AI Social Media Manager
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Automate your social media presence with AI that creates, schedules, and optimizes 
@@ -92,7 +92,7 @@ $4}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </button>
               <button className="border-2 border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300">
-                Watch Demo,
+                Watch Demo
   </
       {/* Platforms Section */}
       <section className="py-16 px-4 bg-slate-800/30">

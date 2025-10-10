@@ -37,7 +37,7 @@ export class RateLimiter {
     // TODO: Add content
   }
 }
-  private requests: Map,
+  private requests: Map
           <string, RequestRecord> = new Map();
   private config: RateLimitConfig,
   constructor(config: RateLimitConfig) {
@@ -252,7 +252,7 @@ export function createRateLimitMiddleware(limiter: RateLimiter) {
 export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add content
   }
 }
-  return async (request: Request): Promise,
+  return async (request: Request): Promise
           <Response | null> => {
     // TODO: Add content
   }

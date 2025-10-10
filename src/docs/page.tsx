@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
 const DocsPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -182,7 +182,7 @@ const DocsPage: React.FC = () => {
               Documentation
   </
             <p className="text-xl text-cyan-400 mb-8">
-              Everything you need to build with AI,
+              Everything you need to build with AI
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Comprehensive guides, API references, and tutorials to help you 

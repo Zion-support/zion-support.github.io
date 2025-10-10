@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface SearchProps {/* TODO: Fix JSX expression */}
 }
 const Search = React.memo(function Search({ className = '' }: SearchProps) {

@@ -32,7 +32,7 @@ const October2025UltimateEnterpriseBanne, r = () => {
             <br /> <span, className="te, x, t-whi, t, e">Revolution, 202, 5</sp, a, n>
           </h2>
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">
-            Breakthrough, solutions, delivering</p> <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>, 
+            Breakthrough, solutions, delivering</p> <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n> 
             <span, classNam, e = "te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</span>, a, n, d 
             <span, classNam, e = "te, x, t-bl, u, e-400, fon, t-bo, l, d"> transformative, result, s</sp, a, n>
           </p>

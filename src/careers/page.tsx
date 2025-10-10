@@ -1,8 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const CareersPage: React.FC = () => {
   const openPositions = [
     {
@@ -159,7 +159,7 @@ const CareersPage: React.FC = () => {
             <Link
               to="/contact"
               className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-              Contact Us,
+              Contact Us
   </
           </div>
         </div>
@@ -172,7 +172,7 @@ const CareersPage: React.FC = () => {
               Why Work With Us?
             </h2>
             <p className="text-xl text-gray-600">
-              We offer more than just a job - we offer a career and a community,
+              We offer more than just a job - we offer a career and a community
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -194,7 +194,7 @@ const CareersPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Our Culture,
+                Our Culture
   </
               <p className="text-lg text-gray-600 mb-8">
                 At Zion Tech Group, we believe that great technology comes from great people. 
@@ -242,7 +242,7 @@ const CareersPage: React.FC = () => {
               Open Positions
   </
             <p className="text-xl text-gray-600">
-              Find your next career opportunity with us,
+              Find your next career opportunity with us
   </
           </div>
           <div className="space-y-8">

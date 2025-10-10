@@ -2,7 +2,7 @@ import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail,
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const GreenITPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState('solutions');
   const tabs = [
@@ -164,7 +164,7 @@ valuevalue: '100%',
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Green IT Solutions,
+              Green IT Solutions
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Transform your IT infrastructure into a sustainable, environmentally friendly system 
@@ -306,7 +306,7 @@ valuevalue: '100%',
 export default GreenITPage;
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const GreenITPage: React.FC = () => {
     return (
     <div>Coming Soon</div>
@@ -557,7 +557,7 @@ const tabs = [
           <div className="text-center mb-16"></div>"
             <h1 className="text-4xl,"
   md: text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Green IT Solutions,
+// Green IT Solutions
           </h1>"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
 // Transform your IT infrastructure into a sustainable, environmentally friendly system;
@@ -641,7 +641,7 @@ const tabs = [
                         {solution.pricing}
                       <a
                         href="/contact" className="inline-flex items-center text-cyan-400 hover: text-cyan-300 font-medium text-sm transition-colors"
-Learn More,
+Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </a>
           )}

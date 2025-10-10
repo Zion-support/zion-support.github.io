@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface EnhancedPromotionalBannerProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({,

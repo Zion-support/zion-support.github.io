@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
 const LatestArticlesShowcas, e: React.FC = () => { ,
   const latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); return(<section, classNam, e = 'py-20, b, g-whi, t, e'>

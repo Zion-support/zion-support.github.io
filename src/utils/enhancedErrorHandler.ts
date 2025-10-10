@@ -649,7 +649,7 @@ interface ErrorContext {
   p: string;
   component?: string
   action?: string
-  props?: Record,
+  props?: Record
           <string>
   state?: Record<string>
 }
@@ -674,7 +674,7 @@ interface ErrorReport {/* TODO: Fix JSX expression */}
     | 'unknown',,
 
     tags: string[],,
-    metadata: Record,
+    metadata: Record
 
           <string>
   resolve,
@@ -707,7 +707,7 @@ class EnhancedErrorHandler {
   private,
   errors: ErrorReport[] = [],
   private,
-  errorCounts: Map,
+  errorCounts: Map
           <string, number> = new Map();
   private,
   errorCategories: Map<string, number> = new Map();
@@ -1109,7 +1109,7 @@ const originalFetch = window.fetch;
    * Report to remote service;
    */
 
-  private async reportToRemote(errorReport: ErrorReport): Promise,
+  private async reportToRemote(errorReport: ErrorReport): Promise
           <void> {
     // TODO: Add content
   }
@@ -1243,7 +1243,7 @@ const originalFetch = window.fetch;
   totalError,
   s: number,,
     errorsByTyp,
-  e: Record,
+  e: Record
           <string>
     errorsByCategor,
   y: Record<string>
@@ -1255,7 +1255,7 @@ const originalFetch = window.fetch;
   O: Add content,}
 }
     const,
-  errorsByType: Record,
+  errorsByType: Record
           <string, number> = {}
     const,
   errorsByCategory: Record<string, number> = {}

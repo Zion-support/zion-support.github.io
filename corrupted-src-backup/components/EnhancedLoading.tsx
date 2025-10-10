@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface LoadingProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedLoading: React.FC<LoadingProps> = ({,

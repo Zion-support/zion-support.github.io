@@ -1,11 +1,10 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap}}from 'lucide-react';
-
-const SitemapPage: React.FC = () => {,
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap} from 'lucide-react'
+;
+const SitemapPage: React.FC = () => {
   const lastUpdated = new Date().toISOString().split('T')[0]
-  
   const pageCategories = [
     {
       title: 'Main Pages',
@@ -90,25 +89,23 @@ const SitemapPage: React.FC = () => {,
         {name: 'Sitemap', url: '/sitemap', description: 'Complete site map' ,}]
     }
   ]
-
   const totalPages = pageCategories.reduce((total, category) => total + category.pages.length, 0);
-
-  return(<>)
+;
+  return(<>);
       <Helmet />
         <title>Sitemap - Zion Tech Group</title>
         <meta name="description" content="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place." />
         <meta name="keywords" content="sitemap, website map, navigation, pages, services, resources" />
-        <link rel="canonical" href="https: //ziontechgroup.com/sitemap" />,
+        <link rel="canonical" href="https: //ziontechgroup.com/sitemap" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                 <Map className="w-8 h-8 text-white" />
               </div>
-              <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
-                Sitemap;
+              <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced"></h1>
+                Sitemap
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Complete overview of all pages and resources available on our website.</p>
@@ -116,13 +113,12 @@ const SitemapPage: React.FC = () => {,
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
               <Calendar className="w-4 h-4" />
-              <span>Last updated: {lastUpdated,</span>}</span>
+              <span>Last updated: {lastUpdated</span>}</span>
               <Users className="w-4 h-4" />
               <span>{totalPages</span>}pages</span>
             </div>
           </div>
-
-          {/* Quick Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16">,</div>
+          {/* Quick Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16"></div>
             <div className="cyber-card-enhanced p-6 text-center">
               <Map className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
               <div className="text-2xl font-bold text-white mb-2">{totalPages</div>}</div>
@@ -144,7 +140,6 @@ const SitemapPage: React.FC = () => {,
               <div className="text-gray-300">Micro SaaS</div>
             </div>
           </div>
-
           {/* Page Categories */} <div className="space-y-12">{pageCategories.map((category, categoryIndex) => (</div>
               <div key={categoryIndex}className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-6">
@@ -153,9 +148,9 @@ const SitemapPage: React.FC = () => {,
                   <span className="ml-4 px-3 py-1 bg-slate-700 text-cyan-400 text-sm font-semibold rounded">{category.pages.length</span>}pages;
                   </span>
                 </div>
-                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">,</div>
-                  {category.pages.map((page, pageIndex) => (
-                    <div key={pageIndex}className="bg-slate-800 rounded-lg p-4 hover: bg-slate-700 transition-colors duration-300">,</div>
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4"></div>
+                  {category.pages.map((page, pageIndex) => (;
+                    <div key={pageIndex}className="bg-slate-800 rounded-lg p-4 hover: bg-slate-700 transition-colors duration-300"></div>
                       <div className="flex items-start justify-between mb-2">
                         <h3 className="text-lg font-semibold text-white group-hover: text-cyan-400 transition-colors">,
                           {page.name} </h3>
@@ -168,9 +163,9 @@ const SitemapPage: React.FC = () => {,
                       </div>
                       <p className="text-gray-300 text-sm mb-3">{page.description</p>}</p>
                       <a;
-                        href={page.url}className="text-cyan-400 hover: text-cyan-300 text-sm font-medium flex items-center",
+                        href={page.url}className="text-cyan-400 hover: text-cyan-300 text-sm font-medium flex items-center"
                       >
-                        Visit Page;
+                        Visit Page
                         <ExternalLink className="w-3 h-3 ml-1" />
                       </a>
                     </div>
@@ -179,7 +174,6 @@ const SitemapPage: React.FC = () => {,
               </div>
             ))}
           </div>
-
           {/* Search Functionality */} <div className="cyber-card-enhanced p-8 mt-16">
             <h2 className="text-2xl font-bold text-white mb-6 text-center">Can't Find What You're Looking For?</h2>
             <p className="text-gray-300 text-center mb-8">Use our search functionality or contact our support team for assistance.</p>
@@ -187,42 +181,41 @@ const SitemapPage: React.FC = () => {,
             <div className="flex flex-wrap justify-center gap-4">
               <a;
                 href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300",
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
               >
                 Contact Support;
               </a>
               <a;
                 href="/search"
-                className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
+                className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Search Site;
               </a>
-              <a;
+              <a
                 href="/"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300",
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300"
               >
-                Go Home;
+                Go Home
               </a>
             </div>
           </div>
-
           {/* XML Sitemap Link */} <div className="cyber-card-enhanced p-6 mt-8 text-center">
             <h3 className="text-lg font-semibold text-white mb-2">For Developers</h3>
             <p className="text-gray-300 mb-4">Access our XML sitemap for search engines and automated tools.</p>
             </p>
             <a;
               href="/sitemap.xml"
-              className="text-cyan-400 hover: text-cyan-300 font-medium flex items-center justify-center",
+              className="text-cyan-400 hover: text-cyan-300 font-medium flex items-center justify-center"
             >
               <Code className="w-4 h-4 mr-2" />
-              View XML Sitemap;
+              View XML Sitemap
               <ExternalLink className="w-4 h-4 ml-2" />
             </a>
           </div>
         </div>
       </div>
     </>
-  );
-};
-
+  )
+}
+;
 export default SitemapPage;

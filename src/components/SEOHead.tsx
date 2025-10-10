@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -14,7 +14,7 @@ interface SEOHeadProps {/* TODO: Fix JSX expression */}
   noindex?: boolean;
   nofollow?: boolean;
 }
-const SEOHead: React.FC,
+const SEOHead: React.FC
           <SEOHeadProps> = ({
     // TODO: Add content
   }

@@ -104,7 +104,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
 
 }
     const,
-  styles: Record,
+  styles: Record
           <ErrorSeverity, string> = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -133,7 +133,7 @@ class ErrorLogger {/* TODO: Fix JSX expression */}
    * Send error to external logging service;
    */
 
-  private async sendToExternalService(entry: ErrorLogEntry): Promise,
+  private async sendToExternalService(entry: ErrorLogEntry): Promise
           <void> {
     // TODO: Add content
   }

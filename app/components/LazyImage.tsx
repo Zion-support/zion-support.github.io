@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
 }
   ]
 const benefits = [
@@ -9,13 +9,9 @@ const benefits = [
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
-
     '24/7 technical support',
-
     'Easy integration with existing systems',
-
     'Cost-effective pricing plans',
-
     'Proven track record of success'
   ]
 {/* Hero Section */} <section className="py-20 px-4">
@@ -35,13 +31,13 @@ const benefits = [
               <span className="text-white">Solutions</span>
             </h1>
             <p>Transform your business with our advanced lazyimage solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.
+              Powered by cutting-edge AI technology and industry expertise.;
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button>Get Started</button>
                 <ArrowRight>
               </button>
-              <button>Learn More,</button>
+              <button>Learn More</button>
               </button>
             </div>
           </div>
@@ -61,11 +57,11 @@ const benefits = [
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
             </h2>
-            <p>Experience the power of our lazyimage solutions for your business.,</p>
+            <p>Experience the power of our lazyimage solutions for your business.</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (;
                 <div key={index}className="flex items-start space-x-3"></div>
                 <CheckCircle />
                 <p className="text-gray-300 text-lg">{benefit</p>}</p>
@@ -83,19 +79,19 @@ const benefits = [
           </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>
             <h2>Ready to Get Started?</h2>
             </h2>
             <p>Contact our experts to discuss your lazyimage needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <Phone>
-                Call Now;
+                Call Now
               </button>
               <button>
                 <Mail>
-                Email Us;
+                Email Us
               </button>
             </div>
           </div>
@@ -103,7 +99,7 @@ const benefits = [
       </section>
     </div>
   ),
-};
-
+}
+;
 export default LazyImagePage;
-
+;

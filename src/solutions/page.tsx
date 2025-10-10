@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
 const SolutionsPage: React.FC = () => {
@@ -209,7 +209,7 @@ $4}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Our Solutions,
+              Our Solutions
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Comprehensive technology solutions designed to transform your business operations 
@@ -810,7 +810,7 @@ $4}
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us,
+                Email Us
   </
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"

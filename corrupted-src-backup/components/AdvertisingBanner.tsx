@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface AdvertisingBannerProps {/* TODO: Fix JSX expression */}
 }
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({,

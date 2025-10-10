@@ -1,6 +1,6 @@
-'use client';
-import React, {useEffect, useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+'use client'
+import React, {useEffect, useState, useCallback} from 'react'
+import {Helmet} from 'react-helmet-async'
 interface SEOOptimizerProps {title?: string;}
   description?: string;
   keywords?: string;
@@ -8,22 +8,22 @@ interface SEOOptimizerProps {title?: string;}
   ogImage?: string;
   twitterCard?: string;
   structuredData?: object;
-  children: React.ReactNode;,}const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({,
+  children: React.ReactNode,}const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Professional AI and IT solutions for your business. Advanced technology, expert support, and proven results.',
   keywords = 'AI solutions, IT services, technology, business solutions, Zion Tech Group',
-  canonicalUrl,
+  canonicalUrl,;
   ogImage = '/images/og-image.jpg',
   twitterCard = 'summary_large_image',
-  structuredData,
+  structuredData,;
   children;}) => {const [seoScore, setSeoScore] = useState(0);
   const [recommendations, setRecommendations] = useState<string[]>([]);
-  const analyzeSEO = useCallback(() => {
+  const analyzeSEO = useCallback(() => {;
     if (typeof window === 'undefined') return;
     let score = 0;
     const newRecommendations: string[] = [],
     // Check title length;
-    if (title.length >= 30 && title.length <= 60) {
+    if (title.length >= 30 && title.length <= 60) {;
       score += 20;}else {newRecommendations.push('Title should be between 30-60 characters')}}// Check description length;
     if (description.length >= 120 && description.length <= 160) {score += 20;}else {newRecommendations.push('Description should be between 120-160 characters')}}// Check for keywords in title;
     if (keywords && title.toLowerCase().includes(keywords.toLowerCase().split(',')[0])) {score += 15;}else {newRecommendations.push('Include primary keyword in title')}}// Check for keywords in description;
@@ -38,15 +38,15 @@ interface SEOOptimizerProps {title?: string;}
     setRecommendations(newRecommendations);
   }, [title, description, keywords]);
   useEffect(() => {analyzeSEO()}, [analyzeSEO]);
-  const generateStructuredData = () => {const defaultStructuredData = {
-      "@context": "https://schema.org",
+  const generateStructuredData = () => {const defaultStructuredData = {;
+      "@context": "https: //schema.org",
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "description": description,
-      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),
-      "logo": ogImage,
-      "sameAs": [
-        "https://twitter.com/ziontechgroup",
+      "description": description,;
+      "url": canonicalUrl || (typeof window !== 'undefined' ? window.location.origin : ''),;
+      "logo": ogImage,;
+      "sameAs": [;
+        "https: //twitter.com/ziontechgroup",
         "https: //linkedin.com/company/ziontechgroup",
       ]}return structuredData || defaultStructuredData;
   }
@@ -68,8 +68,8 @@ interface SEOOptimizerProps {title?: string;}
         {/* Structured Data */} <script type="application/ld+json">
           {JSON.stringify(generateStructuredData())} </script>
       </Helmet>
-      {children}{process.env.NODE_ENV === 'development' && (
-        <div className="seo-debug" style={{
+      {children}{process.env.NODE_ENV === 'development' && (;
+        <div className="seo-debug" style={{;
           position: 'fixed',
           top: '10px',
           left: '10px',
@@ -80,12 +80,12 @@ interface SEOOptimizerProps {title?: string;}
           fontSize: '12px',
           zIndex: 1000,
           maxWidth: '300px',}}>
-          <div>SEO Score: {seoScore,</div>}/100</div>
-          {recommendations.length > 0 && (
+          <div>SEO Score: {seoScore</div>}/100</div>
+          {recommendations.length > 0 && (;
             <div>
-              <div>Recommendations: </div>,
+              <div>Recommendations: </div>
               <ul style={{ margin: '5px 0', paddingLeft: '15px' ,}}>
-                {recommendations.map((rec, index) => (
+                {recommendations.map((rec, index) => (;
                   <li key={index}>{rec}</li>
                 ))}
               </ul>
@@ -95,7 +95,7 @@ interface SEOOptimizerProps {title?: string;}
       )}
     </React.Fragment>
   );
-};
-
+}
+;
 export default AdvancedSEOOptimizerNew;
   </SEOOptimizerProps>

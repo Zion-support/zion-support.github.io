@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 import { MessageCircle, Headphones, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react';
 const AICustomerSupportPage: React.FC = () => {
   const features = [
@@ -63,9 +63,9 @@ const,
         description="Revolutionary AI-powered customer support with chatbots, omnichannel support, and intelligent automation. Boost satisfaction by 95% and reduce costs by 60%."
         keywords={['AI customer support', 'chatbots', 'omnichannel support', 'customer service automation', 'AI helpdesk']}
         canonicalUrl="https: //ziontechgroup.com/ai-customer-support",
-      />,
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,
-        <Navigation />,
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <Navigation />
         <main className="pt-16">,
         canonicalUrl="https://ziontechgroup.com/ai-customer-support"
       />
@@ -138,7 +138,7 @@ const,
               <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
                 {stats.map((stat, index) => (
                   <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text">,
+                    <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text">
                 <a></a>"
                   href="mailt,"
   o:kleber@ziontechgroup.com""
@@ -186,7 +186,7 @@ const AICustomerSupportPage2: React.FC = () => {
           <section className="text-center mb-16">
             <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support;
-            </h1>,
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
               Transform your customer support with intelligent AI solutions that provide 24/7 assistance),
               smart ticket routing, and predictive analytics.
@@ -204,18 +204,18 @@ const AICustomerSupportPage2: React.FC = () => {
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 Learn More;
-              </a>,
-            </div>,
+              </a>
+            </div>
           </section>,
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features;
-            </h2>,
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
-                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
+                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features;
   </
@@ -241,7 +241,7 @@ const AICustomerSupportPage2: React.FC = () => {
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
               Pricing Plans;
-            </h2>,
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">,
               {pricingPlans.map((plan, index) => (
                 <div;
@@ -321,7 +321,7 @@ const AICustomerSupportPage2: React.FC = () => {
               AI Customer Support;
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your customer support with intelligent AI solutions that provide 24/7 assistance, 
+              Transform your customer support with intelligent AI solutions that provide 24/7 assistance 
             </p>
           </section>
         </div>

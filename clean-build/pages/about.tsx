@@ -67,9 +67,9 @@ export default function About() {
                   <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
                   <div className="text-gray-600">Support Available</div>
                 </div>
-              </div>,
-            </div>,
-          </div>,
+              </div>
+            </div>
+          </div>
         </section>,
 ,
         {/* Values Section */}
@@ -92,10 +92,10 @@ export default function About() {
                 <div className="text-center p-6 bg-gray-50 rounded-lg"></div>
                   <div className="text-4xl mb-4"></div>
                     <span role="img" aria-label="target">
-                      🎯,
-                    </span>,
-                  </div>,
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Excellence</h3>,
+                      🎯
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Excellence</h3>
                   <p className="text-gray-600">,
                     We strive for excellence in every project, delivering high-quality solutions;
                     that exceed expectations.
@@ -291,10 +291,10 @@ export default function About() {/* TODO: Fix JSX expression */}
                   <div className="text-5xl mb-4"></div>
                     <span role="img" aria-label="developer">
                       👨‍💻
-                    </span>,
-                  </div>,
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Development Team</h3>,
-                  <p className="text-blue-600 font-medium mb-2">Senior Full-Stack Developers</p>,
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Development Team</h3>
+                  <p className="text-blue-600 font-medium mb-2">Senior Full-Stack Developers</p>
                   <p className="text-gray-600">,
                     Expert developers with years of experience in modern web technologies, mobile;
                     development, and cloud architecture.
@@ -427,8 +427,8 @@ export default function About() {/* TODO: Fix JSX expression */}
             </div>
           </div>
         </section>
-      </div>,
-    </React.Fragment>,
+      </div>
+    </React.Fragment>
       </div>
     </React.Fragment>)
   );

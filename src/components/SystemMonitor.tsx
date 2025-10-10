@@ -146,7 +146,7 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
   tota,
   l: number,,
     byTyp,
-  e: Record,
+  e: Record
           <string>
     byCategor,
   y: Record<string>
@@ -432,7 +432,7 @@ $4});
                     <span className="capitalize">{category}</span>
 export default SystemMonitor;
 const,
-  SystemMonitor: React.FC,
+  SystemMonitor: React.FC
           <SystemMonitorProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -521,7 +521,7 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       rt,
   t: 0,
       saveDat,
-  a: false,
+  a: false
           <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}></div>
       <div className="flex items-center justify-between mb-6"></div>"
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>"

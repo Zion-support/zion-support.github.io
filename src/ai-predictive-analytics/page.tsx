@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, BarChart3, Brain, Target, Zap, Shield, Clock, Users, Star, ArrowRight, Database, Cpu, Eye, Globe, Lock } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const AIPredictiveAnalyticsPage: React.FC = () => {
   const features = [
     {
@@ -62,7 +62,7 @@ const AIPredictiveAnalyticsPage: React.FC = () => {
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Predictive Analytics Features,
+            Predictive Analytics Features
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (

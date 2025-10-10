@@ -889,7 +889,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   Get Started Today
                 </a>
                 <a,
-                  href="tel:+<13024640950" className="text-left">,
+                  href="tel:+<13024640950" className="text-left">
                   <Phone className="text-left" />,
                   Call Now;
               {/* Features */}"
@@ -980,7 +980,7 @@ import {Search, Filter, Clock, DollarSign, Users, Zap, Brain, Cloud, Database, S
                   href="mailt,"
   o: kleber@ziontechgroup.<com" className="text-left"></com>"
                   <Mail className="text-left" /></Mail>
-                  Get Started Today,
+                  Get Started Today
                 </a>
                 <a></a>"
                   href="te,"

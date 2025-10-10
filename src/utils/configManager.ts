@@ -232,7 +232,7 @@ export interface AppConfig {/* TODO: Fix JSX expression */}
     enableNetwork: false,
   }
 }
-const developmentConfig: Partial,
+const developmentConfig: Partial
           <AppConfig> = {
     // TODO: Add content
   }
@@ -285,7 +285,7 @@ const stagingConfig: Partial<AppConfig> = {
     enableNetwork: false,
   }
 }
-const stagingConfig: Partial,
+const stagingConfig: Partial
           <AppConfig> = {
     // TODO: Add content
   }
@@ -338,7 +338,7 @@ const productionConfig: Partial<AppConfig> = {
     enableNetwork: true,
   }
 }
-const productionConfig: Partial,
+const productionConfig: Partial
           <AppConfig> = {
     // TODO: Add content
   }
@@ -406,7 +406,7 @@ const testConfig: Partial<AppConfig> = {
     maxRequestsPerMinute: 60,
   }
 }
-const testConfig: Partial,
+const testConfig: Partial
           <AppConfig> = {
     // TODO: Add content
   }
@@ -467,7 +467,7 @@ export class ConfigManager {
   private static instance: ConfigManager;
   private config: AppConfig
   private environment: Environment
-  private overrides: Partial,
+  private overrides: Partial
 
           <AppConfig> = {}
   constructor() {/* TODO: Fix JSX expression */}
@@ -572,7 +572,7 @@ export class ConfigManager {
     * Deep merge two config objects;
    */
 
-  private mergeConfig(base: AppConfig, override: Partial,
+  private mergeConfig(base: AppConfig, override: Partial
           <AppConfig>): AppConfig {// TODO: Add content
   }
 
@@ -670,13 +670,13 @@ export class ConfigManager {
   get;
           <K extends keyof AppConfig>(ke)
   y: K): AppConfig[K]
-// get,
+// get
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     ke,
   y: K,
     nestedKe,
   y: NK): AppConfig[K][NK]
-// get,
+// get
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     ke,
   y: K,
@@ -697,7 +697,7 @@ export class ConfigManager {
           <K extends keyof AppConfig>(ke,
   y: K, valu)
   e: AppConfig[K]): void
-// set,
+// set
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
 
     key: K,
@@ -705,7 +705,7 @@ export class ConfigManager {
     value: AppConfig[K][NK]
 
   ): void
-// set,
+// set
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     ke,
   y: K,
@@ -1005,7 +1005,7 @@ $4},
    * Update API configuration;
    */
 
-  updateAPIConfig(config: Partial,
+  updateAPIConfig(config: Partial
           <AppConfig['api']>): void {
     // TODO: Add content
   }
@@ -1061,7 +1061,7 @@ $4},
    * Override configuration;
    */
 
-  override(config: Partial,
+  override(config: Partial
           <AppConfig>): void {
     // TODO: Add content
   }

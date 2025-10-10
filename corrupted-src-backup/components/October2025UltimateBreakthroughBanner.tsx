@@ -76,7 +76,7 @@ const, October2025UltimateBreakthroughBanne, r = () => {/* TODO: Fix JSX express
   g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
         <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
           Ultimate, AI, Innovation Su, i, t;
-  e: <br />,
+  e: <br />
         <h2, className="te, x, t-3xl, s, m: te, x, t-4x, l, l
   g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"</h2>
         <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";

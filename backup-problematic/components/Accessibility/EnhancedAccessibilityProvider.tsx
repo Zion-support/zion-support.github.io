@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface EnhancedAccessibilityProviderProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedAccessibilityProvider = React.memo(function EnhancedAccessibilityProvider({)

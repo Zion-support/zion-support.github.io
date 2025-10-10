@@ -99,7 +99,7 @@ class ErrorTrackingService {
   private static,
   instance: ErrorTrackingService,
   private,
-  errors: Map,
+  errors: Map
           <string, TrackedError> = new Map();
   private,
   errorListeners: Array<(erro)
@@ -314,7 +314,7 @@ const,
    * Report critical errors to external service;
    */
 
-  private async reportToExternalService(errorId: string): Promise,
+  private async reportToExternalService(errorId: string): Promise
           <void> {
     // TODO: Add content
   }
@@ -391,7 +391,7 @@ const,
   tota,
   l: number,,
     byCategor,
-  y: Record,
+  y: Record
           <ErrorCategory>
     bySeverit,
   y: Record<ErrorSeverity>

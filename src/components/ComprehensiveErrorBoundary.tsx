@@ -47,7 +47,7 @@ class ComprehensiveErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     this.maxRetries = props.maxRetries || 3;
   }
   static getDerivedStateFromError(erro)
-  r: Error): Partial,
+  r: Error): Partial
           <State> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

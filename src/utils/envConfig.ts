@@ -160,7 +160,7 @@ class EnvironmentConfig {
   O: Add content,}
 }
     const,
-  headers: Record,
+  headers: Record
           <string, string> = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

@@ -3,7 +3,7 @@
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
-import React from 'react'
+import React  from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 
@@ -162,7 +162,7 @@ class HealthCheckService {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   private,
-  checks: Map,
+  checks: Map
           <string, HealthCheckFunction> = new Map()
   private,
   startTime: number = Date.now()

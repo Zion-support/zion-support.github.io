@@ -1,5 +1,5 @@
 import { X, Home, User, Settings, HelpCircle } from 'lucide-react';
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 interface SidebarNavigationProps {
   isOpen: boolean;

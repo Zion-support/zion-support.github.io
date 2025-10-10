@@ -61,7 +61,7 @@ export interface ValidationResult {/* TODO: Fix JSX expression */}
   isVali,
   d: boolean,,
     error,
-  s: Record,
+  s: Record
           <string>
 }
 export class ValidationError extends Error {/* TODO: Fix JSX expression */}
@@ -321,7 +321,7 @@ function validateFieldRule(value: unknown, rule: FieldRule): boolean {
   switch (rule.type) {
  * Create custom validator
  */
-export function createCustomValidator,
+export function createCustomValidator
           <T>()
 
   validator: (value: T) => boolean,
@@ -443,7 +443,7 @@ export function validateForm<T extends Record<string, unknown>>()
 
 }
   const,
-  errors: Record,
+  errors: Record
           <string, string[]> = {}
   for (const field in rules) {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -564,7 +564,7 @@ class DataValidator {
   e: 'This field is required'
   }),
   emai,
-  l: (): ValidationRule,
+  l: (): ValidationRule
           <string> => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -575,7 +575,7 @@ class DataValidator {
   e: 'Please enter a valid email address'
   }),
   ur,
-  l: (): ValidationRule,
+  l: (): ValidationRule
           <string> => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -587,7 +587,7 @@ class DataValidator {
   }),
   minLengt,
   h: (mi)
-  n: number): ValidationRule,
+  n: number): ValidationRule
           <string> => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -599,13 +599,13 @@ class DataValidator {
   }),
   maxLengt,
   h: (ma)
-  x: number): ValidationRule,
+  x: number): ValidationRule
           <string> => ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   validat,
   e: (valu)
-  e: string) => value.length,
+  e: string) => value.length
           <= max,
     messag,`
   e: `Must be no more than ${max} characters long`
@@ -620,7 +620,7 @@ class DataValidator {
   validate: (value: string) => pattern.test(value),
 //     message;
   }),
-  range: (min: number, max: number): ValidationRule,
+  range: (min: number, max: number): ValidationRule
           <number> => ({
     // TODO: Add content
   }
@@ -706,7 +706,7 @@ export const dataValidator = DataValidator.getInstance();
     return Array.isArray(value);
   }
   isObject(valu)
-  e: unknown): value is Record,
+  e: unknown): value is Record
           <string, unknown> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

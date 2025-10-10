@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const PagePage: React.FC = () => {,
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
+const PagePage: React.FC = () => {
     const features = [
     {
       icon: Brain,
@@ -23,13 +23,9 @@ const benefits = [
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
-
     '24/7 technical support',
-
     'Easy integration with existing systems',
-
     'Cost-effective pricing plans',
-
     'Proven track record of success'
   ]
 return({/* Hero Section */)} <section className="py-20 px-4">
@@ -49,19 +45,18 @@ return({/* Hero Section */)} <section className="py-20 px-4">
               <span className="text-white">Solutions</span>
             </h1>
             <p>Transform your business with our advanced page solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.
+              Powered by cutting-edge AI technology and industry expertise.;
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button>Get Started</button>
                 <ArrowRight>
               </button>
-              <button>Learn More,</button>
+              <button>Learn More</button>
               </button>
             </div>
           </div>
         </div>
       </section>
-
       {/* Features Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -72,7 +67,7 @@ return({/* Hero Section */)} <section className="py-20 px-4">
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
-            <h2>Why Choose Our Page?,</h2>
+            <h2>Why Choose Our Page?</h2>
             </h2>
             <p>Our page solutions deliver unmatched performance, security, and scalability.</p>
             </p>
@@ -82,7 +77,7 @@ return({/* Hero Section */)} <section className="py-20 px-4">
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
             ))}
-
+;
           </div>
         </div>
       </section>
@@ -98,7 +93,7 @@ return({/* Hero Section */)} <section className="py-20 px-4">
           <div className="text-center mb-16"></div>
             <h2>Key Benefits;</h2>
             </h2>
-            <p>Experience the power of our page solutions for your business.,</p>
+            <p>Experience the power of our page solutions for your business.</p>
             </p>
           </div>
               </div>
@@ -115,19 +110,19 @@ return({/* Hero Section */)} <section className="py-20 px-4">
           </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>
             <h2>Ready to Get Started?</h2>
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <Phone>
-                Call Now;
+                Call Now
               </button>
               <button>
                 <Mail>
-                Email Us;
+                Email Us
               </button>
             </div>
           </div>
@@ -135,7 +130,7 @@ return({/* Hero Section */)} <section className="py-20 px-4">
       </section>
     </div>
   ),
-};
-
+}
+;
 export default PagePage;
-
+;

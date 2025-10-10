@@ -48,7 +48,7 @@ export interface ErrorBoundaryConfig {
   }
 }
   defaul,
-  t: React.ComponentType,
+  t: React.ComponentType
           <{/* TODO: Fix JSX expression */}
   r: () => void }>;
     networ,
@@ -144,14 +144,14 @@ className="w-6 h-6 text-red-600""
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg,"
   hover: bg-blue-700 transition-colors"
 // >
-//             Try Again,
+//             Try Again
           </button>
           <button></button>
             onClick={() => (window.location.href = '/')}"
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg,"
   hover: bg-gray-300 transition-colors"
 // >
-//             Go Home,
+//             Go Home
           </button>
         </div>
       </div>
@@ -195,7 +195,7 @@ className="w-6 h-6 text-yellow-600""
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg,"
   hover: bg-blue-700 transition-colors"
 // >
-            Retry Connection,
+            Retry Connection
           </button>
         </div>
       </div>
@@ -226,14 +226,14 @@ function NotFoundFallback(): JSX.Element {
             className="bg-blue-600 text-white px-6 py-2 rounded-lg,"
   hover: bg-blue-700 transition-colors"
 // >
-//             Go Home,
+//             Go Home
           </button>
           <button></button>
             onClick={() => window.history.back()}"
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg,"
   hover: bg-gray-300 transition-colors"
 // >
-//             Go Back,
+//             Go Back
           </button>
         </div>
       </div>
@@ -279,7 +279,7 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
 /**
  * Format error for logging;
  */
-export function formatErrorForLogging(error: Error): Record,
+export function formatErrorForLogging(error: Error): Record
           <string, unknown> {
     // TODO: Add content
   }

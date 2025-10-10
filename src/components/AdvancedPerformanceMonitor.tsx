@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -22,7 +22,7 @@ interface PerformanceMonitorProps {
 }
 interface PerformanceProps {/* TODO: Fix JSX expression */}
 }
-const AdvancedPerformanceMonitor: React.FC,
+const AdvancedPerformanceMonitor: React.FC
           <PerformanceMonitorProps> = ({
     // TODO: Add content
   }

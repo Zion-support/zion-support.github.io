@@ -434,7 +434,7 @@ export const SEOComponent = ({/* content */}
       <meta property="og:image" content={fullImage} />)
       <meta property="og:site_name" content={siteName} />)
       {/* Twitter Card */})
-      <meta name="twitter: card" content="summary_large_image" />),
+      <meta name="twitter: card" content="summary_large_image" />)
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={fullImage} />

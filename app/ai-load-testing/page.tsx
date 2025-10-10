@@ -1,10 +1,10 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
-const AiLoadTestingPage: React.FC = () => {,
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer   from '../components/Footer'
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react'
+const AiLoadTestingPage: React.FC = () => {
     const features = [
     {
       icon: Brain,
@@ -28,9 +28,9 @@ const benefits = [
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology';
+    'Gain competitive advantage with advanced technology'
   ]
-return(<>)
+return(<>);
       <Helmet />
         <title>Ai Load Testing - Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -53,10 +53,10 @@ return(<>)
             </h1>
             <p>Advanced AI-powered ai load testing solution for modern businesses.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button>Get Started</button>
               </button>
-              <button>View Demo,</button>
+              <button>View Demo</button>
               </button>
             </div>
           </div>
@@ -77,9 +77,9 @@ return(<>)
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-              {features.map((feature, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+              {features.map((feature, index) => (;
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <feature />
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -87,14 +87,13 @@ return(<>)
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
-
                           {benefit} </li>
                       ))}
                     </ul>
                   )}
                 </div>
               ))}
-
+;
             </div>
           </div>
         </section>
@@ -114,9 +113,9 @@ return(<>)
               </p>
             </div>
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-              {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
+              {benefits.map((benefit, index) => (;
+                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>
                     <CheckCircle />
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
@@ -138,10 +137,10 @@ return(<>)
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.</p>
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
+              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+                <button>Contact Us</button>
                 </button>
-                <button>Learn More;</button>
+                <button>Learn More</button>
                 </button>
               </div>
             </div>
@@ -151,7 +150,7 @@ return(<>)
       <Footer>
     </>
   ),
-};
-
+}
+;
 export default AiLoadTestingPage;
-
+;

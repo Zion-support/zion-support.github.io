@@ -1,9 +1,9 @@
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const PartnersPage: React.FC = () => {
   const partnerTypes = [
     {
@@ -184,7 +184,7 @@ const PagePage: React.FC = () => {
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Our Partners,
+              Our Partners
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               We work with industry-leading technology partners to deliver comprehensive solutions 
@@ -247,7 +247,7 @@ const PagePage: React.FC = () => {
                 href="/contact"
                 className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
                 <Handshake className="w-5 h-5 mr-2" />
-                Become a Partner,
+                Become a Partner
   </
                 href="tel:+13024640950"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"

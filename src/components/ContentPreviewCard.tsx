@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface ContentPreviewCardProps {
     // TODO: Add content
   }
@@ -31,7 +31,7 @@ interface ContentPreviewCardProps {
   excerpt?: string;
 }
 const,
-  ContentPreviewCard: React.FC,
+  ContentPreviewCard: React.FC
           <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }

@@ -21,7 +21,7 @@ export interface ApiClientConfig {// TODO: Add content
 }
 export interface RequestConfig extends Omit<RequestInit, 'cache'> {
     url: string
-  headers?: Record,
+  headers?: Record
           <string>
   cacheOptions?: CacheOptions
   }
@@ -263,7 +263,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   private,
-  config: Required,
+  config: Required
           <Omit<ApiClientConfig, 'cacheOptions' | 'baseURL'>> & {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -272,7 +272,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     cacheOptions?: CacheOptions,
   }
   private,
-  abortControllers: Map,
+  abortControllers: Map
           <string, AbortController> = new Map();
   constructor(_confi)
   g: ApiClientConfig = {}) {/* TODO: Fix JSX expression */}
@@ -305,7 +305,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     ur,
   l: string,
     confi,
-  g: Omit,
+  g: Omit
           <RequestConfig, 'url' | 'method' | 'body'> = {}
 
   ): Promise<ApiResponse<T>> {
@@ -333,7 +333,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   l: string,
     data?: unknown,
     confi,
-  g: Omit,
+  g: Omit
           <RequestConfig, 'url' | 'method'> = {}
 
   ): Promise<ApiResponse<T>> {
@@ -363,7 +363,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   l: string,
     data?: unknown,
     confi,
-  g: Omit,
+  g: Omit
           <RequestConfig, 'url' | 'method'> = {}
 
   ): Promise<ApiResponse<T>> {
@@ -392,7 +392,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
     ur,
   l: string,
     confi,
-  g: Omit,
+  g: Omit
           <RequestConfig, 'url' | 'method' | 'body'> = {}
 
   ): Promise<ApiResponse<T>> {
@@ -420,7 +420,7 @@ class ApiClient {/* TODO: Fix JSX expression */}
   l: string,
     data?: unknown,
     confi,
-  g: Omit,
+  g: Omit
           <RequestConfig, 'url' | 'method'> = {}
 
   ): Promise<ApiResponse<T>> {
@@ -706,7 +706,7 @@ const controller = new AbortController();
     * Update default config;
    */
 
-  setConfig(config: Partial,
+  setConfig(config: Partial
           <ApiClientConfig>): void {// TODO: Add content
   }
 
@@ -752,7 +752,7 @@ const controller = new AbortController();
    * Delay helper;
    */
 
-  private delay(ms: number): Promise,
+  private delay(ms: number): Promise
           <void> {
     // TODO: Add content
   }
@@ -764,7 +764,7 @@ const controller = new AbortController();
    * Health check;
    */
 
-  async healthCheck(endpoint: string = '/health'): Promise,
+  async healthCheck(endpoint: string = '/health'): Promise
           <boolean> {
     // TODO: Add content
   }

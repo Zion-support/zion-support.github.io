@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useMemo } from 'react';
-import ContentPreviewCard from '../components/ContentPreviewCard';
+import ContentPreviewCard  from '../components/ContentPreviewCard';
 interface BlogPost {
     id: string;
   title: string;

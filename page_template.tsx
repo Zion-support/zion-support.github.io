@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../app/components/Navigation';
 import Footer from '../app/components/Footer';
-import SEOOptimizer from '../app/components/SEOOptimizer';
+import SEOOptimizer  from '../app/components/SEOOptimizer';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
 const PageTemplate: React.FC<{
     title: string;
@@ -52,10 +52,10 @@ const PageTemplate: React.FC<{
                 href="tel:+13024640950"
                 className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 <Phone className="w-5 h-5" />
-                +1 302 464 0950,
+                +1 302 464 0950
               </a>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Features Section */}
@@ -68,14 +68,14 @@ const PageTemplate: React.FC<{
               Key Features
   </
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Powerful capabilities designed to transform your business,
+              Powerful capabilities designed to transform your business
             </p>
           </div>,
-          ,
+          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300">,
-                <CheckCircle className="w-8 h-8 text-green-400 mb-4" />,
+              <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-cyan-400/20 hover: border-cyan-400/60 transition-all duration-300">
+                <CheckCircle className="w-8 h-8 text-green-400 mb-4" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((feature, index) => (</div>
@@ -90,7 +90,7 @@ const PageTemplate: React.FC<{
         {/* Benefits Section */}
         <section className="mb-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,
+            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
           <div className="text-center mb-12"></section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our {title}?
@@ -101,8 +101,8 @@ const PageTemplate: React.FC<{
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover: border-purple-400/60 transition-all duration-300">,
-                <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />,
+              <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover: border-purple-400/60 transition-all duration-300">
+                <TrendingUp className="w-8 h-8 text-purple-400 mb-4" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (</div>
               <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-xl p-6 border border-purple-400/20 hover:border-purple-400/60 transition-all duration-300"></div>
@@ -123,12 +123,12 @@ const PageTemplate: React.FC<{
               Pricing
   </
             <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Transparent pricing with no hidden fees,
+              Transparent pricing with no hidden fees
             </p>
           </div>
-          ,
-          <div className="max-w-md mx-auto">,
-            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">,
+          
+          <div className="max-w-md mx-auto">
+            <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center">
           <div className="max-w-md mx-auto"></div>
             <div className="bg-slate-800/50 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/20 text-center"></div>
               <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
@@ -137,10 +137,10 @@ const PageTemplate: React.FC<{
               <a;
                 href="/contact"
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold hover: from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-block">
-                Get Started,
+                Get Started
               </a>
             </div>
-          </div>,
+          </div>
         </section>,
 ,
         {/* Contact Section */}
@@ -180,13 +180,13 @@ const PageTemplate: React.FC<{
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
                 364 E Main St STE 1008</p><br />
-                Middletown DE 19709,
+                Middletown DE 19709
   </
             </div>
           </div>
         </section>
       </main>
-      <Footer />,
+      <Footer />
     </div>);
 }
 export default PageTemplate;

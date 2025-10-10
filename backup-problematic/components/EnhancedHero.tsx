@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface EnhancedHeroProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedHero = React.memo(function EnhancedHero({ className = '' }: EnhancedHeroProps) {

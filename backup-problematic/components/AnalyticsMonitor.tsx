@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface AnalyticsMonitorProps {/* TODO: Fix JSX expression */}
 }
 const AnalyticsMonitor = React.memo(function AnalyticsMonitor({)

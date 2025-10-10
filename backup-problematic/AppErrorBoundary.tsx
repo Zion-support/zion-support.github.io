@@ -32,7 +32,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
           </div>
         </div>
         <div className="mb-4">
-          <p className="text-sm text-gray-600 mb-2">An unexpected error occurred: </p>,
+          <p className="text-sm text-gray-600 mb-2">An unexpected error occurred: </p>
           <pre className="text-xs bg-gray-100 p-2 rounded overflow-auto max-h-32 text-gray-800">,
             {error.message}
           </pre>
@@ -88,7 +88,7 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {/* TODO: Fix 
             Reload page;
           </button>
         </div>
-      </div>,
+      </div>
     </div>);
 }
 interface AppErrorBoundaryProps {/* TODO: Fix JSX expression */}

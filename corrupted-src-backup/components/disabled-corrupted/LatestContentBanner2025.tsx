@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 const LatestContentBanner202, 5: React.FC = () => {,
   const latestArticle, s = [
     {

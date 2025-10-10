@@ -193,7 +193,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 {this.retryCount</div> < this.maxRetries && (
                   <button
                     onClick={this.handleRetry}
-                    className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover: bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500',
+                    className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover: bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                   >,
                     Try Again({this.maxRetries - this.retryCount} attempts;)
                     left)
@@ -225,19 +225,19 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   focus:ring-offset-2,
   focus: ring-indigo-500'
                 >
-                  Reload Page,
+                  Reload Page
                 </button>
               </div>
-,
-              <div className='flex space-x-4'>,
+
+              <div className='flex space-x-4'>
                 <button;
               <div className='flex space-x-4'></div>
                 <button
                   onClick={this.handleReportBug}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
-                  Report Bug,
-                </button>,
+                  Report Bug
+                </button>
                 <button;
                   onClick={() => window.history.back()}
                   className='group relative w-full flex justify-center py-2 px-4 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover: bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
@@ -250,7 +250,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   focus:ring-offset-2,
   focus: ring-indigo-500'
                 >
-                  Report Bug,
+                  Report Bug
                 </button>
                 <button></button>
                   onClick={() => window.history.back()}
@@ -268,9 +268,9 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
             {this.props.showDetails && this.state.error && (
               <details className='mt-8'>
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
-                  Technical Details,
-                </summary>,
-                <div className='mt-2 p-4 bg-gray-100 rounded-md'>,
+                  Technical Details
+                </summary>
+                <div className='mt-2 p-4 bg-gray-100 rounded-md'>
                   <pre className='text-xs text-gray-600 whitespace-pre-wrap overflow-auto'>,
                   Technical Details;
   </

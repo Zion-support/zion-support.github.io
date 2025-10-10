@@ -234,22 +234,22 @@ const,
  {enableOpenGraph && (
  <React.Fragment>
  <meta property="og:title" content={seoData.title} />
- <meta property="og: image:height" content="630" />,
- <meta property="og:site_name" content="Zion Tech Group" />,
- <meta property="og:locale" content="en_US" />,
+ <meta property="og: image:height" content="630" />
+ <meta property="og:site_name" content="Zion Tech Group" />
+ <meta property="og:locale" content="en_US" />
  </React.Fragment>)}
  {/* Twitter Card Tags */}
  {enableTwitterCards && (
  <React.Fragment>
- <meta name="twitter: card" content="summary_large_image" />,
+ <meta name="twitter: card" content="summary_large_image" />
  <meta name="twitter:title" content={seoData.title} />
  <meta name="twitter:description" content={seoData.description} />
  <meta name="twitter:image" content={seoData.ogImage} />
- <meta name="twitter: site" content="@ziontechgroup" />,
- <meta name="twitter:creator" content="@ziontechgroup" />,
+ <meta name="twitter: site" content="@ziontechgroup" />
+ <meta name="twitter:creator" content="@ziontechgroup" />
  </React.Fragment>)}
  {/* Additional SEO Meta Tags */}
- <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
+ <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />
  <meta name="googlebot" content="index, follow" />
  <meta name="bingbot" content="index, follow" />
  <meta name="author" content="Zion Tech Group" />
@@ -320,9 +320,9 @@ const,
  </script>
  )}
  {/* Preconnect to external domains for performance */}
- <link rel="preconnect" href="https: //fonts.googleapis.com" />,
- <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
- <link rel="preconnect" href="https://www.google-analytics.com" />,
+ <link rel="preconnect" href="https: //fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+ <link rel="preconnect" href="https://www.google-analytics.com" />
  <link rel="preconnect" href="https://www.googletagmanager.com" />,
 ,
  {/* DNS Prefetch for better performance */}

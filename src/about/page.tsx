@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Brain, Shield, Target, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const AboutPage: React.FC = () => {
   const team = [
     {
@@ -224,7 +224,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                  Our Mission,
+                  Our Mission
   </
                 <p className="text-lg text-gray-600 mb-6">
                   To democratize access to advanced AI technology and empower businesses of all sizes 
@@ -237,7 +237,7 @@ export default function AboutPage() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors">
-                  Get in Touch,
+                  Get in Touch
   </
               </div>
               <div className="bg-white rounded-xl shadow-lg p-8">
@@ -259,7 +259,7 @@ export default function AboutPage() {
                 Our Values
   </
               <p className="text-xl text-gray-600">
-                The principles that guide everything we do,
+                The principles that guide everything we do
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -287,7 +287,7 @@ export default function AboutPage() {
                 Meet Our Team
   </
               <p className="text-xl text-gray-600">
-                The experts behind our innovative solutions,
+                The experts behind our innovative solutions
   </
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -332,7 +332,7 @@ export default function AboutPage() {
               <Link
                 to="/careers"
                 className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-all duration-300">
-                Join Our Team,
+                Join Our Team
   </
             </div>
           </div>
@@ -355,7 +355,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              About Zion Tech Group,
+              About Zion Tech Group
   </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Leading the future of AI-powered enterprise solutions with cutting-edge technology, 
@@ -384,7 +384,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Our Mission,
+                Our Mission
   </
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To democratize artificial intelligence and cutting-edge technology for enterprises worldwide, 
@@ -407,7 +407,7 @@ export default function AboutPage() {
             </div>
             <div>
               <h2 className="text-3xl lg: text-4xl font-bold text-white mb-6">
-                Our Vision,
+                Our Vision
   </
               <p className="text-lg text-gray-300 mb-6 leading-relaxed">
                 To be the world's leading provider of AI and quantum computing solutions, 
@@ -443,7 +443,7 @@ export default function AboutPage() {
               Our Values
   </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our culture,
+              The principles that guide everything we do and shape our culture
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -464,7 +464,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Meet Our Team,
+              Meet Our Team
   </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               World-class experts in AI, quantum computing, and enterprise technology;
@@ -501,7 +501,7 @@ export default function AboutPage() {
               Our Achievements
   </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Numbers that speak to our impact and success,
+              Numbers that speak to our impact and success
   </
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -529,7 +529,7 @@ export default function AboutPage() {
               Our Journey
   </
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Key milestones in our company's growth and innovation,
+              Key milestones in our company's growth and innovation
   </
           </div>
           <div className="max-w-4xl mx-auto">

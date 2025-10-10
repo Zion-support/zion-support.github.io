@@ -310,7 +310,7 @@ export function validateJSON(jsonStrin)
 export function validateComposite()
 
   value: string,
-  validators: Array,
+  validators: Array
           <(value: string) => ValidationResult>
 ): ValidationResult {
     // TODO: Add content
@@ -334,7 +334,7 @@ export function validateComposite()
 export async function validateAsync()
   validato,
   r: (valu)
-  e: string) => Promise,
+  e: string) => Promise
           <ValidationResult>,
 
   value: string): Promise<ValidationResult> {

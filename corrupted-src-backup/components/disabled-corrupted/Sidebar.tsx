@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 const Sideba, r: React.FC = () => { ,
   const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [

@@ -1,10 +1,10 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AIContentWriterPage: React.FC = () => {,
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer   from '../components/Footer'
+;
+const AIContentWriterPage: React.FC = () => {
   const features = [
     {
       title: 'AI-Powered Writing',
@@ -16,7 +16,7 @@ const AIContentWriterPage: React.FC = () => {,
     {title: 'Multi-Format Support',
       description: 'Create content in various formats including blogs, social media, emails, and marketing copy.',
       benefits: ['Blog posts', 'Social media', 'Email campaigns', 'Marketing copy']},
-  ];
+  ]
   const benefits = [
     '10x faster content creation',
     'Improved SEO performance',
@@ -24,7 +24,7 @@ const AIContentWriterPage: React.FC = () => {,
     'Multi-language support',
     'Content analytics',
     'Team collaboration'
-  ];
+  ]
   const stats = [
     {icon: <PenTool className="w-8 h-8 text-blue-500" />, value: '10K+', label: 'Articles Created' ,},
     {icon: <Zap className="w-8 h-8 text-green-500" />, value: '90%', label: 'Time Saved' ,},
@@ -41,27 +41,26 @@ const AIContentWriterPage: React.FC = () => {,
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} />
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6">,</h1>
-            AI Content Writer;
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6"></h1>
+            AI Content Writer
           </h1>
-          <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,</p>
+          <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"></p>
             Create high-quality, engaging content at scale with our advanced AI-powered writing assistant;
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
-              Start Writing;
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+              Start Writing
             </button>
-            <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
-              Try Demo;
+            <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
+              Try Demo
             </button>
           </div>
         </div>
       </section>
-
       {/* Stats Section */} <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,</div>
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8"></div>
+            {stats.map((stat, index) => (;
               <div key={index}className="text-center">
                 <div className="flex justify-center mb-4">{stat.icon</div>} </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.value</div>}</div>
@@ -71,24 +70,22 @@ const AIContentWriterPage: React.FC = () => {,
           </div>
         </div>
       </section>
-
       {/* Features Section */} <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>
-              Powerful Writing Features;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
+              Powerful Writing Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to create compelling content;</p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to create compelling content</p>
             </p>
           </div>
-          
-          <div className="grid md: grid-cols-3 gap-8">,</div>
-            {features.map((feature, index) => (
+          <div className="grid md: grid-cols-3 gap-8"></div>
+            {features.map((feature, index) => (;
               <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-6">{feature.description</p>}</p>
                 <ul className="space-y-2">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                  {feature.benefits.map((benefit, benefitIndex) => (;
                     <li key={benefitIndex}className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{benefit</span>}</span>
@@ -106,10 +103,9 @@ const AIContentWriterPage: React.FC = () => {,
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our AI Writer?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of AI-powered content creation;</p>
             </p>
-
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            {benefits.map((benefit, index) => (;
               <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
@@ -124,25 +120,24 @@ const AIContentWriterPage: React.FC = () => {,
         <div className="max-w-4xl mx-auto text-center">
 </div>
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>
-              Ready to Create Amazing Content?
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6"></h2>
+              Ready to Create Amazing Content?;
             </h2>
             <p className="text-xl text-gray-300 mb-8">Start creating high-quality content with our AI-powered writing assistant today.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
-                Start Writing Now;
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"></button>
+                Start Writing Now
               </button>
-              <button className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
-                Learn More;
+              <button className="border border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
+                Learn More
               </button>
             </div>
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
-  );
-};
-
+  )
+}
+;

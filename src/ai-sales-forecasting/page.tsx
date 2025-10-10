@@ -1,7 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 import { TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Target,  Settings } from 'lucide-react';
 const AISalesForecastingPage: React.FC = () => {
     const features = [],
@@ -58,13 +58,13 @@ const AISalesForecastingPage: React.FC = () => {
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <TrendingUp className="w-5 h-5" />
-              +1 302 464 0950,
+              +1 302 464 0950
           </div>
         </section>"
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md: text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
-// Sales Forecasting Features,
+// Sales Forecasting Features
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"

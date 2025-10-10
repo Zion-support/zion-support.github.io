@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const AIHRAssistantPage: React.FC = () => {
   const features = [
     {
@@ -40,7 +40,7 @@ const AIHRAssistantPage: React.FC = () => {
             AI HR Assistant
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Intelligent HR Management,
+            Intelligent HR Management
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Transform your HR operations with AI-powered automation and insights. 
@@ -62,7 +62,7 @@ const AIHRAssistantPage: React.FC = () => {
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            HR Assistant Features,
+            HR Assistant Features
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (

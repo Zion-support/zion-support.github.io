@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface ResponsiveContainerProps {
     // TODO: Add content
   }
@@ -18,7 +18,7 @@ interface ResponsiveContainerProps {
   fallback?: React.ReactNode;
 }
 const,
-  ResponsiveContainer: React.FC,
+  ResponsiveContainer: React.FC
           <ResponsiveContainerProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -86,7 +86,7 @@ const,
 }
 // Hook for responsive values;
 export const useResponsiveValue = {}
-          <T,>(value,
+          <T>(value,
   s: {
     // sm?: T
   }

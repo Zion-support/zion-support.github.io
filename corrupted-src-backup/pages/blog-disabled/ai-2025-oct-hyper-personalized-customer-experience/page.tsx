@@ -17,7 +17,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
         /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-hyp e r-personaliz e d-custom e r-experien c e',
-        />,
+        />
       </Helm, e, t>
     <div></div>
       <Helmet>
@@ -27,15 +27,15 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
   content="Deploy AI-powered hyper-personalization that understands each customer individually. Achieve 97.8% satisfaction scores, increase engagement by 12.4x, reduce churn by 89%, and drive $3.2B+ in incremental revenue through truly personalized experiences." /><meta name="keywords;
   content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization" /><link rel="canonical", href=" " />
   content=" />
-        <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />,
+        <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />
         <meta name="description",
   content: "Deploy AI-powered hyper-personalization that understands each customer individually. Achieve 97.8% satisfaction scores, increase engagement by 12.4x, reduce churn by 89%, and drive $3.2B+ in incremental revenue through truly personalized experiences.", /><meta name: "keywords,
   content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience/>",
   content: "AI personalization, customer experience, hyper-personalization, customer engagement, AI CX platform, behavioral AI, customer journey, experience optimization;
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />,
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-hyper-personalized-customer-experience" />
       </Helmet>,
-,
+
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-pi, n, k-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
         <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'></div>
           <Link, t, o='/bl, o, g'
@@ -98,7 +98,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 Enterprise, Success, Stories</h2>
           <div></section>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
-                <Heart className="h-8 w-8 text-pink-400 ,>
+                <Heart className="h-8 w-8 text-pink-400 >
   Customer Experience Impact;
               </h2>"
               <ul className="space-y-4 text-lg">
@@ -107,7 +107,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                   <span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>)
                 </li>)
                 <li className="flex items-start gap-3">)
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 ">),
+                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 ">)
                   <span><strong>12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>)
                 </li>
                 <li className="flex items-start gap-3">
@@ -116,21 +116,21 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 >"
-              </h2>",
-              <ul className="space-y-4 text-lg">,
+              </h2>"
+              <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">,
 :src/pages/blog/ai-2025-oct-hyper-personalized-customer-experience/page.tsx;
-                  <Sparkles className=" />,
+                  <Sparkles className=" />
                   <span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,"
-                  <span></span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>,
+                  <span></span><strong>97.8% Satisfaction: </strong> AI creates experiences so personalized they feel magical</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 ">
-                  <span></span><strong>12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>,
+                  <span></span><strong>12.4x Engagement Lift: </strong> Customers interact 1,140% more with hyper-personalized experiences</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0 ">
-                  <span></span><strong>$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>,
+                  <span></span><strong>$3.2B+ Revenue Growth: </strong> Average annual revenue increase from personalization at scale</span>
                 </li>
                 <li className="flex items-start gap-3"></li>
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 >"</Users>
@@ -275,7 +275,7 @@ export default function HyperPersonalizedCustomerExperience20, 2, 5() {
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" /></ArrowLeft>className</ArrowLeft>="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg"
               >"
                 Schedule Your CX Transformation Assessment"
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">,
+                <ArrowLeft className="ml-2 h-5 w-5 rotate-180 ">
                 <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />);
 export default function HyperPersonalizedCustomerExperience20, 2, 5() {/* TODO: Fix JSX expression */}
 }

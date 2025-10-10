@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface ModernFooterProps {/* TODO: Fix JSX expression */}
 }
 const ModernFooter = React.memo(function ModernFooter({ className = '' }: ModernFooterProps) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface NewestContent2025BannerProps {/* TODO: Fix JSX expression */}
 }
 const,

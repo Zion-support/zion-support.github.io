@@ -1,7 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 import { GraduationCap, BookOpen, Users, Award, CheckCircle, Star,  GraduationCap,  BookOpen,  Award } from 'lucide-react';
 const ITTrainingPage: React.FC = () => {
     const features = [],

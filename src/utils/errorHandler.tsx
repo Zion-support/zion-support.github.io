@@ -150,7 +150,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   private,
   errors: AppError[] = [],
   private,
-  retryQueue: Array,
+  retryQueue: Array
           <{/* TODO: Fix JSX expression */}
   t: number }> = [];
   constructor(confi)

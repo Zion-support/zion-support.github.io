@@ -2,7 +2,7 @@
 /**
  * Accessibility Checker Utility
 
-import React from 'react'
+import React  from 'react'
 'use client'
 /**
  * Accessibility Checker Utility;
@@ -1159,7 +1159,7 @@ $4});
   }
   }
 }
-        fix: 'Add a,
+        fix: 'Add a
 
           <main> element or role="main"',
         codeExampl,

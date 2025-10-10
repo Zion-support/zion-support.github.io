@@ -1,15 +1,15 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const PagePage: React.FC = () => {,
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
+const PagePage: React.FC = () => {
     const features = [
     {
       icon: Zap,
       title: 'High Performance',
       description: 'Lightning-fast processing and real-time analytics for optimal results',},
     {]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>);
       <Helmet />
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -24,7 +24,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
             ))}
-
+;
           </div>
         </div>
       </section>
@@ -37,13 +37,12 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           </div>
         </div>
       </section>
-
       {/* CTA Section */} </div>
         </div>
       </section>
     </div>
   );
-};
-
+}
+;
 export default PagePage;
-
+;

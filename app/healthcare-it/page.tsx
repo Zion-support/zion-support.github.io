@@ -1,10 +1,10 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight}}from 'lucide-react';
-import SEOOptimizer from '../components/SEOOptimizer';
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import Navigation from '../components/Navigation'
+import Footer   from '../components/Footer'
+import {CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight} from 'lucide-react'
+import SEOOptimizer   from '../components/SEOOptimizer'
 icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',
@@ -30,7 +30,7 @@ icon: Heart,
       title: 'Healthcare Analytics',
       description: 'Comprehensive analytics and reporting for healthcare operations and patient outcomes.',
       benefits: ['Patient insights', 'Operational metrics', 'Outcome tracking']}]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>)
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>);
       <SEOOptimizer>
       <Navigation />
       {/* Hero Section */} <section className="py-20 px-4">
@@ -49,7 +49,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900
             </span>
           </h1>
           <p>Secure, compliant, and innovative IT solutions designed specifically for healthcare organizations.;</p>
-            Protect patient data while improving operational efficiency.
+            Protect patient data while improving operational efficiency.;
           </p>
               <ArrowRight>
             </button>
@@ -70,7 +70,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>,
+            {services.map((service, index) => (} <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover: bg-white/10 transition-all duration-300"></div>
                 <div className="text-4xl mb-4">{service.icon</div>}</div>
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description</p>}</p>
@@ -95,7 +95,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900
             </p>
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6"></div>,
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (;
                 <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                   <CheckCircle />
@@ -123,3 +123,4 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900
       <Footer />
   );
 }
+;

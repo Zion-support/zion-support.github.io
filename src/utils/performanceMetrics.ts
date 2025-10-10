@@ -57,7 +57,7 @@ export interface PerformanceMetric {// TODO: Add content
     unit: string,,
     timestamp: Date,,
     category: 'load' | 'runtime' | 'network' | 'memory' | 'custom'
-  metadata?: Record,
+  metadata?: Record
           <string>
 }
 export interface WebVitalsMetrics {/* TODO: Fix JSX expression */}

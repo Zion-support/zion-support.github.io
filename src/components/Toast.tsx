@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 export type ToastType = 'success' | 'error' | 'warning' | 'info';
 export interface ToastProps {/* TODO: Fix JSX expression */}
@@ -13,7 +13,7 @@ export interface ToastProps {/* TODO: Fix JSX expression */}
   w: boolean,
 }
 const,
-  Toast: React.FC,
+  Toast: React.FC
           <ToastProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }

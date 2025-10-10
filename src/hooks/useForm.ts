@@ -1,5 +1,5 @@
 
-import React from 'react'
+import React  from 'react'
 'use client'
 /**
  * useForm Hook;
@@ -25,7 +25,7 @@ export interface UseFormConfig;
 }
   initialValue,
   s: T
-  validationSchema?: Partial,
+  validationSchema?: Partial
           <Record<keyof T, ValidationRule[]>>;
   onSubmi,
   t: (value)
@@ -141,7 +141,7 @@ let,
   // Handle form submission;
 
   const handleSubmit = useCallback(
-    async (e: React.FormEvent,
+    async (e: React.FormEvent
           <HTMLFormElement>) => {
     // TODO: Add content
   }

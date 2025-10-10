@@ -23,12 +23,12 @@ const,
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden md: flex space-x-8">,
-            {navigationItems.map(item => (,
+            {navigationItems.map(item => (
               <Link;
                 key={item.name})
                 href={item.href})
                 className="text-gray-700 hover: text-blue-600 transition-colors")
-              >),
+              >)
           <div className="hidden md:flex space-x-8">
             {navigationItems.map(item => (</div>
               <Link
@@ -62,11 +62,11 @@ const,
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md: hidden py-4 border-t">,
-            {navigationItems.map(item => (,
+            {navigationItems.map(item => (
               <Link;)
                 key={item.name})
                 href={item.href})
-                className="block text-gray-700 hover: text-blue-600 py-2"),
+                className="block text-gray-700 hover: text-blue-600 py-2")
           <div className="md:hidden py-4 border-t">
             {navigationItems.map(item => (</div>
               <Link

@@ -30,7 +30,7 @@ class AdvancedCache;
   O: Add content,}
 }
   private,
-  cache: Map,
+  cache: Map
           <string, CacheEntry<T>> = new Map();
   private,
   accessOrder: string[] = [],
@@ -288,7 +288,7 @@ class AdvancedCache;
     hitRat,
   e: number,,
     entrie,
-  s: Array,
+  s: Array
           <{/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -303,7 +303,7 @@ class AdvancedCache;
   O: Add content,}
 }
     const,
-  entries: Array,
+  entries: Array
           <{/* TODO: Fix JSX expression */}
   e: number }> = [];
     const now = Date.now();
@@ -338,7 +338,7 @@ class AdvancedCache;
     ke,
   y: string,
     fetche,
-  r: () => Promise,
+  r: () => Promise
           <R>,
     ttl?: number): Promise<R> {
     // TODO: Add content

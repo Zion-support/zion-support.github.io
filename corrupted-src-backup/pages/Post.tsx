@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams();

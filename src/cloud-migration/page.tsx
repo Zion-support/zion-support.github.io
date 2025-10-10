@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, Zap, Target, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Server, Database, Users, Clock, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const,
   CloudMigrationPage: React.FC = () => {/* TODO: Fix JSX expression */}
     },
@@ -240,11 +240,11 @@ const,
   md: text-6xl font-bold text-white mb-6"></h1>
               Cloud Migration Services;"
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"></p>
-              Seamlessly migrate your applications and data to the cloud with our expert migration services,
+              Seamlessly migrate your applications and data to the cloud with our expert migration services
               <a></a>"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold,"
   hover: bg-blue-700 transition-colors inline-flex items-center"
-                Get Started,
+                Get Started
               </a>"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold,
   hover:bg-blue-600,"
@@ -254,7 +254,7 @@ const,
 "
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-center text-white mb-12"></h2>
-              Our Migration Services,
+              Our Migration Services
             </h2>"
             <div className="grid grid-cols-1,
   md:grid-cols-2,"

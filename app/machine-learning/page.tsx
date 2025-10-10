@@ -1,23 +1,19 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
   ]
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
-
     '24/7 technical support',
-
     'Easy integration with existing systems',
-
     'Cost-effective pricing plans',
-
     'Proven track record of success'
   ]
 </h1>
             <p>Transform your business with our advanced page solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.
+              Powered by cutting-edge AI technology and industry expertise.;
             </p>
             </div>
           </div>
@@ -45,19 +41,19 @@ const benefits = [
           </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>
             <h2>Ready to Get Started?</h2>
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <Phone>
-                Call Now;
+                Call Now
               </button>
               <button>
                 <Mail>
-                Email Us;
+                Email Us
               </button>
             </div>
           </div>
@@ -65,7 +61,7 @@ const benefits = [
       </section>
     </div>
   ),
-};
-
+}
+;
 export default PagePage;
-
+;

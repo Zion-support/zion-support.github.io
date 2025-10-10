@@ -10,7 +10,7 @@
 
 export function debounce<T extends (...args: unknown[]) => unknown>(),
     func: T,
-  wait: number): (...args: Parameters,
+  wait: number): (...args: Parameters
           <T>) => void {
     // TODO: Add content
   }
@@ -44,7 +44,7 @@ export function throttle;
 
           <T extends (...args: unknown[]) => unknown>(),
     func: T,
-  limit: number): (...args: Parameters,
+  limit: number): (...args: Parameters
           <T>) => void {
     // TODO: Add content
   }
@@ -100,7 +100,7 @@ export function memoize;
  */
 export function lazyLoad<T extends React.ComponentType<unknown>>()
   importFun,
-  c: () => Promise,
+  c: () => Promise
           <{/* TODO: Fix JSX expression */}
   t: T }>,
   fallback?: React.ReactNode): React.LazyExoticComponent<T> {
@@ -150,7 +150,7 @@ export async function batchAsync;
   s: T[],
   operatio,
   n: (ite)
-  m: T) => Promise,
+  m: T) => Promise
           <R>,
   batchSize = 10): Promise<R[]> {
     // TODO: Add content

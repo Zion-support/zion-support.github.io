@@ -1,7 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 import { Mic, Target, Zap, Settings, CheckCircle, Star,  Mic,  Target,  Settings } from 'lucide-react';
 const AIVoiceAssistantPage: React.FC = () => {
     const features = [],

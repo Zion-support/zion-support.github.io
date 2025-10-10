@@ -1,5 +1,5 @@
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 /**;
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z,
@@ -13,8 +13,8 @@ export class SecurityManager {,;}
  * Generate,;
   d: 2025-10-08T0,
   2: 0,
-  6: 22.083Z;,
- */,
+  6: 22.083Z,
+ */,;
 export class SecurityManager {/* TODO: Fix JSX expression */,}}private constructor() {}static getInstance(): SecurityManager {/* TODO: Fix JSX expression */,}}}
     return SecurityManager.instance;
   }
@@ -22,11 +22,11 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
    * Sanitize user input to prevent XSS attacks;
    */;
   sanitizeInput(input: string): string {,}
-    ,
+    ,;
     return input;}sanitizeInput(input: string): string {,}}return input;
       .replace(/[<React.Fragment>{)</React.Fragment>
     ]/g, '');
-      .replace(/javascript:/gi, '');
+      .replace(/javascript: /gi, '');
       .replace(/on\w+=/gi, '')}.trim();}
   sanitizeInput(inpu);
   t: string): string {/* TODO: Fix JSX expression */,}}}
@@ -34,14 +34,14 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
    * Validate and sanitize URL;
    */;
   sanitizeUrl(url: string): string {,}
-    ,
+    ,;
     try {,;}
       const parsed = new URL(url),;
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,}sanitizeUrl(url: string): string {,}}try {}}const parsed = new URL(url);
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,}throw new Error('Invalid protocol');}
+      if (!['http: ', 'https: '].includes(parsed.protocol)) {,}sanitizeUrl(url: string): string {,}}try {}}const parsed = new URL(url);
+      if (!['http: ', 'https: '].includes(parsed.protocol)) {,}throw new Error('Invalid protocol');}
       }
       return parsed.toString();
-    } catch {}}return '';}
+    } catch {}}return ''}
   sanitizeUrl(ur);
   l: string): string {/* TODO: Fix JSX expression */,}}}
       return parsed.toString();
@@ -51,7 +51,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
    * Generate secure random token;
    */;
   generateSecureToken(length: number = 32): string {,}
-    ,
+    ,;
     const array = new Uint8Array(length),;
     if (typeof window !== 'undefined' && window.crypto) {,}window.crypto.getRandomValues(array);}
     } else {// Fallback for Node.js environment;}}generateSecureToken(length: number = 32): string {,}}const array = new Uint8Array(length);
@@ -76,7 +76,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
     if (validRequests.length >= limit) {,;
     // Remove old requests;
     const validRequests = requests.filter((time: number) => time > windowStart),}if (validRequests.length >= limit) {}return false;}
-  checkRateLimit(ke,;)
+  checkRateLimit(ke,;);
   y: string, limi,;
   t: number, windowM);
   s: number): boolean {/* TODO: Fix JSX expression */,}}}

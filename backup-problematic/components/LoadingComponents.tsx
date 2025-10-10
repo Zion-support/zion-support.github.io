@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,

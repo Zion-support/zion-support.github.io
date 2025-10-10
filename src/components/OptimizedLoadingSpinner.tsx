@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 interface OptimizedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
@@ -13,7 +13,7 @@ interface OptimizedLoadingSpinnerProps {/* TODO: Fix JSX expression */}
   className?: string;
 }
 const,
-  OptimizedLoadingSpinner: React.FC,
+  OptimizedLoadingSpinner: React.FC
           <OptimizedLoadingSpinnerProps> = memo()
   ({ size = 'md', color = 'primary', className = '' }) => {/* TODO: Fix JSX expression */}
   m: 'w-4 h-4'}

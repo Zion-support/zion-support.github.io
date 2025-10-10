@@ -113,9 +113,9 @@ const GlobalFinTechAITransformatio, n = () => {/* TODO: Fix JSX expression */}
                       '$127M, annual, run r, a, t, e',
                       '15.2x, ROI, achieved',
                       'Indust, r, y-leading, capabilitie, s',
-                      'Se, l, f-sustaining, AI, program']},
+                      'Se, l, f-sustaining, AI, program']}
                       <h4, classNam, e = 'te, x, t-white, fon, t-semibold, m, b-2'>
-                        Resul, t, s: </h4>,
+                        Resul, t, s: </h4>
                       <ul, className='grid, m, d:gr, i, d-co, l, s-2, ga, p-2'>
                         { pha, s, e.results.m, a, p((re, s, u, l, t, rInd, e, x) = > (
                           <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>

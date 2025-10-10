@@ -75,25 +75,25 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 Error ID: {this.state.errorId}
               </p>
             )}
-            <div className="flex flex-col sm: flex-row gap-4 justify-center">,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <button;
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <RefreshCw className="w-4 h-4" />
-                Try Again,
-              </button>,
+                Try Again
+              </button>
               <button;
                 onClick={this.handleGoHome}
                 className="bg-gray-600 hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <Home className="w-4 h-4" />
-                Go Home,
-              </button>,
-            </div>,
+                Go Home
+              </button>
+            </div>
             <button;
               onClick={() => window.location.reload()}
-              className="mt-4 text-gray-400 hover: text-white text-sm underline",
+              className="mt-4 text-gray-400 hover: text-white text-sm underline"
             <button;
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -109,7 +109,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Try Again,
+                Try Again
               </button>
               <button></button>
                 onClick={this.handleGoHome}"
@@ -117,7 +117,7 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover: bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
-                Go Home,
+                Go Home
               </button>
             </div>
             <button></button>
@@ -129,9 +129,9 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               className="bg-blue-600,"
   hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
             >
-              Or refresh the page,
+              Or refresh the page
             </button>
-          </div>,
+          </div>
         </div>);
     }
     return this.props.children;

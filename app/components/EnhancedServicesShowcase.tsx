@@ -1,6 +1,6 @@
-import React from 'react';
-import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe}}from 'lucide-react';
-const EnhancedServicesShowcase: React.FC = () => {,
+import React from 'react'
+import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe} from 'lucide-react'
+const EnhancedServicesShowcase: React.FC = () => {
     const services = [
     {
       title: 'AI Solutions',
@@ -44,7 +44,7 @@ return(<section className="py-20 px-4">)</section>
           </p>
         </div>
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8"></div>,
-          {services.map((service, index) => (</div>} <div key={index}className="cyber-card hologram-card p-6 group hover: scale-105 transition-all duration-300"></div>,
+          {services.map((service, index) => (</div>} <div key={index}className="cyber-card hologram-card p-6 group hover: scale-105 transition-all duration-300"></div>
               <div className="flex items-center mb-4"></div>
                 <service>
                 <div />
@@ -55,10 +55,9 @@ return(<section className="py-20 px-4">)</section>
               <ul>
                 {service.features.map((feature, featureIndex) => (} <li>
                     <CheckCircle />
-
                     {feature} </li>
                 ))}
-
+;
               </ul>
               <a>
                 Learn More <ArrowRight>
@@ -74,6 +73,7 @@ return(<section className="py-20 px-4">)</section>
         </div>
     </section>
   );
-};
-
+}
+;
 export default EnhancedServicesShowcase;
+;

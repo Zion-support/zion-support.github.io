@@ -312,7 +312,7 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         {/* Hero, Sectio, n */}
         <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
-  g:px-8">",
+  g:px-8">"
             <div, className="te, x, t-cent, e, r">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
@@ -326,9 +326,9 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"</div>
         <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-bl, u, e-800, t, o-purp, l, e-900, tex, t-white, p, y-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"
             <div, className="te, x, t-cent, e, r">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"</section>
             <div, className="te, x, t-cent, e, r">";</div>
               <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6">";
                 AI, Workflo, w</h1> <span, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">Automati, o, n</sp, a, n>";
@@ -397,18 +397,18 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         {/* Key, Benefit, s */}
         <section, className="py-16, b, g-gr, a, y-50">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
-  g:px-8">",
+  g:px-8">"
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-16, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"
             <div, className="text-center mb-12">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="text-center mb-12"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-16, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"</section>
             <div, className="text-center mb-12">";</div>
         {/* Key, Benefit, s */}"
         <section, className="py-16, b, g-gr, a, y-50"></section>"
@@ -490,18 +490,18 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         {/* Featur, e, s */}
         <section, className="py-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
-  g:px-8">",
+  g:px-8">"
             <div, className="te, x, t-center, m, b-16">)
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">)
         <section, className="py-20">";)
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",),
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",)
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Featur, e, s */}"
         <section, className="py-20"></section>"
@@ -591,18 +591,18 @@ const, AIWorkflowAutomatio, n: Rea, c, t.FC = () => {/* TODO: Fix JSX expression
         {/* Prici, n, g */}
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
-  g:px-8">",
+  g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Prici, n, g */}"
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50"></section>"
@@ -706,18 +706,18 @@ pl, a, n.popul, a, r;
         {/* Case, Studie, s */}
         <section, className="py-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
-  g:px-8">",
+  g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Case, Studie, s */}"
         <section, className="py-20"></section>"
@@ -741,11 +741,11 @@ pl, a, n.popul, a, r;
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0"></div>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{stu, d, y.tit, l, e}</h3>
                   <div, className="mb-6">
-                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Challen, g, e: </h4>",
+                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Challen, g, e: </h4>"
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">{stu, d, y.challen, g, e}</p>
                   </d, i, v>
                   <div, className="mb-6">
-                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Soluti, o, n: </h4>",
+                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Soluti, o, n: </h4>"
                   <div, className="mb-6"></div>
                     <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Challen, g, e: </h4>"
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">{stu, d, y.challen, g, e}</p>
@@ -755,7 +755,7 @@ pl, a, n.popul, a, r;
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">{stu, d, y.soluti, o, n}</p>
                   </d, i, v>
                   <d, i, v>
-                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Resul, t, s: </h4>",
+                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Resul, t, s: </h4>"
                     <ul, className="spa, c, e-y-1">
                       {stu, d, y.resul, t, s.m, a, p((resu, l, t, resultInd, e, x) => (
                         <li, ke, y={resultInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
@@ -766,11 +766,11 @@ pl, a, n.popul, a, r;
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";</div>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">{stu, d, y.tit, l, e}</h3>";
                   <div, className="mb-6">";</div>
-                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Challen, g, e: </h4>",
+                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Challen, g, e: </h4>"
                     <p, className="te, x, t-gr, a, y-600, tex, t-sm">{stu, d, y.challen, g, e}</p>";
                   </d, i, v>
                   <div, className="mb-6">";</div>
-                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Soluti, o, n: </h4>",
+                    <h4, className="fo, n, t-semibold, tex, t-gr, a, y-900, m, b-2">Soluti, o, n: </h4>"
             </d, i, v>"
             <div, className="gri, d, l,"
   g: gr, i, d-co, l, s-3, ga, p-8">"
@@ -823,18 +823,18 @@ pl, a, n.popul, a, r;
         {/* Testimonia, l, s */}
         <section, className="py-20, b, g-gr, a, y-50">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l,
-  g:px-8">",
+  g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
         <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"
             <div, className="te, x, t-center, m, b-16">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"</section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
         <section, className="py-20, b, g-gr, a, y-50">";
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">",</section>
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">"</section>
             <div, className="te, x, t-center, m, b-16">";</div>
         {/* Testimonia, l, s */}"
         <section, className="py-20, b, g-gr, a, y-50"></section>"

@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
 const AiEmailMarketingPage: React.FC = () => {
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
@@ -77,7 +77,7 @@ $4}
         'Advanced automation'
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

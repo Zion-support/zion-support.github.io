@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface SitemapProps {/* TODO: Fix JSX expression */}
 }
 const Sitemap = React.memo(function Sitemap({ className = '' }: SitemapProps) {

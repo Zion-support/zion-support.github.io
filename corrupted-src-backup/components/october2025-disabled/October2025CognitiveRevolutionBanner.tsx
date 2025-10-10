@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 impo, r, t {/* TODO: Fix JSX expression */}
 } fr, o, m 'luci, d, e-rea, c, t';
 const October2025CognitiveRevolutionBanne, r: React.FC = () => { ,

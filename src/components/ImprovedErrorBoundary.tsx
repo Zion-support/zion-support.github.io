@@ -9,7 +9,7 @@ interface Props {
   onError?: (erro,
   r: Error, errorInf)
   o: ErrorInfo) => void
-  resetKeys?: Array,
+  resetKeys?: Array
           <string | number>
   }
 interface State {
@@ -98,7 +98,7 @@ class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryS
     }
   }
   static getDerivedStateFromError(erro)
-  r: Error): Partial,
+  r: Error): Partial
           <State> {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

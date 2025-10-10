@@ -1,4 +1,4 @@
-'use client';
+'use client'
 /**;
  * Enhanced Error Handling System;
  * Provides comprehensive error tracking, reporting, and recovery mechanisms;
@@ -15,25 +15,25 @@ interface ErrorContext {userId?: string;}
 interface ErrorReport {id: string,}}interface ErrorContext {}}userId?: string;
   sessionId?: string;
   url: string,
-    userAgent: string;,
-  timestamp: string;,
+    userAgent: string,
+  timestamp: string,
   component?: string;
-  action?: string,
+  action?: string,;
   props?: Record<string, unknown></string></<<<string>state</string></string>?: Record<string>}</strin>
 }
-interface ErrorReport {}}id: string;,
+interface ErrorReport {}}id: string,
   type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom',
   message: string,
   stack?: string;
   context: ErrorContext,
-  severity: 'low' | 'medium' | 'high' | 'critical';,
-  category: ;,
-    | 'syntax';
+  severity: 'low' | 'medium' | 'high' | 'critical',
+  category:  ,
+    | 'syntax'
     | 'runtime'
     | 'network'
     | 'security',
-    | 'performance',;
-    | 'unknown',;
+    | 'performance',
+    | 'unknown',
   tags: string[],
   metadata: Record<string>,
   resolved: boolean,
@@ -51,25 +51,25 @@ interface ErrorHandlerConfig {enableConsoleLogging: boolean,}
   remoteEndpoint?: string;}apiKey?: string;}
 }
 class EnhancedErrorHandler {private config: ErrorHandlerConfig,}
-  private errors: ErrorReport[] = [],}interface ErrorHandlerConfig {}}enableConsoleLogging: boolean;,
-  enableRemoteReporting: boolean;,
-  enableErrorRecovery: boolean;,
-  enableErrorCategorization: boolean;,
-  enableErrorAggregation: boolean;,
-  enablePerformanceImpact: boolean;,
-  maxErrorsPerMinute: number;,
-  errorRetentionDays: number;,
+  private errors: ErrorReport[] = [],}interface ErrorHandlerConfig {}}enableConsoleLogging: boolean,
+  enableRemoteReporting: boolean,
+  enableErrorRecovery: boolean,
+  enableErrorCategorization: boolean,
+  enableErrorAggregation: boolean,
+  enablePerformanceImpact: boolean,
+  maxErrorsPerMinute: number,
+  errorRetentionDays: number,
   remoteEndpoint?: string;
   apiKey?: string,}
 }
-class EnhancedErrorHandler {}}private config: ErrorHandlerConfig;,
+class EnhancedErrorHandler {}}private config: ErrorHandlerConfig,
   private errors: ErrorReport[] = [],
   private errorCounts: Map<string, number> = new Map();
   private errorCategories: Map<string, number> = new Map();
-  private lastErrorTime: number = 0;,
-  private errorRateLimit: number = 0;,
+  private lastErrorTime: number = 0,
+  private errorRateLimit: number = 0,
   private isInitialized: boolean = false,}
-  constructor(config: Partial<ErrorHandlerConfig> = {,)}) {this.config = {
+  constructor(config: Partial<ErrorHandlerConfig> = {,)}) {this.config = {;
       enableConsoleLogging: true,
       enableRemoteReporting: false,
       enableErrorRecovery: true,
@@ -112,11 +112,11 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
    * Setup global error handlers;
    */;
   private setupGlobalErrorHandlers(): void {window.addEventListener('error', event => {)}
-      this.handleError({)
-        type: 'javascript';,
-        message: event.message;),
-        stack: event.error?.stack;),
-        filename: event.filename;),
+      this.handleError({);
+        type: 'javascript',
+        message: event.message),
+        stack: event.error?.stack),
+        filename: event.filename),
         lineno: event.lineno),
         colno: event.colno),}private setupGlobalErrorHandlers(): void {}}window.addEventListener('error', event => {)}this.handleError({)}type: 'javascript',
         message: event.message,
@@ -125,10 +125,10 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
         lineno: event.lineno,
         colno: event.colno,
         error: event.error,}
-      })
-    })
-  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */,}}})
-    })
+      });
+    });
+  private setupGlobalErrorHandlers(): void {/* TODO: Fix JSX expression */,}}});
+    });
   }
   /**;
    * Setup unhandled promise rejection handler;
@@ -139,45 +139,45 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
         message: event.reason?.message || String(event.reason),
         stack: event.reason?.stack,
         reason: event.reason,}
-      })
-    })
-  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */,}}})
-    })
+      });
+    });
+  private setupUnhandledRejectionHandler(): void {/* TODO: Fix JSX expression */,}}});
+    });
   }
   /**;
    * Setup resource error handler;
    */;
   private setupResourceErrorHandler(): void {window.addEventListener('error');}
-      event => {
-        if (event.target !== window) {
-          const target = event.target as HTMLElement & {
+      event => {;
+        if (event.target !== window) {;
+          const target = event.target as HTMLElement & {;
             src?: string;}href?: string;}
           }
-          this.handleError({)
-    )}type: 'resource',})
+          this.handleError({);
+    )}type: 'resource',});
             message: `Failed to load resource: ${target?.src || target?.href,}`);
             element: event.target?.constructor.name),
             src: target?.src || target?.href,
   private setupResourceErrorHandler(): void {}}window.addEventListener();
-      'error',;
+      'error',
       event => {}if (event.target !== window) {}const target = event.target as HTMLElement & {}src?: string;
             href?: string;}
           }
           this.handleError({)}type: 'resource',}
-            message: `Failed to load resource: ${target?.src || target?.href,}`,;
+            message: `Failed to load resource: ${target?.src || target?.href,}`,
             element: event.target?.constructor.name,
             src: target?.src || target?.href,
-          })
+          });
         },
       true;
     );
   private setupResourceErrorHandler(): void {/* TODO: Fix JSX expression */,}}}
-          this.handleError({/* TODO: Fix JSX expression */,)}resource: ${target?.src || target?.href,}`,;
+          this.handleError({/* TODO: Fix JSX expression */,)}resource: ${target?.src || target?.href,}`,
             elemen,;
   t: event.target?.constructor.name,
             sr,;
-  c: target?.src || target?.href;),
-          })
+  c: target?.src || target?.href),
+          });
         },
       true;
     );
@@ -191,15 +191,15 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
       try {,;}
         const response = await originalFetch(...args),;
         if (!response.ok) {,;
-          this.handleError({)}type: 'network',`})
+          this.handleError({)}type: 'network',`});
             message: `Network request failed: ${response.status,}${response.statusText}`);
             url: args[0] as string),
             status: response.status),
             statusText: response.statusText,
-          })
+          });
         }
         return response;
-      } catch (error) {this.handleError({)}type: 'network',`})
+      } catch (error) {this.handleError({)}type: 'network',`});
           message: `Network request failed: ${error,}`);
           url: args[0] as string),
           error: error instanceof Error ? error : new Error(String(error)),
@@ -207,36 +207,36 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
     const originalFetch = window.fetch;
     window.fetch = async (...args: Parameters<typeof fetch>) => {,}try {}}const response = await originalFetch(...args);
         if (!response.ok) {}this.handleError({)}type: 'network',`}
-            message: `Network request failed: ${response.status,}${response.statusText}`,;
+            message: `Network request failed: ${response.status,}${response.statusText}`,
             url: args[0] as string,
             status: response.status,
             statusText: response.statusText,
-          })
+          });
         }
         return response;
       } catch (error) {}this.handleError({)}type: 'network',`}
-          message: `Network request failed: ${error,}`,;
+          message: `Network request failed: ${error,}`,
           url: args[0] as string,
           error: error instanceof Error ? error : new Error(String(error)),
-        })
-  private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */,}}`;
-  failed: ${response.status,}${response.statusText}`,;
+        });
+  private setupNetworkErrorHandler(): void {/* TODO: Fix JSX expression */,}}`
+  failed: ${response.status,}${response.statusText}`,
             ur,;
   l: args[0] as string,
             statu,;
   s: response.status,
             statusTex,;
   t: response.statusText,
-          })
+          });
         }
         return response;
-      } catch (error) {/* TODO: Fix JSX expression */,}`;
-  failed: ${error,}`,;
+      } catch (error) {/* TODO: Fix JSX expression */,}`
+  failed: ${error,}`,
           ur,;
   l: args[0] as string,
           erro,;
   r: error instanceof Error ? error : new Error(String(error)),
-        })
+        });
         throw error;
       }
     }
@@ -246,35 +246,35 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
    */;
   private setupPerformanceErrorHandler(): void {if (!this.config.enablePerformanceImpact) return;}
     // Monitor long tasks that might indicate performance issues;
-    if ('PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) {;
       try {const observer = new PerformanceObserver(list => {);}
           list.getEntries().forEach(entry => {);
-            if (entry.duration > 100) {
+            if (entry.duration > 100) {;
               // Tasks longer than 100ms;
-              this.handleError({)}type: 'custom',`})
+              this.handleError({)}type: 'custom',`});
   private setupPerformanceErrorHandler(): void {}}if (!this.config.enablePerformanceImpact) return;
     // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {}try {}}const observer = new PerformanceObserver(list => {)}list.getEntries().forEach(entry => {)}if (entry.duration > 100) {}// Tasks longer than 100ms;
               this.handleError({)}type: 'custom',`}
-                message: `Long task detected: ${entry.duration.toFixed(2),}ms`,;
+                message: `Long task detected: ${entry.duration.toFixed(2),}ms`,
                 duration: entry.duration,
-                category: 'performance',})
+                category: 'performance',});
             }
-          })
-        })
-        observer.observe({type: 'longtask', buffered: true ,)})
-      } catch (error) {}private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */,}}`;
-  detected: ${entry.duration.toFixed(2),}ms`,;
+          });
+        });
+        observer.observe({type: 'longtask', buffered: true ,)});
+      } catch (error) {}private setupPerformanceErrorHandler(): void {/* TODO: Fix JSX expression */,}}`
+  detected: ${entry.duration.toFixed(2),}ms`,
                 duratio,;
   n: entry.duration,
                 categor,;
   y: 'performance',
-              })
+              });
             }
-          })
-        })
-        observer.observe({/* TODO: Fix JSX expression */,)})
-  d: true ,})
+          });
+        });
+        observer.observe({/* TODO: Fix JSX expression */,)});
+  d: true ,});
       } catch (error) {/* TODO: Fix JSX expression */,}}
     }
   }
@@ -292,7 +292,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
    * Setup error cleanup;
    */;
   private setupErrorCleanup(): void {// Clean up old errors;}
-    setInterval(;)
+    setInterval(;);
       () => {}private setupErrorCleanup(): void {}}// Clean up old errors;
     setInterval();
       () => {}this.cleanupOldErrors();}
@@ -318,7 +318,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
 // statusText?: string;);
 // duration?: number;),;
 // category?: string;)}): void {// Rate limiting;}
-    if (!this.checkRateLimit()) {
+    if (!this.checkRateLimit()) {;
 // src?: string;
 // url?: string;
 // status?: number;
@@ -326,8 +326,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
 // duration?: number;
 // category?: string;}}): void {}}// Rate limiting;
     if (!this.checkRateLimit()) {}return;}
-  private handleError(errorDat,;)
-  a: {/* TODO: Fix JSX expression */,})
+  private handleError(errorDat,;);
+  a: {/* TODO: Fix JSX expression */,});
   }): void {/* TODO: Fix JSX expression */,}}}
     const errorReport = this.createErrorReport(errorData);
     this.processError(errorReport);
@@ -359,9 +359,9 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
     const category = this.categorizeError(errorData);
     const tags = this.generateTags(errorData);
     return {id: this.generateErrorId(),}
-      type: errorData.type;,
+      type: errorData.type,
       message: errorData.message,
-      stack: errorData.stack;,}return {}}id: this.generateErrorId(),
+      stack: errorData.stack,}return {}}id: this.generateErrorId(),
       type: errorData.type,
       message: errorData.message,
       stack: errorData.stack,
@@ -370,14 +370,14 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
       category,;
       tags,;
       metadata: {,
-    filename: errorData.filename;,
-        lineno: errorData.lineno;,
-        colno: errorData.colno;,
-        element: errorData.element;,
+    filename: errorData.filename,
+        lineno: errorData.lineno,
+        colno: errorData.colno,
+        element: errorData.element,
         src: errorData['src'],
-        url: errorData.url;,
+        url: errorData.url,
         status: errorData.status,
-        statusText: errorData.statusText;,}metadata: {,}filename: errorData.filename,
+        statusText: errorData.statusText,}metadata: {,}filename: errorData.filename,
         lineno: errorData.lineno,
         colno: errorData.colno,
         element: errorData.element,
@@ -388,8 +388,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
         duration: errorData.duration,},
       resolved: false,
     }
-  private createErrorReport(errorDat,;)
-  a: {/* TODO: Fix JSX expression */,})
+  private createErrorReport(errorDat,;);
+  a: {/* TODO: Fix JSX expression */,});
   }): ErrorReport {/* TODO: Fix JSX expression */,}},
       resolve,;
   d: false,
@@ -400,8 +400,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
    */;
   private processError(errorReport: ErrorReport): void {,}
     // Add to errors array;
-    this.errors.push(errorReport)
-    // Update counters,
+    this.errors.push(errorReport);
+    // Update counters,;
     this.updateErrorCounts(errorReport),;
     // Console logging;
     if (this.config.enableConsoleLogging) {,}this.logError(errorReport);}
@@ -442,7 +442,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
    */;
   private getErrorContext(): ErrorContext {return {}
       url: window.location.href,
-      userAgent: navigator.userAgent;,}private getErrorContext(): ErrorContext {}}return {}}url: window.location.href,
+      userAgent: navigator.userAgent,}private getErrorContext(): ErrorContext {}}return {}}url: window.location.href,
       userAgent: navigator.userAgent,
       timestamp: new Date().toISOString(),
       sessionId: this.getSessionId(),
@@ -453,8 +453,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
   /**;
    * Determine error severity;
    */;
-  private determineSeverity(errorData: {,)
-    ),
+  private determineSeverity(errorData: {,);
+    ),;
     type: ErrorReport['type']),
     message: string,),;
     status?: number;),}element?: string;}
@@ -462,64 +462,64 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
       errorData.status &&);
       errorData.status >= 500;);
     ) {}private determineSeverity(errorData: {),}type: ErrorReport['type'],
-    message: string;,
+    message: string,
     status?: number;
     element?: string,}
-  }): ErrorReport['severity'] {}if(;)
+  }): ErrorReport['severity'] {}if(;);
       errorData.type === 'network' &&;
       errorData.status &&;
       errorData.status >= 500;
-    ) {}return 'critical';}
+    ) {}return 'critical'}
     }
     if(errorData.type === 'javascript' &&);
       errorData.message.includes('Cannot read property');
-    ) {}return 'high';}
+    ) {}return 'high'}
     }
-    if (errorData.type === 'resource' && errorData.element === 'img') {}return 'medium';}
+    if (errorData.type === 'resource' && errorData.element === 'img') {}return 'medium'}
     }
-    if (errorData.type === 'promise') {}return 'medium';}
-  private determineSeverity(errorDat,;)
-  a: {/* TODO: Fix JSX expression */,})
+    if (errorData.type === 'promise') {}return 'medium'}
+  private determineSeverity(errorDat,;);
+  a: {/* TODO: Fix JSX expression */,});
   }): ErrorReport['severity'] {/* TODO: Fix JSX expression */,}}
     if (errorData.type === 'javascript' &&);
       errorData.message.includes('Cannot read property');
     ) {/* TODO: Fix JSX expression */,}}
     if (errorData.type === 'resource' && errorData.element === 'img') {/* TODO: Fix JSX expression */,}}
     if (errorData.type === 'promise') {/* TODO: Fix JSX expression */,}}
-    return 'low';
+    return 'low'
   }
   /**;
    * Categorize error;
    */;
-  private categorizeError(errorData: {,)
-    ),
+  private categorizeError(errorData: {,);
+    ),;
     type: ErrorReport['type']),}private categorizeError(errorData: {),}type: ErrorReport['type'],
     message: string,}
-  }): ErrorReport['category'] {}if (errorData.type === 'network') {}return 'network';}
+  }): ErrorReport['category'] {}if (errorData.type === 'network') {}return 'network'}
     }
-    if (errorData.type === 'resource') {}return 'performance';}
-  private categorizeError(errorDat,;)
-  a: {/* TODO: Fix JSX expression */,})
+    if (errorData.type === 'resource') {}return 'performance'}
+  private categorizeError(errorDat,;);
+  a: {/* TODO: Fix JSX expression */,});
   }): ErrorReport['category'] {/* TODO: Fix JSX expression */,}}
     if (errorData.type === 'resource') {/* TODO: Fix JSX expression */,}}
     if ();
       errorData.message.includes('SecurityError') ||;
       errorData.message.includes('CORS');
-    ) {}return 'security';}
+    ) {}return 'security'}
     }
-    if (errorData.message.includes('SyntaxError')) {}return 'syntax';}
+    if (errorData.message.includes('SyntaxError')) {}return 'syntax'}
     }
-    if (errorData.type === 'promise') {}return 'runtime';}
+    if (errorData.type === 'promise') {}return 'runtime'}
     ) {/* TODO: Fix JSX expression */,}}
     if (errorData.message.includes('SyntaxError')) {/* TODO: Fix JSX expression */,}}
     if (errorData.type === 'promise') {/* TODO: Fix JSX expression */,}}
-    return 'unknown';
+    return 'unknown'
   }
   /**;
    * Generate error tags;
    */;
-  private generateTags(errorData: {,)
-    ),
+  private generateTags(errorData: {,);
+    ),;
     filename?: string;),;
     type: ErrorReport['type']),}duration?: number;}
   }): string[] {const tags: string[] = [],
@@ -534,8 +534,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
     if (errorData.type === 'resource') {}tags.push('resource');}
     }
     if (errorData.duration && errorData.duration > 1000) {}tags.push('slow');}
-  private generateTags(errorDat,;)
-  a: {/* TODO: Fix JSX expression */,})
+  private generateTags(errorDat,;);
+  a: {/* TODO: Fix JSX expression */,});
   }): string[] {/* TODO: Fix JSX expression */,}}
     if (errorData.type === 'network') {/* TODO: Fix JSX expression */,}}
     if (errorData.type === 'resource') {/* TODO: Fix JSX expression */,}}
@@ -545,18 +545,18 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
   /**;
    * Generate unique error ID;
    */;
-  private generateErrorId(): string {`}}return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  private generateErrorId(): string {/* TODO: Fix JSX expression */,}}`;
-    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  private generateErrorId(): string {`}}return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+  private generateErrorId(): string {/* TODO: Fix JSX expression */,}}`
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
   }
   /**;
    * Get session ID;
    */;
   private getSessionId(): string {}}let sessionId = sessionStorage.getItem('error_session_id');
-    if (!sessionId) {`}sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    if (!sessionId) {`}sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       sessionStorage.setItem('error_session_id', sessionId);
-  private getSessionId(): string {/* TODO: Fix JSX expression */,}}`;
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  private getSessionId(): string {/* TODO: Fix JSX expression */,}}`
+      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
       sessionStorage.setItem('error_session_id', sessionId);
     }
     return sessionId;
@@ -593,8 +593,8 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
       (this.errorCategories.get(errorReport.category) || 0) + 1;
     );
   private updateErrorCounts(errorRepor);
-  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}`;
-    const key = `${errorReport.type}_${errorReport.category}`;
+  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}`
+    const key = `${errorReport.type}_${errorReport.category}`
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(errorReport.category);
       (this.errorCategories.get(errorReport.category) || 0) + 1;
@@ -606,7 +606,7 @@ class EnhancedErrorHandler {/* TODO: Fix JSX expression */,}}g: Partial<ErrorHan
   private logError(errorReport: ErrorReport): void {,}
     ,}private logError(errorReport: ErrorReport): void {,}}const emoji = this.getSeverityEmoji(errorReport.severity);`}
 if (errorReport.stack) {}private logError(errorRepor);
-  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}`;
+  t: ErrorReport): void {/* TODO: Fix JSX expression */,}}`
   Report: ${errorReport.id,}`);
     if (errorReport.stack) {/* TODO: Fix JSX expression */,}}
 }
@@ -614,15 +614,15 @@ if (errorReport.stack) {}private logError(errorRepor);
    * Get severity emoji;
    */;
   private getSeverityEmoji(severity: ErrorReport['severity']): string {,}}switch (severity) {}case 'critical': ;
-        return '🚨';
+        return '🚨'
       case 'high':;
-        return '🔴';
-      case 'medium':,
-        return '🟡',;
+        return '🔴'
+      case 'medium':,;
+        return '🟡',
       case 'low':,;
-        return '🟢',;
+        return '🟢',
       default:,;
-        return '❓';}
+        return '❓'}
   private getSeverityEmoji(severit);
   y: ErrorReport['severity']): string {/* TODO: Fix JSX expression */,}}}
   }
@@ -630,7 +630,7 @@ if (errorReport.stack) {}private logError(errorRepor);
    * Report to remote service;
    */;
   private async reportToRemote(errorReport: ErrorReport): Promise<void> {,
-    ,
+    ,;
     if (!this.config.remoteEndpoint) return;
     try {,;}
       await fetch(this.config.remoteEndpoint, {);
@@ -638,15 +638,15 @@ if (errorReport.stack) {}private logError(errorRepor);
         headers: {,}private async reportToRemote(errorReport: ErrorReport): Promise<void> {,}if (!this.config.remoteEndpoint) return;
     try {}}await fetch(this.config.remoteEndpoint, {)}method: 'POST',
         headers: {,}'Content-Type': 'application/json',`}
-          Authorization: `Bearer ${this.config.apiKey,}})
-        body: JSON.stringify(errorReport),})
+          Authorization: `Bearer ${this.config.apiKey,}});
+        body: JSON.stringify(errorReport),});
     } catch (error) {}private async reportToRemote(errorRepor);
-  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */,}`;
-  n: `Bearer ${this.config.apiKey,}`;
-        },;
+  t: ErrorReport): Promise<void> {/* TODO: Fix JSX expression */,}`
+  n: `Bearer ${this.config.apiKey,}`
+        },
         bod,;
   y: JSON.stringify(errorReport),
-      })
+      });
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
   /**;
@@ -660,11 +660,11 @@ if (errorReport.stack) {}private logError(errorRepor);
    * Assess performance impact;
    */;
   private assessPerformanceImpact(errorReport: ErrorReport): void {,}
-    ,
+    ,;
     if(errorReport.type === 'resource' ||);
-      errorReport.category === 'performance'),}private assessPerformanceImpact(errorReport: ErrorReport): void {,}}if(;)
+      errorReport.category === 'performance'),}private assessPerformanceImpact(errorReport: ErrorReport): void {,}}if(;);
       errorReport.type === 'resource' ||;
-      errorReport.category === 'performance';
+      errorReport.category === 'performance'
     ) {}private assessPerformanceImpact(errorRepor);
   t: ErrorReport): void {/* TODO: Fix JSX expression */,}}}
   }
@@ -674,7 +674,7 @@ if (errorReport.stack) {}private logError(errorRepor);
   private attemptErrorRecovery(): void {const recentErrors = this.errors.filter(error =>);}
         !error.resolved &&);
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;}private attemptErrorRecovery(): void {}}const recentErrors = this.errors.filter();
-      error =>;
+      error =>
         !error.resolved &&;
         Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;
     );
@@ -700,7 +700,7 @@ if (errorReport.stack) {}private logError(errorRepor);
    */;
   private cleanupOldErrors(): void {}}const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
-    this.errors = this.errors.filter()
+    this.errors = this.errors.filter();
       error => new Date(error.context.timestamp) > cutoffDate;
     this.errors = this.errors.filter();
       error => new Date(error.context.timestamp) > cutoffDate;
@@ -710,23 +710,23 @@ if (errorReport.stack) {}private logError(errorRepor);
   /**;
    * Get error statistics;
    */;
-  public getErrorStatistics(): {totalErrors: number,}public getErrorStatistics(): {}totalErrors: number;,
+  public getErrorStatistics(): {totalErrors: number,}public getErrorStatistics(): {}totalErrors: number,
     errorsByType: Record<string>,
     errorsByCategory: Record<string>,
     errorsBySeverity: Record<string>,
     recentErrors: ErrorReport[],}
-  } {}const errorsByType: Record<string, number> = {}const errorsByCategory: Record<string, number> = {}const errorsBySeverity: Record<string, number> = {}this.errors.forEach(error => {)
+  } {}const errorsByType: Record<string, number> = {}const errorsByCategory: Record<string, number> = {}const errorsBySeverity: Record<string, number> = {}this.errors.forEach(error => {);
     );
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;}this.errors.forEach(error => {)}errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
       errorsByCategory[error.category] =;
         (errorsByCategory[error.category] || 0) + 1;
       errorsBySeverity[error.severity] =;
         (errorsBySeverity[error.severity] || 0) + 1;}
-    })
+    });
   public getErrorStatistics(): {/* TODO: Fix JSX expression */,}} {/* TODO: Fix JSX expression */,}errorsByType: Record<string, number> = {}const,;
   errorsByCategory: Record<string, number> = {}const,;
-  errorsBySeverity: Record<string, number> = {}this.errors.forEach(error => {/* TODO: Fix JSX expression */,)})
-    })
+  errorsBySeverity: Record<string, number> = {}this.errors.forEach(error => {/* TODO: Fix JSX expression */,)});
+    });
     const recentErrors = this.errors;
       .filter(error => !error.resolved);
       .sort();
@@ -735,7 +735,7 @@ if (errorReport.stack) {}private logError(errorRepor);
           new Date(a.context.timestamp).getTime();
       );
       .slice(0, 10);
-    return {totalErrors: this.errors.length;,}}return {}}totalErrors: this.errors.length,
+    return {totalErrors: this.errors.length,}}return {}}totalErrors: this.errors.length,
       errorsByType,;
       errorsByCategory,;
       errorsBySeverity,;
@@ -769,10 +769,10 @@ if (errorReport.stack) {}private logError(errorRepor);
       message),}public reportError(message: string, context?: Partial<ErrorContext>): string {}}const errorReport = this.createErrorReport({)}type: 'custom',
       message,;
       ...context}
-    })
+    });
     this.processError(errorReport);
   public reportError(messag);
-  e: string, context?: Partial<ErrorContext>): string {/* TODO: Fix JSX expression */,}}})
+  e: string, context?: Partial<ErrorContext>): string {/* TODO: Fix JSX expression */,}}});
     this.processError(errorReport);
     return errorReport.id;
   }
@@ -788,4 +788,4 @@ export {// Export class for custom instances;}}export {}}EnhancedErrorHandler,;
 export const errorHandler = new EnhancedErrorHandler();
 // Export class for custom instances;
 export {/* TODO: Fix JSX expression */,}}}
-`;
+`

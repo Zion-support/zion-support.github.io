@@ -1,8 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import { Video, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 const AIVideoGenerationPage: React.FC = () => {
   const features = [
     'AI Video Creation',
@@ -66,7 +66,7 @@ const AIVideoGenerationPage: React.FC = () => {
                   <Video className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md: text-5xl font-bold text-white neon-text">
-                  AI Video Generator Pro,
+                  AI Video Generator Pro
   </
               </div>
               <p className="text-xl text-gray-300 mb-8">
@@ -82,7 +82,7 @@ const AIVideoGenerationPage: React.FC = () => {
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <Play className="w-5 h-5" />
-                  Watch Demo,
+                  Watch Demo
   </
               </div>
             </div>

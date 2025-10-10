@@ -2,7 +2,7 @@ import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide
 'use client';
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const FAQPage: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -156,7 +156,7 @@ $4];
 export default FAQPage,
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const FAQPage: React.FC = () => {
     return (
     <div>Coming Soon</div>

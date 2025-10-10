@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 /**
  * SEO Component;
@@ -53,7 +53,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   twitterCar,
   d: 'summary_large_image' as const}
 export const,
-  SEO: React.FC,
+  SEO: React.FC
           <SEOProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -101,7 +101,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
       return structuredData;
     }
     const,
-  baseStructuredData: Record,
+  baseStructuredData: Record
           <string, unknown> = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

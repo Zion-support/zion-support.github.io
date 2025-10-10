@@ -27,7 +27,7 @@ export interface PerformanceReport {
     // TODO: Add content
   }
 }
-  webVitals: Partial,
+  webVitals: Partial
 
           <PerformanceMetrics>,
     resource,

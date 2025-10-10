@@ -189,7 +189,7 @@ const Navigation: React.FC = () => {
               Home
   </
             <Link href="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
-              About,
+              About
   </
             {/* Services Dropdown */}
             <div className="relative">
@@ -369,7 +369,7 @@ const Navigation: React.FC = () => {
             <a
               href="/contact"
               className="cyber-button px-4 py-2 text-sm font-medium">
-              Get Started,
+              Get Started
   </
           </div>
           {/* Mobile Menu Button */}

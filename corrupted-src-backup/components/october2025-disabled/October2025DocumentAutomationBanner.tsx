@@ -54,7 +54,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
   </
           <p, className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>
             Discover, how, leading enterprises, achi, e, v, e{' '}</p>
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>,
+            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, m, b-3'></h2>
@@ -65,7 +65,7 @@ const October2025DocumentAutomationBanne, r = () => {/* TODO: Fix JSX expression
           </p>
           <p, className='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'></p>
             Discover, how, leading enterprises, achi, e, v, e{' '}
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>,
+            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</span>
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</span>, a, n, d;
             <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'></span>
               {' '}

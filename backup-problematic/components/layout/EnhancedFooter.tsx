@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface EnhancedFooterProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedFooter = React.memo(function EnhancedFooter({ className = '' }: EnhancedFooterProps) {

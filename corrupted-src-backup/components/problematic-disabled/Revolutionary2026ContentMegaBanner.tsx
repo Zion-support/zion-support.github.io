@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 const Revolutionary2026ContentMegaBanne, r: React.FC = () => {
     ,
   const revolutionaryConten, t = [

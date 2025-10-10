@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';
 const MicroSAASPage: React.FC = () => {
@@ -3408,7 +3408,7 @@ $4}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
-            Micro SAAS Solutions,
+            Micro SAAS Solutions
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
@@ -10325,7 +10325,7 @@ const categories = [
 // Micro SAAS Solutions
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
+            Coming Soon
   </
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -10518,7 +10518,7 @@ const categories = [
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
-                    Get Started Now,
+                    Get Started Now
   </
                   <p className="text-xs text-gray-500 mt-2">
                 </div>"
@@ -10530,7 +10530,7 @@ const categories = [
   hover:from-purple-700,"
   hover: to-blue-700 transition-all inline-block"
 // >
-//                     Get Started Now,
+//                     Get Started Now
           </a>"
                   <p className="text-xs text-gray-500 mt-2"></p>
                     {service.contactInfo}
@@ -10559,7 +10559,7 @@ const categories = [
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
-              Email Us,
+              Email Us
   </
       {/* CTA Section */}"
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"

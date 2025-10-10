@@ -1,8 +1,8 @@
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Mail, ArrowRight}}from 'lucide-react';
-const EmailMarketingSuitePage: React.FC = () => {,
-    return(<>,)
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Mail, ArrowRight} from 'lucide-react'
+const EmailMarketingSuitePage: React.FC = () => {
+    return(<>,);
       <Helmet />
         <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
         <meta />
@@ -27,14 +27,14 @@ const EmailMarketingSuitePage: React.FC = () => {,
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
             <p>AI-powered email marketing automation. Create, send, and optimize email campaigns;</p>
-              with intelligent automation and personalization.
+              with intelligent automation and personalization.;
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>View Demo;</button>
+              <button>View Demo</button>
               </button>
             </div>
           </div>
@@ -57,6 +57,7 @@ const EmailMarketingSuitePage: React.FC = () => {,
         </section>
       </div>
     </>,
-  )}};
-
+  )}}
+;
 export default EmailMarketingSuitePage;
+;

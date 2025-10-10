@@ -1,20 +1,16 @@
-'use client';
-import React from 'react';
-'use client';
-import React, {useState, useCallback}from 'react';
-import {Helmet}}from 'react-helmet-async';
+'use client'
+import React from 'react'
+'use client'
+import React, {useState, useCallback} from 'react'
+import {Helmet} from 'react-helmet-async'
 import {Phone,}
-  Mail,
-
-  MapPin,
-
-  Clock,
-
-  Send,
-
+  Mail,;
+  MapPin,;
+  Clock,;
+  Send,;
   CheckCircle;}} from 'lucide-react'
-const ContactPage: React.FC = () => {,
-    const [formData, setFormData] = useState({)
+const ContactPage: React.FC = () => {
+    const [formData, setFormData] = useState({);
     name: '',
     email: '',
     company: '',
@@ -22,22 +18,22 @@ phone: '',
     service: '',
     budget: '',
     timeline: '',
-    message: '',}})
+    message: '',}});
 const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,}const {name, value}}= e.target;
-    setFormData(prev => ({)
-    ...prev,
+    setFormData(prev => ({);
+    ...prev,;
       [name]: value;}}));
   }, []);
 const handleSubmit = async (e: React.FormEvent) => {,
     e.preventDefault();
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
 try {// Simulate form submission,}
       await new Promise(resolve => setTimeout(resolve, 1000));
       setSubmitStatus('success');
-      setFormData({)
+      setFormData({);
         name: '',
         email: '',
         company: '',
@@ -45,7 +41,7 @@ try {// Simulate form submission,}
         service: '',
         budget: '',
         timeline: '',
-        message: '',}})
+        message: '',}});
     } catch (error) {setSubmitStatus('error')}} finally {setIsSubmitting(false)}}}
   }
 const services = [
@@ -54,13 +50,9 @@ const services = [
     'Mobile App Development',
     'Web Development',
     'Data Analytics',
-
     'Cybersecurity',
-
     'DevOps',
-
     'Consulting',
-
     'Other'
   ]
 const contactInfo = [
@@ -81,7 +73,7 @@ const contactInfo = [
       details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
       description: 'Eastern Time',}}
   ]
-return(<>)
+return(<>);
       <Helmet />
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
         <meta name="description" content="AI-powered solution" />
@@ -95,7 +87,7 @@ return(<>)
               </span>
             </h1>
             <p>Ready to transform your business? Let's discuss your project and explore;</p>
-              how our AI and IT solutions can help you achieve your goals.
+              how our AI and IT solutions can help you achieve your goals.;
             </p>
           </div>
         </section>
@@ -112,10 +104,10 @@ return(<>)
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>})}
 <form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                   <div />
                     <label>
-                      Full Name *
+                      Full Name *;
                     </label>
                     <div className="relative"></div>
                       <User>
@@ -123,14 +115,14 @@ return(<>)
                   </div>
                   <div />
                     <label>
-                      Email Address *
+                      Email Address *;
                     </label>
                     <div className="relative"></div>
                       <Mail>
                       <input />
                   </div>
                 </div>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>,
+                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                   <div />
                     <label>
                       Company;
@@ -141,7 +133,7 @@ return(<>)
                   </div>
                   <div />
                     <label>
-                      Phone Number;
+                      Phone Number
                     </label>
                     <div className="relative"></div>
                       <Phone>
@@ -150,35 +142,34 @@ return(<>)
                 </div>
                 <div />
                   <label>
-                    Service Interest,
+                    Service Interest
                   </label>
                   <div className="relative"></div>
                     <Globe>
                     <select>
                       <option value="">Select a service</option>
                       {services.map((service) => (} <option>
-
                           {service} </option>
                       ))}
-
+;
                     </select>
                   </div>
                 </div>
                 <div />
                   <label>
-                    Message *
+                    Message *;
                   </label>
                   <div className="relative"></div>
                     <MessageCircle>
                     <textarea />
                 </div>
                 <button>{isSubmitting ? (;</button>
-                    <>
+                    <>;
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
                   ) : (;
-                    <>
+                    <>;
                       <Send>
                       <span>Send Message</span>
                     </>})}
@@ -189,7 +180,7 @@ return(<>)
               <div />
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
                 <p>We're here to help! Reach out to us through any of these channels;</p>
-                  and we'll get back to you as soon as possible.
+                  and we'll get back to you as soon as possible.;
                 </p>
               </div>
               {/* Contact Information */} <div className="space-y-8"></div>
@@ -204,7 +195,6 @@ return(<>)
                       <Phone />
                     <div />
 <h3>
-
                         {info.title} </h3>
                       <p>{info.details</p>} </p>
                       <p>{info.description</p>} </p>
@@ -231,7 +221,7 @@ return(<>)
                       <Clock />
                     <div />
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>,
+                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
                   </div>
                 </div>
@@ -242,7 +232,7 @@ return(<>)
       </div>
 </div>
   ),
-};
-
+}
+;
 export default ContactPage;
-
+;

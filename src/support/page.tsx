@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 const SupportPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -152,7 +152,7 @@ const SupportPage: React.FC = () => {
               Support Center
   </
             <p className="text-xl text-cyan-400 mb-8">
-              We're here to help you succeed with AI,
+              We're here to help you succeed with AI
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Get instant answers to your questions, access comprehensive resources, 

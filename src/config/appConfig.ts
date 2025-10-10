@@ -80,7 +80,7 @@ export interface AppConfig {
   n: true
  * Get configuration value by key path
  * @example getConfig('app.name') => 'Zion Tech Group'
-export function getConfig,
+export function getConfig
           <T = unknown>(keyPat)
   h: string): T {
     const keys = keyPath.split('.')

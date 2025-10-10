@@ -190,12 +190,12 @@ const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => {/* TODO: Fix JS
                   Get, Your, Free Consultati, o, n;
                   Get, Your, Free Consultati, o, n</h2>
                     <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
-                      What, Yo, u'll, Ge, t: </h3>,
+                      What, Yo, u'll, Ge, t: </h3>
                     <ul, classNam, e='spa, c, e-y-4, tex, t-gr, a, y-3, 0, 0'>
                       <li, classNam, e='flex, item, s-start, ga, p-3'>)
                         <span, classNam, e='te, x, t-indi, g, o-400, fon, t-bo, l, d'>✓</sp, a, n>)
                     <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>)
-                      What, Yo, u'll, Ge, t: </h3>),
+                      What, Yo, u'll, Ge, t: </h3>)
                     <ul, className='spa, c, e-y-4, tex, t-gr, a, y-3, 0, 0'>
                       <li, className='flex, item, s-start, ga, p-3'>
                 ></a>

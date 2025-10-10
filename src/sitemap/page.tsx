@@ -1,8 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 const SitemapPage: React.FC = () => {
   const mainPages = [
@@ -82,7 +82,7 @@ const SitemapPage: React.FC = () => {
               Site Map
   </
             <p className="text-xl text-cyan-400 mb-8">
-              Navigate through all our pages and services,
+              Navigate through all our pages and services
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Find everything you need on our website. From AI services to IT solutions, 

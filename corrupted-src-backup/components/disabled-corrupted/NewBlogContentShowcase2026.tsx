@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 const NewBlogContentShowcase202, 6: React.FC = () => { ,
   const blogPost, s = [
     {
@@ -14,7 +14,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => { ,
       rati, n, g: 4., 9,
       trendi, n, g: t, r, u, e,
       featured: t, r, u, e,
-      ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
+      ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > </Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
       bad, g, e: 'FEATU, R, E, D',
       tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
 const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}

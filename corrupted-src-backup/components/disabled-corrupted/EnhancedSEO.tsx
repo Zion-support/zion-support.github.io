@@ -142,18 +142,18 @@ const,
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
       <meta property="og:url" content={currentUrl} />
-      <meta property="og: site_name" content="Zion Tech Group" />,
+      <meta property="og: site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />,
 ,
       {/* Twitter */}
-      <meta name="twitter: card" content="summary_large_image" />,
+      <meta name="twitter: card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta;
         name="twitter: image",
         content={image.startsWith('http') ? image : `${window.location.origin}${image}`}
       />
-      <meta name="twitter: site" content="@ziontechgroup" />,
+      <meta name="twitter: site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />,
 ,
       {/* Additional Meta Tags */}
@@ -173,8 +173,8 @@ const,
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
       {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />,
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />,
 ,
       {/* DNS Prefetch */}

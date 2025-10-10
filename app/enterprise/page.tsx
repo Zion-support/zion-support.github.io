@@ -1,10 +1,10 @@
-'use client';
-import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import {CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles}}from 'lucide-react';
-const EnterprisePage: React.FC = () => {,
+'use client'
+import React from 'react'
+import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
+import SEOOptimizer   from '../components/SEOOptimizer'
+import {CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles} from 'lucide-react'
+const EnterprisePage: React.FC = () => {
     const features = [
     {
       icon: Shield,
@@ -53,13 +53,9 @@ const benefits = [
     'Improve productivity by 50%',
     'Enhance security and compliance',
     'Streamline business processes',
-
     'Enable data-driven decisions',
-
     'Scale with business growth',
-
     'Integrate with existing systems',
-
     'Provide 24/7 support and monitoring'
   ]
 const stats = [
@@ -67,7 +63,7 @@ const stats = [
     {number: '99.9%', label: 'Uptime Guarantee', icon: Shield ,},
     {number: '50%', label: 'Cost Reduction', icon: TrendingUp ,},
     {number: '24/7', label: 'Support Available', icon: Clock ,}]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>);
       <SEOOptimizer>
       <Navigation />
       {/* Hero Section */} <section className="py-20 px-4">
@@ -87,18 +83,17 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </span>
           </h1>
           <p>Comprehensive enterprise-grade solutions designed for large-scale business operations.;</p>
-            Transform your organization with cutting-edge technology and expert implementation.
+            Transform your organization with cutting-edge technology and expert implementation.;
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-            <button>Get Enterprise Consultation;</button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <button>Get Enterprise Consultation</button>
               <ArrowRight>
             </button>
-            <button>View Case Studies,</button>
+            <button>View Case Studies</button>
             </button>
           </div>
         </div>
       </section>
-
       {/* Stats Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -116,7 +111,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
                 <div className="text-gray-300 text-sm">{stat.label</div>}</div>
               </div>
             ))}
-
+;
           </div>
         </div>
       </section>
@@ -135,7 +130,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             <p>Built for scale, security, and performance to meet the demands of large organizations.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>
                   <feature>
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
@@ -143,13 +138,12 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
                 <ul>
                   {feature.benefits.map((benefit, idx) => (} <li>
                       <CheckCircle />
-
                       {benefit} </li>
                   ))}
                 </ul>
               </div>
             ))}
-
+;
           </div>
         </div>
       </section>
@@ -159,12 +153,11 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
             </p>
           </div>
                     </li>
-
                   ))}
                 </ul>
               </div>
             ))}
-
+;
           </div>
         </div>
       </section>
@@ -195,18 +188,18 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           </h2>
           <p>Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.</p>
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-            <button>Contact Enterprise Sales;</button>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+            <button>Contact Enterprise Sales</button>
               <ArrowRight>
             </button>
-            <button>Learn More;</button>
+            <button>Learn More</button>
             </button>
           </div>
         </div>
       </section>
       <Footer />
   ),
-};
-
+}
+;
 export default EnterprisePage;
-
+;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 const UltimateContentAdvertisingBanne, r: React.FC = () => {,
   const advertisingFeature, s = [
     {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -30,7 +30,7 @@ interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
     popular?: boolean,
   }
 }
-const MicroSAASCard: React.FC,
+const MicroSAASCard: React.FC
           <MicroSAASCardProps> = ({ service }) => {
     // TODO: Add content
   }

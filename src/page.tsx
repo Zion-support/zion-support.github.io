@@ -111,7 +111,7 @@ import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
+import SecurityEnhancer  from './components/SecurityEnhancer';
 import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -674,7 +674,7 @@ const HomePage: React.FC = () => {
               ZION TECH GROUP
   </
             <p className="text-2xl md:text-3xl text-white mb-8 font-light">
-              AI-Powered Enterprise Solutions & Digital Transformation,
+              AI-Powered Enterprise Solutions & Digital Transformation
   </
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <div className="flex items-center text-cyan-400 text-lg">
@@ -686,7 +686,7 @@ const HomePage: React.FC = () => {
               <div className="flex items-center text-purple-400 text-lg">
                 <Mail className="w-6 h-6 mr-2" />
                 <a href="mailto:kleber@ziontechgroup.com" className="hover:text-purple-300 transition-colors">
-                  kleber@ziontechgroup.com,
+                  kleber@ziontechgroup.com
   </
               </div>
               <div className="flex items-center text-pink-400 text-lg">
@@ -732,7 +732,7 @@ const HomePage: React.FC = () => {
                 {service.popular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold shadow-lg">
-                      🔥 POPULAR,
+                      🔥 POPULAR
   </
                   </div>
                 )}
@@ -1043,7 +1043,7 @@ const HomePage: React.FC = () => {
               <p className="text-gray-300 mb-4">Our headquarters location</p>
               <p className="text-pink-400 text-sm">
                 364 E Main St STE 1008<br />
-                Middletown DE 19709,
+                Middletown DE 19709
   </
             </div>
           </div>

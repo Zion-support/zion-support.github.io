@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface SkeletonProps {
     // TODO: Add content
   }
@@ -10,7 +10,7 @@ interface SkeletonProps {
   animated?: boolean;
 }
 const,
-  Skeleton: React.FC,
+  Skeleton: React.FC
           <SkeletonProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }

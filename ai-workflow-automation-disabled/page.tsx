@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 import { Workflow, Zap, Brain, BarChart, Clock, Shield, Users, CheckCircle, Phone, Mail, ArrowRight, Settings, Database, Globe } from 'lucide-react';
 const AIWorkflowAutomationPage: React.FC = () => {
   const features = [
@@ -105,7 +105,7 @@ const,
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
                 AI Workflow Automation Platform</span>
               <p className="text-xl md:text-2xl text-cyan-400 mb-8">
-                Automate any business process with intelligent workflows</p>,
+                Automate any business process with intelligent workflows</p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">,
                 Our AI-powered workflow automation platform helps businesses eliminate manual tasks),
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
@@ -170,7 +170,7 @@ const,
               <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16">,
                 {stats.map((stat, index) => (
                   <div key={index} className="cyber-card p-6 text-center">
-                    <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text">,
+                    <div className="text-3xl md: text-4xl font-bold text-cyan-400 mb-2 neon-text">
                 <a></a>"
                   href="mailt,"
   o:kleber@ziontechgroup.com""
@@ -231,17 +231,17 @@ const AIWorkflowAutomationPage = () => {
               <a;
                 href="/contact"
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
-                Learn More</a>,
-            </div>,
+                Learn More</a>
+            </div>
           </section>,
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-              Key Features</h2>,
+              Key Features</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {features.map((feature, index) => (
-                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">,
-                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />,
+                <div key={index} className="cyber-card p-6 text-center hover: scale-105 transition-all duration-300">
+                  <feature.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Key Features</span>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -265,11 +265,11 @@ const AIWorkflowAutomationPage = () => {
           {/* Use Cases Section */}
           <section className="container mx-auto px-4 py-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-              Automate Any Business Process</h2>,
+              Automate Any Business Process</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
               {useCases.map((useCase, index) => (
-                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">,
-                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />,
+                <div key={index} className="cyber-card p-6 hover: scale-105 transition-all duration-300">
+                  <useCase.icon className="w-12 h-12 text-cyan-400 mb-4" />
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
               Automate Any Business Process</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -285,7 +285,7 @@ const AIWorkflowAutomationPage = () => {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl md: text-4xl font-bold text-white text-center mb-12 neon-text">
-              Pricing Plans</h2>,
+              Pricing Plans</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
               {pricing.map((plan, index) => (
             <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
@@ -340,7 +340,7 @@ const AIWorkflowAutomationPage = () => {
           </section>
         </main>
         <Footer />
-      </div>,
+      </div>
     </div>);
 }</h3>
   </h2>

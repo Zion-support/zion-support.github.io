@@ -16,7 +16,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
         /></meta>
         <link, re, l = 'canonic, a, l'
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-autonomo u s-infrastructu r e-heali n g',
-        />,
+        />
       </Helm, e, t>
     <div></div>
       <Helmet>
@@ -26,15 +26,15 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
   content="Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation." /><meta name="keywords;
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience" /><link rel="canonical", href=" " />
   content=" />
-        <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />,
+        <link rel="canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />
         <meta name="description",
   content: "Deploy autonomous self-healing infrastructure that automatically detects, diagnoses, and resolves incidents in milliseconds. Achieve 99.97% uptime, reduce incidents by 94%, and save $67M+ annually with AI-powered infrastructure automation.", /><meta name: "keywords,
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience", /><link rel: "canonical", href="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing/>",
   content: "autonomous infrastructure, self-healing systems, AI infrastructure, automated incident response, infrastructure automation, site reliability engineering, chaos engineering, infrastructure resilience;
         />
-        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />,
+        <link rel: "canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-autonomous-infrastructure-healing" />
       </Helmet>,
-,
+
       <article, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
         <div, className='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'></div>
           <Link, t, o='/bl, o, g'
@@ -72,7 +72,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                   ML, models, analyze thousands, of, infrastructure metrics, in, real-ti, m, e, detecting, anomalies, 15-45, minutes, before they, cause, incidents. Pattern, recognition, identifies subtle, deviations, that traditional, threshol, d-based, monitoring, misses.</p>
           <div></div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
-                <Server className="h-8 w-8 text-purple-400 ,>
+                <Server className="h-8 w-8 text-purple-400 >
   Key Outcomes;
               </h2>"
               <ul className="space-y-4 text-lg">
@@ -86,17 +86,17 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 >"
-              </h2>",
-              <ul className="space-y-4 text-lg">,
+              </h2>"
+              <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">,
 :src/pages/blog/ai-2025-oct-autonomous-infrastructure-healing/page.tsx;
-                  <Zap className=" />,
+                  <Zap className=" />
                   <span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,"
-                  <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
+                  <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0 ">
-                  <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
+                  <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>
                 </li>
                 <li className="flex items-start gap-3"></li>
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0 >"</TrendingUp>
@@ -135,12 +135,12 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                 <li className="flex items-start gap-3">)
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />)
           <div>)
-              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">),
-                  <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
+              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">)
+                  <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
+                  <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
@@ -157,11 +157,11 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <Shield className=" />">
                   <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>
-                  <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
+                  <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className=" />">
-                  <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
+                  <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <TrendingUp className=" />">
@@ -178,11 +178,11 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>)
-                  <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>,
+                  <span></span><strong>99.97% Uptime: </strong> Autonomous healing resolves 94% of incidents before user impact</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Shield className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
-                  <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>,
+                  <span></span><strong>Sub-Second Response: </strong> AI detects and remediates issues in under 850ms average</span>
                 </li>
                 <li className="flex items-start gap-3"></li>
                   <TrendingUp className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" /></TrendingUp>
@@ -193,7 +193,7 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
               <h2 className="text-3xl font-bold mb-6 text-purple-300">The Infrastructure Reliability Crisis</h2>
               <p className="text-gray-300 mb-4 leading-relaxed"></p>
             <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-6 text-purple-300">The Infrastructure Reliability Crisis</h2>,
+              <h2 className="text-3xl font-bold mb-6 text-purple-300">The Infrastructure Reliability Crisis</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">",
   Traditional infrastructure management struggles with the complexity and scale of modern cloud environments. ,
                 Manual incident response takes 45+ minutes on average, with 67% of incidents caused by configuration drift;
@@ -296,8 +296,8 @@ export default function AutonomousInfrastructureHealing20, 2, 5() {
   Deploy autonomous self-healing systems and achieve enterprise-grade reliability at scale.
               </p>to</p>="/contact"
   className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg font-bold text-lg hover:bg-purple-50 transition-colors">",
-                Start Your Reliability Transformation",
-                <Zap className="ml-2 h-5 w-5 ">,
+                Start Your Reliability Transformation"
+                <Zap className="ml-2 h-5 w-5 ">
                 <Zap className="ml-2 h-5 w-5" />);
 export default function AutonomousInfrastructureHealing20, 2, 5() {/* TODO: Fix JSX expression */}
 }

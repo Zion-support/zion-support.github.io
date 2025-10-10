@@ -3,7 +3,7 @@ import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Awa
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const SignupPage: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -158,7 +158,7 @@ const PagePage: React.FC = () => {
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name,
+                      First Name
   </
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -231,7 +231,7 @@ const PagePage: React.FC = () => {
   md: grid-cols-2 gap-4"></div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// First Name,
+// First Name
           </label>
                     <div className="relative">
                       <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -280,11 +280,11 @@ Confirm Password;
                     <span className="ml-2 text-sm text-gray-300">
                       I agree to the{' '}
                       <a href="/terms" className="text-cyan-400 hover: text-cyan-300">
-                        Terms of Service,
+                        Terms of Service
   </{' '}
                       and{' '}
                       <a href="/privacy" className="text-cyan-400 hover: text-cyan-300">
-                        Privacy Policy,
+                        Privacy Policy
   </
                     </span>
                       name="subscribeNewsletter"
@@ -346,7 +346,7 @@ Confirm Password;
                       and{' '}"
                       <a href="/privacy" className="text-cyan-400,"
   hover: text-cyan-300"></a>
-// Privacy Policy,
+// Privacy Policy
           </a>
                     </span>
 name="subscribeNewsletter" checked={formData.subscribeNewsletter}

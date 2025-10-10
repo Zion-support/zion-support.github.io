@@ -15,7 +15,7 @@ const AutonomousDevOpsServic, e = () => {
         />)
         <link, re, l = 'canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/servic e s/autonomo u s-devo p s')
-        />),
+        />)
       </Helm, e, t>
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e'></div>
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }

@@ -1,7 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const CloudServicesPage: React.FC = () => {
     return (
     <div>Coming Soon</div>
@@ -92,7 +92,7 @@ const CloudServicesPage: React.FC = () => {
             <a
               href="/contact" className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
 // >
-//               Learn More,
+//               Learn More
           </a>
           </div>
         </section>

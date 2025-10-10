@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { WifiOff, RefreshCw, Home, Wifi } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 'use client';
 /**
  * Offline Page;
@@ -38,7 +38,7 @@ const,
 // >
           "
           <RefreshCw className="w-4 h-4" /></RefreshCw>
-// Try Again,
+// Try Again
           </button>
 onClick={handleGoHome}"
             className="w-full flex items-center justify-center gap-2 px-6 py-3 bg-white/10,"

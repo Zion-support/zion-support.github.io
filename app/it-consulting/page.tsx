@@ -1,111 +1,103 @@
-'use client';
-import React, {Suspense, lazy}from 'react';
-import {Link}}from 'react-router-dom';
+'use client'
+import React, {Suspense, lazy} from 'react'
+import {Link} from 'react-router-dom'
 import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,}
-  Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
-  TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,
-  Mail, Phone, DollarSign, Clock, Award, CheckCircle,
-  Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart,
-  CreditCard, Building, Factory, Car, Plane, Ship, Train,
-  Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench,
-  Hammer, Paintbrush, Scissors, BookOpen, Calculator,
-  Compass, PieChart, TrendingDown, Activity, Zap as Lightning,
-  Target as Crosshair, Shield as Security, Users as People,
-  Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow,
-  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location,
-  Eye, Search, MessageSquare, PieChart as Chart,
-  Download, Upload, RefreshCw, Play, Pause, Stop,
-  Volume2, VolumeX, Mic, MicOff, Headphones,
-  Wifi, WifiOff, Battery, BatteryCharging,
-  Sun, Moon, Sunrise, Sunset, CloudRain,
-  Snowflake, Wind, Thermometer, Droplets,
-  Lightbulb, LightbulbOff, Power, PowerOff,
-  Wrench as Tool, Hammer as HammerIcon,
-  Paintbrush as Brush, Scissors as ScissorIcon,
-  BookOpen as Book, Calculator as Calc,
-  Compass as CompassIcon, PieChart as PieChartIcon,
-  TrendingDown as TrendingDownIcon, Activity as ActivityIcon,
-  Grid3X3, Package, Utensils, Microscope,
-  Atom, Cpu as CpuIcon, Database as DatabaseIcon,
-  Network, Layers, Workflow, GitBranch,
-  Zap as ZapIcon, Brain as BrainIcon, Eye as EyeIcon,
-  Search as SearchIcon, MessageSquare as MessageSquareIcon,
-  PieChart as PieChartIcon2, BarChart as BarChartIcon,
-  TrendingUp as TrendingUpIcon, Activity as ActivityIcon2,
-  Target as TargetIcon, Globe as GlobeIcon,
-  Shield as ShieldIcon, Lock as LockIcon,
-  Users as UsersIcon, Settings as SettingsIcon,
-  Calendar as CalendarIcon, CheckSquare as CheckSquareIcon,
-  FileText as FileTextIcon, Mail as MailIcon2,
-  Phone as PhoneIcon2, DollarSign as DollarSignIcon,
-  Clock as ClockIcon, Award as AwardIcon,
-  CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon,
-  Bot as BotIcon, Palette as PaletteIcon,
-  Camera as CameraIcon, Music as MusicIcon,
-  Video as VideoIcon, Gamepad2 as Gamepad2Icon,
-  ShoppingCart as ShoppingCartIcon, CreditCard as CreditCardIcon,
-  Building as BuildingIcon, Factory as FactoryIcon,
-  Car as CarIcon, Plane as PlaneIcon,
-  Ship as ShipIcon, Train as TrainIcon,
-  Home as HomeIcon, Heart as HeartIcon,
-  Stethoscope as StethoscopeIcon, GraduationCap as GraduationCapIcon,
-  Briefcase as BriefcaseIcon, Wrench as WrenchIcon,
-  Hammer as HammerIcon2, Paintbrush as PaintbrushIcon,
-  Scissors as ScissorsIcon, BookOpen as BookOpenIcon,
-  Calculator as CalculatorIcon, Compass as CompassIcon2,
-  PieChart as PieChartIcon3, TrendingDown as TrendingDownIcon2,
-  Activity as ActivityIcon3, Zap as ZapIcon2,
-  Target as TargetIcon2, Shield as ShieldIcon2,
-  Users as UsersIcon2, Star as StarIcon2,
-  CheckCircle as CheckCircleIcon2, ArrowRight as ArrowRightIcon2,
-  Phone as PhoneIcon3, Mail as MailIcon3,
-  MapPin as LocationIcon, Server, HardDrive,
-  Monitor, Printer, Router, Wifi as WifiIcon,
-  Smartphone as SmartphoneIcon, Laptop,
-  Tablet, Headphones as HeadphonesIcon,
-  Keyboard, Mouse, Webcam, Speaker,
-  HardDrive as HardDriveIcon, Server as ServerIcon,
-  Monitor as MonitorIcon, Printer as PrinterIcon,
-  Router as RouterIcon, Wifi as WifiIcon2,
-  Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
-  Tablet as TabletIcon, Headphones as HeadphonesIcon2,
-  Keyboard as KeyboardIcon, Mouse as MouseIcon,
-  Webcam as WebcamIcon, Speaker as SpeakerIcon;}} from 'lucide-react';
-const ITConsultingPage: React.FC = () => {,
+  Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,;
+  TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,;
+  Mail, Phone, DollarSign, Clock, Award, CheckCircle,;
+  Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart,;
+  CreditCard, Building, Factory, Car, Plane, Ship, Train,;
+  Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench,;
+  Hammer, Paintbrush, Scissors, BookOpen, Calculator,;
+  Compass, PieChart, TrendingDown, Activity, Zap as Lightning,;
+  Target as Crosshair, Shield as Security, Users as People,;
+  Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow,;
+  Phone as PhoneIcon, Mail as MailIcon, MapPin as Location,;
+  Eye, Search, MessageSquare, PieChart as Chart,;
+  Download, Upload, RefreshCw, Play, Pause, Stop,;
+  Volume2, VolumeX, Mic, MicOff, Headphones,;
+  Wifi, WifiOff, Battery, BatteryCharging,;
+  Sun, Moon, Sunrise, Sunset, CloudRain,;
+  Snowflake, Wind, Thermometer, Droplets,;
+  Lightbulb, LightbulbOff, Power, PowerOff,;
+  Wrench as Tool, Hammer as HammerIcon,;
+  Paintbrush as Brush, Scissors as ScissorIcon,;
+  BookOpen as Book, Calculator as Calc,;
+  Compass as CompassIcon, PieChart as PieChartIcon,;
+  TrendingDown as TrendingDownIcon, Activity as ActivityIcon,;
+  Grid3X3, Package, Utensils, Microscope,;
+  Atom, Cpu as CpuIcon, Database as DatabaseIcon,;
+  Network, Layers, Workflow, GitBranch,;
+  Zap as ZapIcon, Brain as BrainIcon, Eye as EyeIcon,;
+  Search as SearchIcon, MessageSquare as MessageSquareIcon,;
+  PieChart as PieChartIcon2, BarChart as BarChartIcon,;
+  TrendingUp as TrendingUpIcon, Activity as ActivityIcon2,;
+  Target as TargetIcon, Globe as GlobeIcon,;
+  Shield as ShieldIcon, Lock as LockIcon,;
+  Users as UsersIcon, Settings as SettingsIcon,;
+  Calendar as CalendarIcon, CheckSquare as CheckSquareIcon,;
+  FileText as FileTextIcon, Mail as MailIcon2,;
+  Phone as PhoneIcon2, DollarSign as DollarSignIcon,;
+  Clock as ClockIcon, Award as AwardIcon,;
+  CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon,;
+  Bot as BotIcon, Palette as PaletteIcon,;
+  Camera as CameraIcon, Music as MusicIcon,;
+  Video as VideoIcon, Gamepad2 as Gamepad2Icon,;
+  ShoppingCart as ShoppingCartIcon, CreditCard as CreditCardIcon,;
+  Building as BuildingIcon, Factory as FactoryIcon,;
+  Car as CarIcon, Plane as PlaneIcon,;
+  Ship as ShipIcon, Train as TrainIcon,;
+  Home as HomeIcon, Heart as HeartIcon,;
+  Stethoscope as StethoscopeIcon, GraduationCap as GraduationCapIcon,;
+  Briefcase as BriefcaseIcon, Wrench as WrenchIcon,;
+  Hammer as HammerIcon2, Paintbrush as PaintbrushIcon,;
+  Scissors as ScissorsIcon, BookOpen as BookOpenIcon,;
+  Calculator as CalculatorIcon, Compass as CompassIcon2,;
+  PieChart as PieChartIcon3, TrendingDown as TrendingDownIcon2,;
+  Activity as ActivityIcon3, Zap as ZapIcon2,;
+  Target as TargetIcon2, Shield as ShieldIcon2,;
+  Users as UsersIcon2, Star as StarIcon2,;
+  CheckCircle as CheckCircleIcon2, ArrowRight as ArrowRightIcon2,;
+  Phone as PhoneIcon3, Mail as MailIcon3,;
+  MapPin as LocationIcon, Server, HardDrive,;
+  Monitor, Printer, Router, Wifi as WifiIcon,;
+  Smartphone as SmartphoneIcon, Laptop,;
+  Tablet, Headphones as HeadphonesIcon,;
+  Keyboard, Mouse, Webcam, Speaker,;
+  HardDrive as HardDriveIcon, Server as ServerIcon,;
+  Monitor as MonitorIcon, Printer as PrinterIcon,;
+  Router as RouterIcon, Wifi as WifiIcon2,;
+  Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,;
+  Tablet as TabletIcon, Headphones as HeadphonesIcon2,;
+  Keyboard as KeyboardIcon, Mouse as MouseIcon,;
+  Webcam as WebcamIcon, Speaker as SpeakerIcon;}} from 'lucide-react'
+const ITConsultingPage: React.FC = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 const itServices = [
     // IT Infrastructure Services;
-    {
+    {;
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
       description: 'Complete IT infrastructure design, deployment, and optimization for modern businesses',
       category: 'infrastructure',
       icon: Server,
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5,000',
       features: [,
         'Network architecture design',
         'Server deployment and configuration',
         'Storage solutions implementation',
         'Backup and disaster recovery setup',
-
         'Security infrastructure deployment',
-
         'Monitoring and management tools',
-
         'Documentation and training',
-
         'Ongoing support and maintenance'
       ],
       benefits: [,
         'Scalable and reliable infrastructure',
-
         'Improved system performance',
-
         'Enhanced security posture',
-
         'Reduced downtime and outages',
-
         'Future-proof technology stack'
       ],
       targetAudience: 'Small to large businesses, Startups, Enterprises',
@@ -120,30 +112,22 @@ const itServices = [
       description: 'Seamless migration to cloud platforms with optimization for cost and performance',
       category: 'cloud',
       icon: Cloud,
-      price: 'Starting at $3,000',;
+      price: 'Starting at $3,000',
       features: [,
         'Cloud readiness assessment',
         'Migration strategy development',
         'Data and application migration',
         'Cloud security implementation',
-
         'Cost optimization analysis',
-
         'Performance tuning',
-
         'Disaster recovery setup',
-
         'Training and documentation'
       ],
       benefits: [,
         'Reduce IT costs by 30-50%',
-
         'Improve scalability and flexibility',
-
         'Enhanced security and compliance',
-
         'Better disaster recovery capabilities',
-
         'Access to latest technologies'
       ],
       targetAudience: 'Businesses looking to modernize IT infrastructure',
@@ -158,30 +142,22 @@ const itServices = [
       description: 'Comprehensive security assessment, implementation, and ongoing protection',
       category: 'security',
       icon: Shield,
-      price: 'Starting at $2,500',;
+      price: 'Starting at $2,500',
       features: [,
         'Security risk assessment',
         'Penetration testing',
         'Security policy development',
         'Firewall and endpoint protection',
-
         'Email security implementation',
-
         'Security awareness training',
-
         'Compliance auditing',
-
         'Incident response planning'
       ],
       benefits: [,
         'Protect against cyber threats',
-
         'Ensure regulatory compliance',
-
         'Reduce security risks by 90%',
-
         'Improve incident response time',
-
         'Maintain customer trust'
       ],
       targetAudience: 'All businesses handling sensitive data',
@@ -196,30 +172,22 @@ const itServices = [
       description: 'High-performance network infrastructure design and optimization for reliability',
       category: 'networking',
       icon: Network,
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2,000',
       features: [,
         'Network architecture design',
         'Bandwidth optimization',
         'Quality of Service (QoS) setup',
         'Wireless network deployment',
-
         'Network monitoring implementation',
-
         'Traffic analysis and optimization',
-
         'Redundancy and failover setup',
-
         'Performance tuning'
       ],
       benefits: [,
         'Improve network performance by 200%',
-
         'Reduce network downtime',
-
         'Optimize bandwidth usage',
-
         'Enhance user experience',
-
         'Future-proof network design'
       ],
       targetAudience: 'Businesses with complex networking needs',
@@ -234,30 +202,22 @@ const itServices = [
       description: 'Database design, implementation, optimization, and ongoing management',
       category: 'database',
       icon: Database,
-      price: 'Starting at $1,500',;
+      price: 'Starting at $1,500',
       features: [,
         'Database design and architecture',
         'Performance optimization',
         'Backup and recovery setup',
         'Security implementation',
-
         'Monitoring and alerting',
-
         'Query optimization',
-
         'Capacity planning',
-
         'Maintenance and updates'
       ],
       benefits: [,
         'Improve database performance by 150%',
-
         'Ensure data integrity and security',
-
         'Reduce maintenance overhead',
-
         'Optimize storage usage',
-
         'Minimize downtime'
       ],
       targetAudience: 'Businesses with critical data requirements',
@@ -278,24 +238,16 @@ const itServices = [
         'Remote monitoring and management',
         'Proactive maintenance',
         'Software updates and patches',
-
         'Hardware support and replacement',
-
         'User training and onboarding',
-
         'IT asset management',
-
         'Help desk services'
       ],
       benefits: [,
         'Reduce IT downtime by 80%',
-
         'Lower IT support costs',
-
         'Improve user productivity',
-
         'Proactive issue resolution',
-
         'Focus on core business activities'
       ],
       targetAudience: 'Small to medium businesses without dedicated IT staff',
@@ -310,30 +262,22 @@ const itServices = [
       description: 'Tailored software solutions built to meet specific business requirements',
       category: 'development',
       icon: Code,
-      price: 'Starting at $5,000',;
+      price: 'Starting at $5,000',
       features: [,
         'Requirements analysis',
         'Custom application development',
         'Web and mobile app development',
         'API development and integration',
-
         'Database design and implementation',
-
         'Testing and quality assurance',
-
         'Deployment and maintenance',
-
         'User training and documentation'
       ],
       benefits: [,
         'Streamline business processes',
-
         'Improve operational efficiency',
-
         'Gain competitive advantage',
-
         'Reduce manual work',
-
         'Scale with business growth'
       ],
       targetAudience: 'Businesses needing custom software solutions',
@@ -354,24 +298,16 @@ const itServices = [
         'Technology roadmap planning',
         'Digital transformation consulting',
         'Vendor evaluation and selection',
-
         'Cost-benefit analysis',
-
         'Risk assessment and mitigation',
-
         'Change management planning',
-
         'Implementation guidance'
       ],
       benefits: [,
         'Align IT with business goals',
-
         'Optimize technology investments',
-
         'Reduce implementation risks',
-
         'Accelerate digital transformation',
-
         'Improve ROI on technology'
       ],
       targetAudience: 'Businesses planning technology initiatives',
@@ -386,30 +322,22 @@ const itServices = [
       description: 'Comprehensive disaster recovery planning and implementation',
       category: 'recovery',
       icon: RefreshCw,
-      price: 'Starting at $3,500',;
+      price: 'Starting at $3,500',
       features: [,
         'Business impact analysis',
         'Recovery time objective planning',
         'Backup strategy implementation',
         'Disaster recovery testing',
-
         'Business continuity planning',
-
         'Cloud-based recovery solutions',
-
         'Documentation and procedures',
-
         'Regular testing and updates'
       ],
       benefits: [,
         'Minimize business disruption',
-
         'Ensure rapid recovery',
-
         'Protect critical data',
-
         'Maintain customer service',
-
         'Comply with regulations'
       ],
       targetAudience: 'Businesses requiring high availability',
@@ -424,30 +352,22 @@ const itServices = [
       description: 'Compliance assessment and implementation for various industry standards',
       category: 'compliance',
       icon: CheckSquare,
-      price: 'Starting at $2,000',;
+      price: 'Starting at $2,000',
       features: [,
         'Compliance gap analysis',
         'Policy and procedure development',
         'Security control implementation',
         'Audit preparation and support',
-
         'Training and awareness programs',
-
         'Ongoing compliance monitoring',
-
         'Documentation and reporting',
-
         'Remediation planning'
       ],
       benefits: [,
         'Ensure regulatory compliance',
-
         'Reduce audit findings',
-
         'Improve security posture',
-
         'Avoid penalties and fines',
-
         'Build customer trust'
       ],
       targetAudience: 'Healthcare, Finance, Government, Education sectors',
@@ -470,12 +390,12 @@ const categories = [
     {id: 'consulting', name: 'Consulting', icon: Briefcase ,},
     {id: 'recovery', name: 'Disaster Recovery', icon: RefreshCw ,},
     {id: 'compliance', name: 'Compliance', icon: CheckSquare ,}]
-const filteredServices = itServices.filter(service => {)
+const filteredServices = itServices.filter(service => {);
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;}})
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+    return matchesCategory && matchesSearch;}});
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>);
       {/* Hero Section */}</div>
       <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -490,22 +410,21 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>,
             Professional <span className="holographic-text">IT Services</span>
           </h1>
-          <p>Comprehensive IT solutions designed to optimize your technology infrastructure,</p>
-            enhance security, and drive business growth. Expert consulting and implementation.
+          <p>Comprehensive IT solutions designed to optimize your technology infrastructure</p>
+            enhance security, and drive business growth. Expert consulting and implementation.;
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center mb-12"></div>
             <a>
               <Phone>
-              Call (302) 464-0950;
+              Call (302) 464-0950
             </a>
             <a>
               <Mail>
-              Get IT Consultation,
+              Get IT Consultation
             </a>
           </div>
         </div>
       </section>
-
       {/* Search and Filter Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -521,36 +440,33 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
               <div className="relative"></div>
                 <Search>
                 <input;
-                  type="text";
-                  placeholder="Search IT services...";
+                  type="text"
+                  placeholder="Search IT services..."
                   value={searchTerm}onChange={(e) => setSearchTerm(e.target.value)}className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20",
-                />,
+                />;
               </div>
             </div>
-
-            {/* Category Filter */} <div className="lg: w-64"></div>,
+            {/* Category Filter */} <div className="lg: w-64"></div>
               <select,
-                value={selectedCategory}onChange={(e) => setSelectedCategory(e.target.value)}className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20",
+                value={selectedCategory}onChange={(e) => setSelectedCategory(e.target.value)}className="w-full px-4 py-3 bg-slate-800/50 border border-cyan-400/20 rounded-lg text-white focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               >,
                 {categories.map((category) => (} <option>
-
                     {category.name} </option>
                 ))}
-
+;
               </select>
             </div>
           </div>
-
           {/* Category Pills */} <div className="flex flex-wrap gap-2 mb-8"></div>
             {categories.map((category) => (</div>
-              <button;}key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+              <button;}key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === category.id;
-                    ? 'bg-cyan-500 text-white';
-                    : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 hover:text-cyan-400',}}`}
+                    ? 'bg-cyan-500 text-white'
+                    : 'bg-slate-800/50 text-gray-300 hover: bg-slate-700/50 hover:text-cyan-400',} }`}
               >;
                 {category.name} </button>
             ))}
-
+;
           </div>
         </div>
       </section>
@@ -564,9 +480,9 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         </section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
-            {filteredServices.map((service) => (</div>} <div key={service.id}className="quantum-card p-6 group hover: scale-105 transition-all duration-300 energy-pulse"></div>,
+            {filteredServices.map((service) => (</div>} <div key={service.id}className="quantum-card p-6 group hover: scale-105 transition-all duration-300 energy-pulse"></div>
                 <div className="flex items-start justify-between mb-4"></div>
-                  <div className="text-cyan-400 group-hover: text-cyan-300 transition-colors"></div>,
+                  <div className="text-cyan-400 group-hover: text-cyan-300 transition-colors"></div>
                     <service />
                   <div className="text-right"></div>
                     <div className="text-2xl font-bold text-white">{service.price</div>}</div>
@@ -577,7 +493,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description</p>}</p>
                 <div className="space-y-3 mb-6"></div>
                   <div />
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features: </h4>,
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features: </h4>
                     <ul>
                       {service.features.slice(0, 4).map((feature, idx) => (} <li>
                           <CheckCircle />
@@ -587,7 +503,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
                     </ul>
                   </div>
                   <div />
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits: </h4>,
+                    <h4 className="text-sm font-semibold text-cyan-400 mb-2">Benefits: </h4>
                     <ul>
                       {service.benefits.slice(0, 2).map((benefit, idx) => (} <li>
                           <TrendingUp>
@@ -599,15 +515,15 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
                 </div>
                 <div className="space-y-2 mb-6 text-sm"></div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Setup Time: </span>,
+                    <span className="text-gray-400">Setup Time: </span>
                     <span className="text-white">{service.setupTime</span>}</span>
                   </div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Free Consultation: </span>,
+                    <span className="text-gray-400">Free Consultation: </span>
                     <span className="text-green-400">{service.freeConsultation</span>}</span>
                   </div>
                   <div className="flex justify-between"></div>
-                    <span className="text-gray-400">Target: </span>,
+                    <span className="text-gray-400">Target: </span>
                     <span className="text-white">{service.targetAudience</span>}</span>
                   </div>
                 </div>
@@ -638,26 +554,26 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           </div>
         </section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>Ready to Optimize Your IT Infrastructure?,</h2>
+          <h2>Ready to Optimize Your IT Infrastructure?</h2>
           </h2>
           <p>Our certified IT professionals deliver reliable, secure, and scalable solutions.;</p>
-            All services include free consultations and ongoing support.
+            All services include free consultations and ongoing support.;
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <a>
               <Phone>
-              Call (302) 464-0950;
+              Call (302) 464-0950
             </a>
             <a>
               <Mail>
-              Get Custom IT Strategy;
+              Get Custom IT Strategy
             </a>
           </div>
         </div>
       </section>
     </div>
   ),
-};
-
+}
+;
 export default ITConsultingPage;
-
+;

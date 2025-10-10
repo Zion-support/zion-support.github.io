@@ -3,7 +3,7 @@
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
  */;
-import React from 'react';
+import React from 'react'
 export interface ErrorBoundaryConfig {/**;}
    * Whether to log errors to console;
    */;
@@ -32,9 +32,9 @@ export interface ErrorBoundaryConfig {/**;}
    * Custom error messages by error type;
    */;
   customMessages: Record<string>,
-/**
+/**;
    * Fallback UI components;
-   */,
+   */,;
   fallbackComponents: {,}default: React.ComponentType<{error: Error, resetError: () => void ,}>;
     network: React.ComponentType<{error: Error, resetError: () => void ,}>;
     notFound: React.ComponentType<{error: Error, resetError: () => void ,}>;
@@ -69,7 +69,7 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {}
 /**;
  * Default error fallback component;
  */;
-function DefaultErrorFallback({error, resetError)}: {error: Error, resetError: () => void ,}) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>)
+function DefaultErrorFallback({error, resetError)}: {error: Error, resetError: () => void ,}) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>);
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
           <svg>
@@ -85,9 +85,9 @@ function DefaultErrorFallback({error, resetError)}: {error: Error, resetError: (
           <button>Try Again;</button>
           </button>
           <button;
-            onClick={() =>(window.location.href = '/')</button>}className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors";,
+            onClick={() =>(window.location.href = '/')</button>}className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
-            Go Home;
+            Go Home
           </button>
         </div>
       </div>
@@ -97,7 +97,7 @@ function DefaultErrorFallback({error, resetError)}: {error: Error, resetError: (
 /**;
  * Network error fallback component;
  */;
-function NetworkErrorFallback({resetError)}: {error: Error, resetError: () => void ,}) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>)
+function NetworkErrorFallback({resetError)}: {error: Error, resetError: () => void ,}) {return(<div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>);
       <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
           <svg>
@@ -123,14 +123,14 @@ function NotFoundFallback(): JSX.Element {return(<div className="min-h-screen fl
         <p>The page you're looking for doesn't exist or has been moved.</p>
         </p>
         <div className="mt-6 flex gap-4 justify-center"></div>
-          <button;}onClick={() =>(window.location.href = '/')</button>}className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors";,
+          <button;}onClick={() =>(window.location.href = '/')</button>}className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors"
           >
-            Go Home;
+            Go Home
           </button>
           <button,
-            onClick={() =>window.history.back()</button>}className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors";,
+            onClick={() =>window.history.back()</button>}className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors"
           >
-            Go Back;
+            Go Back
           </button>
         </div>
       </div>
@@ -141,13 +141,13 @@ function NotFoundFallback(): JSX.Element {return(<div className="min-h-screen fl
  * Get error type from error object;
  */;
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {,}
-    if (error.message.includes('Network') || error.message.includes('fetch')) {
+    if (error.message.includes('Network') || error.message.includes('fetch')) {;
     return 'network'}}
   if (error.message.includes('404') || error.message.includes('not found')) {return 'notFound'}}
   if (error.message.includes('timeout')) {return 'timeout'}}
   if (error.message.includes('500') || error.message.includes('server')) {return 'serverError'}}
   if (error.message.includes('validation')) {return 'validation'}}
-  return 'default';
+  return 'default'
 }
 /**;
  * Format error for logging;
@@ -159,6 +159,7 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {re
     timestamp: new Date().toISOString(),
     userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',}}
-};
-
+}
+;
 export default getErrorBoundaryConfig;
+;

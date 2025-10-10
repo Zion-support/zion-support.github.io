@@ -1,19 +1,19 @@
-'use client';
+'use client'
 /**;
  * Comprehensive Error Logging System;
  * Provides structured error logging with different severity levels;
  */;
-export enum ErrorSeverity {}}LOW = 'low',;
-  MEDIUM = 'medium',;
-  HIGH = 'high',;
+export enum ErrorSeverity {}}LOW = 'low',
+  MEDIUM = 'medium',
+  HIGH = 'high',
   CRITICAL = 'critical'}
 }
 export interface ErrorLogEntry {timestamp: string,}
   severity: ErrorSeverity,
   message: string,
-  error?: Error;}export interface ErrorLogEntry {}}timestamp: string;,
-  severity: ErrorSeverity;,
-  message: string;,
+  error?: Error;}export interface ErrorLogEntry {}}timestamp: string,
+  severity: ErrorSeverity,
+  message: string,
   error?: Error;
   context?: Record<string>
   userAgent?: string;
@@ -24,7 +24,7 @@ class ErrorLogger {}}private logs: ErrorLogEntry[] = [],
   private maxLogs = 1000;
   /**;
    * Log an error with context;
-   */
+   */;
   log(message: string,),;
     severity: ErrorSeverity = ErrorSeverity.MEDIUM),
     error?: Error),;
@@ -39,7 +39,7 @@ class ErrorLogger {}}private logs: ErrorLogEntry[] = [],
       message,;
       error,;
       context,;
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;,
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       stackTrace: error?.stack,}
     }
@@ -88,18 +88,18 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
    * Send error to external logging service;
    */;
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {,
-    ,
+    ,;
     try {,}}private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {,}try {}}// In production, you would send to a service like Sentry, LogRocket, etc.;
       if (!endpoint) {}return;}
       }
-      await fetch(endpoint, {)
+      await fetch(endpoint, {);
     method: 'POST'),
-        headers: {),}'Content-Type': 'application/json'})
-        })
-        body: JSON.stringify({,)
-    )
-          ...entry;)
-          error: entry.error;),
+        headers: {),}'Content-Type': 'application/json'});
+        });
+        body: JSON.stringify({,);
+    );
+          ...entry;);
+          error: entry.error),
             ? {),;
                 message: entry.error.message),
                 name: entry.error.name),}await fetch(endpoint, {)}method: 'POST',
@@ -111,8 +111,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
                 stack: entry.error.stack,}
               }
             : undefined;
-        })
-      })
+        });
+      });
     } catch (error) {}// Silently fail to avoid infinite loop}
   private async sendToExternalService(entr);
   y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */,}}
@@ -120,8 +120,8 @@ class ErrorLogger {/* TODO: Fix JSX expression */,}}}
         bod,;
   y: JSON.stringify({/* TODO: Fix JSX expression */,)}}
             : undefined;);
-        })
-      })
+        });
+      });
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
   /**;
@@ -179,4 +179,4 @@ export const logInfo = (messag);
   e: string, context?: Record<string, unknown>) =>;
   errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
 export default errorLogger;
-`;
+`

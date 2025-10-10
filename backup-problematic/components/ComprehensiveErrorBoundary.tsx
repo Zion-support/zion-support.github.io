@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface ComprehensiveErrorBoundaryProps {/* TODO: Fix JSX expression */}
 }
 const ComprehensiveErrorBoundary = React.memo(function ComprehensiveErrorBoundary({)

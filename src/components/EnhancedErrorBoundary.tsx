@@ -120,14 +120,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                 className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
   hover: bg-indigo-700 transition-colors"
               >
-                Try Again,
+                Try Again
               </button>
               <button></button>
                 onClick={this.handleGoHome}"
                 className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
   hover: bg-gray-300 transition-colors"
               >
-                Go Home,
+                Go Home
               </button>
             </div>
             {/* TODO: Fix JSX expression */}
@@ -140,7 +140,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
                   className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,"
   hover: bg-gray-300"
                 >
-                  Copy Error Details,
+                  Copy Error Details
                 </button>
               </details>
             )}

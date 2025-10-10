@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 interface LazyImageProps {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -11,7 +11,7 @@ interface LazyImageProps {/* TODO: Fix JSX expression */}
   children?: React.ReactNode,
 }
 const,
-  LazyImage: React.FC,
+  LazyImage: React.FC
           <LazyImageProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
 }

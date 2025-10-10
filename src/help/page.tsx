@@ -3,7 +3,7 @@ import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Downloa
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const HelpPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
@@ -148,7 +148,7 @@ questionquestion: 'Is there a free trial available?',
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Help Center,
+              Help Center
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Find answers, get support, and learn how to make the most of our AI and IT services. 
@@ -372,7 +372,7 @@ const categories = [
                 Email Us
       <Footer /></Footer>
     </React.Fragment>
-export default HelpPage,
+export default HelpPage
   </div>
   </p>
   </h2>

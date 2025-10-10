@@ -224,7 +224,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
                     {new, Dat, e(artic, l, e.d, a, t, e).toLocaleDateStri, n, g('en-US', {
                       mon, t, h: 'sh, o, r, t',
                       d, a, y: 'nume, r, i, c',
-                      ye, a, r: 'nume, r, i, c',
+                      ye, a, r: 'nume, r, i, c'
           <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
             Experience, the, next generation, of, AI and, technology, breakthroughs.
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
@@ -238,7 +238,7 @@ const, FutureTechShowcase202, 6: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
             { val, u, e: ', 1, 0,00, 0, x', lab, e, l: 'Quantum, Processing, Spee, d', ic, o, n: '⚛️' },
             { val, u, e: '99., 7%', lab, e, l: 'Au, t, o-Improvement, Ra, t, e', ic, o, n: '🧠' },
             { val, u, e: '99., 9%', lab, e, l: 'Predictive, Accura, c, y', ic, o, n: '🎯' },
-            { val, u, e: '$1, B+', lab, e, l: 'Enterprise, Value, Create, d', ic, o, n: '💰' },
+            { val, u, e: '$1, B+', lab, e, l: 'Enterprise, Value, Create, d', ic, o, n: '💰' }
               <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'></div>
                 <a, hre, f='/bl, o, g'
                   classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'

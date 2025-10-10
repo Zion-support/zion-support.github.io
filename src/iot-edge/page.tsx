@@ -1,7 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 }
   titl,
   e: 'IoT Device Management Platform',
@@ -157,7 +157,7 @@ titl,
             <div className="text-center"></div>"
               <h1 className="text-4xl,"
   md: text-6xl font-bold mb-6"></h1>
-// IoT & Edge Computing Services,
+// IoT & Edge Computing Services
           </h1>"
               <p className="text-xl,"
   md:text-2xl mb-8 text-cyan-100 max-w-3xl mx-auto"></p>
@@ -167,12 +167,12 @@ titl,
   sm:flex-row gap-4 justify-center"></div>"
                 <button className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold,"
   hover: bg-cyan-50 transition-colors"></button>
-// Explore IoT Solutions,
+// Explore IoT Solutions
           </button>"
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"
   hover: text-cyan-600 transition-colors"></button>
-Schedule Demo,
+Schedule Demo
               </div>
         </section>
         {/* Key Benefits */}"
@@ -302,7 +302,7 @@ Ready to Connect Your World?"
 //                  +1 302 464 0950
           </a>
 href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
-                ✉️ kleber@ziontechgroup.com,
+                ✉️ kleber@ziontechgroup.com
             <div className="mt-8 text-sm text-cyan-200">
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
   );

@@ -53,7 +53,7 @@ export const mockFetch = ()
   e: unknown,
   status = 200,
   header,
-  s: Record,
+  s: Record
           <string, string> = {}
 
 ): void => {
@@ -70,7 +70,7 @@ export const mockFetch = ()
   O: Add content,}
 }
 
-  ok: status >= 200 && status,
+  ok: status >= 200 && status
 
           < 300,
 // status,
@@ -94,7 +94,7 @@ export class MockStorage implements Storage {
 
 }
   private,
-  store: Map,
+  store: Map
           <string, string> = new Map();
   get length(): number {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -425,7 +425,7 @@ export interface Deferred;
   O: Add content,}
 }
 
-  promise: Promise,
+  promise: Promise
 
           <T>,
     resolv,
@@ -443,7 +443,7 @@ export const createDeferred = <T>(): Deferred<T> => {
   let resolve!: (valu)
   e: T) => void
   let reject!: (reason?: unknown) => void
-  const promise = new Promise,
+  const promise = new Promise
 
           <T>((res, rej) => {
     // TODO: Add content
@@ -456,7 +456,7 @@ export const createDeferred = <T>(): Deferred<T> => {
 export const retryWithBackoff = async;
           <T>()
   f,
-  n: () => Promise,
+  n: () => Promise
           <T>,
   maxRetries = 3,
   initialDelay = 1000): Promise<T> => {

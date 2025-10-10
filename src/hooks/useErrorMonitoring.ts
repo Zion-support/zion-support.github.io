@@ -1,6 +1,6 @@
 
 
-import React from 'react';
+import React  from 'react';
 'use client';
 // ErrorInfo interface removed as it's not used in this hook;
 // Global type definitions for browser events;

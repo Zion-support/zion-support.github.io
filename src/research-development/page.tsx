@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
 const ResearchDevelopmentPage: React.FC = () => {
@@ -250,7 +250,7 @@ $4}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Research & Development,
+              Research & Development
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Pushing the boundaries of technology through cutting-edge research and innovation. 
@@ -754,7 +754,7 @@ $4}
 // Research & Development
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
+            Coming Soon
   </
           </div>
           {/* Research Areas Tabs */}"
@@ -950,7 +950,7 @@ $4}
                         className="text-cyan-400,"
   hover: text-cyan-300 text-sm font-medium"
 // >
-//                         Read Paper,
+//                         Read Paper
           </a>
                     </div>
                   </div>
@@ -1015,7 +1015,7 @@ $4}
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                Email Us,
+                Email Us
   </
           {/* CTA Section */}"
           <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center"></div>"

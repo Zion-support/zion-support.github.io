@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const SEOEnhancer = React.memo(function SEOEnhancer({ className = '' }: SEOEnhancerProps) {

@@ -1970,7 +1970,7 @@ export const getPopularEmergingTechServices = () =>
 }
 export const getEmergingTechServicesByCategory = (category: string) =>,
   return innovative2026EmergingTechServices.filter(service =>),
-    service.category.toLowerCase().includes(category.toLowerCase()),
+    service.category.toLowerCase().includes(category.toLowerCase())
   </div>)}
 export const getEmergingTechServicesByPriceRange = (minPrice: number) maxPrice: number) =>,
   return innovative2026EmergingTechServices && innovative2026EmergingTechServices.filter(service =>)

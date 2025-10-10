@@ -347,7 +347,7 @@ export class PerformanceMonitor {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   private,
-  metrics: Map,
+  metrics: Map
           <string, number[]> = new Map();
   private,
   observers: PerformanceObserver[] = [],

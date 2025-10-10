@@ -42,7 +42,7 @@ export class ErrorReporter {
   static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {
     if (!ErrorReporter.instance) {
 
-import React from 'react'
+import React  from 'react'
 'use client'
 /**
  * Enhanced Error Reporting Utility;
@@ -62,7 +62,7 @@ export interface ErrorReport {// TODO: Add content
     userAgent: string,,
     url: string,,
     severity: 'low' | 'medium' | 'high' | 'critical'
-  context?: Record,
+  context?: Record
           <string>
 }
 export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
@@ -101,7 +101,7 @@ export class ErrorReporter {
   private,
   errorQueue: ErrorReport[] = [],
   private,
-  errorCount: Map,
+  errorCount: Map
           <string, number> = new Map();
   private constructor(confi)
   g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
@@ -311,7 +311,7 @@ $4}
    * Send error to remote logging service;
    */
 
-  private async sendToRemote(report: ErrorReport): Promise,
+  private async sendToRemote(report: ErrorReport): Promise
           <void> {
     // TODO: Add content
   }
@@ -395,7 +395,7 @@ $4}
     uniqueError,
   s: number,,
     errorsByTyp,
-  e: Record,
+  e: Record
           <string>
   } {/* TODO: Fix JSX expression */}
   O: Add content,}

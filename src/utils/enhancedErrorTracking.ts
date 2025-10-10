@@ -300,7 +300,7 @@ class EnhancedErrorTracker {
   tota,
   l: number,,
     byComponen,
-  t: Record,
+  t: Record
           <string>
     recen,
   t: TrackedError[],
@@ -308,7 +308,7 @@ class EnhancedErrorTracker {
   O: Add content,}
 }
     const,
-  byComponent: Record,
+  byComponent: Record
           <string, number> = {}
     this.errors.forEach(error => {
     byComponent[component] = (byComponent[component] || 0) + 1

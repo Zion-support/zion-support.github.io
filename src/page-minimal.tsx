@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, CheckCircle, Star, ArrowRight } from 'lucide-react';
 // eslint-disable-next-line react-refresh/only-export-components
@@ -28,7 +28,7 @@ Home;
               <Link href="/blog" className="text-gray-900 hover:text-blue-600">
                 Blog
               <Link href="/contact" className="text-gray-900 hover:text-blue-600">
-                Contact,
+                Contact
             </nav>
       </header>
       <main>
@@ -36,7 +36,7 @@ Home;
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-// Transform Your Business with,
+// Transform Your Business with
           <span className="block text-blue-200">AI-Powered Solutions</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
@@ -51,7 +51,7 @@ Home;
           <Link className="w-5 h-5 ml-2" />
               <a href="tel:+13024640950" className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
                 <Phone className="w-5 h-5 mr-2" />
-// Call +1 302 464 0950,
+// Call +1 302 464 0950
           </a>
         </section>
         {/* Features Section */}
@@ -86,7 +86,7 @@ Ready to Transform Your Business?
             <p className="text-xl mb-8 text-blue-100">
               Let's discuss how our AI solutions can drive your success.
                 href="/contact" Get Started Today
-                href="/blog" View Our Blog,
+                href="/blog" View Our Blog
                 <ArrowRight className="w-5 h-5 ml-2" />
       </main>
       {/* Footer */}

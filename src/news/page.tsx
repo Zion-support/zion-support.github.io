@@ -1,8 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 import { Calendar, ArrowRight, TrendingUp, Users, Award, Globe, Zap, Brain, Shield, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
 const NewsPage: React.FC = () => {
   const newsArticles = [
@@ -91,7 +91,7 @@ const NewsPage: React.FC = () => {
               News & Updates
   </
             <p className="text-xl text-cyan-400 mb-8">
-              Stay informed with our latest innovations and success stories,
+              Stay informed with our latest innovations and success stories
   </
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Discover the latest developments in AI technology, product launches, 
@@ -212,7 +212,7 @@ const NewsPage: React.FC = () => {
                   className="flex-1 px-4 py-3 bg-slate-800 text-white rounded-lg border border-slate-600 focus:border-cyan-400 focus:outline-none"
                 />
                 <button className="cyber-button px-8 py-3 font-semibold">
-                  Subscribe,
+                  Subscribe
   </
               </div>
               <p className="text-gray-400 text-sm mt-4">

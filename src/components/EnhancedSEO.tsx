@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface SEOProps {
     // TODO: Add content
   }
@@ -21,7 +21,7 @@ interface SEOProps {
   section?: string;
   tags?: string[];
 }
-const EnhancedSEO: React.FC,
+const EnhancedSEO: React.FC
           <SEOProps> = ({
     // TODO: Add content
   }

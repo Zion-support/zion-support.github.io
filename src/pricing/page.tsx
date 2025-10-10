@@ -1,8 +1,8 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -255,7 +255,7 @@ const PricingPage: React.FC = () => {
               Add-on Services
   </
             <p className="text-xl text-gray-600">
-              Enhance your plan with additional services and features,
+              Enhance your plan with additional services and features
   </
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -280,7 +280,7 @@ const PricingPage: React.FC = () => {
               Frequently Asked Questions
   </
             <p className="text-xl text-gray-600">
-              Everything you need to know about our pricing and plans,
+              Everything you need to know about our pricing and plans
   </
           </div>
           <div className="space-y-8">

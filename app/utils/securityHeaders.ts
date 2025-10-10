@@ -9,7 +9,7 @@ export interface SecurityHeadersConfig {contentSecurityPolicy?: string;}
   referrerPolicy?: string;}permissionsPolicy?: string;}
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {,
-    // Content Security Policy,
+    // Content Security Policy,;
   contentSecurityPolicy: [,}export interface SecurityHeadersConfig {}}contentSecurityPolicy?: string;
   strictTransportSecurity?: string;
   xFrameOptions?: string;
@@ -19,34 +19,34 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {,
 }
 export const defaultSecurityHeaders: SecurityHeadersConfig = {,}// Content Security Policy;
   contentSecurityPolicy: [,
-    "default-src 'self'",;
+    "default-src 'self'",
     "script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com",
-    "style-src 'self' 'unsafe-inline'",;
+    "style-src 'self' 'unsafe-inline'",
     "img-src 'self' data: https: blob:",
     "font-src 'self' data: ",
     "connect-src 'self' https: //www.google-analytics.com https://analytics.google.com",
-    "frame-ancestors 'none'",;
-    "base-uri 'self'",;
-    "form-action 'self'",;
-    'upgrade-insecure-requests'].join('; '),;
+    "frame-ancestors 'none'",
+    "base-uri 'self'",
+    "form-action 'self'",
+    'upgrade-insecure-requests'].join(' '),;
   // HTTP Strict Transport Security (HSTS);
-  strictTransportSecurity: 'max-age=63072000; includeSubDomains; preload';,
+  strictTransportSecurity: 'max-age=63072000 includeSubDomains preload',
   // Prevent clickjacking;
-  xFrameOptions: 'DENY';,
+  xFrameOptions: 'DENY',
   // Prevent MIME type sniffing;
   xContentTypeOptions: 'nosniff',
   // Referrer Policy;
   referrerPolicy: 'strict-origin-when-cross-origin',
   // Permissions Policy (formerly Feature Policy),;
   permissionsPolicy: [,
-    'camera=()',;
-    'microphone=()',;
-    'geolocation=()',;
-    'payment=()',;
-    'usb=()',;
-    'interest-cohort=()',;
-    'accelerometer=()',;
-    'gyroscope=()',;
+    'camera=()',
+    'microphone=()',
+    'geolocation=()',
+    'payment=()',
+    'usb=()',
+    'interest-cohort=()',
+    'accelerometer=()',
+    'gyroscope=()',
     'magnetometer=()'].join(', ')}
 }
 /**;
@@ -55,7 +55,7 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {,}// Content Secur
 export function getSecurityHeaders(customConfig?: Partial<SecurityHeadersConfig>);
 export function getSecurityHeaders();
   customConfig?: Partial<SecurityHeadersConfig>
-): Record<string, string> {}const config = {...defaultSecurityHeaders, ...customConfig}const headers: Record<string, string> = {}'X-XSS-Protection': '1; mode=block',;
+): Record<string, string> {}const config = {...defaultSecurityHeaders, ...customConfig}const headers: Record<string, string> = {}'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'}
   }
   if (config.contentSecurityPolicy) {}headers['Content-Security-Policy'] = config.contentSecurityPolicy;}

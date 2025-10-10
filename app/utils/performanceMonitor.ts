@@ -1,4 +1,4 @@
-'use client';
+'use client'
 /**;
  * Advanced Performance Monitoring Utility;
  * Tracks Core Web Vitals and custom metrics;
@@ -22,7 +22,7 @@ class PerformanceMonitor {}}private metrics: PerformanceMetrics = {,}customMetri
 class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
   private,;
   observers: PerformanceObserver[] = [],
-  private isInitialized = false,
+  private isInitialized = false,;
   init(): void {}}if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
@@ -34,30 +34,30 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
    */;
   private initializeObservers(): void {try {}
       // Observe paint metrics;
-      if ('PerformanceObserver' in window) {
+      if ('PerformanceObserver' in window) {;
         // First Contentful Paint;
-        this.observeEntry('paint', (entries) => {
-          entries.forEach((entry) => {
+        this.observeEntry('paint', (entries) => {;
+          entries.forEach((entry) => {;
             if (entry.name === 'first-contentful-paint') {}private initializeObservers(): void {}}try {}}// Observe paint metrics;
       if ('PerformanceObserver' in window) {}// First Contentful Paint;
         this.observeEntry('paint', (entries) => {}entries.forEach((entry) => {}if (entry.name === 'first-contentful-paint') {}this.recordMetric('FCP', entry.startTime);
             }
 // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {)
+        this.observeEntry('largest-contentful-paint', entries => {);
     );
           const lastEntry = entries[entries.length - 1]);
-          if (lastEntry) {
+          if (lastEntry) {;
             this.recordMetric('LCP');
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             )}}
 // First Input Delay;
-        this.observeEntry('first-input', entries => {)
+        this.observeEntry('first-input', entries => {);
     );
           const firstInput = entries[0]);
-          if (firstInput && (firstInput as any).processingStart !== undefined) {
+          if (firstInput && (firstInput as any).processingStart !== undefined) {;
         // Largest Contentful Paint;}this.observeEntry('largest-contentful-paint', entries => {)}const lastEntry = entries[entries.length - 1]
           if (lastEntry) {}this.recordMetric();
-              'LCP',;
+              'LCP',
               (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
             );
           }
@@ -75,17 +75,17 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */,}}s: {,}}
             }
 if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
   private initializeObservers(): void {/* TODO: Fix JSX expression */,}}}
-          })
-        })
+          });
+        });
         // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */,)}})
-        })
+        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */,)}});
+        });
         // First Input Delay;
-        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */,)}})
-        })
+        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */,)}});
+        });
         // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {/* TODO: Fix JSX expression */,}}
-          })
+          });
           if (clsValue > 0) {/* TODO: Fix JSX expression */,}}
 }
     } catch (error) {}logger.error('Failed to initialize performance observers', error as Error);
@@ -100,7 +100,7 @@ if (clsValue > 0) {}this.recordMetric('CLS', clsValue);
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
-observer.observe({entryTypes: ['paint'] ,)})
+observer.observe({entryTypes: ['paint'] ,)});
       this.observers.push(observer);
     } catch (error) {}}
   }
@@ -108,14 +108,14 @@ observer.observe({entryTypes: ['paint'] ,)})
         const lastEntry = entries[entries.length - 1]
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
-observer.observe({entryTypes: ['largest-contentful-paint'] ,)})
+observer.observe({entryTypes: ['largest-contentful-paint'] ,)});
       this.observers.push(observer);
     } catch (error) {}}
   }
   private observeFID(): void {}}try {}}const observer = new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}this.metrics.fid = (entry as any).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);
         }
-observer.observe({entryTypes: ['first-input'] ,)})
+observer.observe({entryTypes: ['first-input'] ,)});
       this.observers.push(observer);
     } catch (error) {}}
   }
@@ -123,26 +123,26 @@ observer.observe({entryTypes: ['first-input'] ,)})
       const observer = new PerformanceObserver((list) => {}for (const entry of list.getEntries()) {}if (!(entry as any).hadRecentInput) {}clsValue += (entry as any).value;
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
-  private observePaint(nam,;)
+  private observePaint(nam,;);
   e: string, metricKe);
   y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */,}}}
         }
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['paint'] ,})
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['paint'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
-  private observeLCP(): void {/* TODO: Fix JSX expression */,}}})
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['largest-contentful-paint'] ,})
+  private observeLCP(): void {/* TODO: Fix JSX expression */,}}});
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['largest-contentful-paint'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
   private observeFID(): void {/* TODO: Fix JSX expression */,}}}
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['first-input'] ,})
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['first-input'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
@@ -150,12 +150,12 @@ observer.observe({entryTypes: ['first-input'] ,)})
         }
         this.metrics.cls = clsValue;
         this.logMetric('cls', clsValue);
-observer.observe({entryTypes: ['layout-shift'] ,)})
+observer.observe({entryTypes: ['layout-shift'] ,)});
       this.observers.push(observer);
     } catch (error) {}}
   }
   private setupCustomMetrics(): void {// Time to First Byte;}
-    if (performance.timing) {
+    if (performance.timing) {;
       this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
       this.logMetric('ttfb', this.metrics.ttfb)}}
     // Page Load Time;
@@ -179,7 +179,7 @@ observer.observe({entryTypes: ['layout-shift'] ,)})
             this.analyzeResource(resourceEntry);
           }
         }
-observer.observe({entryTypes: ['resource'] ,)})
+observer.observe({entryTypes: ['resource'] ,)});
       this.observers.push(observer);
     } catch (error) {}}
   }
@@ -193,7 +193,7 @@ observer.observe({entryTypes: ['resource'] ,)})
     }
   }
   addCustomMetric(name: string, value: number): void {,}
-    ,
+    ,;
     this.metrics.customMetrics[name] = value;,;
     this.logMetric(name, value)}}
   private logMetric(name: string, value: number): void {,}
@@ -246,9 +246,9 @@ observer.observe({entryTypes: ['resource'] ,)})
     }
     return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
   }
-  generateReport(): string {}}})
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['layout-shift'] ,})
+  generateReport(): string {}}});
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['layout-shift'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
@@ -260,9 +260,9 @@ observer.observe({entryTypes: ['resource'] ,)})
   }
   private setupResourceTiming(): void {/* TODO: Fix JSX expression */,}}}
         }
-      })
-      observer.observe({/* TODO: Fix JSX expression */,)})
-  s: ['resource'] ,})
+      });
+      observer.observe({/* TODO: Fix JSX expression */,)});
+  s: ['resource'] ,});
       this.observers.push(observer);
     } catch (error) {/* TODO: Fix JSX expression */,}}
   }
@@ -270,20 +270,20 @@ observer.observe({entryTypes: ['resource'] ,)})
   y: PerformanceResourceTiming): void {/* TODO: Fix JSX expression */,}}this.addCustomMetric(`slowResource_${entry.name)}`, duration);
     }
     // Track large resources;
-    if (size > 100000) {/* TODO: Fix JSX expression */,}`;
+    if (size > 100000) {/* TODO: Fix JSX expression */,}`
       this.addCustomMetric(`largeResource_${entry.name)}`, size);
     }
   }
-  addCustomMetric(nam,;)
+  addCustomMetric(nam,;);
   e: string, valu);
   e: number): void {/* TODO: Fix JSX expression */,}}}
-  private logMetric(nam,;)
+  private logMetric(nam,;);
   e: string, valu);
-  e: number): void {/* TODO: Fix JSX expression */,}}`;
+  e: number): void {/* TODO: Fix JSX expression */,}}`
       }ms`);
     }
     // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */,}})
+    if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */,}});
     }
   }
   getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */,}}return {...this.metrics}}}
@@ -298,6 +298,7 @@ observer.observe({entryTypes: ['resource'] ,)})
   }
 generateReport(): string {const score = this.getScore();}
     const metrics = this.getMetrics();
-    return `;
-Performance Report:  ,}Score: ${score,}Metrics: ${JSON.stringify(metrics, null, 2)}`;
+    return `
+Performance Report:  ,}Score: ${score,}Metrics: ${JSON.stringify(metrics, null, 2)}`
   }
+;

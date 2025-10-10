@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams();
   // Mock data - in a real app, this would come from an API or CMS;
@@ -202,8 +202,8 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
               {featuredPosts.slice(0, 3).map((post, index) => (
                 <div;
                   key={index}
-                  className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow",
-                >,
+                  className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow"
+                >
       <div className="bg-white py-16"></div>
         <div className="container mx-auto px-4"></div>
           <div className="max-w-6xl mx-auto"></div>
@@ -223,10 +223,10 @@ export default function PostBySlug(): React.JSX.Element {/* TODO: Fix JSX expres
                   </div>
                   <a;
                     href={`/blog/${post.slug}`}
-                    className="text-blue-600 font-semibold hover: text-blue-800 transition-colors",
+                    className="text-blue-600 font-semibold hover: text-blue-800 transition-colors"
                   >,
-                    Read More →,
-                  </a>,
+                    Read More →
+                  </a>
                 </div>,
       {/* Related Posts */}"
       <div className="bg-white py-16"></div>"

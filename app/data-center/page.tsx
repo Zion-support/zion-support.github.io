@@ -1,8 +1,8 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
-const PagePage: React.FC = () => {,
+'use client'
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe} from 'lucide-react'
+const PagePage: React.FC = () => {
     const features = [
     {
       icon: Brain,
@@ -23,16 +23,12 @@ const benefits = [
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
-
     '24/7 technical support',
-
     'Easy integration with existing systems',
-
     'Cost-effective pricing plans',
-
     'Proven track record of success'
   ]
-return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>);
       <Helmet />
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="AI-powered solution" />
@@ -55,13 +51,13 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
               <span className="text-white">Solutions</span>
             </h1>
             <p>Transform your business with our advanced page solutions.;</p>
-              Powered by cutting-edge AI technology and industry expertise.
+              Powered by cutting-edge AI technology and industry expertise.;
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+              <button>Get Started</button>
                 <ArrowRight>
               </button>
-              <button>Learn More,</button>
+              <button>Learn More</button>
               </button>
             </div>
           </div>
@@ -81,18 +77,18 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           </div>
         </div>
       </section>
-              Ready to Get Started?
+              Ready to Get Started?;
             </h2>
             <p>Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <Phone>
-                Call Now;
+                Call Now
               </button>
               <button>
                 <Mail>
-                Email Us;
+                Email Us
               </button>
             </div>
           </div>
@@ -100,7 +96,7 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
       </section>
     </div>
   ),
-};
-
+}
+;
 export default PagePage;
-
+;

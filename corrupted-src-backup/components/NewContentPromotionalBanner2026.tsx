@@ -34,7 +34,7 @@ const, NewContentPromotionalBanner202, 6 = () => {/* TODO: Fix JSX expression */
                   <Link, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
               <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r" ></div> <div, classNam, e = { `${st, a, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}></div>
               <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
-                Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h,</p> 
+                Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h</p> 
                   <Rocket, classNam, e="w-5 h-5" />
                   <Link, classNam, e="w-5 h-5" />
 }}}

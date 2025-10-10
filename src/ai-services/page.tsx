@@ -1,11 +1,11 @@
-import React from 'react';
+import React  from 'react';
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {Brain, Zap, Shield, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import React from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const AIServicesPage: React.FC = () => {
   const services = [
     {
@@ -243,7 +243,7 @@ export default function AIServicesPage() {
                   href="mailto:kleber@ziontechgroup.com"
                   className="cyber-button inline-flex items-center px-8 py-4 text-lg">
                   <Mail className="w-5 h-5 mr-2" />
-                  Get Quote,
+                  Get Quote
   </
               </div>
             </div>
@@ -327,7 +327,7 @@ export default function AIServicesPage() {
                     <a
                       href="mailto:kleber@ziontechgroup.com"
                       className="flex-1 bg-slate-800 text-white py-3 px-4 rounded-lg hover:bg-slate-700 transition-colors text-center">
-                      Learn More,
+                      Learn More
   </
                   </div>
                 </div>

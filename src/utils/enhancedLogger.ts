@@ -48,7 +48,7 @@ export interface LogEntry {
   timestam,
   p: Date
   /** Optional data associated with the log */
-  data?: Record,
+  data?: Record
           <string>
   /** Source of the log (component, module, etc.) */
   source?: string;
@@ -137,7 +137,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   private,
   logs: LogEntry[] = [],
   private,
-  performanceMarks: Map,
+  performanceMarks: Map
           <string, number> = new Map();
   private constructor(confi)
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
@@ -579,7 +579,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param entry - Log entry to send;
    */
 
-  private async logToRemote(entry: LogEntry): Promise,
+  private async logToRemote(entry: LogEntry): Promise
           <void> {
     // TODO: Add content
   }
@@ -735,7 +735,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   tota,
   l: number,,
     byLeve,
-  l: Record,
+  l: Record
           <string>
     bySourc,
   e: Record<string>
@@ -743,7 +743,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     const,
-  byLevel: Record,
+  byLevel: Record
           <string, number> = {}
     const,
   bySource: Record<string, number> = {}
@@ -784,7 +784,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * @param config - Partial configuration to merge;
    */
 
-  public configure(config: Partial,
+  public configure(config: Partial
           <LoggerConfig>): void {
     // TODO: Add content
   }

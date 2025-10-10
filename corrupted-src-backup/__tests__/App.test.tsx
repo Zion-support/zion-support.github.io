@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 // Mock the components that App depends on;
 jest.mock('../components/ErrorBoundary', () => {
   return function MockErrorBoundary({ children }: { children: React.ReactNode }) {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface SkipLinkProps {
     to: string,
   children: React.ReactNode

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 'use client';
 import React, { useState } from 'react';
 const RequestQuotePage: React.FC = () => {
@@ -157,7 +157,7 @@ $4}
                   href="/"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
                   <ArrowRight className="w-4 h-4 mr-2" />
-                  Back to Home,
+                  Back to Home
   </
               </div>
             </div>
@@ -175,7 +175,7 @@ $4}
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Request a Quote,
+              Request a Quote
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Get a detailed, no-obligation quote for your AI and IT project. 
@@ -222,7 +222,7 @@ $4}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name,
+                        Company Name
   </
                       <input
                         type="text"
@@ -235,7 +235,7 @@ $4}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number,
+                        Phone Number
   </
                       <input
                         type="tel"
@@ -267,7 +267,7 @@ $4}
                   <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Size,
+                        Project Size
   </
                       <select
                         name="projectSize"
@@ -327,7 +327,7 @@ $4}
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Specific Requirements,
+                      Specific Requirements
   </
                     <textarea
                       name="requirements"
@@ -678,7 +678,7 @@ $4}
 // Request a Quote
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
+            Coming Soon
   </
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -718,7 +718,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   md: grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Company Name,
+// Company Name
           </label>
                       <input
 type="text" name="company"
@@ -729,7 +729,7 @@ type="text" name="company"
           </div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Phone Number,
+// Phone Number
           </label>
                       <input
 type="tel" name="phone"
@@ -761,7 +761,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
   md: grid-cols-2 gap-6"></div>
                     <div></div>"
                       <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Project Size,
+// Project Size
           </label>
                       <select
                         name="projectSize" value={formData.projectSize}
@@ -822,7 +822,7 @@ className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-
           </div>
                   <div></div>"
                     <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Specific Requirements,
+// Specific Requirements
           </label>
                     <textarea
                       name="requirements" value={formData.requirements}

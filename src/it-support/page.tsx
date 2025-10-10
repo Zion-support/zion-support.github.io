@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { ArrowRight, CheckCircle, Headphones, Clock, Shield, Zap, Brain, Target, Users, BarChart, Globe, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const ITSupportPage: React.FC = () => {
   const features = [
     {
@@ -39,7 +39,7 @@ const ITSupportPage: React.FC = () => {
             IT Support & Maintenance
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse">
-            Reliable IT Support Services,
+            Reliable IT Support Services
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Keep your IT infrastructure running smoothly with our comprehensive support and maintenance services. 
@@ -61,7 +61,7 @@ const ITSupportPage: React.FC = () => {
         </section>
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
-            Support Services,
+            Support Services
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (

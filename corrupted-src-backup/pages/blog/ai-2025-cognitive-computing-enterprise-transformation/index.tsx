@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 impo, r, t { Bra, i, n } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Sparkl, e, s } fr, o, m 'luci, d, e-rea, c, t';
@@ -8,7 +8,7 @@ impo, r, t { ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Awa, r, d } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Lightbu, l, b } fr, o, m 'luci, d, e-rea, c, t';
 const CognitiveComputingTransformatio, n: React.FC = () => { ,
-  return(<React.Fragment>,
+  return(<React.Fragment>
       <Helm, e, t>
         <title>
           Cognitive, Computing, Enterprise Transformati, o, n | Hum, a, n-Like, AI, Intelligence | Zion, Tech, Group;
@@ -21,7 +21,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => { ,
         />)
         <link, re, l = 'canonic, a, l')
           hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-cogniti v e-computi n g-enterpri s e-transformati o n')
-        />),
+        />)
       </Helm, e, t>
       <div, className='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'></div>
         <Head, e, r / > {/* Hero, Sect, i, o, n */ }
@@ -66,7 +66,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
                   98.5% decision, accurac, y;
                 </span>
-                ,
+                
                 <span, classNam, e = 'fo, n, t-bold, tex, t-gre, e, n-3, 0, 0'></span>
                   {' '}
                   $1.2B+ in, annual, value;
@@ -79,12 +79,12 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                 </sp, a, n>{' '}
                 by, deploying, cognitive AI, platforms, that underst, a, n, d, reas, o, n, and, learn, like huma, n, s.
         <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,
+          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>
             <div, classNam, e='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'>
                 <li, classNam, e='flex, item, s-start, ga, p-3, tex, t-purp, l, e-1, 0, 0'>
                   <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
         <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'>
-          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>,
+          <div, className='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8'>
             <div, className='grid, gri, d-co, l, s-2, m, d:gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'>
         <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, borde, r-y, borde, r-whi, t, e/10, p, y-8'></div>
           <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'></div>
@@ -195,7 +195,7 @@ const CognitiveComputingTransformatio, n: React.FC = () => {/* TODO: Fix JSX exp
                       duratio,
   n: 'Month, s, 1, 3+',
                       investme, n, t: '$5-1, 0, M/y, e, a, r',
-                      objectiv, e, s: 'Continuous, improveme, n, t, new, use, cases, se, l, f-service, capabilitie, s'},
+                      objectiv, e, s: 'Continuous, improveme, n, t, new, use, cases, se, l, f-service, capabilitie, s'}
                   </div>
                   <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6'></div>
                     <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>

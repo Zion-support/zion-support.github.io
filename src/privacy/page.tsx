@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
 export default function PrivacyPage() {
   const lastUpdated = 'January 1, 2024';
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              Privacy Policy,
+              Privacy Policy
   </
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Your privacy is important to us. Learn how we collect, use, and protect your personal information.

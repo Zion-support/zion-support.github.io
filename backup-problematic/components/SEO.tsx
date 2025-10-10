@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const SEO: React.FC<SEOProps> = ({,

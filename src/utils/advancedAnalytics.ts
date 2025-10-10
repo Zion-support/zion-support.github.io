@@ -23,7 +23,7 @@ interface UserEvent {
   userId?: string,,
 
     url: string
-  metadata?: Record,
+  metadata?: Record
           <string>
 }
 interface UserSession {/* TODO: Fix JSX expression */}
@@ -554,7 +554,7 @@ class AdvancedAnalytics {
    * Send event to analytics service;
    */
 
-  private async sendEvent(event: UserEvent): Promise,
+  private async sendEvent(event: UserEvent): Promise
           <void> {
     // TODO: Add content
   }
@@ -767,7 +767,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
     totalEvent,
   s: number,,
     eventsByTyp,
-  e: Record,
+  e: Record
           <string>
     eventsByCategor,
   y: Record<string>
@@ -850,7 +850,7 @@ let label = id || className || text?.substring(0, 50) || tagName;
    * Send session data to analytics service;
    */
 
-  private async sendSessionData(session: UserSession): Promise,
+  private async sendSessionData(session: UserSession): Promise
           <void> {
     // TODO: Add content
   }

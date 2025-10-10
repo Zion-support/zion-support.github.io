@@ -7,7 +7,7 @@ import './app/styles/futuristic-enhanced.css';
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import Sidebar from './app/components/Sidebar';
-import HomePage from './app/page';
+import HomePage  from './app/page';
 import { PageLoader } from './app/components/LoadingStates';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import SEOHead from './app/components/EnhancedSEOHead';
@@ -15,14 +15,14 @@ import SkipLink from './app/components/EnhancedSkipLink';
 import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/EnhancedPerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import EnhancedAccessibility  from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import FuturisticBackground from './app/components/FuturisticBackground';
-import PerformanceOptimizations from './app/components/PerformanceOptimizations';
+import PerformanceOptimizations  from './app/components/PerformanceOptimizations';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));

@@ -105,7 +105,7 @@ const,
   onLoad?: () => void
   onError?: () => void,
 }
-export const Image: React.FC,
+export const Image: React.FC
           <ImageProps> = ({
     // TODO: Add content
   }

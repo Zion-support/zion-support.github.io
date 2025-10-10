@@ -137,7 +137,7 @@ const, ModernHeade, r: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   return (</div>
     <header, className="bg-white, shado, w-sm, borde, r-b, borde, r-gr, a, y-200, sticky, top-0 z-50">";
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
-  g:px-8">",</div>
+  g:px-8">"</div>
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">";
           {/* Lo, g, o */}</div>
           <Link, t, o="/" classNa, m, e="flex, item, s-center, spac, e-x-2">";

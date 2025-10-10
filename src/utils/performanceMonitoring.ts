@@ -244,7 +244,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
 
 }
     const,
-  thresholds: Record,
+  thresholds: Record
           <keyof WebVitals, {/* TODO: Fix JSX expression */}
   r: number }> = {/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -301,7 +301,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
    * Send metric to analytics service;
    */
 
-  private async sendToAnalytics(metric: PerformanceMetric): Promise,
+  private async sendToAnalytics(metric: PerformanceMetric): Promise
           <void> {
     // TODO: Add content
   }

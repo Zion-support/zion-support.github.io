@@ -20,7 +20,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               AI Customer Service Solutions
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
-              Revolutionary 24/7 AI-powered customer support,
+              Revolutionary 24/7 AI-powered customer support
             </p>"
             <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8"></p>
               Transform your customer service with intelligent AI agents that provide instant, accurate, and personalized support in 50+ languages.
@@ -173,7 +173,7 @@ export default function AICustomerServicePage() {/* TODO: Fix JSX expression */}
               <a href="te,"
   l: +13024640950" className="cyber-button"></a>
                 📞 Cal)
-  l: (302) 464-0950,
+  l: (302) 464-0950
               </a>"
               <a href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold,
   hover:bg-white,"

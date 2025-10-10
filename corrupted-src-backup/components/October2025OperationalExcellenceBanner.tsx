@@ -59,7 +59,7 @@ const, October2025OperationalExcellenceBanne, r = () => {/* TODO: Fix JSX expres
             Transform, Operations, with AI-Powered, Intelligenc, e;
           </h2>)
           <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">)
-            Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y: ),
+            Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y: )
           </h2>
           <p, className="te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
             Discover, breakthrough, AI innovations, delivering, unprecedented efficien, c, y:</p> 

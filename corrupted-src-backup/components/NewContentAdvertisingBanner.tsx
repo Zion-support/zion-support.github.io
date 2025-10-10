@@ -1,4 +1,4 @@
-import React from "react";
+import React  from 'react';
 interface, FeaturedConten, t {
     id: numb, e, r;
 tit, l, e: stri, n, g;

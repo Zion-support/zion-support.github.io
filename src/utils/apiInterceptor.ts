@@ -38,13 +38,13 @@ export interface APIConfig {
     retryDelay: number,,
     enableCaching: boolean,,
     cacheTimeout: number
-  headers?: Record,
+  headers?: Record
           <string>
   interceptors?: {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     request?: (confi)
-  g: RequestConfig) => RequestConfig | Promise,
+  g: RequestConfig) => RequestConfig | Promise
           <RequestConfig>
     response?: (respons)
   e: Response) => Response | Promise<Response>
@@ -99,7 +99,7 @@ export class APIInterceptor {
   private,
   config: APIConfig,
   private,
-  cache: Map,
+  cache: Map
           <string, CacheEntry> = new Map();
   private,
   errorHandler: ErrorHandler,
@@ -270,7 +270,7 @@ const data = await this.parseResponse;
     ur,
   l: string,
     confi,
-  g: Partial,
+  g: Partial
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {
@@ -289,7 +289,7 @@ const data = await this.parseResponse;
   l: string,
     body?: unknown,
     confi,
-  g: Partial,
+  g: Partial
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {
@@ -308,7 +308,7 @@ const data = await this.parseResponse;
   l: string,
     body?: unknown,
     confi,
-  g: Partial,
+  g: Partial
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {
@@ -326,7 +326,7 @@ const data = await this.parseResponse;
     ur,
   l: string,
     confi,
-  g: Partial,
+  g: Partial
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {
@@ -345,7 +345,7 @@ const data = await this.parseResponse;
   l: string,
     body?: unknown,
     confi,
-  g: Partial,
+  g: Partial
           <RequestConfig> = {}
 
   ): Promise<APIResponse<T>> {
@@ -572,7 +572,7 @@ const data = await this.parseResponse;
    * Delay helper for retry logic;
    */
 
-  private delay(ms: number): Promise,
+  private delay(ms: number): Promise
           <void> {
     // TODO: Add content
   }
@@ -584,7 +584,7 @@ const data = await this.parseResponse;
    * Update configuration;
    */
 
-  updateConfig(config: Partial,
+  updateConfig(config: Partial
           <APIConfig>): void {
     // TODO: Add content
   }

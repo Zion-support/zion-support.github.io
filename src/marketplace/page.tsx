@@ -3,7 +3,7 @@ import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, A
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const MarketplacePage: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
@@ -164,7 +164,7 @@ icon$5: Award,
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Zion Tech Marketplace,
+              Zion Tech Marketplace
   </
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Discover, compare, and purchase AI and IT solutions from verified vendors. 
@@ -194,7 +194,7 @@ icon$5: Award,
                 />
               <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
                 <Filter className="w-5 h-5 mr-2" />
-                Filters,
+                Filters
   </
             {/* Category Tabs */}
             <div className="flex flex-wrap justify-center gap-4">
@@ -407,7 +407,7 @@ const categories = [
       feature,
   s: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
       vendo,
-  r: 'QuantumCloud',
+  r: 'QuantumCloud'
           <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
 // Start Shopping;
           </a>
@@ -418,7 +418,7 @@ const categories = [
                 <Mail className="w-4 h-4 mr-2" />
                 Email Us
       <Footer /></Footer>
-export default MarketplacePage,
+export default MarketplacePage
   </div>
   </p>
   </h2>

@@ -248,7 +248,7 @@ const September30MegaBanner202, 5 = () => {/* TODO: Fix JSX expression */}
         </div>
         {/* Featured, Top, i, c, s */}
         <div, classNam, e = "mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30">
-          <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>,
+          <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>
         <div, classNam, e = "mt-10, p, t-8, borde, r-t-2, borde, r-whi, t, e/30"></div>
           <p, className="te, x, t-center, tex, t-cy, a, n-200, tex, t-sm, m, b-4, fon, t-bold, uppercase, tracking-wid, e, r">BREAKTHROUGH, TOPIC, S: </p>
           <div, className="flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r">

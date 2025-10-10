@@ -1,36 +1,36 @@
-'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
+'use client'
+import React, {useState} from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Link} from 'react-router-dom'
 import {Brain,}
-  MessageSquare, 
-  Eye, 
-  Zap, 
-  BarChart, 
-  Box, 
-  Mic, 
-  Shield, 
-  CheckCircle, 
-  ArrowRight, 
-  Star, 
-  Clock,
-  Users,
-  TrendingUp,
-  Settings,
-  Target,
-  Heart,
-  FileText,
-  Cpu,
-  Link,
-  Server;}from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const AiServicesPage: React.FC = () => {,
+  MessageSquare,;
+  Eye,;
+  Zap,;
+  BarChart,;
+  Box,;
+  Mic,;
+  Shield,;
+  CheckCircle,;
+  ArrowRight,;
+  Star,;
+  Clock,;
+  Users,;
+  TrendingUp,;
+  Settings,;
+  Target,;
+  Heart,;
+  FileText,;
+  Cpu,;
+  Link,;
+  Server;}from 'lucide-react'
+import Navigation from '../components/Navigation'
+import Footer   from '../components/Footer'
+;
+const AiServicesPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
+;
   const services = [
-    {
+    {;
       id: 'ai-chatbots',
       name: 'AI-Powered Chatbots',
       description: 'Advanced conversational AI with natural language processing and sentiment analysis',
@@ -51,7 +51,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare;,},
+      icon: MessageSquare,},
     {id: 'ai-content',
       name: 'AI Content Generation',
       description: 'Automated content creation using advanced language models for blogs, social media, and marketing',
@@ -72,7 +72,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Content',
       popular: true,
-      icon: Brain;,},
+      icon: Brain,},
     {id: 'ai-analytics',
       name: 'AI Data Analytics',
       description: 'Advanced analytics and business intelligence powered by machine learning algorithms',
@@ -93,7 +93,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Analytics',
       popular: false,
-      icon: BarChart;,},
+      icon: BarChart,},
     {id: 'ai-vision',
       name: 'AI Computer Vision',
       description: 'Image and video analysis solutions for quality control, security, and automation',
@@ -114,7 +114,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Computer Vision',
       popular: false,
-      icon: Eye;,},
+      icon: Eye,},
     {id: 'ai-voice',
       name: 'AI Voice Processing',
       description: 'Speech recognition, synthesis, and voice analytics for customer interactions',
@@ -135,7 +135,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Voice AI',
       popular: false,
-      icon: Mic;,},
+      icon: Mic,},
     {id: 'ai-automation',
       name: 'AI Workflow Automation',
       description: 'Intelligent process automation that learns and optimizes business workflows',
@@ -156,7 +156,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Automation',
       popular: true,
-      icon: Zap;,},
+      icon: Zap,},
     {id: 'ai-fraud-detection',
       name: 'AI Fraud Detection',
       description: 'Advanced machine learning algorithms to detect and prevent fraudulent activities in real-time',
@@ -177,7 +177,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Security',
       popular: true,
-      icon: Shield;,},
+      icon: Shield,},
     {id: 'ai-predictive-maintenance',
       name: 'AI Predictive Maintenance',
       description: 'Machine learning-powered maintenance scheduling to prevent equipment failures and optimize uptime',
@@ -198,7 +198,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Industrial AI',
       popular: false,
-      icon: Settings;,},
+      icon: Settings,},
     {id: 'ai-personalization',
       name: 'AI Personalization Engine',
       description: 'Advanced recommendation systems and personalization algorithms for enhanced customer experience',
@@ -219,7 +219,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Marketing',
       popular: true,
-      icon: Target;,},
+      icon: Target,},
     {id: 'ai-supply-chain',
       name: 'AI Supply Chain Optimization',
       description: 'Intelligent supply chain management with demand forecasting and inventory optimization',
@@ -240,7 +240,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Supply Chain',
       popular: false,
-      icon: Box;,},
+      icon: Box,},
     {id: 'ai-healthcare-diagnostics',
       name: 'AI Healthcare Diagnostics',
       description: 'Medical image analysis and diagnostic assistance using advanced computer vision and machine learning',
@@ -261,7 +261,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Healthcare',
       popular: false,
-      icon: Heart;,},
+      icon: Heart,},
     {id: 'ai-financial-modeling',
       name: 'AI Financial Modeling',
       description: 'Advanced financial analysis and modeling using machine learning for investment decisions',
@@ -282,7 +282,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Finance',
       popular: true,
-      icon: TrendingUp;,},
+      icon: TrendingUp,},
     {id: 'ai-nlp-processing',
       name: 'AI Natural Language Processing',
       description: 'Advanced text analysis, sentiment analysis, and language understanding for business applications',
@@ -303,7 +303,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Language Processing',
       popular: false,
-      icon: FileText;,},
+      icon: FileText,},
     {id: 'ai-robotic-process',
       name: 'AI Robotic Process Automation',
       description: 'Intelligent automation of repetitive tasks with AI-powered decision making and learning capabilities',
@@ -324,7 +324,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Automation',
       popular: true,
-      icon: Cpu;,},
+      icon: Cpu,},
     {id: 'ai-customer-insights',
       name: 'AI Customer Insights',
       description: 'Advanced customer analytics and behavioral insights to improve customer experience and retention',
@@ -345,7 +345,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users;,},
+      icon: Users,},
     {id: 'ai-quality-assurance',
       name: 'AI Quality Assurance',
       description: 'Automated testing and quality assurance using AI to improve software reliability and performance',
@@ -366,7 +366,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Software Testing',
       popular: false,
-      icon: CheckCircle;,},
+      icon: CheckCircle,},
     {id: 'ai-energy-optimization',
       name: 'AI Energy Optimization',
       description: 'Smart energy management and optimization using AI to reduce costs and improve efficiency',
@@ -387,7 +387,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Energy',
       popular: false,
-      icon: Zap;,},
+      icon: Zap,},
     {id: 'ai-hr-analytics',
       name: 'AI HR Analytics',
       description: 'Human resources analytics and workforce optimization using AI and machine learning',
@@ -408,7 +408,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Human Resources',
       popular: false,
-      icon: Users;,},
+      icon: Users,},
     {id: 'ai-blockchain-analytics',
       name: 'AI Blockchain Analytics',
       description: 'Advanced blockchain data analysis and cryptocurrency market insights using AI',
@@ -429,7 +429,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Blockchain',
       popular: false,
-      icon: Link;,},
+      icon: Link,},
     {id: 'ai-edge-computing',
       name: 'AI Edge Computing',
       description: 'Deploy AI models at the edge for real-time processing and reduced latency',
@@ -450,7 +450,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Edge Computing',
       popular: false,
-      icon: Server;,},
+      icon: Server,},
     {id: 'ai-video-analysis',
       name: 'AI Video Analysis',
       description: 'Advanced video content analysis with object detection, scene understanding, and automated tagging',
@@ -474,7 +474,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Computer Vision',
       popular: true,
-      icon: Eye;,},
+      icon: Eye,},
     {id: 'ai-speech-synthesis',
       name: 'AI Speech Synthesis',
       description: 'Natural-sounding text-to-speech with multiple voices and emotional expression',
@@ -498,7 +498,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Voice AI',
       popular: true,
-      icon: Mic;,},
+      icon: Mic,},
     {id: 'ai-recommendation-engine',
       name: 'AI Recommendation Engine',
       description: 'Advanced recommendation system with collaborative filtering and content-based algorithms',
@@ -522,7 +522,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Personalization',
       popular: true,
-      icon: Target;,},
+      icon: Target,},
     {id: 'ai-sentiment-analysis',
       name: 'AI Sentiment Analysis',
       description: 'Advanced sentiment analysis for text, voice, and social media with emotion detection',
@@ -546,7 +546,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Language Processing',
       popular: true,
-      icon: Heart;,},
+      icon: Heart,},
     {id: 'ai-chatbot-enterprise',
       name: 'AI Enterprise Chatbot',
       description: 'Enterprise-grade chatbot platform with advanced NLP, integration capabilities, and analytics',
@@ -570,7 +570,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Customer Service',
       popular: true,
-      icon: MessageSquare;,},
+      icon: MessageSquare,},
     {id: 'ai-content-moderation',
       name: 'AI Content Moderation',
       description: 'Automated content moderation with image, video, and text analysis for platform safety',
@@ -594,7 +594,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Content Moderation',
       popular: false,
-      icon: Shield;,},
+      icon: Shield,},
     {id: 'ai-predictive-modeling',
       name: 'AI Predictive Modeling',
       description: 'Advanced predictive modeling platform with machine learning algorithms for business forecasting',
@@ -618,7 +618,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Analytics',
       popular: true,
-      icon: BarChart;,},
+      icon: BarChart,},
     {id: 'ai-document-intelligence',
       name: 'AI Document Intelligence',
       description: 'Intelligent document processing with OCR, data extraction, and automated classification',
@@ -642,7 +642,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Document Processing',
       popular: true,
-      icon: FileText;,},
+      icon: FileText,},
     {id: 'ai-conversation-analytics',
       name: 'AI Conversation Analytics',
       description: 'Advanced conversation analysis platform with insights, sentiment tracking, and optimization',
@@ -666,7 +666,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users;,},
+      icon: Users,},
     {id: 'ai-supply-chain-ai',
       name: 'AI Supply Chain Intelligence',
       description: 'Intelligent supply chain optimization with demand forecasting and risk management',
@@ -690,7 +690,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Supply Chain',
       popular: false,
-      icon: Box;,},
+      icon: Box,},
     {id: 'ai-healthcare-diagnostics',
       name: 'AI Healthcare Diagnostics',
       description: 'Medical AI platform with diagnostic assistance, image analysis, and patient monitoring',
@@ -714,7 +714,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Healthcare',
       popular: false,
-      icon: Heart;,},
+      icon: Heart,},
     {id: 'ai-financial-forecasting',
       name: 'AI Financial Forecasting',
       description: 'Advanced financial forecasting platform with market analysis and investment insights',
@@ -738,7 +738,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Finance',
       popular: true,
-      icon: TrendingUp;,},
+      icon: TrendingUp,},
     {id: 'ai-iot-analytics',
       name: 'AI IoT Analytics',
       description: 'Intelligent IoT data analysis platform with real-time monitoring and predictive maintenance',
@@ -762,7 +762,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'IoT & Analytics',
       popular: false,
-      icon: Cpu;,},
+      icon: Cpu,},
     {id: 'ai-conversational-ai',
       name: 'AI Conversational AI Platform',
       description: 'Advanced conversational AI platform with natural language understanding and generation',
@@ -786,7 +786,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Conversational AI',
       popular: true,
-      icon: MessageCircle;,},
+      icon: MessageCircle,},
     {id: 'ai-automated-testing',
       name: 'AI Automated Testing',
       description: 'Intelligent software testing platform with automated test generation and execution',
@@ -810,7 +810,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Software Testing',
       popular: true,
-      icon: CheckCircle;,},
+      icon: CheckCircle,},
     {id: 'ai-knowledge-management',
       name: 'AI Knowledge Management',
       description: 'Intelligent knowledge management platform with automated content organization and search',
@@ -834,7 +834,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Knowledge Management',
       popular: false,
-      icon: FileText;,},
+      icon: FileText,},
     {id: 'ai-customer-churn',
       name: 'AI Customer Churn Prediction',
       description: 'Advanced customer churn prediction platform with retention strategies and analytics',
@@ -858,7 +858,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Customer Analytics',
       popular: true,
-      icon: Users;,},
+      icon: Users,},
     {id: 'ai-automated-reporting',
       name: 'AI Automated Reporting',
       description: 'Intelligent reporting platform with automated data analysis and report generation',
@@ -882,7 +882,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Reporting & Analytics',
       popular: true,
-      icon: BarChart;,},
+      icon: BarChart,},
     {id: 'ai-voice-assistant',
       name: 'AI Voice Assistant Platform',
       description: 'Enterprise voice assistant platform with custom voice commands and integrations',
@@ -906,7 +906,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Voice AI',
       popular: true,
-      icon: Mic;,},
+      icon: Mic,},
     {id: 'ai-content-generation',
       name: 'AI Content Generation Pro',
       description: 'Advanced content generation platform with multi-format support and brand consistency',
@@ -930,8 +930,7 @@ const AiServicesPage: React.FC = () => {,
       ],
       category: 'Content Generation',
       popular: true,
-      icon: FileText;,}]
-
+      icon: FileText,}]
   const categories = [
     {id: 'all', name: 'All Services', count: services.length ,},
     {id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length ,},
@@ -961,47 +960,42 @@ const AiServicesPage: React.FC = () => {,
     {id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length ,},
     {id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length ,},
     {id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length ,}]
-
-  const filteredServices = services.filter(service =>)
+  const filteredServices = services.filter(service =>);
     selectedCategory === 'all' || service.category === selectedCategory;
   );
-
-  return(<>)
+;
+  return(<>);
       <Helmet />
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI services including chatbots, content generation, analytics, computer vision, and workflow automation." />
       </Helmet>
-      
       <Navigation />
-      
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">{/* Header */</div>} <div className="text-center mb-16">
-              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h1>
-                AI Services;
+              <h1 className="text-4xl md: text-5xl font-bold text-white mb-6"></h1>
+                AI Services
               </h1>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">Comprehensive AI solutions designed to transform your business operations.</p>
-                From chatbots to computer vision, we have the AI expertise you need.
+                From chatbots to computer vision, we have the AI expertise you need.;
               </p>
             </div>
-
             {/* Category Filter */} <div className="mb-12">
               <div className="flex flex-wrap justify-center gap-4">{categories.map((category) => (</div>
                   <button;
-                    key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    key={category.id}onClick={() =>setSelectedCategory(category.id)</button>}className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${;
                       selectedCategory === category.id;
                         ? 'bg-cyan-500 text-white'
-                        : 'bg-slate-800 text-gray-300 hover: bg-slate-700',}`}
-                  >
-                    {category.name}({category.count})
+                        : 'bg-slate-800 text-gray-300 hover: bg-slate-700',} `}
+                  >;
+                    {category.name}({category.count});
                   </button>
                 ))}
               </div>
             </div>
-
-            {/* Services Grid */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
+            {/* Services Grid */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16"></div>
               {filteredServices.map((service) => (
-                <div key={service.id}className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-800/70 transition-all duration-300">,</div>
+                <div key={service.id}className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-800/70 transition-all duration-300"></div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -1009,15 +1003,13 @@ const AiServicesPage: React.FC = () => {,
                       </div>
                       <h3 className="text-xl font-bold text-white">{service.name}</h3>
                     </div>
-                    {service.popular && (
+                    {service.popular && (;
                       <span className="bg-cyan-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
                         <Star className="w-4 h-4 mr-1" />
                         Popular;
                       </span>
                     )} </div>
-                  
                   <p className="text-gray-300 mb-4">{service.description</p>}</p>
-                  
                   <div className="flex items-center justify-between mb-4">
                     <div>
                       <span className="text-2xl font-bold text-cyan-400">{service.price</span>}</span>
@@ -1025,11 +1017,10 @@ const AiServicesPage: React.FC = () => {,
                     </div>
                     <span className="text-gray-400 text-sm">{service.category</span>}</span>
                   </div>
-
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
-                      {service.features.slice(0, 3).map((feature, index) => (
+                      {service.features.slice(0, 3).map((feature, index) => (;
                         <li key={index}className="flex items-start space-x-2">
                           <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
                           <span className="text-sm text-gray-300">{feature</span>}</span>
@@ -1037,45 +1028,43 @@ const AiServicesPage: React.FC = () => {,
                       ))}
                     </ul>
                   </div>
-
                   <div className="flex items-center justify-between">
                     <Link;
                       to="/contact"
-                      className="flex items-center text-cyan-400 hover: text-cyan-300 transition-colors",
+                      className="flex items-center text-cyan-400 hover: text-cyan-300 transition-colors"
                     >
                       Learn More;
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
-                    <Link;
+                    <Link
                       to="/contact"
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300",
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
                     >
-                      Get Quote;
+                      Get Quote
                     </Link>
                   </div>
                 </div>
               ))}
             </div>
-
             {/* CTA Section */} <div className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business with AI?</h2>
                 </h2>
                 <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Let our AI experts help you choose the right solutions for your business needs.</p>
-                  Get a free consultation and see how AI can transform your operations.
+                  Get a free consultation and see how AI can transform your operations.;
                 </p>
-                <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
-                  <Link;
+                <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
+                  <Link
                     to="/contact"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300",
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Get Free Consultation;
+                    Get Free Consultation
                   </Link>
-                  <a;
+                  <a
                     href="tel: +13024640950",
-                    className="border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300",
+                    className="border-2 border-cyan-400 text-cyan-400 hover: bg-cyan-400 hover:text-slate-900 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
                   >
-                    Call: (302) 464-0950;,
+                    Call: (302) 464-0950
                   </a>
                 </div>
               </div>
@@ -1083,10 +1072,10 @@ const AiServicesPage: React.FC = () => {,
           </div>
         </div>
       </main>
-      
       <Footer />
     </>
-  );
+  )
 }
-
+;
 export default AiServicesPage;
+;

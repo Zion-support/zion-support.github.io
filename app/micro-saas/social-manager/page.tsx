@@ -1,8 +1,8 @@
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Share2, ArrowRight}}from 'lucide-react';
-const SocialMediaManagerPage: React.FC = () => {,
-    return(<>,)
+import React from 'react'
+import {Helmet} from 'react-helmet-async'
+import {Share2, ArrowRight} from 'lucide-react'
+const SocialMediaManagerPage: React.FC = () => {
+    return(<>,);
       <Helmet />
         <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
         <meta />
@@ -26,15 +26,15 @@ const SocialMediaManagerPage: React.FC = () => {,
               AI Social Media </h1>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
-            <p>AI-powered social media management and automation. Schedule posts, analyze engagement,</p>
-              and grow your social presence with intelligent automation.
+            <p>AI-powered social media management and automation. Schedule posts, analyze engagement</p>
+              and grow your social presence with intelligent automation.;
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>View Demo;</button>
+              <button>View Demo</button>
               </button>
             </div>
           </div>
@@ -57,7 +57,7 @@ const SocialMediaManagerPage: React.FC = () => {,
         </section>
       </div>
     </>,
-  )}};
-
+  )}}
+;
 export default SocialMediaManagerPage;
-
+;

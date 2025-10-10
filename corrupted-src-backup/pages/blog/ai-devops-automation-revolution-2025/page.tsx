@@ -54,7 +54,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r;
-  s: </p>,
+  s: </p>
             <div, className="spa, c, e-y-6">
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, b-3">🤖 Autonomous, C, I/CD, Agent, s</h3>
@@ -62,7 +62,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12">";)
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, AI, DevOps Architectu, r, e</h2>";)
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";)
-              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>),
+              Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, layer, s: </p>)
             <div, className="spa, c, e-y-6">";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
               Our, comprehensive, AI DevOps, platform, consists of, five, integrated intelligent, laye, r
@@ -204,7 +204,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2 x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>"
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">
-              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: </p>,
+              A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: </p>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">"
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platform: </p>
@@ -216,7 +216,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3 xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: FinTech, Success, Story</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor;
-  m: </p>,
+  m: </p>
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">";
               A, leading, financial services, company, with 5, 0, M+ users, transformed, their DevOps, operations, with our, AI, platfor
@@ -385,14 +385,14 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>
             <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20"></section>
               <p, className="te, x, t-gr, a, y-300, m, b-6">
-                For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>,
+                For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"</div>
                 <d, i, v>
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">
-                    <li>• Infrastructure, optimizatio, n: $1.6M</li>,
+                    <li>• Infrastructure, optimizatio, n: $1.6M</li>
                     <li>• Reduced, incident, response: $80, 0, K</li>
                     <li>• Eliminated, manual, processes: $60, 0, K</li>
                     <li, className="te, x, t-xl, fon, t-bold, tex, t-purp, l, e-300, m, t-2">Tot, a, l: $3M+ annual, l, y</li>"
@@ -400,7 +400,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Calculato, r</h2>";
             <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/20">";</section>
               <p, className="te, x, t-gr, a, y-300, m, b-6">";
-                For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>,
+                For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
                 For, a, mid-size, organization, with 50, engineers, and $2M, annual, infrastructure spe, n, d: </p>
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";</div>
@@ -408,7 +408,7 @@ export, default, function AIDevOpsAutomationRevolution2025Pa, g, e(): vo, i, d {
                   <h4, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-300, m, b-3">Cost, Saving, s (Annu, a, l)</h4>";
                   <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
                     <li>• Infrastructure, optimizati, o;
-  n: $1.6M</li>,
+  n: $1.6M</li>
                     <li>• Reduced, incident, response: $80, 0, K</li>
                     <li>• Eliminated, manual, processes: $60, 0, K</li>
           </secti, o, n>"

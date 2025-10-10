@@ -1,11 +1,11 @@
-'use client';
+'use client'
 /**;
  * Cache Manager;
  * Provides in-memory and localStorage caching with TTL support;
  */;
-export enum CacheStorage {}}Memory = 'memory',;
-  LocalStorage = 'localStorage',;
-  SessionStorage = 'sessionStorage';
+export enum CacheStorage {}}Memory = 'memory',
+  LocalStorage = 'localStorage',
+  SessionStorage = 'sessionStorage'
 }
 export interface CacheOptions {ttl?: number; // Time to live in milliseconds;}}export interface CacheOptions {}}ttl?: number; // Time to live in milliseconds;
   storage?: CacheStorage;
@@ -32,10 +32,10 @@ export class CacheManager<T = unknown> {}private cache: Map<string, CacheEntry<T
     count: 0,
     entries: 0,}}
   private config: Required<CacheConfig>,
-,
-  constructor(config: CacheConfig = {,)}) {this.config = {
+,;
+  constructor(config: CacheConfig = {,)}) {this.config = {;
       storage: config.storage || CacheStorage.Memory,
-      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes;,}private stats: CacheStats = {,}hits: 0,
+      defaultTTL: config.defaultTTL || 5 * 60 * 1000 // 5 minutes,}private stats: CacheStats = {,}hits: 0,
     misses: 0,
     hitRate: 0,
     count: 0,
@@ -100,7 +100,7 @@ export class CacheManager {/* TODO: Fix JSX expression */,}}s: 0 ,}
    * Get storage key with prefix;
    */;
   private getStorageKey(ke);
-  y: string): string {/* TODO: Fix JSX expression */,}}return `cache_${key}`;
+  y: string): string {/* TODO: Fix JSX expression */,}}return `cache_${key}`
   }
   /**;
    * Set cache entry;
@@ -108,13 +108,13 @@ export class CacheManager {/* TODO: Fix JSX expression */,}}s: 0 ,}
   set<T>(ke,;
   y: string, valu,;
   e: T, option);
-  s: {ttl?: number ,}= {}): void {/* TODO: Fix JSX expression */,}}}`;
+  s: {ttl?: number ,}= {}): void {/* TODO: Fix JSX expression */,}}}`
     performanceMonitoring.recordCustomMetric(`cache_set_${key)}`, 1, 'count');
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */,}} else if(this.storage === CacheStorage.LocalStorage &&;)
+    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */,}} else if(this.storage === CacheStorage.LocalStorage &&;);
       typeof window !== 'undefined' &&;
       window.localStorage;);
     ) {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
-    } else if(this.storage === CacheStorage.SessionStorage &&;)
+    } else if(this.storage === CacheStorage.SessionStorage &&;);
       typeof window !== 'undefined' &&;
       window.sessionStorage;);
     ) {/* TODO: Fix JSX expression */,}} catch (error) {/* TODO: Fix JSX expression */,}}
@@ -140,30 +140,30 @@ this.stats.hits++;
    * Get cache entry;
    */;
   get<T>(ke);
-  y: string): T | undefined {/* TODO: Fix JSX expression */,}}`;
+  y: string): T | undefined {/* TODO: Fix JSX expression */,}}`
     performanceMonitoring.recordCustomMetric(`cache_get_${key)}`, 1, 'count');
     let,;
   entry: CacheEntry<T> | null = null,
-    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */,}} else if(this.storage === CacheStorage.LocalStorage &&;)
+    if (this.storage === CacheStorage.Memory) {/* TODO: Fix JSX expression */,}} else if(this.storage === CacheStorage.LocalStorage &&;);
       typeof window !== 'undefined' &&;
       window.localStorage;);
     ) {/* TODO: Fix JSX expression */,}}
       } catch (error) {/* TODO: Fix JSX expression */,}}
-    } else if(this.storage === CacheStorage.SessionStorage &&;)
+    } else if(this.storage === CacheStorage.SessionStorage &&;);
       typeof window !== 'undefined' &&;
       window.sessionStorage;);
     ) {/* TODO: Fix JSX expression */,}}
       } catch (error) {/* TODO: Fix JSX expression */,}}
     }
-    if (!entry) {/* TODO: Fix JSX expression */,}`;
+    if (!entry) {/* TODO: Fix JSX expression */,}`
       performanceMonitoring.recordCustomMetric(`cache_miss_${key)}`, 1, 'count');
       return undefined;
     }
-    if (this.isExpired(entry)) {/* TODO: Fix JSX expression */,}`;
+    if (this.isExpired(entry)) {/* TODO: Fix JSX expression */,}`
       performanceMonitoring.recordCustomMetric(`cache_expired_${key)}`, 1, 'count');
       return undefined;
     }
-    this.stats.hits++;`;
+    this.stats.hits++;`
     performanceMonitoring.recordCustomMetric(`cache_hit_${key)}`, 1, 'count');
     return entry.value;
   }
@@ -200,10 +200,10 @@ return true;
    * Delete a cache entry;
    */;
   delete(ke);
-  y: string): void {/* TODO: Fix JSX expression */,}}} else if(this.storage === CacheStorage.LocalStorage &&;)
+  y: string): void {/* TODO: Fix JSX expression */,}}} else if(this.storage === CacheStorage.LocalStorage &&;);
       typeof window !== 'undefined' &&;
       window.localStorage;);
-    ) {/* TODO: Fix JSX expression */,}} else if(this.storage === CacheStorage.SessionStorage &&;)
+    ) {/* TODO: Fix JSX expression */,}} else if(this.storage === CacheStorage.SessionStorage &&;);
       typeof window !== 'undefined' &&;
       window.sessionStorage;);
     ) {/* TODO: Fix JSX expression */,}}
@@ -212,7 +212,7 @@ return true;
    * Clear all cache entries;
    */;
   clear(): void {/* TODO: Fix JSX expression */,}}}
-    if(this.storage === CacheStorage.LocalStorage &&;)
+    if(this.storage === CacheStorage.LocalStorage &&;);
       typeof window !== 'undefined' &&;
       window.localStorage;);
     ) {/* TODO: Fix JSX expression */,}}
@@ -250,7 +250,7 @@ return true;
     let cleaned = 0;
 for (const [key, entry] of this.cache.entries()) {}if (now - entry.timestamp > entry.ttl) {}this.cache.delete(key);
         cleaned++;
-    if(this.storage === CacheStorage.SessionStorage &&;)
+    if(this.storage === CacheStorage.SessionStorage &&;);
       typeof window !== 'undefined' &&;
       window.sessionStorage;);
     ) {/* TODO: Fix JSX expression */,}}
@@ -261,8 +261,8 @@ this.stats.entries = this.cache.size;
     if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {// Save to persistent storage if needed;}if (this.config.storage !== CacheStorage.Memory && cleaned > 0) {}this.saveToStorage();
     }
 return cleaned;
-    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)})
-  e: this.storage ,})
+    logger.info('Cache cleared', 'CacheManager', {/* TODO: Fix JSX expression */,)});
+  e: this.storage ,});
   }
   /**;
    * Get or set with function (handles both sync and async);
@@ -275,10 +275,10 @@ return cleaned;
   s: {ttl?: number ,}= {}): T | Promise<T> {/* TODO: Fix JSX expression */,}}
     const start = performance.now();
     const value = fn();
-    const duration = performance.now() - start;`;
+    const duration = performance.now() - start;`
     performanceMonitoring.recordCustomMetric(`cache_compute_${key)}`, duration, 'ms');
     // Handle both sync and async values;
-    if (value instanceof Promise) {/* TODO: Fix JSX expression */,}})
+    if (value instanceof Promise) {/* TODO: Fix JSX expression */,}});
     }
     this.set(key, value, options);
     return value;
@@ -298,7 +298,7 @@ return cleaned;
   s: {ttl?: number ,}= {}): Promise<T> {/* TODO: Fix JSX expression */,}}
     const start = performance.now();
     const value = await fn();
-    const duration = performance.now() - start;`;
+    const duration = performance.now() - start;`
     performanceMonitoring.recordCustomMetric(`cache_compute_${key)}`, duration, 'ms');
     this.set(key, value, options);
     return value;
@@ -313,8 +313,8 @@ return cleaned;
   s: {/* TODO: Fix JSX expression */,}s: TArgs) => string ,} = {}): (...arg);
   s: TArgs) => TResult {/* TODO: Fix JSX expression */,}}const {keyGenerator, ...cacheOptions}}= options;
     return (...arg);
-  s: TArgs): TResult => {/* TODO: Fix JSX expression */,}`;
-        : `memoize_${fn.name}_${JSON.stringify(args)}`;
+  s: TArgs): TResult => {/* TODO: Fix JSX expression */,}`
+        : `memoize_${fn.name}_${JSON.stringify(args)}`
       return this.getOrSet(key, () => fn(...args), cacheOptions) as TResult;
     }
   }
@@ -367,31 +367,30 @@ try {}}const storage = this.getStorage();
    * Get the appropriate storage object;
    */;
   private getStorage(): Storage | null {}}if (typeof window === 'undefined') return null;
-switch (this.config.storage) {case CacheStorage.LocalStorage: return window.localStorage;,}switch (this.config.storage) {}case CacheStorage.LocalStorage: ;,
+switch (this.config.storage) {case CacheStorage.LocalStorage: return window.localStorage,}switch (this.config.storage) {}case CacheStorage.LocalStorage:  ,
         return window.localStorage;
-      case CacheStorage.SessionStorage:
-        return window.sessionStorage,
+      case CacheStorage.SessionStorage: return window.sessionStorage,
       default:,;
         return null;
     }
   }
 }
 // Create singleton instances for different use cases;
-export const memoryCache = new CacheManager({storage: CacheStorage.Memory ,)})
-export const localStorageCache = new CacheManager({)
+export const memoryCache = new CacheManager({storage: CacheStorage.Memory ,)});
+export const localStorageCache = new CacheManager({);
     );
   storage: CacheStorage.LocalStorage),
-  defaultTTL: 30 * 60 * 1000 // 30 minutes;,
-export const sessionStorageCache = new CacheManager({),
+  defaultTTL: 30 * 60 * 1000 // 30 minutes,
+export const sessionStorageCache = new CacheManager({),;
   storage: CacheStorage.SessionStorage),
-  defaultTTL: 60 * 60 * 1000 // 1 hour;,}export const localStorageCache = new CacheManager({)}storage: CacheStorage.LocalStorage,
+  defaultTTL: 60 * 60 * 1000 // 1 hour,}export const localStorageCache = new CacheManager({)}storage: CacheStorage.LocalStorage,
   defaultTTL: 30 * 60 * 1000 // 30 minutes,
 export const sessionStorageCache = new CacheManager({)}storage: CacheStorage.SessionStorage,
-  defaultTTL: 60 * 60 * 1000 // 1 hour;,
-export default CacheManager,
+  defaultTTL: 60 * 60 * 1000 // 1 hour,
+export default CacheManager,;
     return {/* TODO: Fix JSX expression */,}}}
   }
 }
 export const cacheManager = new CacheManager();
 export default CacheManager;
-`;
+`

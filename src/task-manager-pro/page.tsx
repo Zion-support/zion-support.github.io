@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React  from 'react';
 import {CheckSquare, Users, Zap, Brain, Target, BarChart, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 const TaskManagerProPage: React.FC = () => {
@@ -104,7 +104,7 @@ $4}
             Task Manager Pro
   </
           <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-            AI-Powered Productivity Platform,
+            AI-Powered Productivity Platform
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             Supercharge your productivity with our AI-powered task management platform. 
@@ -120,7 +120,7 @@ $4}
             <Link 
               href="/contact"
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-              Start Free Trial,
+              Start Free Trial
   </
         {/* Key Benefits */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
@@ -140,7 +140,7 @@ $4}
         {/* Features Section */}
         <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-12 text-center">
-            Powerful Task Management Features,
+            Powerful Task Management Features
   </
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
@@ -187,7 +187,7 @@ $4}
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     ? 'bg-gradient-to-r from-cyan-400 to-purple-500 text-white hover: from-cyan-500 hover:to-purple-600'
                     : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white'
-                  Get Started,
+                  Get Started
   </
         {/* Testimonials */}
             What Our Users Say
@@ -229,7 +229,7 @@ const TaskManagerProPage: React.FC = () => {
       description: 'Seamless team collaboration with real-time updates, shared workspaces, and intelligent task assignment.',
       benefit: 'Improve team efficiency by 60%',
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 const PagePage: React.FC = () => {
   return (
           <div>Coming Soon</div>
@@ -243,11 +243,11 @@ const PagePage: React.FC = () => {
           </div>"
           <h1 className="text-4xl,"
   md: text-6xl font-bold text-white mb-6"></h1>
-// Task Manager Pro,
+// Task Manager Pro
           </h1>"
           <p className="text-xl,"
   md: text-2xl text-cyan-400 mb-8 font-medium"></p>
-// AI-Powered Productivity Platform,
+// AI-Powered Productivity Platform
           </p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
 Supercharge your productivity with our AI-powered task management platform.
@@ -264,7 +264,7 @@ Supercharge your productivity with our AI-powered task management platform.
             </a>
             <Link
               href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
-Start Free Trial,
+Start Free Trial
             </Link>
         {/* Key Benefits */}"
         <div className="grid grid-cols-1,"
@@ -286,7 +286,7 @@ Start Free Trial,
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md: text-4xl font-bold text-white mb-12 text-center"></h2>
-// Powerful Task Management Features,
+// Powerful Task Management Features
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -347,7 +347,7 @@ Most Popular;
                     : 'border-2 border-cyan-400 text-cyan-400,
   hover:bg-cyan-400,
   hover: text-white'
-                  Get Started,
+                  Get Started
                 </button></button>
         {/* Testimonials */}
             What Our Users Say;"

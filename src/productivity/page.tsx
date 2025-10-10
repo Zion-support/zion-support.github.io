@@ -1,7 +1,7 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 import { CheckCircle, Star } from 'lucide-react';
 const ProductivityPage: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const ProductivityPage: React.FC = () => {
             Page
   </
           <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
+            Coming Soon
   </
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
             This page is under development. Please check back soon for updates.

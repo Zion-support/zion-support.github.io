@@ -25,7 +25,7 @@ export interface MiddlewareContext {
 }
   status: number
     data?: unknown
-    headers?: Record,
+    headers?: Record
           <string>
   metadata: Record<string>
 }
@@ -47,7 +47,7 @@ export class MiddlewareExecutor {
     this.middlewares.push(middleware);
     return this;
    * Execute middleware chain;
-  async execute(context: MiddlewareContext): Promise,
+  async execute(context: MiddlewareContext): Promise
           <unknown> {
     let index = 0
   }
@@ -276,7 +276,7 @@ export const timeoutMiddleware = (timeoutMs: number): Middleware => {return awai
       new Promise((_, reject) => setTimeout(() => reject(new Error('Request timeout')), timeoutMs))]);
  * Request transformation middleware;
 export const transformRequestMiddleware = ()
-  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise,
+  transformer: (context: MiddlewareContext) => MiddlewareContext | Promise
           <MiddlewareContext>
 ): Middleware => {
     return await transformer(result)

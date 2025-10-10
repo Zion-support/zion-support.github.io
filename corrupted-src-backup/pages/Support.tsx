@@ -93,7 +93,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
         {/* Hero, Sectio, n */})
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
-          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
+          <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">)
             <div, className="te, x, t-cent, e, r">
               <h1, className="te, x, t-4x, l, m;
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
@@ -150,7 +150,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
         </secti, o, n>
         {/* Support, Channel, s */}
-        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8">,
+        <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8">
           <div, className="m, a, x-w-7xl, m, x-au, t, o">
             <div, className="te, x, t-center, m, b-16">
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8">
@@ -251,7 +251,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
   return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
       {/* Hero, Sectio, n */})
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
-        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
+        <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">)
           <div, className="te, x, t-cent, e, r">
             <h1, className="te, x, t-4x, l, m;
   return (

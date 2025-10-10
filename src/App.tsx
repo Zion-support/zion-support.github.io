@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
-import LoadingSpinner from './components/LoadingSpinner';
+import LoadingSpinner  from './components/LoadingSpinner';
 import { performanceMonitor } from './utils/performanceMonitor';
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));

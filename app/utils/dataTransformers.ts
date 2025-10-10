@@ -1,4 +1,4 @@
-'use client';
+'use client'
 /**;
  * Data Transformation Utilities;
  * Provides utilities for transforming and formatting data;
@@ -30,9 +30,9 @@ export function deepMerge<T extends Record<string, unknown>>(targe,;
 /**;
  * Flatten a nested object;
  */;
-export function flattenObject(ob,;)
-  j: Record<string, unknown>,;
-  prefix = '',;
+export function flattenObject(ob,;);
+  j: Record<string, unknown>,
+  prefix = '',
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
       if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}
@@ -43,8 +43,8 @@ export function flattenObject(ob,;)
 /**;
  * Unflatten a flattened object;
  */;
-export function unflattenObject(ob,;)
-  j: Record<string, unknown>,;
+export function unflattenObject(ob,;);
+  j: Record<string, unknown>,
   separator = '.');
 ): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
         }
@@ -61,8 +61,8 @@ export function pick<T extends Record<string, unknown>, K extends keyof T>(ob,;
   key,;
   s: K[]),
 ): Pick<T, K> {/* TODO: Fix JSX expression */,}const result = {}as Pick<T>
-  keys.forEach(key => {/* TODO: Fix JSX expression */,)}})
-  })
+  keys.forEach(key => {/* TODO: Fix JSX expression */,)}});
+  });
   return result;
 }
 /**;
@@ -72,8 +72,8 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,;
   j: T,
   key,;
   s: K[]),
-): Omit<T, K> {/* TODO: Fix JSX expression */,}const result = {...obj}keys.forEach(key => {/* TODO: Fix JSX expression */,)})
-  })
+): Omit<T, K> {/* TODO: Fix JSX expression */,}const result = {...obj}keys.forEach(key => {/* TODO: Fix JSX expression */,)});
+  });
   return result as Omit<T>
 }
 /**;
@@ -94,10 +94,10 @@ export function groupBy<T>(arra,;
 export function unique<T>(arra);
   y: T[], key?: keyof T): T[] {/* TODO: Fix JSX expression */,}}
   const seen = new Set();
-  return array.filter(item => {/* TODO: Fix JSX expression */,)}})
+  return array.filter(item => {/* TODO: Fix JSX expression */,)}});
     seen.add(value);
     return true;
-  })
+  });
 }
 /**;
  * Sort array by multiple keys;
@@ -112,18 +112,18 @@ export function sortBy<T>(arra,;
 ): T[] {/* TODO: Fix JSX expression */,}}
       // Convert to comparable values;
       const aComp =;
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean';
+        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
           ? aVal;
           : String(aVal);
       const bComp =;
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean';
+        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
           ? bVal;
           : String(bVal);
       if (aComp < bComp) return order === 'asc' ? -1 : 1;
       if (aComp > bComp) return order === 'asc' ? 1 : -1;
     }
     return 0;
-  })
+  });
 }
 /**;
  * Chunk array into smaller arrays;
@@ -144,8 +144,8 @@ export function zip<T>(...array);
  * Format bytes to human readable string;
  */;
 export function formatBytes(byte);
-  s: number, decimals = 2): string {/* TODO: Fix JSX expression */,}}`;
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))}${sizes[i]}`;
+  s: number, decimals = 2): string {/* TODO: Fix JSX expression */,}}`
+  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))}${sizes[i]}`
 }
 /**;
  * Format number with separators;
@@ -161,28 +161,28 @@ export function formatCurrency(amoun);
 /**;
  * Format date;
  */;
-export function formatDate(dat,;)
+export function formatDate(dat,;);
   e: Date | string | number,
   option,;
-  s: Intl.DateTimeFormatOptions = {,},;
+  s: Intl.DateTimeFormatOptions = {,},
   locale = 'en-US');
 ): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Format relative time;
  */;
 export function formatRelativeTime(dat);
-  e: Date | string | number): string {/* TODO: Fix JSX expression */,}}`;
-  if (minutes < 60) return `${minutes}minute${minutes > 1 ? 's' : ''}ago`;`;
-  if (hours < 24) return `${hours}hour${hours > 1 ? 's' : ''}ago`;`;
-  if (days < 7) return `${days}day${days > 1 ? 's' : ''}ago`;`;
-  if (weeks < 4) return `${weeks}week${weeks > 1 ? 's' : ''}ago`;`;
-  if (months < 12) return `${months}month${months > 1 ? 's' : ''}ago`;`;
-  return `${years}year${years > 1 ? 's' : ''}ago`;
+  e: Date | string | number): string {/* TODO: Fix JSX expression */,}}`
+  if (minutes < 60) return `${minutes}minute${minutes > 1 ? 's' : ''}ago``
+  if (hours < 24) return `${hours}hour${hours > 1 ? 's' : ''}ago``
+  if (days < 7) return `${days}day${days > 1 ? 's' : ''}ago``
+  if (weeks < 4) return `${weeks}week${weeks > 1 ? 's' : ''}ago``
+  if (months < 12) return `${months}month${months > 1 ? 's' : ''}ago``
+  return `${years}year${years > 1 ? 's' : ''}ago`
 }
 /**;
  * Truncate string;
  */;
-export function truncate(st,;)
+export function truncate(st,;);
   r: string, lengt);
   h: number, suffix = '...'): string {/* TODO: Fix JSX expression */,}}}
 /**;
@@ -211,4 +211,4 @@ export function camelCase(st);
 export function snakeCase(st);
   r: string): string {/* TODO: Fix JSX expression */,}}}
 export default {/* TODO: Fix JSX expression */,}}}
-`;
+`

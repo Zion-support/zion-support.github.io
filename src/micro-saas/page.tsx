@@ -1,9 +1,9 @@
-import React from 'react';
+import React  from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Brain, BarChart, MessageSquare, Eye, Phone, Lock, Database, Cloud, Code, Settings, BarChart3, ShoppingCart, Car, Target, Globe, Cpu, Smartphone, FileText, Bot, Music, Video, CreditCard, Train, Home, Heart, GraduationCap, Mail, Calendar, PieChart, Search, Filter, Download, Upload, Share, Edit, Trash2, Plus, Minus, Refresh, Play, Pause, Stop, Volume2, Camera, Image, File, Folder, Archive, Bookmark, Tag, Link as LinkIcon, ExternalLink, ArrowRight, ChevronRight, Award, Gift, Rocket, Lightbulb, Wrench, Hammer, Scissors, Paintbrush, Palette, Layers, Grid, List, Layout, Monitor, Laptop, Tablet, Smartphone as PhoneIcon, Headphones, Microphone, Speaker, Wifi, Bluetooth, Battery, Power, Zap as Lightning, Sun, Moon, CloudRain, Wind, Thermometer, Droplets, Snowflake, Cloud, CloudSnow, CloudLightning, CloudDrizzle, CloudFog, Eye as EyeIcon, EyeOff, Lock as LockIcon, Unlock, Key, Fingerprint, Shield as ShieldIcon, AlertTriangle, AlertCircle, Info, HelpCircle, X, Check, XCircle, CheckCircle2, PlusCircle, MinusCircle, XSquare, CheckSquare, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Heart as HeartIcon, ThumbsUp, ThumbsDown, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10 } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer  from '../components/SEOOptimizer';
 export default function MicroSaasPage() {
   const microSaasServices = [
     {
@@ -296,7 +296,7 @@ export default function MicroSaasPage() {
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SAAS Solutions,
+              Micro SAAS Solutions
   </
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               50+ AI-powered micro SAAS applications designed for modern businesses. Affordable, powerful, and easy to use.
@@ -311,7 +311,7 @@ export default function MicroSaasPage() {
               <Link
                 to="/contact"
                 className="border border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Trial,
+                Get Free Trial
   </
             </div>
           </div>
@@ -390,7 +390,7 @@ export default function MicroSaasPage() {
                   <Link
                     to={service.link}
                     className="bg-purple-500 hover: bg-purple-600 text-white px-4 py-2 rounded-lg font-semibold transition-colors inline-block text-sm">
-                    Learn More,
+                    Learn More
   </
                 </div>
               </div>
@@ -525,7 +525,7 @@ export default function MicroSaasPage() {
               <Link
                 to="/contact"
                 className="w-full bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center block">
-                Contact Sales,
+                Contact Sales
   </
             </div>
           </div>

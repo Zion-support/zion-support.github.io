@@ -147,7 +147,7 @@ class Logger {/* TODO: Fix JSX expression */}
     let,
   context: LogContext | undefined,
     let,
-  meta: Record,
+  meta: Record
           <string, unknown> | undefined;
     // Handle different parameter combinations;
     if (errorOrContextOrMetadata instanceof Error) {/* TODO: Fix JSX expression */}

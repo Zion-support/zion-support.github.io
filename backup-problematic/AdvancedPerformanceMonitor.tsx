@@ -313,7 +313,7 @@ const,
  {recommendations.length > 0 && (
  <div className='mt-2'></div>
  <h4 className='font-semibold text-xs text-red-600'>
- Recommendations: </h4>,
+ Recommendations: </h4>
  <ul className='text-xs text-red-600'>,
  {recommendations.map((rec, index) => (
  {/* TODO: Fix JSX expression */}

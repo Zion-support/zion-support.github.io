@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
 export interface FeaturedItem {
     title: string
