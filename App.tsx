@@ -14,7 +14,7 @@ import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
-import { AnalyticsProvider } from './app/components/Analytics';
+import Analytics from './app/components/Analytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 
 // Structured data for SEO
@@ -98,7 +98,7 @@ const App: React.FC = memo(() => {
   return (
     <ErrorBoundary>
       <HelmetProvider>
-        <AnalyticsProvider>
+        <Analytics>
           <PerformanceOptimizer>
             <AccessibilityEnhancer>
               <EnhancedAccessibility>
@@ -150,7 +150,7 @@ const App: React.FC = memo(() => {
               </EnhancedAccessibility>
             </AccessibilityEnhancer>
           </PerformanceOptimizer>
-        </AnalyticsProvider>
+        </Analytics>
       </HelmetProvider>
     </ErrorBoundary>
   );
