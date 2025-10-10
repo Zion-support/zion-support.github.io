@@ -427,7 +427,203 @@ name: 'AI-Powered Infrastructure Management',
           popular: false
         }
       ]
-
+    },
+    // New Emerging Technology IT Services
+    {
+      category: 'Quantum Computing & Security',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'Quantum Computing Infrastructure',
+          description: 'Next-generation quantum computing infrastructure with quantum-safe security and optimization',
+          features: ['Quantum Hardware Setup', 'Quantum Software Development', 'Quantum-Safe Cryptography', 'Quantum Algorithm Implementation', 'Quantum Error Correction', 'Hybrid Classical-Quantum Systems'],
+          pricing: 'Starting at $15,999/mo',
+          trial: 'Free quantum assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/quantum-computing-infrastructure',
+          popular: true
+        },
+        {
+          name: 'Post-Quantum Security Migration',
+          description: 'Migration to post-quantum cryptographic standards to protect against future quantum threats',
+          features: ['Quantum-Safe Algorithms', 'Migration Planning', 'Security Assessment', 'Implementation', 'Testing & Validation', 'Compliance Assurance'],
+          pricing: 'Starting at $12,999',
+          trial: 'Free security audit',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/post-quantum-security',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: '5G & Edge Computing',
+      icon: Wifi,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {
+          name: '5G Network Implementation',
+          description: 'Complete 5G network deployment with edge computing and IoT integration',
+          features: ['5G Infrastructure', 'Edge Computing Nodes', 'Network Slicing', 'IoT Integration', 'Low Latency Optimization', 'Coverage Planning'],
+          pricing: 'Starting at $18,999',
+          trial: 'Free 5G assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/5g-implementation',
+          popular: true
+        },
+        {
+          name: 'Edge AI Computing Platform',
+          description: 'Distributed AI computing platform with edge nodes and real-time processing',
+          features: ['Edge AI Nodes', 'Real-time Processing', 'Distributed Computing', 'AI Model Deployment', 'Data Synchronization', 'Performance Optimization'],
+          pricing: 'Starting at $9,999/mo',
+          trial: 'Free edge assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/edge-ai-computing',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Metaverse & Web3',
+      icon: Globe,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        {
+          name: 'Metaverse Platform Development',
+          description: 'Complete metaverse platform development with virtual worlds and immersive experiences',
+          features: ['Virtual World Creation', 'Avatar Systems', 'Social Features', 'Virtual Economy', 'Cross-platform Integration', 'VR/AR Support'],
+          pricing: 'Starting at $35,999',
+          trial: 'Free metaverse consultation',
+          timeline: '16-32 weeks',
+          link: 'https://ziontechgroup.com/metaverse-development',
+          popular: true
+        },
+        {
+          name: 'Web3 Infrastructure Services',
+          description: 'Comprehensive Web3 infrastructure with decentralized applications and blockchain integration',
+          features: ['DApp Development', 'Smart Contract Deployment', 'DeFi Integration', 'NFT Marketplace', 'Wallet Integration', 'Cross-chain Support'],
+          pricing: 'Starting at $22,999',
+          trial: 'Free Web3 consultation',
+          timeline: '12-20 weeks',
+          link: 'https://ziontechgroup.com/web3-infrastructure',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'AI Infrastructure & MLOps',
+      icon: Brain,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      services: [
+        {
+          name: 'AI Infrastructure as a Service',
+          description: 'Complete AI infrastructure with GPU clusters, model training, and deployment pipelines',
+          features: ['GPU Cluster Management', 'Model Training Infrastructure', 'MLOps Pipelines', 'Model Deployment', 'Auto-scaling', 'Performance Monitoring'],
+          pricing: 'Starting at $7,999/mo',
+          trial: 'Free AI infrastructure audit',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-infrastructure-service',
+          popular: true
+        },
+        {
+          name: 'MLOps Platform Implementation',
+          description: 'Complete MLOps platform with automated model training, testing, and deployment',
+          features: ['Automated Training', 'Model Versioning', 'A/B Testing', 'Model Monitoring', 'CI/CD for ML', 'Model Governance'],
+          pricing: 'Starting at $5,999/mo',
+          trial: 'Free MLOps assessment',
+          timeline: '6-10 weeks',
+          link: 'https://ziontechgroup.com/mlops-platform',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Cybersecurity & Compliance',
+      icon: Shield,
+      color: 'text-red-400',
+      bgColor: 'bg-red-500/10',
+      services: [
+        {
+          name: 'Zero Trust Security Architecture',
+          description: 'Complete zero trust security implementation with identity verification and micro-segmentation',
+          features: ['Identity Verification', 'Micro-segmentation', 'Device Management', 'Access Control', 'Continuous Monitoring', 'Threat Detection'],
+          pricing: 'Starting at $15,999',
+          trial: 'Free security assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/zero-trust-architecture',
+          popular: true
+        },
+        {
+          name: 'AI-Powered Security Operations',
+          description: 'Advanced AI-powered security operations with automated threat detection and response',
+          features: ['AI Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Threat Intelligence', 'Incident Response', 'Security Analytics'],
+          pricing: 'Starting at $8,999/mo',
+          trial: 'Free security audit',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-security-operations',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Data & Analytics Infrastructure',
+      icon: BarChart,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      services: [
+        {
+          name: 'Real-time Data Platform',
+          description: 'Complete real-time data processing platform with streaming analytics and instant insights',
+          features: ['Streaming Data Processing', 'Real-time Analytics', 'Event-driven Architecture', 'Data Pipeline Management', 'Real-time Dashboards', 'Data Quality Monitoring'],
+          pricing: 'Starting at $6,999/mo',
+          trial: 'Free data assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/real-time-data-platform',
+          popular: true
+        },
+        {
+          name: 'Data Lake & Warehouse Modernization',
+          description: 'Modern data lake and warehouse solutions with AI-powered data processing and analytics',
+          features: ['Data Lake Architecture', 'Modern Data Warehouse', 'AI Data Processing', 'Data Governance', 'Self-service Analytics', 'Data Catalog'],
+          pricing: 'Starting at $9,999/mo',
+          trial: 'Free data modernization plan',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/data-modernization',
+          popular: true
+        }
+      ]
+    },
+    {
+      category: 'Cloud & Hybrid Infrastructure',
+      icon: Cloud,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {
+          name: 'Multi-Cloud Management Platform',
+          description: 'Comprehensive multi-cloud management with unified monitoring and cost optimization',
+          features: ['Multi-cloud Orchestration', 'Unified Monitoring', 'Cost Optimization', 'Security Management', 'Compliance Monitoring', 'Disaster Recovery'],
+          pricing: 'Starting at $4,999/mo',
+          trial: 'Free cloud assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/multi-cloud-management',
+          popular: true
+        },
+        {
+          name: 'Hybrid Cloud Architecture',
+          description: 'Seamless hybrid cloud architecture connecting on-premises and cloud environments',
+          features: ['Hybrid Connectivity', 'Data Synchronization', 'Workload Migration', 'Security Integration', 'Performance Optimization', 'Disaster Recovery'],
+          pricing: 'Starting at $7,999',
+          trial: 'Free hybrid assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/hybrid-cloud-architecture',
+          popular: false
+        }
+      ]
     }
   ];
 

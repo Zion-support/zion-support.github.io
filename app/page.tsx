@@ -41,11 +41,14 @@ import {
 const microSAASServices = [
   {
     name: "AI Project Manager Pro",
-    description: "Intelligent project management with predictive analytics and automated resource allocation",
-    price: "$99/mo",
-    features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking"],
+    description: "Intelligent project management with predictive analytics and automated resource allocation. Trusted by 2,500+ teams worldwide.",
+    price: "$199/mo",
+    features: ["Smart Scheduling", "Risk Prediction", "Team Optimization", "Progress Tracking", "Resource Allocation", "Budget Management"],
     category: "Productivity",
-    popular: true
+    popular: true,
+    rating: 4.8,
+    users: "2,500+",
+    link: "https://ziontechgroup.com/ai-project-manager"
   },
   {
     name: "AI Analytics Dashboard",
@@ -334,6 +337,57 @@ const microSAASServices = [
     popular: true,
     icon: Palette,
     link: "https://ziontechgroup.com/ai-design-studio"
+  },
+  // Additional Micro SAAS Services
+  {
+    name: "AI Quantum Financial Oracle",
+    description: "Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading",
+    price: "$2,999/mo",
+    features: ["Quantum Risk Modeling", "High-Frequency Trading", "Portfolio Optimization", "Market Prediction"],
+    category: "Quantum Finance",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-financial-oracle"
+  },
+  {
+    name: "AI Neural Memory Assistant",
+    description: "Advanced AI system with persistent memory and contextual understanding for personalized assistance",
+    price: "$399/mo",
+    features: ["Persistent Memory", "Contextual Understanding", "Personalized Responses", "Learning from Interactions"],
+    category: "Advanced AI",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-memory-assistant"
+  },
+  {
+    name: "AI Holographic Workspace",
+    description: "Next-generation 3D workspace with holographic interfaces and spatial computing capabilities",
+    price: "$1,200/mo",
+    features: ["3D Workspace", "Holographic UI", "Spatial Computing", "Collaborative Environment"],
+    category: "Immersive Tech",
+    popular: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-holographic-workspace"
+  },
+  {
+    name: "AI Climate Solutions Pro",
+    description: "Combat climate change with intelligent environmental monitoring and prediction systems",
+    price: "$3,200/mo",
+    features: ["Carbon Analysis", "Weather Prediction", "Sustainability Planning", "Emission Tracking"],
+    category: "Environmental AI",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
+  },
+  {
+    name: "AI Drug Discovery Pro",
+    description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug development",
+    price: "$4,500/mo",
+    features: ["Molecular Modeling", "Drug Interaction Analysis", "Clinical Trial Optimization", "Patent Research"],
+    category: "Pharma AI",
+    popular: true,
+    icon: Stethoscope,
+    link: "https://ziontechgroup.com/ai-drug-discovery-pro"
   }
 ];
 
@@ -417,6 +471,57 @@ const aiServices: AIService[] = [
     enterprise: true,
     icon: Settings,
     link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  // Additional AI Services
+  {
+    name: "AI Quantum Machine Learning Platform",
+    description: "Revolutionary quantum machine learning platform that leverages quantum computing for exponentially faster AI training",
+    price: "$4,999/mo",
+    features: ["Quantum Neural Networks", "Quantum Optimization", "Quantum Feature Selection", "Hybrid Quantum-Classical AI"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-ml-platform"
+  },
+  {
+    name: "AI Space Mission Control",
+    description: "Advanced AI system for space mission planning, satellite operations, and deep space exploration management",
+    price: "$8,999/mo",
+    features: ["Mission Planning AI", "Satellite Management", "Deep Space Navigation", "Space Weather Prediction"],
+    category: "Space AI",
+    enterprise: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-space-mission-control"
+  },
+  {
+    name: "AI Climate Intelligence Platform",
+    description: "Comprehensive climate AI platform for environmental monitoring, carbon management, and sustainability optimization",
+    price: "$2,999/mo",
+    features: ["Climate Modeling AI", "Carbon Analysis", "Environmental Impact Assessment", "Sustainability Optimization"],
+    category: "Climate AI",
+    enterprise: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-intelligence"
+  },
+  {
+    name: "AI Autonomous Vehicle Platform",
+    description: "Next-generation AI platform for autonomous vehicle development, testing, and fleet management",
+    price: "$6,999/mo",
+    features: ["Autonomous Driving AI", "Fleet Management", "Real-time Decision Making", "Safety Monitoring"],
+    category: "Autonomous AI",
+    enterprise: true,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-autonomous-vehicles"
+  },
+  {
+    name: "AI Blockchain Intelligence",
+    description: "Advanced AI platform for blockchain analysis, DeFi optimization, and cryptocurrency intelligence",
+    price: "$2,999/mo",
+    features: ["Blockchain Analysis AI", "DeFi Optimization", "Cryptocurrency Intelligence", "Smart Contract AI"],
+    category: "Blockchain AI",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-blockchain-intelligence"
   }
 ];
 
@@ -528,6 +633,122 @@ const itServices: ITService[] = [
     category: "Blockchain Security",
     icon: Shield,
     link: "https://ziontechgroup.com/smart-contract-security-audit"
+  },
+  // Additional IT Services
+  {
+    name: "Quantum Computing Infrastructure",
+    description: "Next-generation quantum computing infrastructure with quantum-safe security and optimization",
+    price: "$15,999/mo",
+    features: ["Quantum Hardware Setup", "Quantum Software Development", "Quantum-Safe Cryptography", "Quantum Algorithm Implementation"],
+    category: "Quantum Computing",
+    icon: Brain,
+    link: "https://ziontechgroup.com/quantum-computing-infrastructure"
+  },
+  {
+    name: "5G Network Implementation",
+    description: "Complete 5G network deployment with edge computing and IoT integration",
+    price: "$18,999",
+    features: ["5G Infrastructure", "Edge Computing Nodes", "Network Slicing", "IoT Integration"],
+    category: "5G & Edge Computing",
+    icon: Wifi,
+    link: "https://ziontechgroup.com/5g-implementation"
+  },
+  {
+    name: "Metaverse Platform Development",
+    description: "Complete metaverse platform development with virtual worlds and immersive experiences",
+    price: "$35,999",
+    features: ["Virtual World Creation", "Avatar Systems", "Social Features", "Virtual Economy"],
+    category: "Metaverse & Web3",
+    icon: Globe,
+    link: "https://ziontechgroup.com/metaverse-development"
+  },
+  {
+    name: "AI Infrastructure as a Service",
+    description: "Complete AI infrastructure with GPU clusters, model training, and deployment pipelines",
+    price: "$7,999/mo",
+    features: ["GPU Cluster Management", "Model Training Infrastructure", "MLOps Pipelines", "Model Deployment"],
+    category: "AI Infrastructure",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-infrastructure-service"
+  },
+  {
+    name: "Zero Trust Security Architecture",
+    description: "Complete zero trust security implementation with identity verification and micro-segmentation",
+    price: "$15,999",
+    features: ["Identity Verification", "Micro-segmentation", "Device Management", "Access Control"],
+    category: "Cybersecurity",
+    icon: Shield,
+    link: "https://ziontechgroup.com/zero-trust-architecture"
+  }
+];
+
+// Testimonials data
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CTO",
+    company: "TechCorp Solutions",
+    content: "Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented increased our efficiency by 300% and reduced costs by 60%. Their quantum computing platform is revolutionary.",
+    avatar: "SJ"
+  },
+  {
+    name: "Michael Chen",
+    role: "CEO",
+    company: "InnovateLabs",
+    content: "The AI-powered micro SAAS tools from Zion Tech Group have been game-changers for our business. The project management AI alone saved us 40 hours per week. Highly recommended!",
+    avatar: "MC"
+  },
+  {
+    name: "Dr. Emily Rodriguez",
+    role: "Research Director",
+    company: "PharmaTech",
+    content: "Their AI drug discovery platform accelerated our research by 70%. The molecular analysis capabilities are incredible. We've already identified 3 promising drug candidates in just 6 months.",
+    avatar: "ER"
+  },
+  {
+    name: "James Wilson",
+    role: "Operations Manager",
+    company: "ManufacturingPlus",
+    content: "The AI manufacturing optimization platform reduced our downtime by 30% and increased quality by 25%. The predictive maintenance features are incredibly accurate.",
+    avatar: "JW"
+  },
+  {
+    name: "Lisa Park",
+    role: "Financial Director",
+    company: "FinanceFirst",
+    content: "The AI financial intelligence suite has revolutionized our risk management. We've achieved 99.9% fraud detection accuracy and reduced false positives by 80%.",
+    avatar: "LP"
+  },
+  {
+    name: "David Thompson",
+    role: "IT Director",
+    company: "GlobalEnterprises",
+    content: "Their quantum computing infrastructure and 5G implementation services are cutting-edge. We're now operating at speeds we never thought possible. The ROI has been phenomenal.",
+    avatar: "DT"
+  }
+];
+
+// Stats data
+const stats = [
+  {
+    number: "500+",
+    label: "Enterprise Clients",
+    icon: Building
+  },
+  {
+    number: "50+",
+    label: "AI Services",
+    icon: Brain
+  },
+  {
+    number: "100+",
+    label: "IT Solutions",
+    icon: Settings
+  },
+  {
+    number: "99.9%",
+    label: "Uptime SLA",
+    icon: Shield
   }
 ];
 
