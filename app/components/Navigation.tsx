@@ -180,7 +180,6 @@ const Navigation: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
   const toggleServices = () => {
     setServicesOpen(!servicesOpen);
   };
@@ -231,11 +230,6 @@ const Navigation: React.FC = () => {
     { name: 'Robotics Solutions', href: '/robotics', icon: Settings, price: '$3,500/mo' }
   ];
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-a9e4
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-55ba
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'
@@ -249,17 +243,10 @@ const Navigation: React.FC = () => {
             onClick={closeAllMenus}
           >
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
-<<<<<<< HEAD
-            <Zap className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
-            Zion Tech Group
-=======
               <Zap className="w-5 h-5 text-white" />
             </div>
             <span className="text-white bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold">
               Zion Tech Group
->>>>>>> cursor/website-audit-and-update-with-deployment-a9e4
             </span>
           </Link>
 
