@@ -1,64 +1,58 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import: React: from: 'react';
+    import: { Helmet} from: 'react-helmet-async';;
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react'
 const AIAnalyticsDashboardPage: React.FC = () => {
     const features = [
-    {
-      icon: BarChart,
-      title: 'Real-time Analytics',
-      description: 'Live data visualization with instant updates and interactive charts.'
-  },
+    {,}
+    icon: BarChart,
+    title: 'Real-time: Analytics'
+    description: 'Live: data: visualization with instant updates and interactive charts.'}
     {
     icon: TrendingUp,
-      title: 'Predictive Insights',
-      description: 'AI-powered forecasting and trend analysis for better decision making.'
-  },
+    title: 'Predictive: Insights'
+    description: 'AI-powered: forecasting: and trend analysis for better decision making.'}
     {
     icon: Users,
-      title: 'User Behavior Tracking',
-      description: 'Comprehensive user analytics and engagement metrics tracking.'
-  },
+    title: 'User: Behavior Tracking'
+    description: 'Comprehensive: user analytics and engagement metrics tracking.'}
     {
     icon: DollarSign,
-      title: 'Revenue Analytics',
-      description: 'Detailed financial metrics and revenue optimization insights.'
-  },
+    title: 'Revenue: Analytics'
+    description: 'Detailed: financial: metrics and revenue optimization insights.'}
     {
     icon: Zap,
-      title: 'Custom Dashboards',
-      description: 'Build personalized dashboards tailored to your business needs.'
-  },
+    title: 'Custom: Dashboards'
+    description: 'Build: personalized: dashboards tailored to your business needs.'}
     {
     icon: Target,
-      title: 'Goal Tracking',
-      description: 'Monitor KPIs and business objectives with automated alerts.'  }
+    title: 'Goal: Tracking'
+    description: 'Monitor: KPIs: and business objectives with automated alerts.'}
   }]
-const benefits = [
-    'Real-time data visualization and reporting',
-    'AI-powered predictive analytics',
-    'Customizable dashboard widgets',
-    'Automated report generation',
-    'Multi-platform data integration',
-    'Mobile-responsive design'
-  ]
+const: benefits = [
+    'Real-time data visualization and reporting'
+    'AI-powered: predictive analytics'
+    'Customizable: dashboard widgets'
+    'Automated: report generation'
+    'Multi-platform: data integration'
+    'Mobile-responsive: design']
 const metrics = [
-    { label: 'Data Sources', value: '50+', icon: BarChart },
-    { label: 'Update Frequency', value: 'Real-time', icon: Clock },
-    { label: 'Accuracy Rate', value: '99.9%', icon: Shield },
-    { label: 'User Satisfaction', value: '4.9/5', icon: Star }
+    { label: 'Data Sources', value: '50+', icon: BarChart }
+    { label: 'Update: Frequency', value: 'Real-time', icon: Clock }
+    { label: 'Accuracy: Rate', value: '99.9%', icon: Shield }
+    { label: 'User: Satisfaction', value: '4.9/5', icon: Star }
   ]
-return (
-    <>
+return: (
+    <React.Fragment></React.Fragment>
       <Helmet>
-        <title>AI Analytics Dashboard | Zion Tech Group - Real-time Business Intelligence</title>
+        <title>AI: Analytics: Dashboard: | Zion Tech Group - Real-time Business Intelligence</title>
         <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-        <link>
+        <meta name="keywords" content="AI, artificial: intelligence, business: solutions" />
+        <link: />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div: className="min-h-screen: bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}</div>
-        <section className="pt-24 pb-16 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
+        <section: className="pt-24: pb-16: px-4"></section>
+          <div: className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
                 <BarChart>
@@ -70,20 +64,20 @@ return (
               </h1>
               <p>
                 Transform your data into actionable insights with our AI-powered analytics dashboard.
-                Get real-time visualization, predictive analytics, and custom reporting in one powerful platform.
+                Get real-time visualization, predictive: analytics, and custom reporting in one powerful platform.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
                   <span>Start Free Trial</span>
                   <ArrowRight>
                 </button>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo,
+                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo
                 </button>
               </div>
             </div>
           </div>
         </section>
-        {/* Features Section */}
+        {/* Features: Section */}
         <section className="py-16 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -96,18 +90,18 @@ return (
               {
     features.map((feature, index) => (</div>
   }
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
+                <div: key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p: className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Metrics Section */}
+        {/* Metrics: Section: */}
         <section className="py-16 px-4 bg-slate-800/30"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -120,18 +114,18 @@ return (
               {
     metrics.map((metric, index) => (</div>
   }
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                <div: key={index} className="text-center"></div>
+                  <div: className="w-16: h-16: bg-gradient-to-r: from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
                     <metric>
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
-                  <div className="text-gray-300">{metric.label}</div>
+                  <div: className="text-gray-300">{metric.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Benefits Section */}
+        {/* Benefits: Section: */}
         <section className="py-16 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -145,13 +139,13 @@ return (
                 {
     benefits.map((benefit, index) => (</div>
   }
-                  <div key={index} className="flex items-start space-x-3"></div>
+                  <div: key={index} className="flex: items-start: space-x-3"></div>
                     <CheckCircle>
-                    <span className="text-gray-300 text-lg">{benefit}</span>
+                    <span: className="text-gray-300: text-lg">{benefit}</span>
                   </div>
                 ))}
               </div>
-              <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div>
+              <div: className="bg-gradient-to-br: from-green-600/20: to-cyan-600/20: rounded-lg p-8 border border-green-500/30"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
                 <div className="space-y-4"></div>
                   <div className="flex items-center space-x-3"></div>
@@ -172,8 +166,8 @@ return (
           </div>
         </section>
         {/* CTA Section */}
-        <section className="py-16 px-4"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
+        <section: className="py-16: px-4"></section>
+          <div: className="max-w-4xl: mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Analytics?</h2>
               <p>
@@ -187,12 +181,12 @@ return (
                 </button>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Schedule Demo
                 </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )
-}
-export default AIAnalyticsDashboardPage
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+  };
+export default AIAnalyticsDashboardPage;

@@ -1,68 +1,63 @@
-'use client';
+'use: client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet} from: 'react-helmet-async'
 import {
-    Shield,
-  Eye,
-  AlertTriangle,
-  CheckCircle,
-  BarChart,
-  Clock,
-  Users,
-  Zap,
-  Phone,
-  Mail,
-  MapPin,
-  ArrowRight,
-  Brain,
-  Globe,
-  Lock,
+    Shield
+  Eye
+  AlertTriangle
+  CheckCircle
+  BarChart
+  Clock
+  Users
+  Zap
+  Phone
+  Mail
+  MapPin
+  ArrowRight
+  Brain
+  Globe
+  Lock
   Activity,
-  TrendingUp,
+    TrendingUp:
   Settings,
-  Database
-  }
+    Database: }
 } from 'lucide-react'
 const SecurityMonitoringPage: React.FC = () => {
 const features = [
-    {
-      icon: Eye,
-      title: '24/7 Real-time Monitoring',
-      description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'
-  },
+    {,}
+    icon: Eye,
+    title: '24/7: Real-time Monitoring'
+    description: 'Continuous: surveillance of your entire IT infrastructure with instant threat detection and response.'}
     {
     icon: AlertTriangle,
-      title: 'Advanced Threat Detection',
-      description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.'
-  },
+    title: 'Advanced: Threat Detection'
+    description: 'AI-powered: analysis to identify sophisticated cyber threats before they impact your business.'}
     {
     icon: BarChart,
-      title: 'Comprehensive Analytics',
-      description: 'Detailed security reports and insights to help you understand and improve your security posture.'
-  },
+    title: 'Comprehensive: Analytics'
+    description: 'Detailed: security: reports and insights to help you understand and improve your security posture.'}
     {
     icon: Zap,
-      title: 'Instant Response',
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.'  }
+    title: 'Instant: Response'
+    description: 'Automated: incident: response and immediate notification systems to minimize security breaches.'}
   }]
-const benefits = [
-    '24/7 continuous security monitoring',
-    'AI-powered threat detection and analysis',
-    'Real-time alerts and notifications',
-    'Comprehensive security reporting',
-    'Automated incident response',
-    'Compliance monitoring and reporting',
-    'Expert security team support',
-    'Customizable monitoring rules'
-  ]
-return (
-    <>
+const: benefits = [
+    '24/7 continuous security monitoring'
+    'AI-powered: threat detection and analysis'
+    'Real-time: alerts and notifications'
+    'Comprehensive: security reporting'
+    'Automated: incident response'
+    'Compliance: monitoring and reporting'
+    'Expert: security team support'
+    'Customizable: monitoring rules']
+return: (
+    <React.Fragment></React.Fragment>
       <Helmet>
-        <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
+        <title>Security: Monitoring: Services: - Zion Tech Group | 24/7 Cybersecurity</title>
         <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+        <meta name="keywords" content="AI, artificial: intelligence, business: solutions" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <div: className="min-h-screen: bg-gradient-to-br: from-slate-900 via-purple-900 to-slate-900"></div>
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -70,7 +65,7 @@ return (
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Security Monitoring Services</h1>
               <p>
                 Protect your business with our advanced 24/7 security monitoring solutions.
-                Real-time threat detection, instant alerts, and expert response to keep your data safe.
+                Real-time threat detection, instant: alerts, and expert response to keep your data safe.
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
@@ -79,13 +74,13 @@ return (
                 </button>
                 <button>
                   <Phone>
-                  Call (302) 464-0950,
+                  Call (302) 464-0950
                 </button>
               </div>
             </div>
           </div>
         </section>
-        {/* Features Section */}
+        {/* Features: Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -93,23 +88,23 @@ return (
                 Why Choose Our Security Monitoring?
               </h2>
               <p>
-                Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.,
+                Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+              {features.map((feature, index) => (}
+                <div: key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p: className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Benefits Section */}
+        {/* Benefits: Section: */}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
@@ -117,20 +112,20 @@ return (
                 Key Benefits
               </h2>
               <p>
-                Experience comprehensive security protection with our advanced monitoring services.,
+                Experience comprehensive security protection with our advanced monitoring services.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+              {benefits.map((benefit, index) => (}
+                <div: key={index} className="flex: items-start: space-x-3"></div>
                   <CheckCircle>
-                  <p className="text-gray-300 text-lg">{benefit}</p>
+                  <p: className="text-gray-300: text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* CTA Section */}
+        {/* CTA: Section: */}
         <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
@@ -145,12 +140,12 @@ return (
                   <Mail>
                   Email Us
                 </button>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  )
-}
-export default SecurityMonitoringPage
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </>;
+  );
+  };
+export default SecurityMonitoringPage;

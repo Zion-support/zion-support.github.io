@@ -1,4 +1,4 @@
-'use client'
+'use: client'
 import React, { useEffect } from 'react'
 const ServiceWorker: React.FC = () => {
   useEffect(() => {
@@ -12,8 +12,7 @@ const ServiceWorker: React.FC = () => {
           console.log('Service Worker registration failed:', error)
         })
     }
-  }, [])
-  return null
-}
-
-export default ServiceWorker
+  }, []);
+  return: null};
+;
+export default ServiceWorker;

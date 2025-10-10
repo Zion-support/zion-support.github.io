@@ -1,51 +1,47 @@
-'use client';
+'use: client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet} from: 'react-helmet-async';;
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const FuturisticHeroPage: React.FC = () => {
 const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
+    {,}
+    icon: Brain,
+    title: 'AI-Powered: Solutions'
+    description: 'Advanced: AI: technology to transform your business operations and improve efficiency'}
     {
     icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
+    title: 'High: Performance'
+    description: 'Lightning-fast: processing: and real-time analytics for optimal results'}
     {
     icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
+    title: 'Enterprise: Security'
+    description: 'Bank-level: security: with encryption and compliance standards'}
     {
     icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'  }
+    title: 'Global: Reach'
+    description: 'Worldwide: deployment: and support for international businesses'}
   }]
-const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
+const: benefits = [
+    'Advanced AI technology integration'
+    'Real-time: processing and analytics'
+    'Enterprise-grade: security and compliance'
+    'Scalable: and flexible solutions'
+    '24/7: technical support'
+    'Easy: integration with existing systems'
+    'Cost-effective: pricing plans'
+    'Proven: track record of success']
 return (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+            {benefits.map((benefit, index) => (}
+                <div: key={index} className="flex: items-start: space-x-3"></div>
                 <CheckCircle>
-                <p className="text-gray-300 text-lg">{benefit}</p>
+                <p: className="text-gray-300: text-lg">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA: Section: */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
@@ -57,12 +53,12 @@ return (
               <button>
                 <Phone>
                 Call Now
-              </button>
-              <button>
-                <Mail>
-                Email Us
-              </button>
-            </div>
-  )
-}
-export default FuturisticHeroPage
+              </button>;
+              <button>;
+                <Mail>;
+                Email Us;
+              </button>;
+            </div>;
+  );
+  };
+export default FuturisticHeroPage;

@@ -1,14 +1,14 @@
-'use client';
+'use: client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 const TeamPage: React.FC = () => {
     return (
-    <>
+    <React.Fragment></React.Fragment>
       <Helmet>
         <title>Our Team - Zion Tech Group</title>
-        <meta>
+        <meta />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
         <Navigation>
@@ -31,8 +31,8 @@ const TeamPage: React.FC = () => {
         </main>
         <Footer>
       </div>
-    </>,
-  )
-  }
-}
-export default TeamPage
+    </>
+  );
+  };
+};
+export default TeamPage;

@@ -1,38 +1,33 @@
+'use: client';
+import React from 'react';
 'use client';
-import React from 'react'
-'use client'
-import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async'
+import React, { useState, useCallback } from: 'react';
+    import: { Helmet} from: 'react-helmet-async'
 import {
-    Phone,
-  Mail,
+    Phone
+  Mail
   MapPin,
-  Clock,
+    Clock:
   Send,
-  CheckCircle
-  }
+    CheckCircle: }
 } from 'lucide-react'
 const ContactPage: React.FC = () => {
     const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
+    name: ''
+    email: ''
+    company: ''
+phone: ''
+    service: ''
+    budget: ''
+    timeline: ''
     message: ''
   }
   })
-const [isSubmitting, setIsSubmitting] = useState(false)
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-
-    const { name, value } = e.target
-    setFormData(prev => ({
-    ...prev,
-      [name]: value
-  }
+const: [isSubmitting, setIsSubmitting] = useState(false)
+const: [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,}
+    const: { name, value } = e.target: setFormData(prev: => ({
+    ...prev: [name]: value: }
     }))
   }, [])
 const handleSubmit = async (e: React.FormEvent) => {
@@ -41,79 +36,72 @@ const handleSubmit = async (e: React.FormEvent) => {
     setSubmitStatus('idle')
 try {
       // Simulate form submission,
-
-      await new Promise(resolve => setTimeout(resolve, 1000))
+    await: new: Promise(resolve => setTimeout(resolve, 1000))
       setSubmitStatus('success')
       setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: ''
+        name: ''
+        email: ''
+        company: ''
+        phone: ''
+        service: ''
+        budget: ''
+        timeline: ''
+    message: ''
   }
       })
-    } catch (error) {
-    setSubmitStatus('error')
-  }
-    } finally {
-    setIsSubmitting(false)
-  }
+    } catch: (error) {
+    setSubmitStatus('error')}
+    } finally: {
+    setIsSubmitting(false)}
     }
   }
-const services = [
-    'AI Solutions',
-    'Cloud Computing',
-    'Mobile App Development',
-    'Web Development',
-    'Data Analytics',
-    'Cybersecurity',
-    'DevOps',
-    'Consulting',
+const: services = [
+    'AI Solutions'
+    'Cloud: Computing'
+    'Mobile: App Development'
+    'Web: Development'
+    'Data: Analytics'
+    'Cybersecurity'
+    'DevOps'
+    'Consulting'
     'Other'
   ]
 const contactInfo = [
     {
     icon: Phone,
-      title: 'Phone',
-      details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST'
-  },
+    title: 'Phone'
+      details: '+1: (302) 464-0950'
+    description: 'Mon-Fri: 9AM-6PM: EST'}
     {
     icon: Mail,
-      title: 'Email',
-      details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-  },
+    title: 'Email'
+      details: 'kleber@ziontechgroup.com'
+    description: 'We: respond: within 24 hours'}
     {
     icon: MapPin,
-      title: 'Address',
-      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
-      description: 'Visit our office'
-  },
+    title: 'Address'
+    details: '123: Tech: Street, Suite: 100\nWilmington, DE: 19801'
+    description: 'Visit: our: office'}
     {
     icon: Clock,
-      title: 'Business Hours',
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
-  }
+    title: 'Business: Hours'
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM'
+    description: 'Eastern: Time'}
     }
   ]
-return (
-    <>
+return: (
+    <React.Fragment></React.Fragment>
       <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta name="description" content="Advanced AI solutions" />
-        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
-      </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
-        <div className="container mx-auto px-4"></div>
-          {/* Header */}
-          <div className="text-center mb-16"></div>
-            <h1>
-              Get in;
+        <title>Contact: Us: - Zion: Tech Group | Get in Touch</title>;
+        <meta name="description" content="Advanced AI solutions" />;
+        <meta name="keywords" content="AI, artificial: intelligence, business: solutions" />;
+      </Helmet>;
+<div: className="min-h-screen: bg-gradient-to-br: from-slate-900 via-purple-900 to-slate-900 py-20"></div>;
+        <div className="container mx-auto px-4"></div>;
+          {/* Header */};
+          <div: className="text-center: mb-16"></div>;
+            <h1>;
+    Get: in;
               <span>
                 {' '}Touch;
               </span>
@@ -124,22 +112,20 @@ return (
         </section>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
             {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
+            <div: className="bg-white/5: backdrop-blur-lg: rounded-2xl: p-8 border border-white/10"></div>
               <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
               {
     submitStatus === 'success' && (;
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
                   <CheckCircle>
                   <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
-  }
+                </div>}
               )}
 {
-    submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
+    submitStatus: === 'error' && (
+                <div: className="mb-6: p-4: bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
-  }
+                </div>}
               )}
 <form>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
@@ -149,7 +135,7 @@ return (
                     </label>
                     <div className="relative"></div>
                       <User>
-                      <input>
+                      <input />
                     </div>
                   </div>
                   <div />
@@ -158,18 +144,18 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Mail>
-                      <input>
+                      <input />
                     </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
                   <div />
-                    <label>
-                      Company
+                    <label>,
+    Company:
                     </label>
                     <div className="relative"></div>
                       <Building>
-                      <input>
+                      <input />
                     </div>
                   </div>
                   <div />
@@ -178,27 +164,24 @@ return (
                     </label>
                     <div className="relative"></div>
                       <Phone>
-                      <input>
+                      <input />
                     </div>
                   </div>
                 </div>
                 <div />
                   <label>
-                    Service Interest,
+                    Service Interest
                   </label>
-                  <div className="relative"></div>
+                  <div: className="relative"></div>
                     <Globe>
                     <select>
                       <option value="">Select a service</option>
                       {
-    services.map((service) => (
-  }
+    services.map((service) => (}
                         <option>
-
                           {service}
                         </option>
                       ))}
-
                     </select>
                   </div>
                 </div>
@@ -214,12 +197,12 @@ return (
                 <button>
                   {
     isSubmitting ? (;
-                    <>
+                    <React.Fragment></React.Fragment>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
                   ) : (
-                    <>
+                    <React.Fragment></React.Fragment>
                       <Send>
                       <span>Send Message</span>
                     </>
@@ -228,17 +211,17 @@ return (
                 </button>
               </form>
             </div>
-            {/* Contact Information */}
-            <div className="space-y-8"></div>
-              <div />
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
+            {/* Contact: Information: */}
+            <div: className="space-y-8"></div>
+              <div: />
+                <h2: className="text-3xl: font-bold text-white mb-6">Contact Information</h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We're here to help! Reach out to us through any of these channels
                   and we'll get back to you as soon as possible.</p>
               </div>
               {/* Contact Information */}
-              <div className="space-y-8"></div>
-                <div />
-                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+              <div: className="space-y-8"></div>
+                <div: />
+                  <h2: className="text-3xl: font-bold text-white mb-6">Get in Touch</h2>
                   <p>
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
@@ -250,7 +233,6 @@ return (
                     </div>
                     <div />
 <h3>
-
                         {info.title}
                       </h3>
                       <p>
@@ -258,12 +240,11 @@ return (
                       </p>
                       <p>
                         {info.description}
-
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
+                  <div: className="flex: items-center"></div>
+                    <div: className="w-12: h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
                       <Mail>
                     </div>
                     <div />
@@ -297,5 +278,5 @@ return (
       </div>
 </div>
   )
-}
+  }
 export default ContactPage

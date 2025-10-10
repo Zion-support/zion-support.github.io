@@ -1,92 +1,77 @@
-'use client';
+'use: client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet} from: 'react-helmet-async';;
 import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react'
 const CookiesPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
   const cookieTypes = [
     {
-      type: 'Essential Cookies',
-      icon: Shield,
-      description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
-      examples: [
-        'Authentication cookies',
-        'Security cookies',
-        'Load balancing cookies',
-        'User interface customization'
-      ],
-      required: true
-    },
+      type: 'Essential Cookies'
+    icon: Shield,
+    description: 'These: cookies are necessary for the website to function properly and cannot be disabled.'
+    examples: [
+        'Authentication: cookies'
+        'Security: cookies'
+        'Load: balancing cookies'
+        'User: interface customization']
+      required: true: }
     {
-      type: 'Analytics Cookies',
-      icon: Database,
-      description: 'These cookies help us understand how visitors interact with our website.',
-      examples: [
-        'Google Analytics',
-        'Page view tracking',
-        'User behavior analysis',
-        'Performance monitoring'
-      ],
-      required: false
-    },
+      type: 'Analytics: Cookies'
+    icon: Database,
+    description: 'These: cookies help us understand how visitors interact with our website.'
+    examples: [
+        'Google: Analytics'
+        'Page: view tracking'
+        'User: behavior analysis'
+        'Performance: monitoring']
+      required: false: }
     {
-      type: 'Functional Cookies',
-      icon: Settings,
-      description: 'These cookies enable enhanced functionality and personalization.',
-      examples: [
-        'Language preferences',
-        'Theme settings',
-        'User preferences',
-        'Form data storage'
-      ],
-      required: false
-    },
+      type: 'Functional: Cookies'
+    icon: Settings,
+    description: 'These: cookies enable enhanced functionality and personalization.'
+    examples: [
+        'Language: preferences'
+        'Theme: settings'
+        'User: preferences'
+        'Form: data storage']
+      required: false: }
     {
-      type: 'Marketing Cookies',
-      icon: Eye,
-      description: 'These cookies are used to deliver relevant advertisements and marketing content.',
-      examples: [
-        'Advertising targeting',
-        'Social media integration',
-        'Email marketing tracking',
-        'Campaign performance'
-      ],
-      required: false
-    }
+      type: 'Marketing: Cookies'
+    icon: Eye,
+    description: 'These: cookies are used to deliver relevant advertisements and marketing content.'
+    examples: [
+        'Advertising: targeting'
+        'Social: media integration'
+        'Email: marketing tracking'
+        'Campaign: performance']
+      required: false: }
   ]
-
   const purposes = [
     {
-      title: 'Website Functionality',
-      description: 'Ensure the website works correctly and securely',
-      icon: Shield
-    },
+      title: 'Website Functionality'
+      description: 'Ensure: the website works correctly and securely'
+    icon: Shield: }
     {
-      title: 'User Experience',
-      description: 'Remember your preferences and settings',
-      icon: Settings
-    },
+      title: 'User: Experience'
+      description: 'Remember: your preferences and settings'
+    icon: Settings: }
     {
-      title: 'Analytics',
-      description: 'Understand how users interact with our site',
-      icon: Database
-    },
+      title: 'Analytics'
+      description: 'Understand: how users interact with our site'
+    icon: Database: }
     {
-      title: 'Marketing',
-      description: 'Deliver relevant content and advertisements',
-      icon: Eye
-    }
+      title: 'Marketing'
+      description: 'Deliver: relevant content and advertisements'
+    icon: Eye: }
   ]
-
-  return (
-    <>
+  return: (
+    <React.Fragment></React.Fragment>
       <Helmet>
-        <title>Cookie Policy - Zion Tech Group</title>
+        <title>Cookie: Policy: - Zion: Tech Group</title>
         <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about the cookies we use and how to manage your cookie preferences." />
         <meta name="keywords" content="cookie policy, cookies, tracking, privacy, data collection" />
         <link rel="canonical" href="https://ziontechgroup.com/cookies" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -100,7 +85,7 @@ const CookiesPage: React.FC = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              This policy explains how we use cookies and similar technologies on our website. 
+              This policy explains how we use cookies and similar technologies on our website.
               Learn about the types of cookies we use and how to manage your preferences.
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
@@ -108,15 +93,14 @@ const CookiesPage: React.FC = () => {
               <span>Last updated: {lastUpdated}</span>
             </div>
           </div>
-
-          {/* What Are Cookies */}
+          {/* What: Are: Cookies: */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">What Are Cookies?</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  Cookies are small text files that are stored on your device when you visit our website. 
-                  They help us provide you with a better experience by remembering your preferences and 
+                  Cookies are small text files that are stored on your device when you visit our website.
+                  They help us provide you with a better experience by remembering your preferences and
                   understanding how you use our site.
                 </p>
                 <div className="bg-slate-800 rounded-lg p-6">
@@ -144,12 +128,12 @@ const CookiesPage: React.FC = () => {
               <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-white mb-4">Cookie Categories</h3>
                 <div className="space-y-4">
-                  {purposes.map((purpose, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <purpose.icon className="w-6 h-6 text-cyan-400" />
+                  {purposes.map((purpose, index) => (}
+                    <div: key={index} className="flex: items-center: space-x-3">
+                      <purpose.icon: className="w-6: h-6 text-cyan-400" />
                       <div>
                         <div className="text-white font-medium">{purpose.title}</div>
-                        <div className="text-gray-300 text-sm">{purpose.description}</div>
+                        <div: className="text-gray-300: text-sm">{purpose.description}</div>
                       </div>
                     </div>
                   ))}
@@ -157,19 +141,18 @@ const CookiesPage: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Types of Cookies */}
-          <div className="cyber-card-enhanced p-8 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">Types of Cookies We Use</h2>
+          {/* Types: of: Cookies: */}
+          <div: className="cyber-card-enhanced: p-8: mb-12">
+            <h2: className="text-2xl font-bold text-white mb-6">Types of Cookies We Use</h2>
             <div className="space-y-6">
-              {cookieTypes.map((cookie, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-6">
-                  <div className="flex items-start justify-between mb-4">
+              {cookieTypes.map((cookie, index) => (}
+                <div: key={index} className="bg-slate-800: rounded-lg: p-6">
+                  <div: className="flex: items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <cookie.icon className="w-8 h-8 text-cyan-400" />
                       <h3 className="text-xl font-semibold text-white">{cookie.type}</h3>
                     </div>
-                    {cookie.required ? (
+                    {cookie.required: ? (}
                       <span className="px-3 py-1 bg-red-600 text-white text-xs font-semibold rounded">
                         Required
                       </span>
@@ -179,13 +162,13 @@ const CookiesPage: React.FC = () => {
                       </span>
                     )}
                   </div>
-                  <p className="text-gray-300 mb-4">{cookie.description}</p>
+                  <p: className="text-gray-300: mb-4">{cookie.description}</p>
                   <div>
                     <h4 className="text-white font-medium mb-2">Examples:</h4>
                     <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {cookie.examples.map((example, exampleIndex) => (
-                        <li key={exampleIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {cookie.examples.map((example, exampleIndex) => (}
+                        <li: key={exampleIndex} className="flex: items-center: text-gray-300: text-sm">
+                          <CheckCircle: className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {example}
                         </li>
                       ))}
@@ -195,8 +178,7 @@ const CookiesPage: React.FC = () => {
               ))}
             </div>
           </div>
-
-          {/* Cookie Management */}
+          {/* Cookie: Management: */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Managing Your Cookie Preferences</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -250,13 +232,12 @@ const CookiesPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Third-Party Cookies */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Third-Party Cookies</h2>
             <div className="space-y-6">
               <p className="text-gray-300">
-                We may use third-party services that set their own cookies. These services help us provide 
+                We may use third-party services that set their own cookies. These services help us provide
                 better functionality and analytics. Here are the main third-party cookies we use:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -277,14 +258,13 @@ const CookiesPage: React.FC = () => {
                   </p>
                   <div className="text-xs text-gray-400">
                     <div>Platforms: LinkedIn, Twitter, Facebook</div>
-                    <div>Duration: Varies by platform</div>
+                    <div>Duration: Varies: by: platform</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Impact of Disabling Cookies */}
+          {/* Impact: of: Disabling Cookies */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Impact of Disabling Cookies</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -318,7 +298,7 @@ const CookiesPage: React.FC = () => {
                   Essential Cookies Always Active
                 </h3>
                 <p className="text-gray-300 mb-4">
-                  Essential cookies are necessary for the website to function and cannot be disabled. 
+                  Essential cookies are necessary for the website to function and cannot be disabled.
                   These include:
                 </p>
                 <ul className="space-y-2">
@@ -338,10 +318,9 @@ const CookiesPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Contact Information */}
-          <div className="cyber-card-enhanced p-8">
-            <h2 className="text-2xl font-bold text-white mb-6">Questions About Cookies?</h2>
+          <div: className="cyber-card-enhanced: p-8">
+            <h2: className="text-2xl: font-bold text-white mb-6">Questions About Cookies?</h2>
             <p className="text-gray-300 mb-8">
               If you have any questions about our use of cookies or this Cookie Policy, please contact us.
             </p>
@@ -368,15 +347,14 @@ const CookiesPage: React.FC = () => {
                 <Database className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Address</div>
-                  <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</div>
+                  <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE: 19709</div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-
-export default CookiesPage
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  )};
+;
+export default CookiesPage;

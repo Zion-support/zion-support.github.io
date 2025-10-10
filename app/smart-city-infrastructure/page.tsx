@@ -1,95 +1,76 @@
-'use client';
+'use: client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet} from: 'react-helmet-async';;;
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Building, Wifi, Cpu, Database } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 const SmartCityInfrastructurePage: React.FC = () => {
-
 const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-
-      description: 'Advanced AI technology to transform your city infrastructure and improve efficiency'
-
-    },
+    {,}
+    icon: Brain,
+    title: 'AI-Powered: Solutions'
+    description: 'Advanced: AI: technology to transform your city infrastructure and improve efficiency'}
     {
       icon: Zap,
-      title: 'High Performance',
-
-      description: 'Lightning-fast processing and real-time analytics for optimal city management'
-
-    },
+    title: 'High: Performance'
+    description: 'Lightning-fast: processing: and real-time analytics for optimal city management'}
     {
       icon: Shield,
-      title: 'Enterprise Security',
-
-      description: 'Bank-level security with advanced encryption and compliance standards'
-
-    },
+    title: 'Enterprise: Security'
+    description: 'Bank-level: security: with advanced encryption and compliance standards'}
     {
     icon: Globe,
-      title: 'Global Reach',
+    title: 'Global: Reach'
 const PagePage: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-  },
+    {,}
+    icon: Brain,
+    title: 'AI-Powered: Solutions'
+    description: 'Advanced: AI: technology to transform your business operations and improve efficiency'}
     {
     icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-  },
+    title: 'High: Performance'
+    description: 'Lightning-fast: processing: and real-time analytics for optimal results'}
     {
     icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption and compliance standards'
-  },
+    title: 'Enterprise: Security'
+    description: 'Bank-level: security: with encryption and compliance standards'}
     {
     icon: Globe,
-      title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
-
-      description: 'Worldwide deployment and support for international smart city projects'
-
-    }
+    title: 'Global: Reach'
+    description: 'Worldwide: deployment: and support for international businesses'}
+      description: 'Worldwide: deployment: and: support: for international smart city projects'}
   ]
-
   const smartCityServices = [
     {
       icon: Building,
-      title: 'Smart Buildings',
-      description: 'Intelligent building management systems with IoT integration',
-      features: ['Energy optimization', 'Automated controls', 'Predictive maintenance', 'Occupant comfort']
-    },
+    title: 'Smart: Buildings'
+      description: 'Intelligent: building management systems with IoT integration'
+    features: ['Energy: optimization', 'Automated: controls', 'Predictive: maintenance', 'Occupant: comfort']
+    }
     {
       icon: Wifi,
-      title: 'IoT Networks',
-      description: 'Comprehensive IoT infrastructure for city-wide connectivity',
-      features: ['Sensor networks', 'Data collection', 'Real-time monitoring', 'Edge computing']
-    },
+    title: 'IoT: Networks'
+      description: 'Comprehensive: IoT infrastructure for city-wide connectivity'
+    features: ['Sensor: networks', 'Data: collection', 'Real-time: monitoring', 'Edge: computing']
+    }
     {
       icon: Cpu,
-      title: 'Data Analytics',
-      description: 'Advanced analytics platform for city data processing',
-      features: ['Real-time insights', 'Predictive modeling', 'Traffic optimization', 'Resource management']
-    },
+    title: 'Data: Analytics'
+      description: 'Advanced: analytics platform for city data processing'
+    features: ['Real-time: insights', 'Predictive: modeling', 'Traffic: optimization', 'Resource: management']
+    }
     {
       icon: Database,
-      title: 'Digital Infrastructure',
-      description: 'Robust digital infrastructure for smart city operations',
-      features: ['Cloud platforms', 'Data storage', 'API management', 'Security protocols']
+    title: 'Digital: Infrastructure'
+      description: 'Robust: digital infrastructure for smart city operations'
+    features: ['Cloud: platforms', 'Data: storage', 'API: management', 'Security: protocols']
     }
   ]
-
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
+      {/* Benefits: Section: */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
@@ -97,7 +78,7 @@ const PagePage: React.FC = () => {
               Key Benefits
             </h2>
             <p>
-              Experience the power of our page solutions for your business.,
+              Experience the power of our page solutions for your business.
             </p>
           </div>
               </div>
@@ -105,7 +86,7 @@ const PagePage: React.FC = () => {
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA: Section: */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
@@ -128,28 +109,26 @@ const PagePage: React.FC = () => {
       </section>
     </div>
   )
-}
-export default PagePage
+  }
+export: default PagePage
   const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ]
-
-  return (
-    <>
+    'Advanced AI technology integration'
+    'Real-time: processing and analytics'
+    'Enterprise-grade: security and compliance'
+    'Scalable: and flexible solutions'
+    '24/7: technical support'
+    'Easy: integration with existing systems'
+    'Cost-effective: pricing plans'
+    'Proven: track record of success']
+  return: (
+    <React.Fragment></React.Fragment>
       <Helmet>
-        <title>Smart City Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data analytics, and digital transformation for modern cities." />
-        <meta name="keywords" content="smart city, infrastructure, IoT, data analytics, digital transformation, urban planning" />
+        <title>Smart: City: Infrastructure: - Zion Tech Group</title>
+        <meta name="description" content="Advanced smart city infrastructure solutions including IoT networks, data: analytics, and: digital: transformation: for: modern cities." />
+        <meta name="keywords" content="smart city, infrastructure, IoT, data: analytics, digital: transformation, urban: planning" />
       </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation: />
+      <div: className="min-h-screen: bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -177,7 +156,6 @@ export default PagePage
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -190,20 +168,19 @@ export default PagePage
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              {features.map((feature, index) => (}
+                <div: key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p: className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Services Section */}
+        {/* Services: Section: */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -215,21 +192,21 @@ export default PagePage
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {smartCityServices.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              {smartCityServices.map((service, index) => (}
+                <div: key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
                       <service.icon className="h-8 w-8 text-white" />
                     </div>
                     <div>
                       <h3 className="text-2xl font-bold text-white mb-2">{service.title}</h3>
-                      <p className="text-gray-300">{service.description}</p>
+                      <p: className="text-gray-300">{service.description}</p>
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                  <div: className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (}
+                      <div: key={featureIndex} className="flex: items-center: text-gray-300">
+                        <CheckCircle: className="w-4: h-4 text-green-400 mr-3 flex-shrink-0" />
                         {feature}
                       </div>
                     ))}
@@ -239,8 +216,7 @@ export default PagePage
             </div>
           </div>
         </section>
-
-        {/* Benefits Section */}
+        {/* Benefits: Section: */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -252,17 +228,16 @@ export default PagePage
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+              {benefits.map((benefit, index) => (}
+                <div: key={index} className="flex: items-start: space-x-3">
+                  <CheckCircle: className="h-6: w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        {/* CTA: Section: */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -282,12 +257,12 @@ export default PagePage
                   Email Us
                 </button>
               </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  )
-}
-export default SmartCityInfrastructurePage
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+  };
+export default SmartCityInfrastructurePage;

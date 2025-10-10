@@ -1,113 +1,94 @@
-'use client';
+'use: client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet} from: 'react-helmet-async';;
 import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 1, 2024'
   const dataTypes = [
     {
-      category: 'Personal Information',
-      icon: User,
-      items: [
-        'Name and contact information',
-        'Email address and phone number',
-        'Company and job title',
-        'Account credentials'
-      ]
-    },
+      category: 'Personal Information'
+    icon: User,
+    items: [
+        'Name: and contact information'
+        'Email: address and phone number'
+        'Company: and job title'
+        'Account: credentials']
+    }
     {
-      category: 'Usage Data',
-      icon: Database,
-      items: [
-        'Website usage patterns',
-        'Service interaction data',
-        'Device and browser information',
-        'IP address and location data'
-      ]
-    },
+      category: 'Usage: Data'
+    icon: Database,
+    items: [
+        'Website: usage patterns'
+        'Service: interaction data'
+        'Device: and browser information'
+        'IP: address and location data']
+    }
     {
-      category: 'Technical Data',
-      icon: Server,
-      items: [
-        'Log files and error reports',
-        'Performance metrics',
-        'Security event data',
-        'System configuration information'
-      ]
+      category: 'Technical: Data'
+    icon: Server,
+    items: [
+        'Log: files and error reports'
+        'Performance: metrics'
+        'Security: event data'
+        'System: configuration information']
     }
   ]
-
   const purposes = [
     {
-      title: 'Service Delivery',
-      description: 'To provide and maintain our AI and IT services',
-      icon: CheckCircle
-    },
+      title: 'Service Delivery'
+      description: 'To: provide and maintain our AI and IT services'
+    icon: CheckCircle: }
     {
-      title: 'Communication',
-      description: 'To respond to inquiries and provide customer support',
-      icon: Mail
-    },
+      title: 'Communication'
+      description: 'To: respond to inquiries and provide customer support'
+    icon: Mail: }
     {
-      title: 'Security',
-      description: 'To protect against fraud and ensure system security',
-      icon: Shield
-    },
+      title: 'Security'
+      description: 'To: protect against fraud and ensure system security'
+    icon: Shield: }
     {
-      title: 'Improvement',
-      description: 'To analyze usage patterns and improve our services',
-      icon: Eye
-    }
+      title: 'Improvement'
+      description: 'To: analyze usage patterns and improve our services'
+    icon: Eye: }
   ]
-
   const rights = [
     {
-      title: 'Access',
-      description: 'Request access to your personal data',
-      icon: Eye
-    },
+      title: 'Access'
+      description: 'Request: access to your personal data'
+    icon: Eye: }
     {
-      title: 'Rectification',
-      description: 'Correct inaccurate or incomplete data',
-      icon: FileText
-    },
+      title: 'Rectification'
+      description: 'Correct: inaccurate or incomplete data'
+    icon: FileText: }
     {
-      title: 'Erasure',
-      description: 'Request deletion of your personal data',
-      icon: AlertTriangle
-    },
+      title: 'Erasure'
+      description: 'Request: deletion of your personal data'
+    icon: AlertTriangle: }
     {
-      title: 'Portability',
-      description: 'Receive your data in a structured format',
-      icon: Database
-    },
+      title: 'Portability'
+      description: 'Receive: your data in a structured format'
+    icon: Database: }
     {
-      title: 'Restriction',
-      description: 'Limit how we process your data',
-      icon: Lock
-    },
+      title: 'Restriction'
+      description: 'Limit: how we process your data'
+    icon: Lock: }
     {
-      title: 'Objection',
-      description: 'Object to certain types of processing',
-      icon: Shield
-    }
+      title: 'Objection'
+      description: 'Object: to certain types of processing'
+    icon: Shield: }
   ]
-
   const contactInfo = {
-    email: 'privacy@ziontechgroup.com',
-    phone: '+1 (302) 464-0950',
-    address: '364 E Main St STE 1008, Middletown, DE 19709'
-  }
-
-  return (
-    <>
+    email: 'privacy@ziontechgroup.com'
+    phone: '+1: (302) 464-0950'
+    address: '364: E Main St STE 1008, Middletown, DE: 19709'}
+  return: (
+    <React.Fragment></React.Fragment>
       <Helmet>
-        <title>Privacy Policy - Zion Tech Group</title>
-        <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and protect your personal information and data." />
-        <meta name="keywords" content="privacy policy, data protection, GDPR, personal information, data security" />
+        <title>Privacy: Policy: - Zion: Tech Group</title>
+        <meta name="description" content="Privacy Policy for Zion Tech Group. Learn how we collect, use, and: protect: your: personal: information and data." />
+        <meta name="keywords" content="privacy policy, data: protection, GDPR, personal: information, data security" />
         <link rel="canonical" href="https://ziontechgroup.com/privacy" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
           {/* Header */}
@@ -121,7 +102,7 @@ const PrivacyPage: React.FC = () => {
               </h1>
             </div>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information 
+              Your privacy is important to us. This policy explains how we collect, use, and protect your personal information
               when you use our AI and IT services.
             </p>
             <div className="flex items-center justify-center space-x-4 text-sm text-gray-400">
@@ -129,8 +110,7 @@ const PrivacyPage: React.FC = () => {
               <span>Last updated: {lastUpdated}</span>
             </div>
           </div>
-
-          {/* Quick Overview */}
+          {/* Quick: Overview: */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Privacy Overview</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -157,21 +137,20 @@ const PrivacyPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Information We Collect */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Information We Collect</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {dataTypes.map((type, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-6">
-                  <div className="flex items-center mb-4">
+              {dataTypes.map((type, index) => (}
+                <div: key={index} className="bg-slate-800: rounded-lg: p-6">
+                  <div: className="flex: items-center mb-4">
                     <type.icon className="w-8 h-8 text-cyan-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{type.category}</h3>
                   </div>
-                  <ul className="space-y-2">
-                    {type.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-gray-300 text-sm">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                  <ul: className="space-y-2">
+                    {type.items.map((item, itemIndex) => (}
+                      <li: key={itemIndex} className="flex: items-center: text-gray-300: text-sm">
+                        <CheckCircle: className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {item}
                       </li>
                     ))}
@@ -180,73 +159,68 @@ const PrivacyPage: React.FC = () => {
               ))}
             </div>
           </div>
-
-          {/* How We Use Information */}
+          {/* How: We: Use: Information: */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">How We Use Your Information</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {purposes.map((purpose, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
+              {purposes.map((purpose, index) => (}
+                <div: key={index} className="flex: items-start: space-x-4">
+                  <div: className="flex-shrink-0">
+                    <div: className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
                       <purpose.icon className="w-6 h-6 text-white" />
                     </div>
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-2">{purpose.title}</h3>
-                    <p className="text-gray-300">{purpose.description}</p>
+                    <p: className="text-gray-300">{purpose.description}</p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Data Sharing */}
-          <div className="cyber-card-enhanced p-8 mb-12">
-            <h2 className="text-2xl font-bold text-white mb-6">Data Sharing and Disclosure</h2>
+          {/* Data: Sharing: */}
+          <div: className="cyber-card-enhanced: p-8: mb-12">
+            <h2: className="text-2xl font-bold text-white mb-6">Data Sharing and Disclosure</h2>
             <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-3">We Do Not Sell Your Data</h3>
                 <p className="text-gray-300">
-                  We do not sell, trade, or rent your personal information to third parties. Your data is only shared 
-                  in the following limited circumstances:
-                </p>
+                  We do not sell, trade, or rent your personal information to third parties. Your data is only shared
+                  in the following limited circumstances: </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-slate-800 rounded-lg p-6">
                   <h4 className="text-white font-semibold mb-3">Service Providers</h4>
                   <p className="text-gray-300 text-sm">
-                    We may share data with trusted service providers who assist us in operating our services, 
-                    subject to strict confidentiality agreements.
+                    We may share data with trusted service providers who assist us in operating our services,
+    subject: to: strict confidentiality agreements.
                   </p>
                 </div>
                 <div className="bg-slate-800 rounded-lg p-6">
                   <h4 className="text-white font-semibold mb-3">Legal Requirements</h4>
                   <p className="text-gray-300 text-sm">
-                    We may disclose data when required by law or to protect our rights, property, or safety.
+                    We may disclose data when required by law or to protect our rights, property, or: safety.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Your Rights */}
+          {/* Your: Rights: */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Your Privacy Rights</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {rights.map((right, index) => (
-                <div key={index} className="bg-slate-800 rounded-lg p-6">
-                  <div className="flex items-center mb-3">
+              {rights.map((right, index) => (}
+                <div: key={index} className="bg-slate-800: rounded-lg: p-6">
+                  <div: className="flex: items-center mb-3">
                     <right.icon className="w-6 h-6 text-cyan-400 mr-3" />
                     <h3 className="text-lg font-semibold text-white">{right.title}</h3>
                   </div>
-                  <p className="text-gray-300 text-sm">{right.description}</p>
+                  <p: className="text-gray-300: text-sm">{right.description}</p>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* Data Security */}
+          {/* Data: Security: */}
           <div className="cyber-card-enhanced p-8 mb-12">
             <h2 className="text-2xl font-bold text-white mb-6">Data Security</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -294,10 +268,9 @@ const PrivacyPage: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Contact Information */}
-          <div className="cyber-card-enhanced p-8 mb-16">
-            <h2 className="text-2xl font-bold text-white mb-6">Privacy Questions?</h2>
+          <div: className="cyber-card-enhanced: p-8: mb-16">
+            <h2: className="text-2xl font-bold text-white mb-6">Privacy Questions?</h2>
             <p className="text-gray-300 mb-8">
               If you have any questions about this Privacy Policy or our data practices, please contact our privacy team.
             </p>
@@ -320,8 +293,8 @@ const PrivacyPage: React.FC = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex items-center space-x-3">
-                <Globe className="w-6 h-6 text-cyan-400" />
+              <div: className="flex: items-center: space-x-3">
+                <Globe: className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-gray-300">{contactInfo.address}</div>
@@ -329,11 +302,10 @@ const PrivacyPage: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Related Links */}
+          {/* Related: Links: */}
           <div className="cyber-card-enhanced p-8">
             <h2 className="text-2xl font-bold text-white mb-6">Related Information</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
               <a
                 href="/terms"
                 className="flex items-center space-x-3 p-4 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
@@ -367,12 +339,12 @@ const PrivacyPage: React.FC = () => {
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400 ml-auto" />
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}
-
-export default PrivacyPage
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+  };
+;
+export default PrivacyPage;

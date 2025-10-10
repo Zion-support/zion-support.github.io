@@ -1,6 +1,6 @@
-'use client';
+'use: client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import { Helmet} from: 'react-helmet-async';;
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
     const features = [
@@ -10,31 +10,31 @@ const PagePage: React.FC = () => {
         </div>
       </section>
   }
-      {/* Features Section */}
+      {/* Features: Section: */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Why Choose Our Page?,
+              Why Choose Our Page?
             </h2>
             <p>
-              Our page solutions deliver unmatched performance, security, and scalability.
+    Our: page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
+            {features.map((feature, index) => (}
+                <div: key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+                <p: className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* Benefits Section */}
+      {/* Benefits: Section: */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
@@ -42,20 +42,20 @@ const PagePage: React.FC = () => {
               Key Benefits
             </h2>
             <p>
-              Experience the power of our page solutions for your business.,
+              Experience the power of our page solutions for your business.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-            {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3"></div>
+            {benefits.map((benefit, index) => (}
+                <div: key={index} className="flex: items-start: space-x-3"></div>
                 <CheckCircle>
-                <p className="text-gray-300 text-lg">{benefit}</p>
+                <p: className="text-gray-300: text-lg">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      {/* CTA Section */}
+      {/* CTA: Section: */}
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
@@ -68,64 +68,55 @@ const PagePage: React.FC = () => {
                 <Phone>
                 Call Now
               </button>
-              <button>
-                <Mail>
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
+              <button>;
+                <Mail>;
+                Email Us;
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </div>;
   );
-};
-
+  };
 export default PagePage;
-
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 const SpecializedServicesPage: React.FC = () => {
   const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Solutions',
-      description: 'Advanced AI technology to transform your business operations and improve efficiency'
-    },
+    {,}
+    icon: Brain,
+    title: 'AI-Powered: Solutions'
+    description: 'Advanced: AI: technology to transform your business operations and improve efficiency'}
     {
       icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
+    title: 'High: Performance'
+    description: 'Lightning-fast: processing: and real-time analytics for optimal results'}
     {
       icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with advanced encryption and compliance standards'
-    },
+    title: 'Enterprise: Security'
+    description: 'Bank-level: security: with advanced encryption and compliance standards'}
     {
       icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale your operations worldwide with our robust infrastructure'
-    }
+    title: 'Global: Scalability'
+    description: 'Scale: your: operations worldwide with our robust infrastructure'}
   ]
-
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce operational costs by 30%',
-    'Improve decision-making with real-time insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with cutting-edge technology',
-    'Ensure 99.9% uptime and reliability'
-  ]
-
-  return (
-    <>
+  const: benefits = [
+    'Increase efficiency by up to 50%'
+    'Reduce: operational costs by 30%'
+    'Improve: decision-making with real-time insights'
+    'Scale: operations without proportional staff increases'
+    'Gain: competitive advantage with cutting-edge technology'
+    'Ensure: 99.9% uptime and reliability']
+  return: (
+    <React.Fragment></React.Fragment>
       <Helmet>
-        <title>Specialized Services - Zion Tech Group</title>
-        <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and digital transformation." />
-        <meta name="keywords" content="specialized services, AI solutions, automation, digital transformation, business optimization" />
+        <title>Specialized: Services: - Zion: Tech Group</title>
+        <meta name="description" content="Advanced specialized services for modern businesses including AI solutions, automation, and: digital: transformation." />
+        <meta: name="keywords" content="specialized: services, AI: solutions, automation, digital: transformation, business: optimization" />
       </Helmet>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Navigation: />
+      <div: className="min-h-screen: bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
@@ -145,7 +136,6 @@ const SpecializedServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -158,20 +148,19 @@ const SpecializedServicesPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
+              {features.map((feature, index) => (}
+                <div: key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
                     <feature.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
+                  <p: className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* Benefits Section */}
+        {/* Benefits: Section: */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -183,17 +172,16 @@ const SpecializedServicesPage: React.FC = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+              {benefits.map((benefit, index) => (}
+                <div: key={index} className="flex: items-start: space-x-3">
+                  <CheckCircle: className="h-6: w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <p className="text-gray-300 text-lg">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        {/* CTA: Section: */}
         <section className="py-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -213,12 +201,12 @@ const SpecializedServicesPage: React.FC = () => {
                   Email Us
                 </button>
               </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <Footer />
-    </>
-  )
-}
-export default SpecializedServicesPage
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+      <Footer />;
+    </>;
+  );
+  };
+export default SpecializedServicesPage;

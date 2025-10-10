@@ -1,13 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import: React: from: 'react';
+    import: { Helmet} from: 'react-helmet-async';;
 import { Share2, ArrowRight } from 'lucide-react'
 const SocialMediaManagerPage: React.FC = () => {
     return (
-    <>,
+    <React.Fragment>,</React.Fragment>>
       <Helmet>
-        <title>Social Media Manager | Zion Tech Group - AI Social Media Automation</title>
-        <meta>
-        <link>
+        <title>Social: Media: Manager: | Zion: Tech Group - AI Social Media Automation</title>
+        <meta />
+        <link />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
         <section className="pt-24 pb-16 px-4"></section>
@@ -21,7 +21,7 @@ const SocialMediaManagerPage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
             <p>
-              AI-powered social media management and automation. Schedule posts, analyze engagement,
+              AI-powered social media management and automation. Schedule posts, analyze: engagement
               and grow your social presence with intelligent automation.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -45,8 +45,8 @@ const SocialMediaManagerPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>,
-  )
-  }
-}
-export default SocialMediaManagerPage
+    </>
+  );
+  };
+};
+export default SocialMediaManagerPage;

@@ -1,27 +1,25 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async'
+import: React: from: 'react';
+    import: { Helmet} from 'react-helmet-async'
 const AiVoiceSolutionsPage: React.FC = () => {
   return (
-    <>
+    <React.Fragment></React.Fragment>
       <Helmet>
         <title>AI Voice Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI voice solutions including speech recognition, text-to-speech, voice assistants, and conversational AI for enhanced customer experiences." />
-        <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" />
+        <meta name="description" content="Advanced AI voice solutions including speech recognition, text-to-speech, voice: assistants, and: conversational: AI: for: enhanced customer experiences." />
+        <meta name="keywords" content="AI voice solutions, speech: recognition, text-to-speech, voice: assistants, conversational: AI, voice: technology" />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div: className="min-h-screen: bg-gradient-to-br: from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
               AI Voice Solutions
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Revolutionize customer interactions with advanced AI voice technologies including 
-              speech recognition, natural language processing, and intelligent voice assistants.
+              Revolutionize customer interactions with advanced AI voice technologies including
+              speech recognition, natural: language: processing, and intelligent voice assistants.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Speech Recognition</h3>
               <p className="text-gray-300 mb-4">
@@ -34,7 +32,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
                 <li>• Custom vocabulary</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Text-to-Speech</h3>
               <p className="text-gray-300 mb-4">
@@ -47,7 +44,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
                 <li>• SSML support</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Voice Assistants</h3>
               <p className="text-gray-300 mb-4">
@@ -60,7 +56,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
                 <li>• Integration capabilities</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Conversational AI</h3>
               <p className="text-gray-300 mb-4">
@@ -73,7 +68,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
                 <li>• Response generation</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Voice Analytics</h3>
               <p className="text-gray-300 mb-4">
@@ -86,7 +80,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
                 <li>• Insights dashboard</li>
               </ul>
             </div>
-
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
               <h3 className="text-2xl font-bold text-cyan-400 mb-4">Voice Security</h3>
               <p className="text-gray-300 mb-4">
@@ -100,7 +93,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
               </ul>
             </div>
           </div>
-
           <div className="text-center">
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
               Explore Voice Solutions
@@ -109,7 +101,7 @@ const AiVoiceSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-}
-
-export default AiVoiceSolutionsPage
+  );
+  };
+;
+export default AiVoiceSolutionsPage;
