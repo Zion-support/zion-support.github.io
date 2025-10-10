@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
-interface ServiceCardProps {
+interface ServiceCardProps {}
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
@@ -12,7 +12,7 @@ interface ServiceCardProps {
   href?: string;
 }
 
-const ServiceCard: React.FC<ServiceCardProps> = memo(({
+const ServiceCard: React.FC<ServiceCardProps> = memo(({)}
   icon: Icon,
   title,
   description,
@@ -20,10 +20,10 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
   price,
   popular = false,
   href = '/contact'
-}) => {
+}) => {}
   return (
     <div className={`quantum-card p-8 space-y-6 relative ${popular ? 'border-2 border-cyan-400' : ''}`}>
-      {popular && (
+      {popular && (}
         <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
           <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-medium">
             Most Popular
@@ -43,7 +43,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
       <div className="space-y-3">
         <h4 className="text-white font-semibold">Key Features:</h4>
         <ul className="space-y-2">
-          {features.map((feature, index) => (
+          {features.map((feature, index) => (}
             <li key={index} className="flex items-center text-gray-300">
               <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
               {feature}

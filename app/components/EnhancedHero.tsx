@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-interface HeroStats {
+interface HeroStats {}
   clients: number;
   savings: string;
   uptime: string;
   support: string;
 }
 
-const EnhancedHero: React.FC = () => {
+const EnhancedHero: React.FC = () => {}
   const [currentStat, setCurrentStat] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -18,52 +18,52 @@ const EnhancedHero: React.FC = () => {
     { clients: 1000, savings: '$4.1B+', uptime: '99.99%', support: '24/7' }
   ];
 
-  useEffect(() => {
+  useEffect(() => {}
     setIsVisible(true);
-    const interval = setInterval(() => {
+    const interval = setInterval(() => {}
       setCurrentStat((prev) => (prev + 1) % stats.length);
     }, 3000);
     return () => clearInterval(interval);
   }, [stats.length]);
 
-  const handlePhoneClick = useCallback(() => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'phone_click', {
+  const handlePhoneClick = useCallback(() => {}
+    if (typeof window !== 'undefined' && 'gtag' in window) {}
+      (window as any).gtag('event', 'phone_click', {)}
         event_category: 'engagement',
         event_label: 'main_phone_number',
 
     }
   }, []);
 
-  const containerVariants = {
+  const containerVariants = {}
     hidden: { opacity: 0, y: 50 },
-    visible: {
+    visible: {}
       opacity: 1,
       y: 0,
-      transition: {
+      transition: {}
         duration: 0.8,
         staggerChildren: 0.2
       }
     }
   };
 
-  const itemVariants = {
+  const itemVariants = {}
     hidden: { opacity: 0, y: 30 },
-    visible: {
+    visible: {}
       opacity: 1,
       y: 0,
       transition: { duration: 0.6 }
     }
   };
 
-  const statVariants = {
+  const statVariants = {}
     hidden: { opacity: 0, scale: 0.8 },
-    visible: {
+    visible: {}
       opacity: 1,
       scale: 1,
       transition: { duration: 0.5 }
     },
-    exit: {
+    exit: {}
       opacity: 0,
       scale: 0.8,
       transition: { duration: 0.3 }
@@ -85,12 +85,12 @@ const EnhancedHero: React.FC = () => {
         {/* Floating Elements */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl"
-          animate={{
+          animate={{}
             y: [0, -20, 0],
             x: [0, 10, 0],
             scale: [1, 1.1, 1]
           }}
-          transition={{
+          transition={{}
             duration: 4,
             repeat: Infinity,
             ease: "easeInOut"
@@ -98,12 +98,12 @@ const EnhancedHero: React.FC = () => {
         />
         <motion.div
           className="absolute bottom-20 right-20 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"
-          animate={{
+          animate={{}
             y: [0, 20, 0],
             x: [0, -10, 0],
             scale: [1, 0.9, 1]
           }}
-          transition={{
+          transition={{}
             duration: 3,
             repeat: Infinity,
             ease: "easeInOut"

@@ -156,7 +156,7 @@ const AIAutomationPage: React.FC = () => {
             {/* Stats Section */}
             <section className="mb-16">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                {stats.map((stat, index) => (
+                {stats.map((stat, index) => (}
                   <div key={index} className="text-center cyber-card p-6">
                     <stat.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                     <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
@@ -172,7 +172,7 @@ const AIAutomationPage: React.FC = () => {
                 Advanced Automation Features
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {features.map((feature, index) => (
+                {features.map((feature, index) => (}
                   <div key={index} className="cyber-card p-8 hover:scale-105 transition-all duration-300">
                     <div className="flex items-start space-x-4">
                       <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -182,7 +182,7 @@ const AIAutomationPage: React.FC = () => {
                         <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                         <p className="text-gray-300 mb-4">{feature.description}</p>
                         <ul className="space-y-2">
-                          {feature.benefits.map((benefit, benefitIndex) => (
+                          {feature.benefits.map((benefit, benefitIndex) => (}
                             <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
                               <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                               {benefit}
@@ -202,9 +202,9 @@ const AIAutomationPage: React.FC = () => {
                 Choose Your Plan
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {pricingPlans.map((plan, index) => (
+                {pricingPlans.map((plan, index) => (}
                   <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
-                    {plan.popular && (
+                    {plan.popular && (}
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                         <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
                           Most Popular
@@ -222,7 +222,7 @@ const AIAutomationPage: React.FC = () => {
                     </div>
 
                     <ul className="space-y-4 mb-8">
-                      {plan.features.map((feature, featureIndex) => (
+                      {plan.features.map((feature, featureIndex) => (}
                         <li key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                           {feature}
@@ -232,7 +232,7 @@ const AIAutomationPage: React.FC = () => {
 
                     <a
                       href="/contact"
-                      className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                      className={`block w-full text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                         plan.popular
                           ? 'cyber-button'
                           : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'

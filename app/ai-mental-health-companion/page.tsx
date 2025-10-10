@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   Heart,
   Brain,
   MessageCircle,
@@ -671,11 +671,11 @@ import {
   Yocto as YoctoIcon
 } from 'lucide-react';
 
-interface MentalHealthCompanionProps {
+interface MentalHealthCompanionProps {}
   className?: string;
 }
 
-export default function MentalHealthCompanion({ className = '' }: MentalHealthCompanionProps) {
+export default function MentalHealthCompanion({ className = '' }: MentalHealthCompanionProps) {}
   const [currentMood, setCurrentMood] = useState('neutral');
   const [chatMessages, setChatMessages] = useState<any[]>([]);
   const [userInput, setUserInput] = useState('');
@@ -695,37 +695,37 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
   ];
 
   const features = [
-    {
+    {}
       title: "24/7 AI Companion",
       description: "Always available mental health support powered by advanced AI",
       icon: Heart,
       price: "Included"
     },
-    {
+    {}
       title: "Mood Tracking",
       description: "Track your daily mood and emotional patterns over time",
       icon: BarChart3,
       price: "Included"
     },
-    {
+    {}
       title: "Crisis Support",
       description: "Immediate support and resources during mental health crises",
       icon: Shield,
       price: "Included"
     },
-    {
+    {}
       title: "Therapy Sessions",
       description: "AI-powered therapy sessions with evidence-based techniques",
       icon: MessageCircle,
       price: "Included"
     },
-    {
+    {}
       title: "Progress Monitoring",
       description: "Track your mental health journey and celebrate milestones",
       icon: Target,
       price: "Included"
     },
-    {
+    {}
       title: "Professional Referrals",
       description: "Connect with licensed mental health professionals when needed",
       icon: Users,
@@ -734,7 +734,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
   ];
 
   const pricingPlans = [
-    {
+    {}
       name: "Basic",
       price: "$19",
       period: "/month",
@@ -748,7 +748,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       ],
       popular: false
     },
-    {
+    {}
       name: "Professional",
       price: "$49",
       period: "/month",
@@ -764,7 +764,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
       ],
       popular: true
     },
-    {
+    {}
       name: "Family",
       price: "$99",
       period: "/month",
@@ -783,9 +783,9 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     }
   ];
 
-  const handleMoodSelection = (moodId: string) => {
+  const handleMoodSelection = (moodId: string) => {}
     setCurrentMood(moodId);
-    const newMoodEntry = {
+    const newMoodEntry = {}
       id: Date.now(),
       mood: moodId,
       timestamp: new Date(),
@@ -794,10 +794,10 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     setMoodHistory(prev => [...prev, newMoodEntry]);
   };
 
-  const handleSendMessage = async () => {
+  const handleSendMessage = async () => {}
     if (!userInput.trim()) return;
 
-    const userMessage = {
+    const userMessage = {}
       id: Date.now(),
       type: 'user',
       content: userInput,
@@ -809,8 +809,8 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     setIsTyping(true);
 
     // Simulate AI response
-    setTimeout(() => {
-      const aiResponse = {
+    setTimeout(() => {}
+      const aiResponse = {}
         id: Date.now() + 1,
         type: 'ai',
         content: "I understand how you're feeling. It's important to acknowledge your emotions. Would you like to talk about what's on your mind?",
@@ -821,8 +821,8 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
     }, 2000);
   };
 
-  const handleCrisisSupport = () => {
-    const crisisMessage = {
+  const handleCrisisSupport = () => {}
+    const crisisMessage = {}
       id: Date.now(),
       type: 'system',
       content: "Crisis support activated. Please know that you're not alone. If you're having thoughts of self-harm, please contact the National Suicide Prevention Lifeline at 988 or text HOME to 741741.",
@@ -923,11 +923,11 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
 
                 <div className="space-y-6">
                   <div className="grid grid-cols-2 gap-4">
-                    {moods.map((mood) => (
+                    {moods.map((mood) => (}
                       <button
                         key={mood.id}
                         onClick={() => handleMoodSelection(mood.id)}
-                        className={`p-4 rounded-lg border-2 transition-all duration-300 ${
+                        className={`p-4 rounded-lg border-2 transition-all duration-300 ${}
                           currentMood === mood.id
                             ? 'border-pink-400 bg-pink-400/10'
                             : 'border-white/20 hover:border-pink-400/50'
@@ -942,7 +942,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   <div className="bg-white/5 rounded-lg p-4">
                     <h4 className="text-white font-semibold mb-2">Mood History</h4>
                     <div className="space-y-2">
-                      {moodHistory.slice(-5).map((entry) => (
+                      {moodHistory.slice(-5).map((entry) => (}
                         <div key={entry.id} className="flex items-center justify-between text-sm">
                           <span className="text-gray-300">
                             {entry.timestamp.toLocaleDateString()}
@@ -967,7 +967,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                 <div className="space-y-4">
                   {/* Chat Messages */}
                   <div className="h-64 overflow-y-auto space-y-4 mb-4">
-                    {chatMessages.length === 0 ? (
+                    {chatMessages.length === 0 ? (}
                       <div className="text-center py-8">
                         <MessageCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                         <p className="text-gray-400">Start a conversation with your AI companion</p>
@@ -979,7 +979,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                           className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
                         >
                           <div
-                            className={`max-w-xs px-4 py-2 rounded-lg ${
+                            className={`max-w-xs px-4 py-2 rounded-lg ${}
                               message.type === 'user'
                                 ? 'bg-pink-500 text-white'
                                 : message.type === 'system'
@@ -995,7 +995,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                         </div>
                       ))
                     )}
-                    {isTyping && (
+                    {isTyping && (}
                       <div className="flex justify-start">
                         <div className="bg-white/10 text-gray-300 px-4 py-2 rounded-lg">
                           <div className="flex space-x-1">
@@ -1054,7 +1054,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-pink-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -1084,9 +1084,9 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-pink-400/50 ring-2 ring-pink-400/30' : 'border-white/10'}`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-pink-400 to-purple-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular
@@ -1104,7 +1104,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -1112,7 +1112,7 @@ export default function MentalHealthCompanion({ className = '' }: MentalHealthCo
                   ))}
                 </ul>
 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                   plan.popular
                     ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'

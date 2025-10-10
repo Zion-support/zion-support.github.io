@@ -6,11 +6,11 @@ import ServiceWorkerRegistration from './components/ServiceWorkerRegistration';
 import EnhancedSEOHead from './components/EnhancedSEOHead';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
-export default function RootLayout({
+export default function RootLayout({)}
   children,
-}: {
+}: {}
   children: React.ReactNode;
-}) {
+}) {}
   return (
     <html lang="en" className="dark">
       <head>
@@ -39,15 +39,15 @@ export default function RootLayout({
         {/* Structured Data */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+          dangerouslySetInnerHTML={{}
+            __html: JSON.stringify({)}
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Zion Tech Group',
               url: 'https://ziontechgroup.com',
               logo: 'https://ziontechgroup.com/logo.webp',
               description: 'Leading provider of AI and IT solutions for modern enterprises',
-              address: {
+              address: {}
                 '@type': 'PostalAddress',
                 streetAddress: '364 E Main St STE 1008',
                 addressLocality: 'Middletown',
@@ -55,7 +55,7 @@ export default function RootLayout({
                 postalCode: '19709',
                 addressCountry: 'US',
               },
-              contactPoint: {
+              contactPoint: {}
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
                 contactType: 'customer service',
@@ -71,17 +71,17 @@ export default function RootLayout({
                 'https://github.com/ziontechgroup',
               ],
               service: [
-                {
+                {}
                   '@type': 'Service',
                   name: 'AI Services',
                   description: 'Advanced artificial intelligence solutions',
                 },
-                {
+                {}
                   '@type': 'Service',
                   name: 'IT Services',
                   description: 'Comprehensive IT support and infrastructure',
                 },
-                {
+                {}
                   '@type': 'Service',
                   name: 'Digital Transformation',
                   description: 'Business modernization and process automation',

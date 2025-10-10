@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import {
+import {}
   Brain,
   Zap,
   Target,
@@ -21,16 +21,16 @@ import {
 Rocket
 } from 'lucide-react';
 
-const AIServicesPage: React.FC = () => {
+const AIServicesPage: React.FC = () => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => {}
     setIsLoaded(true);
   }, []);
 
   const services = [
     // Core AI Services
-    {
+    {}
       id: 1,
       name: 'AI-Powered Analytics Platform',
       description: 'Advanced analytics solutions powered by machine learning and artificial intelligence with real-time insights and predictive modeling',
@@ -60,7 +60,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-analytics-platform'
     },
-    {
+    {}
       id: 11,
       name: 'AI Quantum Computing Platform',
       description: 'Revolutionary quantum computing solutions for complex optimization problems, cryptography, and scientific simulations',
@@ -88,7 +88,7 @@ const AIServicesPage: React.FC = () => {
         'Scientific breakthrough potential'
       ]
     },
-    {
+    {}
       id: 12,
       name: 'AI Neural Memory Assistant',
       description: 'Advanced AI system with persistent memory and contextual understanding for personalized assistance',
@@ -116,7 +116,7 @@ const AIServicesPage: React.FC = () => {
         'Long-term memory retention'
       ]
     },
-    {
+    {}
       id: 13,
       name: 'AI Holographic Workspace',
       description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
@@ -144,7 +144,7 @@ const AIServicesPage: React.FC = () => {
         'Next-gen workspace'
       ]
     },
-    {
+    {}
       id: 14,
       name: 'AI Climate Solutions Pro',
       description: 'AI-powered climate monitoring, carbon footprint tracking, and environmental impact optimization',
@@ -172,7 +172,7 @@ const AIServicesPage: React.FC = () => {
         'Climate risk mitigation'
       ]
     },
-    {
+    {}
       id: 15,
       name: 'AI Drug Discovery Pro',
       description: 'Advanced AI platform for pharmaceutical research, drug discovery, and molecular analysis',
@@ -200,7 +200,7 @@ const AIServicesPage: React.FC = () => {
         'Personalized treatment options'
       ]
     },
-    {
+    {}
       id: 16,
       name: 'AI Fashion Design Studio',
       description: 'AI-powered fashion design with trend analysis, virtual try-on, and sustainable fashion recommendations',
@@ -228,7 +228,7 @@ const AIServicesPage: React.FC = () => {
         'Personalized fashion recommendations'
       ]
     },
-    {
+    {}
       id: 17,
       name: 'AI Music Composition Suite',
       description: 'AI-powered music creation with composition, arrangement, and production capabilities',
@@ -256,7 +256,7 @@ const AIServicesPage: React.FC = () => {
         'Copyright-safe generation'
       ]
     },
-    {
+    {}
       id: 18,
       name: 'AI Energy Management System',
       description: 'Smart energy optimization with AI-powered grid management and renewable energy integration',
@@ -284,7 +284,7 @@ const AIServicesPage: React.FC = () => {
         'Predictive energy management'
       ]
     },
-    {
+    {}
       id: 19,
       name: 'AI Autonomous Systems Platform',
       description: 'AI-powered autonomous vehicle and drone management with real-time decision making',
@@ -312,7 +312,7 @@ const AIServicesPage: React.FC = () => {
         'Weather-adaptive navigation'
       ]
     },
-    {
+    {}
       id: 20,
       name: 'AI Blockchain Solutions',
       description: 'AI-powered blockchain technology with smart contracts, DeFi optimization, and crypto analytics',
@@ -341,7 +341,7 @@ const AIServicesPage: React.FC = () => {
       ]
     },
     // New Advanced AI Services
-    {
+    {}
       id: 21,
       name: 'AI Quantum Financial Oracle Pro',
       description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
@@ -370,7 +370,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-quantum-financial-oracle'
     },
-    {
+    {}
       id: 22,
       name: 'AI Neural Memory Assistant Pro',
       description: 'Advanced AI system with persistent memory and contextual understanding for personalized assistance',
@@ -399,7 +399,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-neural-memory-assistant'
     },
-    {
+    {}
       id: 23,
       name: 'AI Holographic Workspace Pro',
       description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
@@ -428,7 +428,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-holographic-workspace'
     },
-    {
+    {}
       id: 24,
       name: 'AI Autonomous Systems Pro',
       description: 'Self-managing systems with advanced AI decision-making and autonomous operations',
@@ -457,7 +457,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-autonomous-systems'
     },
-    {
+    {}
       id: 25,
       name: 'AI Agricultural Intelligence Pro',
       description: 'Revolutionary AI-powered agricultural solutions for precision farming and crop optimization',
@@ -486,7 +486,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-agricultural-intelligence-pro'
     },
-    {
+    {}
       id: 26,
       name: 'AI Legal Research Pro',
       description: 'Advanced AI-powered legal research and case analysis for law firms and legal departments',
@@ -515,7 +515,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-legal-research-pro'
     },
-    {
+    {}
       id: 27,
       name: 'AI Financial Crime Detection Pro',
       description: 'Real-time fraud detection and financial security monitoring with machine learning algorithms',
@@ -544,7 +544,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-financial-crime-detection-pro'
     },
-    {
+    {}
       id: 28,
       name: 'AI 3D Generation Studio Pro',
       description: 'AI-powered 3D model generation and animation with photorealistic rendering capabilities',
@@ -573,7 +573,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-3d-generation'
     },
-    {
+    {}
       id: 29,
       name: 'AI Mobile App Builder Pro',
       description: 'AI-powered mobile app development with automated coding and intelligent design suggestions',
@@ -602,7 +602,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-mobile-app-builder'
     },
-    {
+    {}
       id: 30,
       name: 'AI Supply Chain Optimization Pro',
       description: 'Intelligent supply chain management with predictive analytics and optimization algorithms',
@@ -631,7 +631,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-supply-chain-optimization-pro'
     },
-    {
+    {}
       id: 31,
       name: 'AI Content Delivery Network Pro',
       description: 'AI-powered content delivery network with intelligent caching and global optimization',
@@ -660,7 +660,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-content-delivery-network'
     },
-    {
+    {}
       id: 32,
       name: 'AI Business Intelligence Pro',
       description: 'Advanced AI-powered business intelligence with predictive analytics and automated insights',
@@ -689,7 +689,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-business-intelligence'
     },
-    {
+    {}
       id: 33,
       name: 'AI API Management Pro',
       description: 'Intelligent API management with AI-powered optimization and security',
@@ -718,7 +718,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-api-management'
     },
-    {
+    {}
       id: 34,
       name: 'AI Cybersecurity Monitor Pro',
       description: 'AI-powered security monitoring with threat detection, vulnerability assessment, and incident response',
@@ -747,7 +747,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-cybersecurity-monitor'
     },
-    {
+    {}
       id: 35,
       name: 'AI Energy Grid Management Pro',
       description: 'Intelligent energy distribution and optimization for smart cities and utilities',
@@ -776,7 +776,7 @@ const AIServicesPage: React.FC = () => {
       ],
       link: 'https://ziontechgroup.com/ai-energy-grid-management'
     },
-    {
+    {}
       id: 2,
       name: 'AI Workflow Automation Suite',
       description: 'Comprehensive business process automation with intelligent decision-making and self-optimizing workflows',
@@ -804,7 +804,7 @@ const AIServicesPage: React.FC = () => {
         'Intelligent error handling'
       ]
     },
-    {
+    {}
       id: 3,
       name: 'AI Cybersecurity Platform',
       description: 'Next-generation security solutions with AI-powered threat detection, prevention, and response capabilities',
@@ -832,7 +832,7 @@ const AIServicesPage: React.FC = () => {
         'Compliance automation'
       ]
     },
-    {
+    {}
       id: 4,
       name: 'AI Document Intelligence Suite',
       description: 'Intelligent document processing with advanced OCR, NLP, and automated data extraction capabilities',
@@ -860,7 +860,7 @@ const AIServicesPage: React.FC = () => {
         'Automated validation'
       ]
     },
-    {
+    {}
       id: 5,
       name: 'AI Customer Experience Platform',
       description: 'Comprehensive customer experience management with AI-powered personalization and engagement optimization',
@@ -888,7 +888,7 @@ const AIServicesPage: React.FC = () => {
         'Predictive customer insights'
       ]
     },
-    {
+    {}
       id: 6,
       name: 'AI Content Generation Studio',
       description: 'Advanced content creation platform with AI-powered writing, editing, and optimization capabilities',
@@ -916,7 +916,7 @@ const AIServicesPage: React.FC = () => {
         'Multi-platform publishing'
       ]
     },
-    {
+    {}
       id: 7,
       name: 'AI Predictive Maintenance',
       description: 'Intelligent maintenance solutions with predictive analytics and automated scheduling for industrial equipment',
@@ -944,7 +944,7 @@ const AIServicesPage: React.FC = () => {
         'Real-time monitoring'
       ]
     },
-    {
+    {}
       id: 8,
       name: 'AI Financial Intelligence',
       description: 'Advanced financial analysis and forecasting with AI-powered risk assessment and investment optimization',
@@ -972,7 +972,7 @@ const AIServicesPage: React.FC = () => {
         'Investment optimization'
       ]
     },
-    {
+    {}
       id: 9,
       name: 'AI Healthcare Diagnostics',
       description: 'Advanced medical AI with diagnostic assistance, treatment recommendations, and patient monitoring capabilities',
@@ -1000,7 +1000,7 @@ const AIServicesPage: React.FC = () => {
         'Improved patient outcomes'
       ]
     },
-    {
+    {}
       id: 10,
       name: 'AI Supply Chain Optimization',
       description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation',
@@ -1028,7 +1028,7 @@ const AIServicesPage: React.FC = () => {
         'Predictive analytics'
 ]
     },
-    {
+    {}
       id: 11,
       name: 'AI Quantum Financial Oracle',
       description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
@@ -1056,7 +1056,7 @@ const AIServicesPage: React.FC = () => {
         'Real-time risk modeling'
       ]
     },
-    {
+    {}
       id: 12,
       name: 'AI Climate Solutions Pro',
       description: 'Advanced climate modeling and environmental impact analysis with carbon footprint optimization and sustainability planning',
@@ -1084,7 +1084,7 @@ const AIServicesPage: React.FC = () => {
         'Climate risk assessment'
       ]
     },
-    {
+    {}
       id: 13,
       name: 'AI Space Technology Pro',
       description: 'Cutting-edge AI solutions for space exploration, satellite management, and space mission optimization',
@@ -1112,7 +1112,7 @@ const AIServicesPage: React.FC = () => {
         'Space debris mitigation'
       ]
     },
-    {
+    {}
       id: 14,
       name: 'AI Drug Discovery Pro',
       description: 'Revolutionary AI-powered drug discovery platform with molecular modeling, clinical trial optimization, and personalized medicine',
@@ -1140,7 +1140,7 @@ const AIServicesPage: React.FC = () => {
         'Reduced clinical trial costs'
       ]
     },
-    {
+    {}
       id: 15,
       name: 'AI Neural Memory Assistant',
       description: 'Advanced AI system that mimics human memory patterns for enhanced learning, recall, and cognitive assistance',
@@ -1172,7 +1172,7 @@ const AIServicesPage: React.FC = () => {
 
 const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics', 'Environmental AI', 'Agricultural AI', 'Legal AI', '3D AI', 'Mobile AI', 'CDN AI', 'BI AI', 'API AI', 'Security AI'];
 
-  if (!isLoaded) {
+  if (!isLoaded) {}
     return (
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
@@ -1260,7 +1260,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       {/* Category Filter */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="flex flex-wrap justify-center gap-4">
-          {categories.map((category) => (
+          {categories.map((category) => (}
             <button
               key={category}
               className="px-6 py-3 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-white hover:bg-white/20 hover:border-cyan-400/50 transition-all duration-300 font-medium"
@@ -1274,11 +1274,15 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
+          {services.map((service) => (}
             <div
               key={service.id}
 
+<<<<<<< HEAD
               className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${
+=======
+              className={`group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden ${}
+>>>>>>> cursor/fix-errors-and-merge-to-main-eba3
                 service.popular ? 'ring-2 ring-purple-500/50 shadow-lg shadow-purple-500/20 neon-glow-purple' : ''
               }`}
             >
@@ -1291,7 +1295,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                     <service.icon className="h-8 w-8" />
                   </div>
                   <div className="flex items-center space-x-2">
-                    {service.popular && (
+                    {service.popular && (}
                       <span className="px-3 py-1 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs rounded-full flex items-center font-bold shadow-lg">
                         <Star className="w-3 h-3 mr-1" />
                         Popular
@@ -1318,13 +1322,13 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                     Key Features:
                   </h4>
                   <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, index) => (
+                    {service.features.slice(0, 4).map((feature, index) => (}
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
-                    {service.features.length > 4 && (
+                    {service.features.length > 4 && (}
                       <li className="text-cyan-400 text-sm font-medium">
                         +{service.features.length - 4} more features
                       </li>
@@ -1347,7 +1351,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
                   </div>
                   <h4 className="text-lg font-semibold text-white mb-3">Key Capabilities:</h4>
                   <ul className="space-y-1">
-                    {service.capabilities.map((capability, index) => (
+                    {service.capabilities.map((capability, index) => (}
                       <li key={index} className="flex items-center text-gray-300 text-sm">
                         <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {capability}
@@ -1379,7 +1383,7 @@ const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Proc
       </div>
 
       {/* CTA Section */}
-<div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
+      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Ready to Transform Your Business with AI?

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import {
+import {}
   Mic,
   Play,
   Pause,
@@ -704,16 +704,16 @@ import {
   Yocto as YoctoIcon
 } from 'lucide-react';
 
-interface VoiceCloningStudioProps {
+interface VoiceCloningStudioProps {}
   className?: string;
 }
 
-export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudioProps) {
+export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudioProps) {}
   const [isRecording, setIsRecording] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentVoice, setCurrentVoice] = useState('default');
   const [textToSpeak, setTextToSpeak] = useState('');
-  const [voiceSettings, setVoiceSettings] = useState({
+  const [voiceSettings, setVoiceSettings] = useState({)}
     pitch: 0,
     speed: 1,
     emotion: 'neutral',
@@ -750,37 +750,37 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   ];
 
   const features = [
-    {
+    {}
       title: "Real-time Voice Cloning",
       description: "Clone any voice with just 30 seconds of audio sample",
       icon: Mic,
       price: "Included"
     },
-    {
+    {}
       title: "Multi-language Support",
       description: "Generate speech in 50+ languages with native accents",
       icon: Globe,
       price: "Included"
     },
-    {
+    {}
       title: "Emotion Control",
       description: "Add emotions like happiness, sadness, excitement to your voice",
       icon: Heart,
       price: "Included"
     },
-    {
+    {}
       title: "Voice Customization",
       description: "Adjust pitch, speed, tone, and other voice parameters",
       icon: Settings,
       price: "Included"
     },
-    {
+    {}
       title: "Batch Processing",
       description: "Process multiple audio files simultaneously",
       icon: FileAudio,
       price: "Pro Feature"
     },
-    {
+    {}
       title: "API Integration",
       description: "Integrate voice cloning into your applications",
       icon: Code,
@@ -789,7 +789,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
   ];
 
   const pricingPlans = [
-    {
+    {}
       name: "Starter",
       price: "$29",
       period: "/month",
@@ -803,7 +803,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       ],
       popular: false
     },
-    {
+    {}
       name: "Professional",
       price: "$79",
       period: "/month",
@@ -818,7 +818,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
       ],
       popular: true
     },
-    {
+    {}
       name: "Enterprise",
       price: "$199",
       period: "/month",
@@ -836,26 +836,26 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
     }
   ];
 
-  const handleStartRecording = () => {
+  const handleStartRecording = () => {}
     setIsRecording(true);
     // Simulate recording process
-    setTimeout(() => {
+    setTimeout(() => {}
       setIsRecording(false);
     }, 3000);
   };
 
-  const handleGenerateVoice = async () => {
+  const handleGenerateVoice = async () => {}
     if (!textToSpeak.trim()) return;
 
     setIsGenerating(true);
     // Simulate voice generation
-    setTimeout(() => {
+    setTimeout(() => {}
       setGeneratedAudio('generated-audio-url');
       setIsGenerating(false);
     }, 2000);
   };
 
-  const handlePlayAudio = () => {
+  const handlePlayAudio = () => {}
     setIsPlaying(!isPlaying);
   };
 
@@ -974,7 +974,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       onChange={(e) => setCurrentVoice(e.target.value)}
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                     >
-                      {voices.map((voice) => (
+                      {voices.map((voice) => (}
                         <option key={voice.id} value={voice.id} className="bg-slate-800">
                           {voice.name} ({voice.gender}, {voice.accent})
                         </option>
@@ -1023,7 +1023,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, emotion: e.target.value }))}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >
-                        {emotions.map((emotion) => (
+                        {emotions.map((emotion) => (}
                           <option key={emotion} value={emotion} className="bg-slate-800 capitalize">
                             {emotion}
                           </option>
@@ -1039,7 +1039,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                         onChange={(e) => setVoiceSettings(prev => ({ ...prev, language: e.target.value }))}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20"
                       >
-                        {languages.map((lang) => (
+                        {languages.map((lang) => (}
                           <option key={lang.code} value={lang.code} className="bg-slate-800">
                             {lang.name}
                           </option>
@@ -1054,7 +1054,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                     disabled={!textToSpeak.trim() || isGenerating}
                     className="w-full bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
-                    {isGenerating ? (
+                    {isGenerating ? (}
                       <>
                         <RefreshCw className="w-5 h-5 mr-2 animate-spin inline" />
                         Generating Voice...
@@ -1079,7 +1079,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                 <div className="space-y-6">
                   {/* Audio Player */}
                   <div className="bg-white/5 rounded-lg p-6 text-center">
-                    {generatedAudio ? (
+                    {generatedAudio ? (}
                       <div className="space-y-4">
                         <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-full flex items-center justify-center mx-auto">
                           <Play className="w-8 h-8 text-white" />
@@ -1118,7 +1118,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                       disabled={isRecording}
                       className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                     >
-                      {isRecording ? (
+                      {isRecording ? (}
                         <>
                           <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 inline"></div>
                           Recording... (30s)
@@ -1164,7 +1164,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-400/50 transition-all duration-300 transform hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-white" />
@@ -1194,9 +1194,9 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <div key={index} className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 transform hover:scale-105 ${plan.popular ? 'border-purple-400/50 ring-2 ring-purple-400/30' : 'border-white/10'}`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-sm font-bold px-4 py-2 rounded-full">
                       Most Popular
@@ -1214,7 +1214,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                 </div>
 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -1222,7 +1222,7 @@ export default function VoiceCloningStudio({ className = '' }: VoiceCloningStudi
                   ))}
                 </ul>
 
-                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                   plan.popular
                     ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'

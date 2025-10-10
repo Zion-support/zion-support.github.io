@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useCallback } from 'react'
-interface ImageProps {
+interface ImageProps {}
   src: string
   alt: string
   width?: number
@@ -16,7 +16,7 @@ interface ImageProps {
   onLoad?: () => void
   onError?: () => void;}
 }
-export const Image: React.FC<ImageProps> = ({
+export const Image: React.FC<ImageProps> = ({}
   src,
   alt,
   width,
@@ -32,20 +32,20 @@ export const Image: React.FC<ImageProps> = ({
   onLoad,
   onError,
   ...props}
-}) => {
+}) => {}
   const [, setIsLoaded] = useState(false)
   const [hasError, setHasError] = useState(false)
-  const handleLoad = useCallback(() => {
+  const handleLoad = useCallback(() => {}
     setIsLoaded(true)
     if (onLoad) onLoad();}
   }, [onLoad])
-  const handleError = useCallback(() => {
+  const handleError = useCallback(() => {}
     setHasError(true)
     if (onError) onError();}
   }, [onError])
-  const imageStyle: React.CSSProperties = {
+  const imageStyle: React.CSSProperties = {}
     ...style,
-    ...(fill && {
+    ...(fill && {}
       position: 'absolute',
       top: 0,
       left: 0,
@@ -54,7 +54,7 @@ export const Image: React.FC<ImageProps> = ({
       objectFit: 'cover'}
     })
   }
-  if (hasError) {
+  if (hasError) {}
     return (
       <div}
         className={`bg-gray-200 flex items-center justify-center ${className}`}

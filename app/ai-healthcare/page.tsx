@@ -3,33 +3,33 @@ import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Heart, Stethoscope, Brain, Shield, CheckCircle, Phone, Mail, Target, Target, Shield, CheckCircle, Phone, Mail, Eye, AlertTriangle } from 'lucide-react';
 
-const AIHealthcarePage: React.FC = memo(() => {
+const AIHealthcarePage: React.FC = memo(() => {}
   const [isLoaded, setIsLoaded] = useState(false);
 
-  React.useEffect(() => {
+  React.useEffect(() => {}
     setIsLoaded(true);
   }, []);
 
   const features = [
-    {
+    {}
       icon: Heart,
       title: 'Medical Image Analysis',
       description: 'AI-powered analysis of X-rays, MRIs, CT scans, and ultrasounds with 95% accuracy',
       color: 'text-purple-400'
     },
-    {
+    {}
       icon: Brain,
       title: 'Diagnostic Assistance',
       description: 'AI algorithms that assist doctors in making accurate diagnoses and treatment recommendations',
       color: 'text-blue-400'
     },
-    {
+    {}
       icon: Stethoscope,
       title: 'Patient Monitoring',
       description: 'Continuous monitoring of patient vital signs and health metrics with predictive alerts',
       color: 'text-green-400'
     },
-    {
+    {}
       icon: Shield,
       title: 'HIPAA Compliance',
       description: 'Enterprise-grade security and compliance with healthcare regulations and data protection',
@@ -38,7 +38,7 @@ const AIHealthcarePage: React.FC = memo(() => {
   ];
 
   const pricingPlans = [
-    {
+    {}
       name: 'Clinic',
       price: '$1,999',
       period: '/month',
@@ -53,7 +53,7 @@ const AIHealthcarePage: React.FC = memo(() => {
       ],
       popular: false
     },
-    {
+    {}
       name: 'Hospital',
       price: '$4,999',
       period: '/month',
@@ -69,7 +69,7 @@ const AIHealthcarePage: React.FC = memo(() => {
       ],
       popular: true
     },
-    {
+    {}
       name: 'Enterprise',
       price: '$9,999',
       period: '/month',
@@ -88,25 +88,25 @@ const AIHealthcarePage: React.FC = memo(() => {
   ];
 
   const useCases = [
-    {
+    {}
       title: 'Radiology',
       description: 'AI-powered analysis of medical images for faster and more accurate diagnoses',
       icon: Eye,
       result: '95% accuracy'
     },
-    {
+    {}
       title: 'Cardiology',
       description: 'Heart disease detection and monitoring with AI-powered ECG analysis',
       icon: Heart,
       result: '90% faster'
     },
-    {
+    {}
       title: 'Oncology',
       description: 'Cancer detection and treatment planning with advanced AI algorithms',
       icon: Target,
       result: '80% improvement'
     },
-    {
+    {}
       title: 'Emergency Care',
       description: 'Rapid triage and critical care decision support in emergency situations',
       icon: AlertTriangle,
@@ -170,7 +170,7 @@ const AIHealthcarePage: React.FC = memo(() => {
         {/* Benefits */}
         <section className="mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <div key={index} className="bg-slate-800/50 p-6 rounded-lg border border-green-500/20">
                 <div className={`text-3xl font-bold ${benefit.color} mb-2`}>{benefit.metric}</div>
                 <div className="text-white font-semibold mb-2">{benefit.label}</div>
@@ -184,7 +184,7 @@ const AIHealthcarePage: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Advanced Healthcare Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div key={index} className="bg-slate-800/30 p-6 rounded-lg border border-gray-700 hover:border-green-500/50 transition-all duration-300">
                 <div className="flex items-start space-x-4">
                   <div className={`p-3 rounded-lg bg-slate-700 ${feature.color}`}>
@@ -204,7 +204,7 @@ const AIHealthcarePage: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Medical Specialties</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
+            {useCases.map((useCase, index) => (}
               <div key={index} className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-gray-700 hover:border-green-500/50 transition-all duration-300">
                 <div className="flex items-center justify-between mb-4">
                   <useCase.icon className="w-8 h-8 text-green-400" />
@@ -221,9 +221,9 @@ const AIHealthcarePage: React.FC = memo(() => {
         <section className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Healthcare Solutions</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <div key={index} className={`relative bg-slate-800/50 p-8 rounded-lg border ${plan.popular ? 'border-green-500 ring-2 ring-green-500/20' : 'border-gray-700'} hover:border-green-500/50 transition-all duration-300`}>
-                {plan.popular && (
+                {plan.popular && (}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-green-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
@@ -239,7 +239,7 @@ const AIHealthcarePage: React.FC = memo(() => {
                   <p className="text-gray-400 mt-2">{plan.description}</p>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
@@ -248,7 +248,7 @@ const AIHealthcarePage: React.FC = memo(() => {
                 </ul>
                 <a
                   href="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white hover:from-green-700 hover:to-blue-700'
                       : 'border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'

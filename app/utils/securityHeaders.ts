@@ -2,7 +2,7 @@
  * Security Headers Configuration
  * Comprehensive security headers for production applications
  */
-export interface SecurityHeadersConfig {
+export interface SecurityHeadersConfig {}
   contentSecurityPolicy?: string
   strictTransportSecurity?: string
   xFrameOptions?: string
@@ -10,7 +10,7 @@ export interface SecurityHeadersConfig {
   referrerPolicy?: string
   permissionsPolicy?: string;}
 }
-export const defaultSecurityHeaders: SecurityHeadersConfig = {
+export const defaultSecurityHeaders: SecurityHeadersConfig = {}
   // Content Security Policy
   contentSecurityPolicy: [
     "default-src 'self'",
@@ -48,30 +48,30 @@ export const defaultSecurityHeaders: SecurityHeadersConfig = {
 /**
  * Get security headers as key-value pairs
  */
-export function getSecurityHeaders(
+export function getSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig>
 ): Record<string, string> {}
   const config = { ...defaultSecurityHeaders, ...customConfig }
-  const headers: Record<string, string> = {
+  const headers: Record<string, string> = {}
     'X-XSS-Protection': '1; mode=block',
     'X-DNS-Prefetch-Control': 'on'}
   }
-  if (config.contentSecurityPolicy) {
+  if (config.contentSecurityPolicy) {}
     headers['Content-Security-Policy'] = config.contentSecurityPolicy;}
   }
-  if (config.strictTransportSecurity) {
+  if (config.strictTransportSecurity) {}
     headers['Strict-Transport-Security'] = config.strictTransportSecurity;}
   }
-  if (config.xFrameOptions) {
+  if (config.xFrameOptions) {}
     headers['X-Frame-Options'] = config.xFrameOptions;}
   }
-  if (config.xContentTypeOptions) {
+  if (config.xContentTypeOptions) {}
     headers['X-Content-Type-Options'] = config.xContentTypeOptions;}
   }
-  if (config.referrerPolicy) {
+  if (config.referrerPolicy) {}
     headers['Referrer-Policy'] = config.referrerPolicy;}
   }
-  if (config.permissionsPolicy) {
+  if (config.permissionsPolicy) {}
     headers['Permissions-Policy'] = config.permissionsPolicy;}
   }
   return headers
@@ -79,11 +79,11 @@ export function getSecurityHeaders(
 /**
  * Get security headers in Next.js format
  */
-export function getNextSecurityHeaders(
+export function getNextSecurityHeaders()
   customConfig?: Partial<SecurityHeadersConfig>
-): Array<{ key: string; value: string }> {
+): Array<{ key: string; value: string }> {}
   const headers = getSecurityHeaders(customConfig)
-  return Object.entries(headers).map(([key, value]) => ({
+  return Object.entries(headers).map(([key, value]) => ({}
     key,
     value}
   }))

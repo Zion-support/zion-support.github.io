@@ -3,7 +3,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {
+import {}
   TrendingUp,
   DollarSign,
   BarChart,
@@ -21,27 +21,27 @@ import {
   Activity
 } from 'lucide-react';
 
-const InvestorsPage: React.FC = () => {
+const InvestorsPage: React.FC = () => {}
   const metrics = [
-    {
+    {}
       icon: DollarSign,
       value: '$50M+',
       label: 'Total Funding Raised',
       description: 'Series A and B rounds completed'
     },
-    {
+    {}
       icon: TrendingUp,
       value: '300%',
       label: 'Revenue Growth',
       description: 'Year-over-year growth rate'
     },
-    {
+    {}
       icon: Users,
       value: '500+',
       label: 'Enterprise Clients',
       description: 'Fortune 500 companies served'
     },
-    {
+    {}
       icon: Globe,
       value: '25+',
       label: 'Countries',
@@ -50,25 +50,25 @@ const InvestorsPage: React.FC = () => {
   ];
 
   const investors = [
-    {
+    {}
       name: 'Sequoia Capital',
       logo: '🌲',
       type: 'Lead Investor',
       description: 'Series A lead investor with deep AI expertise'
     },
-    {
+    {}
       name: 'Andreessen Horowitz',
       logo: '🚀',
       type: 'Series B',
       description: 'Strategic partner for enterprise growth'
     },
-    {
+    {}
       name: 'Accel Partners',
       logo: '⚡',
       type: 'Growth Capital',
       description: 'Supporting international expansion'
     },
-    {
+    {}
       name: 'GV (Google Ventures)',
       logo: '🔍',
       type: 'Strategic',
@@ -77,22 +77,22 @@ const InvestorsPage: React.FC = () => {
   ];
 
   const highlights = [
-    {
+    {}
       icon: Award,
       title: 'Industry Recognition',
       description: 'Named "AI Company of the Year" by TechCrunch'
     },
-    {
+    {}
       icon: Shield,
       title: 'Financial Stability',
       description: 'Strong balance sheet with 24+ months runway'
     },
-    {
+    {}
       icon: Zap,
       title: 'Rapid Growth',
       description: 'Consistent 300%+ revenue growth year-over-year'
     },
-    {
+    {}
       icon: Target,
       title: 'Market Leadership',
       description: 'Leading position in enterprise AI solutions'
@@ -130,7 +130,7 @@ const InvestorsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {metrics.map((metric, index) => (
+            {metrics.map((metric, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <metric.icon className="w-8 h-8 text-white" />
@@ -157,7 +157,7 @@ const InvestorsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {investors.map((investor, index) => (
+            {investors.map((investor, index) => (}
               <div
                 key={index}
                 className="cyber-card p-8 hover:scale-105 transition-all duration-300 text-center"
@@ -185,7 +185,7 @@ const InvestorsPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {highlights.map((highlight, index) => (
+            {highlights.map((highlight, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <highlight.icon className="w-8 h-8 text-white" />

@@ -2,9 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { Users, Award, Clock, Star, Shield, Globe } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
+const ContentStatistics: React.FC = () => {}
   const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState({
+  const [counts, setCounts] = useState({)}
     projects: 0,
     clients: 0,
     uptime: 0,
@@ -14,7 +14,7 @@ const ContentStatistics: React.FC = () => {
   });
 
   const stats = [
-    {
+    {}
       id: 'projects',
       label: 'Projects Completed',
       value: 500,
@@ -24,7 +24,7 @@ const ContentStatistics: React.FC = () => {
       bgColor: 'bg-cyan-500/10',
       description: 'Successful AI and IT implementations'
     },
-    {
+    {}
       id: 'clients',
       label: 'Happy Clients',
       value: 200,
@@ -34,7 +34,7 @@ const ContentStatistics: React.FC = () => {
       bgColor: 'bg-purple-500/10',
       description: 'Satisfied customers worldwide'
     },
-    {
+    {}
       id: 'uptime',
       label: 'Uptime Guarantee',
       value: 99.9,
@@ -44,7 +44,7 @@ const ContentStatistics: React.FC = () => {
       bgColor: 'bg-green-500/10',
       description: 'Reliable service delivery'
     },
-    {
+    {}
       id: 'satisfaction',
       label: 'Client Satisfaction',
       value: 98,
@@ -54,7 +54,7 @@ const ContentStatistics: React.FC = () => {
       bgColor: 'bg-yellow-500/10',
       description: 'Customer satisfaction rate'
     },
-    {
+    {}
       id: 'countries',
       label: 'Countries Served',
       value: 25,
@@ -64,7 +64,7 @@ const ContentStatistics: React.FC = () => {
       bgColor: 'bg-blue-500/10',
       description: 'Global presence and reach'
     },
-    {
+    {}
       id: 'years',
       label: 'Years Experience',
       value: 10,
@@ -76,10 +76,10 @@ const ContentStatistics: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+  useEffect(() => {}
+    const observer = new IntersectionObserver()
+      ([entry]) => {}
+        if (entry.isIntersecting) {}
           setIsVisible(true);
         }
       },
@@ -87,37 +87,37 @@ const ContentStatistics: React.FC = () => {
     );
 
     const element = document.getElementById('statistics-section');
-    if (element) {
+    if (element) {}
       observer.observe(element);
     }
 
-    return () => {
-      if (element) {
+    return () => {}
+      if (element) {}
         observer.unobserve(element);
       }
     };
   }, []);
 
-  useEffect(() => {
-    if (isVisible) {
+  useEffect(() => {}
+    if (isVisible) {}
       const duration = 2000; // 2 seconds
       const steps = 60;
       const stepDuration = duration / steps;
 
-      stats.forEach((stat) => {
+      stats.forEach((stat) => {}
         let currentStep = 0;
         const increment = stat.value / steps;
 
-        const timer = setInterval(() => {
+        const timer = setInterval(() => {}
           currentStep++;
-          setCounts((prev) => ({
+          setCounts((prev) => ({}
             ...prev,
             [stat.id]: Math.min(Math.floor(increment * currentStep), stat.value)
           }));
 
-          if (currentStep >= steps) {
+          if (currentStep >= steps) {}
             clearInterval(timer);
-            setCounts((prev) => ({
+            setCounts((prev) => ({}
               ...prev,
               [stat.id]: stat.value
             }));
@@ -138,7 +138,7 @@ const ContentStatistics: React.FC = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {stats.map((stat) => (
+          {stats.map((stat) => (}
             <div
               key={stat.id}
               className={`${stat.bgColor} rounded-xl p-6 text-center hover:scale-105 transition-all duration-300 cyber-card`}
@@ -150,7 +150,7 @@ const ContentStatistics: React.FC = () => {
               </div>
 
               <div className={`text-4xl md:text-5xl font-bold ${stat.color} mb-2`}>
-                {stat.id === 'uptime' || stat.id === 'satisfaction'
+                {stat.id === 'uptime' || stat.id === 'satisfaction'}
                   ? `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
                   : `${counts[stat.id as keyof typeof counts]}${stat.suffix}`
                 }

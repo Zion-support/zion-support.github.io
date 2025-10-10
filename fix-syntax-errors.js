@@ -1,87 +1,119 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-// List of files with syntax errors
-const filesToFix = [
-  'src/ai-analytics/page.tsx',
-  'src/ai-automation/page.tsx',
-  'src/ai-computer-vision/page.tsx',
-  'src/ai-content-generation/page.tsx',
-  'src/ai-content-studio/page.tsx',
-  'src/ai-crm/page.tsx',
-  'src/ai-customer-insights/page.tsx',
-  'src/ai-customer-support-bot/page.tsx',
-  'src/ai-customer-support/page.tsx',
-  'src/ai-cybersecurity/page.tsx',
-  'src/ai-data-analytics/page.tsx',
-  'src/ai-data-visualization/page.tsx',
-  'src/ai-design-assistant/page.tsx',
-  'src/ai-document-processing/page.tsx',
-  'src/ai-document-processor/page.tsx',
-  'src/ai-ecommerce-optimizer/page.tsx',
-  'src/ai-ecommerce-solutions/page.tsx',
-  'src/ai-edge-computing/page.tsx',
-  'src/ai-email-assistant/page.tsx',
-  'src/ai-email-marketing/page.tsx',
-  'src/ai-fintech/page.tsx',
-  'src/ai-healthcare/page.tsx',
-  'src/ai-hr-assistant/page.tsx',
-  'src/ai-inventory-manager/page.tsx',
-  'src/ai-invoice-generator/page.tsx',
-  'src/ai-lead-generation/page.tsx',
-  'src/ai-lead-scoring/page.tsx',
-  'src/ai-marketing/page.tsx'
-];
-
-// Template for a simple coming soon page
-const createComingSoonPage = (title, description) => `import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-const ${title}Page: React.FC = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation />
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
-          <p className="text-gray-300 mb-8">${description}</p>
-          <Link 
-            to="/contact" 
-            className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors"
-          >
-            Contact Us
-          </Link>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
-};
-
-export default ${title}Page;`;
-
-// Fix each file
-filesToFix.forEach(filePath => {
-  const fullPath = path.join(__dirname, filePath);
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  
-  const description = `Coming Soon - Advanced ${title.toLowerCase()} solutions`;
-  
+// Get all TypeScript errors
+function getTypeScriptErrors() {
   try {
-    fs.writeFileSync(fullPath, createComingSoonPage(title, description));
-    console.log(`Fixed: ${filePath}`);
+    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
+    return output.split('\n').filter(line => line.includes('error TS'));
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    return error.stdout.split('\n').filter(line => line.includes('error TS'));
   }
-});
+}
 
-console.log('All files fixed!');
+// Fix common syntax errors in a file
+function fixFile(filePath) {
+  if (!fs.existsSync(filePath)) {
+    console.log(`File not found: ${filePath}`);
+    return false;
+  }
+
+  let content = fs.readFileSync(filePath, 'utf8');
+  let modified = false;
+
+  // Fix missing closing braces in JSX
+  const jsxPattern = /(\s*)(<[^>]+>)(\s*)([^<]*?)(\s*)(<\/[^>]+>)/g;
+  const beforeLength = content.length;
+
+  // Fix common patterns
+  const fixes = [
+    // Fix missing closing braces in className templates
+    {
+      pattern: /className=\{`([^`]*?)\$\{([^}]*?)\}\s*([^`]*?)\`\}/g,
+      replacement: (match, before, expr, after) => {
+        if (!match.includes('}')) {
+          return `className={\`${before}\${${expr}}${after}\`}`;
+        }
+        return match;
+      }
+    },
+    // Fix missing closing parentheses in function calls
+    {
+      pattern: /(\w+\([^)]*?)\s*$/gm,
+      replacement: (match) => {
+        if (match.includes('(') && !match.includes(')')) {
+          return match + ')';
+        }
+        return match;
+      }
+    },
+    // Fix missing closing braces in object literals
+    {
+      pattern: /(\{[^}]*?)\s*$/gm,
+      replacement: (match) => {
+        const openBraces = (match.match(/\{/g) || []).length;
+        const closeBraces = (match.match(/\}/g) || []).length;
+        if (openBraces > closeBraces) {
+          return match + '}';
+        }
+        return match;
+      }
+    }
+  ];
+
+  fixes.forEach(fix => {
+    const newContent = content.replace(fix.pattern, fix.replacement);
+    if (newContent !== content) {
+      content = newContent;
+      modified = true;
+    }
+  });
+
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+    return true;
+  }
+
+  return false;
+}
+
+// Main function
+function main() {
+  console.log('🔧 Starting syntax error fixes...');
+  
+  const errors = getTypeScriptErrors();
+  const files = new Set();
+  
+  errors.forEach(error => {
+    const match = error.match(/^([^(]+)\((\d+),(\d+)\):/);
+    if (match) {
+      files.add(match[1]);
+    }
+  });
+
+  console.log(`Found ${files.size} files with errors`);
+
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
+
+  console.log(`✅ Fixed ${fixedCount} files`);
+  
+  // Run type check again to see remaining errors
+  console.log('\n🔍 Running type check again...');
+  try {
+    execSync('pnpm run type-check', { stdio: 'inherit' });
+    console.log('✅ All TypeScript errors fixed!');
+  } catch (error) {
+    console.log('⚠️  Some errors remain, continuing...');
+  }
+}
+
+main();

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import {
+import {}
   Search,
   HelpCircle,
   BookOpen,
@@ -20,60 +20,60 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-const HelpPage: React.FC = () => {
+const HelpPage: React.FC = () => {}
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const faqCategories = [
-    {
+    {}
       title: 'Getting Started',
       icon: BookOpen,
       questions: [
-        {
+        {}
           question: 'How do I get started with Zion Tech Group services?',
           answer: 'Getting started is easy! Simply contact our sales team through the contact form or call us directly. We\'ll schedule a consultation to understand your needs and recommend the best solutions.'
         },
-        {
+        {}
           question: 'What AI services do you offer?',
           answer: 'We offer comprehensive AI services including workflow automation, customer support, data analytics, content generation, healthcare solutions, fintech platforms, and much more. Check our services page for a complete list.'
         },
-        {
+        {}
           question: 'Do you offer free consultations?',
           answer: 'Yes! We provide free initial consultations to assess your needs and recommend the best solutions for your business. Contact us to schedule yours today.'
         }
       ]
     },
-    {
+    {}
       title: 'Technical Support',
       icon: HelpCircle,
       questions: [
-        {
+        {}
           question: 'How do I access technical support?',
           answer: 'You can access technical support through our support portal, email support@ziontechgroup.com, or call our 24/7 support line at +1 (302) 464-0950.'
         },
-        {
+        {}
           question: 'What are your support hours?',
           answer: 'We provide 24/7 technical support for all our clients. Our support team is always available to help with any issues or questions you may have.'
         },
-        {
+        {}
           question: 'How do I report a bug or issue?',
           answer: 'You can report bugs through our support portal, email support@ziontechgroup.com, or contact your dedicated account manager. We typically respond within 2 hours.'
         }
       ]
     },
-    {
+    {}
       title: 'Billing & Pricing',
       icon: FileText,
       questions: [
-        {
+        {}
           question: 'What are your pricing models?',
           answer: 'We offer flexible pricing models including subscription-based plans, project-based pricing, and enterprise agreements. Contact our sales team for a customized quote.'
         },
-        {
+        {}
           question: 'Do you offer volume discounts?',
           answer: 'Yes, we offer volume discounts for enterprise clients and long-term contracts. Contact our sales team to discuss your specific needs and pricing options.'
         },
-        {
+        {}
           question: 'How do I update my billing information?',
           answer: 'You can update your billing information through your account dashboard or contact our billing team at billing@ziontechgroup.com.'
         }
@@ -82,28 +82,28 @@ const HelpPage: React.FC = () => {
   ];
 
   const quickLinks = [
-    {
+    {}
       title: 'Documentation',
       description: 'Comprehensive guides and API documentation',
       icon: BookOpen,
       link: '/docs',
       color: 'text-blue-400'
     },
-    {
+    {}
       title: 'Video Tutorials',
       description: 'Step-by-step video guides',
       icon: Video,
       link: '/tutorials',
       color: 'text-purple-400'
     },
-    {
+    {}
       title: 'Download Resources',
       description: 'Templates, guides, and tools',
       icon: Download,
       link: '/downloads',
       color: 'text-green-400'
     },
-    {
+    {}
       title: 'Community Forum',
       description: 'Connect with other users',
       icon: MessageSquare,
@@ -113,21 +113,21 @@ const HelpPage: React.FC = () => {
   ];
 
   const contactMethods = [
-    {
+    {}
       icon: Phone,
       title: 'Phone Support',
       description: '24/7 technical support',
       contact: '+1 (302) 464-0950',
       action: 'Call Now'
     },
-    {
+    {}
       icon: Mail,
       title: 'Email Support',
       description: 'Get help via email',
       contact: 'support@ziontechgroup.com',
       action: 'Send Email'
     },
-    {
+    {}
       icon: MessageSquare,
       title: 'Live Chat',
       description: 'Chat with our support team',
@@ -136,7 +136,7 @@ const HelpPage: React.FC = () => {
     }
   ];
 
-  const toggleCategory = (categoryTitle: string) => {
+  const toggleCategory = (categoryTitle: string) => {}
     setExpandedCategory(expandedCategory === categoryTitle ? null : categoryTitle);
   };
 
@@ -185,7 +185,7 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {quickLinks.map((link, index) => (
+            {quickLinks.map((link, index) => (}
               <a
                 key={index}
                 href={link.link}
@@ -221,7 +221,7 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="space-y-6">
-            {faqCategories.map((category, categoryIndex) => (
+            {faqCategories.map((category, categoryIndex) => (}
               <div key={categoryIndex} className="cyber-card">
                 <button
                   onClick={() => toggleCategory(category.title)}
@@ -231,16 +231,16 @@ const HelpPage: React.FC = () => {
                     <category.icon className="w-6 h-6 text-cyan-400 mr-4" />
                     <h3 className="text-xl font-bold text-white">{category.title}</h3>
                   </div>
-                  {expandedCategory === category.title ? (
+                  {expandedCategory === category.title ? (}
                     <ChevronDown className="w-6 h-6 text-cyan-400" />
                   ) : (
                     <ChevronRight className="w-6 h-6 text-cyan-400" />
                   )}
                 </button>
 
-                {expandedCategory === category.title && (
+                {expandedCategory === category.title && (}
                   <div className="px-6 pb-6 space-y-4">
-                    {category.questions.map((faq, faqIndex) => (
+                    {category.questions.map((faq, faqIndex) => (}
                       <div key={faqIndex} className="border-l-2 border-cyan-400/30 pl-4">
                         <h4 className="text-lg font-semibold text-white mb-2">{faq.question}</h4>
                         <p className="text-gray-300">{faq.answer}</p>
@@ -267,7 +267,7 @@ const HelpPage: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {contactMethods.map((method, index) => (
+            {contactMethods.map((method, index) => (}
               <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <method.icon className="w-8 h-8 text-white" />
