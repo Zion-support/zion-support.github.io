@@ -19,12 +19,8 @@ import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import SecurityEnhancer from './app/components/SecurityEnhancer';
 
-<<<<<<< HEAD
-// Lazy load pages
-=======
 // Lazy load pages for better performance
 const HomePage = React.lazy(() => import('./app/page'));
->>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
