@@ -1,9 +1,6 @@
 // Learn more: https://github.com/testing-library/jest-dom
 require('@testing-library/jest-dom');
-<<<<<<< HEAD
 const React = require('react');
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4927
 const { TextEncoder, TextDecoder } = require('util');
 
 // Polyfills for Node.js environment

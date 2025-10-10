@@ -240,7 +240,7 @@ export class ErrorHandler {
         body: JSON.stringify(error)
       });
     } catch (err) {
-      // }
+      }
   }
   // Report error
   private async reportError(error: AppError) {
@@ -257,7 +257,7 @@ export class ErrorHandler {
         })
       });
     } catch (err) {
-      // }
+    }
   }
   // Notify user
   private notifyUser(error: AppError) {
@@ -351,7 +351,7 @@ export class ErrorHandler {
       if (retryItem.retryCount < this.config.maxRetries) {
         this.scheduleRetry(retryItem.error);
       } else {
-        // }
+      }
     }
   }
   // Get all errors

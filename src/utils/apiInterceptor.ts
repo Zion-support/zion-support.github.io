@@ -14,7 +14,8 @@ class ErrorHandler {
     return ErrorHandler.instance;
   }
   handleNetworkError(error: Error, url: string, config?: unknown): void {
-    // }
+    // Handle network error logic here
+  }
 }
 export interface APIConfig {
   baseURL: string;

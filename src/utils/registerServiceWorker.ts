@@ -60,7 +60,7 @@ export async function registerServiceWorker(
     });
     return registration;
   } catch (error) {
-    // if (config.onError && error instanceof Error) {
+    if (config.onError && error instanceof Error) {
       config.onError(error);
     }
   }
@@ -77,7 +77,7 @@ export async function unregisterServiceWorker(): Promise<boolean> {
     const result = await registration.unregister();
     return result;
   } catch (error) {
-    // return false;
+    return false;
   }
 }
 /**
@@ -90,8 +90,8 @@ export async function checkForUpdates(): Promise<void> {
   try {
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
-    } catch (error) {
-    // }
+  } catch (error) {
+    }
 }
 /**
  * Skip waiting and activate new service worker

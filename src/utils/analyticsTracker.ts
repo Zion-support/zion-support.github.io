@@ -119,7 +119,7 @@ class AnalyticsTracker {
         });
       }
       // Always log errors to console
-      // };
+    }
     if (this.isInitialized) {
       track();
     } else {
