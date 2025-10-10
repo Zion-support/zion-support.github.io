@@ -91,7 +91,7 @@ import {
   Map,
   TestTube,
   Thermometer,
-  Popup,
+  MessageSquare,
   DollarSign,
   Receipt,
   PiggyBank,
@@ -4331,7 +4331,8 @@ const HomePage: React.FC = memo(() => {
                   </div>
                 </div>
               ))}
-
+            </div>
+          </div>
         </div>
       </section>
 
