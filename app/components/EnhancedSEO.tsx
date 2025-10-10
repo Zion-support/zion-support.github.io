@@ -1,221 +1,141 @@
 'use client';
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+interface StructuredData {
+  '@context': string;
+  '@type': string;
+  [key: string]: any;
+}
+
 interface EnhancedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  canonicalUrl?: string;
+  title: string;
+  description: string;
+  keywords: string[];
+  canonicalUrl: string;
   ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: any;
-  noIndex?: boolean;
-  noFollow?: boolean;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  locale?: string;
-  alternateLocales?: string[];
-  robots?: string;
-  viewport?: string;
-  themeColor?: string;
-  colorScheme?: string;
-  preload?: Array<{
-    href: string;
-    as: string;
-    type?: string;
-  }>;
-  prefetch?: Array<{
-    href: string;
-    as: string;
-  }>;
+  structuredData?: StructuredData;
+  preload?: Array<{ href: string; as: string; type?: string }>;
+  prefetch?: Array<{ href: string; as: string }>;
   dnsPrefetch?: string[];
   preconnect?: string[];
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.',
-  keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services', 'artificial intelligence', 'business intelligence', 'data analytics', 'cybersecurity', 'cloud migration', 'DevOps', 'IT consulting'],
-  canonicalUrl = 'https://ziontechgroup.com',
+  title,
+  description,
+  keywords,
+  canonicalUrl,
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image',
   structuredData,
-  noIndex = false,
-  noFollow = false,
-  author = 'Zion Tech Group',
-  publishedTime,
-  modifiedTime,
-  section,
-  tags = [],
-  locale = 'en_US',
-  alternateLocales = [],
-  robots,
-  viewport = 'width=device-width, initial-scale=1, viewport-fit=cover',
-  themeColor = '#0f172a',
-  colorScheme = 'dark light',
   preload = [],
   prefetch = [],
   dnsPrefetch = [],
-  preconnect = []
+  preconnect = [],
 }) => {
-  const robotsContent = robots || `${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   
-  const defaultStructuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description: 'Advanced AI and IT Solutions',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '364 E Main St STE 1008',
-      addressLocality: 'Middletown',
-      addressRegion: 'DE',
-      postalCode: '19709',
-      addressCountry: 'US',
-    },
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://facebook.com/ziontechgroup',
-      'https://instagram.com/ziontechgroup',
-      'https://github.com/ziontechgroup',
-      'https://youtube.com/@ziontechgroup'
-    ],
-    offers: {
-      '@type': 'Offer',
-      name: 'AI Enterprise Transformation Services',
-      description: 'Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains',
-      price: '50000',
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-    },
-  };
-
-  const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
-      <meta name="author" content={author} />
-      <meta name="robots" content={robotsContent} />
-      <meta name="viewport" content={viewport} />
-      <meta name="theme-color" content={themeColor} />
-      <meta name="color-scheme" content={colorScheme} />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      
-      {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
       
-      {/* Language and Locale */}
-      <html lang={locale.split('_')[0]} />
-      {alternateLocales.map((altLocale) => (
-        <link key={altLocale} rel="alternate" hrefLang={altLocale} href={`${canonicalUrl}?lang=${altLocale}`} />
-      ))}
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:title" content={title} />
+      {/* Open Graph Tags */}
+      <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={title} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content={locale} />
-      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
-      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.map((tag) => (
-        <meta key={tag} property="article:tag" content={tag} />
-      ))}
+      <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:url" content={canonicalUrl} />
-      <meta name="twitter:title" content={title} />
+      {/* Twitter Card Tags */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
-      <meta name="twitter:image:alt" content={title} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Preconnect to external domains */}
-      {preconnect.map((domain) => (
-        <link key={domain} rel="preconnect" href={domain} crossOrigin="anonymous" />
-      ))}
+      {/* Additional SEO Tags */}
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="publisher" content="Zion Tech Group" />
+      <meta name="copyright" content="Zion Tech Group" />
+      <meta name="language" content="en" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="rating" content="general" />
+      <meta name="distribution" content="global" />
+      <meta name="geo.region" content="US-DE" />
+      <meta name="geo.placename" content="Middletown" />
+      <meta name="geo.position" content="39.4496;-75.7163" />
+      <meta name="ICBM" content="39.4496, -75.7163" />
       
-      {/* DNS Prefetch */}
-      {dnsPrefetch.map((domain) => (
-        <link key={domain} rel="dns-prefetch" href={domain} />
-      ))}
-      
-      {/* Preload critical resources */}
-      {preload.map((resource, index) => (
-        <link
-          key={index}
-          rel="preload"
-          href={resource.href}
-          as={resource.as}
-          type={resource.type}
-        />
-      ))}
-      
-      {/* Prefetch likely next pages */}
-      {prefetch.map((resource, index) => (
-        <link
-          key={index}
-          rel="prefetch"
-          href={resource.href}
-          as={resource.as}
-        />
-      ))}
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(finalStructuredData)}
-      </script>
-      
-      {/* Additional SEO Meta Tags */}
-      <meta name="google-site-verification" content="your-google-verification-code" />
-      <meta name="msvalidate.01" content="your-bing-verification-code" />
-      <meta name="yandex-verification" content="your-yandex-verification-code" />
-      
-      {/* Security Headers */}
-      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-      <meta httpEquiv="X-Frame-Options" content="DENY" />
-      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-      
-      {/* Performance Hints */}
-      <meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width" />
-      <meta name="mobile-web-app-capable" content="yes" />
+      {/* Mobile Optimization */}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      <meta name="theme-color" content="#00ffff" />
+      <meta name="msapplication-TileColor" content="#00ffff" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-      {/* Favicon and Icons */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.png" />
-      <link rel="manifest" href="/manifest.json" />
+      {/* Performance Hints */}
+      {dnsPrefetch.map((url) => (
+        <link key={url} rel="dns-prefetch" href={url} />
+      ))}
+      {preconnect.map((url) => (
+        <link key={url} rel="preconnect" href={url} crossOrigin="anonymous" />
+      ))}
+      {preload.map(({ href, as, type }) => (
+        <link key={href} rel="preload" href={href} as={as} type={type} />
+      ))}
+      {prefetch.map(({ href, as }) => (
+        <link key={href} rel="prefetch" href={href} as={as} />
+      ))}
+      
+      {/* Structured Data */}
+      {structuredData && (
+        <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+        </script>
+      )}
+      
+      {/* Additional Structured Data for Services */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "AI and IT Solutions",
+          "description": "Advanced AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
+          "provider": {
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com"
+            },
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            }
+          },
+          "areaServed": "United States",
+          "serviceType": "Technology Services",
+          "category": "Artificial Intelligence, IT Services, Digital Transformation"
+        })}
+      </script>
     </Helmet>
   );
 };

@@ -1,108 +1,96 @@
 'use client';
 import { useEffect } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
 
-interface PerformanceMonitorProps {
-  enableReporting?: boolean;
-  enableConsoleLogging?: boolean;
+interface PerformanceMetrics {
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  enableReporting = true,
-  enableConsoleLogging = false
-}) => {
+const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    if (!enableReporting) return;
+    // Only run in browser
+    if (typeof window === 'undefined') return;
 
-    const reportMetric = (metric: any) => {
-      if (enableConsoleLogging) {
-        console.log('Performance Metric:', metric);
-      }
-
+    const reportMetric = (name: string, value: number) => {
       // Send to analytics
-      if (typeof window !== 'undefined' && 'gtag' in window) {
+      if ('gtag' in window) {
         (window as any).gtag('event', 'web_vitals', {
           event_category: 'Performance',
-          event_label: metric.name,
-          value: Math.round(metric.value),
-          non_interaction: true,
+          event_label: name,
+          value: Math.round(name === 'CLS' ? value * 1000 : value),
         });
       }
 
-      // Send to custom analytics endpoint
-      if (typeof window !== 'undefined' && navigator.sendBeacon) {
-        const data = JSON.stringify({
-          name: metric.name,
-          value: metric.value,
-          delta: metric.delta,
-          id: metric.id,
-          navigationType: metric.navigationType,
-          timestamp: Date.now(),
-          url: window.location.href,
-          userAgent: navigator.userAgent,
-        });
-
-        navigator.sendBeacon('/api/analytics/performance', data);
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log(`Performance Metric - ${name}:`, value);
       }
     };
 
-    // Measure Core Web Vitals
-    getCLS(reportMetric);
-    getFID(reportMetric);
-    getFCP(reportMetric);
-    getLCP(reportMetric);
-    getTTFB(reportMetric);
+    // LCP - Largest Contentful Paint
+    const lcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      const lastEntry = entries[entries.length - 1];
+      reportMetric('LCP', lastEntry.startTime);
+    });
+    lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-    // Additional performance monitoring
-    const measurePageLoad = () => {
-      if (typeof window !== 'undefined' && window.performance) {
-        const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        if (navigation) {
-          const metrics = {
-            name: 'page_load_time',
-            value: navigation.loadEventEnd - navigation.fetchStart,
-            delta: navigation.loadEventEnd - navigation.fetchStart,
-            id: 'page-load',
-            navigationType: navigation.type,
-          };
-          
-          reportMetric(metrics);
+    // FID - First Input Delay
+    const fidObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        reportMetric('FID', entry.processingStart - entry.startTime);
+      });
+    });
+    fidObserver.observe({ entryTypes: ['first-input'] });
+
+    // CLS - Cumulative Layout Shift
+    let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry: any) => {
+        if (!entry.hadRecentInput) {
+          clsValue += entry.value;
         }
-      }
-    };
+      });
+      reportMetric('CLS', clsValue);
+    });
+    clsObserver.observe({ entryTypes: ['layout-shift'] });
 
-    // Measure when page is fully loaded
-    if (document.readyState === 'complete') {
-      measurePageLoad();
-    } else {
-      window.addEventListener('load', measurePageLoad);
-    }
+    // FCP - First Contentful Paint
+    const fcpObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.name === 'first-contentful-paint') {
+          reportMetric('FCP', entry.startTime);
+        }
+      });
+    });
+    fcpObserver.observe({ entryTypes: ['paint'] });
 
-    // Monitor memory usage (if available)
-    const measureMemory = () => {
-      if (typeof window !== 'undefined' && 'memory' in performance) {
-        const memory = (performance as any).memory;
-        const memoryMetrics = {
-          name: 'memory_usage',
-          value: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
-          delta: memory.usedJSHeapSize / 1024 / 1024,
-          id: 'memory-usage',
-          navigationType: 'navigate',
-        };
-        
-        reportMetric(memoryMetrics);
-      }
-    };
+    // TTFB - Time to First Byte
+    const ttfbObserver = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+          reportMetric('TTFB', entry.responseStart - entry.requestStart);
+        }
+      });
+    });
+    ttfbObserver.observe({ entryTypes: ['navigation'] });
 
-    // Measure memory usage periodically
-    const memoryInterval = setInterval(measureMemory, 30000); // Every 30 seconds
-
+    // Cleanup
     return () => {
-      window.removeEventListener('load', measurePageLoad);
-      clearInterval(memoryInterval);
+      lcpObserver.disconnect();
+      fidObserver.disconnect();
+      clsObserver.disconnect();
+      fcpObserver.disconnect();
+      ttfbObserver.disconnect();
     };
-  }, [enableReporting, enableConsoleLogging]);
+  }, []);
 
   return null;
 };

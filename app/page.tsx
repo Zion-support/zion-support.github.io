@@ -8,6 +8,8 @@ import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
 import EnhancedSEO from './components/EnhancedSEO';
 import PerformanceEnhancer from './components/PerformanceEnhancer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import LoadingSkeleton, { ServiceCardSkeleton } from './components/LoadingSkeleton';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -1293,6 +1295,7 @@ const HomePage: React.FC = () => {
             ttfb: 600
           }}
         />
+        <PerformanceMonitor />
         <AccessibilityEnhancer
           enableKeyboardNavigation={true}
           enableScreenReaderSupport={true}
@@ -1309,6 +1312,7 @@ const HomePage: React.FC = () => {
         />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <Navigation />
+          <main id="main-content">
           
           {/* Hero Section */}
           <section className="relative pt-20 pb-16 overflow-hidden">
@@ -1650,6 +1654,7 @@ const HomePage: React.FC = () => {
           </section>
 
           <Footer />
+          </main>
         </div>
       </EnhancedSEO>
     </EnhancedErrorBoundary>

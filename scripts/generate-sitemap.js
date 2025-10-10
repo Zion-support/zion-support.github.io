@@ -1,1 +1,159 @@
-// #!/usr/bin/env node /** * Sitemap Generator for Zion Tech Group Website * * This script generates a comprehensive sitemap.xml file * including all pages, blog posts, and services. */ import fs from 'fs'' import path from 'path' ' const baseUrl = 'https: //zion.app'' const currentDate = new Date().toISOString().split('T')[0], // Define all static pages const staticPages = [ { url: `${baseUrl}/`, lastmod: currentDate,' changefreq: 'daily', priority: 1.0 }, { url: `${baseUrl}/services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.9 }, { url: `${baseUrl}/services/ai-services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/services/micro-saas`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/services/it-services`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/blog`, lastmod: currentDate,' changefreq: 'daily', priority: 0.8 }, { url: `${baseUrl}/case-studies`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/testimonials`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.6 }, { url: `${baseUrl}/pricing`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.8 }, { url: `${baseUrl}/contact`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/about`, lastmod: currentDate,' changefreq: 'monthly', priority: 0.6 }, { url: `${baseUrl}/tools`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/resources`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 } ]; // Blog posts from content files const blogPosts = [ { url: `${baseUrl}/blog/genai-telemetry-observability-2025`,' lastmod: '2025-09-29',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/feature-flags-at-the-edge-2025`,' lastmod: '2025-09-28',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/ai-product-readiness-checks`,' lastmod: '2025-09-27',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/real-time-data-pipelines`,' lastmod: '2025-09-26',' changefreq: 'monthly', priority: 0.7 }, { url: `${baseUrl}/blog/platform-scorecards-that-stick`,' lastmod: '2025-09-25',' changefreq: 'monthly', priority: 0.7 } ]; // Service-specific pages const servicePages = [ { url: `${baseUrl}/services/ai-autonomous-operations`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 }, { url: `${baseUrl}/services/enterprise-ai-solutions`, lastmod: currentDate,' changefreq: 'weekly', priority: 0.7 } ]; // Combine all pages const allPages = [...staticPages, ...blogPosts, ...servicePages]; // Generate sitemap XML function generateSitemapXML() { const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"> ${allPages.map(page => ` <url> <loc>${page.url}</loc> <lastmod>${page.lastmod}</lastmod> <changefreq>${page.changefreq}</changefreq> <priority>${page.priority}</priority> <mobile:mobile/>' </url>`).join('\n')} </urlset>`; return sitemap; } // Generate robots.txt function generateRobotsTxt() { return `User-agent: * Allow: / # Sitemap Sitemap: ${baseUrl}/sitemap.xml # Disallow admin and private areas Disallow: /admin/ Disallow: /api/ Disallow: /_next/ Disallow: /private/ Disallow: /tmp/ # Allow search engines to crawl static assets Allow: /images/ Allow: /css/ Allow: /js/ Allow: /fonts/ Allow: /assets/ # Crawl delay for respectful crawling Crawl-delay: 1 # Host directive Host: ${baseUrl}`; } // Main function function generateSitemap() {' try { // Ensure public directory exists' const publicDir = path.join(process.cwd(), 'public')} if (!fs.existsSync(publicDir)) { fs.mkdirSync(publicDir} { recursive: true }); } // Generate and save sitemap.xml const sitemapXML = generateSitemapXML();' const sitemapPath = path.join(publicDir) 'sitemap.xml');' fs.writeFileSync(sitemapPath, sitemapXML) 'utf8');' // Generate and save robots.txt const robotsTxt = generateRobotsTxt(),' const robotsPath = path.join(publicDir) 'robots.txt');' fs.writeFileSync(robotsPath, robotsTxt) 'utf8');' // console.log('✅ Robots.txt generated: public/robots.txt'), // Generate sitemap index for multiple sitemaps (future use) const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?> <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> <sitemap> <loc>${baseUrl}/sitemap.xml</loc> <lastmod>${currentDate}</lastmod> </sitemap> </sitemapindex>`; ' const sitemapIndexPath = path.join(publicDir) 'sitemap-index.xml');' fs.writeFileSync(sitemapIndexPath, sitemapIndex) 'utf8');' // console.log(`\\n📊 Sitemap Statistics:`), ' ' ' ' ' ' // console.log('4. Monitor sitemap indexing status in search consoles'), } catch (error) {' process.exit(1); } } // Run if called directly if (import.meta.url === `file://${process.argv[1]}`) {generateSitemap()} } export {generateSitemap, generateSitemapXML, generateRobotsTxt, staticPages, blogPosts} servicePages };'
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Define all the routes in your application
+const routes = [
+  {
+    url: '/',
+    changefreq: 'daily',
+    priority: '1.0',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/about',
+    changefreq: 'monthly',
+    priority: '0.8',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/services',
+    changefreq: 'weekly',
+    priority: '0.9',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/contact',
+    changefreq: 'monthly',
+    priority: '0.8',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/pricing',
+    changefreq: 'weekly',
+    priority: '0.8',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/enterprise',
+    changefreq: 'monthly',
+    priority: '0.7',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/blog',
+    changefreq: 'weekly',
+    priority: '0.6',
+    lastmod: new Date().toISOString().split('T')[0]
+  },
+  {
+    url: '/case-studies',
+    changefreq: 'monthly',
+    priority: '0.6',
+    lastmod: new Date().toISOString().split('T')[0]
+  }
+];
+
+// Add AI service pages
+const aiServices = [
+  'machine-learning', 'ai-business-intelligence', 'ai-supply-chain', 'ai-quality-assurance',
+  'ai-hr', 'ai-legal', 'ai-real-estate', 'ai-manufacturing', 'ai-transportation',
+  'ai-education', 'ai-energy', 'ai-insurance', 'nlp', 'computer-vision',
+  'ai-automation', 'quantum-ai', 'ai-cybersecurity', 'ai-healthcare', 'ai-fintech',
+  'ai-mobile-app-development', 'ai-crm', 'ai-email-assistant', 'ai-scheduler'
+];
+
+aiServices.forEach(service => {
+  routes.push({
+    url: `/${service}`,
+    changefreq: 'monthly',
+    priority: '0.7',
+    lastmod: new Date().toISOString().split('T')[0]
+  });
+});
+
+// Add IT service pages
+const itServices = [
+  'cloud-services', 'enterprise-security', 'it-infrastructure', 'data-center',
+  'network-security', 'it-consulting', 'managed-it', 'cloud-security',
+  'it-asset-management', 'backup-recovery', 'it-training', 'it-performance',
+  'cybersecurity', 'devops', 'database-services', 'network-infrastructure',
+  'it-support', 'cloud-migration', 'compliance', 'developer-tools',
+  'marketing-tools', 'productivity'
+];
+
+itServices.forEach(service => {
+  routes.push({
+    url: `/${service}`,
+    changefreq: 'monthly',
+    priority: '0.7',
+    lastmod: new Date().toISOString().split('T')[0]
+  });
+});
+
+// Add specialized service pages
+const specializedServices = [
+  'quantum-computing', 'autonomous-systems', 'blockchain', 'iot-edge',
+  'business-intelligence', 'robotics', 'enterprise', 'analytics-tools',
+  'business-apps', 'expense-tracker', 'task-manager-pro', 'smart-analytics'
+];
+
+specializedServices.forEach(service => {
+  routes.push({
+    url: `/${service}`,
+    changefreq: 'monthly',
+    priority: '0.6',
+    lastmod: new Date().toISOString().split('T')[0]
+  });
+});
+
+// Generate sitemap XML
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routes.map(route => `  <url>
+    <loc>https://ziontechgroup.com${route.url}</loc>
+    <lastmod>${route.lastmod}</lastmod>
+    <changefreq>${route.changefreq}</changefreq>
+    <priority>${route.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
+
+// Write sitemap to public directory
+const publicDir = path.join(__dirname, '..', 'public');
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true });
+}
+
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
+console.log('Sitemap generated successfully!');
+
+// Generate robots.txt
+const robots = `User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
+
+# Allow important pages
+Allow: /
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+Allow: /pricing/
+Allow: /blog/
+Allow: /case-studies/`;
+
+fs.writeFileSync(path.join(publicDir, 'robots.txt'), robots);
+console.log('Robots.txt generated successfully!');
