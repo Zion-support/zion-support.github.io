@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+'use client';
 
 const PageBackupPage: React.FC = () => {
   const features = [

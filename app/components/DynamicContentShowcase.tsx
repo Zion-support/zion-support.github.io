@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+'use client';
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
 

@@ -1,3 +1,5 @@
+'use client';
+import React from 'react';
 import React, { memo, useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 

@@ -292,10 +292,7 @@ const MicroSaasPage: React.FC = () => {
               </table>
             </div>
           </div>
-<<<<<<< HEAD
-=======
         </div>
->>>>>>> bc969527fc10f0bc15fab48f1421aeba969621d1
 
         {/* CTA Section */}
         <section className="py-20 px-4">
@@ -326,7 +323,6 @@ const MicroSaasPage: React.FC = () => {
             </div>
           </div>
         </section>
-        </div>
       </div>
     </>
   );

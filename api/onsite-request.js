@@ -1,6 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+// Simple wrapper function to replace withSentry
+const withSentry = (handler) => handler;
+
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 

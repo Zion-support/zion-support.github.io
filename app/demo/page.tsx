@@ -1,4 +1,6 @@
 'use client';
+import React from 'react';
+'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, CheckCircle, ArrowRight, Star, Monitor, Smartphone, Tablet, Zap, BarChart, Brain, Cloud, Shield } from 'lucide-react';
