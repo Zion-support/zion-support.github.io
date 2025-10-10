@@ -84,7 +84,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: (id) => {
-          // Vendor chunks - more granular splitting
+          // Vendor chunks - more granular splitting for better caching
           if (id.includes('node_modules')) {
             if (id.includes('react') || id.includes('react-dom')) {
               return 'vendor-react';
@@ -101,12 +101,18 @@ export default defineConfig({
             if (id.includes('react-router-dom')) {
               return 'vendor-router';
             }
+            if (id.includes('react-helmet-async')) {
+              return 'vendor-seo';
+            }
+            if (id.includes('web-vitals')) {
+              return 'vendor-analytics';
+            }
             if (id.includes('tailwindcss') || id.includes('postcss')) {
               return 'vendor-css';
             }
             return 'vendor-other';
           }
-          // Page chunks - group similar pages
+          // Page chunks - group similar pages for better caching
           if (id.includes('/app/ai-') || id.includes('/app/machine-learning') || id.includes('/app/nlp') || id.includes('/app/computer-vision')) {
             return 'pages-ai';
           }
@@ -118,6 +124,10 @@ export default defineConfig({
           }
           if (id.includes('/app/')) {
             return 'pages-other';
+          }
+          // Component chunks
+          if (id.includes('/src/components/')) {
+            return 'components';
           }
         },
         chunkFileNames: 'assets/[name]-[hash].js',

@@ -48,152 +48,118 @@ const Navigation: React.FC = () => {
     { name: 'AI Project Manager', href: '/ai-project-manager', icon: BarChart, category: 'Productivity' },
     { name: 'AI Task Manager Pro', href: '/task-manager-pro', icon: Check, category: 'Productivity' },
     { name: 'AI Workflow Automation', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity' },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity' },
+    { name: 'AI Time Tracker', href: '/ai-time-tracker', icon: Clock3, category: 'Productivity' },
+    { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, category: 'Productivity' },
     
     // Content & Marketing
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: FileText, category: 'Content' },
-    { name: 'AI Content Generator', href: '/ai-content-generation', icon: FileText, category: 'Content' },
-    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: MessageSquare, category: 'Marketing' },
+    { name: 'AI Content Writer', href: '/ai-content-writer', icon: FileText, category: 'Content' },
+    { name: 'AI Content Generation', href: '/ai-content-generation', icon: PenTool, category: 'Content' },
     { name: 'AI Email Marketing', href: '/ai-email-marketing', icon: Mail, category: 'Marketing' },
-    { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, category: 'Marketing' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Share2, category: 'Marketing' },
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, category: 'Marketing' },
-    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target, category: 'Marketing' },
     
     // Business & Finance
-    { name: 'AI CRM Intelligence', href: '/ai-crm', icon: Users, category: 'Business' },
-    { name: 'AI Fintech Analyzer', href: '/ai-fintech', icon: CreditCard, category: 'Finance' },
-    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: Calculator, category: 'Finance' },
-    { name: 'AI Expense Tracker', href: '/expense-tracker', icon: Calculator, category: 'Finance' },
-    { name: 'AI E-commerce Assistant', href: '/ai-ecommerce-solutions', icon: ShoppingCart, category: 'Business' },
-    
-    // Customer Service
-    { name: 'AI Customer Support Bot', href: '/ai-customer-support-bot', icon: Bot, category: 'Support' },
-    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot, category: 'Support' },
-    { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail, category: 'Support' },
-    
-    // Development & Technical
-    { name: 'AI Code Review Assistant', href: '/ai-code-generation', icon: Code, category: 'Development' },
-    { name: 'AI Mobile App Builder', href: '/ai-mobile-app-development', icon: Smartphone, category: 'Development' },
-    { name: 'AI Cybersecurity Shield', href: '/ai-cybersecurity', icon: Shield, category: 'Security' },
-    { name: 'AI Document Processor', href: '/ai-document-processing', icon: FileText, category: 'Development' },
-    
-    // Analytics & Data
-    { name: 'AI Data Analytics Pro', href: '/ai-data-analytics', icon: BarChart3, category: 'Analytics' },
-    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: BarChart, category: 'Analytics' },
-    
-    // Creative & Media
-    { name: 'AI Video Generator Pro', href: '/ai-video-generation', icon: Video, category: 'Creative' },
-    { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning', icon: Music, category: 'Creative' },
-    { name: 'AI Music Composer', href: '/ai-music-composition', icon: Music, category: 'Creative' },
-    { name: 'AI Fashion Designer', href: '/ai-fashion-design', icon: Palette, category: 'Creative' },
-    { name: 'AI 3D Generation Studio', href: '/ai-3d-generation', icon: Camera, category: 'Creative' },
-    
-    // Health & Wellness
-    { name: 'AI Healthcare Assistant', href: '/ai-healthcare', icon: Heart, category: 'Health' },
-    { name: 'AI Fitness Coach', href: '/ai-fitness-coach', icon: Heart, category: 'Health' },
-    
-    // Sales & Business
-    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Target, category: 'Sales' }
+    { name: 'AI Financial Advisor', href: '/ai-financial-advisor', icon: DollarSign, category: 'Finance' },
+    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, category: 'Finance' },
+    { name: 'AI Expense Tracker', href: '/ai-expense-tracker', icon: Calculator, category: 'Finance' },
+    { name: 'AI Stock Portfolio Manager', href: '/ai-stock-portfolio-manager', icon: TrendingUp, category: 'Finance' },
   ];
 
   const aiServices = [
-    { name: 'Machine Learning Solutions', href: '/machine-learning', icon: Brain },
-    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: BarChart },
-    { name: 'AI Supply Chain Optimization', href: '/ai-supply-chain', icon: Globe },
-    { name: 'AI Quality Assurance', href: '/ai-quality-assurance', icon: Shield },
-    { name: 'AI Human Resources', href: '/ai-hr', icon: Users },
-    { name: 'AI Legal Assistant', href: '/ai-legal', icon: FileText },
-    { name: 'AI Real Estate Analytics', href: '/ai-real-estate', icon: Home },
-    { name: 'AI Manufacturing Intelligence', href: '/ai-manufacturing', icon: Factory },
-    { name: 'AI Transportation & Logistics', href: '/ai-transportation', icon: Truck },
-    { name: 'AI Education Platform', href: '/ai-education', icon: GraduationCap },
-    { name: 'AI Energy Management', href: '/ai-energy', icon: Zap },
-    { name: 'AI Insurance Analytics', href: '/ai-insurance', icon: Shield },
-    { name: 'Natural Language Processing', href: '/nlp', icon: MessageSquare },
-    { name: 'Computer Vision', href: '/computer-vision', icon: Eye },
-    { name: 'AI Automation', href: '/ai-automation', icon: Zap },
-    { name: 'Quantum AI Computing', href: '/quantum-ai', icon: Cpu },
-    { name: 'AI Cybersecurity', href: '/ai-cybersecurity', icon: Shield },
-    { name: 'AI Healthcare Solutions', href: '/ai-healthcare', icon: Stethoscope },
-    { name: 'AI Fintech Solutions', href: '/ai-fintech', icon: CreditCard },
-    { name: 'AI Mobile App Development', href: '/ai-mobile-app-development', icon: Smartphone },
-    { name: 'AI CRM Solutions', href: '/ai-crm', icon: Users },
+    { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart3 },
+    { name: 'AI Automation', href: '/ai-automation', icon: Settings },
+    { name: 'AI Business Intelligence', href: '/ai-business-intelligence', icon: Brain },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Bot },
+    { name: 'AI Code Generation', href: '/ai-code-generation', icon: Code },
+    { name: 'AI Customer Support', href: '/ai-customer-support', icon: MessageSquare },
+    { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: BarChart },
+    { name: 'AI Data Visualization', href: '/ai-data-visualization', icon: Eye },
+    { name: 'AI E-commerce Solutions', href: '/ai-ecommerce-solutions', icon: ShoppingCart },
     { name: 'AI Email Assistant', href: '/ai-email-assistant', icon: Mail },
-    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar }
+    { name: 'AI Financial Analyzer', href: '/ai-financial-analyzer', icon: DollarSign },
+    { name: 'AI Lead Generation', href: '/ai-lead-generation', icon: Target },
+    { name: 'AI Marketing', href: '/ai-marketing', icon: TrendingUp },
+    { name: 'AI Predictive Analytics', href: '/ai-predictive-analytics', icon: Activity },
+    { name: 'AI Sales Automation', href: '/ai-sales-automation', icon: Users },
+    { name: 'AI Website Builder', href: '/ai-website-builder', icon: Globe },
   ];
 
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud },
-    { name: 'Enterprise Security Solutions', href: '/enterprise-security', icon: Shield },
-    { name: 'IT Infrastructure Management', href: '/it-infrastructure', icon: Settings },
-    { name: 'Data Center Solutions', href: '/data-center', icon: Database },
-    { name: 'Network Security & Firewall', href: '/network-security', icon: Lock },
-    { name: 'IT Consulting & Strategy', href: '/it-consulting', icon: Briefcase },
-    { name: 'Managed IT Services', href: '/managed-it', icon: Users },
-    { name: 'Cloud Security & Compliance', href: '/cloud-security', icon: Shield },
-    { name: 'IT Asset Management', href: '/it-asset-management', icon: BarChart },
-    { name: 'Backup & Disaster Recovery', href: '/backup-recovery', icon: Database },
-    { name: 'IT Training & Support', href: '/it-training', icon: GraduationCap },
-    { name: 'IT Performance Optimization', href: '/it-performance', icon: Zap },
     { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield },
-    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings },
-    { name: 'Database Services', href: '/database-services', icon: Database },
-    { name: 'Network Infrastructure', href: '/network-infrastructure', icon: Globe },
-    { name: 'IT Support & Helpdesk', href: '/it-support', icon: Users },
-    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud },
-    { name: 'Compliance & Governance', href: '/compliance', icon: FileText },
-    { name: 'Developer Tools', href: '/developer-tools', icon: Code },
-    { name: 'Marketing Tools', href: '/marketing-tools', icon: Target },
-    { name: 'Productivity Solutions', href: '/productivity', icon: BarChart }
+    { name: 'DevOps', href: '/devops', icon: Settings },
+    { name: 'Mobile App Development', href: '/mobile-app-development', icon: Smartphone },
+    { name: 'Web Development', href: '/web-development', icon: Code },
+    { name: 'Database Management', href: '/database-management', icon: Database },
+    { name: 'API Development', href: '/api-development', icon: Globe },
+    { name: 'System Integration', href: '/system-integration', icon: Settings },
   ];
 
   const specializedServices = [
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu },
-    { name: 'Autonomous Systems', href: '/autonomous-systems', icon: Settings },
-    { name: 'Blockchain & Web3', href: '/blockchain', icon: Lock },
-    { name: 'IoT & Edge Computing', href: '/iot-edge', icon: Globe },
-    { name: 'Business Intelligence', href: '/business-intelligence', icon: BarChart },
-    { name: 'Robotics Solutions', href: '/robotics', icon: Settings },
-    { name: 'Enterprise Solutions', href: '/enterprise', icon: Building },
-    { name: 'Analytics Tools', href: '/analytics-tools', icon: BarChart3 },
-    { name: 'Business Apps', href: '/business-apps', icon: Briefcase },
-    { name: 'Expense Tracker Pro', href: '/expense-tracker', icon: Calculator },
-    { name: 'Task Manager Pro', href: '/task-manager-pro', icon: Check },
-    { name: 'Smart Analytics', href: '/smart-analytics', icon: TrendingUp }
+    { name: 'AI Healthcare', href: '/ai-healthcare', icon: Stethoscope },
+    { name: 'AI Education', href: '/ai-education', icon: GraduationCap },
+    { name: 'AI Legal', href: '/ai-legal', icon: Scale },
+    { name: 'AI Real Estate', href: '/ai-real-estate', icon: Home },
+    { name: 'AI Manufacturing', href: '/ai-manufacturing', icon: Factory },
+    { name: 'AI Transportation', href: '/ai-transportation', icon: Truck },
+    { name: 'AI Energy', href: '/ai-energy', icon: Zap },
+    { name: 'AI Insurance', href: '/ai-insurance', icon: Shield },
   ];
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20' : 'bg-transparent'
+      isScrolled ? 'bg-gray-900/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
+          {/* Logo */}
           <Link to="/" className="flex items-center space-x-2" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center">
-              <Brain className="w-5 h-5 text-white" />
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+              Zion Tech Group
+            </span>
           </Link>
 
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <div className="relative group">
+            <Link
+              to="/"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              onClick={closeAllMenus}
+            >
+              Home
+            </Link>
+            
+            <Link
+              to="/about"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              onClick={closeAllMenus}
+            >
+              About
+            </Link>
+
+            {/* Services Dropdown */}
+            <div className="relative">
               <button
                 onClick={toggleServices}
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors"
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
               >
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
+                  isServicesOpen ? 'rotate-180' : ''
+                }`} />
               </button>
-              
+
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[1000px] bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg shadow-xl p-6">
+                <div className="absolute top-full left-0 mt-2 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-700 p-6">
                   <div className="grid grid-cols-4 gap-6">
                     <div>
                       <h3 className="text-cyan-400 font-semibold mb-3 flex items-center">
                         <Zap className="w-4 h-4 mr-2" />
                         Micro SAAS
                       </h3>
-<<<<<<< HEAD
                       <div className="space-y-3">
                         {['Productivity', 'Content', 'Marketing', 'Business', 'Finance'].map(category => (
                           <div key={category}>
@@ -211,18 +177,6 @@ const Navigation: React.FC = () => {
                               ))}
                             </div>
                           </div>
-=======
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 6).map((service) => (
-                          <Link key={service.name}
-                            to={service.href}
-                            className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            <service.icon className="w-3 h-3" />
-                            <span>{service.name}</span>
-                          </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                         ))}
                       </div>
                     </div>
@@ -232,11 +186,7 @@ const Navigation: React.FC = () => {
                         AI Services
                       </h3>
                       <div className="space-y-2">
-<<<<<<< HEAD
                         {aiServices.slice(0, 8).map((service) => (
-=======
-                        {aiServices.slice(0, 6).map((service) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                           <Link key={service.name}
                             to={service.href}
                             className="flex items-center space-x-2 text-sm text-gray-300 hover:text-cyan-400 transition-colors"
@@ -254,11 +204,7 @@ const Navigation: React.FC = () => {
                         IT Services
                       </h3>
                       <div className="space-y-2">
-<<<<<<< HEAD
                         {itServices.slice(0, 8).map((service) => (
-=======
-                        {itServices.slice(0, 6).map((service) => (
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                           <Link
                             key={service.name}
                             to={service.href}
@@ -268,7 +214,6 @@ const Navigation: React.FC = () => {
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </Link>
-<<<<<<< HEAD
                         ))}
                       </div>
                     </div>
@@ -288,217 +233,75 @@ const Navigation: React.FC = () => {
                             <service.icon className="w-3 h-3" />
                             <span>{service.name}</span>
                           </Link>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                         ))}
                       </div>
-                    </div>
-                  </div>
-                  <div className="mt-6 pt-4 border-t border-gray-700">
-                    <div className="grid grid-cols-3 gap-4">
-                      <Link
-                        to="/services"
-                        className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>View All Services</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-                      <Link
-<<<<<<< HEAD
-                        to="/specialized-services"
-=======
-                        to="/services"
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
-                        className="flex items-center justify-center space-x-2 text-purple-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>Specialized Solutions</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-<<<<<<< HEAD
-                      <Link
-                        to="/pricing"
-                        className="flex items-center justify-center space-x-2 text-green-400 hover:text-white transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <span>View Pricing</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </Link>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                     </div>
                   </div>
                 </div>
               )}
             </div>
 
-            <Link to="/about" className="text-white hover:text-cyan-400 transition-colors">
-              About
-            </Link>
-            <Link to="/blog" className="text-white hover:text-cyan-400 transition-colors">
-              Blog
-            </Link>
-            <Link to="/case-studies" className="text-white hover:text-cyan-400 transition-colors">
-              Case Studies
-            </Link>
-            <Link to="/pricing" className="text-white hover:text-cyan-400 transition-colors">
-              Pricing
-            </Link>
-<<<<<<< HEAD
-            <Link to="/enterprise" className="text-white hover:text-cyan-400 transition-colors">
-              Enterprise
-            </Link>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
-            <Link to="/contact" className="text-white hover:text-cyan-400 transition-colors">
+            <Link
+              to="/contact"
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+              onClick={closeAllMenus}
+            >
               Contact
             </Link>
-            
-            <div className="flex items-center space-x-4">
-              <a
-                href="tel:+13024640950"
-                className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors"
+
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 flex items-center space-x-2"
+              onClick={closeAllMenus}
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+            >
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2">
+              <Link
+                to="/"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                onClick={closeAllMenus}
               >
-                <Phone className="w-4 h-4" />
-                <span className="hidden sm:inline">+1 302 464 0950</span>
-              </a>
-              <Link to="/contact"
-                className="cyber-button px-4 py-2 text-sm"
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
+              <Link
+                to="/contact"
+                className="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors duration-200"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
+              <Link
+                to="/contact"
+                className="block px-3 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 text-center"
+                onClick={closeAllMenus}
               >
                 Get Started
               </Link>
-            </div>
-          </div>
-
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {isMenuOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-cyan-400/20">
-            <div className="px-4 py-6 space-y-4">
-              <div>
-                <button
-                  onClick={toggleServices}
-                  className="flex items-center justify-between w-full text-white hover:text-cyan-400 transition-colors"
-                >
-                  <span>Services</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-4 pl-4 space-y-3">
-                    <div>
-                      <h4 className="text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
-                      <div className="space-y-2">
-                        {microSAASServices.slice(0, 4).map((service) => (
-                          <Link key={service.name}
-                            to={service.href}
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-purple-400 font-semibold mb-2">AI Services</h4>
-                      <div className="space-y-2">
-                        {aiServices.slice(0, 4).map((service) => (
-                          <Link key={service.name}
-                            to={service.href}
-<<<<<<< HEAD
-                            className="block text-sm text-gray-300 hover:text-purple-400 transition-colors"
-=======
-                            className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors"
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </Link>
-<<<<<<< HEAD
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-green-400 font-semibold mb-2">IT Services</h4>
-                      <div className="space-y-2">
-                        {itServices.slice(0, 4).map((service) => (
-                          <Link key={service.name}
-                            to={service.href}
-                            className="block text-sm text-gray-300 hover:text-green-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-orange-400 font-semibold mb-2">Specialized</h4>
-                      <div className="space-y-2">
-                        {specializedServices.slice(0, 4).map((service) => (
-                          <Link key={service.name}
-                            to={service.href}
-                            className="block text-sm text-gray-300 hover:text-orange-400 transition-colors"
-                            onClick={closeAllMenus}
-                          >
-                            {service.name}
-                          </Link>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              <Link to="/about" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                About
-              </Link>
-              <Link to="/blog" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Blog
-              </Link>
-              <Link to="/case-studies" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Case Studies
-              </Link>
-              <Link to="/pricing" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Pricing
-              </Link>
-              <Link to="/enterprise" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-                Enterprise
-              </Link>
-              <Link to="/contact" className="block text-white hover:text-cyan-400 transition-colors" onClick={closeAllMenus}>
-<<<<<<< HEAD
-                Contact
-              </Link>
-=======
-                  Contact
-                </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
-              
-              <div className="pt-4 border-t border-gray-700">
-                <a
-                  href="tel:+13024640950"
-                  className="flex items-center space-x-2 text-cyan-400 hover:text-white transition-colors mb-2"
-                >
-                  <Phone className="w-4 h-4" />
-                  <span>+1 302 464 0950</span>
-                </a>
-                <Link to="/contact"
-                  className="cyber-button px-4 py-2 text-sm inline-block"
-                  onClick={closeAllMenus}
-                >
-                  Get Started
-                </Link>
-              </div>
             </div>
           </div>
         )}
