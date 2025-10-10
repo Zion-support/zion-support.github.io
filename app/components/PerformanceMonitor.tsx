@@ -1,110 +1,102 @@
 'use client';
-
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { measureWebVitals } from '../../src/utils/performanceMonitor';
-=======
+import React, { useEffect, useState } from 'react';
 interface PerformanceMetrics {
-  loadTime: number,
-  memoryUsage: number,
-  connectionSpeed: string,
-  renderTime: number,
+  fcp: number | null;
+  lcp: number | null;
+  fid: number | null;
+  cls: number | null;
+  ttfb: number | null;
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
-
 const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null
+  });
   useEffect(() => {
-    // Initialize performance monitoring
-    measureWebVitals();
-
-    // Track page load performance
-    const trackPageLoad = () => {
-      if (typeof window !== 'undefined' && 'performance' in window) {
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        
-        if (navigation) {
-          const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-          const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-          
-          console.log('Page Load Performance:', {
-            loadTime,
-            domContentLoaded,
-            totalTime: navigation.loadEventEnd - navigation.fetchStart
-          });
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
+    const measurePerformance = () => {
+      // Measure First Contentful Paint
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'paint' && entry.name === 'first-contentful-paint') {
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+            }
+          }
+        });
+        observer.observe({ entryTypes: ['paint'] });
+      }
+      // Measure Largest Contentful Paint
+      if ('PerformanceObserver' in window) {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+      }
+      // Measure First Input Delay
+      if ('PerformanceObserver' in window) {
+        const fidObserver = new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (entry.entryType === 'first-input') {
+              setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+            }
+          }
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+      }
+      // Measure Cumulative Layout Shift
+      if ('PerformanceObserver' in window) {
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          const layoutShiftEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+          if (!layoutShiftEntry.hadRecentInput) {
+            clsValue += layoutShiftEntry.value || 0;
+          }
         }
+          setMetrics(prev => ({ ...prev, cls: clsValue }));
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+      // Measure Time to First Byte
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        }));
       }
     };
-
-    // Track performance after page load
+    // Measure after page load
     if (document.readyState === 'complete') {
-      trackPageLoad();
+      measurePerformance();
     } else {
-      window.addEventListener('load', trackPageLoad);
+      window.addEventListener('load', measurePerformance);
     }
-
-    return () => {
-      window.removeEventListener('load', trackPageLoad);
-    };
   }, []);
-
-<<<<<<< HEAD
-  return null;
-=======
-  if (!isVisible || !metrics) return null;
-
+  
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+  
   return (
-    <div className="fixed bottom-4 right-4 bg-black/90 text-white p-4 rounded-lg shadow-lg z-50 min-w-[200px]">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-sm font-semibold flex items-center">
-          <Activity className="w-4 h-4 mr-1" />
-          Performance
-        </h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white text-xs"
-        >
-          ×
-        </button>
+    <div className="performance-monitor fixed bottom-4 right-4 bg-gray-800 text-white p-4 rounded-lg shadow-lg text-xs z-50">
+      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div className="metrics space-y-1">
+        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'N/A'}</div>
+        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'N/A'}</div>
+        <div>CLS: {metrics.cls ? metrics.cls.toFixed(4) : 'N/A'}</div>
+        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'N/A'}</div>
+        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'N/A'}</div>
       </div>
-      
-      <div className="space-y-2 text-xs">
-        <div className="flex items-center justify-between">
-          <span className="flex items-center">
-            <Clock className="w-3 h-3 mr-1" />
-            Load Time:
-          </span>
-          <span className="text-green-400">{metrics.loadTime}ms</span>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <span className="flex items-center">
-            <Zap className="w-3 h-3 mr-1" />
-            Render Time:
-          </span>
-          <span className="text-blue-400">{metrics.renderTime}ms</span>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <span className="flex items-center">
-            <Database className="w-3 h-3 mr-1" />
-            Memory:
-          </span>
-          <span className="text-yellow-400">{metrics.memoryUsage}MB</span>
-        </div>
-        
-        <div className="flex items-center justify-between">
-          <span className="flex items-center">
-            <Activity className="w-3 h-3 mr-1" />
-            Connection:
-          </span>
-          <span className="text-purple-400">{metrics.connectionSpeed}</span>
-        </div>
-      
-      <div className="mt-2 text-xs text-gray-400">
-        Press Ctrl+Shift+P to toggle</div>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-e3dc
 };
-
 export default PerformanceMonitor;

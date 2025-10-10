@@ -1,14 +1,12 @@
 'use client';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Building, Target, Award, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, ExternalLink, Star, TrendingUp, Users, DollarSign } from 'lucide-react';
-
+const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
 id: 1,
@@ -266,4 +264,6 @@ return (
     </div>
   );
 };
+
+export default CaseStudiesPage;
 
