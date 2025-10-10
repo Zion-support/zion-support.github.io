@@ -1,8 +1,6 @@
 import { withErrorLogging } from './withErrorLogging.cjs';
 
-';
-
-const PROD_DOMAIN = 'https://ziontechgroup.com;;
+const PROD_DOMAIN = 'https://ziontechgroup.com';
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
