@@ -125,6 +125,13 @@ const AISupplyChainOptimizationProPage = React.lazy(() => import('./app/ai-suppl
 const AIVideoGeneratorPage = React.lazy(() => import('./app/ai-video-generator/page'));
 const AIWorkflowAutomationPage = React.lazy(() => import('./app/ai-workflow-automation/page'));
 
+// New Micro SAAS Services
+const AIVoiceCloningStudioPage = React.lazy(() => import('./app/ai-voice-cloning-studio/page'));
+const AICodeSecurityAuditorPage = React.lazy(() => import('./app/ai-code-security-auditor/page'));
+const AIMentalHealthCompanionPage = React.lazy(() => import('./app/ai-mental-health-companion/page'));
+const AISmartHomeControllerPage = React.lazy(() => import('./app/ai-smart-home-controller/page'));
+const AIInvestmentOptimizerPage = React.lazy(() => import('./app/ai-investment-optimizer/page'));
+
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
@@ -260,6 +267,13 @@ const App: React.FC = memo(() => {
                       <Route path="/ai-supply-chain-optimization-pro" element={<AISupplyChainOptimizationProPage />} />
                       <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
                       <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+
+                      {/* New Micro SAAS Services */}
+                      <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
+                      <Route path="/ai-code-security-auditor" element={<AICodeSecurityAuditorPage />} />
+                      <Route path="/ai-mental-health-companion" element={<AIMentalHealthCompanionPage />} />
+                      <Route path="/ai-smart-home-controller" element={<AISmartHomeControllerPage />} />
+                      <Route path="/ai-investment-optimizer" element={<AIInvestmentOptimizerPage />} />
 
                       {/* IT Services Pages */}
                       <Route path="/cloud-migration" element={<CloudMigrationPage />} />
