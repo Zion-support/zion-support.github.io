@@ -32,7 +32,7 @@ const AIMarketingPage = lazy(() => import('./ai-marketing/page'));
 const AIMobileAppDevelopmentPage = lazy(() => import('./ai-mobile-app-development/page'));
 const AISalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AISchedulerPage = lazy(() => import('./ai-scheduler/page'));
-const AIServicesPage = lazy(() => import('../app/ai-services/page'));
+const AIServicesPage = lazy(() => import('./ai-services/page'));
 const AIWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/page'));
 const AIWritingAssistantPage = lazy(() => import('./ai-writing-assistant/page'));
 
@@ -57,6 +57,29 @@ const QuantumAIPage = lazy(() => import('./quantum-ai/page'));
 const DatabaseServicesPage = lazy(() => import('./database-services/page'));
 const NetworkInfrastructurePage = lazy(() => import('./network-infrastructure/page'));
 const ITSupportPage = lazy(() => import('./it-support/page'));
+
+// Additional AI Services Pages (missing from navigation)
+const AIEducationPage = lazy(() => import('../app/ai-education/page'));
+const AIEnergyPage = lazy(() => import('../app/ai-energy/page'));
+const AIHRPage = lazy(() => import('../app/ai-hr/page'));
+const AIInsurancePage = lazy(() => import('../app/ai-insurance/page'));
+const AILegalPage = lazy(() => import('../app/ai-legal/page'));
+const AIManufacturingPage = lazy(() => import('../app/ai-manufacturing/page'));
+const AIQualityAssurancePage = lazy(() => import('../app/ai-quality-assurance/page'));
+const AIRealEstatePage = lazy(() => import('../app/ai-real-estate/page'));
+const AISupplyChainPage = lazy(() => import('../app/ai-supply-chain/page'));
+const AITransportationPage = lazy(() => import('../app/ai-transportation/page'));
+
+// IT Services Pages (missing from navigation)
+const BackupRecoveryPage = lazy(() => import('../app/backup-recovery/page'));
+const CloudSecurityPage = lazy(() => import('../app/cloud-security/page'));
+const DataCenterPage = lazy(() => import('../app/data-center/page'));
+const EnterpriseSecurityPage = lazy(() => import('../app/enterprise-security/page'));
+const ITAssetManagementPage = lazy(() => import('../app/it-asset-management/page'));
+const ITPerformancePage = lazy(() => import('../app/it-performance/page'));
+const ITTrainingPage = lazy(() => import('../app/it-training/page'));
+const ManagedITPage = lazy(() => import('../app/managed-it/page'));
+const NetworkSecurityPage = lazy(() => import('../app/network-security/page'));
 
 // New Pages
 const WebDevelopmentPage = lazy(() => import('../app/web-development/page'));
@@ -217,6 +240,29 @@ const App: React.FC = () => {
             <Route path="/database-services" element={<DatabaseServicesPage />} />
             <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
             <Route path="/it-support" element={<ITSupportPage />} />
+            
+            {/* Additional AI Services Pages (missing from navigation) */}
+            <Route path="/ai-education" element={<AIEducationPage />} />
+            <Route path="/ai-energy" element={<AIEnergyPage />} />
+            <Route path="/ai-hr" element={<AIHRPage />} />
+            <Route path="/ai-insurance" element={<AIInsurancePage />} />
+            <Route path="/ai-legal" element={<AILegalPage />} />
+            <Route path="/ai-manufacturing" element={<AIManufacturingPage />} />
+            <Route path="/ai-quality-assurance" element={<AIQualityAssurancePage />} />
+            <Route path="/ai-real-estate" element={<AIRealEstatePage />} />
+            <Route path="/ai-supply-chain" element={<AISupplyChainPage />} />
+            <Route path="/ai-transportation" element={<AITransportationPage />} />
+            
+            {/* IT Services Pages (missing from navigation) */}
+            <Route path="/backup-recovery" element={<BackupRecoveryPage />} />
+            <Route path="/cloud-security" element={<CloudSecurityPage />} />
+            <Route path="/data-center" element={<DataCenterPage />} />
+            <Route path="/enterprise-security" element={<EnterpriseSecurityPage />} />
+            <Route path="/it-asset-management" element={<ITAssetManagementPage />} />
+            <Route path="/it-performance" element={<ITPerformancePage />} />
+            <Route path="/it-training" element={<ITTrainingPage />} />
+            <Route path="/managed-it" element={<ManagedITPage />} />
+            <Route path="/network-security" element={<NetworkSecurityPage />} />
             
             {/* New Pages */}
             <Route path="/web-development" element={<WebDevelopmentPage />} />

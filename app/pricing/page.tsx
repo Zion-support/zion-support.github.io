@@ -1,7 +1,6 @@
 'use client';
-<<<<<<< HEAD
 import React, { useState } from 'react';
-import { CheckCircle, Users } from 'lucide-react';;
+import { CheckCircle, Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
