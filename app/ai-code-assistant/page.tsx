@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiCodeAssistantPage: React.FC = () => {
@@ -31,7 +30,6 @@ const AiCodeAssistantPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const PagePage: React.FC = () => {
@@ -50,12 +48,10 @@ const PagePage: React.FC = () => {
       title: 'Feature 3',
       description: 'Description of feature 3',
       benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -125,7 +121,6 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   )}
-=======
     'Benefit 1',
     'Benefit 2',
     'Benefit 3',
@@ -185,7 +180,6 @@ const PagePage: React.FC = () => {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <CheckCircle className="w-6 h-6 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -203,7 +197,6 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
@@ -251,7 +244,6 @@ const PagePage: React.FC = () => {
           </div>
         </section>
       </div>
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -293,14 +285,10 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
       <Footer />
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default AiCodeAssistantPage;
-=======
 export default PagePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4

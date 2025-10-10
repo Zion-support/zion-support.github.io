@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiContentWriterPage: React.FC = () => {
@@ -32,7 +31,6 @@ const AiContentWriterPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const AIContentWriterPage: React.FC = () => {
@@ -51,12 +49,10 @@ const AIContentWriterPage: React.FC = () => {
       title: 'SEO Optimization',
       description: 'Optimize content for search engines automatically',
       benefits: ['Keyword research', 'SEO scoring', 'Content suggestions']
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
     }
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
@@ -95,7 +91,6 @@ const AIContentWriterPage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
     'Increase content production by 10x',
     'Improve engagement by 200%',
     'Save 50+ hours per week',
@@ -213,7 +208,6 @@ const AIContentWriterPage: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
 
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -303,8 +297,5 @@ const AIContentWriterPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AiContentWriterPage;
-=======
 export default AIContentWriterPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-00e4
