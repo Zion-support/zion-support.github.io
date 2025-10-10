@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
 
-<<<<<<< HEAD
 interface AdvancedAccessibilityEnhancerProps {}
   enableKeyboardNavigation?: boolean;
   enableScreenReader?: boolean;
@@ -15,17 +14,11 @@ interface AdvancedAccessibilityEnhancerProps {}
   enableVoiceNavigation?: boolean;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps>= ({
-=======
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({}
->>>>>>> origin/merge-error-fixes
   enableKeyboardNavigation = true,
-=======
 const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps> = ({,
   enableKeyboardNavigation = true;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   enableScreenReader = true,
   enableHighContrast = true,
   enableFocusManagement = true,
@@ -34,16 +27,12 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   enableColorContrast = true,
   enableMotionReduction = true,
   enableFontScaling = true,
-<<<<<<< HEAD
   enableVoiceNavigation = true;
 }) => {
-<<<<<<< HEAD
   const [accessibilitySettings, setAccessibilitySettings] = useState({
-=======
   enableVoiceNavigation = true
 }) => {}
   const [accessibilitySettings, setAccessibilitySettings] = useState({)}
->>>>>>> origin/merge-error-fixes
     highContrast: false,
     reducedMotion: false,
     fontSize: 'normal',
@@ -51,10 +40,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     keyboardNavigation: false
   });
 
-<<<<<<< HEAD
   // Detect user preferences)
     useEffect(() => {
-=======
   const [accessibilitySettings, setAccessibilitySettings] = useState({)
     highContrast: false;)
     reducedMotion: false;)
@@ -65,11 +52,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   // Detect user preferences;
   useEffect(() => {
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
   // Detect user preferences
   useEffect(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     // Check for reduced motion preference;
@@ -81,41 +65,32 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     // Check for color scheme preference;
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     setAccessibilitySettings(prev => ({
-=======
     setAccessibilitySettings(prev => ({)}
->>>>>>> origin/merge-error-fixes
       ...prev,
-      reducedMotion: prefersReducedMotion,)
+      reducedMotion: prefersReducedMotion)
     highContrast: prefersHighContrast
-=======
     setAccessibilitySettings(prev => ({)
       ...prev),
       reducedMotion: prefersReducedMotion),
       highContrast: prefersHighContrast;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     }));
 
     // Listen for changes in user preferences;
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
-<<<<<<< HEAD
 ,
     const handleMotionChange = (e: MediaQueryListEvent) => {,
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }));
     };
 
     const handleContrastChange = (e: MediaQueryListEvent) => {,
-=======
 
     const handleMotionChange = (e: MediaQueryListEvent) => {}
       setAccessibilitySettings(prev => ({ ...prev, reducedMotion: e.matches }));
     };
 
     const handleContrastChange = (e: MediaQueryListEvent) => {}
->>>>>>> origin/merge-error-fixes
       setAccessibilitySettings(prev => ({ ...prev, highContrast: e.matches }));
     };
 
@@ -128,36 +103,27 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     };
   }, []);
 
-<<<<<<< HEAD
   // Apply accessibility styles;
   useEffect(() => {
-=======
   // Apply accessibility styles
   useEffect(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     const root = document.documentElement;
 
-<<<<<<< HEAD
     // Apply high contrast mode;
     if (accessibilitySettings.highContrast) {
-=======
     // Apply high contrast mode
     if (accessibilitySettings.highContrast) {}
->>>>>>> origin/merge-error-fixes
       root.classList.add('high-contrast');
     } else {}
       root.classList.remove('high-contrast');
     }
 
-<<<<<<< HEAD
     // Apply reduced motion;
     if (accessibilitySettings.reducedMotion) {
-=======
     // Apply reduced motion
     if (accessibilitySettings.reducedMotion) {}
->>>>>>> origin/merge-error-fixes
       root.classList.add('reduced-motion');
     } else {}
       root.classList.remove('reduced-motion');
@@ -167,7 +133,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     root.style.setProperty('--font-scale', accessibilitySettings.fontSize === 'large' ? '1.2' : '1');
   }, [accessibilitySettings]);
 
-<<<<<<< HEAD
   // Keyboard navigation enhancement;
   const setupKeyboardNavigation = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -177,7 +142,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
         if (skipLink) {,
-=======
   // Keyboard navigation enhancement
   const setupKeyboardNavigation = useCallback(() => {}
     if (typeof window === 'undefined') return;
@@ -187,32 +151,25 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {}
         const skipLink = document.querySelector('[data-skip-link]') as HTMLElement;
         if (skipLink) {}
->>>>>>> origin/merge-error-fixes
           skipLink.focus();
           event.preventDefault();
         }
       }
 
-<<<<<<< HEAD
       // Escape key to close modals/dropdowns;
       if (event.key === 'Escape') {
-=======
       // Escape key to close modals/dropdowns
       if (event.key === 'Escape') {}
->>>>>>> origin/merge-error-fixes
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.hasAttribute('data-close-on-escape')) {}
           activeElement.click();
         }
       }
 
-<<<<<<< HEAD
       // Arrow keys for menu navigation;
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-=======
       // Arrow keys for menu navigation
       if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {}
->>>>>>> origin/merge-error-fixes
         const menu = document.querySelector('[role="menu"]') as HTMLElement;
         if (menu && menu.contains(event.target as Node)) {}
           event.preventDefault();
@@ -230,13 +187,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-<<<<<<< HEAD
   // Screen reader enhancements;
   const setupScreenReaderSupport = useCallback(() => {
-=======
   // Screen reader enhancements
   const setupScreenReaderSupport = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     // Add live region for dynamic content updates;
@@ -247,17 +201,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     liveRegion.id = 'live-region';
     document.body.appendChild(liveRegion);
 
-<<<<<<< HEAD
     // Announce page changes;
     const announcePageChange = (message: string) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {,
-=======
     // Announce page changes
     const announcePageChange = (message: string) => {}
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {}
->>>>>>> origin/merge-error-fixes
         liveRegion.textContent = message;
       }
     };
@@ -277,47 +228,35 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     };
   }, []);
 
-<<<<<<< HEAD
   // Focus management;
   const setupFocusManagement = useCallback(() => {
-=======
   // Focus management
   const setupFocusManagement = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
-<<<<<<< HEAD
     // Trap focus in modals
-<<<<<<< HEAD
     const trapFocus = (element: HTMLElement) => {
       const focusableElements = element.querySelectorAll(</AdvancedAccessibilityEnhancerProps>
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'</AdvancedAccessibilityEnhancerProps>
-=======
     // Trap focus in modals;
     const trapFocus = (element: HTMLElement) => {,
-      const focusableElements = element.querySelectorAll(,)
-=======
+      const focusableElements = element.querySelectorAll()
     const trapFocus = (element: HTMLElement) => {}
       const focusableElements = element.querySelectorAll()
->>>>>>> origin/merge-error-fixes
         'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       ) as NodeListOf<HTMLElement>;
 
       const firstElement = focusableElements[0];
       const lastElement = focusableElements[focusableElements.length - 1];
 
-<<<<<<< HEAD
       const handleTabKey = (e: KeyboardEvent) => {
         if (e.key === 'Tab') {,
           if (e.shiftKey) {,
             if (document.activeElement === firstElement) {,
-=======
       const handleTabKey = (e: KeyboardEvent) => {}
         if (e.key === 'Tab') {}
           if (e.shiftKey) {}
             if (document.activeElement === firstElement) {}
->>>>>>> origin/merge-error-fixes
               lastElement.focus();
               e.preventDefault();
             }
@@ -338,24 +277,17 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
     // Apply focus trap to modals;
     const modals = document.querySelectorAll('[role="dialog"]');
-<<<<<<< HEAD
     modals.forEach(modal => {)
-<<<<<<< HEAD
     const cleanup = trapFocus(modal as HTMLElement);
-=======
     modals.forEach(modal => {)}
       const cleanup = trapFocus(modal as HTMLElement);
->>>>>>> origin/merge-error-fixes
       // Store cleanup function for later use
-=======
       const cleanup = trapFocus(modal as HTMLElement);
       // Store cleanup function for later use;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       (modal as any).__focusTrapCleanup = cleanup;
 
   }, []);
 
-<<<<<<< HEAD
   // ARIA labels enhancement;
   const enhanceARIALabels = useCallback(() => {
     if (typeof window === 'undefined') return;
@@ -363,7 +295,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     // Add missing ARIA labels to interactive elements;
     const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])');
     buttons.forEach((button, index) => {
-=======
   // ARIA labels enhancement
   const enhanceARIALabels = useCallback(() => {}
     if (typeof window === 'undefined') return;
@@ -371,7 +302,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     // Add missing ARIA labels to interactive elements
     const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
     buttons.forEach((button, index) => {}
->>>>>>> origin/merge-error-fixes
       const text = button.textContent?.trim();
       if (text && text.length > 0) {}
         button.setAttribute('aria-label', text);
@@ -379,7 +309,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
         button.setAttribute('aria-label', `Button ${index + 1}`);
       }
 
-<<<<<<< HEAD
     // Add ARIA labels to images;
     const images = document.querySelectorAll('img: not([alt])');
     images.forEach((img, index) => {
@@ -388,7 +317,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     // Add ARIA labels to form inputs;
     const inputs = document.querySelectorAll('input: not([aria-label]):not([aria-labelledby])');
     inputs.forEach((input, index) => {
-=======
     // Add ARIA labels to images
     const images = document.querySelectorAll('img:not([alt])');
     images.forEach((img, index) => {}
@@ -397,7 +325,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     // Add ARIA labels to form inputs
     const inputs = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
     inputs.forEach((input, index) => {}
->>>>>>> origin/merge-error-fixes
       const placeholder = input.getAttribute('placeholder');
       const label = input.getAttribute('name');
       if (placeholder) {}
@@ -410,13 +337,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
 
   }, []);
 
-<<<<<<< HEAD
   // Skip links;
   const addSkipLinks = useCallback(() => {
-=======
   // Skip links
   const addSkipLinks = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     const skipLinks = [
@@ -440,13 +364,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     document.body.insertBefore(skipLinksContainer, document.body.firstChild);
   }, []);
 
-<<<<<<< HEAD
   // Color contrast checking;
   const checkColorContrast = useCallback(() => {
-=======
   // Color contrast checking
   const checkColorContrast = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
     const checkElementContrast = (element: HTMLElement) => {}
@@ -454,15 +375,12 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       const backgroundColor = styles.backgroundColor;
       const color = styles.color;
 
-<<<<<<< HEAD
       // Simple contrast check (this would need a more sophisticated implementation),
       if (backgroundColor && color) {,
         // Add visual indicator for low contrast elements;
-=======
       // Simple contrast check (this would need a more sophisticated implementation)
       if (backgroundColor && color) {}
         // Add visual indicator for low contrast elements
->>>>>>> origin/merge-error-fixes
         element.setAttribute('data-contrast-checked', 'true');
       }
     };
@@ -471,13 +389,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     elements.forEach(element => checkElementContrast(element as HTMLElement));
   }, []);
 
-<<<<<<< HEAD
   // Voice navigation support;
   const setupVoiceNavigation = useCallback(() => {
-=======
   // Voice navigation support
   const setupVoiceNavigation = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined' || !('webkitSpeechRecognition' in window)) return;
 
     const recognition = new (window as any).webkitSpeechRecognition();
@@ -488,13 +403,10 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     recognition.onresult = (event: any) => {}
       const command = event.results[0][0].transcript.toLowerCase();
 
-<<<<<<< HEAD
       // Voice commands;
       if (command.includes('go to home')) {,
-=======
       // Voice commands
       if (command.includes('go to home')) {}
->>>>>>> origin/merge-error-fixes
         window.location.href = '/';
       } else if (command.includes('go to about')) {}
         window.location.href = '/about';
@@ -502,17 +414,14 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
         window.location.href = '/contact';
       } else if (command.includes('go to services')) {}
         window.location.href = '/services';
-<<<<<<< HEAD
       } else if (command.includes('call phone')) {
         window.location.href = 'tel: +13024640950';
       } else if (command.includes('send email')) {
         window.location.href = 'mailto: kleber@ziontechgroup.com';
-=======
       } else if (command.includes('call phone')) {}
         window.location.href = 'tel:+13024640950';
       } else if (command.includes('send email')) {}
         window.location.href = 'mailto:kleber@ziontechgroup.com';
->>>>>>> origin/merge-error-fixes
       }
     };
 
@@ -529,15 +438,12 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
     }
   }, []);
 
-<<<<<<< HEAD
   // Initialize all accessibility features;
   useEffect(() => {
     if (enableKeyboardNavigation) {
-=======
   // Initialize all accessibility features
   useEffect(() => {}
     if (enableKeyboardNavigation) {}
->>>>>>> origin/merge-error-fixes
       setupKeyboardNavigation();
     }
     if (enableScreenReader) {}
@@ -561,7 +467,6 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   }, [enableKeyboardNavigation, enableScreenReader, enableFocusManagement, enableARIALabels, enableSkipLinks, enableColorContrast, enableVoiceNavigation, setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement, enhanceARIALabels, addSkipLinks, checkColorContrast, setupVoiceNavigation]);
 
   return null;
-=======
 interface AdvancedAccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -594,6 +499,5 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
   }, []);
 
   return <>{children}</>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 </<<<HTMLElement>export</HTMLElement></<<HTMLElement>default</HTMLElement> AdvancedAccessibilityEnhancer;</HTMLElement>

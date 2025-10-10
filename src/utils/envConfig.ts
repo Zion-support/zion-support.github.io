@@ -72,7 +72,7 @@ class EnvironmentConfig {// TODO: Add content;}
    * Get a specific configuration value;
    */
   public get;
-          <K extends keyof EnvConfig>(ke,)
+          <K extends keyof EnvConfig>(ke)
   y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

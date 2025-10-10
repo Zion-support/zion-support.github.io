@@ -11,7 +11,6 @@ function main() {/* TODO: Fix JSX expression */}
 }
   console.log('🚀 Syncing with remote and pushing changes...');
   
-<<<<<<< HEAD
   try {
     // First, fetch the latest changes;
     console.log('📥 Fetching latest changes...');
@@ -20,9 +19,7 @@ function main() {/* TODO: Fix JSX expression */}
     if (fetchResult.error) {
       console.log('❌ Error fetching:', fetchResult.stderr);
       return false;
-=======
   try {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     
     console.log('✅ Fetched latest changes');
@@ -31,7 +28,6 @@ function main() {/* TODO: Fix JSX expression */}
     console.log('🔄 Pulling with rebase...');
     const pullResult = runCommand('git pull --rebase origin main');
     
-<<<<<<< HEAD
     if (pullResult.error) {
       console.log('⚠️  Rebase failed, trying merge...');
       
@@ -41,9 +37,7 @@ function main() {/* TODO: Fix JSX expression */}
       if (mergeResult.error) {
         console.log('❌ Merge also failed:', mergeResult.stderr);
         return false;
-=======
     if (pullResult.error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       
       console.log('✅ Successfully merged with remote');
@@ -60,25 +54,18 @@ function main() {/* TODO: Fix JSX expression */}
     console.log('✅ Successfully pushed to main branch');
     
     // Check final status;
-<<<<<<< HEAD
     console.log('📊 Final status: ');
-=======
-    console.log('📊 Final,)
+    console.log('📊 Final)
   status:');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const statusResult = runCommand('git status');
     console.log(statusResult);
     
     console.log('🎉 All changes successfully synced and pushed!');
     return true;
-<<<<<<< HEAD
-    ,
-  } catch (error) {
+    } catch (error) {
     console.log('❌ Error syncing and pushing:', error.message);
     return false;
-=======
     
   } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }

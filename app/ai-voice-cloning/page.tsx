@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Star, Zap, Shield, Clock, Users, Award, ArrowRight } from 'lucide-react';
 
@@ -62,11 +61,9 @@ const AIVoiceCloningPage: React.FC = () => {
       icon: '📢'
     }
 import { CheckCircle, Star, Phone, Mail, MapPin, Mic, Volume2, Languages, Zap, Shield, Clock } from 'lucide-react';
-=======
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Mic, Volume2, Download, Play, Pause, Settings, Users, Zap, Shield, Globe } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ErrorBoundary from '../components/ErrorBoundary';
->>>>>>> origin/main
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
@@ -427,8 +424,5 @@ const AIVoiceCloningPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIVoiceCloningPage;
-=======
 export default AIVoiceCloningPage;
->>>>>>> origin/main

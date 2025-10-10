@@ -8,7 +8,6 @@ interface AccessibilityConfig {/* TODO: Fix JSX expression */}
 interface AccessibilityMetric {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
   private metrics: AccessibilityMetric[] = [];
@@ -23,17 +22,14 @@ class AccessibilityEnhancer {
       enableHighContrast: false;
       enableReducedMotion: false;
       ...config,
-=======
 class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
   g: Partial<AccessibilityConfig> = {}) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
 
   public initialize(): void {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
 
@@ -43,9 +39,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       *:focus {
         outline: 2px solid #0066cc;
         outline-offset: 2px;
-=======
   private setupFocusManagement(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       
       .focus-trap {/* TODO: Fix JSX expression */}
@@ -54,21 +48,17 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     document.head.appendChild(style);
   }
 
-<<<<<<< HEAD
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
     document.addEventListener('keydown', event => {)
       if (event.key === 'Tab') {
         this.handleTabNavigation(event);
-=======
   private setupKeyboardNavigation(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     });
   }
 
-<<<<<<< HEAD
   private setupScreenReaderSupport(): void {
     if (!this.config.enableScreenReaderSupport) return;
 
@@ -90,9 +80,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
 ,
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
-=======
   private setupScreenReaderSupport(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
 
     skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
@@ -101,7 +89,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     document.body.insertBefore(skipLink, document.body.firstChild);
   }
 
-<<<<<<< HEAD
   private setupHighContrast(): void {
     if (!this.config.enableHighContrast) return;
 
@@ -111,9 +98,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         * {,
           background-color: #000 !important;
           color: #fff !important;
-=======
   private setupHighContrast(): void {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       }`
     `;
@@ -127,7 +112,6 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
     document.head.appendChild(style);
   }
 
-<<<<<<< HEAD
   private handleTabNavigation(event: KeyboardEvent): void {
     const _focusableElements = this.getFocusableElements();
     const _currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
@@ -136,24 +120,20 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       // Shift + Tab: move backwards;
       if (currentIndex === 0) {,
         event.preventDefault();
-        focusableElements[focusableElements.length - 1]?.focus();,
-      }
+        focusableElements[focusableElements.length - 1]?.focus();}
     } else {
       // Tab: move forwards;
       if (currentIndex === focusableElements.length - 1) {,
         event.preventDefault();
         focusableElements[0]?.focus();,
-=======
-  private handleTabNavigation(even,)
+  private handleTabNavigation(even)
   t: KeyboardEvent): void {/* TODO: Fix JSX expression */}
       }
     } else {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   }
 
-<<<<<<< HEAD
   private getFocusableElements(): HTMLElement[] {
     const selectors = [
       'button: not([disabled])',
@@ -161,8 +141,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       'select: not([disabled])',
       'textarea: not([disabled])',
       'a[href]',
-      '[tabindex]:not([tabindex="-1"])',
-    ].join(', ');
+      '[tabindex]:not([tabindex="-1"])'].join(', ');
 
     return Array.from(document.querySelectorAll(selectors)) as HTMLElement[];
   }
@@ -173,20 +152,17 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
         name: 'Focusable Elements'
         value: this.getFocusableElements().length;
         threshold: 10;
-        status: 'pass',
-      },
+        status: 'pass'},
       {
         name: 'Images with Alt Text'
         value: this.getImagesWithAltText().length;
         threshold: 0;
-        status: 'pass',
-      },
+        status: 'pass'},
       {
         name: 'Headings Structure',
         value: this.getHeadingStructureScore(),
         threshold: 80;
         status: 'pass',
-=======
   private getFocusableElements(): HTMLElement[] {/* TODO: Fix JSX expression */}
   }
 
@@ -195,15 +171,12 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       {/* TODO: Fix JSX expression */}
       },
       {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-      },
-    ];
+      }];
   }
 
   private getImagesWithAltText(): HTMLImageElement[] {/* TODO: Fix JSX expression */}
   }
 
-<<<<<<< HEAD
   private getHeadingStructureScore(): number {
     const _headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let _score = 100;
@@ -213,9 +186,7 @@ class AccessibilityEnhancer {/* TODO: Fix JSX expression */}
       //       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         score -= 20; // Penalty for skipped heading levels;
-=======
   private getHeadingStructureScore(): number {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       previousLevel = level;
     });

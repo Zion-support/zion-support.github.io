@@ -1,5 +1,4 @@
 // Advanced analytics and monitoring;
-<<<<<<< HEAD
 export const analyticsUtils = {
   // Performance monitoring;
   measurePerformance: () => {
@@ -13,9 +12,7 @@ export const analyticsUtils = {
         loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
         firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0;
         firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-=======
 export const analyticsUtils = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       };
 
       return metrics;
@@ -23,7 +20,6 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
     return null;
   },
 
-<<<<<<< HEAD
   // Error tracking;
   trackError: (error, context = {}) => {
     const errorData = {
@@ -33,10 +29,8 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent;
       context,
-=======
   // Error tracking,
   trackError: (error, context = {}) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     // Send to analytics service;
@@ -44,7 +38,6 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
     return errorData;
   },
 
-<<<<<<< HEAD
   // User behavior tracking;
   trackUserInteraction: (action, element, metadata = {}) => {
     const interactionData = {
@@ -55,16 +48,13 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
       timestamp: new Date().toISOString(),
       url: window.location.href;
       metadata,
-=======
   // User behavior tracking,
   trackUserInteraction: (action, element, metadata = {}) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     //     return interactionData;
   },
 
-<<<<<<< HEAD
   // Core Web Vitals;
   measureCoreWebVitals: () => {,
     if (typeof window !== 'undefined' && 'web-vitals' in window) {,
@@ -74,12 +64,9 @@ export const analyticsUtils = {/* TODO: Fix JSX expression */}
         //           getFCP(console.log);
         //           getLCP(console.log);
         //           getTTFB(console.log);
-=======
   // Core Web Vitals,
   measureCoreWebVitals: () => {/* TODO: Fix JSX expression */}
       import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     }
-  },
-};
+  }};

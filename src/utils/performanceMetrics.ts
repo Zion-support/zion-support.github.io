@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Performance Metrics Utility
@@ -43,7 +42,6 @@ export class PerformanceMetrics {
   }
   static getInstance(): PerformanceMetrics {
     if (!PerformanceMetrics.instance) {
-=======
 
 'use client'
 /**
@@ -120,13 +118,11 @@ export class PerformanceMetrics {// TODO: Add content;}
     if (!PerformanceMetrics.instance) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance;
   }
   /**
-<<<<<<< HEAD
    * Initialize performance observers
    */
   private initializeObservers(): void {
@@ -139,7 +135,6 @@ export class PerformanceMetrics {// TODO: Add content;}
               const navEntry = entry as PerformanceNavigationTiming;
               this.recordMetric({
                 name: 'pageLoadTime',
-=======
    * Initialize performance observers;
    */
 
@@ -163,12 +158,10 @@ export class PerformanceMetrics {// TODO: Add content;}
 };
 
   name: 'pageLoadTime',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 value: navEntry.loadEventEnd - navEntry.fetchStart,
                 unit: 'ms',
                 timestamp: new Date(),
                 category: 'load',
-<<<<<<< HEAD
                 metadata: {
                   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
                   domInteractive: navEntry.domInteractive - navEntry.fetchStart
@@ -216,7 +209,6 @@ $4});
         // Layout Shift
         const clsObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
-=======
                 metadata: {// TODO: Add content;}
 };
   domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.fetchStart,
@@ -292,12 +284,10 @@ const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression
   // TOD,
   O: Add content;
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             if ((entry as LayoutShift).hadRecentInput) continue;
             clsValue += (entry as LayoutShift).value;
           }
           this.webVitals.CLS = clsValue;
-<<<<<<< HEAD
           this.recordMetric({
             name: 'CLS',
             value: clsValue,
@@ -309,7 +299,6 @@ $4});
         clsObserver.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(clsObserver);
       } catch (error) {
-=======
           this.recordMetric({/* TODO: Fix JSX expression */}
   O: Add content;}
 };
@@ -328,19 +317,16 @@ $4});
       } catch (error) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
     }
   }
   /**
-<<<<<<< HEAD
    * Record a custom performance metric
    */
   recordMetric(metric: PerformanceMetric): void {
     this.metrics.push(metric);
     // Keep only last 1000 metrics
     if (this.metrics.length > 1000) {
-=======
    * Record a custom performance metric;
    */
 
@@ -352,12 +338,10 @@ $4});
     if (this.metrics.length > 1000) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.metrics.shift();
     }
   }
   /**
-<<<<<<< HEAD
    * Record page load time
    */
   recordPageLoad(): void {
@@ -366,7 +350,6 @@ $4});
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
     this.recordMetric({
       name: 'pageLoad',
-=======
    * Record page load time;
    */
 
@@ -381,12 +364,10 @@ $4});
 };
 
   name: 'pageLoad',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       value: pageLoadTime,
       unit: 'ms',
       timestamp: new Date(),
       category: 'load',
-<<<<<<< HEAD
       metadata: {
         dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
         tcpConnection: perfData.connectEnd - perfData.connectStart,
@@ -401,7 +382,6 @@ $4});
   recordNetworkRequest(url: string, duration: number, status: number): void {
     this.recordMetric({
       name: 'networkRequest',
-=======
       metadata: {// TODO: Add content;}
 };
   dnsLookup: perfData.domainLookupEnd - perfData.domainLookupStart,
@@ -425,12 +405,10 @@ $4});
 };
 
   name: 'networkRequest',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       value: duration,
       unit: 'ms',
       timestamp: new Date(),
       category: 'network',
-<<<<<<< HEAD
       metadata: {
         url,
         status
@@ -446,7 +424,6 @@ $4});
     const memory = (performance as PerformanceWithMemory).memory;
     this.recordMetric({
       name: 'memoryUsage',
-=======
       metadata: {// TODO: Add content;}
 
 }
@@ -471,12 +448,10 @@ $4});
 };
 
   name: 'memoryUsage',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       value: memory.usedJSHeapSize,
       unit: 'bytes',
       timestamp: new Date(),
       category: 'memory',
-<<<<<<< HEAD
       metadata: {
         total: memory.totalJSHeapSize,
         limit: memory.jsHeapSizeLimit,
@@ -532,7 +507,6 @@ $4});
    * Get Web Vitals
    */
   getWebVitals(): WebVitalsMetrics {
-=======
       metadata: {// TODO: Add content;}
 };
   total: memory.totalJSHeapSize,
@@ -548,7 +522,7 @@ $4});
    */
   measureFunction;
           <T>(nam,
-  e: string, f,)
+  e: string, f)
   n: () => T): T {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -574,7 +548,7 @@ $4});
    */
   async measureAsyncFunction;
           <T>(nam,
-  e: string, f,)
+  e: string, f)
   n: () => Promise<T>): Promise<T> {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -620,13 +594,11 @@ $4});
   getWebVitals(): WebVitalsMetrics {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return { ...this.webVitals };
   }
   /**
    * Calculate performance score (0-100)
    */
-<<<<<<< HEAD
   calculatePerformanceScore(): number {
     let score = 100;
     // FCP scoring
@@ -681,7 +653,6 @@ $4});
       recommendations.push(
         'Optimize network requests - consider caching and reducing payload sizes'
       );
-=======
 
   calculatePerformanceScore(): number {// TODO: Add content;}
 
@@ -764,12 +735,10 @@ $4});
 //       recommendations.push()
 //         'Optimize network requests - consider caching and reducing payload sizes'
       )
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return recommendations;
   }
   /**
-<<<<<<< HEAD
    * Generate performance report
    */
   generateReport(): PerformanceReport {
@@ -797,7 +766,6 @@ $4});
    * Clear all metrics
    */
   clearMetrics(): void {
-=======
    * Generate performance report;
    */
 
@@ -845,28 +813,23 @@ $4});
   clearMetrics(): void {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.metrics = [];
     this.webVitals = {};
   }
   /**
-<<<<<<< HEAD
    * Cleanup observers
    */
   cleanup(): void {
-=======
    * Cleanup observers;
    */
 
   cleanup(): void {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
   }
 }
-<<<<<<< HEAD
 // Type for performance.memory
 interface PerformanceWithMemory extends Performance {
   memory: {
@@ -882,7 +845,6 @@ interface LayoutShift extends PerformanceEntry {
 }
 // Export singleton instance
 export const performanceMetrics = PerformanceMetrics.getInstance();
-=======
 // Type for performance.memory;
 interface PerformanceWithMemory extends Performance {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -908,4 +870,3 @@ interface LayoutShift extends PerformanceEntry {/* TODO: Fix JSX expression */}
 export const performanceMetrics = PerformanceMetrics.getInstance();
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

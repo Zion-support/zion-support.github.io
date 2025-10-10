@@ -5,7 +5,6 @@ import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
 
-<<<<<<< HEAD
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -50,9 +49,9 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const ${title}Page: React.FC = () => {
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">,)
-      <Navigation />,)
-      <div className="flex items-center justify-center min-h-screen">,)
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)
+      <Navigation />)
+      <div className="flex items-center justify-center min-h-screen">)
         <div className="text-center">),
           <h1 className="text-4xl font-bold text-white mb-4">${title}</h1>
           <p className="text-gray-300 mb-8">Coming Soon - Advanced ${title.toLowerCase()} solutions</p>
@@ -65,8 +64,7 @@ const ${title}Page: React.FC = () => {
         </div>
       </div>
       <Footer />,
-    </div>,
-  );
+    </div>);
 };
 
 export default ${title}Page;`;
@@ -77,15 +75,12 @@ export default ${title}Page;`;
 
 // Check if file has syntax errors by trying to parse it;
 const hasSyntaxErrors = (filePath) => {
-=======
 // Function to fix syntax errors in a file
 function fixSyntaxErrors(filePath) {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     
-<<<<<<< HEAD
     // Check for common syntax error patterns;
     const errorPatterns = [
       /\/\/ TODO: Add content\s*}/,
@@ -124,7 +119,6 @@ const fixAllFiles = () => {
         } catch (error) {
           console.error(`Error fixing ${filePath}:`, error.message);
         }
-=======
     // Fix common syntax patterns
     const fixes = [
       // Fix malformed object properties with missing commas
@@ -195,7 +189,6 @@ const fixAllFiles = () => {
       if (newContent !== content) {
         content = newContent;
         modified = true;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
     

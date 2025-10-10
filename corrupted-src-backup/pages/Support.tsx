@@ -1,7 +1,6 @@
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";"
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";"
 impo, r, t { Sear, c, h, MessageCirc, l, e, Pho, n, e, Ma, i, l, BookOp, e, n, Vid, e, o, Use, r, s, Z, a, p, Clo, c, k, CheckCirc, l, e } fr, o, m "luci, d, e-rea, c, t";
-<<<<<<< HEAD
 const, Suppor, t: Rea, c, t.FC = () => {
   con, s, t [searchQue, r, y, setSearchQue, r, y] = useSta, t, e('');
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('a, l, l');
@@ -37,7 +36,6 @@ const, Suppor, t: Rea, c, t.FC = () => {
       availabili, t, y: 'Business, Hour, s'
       responseTi, m, e: '< 4, hour, s'
       conta, c, t: 'Schedule, Cal, l'
-=======
 const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
@@ -45,7 +43,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   ];
   const, faqCategorie, s = [
@@ -69,7 +66,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
     {/* TODO: Fix JSX expression */}
     }
-<<<<<<< HEAD
     {
       catego, r, y: 'gener, a, l'
       questi, o, n: 'What, is, your response, time, for support, request, s?'
@@ -78,18 +74,15 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     }
   ];
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => )
-=======
     {/* TODO: Fix JSX expression */}
     }
   ];
   const, filteredFaq, s = fa, q, s.filt, e, r(f, a, q => 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     selectedCatego, r, y === 'a, l, l' || f, a, q.catego, r, y === selectedCatego, r, y;)
   ).filt, e, r(f, a, q =>)
     f, a, q.questi, o, n.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e()) ||
     f, a, q.answ, e, r.toLowerCa, s, e().includ, e, s(searchQue, r, y.toLowerCa, s, e())
   );
-<<<<<<< HEAD
   return(<>
       <Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>
@@ -97,23 +90,19 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <meta name="keywor, d, s" content="suppo, r, t, he, l, p, technical, assistanc, e, customer, servic, e, documentati, o, n"  />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/suppo, r, t"  />
       </Helmet>
-<<<<<<< HEAD
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
         {/* Hero, Sectio, n */})
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">)
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
             <div, className="te, x, t-cent, e, r">
               <h1, className="te, x, t-4x, l, m;
-=======
       <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
         {/* Hero, Sectio, n */}</div>
         <section, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20">
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></section>
             <div, className="te, x, t-cent, e, r"></div>
               <h1, className="te, x, t-4x, l, m
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   d:te, x, t-5xl, fon, t-bold, m, b-6">
-=======
   return (<>
       <Helmet></Helmet>
         <title>Suppo, r, t - Zion, Tech, Group</title>"
@@ -128,13 +117,11 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             <div, className="te, x, t-cent, e, r"></div>"
               <h1, className="te, x, t-4x, l, m,"
   d:te, x, t-5xl, fon, t-bold, m, b-6"></h1>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Support, Cente, r;
               </h1>"
               <p, className="te, x, t-xl, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
                 Get, help, when you, need, it. Our, expert, support team, is, here 24/7, to, assist you, with, any questions, or, issues.
               </p>
-<<<<<<< HEAD
               {/* Search, Ba, r */}
               <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>
                 <div, className="relati, v, e"></div>
@@ -145,7 +132,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     val, u, e={searchQue, r, y}
                     onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
                     classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u;
-=======
               {/* Search, Ba, r */}"
               <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>"
                 <div, className="relati, v, e"></div>"
@@ -156,7 +142,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     val, u, e={searchQue, r, y})
                     onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}"
                     classNa, m, e="w-full, p, l-10, p, r-4, p, y-3, rounde, d-lg, tex, t-gr, a, y-900, focu, s: outli, n, e-none, focu, s:ri, n, g-2, foc, u,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   s:ri, n, g-whi, t, e"
                    />
                 </d, i, v>
@@ -164,31 +149,24 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* Support, Channel, s */}
-<<<<<<< HEAD
         <section, className="py-20, p, x-4, s, m: px-6, l, g: px-8">,
           <div, className="m, a, x-w-7xl, m, x-au, t, o">
             <div, className="te, x, t-center, m, b-16">
-=======
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8">
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></section>
             <div, className="te, x, t-center, m, b-16"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         {/* Support, Channel, s */}"
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8"></section>"
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Get, Suppor, t;
               </h2>"
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0"></p>
                 Choose, the, support channel, that, works best, for, you;
               </p>
-<<<<<<< HEAD
             </d, i, v>
             <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l;
   g:gr, i, d-co, l, s-4, ga, p-8">
@@ -199,7 +177,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <chann, e, l .icon, className="h-8 w-8, tex, t-bl, u, e-6, 0, 0"  />
                     </d, i, v>
                     <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2">
-=======
             </d, i, v>"
             <div, className="grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2 l,"
   g:gr, i, d-co, l, s-4, ga, p-8"></div>
@@ -210,12 +187,10 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       <chann, e, l .icon, className="h-8 w-8, tex, t-bl, u, e-6, 0, 0"  /></chann>
                     </d, i, v>"
                     <h3, className="te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       {chann, e, l.tit, l, e}
                     </h3>"
                     <p, className="te, x, t-gr, a, y-600, m, b-4"></p>
                       {chann, e, l.descripti, o, n}
-<<<<<<< HEAD
                     </p>
                     <div, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-500, m, b-4"></div>
                       <div, className="flex, justif, y-betwe, e, n"></div>
@@ -224,7 +199,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       </d, i, v>
                       <div, className="flex, justif, y-betwe, e, n"></div>
                         <sp, a, n>Response, Tim, e:</sp, a, n>
-=======
                     </p>"
                     <div, className="spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-500, m, b-4"></div>"
                       <div, className="flex, justif, y-betwe, e, n"></div>
@@ -233,7 +207,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                       </d, i, v>"
                       <div, className="flex, justif, y-betwe, e, n"></div>
                         <sp, a, n>Response, Tim, e:</sp, a, n>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         <span, className="fo, n, t-semibo, l, d">{chann, e, l.responseTi, m, e}</sp, a, n>
                       </d, i, v>
                     </d, i, v>"
@@ -246,32 +219,26 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
             </d, i, v>
           </d, i, v>
         </secti, o, n>
-<<<<<<< HEAD
         {/* FAQ, Sectio, n */}
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e">
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></section>
             <div, className="te, x, t-center, m, b-16"></div>
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         {/* FAQ, Sectio, n */}"
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-whi, t, e"></section>"
           <div, className="m, a, x-w-7xl, m, x-au, t, o"></div>"
             <div, className="te, x, t-center, m, b-16"></div>"
               <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Frequently, Asked, Questions;
               </h2>"
               <p, className="te, x, t-xl, tex, t-gr, a, y-6, 0, 0"></p>
                 Find, quick, answers to, common, questions;
               </p>
             </d, i, v>
-<<<<<<< HEAD
       quest, i, o;
   n: 'Is, there, a community, where, I can, get, help from, other, users?'
-=======
       quest, i, o,
   n: 'Is, there, a community, where, I can, get, help from, other, users?'"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       answ, e, r: "Y, e, s! We, have, an active, community, forum where, users, can ask, question, s, share, best, practices, and, get, help from, both, our team, and, other experienced, user, s. It's, a, great place, to, learn and, networ, k."
     }
   ];
@@ -281,15 +248,12 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
     { tit, l, e: 'Schedule, Trainin, g', descripti, o, n: 'Book, a, training session, for, your te, a, m', li, n, k: '/traini, n, g', ic, o, n: '🎓' }
     { tit, l, e: 'View, Status, Page', descripti, o, n: 'Check, system, status and, uptim, e', li, n, k: '/stat, u, s', ic, o, n: '📊' }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
   return(<div, className="m, i, n-h-screen, b, g-gr, a, y-50">)
       {/* Hero, Sectio, n */})
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">)
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g: px-8">),
           <div, className="te, x, t-cent, e, r">
             <h1, className="te, x, t-4x, l, m;
-=======
   return (
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50">
       {/* Hero, Sectio, n */}</div>
@@ -297,9 +261,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8"></section>
           <div, className="te, x, t-cent, e, r"></div>
             <h1, className="te, x, t-4x, l, m
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   d:te, x, t-6xl, fon, t-bold, m, b-6">
-=======
   return ("
     <div, className="m, i, n-h-screen, b, g-gr, a, y-50"></div>
       {/* Hero, Sectio, n */}"
@@ -308,14 +270,12 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           <div, className="te, x, t-cent, e, r"></div>"
             <h1, className="te, x, t-4x, l, m,"
   d:te, x, t-6xl, fon, t-bold, m, b-6"></h1>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               We're, Here, to He, l, p;
             </h1>"
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
               Get, the, support you, need, to succeed, with, our AI, solution, s. 
               Our, expert, team is, ready, to help, you, every step, of, the w, a, y.
             </p>
-<<<<<<< HEAD
             {/* Search, Ba, r */}
             <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>
               <div, className="relati, v, e"></div>
@@ -326,7 +286,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   val, u, e={searchQue, r, y}
                   onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}
                   classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u;
-=======
             {/* Search, Ba, r */}"
             <div, className="m, a, x-w-2xl, m, x-au, t, o"></div>"
               <div, className="relati, v, e"></div>"
@@ -337,7 +296,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                   val, u, e={searchQue, r, y})
                   onChan, g, e={(e) => setSearchQue, r, y(e.targ, e, t.val, u, e)}"
                   classNa, m, e="w-full, p, l-12, p, r-4, p, y-4, rounde, d-lg, tex, t-gr, a, y-900, tex, t-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, foc, u,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   s:outli, n, e-no, n, e"
                  />
               </d, i, v>
@@ -345,32 +303,25 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
         </d, i, v>
       </secti, o, n>
-<<<<<<< HEAD
             {/* Category, Filte, r */}
-<<<<<<< HEAD
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12">
               <butt, o, n;
-=======
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"></div>
               <butt, o, n
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
                 classNa, m, e={`px-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`
                   selectedCatego, r, y === 'a, l, l'
                     ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                     : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
-=======
             {/* Category, Filte, r */}"
             <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-12"></div>
               <butt, o, n;
   onCli, c, k={() => setSelectedCatego, r, y('a, l, l')}
                 classNa, m, e={/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 }`}`
               >
                 All, Categorie, s;
               </butt, o, n>
-<<<<<<< HEAD
               {faqCategori, e, s.m, a, p((catego, r, y) => (
                 <butt, o, n;
   k, e, y={catego, r, y.id}
@@ -378,12 +329,10 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                     selectedCatego, r, y === catego, r, y.id;
                       ? 'bg-bl, u, e-600, tex, t-whi, t, e'}
                       : 'bg-gr, a, y-200, tex, t-gr, a, y-700, hove, r:bg-gr, a, y-3, 0, 0'}
-=======
               {/* TODO: Fix JSX expression */}
   k, e, y={catego, r, y.id}
                   onCli, c, k={() => setSelectedCatego, r, y(catego, r, y.id)}
                   classNa, m, e={/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   }`}`
                 >"
                   <catego, r, y .icon, className="h-4 w-4, m, r-2"  /></catego>
@@ -391,19 +340,16 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 </butt, o, n>
               ))}
             </d, i, v>
-<<<<<<< HEAD
             {/* FAQ, Item, s */}
             <div, className="spa, c, e-y-6">
               {filteredFa, q, s.m, a, p((f, a, q, ind, e, x) => (</div>
                 <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6"></div>
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3">
-=======
             {/* FAQ, Item, s */}"
             <div, className="spa, c, e-y-6"></div>
               {/* TODO: Fix JSX expression */}"
                 <div, ke, y={ind, e, x} classNa, m, e="bg-gr, a, y-50, rounde, d-l, g, p-6"></div>"
                   <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-3"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {f, a, q.questi, o, n}
                   </h3>"
                   <p, className="te, x, t-gr, a, y-6, 0, 0"></p>
@@ -412,7 +358,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
                 </d, i, v>
               ))}
             </d, i, v>
-<<<<<<< HEAD
             {filteredFa, q, s.leng, t, h === 0 && (
               <div, className="te, x, t-center, p, y-12"></div>
                 <p, className="te, x, t-gr, a, y-500, tex, t-lg">
@@ -426,7 +371,6 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0">
           <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r"></section>
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">
-=======
             {/* TODO: Fix JSX expression */}
             )}
           </d, i, v>
@@ -435,41 +379,31 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
         <section, className="py-20, p, x-4, s, m: px-6, l, g:px-8, b, g-bl, u, e-6, 0, 0"></section>"
           <div, className="m, a, x-w-7xl, m, x-auto, tex, t-cent, e, r"></div>"
             <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4"></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               Still, Need, Help?
             </h2>"
             <p, className="te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-3xl, m, x-au, t, o"></p>
               C, a, n't, find, what y, o, u're, looking, for? Our, support, team is, ready, to help, you, with any, questions, or issu, e, s.
-<<<<<<< HEAD
             </p>
-<<<<<<< HEAD
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r">
               <Li, n, k;
-=======
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
               <Li, n, k
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
   to="/conta, c, t"
-=======
             </p>"
             <div, className="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
               <Li, n, k;"
   to="/conta, c, t""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-transparent, tex, t-base, fon, t-medium, rounde, d-md, tex, t-bl, u, e-600, b, g-white, hove, r:bg-gr, a, y-50, transitio, n-colo, r, s"
               ></Li>
                 Contact, Suppor, t;"
                 <MessageCircle, className="ml-2 h-5 w-5"  /></MessageCircle>
               </Li, n, k>
-<<<<<<< HEAD
               <Li, n, k;
   to="/documentati, o, n"
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e;
-=======
               <Li, n, k;"
   to="/documentati, o, n""
                 classNa, m, e="inli, n, e-flex, item, s-center, p, x-8, p, y-3, border, border-white, tex, t-base, fon, t-medium, rounde, d-md, tex, t-white, hov, e,"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   r:bg-whi, t, e/10, transitio, n-colo, r, s"
               ></Li>
                 View, Documentatio, n;"
@@ -479,7 +413,7 @@ const, Suppor, t: Rea, c, t.FC = () => {/* TODO: Fix JSX expression */}
           </d, i, v>
         </secti, o, n>
       </d, i, v>
-    < />
+    </>
         </d, i, v>
       </secti, o, n>
     </d, i, v>

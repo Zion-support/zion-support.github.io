@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -9,7 +8,6 @@
   link: string;
   category: string;
     address: string;
-=======
   i,
   d: string;
   nam,
@@ -27,9 +25,7 @@
   categor,
   y: string;
     addres,
-  s: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: string}
 export const,
   nextGenInnovations2025: NextGenInnovation2025[] = [;
     i,
@@ -50,19 +46,16 @@ export const,
       'Innovation platform'
       'Expert support'
     ]
-<<<<<<< HEAD
     link: '/services/next-gen-ai-suite'
     category: 'Next-Gen Innovations 2025'
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   }
 ]
     id: "next-gen-ai-suite"
@@ -83,7 +76,6 @@ export const,
     contactInfo: unknown;
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     lin,
   k: '/services/next-gen-ai-suite'
     categor,
@@ -138,12 +130,9 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
-],
-],
-],
+]]],
       mobil,"
   e: "+1 302 464 0950",
       mobil,
@@ -151,17 +140,12 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  };
-<<<<<<< HEAD
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobile: "+1 302 464 0950",
       mobile: "+1 302 464 0950",
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
-];      mobil,"
+      address: "364 E Main St STE 1008 Middletown DE 19709"];      mobil,"
   e: "+1 302 464 0950",
       mobil,"
   e: "+1 302 464 0950",
@@ -171,13 +155,10 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
-],
-];
-],
-],
+]];
+]],
 i,
   d: string; nam,
   e: string; taglin,
@@ -187,7 +168,7 @@ i,
   s: string[]; lin,
   k: string; categor,
   y: string; addres,
-  s: string, } export const,
+  s: string} export const,
   nextGenInnovations2025: NextGenInnovation2025[] = [ i,
   d: 'next-gen-ai-suite'' nam,
   e: 'Next-Gen AI Suite'' taglin,
@@ -217,13 +198,13 @@ i,
   n: true, contactInf,
   o: emai,"
   l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ], ], ], mobil,"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]], mobil,"
   e: "+1 302 464 0950",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', }, },; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
   e: "+1 302 464 0950", mobil,"
   e: "+1 302 464 0950", mobil,"
   e: "+1 302 464 0950", emai,"
   l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ], ]; ], ], '"
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]]; ]], '"

@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
 const HelpPage: React.FC = () => {
-<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 
@@ -63,8 +56,7 @@ titletitle: 'Setting Up Your First Dashboard',
         title: 'Integration with Existing Systems',
         description: 'How to integrate our AI services with your current business systems',
         readTime: '7 min read',
-        difficulty: 'Intermediate',
-    ],
+        difficulty: 'Intermediate'],
     'troubleshooting': [
         title: 'Common Login Issues and Solutions',
         description: 'Troubleshoot common authentication problems and access issues',
@@ -102,8 +94,7 @@ titletitle: 'Security Best Practices',
         description: 'Build custom integrations with our platform using webhooks and APIs',
         readTime: '12 min read',
         title: 'Monitoring and Logging',
-        description: 'Set up monitoring and logging for your AI services and applications',
-    ]
+        description: 'Set up monitoring and logging for your AI services and applications']
   };
 
   const resources = [
@@ -295,7 +286,6 @@ questionquestion: 'Is there a free trial available?',
                 Email Us
       <Footer />
     </>
-=======
   return (
     <div>Coming Soon</div>
 
@@ -328,7 +318,6 @@ const categories = [
   r: 'text-red-400',
       bgColo,
   r: 'bg-red-500/10',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
       i,
   d: 'technical',

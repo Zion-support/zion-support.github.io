@@ -18,8 +18,7 @@ export const waitFor = async ()
   conditio,
   n: () => boolean,
   timeout = 5000,
-  interval = 100,
-): Promise;
+  interval = 100): Promise;
           <void> => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -71,7 +70,7 @@ export const mockFetch = ()
 
           < 300,
 // status,
-        header,)
+        header)
   s: new Headers(headers),
         jso,
   n: async () => response,
@@ -101,27 +100,27 @@ export class MockStorage implements Storage {// TODO: Add content;}
 }
     this.store.clear();
   }
-  getItem(ke,)
+  getItem(ke)
   y: string): string | null {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     return this.store.get(key) || null;
   }
-  key(inde,)
+  key(inde)
   x: number): string | null {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const keys = Array.from(this.store.keys());
     return keys[index] || null;
   }
-  removeItem(ke,)
+  removeItem(ke)
   y: string): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     this.store.delete(key);
   }
   setItem(ke,
-  y: string, valu,)
+  y: string, valu)
   e: string): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -177,7 +176,7 @@ export const createMockPerformance = (): Performance => {// TODO: Add content;}
   no,
   w: () => Date.now(),
     mar,
-  k: (nam,)
+  k: (nam)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -187,7 +186,7 @@ export const createMockPerformance = (): Performance => {// TODO: Add content;}
 //         name,
         entryTyp,
   e: 'mark',
-        startTim,)
+        startTim)
   e: Date.now(),
         duratio,
   n: 0,
@@ -204,7 +203,7 @@ measure: (name: string, startMark?: string, endMark?: string) => {entries.push({
 //         name,
         entryTyp,
   e: 'measure',
-        startTim,)
+        startTim)
   e: Date.now(),
         duratio,
   n: 100,
@@ -358,19 +357,19 @@ export class ConsoleSpy {// TODO: Add content;}
   private mock(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    console.log = (...arg,)
+    console.log = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.logs.push(args.map(String).join(' '));
     };
-    console.error = (...arg,)
+    console.error = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
       this.errors.push(args.map(String).join(' '));
     };
-    console.warn = (...arg,)
+    console.warn = (...arg)
   s: unknown[]) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -419,7 +418,7 @@ export interface Deferred;
 
           <T>;,
     resolv,
-  e: (valu,)
+  e: (valu)
   e: T) => void;,
     rejec,
   t: (reason?: unknown) => void;
@@ -428,7 +427,7 @@ export interface Deferred;
 export const createDeferred = <T>(): Deferred<T> => {// TODO: Add content;}
 
 }
-  let resolve!: (valu,)
+  let resolve!: (valu)
   e: T) => void;
   let reject!: (reason?: unknown) => void;
   const promise = new Promise;
@@ -445,9 +444,7 @@ export const retryWithBackoff = async;
   n: () => Promise;
           <T>,
   maxRetries = 3,
-  initialDelay = 1000,
-
-): Promise<T> => {// TODO: Add content;}
+  initialDelay = 1000): Promise<T> => {// TODO: Add content;}
 
 }
   let,

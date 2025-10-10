@@ -4,12 +4,9 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
 
 import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
-=======
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 const AIABTestingPage: React.FC = () => {
   const features = [

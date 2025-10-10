@@ -2,15 +2,12 @@ import fs from 'fs';
 
 // // 1. Fix test imports;
 // // const appMinimalTestPath = '/workspace/__tests__/AppMinimal.test.tsx';
-<<<<<<< HEAD
 if (fs.existsSync(appMinimalTestPath)) {
 
   // Fix jest imports;
   content = content.replace(/import \{ describe, it, expect \} from 'jest';/)
-=======
 if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
     /import \{ describe, it, expect \} from 'jest';/,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     `import { describe, it, expect } from '@jest/globals';`
   );
 
@@ -21,10 +18,8 @@ if (fs.existsSync(appMinimalTestPath)) {/* TODO: Fix JSX expression */}
 // const blogPages = [
   'app/blog/ai-2026-april-revolutionary-breakthrough/page.tsx',
   'app/blog/ai-2026-autonomous-agent-factories/page.tsx',
-  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx',
-];
+  'app/blog/ai-2026-autonomous-enterprise-architecture/page.tsx'];
 
-<<<<<<< HEAD
 blogPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
@@ -33,29 +28,23 @@ blogPages.forEach(pagePath => {)
 
     fs.writeFileSync(pagePath, content);
     //         }
-=======
 blogPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
     //         })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 });
 
 // 3. Fix OpenGraph authors;
 // const openGraphPages = [
   'app/blog/ai-2026-consensus-intelligence-breakthrough/page.tsx',
-  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx',
-];
+  'app/blog/ai-2026-enterprise-automation-revolutionary-breakthrough/page.tsx'];
 
-<<<<<<< HEAD
 openGraphPages.forEach(pagePath => {)
   if (fs.existsSync(pagePath)) {
 
     // Fix authors format to match Author type;
     content = content.replace(/authors: \['Zion Tech Group'\]/g),
       "authors: [{ name: 'Zion Tech Group' }]"
-=======
 openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
   e: 'Zion Tech Group' }]")
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     );
 
     fs.writeFileSync(pagePath, content);
@@ -64,13 +53,10 @@ openGraphPages.forEach(pagePath => {/* TODO: Fix JSX expression */}
 
 // 4. Fix Calculator import;
 // // const calculatorPagePath = '/workspace/app/blog/ai-enterprise-transformation-ultimate-guide-2025/page.tsx';
-<<<<<<< HEAD
 if (fs.existsSync(calculatorPagePath)) {
 
   // Replace Calculator with CalculatorIcon;
-=======
 if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   content = content.replace(/import \{ Calculator \}/, 'import { CalculatorIcon }');
   content = content.replace(/<Calculator/g, '<CalculatorIcon');
 
@@ -79,7 +65,6 @@ if (fs.existsSync(calculatorPagePath)) {/* TODO: Fix JSX expression */}
 
 // 5. Fix AdvancedSEOOptimizer component;
 // // const seoOptimizerPath = '/workspace/app/components/AdvancedSEOOptimizer.tsx';
-<<<<<<< HEAD
 if (fs.existsSync(seoOptimizerPath)) {
 
   // Update the interface to include all missing props;
@@ -92,11 +77,9 @@ if (fs.existsSync(seoOptimizerPath)) {
     canonicalUrl: string;
     ogImage: string;
     structuredData?: unknown;,
-=======
 if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
     /interface AdvancedSEOOptimizerProps \{[^}]*\}/,`
     `interface AdvancedSEOOptimizerProps {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   enableStructuredData?: boolean;
   enableAnalytics?: boolean;
@@ -113,19 +96,16 @@ if (fs.existsSync(seoOptimizerPath)) {/* TODO: Fix JSX expression */}
 
 // 6. Fix AnalyticsTracker;
 // // const analyticsTrackerPath = '/workspace/app/components/AnalyticsTracker.tsx';
-<<<<<<< HEAD
 if (fs.existsSync(analyticsTrackerPath)) {
 
   // Remove conflicting declarations;
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper imports and declarations at the top;
-=======
 if (fs.existsSync(analyticsTrackerPath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper imports and declarations at the top;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   content = `
 declare global {/* TODO: Fix JSX expression */}
   }
@@ -138,25 +118,19 @@ ${content}`;
 
 // 7. Fix SystemMonitor;
 // // const systemMonitorPath = '/workspace/app/components/SystemMonitor.tsx';
-<<<<<<< HEAD
 if (fs.existsSync(systemMonitorPath)) {
 
   // Add proper React imports;
   content = content.replace(/import React from 'react';/)
-=======
 if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     `import React, { useState, useEffect } from 'react';`
   );
 
   // Remove the performanceEnhancer import and usage;
-<<<<<<< HEAD
   content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g)
     ''
-=======
   content = content.replace(/import { performanceEnhancer } from '\.\.\/utils\/performanceEnhancer';\s*/g,
     '')
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 
   // Replace performanceEnhancer calls with direct performance API calls;
@@ -167,7 +141,6 @@ if (fs.existsSync(systemMonitorPath)) {/* TODO: Fix JSX expression */}`
 
 // 8. Fix lib/performance.ts;
 // // const performancePath = '/workspace/lib/performance.ts';
-<<<<<<< HEAD
 if (fs.existsSync(performancePath)) {
 
   // Remove conflicting declarations;
@@ -177,13 +150,11 @@ if (fs.existsSync(performancePath)) {
   content = `declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;
-=======
 if (fs.existsSync(performancePath)) {/* TODO: Fix JSX expression */}
   content = content.replace(/declare global \{[^}]*\}/g, '');
 
   // Add proper declaration at the top;`
   content = `declare global {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 `

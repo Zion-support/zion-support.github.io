@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 export interface AdditionalRealService {id: string;
   name: string;
   tagline: string;
@@ -25,20 +24,17 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
     tagline: 'Intelligent automation for modern businesses',
     price: '$79 / month',
     description: unknown;
-=======
 export interface AdditionalRealService {/* TODO: Fix JSX expression */}
   e: string}
     emai,
   l: string}
 }
     addres,
-  s: string,
-  }
+  s: string}
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [;
     addres,
-  s: string,
-  }
+  s: string}
 ;
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [,
@@ -52,7 +48,6 @@ export const,
   e: '$79 / month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Comprehensive AI - powered automation platform that streamlines business processes and increases efficiency.',
     feature,
   s: [,
@@ -60,18 +55,14 @@ export const,
       'AI decision making',
       'Integration APIs',
       'Custom workflows',
-      'Analytics dashboard',
-    ],
-<<<<<<< HEAD
+      'Analytics dashboard'],
     link: '/services / ai - automation - suite'
     category: 'AI & Automation'
     real_implementation: true;
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+      address: '364 E Main St STE 1008 Middletown DE 19709'}},
   id: string, name: string;
   tagline: string, price: string;
   description: string, features: string[],
@@ -97,7 +88,6 @@ export const,
 }
 }
     address: string;
-=======
     lin,
   k: '/services / ai - automation - suite',
     categor,
@@ -111,9 +101,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
+  s: '364 E Main St STE 1008 Middletown DE 19709'}},
   i,
   d: string, nam,
   e: string,
@@ -160,14 +148,11 @@ export const,
     emai,
   l: string;
     addres,
-  s: string,
-  };
+  s: string};
 }
 }
     addres,
-  s: string,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: string}
 export const,
   additionalEnhancedServices: AdditionalRealService[] = [;
     i,
@@ -188,14 +173,12 @@ export const,
       'Custom workflows'
       'Analytics dashboard'
     ]
-<<<<<<< HEAD
     link: '/services/ai-automation-suite'
     category: 'AI & Automation'
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-=======
     lin,
   k: '/services/ai-automation-suite'
     categor,
@@ -209,7 +192,6 @@ export const,
   l: 'kleber@ziontechgroup.com'
       addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
     i,
@@ -230,14 +212,12 @@ export const,
       'Scalable architecture'
       'Security compliance'
     ]
-<<<<<<< HEAD
     link: '/services/data-warehouse-solution'
     category: 'Data & Analytics'
     realImplementation: true;
     contactInfo: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709'}
   }
 ];      mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com"
@@ -246,7 +226,6 @@ export const,
     tagline: 'Enterprise - grade data management and analytics',
     price: '$149 / month',
     description: unknown;
-=======
     lin,
   k: '/services/data-warehouse-solution'
     categor,
@@ -276,7 +255,6 @@ export const,
   e: '$149 / month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.',
     feature,
   s: [,
@@ -284,19 +262,14 @@ export const,
       'Real - time processing',
       'Advanced analytics',
       'Scalable architecture',
-      'Security compliance',
-    ],
-<<<<<<< HEAD
+      'Security compliance'],
     link: '/services / data - warehouse - solution'
     category: 'Data & Analytics'
     real_implementation: true;
     contact_info: unknown;
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobile: "+1 302 464 0950"
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobile: "+1 302 464 0950"
     id: "ai-automation-suite"
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
@@ -315,8 +288,7 @@ export const,
     contactInfo: unknown;
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
     id: "data-warehouse-solution"
     name: "Data Warehouse Solution",
@@ -336,7 +308,6 @@ export const,
     contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     lin,
   k: '/services / data - warehouse - solution',
     categor,
@@ -350,10 +321,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },
-];      mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}];      mobil,"
   e: "+1 302 464 0950",
   i,"
   d: "ai-automation-suite",
@@ -420,13 +388,11 @@ export const,
   l: "kleber@ziontechgroup.com"
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
 ;
 ];
-<<<<<<< HEAD
     id: "ai-automation-suite"
     name: "AI Automation Suite",
     tagline: "Intelligent automation for modern businesses",
@@ -446,7 +412,6 @@ export const,
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     i,"
   d: "ai-automation-suite",
     nam,"
@@ -479,7 +444,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   },
     i,
@@ -501,7 +465,6 @@ export const,
       'Embeddable widgets',
       'Export CSV/Sheets'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -528,7 +491,6 @@ export const,
     customers: 55;
     rating: 4.5;
     reviews: 18;
-=======
     popula,
   r: false,
     ico,
@@ -581,9 +543,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 18},
     i,
   d: 'event-management-dashboard',
     nam,
@@ -603,7 +563,6 @@ export const,
       'Speaker and agenda planner',
       'Post-event feedback analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -638,7 +597,6 @@ export const,
     period: '/month',
     description: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -691,8 +649,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 24,
-  },
+  s: 24},
     i,
   d: 'churn-risk-alerts',
     nam,
@@ -707,13 +664,11 @@ export const,
   n: 'Tracks product usage and support sentiment to flag churn risks in Slack with next-best-action playbooks.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Usage anomaly detection',
       'Sentiment from tickets/reviews',
       'Playbooks and tasks',
       'Owner assignment'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700'
@@ -740,7 +695,6 @@ export const,
     customers: 28;
     rating: 4.5;
     reviews: 15;
-=======
     popula,
   r: false,
     ico,
@@ -793,9 +747,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 15,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 15},
     i,
   d: 'subscription-revenue-analytics',
     nam,
@@ -815,7 +767,6 @@ export const,
       'CSV/Stripe imports',
       'Board-ready reports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-fuchsia-600 to-pink-700',
@@ -842,7 +793,6 @@ export const,
     customers: 22;
     rating: 4.6;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -895,9 +845,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 12},
     i,
   d: 'iso-27001-evidence-kit',
     nam,
@@ -917,7 +865,6 @@ export const,
       'Exceptions and approvals',
       'Audit-ready exports'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -944,7 +891,6 @@ export const,
       customers: 18;
       rating: 4.5;
       reviews: 10;
-=======
     popula,
   r: false,
     ico,
@@ -997,9 +943,7 @@ export const,
       ratin,
   g: 4.5,
       review,
-  s: 10,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 10},
     i,
   d: 'api-changelog-notifier',
     nam,
@@ -1019,7 +963,6 @@ export const,
       'Deprecation timelines',
       'Email/Slack/webhook alerts'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -1046,7 +989,6 @@ export const,
     customers: 30;
     rating: 4.6;
     reviews: 14;
-=======
     popula,
   r: false,
     ico,
@@ -1099,9 +1041,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 14,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 14},
     i,
   d: 'runbook-generator',
     nam,
@@ -1121,7 +1061,6 @@ export const,
       'Step validation checklists',
       'On-call links and owners'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-sky-600 to-blue-700',
@@ -1148,7 +1087,6 @@ export const,
       customers: 26;
       rating: 4.5;
       reviews: 11;
-=======
     popula,
   r: false,
     ico,
@@ -1201,9 +1139,7 @@ export const,
       ratin,
   g: 4.5,
       review,
-  s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 11},
     i,
   d: 'incident-timeline-composer',
     nam,
@@ -1223,7 +1159,6 @@ export const,
       'Customer comms templates',
       'Postmortem export'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-rose-600 to-pink-700'
@@ -1250,7 +1185,6 @@ export const,
     customers: 19;
     rating: 4.5;
     reviews: 9;
-=======
     popula,
   r: false,
     ico,
@@ -1303,9 +1237,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 9},
     i,
   d: 'ad-creative-generator',
     nam,
@@ -1325,7 +1257,6 @@ export const,
       'Headlines and copy suggestions',
       'Performance tips and tags'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-violet-600 to-purple-700'
@@ -1352,7 +1283,6 @@ export const,
     customers: 33;
     rating: 4.6;
     reviews: 13;
-=======
     popula,
   r: true,
     ico,
@@ -1405,9 +1335,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 13,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 13},
     i,
   d: 'cloud-cost-optimizer-pro',
     nam,
@@ -1428,7 +1356,6 @@ export const,
       "Scalable architecture","
       "Security compliance"
     ],
-<<<<<<< HEAD
     link: "/services/data-warehouse-solution"
     category: "Data & Analytics"
     realImplementation: true;
@@ -1437,7 +1364,6 @@ export const,
     customers: 90;
     rating: 4.6;
     reviews: 54;
-=======
     lin,"
   k: "/services/data-warehouse-solution",
     categor,"
@@ -1453,9 +1379,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 54,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 54},
     i,
   d: 'database-performance-monitor',
     nam,
@@ -1475,7 +1399,6 @@ export const,
       'Connection pool tuning',
       'Capacity forecasting'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-indigo-700'
@@ -1502,7 +1425,6 @@ export const,
     customers: 60;
     rating: 4.6;
     reviews: 38;
-=======
     popula,
   r: true,
     ico,
@@ -1555,9 +1477,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 38,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 38},
     i,
   d: 'api-documentation-generator',
     nam,
@@ -1577,7 +1497,6 @@ export const,
       'Changelogs and versions',
       'Full-text search and themes'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -1604,7 +1523,6 @@ export const,
     customers: 110;
     rating: 4.7;
     reviews: 81;
-=======
     popula,
   r: true,
     ico,
@@ -1657,9 +1575,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 81,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 81},
     i,
   d: 'email-deliverability-monitor',
     nam,
@@ -1679,7 +1595,6 @@ export const,
       'Blocklist monitoring',
       'Domain reputation score'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700',
@@ -1706,7 +1621,6 @@ export const,
     customers: 45;
     rating: 4.5;
     reviews: 22;
-=======
     popula,
   r: false,
     ico,
@@ -1759,9 +1673,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 22},
     i,
   d: 'gdpr-dsar-automation',
     nam,
@@ -1781,7 +1693,6 @@ export const,
       'Data discovery connectors',
       'Audit logs and exports'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-rose-600 to-fuchsia-700'
@@ -1808,7 +1719,6 @@ export const,
     customers: 33;
     rating: 4.6;
     reviews: 19;
-=======
     popula,
   r: false,
     ico,
@@ -1861,9 +1771,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 19},
     i,
   d: 'api-security-scanner',
     nam,
@@ -1883,7 +1791,6 @@ export const,
       'OWASP API Top 10 checks',
       'CI pipeline integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -1910,7 +1817,6 @@ export const,
     customers: 52;
     rating: 4.5;
     reviews: 28;
-=======
     popula,
   r: true,
     ico,
@@ -1963,9 +1869,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 28},
     i,
   d: 'api-observability-starter',
     nam,
@@ -1987,7 +1891,6 @@ export const,
       'Exporters for popular backends',
       'Auto-ingest OpenAPI metadata'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -2022,7 +1925,6 @@ export const,
     period: '/month',
     description: 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.',
     features: [,
-=======
     popula,
   r: false,
     ico,
@@ -2075,8 +1977,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 11,
-  },
+  s: 11},
     i,
   d: 'status-pages-slo',
     nam,
@@ -2091,13 +1992,11 @@ export const,
   n: 'Publish service status and SLOs with incident posts and subscriber alerts. Pull metrics from providers and APM tools.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Custom branded status pages',
       'SLO dashboards',
       'Incident posts & timelines',
       'Subscriber notifications'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-teal-600 to-emerald-700'
@@ -2124,7 +2023,6 @@ export const,
     customers: 75;
     rating: 4.6;
     reviews: 35;
-=======
     popula,
   r: false,
     ico,
@@ -2177,9 +2075,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 35,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 35},
     i,
   d: 'uptime-slo-monitor',
     nam,
@@ -2199,7 +2095,6 @@ export const,
       'Error budget policy',
       'Burn rate alerts'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -2226,7 +2121,6 @@ export const,
     customers: 130;
     rating: 4.7;
     reviews: 64;
-=======
     popula,
   r: true,
     ico,
@@ -2279,9 +2173,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 64,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 64},
     i,
   d: 'webhook-relay-replay',
     nam,
@@ -2301,7 +2193,6 @@ export const,
       'Replay & DLQ',
       'Traffic mirroring'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-sky-600 to-cyan-700'
@@ -2328,7 +2219,6 @@ export const,
     customers: 58;
     rating: 4.6;
     reviews: 27;
-=======
     popula,
   r: false,
     ico,
@@ -2381,9 +2271,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 27,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 27},
     i,
   d: 'feature-flags-edge',
     nam,
@@ -2403,7 +2291,6 @@ export const,
       'SDKs and audit logs',
       'Kill switches'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-fuchsia-600 to-pink-700'
@@ -2430,7 +2317,6 @@ export const,
     customers: 42;
     rating: 4.5;
     reviews: 23;
-=======
     popula,
   r: false,
     ico,
@@ -2483,9 +2369,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 23,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 23},
     i,
   d: 'sso-in-a-box',
     nam,
@@ -2505,7 +2389,6 @@ export const,
       'Branding & JIT',
       'User/role sync'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-green-700'
@@ -2532,7 +2415,6 @@ export const,
     customers: 150;
     rating: 4.8;
     reviews: 96;
-=======
     popula,
   r: true,
     ico,
@@ -2585,9 +2467,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 96,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 96},
     i,
   d: 'vector-search-starter',
     nam,
@@ -2607,7 +2487,6 @@ export const,
       'SDKs and relevance tuning',
       'Observability and quotas'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700',
@@ -2634,7 +2513,6 @@ export const,
     customers: 70;
     rating: 4.6;
     reviews: 33;
-=======
     popula,
   r: false,
     ico,
@@ -2687,9 +2565,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 33,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 33},
     i,
   d: 'data-quality-monitor',
     nam,
@@ -2709,7 +2585,6 @@ export const,
       'Anomaly alerts',
       'Dashboard and lineage hints'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700'
@@ -2736,7 +2611,6 @@ export const,
     customers: 39;
     rating: 4.5;
     reviews: 20;
-=======
     popula,
   r: false,
     ico,
@@ -2789,9 +2663,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 20,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 20},
     i,
   d: 'data-pipeline-observability',
     nam,
@@ -2811,7 +2683,6 @@ export const,
       'Predictive failure alerts',
       'Dashboards & reports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-700 to-indigo-700'
@@ -2838,7 +2709,6 @@ export const,
     customers: 44;
     rating: 4.6;
     reviews: 26;
-=======
     popula,
   r: true,
     ico,
@@ -2891,9 +2761,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 26,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 26},
     i,
   d: 'ai-guardrails-suite',
     nam,
@@ -2913,7 +2781,6 @@ export const,
       'Eval and red team runs',
       'Audit and exceptions'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-rose-600 to-red-700'
@@ -2940,7 +2807,6 @@ export const,
     customers: 36;
     rating: 4.5;
     reviews: 18;
-=======
     popula,
   r: true,
     ico,
@@ -2993,9 +2859,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 18},
     i,
   d: 'ai-sales-automation',
     nam,
@@ -3015,7 +2879,6 @@ export const,
       'Meeting prep copilot',
       'Pipeline analytics'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -3042,7 +2905,6 @@ export const,
     customers: 66;
     rating: 4.5;
     reviews: 31;
-=======
     popula,
   r: false,
     ico,
@@ -3095,9 +2957,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 31,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 31},
     i,
   d: 'synthetic-data-generator',
     nam,
@@ -3117,7 +2977,6 @@ export const,
       'Utility and drift reports',
       'REST API & SDKs (Python/JS)'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700',
@@ -3144,7 +3003,6 @@ export const,
     customers: 25;
     rating: 4.6;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -3197,9 +3055,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 12},
     i,
   d: 'email-parsing-routing-api',
     nam,
@@ -3219,7 +3075,6 @@ export const,
       'Webhook delivery with retries & DLQ',
       'Inspector and secure replays'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -3246,7 +3101,6 @@ export const,
     customers: 18;
     rating: 4.5;
     reviews: 9;
-=======
     popula,
   r: false,
     ico,
@@ -3299,9 +3153,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 9},
     i,
   d: 'kubernetes-cost-analyzer',
     nam,
@@ -3321,7 +3173,6 @@ export const,
       'Binpacking recommendations',
       'Chargeback/showback reports'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -3348,7 +3199,6 @@ export const,
     customers: 22;
     rating: 4.6;
     reviews: 11;
-=======
     popula,
   r: true,
     ico,
@@ -3401,9 +3251,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 11},
     i,
   d: 'cloud-landing-zone',
     nam,
@@ -3423,7 +3271,6 @@ export const,
       'Audit logging & SIEM hooks',
       'Budgets & anomaly alerts'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-sky-600 to-blue-700'
@@ -3450,7 +3297,6 @@ export const,
     customers: 14;
     rating: 4.7;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -3503,9 +3349,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 8},
     i,
   d: 'security-headers-scanner',
     nam,
@@ -3525,7 +3369,6 @@ export const,
       'PR annotations & diffs',
       'Alerting & weekly reports'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-rose-600 to-fuchsia-700'
@@ -3552,7 +3395,6 @@ export const,
     customers: 10;
     rating: 4.5;
     reviews: 6;
-=======
     popula,
   r: false,
     ico,
@@ -3605,9 +3447,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 6},
     i,
   d: 'frontend-bundle-analyzer-ci',
     nam,
@@ -3627,7 +3467,6 @@ export const,
       'Actionable suggestions',
       'Dashboards & trends'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-amber-600 to-orange-700'
@@ -3654,7 +3493,6 @@ export const,
     customers: 12;
     rating: 4.5;
     reviews: 7;
-=======
     popula,
   r: false,
     ico,
@@ -3707,9 +3545,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 7},
     i,
   d: 's3-to-snowflake-ingestion',
     nam,
@@ -3729,7 +3565,6 @@ export const,
       'Backfills & reprocess',
       'Lineage & monitoring'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-blue-700 to-indigo-700'
@@ -3756,7 +3591,6 @@ export const,
     customers: 9;
     rating: 4.4;
     reviews: 5;
-=======
     popula,
   r: false,
     ico,
@@ -3809,9 +3643,7 @@ export const,
     ratin,
   g: 4.4,
     review,
-  s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 5},
     i,
   d: 'visual-regression-monitor',
     nam,
@@ -3831,7 +3663,6 @@ export const,
       'Baselines & environments',
       'Alerting & history'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-violet-600 to-purple-700'
@@ -3866,7 +3697,6 @@ export const,
     period: '/month',
     description: 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.',
     features: [,
-=======
     popula,
   r: false,
     ico,
@@ -3919,8 +3749,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 7,
-  },
+  s: 7},
     i,
   d: 'data-masking-proxy',
     nam,
@@ -3935,13 +3764,11 @@ export const,
   n: 'Proxy and transform streams with tokenization and masking policies to safely replicate data to non-production systems.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Tokenization & masking policies',
       'Format-preserving encryption',
       'Schema-aware transforms',
       'Audit logs & approvals'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -3968,7 +3795,6 @@ export const,
     customers: 13;
     rating: 4.6;
     reviews: 6;
-=======
     popula,
   r: true,
     ico,
@@ -4021,9 +3847,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 6,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 6},
     i,
   d: 'ai-meeting-notes-agent',
     nam,
@@ -4043,7 +3867,6 @@ export const,
       'Summaries & highlights',
       'CRM/PM sync'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -4078,7 +3901,6 @@ export const,
     period: '/month',
     description: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -4131,8 +3953,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 13,
-  },
+  s: 13},
     i,
   d: 'compliance-policy-as-code',
     nam,
@@ -4147,13 +3968,11 @@ export const,
   n: 'Define and validate compliance policies as code across cloud resources and IaC with CI quality gates and evidence reports.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Policy packs (SOC2) ISO)',
       'CI gates & PR comments',
       'Evidence reports',
       'Drift detection'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-indigo-700'
@@ -4180,7 +3999,6 @@ export const,
     customers: 17;
     rating: 4.6;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -4233,9 +4051,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 8},
     i,
   d: 'pdf-render-api',
     nam,
@@ -4257,7 +4073,6 @@ export const,
       'Storage destinations (S3/GCS/Azure)',
       'Usage analytics and quotas'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700',
@@ -4284,7 +4099,6 @@ export const,
     customers: 75;
     rating: 4.7;
     reviews: 28;
-=======
     popula,
   r: true,
     ico,
@@ -4337,9 +4151,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 28},
     i,
   d: 'invoice-ocr-extraction-api',
     nam,
@@ -4361,7 +4173,6 @@ export const,
       'CSV/JSON export and webhooks',
       'Native integrations (Xero/QuickBooks)'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -4388,7 +4199,6 @@ export const,
     customers: 29;
     rating: 4.6;
     reviews: 9;
-=======
     popula,
   r: true,
     ico,
@@ -4441,9 +4251,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 9,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 9},
     i,
   d: 'log-archive-search',
     nam,
@@ -4465,7 +4273,6 @@ export const,
       'Alerting and dashboards',
       'PII redaction and tokenization'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -4492,7 +4299,6 @@ export const,
     customers: 21;
     rating: 4.5;
     reviews: 7;
-=======
     popula,
   r: false,
     ico,
@@ -4545,9 +4351,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 7,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 7},
     i,
   d: 'gdpr-privacyops-suite',
     nam,
@@ -4568,7 +4372,6 @@ export const,
       'Retention rules with defensible deletion',
       'Evidence export for auditors'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-fuchsia-700'
@@ -4595,7 +4398,6 @@ export const,
     customers: 18;
     rating: 4.6;
     reviews: 11;
-=======
     popula,
   r: true,
     ico,
@@ -4648,9 +4450,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 11,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 11},
     i,
   d: 'ai-code-review-copilot',
     nam,
@@ -4671,7 +4471,6 @@ export const,
       'PR comments and SARIF outputs',
       'Risk heatmaps and trends'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -4698,7 +4497,6 @@ export const,
     customers: 42;
     rating: 4.5;
     reviews: 29;
-=======
     popula,
   r: false,
     ico,
@@ -4751,9 +4549,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 29,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 29},
     i,
   d: 'm365-security-hardening-kit',
     nam,
@@ -4773,7 +4569,6 @@ export const,
       'Auto-remediation playbooks',
       'Executive reporting'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -4800,7 +4595,6 @@ export const,
     customers: 15;
     rating: 4.4;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -4853,9 +4647,7 @@ export const,
     ratin,
   g: 4.4,
     review,
-  s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 8},
     i,
   d: 'ai-customer-qa-benchmark',
     nam,
@@ -4875,7 +4667,6 @@ export const,
       'RAG source attribution validation',
       'Compliance and brand guardrails'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-violet-700',
@@ -4910,7 +4701,6 @@ export const,
     period: '/month',
     description: 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.',
     features: [,
-=======
     popula,
   r: false,
     ico,
@@ -4963,8 +4753,7 @@ export const,
     ratin,
   g: 4.3,
     review,
-  s: 13,
-  },
+  s: 13},
     i,
   d: 'quantum-ai-fusion-platform',
     nam,
@@ -4979,14 +4768,12 @@ export const,
   n: 'Advanced platform combining quantum computing principles with AI to solve complex optimization problems and accelerate machine learning.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum-inspired algorithms',
       'AI model acceleration',
       'Optimization solvers',
       'Real-time analytics',
       'API integration'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-purple-700'
@@ -5013,7 +4800,6 @@ export const,
     customers: 15;
     rating: 4.8;
     reviews: 8;
-=======
     popula,
   r: true,
     ico,
@@ -5066,9 +4852,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 8},
     i,
   d: 'ai-cybersecurity-sentinel',
     nam,
@@ -5089,7 +4873,6 @@ export const,
       'Threat intelligence',
       'Compliance reporting'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-orange-700'
@@ -5116,7 +4899,6 @@ export const,
     customers: 45;
     rating: 4.7;
     reviews: 32;
-=======
     popula,
   r: true,
     ico,
@@ -5169,9 +4951,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 32,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 32},
     i,
   d: 'autonomous-devops-orchestrator',
     nam,
@@ -5192,7 +4972,6 @@ export const,
       'Cost management',
       'Multi-cloud orchestration'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-green-600 to-teal-700'
@@ -5219,7 +4998,6 @@ export const,
     customers: 28;
     rating: 4.6;
     reviews: 19;
-=======
     popula,
   r: false,
     ico,
@@ -5272,9 +5050,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 19},
     i,
   d: 'blockchain-enterprise-platform',
     nam,
@@ -5295,7 +5071,6 @@ export const,
       'Scalability solutions',
       'Integration APIs'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -5322,7 +5097,6 @@ export const,
     customers: 22;
     rating: 4.5;
     reviews: 15;
-=======
     popula,
   r: true,
     ico,
@@ -5375,9 +5149,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 15,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 15},
     i,
   d: 'ai-content-intelligence-suite',
     nam,
@@ -5398,7 +5170,6 @@ export const,
       'Multi-language support',
       'Brand voice consistency'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -5425,7 +5196,6 @@ export const,
     customers: 67;
     rating: 4.4;
     reviews: 41;
-=======
     popula,
   r: false,
     ico,
@@ -5478,9 +5248,7 @@ export const,
     ratin,
   g: 4.4,
     review,
-  s: 41,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 41},
     i,
   d: 'iot-enterprise-platform',
     nam,
@@ -5501,7 +5269,6 @@ export const,
       'Automation workflows',
       'Security & compliance'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-teal-600 to-green-700'
@@ -5528,7 +5295,6 @@ export const,
     customers: 38;
     rating: 4.6;
     reviews: 25;
-=======
     popula,
   r: true,
     ico,
@@ -5581,9 +5347,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 25,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 25},
     i,
   d: 'ai-customer-success-platform',
     nam,
@@ -5604,7 +5368,6 @@ export const,
       'Success playbooks',
       'Analytics dashboard'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-teal-700'
@@ -5639,7 +5402,6 @@ export const,
     period: '/month',
     description: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.',
     features: [,
-=======
     popula,
   r: true,
     ico,
@@ -5692,8 +5454,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 38,
-  },
+  s: 38},
     i,
   d: 'quantum-cryptography-suite',
     nam,
@@ -5708,14 +5469,12 @@ export const,
   n: 'Advanced cryptographic solutions designed to protect against quantum computing threats while maintaining high performance.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Post-quantum cryptography',
       'Quantum key distribution',
       'Hybrid encryption',
       'Performance optimization',
       'Compliance standards'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -5742,7 +5501,6 @@ export const,
     customers: 18;
     rating: 4.8;
     reviews: 12;
-=======
     popula,
   r: false,
     ico,
@@ -5795,9 +5553,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 12},
     i,
   d: 'ai-supply-chain-optimizer',
     nam,
@@ -5818,7 +5574,6 @@ export const,
       'Risk assessment',
       'Real-time analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -5845,7 +5600,6 @@ export const,
     customers: 41;
     rating: 4.6;
     reviews: 28;
-=======
     popula,
   r: true,
     ico,
@@ -5898,9 +5652,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 28,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 28},
     i,
   d: 'autonomous-financial-advisor',
     nam,
@@ -5921,7 +5673,6 @@ export const,
       'Goal-based planning',
       'Real-time monitoring'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -5948,7 +5699,6 @@ export const,
     customers: 35;
     rating: 4.7;
     reviews: 22;
-=======
     popula,
   r: true,
     ico,
@@ -6001,9 +5751,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 22},
     i,
   d: 'ai-consciousness-evolution-platform',
     nam,
@@ -6024,7 +5772,6 @@ export const,
       'Self-awareness algorithms',
       'Ethical decision making'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-violet-600 to-purple-700'
@@ -6051,7 +5798,6 @@ export const,
     customers: 8;
     rating: 4.9;
     reviews: 5;
-=======
     popula,
   r: true,
     ico,
@@ -6104,9 +5850,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 5,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 5},
     i,
   d: 'quantum-space-technology-suite',
     nam,
@@ -6127,7 +5871,6 @@ export const,
       'Quantum communications',
       'Mission planning'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -6154,7 +5897,6 @@ export const,
     customers: 12;
     rating: 4.7;
     reviews: 8;
-=======
     popula,
   r: false,
     ico,
@@ -6207,9 +5949,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 8},
     i,
   d: 'autonomous-manufacturing-ai',
     nam,
@@ -6230,7 +5970,6 @@ export const,
       'Supply chain automation',
       'Real-time analytics'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -6257,7 +5996,6 @@ export const,
     customers: 31;
     rating: 4.6;
     reviews: 24;
-=======
     popula,
   r: true,
     ico,
@@ -6310,9 +6048,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 24,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 24},
     i,
   d: 'biotech-ai-research-platform',
     nam,
@@ -6333,7 +6069,6 @@ export const,
       'Clinical trial optimization',
       'Personalized medicine'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -6360,7 +6095,6 @@ export const,
     customers: 19;
     rating: 4.8;
     reviews: 15;
-=======
     popula,
   r: true,
     ico,
@@ -6413,9 +6147,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 15,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 15},
     i,
   d: 'metaverse-enterprise-platform',
     nam,
@@ -6436,7 +6168,6 @@ export const,
       'Virtual meetings',
       'Integration APIs'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -6463,7 +6194,6 @@ export const,
     customers: 26;
     rating: 4.5;
     reviews: 18;
-=======
     popula,
   r: false,
     ico,
@@ -6516,9 +6246,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 18},
     i,
   d: 'quantum-financial-trading-platform',
     nam,
@@ -6539,7 +6267,6 @@ export const,
       'Market prediction',
       'High-frequency trading'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-emerald-600 to-green-700'
@@ -6566,7 +6293,6 @@ export const,
     customers: 15;
     rating: 4.9;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -6619,9 +6345,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 12},
     i,
   d: 'ai-autonomous-vehicle-platform',
     nam,
@@ -6642,7 +6366,6 @@ export const,
       'Predictive maintenance',
       'Real-time tracking'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-blue-600 to-cyan-700'
@@ -6677,7 +6400,6 @@ export const,
     period: '/month',
     description: 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.',
     features: [,
-=======
     popula,
   r: false,
     ico,
@@ -6730,8 +6452,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 16,
-  },
+  s: 16},
     i,
   d: 'quantum-cybersecurity-suite',
     nam,
@@ -6746,14 +6467,12 @@ export const,
   n: 'Advanced cybersecurity platform that implements quantum-resistant encryption algorithms and prepares organizations for the quantum computing threat.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Post-quantum cryptography',
       'Quantum-resistant algorithms',
       'Threat detection',
       'Compliance frameworks',
       'Migration tools'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-pink-700'
@@ -6780,7 +6499,6 @@ export const,
     customers: 28;
     rating: 4.7;
     reviews: 20;
-=======
     popula,
   r: true,
     ico,
@@ -6833,9 +6551,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 20,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 20},
     i,
   d: 'enterprise-data-governance-platform',
     nam,
@@ -6856,7 +6572,6 @@ export const,
       'Privacy controls',
       'Audit reporting'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-blue-600 to-indigo-700'
@@ -6883,7 +6598,6 @@ export const,
     customers: 34;
     rating: 4.5;
     reviews: 22;
-=======
     popula,
   r: false,
     ico,
@@ -6936,9 +6650,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 22,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 22},
     i,
   d: 'ai-powered-hr-analytics-suite',
     nam,
@@ -6959,7 +6671,6 @@ export const,
       'Diversity metrics',
       'Recruitment optimization'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-purple-600 to-pink-700'
@@ -6986,7 +6697,6 @@ export const,
     customers: 47;
     rating: 4.6;
     reviews: 31;
-=======
     popula,
   r: true,
     ico,
@@ -7039,9 +6749,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 31,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 31},
     i,
   d: 'cloud-migration-automation-platform',
     nam,
@@ -7062,7 +6770,6 @@ export const,
       'Security compliance',
       'Multi-cloud support'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-cyan-600 to-blue-700'
@@ -7089,7 +6796,6 @@ export const,
     customers: 29;
     rating: 4.7;
     reviews: 19;
-=======
     popula,
   r: true,
     ico,
@@ -7142,9 +6848,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 19,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 19},
     i,
   d: 'digital-transformation-consulting',
     nam,
@@ -7165,7 +6869,6 @@ export const,
       'Process optimization',
       'Implementation support'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-orange-600 to-red-700'
@@ -7192,7 +6895,6 @@ export const,
     customers: 12;
     rating: 4.9;
     reviews: 8;
-=======
     popula,
   r: false,
     ico,
@@ -7245,9 +6947,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 8,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 8},
     i,
   d: 'ai-ethics-compliance-framework',
     nam,
@@ -7268,7 +6968,6 @@ export const,
       'Transparency tools',
       'Audit frameworks'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-green-600 to-emerald-700'
@@ -7295,7 +6994,6 @@ export const,
     customers: 18;
     rating: 4.8;
     reviews: 12;
-=======
     popula,
   r: true,
     ico,
@@ -7348,9 +7046,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 12,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 12},
     i,
   d: 'edge-computing-optimization-platform',
     nam,
@@ -7371,7 +7067,6 @@ export const,
       'Resource allocation',
       'Performance monitoring'
     ],
-<<<<<<< HEAD
     popular: false;
     icon: ''
     color: 'from-teal-600 to-green-700'
@@ -7398,7 +7093,6 @@ export const,
     customers: 25;
     rating: 4.5;
     reviews: 17;
-=======
     popula,
   r: false,
     ico,
@@ -7451,9 +7145,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 17,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 17},
     i,
   d: 'zero-trust-security-implementation',
     nam,
@@ -7474,7 +7166,6 @@ export const,
       'Threat detection',
       'Compliance reporting'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-red-600 to-orange-700'
@@ -7501,7 +7192,6 @@ export const,
     customers: 36;
     rating: 4.7;
     reviews: 25;
-=======
     popula,
   r: true,
     ico,
@@ -7554,9 +7244,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 25,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 25},
     i,
   d: 'ai-powered-customer-experience-platform',
     nam,
@@ -7577,7 +7265,6 @@ export const,
       'Omnichannel support',
       'Experience optimization'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-pink-600 to-purple-700'
@@ -7604,7 +7291,6 @@ export const,
     customers: 53;
     rating: 4.6;
     reviews: 38;
-=======
     popula,
   r: true,
     ico,
@@ -7657,9 +7343,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 38,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 38},
     i,
   d: 'ai-sales-agent-suite',
     nam,
@@ -7679,7 +7363,6 @@ export const,
       'Calendar booking and routing',
       'Compliance and opt-out handling'
     ],
-<<<<<<< HEAD
     popular: true;
     icon: ''
     color: 'from-indigo-600 to-blue-700'
@@ -7704,15 +7387,12 @@ export const,
       email: "kleber@ziontechgroup.com"
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  };
+      address: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     popula,
   r: true,
     ico,
@@ -7763,9 +7443,7 @@ export const,
       emai,
   l: 'kleber@ziontechgroup.com',
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  };
+  s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      mobil,"
   e: "+1 302 464 0950",
   emai,"
@@ -7776,7 +7454,6 @@ export const,
   l: "kleber@ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];
@@ -7792,24 +7469,24 @@ export interface AdditionalRealService,
   n: boolean; contact_inf,
   o: mobil,
   e: string; emai,
-  l: string, } addres,
-  s: string, } export const,
+  l: string} addres,
+  s: string} export const,
   additionalEnhancedServices: AdditionalRealService[] = [ addres,
-  s: string, } ; export const,
+  s: string} ; export const,
   additionalEnhancedServices: AdditionalRealService[] = [, i,
   d: 'ai - automation - suite',' nam,
   e: 'AI Automation Suite',' taglin,
   e: 'Intelligent automation for modern businesses',' pric,
   e: '$79 / month', descriptio,
   n:  ,' 'Comprehensive AI - powered automation platform that streamlines business processes and increases efficiency.', feature,
-  s: [,' 'Workflow automation',' 'AI decision making',' 'Integration APIs',' 'Custom workflows',' 'Analytics dashboard', ],' lin,
+  s: [,' 'Workflow automation',' 'AI decision making',' 'Integration APIs',' 'Custom workflows',' 'Analytics dashboard'],' lin,
   k: '/services / ai - automation - suite',' categor,
   y: 'AI & Automation', real_implementatio,
   n: true, contact_inf,
   o: ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', }, }, i,
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}, i,
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -7835,8 +7512,8 @@ export interface AdditionalRealService,
   o: mobil,
   e: string; emai,
   l: string; addres,
-  s: string, }; } } addres,
-  s: string, } export const,
+  s: string}; } } addres,
+  s: string} export const,
   additionalEnhancedServices: AdditionalRealService[] = [ ' i,
   d: 'ai-automation-suite'' nam,
   e: 'AI Automation Suite'' taglin,
@@ -7872,14 +7549,14 @@ export interface AdditionalRealService,
   e: 'Enterprise - grade data management and analytics',' pric,
   e: '$149 / month', descriptio,
   n:  ,' 'Scalable data warehouse solution with advanced analytics and business intelligence capabilities.', feature,
-  s: [,' 'Data integration',' 'Real - time processing',' 'Advanced analytics',' 'Scalable architecture',' 'Security compliance', ],' lin,
+  s: [,' 'Data integration',' 'Real - time processing',' 'Advanced analytics',' 'Scalable architecture',' 'Security compliance'],' lin,
   k: '/services / data - warehouse - solution',' categor,
   y: 'Data & Analytics', real_implementatio,
   n: true, contact_inf,
   o: ' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup && ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', }, }, ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}]; mobil,"
   e: "+1 302 464 0950",
   i,"
   d: "ai-automation-suite", nam,"
@@ -10315,7 +9992,7 @@ export interface AdditionalRealService,
   l: "kleber@ziontechgroup.com",' mobil,
   e: '+1 302 464 0950',' emai,
   l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709', }, },; ]; mobil,"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}; ]; mobil,"
   e: "+1 302 464 0950",
   emai,"
   l: "kleber@ziontechgroup.com" mobil,"

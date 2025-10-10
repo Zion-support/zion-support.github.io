@@ -1,14 +1,10 @@
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
   return(<div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-=======
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helm, e, t>
         <title>
           Intelligent, Automation, Breakthrough 20, 2, 5: From, Tickets, to Outcom, e, s;
@@ -17,7 +13,7 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
           conte, n, t='Intelligent, Automation, Breakthrough 20, 2, 5: From, Tickets, to Outcom, e, s - Shift, from manual tickets, to, outcome-driven, automation, with safe, agent, runboo, k, s, budge, t, s, and, instant, rollback'
         />)
         <link, re, l = 'canonic, a, l')
-          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-intellige n t-automati o n-breakthrou g h',)
+          hr, e, f='htt, p, s: //ziontechgro u p.c o m/bl o g/ai-20 2 5-o c t-intellige n t-automati o n-breakthrou g h')
         />),
       </Helm, e, t>
 
@@ -42,7 +38,5 @@ export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {
         </div>
       </div>
     </d, i, v > );
-=======
 export default function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  }

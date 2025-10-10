@@ -35,7 +35,7 @@ class AdvancedCache;
   private,
   options: Required<CacheOptions>;
   private storageKey = 'advanced-cache';
-  constructor(_option,)
+  constructor(_option)
   s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -156,7 +156,7 @@ class AdvancedCache;
       this.saveToStorage();
     }
   }
-  public get(ke,)
+  public get(ke)
   y: string): T | null {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -180,7 +180,7 @@ class AdvancedCache;
     this.updateAccessOrder(key);
     return entry.value;
   }
-  public has(ke,)
+  public has(ke)
   y: string): boolean {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -215,7 +215,7 @@ class AdvancedCache;
       storage?.removeItem(this.storageKey);
     }
   }
-  private updateAccessOrder(ke,)
+  private updateAccessOrder(ke)
   y: string): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -330,9 +330,7 @@ class AdvancedCache;
     fetche,
   r: () => Promise;
           <R>,
-    ttl?: number,
-
-): Promise<R> {// TODO: Add content;}
+    ttl?: number): Promise<R> {// TODO: Add content;}
 
 }
     const cached = this.get(key);

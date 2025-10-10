@@ -1,7 +1,6 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '..', '..') relativePath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -9,7 +8,6 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   return {status: res.status || 0;
     stdout: res.stdout || ''}
     stderr: res.stderr || '';
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -17,7 +15,6 @@ function runNode(relativePath) args = []) {const abs = path.resolve(__dirname, '
   t: res.stdout || ''}
     stder,
   r: res.stderr || '';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 exports.config = {/* TODO: Fix JSX expression */}
@@ -33,9 +30,9 @@ exports.handler = async () => {const logs = []}
     return status;
   };
   step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'));
-  step('searc,)
+  step('searc)
   h: index') () => runNode('scripts/generate-search-index.js'));
-  step('gi,)
+  step('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {/* TODO: Fix JSX expression */}
   e: 200}
@@ -51,8 +48,8 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   s: res.status || 0} stdou,
   t: res.stdout || ''; stder,
   r: res.stderr || '' }; } exports.config = {/* TODO: Fix JSX expression */}`
-  e: '*/7 * * * *'} }; exports.handler = async () => {const logs = []} const step = (name} fn) => { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; }; ' step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'));' step('searc,)
-  h: index') () => runNode('scripts/generate-search-index.js'));' step('gi,)
+  e: '*/7 * * * *'} }; exports.handler = async () => {const logs = []} const step = (name} fn) => { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; }; ' step('opportunity-miner') () => runNode('automation/opportunity-miner.cjs'));' step('searc)
+  h: index') () => runNode('scripts/generate-search-index.js'));' step('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}
   e: 200} header,
   s: { 'content-type': 'text/plain' }; bod,

@@ -1,7 +1,6 @@
 import React from 'react';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 interface SEOHeadProp, s {
   title?: string;
   description?: string;
@@ -20,8 +19,7 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
   u, r, l = 'htt, p, s: //ziontechgro u p.c o m' ,
   image = 'htt, p, s: //ziontechgro u p.c o m/og-image.j p g' ,
   ty, p, e = 'webs, i, t, e',
-  author = 'Zion, Tech, Grou, p',
-}) => { 
+  author = 'Zion, Tech, Grou, p'}) => { 
   const metaKeyword, s = Arr, a, y.isArr, a, y(keywo, r, d, s)  ? keywor, d, s.jo, i, n(', ') : keywor, d, s; const canonicalUr, l = canonic, a, l || u, r, l; const structuredDat, a = {
     '@conte, x, t': 'htt, p, s: //sche m a.o r g' ,
     '@ty, p, e': 'Organizati, o, n',
@@ -32,27 +30,23 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({</SEOHeadPro>title</SEOH
     same, A, s: [,
       'htt, p, s: //linked i n.c o m/company/zi o n-te c h-gr o u p' ,
       'htt, p, s: //twitt e r.c o m/ziontechgr o u p' ,
-      'htt, p, s: //gith u b.c o m/ZionClo u d s' ,
-    ],
+      'htt, p, s: //gith u b.c o m/ZionClo u d s' ],
     contactPoi, n, t: {,
       '@ty, p, e': 'ContactPo, i, n, t',
       telepho, n, e: '+1-5, 5, 5-1, 2, 3-4, 5, 6, 7',
       contactTy, p, e: 'customer, servi, c, e',
-      ema, i, l : 'in, f, o@ziontechgro, u, p.co, m',
-     },
+      ema, i, l : 'in, f, o@ziontechgro, u, p.co, m'},
     addre, s, s: {,
       '@ty, p, e': 'PostalAddr, e, s, s',
       streetAddre, s, s: '123, Innovation, Driv, e',
       addressLocali, t, y: 'San, Francis, c, o',
       addressRegi, o, n: 'C, A',
       postalCo, d, e: '94, 1, 0, 5',
-      addressCount, r, y: 'U, S',
-    },
+      addressCount, r, y: 'U, S'},
     foundingDa, t, e: '2, 0, 2, 0',
     numberOfEmploye, e, s: '50, 0+',
     industry: 'Artificial, Intelligen, c, e',
     servic, e, s: [,
-=======
 interface SEOHeadProp, s {/* TODO: Fix JSX expression */}
  }
 
@@ -66,16 +60,12 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
     industr,
   y: 'Artificial, Intelligen, c, e',
     servic, e, s: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI, Workflow, Automatio, n',
       'Enterprise, AI, Solutions',
       'AI, Data, Analytics',
       'Cybersecurity, A, I',
       'Quantum, Computin, g',
-      'AI, Consultin, g',
-    ],
-<<<<<<< HEAD
-  }; return(<Helm, e, t>
+      'AI, Consultin, g']}; return(<Helm, e, t>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} />
       <meta, nam, e='keywor, d, s' conte, n, t={metaKeywor, d, s} />
@@ -111,7 +101,6 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' />)
       {/* Structured, Dat, a */})
       <script, typ, e='applicati, o, n/ld+js, o, n'>)
-=======
   }; return (<Helm, e, t></Helm>
       <title>{title}</title>
       <meta, nam, e = 'description' conte, n, t={description} /></meta>
@@ -155,7 +144,6 @@ const EnhancedSEOHea, d: React.FC<SEOHeadPro, p, s> = ({/* TODO: Fix JSX express
       <meta, httpEqui, v='x-d, n, s-prefet, c, h-contr, o, l' conte, n, t='on' /></meta>
       {/* Structured, Dat, a */}
       <script, typ, e='applicati, o, n/ld+js, o, n'></script>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         {JS, O, N.stringi, f, y(structuredD, a, t, a)}
       </scri, p, t>
     </Helm, e, t>

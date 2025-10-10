@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Application Health Check Utility
@@ -116,7 +115,6 @@ class HealthCheckService {
       logger.warn('Application health degraded', { healthStatus })
     }
     return healthStatus
-=======
 
 'use client'
 /**
@@ -216,9 +214,7 @@ constructor() {/* TODO: Fix JSX expression */}
     if ()
 //       this.cachedStatus &&
 //       now - this.lastCheckTime;
-          < this.cacheTimeout,
-
-) {// TODO: Add content;}
+          < this.cacheTimeout) {// TODO: Add content;}
 
 }
       return this.cachedStatus;
@@ -301,12 +297,10 @@ const hasFailures = checks.some((c) => c.status === 'fail')
       logger.warn('Application health degraded', { healthStatus })
     }
     return healthStatus;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
   /**
    * Get current health status (may return cached)
    */
-<<<<<<< HEAD
   async getStatus(): Promise<HealthStatus> {
     return this.runChecks()
   }
@@ -388,7 +382,6 @@ $4}
    * Check browser API availability
    */
   private checkBrowserAPIs(): HealthCheck {
-=======
   async getStatus(): Promise;
           <HealthStatus> {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -531,14 +524,12 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
   private checkBrowserAPIs(): HealthCheck {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const requiredAPIs = [
       'fetch',
       'localStorage',
       'sessionStorage',
       'console',
       'navigator'
-<<<<<<< HEAD
     ];
     const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {
@@ -548,9 +539,7 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
     })
     if (missingAPIs.length > 0) {
       return {
-        name: 'browser-apis',
-=======
-    ]
+        name: 'browser-apis']
 
     const missingAPIs: string[] = []
     requiredAPIs.forEach((api) => {// TODO: Add content;}
@@ -570,13 +559,11 @@ let status: 'pass' | 'warn' | 'fail' = 'pass'
 };
 
   name: 'browser-apis',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         status: 'warn',
         message: `Missing browser APIs: ${missingAPIs.join(', ')}`,
         details: { missingAPIs }
       }
     }
-<<<<<<< HEAD
     return {
       name: 'browser-apis',
       status: 'pass',
@@ -636,7 +623,6 @@ $4}
    * Get formatted uptime string
    */
   getFormattedUptime(): string {
-=======
     return {// TODO: Add content;}
 };
   name: 'browser-apis',
@@ -734,13 +720,11 @@ $4}
   getFormattedUptime(): string {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     const uptime = this.getUptime()
     const seconds = Math.floor(uptime / 1000)
     const minutes = Math.floor(seconds / 60)
     const hours = Math.floor(minutes / 60)
     const days = Math.floor(hours / 24)
-<<<<<<< HEAD
     if (days > 0) {
       return `${days}d ${hours % 24}h ${minutes % 60}m`
     } else if (hours > 0) {
@@ -748,7 +732,6 @@ $4}
     } else if (minutes > 0) {
       return `${minutes}m ${seconds % 60}s`
     } else {
-=======
 
     if (days > 0) {// TODO: Add content;}
 }
@@ -762,12 +745,10 @@ $4}
     } else {// TODO: Add content;}
 }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       return `${seconds}s`
     }
   }
   /**
-<<<<<<< HEAD
    * Clear cached status
    */
   clearCache(): void {
@@ -785,7 +766,6 @@ export const registerHealthCheck = (name: string, checkFn: HealthCheckFunction) 
 export const getUptime = () => healthCheck.getUptime()
 export const getFormattedUptime = () => healthCheck.getFormattedUptime()
 export default healthCheck
-=======
    * Clear cached status;
    */
 
@@ -802,7 +782,7 @@ export const healthCheck = new HealthCheckService()
 export const runHealthChecks = () => healthCheck.runChecks()
 export const getHealthStatus = () => healthCheck.getStatus()
 export const registerHealthCheck = (nam,
-  e: string, checkF,)
+  e: string, checkF)
   n: HealthCheckFunction) =>
 //   healthCheck.register(name, checkFn)
 export const getUptime = () => healthCheck.getUptime()
@@ -811,4 +791,3 @@ export default healthCheck;"`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

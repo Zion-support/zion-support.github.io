@@ -35,7 +35,7 @@ const EnhancedPerformanceMonitor: React.FC;
 }
 //   onMetricsUpdate,
   enableReporting = true,
-  reportInterval = 10000,)
+  reportInterval = 10000)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -48,9 +48,7 @@ const EnhancedPerformanceMonitor: React.FC;
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
-
-  });
+    ttfb: null});
   const [isVisible, setIsVisible] = useState(false);
 // Web Vitals measurement;
     if (typeof window === 'undefined' || !('performance' in window)) return;
@@ -202,9 +200,8 @@ const analyzeResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
       slowResource,
   s: 0,
       cachedResource,
-  s: 0,
-    };
-    resources.forEach((resourc,)
+  s: 0};
+    resources.forEach((resourc)
   e: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -228,8 +225,7 @@ const getMemoryUsage = useCallback(() => {/* TODO: Fix JSX expression */}
       totalJSHeapSiz,
   e: memory.totalJSHeapSize,
       jsHeapSizeLimi,
-  t: memory.jsHeapSizeLimit,
-    };
+  t: memory.jsHeapSizeLimit};
   }, []);
   // Network information;
 const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */}
@@ -247,11 +243,10 @@ const getNetworkInfo = useCallback(() => {/* TODO: Fix JSX expression */}
       rt,
   t: connection.rtt,
       saveDat,
-  a: connection.saveData,
-    };
+  a: connection.saveData};
   }, []);
   // Performance score calculation;
-const calculatePerformanceScore = useCallback((metric,)
+const calculatePerformanceScore = useCallback((metric)
   s: PerformanceMetrics) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -310,8 +305,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       userAgen,
   t: navigator.userAgent,
       ur,
-  l: window.location.href,
-    };
+  l: window.location.href};
     // Send to analytics (replace with your analytics service)
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -333,10 +327,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   fcp: metrics.fcp,
           lcp: metrics.lcp,
           fid: metrics.fid,
-          cls: metrics.cls,
-        },
-
-      });
+          cls: metrics.cls}});
     });
 
     try {/* TODO: Fix JSX expression */}
@@ -346,7 +337,7 @@ const reportMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
     }
     // Callback for custom handling;
     onMetricsUpdate?.(metrics);
-// console.log('Performance,)
+// console.log('Performance)
   Report:', report);
   }, [metrics, enableReporting, calculatePerformanceScore, analyzeResourceTiming, getMemoryUsage, getNetworkInfo, onMetricsUpdate]);
   useEffect(() => {/* TODO: Fix JSX expression */}

@@ -4,10 +4,7 @@
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-<<<<<<< HEAD
-=======
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
 const AIComputerVisionPage: React.FC = () => {
@@ -70,8 +67,7 @@ const AIComputerVisionPage: React.FC = () => {
       feature,
   s: [
   // TOD,
-  O: Add items,
-];
+  O: Add items];
 //         'Up to 1,000 images/month',
 //         'Basic models',
 //         'Email support',

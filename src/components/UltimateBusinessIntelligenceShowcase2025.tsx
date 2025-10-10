@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useState } from 'react';
         return (
@@ -140,7 +139,6 @@ readingTimereadingTime: '45 min read',
               >Learn More</Link>
     </section>);
 export default UltimateBusinessIntelligenceShowcase2025
-=======
 
 
 'use client';
@@ -165,7 +163,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       descriptio,
   n: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
       ur,
-  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',;
+  l: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough';
       typ,
   e: 'Blog Post',
       categor,
@@ -208,7 +206,7 @@ const _UltimateBusinessIntelligenceShowcase2025 = () => {/* TODO: Fix JSX expres
       descriptio,
   n: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation.',
       ur,
-  l: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',;
+  l: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide';
       typ,
   e: 'Implementation Guide',
       categor,
@@ -285,4 +283,3 @@ export default UltimateBusinessIntelligenceShowcase2025;
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

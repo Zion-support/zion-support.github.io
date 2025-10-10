@@ -2,7 +2,6 @@
 import fs from 'fs';
 import { glob } from 'glob';
 
-<<<<<<< HEAD
 async function removeProblematicIcons() {
   //Find all TypeScript/JavaScript files in src/components;
   //   for (const filePath of files) {
@@ -13,34 +12,26 @@ async function removeProblematicIcons() {
       content = content.replace(spanRegex, match => {)
         modified = true;)
         return '';)
-=======
 async function removeProblematicIcons() {/* TODO: Fix JSX expression */}
 }
   //Find all TypeScript/JavaScript files in src/components;
   //   for (const filePath of files) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
 
       //Remove <div className="...">IconName</div>"
       //       const divRegex = /<div className="[^"]+">\w+<\/div>/g;
-<<<<<<< HEAD
       content = content.replace(divRegex, match => {)
         modified = true;)
         return '';)
-=======
       content = content.replace(divRegex, match => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
 
       //Remove any remaining malformed JSX with angle brackets;
       //       const malformedRegex = /<[^>]*>\w+<\/[^>]*>/g;
-<<<<<<< HEAD
       content = content.replace(malformedRegex, match => {)
         modified = true;)
         return '';)
-=======
       content = content.replace(malformedRegex, match => {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
 
       //Clean up any empty lines that might have been created;

@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 
-=======
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 const AnalyticsToolsPage: React.FC = () => {
   const analyticsTools = [
     {
@@ -64,7 +60,6 @@ icon$5: Brain,
       description: 'Leverage advanced AI algorithms for deeper insights and automation'
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
 
 
 import { Link } from 'react-router-dom';
@@ -87,13 +82,11 @@ const PagePage: React.FC = () => {
   )
     
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       <Helmet>
         <title>Analytics Tools - Zion Tech Group</title>
         <meta name="description" content="AI-powered analytics tools for business intelligence, web analytics, marketing analytics, and more. Starting at $179/month." />
         <meta name="keywords" content="analytics tools, business intelligence, web analytics, marketing analytics, sales analytics, ai analytics" />
       </Helmet>
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -102,7 +95,6 @@ const PagePage: React.FC = () => {
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your data into actionable insights with AI-powered analytics tools for business intelligence, marketing, and performance tracking.
-=======
 
       {/* Hero Section */}
       <section className="pt-24 pb-16 px-4"></section>"
@@ -115,13 +107,11 @@ const PagePage: React.FC = () => {
           </h1>
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           </p>
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <div className="text-3xl font-bold text-cyan-400 mb-2">6</div>
-<<<<<<< HEAD
               <div className="text-gray-300">Analytics Tools</div>
             </div>
               <div className="text-3xl font-bold text-green-400 mb-2">$179</div>
@@ -182,7 +172,6 @@ const PagePage: React.FC = () => {
                 <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
-=======
 
               <div className="text-gray-300">Analytics Tools</div>
             </div>"
@@ -259,12 +248,10 @@ Why Choose Our Analytics Tools?"
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>"
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-<<<<<<< HEAD
             Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
@@ -277,7 +264,6 @@ Why Choose Our Analytics Tools?"
               Email Us
   );
 };
-=======
 Ready to Unlock Your Data?
           <p className="text-xl text-purple-100 mb-8">
             Get started with our AI analytics tools today and transform your data into actionable insights.
@@ -291,7 +277,6 @@ Call (302) 464-0950;
 };
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 export default AnalyticsToolsPage;
 
 

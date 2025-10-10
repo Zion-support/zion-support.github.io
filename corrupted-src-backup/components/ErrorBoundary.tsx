@@ -7,7 +7,6 @@ interface Props {/* TODO: Fix JSX expression */}
 interface State {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {,
     super(props);
@@ -41,27 +40,25 @@ class ErrorBoundary extends Component<Props, State> {
         custom_map: {,
           error_id: this.state.errorId),
           component_stack: errorInfo.componentStack;
-=======
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
   r: false };
   }
 
-  static getDerivedStateFromError(erro,)
+  static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
   d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
   }
 
   componentDidCatch(erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     }
   }
 
   private reportError = (erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         }
       });
     }
@@ -74,7 +71,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   private handleGoHome = () => {/* TODO: Fix JSX expression */}
   };
 
-<<<<<<< HEAD
   render() {
     if (this.state.hasError) {
       return this.props.fallback || (
@@ -91,13 +87,10 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 Error ID: {this.state.errorId}
               </p>
             )}
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 onClick={this.handleRetry}
                 className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
@@ -118,7 +111,6 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
             <button;
               onClick={() => window.location.reload()}
               className="bg-blue-600 hover: bg-blue-700 text-white font-bold py-2 px-4 rounded"
-=======
   render() {/* TODO: Fix JSX expression */}
   ID: {this.state.errorId}
               </p>
@@ -150,13 +142,11 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
               onClick={() => window.location.reload()}"
               className="bg-blue-600,"
   hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             >
               Or refresh the page;
             </button>
           </div>,
-        </div>,
-      );
+        </div>);
     }
 
     return this.props.children;

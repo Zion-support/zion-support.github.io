@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type CaseStudy = {
   id: string;
   title: string;
@@ -9,8 +8,7 @@ export type CaseStudy = {
   results: string[];
   technologies: string[];
   duration: string;
-  imageUrl?: string;,
-};
+  imageUrl?: string;};
 
 export const caseStudies: CaseStudy[] = [
   {
@@ -28,19 +26,16 @@ export const caseStudies: CaseStudy[] = [
       '99.4% equipment uptime (from 87.3%)',
       '61% reduction in maintenance costs',
       '87% reduction in unplanned outages',
-      '99.2% failure prediction accuracy',
-    ],
+      '99.2% failure prediction accuracy'],
     technologies: [,
       'Azure IoT Hub',
       'TensorFlow',
       'Apache Kafka',
       'Azure ML',
       'Unity 3 D',
-      'Kubernetes',
-    ],
+      'Kubernetes'],
     duration: '18 months',
-    imageUrl: '/images/case-studies/energy-digital-twin.jpg',
-  },
+    imageUrl: '/images/case-studies/energy-digital-twin.jpg'},
   {
     id: 'fintech-ai-platform',
     title: 'AI-Powered Financial Analytics Platform',
@@ -54,12 +49,10 @@ export const caseStudies: CaseStudy[] = [
       'Reduced analysis time from 40 hours to 2 hours per week',
       'Improved prediction accuracy by 85%',
       'Increased client satisfaction scores by 40%',
-      'Generated $2.3 M in additional revenue through better insights',
-    ],
+      'Generated $2.3 M in additional revenue through better insights'],
     technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL', 'Docker'],
     duration: '12 weeks',
-    imageUrl: '/images/case-studies/fintech-platform.jpg',
-  },
+    imageUrl: '/images/case-studies/fintech-platform.jpg'},
   {
     id: 'healthcare-chatbot',
     title: 'Healthcare AI Chatbot System',
@@ -73,12 +66,10 @@ export const caseStudies: CaseStudy[] = [
       'Reduced average response time from 30 minutes to 2 minutes',
       'Handled 70% of inquiries without human intervention',
       'Improved patient satisfaction scores by 60%',
-      'Freed up 15 hours daily for staff to focus on critical cases',
-    ],
+      'Freed up 15 hours daily for staff to focus on critical cases'],
     technologies: ['OpenAI GPT-4', 'Node.js', 'React', 'MongoDB', 'AWS Lambda'],
     duration: '8 weeks',
-    imageUrl: '/images/case-studies/healthcare-chatbot.jpg',
-  },
+    imageUrl: '/images/case-studies/healthcare-chatbot.jpg'},
   {
     id: 'ecommerce-optimization'
     title: 'E-commerce AI Optimization Suite',
@@ -91,12 +82,10 @@ export const caseStudies: CaseStudy[] = [
       'Increased conversion rates from 2.1% to 4.7%',
       'Reduced cart abandonment from 78% to 45%',
       'Boosted average order value by 35%',
-      'Generated $1.8 M in additional revenue in 6 months',
-    ],
+      'Generated $1.8 M in additional revenue in 6 months'],
     technologies: ['Machine Learning', 'Python', 'Vue.js', 'Redis', 'Kubernetes'],
     duration: '10 weeks',
-    imageUrl: '/images/case-studies/ecommerce-ai.jpg',
-  },
+    imageUrl: '/images/case-studies/ecommerce-ai.jpg'},
   {
     id: 'manufacturing-iot',
     title: 'Smart Manufacturing IoT Platform',
@@ -110,12 +99,10 @@ export const caseStudies: CaseStudy[] = [
       'Reduced unplanned downtime by 65%',
       'Improved equipment efficiency by 25%',
       'Saved $2.1 M annually in maintenance costs',
-      'Increased production output by 18%',
-    ],
+      'Increased production output by 18%'],
     technologies: ['IoT Sensors', 'Edge Computing', 'Python', 'React', 'Azure IoT Hub'],
     duration: '16 weeks',
-    imageUrl: '/images/case-studies/manufacturing-iot.jpg',
-  },
+    imageUrl: '/images/case-studies/manufacturing-iot.jpg'},
   {
     id: 'saas-analytics',
     title: 'SaaS Analytics Dashboard',
@@ -129,12 +116,10 @@ export const caseStudies: CaseStudy[] = [
       'Reduced churn rate from 15% to 8%',
       'Improved user engagement by 45%',
       'Increased MRR by $500 K through better retention',
-      'Enabled 90% faster product decision-making',
-    ],
+      'Enabled 90% faster product decision-making'],
     technologies: ['Apache Kafka', 'ClickHouse', 'React', 'D3.js', 'AWS'],
     duration: '14 weeks',
-    imageUrl: '/images/case-studies/saas-analytics.jpg',
-  },
+    imageUrl: '/images/case-studies/saas-analytics.jpg'},
   {
     id: 'cybersecurity-automation',
     title: 'Automated Cybersecurity Platform',
@@ -148,12 +133,10 @@ export const caseStudies: CaseStudy[] = [
       'Reduced threat detection time from 6 hours to 15 minutes',
       'Improved threat detection accuracy to 98%',
       'Achieved 100% compliance audit success rate',
-      'Prevented $3.2 M in potential security breaches',
-    ],
+      'Prevented $3.2 M in potential security breaches'],
     technologies: ['SIEM', 'Machine Learning', 'Python', 'Elasticsearch', 'Kubernetes'],
     duration: '20 weeks',
-    imageUrl: '/images/case-studies/cybersecurity.jpg',
-  },
+    imageUrl: '/images/case-studies/cybersecurity.jpg'},
   {
     id: 'telco-edge-observability'
     title: 'Telco Edge Observability Overhaul',
@@ -166,12 +149,10 @@ export const caseStudies: CaseStudy[] = [
       'Cut P95 latency from 180ms to 85ms',
       'Reduced incident MTTR by 62%',
       'Decreased churn by 18% in 2 quarters',
-      '$4.7 M annual SLA penalty savings',
-    ],
+      '$4.7 M annual SLA penalty savings'],
     technologies: ['OpenTelemetry', 'ClickHouse', 'Edge Workers', 'TypeScript', 'Kubernetes'],
     duration: '18 weeks',
-    imageUrl: '/images/case-studies/telco-edge.jpg',
-  },
+    imageUrl: '/images/case-studies/telco-edge.jpg'},
   {
     id: 'enterprise-rag-rollout'
     title: 'Enterprise RAG Rollout at Fortune 500',
@@ -184,12 +165,10 @@ export const caseStudies: CaseStudy[] = [
       'Increased self-service deflection by 32%',
       'Raised CSAT from 3.7 to 4.5',
       'Cut average handle time by 28%',
-      '$3.1 M/year support cost savings',
-    ],
+      '$3.1 M/year support cost savings'],
     technologies: ['RAG', 'Vector DB', 'TypeScript', 'OpenAI', 'ClickHouse'],
     duration: '10 weeks',
     imageUrl: '/images/case-studies/enterprise-rag.jpg',
-=======
 export type CaseStudy = {/* TODO: Fix JSX expression */}
 };
 
@@ -212,6 +191,4 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-];
+  }];

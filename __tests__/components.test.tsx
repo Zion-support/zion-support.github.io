@@ -1,9 +1,9 @@
 import { describe, it, expect, beforeEach } from '@jest/globals';
+import React from 'react';
 
-<<<<<<< HEAD
-describe('componentsx', () => {
+describe('components', () => {
   beforeEach(() => {
-    // Setup before each test;
+    // Setup before each test
   });
 
   it('should pass basic test', () => {
@@ -13,10 +13,5 @@ describe('componentsx', () => {
   it('should handle basic functionality', () => {
     const result = 1 + 1;
     expect(result).toBe(2);
-=======
-describe('Components', () => {
-  it('renders basic components', () => {
-    expect(true).toBe(true);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   });
 });

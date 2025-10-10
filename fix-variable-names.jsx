@@ -5,7 +5,7 @@
   t: ${camelCaseName}: NextPag,`
   e: = () => {`)} //Replac,
   e: the export statement} newConten,`
-  t: = newContent.replace(' new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}`;g;' ')',; `expor,`
+  t: = newContent.replace(' new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}`;g;' ')'; `expor,`
   t: default ${camelCaseName}`); //Updat,
   e: title and meta description, cons,`
   t: title = filename.replace(/-/g)).replace(/\\b\\w/g) l => l.toUpperCase()) newContent = newContent.replace(/<title>.*?<\\/title>/g) `<title>${title} - Zion Tech Solutions</title>`) newContent = newContent.replace(' /<meta name='description' content='.*?' \/>/g');' `<met,`

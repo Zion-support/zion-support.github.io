@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Suspense, lazy, ComponentType } from 'react';
 
 interface LazyComponentProps {
@@ -6,12 +5,10 @@ interface LazyComponentProps {
   children: React.ReactNode;
 }
 
-<<<<<<< HEAD
 export default function LazyComponent({
   className = '',
   children
 }: LazyComponentProps) {
-=======
 const DefaultFallback = () => (
   <div className="flex items-center justify-center p-8"></div>
     <div className="cyber-loader"></div>
@@ -21,7 +18,6 @@ const DefaultFallback = () => (
 
 const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
 }) => {
->>>>>>> cursor/analyze-improve-and-deploy-application-4 b35
   return (
     <Suspense fallback={fallback}></Suspens>
       {children}
@@ -56,7 +52,6 @@ export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => 
 };
 
 export default LazyComponent;
-=======
 
 
 import LoadingSpinner from './LoadingSpinner';
@@ -76,11 +71,10 @@ export const _withLazyLoading = {};
   Componen,
   t: ComponentType;
           <P>,
-  fallback?: ReactNode,
-) => {/* TODO: Fix JSX expression */}
+  fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  return (prop,)
+  return (prop)
   s: P) => ()
     
           
@@ -115,7 +109,7 @@ const,
           <LoadingSpinner />,
   delay = 0,
   threshold = 0.1,
-  rootMargin = '50px',)
+  rootMargin = '50px')
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -146,8 +140,7 @@ const,
   O: Add content;}
 }
 //         threshold,
-//         rootMargin,
-      }
+//         rootMargin}
     );
     if (elementRef.current) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -165,8 +158,7 @@ const,
           {children}
         </Suspense>
       ) : ()
-// fallback,
-)}
+// fallback)}
     
           
           
@@ -180,7 +172,7 @@ const,
   );
 };
 // Preload function for critical components;
-export const preloadComponent = (importFunctio,)
+export const preloadComponent = (importFunctio)
   n: () => Promise;
           <any>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -199,12 +191,11 @@ export const createLazyComponent = {};
   n: () => Promise;
           <{/* TODO: Fix JSX expression */}
   t: ComponentType<P> }>,
-  fallback?: ReactNode,
-) => {/* TODO: Fix JSX expression */}
+  fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   const LazyComponent = lazy(importFunction);
-  return (prop,)
+  return (prop)
   s: P) => ()
     
           
@@ -235,8 +226,7 @@ const fontPreloads = [
   n:wght@400;700;900&display=swap',
     'http,
   s://fonts.googleapis.com/css2?family=Rajdhan,
-  i:wght@300;400;500;600;700&display=swap',
-  ];
+  i:wght@300;400;500;600;700&display=swap'];
   fontPreloads.forEach((href) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -252,8 +242,7 @@ const imagePreloads = [
   O: Add items;
 ];;
 //     '/og-image.jpg',
-//     '/favicon.ico',
-  ];
+//     '/favicon.ico'];
   imagePreloads.forEach((src) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -268,4 +257,3 @@ const imagePreloads = [
 export default LazyComponent;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

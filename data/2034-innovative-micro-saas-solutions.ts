@@ -1,6 +1,5 @@
 
 export type InnovativeMicroSaas =
-<<<<<<< HEAD
 export type InnovativeMicroSaas = {;
   id: string;
   name: string;
@@ -17,12 +16,10 @@ export type InnovativeMicroSaas = {;
     | 'Customer Support',
   pricing: { starter: string} professional?: string} enterprise?: string }
   features: string[];
-=======
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
   r: string} professional?: string} enterprise?: string }
   feature,
   s: string[];
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   integrations?: string[];
   useCases?: string[];
   lin,
@@ -31,12 +28,10 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
   rating?: number;,
   launchDate?: string;
 }
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description: unknown;
-=======
 export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
     i,
@@ -45,7 +40,6 @@ export const,
   e: 'Local SEO Reviews Booster',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',
     categor,
   y: 'Marketing Automation',
@@ -57,14 +51,11 @@ export const,
       'OCR ingestion',
       'Matching heuristics',
       'Discrepancy alerts',
-      'Export to ERP',
-    ],
-<<<<<<< HEAD
+      'Export to ERP'],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
     use_cases: ['Accounting automation', 'Finance ops'],
     link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
     real_service: true;
-=======
     integration,
   s: ['QuickBooks', 'Xero', 'Stripe'],
     use_case,
@@ -74,24 +65,19 @@ export const,
   s://ziontechgroup.com / services / smart - invoice - reconciliation',
     real_servic,
   e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Multi - speaker diarization',
       'SEO blog drafts',
       'Pull - quotes',
-      'Schema & social cards',
-    ],
-<<<<<<< HEAD
+      'Schema & social cards'],
     integrations: ['YouTube', 'Spotify', 'WordPress'],
     use_cases: ['Content repurposing', 'SEO growth'],
     link: 'https://ziontechgroup.com / services / podcast - transcription - seo - suite'
     real_service: true;
     rating: 4.7;
-    launch_date: '2025 - 12 - 01',
-  },
+    launch_date: '2025 - 12 - 01'},
     id: 'local - seo - reviews - booster',
     name: 'Local SEO Reviews Booster',
     description: unknown;
-=======
     integration,
   s: ['YouTube', 'Spotify', 'WordPress'],
     use_case,
@@ -104,15 +90,13 @@ export const,
     ratin,
   g: 4.7,
     launch_dat,
-  e: '2025 - 12 - 01',
-  },
+  e: '2025 - 12 - 01'},
     i,
   d: 'local - seo - reviews - booster',
     nam,
   e: 'Local SEO Reviews Booster',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',
     categor,
   y: 'Marketing Automation',
@@ -124,19 +108,15 @@ export const,
       'Smart review routing',
       'NPS & CSAT',
       'Churn alerts',
-      'Multi - location dashboards',
-    ],
-<<<<<<< HEAD
+      'Multi - location dashboards'],
     integrations: ['Google Business Profile', 'Yelp'],
     use_cases: ['Local ranking', 'Reputation management'],
     link: 'https://ziontechgroup.com / services / local - seo - reviews - booster',
     real_service: true;
-  },
-  },
+  }},
     id: 'smart - invoice - reconciliation',
     name: 'Smart Invoice Reconciliation',
     description: unknown;
-=======
     integration,
   s: ['Google Business Profile', 'Yelp'],
     use_case,
@@ -145,16 +125,13 @@ export const,
   k: 'http,
   s://ziontechgroup.com / services / local - seo - reviews - booster',
     real_servic,
-  e: true,
-  },
-  },
+  e: true}},
     i,
   d: 'smart - invoice - reconciliation',
     nam,
   e: 'Smart Invoice Reconciliation',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',
     categor,
   y: 'Financial Technology',
@@ -166,9 +143,7 @@ export const,
       'OCR ingestion',
       'Matching heuristics',
       'Discrepancy alerts',
-      'Export to ERP',
-    ],
-<<<<<<< HEAD
+      'Export to ERP'],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
     use_cases: ['Accounting automation', 'Finance ops'],
     link: 'https://ziontechgroup.com / services / smart - invoice - reconciliation',
@@ -196,8 +171,7 @@ export const,
     use_cases: ['Faster hiring', 'Bias reduction'],
     link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
     real_service: true;
-  },
-];	id: string;
+  }];	id: string;
 	id: string, name: string;
 	description: string, tagline?: string,
 	id: string, name: string;
@@ -240,8 +214,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 		link: 'https://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite'
 		realService: true;
 		rating: 4 && 4.7;
-		launchDate: '2025-12-01',
-	}
+		launchDate: '2025-12-01'}
 		id: 'local-seo-reviews-booster',
 		name: 'Local SEO Reviews Booster',
 		description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',
@@ -274,7 +247,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 		useCases: ['Faster hiringBias reduction'],
 		link: 'https://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
 		realService: true;
-=======
     integration,
   s: ['QuickBooks', 'Xero', 'Stripe'],
     use_case,
@@ -283,8 +255,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   k: 'http,
   s://ziontechgroup.com / services / smart - invoice - reconciliation',
     real_servic,
-  e: true,
-  },
+  e: true},
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
     categor,
@@ -302,8 +273,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   k: 'http,
   s://ziontechgroup.com/services/candidate-screening-copilot'
     realServic,
-  e: true,
-  }
+  e: true}
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
     i,
   d: 'candidate - screening - copilot',
@@ -327,9 +297,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   k: 'http,
   s://ziontechgroup.com / services / candidate - screening - copilot',
     real_servic,
-  e: true,
-  },
-];	i,
+  e: true}];	i,
   d: string,
 	i,
   d: string, nam,
@@ -347,8 +315,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   k: 'http,
   s://ziontechgroup.com/services/candidate-screening-copilot',
     realServic,
-  e: true,
-  };
+  e: true};
 ];	i,
   d: string,
 	i,
@@ -431,8 +398,7 @@ export const,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/local-seo-reviews-booster',
 		realServic,
-  e: true,
-	}
+  e: true}
 		i,
   d: 'smart-invoice-reconciliation'
 		nam,
@@ -454,8 +420,7 @@ export const,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/smart-invoice-reconciliation',
 		realServic,
-  e: true,
-	}
+  e: true}
 		i,
   d: 'candidate-screening-copilot'
 		nam,
@@ -477,21 +442,16 @@ export const,
   k: 'http,
   s://ziontechgroup && ziontechgroup.com/services/candidate-screening-copilot',
 		realServic,
-  e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-	}
+  e: true}
 ];
 nam,
   e: string;
 descriptio,
   n: string;
 tagline?: string;
-<<<<<<< HEAD
 category: unknown;
-=======
 categor,
   y: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   | 'Content Marketing'
   | 'Business Operations'
   | 'Marketing Automation'
@@ -508,19 +468,15 @@ feature,
   s: string[];
 integrations?: string[];
 use_cases?: string[];
-<<<<<<< HEAD
 link: string;
 real_service?: boolean;,
-=======
 lin,
   k: string;
 real_service?: boolean,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 rating?: number,
 launch_date?: string;
 }
 ;
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   id: 'podcast - transcription - seo - suite',
   name: 'Podcast Transcription & SEO Suite',
@@ -534,8 +490,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   link: 'https://ziontechgroup.com / services / podcast - transcription - seo - suite'
   real_service: true;
   rating: 4.7;
-  launch_date: '2025 - 12 - 01',
-}
+  launch_date: '2025 - 12 - 01'}
   id: 'local - seo - reviews - booster',
   name: 'Local SEO Reviews Booster',
   description: 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',
@@ -568,7 +523,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   use_cases: ['Faster hiring_bias reduction'],
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
-=======
 export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   i,
@@ -621,8 +575,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com / services / local - seo - reviews - booster',
   real_servic,
-  e: true,
-}
+  e: true}
   i,
   d: 'smart - invoice - reconciliation'
   nam,
@@ -644,8 +597,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com / services / smart - invoice - reconciliation',
   real_servic,
-  e: true,
-}
+  e: true}
   i,
   d: 'candidate - screening - copilot'
   nam,
@@ -667,14 +619,11 @@ export const,
   k: 'http,
   s://ziontechgroup.com / services / candidate - screening - copilot',
   real_servic,
-  e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-}
+  e: true}
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 	}
 ];
 ;
-<<<<<<< HEAD
 export type InnovativeMicroSaas = {;
 	id: string;
 	name: string,,
@@ -689,9 +638,7 @@ export type InnovativeMicroSaas = {;
 		| 'Financial Technology',
 		| 'Human Resources',
 		| 'Supply Chain Management',
-=======
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 		| 'Customer Support'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -706,7 +653,6 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 	rating?: number;,
 	launchDate?: string;
 };
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	{,
 		id: 'podcast-transcription-seo-suite';
@@ -721,11 +667,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		link: 'https://ziontechgroup.com/services/podcast-transcription-seo-suite';
 		realService: true;
 		rating: 4.7;
-		launchDate: '2025-12-01',
-	};
+		launchDate: '2025-12-01'};
 	{;
 		id: 'local-seo-reviews-booster'}
-		name: 'Local SEO Reviews Booster',}
+		name: 'Local SEO Reviews Booster'}
   description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.';
 		category: 'Marketing Automation';
 		pricing: { starter: '$29/mo' };
@@ -775,7 +720,6 @@ export type InnovativeMicroSaas = {;
 		| 'Financial Technology',
 		| 'Human Resources',
 		| 'Supply Chain Management',
-=======
 export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	{/* TODO: Fix JSX expression */}
@@ -808,7 +752,7 @@ export const,
 	{/* TODO: Fix JSX expression */}
   d: 'local-seo-reviews-booster'}
 		nam,
-  e: 'Local SEO Reviews Booster',}
+  e: 'Local SEO Reviews Booster'}
   descriptio,
   n: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.';
 		categor,
@@ -826,8 +770,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/services/local-seo-reviews-booster';
 		realServic,
-  e: true,
-	};
+  e: true};
 	{/* TODO: Fix JSX expression */}
   d: 'smart-invoice-reconciliation'}
 		nam,
@@ -849,8 +792,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/services/smart-invoice-reconciliation';
 		realServic,
-  e: true,
-	};
+  e: true};
 	{/* TODO: Fix JSX expression */}
   d: 'candidate-screening-copilot'}
 		nam,
@@ -872,12 +814,10 @@ export const,
   k: 'http,
   s://ziontechgroup.com/services/candidate-screening-copilot';
 		realServic,
-  e: true,
-	}
+  e: true}
 ];
 ;
 export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 		| 'Customer Support'}
 	pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -892,7 +832,6 @@ export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
 	rating?: number;,
 	launchDate?: string;
 };
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	{,
 		id: 'podcast-transcription-seo-suite';
@@ -907,11 +846,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		link: 'https://ziontechgroup.com/services/podcast-transcription-seo-suite';
 		realService: true;
 		rating: 4.7;
-		launchDate: '2025-12-01',
-	};
+		launchDate: '2025-12-01'};
 	{;
 		id: 'local-seo-reviews-booster'}
-		name: 'Local SEO Reviews Booster',}
+		name: 'Local SEO Reviews Booster'}
   description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.';
 		category: 'Marketing Automation';
 		pricing: { starter: '$29/mo' };
@@ -952,7 +890,6 @@ export type InnovativeMicroSaas =
   description: string;
   tagline?: string;,
   category: unknown;
-=======
 export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 	{/* TODO: Fix JSX expression */}
@@ -985,7 +922,7 @@ export const,
 	{/* TODO: Fix JSX expression */}
   d: 'local-seo-reviews-booster'}
 		nam,
-  e: 'Local SEO Reviews Booster',}
+  e: 'Local SEO Reviews Booster'}
   descriptio,
   n: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.';
 		categor,
@@ -1003,8 +940,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/services/local-seo-reviews-booster';
 		realServic,
-  e: true,
-	};
+  e: true};
 	{/* TODO: Fix JSX expression */}
   d: 'smart-invoice-reconciliation'}
 		nam,
@@ -1026,8 +962,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/services/smart-invoice-reconciliation';
 		realServic,
-  e: true,
-	};
+  e: true};
 	{/* TODO: Fix JSX expression */}
   d: 'candidate-screening-copilot'}
 		nam,
@@ -1049,8 +984,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com/services/candidate-screening-copilot';
 		realServic,
-  e: true,
-	}
+  e: true}
 ];
 export type InnovativeMicroSaas =
   i,
@@ -1062,23 +996,18 @@ export type InnovativeMicroSaas =
   tagline?: string;
   categor,
   y: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart review routing',
       'NPS & CSAT',
       'Churn alerts',
-      'Multi - location dashboards',
-    ],
+      'Multi - location dashboards'],
     integration,
-  s: ['Google Business Profile', 'Yelp'],
-  },
+  s: ['Google Business Profile', 'Yelp']},
       'OCR ingestion',
       'Matching heuristics',
       'Discrepancy alerts',
-      'Export to ERP',
-    ],
+      'Export to ERP'],
     integration,
-  s: ['QuickBooks', 'Xero', 'Stripe'],
-  },
+  s: ['QuickBooks', 'Xero', 'Stripe']},
     categor,
   y: 'Human Resources',
     pricin,
@@ -1087,23 +1016,17 @@ export type InnovativeMicroSaas =
     feature,
   s: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integration,
-  s: ['Greenhouse', 'Lever'],
-  },
-<<<<<<< HEAD
-];	id: string;
+  s: ['Greenhouse', 'Lever']}];	id: string;
 	category: | 'Content Marketing'
-=======
 ];	i,
   d: string,
 	categor,
   y: | 'Content Marketing'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 		| 'Business Operations'
 		| 'Marketing Automation'
 		| 'Customer Success'
 		| 'Sales Automation'
 		| 'Financial Technology'
-<<<<<<< HEAD
 		| 'Human Resources',
 		| 'Supply Chain Management',
 		| 'Customer Support',
@@ -1128,8 +1051,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
 		useCases: ['Content repurposingSEO growth'];
 		link: 'https://ziontechgroup && ziontechgroup.com/services/podcast-transcription-seo-suite',
 		realService: true;
-		launchDate: '2025-12-01',
-	}
+		launchDate: '2025-12-01'}
 		id: 'local-seo-reviews-booster',
 		name: 'Local SEO Reviews Booster',
   description: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',
@@ -1165,7 +1087,6 @@ name: string;
   description: string;
 tagline?: string;
 category: unknown;
-=======
 		| 'Human Resources'
 		| 'Supply Chain Management'
 		| 'Customer Support'
@@ -1229,8 +1150,7 @@ export const,
 		useCase,
   s: ['Local rankingReputation management'];
 		realServic,
-  e: true,
-	}
+  e: true}
 		i,
   d: 'smart-invoice-reconciliation'
 		nam,
@@ -1249,8 +1169,7 @@ export const,
 		useCase,
   s: ['Accounting automationFinance ops'];
 		realServic,
-  e: true,
-	}
+  e: true}
 		i,
   d: 'candidate-screening-copilot'
 		nam,
@@ -1269,8 +1188,7 @@ export const,
 		useCase,
   s: ['Faster hiringBias reduction'];
 		realServic,
-  e: true,
-	}
+  e: true}
 ];
 nam,
   e: string,
@@ -1279,7 +1197,6 @@ nam,
 tagline?: string;
 categor,
   y: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   | 'Content Marketing'
   | 'Business Operations'
   | 'Marketing Automation'
@@ -1296,19 +1213,15 @@ feature,
   s: string[];
 integrations?: string[];
 use_cases?: string[];
-<<<<<<< HEAD
 link: string;
 real_service?: boolean;,
-=======
 lin,
   k: string;
 real_service?: boolean,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 rating?: number,
 launch_date?: string;
 }
 ;
-<<<<<<< HEAD
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   id: 'podcast - transcription - seo - suite',
   name: 'Podcast Transcription & SEO Suite',
@@ -1322,8 +1235,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   link: 'https://ziontechgroup.com / services / podcast - transcription - seo - suite'
   real_service: true;
   rating: 4.7;
-  launch_date: '2025 - 12 - 01',
-}
+  launch_date: '2025 - 12 - 01'}
   id: 'local - seo - reviews - booster',
   name: 'Local SEO Reviews Booster',
   description: 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',
@@ -1356,7 +1268,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   use_cases: ['Faster hiring_bias reduction'],
   link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
   real_service: true;
-=======
 export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [,
   i,
@@ -1409,8 +1320,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com / services / local - seo - reviews - booster',
   real_servic,
-  e: true,
-}
+  e: true}
   i,
   d: 'smart - invoice - reconciliation'
   nam,
@@ -1432,8 +1342,7 @@ export const,
   k: 'http,
   s://ziontechgroup.com / services / smart - invoice - reconciliation',
   real_servic,
-  e: true,
-}
+  e: true}
   i,
   d: 'candidate - screening - copilot'
   nam,
@@ -1455,15 +1364,13 @@ export const,
   k: 'http,
   s://ziontechgroup.com / services / candidate - screening - copilot',
   real_servic,
-  e: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-}
+  e: true}
 ];
 ;
 export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
   r: string} professional?: string} enterprise?: string } feature,
   s: string[]; integrations?: string[]; useCases?: string[]; lin,
-  k: string; realService?: boolean; rating?: number; launchDate?: string, } export const,
+  k: string; realService?: boolean; rating?: number; launchDate?: string} export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [ ' i,
   d: 'local - seo - reviews - booster',' nam,
   e: 'Local SEO Reviews Booster', descriptio,
@@ -1471,43 +1378,43 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   y: 'Marketing Automation',' pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$29 / mo' }, feature,
-  s: [, ' 'OCR ingestion',' 'Matching heuristics',' 'Discrepancy alerts',' 'Export to ERP', ],' integration,
+  s: [, ' 'OCR ingestion',' 'Matching heuristics',' 'Discrepancy alerts',' 'Export to ERP'],' integration,
   s: ['QuickBooks', 'Xero', 'Stripe'], ' use_case,
   s: ['Accounting automation', 'Finance ops'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
-  e: true, ' 'Multi - speaker diarization',' 'SEO blog drafts',' 'Pull - quotes',' 'Schema & social cards', ],' integration,
+  e: true, ' 'Multi - speaker diarization',' 'SEO blog drafts',' 'Pull - quotes',' 'Schema & social cards'],' integration,
   s: ['YouTube', 'Spotify', 'WordPress'],' use_case,
   s: ['Content repurposing', 'SEO growth'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / podcast - transcription - seo - suite', real_servic,
   e: true, ratin,
   g: 4.7,' launch_dat,
-  e: '2025 - 12 - 01', }, ' i,
+  e: '2025 - 12 - 01'}, ' i,
   d: 'local - seo - reviews - booster',' nam,
   e: 'Local SEO Reviews Booster', descriptio,
   n:  ,' 'Automated post - visit SMS / email review requests with smart routing to preferred platforms and churn - risk alerts.',' categor,
   y: 'Marketing Automation',' pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$29 / mo' }, feature,
-  s: [, ' 'Smart review routing',' 'NPS & CSAT',' 'Churn alerts',' 'Multi - location dashboards', ],' integration,
+  s: [, ' 'Smart review routing',' 'NPS & CSAT',' 'Churn alerts',' 'Multi - location dashboards'],' integration,
   s: ['Google Business Profile', 'Yelp'], ' use_case,
   s: ['Local ranking', 'Reputation management'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
-  e: true, }, }, ' i,
+  e: true}}, ' i,
   d: 'smart - invoice - reconciliation',' nam,
   e: 'Smart Invoice Reconciliation', descriptio,
   n:  ,' 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',' categor,
   y: 'Financial Technology',' pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$59 / mo' }, feature,
-  s: [, ' 'OCR ingestion',' 'Matching heuristics',' 'Discrepancy alerts',' 'Export to ERP', ],' integration,
+  s: [, ' 'OCR ingestion',' 'Matching heuristics',' 'Discrepancy alerts',' 'Export to ERP'],' integration,
   s: ['QuickBooks', 'Xero', 'Stripe'], ' use_case,
   s: ['Accounting automation', 'Finance ops'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
-  e: true, }, ' 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',' 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'' categor,
+  e: true}, ' 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',' 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'' categor,
   y: 'Human Resources'' pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$69/mo' }' feature,
@@ -1528,7 +1435,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Faster hiring', 'Bias reduction'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / candidate - screening - copilot', real_servic,
-  e: true, }, ]; i,
+  e: true}]; i,
   d: string, i,
   d: string, nam,
   e: string, descriptio,
@@ -1539,7 +1446,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Faster hiring', 'Bias reduction'],' lin,
   k: 'http,
   s://ziontechgroup.com/services/candidate-screening-copilot', realServic,
-  e: true, },; ]; i,
+  e: true}; ]; i,
   d: string, i,
   d: string, nam,
   e: string, descriptio,
@@ -1635,7 +1542,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Local ranking_reputation management'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
-  e: true, } ' i,
+  e: true} ' i,
   d: 'smart - invoice - reconciliation'' nam,
   e: 'Smart Invoice Reconciliation',' descriptio,
   n: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.'' categor,
@@ -1647,7 +1554,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Accounting automation_finance ops'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
-  e: true, } ' i,
+  e: true} ' i,
   d: 'candidate - screening - copilot'' nam,
   e: 'Candidate Screening Copilot',' descriptio,
   n: 'Summarize resumes, score against job descriptions, and auto - generate interview question sets.'' categor,
@@ -1659,114 +1566,114 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Faster hiring_bias reduction'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / candidate - screening - copilot', real_servic,
-  e: true, } export type InnovativeMicroSaas = {; } ]; export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
-  y:  ,' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support',} pricin,
+  e: true} export type InnovativeMicroSaas = {; } ]; export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+  y:  ,' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support'} pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: string, professional?: string} enterprise?: string },; feature,
-  s: string[],; integrations?: string[],; useCases?: string[],; lin,
-  k: string,; realService?: boolean,; rating?: number,; launchDate?: string; },; export const,
+  r: string, professional?: string} enterprise?: string }; feature,
+  s: string[]; integrations?: string[]; useCases?: string[]; lin,
+  k: string; realService?: boolean; rating?: number; launchDate?: string; }; export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [; {/* TODO: Fix JSX expression */}
-  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',}' categor,
+  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'}' categor,
   y: 'Content Marketing'};' pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: '$39/mo' },;' feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],;' integration,
-  s: ['YouTubeSpotifyWordPress'],;' useCase,
-  s: ['Content repurposingSEO growth'],;' lin,
+  r: '$39/mo' };' feature,
+  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'];' integration,
+  s: ['YouTubeSpotifyWordPress'];' useCase,
+  s: ['Content repurposingSEO growth'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/podcast-transcription-seo-suite',; realServic,
-  e: true,; ratin,
-  g: 4.7,;' launchDat,
-  e: '2025-12-01' },; {/* TODO: Fix JSX expression */}
-  n: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',}' categor,
+  s://ziontechgroup.com/services/podcast-transcription-seo-suite'; realServic,
+  e: true; ratin,
+  g: 4.7;' launchDat,
+  e: '2025-12-01' }; {/* TODO: Fix JSX expression */}
+  n: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.'}' categor,
   y: 'Marketing Automation'};' pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: '$29/mo' },;' feature,
-  s: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'],;' integration,
-  s: ['Google Business ProfileYelp'],;' useCase,
-  s: ['Local rankingReputation management'],;' lin,
+  r: '$29/mo' };' feature,
+  s: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'];' integration,
+  s: ['Google Business ProfileYelp'];' useCase,
+  s: ['Local rankingReputation management'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/local-seo-reviews-booster',; realServic,
-  e: true, },; {/* TODO: Fix JSX expression */}
-  n: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',}' categor,
+  s://ziontechgroup.com/services/local-seo-reviews-booster'; realServic,
+  e: true}; {/* TODO: Fix JSX expression */}
+  n: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.'}' categor,
   y: 'Financial Technology'};' pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: '$59/mo' },;' feature,
-  s: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'],;' integration,
-  s: ['QuickBooksXeroStripe'],;' useCase,
-  s: ['Accounting automationFinance ops'],;' lin,
+  r: '$59/mo' };' feature,
+  s: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'];' integration,
+  s: ['QuickBooksXeroStripe'];' useCase,
+  s: ['Accounting automationFinance ops'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/smart-invoice-reconciliation',; realServic,
-  e: true, },; {/* TODO: Fix JSX expression */}
-  n: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',}' categor,
+  s://ziontechgroup.com/services/smart-invoice-reconciliation'; realServic,
+  e: true}; {/* TODO: Fix JSX expression */}
+  n: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'}' categor,
   y: 'Human Resources'};' pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: '$69/mo' },;' feature,
-  s: ['Resume parsingJD matchingQuestion setsATS sync'],;' integration,
-  s: ['GreenhouseLever'],;' useCase,
-  s: ['Faster hiringBias reduction'],;' lin,
+  r: '$69/mo' };' feature,
+  s: ['Resume parsingJD matchingQuestion setsATS sync'];' integration,
+  s: ['GreenhouseLever'];' useCase,
+  s: ['Faster hiringBias reduction'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/candidate-screening-copilot',; realServic,
-  e: true, } ]; export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
-  y:  ,' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support',} pricin,
+  s://ziontechgroup.com/services/candidate-screening-copilot'; realServic,
+  e: true} ]; export type InnovativeMicroSaas = {/* TODO: Fix JSX expression */}
+  y:  ,' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support'} pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: string, professional?: string} enterprise?: string },; feature,
-  s: string[],; integrations?: string[],; useCases?: string[],; lin,
-  k: string,; realService?: boolean,; rating?: number,; launchDate?: string; },; export const,
+  r: string, professional?: string} enterprise?: string }; feature,
+  s: string[]; integrations?: string[]; useCases?: string[]; lin,
+  k: string; realService?: boolean; rating?: number; launchDate?: string; }; export const,
   innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [; {/* TODO: Fix JSX expression */}
-  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.',}' categor,
+  n: 'Accurate multi-speaker transcription with summaries, quotes, and SEO-ready blog drafts including schema and social cards.'}' categor,
   y: 'Content Marketing'};' pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: '$39/mo' },;' feature,
-  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'],;' integration,
-  s: ['YouTubeSpotifyWordPress'],;' useCase,
-  s: ['Content repurposingSEO growth'],;' lin,
+  r: '$39/mo' };' feature,
+  s: ['Multi-speaker diarizationSEO blog draftsPull-quotesSchema & social cards'];' integration,
+  s: ['YouTubeSpotifyWordPress'];' useCase,
+  s: ['Content repurposingSEO growth'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/podcast-transcription-seo-suite',; realServic,
-  e: true,; ratin,
-  g: 4.7,;' launchDat,
-  e: '2025-12-01' },; {/* TODO: Fix JSX expression */}
-  n: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.',}' categor,
+  s://ziontechgroup.com/services/podcast-transcription-seo-suite'; realServic,
+  e: true; ratin,
+  g: 4.7;' launchDat,
+  e: '2025-12-01' }; {/* TODO: Fix JSX expression */}
+  n: 'Automated post-visit SMS/email review requests with smart routing to preferred platforms and churn-risk alerts.'}' categor,
   y: 'Marketing Automation'};' pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: '$29/mo' },;' feature,
-  s: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'],;' integration,
-  s: ['Google Business ProfileYelp'],;' useCase,
-  s: ['Local rankingReputation management'],;' lin,
+  r: '$29/mo' };' feature,
+  s: ['Smart review routingNPS & CSATChurn alertsMulti-location dashboards'];' integration,
+  s: ['Google Business ProfileYelp'];' useCase,
+  s: ['Local rankingReputation management'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/local-seo-reviews-booster',; realServic,
-  e: true, },; {/* TODO: Fix JSX expression */}
-  n: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.',}' categor,
+  s://ziontechgroup.com/services/local-seo-reviews-booster'; realServic,
+  e: true}; {/* TODO: Fix JSX expression */}
+  n: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.'}' categor,
   y: 'Financial Technology'};' pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: '$59/mo' },;' feature,
-  s: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'],;' integration,
-  s: ['QuickBooksXeroStripe'],;' useCase,
-  s: ['Accounting automationFinance ops'],;' lin,
+  r: '$59/mo' };' feature,
+  s: ['OCR ingestionMatching heuristicsDiscrepancy alertsExport to ERP'];' integration,
+  s: ['QuickBooksXeroStripe'];' useCase,
+  s: ['Accounting automationFinance ops'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/smart-invoice-reconciliation',; realServic,
-  e: true, },; {/* TODO: Fix JSX expression */}
-  n: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',}' categor,
+  s://ziontechgroup.com/services/smart-invoice-reconciliation'; realServic,
+  e: true}; {/* TODO: Fix JSX expression */}
+  n: 'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'}' categor,
   y: 'Human Resources'};' pricin,
   g: {/* TODO: Fix JSX expression */}
-  r: '$69/mo' },;' feature,
-  s: ['Resume parsingJD matchingQuestion setsATS sync'],;' integration,
-  s: ['GreenhouseLever'],;' useCase,
-  s: ['Faster hiringBias reduction'],;' lin,
+  r: '$69/mo' };' feature,
+  s: ['Resume parsingJD matchingQuestion setsATS sync'];' integration,
+  s: ['GreenhouseLever'];' useCase,
+  s: ['Faster hiringBias reduction'];' lin,
   k: 'http,
-  s://ziontechgroup.com/services/candidate-screening-copilot',; realServic,
-  e: true, } ]; export type InnovativeMicroSaas = i,
+  s://ziontechgroup.com/services/candidate-screening-copilot'; realServic,
+  e: true} ]; export type InnovativeMicroSaas = i,
   d: string, nam,
   e: string, descriptio,
   n: string; tagline?: string; categor,
-  y:, ' 'Smart review routing',' 'NPS & CSAT',' 'Churn alerts',' 'Multi - location dashboards', ],' integration,
-  s: ['Google Business Profile', 'Yelp'], }, ' 'OCR ingestion',' 'Matching heuristics',' 'Discrepancy alerts',' 'Export to ERP', ],' integration,
-  s: ['QuickBooks', 'Xero', 'Stripe'], }, ' categor,
+  y:, ' 'Smart review routing',' 'NPS & CSAT',' 'Churn alerts',' 'Multi - location dashboards'],' integration,
+  s: ['Google Business Profile', 'Yelp']}, ' 'OCR ingestion',' 'Matching heuristics',' 'Discrepancy alerts',' 'Export to ERP'],' integration,
+  s: ['QuickBooks', 'Xero', 'Stripe']}, ' categor,
   y: 'Human Resources',' pricin,
   g: {/* TODO: Fix JSX expression */}
   r: '$69 / mo' },' feature,
   s: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],' integration,
-  s: ['Greenhouse', 'Lever'], }, ]; i,
+  s: ['Greenhouse', 'Lever']}]; i,
   d: string, categor,
   y:' | 'Content Marketing'' | 'Business Operations'' | 'Marketing Automation'' | 'Customer Success'' | 'Sales Automation'' | 'Financial Technology'' | 'Human Resources'' | 'Supply Chain Management'' | 'Customer Support' pricin,
   g: {/* TODO: Fix JSX expression */}
@@ -1852,7 +1759,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Local ranking_reputation management'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / local - seo - reviews - booster', real_servic,
-  e: true, } ' i,
+  e: true} ' i,
   d: 'smart - invoice - reconciliation'' nam,
   e: 'Smart Invoice Reconciliation',' descriptio,
   n: 'Reconciling bank transactions with invoices using OCR and matching heuristics, with discrepancy alerts.'' categor,
@@ -1864,7 +1771,7 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Accounting automation_finance ops'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / smart - invoice - reconciliation', real_servic,
-  e: true, } ' i,
+  e: true} ' i,
   d: 'candidate - screening - copilot'' nam,
   e: 'Candidate Screening Copilot',' descriptio,
   n: 'Summarize resumes, score against job descriptions, and auto - generate interview question sets.'' categor,
@@ -1876,4 +1783,4 @@ export type InnovativeMicroSaas = export type InnovativeMicroSaas = {/* TODO: Fi
   s: ['Faster hiring_bias reduction'],' lin,
   k: 'http,
   s://ziontechgroup.com / services / candidate - screening - copilot', real_servic,
-  e: true, } ]; '
+  e: true} ]; '

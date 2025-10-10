@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 const SEOHead: React.FC<SEOHeadProps> = ({,
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of advanced AI and IT solutions that transform businesses and drive innovation across industries.',
@@ -13,8 +12,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
   ogImage = 'https: //zion.app/og-image.jpg',
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  structuredData,
-}) => {
+  structuredData}) => {
   const _fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonicalUrl = canonicalUrl.startsWith('http')
     ? canonicalUrl;
@@ -27,8 +25,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
     url: 'https://zion.app',
     logo: 'https://zion.app/logo.png',
     description: description;
-    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup'],
-  };
+    sameAs: ['https://linkedin.com/company/zion-tech-group', 'https: //twitter.com/ziontechgroup']};
 
   return(<Helmet>
       <title>{fullTitle}</title>
@@ -54,13 +51,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({,
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#2563eb" />
       {/* Performance hints */}
-      <link rel="preconnect" href="https: //fonts.googleapis.com" />,)
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />,)
-      <link rel="dns-prefetch" href="//www.google-analytics.com" />,)
+      <link rel="preconnect" href="https: //fonts.googleapis.com" />)
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />)
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />)
 ),
       {/* Structured Data */}
       <script type="application/ld+json">
-=======
 const,
   SEOHead: React.FC<SEOHeadProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -113,7 +109,6 @@ const,
       <link rel="dns-prefetch" href="//www.google-analytics.com" /></link>
       {/* Structured Data */}"
       <script type="application/ld+json"></script>)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>

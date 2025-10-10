@@ -2,7 +2,6 @@ exports.config = {/* TODO: Fix JSX expression */}
   e: '*/10 * * * *' };
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { execSync } = require('child_process');
-<<<<<<< HEAD
   try {// Curate content and generate changelog;
     execSync('node automation/llm-content-curator.cjs || true', {)
       stdio: inherit),
@@ -23,7 +22,6 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     });
     // Commit and push;
     execSync(
-=======
   try {/* TODO: Fix JSX expression */}
   l: true}
     });
@@ -42,13 +40,10 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
     });
     // Commit and push;
     execSync()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'git config user.name "zion-bot" && git config user.email "bot@zion.app" && git add -A && (git commit -m "chore(content): refresh docs/search/changelog [skip ci]" || true) && (git push origin main || true)',
       {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
-  l: true },
-    );
-<<<<<<< HEAD
+  l: true });
     return {statusCode: 200;
       body: JSON.stringify({ ok: true),
         task: 'content-refresh-runner' });
@@ -57,17 +52,14 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     return {/* TODO: Fix JSX expression */}
   k: 'content-refresh-runner' });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.config = { schedule: '*/10 * * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {// Curate content and generate changelog' execSync('node automation/llm-content-curator.cjs || true') { stdio: 'inherit'} shell: true;
       });' execSync('node automation/ai-changelog-generator.cjs || true') {stdio: 'inherit'} shell: true;
       }); // Refresh docs/pages indexes and search' execSync('node automation/docs-pages-indexer.cjs || true') {stdio: 'inherit'} shell: true;
@@ -78,9 +70,7 @@ exports.config = { schedule: '*/10 * * * *' }; exports.handler = async function(
         body: JSON.stringify({ok: true),
         task: 'content-refresh-runner' }) }; } catch (e) {return { statusCode: 200;
         body: JSON.stringify({ok: false),
-        error: String(e;),
-      }) }; } };'
-=======
+        error: String(e;)}) }; } };'
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/10 * * * *' }; exports.handler = async function() {' const { execSync } = require('child_process'); try {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
@@ -103,4 +93,3 @@ exports.config = {/* TODO: Fix JSX expression */}
       }); ' return {/* TODO: Fix JSX expression */}
   k: 'content-refresh-runner' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } };'"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

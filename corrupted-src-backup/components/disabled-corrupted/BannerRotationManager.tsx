@@ -1,7 +1,6 @@
 import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths;
-<<<<<<< HEAD
 const bannerComponents = {
   'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
   'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026')),
@@ -19,9 +18,7 @@ const bannerComponents = {
   'cognitive-orchestration': lazy(
     () => import('./CognitiveOrchestrationMegaBanner')
   ),
-=======
 const bannerComponents = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 type BannerKey = keyof typeof bannerComponents;
@@ -32,7 +29,6 @@ interface BannerRotationManagerProps {/* TODO: Fix JSX expression */}
 /**
  * BannerRotationManager - Manages the rotation and display of promotional banners;
  *
-<<<<<<< HEAD
  * Features: * - Lazy loads banner components for better performance;
  * - Rotates banners at specified intervals;
  * - Limits the number of visible banners;
@@ -42,8 +38,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
   banners = [],
   maxBanners = 3,
   rotationInterval = 10000,
-  className = '',
-}) => {
+  className = ''}) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);</BannerKey>
 
@@ -59,7 +54,6 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({,
 
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
-=======
  * Feature,
   s:
  * - Lazy loads banner components for better performance;
@@ -74,7 +68,6 @@ export const,
 
   // Rotate banners at specified interval;
   useEffect(() => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }, rotationInterval);
 
     return () => clearInterval(interval);
@@ -86,7 +79,6 @@ export const,
 //   const currentBanner = visibleBanners[currentIndex];
 //   const BannerComponent = bannerComponents[currentBanner];
 
-<<<<<<< HEAD
   return(<div className={`banner-rotation-manager ${className}`}></div>
       <Suspense;
         fallback={
@@ -110,7 +102,6 @@ export const,
                   ? 'bg-blue-600'}
                   : 'bg-gray-300 hover:bg-gray-400'}
               }`}
-=======
   return (<div className={`banner-rotation-manager ${className}`}></div>
       <Suspense></Suspense>
         fallback={/* TODO: Fix JSX expression */}
@@ -125,7 +116,6 @@ export const,
               onClick={() => setCurrentIndex(index)}
               className={/* TODO: Fix JSX expression */}`
               }`}`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               aria-label={`Go to banner ${index + 1}`}
             />
           ))}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Configuration Manager
@@ -92,7 +91,6 @@ const developmentConfig: Partial<AppConfig> = {
   },
   features: {
     enableAnalytics: false,
-=======
 
 'use client'
 /**
@@ -236,12 +234,10 @@ const developmentConfig: Partial;
   features: {// TODO: Add content;}
 };
   enableAnalytics: false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: false,
-<<<<<<< HEAD
     enablePWA: false
   },
   logging: {
@@ -260,7 +256,6 @@ const stagingConfig: Partial<AppConfig> = {
   },
   features: {
     enableAnalytics: true,
-=======
     enablePWA: false;
   },
   logging: {// TODO: Add content;}
@@ -284,12 +279,10 @@ const stagingConfig: Partial;
   features: {// TODO: Add content;}
 };
   enableAnalytics: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-<<<<<<< HEAD
     enablePWA: true
   },
   logging: {
@@ -308,7 +301,6 @@ const productionConfig: Partial<AppConfig> = {
   },
   features: {
     enableAnalytics: true,
-=======
     enablePWA: true;
   },
   logging: {// TODO: Add content;}
@@ -332,12 +324,10 @@ const productionConfig: Partial;
   features: {// TODO: Add content;}
 };
   enableAnalytics: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     enableErrorReporting: true,
     enablePerformanceMonitoring: true,
     enableAccessibility: true,
     enableSEO: true,
-<<<<<<< HEAD
     enablePWA: true
   },
   logging: {
@@ -362,7 +352,6 @@ const testConfig: Partial<AppConfig> = {
   },
   features: {
     enableAnalytics: false,
-=======
     enablePWA: true;
   },
   logging: {// TODO: Add content;}
@@ -393,12 +382,10 @@ const testConfig: Partial;
   features: {// TODO: Add content;}
 };
   enableAnalytics: false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     enableErrorReporting: false,
     enablePerformanceMonitoring: false,
     enableAccessibility: true,
     enableSEO: false,
-<<<<<<< HEAD
     enablePWA: false
   },
   logging: {
@@ -418,7 +405,6 @@ export class ConfigManager {
   }
   static getInstance(): ConfigManager {
     if (!ConfigManager.instance) {
-=======
     enablePWA: false;
   },
   logging: {// TODO: Add content;}
@@ -448,13 +434,11 @@ export class ConfigManager {// TODO: Add content;}
     if (!ConfigManager.instance) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       ConfigManager.instance = new ConfigManager();
     }
     return ConfigManager.instance;
   }
   /**
-<<<<<<< HEAD
    * Detect current environment
    */
   private detectEnvironment(): Environment {
@@ -488,7 +472,6 @@ export class ConfigManager {// TODO: Add content;}
         break;
     }
     // Apply overrides
-=======
    * Detect current environment;
    */
 
@@ -513,12 +496,10 @@ export class ConfigManager {// TODO: Add content;}
         break;
     }
     // Apply overrides;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     config = this.mergeConfig(config, this.overrides);
     return config;
   }
   /**
-<<<<<<< HEAD
    * Deep merge two config objects
    */
   private mergeConfig(base: AppConfig, override: Partial<AppConfig>): AppConfig {
@@ -538,7 +519,6 @@ export class ConfigManager {// TODO: Add content;}
           ) {
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {
-=======
    * Deep merge two config objects;
    */
 
@@ -550,7 +530,7 @@ export class ConfigManager {// TODO: Add content;}
 //     (Object.keys(override) as Array;
           <keyof AppConfig>).forEach()
       
-          <K extends keyof AppConfig>(ke,)
+          <K extends keyof AppConfig>(ke)
   y: K) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -565,21 +545,17 @@ export class ConfigManager {// TODO: Add content;}
             value !== null &&
             typeof baseValue === 'object' &&
 //             !Array.isArray(baseValue) &&
-            baseValue !== null,
-
-) {// TODO: Add content;}
+            baseValue !== null) {// TODO: Add content;}
 
 }
             result[key] = Object.assign({}, baseValue, value) as typeof baseValue;
           } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             result[key] = value as typeof baseValue;
           }
         }
       }
-<<<<<<< HEAD
     );
     return result;
   }
@@ -632,7 +608,6 @@ export class ConfigManager {// TODO: Add content;}
         }) as AppConfig[K];
       }
     } else {
-=======
   )
     return result;
   }
@@ -640,21 +615,19 @@ export class ConfigManager {// TODO: Add content;}
    * Get configuration value;
    */
   get;
-          <K extends keyof AppConfig>(ke,)
+          <K extends keyof AppConfig>(ke)
   y: K): AppConfig[K];
 // get;
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     ke,
   y: K,
     nestedKe,
-  y: NK,
-): AppConfig[K][NK];
+  y: NK): AppConfig[K][NK];
 // get;
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
     ke,
   y: K,
-    nestedKey?: NK,
-): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
+    nestedKey?: NK): AppConfig[K] | AppConfig[K][NK] {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (nestedKey !== undefined) {/* TODO: Fix JSX expression */}
@@ -669,7 +642,7 @@ export class ConfigManager {// TODO: Add content;}
    */
   set;
           <K extends keyof AppConfig>(ke,
-  y: K, valu,)
+  y: K, valu)
   e: AppConfig[K]): void;
 // set;
           <K extends keyof AppConfig, NK extends keyof AppConfig[K]>()
@@ -697,9 +670,7 @@ export class ConfigManager {// TODO: Add content;}
       if ()
         typeof currentValue === 'object' &&
 //         !Array.isArray(currentValue) &&
-        currentValue !== null,
-
-) {// TODO: Add content;}
+        currentValue !== null) {// TODO: Add content;}
 
 }
         this.config[key] = Object.assign({}, currentValue, {/* TODO: Fix JSX expression */}
@@ -721,12 +692,10 @@ const defaultValue = this.getDefaultForKey(key);
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       this.config[key] = nestedKeyOrValue as AppConfig[K];
     }
   }
   /**
-<<<<<<< HEAD
    * Get default value for a config key
    */
   private getDefaultForKey<K extends keyof AppConfig>(key: K): AppConfig[K] {
@@ -740,11 +709,10 @@ const defaultValue = this.getDefaultForKey(key);
       },
       features: {
         enableAnalytics: false,
-=======
    * Get default value for a config key;
    */
   private getDefaultForKey;
-          <K extends keyof AppConfig>(ke,)
+          <K extends keyof AppConfig>(ke)
   y: K): AppConfig[K] {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -767,12 +735,10 @@ const defaultValue = this.getDefaultForKey(key);
       features: {// TODO: Add content;}
 };
   enableAnalytics: false,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         enableErrorReporting: true,
         enablePerformanceMonitoring: false,
         enableAccessibility: true,
         enableSEO: true,
-<<<<<<< HEAD
         enablePWA: false
       },
       performance: {
@@ -870,7 +836,6 @@ $4},
    * Override configuration
    */
   override(config: Partial<AppConfig>): void {
-=======
         enablePWA: false;
       },
       performance: {// TODO: Add content;}
@@ -1011,28 +976,23 @@ $4},
           <AppConfig>): void {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.overrides = config;
     this.config = this.loadConfig();
   }
   /**
-<<<<<<< HEAD
    * Reset configuration
    */
   reset(): void {
-=======
    * Reset configuration;
    */
 
   reset(): void {// TODO: Add content;}
 
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     this.overrides = {};
     this.config = this.loadConfig();
   }
   /**
-<<<<<<< HEAD
    * Export configuration as JSON
    */
   export(): string {
@@ -1065,7 +1025,6 @@ $4},
 }
 // Export singleton instance
 export const configManager = ConfigManager.getInstance();
-=======
    * Export configuration as JSON;
    */
 
@@ -1121,4 +1080,3 @@ export const configManager = ConfigManager.getInstance();
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

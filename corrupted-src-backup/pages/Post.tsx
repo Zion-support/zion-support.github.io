@@ -4,13 +4,9 @@ import { Helmet } from 'react-helmet-async';
 export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression */}
   const { slug } = useParams();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Helmet>
         <title>Post - Zion Website</title>
         <meta name="description" content="Read our latest blog post." />
@@ -29,7 +25,6 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
           </div>)
         </div>)
       </div>)
-=======
   return (<div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100"></div>
       <Helmet></Helmet>
         <title>Post - Zion Website</title>"
@@ -50,7 +45,6 @@ export default function Post(): React.JSX.Element {/* TODO: Fix JSX expression *
           </div>
         </div>
       </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     </div>)
   );
 }

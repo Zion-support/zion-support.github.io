@@ -20,29 +20,18 @@ async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Basic checkout session creation logic;
-=======
     // Basic checkout session creation logic
->>>>>>> cursor/fix-errors-and-merge-to-main-14e4
     const sessionData = {
       productId,
       userId,
       domain: PROD_DOMAIN,
       timestamp: new Date().toISOString(),
-=======
-    const sessionData = {
-      productId,
-      userId,
-      domain: PROD_DOMAIN
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ session: sessionData }));
-  } catch {
+  } catch (error) {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));

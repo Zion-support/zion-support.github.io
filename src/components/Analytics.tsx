@@ -92,7 +92,7 @@ const,
   };
 
   const trackEvent = (categor,
-  y: string, actio,)
+  y: string, actio)
   n: string, value?: any) => {/* TODO: Fix JSX expression */}
       });
     }

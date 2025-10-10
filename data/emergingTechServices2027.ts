@@ -1,5 +1,4 @@
 export type EmergingTechService2027 =
-<<<<<<< HEAD
   id: string;
   title: string;
   description: string;
@@ -50,7 +49,6 @@ export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [
       custom: "Enterprise quantum network solutions",
       currency: "$",
       pricingModel: "Enterprise subscription with quantum network access",
-=======
   i,
   d: string;
   titl,
@@ -149,7 +147,6 @@ export const,
   y: "$",
       pricingMode,"
   l: "Enterprise subscription with quantum network access"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     features["
       "Quantum key distribution (QKD)","
@@ -199,7 +196,6 @@ export const,
       "Compliance assistance","
       "Training and certification"
     ],
-<<<<<<< HEAD
     link: "https://ziontechgroup.com/quantum-internet"
     badge: "Breakthrough",
     icon: "",
@@ -219,8 +215,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
   // Space-Based Quantum Computing;
     id: "space-based-quantum-computing",
@@ -234,7 +229,6 @@ export const,
       custom: "Space quantum computing missions",
       currency: "$",
       pricingModel: "Mission-based pricing with quantum computing access",
-=======
     lin,"
   k: "http,"
   s://ziontechgroup.com/quantum-internet",
@@ -299,7 +293,6 @@ export const,
   y: "$",
       pricingMode,"
   l: "Mission-based pricing with quantum computing access"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     features["
       "Zero-gravity quantum processing","
@@ -349,7 +342,6 @@ export const,
       "Mission planning assistance","
       "Technical training"
     ],
-<<<<<<< HEAD
     link: "https://ziontechgroup.com/space-quantum-computing"
     badge: "Revolutionary",
     icon: "",
@@ -369,8 +361,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
   // Biocomputing Platform;
     id: "biocomputing-platform",
@@ -384,7 +375,6 @@ export const,
       custom: "Biocomputing research partnerships",
       currency: "$",
       pricingModel: "Research partnership with biocomputing access",
-=======
     lin,"
   k: "http,"
   s://ziontechgroup.com/space-quantum-computing",
@@ -449,7 +439,6 @@ export const,
   y: "$",
       pricingMode,"
   l: "Research partnership with biocomputing access"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     features["
       "DNA-based computing","
@@ -499,7 +488,6 @@ export const,
       "Training programs","
       "Ongoing support"
     ],
-<<<<<<< HEAD
     link: "https://ziontechgroup.com/biocomputing"
     badge: "Breakthrough",
     icon: "",
@@ -519,8 +507,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
   // Neuromorphic Computing Platform;
     id: "neuromorphic-computing-platform",
@@ -534,7 +521,6 @@ export const,
       custom: "Neuromorphic computing solutions",
       currency: "$",
       pricingModel: "Platform subscription with neuromorphic processing",
-=======
     lin,"
   k: "http,"
   s://ziontechgroup.com/biocomputing",
@@ -599,7 +585,6 @@ export const,
   y: "$",
       pricingMode,"
   l: "Platform subscription with neuromorphic processing"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     features["
       "Brain-inspired architecture","
@@ -649,7 +634,6 @@ export const,
       "Training programs","
       "Research collaboration"
     ],
-<<<<<<< HEAD
     link: "https://ziontechgroup.com/neuromorphic-computing"
     badge: "Advanced",
     icon: "",
@@ -669,8 +653,7 @@ export const,
       phone: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    }
+      address: "364 E Main St STE 1008 Middletown DE 19709"}
   },
   // Fusion Energy Computing Platform;
     id: "fusion-energy-computing-platform",
@@ -684,7 +667,6 @@ export const,
       custom: "Fusion energy computing solutions",
       currency: "$",
       pricingModel: "Energy-as-a-service with computing infrastructure",
-=======
     lin,"
   k: "http,"
   s://ziontechgroup.com/neuromorphic-computing",
@@ -749,7 +731,6 @@ export const,
   y: "$",
       pricingMode,"
   l: "Energy-as-a-service with computing infrastructure"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
     features["
       "Fusion power generation","
@@ -799,7 +780,6 @@ export const,
       "Technical training","
       "Ongoing maintenance"
     ],
-<<<<<<< HEAD
     link: "https://ziontechgroup.com/fusion-energy-computing"
     badge: "Revolutionary",
     icon: "",
@@ -820,7 +800,6 @@ export const,
       email: "kleber@ziontechgroup.com",
       website: "https://ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-=======
     lin,"
   k: "http,"
   s://ziontechgroup.com/fusion-energy-computing",
@@ -861,7 +840,6 @@ export const,
   s://ziontechgroup.com",
       addres,"
   s: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 ];

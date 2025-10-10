@@ -1,41 +1,30 @@
-<<<<<<< HEAD
 import React, { useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 interface SEOData {}
-=======
 'use client';
 import React, { useEffect, useCallback, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   title: string;
   description: string;
   keywords: string[];
   canonicalUrl: string;
-<<<<<<< HEAD
-=======
 interface SEOData {
   title?: string;
   description?: string;
   keywords?: string[];
   canonical?: string;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   ogTitle?: string;
   ogDescription?: string;
   ogImage?: string;
   twitterCard?: string;
   twitterTitle?: string;
-<<<<<<< HEAD
   twitterDescription?: string;,
   twitterImage?: string;
 }
 
-<<<<<<< HEAD
 interface AdvancedSEOOptimizerProps {}
   seoData: SEOData;
   enableStructuredData?: boolean;
@@ -44,18 +33,14 @@ interface AdvancedSEOOptimizerProps {}
   enableSchemaMarkup?: boolean;
 }
 
-<<<<<<< HEAD
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
   seoData;
-=======
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
   seoData,
->>>>>>> origin/merge-error-fixes
   enableStructuredData = true,
   enableOpenGraph = true,
   enableTwitterCards = true,
-  enableSchemaMarkup = true,
-}) => {}
+  enableSchemaMarkup = true}) => {}
   const structuredDataRef = useRef<HTMLScriptElement | null>(null);
 
   const generateStructuredData = useCallback(() => {}
@@ -63,13 +48,10 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       return null;
     }
 
-<<<<<<< HEAD
     const baseStructuredData = {
       '@context': 'https: //schema.org',
-=======
     const baseStructuredData = {}
       '@context': 'https://schema.org',
->>>>>>> origin/merge-error-fixes
       '@type': 'TechCompany',
       name: 'Zion Tech Group'
       description: seoData.description;
@@ -78,14 +60,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
         'https: //twitter.com/ziontechgroup',
-        'https: //github.com/zion-tech-group',
-      ],
-<<<<<<< HEAD
+        'https: //github.com/zion-tech-group'],
       contactPoint: {,
-=======
       contactPoint: {}
->>>>>>> origin/merge-error-fixes
-=======
 interface AdvancedSEOOptimizerProps {
   seoData?: SEOData;
   children?: React.ReactNode;
@@ -120,29 +97,22 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.png',
       contactPoint: {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         '@type': 'ContactPoint',
         telephone: '+1-302-464-0950',
         contactType: 'customer service',
         areaServed: 'US',
         availableLanguage: 'English'
       },
-<<<<<<< HEAD
-<<<<<<< HEAD
       address: {
         '@type': 'PostalAddress'
-=======
       address: {}
         '@type': 'PostalAddress',
->>>>>>> origin/merge-error-fixes
         streetAddress: '123 Tech Innovation Drive',
         addressLocality: 'San Francisco',
         addressRegion: 'CA',
         postalCode: '94105',
-        addressCountry: 'US',
-      },
-      ...seoData.structuredData,
-    };
+        addressCountry: 'US'},
+      ...seoData.structuredData};
 
     if (seoData.author) {}
       baseStructuredData.author = {}
@@ -167,7 +137,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       baseStructuredData.keywords = seoData.tags.join(', ');
     }
 
-=======
   twitterDescription?: string;
   twitterImage?: string;
 }
@@ -227,12 +196,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       }
     };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     return baseStructuredData;
   }, []);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Generate Open Graph data;
   const generateOpenGraphData = useCallback(() => {
     if (!enableOpenGraph) return {};
@@ -245,7 +211,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'og: image': seoData.ogImage || '/og-image.webp',
       'og: site_name': 'Zion Tech Group',
       'og: locale': 'en_US',
-=======
   const generateOpenGraphData = useCallback(() => {
     return {
       'og:title': seoData.ogTitle,
@@ -253,11 +218,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'og:image': seoData.ogImage,
       'og:url': seoData.canonicalUrl,
       'og:type': 'website'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     };
   }, [seoData]);
 
-<<<<<<< HEAD
   // Generate Twitter Card data;
   const generateTwitterCardData = useCallback(() => {
     if (!enableTwitterCards) return {};
@@ -270,7 +233,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           '@type': 'Question',
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {,
-=======
   // Generate Open Graph data
   const generateOpenGraphData = useCallback(() => {}
     if (!enableOpenGraph) return {};
@@ -282,8 +244,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       'og:type': seoData.ogType || 'website',
       'og:image': seoData.ogImage || '/og-image.webp',
       'og:site_name': 'Zion Tech Group',
-      'og:locale': 'en_US',
-    };
+      'og:locale': 'en_US'};
   }, [seoData, enableOpenGraph]);
 
   // Generate Twitter Card data
@@ -298,55 +259,35 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
           '@type': 'Question',
           name: 'What services does Zion Tech Group offer?',
           acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
-            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.',
-          },
-        },
+            text: 'We offer comprehensive AI solutions, digital transformation services, cloud computing, automation, and business intelligence services.'}},
         {}
           '@type': 'Question',
           name: 'How can I contact Zion Tech Group?',
-<<<<<<< HEAD
           acceptedAnswer: {,
-=======
           acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
-            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.',
-          },
-        },
+            text: 'You can contact us through our website, email, or phone. Visit our contact page for more information.'}},
         {}
           '@type': 'Question',
           name: 'What makes Zion Tech Group different?',
-<<<<<<< HEAD
           acceptedAnswer: {,
-=======
           acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
-            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.',
-          },
-        },
-      ],
-=======
+            text: 'We combine cutting-edge AI technology with deep industry expertise to deliver transformative solutions that drive real business value.'}}],
   const generateTwitterCardData = useCallback(() => {
     return {
       'twitter:card': seoData.twitterCard,
       'twitter:title': seoData.twitterTitle,
       'twitter:description': seoData.twitterDescription,
       'twitter:image': seoData.twitterImage
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     };
   }, [seoData]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   // Generate meta tags;
   const generateMetaTags = useCallback(() => {
-=======
   // Generate meta tags
   const generateMetaTags = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     const metaTags = [
       { name: 'description', content: seoData.description },
       { name: 'keywords', content: seoData.keywords.join(', ') },
@@ -356,43 +297,34 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       { name: 'theme-color', content: '#3 B82 F6' },
       { name: 'msapplication-TileColor', content: '#3 B82 F6' },
       { name: 'msapplication-config', content: '/browserconfig.xml' },
-=======
   const generateMetaTags = useCallback(() => {
     const metaTags = [
       { name: 'description', content: seoData.description },
       { name: 'keywords', content: seoData.keywords.join(', ') },
       { name: 'robots', content: 'index, follow' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     ];
 
     return metaTags;
   }, [seoData]);
 
-<<<<<<< HEAD
   const structuredData = generateStructuredData();
   const openGraphData = generateOpenGraphData();
   const twitterCardData = generateTwitterCardData();
   const metaTags = generateMetaTags();
-=======
       sameAs: [
         'https://linkedin.com/company/zion-tech-group',
         'https://twitter.com/ziontechgroup'
       ]
     };
   }, [mergedSEO.description]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
-<<<<<<< HEAD
   useEffect(() => {
-<<<<<<< HEAD
     // Update page title and meta description for better SEO;
     if (typeof document !== 'undefined') {
-=======
   useEffect(() => {}
     // Update page title and meta description for better SEO
     if (typeof document !== 'undefined') {}
->>>>>>> origin/merge-error-fixes
       document.title = seoData.title;
 
       let metaDescription = document.querySelector('meta[name="description"]');
@@ -400,7 +332,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         metaDescription = document.createElement('meta');
         metaDescription.setAttribute('name', 'description');
         document.head.appendChild(metaDescription);
-=======
     // Update meta tags dynamically
     const updateMetaTag = (name: string, content: string) => {
       let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
@@ -408,40 +339,32 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         meta = document.createElement('meta');
         meta.name = name;
         document.head.appendChild(meta);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       meta.content = content;
     };
 
-<<<<<<< HEAD
       // Update canonical URL;
       let canonicalLink = document.querySelector('link[rel="canonical"]');
       if (!canonicalLink) {}
         canonicalLink = document.createElement('link');
         canonicalLink.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalLink);
-=======
     const updatePropertyTag = (property: string, content: string) => {
       let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
         meta.setAttribute('property', property);
         document.head.appendChild(meta);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       meta.content = content;
     };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data;
     if (structuredDataRef.current) {
-=======
   const addStructuredData = (data: Record<string, unknown>) => {}
     // Remove existing structured data
     if (structuredDataRef.current) {}
->>>>>>> origin/merge-error-fixes
       structuredDataRef.current.remove();
     }
 
@@ -457,7 +380,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   }, [structuredData]);
 
-<<<<<<< HEAD
   useEffect(() => {
     // Track page performance;
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -465,9 +387,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       if (perfData) {
         // Track performance metrics;
         if (typeof (window as any).gtag === 'function') {
-<<<<<<< HEAD
           (window as any).gtag('event', 'page_load_performance', {
-=======
   useEffect(() => {}
     // Track page performance
     if (typeof window !== 'undefined' && 'performance' in window) {}
@@ -476,22 +396,17 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         // Track performance metrics
         if (typeof (window as any).gtag === 'function') {}
           (window as any).gtag('event', 'page_load_performance', {)}
->>>>>>> origin/merge-error-fixes
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart)
           });
-=======
           (window as any).gtag('event', 'page_load_performance', {)
             event_category: 'Performance'),
             event_label: 'Page Load'),
-            value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-        }
+            value: Math.round(perfData.loadEventEnd - perfData.fetchStart)}
       }
     }
   }, []);
-=======
     if (mergedSEO.title) {
       document.title = mergedSEO.title;
     }
@@ -546,21 +461,16 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
     script.textContent = JSON.stringify(structuredData);
   }, [mergedSEO, generateStructuredData]);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
-<<<<<<< HEAD
   return(<Helmet>)
       {/* Basic Meta Tags */})
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
-=======
   return (
-<<<<<<< HEAD
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{seoData.title}</title>
       {metaTags.map((tag, index) => (}
->>>>>>> origin/merge-error-fixes
         <meta key={index} name={tag.name} content={tag.content} />
       ))}
 
@@ -601,7 +511,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-=======
   useEffect(() => {
     // Update document title
     document.title = seoData.title;
@@ -654,9 +563,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(generateStructuredData())}
       </script>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     </Helmet>
-=======
     <>
       <Helmet>
         <title>{mergedSEO.title}</title>
@@ -681,7 +588,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       </Helmet>
       {children}
     </>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

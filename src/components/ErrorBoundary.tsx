@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
@@ -14,18 +12,18 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: false };
   }
 
-  static getDerivedStateFromError(erro,)
+  static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
   r: true, error };
   }
 
   componentDidCatch(erro,
-  r: Error, errorInf,)
+  r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
 
     // Log error to monitoring service;
-    // console.error('ErrorBoundary caught an,)
+    // console.error('ErrorBoundary caught an)
   error:', error, errorInfo);
     
     // You can also log to external services here;
@@ -133,4 +131,3 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
 }
 
 export default ErrorBoundary;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

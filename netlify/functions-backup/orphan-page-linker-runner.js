@@ -1,17 +1,13 @@
 exports.handler = async function () {/* TODO: Fix JSX expression */}
   const { spawnSync } = require('child_process');
-<<<<<<< HEAD
   function run(cmd) {return spawnSync(cmd} {stdio: 'inherit'} shell: true;),
-=======
   function run(cmd) {return spawnSync(cmd} {/* TODO: Fix JSX expression */}
   o: 'inherit'} shel,
   l: true;)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
   }
   try {/* TODO: Fix JSX expression */}
     run('node automation/advanced-git-sync.cjs || true')}
-<<<<<<< HEAD
     return {
       statusCode: 200;
       body: JSON.stringify({ ok: true),
@@ -21,26 +17,20 @@ exports.handler = async function () {/* TODO: Fix JSX expression */}
       statusCode: 200;
       body: JSON.stringify({ ok: false),
         error: String(e;),
-=======
     return {/* TODO: Fix JSX expression */}
   k: 'orphan-page-linker' });
     };
   } catch (e) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
 exports.config = { schedule: '13 */6 * * *' };
-exports.handler = async function() { const { spawnSync } = require('child_process');' function run(cmd) {return spawnSync(cmd} {stdio: 'inherit'} shell: true;),
-      }); } try {' run('node automation/orphan-page-linker.cjs || true');' run('node automation/advanced-git-sync.cjs || true')}' return { statusCode: 200;
+exports.handler = async function() { const { spawnSync } = require('child_process');' function run(cmd) {return spawnSync(cmd} {stdio: 'inherit'} shell: true;)}); } try {' run('node automation/orphan-page-linker.cjs || true');' run('node automation/advanced-git-sync.cjs || true')}' return { statusCode: 200;
         body: JSON.stringify({ok: true),
         task: 'orphan-page-linker' }) }; } catch (e) {return { statusCode: 200;
         body: JSON.stringify({ok: false),
-        error: String(e;),
-      }) }; } }; ' exports.config = { schedule: '13 */6 * * *' };'
-=======
+        error: String(e;)}) }; } }; ' exports.config = { schedule: '13 */6 * * *' };'
 exports.config = {/* TODO: Fix JSX expression */}
   e: '13 */6 * * *' };
 exports.handler = async function() { const { spawnSync } = require('child_process');' function run(cmd) {return spawnSync(cmd} {/* TODO: Fix JSX expression */}
@@ -50,4 +40,3 @@ exports.handler = async function() { const { spawnSync } = require('child_proces
   k: 'orphan-page-linker' }) }; } catch (e) {/* TODO: Fix JSX expression */}
       }) }; } }; ' exports.config = {/* TODO: Fix JSX expression */}
   e: '13 */6 * * *' };'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

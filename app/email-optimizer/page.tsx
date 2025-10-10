@@ -8,55 +8,44 @@ const EmailOptimizerPage: React.FC = () => {
     {
       icon: Target;
       title: 'AI-Powered Subject Lines',
-      description: 'Generate compelling subject lines that increase open rates by up to 40%',
-    },
+      description: 'Generate compelling subject lines that increase open rates by up to 40%'},
     {
       icon: BarChart;
       title: 'Performance Analytics',
-      description: 'Track email performance with detailed analytics and insights',
-    },
+      description: 'Track email performance with detailed analytics and insights'},
     {
       icon: Users;
       title: 'Audience Segmentation',
-      description: 'Automatically segment your audience for personalized campaigns',
-    },
+      description: 'Automatically segment your audience for personalized campaigns'},
     {
       icon: Zap;
       title: 'A/B Testing',
-      description: 'Test different versions to find the most effective content',
-    },
+      description: 'Test different versions to find the most effective content'},
     {
       icon: Shield;
       title: 'Deliverability Optimization',
-      description: 'Ensure your emails reach the inbox with advanced deliverability tools',
-    },
+      description: 'Ensure your emails reach the inbox with advanced deliverability tools'},
     {
       icon: TrendingUp;
       title: 'ROI Tracking',
-      description: 'Measure and optimize your email marketing ROI in real-time',
-    }
+      description: 'Measure and optimize your email marketing ROI in real-time'}
   ];
 
   const benefits = [
     {
       title: '40% Higher Open Rates',
-      description: 'AI-optimized subject lines and content',
-    },
+      description: 'AI-optimized subject lines and content'},
     {
       title: '60% More Clicks',
-      description: 'Personalized content that resonates with your audience',
-    },
+      description: 'Personalized content that resonates with your audience'},
     {
       title: '3x Better ROI',
-      description: 'Data-driven optimization for maximum returns',
-    },
+      description: 'Data-driven optimization for maximum returns'},
     {
       title: 'Save 10 Hours/Week',
-      description: 'Automated optimization and campaign management',
-    }
+      description: 'Automated optimization and campaign management'}
   ];
 
-<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">{/* Hero Section */}</div>
       <div className="container mx-auto px-4 py-16"></div>
@@ -64,7 +53,6 @@ const EmailOptimizerPage: React.FC = () => {
           <h1 className="text-5xl font-bold text-white mb-6">
             Email</h1> <span className="text-cyan-400">Optimizer</span><p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Transform your email marketing with AI-powered optimization. Increase open rates,</p>
             boost engagement, and maximize ROI with our intelligent email optimization platform.</p>
-=======
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
@@ -75,19 +63,14 @@ const EmailOptimizerPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">)
             Transform your email marketing with AI-powered optimization. Increase open rates)
             boost engagement, and maximize ROI with our intelligent email optimization platform.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link;
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
-<<<<<<< HEAD
               <Mail className="w-5 h-5 mr-2" >Get Started</Mail>
             </Mail>
             <Link
@@ -109,9 +92,7 @@ const EmailOptimizerPage: React.FC = () => {
               ></div>
                 <div className="p-3 bg-cyan-400 rounded-lg w-fit mb-4"></div>
                   <feature.icon className="w-6 h-6 text-white" />
-<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}<p className="text-gray-300">{feature.description}</p>
-=======
               <Mail className="w-5 h-5 mr-2" />
               Get Started;
             </Link>
@@ -141,10 +122,7 @@ const EmailOptimizerPage: React.FC = () => {
                 </div>,
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3><p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               </div>
             ))}
           </div>
@@ -153,22 +131,16 @@ const EmailOptimizerPage: React.FC = () => {
         {/* Benefits Section */}
         <div className="mb-16"></div>
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
             Proven <span className="text-cyan-400">Results<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-=======
             Proven <span className="text-cyan-400">Results</span>
           </h2>
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">,
             {benefits.map((benefit, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               <div key={index} className="text-center">
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4">
-=======
             Proven</h2> <span className="text-cyan-400">Results</span><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
               <div key={index} className="text-center"></div>
                 <div className="p-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full w-fit mx-auto mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <TrendingUp className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
               </div>
@@ -180,17 +152,13 @@ const EmailOptimizerPage: React.FC = () => {
         <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-2xl p-12 text-center"></div>
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Optimize Your Email Marketing?</h2><p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Join thousands of marketers using our AI-powered email optimization to boost their campaigns.</p>
           </p>
-<<<<<<< HEAD
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link;
-=======
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
             <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
             >
-<<<<<<< HEAD
               <ArrowRight className="w-5 h-5 mr-2" >Start Optimizing</ArrowRight>
             </ArrowRight>
             <Link
@@ -199,7 +167,6 @@ const EmailOptimizerPage: React.FC = () => {
             ></Lin>
               <Target className="w-5 h-5 mr-2" >View Pricing</Targe>
             </Target>
-=======
               <ArrowRight className="w-5 h-5 mr-2" />
               Start Optimizing;
             </Link>
@@ -210,12 +177,10 @@ const EmailOptimizerPage: React.FC = () => {
               <Target className="w-5 h-5 mr-2" />
               View Pricing;
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           </div>
         </div>
       </div>,
-    </div>,
-  );
+    </div>);
 };
 
 export default EmailOptimizerPage;

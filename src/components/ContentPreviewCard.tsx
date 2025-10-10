@@ -53,7 +53,7 @@ const,
     }
     return num.toString();
   };
-  const getCategoryColor = (categor,)
+  const getCategoryColor = (categor)
   y: string): string => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

@@ -41,7 +41,7 @@ function fixFile(filePath) {
   }
 
   // Fix missing closing braces in function declarations
-  const missingClosePattern = /(\w+):\s*([^,}]+)\s*$/gm;
+  const missingClosePattern = /(\w+):\s*([^}]+)\s*$/gm;
   content = content.replace(missingClosePattern, (match, key, value) => {
     if (!match.includes('}') && !match.includes(',') && !match.includes(';') && !match.includes(')')) {
       return `${key}: ${value},`;
@@ -50,14 +50,14 @@ function fixFile(filePath) {
   });
 
   // Fix missing commas in object properties
-  const missingCommaPattern = /(\w+):\s*([^,}]+)\s*\n\s*(\w+):/g;
+  const missingCommaPattern = /(\w+):\s*([^}]+)\s*\n\s*(\w+):/g;
   if (missingCommaPattern.test(content)) {
     content = content.replace(missingCommaPattern, '$1: $2,\n      $3:');
     modified = true;
   }
 
   // Fix missing closing braces in arrays
-  const arrayClosePattern = /(\w+):\s*([^,}]+)\s*\n\s*\]/g;
+  const arrayClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\]/g;
   if (arrayClosePattern.test(content)) {
     content = content.replace(arrayClosePattern, '$1: $2\n    }');
     modified = true;
@@ -78,14 +78,14 @@ function fixFile(filePath) {
   }
 
   // Fix missing closing braces for functions
-  const functionClosePattern = /(\w+):\s*([^,}]+)\s*\n\s*\);/g;
+  const functionClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;
   if (functionClosePattern.test(content)) {
     content = content.replace(functionClosePattern, '$1: $2\n    });');
     modified = true;
   }
 
   // Fix missing closing braces for memo functions
-  const memoClosePattern = /(\w+):\s*([^,}]+)\s*\n\s*\);/g;
+  const memoClosePattern = /(\w+):\s*([^}]+)\s*\n\s*\);/g;
   if (memoClosePattern.test(content)) {
     content = content.replace(memoClosePattern, '$1: $2\n  });');
     modified = true;

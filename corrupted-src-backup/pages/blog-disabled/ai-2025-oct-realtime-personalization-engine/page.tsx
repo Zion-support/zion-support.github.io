@@ -1,7 +1,6 @@
 impo, r, t { ArrowLe, f, t, DollarSi, g, n, Targ, e, t, Use, r, s, Z, a, p } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-<<<<<<< HEAD
 export default function RealtimePersonalizationEngine20, 2, 5() { 
   return(:src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
     <>
@@ -45,22 +44,16 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
             Back, to, Blog;
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-ro, s, e-400, vi, a-pi, n, k-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e;
-=======
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
                   <DollarSign, classNam, e='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
               <span, className='te, x, t-gr, a, y-4, 0, 0'>Octo, b, e, r , 1, 20, 2, 5</sp, a, n>
             </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-ro, s, e-400, vi, a-pi, n, k-400, t, o-purp, l, e-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-<<<<<<< HEAD
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e;
-=======
               Re, a, l-Time, AI, Personalization: The, Revenue, Multiplication Engi, n, e</h1>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <li, className='flex, item, s-start, ga, p-3'>
                   <DollarSign, className='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
@@ -103,7 +96,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0 ">
-<<<<<<< HEAD
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -118,7 +110,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
                   <Zap className=" />,
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
-=======
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -133,7 +124,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
                   <Zap className=" />
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,"
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>"
                 <li className="flex items-start gap-3">
                   <Users className=" />
@@ -154,18 +144,16 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-<<<<<<< HEAD
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>
                 </li>
-                <li className="flex items-start gap-3">,)
-                  <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />,)
-          <div>,)
+                <li className="flex items-start gap-3">)
+                  <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />)
+          <div>)
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">),
-=======
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -176,26 +164,22 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                   <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
           <div></div>
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3"></h2>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <Target className=" />,"
   Revenue Impact;
               </h2>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className=" />">
-<<<<<<< HEAD
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className=" />">
                   <span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>
-=======
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,
                 </li>
                 <li className="flex items-start gap-3">
                   <Users className=" />">
                   <span></span><strong>8.7x Conversion Lift: </strong> Personalized experiences drive dramatic engagement increases</span>,
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>
                 <li className="flex items-start gap-3">
                   <DollarSign className=" />">
@@ -207,7 +191,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
                   <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
-<<<<<<< HEAD
                   <span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>
                 </li>
                 <li className="flex items-start gap-3">
@@ -217,7 +200,6 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>$234M+ Revenue: </strong> Average incremental revenue for enterprise deployments</span>)
-=======
                   <span></span><strong>98.4% Relevance: </strong> AI predicts user intent and preferences with near-perfect accuracy</span>,
                 </li>
                 <li className="flex items-start gap-3">
@@ -227,27 +209,23 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
                 <li className="flex items-start gap-3">
                   <DollarSign className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span></span><strong>$234M+ Revenue: </strong> Average incremental revenue for enterprise deployments</span>,
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 </li>
               </ul>
   </div>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-rose-300">The Personalization Imperative</h2>
-<<<<<<< HEAD
               <p className="text-gray-300 mb-4 leading-relaxed">
             <section className="mb-12">,
               <h2 className="text-3xl font-bold mb-6 text-rose-300">The Personalization Imperative</h2>,
               <p className="text-gray-300 mb-4 leading-relaxed">",
   Generic, one-size-fits-all experiences no longer work. 78% of customers expect personalized interactions and;
                 abandon brands that fail to deliver. Yet traditional personalization based on simple rules and segmentation;
-=======
               <p className="text-gray-300 mb-4 leading-relaxed"></p>
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-rose-300">The Personalization Imperative</h2>
               <p className="text-gray-300 mb-4 leading-relaxed">"
   Generic, one-size-fits-all experiences no longer work. 78% of customers expect personalized interactions and 
                 abandon brands that fail to deliver. Yet traditional personalization based on simple rules and segmentation 
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 achieves only 23% relevance on average—barely better than random.
               </p>
               <p className="text-gray-300 mb-4 leading-relaxed"></p>
@@ -394,15 +372,12 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               </p>
             </section>
 
-<<<<<<< HEAD
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx;
             <div>
             <div className="bg-gradient-to-r from-rose-600 to-purple-600 rounded-xl p-8 text-center">
-=======
 :src/pages/blog/ai-2025-oct-realtime-personalization-engine/page.tsx
             <div></section>
             <div className="bg-gradient-to-r from-rose-600 to-purple-600 rounded-xl p-8 text-center"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <h2 className="text-3xl font-bold mb-4">Multiply Your Revenue with AI Personalization</h2>
               <p className="text-xl mb-6 text-rose-100">
   Deploy real-time personalization and transform every customer interaction into revenue opportunity.
@@ -423,11 +398,8 @@ export default function RealtimePersonalizationEngine20, 2, 5() {
               >",
                 Start Your Personalization Journey",
                 <Target className="ml-2 h-5 w-5 ">,
-                <Target className="ml-2 h-5 w-5" />,
-  );
-=======
+                <Target className="ml-2 h-5 w-5" />);
 export default function RealtimePersonalizationEngine20, 2, 5() {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
   </div>
   </div>

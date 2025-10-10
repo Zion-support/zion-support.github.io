@@ -8,20 +8,16 @@ export async function simulateAction<T = unknown>(
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {,
     id: Math.random().toString(36).substr(2, 9),
-<<<<<<< HEAD
 // Simple UUID generator since uuid package is not available;
-=======
   };
 };
 
 // Simple UUID generator since uuid package is not available
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 const generateId = (): string => {
   return Math.random().toString(36).substr(2, 9);
 
 };
 
-<<<<<<< HEAD
 export async function simulateAction<T = any>(
   connection: ProviderConnection;
   action: string;
@@ -44,7 +40,6 @@ export async function simulateAction<T = any>(
     providerId: connection.providerId;
     level: 'info',
     connectionId: connection.id;
-=======
 
 
 export async function simulateAction<T = any>(connectio,
@@ -86,7 +81,6 @@ export async function simulateAction<T = any>(connectio,
   l: 'info',
     connectionI,
   d: connection.id,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     action,
     statu,
   s: 'success',
@@ -94,24 +88,19 @@ export async function simulateAction<T = any>(connectio,
   e: `Action ${action} completed successfully`,
     details,
     timestam,
-  p: new Date(),
-  };
+  p: new Date()};
 
   // Simulate occasional errors;
-<<<<<<< HEAD
   if (Math.random() < 0.1) {
     log.status = 'error';
     log.message = `Action ${action} failed: Simulated error`;
-=======
   if (Math.random() < 0.1) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} faile,`
   d: Simulated error`;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     throw new Error(log.message);
   }
 
   // Simulate occasional warnings;
-<<<<<<< HEAD
   if (Math.random() < 0.2) {
     log.status = 'warning';
     log.message = `Action ${action} completed with warnings`;
@@ -121,75 +110,62 @@ export async function simulateAction<T = any>(connectio,
     success: true;
     data: details;
     timestamp: new Date().toISOString(),
-=======
   if (Math.random() < 0.2) {/* TODO: Fix JSX expression */}`
     log.message = `Action ${action} completed with warnings`;
   }
 
   const result = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   } as T;
 
   return { log, result };
 }
-<<<<<<< HEAD
 
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-=======
   
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
-<<<<<<< HEAD
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-=======
 
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
   async addEmailTouchpoint(connectio,
-  n: ProviderConnection, touc,)
+  n: ProviderConnection, touc)
   h: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
   }
 };
 // ATS actions;
-<<<<<<< HEAD
 export const ats = {
   async pushApplicant(connection: ProviderConnection, applicant: Record<string, unknown>) {
-=======
 export const ats = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
 
-<<<<<<< HEAD
-export async function testConnection(connection: ProviderConnection;),
-): Promise<boolean> {,
+export async function testConnection(connection: ProviderConnection;)): Promise<boolean> {,
   try {,
     await simulateAction(connection, 'test_connection');
     return true;
@@ -207,7 +183,6 @@ export async function syncData(connection: ProviderConnection;)
 // CRM actions;
 export const crm = {
   async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
-=======
 export async function testConnection(connectio,
   n: ProviderConnection;)
 ): Promise<boolean> {/* TODO: Fix JSX expression */}
@@ -218,70 +193,64 @@ export async function testConnection(connectio,
 export async function syncData(connectio,
   n: ProviderConnection;)
 ): Promise<SyncLogEntry[]> {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
 
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-<<<<<<< HEAD
 
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {</string>return</string> simulateAction(connection, 'crm.addProjectNote', { note });
   },
 
   async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
-=======
   
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
   
   async addProjectNote(connectio,
-  n: ProviderConnection, not,)
+  n: ProviderConnection, not)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
   async addEmailTouchpoint(connectio,
-  n: ProviderConnection, touc,)
+  n: ProviderConnection, touc)
   h: Record<string, any>) {/* TODO: Fix JSX expression */}
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-<<<<<<< HEAD
   try {
     const { log } = await simulateAction(connection, 'sync_data', {)
-      lastSync: connection.lastSync?.toISOString(),
-    });
+      lastSync: connection.lastSync?.toISOString()});
     logs.push(log);
   } catch (error) {
     logs.push({)
@@ -290,8 +259,7 @@ export async function syncData(connectio,
       action: 'sync_data'
       status: 'error',
       message: error instanceof Error ? error.message : 'Unknown error',
-      timestamp: new Date(),
-    });
+      timestamp: new Date()});
   }
 
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
@@ -305,7 +273,6 @@ export async function syncData(connectio,
 
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
   async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
-=======
   try {/* TODO: Fix JSX expression */}
     const { log } = await simulateAction(connection, 'sync_data', {/* TODO: Fix JSX expression */})
     });
@@ -316,9 +283,8 @@ export async function syncData(connectio,
 
 
   async updateStatus(connectio,
-  n: ProviderConnection, chang,)
+  n: ProviderConnection, chang)
   e: Record<string, any>) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     return simulateAction(connection, 'ats.updateStatus', { change });
   }
 };

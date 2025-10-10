@@ -3,12 +3,10 @@ import React, { useEffect, useState } from 'react';
 interface AdvancedAnalyticsProps {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
   enableConversionTracking = true;
   enablePerformanceTracking = true,
-  enableErrorTracking = true,
-}) => {
+  enableErrorTracking = true}) => {
   const [analytics] = useState({
     pageViews: 0;
     uniqueVisitors: 0;
@@ -22,12 +20,11 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       loadTime: 0;)
       firstContentfulPaint: 0;)
       largestContentfulPaint: 0;)
-      cumulativeLayoutShift: 0;,)
+      cumulativeLayoutShift: 0;)
     })
     conversions: 0;
     performance: 0),
-    errors: 0),
-  });
+    errors: 0)});
 
   useEffect(() => {
     // Initialize analytics tracking;
@@ -44,20 +41,17 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
       //       }
   }, [enableConversionTracking, enablePerformanceTracking, enableErrorTracking]);
 
-<<<<<<< HEAD
   return(<div className="advanced-analytics">)
       <h2>Advanced Analytics Dashboard</h2>)
       <div className="metrics-grid">)
         <div className="metric-card">)
           <h3>Page Views</h3>)
-=======
   return (
     <div className="advanced-analytics"></div>
       <h2>Advanced Analytics Dashboard</h2>
       <div className="metrics-grid"></div>
         <div className="metric-card"></div>
           <h3>Page Views</h3>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
           <p className="metric-value">{analytics.pageViews.toLocaleString()}</p>
         </div>
         <div className="metric-card"></div>
@@ -70,7 +64,6 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({,
         </div>
         <div className="metric-card"></div>
           <h3>Conversion Rate</h3>
-=======
 const,
   AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
@@ -80,8 +73,7 @@ const,
     performanc,
   e: 0,
     error,
-  s: 0,
-  });
+  s: 0});
 
   useEffect(() => {/* TODO: Fix JSX expression */}
       //       }
@@ -110,7 +102,6 @@ const,
         </div>"
         <div className="metric-card"></div>
           <h3>Conversion Rate</h3>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           <p className="metric-value">{analytics.conversionRate.toFixed(1)}%</p>
         </div>
       </div>

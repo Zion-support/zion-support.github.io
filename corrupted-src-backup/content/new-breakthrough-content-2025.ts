@@ -2,7 +2,6 @@ export interface BreakthroughContent {/* TODO: Fix JSX expression */}
   };
 }
 
-<<<<<<< HEAD
 export const newBreakthroughContent2025: BreakthroughContent[] = [
   {
     id: 'ai-platform-optimization-2025'
@@ -30,9 +29,7 @@ Transform your AI platform with intelligent scorecards and performance monitorin
       performance: '99.9% uptime'
       savings: '$2.8M annually',
       accuracy: '95% optimization',
-      roi: '300%',
-    },
-  },
+      roi: '300%'}},
   {
     id: 'quantum-ai-security-2025'
     title: 'Quantum AI Security 2025: Next-Generation Protection'
@@ -60,14 +57,9 @@ Protect your AI systems with next-generation quantum security frameworks.
       savings: '$2.8B protected',
       accuracy: 'Zero breaches',
       roi: '500%',
-=======
 export const,
   newBreakthroughContent2025: BreakthroughContent[] = [
   {/* TODO: Fix JSX expression */}
-    },
-  },
+    }},
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
-];
+    }}];

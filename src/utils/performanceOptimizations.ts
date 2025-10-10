@@ -13,8 +13,7 @@ export const _debounce =
           
           <T extends (...args: any[]) => any>(),
     func: T,
-  wait: number,
-): ((...args: Parameters;
+  wait: number): ((...args: Parameters;
           <T>) => void) => {// TODO: Add content;}
 }
   let timeout: NodeJS.Timeout;
@@ -33,8 +32,7 @@ export const throttle =
           
           <T extends (...args: any[]) => any>(),
     func: T,
-  limit: number,
-): ((...args: Parameters;
+  limit: number): ((...args: Parameters;
           <T>) => void) => {// TODO: Add content;}
 
 }
@@ -109,7 +107,7 @@ export const useIntersectionObserver = ()
   return { observe, disconnect };
 };
 // Image lazy loading hook;
-export const useLazyImage = (sr,)
+export const useLazyImage = (sr)
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -259,7 +257,7 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
 };
 // Resource preloading utility;
 export const preloadResource = (hre,
-  f: string, a,)
+  f: string, a)
   s: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

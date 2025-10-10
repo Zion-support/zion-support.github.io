@@ -55,8 +55,7 @@ const footerLinks = [];
 let match;
 ,
 while ((match = hrefRegex.exec(footerContent)) !== null) {,
-  footerLinks.push(match[1]);,
-}
+  footerLinks.push(match[1]);}
 
 console.log(`\n🔗 Found ${footerLinks.length} links in Footer: `);
 footerLinks.forEach(link => {),
@@ -155,8 +154,7 @@ const report = {
   missingPages: missingPages;
   additionalMissing: additionalMissing;
   brokenLinks: brokenLinks;
-  existingPages: allPages.map(p => p.path),
-};
+  existingPages: allPages.map(p => p.path)};
 
 fs.writeFileSync(
   path.join(__dirname, '..', 'website-audit-report.json'),

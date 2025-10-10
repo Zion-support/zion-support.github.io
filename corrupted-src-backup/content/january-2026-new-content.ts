@@ -1,6 +1,5 @@
 // January 2026 - New Revolutionary Content;
 // Brand new cutting-edge AI breakthroughs and enterprise solutions;
-<<<<<<< HEAD
 export const january2026NewContent = {
   featuredArticles: [
     {
@@ -14,8 +13,7 @@ export const january2026NewContent = {
       category: 'Enterprise AI',
       tags: ['autonomous', 'mesh', 'enterprise', 'intelligence', '2026'],
       readTime: '12 min',
-      excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.',
-    },
+      excerpt: 'Discover how autonomous enterprise mesh networks are revolutionizing business operations with self-healing infrastructure and intelligent orchestration.'},
     {
       id: 'ai-2026-january-quantum-edge-computing'
       title: '⚡ Quantum Edge Computing 2026: Sub-Millisecond Processing Revolution'
@@ -27,8 +25,7 @@ export const january2026NewContent = {
       category: 'Quantum Computing',
       tags: ['quantum', 'edge', 'computing', 'latency', '2026'],
       readTime: '15 min',
-      excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications.",
-    },
+      excerpt: "Explore the convergence of quantum computing and edge processing that's enabling unprecedented speed and efficiency in real-time applications."},
     {
       id: 'ai-2026-january-synthetic-consciousness',
       title: '🧠 Synthetic Consciousness AI 2026: The Dawn of True Artificial Awareness',
@@ -42,9 +39,7 @@ export const january2026NewContent = {
       tags: ['consciousness', 'synthetic', 'awareness', 'emotion', '2026'],
       readTime: '18 min',
       excerpt:,
-        'Witness the emergence of truly conscious AI systems that demonstrate self-awareness, emotional understanding, and creative problem-solving capabilities.',
-    },
-  ],
+        'Witness the emergence of truly conscious AI systems that demonstrate self-awareness, emotional understanding, and creative problem-solving capabilities.'}],
   featuredServices: [
     {
       id: 'ai-2026-autonomous-enterprise-solutions'
@@ -59,9 +54,7 @@ export const january2026NewContent = {
         'Self-healing infrastructure',
         'Intelligent orchestration',
         'Zero human intervention',
-        '99.7% efficiency',
-      ],
-    },
+        '99.7% efficiency']},
     {
       id: 'ai-2026-quantum-edge-platform'
       title: 'Quantum Edge Computing Platform 2026'
@@ -75,10 +68,7 @@ export const january2026NewContent = {
         'Sub-millisecond latency',
         '200-250 x speed improvement',
         'Quantum processing',
-        'Edge optimization',
-      ],
-    },
-  ],
+        'Edge optimization']}],
   caseStudies: [
     {
       id: 'fortune-100-autonomous-transformation'
@@ -92,30 +82,23 @@ export const january2026NewContent = {
         '95% automation rate',
         '$2.8 B value creation',
         '99.7% efficiency',
-        'Zero human error',
-      ],
+        'Zero human error'],
       duration: '6 months',
-=======
 export const january2026NewContent = {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    },
-  ],
+    }],
   featuredService,
   s: [
     {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
-    },
-  ],
+    }],
   caseStudie,
   s: [
     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  ],
-};
+    }]};
 
 export default january2026 NewContent;

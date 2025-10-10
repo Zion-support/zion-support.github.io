@@ -5,7 +5,6 @@ if (conflictMarkers && conflictMarkers.trim()) {/* TODO: Fix JSX expression */}
 //   }
 
 // 7. Create a summary report;
-<<<<<<< HEAD
 const report = {
   timestamp: new Date().toISOString()
   currentBranch: currentBranch?.trim()
@@ -17,16 +16,11 @@ const report = {
       .filter(f => f) || [],
   recentCommits: recentCommits?.trim().split('\n') || [],
   recentBranches: recentBranches?.trim().split('\n') || [],
-=======
 const report = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 fs.writeFileSync('merge-analysis-report.json', JSON.stringify(report, null, 2));
 
 // // // // // // // // // 8. Provide next steps;
-<<<<<<< HEAD
 // // // // // // // 
-=======
 // // // // // // // "
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -1,5 +1,4 @@
 //Security headers middleware;
-<<<<<<< HEAD
 export function middleware(_request) {const response = NextResponse.next();
   //Security headers;
   response.headers.set('X-Frame-Options') 'DENY');
@@ -16,12 +15,10 @@ export function middleware(_request) {const response = NextResponse.next();
       "font-src 'self' https://fonts.gstatic.com) " +,
       "img-src 'self' data: https:} " +
       "connect-src 'self' https://api.vercel.com)"}
-=======
 export function middleware(_request) {/* TODO: Fix JSX expression */}
   s:} " +"
       "connect-src 'self' http,"
   s://api.vercel.com)"}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
   return response;
 }

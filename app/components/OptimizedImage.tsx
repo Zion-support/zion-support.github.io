@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 
-<<<<<<< HEAD
 interface OptimizedImageProps {
   src: string;,
     alt: string;
@@ -17,13 +16,10 @@ interface OptimizedImageProps {
   onError?: () => void;
 }
 
-<<<<<<< HEAD
 const OptimizedImage: React.FC<OptimizedImageProps>= ({
   src,
-=======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({,
   src;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
   alt,
   width,
   height,
@@ -48,8 +44,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
       },
       {
         threshold: 0.1;
-        rootMargin: '50px',
-      }
+        rootMargin: '50px'}
     );
 
     if (imgRef.current) {
@@ -89,14 +84,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
     return canvas.toDataURL();
   };
 
-<<<<<<< HEAD
   if (hasError) {</HTMLImageElement>
     return (</HTMLImageElement>
       <div
-=======
   if (hasError) {
     return(<div;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
         ref={imgRef}
         className={`bg-slate-700 flex items-center justify-center ${className}`}
         style={{ width, height }}
@@ -104,22 +96,16 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
         <div className="text-gray-400 text-center"></div>
           <div className="w-8 h-8 mx-auto mb-2"></div>
             <svg viewBox="0 0 24 24" fill="currentColor">
-<<<<<<< HEAD
               <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
-<<<<<<< HEAD
-=======
               <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <p className="text-xs">Failed to load</p>
         </div>
       </div>
-=======
             </svg>
           </div>
           <p className="text-xs">Failed to load</p>)
         </div>)
       </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
     );
   }
 
@@ -127,33 +113,26 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-<<<<<<< HEAD
     >{/* Placeholder */}</div>
       {!isLoaded && (<div
           className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse"
           style={{
-=======
     >
       {/* Placeholder */}
       {!isLoaded && (
         <div;)
           className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 animate-pulse")
           style={{})
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             backgroundImage: `url(${generatePlaceholder()})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
+            backgroundPosition: 'center'}}
         >)}</div>
 
-<<<<<<< HEAD
       {/* Actual Image */}</div>
       {isInView && (<img
-=======
       {/* Actual Image */}
       {isInView && (
         <img;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
           src={src}
           alt={alt}
           width={width}
@@ -168,7 +147,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
           onError={handleError}
           style={{
             width: '100%',
-            height: '100%',}
+            height: '100%'}
             objectFit: 'cover'}
           }}
         >)}</img>
@@ -182,7 +161,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({,
 };
 
 export default OptimizedImage;
-=======
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 
@@ -207,4 +185,3 @@ const,
 
 export default OptimizedImage;
 "`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

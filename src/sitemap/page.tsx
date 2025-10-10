@@ -14,8 +14,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Team', path: '/team', description: 'Meet our expert team' },
     { name: 'Case Studies', path: '/case-studies', description: 'Success stories and projects' },
     { name: 'Blog', path: '/blog', description: 'Latest insights and updates' },
-    { name: 'Enterprise', path: '/enterprise', description: 'Enterprise solutions' },
-  ];
+    { name: 'Enterprise', path: '/enterprise', description: 'Enterprise solutions' }];
 
   const aiServices = [
     { name: 'AI Services', path: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -28,8 +27,7 @@ const SitemapPage: React.FC = () => {
     { name: 'AI Data Analytics', path: '/ai-data-analytics', description: 'Advanced data analytics' },
     { name: 'AI Project Manager', path: '/ai-project-manager', description: 'AI project management tools' },
     { name: 'AI Sales Automation', path: '/ai-sales-automation', description: 'Sales process automation' },
-    { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' },
-  ];
+    { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Workflow optimization' }];
 
   const itServices = [
     { name: 'IT Services', path: '/it-services', description: 'Comprehensive IT solutions' },
@@ -37,8 +35,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud computing solutions' },
     { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security and protection' },
     { name: 'Database Management', path: '/database-management', description: 'Database solutions' },
-    { name: 'DevOps', path: '/devops', description: 'Development and operations' },
-  ];
+    { name: 'DevOps', path: '/devops', description: 'Development and operations' }];
 
   const specializedServices = [
     { name: 'Micro SAAS', path: '/micro-saas', description: 'Small business software solutions' },
@@ -47,8 +44,7 @@ const SitemapPage: React.FC = () => {
     { name: 'Blockchain', path: '/blockchain', description: 'Blockchain technology' },
     { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
     { name: 'IoT Edge', path: '/iot-edge', description: 'Internet of Things solutions' },
-    { name: 'Robotics', path: '/robotics', description: 'Robotic automation' },
-  ];
+    { name: 'Robotics', path: '/robotics', description: 'Robotic automation' }];
 
   const additionalPages = [
     { name: 'Consultation', path: '/consultation', description: 'Expert consultation services' },
@@ -57,14 +53,12 @@ const SitemapPage: React.FC = () => {
     { name: 'Privacy Policy', path: '/privacy', description: 'Privacy and data protection' },
     { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
     { name: 'GDPR Compliance', path: '/gdpr', description: 'GDPR compliance information' },
-    { name: 'Cookies', path: '/cookies', description: 'Cookie policy' },
-  ];
+    { name: 'Cookies', path: '/cookies', description: 'Cookie policy' }];
 
   const contactInfo = [
     { icon: Phone, text: '(302) 464-0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: Globe, text: 'ziontechgroup.com', href: 'https://ziontechgroup.com' },
-  ];
+    { icon: Globe, text: 'ziontechgroup.com', href: 'https://ziontechgroup.com' }];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">

@@ -1,7 +1,6 @@
 exports.handler = async function (event, context) {/* TODO: Fix JSX expression */}
 //     // console.log('front-ads-promoter function triggered')}
     // Front ads promotion simulation;
-<<<<<<< HEAD
     const result = {
       statusCode: 200;
       headers: {,
@@ -16,19 +15,14 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
           status: 'active',
           adsPromoted: 0;
           lastPromotion: new Date().toISOString()}
-=======
     const result = {/* TODO: Fix JSX expression */}
         'Access-Control-Allow-Origin': '*'}
       },
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */})
   n: new Date().toISOString()}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-        },
-      }),
-    };
+        }})};
     return result;
-<<<<<<< HEAD
 //   } catch (error) {// console.error('Error in front-ads-promoter: ') error;
       }
     return {
@@ -40,7 +34,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       body: JSON.stringify({error: 'Internal server error'),
         message: error.message),
         function: 'front-ads-promoter'}
-=======
 //   } catch (error) {/* TODO: Fix JSX expression */}
       }
     return {/* TODO: Fix JSX expression */}
@@ -49,16 +42,13 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   n: 'front-ads-promoter'})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
     };
   }
 };
-<<<<<<< HEAD
         timestamp: new Date().toISOString(),' function: 'front-ads-promoter',' source: event.source || 'unknown', promotion: {' status: 'active', adsPromoted: 0;
         lastPromotion: new Date().toISOString() } }) }; return result; } catch (error) {' // console.error('Error in front-ads-promoter: ') error;
       } return { statusCode: 500, headers: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, body: JSON.stringify({' error: 'Internal server error'} message: error.message)' function: 'front-ads-promoter' }) }; } };'
-=======
         timestam,
   p: new Date().toISOString(),' functio,
   n: 'front-ads-promoter',' sourc,
@@ -68,7 +58,6 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       } return {/* TODO: Fix JSX expression */}
   s: {' 'Content-Type': 'application/json'}' 'Access-Control-Allow-Origin': '*' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
-  r: 'Internal server error'} messag,)
+  r: 'Internal server error'} messag)
   e: error.message)' functio,
   n: 'front-ads-promoter' }) }; } };'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

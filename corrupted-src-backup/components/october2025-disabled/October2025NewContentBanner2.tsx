@@ -8,7 +8,6 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
     }
-<<<<<<< HEAD
   ]; return(<section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, elements */}
       <div, className="absolute, inse, t-0, opacit, y-10"></section>
@@ -32,12 +31,9 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
         {/* Articles, G, r, i, d */})
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">)
           { newArticl, e, s.m, a, p((arti, c, l, e) = > {
-<<<<<<< HEAD
             const Ico, n = artic, l, e.ic, o, n; return(<Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
-=======
             const Ico, n = artic, l, e.ic, o, n; return (</div>
               <Link, ke, y = { artic, l, e.slug  }, to = {`/bl, o, g/${artic, l, e.slug}`}
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 className="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
               >
                 {/* B, a, d, g, e */}
@@ -50,7 +46,6 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                   <Icon, classNam, e = "w-8 h-8, tex, t-whi, t, e"</div>
                 {/* Conte, n, t */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">
-=======
   ]; return ("
     <section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n"></section>
       {/* Animated, background, elements */}"
@@ -88,13 +83,11 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                   <Icon, classNam, e = "w-8 h-8, tex, t-whi, t, e"</div></Icon>
                 {/* Conte, n, t */}"
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s"></h3>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {artic, l, e.t, i, t, l, e}
                 </h3>"
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-4, leadin, g-relax, e, d"></p>
                   {artic, l, e.description}
                 </p>
-<<<<<<< HEAD
                 {/* Read, More, Link */}
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>
                   <sp, a, n>Read, Articl, e</sp, a, n>
@@ -102,7 +95,6 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 </div>
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */})
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />)
-=======
                 {/* Read, More, Link */}"
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l"></div>
                   <sp, a, n>Read, Articl, e</sp, a, n>"
@@ -110,20 +102,16 @@ const October2025NewContentBanner, 2 = () => {/* TODO: Fix JSX expression */}
                 </div>
                 </d, i, v  > {/* Hover, Gradient, Effe, c, t */}`
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} /></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               </Li, n, k>)
             );
           })}
         </div>
-<<<<<<< HEAD
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
           <Link, t, o="/bl, o, g"
-=======
         {/* CTA, Sectio, n */}"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <Link, t, o="/bl, o, g""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5"
           ></Link>
             <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>"

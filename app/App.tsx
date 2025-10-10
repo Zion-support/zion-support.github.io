@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 import React, { useEffect, useState, lazy } from 'react';
 import { useRouter } from 'next/navigation';
@@ -15,7 +14,6 @@ const LoadingSpinner: React.FC = React.memo(() => (
     </div>
   </div>
 ));
-=======
 import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -82,7 +80,6 @@ import { performanceOptimizer, performanceMonitor, seoOptimizer, accessibilityEn
 
 // Styles
 import './globals.css';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
 // Mock components for now - these will be implemented
 const PerformanceOptimizer = () => null;
@@ -103,7 +100,6 @@ const App: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
-<<<<<<< HEAD
     // Initialize app;
     const initializeApp = async () => {
       try {
@@ -115,7 +111,6 @@ const App: React.FC = () => {
     };
 
     initializeApp();
-=======
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       try {
@@ -128,7 +123,6 @@ const App: React.FC = () => {
         console.warn('Performance monitoring initialization failed:', error);
       }
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }, []);
 
   if (!isInitialized) {
@@ -136,11 +130,9 @@ const App: React.FC = () => {
   }
 
   return (
-<<<<<<< HEAD
     <div className="App">
       <HomePage />
     </div>
-=======
     <HelmetProvider>
       <BrowserRouter>
         <div className="App">
@@ -217,7 +209,6 @@ const App: React.FC = () => {
         </div>
       </BrowserRouter>
     </HelmetProvider>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

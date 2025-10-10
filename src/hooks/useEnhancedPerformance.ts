@@ -13,7 +13,7 @@ export interface UseEnhancedPerformanceOptions {// TODO: Add content;}
   trackPerformance?: boolean;
   trackAnalytics?: boolean;
 }
-export function useEnhancedPerformance(__option,)
+export function useEnhancedPerformance(__option)
   s: UseEnhancedPerformanceOptions = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -89,7 +89,7 @@ export function useEnhancedPerformance(__option,)
           <string, unknown>) => {analytics.trackCustomEvent('User Action', action, component, undefined, metadata);}
     [component, trackAnalytics]
   const measureOperation = useCallback()
-    (operationNam,)
+    (operationNam)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

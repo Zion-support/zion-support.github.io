@@ -36,8 +36,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('js', new Date());
       gtag('config', trackingId, {
         page_title: document.title,
-        page_location: window.location.href,
-      });
+        page_location: window.location.href});
     }
   }, [trackingId]);
 
@@ -57,8 +56,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag('config', trackingId, {
         page_title: name,
         page_location: window.location.href,
-        ...properties,
-      });
+        ...properties});
     }
     
     // Also log in development
@@ -71,8 +69,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
         user_id: userId,
-        ...traits,
-      });
+        ...traits});
     }
     
     // Also log in development
@@ -84,8 +81,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   const value: AnalyticsContextType = {
     track,
     page,
-    identify,
-  };
+    identify};
 
   return (
     <AnalyticsContext.Provider value={value}>

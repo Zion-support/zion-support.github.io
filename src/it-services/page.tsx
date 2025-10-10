@@ -1,9 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -15,7 +11,6 @@ const ITServicesPage: React.FC = () => {
       title: 'Cloud Services',
       description: 'Comprehensive cloud migration, setup, and optimization services for AWS, Azure, and Google Cloud.',
       icon: Cloud,
-<<<<<<< HEAD
   const services = [
     {
       icon: Cloud,
@@ -30,7 +25,6 @@ const ITServicesPage: React.FC = () => {
     {
       title: 'Cybersecurity',
       description: 'Advanced security solutions with threat detection, prevention, and incident response capabilities.',
-=======
       features: ['Cloud migration', 'Infrastructure setup', 'Cost optimization', 'Security configuration', 'Monitoring', '24/7 support'],
       price: 'Starting at $1,500/month',
       category: 'Infrastructure',
@@ -40,7 +34,6 @@ const ITServicesPage: React.FC = () => {
 $4},
       title: 'Advanced Threat Protection',
       description: 'Comprehensive cybersecurity solutions with real-time threat detection and automated response.',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0090
       icon: Shield,
       features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Compliance', 'Penetration Testing'],
       price: 'Starting at $1,599/month',
@@ -475,7 +468,6 @@ $4},
 };
 
 export default ITServicesPage;
-=======
 import { Cloud, ArrowRight } from 'lucide-react';
 
 export default function ITServicesPage() {
@@ -507,4 +499,3 @@ export default function ITServicesPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

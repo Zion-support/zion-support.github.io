@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
 export default function CaseStudy(): React.JSX.Element {
   return(<>
       <Header />
@@ -48,21 +47,18 @@ export default function CaseStudy(): React.JSX.Element {
             </div>
           </div>
 
-<<<<<<< HEAD
           <div className="mt-16 pt-8 border-t border-white border-opacity-20">
             <div className="flex flex-col sm: flex-row justify-between items-center gap-6">
-              <div>,)
-                <h3 className="text-xl font-bold mb-2">Share this case study</h3>,)
-                <div className="flex gap-4">,)
+              <div>)
+                <h3 className="text-xl font-bold mb-2">Share this case study</h3>)
+                <div className="flex gap-4">)
                   <a;),
-=======
           <div className="mt-16 pt-8 border-t border-white border-opacity-20"></div>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6"></div>
               <div></div>
                 <h3 className="text-xl font-bold mb-2">Share this case study</h3>
                 <div className="flex gap-4"></div>
                   <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                     href={`https://twitter.com/intent/tweet?text=${encodeURIComponent('Fortune 100 Autonomous Operations Transformation 2025')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -75,7 +71,6 @@ export default function CaseStudy(): React.JSX.Element {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-white bg-opacity-20 hover: bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
-=======
 export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX expression */}
   s://twitter.com/intent/tweet?text=${encodeURIComponent('Fortune 100 Autonomous Operations Transformation 2025')}&url=${encodeURIComponent(window.location.href)}`}
                     target="_blank""
@@ -92,22 +87,18 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
                     rel="noopener noreferrer""
                     className="bg-white bg-opacity-20,"
   hover:bg-opacity-30 px-4 py-2 rounded-lg transition-colors"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   >
                     LinkedIn;
                   </a>
                 </div>
               </div>
-<<<<<<< HEAD
               <a;
                 href="/"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-=======
               <a></a>"
                 href="/""
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold,"
   hover:bg-gray-100 transition-colors"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               >
                 Back to Home;
               </a>
@@ -115,7 +106,6 @@ export default function CaseStudy(): React.JSX.Element {/* TODO: Fix JSX express
           </div>
         </div>
       </div>,
-    </>,
-  );
+    </>);
 }
 "`

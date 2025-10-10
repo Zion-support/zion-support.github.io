@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 /**
  * Advanced Performance Monitoring Utility
@@ -20,7 +19,6 @@ class PerformanceMonitor {
   private observers: PerformanceObserver[] = [];
   private isInitialized = false;
   init(): void {
-=======
 
 'use client'
 /**
@@ -57,7 +55,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   init(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     if (this.isInitialized || typeof window === 'undefined') return;
     this.isInitialized = true;
     this.setupWebVitals();
@@ -65,7 +62,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     this.setupResourceTiming();
   }
   /**
-<<<<<<< HEAD
    * Initialize performance observers
    */
   private initializeObservers(): void {
@@ -76,7 +72,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         this.observeEntry('paint', (entries) => {
           entries.forEach((entry) => {
             if (entry.name === 'first-contentful-paint') {
-=======
    * Initialize performance observers;
    */
 
@@ -100,12 +95,10 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
             if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               this.recordMetric('FCP', entry.startTime);
             }
           });
         });
-<<<<<<< HEAD
         // Largest Contentful Paint
         this.observeEntry('largest-contentful-paint', entries => {
           if (lastEntry) {
@@ -119,7 +112,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         this.observeEntry('first-input', entries => {
           const firstInput = entries[0];
           if (firstInput && (firstInput as any).processingStart !== undefined) {
-=======
         // Largest Contentful Paint;
         this.observeEntry('largest-contentful-paint', entries => {if (lastEntry) {}
   // TOD,
@@ -127,8 +119,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
 }
 //             this.recordMetric()
 //               'LCP',
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime,
-)
+              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime)
           }
         });
         // First Input Delay;
@@ -139,12 +130,10 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           if (firstInput && (firstInput as any).processingStart !== undefined) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             const fid = (firstInput as any).processingStart - firstInput.startTime;
             this.recordMetric('FID', fid);
           }
         });
-<<<<<<< HEAD
         // Cumulative Layout Shift
         this.observeEntry('layout-shift', (entries) => {
           entries.forEach((entry: PerformanceEntry) => {
@@ -166,7 +155,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.name === name) {
-=======
         // Cumulative Layout Shift;
         this.observeEntry('layout-shift', (entries) => {/* TODO: Fix JSX expression */}
   y: PerformanceEntry) => {}
@@ -200,7 +188,7 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
   }
   private observePaint(nam,
-  e: string, metricKe,)
+  e: string, metricKe)
   y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -216,13 +204,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           if (entry.name === name) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             (this.metrics as any)[metricKey] = entry.startTime;
             this.logMetric(metricKey as string, entry.startTime);
           }
         }
       });
-<<<<<<< HEAD
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
@@ -232,7 +218,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
   private observeLCP(): void {
     try {
       const observer = new PerformanceObserver((list) => {
-=======
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['paint'] });
       this.observers.push(observer);
@@ -251,13 +236,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
         this.metrics.lcp = lastEntry.startTime;
         this.logMetric('lcp', lastEntry.startTime);
       });
-<<<<<<< HEAD
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
@@ -268,7 +251,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-=======
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['largest-contentful-paint'] });
       this.observers.push(observer);
@@ -290,12 +272,10 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
         for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           this.metrics.fid = (entry as any).processingStart - entry.startTime;
           this.logMetric('fid', this.metrics.fid);
         }
       });
-<<<<<<< HEAD
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
@@ -308,7 +288,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (!(entry as any).hadRecentInput) {
-=======
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['first-input'] });
       this.observers.push(observer);
@@ -334,14 +313,12 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             clsValue += (entry as any).value;
           }
         }
         this.metrics.cls = clsValue;
         this.logMetric('cls', clsValue);
       });
-<<<<<<< HEAD
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
@@ -361,7 +338,6 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     }
     // DOM Content Loaded
     if (performance.timing) {
-=======
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['layout-shift'] });
       this.observers.push(observer);
@@ -392,18 +368,15 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
     if (performance.timing) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
       this.addCustomMetric('domContentLoaded', domContentLoaded);
     }
   }
-<<<<<<< HEAD
   private setupResourceTiming(): void {
     try {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'resource') {
-=======
   private setupResourceTiming(): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -419,13 +392,11 @@ class PerformanceMonitor {/* TODO: Fix JSX expression */}
           if (entry.entryType === 'resource') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             const resourceEntry = entry as PerformanceResourceTiming;
             this.analyzeResource(resourceEntry);
           }
         }
       });
-<<<<<<< HEAD
       observer.observe({ entryTypes: ['resource'] });
       this.observers.push(observer);
     } catch (error) {
@@ -515,7 +486,6 @@ First Contentful Paint: ${metrics.firstContentfulPaint || 'N/A'}ms
 // Export singleton instance
 export const performanceMonitor = new PerformanceMonitor();
 export default performanceMonitor;
-=======
       observer.observe({/* TODO: Fix JSX expression */})
   s: ['resource'] });
       this.observers.push(observer);
@@ -525,7 +495,7 @@ export default performanceMonitor;
       // Resource observation failed - handled silently;
     }
   }
-  private analyzeResource(entr,)
+  private analyzeResource(entr)
   y: PerformanceResourceTiming): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -543,7 +513,7 @@ export default performanceMonitor;
     }
   }
   addCustomMetric(nam,
-  e: string, valu,)
+  e: string, valu)
   e: number): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -551,7 +521,7 @@ export default performanceMonitor;
     this.logMetric(name, value);
   }
   private logMetric(nam,
-  e: string, valu,)
+  e: string, valu)
   e: number): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -652,4 +622,3 @@ export default performanceMonitor;`
 
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

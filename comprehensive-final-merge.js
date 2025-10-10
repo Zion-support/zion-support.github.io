@@ -5,7 +5,6 @@
  */ import { execSync } from 'child_process';
 import fs from 'fs';
 
-<<<<<<< HEAD
 // //Step 1: Ensure we're on main and up to date;
 // try {,
   execSync('git checkout main', { stdio: 'inherit' });
@@ -17,10 +16,9 @@ import fs from 'fs';
 //Step 2: Get all remaining branches;
 // let allBranches = [];
 try {,
-  const branchOutput = execSync(,)
+  const branchOutput = execSync()
     'git branch -r | grep -v backup | grep -E "(cursor|codex|pr|feature|bugfix)"',
     { encoding: 'utf8' }
-=======
 // //Step,
   1: Ensure we're on main and up to date;
 // try {/* TODO: Fix JSX expression */}
@@ -35,7 +33,6 @@ try {,
 // let allBranches = [];
 try {/* TODO: Fix JSX expression */}
   g: 'utf8' }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
   allBranches = branchOutput;
     .split('\n')
@@ -47,7 +44,6 @@ try {/* TODO: Fix JSX expression */}
 } catch (error) {/* TODO: Fix JSX expression */}
 //   }
 
-<<<<<<< HEAD
 // //Step 3: Process branches in batches to avoid conflicts;
 // const BATCH_SIZE = 50;
 for (let i = 0; i < allBranches.length; i += BATCH_SIZE) {,
@@ -70,11 +66,9 @@ function resolveConflictsAndMerge(branchName) {,
     //Check if branch is already merged;
     try {
       const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {)
-        encoding: 'utf8'),
-      }).trim();
+        encoding: 'utf8')}).trim();
       const branchCommit = execSync(`git rev-parse origin/${branchName}`, {)
         encoding: 'utf8'),
-=======
 // //Step,
   3: Process branches in batches to avoid conflicts;
 // const BATCH_SIZE = 50;
@@ -100,13 +94,11 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       const mergeBase = execSync(`git merge-base HEAD origin/${branchName}`, {/* TODO: Fix JSX expression */})
       }).trim();`
       const branchCommit = execSync(`git rev-parse origin/${branchName}`, {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }).trim();
 
       if (mergeBase === branchCommit) {/* TODO: Fix JSX expression */}
   d: 'already_merged' };
       }
-<<<<<<< HEAD
     } catch (e) {
       //Continue with merge attempt;
     }
@@ -122,7 +114,6 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       //Strategy 1: Auto-resolve with theirs for most conflicts;
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
       execSync(
-=======
     } catch (e) {/* TODO: Fix JSX expression */}
     }
 
@@ -137,7 +128,6 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   } catch (error) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
       execSync(")`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
         {/* TODO: Fix JSX expression */}
   o: 'pipe' }
@@ -147,16 +137,13 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     } catch (theirsError) {/* TODO: Fix JSX expression */}
 //       }
 
-<<<<<<< HEAD
     try {
       //Strategy 2: Auto-resolve with ours;
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
       execSync(
-=======
     try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
       execSync(")`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
         {/* TODO: Fix JSX expression */}
   o: 'pipe' }
@@ -166,7 +153,6 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
     } catch (oursError) {/* TODO: Fix JSX expression */}
 //       }
 
-<<<<<<< HEAD
     try {
       //Strategy 3: Manual conflict resolution;
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
@@ -174,19 +160,16 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
       //Get conflicted files;
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {)
         encoding: 'utf8'),
-=======
     try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 
       //Get conflicted files;
       const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       })
         .split('\n')
         .filter(file => file.trim());
 
 //       //For each conflicted file, try to resolve;
-<<<<<<< HEAD
       for (const file of conflictedFiles) {
         if (file.trim()) {
           try {
@@ -194,26 +177,21 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
             execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
             execSync(`git add "${file}"`, { stdio: 'pipe' });
 //             } catch (fileError) {
-=======
       for (const file of conflictedFiles) {/* TODO: Fix JSX expression */}"`
             execSync(`git checkout --theirs "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });"`
             execSync(`git add "${file}"`, {/* TODO: Fix JSX expression */})
   o: 'pipe' });
 //             } catch (fileError) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //             }
         }
       }
 
-<<<<<<< HEAD
       //Complete the merge;
       execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {)
         stdio: 'pipe'),
-=======
       //Complete the merge;"`
       execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {/* TODO: Fix JSX expression */})
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       });
 //       return {/* TODO: Fix JSX expression */}
   d: 'manual' };
@@ -221,17 +199,14 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
 //       }
 
     //If all strategies fail, abort and skip;
-<<<<<<< HEAD
     try {
       execSync('git merge --abort', { stdio: 'pipe' });
 //       } catch (abortError) {
       execSync('git reset --hard HEAD', { stdio: 'pipe' });
-=======
     try {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 //       } catch (abortError) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
 
     return {/* TODO: Fix JSX expression */}
@@ -239,7 +214,6 @@ function resolveConflictsAndMerge(branchName) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 //Step 5: Process each batch;
 const results = {
   batches: []
@@ -255,20 +229,15 @@ const results = {
       failed: 0;
       not_found: 0;
       already_merged: 0;
-=======
 //Step,
   5: Process each batch;
 const results = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
-};
+    }}};
 
 for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
     `\n📦 Processing Batch ${i + 1}/${batches.length} (${batch.length} branches)...`
   );
 
-<<<<<<< HEAD
   const batchResults = {
     batchNumber: i + 1;
     branches: []
@@ -282,11 +251,8 @@ for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
       failed: 0;
       not_found: 0;
       already_merged: 0;
-=======
   const batchResults = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  };
+    }};
 
   for (const branch of batch) {/* TODO: Fix JSX expression */}
     batchResults.branches.push({ branch, ...result });
@@ -302,22 +268,18 @@ for (let i = 0; i < batches.length; i++) {/* TODO: Fix JSX expression */}`
   results.batches.push(batchResults);
 
   //Push changes after each batch to avoid conflicts;
-<<<<<<< HEAD
   if (i % 5 === 0 || i === batches.length - 1) {
 //     try {
       execSync('git push origin main', { stdio: 'pipe' });
 //       } catch (error) {
-=======
   if (i % 5 === 0 || i === batches.length - 1) {/* TODO: Fix JSX expression */}
   o: 'pipe' });
 //       } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //       }
   }
 
 //   }
 
-<<<<<<< HEAD
 //Step 6: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
 results.summary = {
@@ -326,8 +288,7 @@ results.summary = {
   successfulMerges: results.total.successful;
   failedMerges: results.total.failed;
   successRate: ((results.total.successful / results.total.branches) * 100).toFixed(2) +,
-    '%',
-};
+    '%'};
 
 fs.writeFileSync('comprehensive-final-merge-report.json')
   JSON.stringify(results, null, 2)
@@ -338,14 +299,13 @@ fs.writeFileSync('comprehensive-final-merge-report.json')
 // try {,
   execSync('git push origin main', { stdio: 'inherit' });
 //   } catch (error) {
-=======
 //Step,
   6: Generate comprehensive report;
 // results.timestamp = new Date().toISOString();
 results.summary = {/* TODO: Fix JSX expression */}
 };
 
-fs.writeFileSync('comprehensive-final-merge-report.json',)
+fs.writeFileSync('comprehensive-final-merge-report.json')
   JSON.stringify(results, null, 2)
 );
 
@@ -356,7 +316,6 @@ fs.writeFileSync('comprehensive-final-merge-report.json',)
 // try {/* TODO: Fix JSX expression */}
   o: 'inherit' });
 //   } catch (error) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 //   //   }
 
 // // "`

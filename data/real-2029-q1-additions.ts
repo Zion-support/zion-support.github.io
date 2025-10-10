@@ -1,12 +1,10 @@
 
-<<<<<<< HEAD
     id: 'finops - scheduler - optimizer'
     name: 'FinOps Scheduler Optimizer',
     tagline: 'Rightsizing & schedules with IaC exports',
     price: '$99',
     period: '/month',
     description: unknown;
-=======
     i,
   d: 'finops - scheduler - optimizer',
     nam,
@@ -19,16 +17,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.',
     feature,
   s: [,
       'Idle detection',
       'Schedule generator',
       'IaC export',
-      'Alerting',
-    ],
-<<<<<<< HEAD
+      'Alerting'],
     popular: true;
     icon: ''
     color: 'from - emerald - 600 to - teal - 700'
@@ -63,7 +58,6 @@
     price: '$79',
     period: '/month',
     description: unknown;
-=======
     popula,
   r: true,
     ico,
@@ -117,8 +111,7 @@
     ratin,
   g: 4 && 4.6,
     review,
-  s: 12,
-  },
+  s: 12},
     i,
   d: 'db - index - advisor',
     nam,
@@ -131,16 +124,13 @@
   d: '/month',
     descriptio,
   n: unknown,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Collects slow queries and proposes safe index changes with before / after impact analysis.',
     feature,
   s: [,
       'Slow query capture',
       'Index suggestions',
       'Impact simulation',
-      'Capacity forecast',
-    ],
-<<<<<<< HEAD
+      'Capacity forecast'],
     popular: false;
     icon: ''
     color: 'from - indigo - 600 to - violet - 700'
@@ -425,8 +415,7 @@
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com',
-};
+	website: 'https://ziontechgroup.com'};
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{
 		id: 'ai-redteam-evaluator';
@@ -462,7 +451,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 40;
 		rating: 4.7}
 		reviews: 18}
-=======
     popula,
   r: false,
     ico,
@@ -516,8 +504,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4 && 4.5,
     review,
-  s: 9,
-  };
+  s: 9};
       'Modern alternative to legacy APM addons with focused insights.'
     targetAudienc,
   e: 'DBA, Backend, Platform'
@@ -558,8 +545,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4.5;
     review,
-  s: 9,
-  }
+  s: 9}
       'Modern alternative to legacy APM addons with focused insights.',
     targetAudienc,
   e: 'DBA, Backend, Platform',
@@ -600,8 +586,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
     ratin,
   g: 4.5,
     review,
-  s: 9,
-  };
+  s: 9};
 ];
 		perio,
   d: '/month'
@@ -672,8 +657,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.7,
 		review,
-  s: 18,
-	}
+  s: 18}
 		i,
   d: 'finops-scheduler-optimizer'
 		nam,
@@ -740,8 +724,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.6,
 		review,
-  s: 12,
-	}
+  s: 12}
 		i,
   d: 'db-index-advisor'
 		nam,
@@ -808,8 +791,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		ratin,
   g: 4 && 4.5,
 		review,
-  s: 9,
-	}
+  s: 9}
 ];
   i,
   d: 'ai - redteam - evaluator'
@@ -877,8 +859,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.7,
   review,
-  s: 18,
-}
+  s: 18}
   i,
   d: 'finops - scheduler - optimizer'
   nam,
@@ -945,8 +926,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.6,
   review,
-  s: 12,
-}
+  s: 12}
   i,
   d: 'db - index - advisor'
   nam,
@@ -1013,8 +993,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
   ratin,
   g: 4.5,
   review,
-  s: 9,
-}
+  s: 9}
 		ratin,
   g: 4.5;
 		review,
@@ -1031,7 +1010,6 @@ export const,
   g: 4.7}
 		review,
   s: 18}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
@@ -1045,13 +1023,11 @@ export const,
 	}
 ];
 ;
-<<<<<<< HEAD
 // const contact = {;
 	mobile: '+1 302 464 0950';
 	email: 'kleber@ziontechgroup.com';
 	address: '364 E Main St STE 1008 Middletown DE 19709'}
-	website: 'https://ziontechgroup.com',
-};
+	website: 'https://ziontechgroup.com'};
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 	{
 		id: 'ai-redteam-evaluator';
@@ -1087,7 +1063,6 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [;
 		customers: 40;
 		rating: 4.7}
 		reviews: 18}
-=======
 // const contact = {/* TODO: Fix JSX expression */}
   s: '364 E Main St STE 1008 Middletown DE 19709'}
 	websit,
@@ -1100,7 +1075,6 @@ export const,
   g: 4.7}
 		review,
   s: 18}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 	};
 	{/* TODO: Fix JSX expression */}
   g: 4.6}
@@ -1120,7 +1094,7 @@ i,
   e: '$99',' perio,
   d: '/month', descriptio,
   n:  ,' 'Smart schedules and rightsizing recommendations for EC2 / GKE / AKS / EKS with Terraform exports.', feature,
-  s: [, ' 'Idle detection',' 'Schedule generator',' 'IaC export',' 'Alerting', ], popula,
+  s: [, ' 'Idle detection',' 'Schedule generator',' 'IaC export',' 'Alerting'], popula,
   r: true,' ico,
   n: '💸', ' colo,
   r: 'from - emerald - 600 to - teal - 700',' text_colo,
@@ -1147,14 +1121,14 @@ i,
   e: '2025 - 02 - 10', customer,
   s: 25, ratin,
   g: 4 && 4.6, review,
-  s: 12, }, ' i,
+  s: 12}, ' i,
   d: 'db - index - advisor',' nam,
   e: 'DB Index Advisor',' taglin,
   e: 'AI index recommendations for Postgres / MySQL',' pric,
   e: '$79',' perio,
   d: '/month', descriptio,
   n:  ,' 'Collects slow queries and proposes safe index changes with before / after impact analysis.', feature,
-  s: [, ' 'Slow query capture',' 'Index suggestions',' 'Impact simulation',' 'Capacity forecast', ], popula,
+  s: [, ' 'Slow query capture',' 'Index suggestions',' 'Impact simulation',' 'Capacity forecast'], popula,
   r: false,' ico,
   n: '🗄️', ' colo,
   r: 'from - indigo - 600 to - violet - 700',' text_colo,
@@ -1181,7 +1155,7 @@ i,
   e: '2025 - 02 - 12', customer,
   s: 18, ratin,
   g: 4 && 4.5, review,
-  s: 9, },; ' 'Modern alternative to legacy APM add‑ons with focused insights.'' targetAudienc,
+  s: 9}; ' 'Modern alternative to legacy APM add‑ons with focused insights.'' targetAudienc,
   e: 'DBA, Backend, Platform' trialDay,
   s: 14' setupTim,
   e: '30 minutes'' categor,
@@ -1221,7 +1195,7 @@ i,
   e: '2025-02-12', customer,
   s: 18, ratin,
   g: 4.5, review,
-  s: 9, },; ]; ' perio,
+  s: 9}; ]; ' perio,
   d: '/month'' descriptio,
   n: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.'' feature,
   s: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts']; popula,
@@ -1360,7 +1334,7 @@ i,
   e: '2025 - 02 - 01' customer,
   s: 40, ratin,
   g: 4.7, review,
-  s: 18, } ' i,
+  s: 18} ' i,
   d: 'finops - scheduler - optimizer'' nam,
   e: 'FinOps Scheduler Optimizer'' taglin,
   e: 'Rightsizing & schedules with IaC exports'' pric,
@@ -1394,7 +1368,7 @@ i,
   e: '2025 - 02 - 10' customer,
   s: 25, ratin,
   g: 4.6, review,
-  s: 12, } ' i,
+  s: 12} ' i,
   d: 'db - index - advisor'' nam,
   e: 'DB Index Advisor'' taglin,
   e: 'AI index recommendations for Postgres / MySQL'' pric,
@@ -1428,28 +1402,28 @@ i,
   e: '2025 - 02 - 12' customer,
   s: 18, ratin,
   g: 4.5, review,
-  s: 9, } ratin,
+  s: 9} ratin,
   g: 4.5,
   reviews: 9 ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' },; export const,
+  s://ziontechgroup.com' }; export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 18} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 12} },; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 18} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
   s: 9} } ]; ' import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services'; const contact = {/* TODO: Fix JSX expression */}
-  l: 'kleber@ziontechgroup.com',}' addres,
+  l: 'kleber@ziontechgroup.com'}' addres,
   s: '364 E Main St STE 1008 Middletown DE 19709'};' websit,
   e: 'http,
-  s://ziontechgroup.com' },; export const,
+  s://ziontechgroup.com' }; export const,
   real2029Q1Additions: EnhancedRealMicroSaasService[] = [; {/* TODO: Fix JSX expression */}
-  g: 4.7,} review,
-  s: 18} },; {/* TODO: Fix JSX expression */}
-  g: 4.6,} review,
-  s: 12} },; {/* TODO: Fix JSX expression */}
+  g: 4.7} review,
+  s: 18} }; {/* TODO: Fix JSX expression */}
+  g: 4.6} review,
+  s: 12} }; {/* TODO: Fix JSX expression */}
   g: 4.5} review,
   s: 9} } ]; '

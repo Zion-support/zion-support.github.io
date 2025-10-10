@@ -245,7 +245,7 @@ const slowResources = resources;
   nam,
   e: resource.name,
             duratio,
-  n: resource.duration,;
+  n: resource.duration;
             typ,
   e: resource.initiatorType;)
           });
@@ -344,7 +344,7 @@ const slowResources = resources;
 };
   event_categor,
   y: 'Web Vitals',
-        valu,)
+        valu)
   e: Math.round(metric.value),
         event_labe,
   l: metric.rating,

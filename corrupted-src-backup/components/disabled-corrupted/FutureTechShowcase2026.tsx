@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 const FutureTechShowcase202, 6: React.FC = () => { ,
   const futureTechArticle, s = [
     {
@@ -14,9 +13,7 @@ const FutureTechShowcase202, 6: React.FC = () => { ,
       ic, o, n: <Atom, classNam, e = 'w-8 , h-, 8' / > ,</Atom>gradie</Atom>, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
       bad, g, e: 'QUANTU, M, A, I',
       sta, t, s: '1, 0,000x, Speed, Boost',
-=======
 const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
      },
     {/* TODO: Fix JSX expression */}
      },
@@ -27,26 +24,19 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
     {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
-     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ]; return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
+     }]; return(<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-=======
   ]; return (
     <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'>
       {/* Animated, background, effects */}</div>
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-=======
   ]; return (<div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n'></div>
       {/* Animated, background, effects */}
       <div, className='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'></div>
         <div, className='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' /></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         <div, className='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 2, s' }}
          /></div>
@@ -54,48 +44,38 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
          /></div>
       </div>
-<<<<<<< HEAD
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
         {/* Header, Sectio, n */}</div>
         <div, className='te, x, t-center, m, b-16'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in'></div>
             <Sparkles, className='w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e' />
             <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
-=======
       <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'></div>
         {/* Header, Sectio, n */}
         <div, className='te, x, t-center, m, b-16'></div>
           <div, className='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in'></div>
             <Sparkles, className='w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e' /></Sparkles>
             <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               🚀 6, REVOLUTIONARY, FUTURE TECH, BREAKTHROUGH, S • Januar, y, 2, 0, 20, 2, 6;
             </sp, a, n>
             <Sparkles, classNam, e = 'w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e' /></Sparkles>
           </div>
-<<<<<<< HEAD
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
-=======
           <h2, className='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'></h2>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             Future, Technology, Showcase 20, 2, 6;
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'></p>
             Experience, the, next generation, of, AI and, technology, breakthroughs.
             From, quantu, m-neural, fusion, to se, l, f-evolving, AI, ecosyste, m, s, discover, technologies, that will, reshape, the future, of, enterprise computi, n, g.
           </p>
-<<<<<<< HEAD
         </div>)
         {/* Future, Tech, Articles Gr, i, d */})
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>)
           { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
-=======
         </div>
         {/* Future, Tech, Articles Gr, i, d */}
-<<<<<<< HEAD
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
           { futureTechArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
              > {/* Card, glow, effect */}</div>
@@ -113,7 +93,6 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                         <TrendingUp, className='w-3 h-3' />
                         <sp, a, n>TRENDI, N, G</sp, a, n>
                       </di, v  > )  }
-=======
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'></div>
           {/* TODO: Fix JSX expression */}
             <div, ke, y = { artic, l, e.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
@@ -130,7 +109,6 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'></div>
                     {/* TODO: Fix JSX expression */})
                       </di, v  > )  }`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <span, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${artic, l, e.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-semibold, border, border-whi, t, e/30`}
                     ></span>
                       {artic, l, e.bad, g, e}
@@ -139,11 +117,8 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                 </div>
                 {/* Category, Ta, g */}
                 <div, classNam, e = 'mb-4'></div>
-<<<<<<< HEAD
                   <span, className='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
-=======
                   <span, className='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, tex, t-purp, l, e-400, tex, t-xs, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {artic, l, e.category}
                   </sp, a, n>
                 </div>
@@ -158,11 +133,8 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                 {/* Sta, t, s */}
                 <div, className='mb-6'></div>
                   <div, className='inli, n, e-block, p, x-4, p, y-2, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30'></div>
-<<<<<<< HEAD
                     <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm'>
-=======
                     <span, className='te, x, t-purp, l, e-400, fon, t-bold, tex, t-sm'></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       {artic, l, e.sta, t, s}
                     </sp, a, n>
                   </div>
@@ -170,7 +142,6 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                 {/* Meta, Inf, o */}
                 <div, className='flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10'></div>
                   <span, className='flex, item, s-center, ga, p-2'></span>
-<<<<<<< HEAD
                     <Zap, className='w-4 h-4, tex, t-purp, l, e-4, 0, 0' />
                     {artic, l, e.readTime}
                   </sp, a, n>
@@ -179,13 +150,11 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
                       mon, t, h: 'sh, o, r, t')
                       d, a, y: 'nume, r, i, c')
                       ye, a, r: 'nume, r, i, c')
-=======
                     <Zap, className='w-4 h-4, tex, t-purp, l, e-4, 0, 0' /></Zap>
                     {artic, l, e.readTime}
                   </sp, a, n>
                   <sp, a, n></sp>
                     {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     })}
                   </sp, a, n>
                 </d, i, v > {/* CTA, Butto, n */}`
@@ -206,13 +175,9 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
             { val, u, e: ', 1, 0,00, 0, x', lab, e, l: 'Quantum, Processing, Spee, d', ic, o, n: '⚛️' },
             { val, u, e: '99., 7%', lab, e, l: 'Au, t, o-Improvement, Ra, t, e', ic, o, n: '🧠' },
             { val, u, e: '99., 9%', lab, e, l: 'Predictive, Accura, c, y', ic, o, n: '🎯' },
-            { val, u, e: '$1, B+', lab, e, l: 'Enterprise, Value, Create, d', ic, o, n: '💰' },
-<<<<<<< HEAD
-          ].m, a, p((st, a, t, ind, e, x) => (</div>
+            { val, u, e: '$1, B+', lab, e, l: 'Enterprise, Value, Create, d', ic, o, n: '💰' }].m, a, p((st, a, t, ind, e, x) => (</div>
             <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
-=======
           ].m, a, p((st, a, t, ind, e, x) => (<div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-cent, e, r'></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
               <div, className='te, x, t-5xl, m, b-3'>{st, a, t.ic, o, n}</div>
               <div, className='te, x, t-4xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'></div>
                 {st, a, t.val, u, e}
@@ -227,17 +192,14 @@ const FutureTechShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = 'te, x, t-center, m, t-20'></div>
           <div, className='inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, vi, a-cy, a, n-500, t, o-pi, n, k-5, 0, 0'></div>
             <div, className='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'></div>
-<<<<<<< HEAD
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
                 Lead, the, Future Technology, Revolutio, n;
               </h3>
               <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
-=======
               <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'></h3>
                 Lead, the, Future Technology, Revolutio, n;
               </h3>
               <p, className='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                 Be, among, the first, enterprises, to deploy, these, revolutionary;
                 technologies. Get, exclusive, access to, our, future tech, innovations, and transform, your, organization with, nex, t-generation, AI, capabilities.
               </p>

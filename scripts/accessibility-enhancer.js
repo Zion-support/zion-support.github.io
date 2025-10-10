@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-=======
 #!/usr/bin/env node;
 /**
  * Accessibility Enhancement Script;
  * Enhances accessibility for better user experience;
  */
 
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -16,7 +13,6 @@ const __dirname = path.dirname(__filename);
 
 console.log('♿ Starting accessibility enhancements...');
 
-<<<<<<< HEAD
 // Create accessibility improvements for the main HTML file
 const indexPath = path.join(__dirname, '../dist/index.html');
 if (fs.existsSync(indexPath)) {
@@ -260,7 +256,6 @@ if (fs.existsSync(indexPath)) {
 
 // Create accessibility statement
 const accessibilityStatement = `# Accessibility Statement
-=======
 // 1. Generate accessibility report;
 function generateAccessibilityReport() {
   console.log('📊 Generating accessibility report...');
@@ -279,8 +274,7 @@ function generateAccessibilityReport() {
         id: "alt-text",
         name: "Alt text for images",
         status: "passed",
-        description: "All images have appropriate alt text",
-      },
+        description: "All images have appropriate alt text"},
       {
         id: "heading-structure",
         name: "Heading structure",
@@ -291,38 +285,32 @@ function generateAccessibilityReport() {
         id: "color-contrast",
         name: "Color contrast",
         status: "passed",
-        description: "Sufficient color contrast ratios",
-      },
+        description: "Sufficient color contrast ratios"},
       {
         id: "keyboard-navigation",
         name: "Keyboard navigation",
         status: "passed",
-        description: "All interactive elements are keyboard accessible",
-      },
+        description: "All interactive elements are keyboard accessible"},
       {
         id: "focus-management",
         name: "Focus management",
         status: "passed",
-        description: "Proper focus management and visible focus indicators",
-      },
+        description: "Proper focus management and visible focus indicators"},
       {
         id: "aria-labels",
         name: "ARIA labels",
         status: "passed",
-        description: "Appropriate ARIA labels and roles",
-      },
+        description: "Appropriate ARIA labels and roles"},
       {
         id: "semantic-html",
         name: "Semantic HTML",
         status: "passed",
-        description: "Proper use of semantic HTML elements",
-      },
+        description: "Proper use of semantic HTML elements"},
       {
         id: "skip-links",
         name: "Skip links",
         status: "passed",
-        description: "Skip links for keyboard navigation",
-      }
+        description: "Skip links for keyboard navigation"}
     ],
     recommendations: [,
       "Continue regular accessibility audits",
@@ -414,36 +402,31 @@ function generateAccessibilityImprovements() {
       title: "Add Skip Links",
       description: "Add skip links to allow keyboard users to bypass navigation",
       priority: "high",
-      implementation: "Add skip links at the top of each page",
-    },
+      implementation: "Add skip links at the top of each page"},
     {
       id: "focus-management",
       title: "Improve Focus Management",
       description: "Ensure proper focus management for modal dialogs and dynamic content",
       priority: "high",
-      implementation: "Implement focus trapping and restoration",
-    },
+      implementation: "Implement focus trapping and restoration"},
     {
       id: "aria-labels",
       title: "Enhance ARIA Labels",
       description: "Add more descriptive ARIA labels for complex UI components",
       priority: "medium",
-      implementation: "Review and enhance ARIA labels throughout the application",
-    },
+      implementation: "Review and enhance ARIA labels throughout the application"},
     {
       id: "color-contrast",
       title: "Verify Color Contrast",
       description: "Ensure all text meets WCAG AA contrast requirements",
       priority: "high",
-      implementation: "Test and adjust color combinations as needed",
-    },
+      implementation: "Test and adjust color combinations as needed"},
     {
       id: "keyboard-navigation",
       title: "Enhance Keyboard Navigation",
       description: "Ensure all interactive elements are keyboard accessible",
       priority: "high",
-      implementation: "Add keyboard event handlers where needed",
-    }
+      implementation: "Add keyboard event handlers where needed"}
   ];
 
   fs.writeFileSync(
@@ -465,18 +448,15 @@ function generateAccessibilityTestingGuide() {
       {,
         name: "axe-core",
         description: "Automated accessibility testing library",
-        usage: "npm install axe-core --save-dev",
-      },
+        usage: "npm install axe-core --save-dev"},
       {
         name: "WAVE",
         description: "Web accessibility evaluation tool",
-        usage: "Browser extension or online tool",
-      },
+        usage: "Browser extension or online tool"},
       {
         name: "Lighthouse",
         description: "Google's automated testing tool",
-        usage: "Chrome DevTools or CLI",
-      },
+        usage: "Chrome DevTools or CLI"},
       {
         name: "Screen Readers",
         description: "Test with actual screen readers",
@@ -499,15 +479,12 @@ function generateAccessibilityTestingGuide() {
       "Test with accessibility testing tools"
     ]
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
 ## Our Commitment
 Zion Tech Group is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.
 
-<<<<<<< HEAD
 ## Conformance Status
 This website is partially conformant with WCAG 2.1 level AA. Partially conformant means that some parts of the content do not fully conform to the accessibility standard.
-=======
 // Run all accessibility enhancements;
 async function runAccessibilityEnhancements() {
   try {
@@ -522,7 +499,6 @@ async function runAccessibilityEnhancements() {
     process.exit(1);
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
 ## Accessibility Features
 - Skip to main content links

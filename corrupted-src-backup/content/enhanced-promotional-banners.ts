@@ -1,7 +1,6 @@
 export interface EnhancedPromotionalBanner {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
   {,
     id: 'oct-01-autonomous-business-ops-2025',
@@ -15,8 +14,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     startDate: '2025-10-01',
     endDate: '2025-12-31',
     category: 'AI Platform',
-    tags: ['AI', 'Automation', 'Business Operations', 'Cost Reduction'],
-  },
+    tags: ['AI', 'Automation', 'Business Operations', 'Cost Reduction']},
   {
     id: 'oct-01-ai-governance-framework-2025',
     title: 'NEW: AI Governance Framework 2025 — Ship AI Safely with Zero Regret',
@@ -30,12 +28,9 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [,
     endDate: '2025-12-31',
     category: 'AI Governance',
     tags: ['AI Governance', 'Enterprise', 'Safety', 'Compliance'],
-=======
 export const,
   enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-];
+  }];

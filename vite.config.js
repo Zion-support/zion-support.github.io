@@ -8,20 +8,16 @@ export default defineConfig({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Optimize JSX runtime
-      jsxRuntime: 'automatic',
-    }),
+      jsxRuntime: 'automatic'}),
     visualizer({
       filename: 'dist/stats.html',
       open: true,
       gzipSize: true,
-      brotliSize: true,
-    }),
-  ],
+      brotliSize: true})],
   root: '.',
   build: {
     outDir: 'dist',
     sourcemap: false,
-<<<<<<< HEAD
     chunkSizeWarningLimit: 1000,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
@@ -33,14 +29,12 @@ export default defineConfig({
     rollupOptions: {
       maxParallelFileOps: 2,
       treeshake: {
-        moduleSideEffects: false,
-      },
+        moduleSideEffects: false},
       output: {
         manualChunks: id => {
           // Core React libraries
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'vendor';
-=======
     minify: 'esbuild',
     target: 'es2015',
     rollupOptions: {
@@ -49,7 +43,6 @@ export default defineConfig({
           // React and React DOM
           if (id.includes('node_modules/react') || id.includes('node_modules/react-dom')) {
             return 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
           // Router library
           if (id.includes('node_modules/react-router-dom')) {
@@ -64,27 +57,21 @@ export default defineConfig({
           }
           // Utilities and web vitals
           if (id.includes('node_modules/web-vitals')) {
-<<<<<<< HEAD
             return 'page';
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
             return 'libs';
-=======
             return 'vitals';
           }
           // Split other node_modules into separate chunks
           if (id.includes('node_modules')) {
             return 'vendor';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           }
         },
         assetFileNames: 'assets/[name]-[hash][extname]',
         chunkFileNames: 'assets/[name]-[hash].js',
-        entryFileNames: 'assets/[name]-[hash].js',
-      },
-    },
-<<<<<<< HEAD
+        entryFileNames: 'assets/[name]-[hash].js'}},
     // Enhanced performance optimizations
     terserOptions: {
       compress: {
@@ -125,42 +112,30 @@ export default defineConfig({
         negate_iife: true,
         typeofs: true,
         global_defs: {
-          'process.env.NODE_ENV': '"production"',
-        }
+          'process.env.NODE_ENV': '"production"'}
       },
       mangle: {
         safari10: true,
         toplevel: true,
         properties: {
-          regex: /^_/,
-        }
+          regex: /^_/}
       },
       format: {
         comments: false,
-        ecma: 2015,
-      },
-    },
-  },
+        ecma: 2015}}},
   server: {
     port: 3000,
     host: true,
     // Enable HMR
     hmr: {
-      overlay: true,
-    },
-=======
-  },
+      overlay: true}},
   server: {
     port: 3000,
-    open: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+    open: true},
   preview: {
     port: 4173,
-    open: true,
-  },
+    open: true},
   optimizeDeps: {
-<<<<<<< HEAD
     include: [
       'react',
       'react-dom', 
@@ -172,35 +147,22 @@ export default defineConfig({
     ],
     // Exclude problematic dependencies
     exclude: ['@vite/client', '@vite/env'],
-=======
-    include: ['react', 'react-dom', 'react-router-dom'],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+    include: ['react', 'react-dom', 'react-router-dom']},
   css: {
-    devSourcemap: true,
-  },
+    devSourcemap: true},
   esbuild: {
-<<<<<<< HEAD
     drop: ['console', 'debugger'],
     // Optimize JSX
     jsxFactory: 'React.createElement',
-    jsxFragment: 'React.Fragment',
-  },
+    jsxFragment: 'React.Fragment'},
   // Define global constants
   define: {
     __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
-    __VERSION__: JSON.stringify(process.env.npm_package_version),
-  },
+    __VERSION__: JSON.stringify(process.env.npm_package_version)},
   // Resolve configuration
   resolve: {
     alias: {
       '@': '/src',
       '@app': '/app',
-      '@components': '/app/components',
-    },
-  },
-=======
-    target: 'es2015',
-  },
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-});
+      '@components': '/app/components'}},
+    target: 'es2015'}});

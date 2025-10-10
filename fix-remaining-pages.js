@@ -6,11 +6,9 @@ const filesToFix = [
   '/workspace/app/offline/page.tsx',
   '/workspace/app/privacy/page.tsx',
   '/workspace/app/team/page.tsx',
-  '/workspace/app/terms/page.tsx',
-];
+  '/workspace/app/terms/page.tsx'];
 
 // // Function to process a single file;
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Remove any broken metadata lines;
@@ -29,9 +27,7 @@ function processFile(filePath) {
         (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,
         (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||
         (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))
       ) {/* TODO: Fix JSX expression */}
@@ -46,7 +42,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
 
     // Fix function declarations;
-<<<<<<< HEAD
     content = content.replace(
       /export default function (\w+)\(\) \{/,
       'const $1: React.FC = () => {'
@@ -56,10 +51,8 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
     if (!content.includes('export default') && content.includes('const ')) {,
       //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
       if (componentName) {,
-=======
     content = content.replace()
       /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
         content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`);
         modified = true;
       }
@@ -74,15 +67,12 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Process all files;
-<<<<<<< HEAD
 filesToFix.forEach(file => {)
   if (processFile(file)) {
     fixedCount++;
   }
-=======
 filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
   })
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 });
 
 // 

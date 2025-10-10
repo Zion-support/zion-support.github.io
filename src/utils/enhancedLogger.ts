@@ -133,7 +133,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   private,
   performanceMarks: Map;
           <string, number> = new Map();
-  private constructor(confi,)
+  private constructor(confi)
   g: Partial<LoggerConfig> = {}) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -258,9 +258,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record;
           <string, unknown>,
     error?: Error,
-    source?: string,
-
-): void {// TODO: Add content;}
+    source?: string): void {// TODO: Add content;}
 
 }
     const logData = { ...data };
@@ -294,9 +292,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record;
           <string, unknown>,
     error?: Error,
-    source?: string,
-
-): void {// TODO: Add content;}
+    source?: string): void {// TODO: Add content;}
 
 }
     const logData = { ...data };
@@ -327,7 +323,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
    * logger.endPerformance('api_call'); // Logs the duration;`
    * ```
    */
-  public startPerformance(markNam,)
+  public startPerformance(markNam)
   e: string): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -387,9 +383,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
     data?: Record;
           <string, unknown>,
     source?: string,
-    stack?: string,
-
-): void {// TODO: Add content;}
+    stack?: string): void {// TODO: Add content;}
 
 }
     // Check if log level meets minimum threshold;
@@ -579,7 +573,7 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //           ...entry,
-          timestam,)
+          timestam)
   p: entry.timestamp.toISOString()
         })
       });
@@ -764,12 +758,11 @@ export class EnhancedLogger {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //         ...log,
-        timestam,)
+        timestam)
   p: log.timestamp.toISOString()
       })),
 //       null,
-//       2,
-)
+//       2)
   }
 }
 // Export singleton instance;

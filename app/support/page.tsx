@@ -22,7 +22,6 @@ import {
   Zap;
 } from 'lucide-react';
 
-<<<<<<< HEAD
 const SupportPage: React.FC = () => {,
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -102,8 +101,7 @@ const SupportPage: React.FC = () => {,
       availability: '24/7'
       responseTime: '< 2 minutes',
       color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-    },
+      bgColor: 'bg-green-500/10'},
     {
       icon: Phone;
       title: 'Phone Support'
@@ -111,8 +109,7 @@ const SupportPage: React.FC = () => {,
       availability: '24/7'
       responseTime: 'Immediate',
       color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-    },
+      bgColor: 'bg-blue-500/10'},
     {
       icon: Mail;
       title: 'Email Support'
@@ -120,8 +117,7 @@ const SupportPage: React.FC = () => {,
       availability: '24/7'
       responseTime: '< 4 hours',
       color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-    },
+      bgColor: 'bg-purple-500/10'},
     {
       icon: Video;
       title: 'Video Call'
@@ -129,8 +125,7 @@ const SupportPage: React.FC = () => {,
       availability: 'Business Hours'
       responseTime: 'Scheduled',
       color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10',
-    }
+      bgColor: 'bg-orange-500/10'}
   ];
 
   const resources = [
@@ -139,29 +134,25 @@ const SupportPage: React.FC = () => {,
       title: 'Documentation'
       description: 'Comprehensive guides and API references',
       link: '/docs',
-      type: 'Guide',
-    },
+      type: 'Guide'},
     {
       icon: Video;
       title: 'Video Tutorials'
       description: 'Step-by-step video guides',
       link: '/tutorials',
-      type: 'Video',
-    },
+      type: 'Video'},
     {
       icon: FileText;
       title: 'Knowledge Base'
       description: 'Searchable articles and FAQs',
       link: '/knowledge-base',
-      type: 'Article',
-    },
+      type: 'Article'},
     {
       icon: Users;
       title: 'Community Forum'
       description: 'Connect with other users',
       link: '/community',
-      type: 'Community',
-    }
+      type: 'Community'}
   ];
 
   const filteredFaqs = faqs.filter(faq => {)
@@ -171,21 +162,16 @@ const SupportPage: React.FC = () => {,
     return matchesSearch && matchesCategory;
   });
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
       <Navigation />
-<<<<<<< HEAD
 
       <main className="container mx-auto px-4 py-16 pt-24">{/* Hero Section */}</main>
         <section className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">Support Center</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.</p>
           </p>
           
-=======
       <main className="container mx-auto px-4 py-16 pt-24">
         {/* Hero Section */}
         <section className="text-center mb-16">
@@ -194,9 +180,7 @@ const SupportPage: React.FC = () => {,
           </h1>)
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">)
             Get help when you need it. Our support team is here 24/7 to assist you with any questions or issues.)
-          </p>),
-          ),
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+          </p>)),
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto mb-8"></section>
             <div className="relative"></div>
@@ -205,7 +189,6 @@ const SupportPage: React.FC = () => {,
                 type="text"
                 placeholder="Search for help..."
                 value={searchQuery}
-<<<<<<< HEAD
                 onChange={(e) =>setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"</input>
               /></input>
@@ -215,10 +198,8 @@ const SupportPage: React.FC = () => {,
 
         {/* Support Channels */}
         <section className="mb-16">
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Get Help Now<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{supportChannels.map((channel, index) => (</div>
               <div key={index} className="cyber-card p-6 text-center group hover:scale-105 transition-transform">
-=======
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-4 bg-slate-800/50 border border-cyan-400/30 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
               />,
@@ -232,26 +213,21 @@ const SupportPage: React.FC = () => {,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
             {supportChannels.map((channel, index) => (
               <div key={index} className="cyber-card p-6 text-center group hover: scale-105 transition-transform">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div className={`w-16 h-16 ${channel.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}>
                   <channel.icon className={`w-8 h-8 ${channel.color}`} />
                 <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3><p className="text-gray-300 mb-4">{channel.description}</p>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
-<<<<<<< HEAD
                     <span className="text-gray-400">Availability:<span className="text-cyan-400">{channel.availability}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">Response:<span className="text-cyan-400">{channel.responseTime}</span>
-=======
                     <span className="text-gray-400">Availability: </span>,
                     <span className="text-cyan-400">{channel.availability}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-400">Response: </span>,
                     <span className="text-cyan-400">{channel.responseTime}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Get Help Now</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{supportChannels.map((channel, index) => (</section>
               <div key={index} className="cyber-card p-6 text-center group hover:scale-105 transition-transform"></div>
                 <div className={`w-16 h-16 ${channel.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform`}></div>
@@ -263,7 +239,6 @@ const SupportPage: React.FC = () => {,
                   </div>
                   <div className="flex justify-between"></div>
                     <span className="text-gray-400">Response:</span><span className="text-cyan-400">{channel.responseTime}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   </div>
                 </div>
               </div>
@@ -277,17 +252,11 @@ const SupportPage: React.FC = () => {,
             <h2 className="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2><p className="text-gray-300 mb-6">Find answers to common questions</p>
             
             {/* Category Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className="flex flex-wrap justify-center gap-2 mb-8">{categories.map((category) => (<button
-=======
             <div className="flex flex-wrap justify-center gap-2 mb-8">
               {categories.map((category) => (
                 <button;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
             <div className="flex flex-wrap justify-center gap-2 mb-8">{categories.map((category) => (</div><button
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   key={category.name}
                   onClick={() =>setSelectedCategory(category.name)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all ${
@@ -318,12 +287,8 @@ const SupportPage: React.FC = () => {,
 
         {/* Resources */}
         <section className="mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Helpful Resources<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{resources.map((resource, index) => (</div>
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Helpful Resources</h2><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">{resources.map((resource, index) => (</section>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               <Link
                 key={index}
                 to={resource.link}
@@ -331,9 +296,7 @@ const SupportPage: React.FC = () => {,
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform"></div>
                   <resource.icon className="w-8 h-8 text-white" />
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{resource.title}<p className="text-gray-300 mb-4">{resource.description}</p>
-=======
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Helpful Resources</h2>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">,
             {resources.map((resource, index) => (
@@ -349,17 +312,13 @@ const SupportPage: React.FC = () => {,
                   {resource.title}
                 </h3>
                 <p className="text-gray-300 mb-4">{resource.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 <div className="flex items-center justify-center text-cyan-400 text-sm">
-=======
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{resource.title}</h3><p className="text-gray-300 mb-4">{resource.description}</p>
                 <div className="flex items-center justify-center text-cyan-400 text-sm"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                   <span>{resource.type}</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover: translate-x-1 transition-transform" />,
                 </div>,
-              </Link>,
-            ))}
+              </Link>))}
           </div>
         </section>
 
@@ -368,17 +327,13 @@ const SupportPage: React.FC = () => {,
           <div className="cyber-card p-8 max-w-4xl mx-auto"></section>
             <h2 className="text-3xl font-bold text-white mb-4">Still Need Help?</h2><p className="text-xl text-gray-300 mb-8">Our support team is standing by to help you succeed. Get in touch with us today.</p>
             </p>
-<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link;
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all inline-flex items-center"
               >
-<<<<<<< HEAD
                 <MessageCircle className="w-5 h-5 mr-2" >Contact Support</MessageCircle>
               </MessageCircle>
               <a
@@ -387,7 +342,6 @@ const SupportPage: React.FC = () => {,
               ></a>
                 <Phone className="w-5 h-5 mr-2" >Call: (302) 464-0950</Phon>
               </Phone>
-=======
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Contact Support;
               </Link>
@@ -398,7 +352,6 @@ const SupportPage: React.FC = () => {,
                 <Phone className="w-5 h-5 mr-2" />
                 Call: (302) 464-0950;
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </div>
           </div>
         </section>
@@ -406,7 +359,6 @@ const SupportPage: React.FC = () => {,
 
       <Footer />,
     </div>,
-=======
 import React from 'react';
 
 
@@ -432,7 +384,6 @@ const SupportPage: React.FC = () => {
       </div>
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

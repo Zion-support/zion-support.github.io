@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 const NewBlogContentShowcase202, 6: React.FC = () => { ,
   const blogPost, s = [
     {
@@ -18,9 +17,7 @@ const NewBlogContentShowcase202, 6: React.FC = () => { ,
       ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,</Brain>gradie</Brain>, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
       bad, g, e: 'FEATU, R, E, D',
       tags: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
-=======
 const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
      },
     {/* TODO: Fix JSX expression */}
      },
@@ -37,21 +34,17 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
     {  val, u, e: '2, M+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-6 , h-, 6" / >  },"
     {  val, u, e: '4., 8', lab, e, l: 'Average, Rati, n, g', ic, o, n: <Star, classNam, e = "w-6 , h-, 6" / >  },"
     {  val, u, e: '15, 0+', lab, e, l: 'Expert, Autho, r, s', ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / >  }
-<<<<<<< HEAD
-<<<<<<< HEAD
   ]; return(<div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-=======
   ]; return (
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
       {/* Animated, background, effects */}</div>
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20"></div>
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" /></div>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} /></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
       </div>
       <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
@@ -68,7 +61,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             New, Blog, Content Showcase, 202, 6;
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-=======
   ]; return ("
     <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n"></div>
       {/* Animated, background, effects */}"
@@ -91,31 +83,24 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             New, Blog, Content Showcase, 202, 6;
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8"></p>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             Discover, our, latest insi, g, h, t, s, breakthrough, researc, h, and, expert, analysis on, the, most important, topics, in AI, and, technology. 
             Stay, ahead, of the, curve, with content, from industry-leading, expert, s.
-<<<<<<< HEAD
           </p>)
           {/* Blog, Stat, s */})
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">)
             { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
-=======
           </p>
-<<<<<<< HEAD
           {/* Blog, Stat, s */}
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
             { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (</div>
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 <div, className="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r">
-=======
           {/* Blog, Stat, s */}"
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o"></div>
             {/* TODO: Fix JSX expression */}"
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r"></div>"
                 <div, className="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r"></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   {st, a, t.ic, o, n}
                 </div>"
                 <div, className="te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1"></div>
@@ -128,7 +113,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             ))}
           </div>
         </div>
-<<<<<<< HEAD
         {/* Featured, Blog, Posts */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (</div>
@@ -149,7 +133,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                         <sp, a, n>TRENDI, N, G</sp, a, n>
                       </di, v  > )  }
                     <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}>
-=======
         {/* Featured, Blog, Posts */}"
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16"></div>
           {/* TODO: Fix JSX expression */}"
@@ -167,20 +150,16 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                     {/* TODO: Fix JSX expression */}
                       </di, v  > )  }`
                     <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                       {po, s, t.bad, g, e}
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
                 {/* Catego, r, y */}
                 <div, classNam, e = "mb-4"></div>
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-bl, u, e-400, tex, t-xs, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30">
-=======
                 {/* Catego, r, y */}"
                 <div, classNam, e = "mb-4"></div>"
                   <span, className="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-bl, u, e-400, tex, t-xs, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30"></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     {po, s, t.category}
                   </sp, a, n>
                 </div>
@@ -192,25 +171,21 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                 <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm"></p>
                   {po, s, t.excerpt}
                 </p>
-<<<<<<< HEAD
                 {/* Ta, g, s */}
                 <div, className="mb-6"></div>
                   <div, className="flex, fle, x-wrap, ga, p-1">
                     { po, s, t.tags.m, a, p((ta, g, i, d, x) = > (</div>
                       <span, ke, y = { id, x  }, classNa, m, e = "px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs">
-=======
                 {/* Ta, g, s */}"
                 <div, className="mb-6"></div>"
                   <div, className="flex, fle, x-wrap, ga, p-1"></div>
                     {/* TODO: Fix JSX expression */}"
                       <span, ke, y = { id, x  }, classNa, m, e = "px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs"></span>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         #{t, a, g}
                       </span>
                     ))}
                   </div>
                 </div>
-<<<<<<< HEAD
                 {/* Meta, Inf, o */}
                 <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>
                   <span, className="flex, item, s-center, ga, p-2"></span>
@@ -229,7 +204,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                   </div>
                   <div, className="flex, item, s-center, ga, p-1"></div>
                     <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-=======
                 {/* Meta, Inf, o */}"
                 <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10"></div>"
                   <span, className="flex, item, s-center, ga, p-2"></span>"
@@ -248,7 +222,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
                   </div>"
                   <div, className="flex, item, s-center, ga, p-1"></div>"
                     <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" /></Star>"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                     <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm">{po, s, t.rati, n, g}</sp, a, n>
                   </div>
                 </d, i, v > {/* CTA, Butto, n */}`
@@ -263,7 +236,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             </div>
           ))}
         </div>
-<<<<<<< HEAD
         {/* Newsletter, Signu, p */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-bl, u, e-5, 0, 0/20, m, b-16"></div>
           <div, className="te, x, t-cent, e, r"></div>
@@ -283,7 +255,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>
               <input, typ, e="ema, i, l"
                   placehold, e, r="Enter, your, email"
-=======
         {/* Newsletter, Signu, p */}"
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-bl, u, e-5, 0, 0/20, m, b-16"></div>"
           <div, className="te, x, t-cent, e, r"></div>"
@@ -303,7 +274,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o"></div>"
               <input, typ, e="ema, i, l""
                   placehold, e, r="Enter, your, email""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   className="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-bl, u, e-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
                 /></input>"
               <button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"></button>
@@ -316,7 +286,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
             </p>
           </div>
         </div>
-<<<<<<< HEAD
         {/* CTA, Sectio, n */}
         <div, classNam, e = "te, x, t-cent, e, r"></div>
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-purp, l, e-500, t, o-cy, a, n-5, 0, 0"></div>
@@ -330,7 +299,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
               </p>
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>
                 <a, hre, f="/bl, o, g"
-=======
         {/* CTA, Sectio, n */}"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
           <div, className="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-purp, l, e-500, t, o-cy, a, n-5, 0, 0"></div>"
@@ -344,7 +312,6 @@ const NewBlogContentShowcase202, 6: React.FC = () => {/* TODO: Fix JSX expressio
               </p>"
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r"></div>"
                 <a, hre, f="/bl, o, g""
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                   className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 ></a>"
                   <Sparkles, className="w-5 h-5" /></Sparkles>

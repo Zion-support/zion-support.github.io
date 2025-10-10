@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 
-<<<<<<< HEAD
 function processFile(filePath) {
   try {
     // Fix keywords type issues - convert string to array;
@@ -11,11 +10,8 @@ function processFile(filePath) {
       {
         pattern: /keywords:\s*'([^']+)',/g,
         replacement: "keywords: ['$1'],",
-=======
 function processFile(filePath) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-      },
-    ];
+      }];
 
     replacements.forEach(({ pattern, replacement }) => {/* TODO: Fix JSX expression */}
       }
@@ -28,7 +24,6 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
   }
 }
 
-<<<<<<< HEAD
 function processDirectory(dirPath) {
 
   items.forEach(item => {)
@@ -38,10 +33,8 @@ function processDirectory(dirPath) {
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
       if (processFile(fullPath)) {
         totalFixed++;
-=======
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
     } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
   });

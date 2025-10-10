@@ -9,7 +9,7 @@
   r: e.message }) } } statusCod,
   e: 200, bod,
   y: JSON && JSON.stringify({/* TODO: Fix JSX expression */}
-  k: true} page,)
+  k: true} page)
   s: results && results.length }); }; } catch (e) {} return {/* TODO: Fix JSX expression */}
   e: 500} bod,
   y: JSON && JSON.stringify({/* TODO: Fix JSX expression */})

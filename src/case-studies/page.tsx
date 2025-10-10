@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 const CaseStudiesPage: React.FC = () => {
@@ -83,7 +82,6 @@ $4}
 };
 
 export default CaseStudiesPage;
-=======
 'use client';
 import React, { useState } from 'react';
 import { ArrowRight, Filter, Search, Calendar, User, Building, Target, TrendingUp, Award, Star, Eye, MessageCircle, Share2, Download, Play, CheckCircle, Clock, DollarSign, BarChart, Users, Globe, Shield, Zap, Brain, Cloud, Code } from 'lucide-react';
@@ -588,4 +586,3 @@ export default function CaseStudiesPage() {
     </div>
   );
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

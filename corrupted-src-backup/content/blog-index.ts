@@ -3,7 +3,6 @@
  * Centralized index of all blog posts for easy discovery and navigation;
  */
 
-<<<<<<< HEAD
 export interface BlogPost {
   slug: string;
   title: string;
@@ -14,15 +13,12 @@ export interface BlogPost {
   tags: string[];
   featured?: boolean;,
   valueProposition: string;
-=======
 export interface BlogPost {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 /**
  * October 2025 Breakthrough Content;
  */
-<<<<<<< HEAD
 export const october2025Breakthroughs: BlogPost[] = [,
   {,
     slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
@@ -38,11 +34,9 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'model optimization',
       'AI evolution',
       'machine learning',
-      'enterprise AI',
-    ],
+      'enterprise AI'],
     featured: true;
-    valueProposition: '$25M annual savings',
-  },
+    valueProposition: '$25M annual savings'},
   {
     slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',
     title: 'Quantum-Inspired Optimization 2025',
@@ -57,11 +51,9 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'enterprise optimization',
       'quantum algorithms',
       'supply chain',
-      'portfolio optimization',
-    ],
+      'portfolio optimization'],
     featured: true;
-    valueProposition: '$42M annual value creation',
-  },
+    valueProposition: '$42M annual value creation'},
   {
     slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',
     title: 'Intelligent Automation Orchestration 2025',
@@ -76,11 +68,9 @@ export const october2025Breakthroughs: BlogPost[] = [,
       'RPA',
       'AI orchestration',
       'workflow automation',
-      'digital transformation',
-    ],
+      'digital transformation'],
     featured: true;
-    valueProposition: '$67M annual savings',
-  },
+    valueProposition: '$67M annual savings'},
   {
     slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
     title: 'Continuous Intelligence 2025',
@@ -91,8 +81,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     readTime: '10 min',
     tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],
     featured: true;
-    valueProposition: '$215M annual value',
-  },
+    valueProposition: '$215M annual value'},
   {
     slug: 'ai-2025-oct-03-autonomous-cloud-security'
     title: 'Autonomous Cloud Security 2025',
@@ -102,8 +91,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     readTime: '9 min',
     tags: ['security', 'zero trust', 'automation', 'rollback'],
     featured: true;
-    valueProposition: '$42M annual savings',
-  },
+    valueProposition: '$42M annual savings'},
   {
     slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
     title: 'Quantum Supply Chain 2025',
@@ -114,8 +102,7 @@ export const october2025Breakthroughs: BlogPost[] = [,
     readTime: '11 min',
     tags: ['quantum', 'optimization', 'supply chain'],
     featured: true;
-    valueProposition: '$127M annual savings',
-  },
+    valueProposition: '$127M annual savings'},
   {
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
     title: 'Runtime Rollback Guardrails Blueprint',
@@ -127,7 +114,6 @@ export const october2025Breakthroughs: BlogPost[] = [,
     tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
     featured: true;
     valueProposition: 'Instant reversibility, resilient releases',
-=======
 export const,
   october2025Breakthroughs: BlogPost[] = [
   {/* TODO: Fix JSX expression */}
@@ -143,9 +129,7 @@ export const,
   {/* TODO: Fix JSX expression */}
   },
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-];
+  }];
 
 /**
  * All blog posts combined;
@@ -155,14 +139,11 @@ export const,
 
 /**
  * Helper functions;
-<<<<<<< HEAD
  */,
 export function getFeaturedPosts(): BlogPost[] {,
   return allBlogPosts.filter(post => post.featured);
-=======
  */
 export function getFeaturedPosts(): BlogPost[] {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 }
 
 export function getAllCategories(): string[] {/* TODO: Fix JSX expression */}
@@ -171,27 +152,21 @@ export function getAllCategories(): string[] {/* TODO: Fix JSX expression */}
 export function getAllTags(): string[] {/* TODO: Fix JSX expression */}
 }
 
-<<<<<<< HEAD
 export function getTotalValueProposition(): string {
   const totalValue = allBlogPosts.reduce((sum, post) => {
     const _value = post.valueProposition.match(/\$(\d+)M/);
 :corrupted-src-backup/content/blog-index.ts;
-=======
 export function getTotalValueProposition(): string {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }, 0);
   return `$${totalValue}M+ total value proposition`;
 }
 
-<<<<<<< HEAD
 export const blogStats = {
   totalPosts: allBlogPosts.length;
   featuredPosts: getFeaturedPosts().length;
   categories: getAllCategories().length;
   tags: getAllTags().length;
   totalValue: getTotalValueProposition(),
-=======
 export const blogStats = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 `

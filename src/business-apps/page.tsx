@@ -5,10 +5,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
 import { CheckCircle, Star } from 'lucide-react';
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 const BusinessAppsPage: React.FC = () => {
   return (
     <div>

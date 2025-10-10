@@ -5,7 +5,6 @@ import React, { useState, useEffect } from "react";
 
 interface DashboardData {/* TODO: Fix JSX expression */}
   };
-<<<<<<< HEAD
   performance: {,
     loadTime: number;
     responseTime: number;
@@ -13,13 +12,11 @@ interface DashboardData {/* TODO: Fix JSX expression */}
   security: {,
     threatsBlocked: number;
     vulnerabilities: number;
-=======
   performanc,
   e: {/* TODO: Fix JSX expression */}
   };
   securit,
   y: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
 }
 

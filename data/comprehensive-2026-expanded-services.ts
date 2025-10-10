@@ -13,7 +13,6 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
   textColo,
   r: string;
   popular?: boolean;
-<<<<<<< HEAD
   marketPosition: string;
   targetAudience: string;
   trialDays: number;
@@ -32,8 +31,7 @@ export interface ComprehensiveService {/* TODO: Fix JSX expression */}
 const contact =
   mobile: "+1 302 464 0950",
   email: "kleber@ziontechgroup.com",
-  address: "364 E Main St STE 1008 Middletown DE 19709",
-};
+  address: "364 E Main St STE 1008 Middletown DE 19709"};
 export const comprehensiveExpandedServices: ComprehensiveService[] = [
   // AI & Machine Learning Services;
     id: 'ai-autonomous-customer-success'
@@ -43,7 +41,6 @@ export const comprehensiveExpandedServices: ComprehensiveService[] = [
     period: '/month',
     description: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.',
     features: [,
-=======
   marketPositio,
   n: string;
   targetAudienc,
@@ -98,14 +95,12 @@ export const,
   n: 'AI-powered platform that predicts customer churn risk and automatically triggers personalized retention campaigns.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Predictive churn scoring',
       'Automated intervention workflows',
       'Customer health dashboards',
       'Integration with CRM systems',
       'ROI tracking and analytics'
     ],
-<<<<<<< HEAD
     category: 'AI & Machine Learning'
     subcategory: 'Customer Success'
     realImplementation: true;
@@ -130,7 +125,6 @@ export const,
     customers: 85;
     rating: 4.8;
     reviews: 47;
-=======
     categor,
   y: 'AI & Machine Learning',
     subcategor,
@@ -179,9 +173,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 47,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 47},
     i,
   d: 'ai-powered-sales-intelligence',
     nam,
@@ -202,7 +194,6 @@ export const,
       'Competitor tracking',
       'Sales performance analytics'
     ],
-<<<<<<< HEAD
     category: 'AI & Machine Learning'
     subcategory: 'Sales Intelligence'
     realImplementation: true;
@@ -227,7 +218,6 @@ export const,
     customers: 62;
     rating: 4.6;
     reviews: 38;
-=======
     categor,
   y: 'AI & Machine Learning',
     subcategor,
@@ -276,9 +266,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 38,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 38},
     i,
   d: 'ai-content-personalization-engine',
     nam,
@@ -299,7 +287,6 @@ export const,
       'Personalization rules engine',
       'Performance analytics'
     ],
-<<<<<<< HEAD
     category: 'AI & Machine Learning'
     subcategory: 'Content Marketing'
     realImplementation: true;
@@ -333,7 +320,6 @@ export const,
     period: '/month',
     description: 'Intelligent platform that automatically optimizes cloud costs across AWS, Azure, and GCP using machine learning and predictive analytics.',
     features: [,
-=======
     categor,
   y: 'AI & Machine Learning',
     subcategor,
@@ -382,8 +368,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 41,
-  },
+  s: 41},
   // Cloud & Infrastructure Services,
   id: 'autonomous-cloud-cost-optimization',
     nam,
@@ -398,14 +383,12 @@ export const,
   n: 'Intelligent platform that automatically optimizes cloud costs across AWS, Azure, and GCP using machine learning and predictive analytics.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Multi-cloud cost optimization',
       'Predictive cost forecasting',
       'Automated resource scaling',
       'Waste detection and elimination',
       'FinOps reporting and analytics'
     ],
-<<<<<<< HEAD
     category: 'Cloud & Infrastructure'
     subcategory: 'Cost Optimization'
     realImplementation: true;
@@ -438,7 +421,6 @@ export const,
     period: '/month',
     description: 'Enterprise-grade zero-trust security platform that implements continuous verification and least-privilege access across all systems.',
     features: [,
-=======
     categor,
   y: 'Cloud & Infrastructure',
     subcategor,
@@ -487,8 +469,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 89,
-  },
+  s: 89},
     i,
   d: 'zero-trust-security-platform',
     nam,
@@ -503,14 +484,12 @@ export const,
   n: 'Enterprise-grade zero-trust security platform that implements continuous verification and least-privilege access across all systems.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Identity verification and management',
       'Continuous monitoring and analytics',
       'Micro-segmentation',
       'Threat detection and response',
       'Compliance reporting'
     ],
-<<<<<<< HEAD
     category: 'Cloud & Infrastructure'
     subcategory: 'Security'
     realImplementation: true;
@@ -535,7 +514,6 @@ export const,
     customers: 156;
     rating: 4.8;
     reviews: 112;
-=======
     categor,
   y: 'Cloud & Infrastructure',
     subcategor,
@@ -584,9 +562,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 112,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 112},
     i,
   d: 'kubernetes-autonomous-operations',
     nam,
@@ -607,7 +583,6 @@ export const,
       'Performance monitoring',
       'Cost optimization'
     ],
-<<<<<<< HEAD
     category: 'Cloud & Infrastructure'
     subcategory: 'Container Management'
     realImplementation: true;
@@ -641,7 +616,6 @@ export const,
     period: '/month',
     description: 'High-performance streaming data platform that processes millions of events per second with real-time analytics and machine learning capabilities.',
     features: [,
-=======
     categor,
   y: 'Cloud & Infrastructure',
     subcategor,
@@ -690,8 +664,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 67,
-  },
+  s: 67},
   // Data & Analytics Services,
   id: 'real-time-data-pipeline-platform',
     nam,
@@ -706,14 +679,12 @@ export const,
   n: 'High-performance streaming data platform that processes millions of events per second with real-time analytics and machine learning capabilities.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Real-time stream processing',
       'ML model serving',
       'Data quality monitoring',
       'Scalable architecture',
       'Real-time dashboards'
     ],
-<<<<<<< HEAD
     category: 'Data & Analytics'
     subcategory: 'Streaming Analytics'
     realImplementation: true;
@@ -738,7 +709,6 @@ export const,
     customers: 78;
     rating: 4.8;
     reviews: 56;
-=======
     categor,
   y: 'Data & Analytics',
     subcategor,
@@ -787,9 +757,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 56,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 56},
     i,
   d: 'ai-powered-business-intelligence',
     nam,
@@ -810,7 +778,6 @@ export const,
       'Automated reporting',
       'Data storytelling'
     ],
-<<<<<<< HEAD
     category: 'Data & Analytics'
     subcategory: 'Business Intelligence'
     realImplementation: true;
@@ -844,7 +811,6 @@ export const,
     period: '/month',
     description: 'Intelligent code review platform that automatically analyzes code quality, suggests improvements, and identifies potential security vulnerabilities.',
     features: [,
-=======
     categor,
   y: 'Data & Analytics',
     subcategor,
@@ -893,8 +859,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 78,
-  },
+  s: 78},
   // Developer Tools & DevOps,
   id: 'ai-code-review-assistant',
     nam,
@@ -909,14 +874,12 @@ export const,
   n: 'Intelligent code review platform that automatically analyzes code quality, suggests improvements, and identifies potential security vulnerabilities.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Automated code analysis',
       'Security vulnerability detection',
       'Code quality scoring',
       'Improvement suggestions',
       'Team collaboration tools'
     ],
-<<<<<<< HEAD
     category: 'Developer Tools & DevOps'
     subcategory: 'Code Quality'
     realImplementation: true;
@@ -941,7 +904,6 @@ export const,
     customers: 156;
     rating: 4.7;
     reviews: 98;
-=======
     categor,
   y: 'Developer Tools & DevOps',
     subcategor,
@@ -990,9 +952,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 98,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 98},
     i,
   d: 'autonomous-deployment-platform',
     nam,
@@ -1013,7 +973,6 @@ export const,
       'Deployment analytics',
       'Team collaboration'
     ],
-<<<<<<< HEAD
     category: 'Developer Tools & DevOps'
     subcategory: 'Deployment'
     realImplementation: true;
@@ -1047,7 +1006,6 @@ export const,
     period: '/month',
     description: 'AI-powered platform that automatically ensures HIPAA compliance, monitors data access, and provides audit trails for healthcare organizations.',
     features: [,
-=======
     categor,
   y: 'Developer Tools & DevOps',
     subcategor,
@@ -1096,8 +1054,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 67,
-  },
+  s: 67},
   // Industry-Specific Solutions,
   id: 'healthcare-ai-compliance-platform',
     nam,
@@ -1112,14 +1069,12 @@ export const,
   n: 'AI-powered platform that automatically ensures HIPAA compliance, monitors data access, and provides audit trails for healthcare organizations.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'HIPAA compliance automation',
       'Data access monitoring',
       'Audit trail generation',
       'Security incident detection',
       'Compliance reporting'
     ],
-<<<<<<< HEAD
     category: 'Industry Solutions'
     subcategory: 'Healthcare'
     realImplementation: true;
@@ -1152,7 +1107,6 @@ export const,
     period: '/month',
     description: 'Advanced AI platform that detects fraudulent transactions in real-time using machine learning and behavioral analysis for financial institutions.',
     features: [,
-=======
     categor,
   y: 'Industry Solutions',
     subcategor,
@@ -1201,8 +1155,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 34,
-  },
+  s: 34},
     i,
   d: 'fintech-fraud-detection-ai',
     nam,
@@ -1217,14 +1170,12 @@ export const,
   n: 'Advanced AI platform that detects fraudulent transactions in real-time using machine learning and behavioral analysis for financial institutions.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Real-time fraud detection',
       'Behavioral analysis',
       'Risk scoring',
       'Transaction monitoring',
       'Compliance reporting'
     ],
-<<<<<<< HEAD
     category: 'Industry Solutions'
     subcategory: 'FinTech'
     realImplementation: true;
@@ -1258,7 +1209,6 @@ export const,
     period: '/month',
     description: 'Complete email marketing automation platform with AI-driven content generation, send time optimization, and behavioral targeting.',
     features: [,
-=======
     categor,
   y: 'Industry Solutions',
     subcategor,
@@ -1307,8 +1257,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 52,
-  },
+  s: 52},
   // Micro SaaS Services,
   id: 'ai-email-automation-suite',
     nam,
@@ -1323,14 +1272,12 @@ export const,
   n: 'Complete email marketing automation platform with AI-driven content generation, send time optimization, and behavioral targeting.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'AI content generation',
       'Send time optimization',
       'Behavioral targeting',
       'A/B testing automation',
       'Advanced analytics'
     ],
-<<<<<<< HEAD
     category: 'Micro SaaS'
     subcategory: 'Email Marketing'
     realImplementation: true;
@@ -1355,7 +1302,6 @@ export const,
     customers: 234;
     rating: 4.8;
     reviews: 156;
-=======
     categor,
   y: 'Micro SaaS',
     subcategor,
@@ -1404,9 +1350,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 156,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 156},
     i,
   d: 'smart-inventory-management',
     nam,
@@ -1427,7 +1371,6 @@ export const,
       'Multi-location support',
       'Real-time analytics'
     ],
-<<<<<<< HEAD
     category: 'Micro SaaS'
     subcategory: 'Inventory Management'
     realImplementation: true;
@@ -1452,7 +1395,6 @@ export const,
     customers: 189;
     rating: 4.7;
     reviews: 134;
-=======
     categor,
   y: 'Micro SaaS',
     subcategor,
@@ -1501,9 +1443,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 134,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 134},
     i,
   d: 'ai-customer-support-chatbot',
     nam,
@@ -1524,7 +1464,6 @@ export const,
       'Analytics dashboard',
       'Custom training'
     ],
-<<<<<<< HEAD
     category: 'Micro SaaS'
     subcategory: 'Customer Support'
     realImplementation: true;
@@ -1549,7 +1488,6 @@ export const,
     customers: 312;
     rating: 4.6;
     reviews: 198;
-=======
     categor,
   y: 'Micro SaaS',
     subcategor,
@@ -1598,9 +1536,7 @@ export const,
     ratin,
   g: 4.6,
     review,
-  s: 198,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 198},
     i,
   d: 'automated-social-media-manager',
     nam,
@@ -1621,7 +1557,6 @@ export const,
       'Performance analytics',
       'Competitor analysis'
     ],
-<<<<<<< HEAD
     category: 'Micro SaaS'
     subcategory: 'Social Media'
     realImplementation: true;
@@ -1655,7 +1590,6 @@ export const,
     period: '/month',
     description: 'Comprehensive managed IT services including helpdesk support, network monitoring, security management, and cloud migration.',
     features: [,
-=======
     categor,
   y: 'Micro SaaS',
     subcategor,
@@ -1704,8 +1638,7 @@ export const,
     ratin,
   g: 4.5,
     review,
-  s: 112,
-  },
+  s: 112},
   // IT Services,
   id: 'managed-it-support-services',
     nam,
@@ -1720,14 +1653,12 @@ export const,
   n: 'Comprehensive managed IT services including helpdesk support, network monitoring, security management, and cloud migration.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       '24/7 helpdesk support',
       'Network monitoring',
       'Security management',
       'Cloud migration',
       'Backup and recovery'
     ],
-<<<<<<< HEAD
     category: 'IT Services'
     subcategory: 'Managed Services'
     realImplementation: true;
@@ -1752,7 +1683,6 @@ export const,
     customers: 145;
     rating: 4.8;
     reviews: 98;
-=======
     categor,
   y: 'IT Services',
     subcategor,
@@ -1801,9 +1731,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 98,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 98},
     i,
   d: 'cybersecurity-assessment-platform',
     nam,
@@ -1824,7 +1752,6 @@ export const,
       'Remediation guidance',
       'Risk assessment'
     ],
-<<<<<<< HEAD
     category: 'IT Services'
     subcategory: 'Cybersecurity'
     realImplementation: true;
@@ -1849,7 +1776,6 @@ export const,
     customers: 98;
     rating: 4.7;
     reviews: 67;
-=======
     categor,
   y: 'IT Services',
     subcategor,
@@ -1898,9 +1824,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 67,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 67},
     i,
   d: 'cloud-migration-consulting',
     nam,
@@ -1921,7 +1845,6 @@ export const,
       'Application modernization',
       'Cost optimization'
     ],
-<<<<<<< HEAD
     category: 'IT Services'
     subcategory: 'Cloud Consulting'
     realImplementation: true;
@@ -1955,7 +1878,6 @@ export const,
     period: '/month',
     description: 'Advanced AI platform that extracts data from documents, processes forms, and automates document workflows using OCR and NLP.',
     features: [,
-=======
     categor,
   y: 'IT Services',
     subcategor,
@@ -2004,8 +1926,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 45,
-  },
+  s: 45},
   // Advanced AI Services,
   id: 'ai-document-processing-platform',
     nam,
@@ -2020,14 +1941,12 @@ export const,
   n: 'Advanced AI platform that extracts data from documents, processes forms, and automates document workflows using OCR and NLP.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'OCR and text extraction',
       'Form processing',
       'Data validation',
       'Workflow automation',
       'API integration'
     ],
-<<<<<<< HEAD
     category: 'AI & Machine Learning'
     subcategory: 'Document Processing'
     realImplementation: true;
@@ -2052,7 +1971,6 @@ export const,
     customers: 156;
     rating: 4.8;
     reviews: 89;
-=======
     categor,
   y: 'AI & Machine Learning',
     subcategor,
@@ -2101,9 +2019,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 89,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 89},
     i,
   d: 'ai-predictive-maintenance',
     nam,
@@ -2124,7 +2040,6 @@ export const,
       'Cost optimization',
       'Performance analytics'
     ],
-<<<<<<< HEAD
     category: 'AI & Machine Learning'
     subcategory: 'Predictive Analytics'
     realImplementation: true;
@@ -2158,7 +2073,6 @@ export const,
     period: '/month',
     description: 'Advanced platform for simulating quantum algorithms, optimizing quantum circuits, and preparing for quantum computing adoption.',
     features: [,
-=======
     categor,
   y: 'AI & Machine Learning',
     subcategor,
@@ -2207,8 +2121,7 @@ export const,
     ratin,
   g: 4.7,
     review,
-  s: 56,
-  },
+  s: 56},
   // Emerging Technology Services,
   id: 'quantum-computing-simulation-platform',
     nam,
@@ -2223,14 +2136,12 @@ export const,
   n: 'Advanced platform for simulating quantum algorithms, optimizing quantum circuits, and preparing for quantum computing adoption.',
     feature,
   s: [,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'Quantum algorithm simulation',
       'Circuit optimization',
       'Performance benchmarking',
       'Quantum education tools',
       'Research collaboration'
     ],
-<<<<<<< HEAD
     category: 'Emerging Technology'
     subcategory: 'Quantum Computing'
     realImplementation: true;
@@ -2255,7 +2166,6 @@ export const,
     customers: 23;
     rating: 4.9;
     reviews: 18;
-=======
     categor,
   y: 'Emerging Technology',
     subcategor,
@@ -2304,9 +2214,7 @@ export const,
     ratin,
   g: 4.9,
     review,
-  s: 18,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
+  s: 18},
     i,
   d: 'blockchain-enterprise-platform',
     nam,
@@ -2327,7 +2235,6 @@ export const,
       'DApp deployment',
       'Governance tools'
     ],
-<<<<<<< HEAD
     category: 'Emerging Technology'
     subcategory: 'Blockchain'
     realImplementation: true;
@@ -2358,50 +2265,42 @@ export const serviceCategories = [{name: 'Micro SaaS',
     description: 'Affordable, specialized software solutions for small businesses',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Micro SaaS'),
     icon: ''}
-    color: 'from-blue-600 to-cyan-700',
-  },
+    color: 'from-blue-600 to-cyan-700'},
     name: 'AI & Machine Learning',
     description: 'Intelligent automation and decision-making systems',
     services: comprehensiveExpandedServices.filter(s => s.category === 'AI & Machine Learning'),
     icon: '',
-    color: 'from-purple-600 to-pink-700',
-  },
+    color: 'from-purple-600 to-pink-700'},
     name: 'IT Services',
     description: 'Comprehensive IT support and infrastructure management',
     services: comprehensiveExpandedServices.filter(s => s.category === 'IT Services'),
     icon: '',
-    color: 'from-indigo-600 to-blue-700',
-  },
+    color: 'from-indigo-600 to-blue-700'},
     name: 'Cloud & Infrastructure',
     description: 'Scalable cloud solutions and infrastructure management',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Cloud & Infrastructure'),
     icon: '',
-    color: 'from-green-600 to-emerald-700',
-  },
+    color: 'from-green-600 to-emerald-700'},
     name: 'Data & Analytics',
     description: 'Real-time data processing and business intelligence',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Data & Analytics'),
     icon: '',
-    color: 'from-teal-600 to-green-700',
-  },
+    color: 'from-teal-600 to-green-700'},
     name: 'Developer Tools & DevOps',
     description: 'Development automation and operational excellence',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Developer Tools & DevOps'),
     icon: '',
-    color: 'from-cyan-600 to-blue-700',
-  },
+    color: 'from-cyan-600 to-blue-700'},
     name: 'Industry Solutions',
     description: 'Specialized solutions for specific industries',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Industry Solutions'),
     icon: '',
-    color: 'from-orange-600 to-red-700',
-  },
+    color: 'from-orange-600 to-red-700'},
     name: 'Emerging Technology',
     description: 'Cutting-edge technology solutions and platforms',
     services: comprehensiveExpandedServices.filter(s => s.category === 'Emerging Technology'),
     icon: '',
     color: 'from-violet-600 to-purple-700',
-=======
     categor,
   y: 'Emerging Technology',
     subcategor,
@@ -2450,8 +2349,7 @@ export const serviceCategories = [{name: 'Micro SaaS',
     ratin,
   g: 4.7,
     review,
-  s: 28,
-  }
+  s: 28}
 ];
 export const serviceCategories = [{/* TODO: Fix JSX expression */}
   n: ''}
@@ -2534,7 +2432,6 @@ export const serviceCategories = [{/* TODO: Fix JSX expression */}
   n: '',
     colo,
   r: 'from-violet-600 to-purple-700'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 ];
 export interface ComprehensiveService,

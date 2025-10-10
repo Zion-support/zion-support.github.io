@@ -127,7 +127,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
 //       ...properties;
     };
   }
-  public trackEvent(even,)
+  public trackEvent(even)
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -160,7 +160,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       this.flush();
     }
   }
-  private sendToGtag(even,)
+  private sendToGtag(even)
   t: AnalyticsEvent): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -176,8 +176,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   s: Record;)
           <string, unknown>) => void;
         }
-// ).gtag,
-) {/* TODO: Fix JSX expression */}
+// ).gtag) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ()
@@ -204,7 +203,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
       });
     }
   }
-  public trackPageView(pagePat,)
+  public trackPageView(pagePat)
   h: string, pageTitle?: string): void {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -280,7 +279,7 @@ class EnhancedAnalytics {/* TODO: Fix JSX expression */}
   y: 'Performance',
       actio,
   n: metric,
-      valu,)
+      valu)
   e: Math.round(value),
       metadat,
   a: {/* TODO: Fix JSX expression */}

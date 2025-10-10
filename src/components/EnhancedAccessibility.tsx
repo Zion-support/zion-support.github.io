@@ -41,7 +41,7 @@ const,
   enableFocusManagement = true,
   enableReducedMotion = true,
   enableColorBlindSupport = true,
-  enableZoomControl = true,)
+  enableZoomControl = true)
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -62,7 +62,7 @@ const,
     zoomLeve,
   l: 100,
     colorBlin,
-  d: 'none',)
+  d: 'none')
   });
   const [isVisible, setIsVisible] = useState(false);
   // Load settings from localStorage;
@@ -80,7 +80,7 @@ const,
     }
   }, []);
   // Save settings to localStorage;
-const saveSettings = useCallback((newSetting,)
+const saveSettings = useCallback((newSetting)
   s: AccessibilitySettings) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -213,7 +213,7 @@ const saveSettings = useCallback((newSetting,)
     };
   }, [enableFocusManagement, settings.focusVisible]);
   // Screen reader announcements;
-const announceToScreenReader = useCallback((messag,)
+const announceToScreenReader = useCallback((messag)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -271,7 +271,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
     saveSettings(newSettings);`
     announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`);
   };
-  const adjustZoom = (delt,)
+  const adjustZoom = (delt)
   a: number) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -281,7 +281,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
     saveSettings(newSettings);`
     announceToScreenReader(`Zoom level set to ${newZoom}%`);
   };
-  const setColorBlind = (typ,)
+  const setColorBlind = (typ)
   e: AccessibilitySettings['colorBlind']) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -292,7 +292,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   };
 // Reset all settings;
   const resetSettings = () => {/* TODO: Fix JSX expression */}
-  t: false,}
+  t: false}
       largeTex,
   t: false,
       reducedMotio,
@@ -304,8 +304,7 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
       zoomLeve,
   l: 100,
       colorBlin,
-  d: 'none',
-    };
+  d: 'none'};
     saveSettings(defaultSettings);
     announceToScreenReader('Accessibility settings reset to default');
   };

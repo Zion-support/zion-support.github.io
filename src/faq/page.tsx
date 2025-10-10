@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
@@ -169,7 +168,6 @@ $4];
     </>
 
 export default FAQPage;
-=======
 
 
 import { Link } from 'react-router-dom';
@@ -184,7 +182,7 @@ const FAQPage: React.FC = () => {
 };
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
-const toggleItem = (inde,)
+const toggleItem = (inde)
   x: number) => {setOpenItems(prev =>})
       prev.includes(index)
         ? prev.filter(i => i !== index)
@@ -456,4 +454,3 @@ export default FAQPage;
 export default FaqPage;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

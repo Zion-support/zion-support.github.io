@@ -1,6 +1,4 @@
 'use client';
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
@@ -98,5 +96,4 @@ const QuantumComputingPage: React.FC = () => {
   );
 };
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 export default QuantumComputingPage;

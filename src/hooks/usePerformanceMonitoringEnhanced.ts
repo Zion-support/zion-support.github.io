@@ -6,7 +6,7 @@ import { useEffect, useCallback } from 'react';
 export const _usePerformanceMonitoring = () => {// TODO: Add content;}
 
 }
-  const reportWebVitals = useCallback((metri,)
+  const reportWebVitals = useCallback((metri)
   c: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

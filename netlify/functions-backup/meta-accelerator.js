@@ -1,7 +1,6 @@
 const _path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', '..') relPath)}
-<<<<<<< HEAD
   const res = spawnSync('node', [abs, ...args], {)
     stdio: 'pipe'),
     encoding: 'utf8'}
@@ -12,7 +11,6 @@ function runNode(relPath) args = []) {const abs = path.resolve(__dirname, '..', 
   };
 }
 exports.config = {schedule: '*/2 * * * *'} // every 2 minutes;
-=======
   const res = spawnSync('node', [abs, ...args], {/* TODO: Fix JSX expression */}
   g: 'utf8'})
   });
@@ -24,7 +22,6 @@ exports.config = {schedule: '*/2 * * * *'} // every 2 minutes;
 }
 exports.config = {/* TODO: Fix JSX expression */}
   e: '*/2 * * * *'} // every 2 minutes;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 exports.handler = async () => {const logs = []}
   function logStep(name} fn) {/* TODO: Fix JSX expression */}
@@ -37,7 +34,6 @@ exports.handler = async () => {const logs = []}
   }
   // Ensure canonical URL available to scripts if needed;
   process.env.CANONICAL_URL =
-<<<<<<< HEAD
     process.env.CANONICAL_URL || 'https: //ziontechgroup.com',
   // Meta tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index;
   logStep('meta: docs-index') () =>
@@ -57,38 +53,32 @@ exports.handler = async () => {const logs = []}
   // Attempt to push any changes;
   logStep('git: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {statusCode: 200} body: logs.join('\n') };
-=======
     process.env.CANONICAL_URL || 'http,
   s: //ziontechgroup.com'
   // Meta,
   tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index;
-  logStep('met,)
+  logStep('met)
   a: docs-index') () =>
-    runNode('automation/docs-pages-indexer.cjs'),
-  );
-  logStep('met,)
+    runNode('automation/docs-pages-indexer.cjs'));
+  logStep('met)
   a: readme') () => runNode('scripts/generate-readme.js'));
-  logStep('met,)
+  logStep('met)
   a: repo-graph') () =>
-    runNode('automation/repo-knowledge-graph.cjs'),
-  );
-  logStep('met,)
+    runNode('automation/repo-knowledge-graph.cjs'));
+  logStep('met)
   a: repo-radar') () =>
-    runNode('automation/repo-radar-metrics.cjs'),
-  );
-  logStep('met,)
+    runNode('automation/repo-radar-metrics.cjs'));
+  logStep('met)
   a: todo-scanner') () => runNode('automation/todo-scanner.cjs'));
-  logStep('met,)
+  logStep('met)
   a: search-index') () =>
-    runNode('scripts/generate-search-index.js'),
-  );
+    runNode('scripts/generate-search-index.js'));
   // Attempt to push any changes;
-  logStep('gi,)
+  logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs'));
   return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 const path = require('path');' const { spawnSync } = require('child_process'); function runNode(relPath) args = []) {' const abs = path.resolve(__dirname, '..', '..') relPath)}' const res = spawnSync('node', [abs, ...args]) {/* TODO: Fix JSX expression */}
   o: 'pipe'} encodin,
@@ -98,13 +88,13 @@ const path = require('path');' const { spawnSync } = require('child_process'); f
   r: res.stderr || '' }; } exports.config = {/* TODO: Fix JSX expression */}`
   e: '*/2 * * * *'} // every 2 minutes }; exports.handler = async () => {const logs = []} function logStep(name} fn) { logs.push(`\\n=== ${name} ===`); const {status, stdout} stderr } = fn(); if (stdout) logs.push(stdout); if (stderr) logs.push(stderr); logs.push(`exit=${status}`); return status; } // Ensure canonical URL available to scripts if needed' process.env.CANONICAL_URL = process.env.CANONICAL_URL || 'http,
   s: //ziontechgroup.com' // Meta,
-  tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index' logStep('met,)
-  a: docs-index') () => runNode('automation/docs-pages-indexer.cjs'));' logStep('met,)
-  a: readme') () => runNode('scripts/generate-readme.js'));' logStep('met,)
-  a: repo-graph') () => runNode('automation/repo-knowledge-graph.cjs'));' logStep('met,)
-  a: repo-radar') () => runNode('automation/repo-radar-metrics.cjs'));' logStep('met,)
-  a: todo-scanner') () => runNode('automation/todo-scanner.cjs'));' logStep('met,)
-  a: search-index') () => runNode('scripts/generate-search-index.js')); // Attempt to push any changes' logStep('gi,)
+  tasks: docs index, README, repo knowledge graph, radar metrics, TODO summary, search index' logStep('met)
+  a: docs-index') () => runNode('automation/docs-pages-indexer.cjs'));' logStep('met)
+  a: readme') () => runNode('scripts/generate-readme.js'));' logStep('met)
+  a: repo-graph') () => runNode('automation/repo-knowledge-graph.cjs'));' logStep('met)
+  a: repo-radar') () => runNode('automation/repo-radar-metrics.cjs'));' logStep('met)
+  a: todo-scanner') () => runNode('automation/todo-scanner.cjs'));' logStep('met)
+  a: search-index') () => runNode('scripts/generate-search-index.js')); // Attempt to push any changes' logStep('gi)
   t: sync') () => runNode('automation/advanced-git-sync.cjs')); ' return {/* TODO: Fix JSX expression */}
   e: 200} bod,
   y: logs.join('\n') }; };'`

@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
 'use client';
 import React from 'react';
-<<<<<<< HEAD
-=======
 
 
 import { Link } from 'react-router-dom';
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01fc
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
 const PartnersPage: React.FC = () => {
-<<<<<<< HEAD
   const partnerTypes = [
     {
       title: 'Technology Partners',
@@ -106,7 +99,6 @@ namename: 'Channel Partners',
       color: 'text-orange-400',
       bgColor: 'bg-orange-500/10'
 
-=======
   const partnerTypes = [];
   return (
     {// TODO: Add content;}
@@ -125,8 +117,7 @@ namename: 'Channel Partners',
       partner,
   s: [
   // TOD,
-  O: Add items,
-];
+  O: Add items];
         {/* TODO: Fix JSX expression */}
   o: '' },
         {/* TODO: Fix JSX expression */}
@@ -194,13 +185,11 @@ icon: Globe,
       description: 'Access to worldwide markets and customers through our partner network',
 
 const PagePage: React.FC = () => {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   return (
     <>
       <Navigation />
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16 pt-24">
-<<<<<<< HEAD
           {/* Header */}
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text">
@@ -285,7 +274,6 @@ const PagePage: React.FC = () => {
                 Email Us
       <Footer />
     </>
-=======
 
           {/* Header */}
           <div className="text-center mb-16"></div>"
@@ -401,7 +389,6 @@ const PagePage: React.FC = () => {
       <Footer />
 
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 

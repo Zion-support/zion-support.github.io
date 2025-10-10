@@ -1,12 +1,9 @@
 #!/usr/bin/env node;
 /**
-<<<<<<< HEAD
  * Comprehensive Improvements Script;
  * Runs all optimization and enhancement scripts;
-=======
  * Comprehensive Code Improvements Script;
  * Automatically applies various code quality and performance improvements;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
  */
 
 import { execSync } from 'child_process';
@@ -17,7 +14,6 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-<<<<<<< HEAD
 console.log('🚀 Starting comprehensive improvements...');
 
 // Add new scripts for better development experience;
@@ -32,7 +28,6 @@ packageJson.scripts = {
   'format:all': 'prettier --write "**/*.{ts,tsx,js,jsx,json,css,md}"',
   'clean: all': 'rm -rf dist node_modules/.vite .next .turbo',
   'precommit': 'npm run type-check && npm run lint && npm run test: unit',
-=======
 // // 1. Code Quality Improvements;
 // // Update package.json with better scripts;
 // const packageJsonPath = path.join(__dirname, '..', 'package.json');
@@ -45,9 +40,7 @@ packageJson.scripts = {/* TODO: Fix JSX expression */}
   n:all': 'rm -rf dist node_modules/.vite .next .turbo',
   'precommit': 'npm run type-check && npm run lint && npm run,
   test:unit',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  'postinstall': 'npm run type-check',
-};
+  'postinstall': 'npm run type-check'};
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 // // 2. Create TypeScript configuration improvements;
@@ -58,7 +51,6 @@ if (fs.existsSync(tsConfigPath)) {/* TODO: Fix JSX expression */}
 }
 
 // Enhanced TypeScript configuration;
-<<<<<<< HEAD
 const improvedTsConfig = {
   ...tsConfig,
   compilerOptions: {
@@ -82,66 +74,52 @@ const improvedTsConfig = {
     verbatimModuleSyntax: true;
   },
   include: [,
-=======
 const improvedTsConfig = {/* TODO: Fix JSX expression */}
   },
   includ,
   e: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     'src/**/*',
     'app/**/*',
     '**/*.ts',
-    '**/*.tsx',
-  ],
-<<<<<<< HEAD
+    '**/*.tsx'],
   exclude: [,
-=======
   exclud,
   e: [
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     'node_modules',
     'dist',
     'build',
     '**/*.test.ts',
     '**/*.test.tsx',
     '**/*.spec.ts',
-    '**/*.spec.tsx',
-  ],
-};
+    '**/*.spec.tsx']};
 
 fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
 // // 3. Create ESLint configuration improvements;
-<<<<<<< HEAD
 // const eslintConfig = {
   extends: [,
     'eslint:recommended',
     '@typescript-eslint/recommended',
     'plugin: react/recommended',
-    'plugin: react-hooks/recommended',
-  ],
+    'plugin: react-hooks/recommended'],
   parser: '@typescript-eslint/parser'
   parserOptions: {
     ecmaVersion: 2022;
     sourceType: 'module',
     ecmaFeatures: {,
       jsx: true;
-    },
-  },
+    }},
   plugins: ['@typescript-eslint', 'react', 'react-hooks'],
   rules: {,
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-=======
 // const eslintConfig = {/* TODO: Fix JSX expression */}
-    },
-  },
+    }},
   plugin,
   s: ['@typescript-eslint', 'react', 'react-hooks'],
   rule,
   s: {/* TODO: Fix JSX expression */}
   n: '^_' }],
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/prefer-const': 'error',
@@ -150,32 +128,23 @@ fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
     'no-console': 'warn',
     'no-debugger': 'error',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-  },
-<<<<<<< HEAD
+    'react-hooks/exhaustive-deps': 'warn'},
   settings: {,
     react: {,
-      version: 'detect',
-    },
-  },
+      version: 'detect'}},
   env: {
     browser: true;
     es2022: true;
     node: true;
-=======
   setting,
   s: {/* TODO: Fix JSX expression */}
-    },
-  },
+    }},
   en,
   v: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-};
+  }};
 
 fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(eslintConfig, null, 2));
 // // 4. Create Prettier configuration;
-<<<<<<< HEAD
 // const prettierConfig = {
   semi: true;
   trailingComma: 'es5'
@@ -194,9 +163,7 @@ fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(es
   vueIndentScriptAndStyle: false;
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: false;
-=======
 // const prettierConfig = {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 };
 
 fs.writeFileSync(path.join(__dirname, '..', '.prettierrc.json'), JSON.stringify(prettierConfig, null, 2));
@@ -212,22 +179,18 @@ if (fs.existsSync(viteConfigPath)) {/* TODO: Fix JSX expression */}
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
 
-<<<<<<< HEAD
 export default defineConfig({
   plugins: [,
-    react({,)
-      jsxImportSource: '@emotion/react',)
-      babel: {,)
-        plugins: ['@emotion/babel-plugin']),
-      })
+    react({)
+      jsxImportSource: '@emotion/react')
+      babel: {)
+        plugins: ['@emotion/babel-plugin'])})
     }),
     visualizer({)
       filename: 'dist/stats.html'),
       open: false;),
       gzipSize: true),
-      brotliSize: true),
-    }),
-  ],
+      brotliSize: true)})],
   build: {
     target: 'esnext'
     minify: 'terser'
@@ -237,17 +200,12 @@ export default defineConfig({
         manualChunks: {,
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react'],
-        },
-      },
-    },
+          ui: ['framer-motion', 'lucide-react']}}},
     terserOptions: {,
       compress: {,
         drop_console: true;
         drop_debugger: true;
-      },
-    },
-  },
+      }}},
   server: {
     port: 3000;
     host: true;
@@ -258,27 +216,20 @@ export default defineConfig({
     host: true;
   },
   optimizeDeps: {,
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
+    include: ['react', 'react-dom', 'react-router-dom']},
   define: {,
     __DEV__: JSON.stringify(process.env['NODE_ENV'] === 'development'),
-=======
 export default defineConfig({/* TODO: Fix JSX expression */}
-      },)
+      })
     }),
     visualizer({/* TODO: Fix JSX expression */})
-    }),
-  ],
+    })],
   buil,
   d: {/* TODO: Fix JSX expression */}
-        },
-      },
-    },
+        }}},
     terserOption,
   s: {/* TODO: Fix JSX expression */}
-      },
-    },
-  },
+      }}},
   serve,
   r: {/* TODO: Fix JSX expression */}
   },
@@ -287,7 +238,6 @@ export default defineConfig({/* TODO: Fix JSX expression */}
   },
   optimizeDep,
   s: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   },
   defin,
   e: {/* TODO: Fix JSX expression */}
@@ -295,17 +245,13 @@ export default defineConfig({/* TODO: Fix JSX expression */}
 });`;
 
 fs.writeFileSync(viteConfigPath, improvedViteConfig);
-<<<<<<< HEAD
 // // 6. Create performance monitoring setup;
-=======
 // // 6. Create performance monitoring setup;`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 // const performanceSetup = `// Performance monitoring setup;
 import { errorHandler } from './src/utils/errorHandler';
 import performanceOptimizer from './src/utils/performanceOptimizer';
 
 // Initialize performance monitoring;
-<<<<<<< HEAD
 if (typeof window !== 'undefined') {
   // Track page load;
   analytics.trackPageView(window.location.pathname);
@@ -317,9 +263,7 @@ if (typeof window !== 'undefined') {
   performanceOptimizer.monitorLongTasks((entries) => {
     entries.forEach((entry) => {
       analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
-=======
 if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     });
   });
   
@@ -328,7 +272,6 @@ if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
   if (metrics) {/* TODO: Fix JSX expression */}
   }
 }
-<<<<<<< HEAD
 
 // 2. Run SEO enhancement;
 function runSEOEnhancement() {
@@ -416,8 +359,7 @@ function generateImprovementReport() {
       bundleSize: "Optimized with code splitting",
       performanceScore: "Improved",
       accessibilityScore: "WCAG AA compliant",
-      seoScore: "Enhanced with structured data",
-    },
+      seoScore: "Enhanced with structured data"},
     nextSteps: [,
       "Deploy changes to production",
       "Monitor performance metrics",
@@ -464,7 +406,6 @@ async function runAllImprovements() {
 }
 
 runAllImprovements();
-=======
 `
 export { analytics, errorHandler, performanceOptimizer };`;
 
@@ -475,43 +416,42 @@ fs.writeFileSync(path.join(__dirname, '..', 'src', 'monitoring.ts'), performance
  * Tools and helpers for development and debugging;
  */
 
-export const devLog = (messag,)
+export const devLog = (messag)
   e: string, data?: unknown) => {/* TODO: Fix JSX expression */}
 //     }
 };
 
-export const devError = (messag,)
+export const devError = (messag)
   e: string, error?: unknown) => {/* TODO: Fix JSX expression */}
 //     }
 };
 
-export const devWarn = (messag,)
+export const devWarn = (messag)
   e: string, data?: unknown) => {/* TODO: Fix JSX expression */}
 //     }
 };
 
 export const measurePerformance = (nam,
-  e: string, f,)
+  e: string, f)
   n: () => void) => {/* TODO: Fix JSX expression */}`
 //     // console.log(\`[PERF] \${name}: \${(end - start).toFixed(2)}ms\`);
   } else {/* TODO: Fix JSX expression */}
   }
 };
 
-export const createDebugger = (componentNam,)
+export const createDebugger = (componentNam)
   e: string) => ({/* TODO: Fix JSX expression */})`
   e: string, data?: unknown) => devLog(\`[\${componentName}] \${message}\`, data),
   erro,
-  r: (messag,)`
+  r: (messag)`
   e: string, error?: unknown) => devError(\`[\${componentName}] \${message}\`, error),
   war,
-  n: (messag,)`
+  n: (messag)`
   e: string, data?: unknown) => devWarn(\`[\${componentName}] \${message}\`, data),
   measur,
   e: (nam,
-  e: string, f,)`
-  n: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn),
-});
+  e: string, f)`
+  n: () => void) => measurePerformance(\`[\${componentName}] \${name}\`, fn)});
 
 export default {/* TODO: Fix JSX expression */}`
 };`;
@@ -530,4 +470,3 @@ fs.writeFileSync(path.join(__dirname, '..', 'src', 'utils', 'devUtils.ts'), devU
 }
 
 // // // // // // // // // // // "`
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

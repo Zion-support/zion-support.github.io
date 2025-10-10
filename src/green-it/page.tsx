@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
@@ -328,7 +327,6 @@ valuevalue: '100%',
 };
 
 export default GreenITPage;
-=======
 
 
 import { Link } from 'react-router-dom';
@@ -378,8 +376,7 @@ const tabs = [
       feature,
   s: [
   // TOD,
-  O: Add items,
-];
+  O: Add items];
 //         'PUE (Power Usage Effectiveness) optimization',
 //         'Renewable energy integration',
 //         'Cooling system optimization',
@@ -785,4 +782,3 @@ Benefits of Green IT;"
 export default GreenItPage;
 
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

@@ -3,7 +3,6 @@
  * Comprehensive security settings and best practices;
  */
 
-<<<<<<< HEAD
 export const securityConfig = {
   // Content Security Policy;
   csp: {,
@@ -13,16 +12,14 @@ export const securityConfig = {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
-        'https: //www.googletagmanager.com',
-      ],
+        'https: //www.googletagmanager.com'],
       'style-src': ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
       'img-src': ["'self'", 'data:', 'https:', 'blob: '],
       'font-src': ["'self'", 'https: //fonts.gstatic.com'],
       'connect-src': ["'self'", 'https: //www.google-analytics.com'],
       'frame-ancestors': ["'none'"],
       'base-uri': ["'self'"],
-      'form-action': ["'self'"],
-    },
+      'form-action': ["'self'"]},
     reportOnly: false;
   },
 
@@ -33,8 +30,7 @@ export const securityConfig = {
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
-  },
+    'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'},
 
   // Input validation;
   validation: {,
@@ -77,12 +73,10 @@ export const securityConfig = {
     encodeSpecialChars: true;
     trimWhitespace: true;
     removeNullBytes: true;
-=======
 export const securityConfig = {/* TODO: Fix JSX expression */}
     },
     reportOnl,
-  y: false,
-  },
+  y: false},
 
   // Security Headers,
   headers: {/* TODO: Fix JSX expression */}
@@ -106,8 +100,6 @@ export const securityConfig = {/* TODO: Fix JSX expression */}
 
   // Data sanitization,
   sanitization: {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  },
-};
+  }};
 
 export default securityConfig;

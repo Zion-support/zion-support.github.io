@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface RevOpsContent {
   id: string;
   title: string;
@@ -14,9 +13,7 @@ export interface RevOpsContent {
   highlights: string[];
   metrics: {,
     [key: string]: string;
-=======
 export interface RevOpsContent {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   };
   icon?: string;
   gradient?: string;
@@ -25,7 +22,6 @@ export interface RevOpsContent {/* TODO: Fix JSX expression */}
   };
 }
 
-<<<<<<< HEAD
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
     id: 'ai-revops-automation-2025'
@@ -45,20 +41,16 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       '3.2 x pipeline velocity improvement',
       '$127 M incremental revenue (Fortune 500 case study)',
       '85% reduction in manual RevOps tasks',
-      '4.7 x faster response times',
-    ],
+      '4.7 x faster response times'],
     metrics: {
       roi: '127%',
       forecastAccuracy: '89%',
       pipelineVelocity: '3.2 x',
       revenue: '$127 M',
-      efficiency: '85%',
-    },
+      efficiency: '85%'},
     cta: {,
       text: 'Read the Complete RevOps Guide',
-      link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution',
-    },
-  },
+      link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'}},
   {
     id: 'autonomous-revenue-operations-2025'
     title: 'Autonomous Revenue Operations 2025: Self-Healing Systems'
@@ -74,8 +66,7 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       'Case Study',
       'SaaS',
       'Revenue Operations',
-      'Enterprise AI',
-    ],
+      'Enterprise AI'],
     featured: true;
     breaking: true;
     highlights: [,
@@ -84,28 +75,22 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       '42% increase in win rates',
       '3.2 x pipeline velocity improvement',
       '12-month transformation timeline',
-      '704% three-year ROI',
-    ],
+      '704% three-year ROI'],
     metrics: {
       revenue: '$127 M',
       accuracy: '89%',
       winRate: '+42%',
       velocity: '3.2 x',
       roi: '704%',
-=======
 export const,
   octoberNewestRevOpsContent: RevOpsContent[] = [
   {/* TODO: Fix JSX expression */}
     },
     ct,
   a: {/* TODO: Fix JSX expression */}
-    },
-  },
+    }},
   {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-    },
-  },
-];
+    }}];
 
 export const getFeaturedRevOpsContent = () => {/* TODO: Fix JSX expression */}
 };

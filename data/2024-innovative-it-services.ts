@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface InnovativeITService2024 {id: string;
   name: string;
   tagline: string;
@@ -80,15 +79,13 @@ export const innovativeITServices2024: InnovativeITService2024[] = [
       mobile: "+1 302 464 0950"
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709",
-      website: "https://ziontechgroup.com",
-    },
+      website: "https://ziontechgroup.com"},
     realImplementation: true;
     implementationDetails: "Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.",
     launchDate: "2024-01-15"
     customers: 950;
     rating: 4.8;
     reviews: 520;
-=======
 export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   s: string}
     websit,
@@ -101,8 +98,7 @@ export interface InnovativeITService2024 {/* TODO: Fix JSX expression */}
   launchDat,
   e: string;
   review,
-  s: number,
-}
+  s: number}
 export const,
   innovativeITServices2024: InnovativeITService2024[] = [,
     i,
@@ -193,9 +189,7 @@ export const,
     ratin,
   g: 4.8,
     review,
-  s: 520,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
-  }
+  s: 520}
 ];
 export interface InnovativeITService2024,
   id: string; nam,
@@ -234,7 +228,7 @@ export interface InnovativeITService2024,
   n: boolean; implementationDetail,
   s: string; launchDat,
   e: string; review,
-  s: number, } export const,
+  s: number} export const,
   innovativeITServices2024: InnovativeITService2024[] = [ i,"
   d: "autonomous-devops-platform", nam,"
   e: "Autonomous DevOps Platform", taglin,"

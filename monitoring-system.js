@@ -2,7 +2,7 @@
   e: `Bundle,"`
   size: ${bundleSize};MB`; bundleSize}} function checkSecurity() {try {' require('child_process').execSync('npm audit --audit-level=moderate') { "stdio": 'pip}e'});' return {"status": 'healthy', "message": 'No security vulnerabilities foun}d'}} catch (error) {' return { "status": 'warning', "message": 'Security vulnerabilities detecte}d'}} } function checkDependencies() {' const packageJson = JSON.parse(fs.readFileSync('package.json') 'utf8');)} const totalDeps = Object.keys(packageJson.dependencies || {}).length + Object.keys(packageJson.devDependencies || {}).lengt;h; return {/* TODO: Fix JSX expression */}"`
   e: `${totalDeps}; dependencies`; "count": totalDeps }} function getBundleSize() {try {' const stats = fs.statSync('.next')} return Math.round(stats.size / (1024 * 1024) * 100) /100} catch { return 0} } //Run monitoring; monitorSystemHealth()>' <#!/usr/bin/env node const fs = require('fs') const path = require('path') function monitorSystemHealth() {/* TODO: Fix JSX expression */}
-  y: checkSecurit,y(,)} dependencie,
+  y: checkSecurit,y()} dependencie,
   s: checkDependencie,s()}}; fs.writeFileSync('health-monitor.json',JSON.stringify(healthChecks,null)2)); return healthChecks} function checkBuildStatus() {/* TODO: Fix JSX expression */}
   o: 'pip}e';}); return {/* TODO: Fix JSX expression */}
   e: 'Build successfu,l'}}} catch (error) {/* TODO: Fix JSX expression */}
