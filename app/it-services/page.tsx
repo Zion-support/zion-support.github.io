@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, MessageSquare, Calendar, Brain } from 'lucide-react';
 
 export default function ITServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -235,6 +235,168 @@ export default function ITServicesPage() {
           popular: false
         }
       ]
+    },
+    {
+      category: 'AI-Powered IT Solutions',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'AI Infrastructure Monitoring Pro',
+          description: 'Advanced AI-powered infrastructure monitoring with predictive analytics and automated issue resolution',
+          features: ['Predictive Analytics', 'Automated Issue Resolution', 'Anomaly Detection', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization'],
+          pricing: 'Starting at $4,999/mo',
+          trial: 'Free AI assessment',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/ai-infrastructure-monitoring',
+          popular: true
+        },
+        {
+          name: 'AI Security Operations Center',
+          description: 'Intelligent security operations with AI-powered threat detection, response, and prevention',
+          features: ['AI Threat Detection', 'Automated Response', 'Behavioral Analysis', 'Threat Intelligence', 'Incident Response', 'Compliance Monitoring'],
+          pricing: 'Starting at $6,999/mo',
+          trial: 'Free security audit',
+          timeline: '3-6 weeks',
+          link: 'https://ziontechgroup.com/ai-security-operations',
+          popular: true
+        },
+        {
+          name: 'AI Cloud Cost Optimization',
+          description: 'Intelligent cloud cost optimization with AI-driven resource management and cost prediction',
+          features: ['Cost Prediction', 'Resource Optimization', 'Auto-scaling', 'Reserved Instance Management', 'Cost Allocation', 'Budget Alerts'],
+          pricing: 'Starting at $2,999/mo',
+          trial: 'Free cost analysis',
+          timeline: '2-3 weeks',
+          link: 'https://ziontechgroup.com/ai-cloud-optimization',
+          popular: true
+        },
+        {
+          name: 'AI Data Center Management',
+          description: 'Smart data center management with AI-powered optimization, monitoring, and automation',
+          features: ['Smart Monitoring', 'Predictive Maintenance', 'Energy Optimization', 'Capacity Planning', 'Automated Operations', 'Performance Analytics'],
+          pricing: 'Starting at $8,999/mo',
+          trial: 'Free assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-data-center-management',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Blockchain & Web3 Solutions',
+      icon: Shield,
+      color: 'text-green-400',
+      bgColor: 'bg-green-500/10',
+      services: [
+        {
+          name: 'Blockchain Integration Services Pro',
+          description: 'Comprehensive blockchain integration with smart contracts, DeFi, and Web3 solutions',
+          features: ['Smart Contract Development', 'DeFi Integration', 'NFT Solutions', 'Cross-chain Interoperability', 'Web3 Development', 'Token Economics'],
+          pricing: 'Starting at $12,999',
+          trial: 'Free consultation',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/blockchain-integration-services',
+          popular: true
+        },
+        {
+          name: 'Smart Contract Security Audit Pro',
+          description: 'Advanced smart contract security auditing with AI-powered vulnerability detection',
+          features: ['AI Vulnerability Detection', 'Code Review', 'Security Testing', 'Gas Optimization', 'Compliance Check', 'Audit Reports'],
+          pricing: 'Starting at $5,999',
+          trial: 'Free security scan',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/smart-contract-security-audit',
+          popular: true
+        },
+        {
+          name: 'Decentralized Infrastructure',
+          description: 'Decentralized infrastructure solutions with distributed computing and storage',
+          features: ['Distributed Computing', 'Decentralized Storage', 'Edge Computing', 'P2P Networks', 'Consensus Mechanisms', 'Token Incentives'],
+          pricing: 'Starting at $9,999/mo',
+          trial: 'Free pilot',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/decentralized-infrastructure',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Advanced Analytics & BI',
+      icon: BarChart,
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      services: [
+        {
+          name: 'AI Business Intelligence Pro',
+          description: 'Advanced AI-powered business intelligence with predictive analytics and automated insights',
+          features: ['Predictive Analytics', 'Automated Insights', 'Natural Language Queries', 'Real-time Dashboards', 'Data Visualization', 'Machine Learning'],
+          pricing: 'Starting at $3,999/mo',
+          trial: 'Free BI assessment',
+          timeline: '3-6 weeks',
+          link: 'https://ziontechgroup.com/ai-business-intelligence',
+          popular: true
+        },
+        {
+          name: 'Data Lake & Warehouse Solutions',
+          description: 'Comprehensive data lake and warehouse solutions with AI-powered data processing',
+          features: ['Data Lake Architecture', 'ETL/ELT Pipelines', 'Data Quality Management', 'Real-time Processing', 'Data Governance', 'AI Data Processing'],
+          pricing: 'Starting at $7,999/mo',
+          trial: 'Free data assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/data-lake-warehouse',
+          popular: true
+        },
+        {
+          name: 'Real-time Analytics Platform',
+          description: 'Real-time analytics platform with streaming data processing and instant insights',
+          features: ['Streaming Analytics', 'Real-time Processing', 'Event-driven Architecture', 'Instant Insights', 'Scalable Processing', 'Data Integration'],
+          pricing: 'Starting at $4,999/mo',
+          trial: 'Free demo',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/real-time-analytics',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'IoT & Edge Computing',
+      icon: Cpu,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      services: [
+        {
+          name: 'IoT Platform Development',
+          description: 'Comprehensive IoT platform development with device management and data analytics',
+          features: ['Device Management', 'Data Analytics', 'Edge Computing', 'Protocol Support', 'Security', 'Scalability'],
+          pricing: 'Starting at $15,999',
+          trial: 'Free IoT assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/iot-platform-development',
+          popular: true
+        },
+        {
+          name: 'Edge Computing Solutions',
+          description: 'Edge computing solutions with real-time processing and low-latency applications',
+          features: ['Edge Processing', 'Low Latency', 'Real-time Analytics', 'Edge AI', 'Distributed Computing', '5G Integration'],
+          pricing: 'Starting at $8,999/mo',
+          trial: 'Free edge assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/edge-computing-solutions',
+          popular: true
+        },
+        {
+          name: 'Smart City Solutions',
+          description: 'Comprehensive smart city solutions with IoT integration and data analytics',
+          features: ['Smart Infrastructure', 'Data Analytics', 'Citizen Services', 'Traffic Management', 'Energy Management', 'Public Safety'],
+          pricing: 'Starting at $25,999',
+          trial: 'Free city assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/smart-city-solutions',
+          popular: false
+        }
+      ]
     }
   ];
 
@@ -349,19 +511,53 @@ export default function ITServicesPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      {/* Futuristic Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(0,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(139,92,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[length:50px_50px]" />
+      
+      {/* Animated Grid Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[length:100px_100px] animate-pulse" />
+      </div>
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              IT Services
-            </h1>
+            <div className="inline-block mb-6">
+              <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4 neon-text">
+                IT Services
+              </h1>
+              <div className="h-1 w-32 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
+            </div>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently. 
               From infrastructure to security, we've got you covered.
             </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
+                <div className="text-3xl font-bold text-cyan-400 mb-2">100+</div>
+                <div className="text-gray-300">IT Services</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20">
+                <div className="text-3xl font-bold text-purple-400 mb-2">500+</div>
+                <div className="text-gray-300">Enterprise Clients</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20">
+                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Uptime SLA</div>
+              </div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20">
+                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-gray-300">Support</div>
+              </div>
+            </div>
+
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
                 <Shield className="w-5 h-5 text-cyan-400" />
@@ -426,52 +622,70 @@ export default function ITServicesPage() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 relative">
+                    <div key={serviceIndex} className="group bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 relative overflow-hidden">
+                      {/* Animated Background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                      
                       {service.popular && (
-                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                           Popular
                         </div>
                       )}
-                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
-                      <p className="text-gray-300 mb-4">{service.description}</p>
-                      <div className="space-y-3 mb-6">
-                        <h5 className="text-sm font-semibold text-cyan-400">Key Features:</h5>
-                        <ul className="space-y-1">
-                          {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span>{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="space-y-2 mb-6">
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Pricing:</span>
-                          <span className="text-sm font-medium text-white">{service.pricing}</span>
+                      
+                      <div className="relative z-10">
+                        <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}</h4>
+                        <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                        
+                        <div className="space-y-4 mb-6">
+                          <h5 className="text-lg font-semibold text-white flex items-center">
+                            <Zap className="w-4 h-4 mr-2 text-cyan-400" />
+                            Key Features:
+                          </h5>
+                          <ul className="space-y-2">
+                            {service.features.slice(0, 4).map((feature, featureIndex) => (
+                              <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                                <span>{feature}</span>
+                              </li>
+                            ))}
+                            {service.features.length > 4 && (
+                              <li className="text-cyan-400 text-sm font-medium">
+                                +{service.features.length - 4} more features
+                              </li>
+                            )}
+                          </ul>
                         </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Trial:</span>
-                          <span className="text-sm font-medium text-cyan-400">{service.trial}</span>
+                        
+                        <div className="space-y-3 mb-6">
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-gray-400">Pricing:</span>
+                            <span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-gray-400">Trial:</span>
+                            <span className="text-sm font-medium text-green-400">{service.trial}</span>
+                          </div>
+                          <div className="flex justify-between items-center">
+                            <span className="text-sm text-gray-400">Timeline:</span>
+                            <span className="text-sm font-medium text-purple-400">{service.timeline}</span>
+                          </div>
                         </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-sm text-gray-400">Timeline:</span>
-                          <span className="text-sm font-medium text-cyan-400">{service.timeline}</span>
+                        
+                        <div className="space-y-3">
+                          <a
+                            href={service.link}
+                            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                          >
+                            Learn More
+                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                          </a>
+                          <a
+                            href="/contact"
+                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
+                          >
+                            Get Started
+                          </a>
                         </div>
-                      </div>
-                      <div className="space-y-2">
-                        <a
-                          href={service.link}
-                          className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-2 px-4 rounded-lg font-medium hover:from-cyan-600 hover:to-purple-700 transition-all block text-center"
-                        >
-                          Learn More
-                        </a>
-                        <a
-                          href="/contact"
-                          className="w-full border border-cyan-400 text-cyan-400 py-2 px-4 rounded-lg font-medium hover:bg-cyan-400 hover:text-slate-900 transition-all block text-center"
-                        >
-                          Get Started
-                        </a>
                       </div>
                     </div>
                   ))}
@@ -595,29 +809,53 @@ export default function ITServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-purple-700">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+      <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">
             Ready to Modernize Your IT Infrastructure?
           </h2>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join hundreds of enterprises that have already transformed their IT operations with our solutions.
+          <p className="text-xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed">
+            Join hundreds of enterprises that have already transformed their IT operations with our cutting-edge solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
             <a
               href="/contact"
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+              className="bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-white/25 inline-flex items-center"
             >
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today
             </a>
             <a
-              href="/consultation"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
+              href="tel:+13024640950"
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-cyan-600 transition-all duration-300 inline-flex items-center"
             >
-              <Calendar className="w-5 h-5 mr-2" />
-              Free Consultation
+              <Phone className="w-5 h-5 mr-2" />
+              Call +1 (302) 464-0950
             </a>
+          </div>
+
+          {/* Contact Information */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <Phone className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-white font-bold text-lg mb-2">Phone</h3>
+              <p className="text-gray-200">+1 (302) 464-0950</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <Mail className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-white font-bold text-lg mb-2">Email</h3>
+              <p className="text-gray-200">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <MapPin className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+              <h3 className="text-white font-bold text-lg mb-2">Address</h3>
+              <p className="text-gray-200">364 E Main St STE 1008<br />Middletown, DE 19709</p>
+            </div>
           </div>
         </div>
       </section>
