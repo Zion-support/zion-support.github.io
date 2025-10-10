@@ -1,22 +1,17 @@
 'use client';
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
+import React, {useEffect } from 'react';
 
-<<<<<<< HEAD
-interface PerformanceOptimizerProps {
-  enableImageOptimization?: boolean;
+interface PerformanceOptimizerProps {enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enableCodeSplitting?: boolean;
   enablePrefetching?: boolean;
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableImageOptimization = true,
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({enableImageOptimization = true,
   enableLazyLoading = true,
   enableCodeSplitting = true,
   enablePrefetching = true
-}) => {
-  useEffect(() => {
+}) => {useEffect(() => {
     // Image optimization
     if (enableImageOptimization) {
       const images = document.querySelectorAll('img');
@@ -24,15 +19,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         if (!img.loading) {
           img.loading = 'lazy';
         }
-        if (!img.decoding) {
-          img.decoding = 'async';
+        if (!img.decoding) {img.decoding = 'async';
         }
       });
     }
 
     // Preload critical resources
-    if (enablePrefetching) {
-      const preloadLink = document.createElement('link');
+    if (enablePrefetching) {const preloadLink = document.createElement('link');
       preloadLink.rel = 'preload';
       preloadLink.href = '/fonts/orbitron.woff2';
       preloadLink.as = 'font';
@@ -42,8 +35,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     }
 
     // Service Worker registration for caching
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js').catch(() => {
+    if ('serviceWorker' in navigator) {navigator.serviceWorker.register('/sw.js').catch(() => {
         // Service worker registration failed, but that's okay
       });
     }
@@ -53,118 +45,61 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 };
 
 export default PerformanceOptimizer;
-=======
-import React, { useEffect, useState, useCallback } from 'react';
-
-<<<<<<< HEAD
-interface PerformanceMetrics {
-  lcp: number;,
-    fid: number;
-  cls: number;,
-    fcp: number;
-  ttfb: number;
+interface PerformanceMetrics {lcp: number;,
+    fid: number;,
+    cls: number;,
+    fcp: number;,
+    ttfb: number;
 }
 
-interface OptimizationStatus {
-  preloaded: number;,
-    codeSplit: boolean;
-  serviceWorker: boolean;,
+interface OptimizationStatus {preloaded: number;,
+    codeSplit: boolean;,
+    serviceWorker: boolean;,
     optimized: boolean;
 }
 
 export const PerformanceOptimizer: React.FC = () => {,
   const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({
-    preloaded: 0;
-    codeSplit: false;
-    serviceWorker: false;
+    preloaded: 0;,
+    codeSplit: false;,
+    serviceWorker: false;,
     optimized: false;
   const collectWebVitals = useCallback(() => {
-=======
-interface PerformanceMetrics {}
-  lcp: number;
-  fid: number;
-  cls: number;
-  fcp: number;
-  ttfb: number;
-}
-
-interface OptimizationStatus {}
-  preloaded: number;
-  codeSplit: boolean;
-  serviceWorker: boolean;
-  optimized: boolean;
-}
-
-export const PerformanceOptimizer: React.FC = () => {}
-  const [optimizationStatus, setOptimizationStatus] = useState<OptimizationStatus>({}
-    preloaded: 0,
-    codeSplit: false,
-    serviceWorker: false,
-    optimized: false
-
-  const collectWebVitals = useCallback(() => {}
->>>>>>> origin/merge-error-fixes
     if (typeof window === 'undefined') return;
 
-<<<<<<< HEAD
     // Collect Core Web Vitals
-<<<<<<< HEAD
     const vitals: PerformanceMetrics = {,
     lcp: 0,
-=======
-    const vitals: PerformanceMetrics = {}
-      lcp: 0,
->>>>>>> origin/merge-error-fixes
       fid: 0,
       cls: 0,
       fcp: 0,
       ttfb: 0,
-=======
     // Collect Core Web Vitals;
-    const vitals: PerformanceMetrics = {
-      lcp: 0;
-      fid: 0;
-      cls: 0;
-      fcp: 0;
-      ttfb: 0;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+    const vitals: PerformanceMetrics = {,
+    lcp: 0;,
+    fid: 0;,
+    cls: 0;,
+    fcp: 0;,
+    ttfb: 0;
     };
 
-<<<<<<< HEAD
     // LCP - Largest Contentful Paint;
-    const lcpObserver = new PerformanceObserver((list) => {
-=======
-    // LCP - Largest Contentful Paint
-    const lcpObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      const entries = list.getEntries();
+    const lcpObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
       vitals.lcp = lastEntry.startTime;
 
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
 
-<<<<<<< HEAD
     // FID - First Input Delay;
-    const fidObserver = new PerformanceObserver((list) => {
-=======
-    // FID - First Input Delay
-    const fidObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      const entries = list.getEntries();
+    const fidObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
       entries.forEach((entry) => {}
         vitals.fid = entry.processingStart - entry.startTime;
 
 
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fidObserver.observe({entryTypes: ['first-input'] });
 
-<<<<<<< HEAD
     // CLS - Cumulative Layout Shift;
-    const clsObserver = new PerformanceObserver((list) => {
-=======
-    // CLS - Cumulative Layout Shift
-    const clsObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      let clsValue = 0;
+    const clsObserver = new PerformanceObserver((list) => {let clsValue = 0;
       for (const entry of list.getEntries()) {}
         if (!(entry as any).hadRecentInput) {}
           clsValue += (entry as any).value;
@@ -172,38 +107,25 @@ export const PerformanceOptimizer: React.FC = () => {}
       }
       vitals.cls = clsValue;
 
-    clsObserver.observe({ entryTypes: ['layout-shift'] });
+    clsObserver.observe({entryTypes: ['layout-shift'] });
 
-<<<<<<< HEAD
     // FCP - First Contentful Paint;
-    const fcpObserver = new PerformanceObserver((list) => {
-=======
-    // FCP - First Contentful Paint
-    const fcpObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      const entries = list.getEntries();
+    const fcpObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
       entries.forEach((entry) => {}
         vitals.fcp = entry.startTime;
 
 
-    fcpObserver.observe({ entryTypes: ['paint'] });
+    fcpObserver.observe({entryTypes: ['paint'] });
 
-<<<<<<< HEAD
     // TTFB - Time to First Byte;
-    const ttfbObserver = new PerformanceObserver((list) => {
-=======
-    // TTFB - Time to First Byte
-    const ttfbObserver = new PerformanceObserver((list) => {}
->>>>>>> origin/merge-error-fixes
-      const entries = list.getEntries();
+    const ttfbObserver = new PerformanceObserver((list) => {const entries = list.getEntries();
       entries.forEach((entry) => {}
         vitals.ttfb = entry.responseStart - entry.requestStart;
 
 
-    ttfbObserver.observe({ entryTypes: ['navigation'] });
+    ttfbObserver.observe({entryTypes: ['navigation'] });
 
-    setOptimizationStatus(prev => ({ ...prev, preloaded: 1 }));
-=======
+    setOptimizationStatus(prev => ({...prev, preloaded: 1 }));
 
 interface PerformanceOptimizerProps {/* TODO: Fix JSX expression */}
 }
@@ -272,7 +194,7 @@ const,
       document.head.appendChild(link);
 
     });
-    fidObserver.observe({ entryTypes: ['first-input'] });
+    fidObserver.observe({entryTypes: ['first-input'] });
 
 
     setOptimizationStatus(prev => ({/* TODO: Fix JSX expression */})
@@ -325,7 +247,6 @@ const,
   s: ['largest-contentful-paint'] });
 
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }, []);
 
   const preloadCriticalResources = useCallback(() => {}
@@ -337,16 +258,9 @@ const,
       '/js/critical.js'
     ];
 
-<<<<<<< HEAD
     criticalResources.forEach(resource => {)
-<<<<<<< HEAD
     const link = document.createElement('link');
-=======
-=======
-    criticalResources.forEach(resource => {)}
->>>>>>> origin/merge-error-fixes
       const link = document.createElement('link');
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       link.rel = 'preload';
       link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script';
@@ -355,36 +269,23 @@ const,
     setOptimizationStatus(prev => ({ ...prev, preloaded: criticalResources.length }));
   }, []);
 
-<<<<<<< HEAD
-  const setupCodeSplitting = () => {
-    // This would be handled by Next.js dynamic imports;
-=======
-  const setupCodeSplitting = () => {}
-    // This would be handled by Next.js dynamic imports
->>>>>>> origin/merge-error-fixes
+  const setupCodeSplitting = () => {// This would be handled by Next.js dynamic imports;
     setOptimizationStatus(prev => ({ ...prev, codeSplit: true }));
   };
 
   const addResourceHints = () => {}
     const hints = [
-      { rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
-      { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
-      { rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
-      { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' }
+      {rel: 'dns-prefetch', href: 'https://fonts.googleapis.com' },
+      {rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' },
+      {rel: 'dns-prefetch', href: 'https://www.googletagmanager.com' },
+      {rel: 'dns-prefetch', href: 'https://www.google-analytics.com' },
+      {rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      {rel: 'preconnect', href: 'https://fonts.gstatic.com' }
     ];
 
-<<<<<<< HEAD
     hints.forEach(hint => {)
-<<<<<<< HEAD
     const link = document.createElement('link');
-=======
-=======
-    hints.forEach(hint => {)}
->>>>>>> origin/merge-error-fixes
       const link = document.createElement('link');
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
       link.rel = hint.rel;
       link.href = hint.href;
       document.head.appendChild(link);
@@ -395,7 +296,7 @@ const,
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {}
       try {}
         const registration = await navigator.serviceWorker.register('/sw.js');
-        setOptimizationStatus(prev => ({ ...prev, serviceWorker: true }));
+        setOptimizationStatus(prev => ({...prev, serviceWorker: true }));
       } catch (error) {}
         }
     }
@@ -409,18 +310,14 @@ const,
       addResourceHints();
       registerServiceWorker();
 
-      setOptimizationStatus(prev => ({ ...prev, optimized: true }));
+      setOptimizationStatus(prev => ({...prev, optimized: true }));
     }
   }, [collectWebVitals, preloadCriticalResources]);
 
   // This component doesn't render anything visible;
   return null;
 };
-<<<<<<< HEAD
 </OptimizationStatus>
 export default PerformanceOptimizer;</OptimizationStatus>
->>>>>>> origin/main
-=======
 
 export default PerformanceOptimizer;"
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

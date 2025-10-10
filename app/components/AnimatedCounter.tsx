@@ -1,34 +1,30 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import React, {useEffect, useState, useRef } from 'react';
+import {useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
-interface AnimatedCounterProps {
-  end: number;
+interface AnimatedCounterProps {end: number;
   duration?: number;
   suffix?: string;
   prefix?: string;
   className?: string;
 }
 
-const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps></<<<AnimatedCounterProps>end</AnimatedCounterProps></AnimatedCounterProps>,
+const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps></AnimatedCounterProps>end</AnimatedCounterProps></AnimatedCounterProps>,
   duration = 2000,
   suffix = '',
   prefix = '',
   className = '',
-}) => {
-  const [count, setCount] = useState(0);
+}) => {const [count, setCount] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.5
   });
 
-  useEffect(() => {
-    if (entry?.isIntersecting && !isVisible) {
+  useEffect(() => {if (entry?.isIntersecting && !isVisible) {
       setIsVisible(true);
     }
   }, [entry, isVisible]);
 
-  useEffect(() => {
-    if (!isVisible) return;
+  useEffect(() => {if (!isVisible) return;
 
     let startTime: number;
     let animationFrame: number;
@@ -50,8 +46,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({</AnimatedCounterProps
 
     animationFrame = requestAnimationFrame(animate);
 
-    return () => {
-      if (animationFrame) {
+    return () => {if (animationFrame) {
         cancelAnimationFrame(animationFrame);
       }
     };

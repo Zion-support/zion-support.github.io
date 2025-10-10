@@ -1,28 +1,15 @@
-export default function Loading() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
-      <div className="text-center"></div>
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div><p className="text-gray-600">Loading...</p>
+export default function Loading() {return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center" ></div>
+      <div className="text-center" ></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4" ></div><p className="text-gray-600" >Loading...</p>
       </div>
     </div>
-=======
-  return(<div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">)
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>)
-        <p className="text-gray-600">Loading...</p>)
-      </div>)
-    </div>)
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-        <p className="text-gray-600">Loading...</p>
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center" >
+      <div className="text-center" >
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4" ></div>
+        <p className="text-gray-600" >Loading...</p>
       </div>
     </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
   );
-}
+};

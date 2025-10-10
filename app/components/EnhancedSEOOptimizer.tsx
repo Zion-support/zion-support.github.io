@@ -1,6 +1,6 @@
 'use client';
-import React, { useEffect } from 'react';
-import { logger } from '../utils/productionLogger';
+import React, {useEffect } from 'react';
+import {logger } from '../utils/productionLogger';
 
 interface SEOOptimizerProps {}
   title?: string;
@@ -8,25 +8,16 @@ interface SEOOptimizerProps {}
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: Record<string, unknown>;</string></<<<strin>noIndex</strin></strin>?: boolean;
+  structuredData?: Record<string, unknown>;</string></strin>noIndex</strin></strin>?: boolean;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
-<<<<<<< HEAD
 }</string>
 </string>
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({
-=======
-}
-
-<<<<<<< HEAD
-const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
+const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps>= ({const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({,
 const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
->>>>>>> origin/merge-error-fixes
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
@@ -39,17 +30,9 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
   modifiedTime,
   section = 'Technology',
   tags = []
-<<<<<<< HEAD
-}) => {
-  useEffect(() => {
+}) => {useEffect(() => {
     try {
       // Update page title;
-=======
-}) => {}
-  useEffect(() => {}
-    try {}
-      // Update page title
->>>>>>> origin/merge-error-fixes
       document.title = title;
 
       // Update meta description;
@@ -71,13 +54,8 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
       updateMetaTag('og:locale', 'en_US', 'property');
 
-<<<<<<< HEAD
       // Add article-specific meta tags;
       if (publishedTime) {
-=======
-      // Add article-specific meta tags
-      if (publishedTime) {}
->>>>>>> origin/merge-error-fixes
         updateMetaTag('article:published_time', publishedTime, 'property');
       }
       if (modifiedTime) {}
@@ -86,18 +64,9 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       if (section) {}
         updateMetaTag('article:section', section, 'property');
       }
-<<<<<<< HEAD
-      if (tags.length > 0) {
-        tags.forEach(tag => {)
-<<<<<<< HEAD
+      if (tags.length > 0) {tags.forEach(tag => {)
     updateMetaTag('article:tag', tag, 'property');
-=======
-=======
-      if (tags.length > 0) {}
-        tags.forEach(tag => {)}
->>>>>>> origin/merge-error-fixes
           updateMetaTag('article:tag', tag, 'property');
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
 
       }
 
@@ -112,14 +81,8 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       // Update canonical URL;
       updateCanonicalUrl(canonicalUrl);
 
-<<<<<<< HEAD
       // Add structured data;
-      if (structuredData) {
-=======
-      // Add structured data
-      if (structuredData) {}
->>>>>>> origin/merge-error-fixes
-        addStructuredData(structuredData);
+      if (structuredData) {addStructuredData(structuredData);
       }
 
       // Add default structured data;
@@ -137,17 +100,13 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
       // Add WebSite structured data;
       addWebSiteStructuredData();
 
-      logger.info('SEO optimization completed', { title, canonicalUrl }, 'EnhancedSEOOptimizer');
+      logger.info('SEO optimization completed', {title, canonicalUrl }, 'EnhancedSEOOptimizer');
     } catch (error) {}
-      logger.error('SEO optimization failed', { error: (error as Error).message }, 'EnhancedSEOOptimizer');
+      logger.error('SEO optimization failed', {error: (error as Error).message }, 'EnhancedSEOOptimizer');
     }
   }, [title, description, keywords, canonicalUrl, ogImage, structuredData, noIndex, author, publishedTime, modifiedTime, section, tags]);
 
-<<<<<<< HEAD
   const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {,
-=======
-  const updateMetaTag = (name: string, content: string, attribute: string = 'name'): void => {}
->>>>>>> origin/merge-error-fixes
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {}
       meta = document.createElement('meta');
@@ -159,26 +118,15 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   const updateCanonicalUrl = (url: string): void => {}
     let canonical = document.querySelector('link[rel="canonical"]');
-<<<<<<< HEAD
     if (!canonical) {,
-=======
-    if (!canonical) {}
->>>>>>> origin/merge-error-fixes
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
       document.head.appendChild(canonical);
     }
     canonical.setAttribute('href', url);
-<<<<<<< HEAD
   };</SEOOptimizerProps>
 </SEOOptimizerProps>
-  const addStructuredData = (data: Record<string, unknown>): void => {
-=======
-  };
-
-  const addStructuredData = (data: Record<string, unknown>): void => {}
->>>>>>> origin/merge-error-fixes
-    const script = document.createElement('script');
+  const addStructuredData = (data: Record<string, unknown>): void => {const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
     script.id = 'structured-data';
@@ -190,15 +138,8 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
     document.head.appendChild(script);
   };
 
-<<<<<<< HEAD
-  const addDefaultStructuredData = (): void => {
-    const defaultData = {
+  const addDefaultStructuredData = (): void => {const defaultData = {
       '@context': 'https: //schema.org',
-=======
-  const addDefaultStructuredData = (): void => {}
-    const defaultData = {}
-      '@context': 'https://schema.org',
->>>>>>> origin/merge-error-fixes
       '@type': 'TechCompany',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
@@ -223,14 +164,8 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         areaServed: 'US',
         availableLanguage: 'en',
       },
-<<<<<<< HEAD
-      address: {
-        '@type': 'PostalAddress'
-=======
-      address: {}
-        '@type': 'PostalAddress',
->>>>>>> origin/merge-error-fixes
-        streetAddress: '364 E Main St STE 1008',
+      address: {'@type': 'PostalAddress',
+    streetAddress: '364 E Main St STE 1008',
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
@@ -245,26 +180,14 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
     addStructuredData(defaultData);
   };
 
-<<<<<<< HEAD
-  const addBreadcrumbStructuredData = (): void => {
-    const breadcrumbData = {
+  const addBreadcrumbStructuredData = (): void => {const breadcrumbData = {
       '@context': 'https: //schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         {
           '@type': 'ListItem'
-          position: 1;
-=======
-  const addBreadcrumbStructuredData = (): void => {}
-    const breadcrumbData = {}
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {}
-          '@type': 'ListItem',
-          position: 1,
->>>>>>> origin/merge-error-fixes
-          name: 'Home',
+          position: 1;,
+    name: 'Home',
           item: 'https://ziontechgroup.com',
         }
       ]
@@ -282,9 +205,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
     document.head.appendChild(script);
   };
 
-<<<<<<< HEAD
-  const addFAQStructuredData = (): void => {
-    const faqData = {
+  const addFAQStructuredData = (): void => {const faqData = {
       '@context': 'https: //schema.org',
       '@type': 'FAQPage',
       mainEntity: [
@@ -292,17 +213,6 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
           '@type': 'Question',
           name: 'What AI services does Zion Tech Group offer?',
           acceptedAnswer: {,
-=======
-  const addFAQStructuredData = (): void => {}
-    const faqData = {}
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: [
-        {}
-          '@type': 'Question',
-          name: 'What AI services does Zion Tech Group offer?',
-          acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
             text: 'Zion Tech Group offers comprehensive AI services including machine learning, natural language processing, computer vision, AI automation, AI marketing, AI healthcare solutions, and AI-powered business intelligence.'
           }
@@ -310,11 +220,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'What is the pricing for AI services?',
-<<<<<<< HEAD
           acceptedAnswer: {,
-=======
-          acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
             text: 'Our AI services start at $1,500/month for basic AI solutions, with custom pricing available for enterprise implementations. We also offer micro SAAS solutions starting at $15/month.'
           }
@@ -322,11 +228,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'Do you provide 24/7 support?',
-<<<<<<< HEAD
           acceptedAnswer: {,
-=======
-          acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
             text: 'Yes, we provide 24/7 expert support with guaranteed response times. Our team is available round-the-clock to assist with any technical issues or questions.'
           }
@@ -334,11 +236,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
         {}
           '@type': 'Question',
           name: 'What technologies do you specialize in?',
-<<<<<<< HEAD
           acceptedAnswer: {,
-=======
-          acceptedAnswer: {}
->>>>>>> origin/merge-error-fixes
             '@type': 'Answer',
             text: 'We specialize in AI/ML, quantum computing, autonomous systems, cloud services, blockchain, IoT, cybersecurity, and digital transformation technologies.'
           }
@@ -358,45 +256,25 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
     document.head.appendChild(script);
   };
 
-<<<<<<< HEAD
-  const addOrganizationStructuredData = (): void => {
-    const organizationData = {
+  const addOrganizationStructuredData = (): void => {const organizationData = {
       '@context': 'https: //schema.org',
-=======
-  const addOrganizationStructuredData = (): void => {}
-    const organizationData = {}
-      '@context': 'https://schema.org',
->>>>>>> origin/merge-error-fixes
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       logo: 'https://ziontechgroup.com/logo.webp',
       description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-<<<<<<< HEAD
-      foundingDate: '2020'
-      numberOfEmployees: '50-100'
-      industry: 'Technology'
-      contactPoint: {
-=======
       foundingDate: '2020',
-      numberOfEmployees: '50-100',
-      industry: 'Technology',
-      contactPoint: {}
->>>>>>> origin/merge-error-fixes
+    numberOfEmployees: '50-100',
+    industry: 'Technology',
+    contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+1-302-464-0950',
         contactType: 'Customer Service',
         areaServed: 'US',
         availableLanguage: 'en',
       },
-<<<<<<< HEAD
-      address: {
-        '@type': 'PostalAddress'
-=======
-      address: {}
-        '@type': 'PostalAddress',
->>>>>>> origin/merge-error-fixes
-        streetAddress: '364 E Main St STE 1008',
+      address: {'@type': 'PostalAddress',
+    streetAddress: '364 E Main St STE 1008',
         addressLocality: 'Middletown',
         addressRegion: 'DE',
         postalCode: '19709',
@@ -420,33 +298,18 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
     document.head.appendChild(script);
   };
 
-<<<<<<< HEAD
-  const addWebSiteStructuredData = (): void => {
-    const websiteData = {
+  const addWebSiteStructuredData = (): void => {const websiteData = {
       '@context': 'https: //schema.org',
-=======
-  const addWebSiteStructuredData = (): void => {}
-    const websiteData = {}
-      '@context': 'https://schema.org',
->>>>>>> origin/merge-error-fixes
       '@type': 'WebSite',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
       description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
-<<<<<<< HEAD
       publisher: {,
-=======
-      publisher: {}
->>>>>>> origin/merge-error-fixes
         '@type': 'Organization',
         name: 'Zion Tech Group',
         url: 'https://ziontechgroup.com',
       },
-<<<<<<< HEAD
       potentialAction: {,
-=======
-      potentialAction: {}
->>>>>>> origin/merge-error-fixes
         '@type': 'SearchAction',
         target: 'https://ziontechgroup.com/search?q={search_term_string}',
         'query-input': 'required name=search_term_string'
@@ -467,4 +330,4 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({}
 
   return null;
 };
-</<<<string>export</string></<<string>default</string> EnhancedSEOOptimizer;</string>
+</string>export</string></string>default</string> EnhancedSEOOptimizer;</string>

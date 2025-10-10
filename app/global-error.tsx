@@ -1,47 +1,26 @@
 "use client";
 
-<<<<<<< HEAD
 export default function GlobalError({)
   error)
   reset)
-}: {
-  error: Error & { digest?: string };)
+}: {error: Error & { digest?: string };)
     reset: () => void;
-}) {
-<<<<<<< HEAD
-  return (
+}) {return (
     <html>
       <body>
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center"></div>
-          <div className="text-center"></div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2><button
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center" ></div>
+          <div className="text-center" ></div>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4" >Something went wrong!</h2><button
               onClick={() =>reset()}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            ></button>
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" ></button>
               Try again</button>
-=======
-  return(<html>
-      <body>)
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">)
-          <div className="text-center">)
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>)
-            <button;)
-              onClick={() => reset()}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover: bg-blue-700"
-            >
-              Try again;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-import { useEffect } from 'react';
+import {useEffect } from 'react';
 
-export default function GlobalError({
-  error,
+export default function GlobalError({error,
   reset,
-}: {
-  error: Error & { digest?: string };
+}: {error: Error & { digest?: string };
   reset: () => void;
-}) {
-  useEffect(() => {
+}) {useEffect(() => {
     // Log the error to an error reporting service
     console.error(error);
   }, [error]);
@@ -49,19 +28,17 @@ export default function GlobalError({
   return (
     <html>
       <body>
-        <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Something went wrong!</h2>
+        <div className="min-h-screen bg-gray-50 flex items-center justify-center" >
+          <div className="text-center" >
+            <h2 className="text-2xl font-bold text-gray-900 mb-4" >Something went wrong!</h2>
             <button
               onClick={() => reset()}
-              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700" >
               Try again
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
             </button>
           </div>
         </div>
       </body>,
     </html>,
   );
-}
+};

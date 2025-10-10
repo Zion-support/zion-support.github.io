@@ -1,86 +1,49 @@
-<<<<<<< HEAD
 'use client'
 // Performance optimization utilities;
 // Debounce utility for performance;
-export const debounce = <T extends (...args: any[]) => any>(
-<<<<<<< HEAD
-  func: T;
-  wait: number;
-): ((...args: Parameters<T>) => void) => {
-  let timeout: NodeJS.Timeout;
+export const debounce = <T extends (...args: any[]) => any>(,
+    func: T;,
+    wait: number;
+): ((...args: Parameters<T>) => void) => {let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {,
     clearTimeout(timeout),
-=======
-  func: T,
-  wait: number
-): ((...args: Parameters<T>) => void) => {}
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters<T>) => {}
-    clearTimeout(timeout)
->>>>>>> origin/merge-error-fixes
     timeout = setTimeout(() => func(...args), wait);}
   }
 }
 // Throttle utility for performance;
-export const throttle = <T extends (...args: any[]) => any>(
-<<<<<<< HEAD
-  func: T;
-  limit: number;
-): ((...args: Parameters<T>) => void) => {
-  let inThrottle: boolean;
+export const throttle = <T extends (...args: any[]) => any>(,
+    func: T;,
+    limit: number;
+): ((...args: Parameters<T>) => void) => {let inThrottle: boolean;
   return (...args: Parameters<T>) => {
     if (!inThrottle) {,
       func(...args),
       inThrottle = true;
-=======
-  func: T,
-  limit: number
-): ((...args: Parameters<T>) => void) => {}
-  let inThrottle: boolean
-  return (...args: Parameters<T>) => {}
-    if (!inThrottle) {}
-      func(...args)
-      inThrottle = true
->>>>>>> origin/merge-error-fixes
       setTimeout(() => (inThrottle = false), limit);}
     }
   }
 }
 // Intersection Observer hook for lazy loading;
 export const useIntersectionObserver = (
-  callback: (entries: IntersectionObserverEntry[]) => void;
-  options: IntersectionObserverInit = {}
+  callback: (entries: IntersectionObserverEntry[]) => void;,
+    options: IntersectionObserverInit = {}
 ) => {}
   const observer = useMemo()
     () =>
       typeof window !== 'undefined'
-<<<<<<< HEAD
         ? new IntersectionObserver(callback, {)
             threshold: 0.1),
             rootMargin: '50px'),
-=======
-        ? new IntersectionObserver(callback, {)}
-            threshold: 0.1,
-            rootMargin: '50px',
->>>>>>> origin/merge-error-fixes
             ...options}
           })
         : null,
     [callback, options]
   )
-<<<<<<< HEAD
   const observe = useCallback(
     (element: Element | null) => {,
       if (observer && element) {,
         observer.observe(element),
-=======
-  const observe = useCallback()
-    (element: Element | null) => {}
-      if (observer && element) {}
-        observer.observe(element)
->>>>>>> origin/merge-error-fixes
         return () => observer.unobserve(element);}
-=======
 'use client';
 // Performance optimization utilities;
 // Debounce utility for performance;
@@ -117,12 +80,10 @@ export const useIntersectionObserver = (callbac,
   );
   const observe = useCallback((elemen,)
   t: Element | null) => {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
       return () => {}
     },
     [observer]
-<<<<<<< HEAD
   )
   const disconnect = useCallback(() => {}
     if (observer) {}
@@ -132,30 +93,15 @@ export const useIntersectionObserver = (callbac,
   useEffect(() => {}
     return () => disconnect();}
   }, [disconnect])
-  return { observe, disconnect }
+  return {observe, disconnect }
 }
-<<<<<<< HEAD
 // Image lazy loading hook;
-export const useLazyImage = useCallback((...args) => {
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
+export const useLazyImage = useCallback((...args) => {const [imageSrc, setImageSrc] = useState(placeholder || '')
   const [isLoaded, setIsLoaded] = useState(false)
   const [isError, setIsError] = useState(false);}
-  const { observe } = useIntersectionObserver(useCallback()
-      (entries) => {
-        entries.forEach((entry) => {
+  const {observe } = useIntersectionObserver(useCallback()
+      (entries) => {entries.forEach((entry) => {
           if (entry.isIntersecting && !isLoaded && !isError) {
-=======
-// Image lazy loading hook
-export const useLazyImage = useCallback((...args) => {}
-  const [imageSrc, setImageSrc] = useState(placeholder || '')
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [isError, setIsError] = useState(false);}
-  const { observe } = useIntersectionObserver()
-    useCallback()
-      (entries) => {}
-        entries.forEach((entry) => {}
-          if (entry.isIntersecting && !isLoaded && !isError) {}
->>>>>>> origin/merge-error-fixes
             const img = new Image()
             img.onload = () => {}
               setImageSrc(src)
@@ -164,46 +110,40 @@ export const useLazyImage = useCallback((...args) => {}
             img.onerror = () => {}
               setIsError(true);}
             }
-=======
   );
   const disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
     }
   }, [observer]);
   useEffect(() => {/* TODO: Fix JSX expression */}
   }, [disconnect]);
-  return { observe, disconnect };
+  return {observe, disconnect };
 };
 // Image lazy loading hook;
 export const useLazyImage = (sr,)
   c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
-  const { observe } = useIntersectionObserver(useCallback()
+  const {observe } = useIntersectionObserver(useCallback()
       (entries) => {/* TODO: Fix JSX expression */}
             };
             img.onerror = () => {/* TODO: Fix JSX expression */}
             };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
             img.src = src;
           }
         })
       },
       [src, isLoaded, isError]
     )
-<<<<<<< HEAD
   )
-  return { imageSrc, isLoaded, isError, observe }
+  return {imageSrc, isLoaded, isError, observe }
 }
-<<<<<<< HEAD
 // Performance monitoring hook;
-export const usePerformanceMonitoring = useCallback((...args) => {
-  const [metrics, setMetrics] = useState<{
+export const usePerformanceMonitoring = useCallback((...args) => {const [metrics, setMetrics] = useState<{
     fcp?: number;
     lcp?: number;
     fid?: number;
     cls?: number;
     ttfb?: number;}
   }>({})
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  useEffect(() => {if (typeof window === 'undefined') return;
     const updateMetrics = useCallback((...args) => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const paint = performance.getEntriesByType('paint')
@@ -216,45 +156,18 @@ export const usePerformanceMonitoring = useCallback((...args) => {
       })
     }
     // Monitor performance after page load;
-    if (document.readyState === 'complete') {
-=======
-// Performance monitoring hook
-export const usePerformanceMonitoring = useCallback((...args) => {}
-  const [metrics, setMetrics] = useState<{}
-    fcp?: number
-    lcp?: number
-    fid?: number
-    cls?: number
-    ttfb?: number;}
-  }>({})
-  useEffect(() => {}
-    if (typeof window === 'undefined') return
-    const updateMetrics = useCallback((...args) => {}
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      const paint = performance.getEntriesByType('paint')
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime
-      setMetrics({)}
-        fcp,
-        lcp,
-        ttfb: navigation?.responseStart - navigation?.requestStart}
-      })
-    }
-    // Monitor performance after page load
-    if (document.readyState === 'complete') {}
->>>>>>> origin/merge-error-fixes
-      updateMetrics();}
+    if (document.readyState === 'complete') {updateMetrics();}
     } else {}
       window.addEventListener('load', updateMetrics);}
     }
     // Monitor Core Web Vitals;
     if ('web-vitals' in window) {}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
-        getCLS((metric) => setMetrics(prev => ({ ...prev, cls: metric.value })))
-        getFID((metric) => setMetrics(prev => ({ ...prev, fid: metric.value })))
-        getFCP((metric) => setMetrics(prev => ({ ...prev, fcp: metric.value })))
-        getLCP((metric) => setMetrics(prev => ({ ...prev, lcp: metric.value })))
-        getTTFB((metric) => setMetrics(prev => ({ ...prev, ttfb: metric.value })))
+      import('web-vitals').then(({getCLS, getFID, getFCP, getLCP, getTTFB }) => {}
+        getCLS((metric) => setMetrics(prev => ({...prev, cls: metric.value })))
+        getFID((metric) => setMetrics(prev => ({...prev, fid: metric.value })))
+        getFCP((metric) => setMetrics(prev => ({...prev, fcp: metric.value })))
+        getLCP((metric) => setMetrics(prev => ({...prev, lcp: metric.value })))
+        getTTFB((metric) => setMetrics(prev => ({...prev, ttfb: metric.value })))
       })
     }
     return () => {}
@@ -263,44 +176,23 @@ export const usePerformanceMonitoring = useCallback((...args) => {}
   }, [])
   return metrics;
 }
-<<<<<<< HEAD
 // Memory usage monitoring;
-export const useMemoryMonitoring = useCallback((...args) => {
-  const [memoryInfo, setMemoryInfo] = useState<{
+export const useMemoryMonitoring = useCallback((...args) => {const [memoryInfo, setMemoryInfo] = useState<{
     usedJSHeapSize?: number;
     totalJSHeapSize?: number;
     jsHeapSizeLimit?: number;}
   }>({})
-  useEffect(() => {
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
+  useEffect(() => {if (typeof window === 'undefined' || !('memory' in performance)) return;
     const updateMemoryInfo = useCallback((...args) => {
       const memory = (performance as any).memory;
       if (memory) {
         setMemoryInfo({)
           usedJSHeapSize: memory.usedJSHeapSize),
           totalJSHeapSize: memory.totalJSHeapSize),
-=======
-// Memory usage monitoring
-export const useMemoryMonitoring = useCallback((...args) => {}
-  const [memoryInfo, setMemoryInfo] = useState<{}
-    usedJSHeapSize?: number
-    totalJSHeapSize?: number
-    jsHeapSizeLimit?: number;}
-  }>({})
-  useEffect(() => {}
-    if (typeof window === 'undefined' || !('memory' in performance)) return
-    const updateMemoryInfo = useCallback((...args) => {}
-      const memory = (performance as any).memory
-      if (memory) {}
-        setMemoryInfo({)}
-          usedJSHeapSize: memory.usedJSHeapSize,
-          totalJSHeapSize: memory.totalJSHeapSize,
->>>>>>> origin/merge-error-fixes
           jsHeapSizeLimit: memory.jsHeapSizeLimit}
         })
-=======
   );
-  return { imageSrc, isLoaded, isError, observe };
+  return {imageSrc, isLoaded, isError, observe };
 };
 // Performance monitoring hook;
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
@@ -314,7 +206,7 @@ export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
     }
     // Monitor Core Web Vitals;
     if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
+      import('web-vitals').then(({getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
   s: metric.value })));
         getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
   d: metric.value })));
@@ -336,7 +228,6 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
   }>({});
   useEffect(() => {/* TODO: Fix JSX expression */}
         });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
     updateMemoryInfo()
@@ -344,34 +235,18 @@ export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
     return () => clearInterval(interval)
   }, [])
   return memoryInfo;
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 // Resource preloading utility;
-export const preloadResource = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
-=======
-// Resource preloading utility
-export const preloadResource = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
->>>>>>> origin/merge-error-fixes
+export const preloadResource = useCallback((...args) => {if (typeof window === 'undefined') return;
   const link = document.createElement('link')
   link.rel = 'preload'
   link.href = href;
   link.as = as;
   document.head.appendChild(link);}
 }
-<<<<<<< HEAD
 // Critical resource preloading;
-export const preloadCriticalResources = useCallback((...args) => {
-  if (typeof window === 'undefined') return;
+export const preloadCriticalResources = useCallback((...args) => {if (typeof window === 'undefined') return;
   // Preload critical fonts;
-=======
-// Critical resource preloading
-export const preloadCriticalResources = useCallback((...args) => {}
-  if (typeof window === 'undefined') return
-  // Preload critical fonts
->>>>>>> origin/merge-error-fixes
   preloadResource('/fonts/inter-var.woff2', 'font')
   preloadResource('/fonts/inter-var.woff', 'font')
   // Preload critical images;
@@ -380,17 +255,14 @@ export const preloadCriticalResources = useCallback((...args) => {}
   // Preload critical CSS;
   preloadResource('/styles/critical.css', 'style');}
 }
-<<<<<<< HEAD
 // Bundle size monitoring;
-export const useBundleSizeMonitoring = useCallback((...args) => {
-  const [bundleSize, setBundleSize] = useState<{
+export const useBundleSizeMonitoring = useCallback((...args) => {const [bundleSize, setBundleSize] = useState<{
     totalSize?: number;
     jsSize?: number;
     cssSize?: number;
     imageSize?: number;}
   }>({})
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
+  useEffect(() => {if (typeof window === 'undefined') return;
     const calculateBundleSize = useCallback((...args) => {
       const resources = performance.getEntriesByType('resource')
       let totalSize = 0;
@@ -401,28 +273,6 @@ export const useBundleSizeMonitoring = useCallback((...args) => {
         const size = (resource as PerformanceResourceTiming).transferSize || 0;
         totalSize += size;
         if (resource.name.includes('.js')) {
-=======
-// Bundle size monitoring
-export const useBundleSizeMonitoring = useCallback((...args) => {}
-  const [bundleSize, setBundleSize] = useState<{}
-    totalSize?: number
-    jsSize?: number
-    cssSize?: number
-    imageSize?: number;}
-  }>({})
-  useEffect(() => {}
-    if (typeof window === 'undefined') return
-    const calculateBundleSize = useCallback((...args) => {}
-      const resources = performance.getEntriesByType('resource')
-      let totalSize = 0
-      let jsSize = 0
-      let cssSize = 0
-      let imageSize = 0
-      resources.forEach((resource) => {}
-        const size = (resource as PerformanceResourceTiming).transferSize || 0
-        totalSize += size
-        if (resource.name.includes('.js')) {}
->>>>>>> origin/merge-error-fixes
           jsSize += size;}
         } else if (resource.name.includes('.css')) {}
           cssSize += size;}
@@ -430,7 +280,6 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
           imageSize += size;}
         }
       })
-<<<<<<< HEAD
       setBundleSize({)
         totalSize)
         jsSize)
@@ -439,19 +288,7 @@ export const useBundleSizeMonitoring = useCallback((...args) => {}
       })
     }
     // Calculate after page load;
-    if (document.readyState === 'complete') {
-=======
-      setBundleSize({)}
-        totalSize,
-        jsSize,
-        cssSize,
-        imageSize}
-      })
-    }
-    // Calculate after page load
-    if (document.readyState === 'complete') {}
->>>>>>> origin/merge-error-fixes
-      calculateBundleSize();}
+    if (document.readyState === 'complete') {calculateBundleSize();}
     } else {}
       window.addEventListener('load', calculateBundleSize);}
     }
@@ -472,7 +309,6 @@ export default {}
   preloadCriticalResources,
   useBundleSizeMonitoring}
 }
-=======
 };
 // Resource preloading utility;
 export const preloadResource = (hre,
@@ -504,4 +340,3 @@ export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
 };
 export default {/* TODO: Fix JSX expression */}
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

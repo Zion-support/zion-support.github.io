@@ -1,8 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import {Helmet } from 'react-helmet-async';
 
-interface SEOHeadProps {
-  title?: string;
+interface SEOHeadProps {title?: string;
   description?: string;
   keywords?: string;
   image?: string;
@@ -11,16 +10,14 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
+const SEOHead: React.FC<SEOHeadProps> = ({title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS",
   image = "https://ziontechgroup.com/og-image.webp",
   url = "https://ziontechgroup.com",
   type = "website",
   structuredData
-}) => {
-  const defaultStructuredData = {
+}) => {const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -35,8 +32,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
-      "@type": "ContactPoint",
+    "contactPoint": {"@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"

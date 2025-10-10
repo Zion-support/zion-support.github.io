@@ -3,59 +3,36 @@
  * Environment Variables Validator;
  * Ensures all required environment variables are present and valid;
  */
-<<<<<<< HEAD
 export interface EnvConfig {}
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SITE_URL?: string;
 }
-<<<<<<< HEAD
-class EnvValidator {
-  private errors: string[] = [],
+class EnvValidator {private errors: string[] = [],
   private warnings: string[] = [],
   /**,
    * Validate all environment variables;
    */,
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
-=======
-class EnvValidator {}
-  private errors: string[] = []
-  private warnings: string[] = []
-  /**
-   * Validate all environment variables
-   */
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {}
->>>>>>> origin/merge-error-fixes
-    this.errors = []
+  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {this.errors = []
     this.warnings = []
     // Validate NODE_ENV;
     this.validateNodeEnv()
     // Validate optional but recommended variables;
     this.validateOptionalVars()
-<<<<<<< HEAD
     return {
-      isValid: this.errors.length === 0;
-      errors: this.errors;
-      warnings: this.warnings;
-=======
-    return {}
-      isValid: this.errors.length === 0,
-      errors: this.errors,
-      warnings: this.warnings
->>>>>>> origin/merge-error-fixes
-=======
+      isValid: this.errors.length === 0;,
+    errors: this.errors;,
+    warnings: this.warnings;
 export interface EnvConfig {/* TODO: Fix JSX expression */}
 }
 class EnvValidator {/* TODO: Fix JSX expression */}
   s: string[] } {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     };
   }
   /**
    * Get validated environment configuration;
    */
-<<<<<<< HEAD
   getConfig(): EnvConfig {}
     const validation = this.validate()
     if (!validation.isValid) {}
@@ -89,17 +66,9 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   }
   private validateOptionalVars(): void {}
     const nodeEnv = this.getNodeEnv()
-<<<<<<< HEAD
     // In production, these should be set;
-    if (nodeEnv === 'production') {
-      if (!process.env['NEXT_PUBLIC_SITE_URL']) {
+    if (nodeEnv === 'production') {if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
-=======
-    // In production, these should be set
-    if (nodeEnv === 'production') {}
-      if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
-        this.warnings.push()
->>>>>>> origin/merge-error-fixes
           'NEXT_PUBLIC_SITE_URL is not set (recommended for production)'
         )
       }
@@ -113,7 +82,6 @@ class EnvValidator {/* TODO: Fix JSX expression */}
   private getNodeEnv(): 'development' | 'production' | 'test' {}
     const env = process.env['NODE_ENV'] || 'development'
     return env as 'development' | 'production' | 'test'
-=======
   getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
   failed:
 ${validation.errors.join('
@@ -132,8 +100,7 @@ ${validation.errors.join('
 
     }
 
-    if (!validEnvs.includes(nodeEnv)) {
-      this.errors.push(
+    if (!validEnvs.includes(nodeEnv)) {this.errors.push(
         `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
       );
 
@@ -146,26 +113,16 @@ ${validation.errors.join('
     }
   }
   private getNodeEnv(): 'development' | 'production' | 'test' {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 }
 // Export singleton instance;
 export const envValidator = new EnvValidator()
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Export convenience function;
-export function validateEnv(): EnvConfig {
-=======
-// Export convenience function
-export function validateEnv(): EnvConfig {}
->>>>>>> origin/merge-error-fixes
-  return envValidator.getConfig()
+export function validateEnv(): EnvConfig {return envValidator.getConfig()
 }
 export default envValidator;
-=======
 // Export convenience function;
 export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
 }
 export default envValidator;`
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

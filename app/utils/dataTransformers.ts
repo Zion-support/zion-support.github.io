@@ -28,7 +28,7 @@ export function deepClone<T>(ob,)
 export function deepMerge<T extends Record<string, unknown>>(targe,
   t: T, sourc,)
   e: Partial<T>): T {/* TODO: Fix JSX expression */}
-  const output = { ...target };
+  const output = {...target };
   for (const key in source) {/* TODO: Fix JSX expression */}
       } else {/* TODO: Fix JSX expression */}
       }
@@ -94,7 +94,7 @@ export function omit<T extends Record<string, unknown>, K extends keyof T>(ob,
   key,
   s: K[])
 ): Omit<T, K> {/* TODO: Fix JSX expression */}
-  const result = { ...obj };
+  const result = {...obj };
   keys.forEach(key => {/* TODO: Fix JSX expression */})
   });
   return result as Omit<T, K>;

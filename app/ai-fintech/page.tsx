@@ -2,7 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
+import {CheckCircle, Star, DollarSign, Shield, TrendingUp, Zap, Target, Brain } from 'lucide-react';
 const AIFintechPage: React.FC = () => {,
   const aiFintechServices = [,
     {,
@@ -16,8 +16,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Trading',
       technologies: ['QuantLib', 'Zipline', 'Backtrader', 'TensorFlow', 'PyTorch']
     },
-    {
-      title: 'AI Fraud Detection & Prevention',
+    {title: 'AI Fraud Detection & Prevention',
       description: 'Real-time fraud detection system using machine learning to identify suspicious transactions and prevent financial crimes.',
       icon: '🛡️',
       price: '$2,999/month',
@@ -27,8 +26,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Security',
       technologies: ['Isolation Forest', 'One-Class SVM', 'Autoencoders', 'XGBoost', 'Real-time Streaming']
     },
-    {
-      title: 'AI Credit Scoring & Risk Assessment',
+    {title: 'AI Credit Scoring & Risk Assessment',
       description: 'Intelligent credit scoring system with alternative data analysis and real-time risk assessment for lending decisions.',
       icon: '💳',
       price: '$1,999/month',
@@ -38,8 +36,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Lending',
       technologies: ['Machine Learning', 'Alternative Data APIs', 'Credit Bureau APIs', 'Python', 'Risk Models']
     },
-    {
-      title: 'AI Personal Finance Management',
+    {title: 'AI Personal Finance Management',
       description: 'Intelligent personal finance platform with budgeting, investment advice, and automated financial planning.',
       icon: 'dollar-sign',
       price: '$1,499/month',
@@ -49,8 +46,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Personal Finance',
       technologies: ['Open Banking APIs', 'Machine Learning', 'Mobile Apps', 'Cloud Computing', 'Data Analytics']
     },
-    {
-      title: 'AI Insurance Underwriting',
+    {title: 'AI Insurance Underwriting',
       description: 'Automated insurance underwriting with risk assessment, pricing optimization, and claims prediction using AI.',
       icon: '🏥',
       price: '$2,499/month',
@@ -60,8 +56,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Insurance',
       technologies: ['Machine Learning', 'Actuarial Models', 'Risk APIs', 'Data Analytics', 'Cloud Computing']
     },
-    {
-      title: 'AI Regulatory Compliance Platform',
+    {title: 'AI Regulatory Compliance Platform',
       description: 'Automated compliance monitoring and reporting system for financial regulations with real-time risk assessment.',
       icon: '📋',
       price: '$3,499/month',
@@ -71,8 +66,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Compliance',
       technologies: ['Regulatory APIs', 'NLP', 'Machine Learning', 'Blockchain', 'Cloud Security']
     },
-    {
-      title: 'AI Payment Processing & Optimization',
+    {title: 'AI Payment Processing & Optimization',
       description: 'Intelligent payment processing with fraud detection, optimization, and real-time transaction analysis.',
       icon: '💳',
       price: '$1,799/month',
@@ -82,8 +76,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Payments',
       technologies: ['Payment APIs', 'Machine Learning', 'Real-time Processing', 'Blockchain', 'Security Protocols']
     },
-    {
-      title: 'AI Wealth Management Platform',
+    {title: 'AI Wealth Management Platform',
       description: 'Robo-advisor platform with portfolio optimization, tax-loss harvesting, and personalized investment strategies.',
       icon: 'bar-chart',
       price: '$2,299/month',
@@ -93,8 +86,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Wealth Management',
       technologies: ['Portfolio Optimization', 'Tax APIs', 'Market Data APIs', 'Machine Learning', 'Cloud Computing']
     },
-    {
-      title: 'AI Cryptocurrency Trading Bot',
+    {title: 'AI Cryptocurrency Trading Bot',
       description: 'Automated cryptocurrency trading with market analysis, arbitrage opportunities, and risk management.',
       icon: '₿',
       price: '$1,999/month',
@@ -104,8 +96,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Cryptocurrency',
       technologies: ['Crypto APIs', 'Machine Learning', 'Blockchain', 'Real-time Data', 'Trading Algorithms']
     },
-    {
-      title: 'AI Financial Planning & Forecasting',
+    {title: 'AI Financial Planning & Forecasting',
       description: 'Intelligent financial planning with cash flow forecasting, scenario analysis, and automated financial advice.',
       icon: '🔮',
       price: '$1,799/month',
@@ -115,8 +106,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'Financial Planning',
       technologies: ['Time Series Analysis', 'Machine Learning', 'Financial Models', 'Data Analytics', 'Cloud Computing']
     },
-    {
-      title: 'AI Anti-Money Laundering (AML)',
+    {title: 'AI Anti-Money Laundering (AML)',
       description: 'Advanced AML system with transaction monitoring, suspicious activity detection, and regulatory reporting.',
       icon: '🚨',
       price: '$2,999/month',
@@ -126,8 +116,7 @@ const AIFintechPage: React.FC = () => {,
       category: 'AML',
       technologies: ['Graph Analytics', 'Machine Learning', 'Regulatory APIs', 'Real-time Processing', 'Blockchain Analysis']
     },
-    {
-      title: 'AI Customer Onboarding & KYC',
+    {title: 'AI Customer Onboarding & KYC',
       description: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
       icon: '👤',
       price: '$1,299/month',
@@ -139,303 +128,180 @@ const AIFintechPage: React.FC = () => {,
     }
   ];
   const categories = [...new Set(aiFintechServices.map(service => service.category))];
-<<<<<<< HEAD
   return(<>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-=======
-  return (
-    <>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" >
       <Navigation >{/* Hero Section */}</Navigation>
-        </Navigation><section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">AI Fintech Solutions</h1><p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions</p>
+        </Navigation><section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20" >
+          <div className="absolute inset-0 bg-black opacity-20" ></section><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></div>
+            <div className="text-center" ></div>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6" >AI Fintech Solutions</h1><p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto" >Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">Start Fintech AI<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">View Trading Demo</button>
-=======
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" ></div>
+                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors" >Start Fintech AI<button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors" >View Trading Demo</button>
       <Navigation />
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20" >
+          <div className="absolute inset-0 bg-black opacity-20" ></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" >
+            <div className="text-center" >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6" >
                 AI Fintech Solutions;
               </h1>,
-              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto">,
+              <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-3xl mx-auto" >,
                 Revolutionize financial services with cutting-edge AI technology that automates trading, prevents fraud, and optimizes financial decisions;
               </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center" >
+                <button className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors" >
                   Start Fintech AI;
                 </button>
-                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors" >
                   View Trading Demo;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                 </button>
               </div>
             </div>,
           </div>,
         </section>,
         {/* Key Benefits */}
-        <section className="py-16 bg-white">
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-12">
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose AI Fintech?<p className="text-xl text-gray-600">Revolutionary AI technology that transforms financial services and maximizes returns</p>
-=======
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose AI Fintech?
-              </h2>
-              <p className="text-xl text-gray-600">
-                Revolutionary AI technology that transforms financial services and maximizes returns;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
-            <div className="text-center mb-12"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose AI Fintech?</h2><p className="text-xl text-gray-600">Revolutionary AI technology that transforms financial services and maximizes returns</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+        <section className="py-16 bg-white" >
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" >
+            <div className="text-center mb-12" >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" >Why Choose AI Fintech?<p className="text-xl text-gray-600" >Revolutionary AI technology that transforms financial services and maximizes returns</p>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></section>
+            <div className="text-center mb-12" ></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" >Why Choose AI Fintech?</h2><p className="text-xl text-gray-600" >Revolutionary AI technology that transforms financial services and maximizes returns</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              <div className="text-center"></div>
-                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" ></div>
+              <div className="text-center" ></div>
+                <div className="bg-indigo-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" ></div>
                   <DollarSign className="w-8 h-8 text-indigo-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Maximize Returns</h3><p className="text-gray-600">AI optimizes trading strategies and investment decisions for maximum returns</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Maximize Returns</h3><p className="text-gray-600" >AI optimizes trading strategies and investment decisions for maximum returns</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="text-center" ></div>
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" ></div>
                   <Shield className="w-8 h-8 text-green-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Fraud Prevention</h3><p className="text-gray-600">Advanced AI detects and prevents 99.5% of fraudulent transactions</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Fraud Prevention</h3><p className="text-gray-600" >Advanced AI detects and prevents 99.5% of fraudulent transactions</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="text-center" ></div>
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" ></div>
                   <TrendingUp className="w-8 h-8 text-purple-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Risk Management</h3><p className="text-gray-600">Intelligent risk assessment and portfolio optimization</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Risk Management</h3><p className="text-gray-600" >Intelligent risk assessment and portfolio optimization</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="text-center" ></div>
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" ></div>
                   <Zap className="w-8 h-8 text-orange-600" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-time Processing</h3><p className="text-gray-600">Millisecond-level decision making and transaction processing</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Real-time Processing</h3><p className="text-gray-600" >Millisecond-level decision making and transaction processing</p>
               </div>
             </div>,
           </div>,
         </section>,
         {/* Services by Category */}
         {categories.map(category => (
-<<<<<<< HEAD
-          <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
-              <div className="text-center mb-12"></div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{category} Solutions</h2><p className="text-xl text-gray-600">)</p>
-    Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{aiFintechServices
+          <section key={category} className="py-16 bg-gray-50" >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></section>
+              <div className="text-center mb-12" ></div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" >{category} Solutions</h2><p className="text-xl text-gray-600" >)</p>
+    Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >{aiFintechServices
                   .filter(service => service.category === category)</div>
                   .map((service, index) => (</div>
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"></div>
-                      <div className="text-4xl mb-4">{service.icon}</div><h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3><p className="text-gray-600 mb-4">{service.description}</p>
-                      <div className="mb-4"></div>
-                        <div className="flex items-center justify-between mb-2"></div>
-                          <span className="text-2xl font-bold text-indigo-600">{service.price}</span><span className="text-sm text-gray-500">Market: {service.marketPrice}</span><div className="text-sm text-green-600 font-semibold">Save up to 60% vs market rates</div>
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow" ></div>
+                      <div className="text-4xl mb-4" >{service.icon}</div><h3 className="text-xl font-semibold text-gray-900 mb-3" >{service.title}</h3><p className="text-gray-600 mb-4" >{service.description}</p>
+                      <div className="mb-4" ></div>
+                        <div className="flex items-center justify-between mb-2" ></div>
+                          <span className="text-2xl font-bold text-indigo-600" >{service.price}</span><span className="text-sm text-gray-500" >Market: {service.marketPrice}</span><div className="text-sm text-green-600 font-semibold" >Save up to 60% vs market rates</div>
                         </div>
                       </div>
-                      <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features:<ul className="space-y-1">{service.features.map((feature, featureIndex) => (</ul>
-=======
-          <section key={category} className="py-16 bg-gray-50">)
-            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,)
-              <div className="text-center mb-12">,)
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">),
-                  {category} Solutions;
-                </h2>
-                <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology;
-                </p>
-              </div>
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
-                {aiFintechServices;
-                  .filter(service => service.category === category),
-                  .map((service, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover: shadow-xl transition-shadow">,
-                      <div className="text-4xl mb-4">{service.icon}</div>
-                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                      <p className="text-gray-600 mb-4">{service.description}</p>
-                      <div className="mb-4">
-                        <div className="flex items-center justify-between mb-2">
-                          <span className="text-2xl font-bold text-indigo-600">{service.price}</span>
-                          <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
-                        </div>
-                        <div className="text-sm text-green-600 font-semibold">
-                          Save up to 60% vs market rates;
-                        </div>
-                      </div>
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: </h4>,
-                        <ul className="space-y-1">,
-                          {service.features.map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                            <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                      <div className="mb-4" ></div>
+                        <h4 className="font-semibold text-gray-900 mb-2" >Key Features:<ul className="space-y-1" >{service.features.map((feature, featureIndex) => (</ul>
+                            <li key={featureIndex} className="flex items-center text-sm text-gray-600" >
                               <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" >{feature}</CheckCircle>
                             </CheckCircle>
                           ))}
                         </ul>
                       </div>
-<<<<<<< HEAD
-                      <div className="mb-4">
-<<<<<<< HEAD
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (<span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">{tech}</span>
-=======
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: </h4>,
-                        <div className="flex flex-wrap gap-2">,
-                          {service.technologies.map((tech, techIndex) => (
-                            <span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">
-                              {tech}
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-                      <div className="mb-4"></div>
-                        <h4 className="font-semibold text-gray-900 mb-2">Technologies:<div className="flex flex-wrap gap-2">{service.technologies.map((tech, techIndex) => (</div><span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">{tech}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                      <div className="mb-4" >
+                        <h4 className="font-semibold text-gray-900 mb-2" >Technologies:<div className="flex flex-wrap gap-2" >{service.technologies.map((tech, techIndex) => (<span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded" >{tech}</span>
+                      <div className="mb-4" ></div>
+                        <h4 className="font-semibold text-gray-900 mb-2" >Technologies:<div className="flex flex-wrap gap-2" >{service.technologies.map((tech, techIndex) => (</div><span key={techIndex} className="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded" >{tech}</span>
                             </span>
                           ))}
                         </div>
                       </div>
-<<<<<<< HEAD
-                      <div className="mb-6">
-<<<<<<< HEAD
-=======
-                      <div className="mb-6"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                        <h4 className="font-semibold text-gray-900 mb-2">Financial Benefits:<ul className="space-y-1">{service.benefits.map((benefit, benefitIndex) => (</ul>
-=======
-                        <h4 className="font-semibold text-gray-900 mb-2">Financial Benefits: </h4>,
-                        <ul className="space-y-1">,
+                      <div className="mb-6" >
+                        <h4 className="font-semibold text-gray-900 mb-2" >Financial Benefits:<ul className="space-y-1" >{service.benefits.map((benefit, benefitIndex) => (</ul>
+                        <h4 className="font-semibold text-gray-900 mb-2" >Financial Benefits: </h4>,
+                        <ul className="space-y-1" >,
                           {service.benefits.map((benefit, benefitIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                            <li key={benefitIndex} className="flex items-center text-sm text-gray-600" >
                               <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" >{benefit}</Star>
                             </Star>
                           ))}
-<<<<<<< HEAD
-                        <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">Get Fintech Consultation</button>
+                        <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-indigo-700 transition-colors" >Get Fintech Consultation</button>
                       </button>
                     </div>
-=======
-                        </ul>
-                      </div>
-                      <button className="w-full bg-indigo-600 text-white py-2 px-4 rounded-lg font-semibold hover: bg-indigo-700 transition-colors">
-                        Get Fintech Consultation;
-                      </button>,
-                    </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   ))}
               </div>
             </div>
           </section>
         ))}
         {/* AI Fintech Capabilities */}
-        <section className="py-16 bg-white">
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center mb-12">
-<<<<<<< HEAD
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Fintech Capabilities<p className="text-xl text-gray-600">Cutting-edge AI technologies that power the future of financial services</p>
-=======
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                AI Fintech Capabilities;
-              </h2>
-              <p className="text-xl text-gray-600">
-                Cutting-edge AI technologies that power the future of financial services;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></section>
-            <div className="text-center mb-12"></div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">AI Fintech Capabilities</h2><p className="text-xl text-gray-600">Cutting-edge AI technologies that power the future of financial services</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+        <section className="py-16 bg-white" >
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8" >
+            <div className="text-center mb-12" >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" >AI Fintech Capabilities<p className="text-xl text-gray-600" >Cutting-edge AI technologies that power the future of financial services</p>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ></section>
+            <div className="text-center mb-12" ></div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4" >AI Fintech Capabilities</h2><p className="text-xl text-gray-600" >Cutting-edge AI technologies that power the future of financial services</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" ></div>
+              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg" ></div>
                 <TrendingUp className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Algorithmic Trading</h3><p className="text-gray-600">AI-powered trading algorithms for maximum returns and risk management</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Algorithmic Trading</h3><p className="text-gray-600" >AI-powered trading algorithms for maximum returns and risk management</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"></div>
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg" ></div>
                 <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Fraud Detection</h3><p className="text-gray-600">Advanced ML models for real-time fraud detection and prevention</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Fraud Detection</h3><p className="text-gray-600" >Advanced ML models for real-time fraud detection and prevention</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"></div>
+              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg" ></div>
                 <Target className="w-12 h-12 text-purple-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Risk Assessment</h3><p className="text-gray-600">Intelligent risk modeling and portfolio optimization</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Risk Assessment</h3><p className="text-gray-600" >Intelligent risk modeling and portfolio optimization</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"></div>
+              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg" ></div>
                 <Brain className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Predictive Analytics</h3><p className="text-gray-600">Market prediction and financial forecasting with AI</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Predictive Analytics</h3><p className="text-gray-600" >Market prediction and financial forecasting with AI</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"></div>
+              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg" ></div>
                 <DollarSign className="w-12 h-12 text-pink-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Wealth Management</h3><p className="text-gray-600">AI-powered robo-advisors and portfolio management</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Wealth Management</h3><p className="text-gray-600" >AI-powered robo-advisors and portfolio management</p>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg"></div>
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg" ></div>
                 <Zap className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Real-time Processing</h3><p className="text-gray-600">High-frequency processing and real-time decision making</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-2" >Real-time Processing</h3><p className="text-gray-600" >High-frequency processing and real-time decision making</p>
               </div>
             </div>,
           </div>,
         </section>,
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Financial Services?<p className="text-xl mb-8 text-indigo-100">Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
-=======
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Financial Services?
-            </h2>
-            <p className="text-xl mb-8 text-indigo-100">
-              Contact our AI fintech experts for a free consultation and custom financial AI strategy;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+        <section className="py-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white" >
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" >Ready to Transform Financial Services?<p className="text-xl mb-8 text-indigo-100" >Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" >
               <a;
-=======
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></section>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Financial Services?</h2><p className="text-xl mb-8 text-indigo-100">Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" ></section>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" >Ready to Transform Financial Services?</h2><p className="text-xl mb-8 text-indigo-100" >Contact our AI fintech experts for a free consultation and custom financial AI strategy</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" ></div>
               <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                 href="tel:+13024640950"
-                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center"
-<<<<<<< HEAD
-              >📞 +1 302 464 0950<a
+                className="bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors inline-flex items-center" >📞 +1 302 464 0950<a
                 href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
-              >✉️ kleber@ziontechgroup.com</a>
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors" >✉️ kleber@ziontechgroup.com</a>
               </a>
             </div>
-<<<<<<< HEAD
-            <div className="mt-8 text-sm text-indigo-200">
-=======
-              >
-                📞 +1 302 464 0950;
-              </a>
-              <a;
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
-              >
-                ✉️ kleber@ziontechgroup.com;
-              </a>,
-            </div>,
-            <div className="mt-8 text-sm text-indigo-200">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-            <div className="mt-8 text-sm text-indigo-200"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+            <div className="mt-8 text-sm text-indigo-200" >
+            <div className="mt-8 text-sm text-indigo-200" ></div>
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

@@ -1,26 +1,22 @@
-import { useEffect, useState } from 'react';
+import {useEffect, useState } from 'react';
 
-interface UseIntersectionObserverProps {
-  threshold?: number;
+interface UseIntersectionObserverProps {threshold?: number;
   root?: Element | null;
   rootMargin?: string;
   freezeOnceVisible?: boolean;
 }
 
-export const useIntersectionObserver = ({
-  threshold = 0,
+export const useIntersectionObserver = ({threshold = 0,
   root = null,
   rootMargin = '0%',
   freezeOnceVisible = false,
-}: UseIntersectionObserverProps = {}) => {
-  const [entry, setEntry] = useState<IntersectionObserverEntry>();</IntersectionObserverEntry></<<<IntersectionObserverEntry>const</IntersectionObserverEntry></IntersectionObserverEntry> [node, setNode] = useState<Element | null>(null);</Element></<<<Element>const</Element></<<Element>frozen</Element> = entry?.isIntersecting && freezeOnceVisible;
+}: UseIntersectionObserverProps = {}) => {const [entry, setEntry] = useState<IntersectionObserverEntry>();</IntersectionObserverEntry></IntersectionObserverEntry>const</IntersectionObserverEntry></IntersectionObserverEntry> [node, setNode] = useState<Element | null>(null);</Element></Element>const</Element></Element>frozen</Element> = entry?.isIntersecting && freezeOnceVisible;
 
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
     setEntry(entry);
   };
 
-  useEffect(() => {
-    const hasIOSupport = !!window.IntersectionObserver;
+  useEffect(() => {const hasIOSupport = !!window.IntersectionObserver;
 
     if (!hasIOSupport || frozen || !node) return;
 

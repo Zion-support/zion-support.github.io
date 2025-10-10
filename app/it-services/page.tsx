@@ -1,22 +1,18 @@
-<<<<<<< HEAD
 'use client';
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Cpu, Cloud, Shield, Database, Settings, Users, Lock, Globe, Code, Smartphone, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Award, TrendingUp, Zap, Target, BarChart, MessageSquare, Eye, Sparkles } from 'lucide-react';
+import React, {useState, useEffect } from 'react';
+import {Cpu, Cloud, Shield, Database, Settings, Users, Lock, Globe, Code, Smartphone, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity, Phone, Mail, MapPin, CheckCircle, ArrowRight, Star, Award, TrendingUp, Zap, Target, BarChart, MessageSquare, Eye, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ITServicesPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+const ITServicesPage: React.FC = () => {const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
   const itServices = [
-    {
-      id: 'cloud-migration',
+    {id: 'cloud-migration',
       name: 'Cloud Migration Services',
       icon: Cloud,
       price: 'Custom Pricing',
@@ -47,30 +43,13 @@ const ITServicesPage: React.FC = () => {
           company: 'CloudFirst Corp',
           quote: 'Migration was seamless and we saved 60% on infrastructure costs.',
           rating: 5
-=======
-import { Cloud, Shield, Settings, Database, BarChart, CheckCircle, ArrowRight, Phone, Clock, Zap, Cpu, Wifi, Server, Code, TrendingUp, DollarSign, Clock, Shield, TrendingUp, MessageSquare } from 'lucide-react';
-
-export default function ITServicesPage() {}
-  const [activeTab, setActiveTab] = useState('overview');
-
-  const itServices = [
-<<<<<<< HEAD
     {
-      category: 'Cloud Infrastructure & Migration'
-      icon: Cloud;
-      color: 'text-blue-400'
-      bgColor: 'bg-blue-500/10'
-      services: [,
-        {,
-=======
-    {}
       category: 'Cloud Infrastructure & Migration',
-      icon: Cloud,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
+    icon: Cloud;,
+    color: 'text-blue-400',
+    bgColor: 'bg-blue-500/10',
+    services: [,
+        {,
           name: 'Cloud Migration & Setup',
           description: 'Seamless migration to AWS, Azure, or GCP with zero downtime and optimized performance',
           features: ['Multi-cloud Strategy', 'Hybrid Cloud Solutions', 'Cost Optimization', 'Security Implementation', 'Performance Tuning'],
@@ -108,25 +87,15 @@ export default function ITServicesPage() {}
           trial: 'Free audit',
           timeline: '2-4 weeks',
           link: 'https://ziontechgroup.com/cloud-optimization',
-<<<<<<< HEAD
           popular: false;
-=======
-          popular: false
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         }
       ]
     },
-<<<<<<< HEAD
-    {
-<<<<<<< HEAD
-      category: 'Cybersecurity & Compliance'
-      icon: Shield;
-      color: 'text-red-400'
-      bgColor: 'bg-red-500/10'
-=======
-<<<<<<< HEAD
-      id: 'it-consulting',
+    {category: 'Cybersecurity & Compliance',
+    icon: Shield;,
+    color: 'text-red-400',
+    bgColor: 'bg-red-500/10',
+    id: 'it-consulting',
       name: 'IT Consulting',
       icon: Users,
       price: '$150/hour',
@@ -160,8 +129,7 @@ export default function ITServicesPage() {}
         }
       ]
     },
-    {
-      id: 'cybersecurity',
+    {id: 'cybersecurity',
       name: 'Cybersecurity Solutions',
       icon: Shield,
       price: '$299/month',
@@ -191,22 +159,13 @@ export default function ITServicesPage() {}
           name: 'Amanda Foster',
           company: 'SecureData Inc',
           quote: 'Our security posture improved dramatically with their solutions.',
-          rating: 5
-=======
-=======
-    {}
->>>>>>> origin/merge-error-fixes
-      category: 'Cybersecurity & Compliance',
+          rating: 5,
+    category: 'Cybersecurity & Compliance',
       icon: Shield,
       color: 'text-red-400',
       bgColor: 'bg-red-500/10',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       services: [
-<<<<<<< HEAD
         {,
-=======
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'Enterprise Cybersecurity Suite',
           description: 'Comprehensive security solutions with 24/7 monitoring and threat detection',
           features: ['Threat Detection', 'Vulnerability Assessment', 'Security Monitoring', 'Incident Response', 'Penetration Testing'],
@@ -244,25 +203,15 @@ export default function ITServicesPage() {}
           trial: 'Free assessment',
           timeline: '6-12 weeks',
           link: 'https://ziontechgroup.com/zero-trust',
-<<<<<<< HEAD
           popular: false;
-=======
-          popular: false
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         }
       ]
     },
-<<<<<<< HEAD
-    {
-<<<<<<< HEAD
-      category: 'IT Support & Management'
-      icon: Settings;
-      color: 'text-green-400'
-      bgColor: 'bg-green-500/10'
-=======
-<<<<<<< HEAD
-      id: 'database-management',
+    {category: 'IT Support & Management',
+    icon: Settings;,
+    color: 'text-green-400',
+    bgColor: 'bg-green-500/10',
+    id: 'database-management',
       name: 'Database Management',
       icon: Database,
       price: '$199/month',
@@ -296,8 +245,7 @@ export default function ITServicesPage() {}
         }
       ]
     },
-    {
-      id: 'system-integration',
+    {id: 'system-integration',
       name: 'System Integration',
       icon: Settings,
       price: 'Custom Pricing',
@@ -327,22 +275,13 @@ export default function ITServicesPage() {}
           name: 'Sarah Johnson',
           company: 'IntegratePro',
           quote: 'Seamless integration saved us 20 hours per week.',
-          rating: 5
-=======
-=======
-    {}
->>>>>>> origin/merge-error-fixes
-      category: 'IT Support & Management',
+          rating: 5,
+    category: 'IT Support & Management',
       icon: Settings,
       color: 'text-green-400',
       bgColor: 'bg-green-500/10',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       services: [
-<<<<<<< HEAD
         {,
-=======
-        {}
->>>>>>> origin/merge-error-fixes
           name: '24/7 IT Support & Monitoring',
           description: 'Round-the-clock technical support with proactive monitoring and maintenance',
           features: ['Help Desk Support', 'Remote Monitoring', 'Proactive Maintenance', 'Emergency Response', 'SLA Guarantee'],
@@ -380,25 +319,15 @@ export default function ITServicesPage() {}
           trial: 'Free inventory',
           timeline: '2-4 weeks',
           link: 'https://ziontechgroup.com/asset-management',
-<<<<<<< HEAD
           popular: false;
-=======
-          popular: false
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         }
       ]
     },
-<<<<<<< HEAD
-    {
-<<<<<<< HEAD
-      category: 'Software Development & Integration'
-      icon: Code;
-      color: 'text-purple-400'
-      bgColor: 'bg-purple-500/10'
-=======
-<<<<<<< HEAD
-      id: 'network-security',
+    {category: 'Software Development & Integration',
+    icon: Code;,
+    color: 'text-purple-400',
+    bgColor: 'bg-purple-500/10',
+    id: 'network-security',
       name: 'Network Security',
       icon: Lock,
       price: '$249/month',
@@ -428,22 +357,13 @@ export default function ITServicesPage() {}
           name: 'David Wilson',
           company: 'NetSecure LLC',
           quote: 'Network security incidents dropped to zero after implementation.',
-          rating: 5
-=======
-=======
-    {}
->>>>>>> origin/merge-error-fixes
-      category: 'Software Development & Integration',
+          rating: 5,
+    category: 'Software Development & Integration',
       icon: Code,
       color: 'text-purple-400',
       bgColor: 'bg-purple-500/10',
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
       services: [
-<<<<<<< HEAD
         {,
-=======
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'Custom Software Development',
           description: 'Tailored software solutions built with modern technologies and best practices',
           features: ['Web Applications', 'Mobile Apps', 'API Development', 'Integration Services', 'Quality Assurance'],
@@ -485,23 +405,12 @@ export default function ITServicesPage() {}
         }
       ]
     },
-<<<<<<< HEAD
-    {
-      category: 'Network & Infrastructure'
-      icon: Wifi;
-      color: 'text-orange-400'
-      bgColor: 'bg-orange-500/10'
-      services: [
+    {category: 'Network & Infrastructure',
+    icon: Wifi;,
+    color: 'text-orange-400',
+    bgColor: 'bg-orange-500/10',
+    services: [
         {,
-=======
-    {}
-      category: 'Network & Infrastructure',
-      icon: Wifi,
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'Network Design & Implementation',
           description: 'Secure and scalable network infrastructure with wireless and wired solutions',
           features: ['Network Design', 'Wireless Solutions', 'Security Implementation', 'Performance Optimization', 'Monitoring'],
@@ -563,23 +472,12 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
-<<<<<<< HEAD
-    {
-      category: 'AI-Powered IT Solutions'
-      icon: Brain;
-      color: 'text-purple-400'
-      bgColor: 'bg-purple-500/10'
-      services: [
+    {category: 'AI-Powered IT Solutions',
+    icon: Brain;,
+    color: 'text-purple-400',
+    bgColor: 'bg-purple-500/10',
+    services: [
         {,
-=======
-    {}
-      category: 'AI-Powered IT Solutions',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'AI Infrastructure Monitoring Pro',
           description: 'Advanced AI-powered infrastructure monitoring with predictive analytics and automated issue resolution',
           features: ['Predictive Analytics', 'Automated Issue Resolution', 'Anomaly Detection', 'Performance Optimization', 'Capacity Planning', 'Cost Optimization'],
@@ -621,23 +519,12 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
-<<<<<<< HEAD
-    {
-      category: 'Blockchain & Web3 Solutions'
-      icon: Shield;
-      color: 'text-green-400'
-      bgColor: 'bg-green-500/10'
-      services: [,
+    {category: 'Blockchain & Web3 Solutions',
+    icon: Shield;,
+    color: 'text-green-400',
+    bgColor: 'bg-green-500/10',
+    services: [,
         {,
-=======
-    {}
-      category: 'Blockchain & Web3 Solutions',
-      icon: Shield,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'Blockchain Integration Services Pro',
           description: 'Comprehensive blockchain integration with smart contracts, DeFi, and Web3 solutions',
           features: ['Smart Contract Development', 'DeFi Integration', 'NFT Solutions', 'Cross-chain Interoperability', 'Web3 Development', 'Token Economics'],
@@ -669,23 +556,12 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
-<<<<<<< HEAD
-    {
-      category: 'Advanced Analytics & BI'
-      icon: BarChart;
-      color: 'text-blue-400'
-      bgColor: 'bg-blue-500/10'
-      services: [
+    {category: 'Advanced Analytics & BI',
+    icon: BarChart;,
+    color: 'text-blue-400',
+    bgColor: 'bg-blue-500/10',
+    services: [
         {,
-=======
-    {}
-      category: 'Advanced Analytics & BI',
-      icon: BarChart,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'AI Business Intelligence Pro',
           description: 'Advanced AI-powered business intelligence with predictive analytics and automated insights',
           features: ['Predictive Analytics', 'Automated Insights', 'Natural Language Queries', 'Real-time Dashboards', 'Data Visualization', 'Machine Learning'],
@@ -717,23 +593,12 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
-<<<<<<< HEAD
-    {
-      category: 'IoT & Edge Computing'
-      icon: Cpu;
-      color: 'text-orange-400'
-      bgColor: 'bg-orange-500/10'
-      services: [
+    {category: 'IoT & Edge Computing',
+    icon: Cpu;,
+    color: 'text-orange-400',
+    bgColor: 'bg-orange-500/10',
+    services: [
         {,
-=======
-    {}
-      category: 'IoT & Edge Computing',
-      icon: Cpu,
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'IoT Platform Development',
           description: 'Comprehensive IoT platform development with device management and data analytics',
           features: ['Device Management', 'Data Analytics', 'Edge Computing', 'Protocol Support', 'Security', 'Scalability'],
@@ -765,23 +630,12 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
-<<<<<<< HEAD
-    {
-      category: 'Advanced AI-Powered IT Solutions'
-      icon: Brain;
-      color: 'text-purple-400'
-      bgColor: 'bg-purple-500/10'
-      services: [
+    {category: 'Advanced AI-Powered IT Solutions',
+    icon: Brain;,
+    color: 'text-purple-400',
+    bgColor: 'bg-purple-500/10',
+    services: [
         {,
-=======
-    {}
-      category: 'Advanced AI-Powered IT Solutions',
-      icon: Brain,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'AI Quantum Security Implementation',
           description: 'Next-generation quantum-resistant security solutions for future-proof cybersecurity',
           features: ['Quantum Cryptography', 'Post-Quantum Algorithms', 'Future-Proof Security', 'Migration Planning', 'Compliance Assurance', 'Quantum Key Distribution'],
@@ -823,23 +677,12 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
-<<<<<<< HEAD
-    {
-      category: 'Specialized Industry IT Solutions'
-      icon: Building;
-      color: 'text-blue-400'
-      bgColor: 'bg-blue-500/10'
-      services: [
+    {category: 'Specialized Industry IT Solutions',
+    icon: Building;,
+    color: 'text-blue-400',
+    bgColor: 'bg-blue-500/10',
+    services: [
         {,
-=======
-    {}
-      category: 'Specialized Industry IT Solutions',
-      icon: Building,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
           name: 'Healthcare IT Solutions Pro',
           description: 'HIPAA-compliant healthcare IT solutions with AI-powered patient care and medical data management',
           features: ['HIPAA Compliance', 'Electronic Health Records', 'Medical Imaging AI', 'Patient Monitoring', 'Telemedicine Platform', 'Medical Data Security'],
@@ -881,23 +724,12 @@ name: 'AI-Powered Infrastructure Management',
         }
       ]
     },
-<<<<<<< HEAD
-    {
-      category: 'Emerging Technology Solutions'
-      icon: Rocket;
-      color: 'text-pink-400'
-      bgColor: 'bg-pink-500/10'
-      services: [
+    {category: 'Emerging Technology Solutions',
+    icon: Rocket;,
+    color: 'text-pink-400',
+    bgColor: 'bg-pink-500/10',
+    services: [
         {,
-=======
-    {}
-      category: 'Emerging Technology Solutions',
-      icon: Rocket,
-      color: 'text-pink-400',
-      bgColor: 'bg-pink-500/10',
-      services: [
-        {}
->>>>>>> origin/merge-error-fixes
           name: '5G Network Implementation Pro',
           description: 'Advanced 5G network implementation with AI-powered optimization and edge computing integration',
           features: ['5G Infrastructure', 'Edge Computing', 'Network Slicing', 'AI Optimization', 'Low Latency', 'High Bandwidth'],
@@ -935,22 +767,15 @@ name: 'AI-Powered Infrastructure Management',
           trial: 'Free metaverse assessment',
           timeline: '16-32 weeks',
           link: 'https://ziontechgroup.com/metaverse-infrastructure-pro',
-<<<<<<< HEAD
           popular: false;
-=======
-          popular: false
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
         }
       ]
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Cloud, Shield, Settings, Database, Users, CheckCircle, ArrowRight, Phone, Mail, Server, Network, Lock, Monitor, Code, BarChart, Globe, Zap, Target, Award } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, {useState } from 'react';
+import {Helmet } from 'react-helmet-async';
+import {Cloud, Shield, Settings, Database, Users, CheckCircle, ArrowRight, Phone, Mail, Server, Network, Lock, Monitor, Code, BarChart, Globe, Zap, Target, Award } from 'lucide-react';
+import {Link } from 'react-router-dom';
 
-const ITServicesPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+const ITServicesPage: React.FC = () => {const [activeTab, setActiveTab] = useState('overview');
 
   const itServices = [
     {
@@ -964,8 +789,7 @@ const ITServicesPage: React.FC = () => {
       popular: true,
       color: 'from-blue-400 to-cyan-500'
     },
-    {
-      id: 'it-support',
+    {id: 'it-support',
       name: 'IT Support',
       description: 'Comprehensive IT support and maintenance services.',
       icon: Users,
@@ -975,8 +799,7 @@ const ITServicesPage: React.FC = () => {
       popular: false,
       color: 'from-green-400 to-emerald-500'
     },
-    {
-      id: 'cybersecurity',
+    {id: 'cybersecurity',
       name: 'Cybersecurity',
       description: 'Protect your business with comprehensive security solutions.',
       icon: Shield,
@@ -986,8 +809,7 @@ const ITServicesPage: React.FC = () => {
       popular: false,
       color: 'from-red-400 to-pink-500'
     },
-    {
-      id: 'cloud-services',
+    {id: 'cloud-services',
       name: 'Cloud Services',
       description: 'Migrate and optimize your cloud infrastructure.',
       icon: Cloud,
@@ -997,8 +819,7 @@ const ITServicesPage: React.FC = () => {
       popular: false,
       color: 'from-purple-400 to-violet-500'
     },
-    {
-      id: 'database-management',
+    {id: 'database-management',
       name: 'Database Management',
       description: 'Optimize and maintain your database systems.',
       icon: Database,
@@ -1008,8 +829,7 @@ const ITServicesPage: React.FC = () => {
       popular: false,
       color: 'from-orange-400 to-amber-500'
     },
-    {
-      id: 'it-consulting',
+    {id: 'it-consulting',
       name: 'IT Consulting',
       description: 'Strategic IT consulting to align technology with business goals.',
       icon: Settings,
@@ -1018,110 +838,71 @@ const ITServicesPage: React.FC = () => {
       pricing: { starting: 1500, period: 'hour' },
       popular: false,
       color: 'from-indigo-400 to-purple-500'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   ];
 
-<<<<<<< HEAD
   const industries = [
-    {
-<<<<<<< HEAD
-      name: 'Healthcare',
+    {name: 'Healthcare',
       icon: Stethoscope,
       description: 'HIPAA-compliant IT solutions for healthcare providers',
       services: ['EMR integration', 'Telemedicine platforms', 'Data security', 'Compliance management']
     },
-    {
-      name: 'Finance',
+    {name: 'Finance',
       icon: CreditCard,
       description: 'Secure financial technology solutions',
       services: ['Payment processing', 'Fraud detection', 'Compliance', 'Risk management']
     },
-    {
-      name: 'Manufacturing',
+    {name: 'Manufacturing',
       icon: Factory,
       description: 'Industrial IT solutions for smart manufacturing',
       services: ['IoT integration', 'Supply chain management', 'Quality control', 'Predictive maintenance']
     },
-    {
-      name: 'Retail',
+    {name: 'Retail',
       icon: ShoppingCart,
       description: 'E-commerce and retail technology solutions',
       services: ['POS systems', 'Inventory management', 'Customer analytics', 'Omnichannel solutions']
     },
-    {
-      name: 'Education',
+    {name: 'Education',
       icon: GraduationCap,
       description: 'Educational technology and learning management systems',
       services: ['LMS platforms', 'Student information systems', 'Online learning', 'Assessment tools']
     },
-    {
-      name: 'Transportation',
+    {name: 'Transportation',
       icon: Car,
       description: 'Logistics and transportation management systems',
       services: ['Fleet management', 'Route optimization', 'Tracking systems', 'Compliance monitoring']
-=======
-  const benefits = [
-<<<<<<< HEAD
     {
-      icon: TrendingUp;
-=======
-    {}
-      icon: TrendingUp,
->>>>>>> origin/merge-error-fixes
-      title: 'Proven Results',
+      icon: TrendingUp;,
+    title: 'Proven Results',
       description: 'Our clients see 40% improvement in system performance',
       stat: '40%',
-=======
       title: '24/7 Support',
       description: 'Round-the-clock technical support and monitoring',
       icon: Monitor,
       stat: '24/7'
     },
-    {
-      title: '99.9% Uptime',
+    {title: '99.9% Uptime',
       description: 'Guaranteed system availability and reliability',
       icon: Server,
       stat: '99.9%'
     },
-    {
-      title: 'Cost Savings',
+    {title: 'Cost Savings',
       description: 'Reduce IT costs through optimization and automation',
       icon: BarChart,
       stat: '40%'
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     },
-<<<<<<< HEAD
-    {
-<<<<<<< HEAD
-      icon: Clock;
-=======
-    {}
-      icon: Clock,
->>>>>>> origin/merge-error-fixes
-      title: 'Rapid Response',
+    {icon: Clock;,
+    title: 'Rapid Response',
       description: 'Average response time of 15 minutes for critical issues',
       stat: '15 min',
     },
-<<<<<<< HEAD
-    {
-      icon: DollarSign;
-=======
-    {}
-      icon: DollarSign,
->>>>>>> origin/merge-error-fixes
-      title: 'Cost Savings',
+    {icon: DollarSign;,
+    title: 'Cost Savings',
       description: 'Reduce IT costs by up to 60% through optimization',
       stat: '60%',
     },
-<<<<<<< HEAD
-    {
-      icon: Shield;
-=======
-    {}
-      icon: Shield,
->>>>>>> origin/merge-error-fixes
-      title: 'Security First',
+    {icon: Shield;,
+    title: 'Security First',
       description: 'Zero security breaches with our comprehensive approach',
       stat: '100%',
     }
@@ -1130,79 +911,49 @@ const ITServicesPage: React.FC = () => {
   const technologies = [
     {}
       category: 'Cloud Platforms',
-      icon: Cloud;
-      techs: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud']
+      icon: Cloud;,
+    techs: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud', 'Oracle Cloud']
     },
     {}
       category: 'Security Tools',
-      icon: Shield;
-      techs: ['CrowdStrike', 'Palo Alto', 'Cisco', 'Fortinet', 'Splunk']
+      icon: Shield;,
+    techs: ['CrowdStrike', 'Palo Alto', 'Cisco', 'Fortinet', 'Splunk']
     },
     {}
       category: 'Databases',
-      icon: Database;
-      techs: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch']
+      icon: Database;,
+    techs: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch']
     },
     {}
       category: 'Monitoring',
-      icon: BarChart;
-      techs: ['Datadog', 'New Relic', 'Prometheus', 'Grafana', 'Zabbix']
+      icon: BarChart;,
+    techs: ['Datadog', 'New Relic', 'Prometheus', 'Grafana', 'Zabbix']
     }
   ];
 
   const process = [
-<<<<<<< HEAD
-    {
-      step: 1;
-=======
-    {}
-      step: 1,
->>>>>>> origin/merge-error-fixes
-      title: 'Assessment & Planning',
+    {step: 1;,
+    title: 'Assessment & Planning',
       description: 'Comprehensive analysis of your current IT infrastructure and needs',
       duration: '1-2 weeks',
     },
-<<<<<<< HEAD
-    {
-      step: 2;
-=======
-    {}
-      step: 2,
->>>>>>> origin/merge-error-fixes
-      title: 'Strategy Development',
+    {step: 2;,
+    title: 'Strategy Development',
       description: 'Create a detailed IT strategy aligned with your business goals',
       duration: '1-2 weeks',
     },
-<<<<<<< HEAD
-    {
-      step: 3;
-=======
-    {}
-      step: 3,
->>>>>>> origin/merge-error-fixes
-      title: 'Implementation',
+    {step: 3;,
+    title: 'Implementation',
       description: 'Deploy solutions with minimal disruption to your operations',
       duration: '2-8 weeks',
     },
-<<<<<<< HEAD
-    {
-      step: 4;
-=======
-    {}
-      step: 4,
->>>>>>> origin/merge-error-fixes
-      title: 'Testing & Optimization',
+    {step: 4;,
+    title: 'Testing & Optimization',
       description: 'Thorough testing and performance optimization',
       duration: '1-2 weeks',
     },
-<<<<<<< HEAD
-    {
-      step: 5;
-=======
-    {}
-      step: 5,
->>>>>>> origin/merge-error-fixes
-      title: 'Support & Monitoring',
+    {step: 5;,
+    title: 'Support & Monitoring',
       description: 'Ongoing support, monitoring, and continuous improvement',
       duration: 'Ongoing',
     }
@@ -1231,15 +982,9 @@ const ITServicesPage: React.FC = () => {
       challenge: 'Disconnected systems and poor customer experience',
       solution: 'System integration and unified platform development',
       results: ['30% improved efficiency', '25% better customer satisfaction', '200% ROI'],
-<<<<<<< HEAD
       image: '/images/case-studies/retail.webp',
-=======
-      image: '/images/case-studies/retail.webp'
->>>>>>> origin/main
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-6ffe
     }
   ];
-=======
       title: 'Expert Team',
       description: 'Certified professionals with years of experience',
       icon: Users,
@@ -1248,28 +993,22 @@ const ITServicesPage: React.FC = () => {
   ];
 
   const industries = [
-    { name: 'Healthcare', description: 'HIPAA compliance, medical records, telemedicine' },
-    { name: 'Finance', description: 'PCI compliance, trading systems, risk management' },
-    { name: 'E-commerce', description: 'Online platforms, payment processing, inventory' },
-    { name: 'Manufacturing', description: 'Production systems, quality control, supply chain' },
-    { name: 'Education', description: 'Learning management, student data, remote learning' },
-    { name: 'Government', description: 'Public services, data security, compliance' }
+    {name: 'Healthcare', description: 'HIPAA compliance, medical records, telemedicine' },
+    {name: 'Finance', description: 'PCI compliance, trading systems, risk management' },
+    {name: 'E-commerce', description: 'Online platforms, payment processing, inventory' },
+    {name: 'Manufacturing', description: 'Production systems, quality control, supply chain' },
+    {name: 'Education', description: 'Learning management, student data, remote learning' },
+    {name: 'Government', description: 'Public services, data security, compliance' }
   ];
 
-  const handlePhoneClick = () => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'phone_click', {
-        event_category: 'engagement',
+  const handlePhoneClick = () => {if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'phone_click', {event_category: 'engagement',
         event_label: 'it_services_phone_number',
       });
     }
   };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 
-<<<<<<< HEAD
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <>
       <SEOOptimizer
         title="IT Services - Zion Tech Group"
@@ -1279,8 +1018,8 @@ const ITServicesPage: React.FC = () => {
       />
       <Navigation />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
-        <main className="container mx-auto px-4 py-16 pt-24">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field" >
+        <main className="container mx-auto px-4 py-16 pt-24" >
           {/* Hero Section */}
           <section className={`text-center mb-16 transition-all duration-1000 ${
             isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
@@ -1288,97 +1027,97 @@ const ITServicesPage: React.FC = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 holographic-text cyber-text glitch" data-text="IT Services">
               IT Services
             </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse">
+            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium neon-pulse" >
               Expert IT Solutions for Modern Businesses
             </p>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed" >
               From cloud migration to cybersecurity, our comprehensive IT services help businesses 
               leverage technology for growth, security, and efficiency. Trust our expert team to 
               handle your technology needs.
             </p>
             
             {/* Key Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
-              <div className="cyber-card p-6 text-center">
-                <div className="text-3xl font-bold text-cyan-400 neon-text mb-2">500+</div>
-                <div className="text-gray-300">Projects Completed</div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12" >
+              <div className="cyber-card p-6 text-center" >
+                <div className="text-3xl font-bold text-cyan-400 neon-text mb-2" >500+</div>
+                <div className="text-gray-300" >Projects Completed</div>
               </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-3xl font-bold text-purple-400 neon-text mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime Guarantee</div>
+              <div className="cyber-card p-6 text-center" >
+                <div className="text-3xl font-bold text-purple-400 neon-text mb-2" >99.9%</div>
+                <div className="text-gray-300" >Uptime Guarantee</div>
               </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-3xl font-bold text-pink-400 neon-text mb-2">24/7</div>
-                <div className="text-gray-300">Support Available</div>
+              <div className="cyber-card p-6 text-center" >
+                <div className="text-3xl font-bold text-pink-400 neon-text mb-2" >24/7</div>
+                <div className="text-gray-300" >Support Available</div>
               </div>
-              <div className="cyber-card p-6 text-center">
-                <div className="text-3xl font-bold text-green-400 neon-text mb-2">15+</div>
-                <div className="text-gray-300">Years Experience</div>
+              <div className="cyber-card p-6 text-center" >
+                <div className="text-3xl font-bold text-green-400 neon-text mb-2" >15+</div>
+                <div className="text-gray-300" >Years Experience</div>
               </div>
             </div>
           </section>
 
           {/* IT Services Grid */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+          <section className="mb-16" >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text" >
               Our IT Services
             </h2>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8" >
               {itServices.map((service, index) => (
                 <article key={service.id} className={`quantum-card p-8 energy-pulse transition-all duration-500 ${
                   isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`} style={{ transitionDelay: `${index * 100}ms` }}>
-                  <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <div className="text-center mb-6" >
+                    <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" >
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.name}</h3>
-                    <div className="text-3xl font-bold text-cyan-400 mb-4">{service.price}</div>
-                    <p className="text-gray-300 leading-relaxed">{service.description}</p>
+                    <h3 className="text-2xl font-bold text-white mb-2 neon-text" >{service.name}</h3>
+                    <div className="text-3xl font-bold text-cyan-400 mb-4" >{service.price}</div>
+                    <p className="text-gray-300 leading-relaxed" >{service.description}</p>
                   </div>
 
                   {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                  <div className="mb-6" >
+                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center" >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
                       Key Features
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2" >
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-300">
+                        <li key={idx} className="flex items-center text-gray-300" >
                           <ArrowRight className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+                          <span className="text-sm" >{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                  <div className="mb-6" >
+                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center" >
                       <TrendingUp className="w-5 h-5 text-green-400 mr-2" />
                       Benefits
                     </h4>
-                    <ul className="space-y-2">
+                    <ul className="space-y-2" >
                       {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-gray-300">
+                        <li key={idx} className="flex items-center text-gray-300" >
                           <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                          <span className="text-sm">{benefit}</span>
+                          <span className="text-sm" >{benefit}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   {/* Use Cases */}
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center">
+                  <div className="mb-6" >
+                    <h4 className="text-lg font-semibold text-white mb-3 flex items-center" >
                       <Target className="w-5 h-5 text-blue-400 mr-2" />
                       Use Cases
                     </h4>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2" >
                       {service.useCases.map((useCase, idx) => (
-                        <span key={idx} className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-xs">
+                        <span key={idx} className="px-3 py-1 bg-cyan-400/20 text-cyan-400 rounded-full text-xs" >
                           {useCase}
                         </span>
                       ))}
@@ -1387,14 +1126,14 @@ const ITServicesPage: React.FC = () => {
 
                   {/* Testimonial */}
                   {service.testimonials.map((testimonial, idx) => (
-                    <div key={idx} className="mb-6 p-4 bg-slate-800/50 rounded-lg">
-                      <div className="flex items-center mb-2">
+                    <div key={idx} className="mb-6 p-4 bg-slate-800/50 rounded-lg" >
+                      <div className="flex items-center mb-2" >
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                         ))}
                       </div>
-                      <p className="text-gray-300 text-sm italic mb-2">"{testimonial.quote}"</p>
-                      <div className="text-cyan-400 text-sm font-medium">
+                      <p className="text-gray-300 text-sm italic mb-2" >"{testimonial.quote}"</p>
+                      <div className="text-cyan-400 text-sm font-medium" >
                         {testimonial.name}, {testimonial.company}
                       </div>
                     </div>
@@ -1403,8 +1142,7 @@ const ITServicesPage: React.FC = () => {
                   {/* CTA Button */}
                   <a
                     href="/contact"
-                    className="cyber-button w-full text-center justify-center inline-flex items-center"
-                  >
+                    className="cyber-button w-full text-center justify-center inline-flex items-center" >
                     Get Started
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </a>
@@ -1414,29 +1152,29 @@ const ITServicesPage: React.FC = () => {
           </section>
 
           {/* Industries Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text">
+          <section className="mb-16" >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center neon-text" >
               Industries We Serve
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
               {industries.map((industry, index) => (
                 <div key={industry.name} className={`cyber-card p-6 hover:scale-105 transition-all duration-300 ${
                   isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                 }`} style={{ transitionDelay: `${index * 100}ms` }}>
-                  <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <div className="text-center mb-4" >
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3" >
                       <industry.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{industry.name}</h3>
-                    <p className="text-gray-300 text-sm">{industry.description}</p>
+                    <h3 className="text-xl font-bold text-white mb-2" >{industry.name}</h3>
+                    <p className="text-gray-300 text-sm" >{industry.description}</p>
                   </div>
                   
-                  <div className="space-y-2">
+                  <div className="space-y-2" >
                     {industry.services.map((service, idx) => (
-                      <div key={idx} className="flex items-center text-gray-300">
+                      <div key={idx} className="flex items-center text-gray-300" >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span className="text-sm">{service}</span>
+                        <span className="text-sm" >{service}</span>
                       </div>
                     ))}
                   </div>
@@ -1446,27 +1184,25 @@ const ITServicesPage: React.FC = () => {
           </section>
 
           {/* CTA Section */}
-          <section className="text-center py-16">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text">
+          <section className="text-center py-16" >
+            <div className="cyber-card p-12 max-w-4xl mx-auto" >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 neon-text" >
                 Ready to Transform Your IT Infrastructure?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8" >
                 Let our expert team help you build a robust, secure, and scalable IT infrastructure 
                 that drives business growth.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" >
                 <a
                   href="/contact"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg"
-                >
+                  className="cyber-button inline-flex items-center px-8 py-4 text-lg" >
                   <Phone className="w-5 h-5 mr-2" />
                   Get Free Consultation
                 </a>
                 <a
                   href="tel:+13024640950"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                >
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center" >
                   <Phone className="w-4 h-4 mr-2" />
                   (302) 464-0950
                 </a>
@@ -1482,68 +1218,36 @@ const ITServicesPage: React.FC = () => {
 };
 
 export default ITServicesPage;
-=======
-
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg"></div>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">{/* Hero Section */}</div>
-      <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></section><div className="container mx-auto px-4 relative z-10"></div>
-          <div className="max-w-4xl mx-auto text-center"></div>
-
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">IT Services</h1><p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.</p>
-              From infrastructure to security, we've got you covered.</p>
-=======
-  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">
-      {/* Hero Section */}
-      <section className="relative py-20 lg: py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              IT Services;
-            </h1>,
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">,
-,
-              Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.
-              From infrastructure to security, we've got you covered.
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
             </p>
 
             {/* Stats */}
-<<<<<<< HEAD
-            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 max-w-5xl mx-auto mb-12">
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150+<div className="text-gray-300">IT Services</div>
-=======
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto mb-12"></div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20"></div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150+</div><div className="text-gray-300">IT Services</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+            <div className="grid grid-cols-1 md: grid-cols-4 gap-8 max-w-5xl mx-auto mb-12" >
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20" >
+                <div className="text-3xl font-bold text-cyan-400 mb-2" >150+<div className="text-gray-300" >IT Services</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20"></div>
-                <div className="text-3xl font-bold text-purple-400 mb-2">750+</div><div className="text-gray-300">Enterprise Clients</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/20" ></div>
+                <div className="text-3xl font-bold text-purple-400 mb-2" >750+</div><div className="text-gray-300" >Enterprise Clients</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20"></div>
-                <div className="text-3xl font-bold text-pink-400 mb-2">99.9%</div><div className="text-gray-300">Uptime SLA</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/20" ></div>
+                <div className="text-3xl font-bold text-pink-400 mb-2" >99.9%</div><div className="text-gray-300" >Uptime SLA</div>
               </div>
-              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20"></div>
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div><div className="text-gray-300">Support</div>
+              <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/20" ></div>
+                <div className="text-3xl font-bold text-green-400 mb-2" >24/7</div><div className="text-gray-300" >Support</div>
               </div>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4"></div>
-              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg"></div>
+            <div className="flex flex-wrap justify-center gap-4" ></div>
+              <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg" ></div>
                 <Shield className="w-5 h-5 text-cyan-400" />
-                <span className="text-white font-medium">Enterprise Security</span>
+                <span className="text-white font-medium" >Enterprise Security</span>
               </div>
-              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg"></div>
+              <div className="flex items-center space-x-2 bg-purple-500/20 px-4 py-2 rounded-lg" ></div>
                 <Cloud className="w-5 h-5 text-purple-400" />
-                <span className="text-white font-medium">Cloud Solutions</span>
+                <span className="text-white font-medium" >Cloud Solutions</span>
               </div>
-              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg"></div>
+              <div className="flex items-center space-x-2 bg-green-500/20 px-4 py-2 rounded-lg" ></div>
                 <Settings className="w-5 h-5 text-green-400" />
-                <span className="text-white font-medium">24/7 Support</span>
+                <span className="text-white font-medium" >24/7 Support</span>
               </div>
             </div>,
           </div>,
@@ -1551,47 +1255,28 @@ export default ITServicesPage;
       </section>,
 ,
       {/* Benefits */}
-      <section className="py-20">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?<p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-=======
-        <div className="container mx-auto px-4"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Why Choose Our IT Services?</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Proven expertise and enterprise-grade solutions that deliver measurable business value</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{benefits.map((benefit, index) => (</div>
-              <div key={index} className="text-center group"></div>
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+      <section className="py-20" >
+        <div className="container mx-auto px-4" >
+          <div className="text-center mb-16" >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" >Why Choose Our IT Services?<p className="text-lg text-gray-300 max-w-3xl mx-auto" >Proven expertise and enterprise-grade solutions that deliver measurable business value<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >{benefits.map((benefit, index) => (</div>
+              <div key={index} className="text-center group" >
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" >
                   <benefit.icon className="w-10 h-10 text-white" />
-=======
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4" >
               Why Choose Our IT Services?
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto" >
               Proven expertise and enterprise-grade solutions that deliver measurable business value;)
             </p>)
           </div>,)
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">),
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >),
             {benefits.map((benefit, index) => (
-=======
-              Proven expertise and enterprise-grade solutions that deliver measurable business value
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (}
->>>>>>> origin/merge-error-fixes
-              <div key={index} className="text-center group">
-                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300">,
+              <div key={index} className="text-center group" >
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover: scale-110 transition-transform duration-300" >,
                   <benefit.icon className="w-10 h-10 text-white" />,
                 </div>,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-                <div className="text-4xl font-bold text-white mb-2">{benefit.stat}</div>
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3><p className="text-gray-300 text-sm leading-relaxed">{benefit.description}</p>
+                <div className="text-4xl font-bold text-white mb-2" >{benefit.stat}</div>
+                <h3 className="text-xl font-bold text-white mb-3" >{benefit.title}</h3><p className="text-gray-300 text-sm leading-relaxed" >{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -1599,204 +1284,103 @@ export default ITServicesPage;
       </section>
 
       {/* IT Services */}
-      <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Services<p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business needs<div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
+      <section className="py-20 bg-slate-800/50" >
+        <div className="container mx-auto px-4" >
+          <div className="text-center mb-16" >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" >Our IT Services<p className="text-lg text-gray-300 max-w-3xl mx-auto" >Comprehensive IT solutions designed to meet your business needs<div className="space-y-16" >{itServices.map((category, categoryIndex) => (</div>
               <div key={categoryIndex}>
-                <div className="flex items-center space-x-3 mb-8">
-=======
-        <div className="container mx-auto px-4"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Services</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Comprehensive IT solutions designed to meet your business needs</p><div className="space-y-16">{itServices.map((category, categoryIndex) => (</div>
-              <div key={categoryIndex}></div>
-                <div className="flex items-center space-x-3 mb-8"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                <div className="flex items-center space-x-3 mb-8" >
                   <category.icon className={`w-8 h-8 ${category.color}`} />
-                  <h3 className="text-2xl font-bold text-white">{category.category}</h3><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">{category.services.map((service, serviceIndex) => (</div>
+                  <h3 className="text-2xl font-bold text-white" >{category.category}</h3><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8" >{category.services.map((service, serviceIndex) => (</div>
 </div>
-<<<<<<< HEAD
-<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
-=======
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Our IT Services;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
+<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative" >
+<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative" >{service.popular && (<div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg" >Popular</div>
               Comprehensive IT solutions designed to meet your business needs;
             </p>,
           </div>,
-          <div className="space-y-16">,
+          <div className="space-y-16" >,
             {itServices.map((category, categoryIndex) => (
-=======
-              Comprehensive IT solutions designed to meet your business needs
-            </p>
-          </div>
-          <div className="space-y-16">
-            {itServices.map((category, categoryIndex) => (}
->>>>>>> origin/merge-error-fixes
               <div key={categoryIndex}>
-                <div className="flex items-center space-x-3 mb-8">
+                <div className="flex items-center space-x-3 mb-8" >
                   <category.icon className={`w-8 h-8 ${category.color}`} />
-                  <h3 className="text-2xl font-bold text-white">{category.category}</h3>
+                  <h3 className="text-2xl font-bold text-white" >{category.category}</h3>
                 </div>
-                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-8">,
+                <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-2 gap-8" >,
                   {category.services.map((service, serviceIndex) => (
 }
-<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">
-<<<<<<< HEAD
+<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative" >
+<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative" >
                       {service.popular && (
-=======
-
-                      {service.popular && (}
->>>>>>> origin/merge-error-fixes
-                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                        <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg" >
                           Popular;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative"></div>
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">{service.popular && (</div><div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">Popular</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative" ></div>
+<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative" >{service.popular && (</div><div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg" >Popular</div>
                         </div>
                       )}
 
-                      <div className="relative z-10"></div>
-                        <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">{service.name}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                      <div className="relative z-10" ></div>
+                        <h4 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300" >{service.name}<p className="text-gray-300 mb-6 leading-relaxed" >{service.description}</p>
 
-                        <div className="space-y-4 mb-6"></div>
-                          <h5 className="text-lg font-semibold text-white flex items-center">
-<<<<<<< HEAD
-                            <Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features:<ul className="space-y-2">{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
-=======
-                            <Zap className="w-4 h-4 mr-2 text-cyan-400" />
-<<<<<<< HEAD
+                        <div className="space-y-4 mb-6" ></div>
+                          <h5 className="text-lg font-semibold text-white flex items-center" >
+                            <Zap className="w-4 h-4 mr-2 text-cyan-400" >Key Features:<ul className="space-y-2" >{service.features.slice(0, 4).map((feature, featureIndex) => (</ul>
                             Key Features: </h5>,
-                          <ul className="space-y-2">,
+                          <ul className="space-y-2" >,
                             {service.features.slice(0, 4).map((feature, featureIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
                             Key Features:
                           </h5>
-                          <ul className="space-y-2">
+                          <ul className="space-y-2" >
                             {service.features.slice(0, 4).map((feature, featureIndex) => (}
->>>>>>> origin/merge-error-fixes
-                              <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
+                              <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300" >
                                 <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span>{feature}</span>
                               </li>
                             ))}
-<<<<<<< HEAD
                             {service.features.length > 4 && (
-<<<<<<< HEAD
-                              <li className="text-cyan-400 text-sm font-medium">+{service.features.length - 4} more features</li>
-=======
-=======
-                            {service.features.length > 4 && (}
->>>>>>> origin/merge-error-fixes
-                              <li className="text-cyan-400 text-sm font-medium">
+                              <li className="text-cyan-400 text-sm font-medium" >+{service.features.length - 4} more features</li>
+                              <li className="text-cyan-400 text-sm font-medium" >
                                 +{service.features.length - 4} more features;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                               </li>
                             )}
                           </ul>
                         </div>
 
-<<<<<<< HEAD
-                        <div className="space-y-3 mb-6">
-                          <div className="flex justify-between items-center">
-<<<<<<< HEAD
-                            <span className="text-sm text-gray-400">Pricing:<span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
-=======
-                        <div className="space-y-3 mb-6"></div>
-                          <div className="flex justify-between items-center"></div>
-                            <span className="text-sm text-gray-400">Pricing:</span><span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                        <div className="space-y-3 mb-6" >
+                          <div className="flex justify-between items-center" >
+                            <span className="text-sm text-gray-400" >Pricing:<span className="text-lg font-bold text-cyan-400" >{service.pricing}</span>
                           </div>
-                          <div className="flex justify-between items-center"></div>
-                            <span className="text-sm text-gray-400">Trial:</span><span className="text-sm font-medium text-green-400">{service.trial}</span>
+                          <div className="flex justify-between items-center" ></div>
+                            <span className="text-sm text-gray-400" >Trial:</span><span className="text-sm font-medium text-green-400" >{service.trial}</span>
                           </div>
-<<<<<<< HEAD
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Timeline:<span className="text-sm font-medium text-purple-400">{service.timeline}</span>
-=======
-                            <span className="text-sm text-gray-400">Pricing: </span>,
-                            <span className="text-lg font-bold text-cyan-400">{service.pricing}</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Trial: </span>,
-                            <span className="text-sm font-medium text-green-400">{service.trial}</span>
-                          </div>
-                          <div className="flex justify-between items-center">
-                            <span className="text-sm text-gray-400">Timeline: </span>,
-                            <span className="text-sm font-medium text-purple-400">{service.timeline}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+                          <div className="flex justify-between items-center" >
+                            <span className="text-sm text-gray-400" >Timeline:<span className="text-sm font-medium text-purple-400" >{service.timeline}</span>
                           </div>
                         </div>
 
-                        <div className="space-y-3">
+                        <div className="space-y-3" >
                           <a;
-=======
-                          <div className="flex justify-between items-center"></div>
-                            <span className="text-sm text-gray-400">Timeline:</span><span className="text-sm font-medium text-purple-400">{service.timeline}</span>
+                          <div className="flex justify-between items-center" ></div>
+                            <span className="text-sm text-gray-400" >Timeline:</span><span className="text-sm font-medium text-purple-400" >{service.timeline}</span>
                           </div>
                         </div>
 
-                        <div className="space-y-3"></div>
+                        <div className="space-y-3" ></div>
                           <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                             href={service.link}
-<<<<<<< HEAD
-                            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                          >Learn More</a>
+                            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25" >Learn More</a>
                             <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" /></ArrowRigh>
                           <a
                             href="/contact"
-                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-                          >Get Started</a>
-=======
-                            className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-xl font-semibold hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-cyan-500/25"
-                          >
-                            Learn More;
-                            <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                          </a>
-                          <a;
-                            href="/contact"
-                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center"
-                          >
-                            Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+                            className="w-full border border-cyan-400/50 text-cyan-400 py-3 px-6 rounded-xl font-semibold hover:bg-cyan-400/10 transition-all duration-300 flex items-center justify-center" >Get Started</a>
                           </a>
                         </div>
-<<<<<<< HEAD
                       </div>,
-<div className="space-y-2">,
+<div className="space-y-2" >,
                         <a;
-=======
-                      </div>
-<div className="space-y-2"></div>
-                        <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
                           href={service.link}
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-<<<<<<< HEAD
-                        >Learn More<a
+                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center" >Learn More<a
                           href="/contact"
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >Get Started</a>
-=======
-                        >
-                          Learn More;
-                        </a>
-                        <a;
-                          href="/contact"
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >
-                          Get Started;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center" >Get Started</a>
                         </a>
                       </div>
 
@@ -1810,50 +1394,30 @@ export default ITServicesPage;
       </section>
 
       {/* Technologies */}
-      <section className="py-20">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With<p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) => (</div>
-=======
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Technologies We Work With;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-<<<<<<< HEAD
+      <section className="py-20" >
+        <div className="container mx-auto px-4" >
+          <div className="text-center mb-16" >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" >Technologies We Work With<p className="text-lg text-gray-300 max-w-3xl mx-auto" >We work with the latest and most reliable technologies in the industry<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >{technologies.map((tech, index) => (</div>
               We work with the latest and most reliable technologies in the industry;
             </p>,
           </div>,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >,
             {technologies.map((tech, index) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
               We work with the latest and most reliable technologies in the industry
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >
             {technologies.map((tech, index) => (}
->>>>>>> origin/merge-error-fixes
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
-=======
-        <div className="container mx-auto px-4"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Technologies We Work With</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">We work with the latest and most reliable technologies in the industry</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">{technologies.map((tech, index) => (</div>
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center" >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" >
+        <div className="container mx-auto px-4" ></section>
+          <div className="text-center mb-16" ></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" >Technologies We Work With</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto" >We work with the latest and most reliable technologies in the industry</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >{technologies.map((tech, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 text-center" ></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4" ></div>
                   <tech.icon className="w-8 h-8 text-white" />
-                <h3 className="text-xl font-bold text-white mb-4">{tech.category}</h3>
-<<<<<<< HEAD
-                <div className="space-y-2">{tech.techs.map((technology, techIndex) => (</div><div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">{technology}</div>
-=======
-                <div className="space-y-2">
-                  {tech.techs.map((technology, techIndex) => (}
-                    <div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded">
-                      {technology}
->>>>>>> origin/merge-error-fixes
+                <h3 className="text-xl font-bold text-white mb-4" >{tech.category}</h3>
+                <div className="space-y-2" >{tech.techs.map((technology, techIndex) => (</div><div key={techIndex} className="text-sm text-gray-300 bg-slate-700/50 px-3 py-1 rounded" >{technology}</div>
                     </div>
                   ))}
                 </div>
@@ -1864,147 +1428,95 @@ export default ITServicesPage;
       </section>
 
       {/* Process */}
-      <section className="py-20 bg-slate-800/50">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
-=======
-        <div className="container mx-auto px-4"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our IT Implementation Process</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">A proven methodology that ensures successful IT implementation</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+      <section className="py-20 bg-slate-800/50" >
+        <div className="container mx-auto px-4" >
+          <div className="text-center mb-16" >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" >Our IT Implementation Process<p className="text-lg text-gray-300 max-w-3xl mx-auto" >A proven methodology that ensures successful IT implementation</p>
             </p>
           </div>
-<<<<<<< HEAD
-          <div className="max-w-4xl mx-auto"></div>
-            <div className="relative"></div>
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600">{process.map((step, index) => (</div>
-<<<<<<< HEAD
+          <div className="max-w-4xl mx-auto" ></div>
+            <div className="relative" ></div>
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600" >{process.map((step, index) => (</div>
                 </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-=======
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
-              Our IT Implementation Process;
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              A proven methodology that ensures successful IT implementation;
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">,
-            <div className="relative">,
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>,
-              {process.map((step, index) => (
-=======
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-500 to-purple-600"></div>
-              {process.map((step, index) => (}
->>>>>>> origin/merge-error-fixes
                 <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                    <div className="bg-slate-800/50 p-6 rounded-lg">
-                      <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}<h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                      <p className="text-gray-300 mb-2">{step.description}<div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
-=======
+                    <div className="bg-slate-800/50 p-6 rounded-lg" >
+                      <div className="text-cyan-400 font-bold text-lg mb-2" >Step {step.step}<h3 className="text-xl font-bold text-white mb-2" >{step.title}</h3>
+                      <p className="text-gray-300 mb-2" >{step.description}<div className="text-sm text-cyan-400 font-medium" >{step.duration}</div>
                 </div><div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}></div>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}></div>
-                    <div className="bg-slate-800/50 p-6 rounded-lg"></div>
-                      <div className="text-cyan-400 font-bold text-lg mb-2">Step {step.step}</div><h3 className="text-xl font-bold text-white mb-2">{step.title}</h3>
-                      <p className="text-gray-300 mb-2">{step.description}</p><div className="text-sm text-cyan-400 font-medium">{step.duration}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+                    <div className="bg-slate-800/50 p-6 rounded-lg" ></div>
+                      <div className="text-cyan-400 font-bold text-lg mb-2" >Step {step.step}</div><h3 className="text-xl font-bold text-white mb-2" >{step.title}</h3>
+                      <p className="text-gray-300 mb-2" >{step.description}</p><div className="text-sm text-cyan-400 font-medium" >{step.duration}</div>
                     </div>
                   </div>
-                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900"></div><div className="w-1/2">))}</div>
+                  <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-500 rounded-full border-4 border-slate-900" ></div><div className="w-1/2" >))}</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Case Studies */}
-      <section className="py-20">
-<<<<<<< HEAD
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Stories<p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industries<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
-=======
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-              Success Stories
-            </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Real results from real clients across various industries
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {caseStudies.map((study, index) => (}
->>>>>>> origin/merge-error-fixes
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2">{study.company}</h3><p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
-                <div className="space-y-3">
+      <section className="py-20" >
+        <div className="container mx-auto px-4" >
+          <div className="text-center mb-16" >
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" >Success Stories<p className="text-lg text-gray-300 max-w-3xl mx-auto" >Real results from real clients across various industries<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >{caseStudies.map((study, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300" >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4" >
+                  <span className="text-2xl font-bold text-white" >{study.company.split(' ').map(word => word[0]).join('')}<h3 className="text-xl font-bold text-white mb-2" >{study.company}</h3><p className="text-cyan-400 text-sm mb-4" >{study.industry}</p>
+                <div className="space-y-3" >
                   <div>
-=======
-        <div className="container mx-auto px-4"></section>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Success Stories</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto">Real results from real clients across various industries</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{caseStudies.map((study, index) => (</div>
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300"></div>
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4"></div>
-                  <span className="text-2xl font-bold text-white">{study.company.split(' ').map(word => word[0]).join('')}</span><h3 className="text-xl font-bold text-white mb-2">{study.company}</h3><p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
-                <div className="space-y-3"></div>
+        <div className="container mx-auto px-4" ></section>
+          <div className="text-center mb-16" ></div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" >Success Stories</h2><p className="text-lg text-gray-300 max-w-3xl mx-auto" >Real results from real clients across various industries</p><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >{caseStudies.map((study, index) => (</div>
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300" ></div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4" ></div>
+                  <span className="text-2xl font-bold text-white" >{study.company.split(' ').map(word => word[0]).join('')}</span><h3 className="text-xl font-bold text-white mb-2" >{study.company}</h3><p className="text-cyan-400 text-sm mb-4" >{study.industry}</p>
+                <div className="space-y-3" ></div>
                   <div></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge:<p className="text-sm text-gray-400">{study.challenge}</p>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1" >Challenge:<p className="text-sm text-gray-400" >{study.challenge}</p>
                   </div>
                   <div></div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution:<p className="text-sm text-gray-400">{study.solution}</p>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1" >Solution:<p className="text-sm text-gray-400" >{study.solution}</p>
                   </div>
                   <div></div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:<ul className="space-y-1">{study.results.map((result, resultIndex) => (</ul>
-=======
-            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1" >Results:<ul className="space-y-1" >{study.results.map((result, resultIndex) => (</ul>
+            <h2 className="text-3xl lg: text-4xl font-bold text-white mb-4" >
               Success Stories;
             </h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto" >
               Real results from real clients across various industries;
             </p>,
           </div>,
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >,
             {caseStudies.map((study, index) => (
-              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-700/50 transition-all duration-300">,
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">,
-                  <span className="text-2xl font-bold text-white">,
+              <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover: bg-slate-700/50 transition-all duration-300" >,
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4" >,
+                  <span className="text-2xl font-bold text-white" >,
                     {study.company.split(' ').map(word => word[0]).join('')}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{study.company}</h3>
-                <p className="text-cyan-400 text-sm mb-4">{study.industry}</p>
-                <div className="space-y-3">
+                <h3 className="text-xl font-bold text-white mb-2" >{study.company}</h3>
+                <p className="text-cyan-400 text-sm mb-4" >{study.industry}</p>
+                <div className="space-y-3" >
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Challenge: </h4>,
-                    <p className="text-sm text-gray-400">{study.challenge}</p>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1" >Challenge: </h4>,
+                    <p className="text-sm text-gray-400" >{study.challenge}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Solution: </h4>,
-                    <p className="text-sm text-gray-400">{study.solution}</p>
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1" >Solution: </h4>,
+                    <p className="text-sm text-gray-400" >{study.solution}</p>
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results: </h4>,
-                    <ul className="space-y-1">,
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1" >Results: </h4>,
+                    <ul className="space-y-1" >,
                       {study.results.map((result, resultIndex) => (
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-                    <h4 className="text-sm font-semibold text-gray-300 mb-1">Results:</h4>
-                    <ul className="space-y-1">
+                    <h4 className="text-sm font-semibold text-gray-300 mb-1" >Results:</h4>
+                    <ul className="space-y-1" >
                       {study.results.map((result, resultIndex) => (}
->>>>>>> origin/merge-error-fixes
-                        <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400">
+                        <li key={resultIndex} className="flex items-center space-x-2 text-sm text-green-400" >
                           <CheckCircle className="w-3 h-3 flex-shrink-0" />
                           <span>{result}</span>
-=======
     <>
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
@@ -2012,30 +1524,28 @@ export default ITServicesPage;
         <meta name="keywords" content="IT services, IT support, IT infrastructure, cybersecurity, cloud services, IT consulting" />
       </Helmet>
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" >
         {/* Hero Section */}
-        <section className="pt-24 pb-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
+        <section className="pt-24 pb-16" >
+          <div className="container mx-auto px-4" >
+            <div className="text-center mb-16" >
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" >
+                IT <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400" >Services</span>
               </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" >
                 Comprehensive IT solutions to keep your business running smoothly, securely, and efficiently.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" >
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                >
+                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" >
                   <Phone className="w-5 h-5" />
                   Call (302) 464-0950
                 </a>
                 <Link
                   to="/contact"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2" >
                   <Mail className="w-5 h-5" />
                   Get Quote
                 </Link>
@@ -2045,25 +1555,25 @@ export default ITServicesPage;
         </section>
 
         {/* Services Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">IT Services</span>
+        <section className="py-16" >
+          <div className="container mx-auto px-4" >
+            <div className="text-center mb-16" >
+              <h2 className="text-4xl font-bold text-white mb-6" >
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400" >IT Services</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" >
                 Professional IT services designed to support and enhance your business operations.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
               {itServices.map((service, index) => (
                 <div key={index} className={`bg-white/10 backdrop-blur-lg rounded-xl p-6 border transition-all duration-300 hover:scale-105 ${
                   service.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20' : 'border-white/20 hover:border-cyan-400/50'
                 }`}>
                   {service.popular && (
-                    <div className="absolute -top-3 left-6">
-                      <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                    <div className="absolute -top-3 left-6" >
+                      <div className="bg-gradient-to-r from-cyan-400 to-purple-400 text-white px-3 py-1 rounded-full text-sm font-semibold" >
                         Most Popular
                       </div>
                     </div>
@@ -2073,27 +1583,26 @@ export default ITServicesPage;
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.name}</h3>
-                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <h3 className="text-2xl font-bold text-white mb-4" >{service.name}</h3>
+                  <p className="text-gray-300 mb-6" >{service.description}</p>
                   
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Features:</h4>
-                    <ul className="space-y-2">
+                  <div className="mb-6" >
+                    <h4 className="text-lg font-semibold text-white mb-3" >Features:</h4>
+                    <ul className="space-y-2" >
                       {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-300">
+                        <li key={idx} className="flex items-center text-gray-300" >
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-3" />
                           {feature}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
                         </li>
                       ))}
                     </ul>
                   </div>
                   
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Benefits:</h4>
-                    <ul className="space-y-2">
+                  <div className="mb-6" >
+                    <h4 className="text-lg font-semibold text-white mb-3" >Benefits:</h4>
+                    <ul className="space-y-2" >
                       {service.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-gray-300">
+                        <li key={idx} className="flex items-center text-gray-300" >
                           <ArrowRight className="w-4 h-4 text-cyan-400 mr-3" />
                           {benefit}
                         </li>
@@ -2101,11 +1610,11 @@ export default ITServicesPage;
                     </ul>
                   </div>
                   
-                  <div className="text-cyan-400 font-semibold mb-4">
+                  <div className="text-cyan-400 font-semibold mb-4" >
                     Starting at ${service.pricing.starting.toLocaleString()}/{service.pricing.period}
                   </div>
                   
-                  <button className="w-full border-2 border-cyan-400 text-cyan-400 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+                  <button className="w-full border-2 border-cyan-400 text-cyan-400 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" >
                     Learn More
                   </button>
                 </div>
@@ -2114,120 +1623,84 @@ export default ITServicesPage;
           </div>
         </section>
 
-<<<<<<< HEAD
       {/* CTA Section */}
-      <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden">{/* Animated Background */}</section>
-<<<<<<< HEAD
+      <section className="relative py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 overflow-hidden" >{/* Animated Background */}</section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="container mx-auto px-4 text-center relative z-10">
-<<<<<<< HEAD
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
-=======
-          <h2 className="text-4xl lg: text-6xl font-bold text-white mb-6 neon-text">
-            Ready to Modernize Your IT Infrastructure?
-          </h2>
-<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
+        <div className="container mx-auto px-4 text-center relative z-10" >
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text" >Ready to Modernize Your IT Infrastructure?<p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto" >Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" >
             <a;
-=======
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(255,255,255,0.1)_0%,transparent_50%)] animate-pulse" /></section>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.05)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
 
-        <div className="container mx-auto px-4 text-center relative z-10"></div>
-          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text">Ready to Modernize Your IT Infrastructure?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
+        <div className="container mx-auto px-4 text-center relative z-10" ></div>
+          <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 neon-text" >Ready to Modernize Your IT Infrastructure?</h2><p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto" >Join 500+ enterprises that have already transformed their IT operations with our solutions. Get started today!</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8"></div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8" ></div>
             <a
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
               href="https://ziontechgroup.com/contact"
-className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
-
-              className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
+className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
 
             >
-<<<<<<< HEAD
               <MessageSquare className="w-5 h-5 mr-2" >Get Started Today</MessageSquare>
             </MessageSquare>
             <a
-=======
-              <MessageSquare className="w-5 h-5 mr-2" />
-              Get Started Today;
-            </a>
-            <a;
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
               href="tel:+13024640950"
 
-className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-
-            >
-<<<<<<< HEAD
+className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center" >
               <Phone className="w-5 h-5 mr-2" >Call: +1 (302) 464-0950</Phone>
             </Phone>
           </div>
-<<<<<<< HEAD
-          <div className="text-gray-200 text-sm">
-=======
-              <Phone className="w-5 h-5 mr-2" />
-              Call: +1 (302) 464-0950;
-            </a>,
-          </div>,
-          <div className="text-gray-200 text-sm">,
->>>>>>> cursor/fix-errors-and-merge-to-main-c796
-=======
-          <div className="text-gray-200 text-sm"></div>
->>>>>>> cursor/fix-errors-and-merge-to-main-2937
+          <div className="text-gray-200 text-sm" >
+          <div className="text-gray-200 text-sm" ></div>
             <p>📧 kleber@ziontechgroup.com | 📍 364 E Main St STE 1008, Middletown, DE 19709</p>
 
-=======
         {/* Benefits Section */}
-        <section className="py-16 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Why Choose Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">IT Services</span>?
+        <section className="py-16 bg-white/5" >
+          <div className="container mx-auto px-4" >
+            <div className="text-center mb-16" >
+              <h2 className="text-4xl font-bold text-white mb-6" >
+                Why Choose Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400" >IT Services</span>?
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" >
                 Experience the difference with our professional IT services.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" >
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div key={index} className="text-center" >
+                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-6" >
                     <benefit.icon className="w-10 h-10 text-white" />
                   </div>
-                  <div className="text-4xl font-bold text-cyan-400 mb-2">{benefit.stat}</div>
-                  <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <div className="text-4xl font-bold text-cyan-400 mb-2" >{benefit.stat}</div>
+                  <h3 className="text-xl font-bold text-white mb-3" >{benefit.title}</h3>
+                  <p className="text-gray-300" >{benefit.description}</p>
                 </div>
               ))}
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
           </div>
         </section>
 
         {/* Industries Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Serve</span>
+        <section className="py-16" >
+          <div className="container mx-auto px-4" >
+            <div className="text-center mb-16" >
+              <h2 className="text-4xl font-bold text-white mb-6" >
+                Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400" >Serve</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" >
                 Our IT services are tailored to meet the unique requirements of various industries.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
               {industries.map((industry, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300">
-                  <h3 className="text-xl font-bold text-white mb-3">{industry.name}</h3>
-                  <p className="text-gray-300">{industry.description}</p>
+                <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300" >
+                  <h3 className="text-xl font-bold text-white mb-3" >{industry.name}</h3>
+                  <p className="text-gray-300" >{industry.description}</p>
                 </div>
               ))}
             </div>
@@ -2235,76 +1708,74 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover
         </section>
 
         {/* Process Section */}
-        <section className="py-16 bg-white/5">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-6">
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Process</span>
+        <section className="py-16 bg-white/5" >
+          <div className="container mx-auto px-4" >
+            <div className="text-center mb-16" >
+              <h2 className="text-4xl font-bold text-white mb-6" >
+                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400" >Process</span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto" >
                 A systematic approach to delivering exceptional IT services.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-white">1</span>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8" >
+              <div className="text-center" >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6" >
+                  <span className="text-2xl font-bold text-white" >1</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Assessment</h3>
-                <p className="text-gray-300">Evaluate your current IT infrastructure and identify areas for improvement.</p>
+                <h3 className="text-xl font-bold text-white mb-3" >Assessment</h3>
+                <p className="text-gray-300" >Evaluate your current IT infrastructure and identify areas for improvement.</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-white">2</span>
+              <div className="text-center" >
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6" >
+                  <span className="text-2xl font-bold text-white" >2</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Planning</h3>
-                <p className="text-gray-300">Develop a comprehensive IT strategy aligned with your business goals.</p>
+                <h3 className="text-xl font-bold text-white mb-3" >Planning</h3>
+                <p className="text-gray-300" >Develop a comprehensive IT strategy aligned with your business goals.</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-white">3</span>
+              <div className="text-center" >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6" >
+                  <span className="text-2xl font-bold text-white" >3</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Implementation</h3>
-                <p className="text-gray-300">Deploy IT solutions with minimal disruption to your operations.</p>
+                <h3 className="text-xl font-bold text-white mb-3" >Implementation</h3>
+                <p className="text-gray-300" >Deploy IT solutions with minimal disruption to your operations.</p>
               </div>
               
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-white">4</span>
+              <div className="text-center" >
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6" >
+                  <span className="text-2xl font-bold text-white" >4</span>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">Support</h3>
-                <p className="text-gray-300">Provide ongoing support and optimization for your IT systems.</p>
+                <h3 className="text-xl font-bold text-white mb-3" >Support</h3>
+                <p className="text-gray-300" >Provide ongoing support and optimization for your IT systems.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-white mb-6">
+        <section className="py-16" >
+          <div className="container mx-auto px-4" >
+            <div className="max-w-4xl mx-auto text-center" >
+              <h2 className="text-4xl font-bold text-white mb-6" >
                 Ready to Optimize Your IT Infrastructure?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-gray-300 mb-8" >
                 Let's discuss how our IT services can help you achieve your business objectives.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" >
                 <a
                   href="tel:+13024640950"
                   onClick={handlePhoneClick}
-                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                >
+                  className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2" >
                   <Phone className="w-5 h-5" />
                   Call (302) 464-0950
                 </a>
                 <Link
                   to="/contact"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2" >
                   <Mail className="w-5 h-5" />
                   Get Started
                 </Link>
@@ -2315,11 +1786,7 @@ className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover
       </div>
     </>
   );
-<<<<<<< HEAD
 }
->>>>>>> origin/main
-=======
 };
 
 export default ITServicesPage;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174

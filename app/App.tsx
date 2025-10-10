@@ -1,7 +1,7 @@
 'use client';
-import React, { Suspense, lazy, useEffect } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
+import React, {Suspense, lazy, useEffect } from 'react';
+import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import {HelmetProvider } from 'react-helmet-async';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import('./page'));
@@ -40,17 +40,16 @@ const WebDevelopmentPage = lazy(() => import('./web-development/page'));
 
 // Loading component
 const LoadingSpinner: React.FC = React.memo(() => (
-  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-      <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center" >
+    <div className="text-center" >
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4" ></div>
+      <p className="text-cyan-400 text-lg" >Loading Zion Tech Group...</p>
     </div>
   </div>
 ));
 
 // Main App component
-const App: React.FC = () => {
-  useEffect(() => {
+const App: React.FC = () => {useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       // Preload critical CSS
@@ -67,7 +66,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <BrowserRouter>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" >
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Pages */}

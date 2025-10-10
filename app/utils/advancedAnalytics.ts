@@ -1,112 +1,56 @@
-<<<<<<< HEAD
 'use client'
 
-<<<<<<< HEAD
-interface UserEvent {
-  id: string;
-  type: string;
-  name: string;
+interface UserEvent {id: string;,
+    type: string;,
+    name: string;
   value?: number;
-  timestamp: string;
-  sessionId: string;
+  timestamp: string;,
+    sessionId: string;
   userId?: string;
   url: string;
   metadata?: Record<string, unknown>
 }
 
-interface UserSession {
-  id: string;
-  startTime: string;
+interface UserSession {id: string;,
+    startTime: string;
   endTime?: string;
   duration?: number;
-  pageViews: number;
-=======
-interface UserEvent {}
-  id: string
-  type: string
-  name: string
-  value?: number
-  timestamp: string,
-    sessionId: string
-  userId?: string
-  url: string
-  metadata?: Record<string, unknown></strin>
-}
-
-interface UserSession {}
-  id: string
-  startTime: string
-  endTime?: string
-  duration?: number
-  pageViews: number
->>>>>>> origin/merge-error-fixes
-  events: UserEvent[]
+  pageViews: number;,
+    events: UserEvent[]
   referrer?: string;
-  userAgent: string;
-  device: 'desktop' | 'mobile' | 'tablet'
-  browser: string;
-  os: string;
+  userAgent: string;,
+    device: 'desktop' | 'mobile' | 'tablet',
+    browser: string;,
+    os: string;
   country?: string;,
   city?: string;
 }
 
-<<<<<<< HEAD
-interface AnalyticsConfig {
-  enableTracking: boolean;
-  enableHeatmaps: boolean;
-  enableSessionRecording: boolean;
-  enableA_BTesting: boolean;
-  enableConversionTracking: boolean;
-  enablePerformanceTracking: boolean;
-  enableErrorTracking: boolean;
-  enableUserJourneyTracking: boolean;
+interface AnalyticsConfig {enableTracking: boolean;,
+    enableHeatmaps: boolean;,
+    enableSessionRecording: boolean;,
+    enableA_BTesting: boolean;,
+    enableConversionTracking: boolean;,
+    enablePerformanceTracking: boolean;,
+    enableErrorTracking: boolean;,
+    enableUserJourneyTracking: boolean;
 }
 
-class AdvancedAnalytics {
-  private static instance: AdvancedAnalytics;
+class AdvancedAnalytics {private static instance: AdvancedAnalytics;
   private config: AnalyticsConfig;
   private currentSession: UserSession;
   private eventQueue: UserEvent[] = []
 
   constructor() {
     this.config = {
-      enableTracking: true;
-      enableHeatmaps: true;
-      enableSessionRecording: false;
-      enableA_BTesting: true;
-      enableConversionTracking: true;
-      enablePerformanceTracking: true;
-      enableErrorTracking: true;
-      enableUserJourneyTracking: true;
-=======
-interface AnalyticsConfig {}
-  enableTracking: boolean
-  enableHeatmaps: boolean
-  enableSessionRecording: boolean
-  enableA_BTesting: boolean
-  enableConversionTracking: boolean
-  enablePerformanceTracking: boolean
-  enableErrorTracking: boolean
-  enableUserJourneyTracking: boolean
-}
-
-class AdvancedAnalytics {}
-  private static instance: AdvancedAnalytics
-  private config: AnalyticsConfig
-  private currentSession: UserSession
-  private eventQueue: UserEvent[] = []
-
-  constructor() {}
-    this.config = {}
-      enableTracking: true,
-      enableHeatmaps: true,
-      enableSessionRecording: false,
-      enableA_BTesting: true,
-      enableConversionTracking: true,
-      enablePerformanceTracking: true,
-      enableErrorTracking: true,
-      enableUserJourneyTracking: true
->>>>>>> origin/merge-error-fixes
+      enableTracking: true;,
+    enableHeatmaps: true;,
+    enableSessionRecording: false;,
+    enableA_BTesting: true;,
+    enableConversionTracking: true;,
+    enablePerformanceTracking: true;,
+    enableErrorTracking: true;,
+    enableUserJourneyTracking: true;
     }
     this.currentSession = this.createNewSession()
     this.initializeTracking()
@@ -115,7 +59,6 @@ class AdvancedAnalytics {}
   static getInstance(): AdvancedAnalytics {}
     if (!AdvancedAnalytics.instance) {}
       AdvancedAnalytics.instance = new AdvancedAnalytics()
-=======
 'use client';
 /**
  * Advanced Analytics System for Zion Tech Group Website;
@@ -133,7 +76,6 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
     this.initializeTracking();
   }
   static getInstance(): AdvancedAnalytics {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
     return AdvancedAnalytics.instance;
   }
@@ -141,17 +83,8 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
   /**
    * Initialize comprehensive analytics tracking;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private initializeTracking(): void {
-    if (typeof window === 'undefined' || !this.config.enableTracking) return;
+  private initializeTracking(): void {if (typeof window === 'undefined' || !this.config.enableTracking) return;
     // Track page views;
-=======
-  private initializeTracking(): void {}
-    if (typeof window === 'undefined' || !this.config.enableTracking) return
-
-    // Track page views
->>>>>>> origin/merge-error-fixes
     this.trackPageView()
 
     // Track clicks;
@@ -166,29 +99,17 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
     // Track downloads;
     this.trackDownloads()
 
-<<<<<<< HEAD
     // Track performance;
     if (this.config.enablePerformanceTracking) {
       this.trackPerformance()
     }
 
     // Track user journey;
-    if (this.config.enableUserJourneyTracking) {
-=======
-    // Track performance
-    if (this.config.enablePerformanceTracking) {}
-      this.trackPerformance()
-    }
-
-    // Track user journey
-    if (this.config.enableUserJourneyTracking) {}
->>>>>>> origin/merge-error-fixes
-      this.trackUserJourney()
+    if (this.config.enableUserJourneyTracking) {this.trackUserJourney()
     }
 
     // Setup network monitoring;
     this.setupNetworkMonitoring()
-=======
   private initializeTracking(): void {/* TODO: Fix JSX expression */}
     }
     // Track user journey;
@@ -196,75 +117,41 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
     }
     // Setup network monitoring;
     this.setupNetworkMonitoring();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Create new user session;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private createNewSession(): UserSession {
-    return {
-      id: this.generateSessionId()
-      startTime: new Date().toISOString()
-      pageViews: 0;
-      events: []
-      userAgent: navigator.userAgent;
-      device: this.detectDevice()
-=======
-  private createNewSession(): UserSession {}
-    return {}
+  private createNewSession(): UserSession {return {
       id: this.generateSessionId(),
-      startTime: new Date().toISOString(),
-      pageViews: 0,
-      events: [],
-      userAgent: navigator.userAgent,
-      device: this.detectDevice(),
->>>>>>> origin/merge-error-fixes
-      browser: this.detectBrowser(),
+    startTime: new Date().toISOString(),
+    pageViews: 0;,
+    events: [],
+    userAgent: navigator.userAgent;,
+    device: this.detectDevice(),
+    browser: this.detectBrowser(),
       os: this.detectOS(),
       referrer: document.referrer;
     }
-=======
   private createNewSession(): UserSession {/* TODO: Fix JSX expression */}
     };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Track page views;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  trackPageView(url?: string, title?: string): void {
-    const event: UserEvent = {
-      id: this.generateEventId()
-      type: 'page_view'
-      name: 'Page View'
-      timestamp: new Date().toISOString()
-      sessionId: this.currentSession.id;
-      url: url || window.location.href;
-      metadata: {,
-        title: title || document.title;
-        referrer: document.referrer;
-=======
-  trackPageView(url?: string, title?: string): void {}
-    const event: UserEvent = {}
-      id: this.generateEventId(),
-      type: 'page_view',
-      name: 'Page View',
-      timestamp: new Date().toISOString(),
-      sessionId: this.currentSession.id,
-      url: url || window.location.href,
-      metadata: {}
-        title: title || document.title,
-        referrer: document.referrer
->>>>>>> origin/merge-error-fixes
-=======
+  trackPageView(url?: string, title?: string): void {const event: UserEvent = {,
+    id: this.generateEventId(),
+    type: 'page_view',
+    name: 'Page View',
+    timestamp: new Date().toISOString(),
+    sessionId: this.currentSession.id;,
+    url: url || window.location.href;,
+    metadata: {,
+        title: title || document.title;,
+    referrer: document.referrer;
   trackPageView(url?: string, title?: string): void {/* TODO: Fix JSX expression */}
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     }
 
@@ -273,23 +160,16 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
   }
 
   /**
-<<<<<<< HEAD
    * Track custom events;
    */
-<<<<<<< HEAD
-  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {
-    const event: UserEvent = {,
-=======
-  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {}
-    const event: UserEvent = {}
->>>>>>> origin/merge-error-fixes
+  trackEvent(name: string, value?: number, metadata?: Record<string, unknown>): void {const event: UserEvent = {,
       id: this.generateEventId(),
       type: 'custom_event',
       name,
       value,
-      timestamp: new Date().toISOString()
-      sessionId: this.currentSession.id;
-      url: window.location.href;
+      timestamp: new Date().toISOString(),
+    sessionId: this.currentSession.id;,
+    url: window.location.href;
       metadata;
     }
 
@@ -299,31 +179,19 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
   /**
    * Track clicks;
    */
-<<<<<<< HEAD
-  private trackClicks(): void {
-    document.addEventListener('click', (event) => {
+  private trackClicks(): void {document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
       const element = target.closest('a, button, [role="button"]')
 
       if (element) {
         this.trackEvent('click', undefined, {)
-=======
-  private trackClicks(): void {}
-    document.addEventListener('click', (event) => {}
-      const target = event.target as HTMLElement
-      const element = target.closest('a, button, [role="button"]')
-
-      if (element) {}
-        this.trackEvent('click', undefined, {)}
->>>>>>> origin/merge-error-fixes
           element: element.tagName.toLowerCase(),
           text: element.textContent?.trim(),
-          href: (element as HTMLAnchorElement).href;
-          className: element.className;
+          href: (element as HTMLAnchorElement).href;,
+    className: element.className;
         })
       }
     })
-=======
    * Track clicks;
    */
   private trackClicks(): void {/* TODO: Fix JSX expression */}
@@ -332,16 +200,12 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
       };
       this.trackEvent(clickEvent);
     });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Track scrolls;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackScrolls(): void {
-    let scrollTimeout: NodeJS.Timeout;
+  private trackScrolls(): void {let scrollTimeout: NodeJS.Timeout;
     window.addEventListener('scroll', () => {
       clearTimeout(scrollTimeout)
       scrollTimeout = setTimeout(() => {
@@ -352,98 +216,52 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
         this.trackEvent('scroll', scrollPercent, {)
           scrollY: window.scrollY),
           scrollPercent;
-=======
-  private trackScrolls(): void {}
-    let scrollTimeout: NodeJS.Timeout
-
-    window.addEventListener('scroll', () => {}
-      clearTimeout(scrollTimeout)
-      scrollTimeout = setTimeout(() => {}
-        const scrollPercent = Math.round()
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-        )
-
-        this.trackEvent('scroll', scrollPercent, {)}
-          scrollY: window.scrollY,
-          scrollPercent
->>>>>>> origin/merge-error-fixes
         })
       }, 150)
     })
-=======
   private trackScrolls(): void {/* TODO: Fix JSX expression */}
           }
         };
         this.trackEvent(scrollEvent);
       }, 100);
     });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Track form submissions;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackFormSubmissions(): void {
-    document.addEventListener('submit', (event) => {
+  private trackFormSubmissions(): void {document.addEventListener('submit', (event) => {
       const form = event.target as HTMLFormElement;
       this.trackEvent('form_submit', undefined, {)
-        formId: form.id;)
-        formAction: form.action),
+        formId: form.id;),
+    formAction: form.action),
         formMethod: form.method),
         fieldCount: form.elements.length;
-=======
-  private trackFormSubmissions(): void {}
-    document.addEventListener('submit', (event) => {}
-      const form = event.target as HTMLFormElement
-      this.trackEvent('form_submit', undefined, {)}
-        formId: form.id,
-        formAction: form.action,
-        formMethod: form.method,
-        fieldCount: form.elements.length
->>>>>>> origin/merge-error-fixes
       })
     })
-=======
   private trackFormSubmissions(): void {/* TODO: Fix JSX expression */}
         }
       };
       this.trackEvent(submitEvent);
     });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Track downloads;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackDownloads(): void {
-    document.addEventListener('click', (event) => {
+  private trackDownloads(): void {document.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
       const link = target.closest('a[href]') as HTMLAnchorElement;
       if (link && this.isDownloadLink(link.href)) {
         this.trackEvent('download', undefined, {)
-=======
-  private trackDownloads(): void {}
-    document.addEventListener('click', (event) => {}
-      const target = event.target as HTMLElement
-      const link = target.closest('a[href]') as HTMLAnchorElement
-
-      if (link && this.isDownloadLink(link.href)) {}
-        this.trackEvent('download', undefined, {)}
->>>>>>> origin/merge-error-fixes
           fileName: link.href.split('/').pop(),
           fileType: link.href.split('.').pop(),
           href: link.href;
         })
-=======
   private trackDownloads(): void {/* TODO: Fix JSX expression */}
           }
         };
         this.trackEvent(downloadEvent);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       }
     })
   }
@@ -451,10 +269,7 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
   /**
    * Track performance metrics;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackPerformance(): void {
-    if (typeof window.performance === 'undefined') return;
+  private trackPerformance(): void {if (typeof window.performance === 'undefined') return;
     window.addEventListener('load', () => {
       setTimeout(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
@@ -463,27 +278,11 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
         this.trackEvent('performance', undefined, {)
           loadTime: navigation.loadEventEnd - navigation.loadEventStart),
           domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart),
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime;
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-=======
-  private trackPerformance(): void {}
-    if (typeof window.performance === 'undefined') return
-
-    window.addEventListener('load', () => {}
-      setTimeout(() => {}
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-        const paint = performance.getEntriesByType('paint')
-
-        this.trackEvent('performance', undefined, {)}
-          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-          domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime,
-          firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime
->>>>>>> origin/merge-error-fixes
+          firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime;,
+    firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
         })
       }, 0)
     })
-=======
   private trackPerformance(): void {/* TODO: Fix JSX expression */}
               }
             };
@@ -499,16 +298,12 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
         this.trackEvent(performanceEvent);
       });
     }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Track user journey;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private trackUserJourney(): void {
-    // Track page visibility changes;
+  private trackUserJourney(): void {// Track page visibility changes;
     document.addEventListener('visibilitychange', () => {
       this.trackEvent('visibility_change', undefined, {)
         hidden: document.hidden),
@@ -517,58 +312,29 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
     })
 
     // Track focus changes;
-    window.addEventListener('focus', () => {
-=======
-  private trackUserJourney(): void {}
-    // Track page visibility changes
-    document.addEventListener('visibilitychange', () => {}
-      this.trackEvent('visibility_change', undefined, {)}
-        hidden: document.hidden,
-        visibilityState: document.visibilityState
-      })
-    })
-
-    // Track focus changes
-    window.addEventListener('focus', () => {}
->>>>>>> origin/merge-error-fixes
-      this.trackEvent('window_focus')
+    window.addEventListener('focus', () => {this.trackEvent('window_focus')
     })
 
     window.addEventListener('blur', () => {}
       this.trackEvent('window_blur')
     })
-=======
   private trackUserJourney(): void {/* TODO: Fix JSX expression */}
       }
     });
     observer.observe(document.body, {/* TODO: Fix JSX expression */})
     });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
    * Setup network monitoring;
    */
-<<<<<<< HEAD
-<<<<<<< HEAD
-  private setupNetworkMonitoring(): void {
-    if ('connection' in navigator) {
+  private setupNetworkMonitoring(): void {if ('connection' in navigator) {
       const connection = (navigator as any).connection;
       this.trackEvent('connection_info', undefined, {)
         effectiveType: connection.effectiveType),
         downlink: connection.downlink),
         rtt: connection.rtt;
-=======
-  private setupNetworkMonitoring(): void {}
-    if ('connection' in navigator) {}
-      const connection = (navigator as any).connection
-      this.trackEvent('connection_info', undefined, {)}
-        effectiveType: connection.effectiveType,
-        downlink: connection.downlink,
-        rtt: connection.rtt
->>>>>>> origin/merge-error-fixes
       })
-=======
   private setupNetworkMonitoring(): void {/* TODO: Fix JSX expression */}
     });
     window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
@@ -582,30 +348,17 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
     }
     // Send to analytics service;
     if (this.isOnline) {/* TODO: Fix JSX expression */}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     }
   }
 
   /**
-<<<<<<< HEAD
    * Add event to queue and session;
    */
-<<<<<<< HEAD
-  private addEvent(event: UserEvent): void {
-    this.eventQueue.push(event),
+  private addEvent(event: UserEvent): void {this.eventQueue.push(event),
     this.currentSession.events.push(event),
 ,
     // Send to analytics service (implement based on your needs),
     this.sendToAnalytics(event),
-=======
-  private addEvent(event: UserEvent): void {}
-    this.eventQueue.push(event)
-    this.currentSession.events.push(event)
-
-    // Send to analytics service (implement based on your needs)
-    this.sendToAnalytics(event)
->>>>>>> origin/merge-error-fixes
-=======
    * Send event to analytics service;
    */
   private async sendEvent(even,)
@@ -616,21 +369,13 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
       });
     } catch (error) {/* TODO: Fix JSX expression */}
       }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   }
 
   /**
-<<<<<<< HEAD
    * Send event to analytics service;
    */
-<<<<<<< HEAD
   private sendToAnalytics(event: UserEvent): void {,
     // Implement your analytics service integration here;
-=======
-  private sendToAnalytics(event: UserEvent): void {}
-    // Implement your analytics service integration here
->>>>>>> origin/merge-error-fixes
-=======
    * Flush event queue when back online;
    */
   private async flushEventQueue(): Promise<void> {/* TODO: Fix JSX expression */}
@@ -751,4 +496,3 @@ class AdvancedAnalytics {/* TODO: Fix JSX expression */}
 export const advancedAnalytics = AdvancedAnalytics.getInstance();
 export default advancedAnalytics;
 `
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
