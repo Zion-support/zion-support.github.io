@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Package, Mic, Heart, DollarSign } from 'lucide-react';
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -69,7 +69,13 @@ const Navigation: React.FC = () => {
     { name: 'AI Environmental', href: '/ai-environmental', icon: Globe, description: 'Environmental AI' },
     { name: 'AI Retail', href: '/ai-retail', icon: Globe, description: 'Retail AI' },
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
-    { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
+    { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' },
+    { name: 'AI Project Management', href: '/ai-project-management', icon: Calendar, description: 'Project Planning AI' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Globe, description: 'Social Media AI' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package, description: 'Inventory AI' },
+    { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Mic, description: 'Voice AI Platform' },
+    { name: 'AI Healthcare Solutions', href: '/ai-healthcare-solutions', icon: Heart, description: 'Medical AI' },
+    { name: 'AI Financial Services', href: '/ai-financial-services', icon: DollarSign, description: 'Financial AI' }
   ];
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
@@ -134,7 +140,11 @@ const Navigation: React.FC = () => {
     { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
     { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
     { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' }
+    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' },
+    { name: 'AI Project Management', href: '/ai-project-management', icon: Calendar, description: 'Project Planning' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Globe, description: 'Social Media' },
+    { name: 'AI Inventory Manager', href: '/ai-inventory-manager', icon: Package, description: 'Inventory' },
+    { name: 'AI Voice Assistant', href: '/ai-voice-assistant', icon: Mic, description: 'Voice AI' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },

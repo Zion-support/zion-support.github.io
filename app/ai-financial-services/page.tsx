@@ -2,121 +2,121 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Star, Users, Zap, BarChart3, Calendar, Shield, Clock, Target, TrendingUp, Brain, Settings, Globe, Smartphone, Heart, Stethoscope, Pill, Activity } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Users, Zap, BarChart3, Calendar, Shield, Clock, Target, TrendingUp, Brain, Settings, Globe, Smartphone, DollarSign, CreditCard, TrendingUp as TrendingUpIcon, PieChart } from 'lucide-react';
 
-const AIHealthcareSolutionsPage: React.FC = () => {
+const AIFinancialServicesPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'Medical Image Analysis',
-      description: 'Advanced AI-powered medical imaging analysis for radiology, pathology, and diagnostic imaging with 99.5% accuracy.',
-      benefits: ['X-ray analysis', 'MRI interpretation', 'CT scan analysis', 'Pathology detection', 'Early disease detection']
+      title: 'Fraud Detection & Prevention',
+      description: 'Advanced AI algorithms that detect fraudulent transactions in real-time with 99.9% accuracy and minimal false positives.',
+      benefits: ['Real-time detection', 'Pattern recognition', 'Risk scoring', 'Automated blocking', 'Machine learning models']
     },
     {
-      icon: Heart,
-      title: 'Predictive Health Analytics',
-      description: 'AI-driven predictive analytics for patient health monitoring, risk assessment, and personalized treatment recommendations.',
-      benefits: ['Risk prediction', 'Treatment optimization', 'Patient monitoring', 'Health trend analysis', 'Preventive care']
+      icon: BarChart3,
+      title: 'Algorithmic Trading',
+      description: 'AI-powered trading algorithms that analyze market data, identify opportunities, and execute trades automatically.',
+      benefits: ['Market analysis', 'Automated trading', 'Risk management', 'Portfolio optimization', 'Backtesting']
     },
     {
-      icon: Stethoscope,
-      title: 'Clinical Decision Support',
-      description: 'Intelligent clinical decision support system that assists healthcare professionals with diagnosis and treatment planning.',
-      benefits: ['Diagnosis assistance', 'Treatment recommendations', 'Drug interaction checking', 'Clinical guidelines', 'Evidence-based medicine']
+      icon: DollarSign,
+      title: 'Credit Risk Assessment',
+      description: 'Intelligent credit scoring and risk assessment using machine learning to evaluate borrower creditworthiness.',
+      benefits: ['Credit scoring', 'Risk modeling', 'Default prediction', 'Portfolio analysis', 'Regulatory compliance']
     },
     {
       icon: Shield,
-      title: 'HIPAA-Compliant Security',
-      description: 'Enterprise-grade security and compliance with HIPAA, GDPR, and other healthcare regulations for patient data protection.',
-      benefits: ['HIPAA compliance', 'Data encryption', 'Access controls', 'Audit trails', 'Privacy protection']
+      title: 'Regulatory Compliance',
+      description: 'Automated compliance monitoring and reporting to ensure adherence to financial regulations and standards.',
+      benefits: ['Regulatory reporting', 'Compliance monitoring', 'Audit trails', 'Risk assessment', 'Documentation']
     }
   ];
 
   const solutions = [
     { 
-      name: 'Radiology AI', 
-      icon: '🩻', 
-      description: 'AI-powered radiology interpretation',
-      features: ['X-ray analysis', 'MRI interpretation', 'CT scan analysis', 'Ultrasound analysis', 'Mammography screening']
+      name: 'Banking AI', 
+      icon: '🏦', 
+      description: 'AI solutions for retail and commercial banking',
+      features: ['Customer service', 'Loan processing', 'Risk assessment', 'Fraud detection', 'Personalized banking']
     },
     { 
-      name: 'Pathology AI', 
-      icon: '🔬', 
-      description: 'Digital pathology and tissue analysis',
-      features: ['Tissue analysis', 'Cancer detection', 'Cell classification', 'Biomarker identification', 'Diagnostic accuracy']
+      name: 'Investment Management', 
+      icon: '📈', 
+      description: 'AI-powered investment and portfolio management',
+      features: ['Portfolio optimization', 'Algorithmic trading', 'Market analysis', 'Risk management', 'Performance tracking']
     },
     { 
-      name: 'Drug Discovery', 
-      icon: '💊', 
-      description: 'AI-accelerated pharmaceutical research',
-      features: ['Molecular design', 'Drug repurposing', 'Clinical trial optimization', 'Side effect prediction', 'Efficacy modeling']
+      name: 'Insurance AI', 
+      icon: '🛡️', 
+      description: 'Intelligent insurance underwriting and claims processing',
+      features: ['Underwriting automation', 'Claims processing', 'Risk assessment', 'Fraud detection', 'Customer service']
     },
     { 
-      name: 'Telemedicine', 
-      icon: '📱', 
-      description: 'AI-enhanced remote healthcare',
-      features: ['Virtual consultations', 'Symptom analysis', 'Remote monitoring', 'Prescription management', 'Follow-up care']
+      name: 'Fintech Solutions', 
+      icon: '💳', 
+      description: 'AI-powered fintech applications and services',
+      features: ['Payment processing', 'Digital wallets', 'Lending platforms', 'Personal finance', 'Cryptocurrency']
     },
     { 
-      name: 'Mental Health', 
-      icon: '🧠', 
-      description: 'AI-powered mental health support',
-      features: ['Depression screening', 'Anxiety assessment', 'Therapy recommendations', 'Crisis intervention', 'Wellness tracking']
+      name: 'RegTech', 
+      icon: '⚖️', 
+      description: 'Regulatory technology and compliance automation',
+      features: ['Compliance monitoring', 'Regulatory reporting', 'Risk management', 'Audit automation', 'Documentation']
     },
     { 
-      name: 'Wearable Health', 
-      icon: '⌚', 
-      description: 'AI analysis of wearable device data',
-      features: ['Vital signs monitoring', 'Activity tracking', 'Sleep analysis', 'Health alerts', 'Trend analysis']
+      name: 'Wealth Management', 
+      icon: '💰', 
+      description: 'AI-driven wealth management and financial planning',
+      features: ['Financial planning', 'Investment advice', 'Tax optimization', 'Estate planning', 'Retirement planning']
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Clinic',
-      price: '$2,999',
+      name: 'Startup',
+      price: '$1,999',
       period: '/month',
-      description: 'Perfect for small clinics and private practices',
+      description: 'Perfect for fintech startups and small financial institutions',
       features: [
-        'Up to 1,000 patients',
-        'Basic AI diagnostics',
+        'Up to 10,000 transactions/month',
+        'Basic fraud detection',
         'Standard reporting',
         'Email support',
-        'Mobile app access',
-        'HIPAA compliance'
+        'API access',
+        'Basic compliance'
       ],
       popular: false
     },
     {
-      name: 'Hospital',
+      name: 'Professional',
       price: '$9,999',
       period: '/month',
-      description: 'Ideal for hospitals and large healthcare systems',
+      description: 'Ideal for growing financial institutions and investment firms',
       features: [
-        'Up to 10,000 patients',
-        'Advanced AI diagnostics',
-        'Advanced analytics',
+        'Up to 100,000 transactions/month',
+        'Advanced fraud detection',
+        'Algorithmic trading',
         'Priority support',
         'Custom integrations',
-        'API access',
-        'Multi-department support',
+        'Advanced analytics',
+        'Regulatory compliance',
         '24/7 monitoring'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$29,999',
+      price: '$49,999',
       period: '/month',
-      description: 'For large healthcare networks and research institutions',
+      description: 'For large banks and financial institutions',
       features: [
-        'Unlimited patients',
+        'Unlimited transactions',
         'Full AI capabilities',
         'Custom development',
         '24/7 dedicated support',
         'Advanced security',
-        'Research collaboration',
-        'Custom integrations',
+        'White-label options',
+        'Custom compliance',
         'Dedicated account manager'
       ],
       popular: false
@@ -125,54 +125,54 @@ const AIHealthcareSolutionsPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Dr. Sarah Johnson',
-      role: 'Chief Medical Officer',
-      company: 'Metro General Hospital',
-      content: 'AI Healthcare Solutions improved our diagnostic accuracy by 35% and reduced patient wait times by 50%. A game-changer for our hospital.',
+      name: 'James Wilson',
+      role: 'Chief Risk Officer',
+      company: 'MetroBank International',
+      content: 'AI Financial Services reduced our fraud losses by 85% and improved our credit approval process by 60%. Exceptional results.',
       rating: 5
     },
     {
-      name: 'Dr. Michael Chen',
-      role: 'Radiologist',
-      company: 'Advanced Medical Center',
-      content: 'The AI-powered radiology analysis has transformed our workflow. We can now detect conditions earlier and with greater accuracy.',
+      name: 'Sarah Thompson',
+      role: 'Head of Trading',
+      company: 'Alpha Investment Group',
+      content: 'The algorithmic trading platform has increased our portfolio returns by 25% while reducing risk. Highly recommended!',
       rating: 5
     },
     {
-      name: 'Dr. Emily Rodriguez',
-      role: 'Pathologist',
-      company: 'City Health System',
-      content: 'The pathology AI has significantly improved our cancer detection rates and reduced false negatives by 40%.',
+      name: 'Michael Rodriguez',
+      role: 'CTO',
+      company: 'FinTech Solutions Inc.',
+      content: 'The AI-powered compliance monitoring has streamlined our regulatory reporting and reduced manual work by 70%.',
       rating: 5
     }
   ];
 
   const stats = [
-    { value: '35%', label: 'Diagnostic Accuracy Improvement', description: 'Better patient outcomes' },
-    { value: '50%', label: 'Reduced Wait Times', description: 'Faster diagnosis and treatment' },
-    { value: '99.5%', label: 'AI Accuracy Rate', description: 'Reliable medical analysis' },
-    { value: '40%', label: 'False Negative Reduction', description: 'Better disease detection' }
+    { value: '85%', label: 'Fraud Reduction', description: 'Decreased fraudulent transactions' },
+    { value: '25%', label: 'Portfolio Returns', description: 'Improved investment performance' },
+    { value: '70%', label: 'Process Automation', description: 'Reduced manual work' },
+    { value: '99.9%', label: 'Detection Accuracy', description: 'Reliable fraud detection' }
   ];
 
-  const certifications = [
-    { name: 'HIPAA Compliant', icon: '🛡️', description: 'Patient data protection' },
-    { name: 'FDA Approved', icon: '✅', description: 'Medical device certification' },
-    { name: 'ISO 27001', icon: '🔒', description: 'Information security' },
-    { name: 'SOC 2 Type II', icon: '📊', description: 'Security compliance' },
-    { name: 'GDPR Compliant', icon: '🌍', description: 'Data privacy protection' },
-    { name: 'CE Marked', icon: '🇪🇺', description: 'European conformity' }
+  const regulations = [
+    { name: 'PCI DSS', icon: '🔒', description: 'Payment card security' },
+    { name: 'SOX Compliance', icon: '📊', description: 'Financial reporting' },
+    { name: 'Basel III', icon: '🏦', description: 'Banking regulations' },
+    { name: 'MiFID II', icon: '🇪🇺', description: 'European markets' },
+    { name: 'GDPR', icon: '🛡️', description: 'Data protection' },
+    { name: 'CCPA', icon: '🔐', description: 'Privacy rights' }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Healthcare Solutions - Zion Tech Group | Medical AI & Diagnostic Technology</title>
-        <meta name="description" content="Revolutionary AI-powered healthcare solutions with medical imaging analysis, predictive health analytics, and clinical decision support. HIPAA-compliant with 99.5% accuracy." />
-        <meta name="keywords" content="AI healthcare, medical AI, diagnostic imaging, clinical decision support, medical imaging analysis, healthcare technology, HIPAA compliant" />
-        <meta property="og:title" content="AI Healthcare Solutions - Zion Tech Group" />
-        <meta property="og:description" content="Advanced AI-powered healthcare solutions with medical imaging and clinical decision support" />
+        <title>AI Financial Services - Zion Tech Group | Banking AI & Fintech Solutions</title>
+        <meta name="description" content="Revolutionary AI-powered financial services with fraud detection, algorithmic trading, and credit risk assessment. Reduce fraud by 85% and improve returns by 25%." />
+        <meta name="keywords" content="AI financial services, banking AI, fintech solutions, fraud detection, algorithmic trading, credit risk assessment, financial technology" />
+        <meta property="og:title" content="AI Financial Services - Zion Tech Group" />
+        <meta property="og:description" content="Advanced AI-powered financial services with fraud detection and algorithmic trading" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare-solutions" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-financial-services" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -182,18 +182,18 @@ const AIHealthcareSolutionsPage: React.FC = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Healthcare Solutions
+              AI Financial Services
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform healthcare delivery with AI-powered medical imaging analysis, predictive health analytics, 
-              and clinical decision support. HIPAA-compliant with 99.5% accuracy.
+              Transform financial services with AI-powered fraud detection, algorithmic trading, 
+              and credit risk assessment. Reduce fraud by 85% and improve returns by 25%.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+              <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                 Schedule Demo
               </button>
               <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Download Brochure
+                Download Whitepaper
               </button>
             </div>
             
@@ -210,26 +210,26 @@ const AIHealthcareSolutionsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Certifications Section */}
+        {/* Regulations Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Trusted & Certified
+                Regulatory Compliance
               </h2>
               <p className="text-gray-300">
-                Our healthcare solutions meet the highest industry standards and regulatory requirements
+                Our financial AI solutions meet all major regulatory requirements
               </p>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {certifications.map((cert, index) => (
+              {regulations.map((regulation, index) => (
                 <div key={index} className="text-center group">
-                  <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-2xl">{cert.icon}</span>
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">{regulation.icon}</span>
                   </div>
-                  <h3 className="text-white font-medium mb-1">{cert.name}</h3>
-                  <p className="text-gray-400 text-sm">{cert.description}</p>
+                  <h3 className="text-white font-medium mb-1">{regulation.name}</h3>
+                  <p className="text-gray-400 text-sm">{regulation.description}</p>
                 </div>
               ))}
             </div>
@@ -241,18 +241,18 @@ const AIHealthcareSolutionsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-white mb-4">
-                Comprehensive Healthcare AI Solutions
+                Comprehensive Financial AI Solutions
               </h2>
               <p className="text-gray-300">
-                From diagnostics to drug discovery, our AI solutions cover the entire healthcare spectrum
+                From banking to investment management, our AI solutions cover the entire financial spectrum
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-red-500/50 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:border-green-500/50 transition-all duration-300">
                   <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-3">
                       <span className="text-2xl">{solution.icon}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2">{solution.name}</h3>
@@ -261,7 +261,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
                   <ul className="space-y-2">
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-red-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
@@ -280,16 +280,16 @@ const AIHealthcareSolutionsPage: React.FC = () => {
                 Advanced AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered healthcare platform combines cutting-edge technology with 
-                clinical expertise to deliver superior patient care.
+                Our AI-powered financial platform combines cutting-edge technology with 
+                regulatory compliance to deliver superior financial services.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               {features.map((feature, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-red-500/50 transition-all duration-300">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-green-500/50 transition-all duration-300">
                   <div className="flex items-start space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0">
                       <feature.icon className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -316,10 +316,10 @@ const AIHealthcareSolutionsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Healthcare-Focused Pricing
+                Financial Services Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your healthcare organization's needs. All plans include HIPAA compliance and security.
+                Choose the plan that fits your financial institution's needs. All plans include regulatory compliance.
               </p>
             </div>
 
@@ -327,12 +327,12 @@ const AIHealthcareSolutionsPage: React.FC = () => {
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 ${
                   plan.popular 
-                    ? 'border-red-500/50 ring-2 ring-red-500/20 scale-105' 
-                    : 'border-white/20 hover:border-red-500/50'
+                    ? 'border-green-500/50 ring-2 ring-green-500/20 scale-105' 
+                    : 'border-white/20 hover:border-green-500/50'
                 }`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                      <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                         <Star className="w-4 h-4 fill-current" />
                         Most Popular
                       </div>
@@ -343,7 +343,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-red-400">{plan.price}</span>
+                      <span className="text-4xl font-bold text-green-400">{plan.price}</span>
                       <span className="text-gray-300 ml-1">{plan.period}</span>
                     </div>
                   </div>
@@ -359,7 +359,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
 
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600'
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'
                   }`}>
                     {plan.popular ? 'Schedule Demo' : 'Contact Sales'}
@@ -375,10 +375,10 @@ const AIHealthcareSolutionsPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Healthcare Leaders
+                Trusted by Financial Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join leading healthcare organizations who have transformed patient care with AI.
+                Join leading financial institutions who have transformed their operations with AI.
               </p>
             </div>
 
@@ -404,20 +404,20 @@ const AIHealthcareSolutionsPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-red-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-12 border border-red-500/20">
+            <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-sm rounded-2xl p-12 border border-green-500/20">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Healthcare?
+                Ready to Transform Financial Services?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Schedule a demo to see how our AI healthcare solutions can improve patient outcomes 
-                and streamline your operations.
+                Schedule a demo to see how our AI financial solutions can improve your operations 
+                and reduce risk while increasing profitability.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                <button className="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                   Schedule Demo
                 </button>
                 <button className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                  Download Brochure
+                  Download Whitepaper
                 </button>
               </div>
             </div>
@@ -428,4 +428,4 @@ const AIHealthcareSolutionsPage: React.FC = () => {
   );
 };
 
-export default AIHealthcareSolutionsPage;
+export default AIFinancialServicesPage;

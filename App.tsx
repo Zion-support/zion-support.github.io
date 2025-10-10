@@ -37,6 +37,12 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+const AIProjectManagementPage = React.lazy(() => import('./app/ai-project-management/page'));
+const AISocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
+const AIInventoryManagerPage = React.lazy(() => import('./app/ai-inventory-manager/page'));
+const AIVoiceAssistantPage = React.lazy(() => import('./app/ai-voice-assistant/page'));
+const AIHealthcareSolutionsPage = React.lazy(() => import('./app/ai-healthcare-solutions/page'));
+const AIFinancialServicesPage = React.lazy(() => import('./app/ai-financial-services/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -80,6 +86,12 @@ const App: React.FC = () => {
                             <Route path="/micro-saas" element={<MicroSaasPage />} />
                             <Route path="/ai-services" element={<AiServicesPage />} />
                             <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
+                            <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
+                            <Route path="/ai-inventory-manager" element={<AIInventoryManagerPage />} />
+                            <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                            <Route path="/ai-healthcare-solutions" element={<AIHealthcareSolutionsPage />} />
+                            <Route path="/ai-financial-services" element={<AIFinancialServicesPage />} />
                           </Routes>
                         </Suspense>
                       </main>

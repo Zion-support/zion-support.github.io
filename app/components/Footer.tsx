@@ -20,7 +20,13 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Data Visualization', url: '/ai-data-visualization', description: 'Advanced data visualization' },
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
-    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
+    { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'Intelligent project planning' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Social media automation' },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Inventory optimization' },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice AI platform' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare-solutions', description: 'Medical AI solutions' },
+    { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Financial AI platform' }
   ];
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
@@ -54,7 +60,13 @@ const Footer: React.FC = memo(() => {
     { name: 'Legal Document Manager', url: '/legal-document-manager', description: 'Legal & compliance' },
     { name: 'Online Learning Platform', url: '/online-learning-platform', description: 'Education' },
     { name: 'Supply Chain Optimizer', url: '/supply-chain-optimizer', description: 'Manufacturing' },
-    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' }
+    { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' },
+    { name: 'AI Project Management', url: '/ai-project-management', description: 'Project planning' },
+    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Social media' },
+    { name: 'AI Inventory Manager', url: '/ai-inventory-manager', description: 'Inventory management' },
+    { name: 'AI Voice Assistant', url: '/ai-voice-assistant', description: 'Voice AI' },
+    { name: 'AI Healthcare Solutions', url: '/ai-healthcare-solutions', description: 'Medical AI' },
+    { name: 'AI Financial Services', url: '/ai-financial-services', description: 'Financial AI' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
