@@ -2,20 +2,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-import Footer from '../components/Footer'
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'const MicroSaasPage: React.FC = () => {
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
+
+const MicroSaasPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('all');
 
   const microSaasTools = [
     {
-<<<<<<< HEAD
-      title: 'AI Content Generator',
-      description: 'Generate high-quality content for blogs, social media, and marketing materials using advanced AI.',
-      features: ['Multi-language support', 'SEO optimization', 'Brand voice customization', 'Content scheduling'],
-      price: '$29/month',
-      icon: Zap=======
       title: 'Zion AI Content Studio Pro',
       description: 'Advanced AI-powered content creation platform with GPT-4 integration, brand voice training, and multi-channel publishing.',
       features: ['GPT-4 & Claude Integration', 'Brand Voice AI Training', 'Multi-language Support (50+ languages)', 'SEO Optimization Engine', 'Content Calendar & Scheduling', 'Plagiarism Detection', 'A/B Testing Tools', 'Social Media Auto-Posting'],
@@ -25,7 +20,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
       icon: Zap,
       category: 'content',
       link: 'https://ziontechgroup.com/zion-ai-content-studio-pro'
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-3339
     },
     {
       title: 'Zion Analytics Intelligence',
@@ -93,13 +87,6 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
       category: 'finance',
       link: 'https://ziontechgroup.com/zion-invoice-genius-ai'
     },
-    {
-<<<<<<< HEAD
-      title: 'Security Monitor',
-      description: 'Advanced security monitoring and threat detection for your applications.',
-      features: ['Real-time monitoring', 'Threat detection', 'Automated alerts', 'Compliance reporting'],
-      price: '$39/month',
-      icon: Shield    },
     {
       title: 'Zion AI Video Editor Pro',
       description: 'AI-powered video editing platform with automatic editing, voice synthesis, and multi-format export.',

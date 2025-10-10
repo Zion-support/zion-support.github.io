@@ -218,28 +218,6 @@ const Footer: React.FC = memo(() => {
                   View All AI Services
                   <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-              </li>                    {service.name}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2 border-t border-purple-500/20">
-                <Link 
-                  to="/it-services"
-                  className="text-purple-400 hover:text-purple-300 transition-all duration-300 text-sm font-semibold flex items-center group">
-                  View All IT Services
-                  <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </li>                    {service.name}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2 border-t border-green-500/20">
-                <Link 
-                  to="/micro-saas"
-                  className="text-green-400 hover:text-green-300 transition-all duration-300 text-sm font-semibold flex items-center group">
-                  View All Micro SAAS
-                  <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
               </li>
             </ul>
           </div>

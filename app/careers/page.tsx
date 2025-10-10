@@ -41,11 +41,12 @@ const CareersPage: React.FC = () => {
     'Top-tier equipment and tools',
     'Team building events',
     'Career growth opportunities'
-  ]
+  ];
 
   const values = [
     {
-      icon: Star,      title: 'Innovation',
+      icon: Star,
+      title: 'Innovation',
       description: 'We push the boundaries of what\'s possible with technology'
     },
     {

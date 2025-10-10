@@ -1,8 +1,11 @@
-'use client'import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async'
+'use client';
+import React, { useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer'const ContactPage: React.FC = () => {
+import Footer from '../components/Footer';
+
+const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,13 +25,14 @@ import Footer from '../components/Footer'const ContactPage: React.FC = () => {
   }, []);
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
     try {
       // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitStatus('success')      setFormData({
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
         name: '',
         email: '',
         company: '',

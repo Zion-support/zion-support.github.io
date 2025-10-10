@@ -5,21 +5,25 @@ import { Helmet } from 'react-helmet-async';
 interface SEOHeadProps {
   title: string;
   description: string;
-  keywords?: string[]  canonicalUrl?: string;
-  structuredData?: any
-  ogImage?: string
-  twitterCard?: string
+  keywords?: string[];
+  canonicalUrl?: string;
+  structuredData?: any;
+  ogImage?: string;
+  twitterCard?: string;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
   keywords = [],
-  canonicalUrl,  structuredData,
+  canonicalUrl,
+  structuredData,
   ogImage = '/og-image.jpg',
   twitterCard = 'summary_large_image'
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`  return (
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  
+  return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
