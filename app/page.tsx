@@ -103,20 +103,13 @@ const HomePage: React.FC = () => {
         enableHighContrast={true}
         enableFocusManagement={true}
       />
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced">
-        {/* Navigation */}
-=======
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
         <Navigation />
         
         <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
           {/* Hero Section */}
-<<<<<<< HEAD
           <section
-className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
+            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
               isLoaded && isVisible 
                 ? 'opacity-100 translate-y-0' 
                 : 'opacity-0 translate-y-8'
@@ -166,7 +159,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
               <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="tel:+13024640950"
-                  onClick={handlePhoneClick}
                   className="cyber-button-enhanced w-full sm:w-auto text-center"
                   aria-label="Call us at (302) 464-0950"
                 >
@@ -192,31 +184,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   ⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available
                 </p>
               </div>
-=======
-          <section className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium">
-              Advanced AI and IT Solutions
-            </p>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
-              Transform your business with our cutting-edge technology and achieve unprecedented growth.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/ai-services"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
-                Explore AI Services
-              </a>
-              <a 
-                href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
-                Get Free Consultation
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
             </div>
           </section>
 
@@ -280,7 +247,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
           </section>
 
           {/* CTA Section */}
-<<<<<<< HEAD
           <section className="mb-16" aria-labelledby="cta-heading">
             <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center">
               <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6 neon-text-enhanced">Get Free Consultation</h2>
@@ -290,7 +256,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="tel:+13024640950"
-                  onClick={handlePhoneClick}
                   className="cyber-button-enhanced"
                   aria-label="Call us at (302) 464-0950"
                 >
@@ -775,26 +740,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                   </a>
                 </div>
               </article>
-=======
-          <section className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn how our AI and IT solutions can help you achieve your goals.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Started
-              </a>
-              <a 
-                href="/about"
-                className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Learn More
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
             </div>
           </div>
         </section>
