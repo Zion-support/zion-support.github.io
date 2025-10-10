@@ -101,7 +101,13 @@ const Navigation: React.FC = () => {
     { name: 'Hybrid Cloud', href: '/hybrid-cloud', icon: Cloud, description: 'Hybrid Solutions' },
     { name: 'Data Migration', href: '/data-migration', icon: Database, description: 'Migration Services' },
     { name: 'API Development', href: '/api-development', icon: Globe, description: 'API Services' },
-    { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' }
+    { name: 'IT Governance', href: '/it-governance', icon: Settings, description: 'Governance Solutions' },
+    { name: 'AI-Powered DevOps', href: '/ai-devops', icon: Brain, description: 'Intelligent DevOps' },
+    { name: 'Edge Computing', href: '/edge-computing', icon: Zap, description: 'Edge Solutions' },
+    { name: 'Predictive Analytics', href: '/predictive-analytics', icon: BarChart, description: 'Predictive Modeling' },
+    { name: 'AI Security Suite', href: '/ai-security-suite', icon: Shield, description: 'AI Security' },
+    { name: 'Cloud AI Platform', href: '/cloud-ai-platform', icon: Cloud, description: 'AI Cloud Services' },
+    { name: 'Digital Transformation', href: '/digital-transformation', icon: Settings, description: 'Digital Strategy' }
   ];
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
@@ -114,6 +120,12 @@ const Navigation: React.FC = () => {
     { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Search, description: 'SEO Tools' },
     { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: BarChart, description: 'Invoice Management' },
     { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'Writing Tools' },
+    { name: 'AI Code Generator', href: '/ai-code-generator', icon: Code, description: 'Code Generation' },
+    { name: 'AI Video Creator', href: '/ai-video-creator', icon: Code, description: 'Video Production' },
+    { name: 'AI Research Assistant', href: '/ai-research-assistant', icon: Code, description: 'Research Tools' },
+    { name: 'AI Website Builder', href: '/ai-website-builder', icon: Globe, description: 'Website Creation' },
+    { name: 'AI Lead Scoring', href: '/ai-lead-scoring', icon: Target, description: 'Lead Qualification' },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield, description: 'Security Monitoring' },
     { name: 'Smart Analytics', href: '/smart-analytics', icon: BarChart, description: 'Analytics Platform' },
     { name: 'AI Scheduler', href: '/ai-scheduler', icon: Calendar, description: 'Scheduling Tools' },
     { name: 'Expense Tracker', href: '/expense-tracker', icon: BarChart, description: 'Expense Management' },
