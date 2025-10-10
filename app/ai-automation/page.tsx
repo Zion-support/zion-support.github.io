@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle, Clock, Shield, Zap, Settings, Phone, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -14,14 +15,36 @@ const AIAutomationPage: React.FC = () => {
       title: 'Process Automation',
       description: 'Intelligent automation of complex business processes with decision-making capabilities',
       benefits: ['80% process efficiency', 'Zero human error', '24/7 operation']
+=======
+'use client';
+import React, { lazy } from 'react';
+import { CheckCircle, TrendingUp, Brain, Zap } from 'lucide-react';
+
+const Navigation = lazy(() => import('../components/Navigation'));
+const Footer = lazy(() => import('../components/Footer'));
+
+const AIAutomationPage: React.FC = React.memo((props) => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'Intelligent Process Discovery',
+      description: 'AI automatically identifies and maps your business processes for optimization opportunities.',
+      benefits: ['Process mapping', 'Bottleneck identification', 'Efficiency analysis', 'ROI prediction']
+>>>>>>> origin/temp-pr-28049
     },
     {
       icon: Zap;
       title: 'Process Automation',
       description: 'Streamline repetitive tasks with intelligent automation',
       icon: Zap,
+<<<<<<< HEAD
       features: ['Task scheduling', 'Data processing', 'Report generation', 'Email automation'],
       color: 'from-blue-400 to-cyan-500'
+=======
+      title: 'Smart Workflow Automation',
+      description: 'Deploy AI-powered workflows that learn and adapt to your business needs over time.',
+      benefits: ['Adaptive workflows', 'Self-healing processes', 'Dynamic optimization', 'Real-time adjustments']
+>>>>>>> origin/temp-pr-28049
     },
     {
       title: 'Workflow Optimization',

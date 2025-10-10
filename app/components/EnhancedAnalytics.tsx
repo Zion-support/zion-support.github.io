@@ -141,6 +141,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
       t.src = v;
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s);
+<<<<<<< HEAD
     })(window, document, 'script', 'https: //connect.facebook.net/en_US/fbevents.js');
 ,
     window.fbq?.('init', PIXEL_ID);
@@ -660,3 +661,11 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({,
 
 export default EnhancedAnalytics;</EnhancedAnalyticsProps>
 </EnhancedAnalyticsProps>
+=======
+    })(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    
+    (window as any).fbq('init', PIXEL_ID);
+    (window as any).fbq('track', 'PageView');
+
+  }, [enableFacebookPixel]);
+>>>>>>> origin/temp-pr-28049
