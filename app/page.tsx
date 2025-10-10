@@ -921,6 +921,329 @@ const HomePage: React.FC = () => {
       link: '/ai-dating-coach',
       popular: false,
       category: 'Dating'
+    },
+    // Advanced AI & Machine Learning Services
+    {
+      title: 'AI Quantum Computing Simulator',
+      description: 'Simulate quantum algorithms and quantum machine learning models for research and development',
+      icon: '⚛️',
+      price: '$299/month',
+      features: ['Quantum Algorithm Simulation', 'QML Model Training', 'Quantum Circuit Design', 'Performance Analysis', 'Research Tools', 'API Integration'],
+      benefits: ['Cutting-edge research', 'Quantum advantage', 'Future-proof solutions', 'Academic collaboration'],
+      link: '/ai-quantum-computing-simulator',
+      popular: false,
+      category: 'Quantum AI'
+    },
+    {
+      title: 'AI Autonomous Vehicle Simulator',
+      description: 'Test and validate autonomous vehicle algorithms in realistic virtual environments',
+      icon: '🚗',
+      price: '$399/month',
+      features: ['Realistic Simulation', 'Traffic Scenarios', 'Weather Conditions', 'Sensor Simulation', 'Safety Testing', 'Performance Metrics'],
+      benefits: ['Safe testing', 'Cost reduction', 'Faster development', 'Real-world validation'],
+      link: '/ai-autonomous-vehicle-simulator',
+      popular: false,
+      category: 'Autonomous Systems'
+    },
+    {
+      title: 'AI Drug Discovery Platform',
+      description: 'Accelerate pharmaceutical research with AI-powered molecular design and drug interaction analysis',
+      icon: '💊',
+      price: '$499/month',
+      features: ['Molecular Design', 'Drug Interaction Analysis', 'Toxicity Prediction', 'Clinical Trial Optimization', 'Patent Analysis', 'Regulatory Compliance'],
+      benefits: ['Faster drug development', 'Reduced costs', 'Better success rates', 'Life-saving innovations'],
+      link: '/ai-drug-discovery-platform',
+      popular: false,
+      category: 'Biotech AI'
+    },
+    {
+      title: 'AI Climate Change Predictor',
+      description: 'Advanced climate modeling and environmental impact prediction using AI and satellite data',
+      icon: '🌍',
+      price: '$199/month',
+      features: ['Climate Modeling', 'Environmental Monitoring', 'Impact Prediction', 'Policy Analysis', 'Carbon Footprint Tracking', 'Sustainability Metrics'],
+      benefits: ['Environmental protection', 'Policy insights', 'Risk mitigation', 'Sustainable solutions'],
+      link: '/ai-climate-change-predictor',
+      popular: false,
+      category: 'Climate AI'
+    },
+    {
+      title: 'AI Space Mission Planner',
+      description: 'Optimize space missions and satellite operations with AI-powered trajectory planning and resource management',
+      icon: '🚀',
+      price: '$599/month',
+      features: ['Trajectory Optimization', 'Resource Management', 'Mission Planning', 'Satellite Operations', 'Risk Assessment', 'Cost Optimization'],
+      benefits: ['Mission success', 'Cost efficiency', 'Risk reduction', 'Space exploration'],
+      link: '/ai-space-mission-planner',
+      popular: false,
+      category: 'Space AI'
+    },
+    {
+      title: 'AI Metaverse Builder',
+      description: 'Create immersive virtual worlds and metaverse experiences with AI-powered content generation',
+      icon: '🌐',
+      price: '$349/month',
+      features: ['Virtual World Creation', 'AI Content Generation', 'Avatar Design', 'Interactive Experiences', 'Multi-platform Support', 'Monetization Tools'],
+      benefits: ['Immersive experiences', 'Creative freedom', 'Monetization opportunities', 'Future-ready platform'],
+      link: '/ai-metaverse-builder',
+      popular: false,
+      category: 'Metaverse AI'
+    },
+    {
+      title: 'AI Blockchain Analyzer',
+      description: 'Advanced blockchain analysis with AI-powered transaction monitoring and smart contract auditing',
+      icon: '⛓️',
+      price: '$179/month',
+      features: ['Transaction Analysis', 'Smart Contract Auditing', 'DeFi Analytics', 'Risk Assessment', 'Compliance Monitoring', 'Fraud Detection'],
+      benefits: ['Enhanced security', 'Risk mitigation', 'Compliance assurance', 'DeFi insights'],
+      link: '/ai-blockchain-analyzer',
+      popular: false,
+      category: 'Blockchain AI'
+    },
+    {
+      title: 'AI Edge Computing Optimizer',
+      description: 'Optimize edge computing deployments with AI-powered resource allocation and latency reduction',
+      icon: '📡',
+      price: '$229/month',
+      features: ['Resource Optimization', 'Latency Reduction', 'Load Balancing', 'Energy Efficiency', 'Performance Monitoring', 'Auto-scaling'],
+      benefits: ['Better performance', 'Cost reduction', 'Energy efficiency', 'Scalable solutions'],
+      link: '/ai-edge-computing-optimizer',
+      popular: false,
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI Digital Twin Creator',
+      description: 'Create digital replicas of physical systems for simulation, monitoring, and predictive maintenance',
+      icon: '👥',
+      price: '$279/month',
+      features: ['Digital Replication', 'Real-time Monitoring', 'Predictive Maintenance', 'Simulation', 'Optimization', 'Performance Analysis'],
+      benefits: ['Better insights', 'Predictive maintenance', 'Cost savings', 'Optimized operations'],
+      link: '/ai-digital-twin-creator',
+      popular: false,
+      category: 'Digital Twin AI'
+    },
+    // Advanced Business & Productivity Tools
+    {
+      title: 'AI Supply Chain Optimizer',
+      description: 'Optimize supply chain operations with AI-powered demand forecasting and logistics management',
+      icon: '📦',
+      price: '$199/month',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Planning', 'Supplier Management', 'Risk Assessment', 'Cost Analysis'],
+      benefits: ['Reduced costs', 'Better efficiency', 'Risk mitigation', 'Improved delivery'],
+      link: '/ai-supply-chain-optimizer',
+      popular: true,
+      category: 'Supply Chain AI'
+    },
+    {
+      title: 'AI Legal Document Analyzer',
+      description: 'Advanced legal document analysis with AI-powered contract review and compliance checking',
+      icon: '⚖️',
+      price: '$149/month',
+      features: ['Contract Analysis', 'Compliance Checking', 'Risk Assessment', 'Legal Research', 'Document Comparison', 'Clause Extraction'],
+      benefits: ['Faster reviews', 'Better accuracy', 'Risk reduction', 'Cost savings'],
+      link: '/ai-legal-document-analyzer',
+      popular: true,
+      category: 'Legal AI'
+    },
+    {
+      title: 'AI Real Estate Valuator',
+      description: 'Accurate property valuation using AI analysis of market data, location factors, and property features',
+      icon: '🏠',
+      price: '$89/month',
+      features: ['Property Valuation', 'Market Analysis', 'Investment Insights', 'Risk Assessment', 'Trend Prediction', 'Comparative Analysis'],
+      benefits: ['Accurate valuations', 'Investment insights', 'Market intelligence', 'Risk assessment'],
+      link: '/ai-real-estate-valuator',
+      popular: true,
+      category: 'Real Estate AI'
+    },
+    {
+      title: 'AI Insurance Risk Assessor',
+      description: 'Advanced risk assessment for insurance with AI-powered fraud detection and claim analysis',
+      icon: '🛡️',
+      price: '$159/month',
+      features: ['Risk Assessment', 'Fraud Detection', 'Claim Analysis', 'Policy Optimization', 'Predictive Modeling', 'Compliance Monitoring'],
+      benefits: ['Better risk management', 'Fraud prevention', 'Cost reduction', 'Improved accuracy'],
+      link: '/ai-insurance-risk-assessor',
+      popular: true,
+      category: 'Insurance AI'
+    },
+    {
+      title: 'AI Manufacturing Optimizer',
+      description: 'Optimize manufacturing processes with AI-powered quality control and production efficiency',
+      icon: '🏭',
+      price: '$299/month',
+      features: ['Quality Control', 'Production Optimization', 'Predictive Maintenance', 'Supply Chain Integration', 'Energy Management', 'Safety Monitoring'],
+      benefits: ['Higher quality', 'Reduced waste', 'Better efficiency', 'Cost savings'],
+      link: '/ai-manufacturing-optimizer',
+      popular: true,
+      category: 'Manufacturing AI'
+    },
+    {
+      title: 'AI Transportation Optimizer',
+      description: 'Optimize transportation and logistics with AI-powered route planning and fleet management',
+      icon: '🚛',
+      price: '$179/month',
+      features: ['Route Optimization', 'Fleet Management', 'Fuel Efficiency', 'Driver Safety', 'Load Planning', 'Real-time Tracking'],
+      benefits: ['Cost reduction', 'Better efficiency', 'Safety improvement', 'Environmental impact'],
+      link: '/ai-transportation-optimizer',
+      popular: true,
+      category: 'Transportation AI'
+    },
+    {
+      title: 'AI Energy Management System',
+      description: 'Optimize energy consumption and renewable energy integration with AI-powered smart grid management',
+      icon: '⚡',
+      price: '$249/month',
+      features: ['Energy Optimization', 'Renewable Integration', 'Demand Response', 'Grid Management', 'Cost Analysis', 'Carbon Tracking'],
+      benefits: ['Energy savings', 'Cost reduction', 'Sustainability', 'Grid stability'],
+      link: '/ai-energy-management-system',
+      popular: true,
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI Education Personalizer',
+      description: 'Personalized learning experiences with AI-powered curriculum adaptation and progress tracking',
+      icon: '🎓',
+      price: '$99/month',
+      features: ['Personalized Learning', 'Progress Tracking', 'Adaptive Content', 'Skill Assessment', 'Learning Analytics', 'Gamification'],
+      benefits: ['Better learning outcomes', 'Personalized experience', 'Progress tracking', 'Engagement improvement'],
+      link: '/ai-education-personalizer',
+      popular: true,
+      category: 'Education AI'
+    },
+    {
+      title: 'AI Healthcare Diagnostician',
+      description: 'Advanced medical diagnosis assistance with AI-powered image analysis and symptom evaluation',
+      icon: '🏥',
+      price: '$399/month',
+      features: ['Medical Image Analysis', 'Symptom Evaluation', 'Diagnosis Assistance', 'Treatment Recommendations', 'Drug Interaction Check', 'Patient Monitoring'],
+      benefits: ['Faster diagnosis', 'Better accuracy', 'Improved outcomes', 'Cost reduction'],
+      link: '/ai-healthcare-diagnostician',
+      popular: true,
+      category: 'Healthcare AI'
+    },
+    {
+      title: 'AI Financial Risk Manager',
+      description: 'Advanced financial risk assessment and portfolio optimization with AI-powered market analysis',
+      icon: '💰',
+      price: '$199/month',
+      features: ['Risk Assessment', 'Portfolio Optimization', 'Market Analysis', 'Fraud Detection', 'Compliance Monitoring', 'Stress Testing'],
+      benefits: ['Better risk management', 'Improved returns', 'Fraud prevention', 'Regulatory compliance'],
+      link: '/ai-financial-risk-manager',
+      popular: true,
+      category: 'Finance AI'
+    },
+    // Creative & Content AI Tools
+    {
+      title: 'AI Video Editor Pro',
+      description: 'Professional video editing with AI-powered scene detection, auto-editing, and content optimization',
+      icon: '🎬',
+      price: '$129/month',
+      features: ['Auto-editing', 'Scene Detection', 'Color Correction', 'Audio Sync', 'Transitions', 'Export Options'],
+      benefits: ['Professional results', 'Time savings', 'Easy editing', 'High quality'],
+      link: '/ai-video-editor-pro',
+      popular: true,
+      category: 'Video AI'
+    },
+    {
+      title: 'AI Podcast Producer',
+      description: 'Create professional podcasts with AI-powered audio editing, noise reduction, and content enhancement',
+      icon: '🎙️',
+      price: '$79/month',
+      features: ['Audio Editing', 'Noise Reduction', 'Voice Enhancement', 'Music Integration', 'Transcription', 'Publishing Tools'],
+      benefits: ['Professional quality', 'Easy production', 'Time savings', 'Better audio'],
+      link: '/ai-podcast-producer',
+      popular: true,
+      category: 'Audio AI'
+    },
+    {
+      title: 'AI Book Publisher',
+      description: 'Complete book publishing solution with AI-powered editing, formatting, and marketing assistance',
+      icon: '📚',
+      price: '$149/month',
+      features: ['AI Editing', 'Formatting', 'Cover Design', 'Marketing', 'Distribution', 'Analytics'],
+      benefits: ['Professional publishing', 'Time savings', 'Better marketing', 'Wider reach'],
+      link: '/ai-book-publisher',
+      popular: true,
+      category: 'Publishing AI'
+    },
+    {
+      title: 'AI Game Developer',
+      description: 'Create games with AI-powered asset generation, level design, and gameplay optimization',
+      icon: '🎮',
+      price: '$199/month',
+      features: ['Asset Generation', 'Level Design', 'Gameplay Testing', 'AI NPCs', 'Balancing', 'Publishing Tools'],
+      benefits: ['Faster development', 'Creative assistance', 'Better gameplay', 'Cost reduction'],
+      link: '/ai-game-developer',
+      popular: true,
+      category: 'Gaming AI'
+    },
+    {
+      title: 'AI Art Gallery',
+      description: 'Create and manage digital art collections with AI-powered curation and authentication',
+      icon: '🖼️',
+      price: '$89/month',
+      features: ['Art Generation', 'Curation', 'Authentication', 'NFT Creation', 'Marketplace', 'Royalty Management'],
+      benefits: ['Creative freedom', 'Monetization', 'Authentication', 'Market access'],
+      link: '/ai-art-gallery',
+      popular: true,
+      category: 'Art AI'
+    },
+    // Specialized Industry Solutions
+    {
+      title: 'AI Agriculture Optimizer',
+      description: 'Optimize farming operations with AI-powered crop monitoring, yield prediction, and resource management',
+      icon: '🌾',
+      price: '$179/month',
+      features: ['Crop Monitoring', 'Yield Prediction', 'Resource Optimization', 'Pest Detection', 'Weather Analysis', 'Market Insights'],
+      benefits: ['Higher yields', 'Resource efficiency', 'Cost reduction', 'Sustainability'],
+      link: '/ai-agriculture-optimizer',
+      popular: true,
+      category: 'Agriculture AI'
+    },
+    {
+      title: 'AI Construction Manager',
+      description: 'Optimize construction projects with AI-powered scheduling, safety monitoring, and resource allocation',
+      icon: '🏗️',
+      price: '$249/month',
+      features: ['Project Scheduling', 'Safety Monitoring', 'Resource Allocation', 'Progress Tracking', 'Cost Management', 'Quality Control'],
+      benefits: ['Project efficiency', 'Safety improvement', 'Cost control', 'Quality assurance'],
+      link: '/ai-construction-manager',
+      popular: true,
+      category: 'Construction AI'
+    },
+    {
+      title: 'AI Retail Optimizer',
+      description: 'Optimize retail operations with AI-powered inventory management, customer analytics, and pricing optimization',
+      icon: '🛒',
+      price: '$159/month',
+      features: ['Inventory Management', 'Customer Analytics', 'Pricing Optimization', 'Demand Forecasting', 'Staff Scheduling', 'Loss Prevention'],
+      benefits: ['Better inventory', 'Customer insights', 'Revenue optimization', 'Operational efficiency'],
+      link: '/ai-retail-optimizer',
+      popular: true,
+      category: 'Retail AI'
+    },
+    {
+      title: 'AI Hospitality Manager',
+      description: 'Optimize hospitality operations with AI-powered guest experience, revenue management, and staff optimization',
+      icon: '🏨',
+      price: '$199/month',
+      features: ['Guest Experience', 'Revenue Management', 'Staff Optimization', 'Demand Forecasting', 'Service Quality', 'Feedback Analysis'],
+      benefits: ['Guest satisfaction', 'Revenue growth', 'Operational efficiency', 'Service quality'],
+      link: '/ai-hospitality-manager',
+      popular: true,
+      category: 'Hospitality AI'
+    },
+    {
+      title: 'AI Sports Analytics',
+      description: 'Advanced sports performance analysis with AI-powered player tracking, strategy optimization, and injury prevention',
+      icon: '⚽',
+      price: '$299/month',
+      features: ['Performance Analysis', 'Injury Prevention', 'Strategy Optimization', 'Player Tracking', 'Team Management', 'Fan Engagement'],
+      benefits: ['Better performance', 'Injury reduction', 'Strategic advantage', 'Fan engagement'],
+      link: '/ai-sports-analytics',
+      popular: true,
+      category: 'Sports AI'
     }
   ];
 
@@ -1338,6 +1661,1105 @@ const HomePage: React.FC = () => {
       features: ['Digital Replication', 'Real-time Monitoring', 'Predictive Maintenance', 'Simulation', 'Optimization', 'Performance Analysis'],
       color: 'text-cyan-600',
       category: 'Digital Twin AI'
+    },
+    // Advanced AI Research & Development
+    {
+      title: 'AI Research & Development Lab',
+      description: 'Cutting-edge AI research with custom algorithm development and breakthrough innovations',
+      icon: Brain,
+      price: '$5,000/month',
+      features: ['Custom Algorithm Development', 'Research Collaboration', 'Patent Development', 'Academic Partnerships', 'Proof of Concept', 'Technology Transfer'],
+      color: 'text-purple-600',
+      category: 'AI Research'
+    },
+    {
+      title: 'AI Ethics & Governance',
+      description: 'AI ethics framework development with bias detection and responsible AI implementation',
+      icon: Shield,
+      price: '$2,800/month',
+      features: ['Ethics Framework', 'Bias Detection', 'Fairness Auditing', 'Transparency Tools', 'Compliance Monitoring', 'Responsible AI Guidelines'],
+      color: 'text-green-600',
+      category: 'AI Ethics'
+    },
+    {
+      title: 'AI Model Explainability',
+      description: 'Make AI decisions transparent and interpretable with advanced explainability techniques',
+      icon: Eye,
+      price: '$1,900/month',
+      features: ['Model Interpretability', 'Decision Explanation', 'Feature Importance', 'Visualization Tools', 'Audit Trails', 'Compliance Reporting'],
+      color: 'text-blue-600',
+      category: 'AI Explainability'
+    },
+    {
+      title: 'AI Federated Learning',
+      description: 'Distributed machine learning with privacy-preserving model training across multiple organizations',
+      icon: Globe,
+      price: '$3,200/month',
+      features: ['Privacy-Preserving Training', 'Distributed Computing', 'Model Aggregation', 'Secure Communication', 'Federated Analytics', 'Cross-Organization Learning'],
+      color: 'text-indigo-600',
+      category: 'Federated Learning'
+    },
+    {
+      title: 'AI Reinforcement Learning',
+      description: 'Advanced reinforcement learning solutions for autonomous decision-making and optimization',
+      icon: Target,
+      price: '$2,600/month',
+      features: ['Autonomous Decision Making', 'Reward Optimization', 'Policy Learning', 'Environment Simulation', 'Multi-Agent Systems', 'Continuous Learning'],
+      color: 'text-orange-600',
+      category: 'Reinforcement Learning'
+    },
+    {
+      title: 'AI Transfer Learning',
+      description: 'Leverage pre-trained models for faster development and improved performance on new tasks',
+      icon: ArrowRight,
+      price: '$1,700/month',
+      features: ['Pre-trained Models', 'Domain Adaptation', 'Fine-tuning', 'Knowledge Transfer', 'Rapid Prototyping', 'Performance Optimization'],
+      color: 'text-teal-600',
+      category: 'Transfer Learning'
+    },
+    {
+      title: 'AI AutoML Platform',
+      description: 'Automated machine learning with intelligent model selection and hyperparameter optimization',
+      icon: Settings,
+      price: '$2,100/month',
+      features: ['Automated Model Selection', 'Hyperparameter Optimization', 'Feature Engineering', 'Model Validation', 'Performance Monitoring', 'Auto-deployment'],
+      color: 'text-pink-600',
+      category: 'AutoML'
+    },
+    {
+      title: 'AI Edge Intelligence',
+      description: 'Deploy AI models on edge devices with optimized inference and real-time processing',
+      icon: Smartphone,
+      price: '$2,300/month',
+      features: ['Edge Model Deployment', 'Optimized Inference', 'Real-time Processing', 'Resource Management', 'Offline Capability', 'Performance Monitoring'],
+      color: 'text-cyan-600',
+      category: 'Edge AI'
+    },
+    {
+      title: 'AI Multi-Modal Learning',
+      description: 'Process and understand multiple data types (text, images, audio) with unified AI models',
+      icon: Camera,
+      price: '$2,700/month',
+      features: ['Multi-Modal Processing', 'Cross-Modal Learning', 'Unified Representations', 'Fusion Techniques', 'Cross-Modal Retrieval', 'Multimedia Analysis'],
+      color: 'text-violet-600',
+      category: 'Multi-Modal AI'
+    },
+    {
+      title: 'AI Few-Shot Learning',
+      description: 'Learn from limited data with advanced few-shot and zero-shot learning techniques',
+      icon: Zap,
+      price: '$1,800/month',
+      features: ['Few-Shot Learning', 'Zero-Shot Learning', 'Meta-Learning', 'Rapid Adaptation', 'Data Efficiency', 'Generalization'],
+      color: 'text-yellow-600',
+      category: 'Few-Shot Learning'
+    },
+    {
+      title: 'AI Adversarial Defense',
+      description: 'Protect AI models from adversarial attacks with robust defense mechanisms',
+      icon: Shield,
+      price: '$2,400/month',
+      features: ['Adversarial Detection', 'Robust Training', 'Defense Mechanisms', 'Attack Simulation', 'Vulnerability Assessment', 'Security Hardening'],
+      color: 'text-red-600',
+      category: 'AI Security'
+    },
+    {
+      title: 'AI Continual Learning',
+      description: 'Enable AI models to learn continuously without forgetting previous knowledge',
+      icon: TrendingUp,
+      price: '$2,200/month',
+      features: ['Continuous Learning', 'Catastrophic Forgetting Prevention', 'Knowledge Retention', 'Incremental Learning', 'Memory Management', 'Adaptive Learning'],
+      color: 'text-emerald-600',
+      category: 'Continual Learning'
+    },
+    {
+      title: 'AI Causal Inference',
+      description: 'Understand cause-and-effect relationships in data with advanced causal analysis',
+      icon: BarChart3,
+      price: '$2,500/month',
+      features: ['Causal Discovery', 'Treatment Effect Estimation', 'Counterfactual Analysis', 'Causal Graphs', 'Intervention Planning', 'Causal Validation'],
+      color: 'text-amber-600',
+      category: 'Causal AI'
+    },
+    {
+      title: 'AI Graph Neural Networks',
+      description: 'Process graph-structured data with advanced graph neural network architectures',
+      icon: Network,
+      price: '$2,000/month',
+      features: ['Graph Processing', 'Node Classification', 'Link Prediction', 'Graph Generation', 'Graph Attention', 'Heterogeneous Graphs'],
+      color: 'text-rose-600',
+      category: 'Graph AI'
+    },
+    {
+      title: 'AI Time Series Forecasting',
+      description: 'Advanced time series analysis and forecasting with deep learning models',
+      icon: Clock3,
+      price: '$1,600/month',
+      features: ['Time Series Analysis', 'Long-term Forecasting', 'Anomaly Detection', 'Seasonality Modeling', 'Trend Analysis', 'Uncertainty Quantification'],
+      color: 'text-sky-600',
+      category: 'Time Series AI'
+    },
+    {
+      title: 'AI Natural Language Understanding',
+      description: 'Advanced NLP with context understanding, sentiment analysis, and language generation',
+      icon: MessageSquare,
+      price: '$1,800/month',
+      features: ['Context Understanding', 'Sentiment Analysis', 'Language Generation', 'Question Answering', 'Text Summarization', 'Language Translation'],
+      color: 'text-lime-600',
+      category: 'NLP AI'
+    },
+    {
+      title: 'AI Computer Vision',
+      description: 'Advanced image and video analysis with object detection, recognition, and understanding',
+      icon: Eye,
+      price: '$1,900/month',
+      features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition', 'Scene Understanding', 'Medical Imaging'],
+      color: 'text-fuchsia-600',
+      category: 'Computer Vision'
+    },
+    {
+      title: 'AI Speech Processing',
+      description: 'Advanced speech recognition, synthesis, and understanding with multilingual support',
+      icon: Mic,
+      price: '$1,700/month',
+      features: ['Speech Recognition', 'Voice Synthesis', 'Speaker Identification', 'Emotion Recognition', 'Language Detection', 'Noise Reduction'],
+      color: 'text-stone-600',
+      category: 'Speech AI'
+    },
+    {
+      title: 'AI Recommendation Systems',
+      description: 'Personalized recommendation engines with advanced collaborative and content-based filtering',
+      icon: Star,
+      price: '$1,500/month',
+      features: ['Personalized Recommendations', 'Collaborative Filtering', 'Content-Based Filtering', 'Hybrid Approaches', 'Real-time Updates', 'A/B Testing'],
+      color: 'text-amber-500',
+      category: 'Recommendation AI'
+    },
+    {
+      title: 'AI Anomaly Detection',
+      description: 'Detect unusual patterns and outliers in data with unsupervised learning techniques',
+      icon: AlertTriangle,
+      price: '$1,400/month',
+      features: ['Unsupervised Detection', 'Real-time Monitoring', 'Pattern Recognition', 'Threshold Learning', 'Alert Generation', 'Root Cause Analysis'],
+      color: 'text-red-500',
+      category: 'Anomaly Detection'
+    },
+    {
+      title: 'AI Optimization Algorithms',
+      description: 'Advanced optimization techniques for complex problems with genetic algorithms and neural networks',
+      icon: Target,
+      price: '$1,800/month',
+      features: ['Genetic Algorithms', 'Neural Optimization', 'Constraint Solving', 'Multi-objective Optimization', 'Global Optimization', 'Heuristic Methods'],
+      color: 'text-green-500',
+      category: 'Optimization AI'
+    },
+    {
+      title: 'AI Knowledge Graphs',
+      description: 'Build and query knowledge graphs with semantic understanding and reasoning capabilities',
+      icon: Network,
+      price: '$2,200/month',
+      features: ['Knowledge Graph Construction', 'Semantic Reasoning', 'Entity Linking', 'Relation Extraction', 'Query Processing', 'Knowledge Fusion'],
+      color: 'text-indigo-500',
+      category: 'Knowledge AI'
+    },
+    {
+      title: 'AI Generative Models',
+      description: 'Create realistic synthetic data and content with advanced generative AI models',
+      icon: Sparkles,
+      price: '$2,600/month',
+      features: ['Data Generation', 'Content Creation', 'Image Synthesis', 'Text Generation', 'Music Composition', 'Video Generation'],
+      color: 'text-purple-500',
+      category: 'Generative AI'
+    },
+    {
+      title: 'AI Ensemble Methods',
+      description: 'Combine multiple AI models for improved accuracy and robustness with ensemble techniques',
+      icon: Layers,
+      price: '$1,600/month',
+      features: ['Model Combination', 'Voting Mechanisms', 'Stacking', 'Bagging', 'Boosting', 'Performance Optimization'],
+      color: 'text-blue-500',
+      category: 'Ensemble AI'
+    },
+    {
+      title: 'AI Active Learning',
+      description: 'Intelligently select the most informative data for training to maximize learning efficiency',
+      icon: Brain,
+      price: '$1,900/month',
+      features: ['Query Strategy', 'Uncertainty Sampling', 'Diversity Sampling', 'Human-in-the-Loop', 'Label Efficiency', 'Adaptive Selection'],
+      color: 'text-cyan-500',
+      category: 'Active Learning'
+    },
+    {
+      title: 'AI Model Compression',
+      description: 'Optimize AI models for deployment with pruning, quantization, and distillation techniques',
+      icon: Compress,
+      price: '$1,700/month',
+      features: ['Model Pruning', 'Quantization', 'Knowledge Distillation', 'Architecture Search', 'Efficiency Optimization', 'Deployment Ready'],
+      color: 'text-orange-500',
+      category: 'Model Optimization'
+    },
+    {
+      title: 'AI Uncertainty Quantification',
+      description: 'Measure and communicate uncertainty in AI predictions for better decision-making',
+      icon: BarChart,
+      price: '$2,000/month',
+      features: ['Uncertainty Estimation', 'Confidence Intervals', 'Prediction Intervals', 'Calibration', 'Risk Assessment', 'Decision Support'],
+      color: 'text-teal-500',
+      category: 'Uncertainty AI'
+    },
+    {
+      title: 'AI Multi-Agent Systems',
+      description: 'Coordinate multiple AI agents for complex problem-solving and distributed intelligence',
+      icon: Users,
+      price: '$2,800/month',
+      features: ['Agent Coordination', 'Distributed Intelligence', 'Communication Protocols', 'Consensus Mechanisms', 'Game Theory', 'Swarm Intelligence'],
+      color: 'text-pink-500',
+      category: 'Multi-Agent AI'
+    },
+    {
+      title: 'AI Neuro-Symbolic Learning',
+      description: 'Combine neural networks with symbolic reasoning for explainable and robust AI systems',
+      icon: Brain,
+      price: '$3,000/month',
+      features: ['Symbolic Reasoning', 'Neural Integration', 'Logic Programming', 'Rule Learning', 'Explainable AI', 'Robust Learning'],
+      color: 'text-violet-500',
+      category: 'Neuro-Symbolic AI'
+    },
+    {
+      title: 'AI Quantum Machine Learning',
+      description: 'Leverage quantum computing for machine learning with quantum algorithms and optimization',
+      icon: Cpu,
+      price: '$4,500/month',
+      features: ['Quantum Algorithms', 'Quantum Optimization', 'Quantum Neural Networks', 'Quantum Feature Maps', 'Quantum Kernels', 'Quantum Advantage'],
+      color: 'text-purple-600',
+      category: 'Quantum ML'
+    },
+    {
+      title: 'AI Neuromorphic Computing',
+      description: 'Brain-inspired computing with spiking neural networks and neuromorphic hardware',
+      icon: Brain,
+      price: '$3,500/month',
+      features: ['Spiking Neural Networks', 'Neuromorphic Hardware', 'Event-Driven Processing', 'Low Power Computing', 'Real-time Learning', 'Brain Simulation'],
+      color: 'text-rose-600',
+      category: 'Neuromorphic AI'
+    },
+    {
+      title: 'AI Swarm Intelligence',
+      description: 'Distributed problem-solving inspired by natural swarm behaviors and collective intelligence',
+      icon: Users,
+      price: '$2,200/month',
+      features: ['Swarm Algorithms', 'Collective Intelligence', 'Distributed Optimization', 'Emergent Behavior', 'Self-Organization', 'Scalable Systems'],
+      color: 'text-emerald-500',
+      category: 'Swarm AI'
+    },
+    {
+      title: 'AI Evolutionary Computing',
+      description: 'Solve complex problems using evolutionary algorithms and genetic programming',
+      icon: TrendingUp,
+      price: '$1,800/month',
+      features: ['Genetic Algorithms', 'Evolutionary Strategies', 'Genetic Programming', 'Particle Swarm', 'Differential Evolution', 'Adaptive Systems'],
+      color: 'text-amber-500',
+      category: 'Evolutionary AI'
+    },
+    {
+      title: 'AI Fuzzy Logic Systems',
+      description: 'Handle uncertainty and imprecision with fuzzy logic and approximate reasoning',
+      icon: BarChart3,
+      price: '$1,500/month',
+      features: ['Fuzzy Inference', 'Membership Functions', 'Rule-Based Systems', 'Approximate Reasoning', 'Uncertainty Handling', 'Decision Support'],
+      color: 'text-gray-500',
+      category: 'Fuzzy AI'
+    },
+    {
+      title: 'AI Expert Systems',
+      description: 'Build knowledge-based systems that mimic human expertise and decision-making',
+      icon: Brain,
+      price: '$2,100/month',
+      features: ['Knowledge Representation', 'Rule-Based Reasoning', 'Inference Engines', 'Expert Knowledge', 'Decision Trees', 'Diagnostic Systems'],
+      color: 'text-slate-500',
+      category: 'Expert Systems'
+    },
+    {
+      title: 'AI Cognitive Computing',
+      description: 'Simulate human thought processes with cognitive architectures and reasoning systems',
+      icon: Brain,
+      price: '$3,200/month',
+      features: ['Cognitive Architectures', 'Reasoning Systems', 'Memory Models', 'Attention Mechanisms', 'Learning Systems', 'Problem Solving'],
+      color: 'text-indigo-600',
+      category: 'Cognitive AI'
+    },
+    {
+      title: 'AI Affective Computing',
+      description: 'Recognize, interpret, and respond to human emotions with emotion-aware AI systems',
+      icon: Heart,
+      price: '$2,400/month',
+      features: ['Emotion Recognition', 'Sentiment Analysis', 'Affective Computing', 'Emotion Generation', 'Empathetic AI', 'Human-AI Interaction'],
+      color: 'text-pink-600',
+      category: 'Affective AI'
+    },
+    {
+      title: 'AI Embodied Intelligence',
+      description: 'Develop AI systems that interact with the physical world through robotics and sensors',
+      icon: Settings,
+      price: '$3,800/month',
+      features: ['Robotic Integration', 'Sensor Fusion', 'Physical Interaction', 'Embodied Learning', 'Manipulation', 'Navigation'],
+      color: 'text-blue-600',
+      category: 'Embodied AI'
+    },
+    {
+      title: 'AI Social Intelligence',
+      description: 'Enable AI systems to understand and interact in social contexts with human-like social skills',
+      icon: Users,
+      price: '$2,600/month',
+      features: ['Social Understanding', 'Social Interaction', 'Group Dynamics', 'Social Norms', 'Cultural Awareness', 'Social Learning'],
+      color: 'text-green-600',
+      category: 'Social AI'
+    },
+    {
+      title: 'AI Creative Intelligence',
+      description: 'Foster creativity and innovation with AI systems that generate novel ideas and solutions',
+      icon: Sparkles,
+      price: '$2,800/month',
+      features: ['Creative Generation', 'Idea Synthesis', 'Innovation Support', 'Creative Problem Solving', 'Artistic Creation', 'Design Thinking'],
+      color: 'text-purple-500',
+      category: 'Creative AI'
+    },
+    {
+      title: 'AI Meta-Learning',
+      description: 'Enable AI systems to learn how to learn with advanced meta-learning algorithms',
+      icon: Brain,
+      price: '$3,100/month',
+      features: ['Learning to Learn', 'Few-Shot Adaptation', 'Rapid Learning', 'Transfer Learning', 'Meta-Optimization', 'Adaptive Algorithms'],
+      color: 'text-cyan-600',
+      category: 'Meta-Learning'
+    },
+    {
+      title: 'AI Self-Supervised Learning',
+      description: 'Learn from unlabeled data with self-supervised learning techniques and contrastive methods',
+      icon: Eye,
+      price: '$2,300/month',
+      features: ['Self-Supervision', 'Contrastive Learning', 'Pretext Tasks', 'Representation Learning', 'Unsupervised Pre-training', 'Data Efficiency'],
+      color: 'text-orange-600',
+      category: 'Self-Supervised AI'
+    },
+    {
+      title: 'AI Curriculum Learning',
+      description: 'Train AI models with curriculum-based learning strategies for better performance',
+      icon: BookOpen,
+      price: '$1,900/month',
+      features: ['Curriculum Design', 'Progressive Learning', 'Difficulty Scheduling', 'Learning Paths', 'Adaptive Curriculum', 'Performance Optimization'],
+      color: 'text-yellow-600',
+      category: 'Curriculum Learning'
+    },
+    {
+      title: 'AI Lifelong Learning',
+      description: 'Enable AI systems to learn continuously throughout their operational lifetime',
+      icon: TrendingUp,
+      price: '$2,700/month',
+      features: ['Continuous Learning', 'Knowledge Accumulation', 'Catastrophic Forgetting Prevention', 'Memory Consolidation', 'Adaptive Learning', 'Experience Replay'],
+      color: 'text-emerald-600',
+      category: 'Lifelong Learning'
+    },
+    {
+      title: 'AI Multi-Task Learning',
+      description: 'Train AI models on multiple related tasks simultaneously for improved efficiency and performance',
+      icon: Layers,
+      price: '$2,200/month',
+      features: ['Multi-Task Training', 'Task Relationships', 'Shared Representations', 'Task Balancing', 'Transfer Learning', 'Performance Optimization'],
+      color: 'text-violet-600',
+      category: 'Multi-Task AI'
+    },
+    {
+      title: 'AI Zero-Shot Learning',
+      description: 'Enable AI models to perform tasks they were never explicitly trained on',
+      icon: Zap,
+      price: '$2,500/month',
+      features: ['Zero-Shot Classification', 'Generalization', 'Semantic Understanding', 'Attribute Learning', 'Cross-Domain Transfer', 'Few-Shot Adaptation'],
+      color: 'text-amber-600',
+      category: 'Zero-Shot AI'
+    },
+    {
+      title: 'AI One-Shot Learning',
+      description: 'Learn from a single example with advanced one-shot learning techniques',
+      icon: Target,
+      price: '$2,100/month',
+      features: ['Single Example Learning', 'Memory Networks', 'Prototype Learning', 'Similarity Learning', 'Rapid Adaptation', 'Few-Shot Generalization'],
+      color: 'text-rose-600',
+      category: 'One-Shot AI'
+    },
+    {
+      title: 'AI Weakly Supervised Learning',
+      description: 'Learn from noisy, incomplete, or imprecise labels with weak supervision techniques',
+      icon: AlertCircle,
+      price: '$1,800/month',
+      features: ['Noisy Label Learning', 'Incomplete Supervision', 'Weak Supervision', 'Label Noise Robustness', 'Semi-Supervised Learning', 'Data Quality Improvement'],
+      color: 'text-red-600',
+      category: 'Weak Supervision'
+    },
+    {
+      title: 'AI Self-Training',
+      description: 'Improve AI models by training on their own predictions with confidence-based selection',
+      icon: RefreshCw,
+      price: '$1,600/month',
+      features: ['Self-Training', 'Confidence-Based Selection', 'Pseudo-Labeling', 'Iterative Learning', 'Quality Control', 'Performance Improvement'],
+      color: 'text-blue-500',
+      category: 'Self-Training'
+    },
+    {
+      title: 'AI Co-Training',
+      description: 'Train multiple AI models on different views of the same data for improved performance',
+      icon: Users,
+      price: '$2,000/month',
+      features: ['Multi-View Learning', 'Co-Training', 'View Independence', 'Consistency Regularization', 'Complementary Learning', 'Performance Enhancement'],
+      color: 'text-green-500',
+      category: 'Co-Training'
+    },
+    {
+      title: 'AI Tri-Training',
+      description: 'Use three AI models to train each other with disagreement-based learning',
+      icon: Triangle,
+      price: '$1,700/month',
+      features: ['Tri-Training', 'Disagreement-Based Learning', 'Model Diversity', 'Confidence Estimation', 'Iterative Refinement', 'Robust Learning'],
+      color: 'text-purple-500',
+      category: 'Tri-Training'
+    },
+    {
+      title: 'AI Multi-Instance Learning',
+      description: 'Learn from bags of instances where only bag-level labels are available',
+      icon: Package,
+      price: '$1,900/month',
+      features: ['Bag-Level Learning', 'Instance-Level Prediction', 'Multiple Instance Classification', 'Attention Mechanisms', 'Instance Selection', 'Bag Representation'],
+      color: 'text-indigo-500',
+      category: 'Multi-Instance AI'
+    },
+    {
+      title: 'AI Multi-Label Learning',
+      description: 'Handle multiple labels per instance with advanced multi-label classification techniques',
+      icon: Tags,
+      price: '$1,800/month',
+      features: ['Multi-Label Classification', 'Label Correlation', 'Label Dependencies', 'Binary Relevance', 'Classifier Chains', 'Label Ranking'],
+      color: 'text-teal-500',
+      category: 'Multi-Label AI'
+    },
+    {
+      title: 'AI Ordinal Regression',
+      description: 'Predict ordinal values with specialized regression techniques for ordered categories',
+      icon: BarChart3,
+      price: '$1,500/month',
+      features: ['Ordinal Prediction', 'Ordered Categories', 'Threshold Models', 'Ranking Loss', 'Monotonic Constraints', 'Ordinal Classification'],
+      color: 'text-orange-500',
+      category: 'Ordinal AI'
+    },
+    {
+      title: 'AI Survival Analysis',
+      description: 'Analyze time-to-event data with survival models and hazard function estimation',
+      icon: Clock,
+      price: '$2,200/month',
+      features: ['Survival Modeling', 'Hazard Functions', 'Censoring Handling', 'Time-to-Event Prediction', 'Risk Stratification', 'Medical Applications'],
+      color: 'text-red-500',
+      category: 'Survival AI'
+    },
+    {
+      title: 'AI Ranking Learning',
+      description: 'Learn to rank items with specialized ranking algorithms and preference learning',
+      icon: TrendingUp,
+      price: '$1,700/month',
+      features: ['Learning to Rank', 'Preference Learning', 'Ranking Metrics', 'Pairwise Learning', 'Listwise Learning', 'Pointwise Learning'],
+      color: 'text-amber-500',
+      category: 'Ranking AI'
+    },
+    {
+      title: 'AI Metric Learning',
+      description: 'Learn distance metrics and similarity functions for better data representation',
+      icon: Ruler,
+      price: '$1,600/month',
+      features: ['Distance Learning', 'Similarity Functions', 'Metric Spaces', 'Embedding Learning', 'Triplet Loss', 'Contrastive Learning'],
+      color: 'text-cyan-500',
+      category: 'Metric Learning'
+    },
+    {
+      title: 'AI Manifold Learning',
+      description: 'Discover low-dimensional structures in high-dimensional data with manifold learning',
+      icon: Layers,
+      price: '$1,800/month',
+      features: ['Dimensionality Reduction', 'Manifold Discovery', 'Nonlinear Mapping', 'Geodesic Distances', 'Local Structure', 'Global Structure'],
+      color: 'text-violet-500',
+      category: 'Manifold Learning'
+    },
+    {
+      title: 'AI Clustering Algorithms',
+      description: 'Discover hidden patterns and groups in data with advanced clustering techniques',
+      icon: Circle,
+      price: '$1,400/month',
+      features: ['K-Means Clustering', 'Hierarchical Clustering', 'Density-Based Clustering', 'Spectral Clustering', 'Fuzzy Clustering', 'Clustering Validation'],
+      color: 'text-pink-500',
+      category: 'Clustering AI'
+    },
+    {
+      title: 'AI Dimensionality Reduction',
+      description: 'Reduce data complexity while preserving important information with dimensionality reduction',
+      icon: Minimize2,
+      price: '$1,500/month',
+      features: ['PCA', 't-SNE', 'UMAP', 'Linear Discriminant Analysis', 'Independent Component Analysis', 'Nonlinear Methods'],
+      color: 'text-green-500',
+      category: 'Dimensionality Reduction'
+    },
+    {
+      title: 'AI Feature Selection',
+      description: 'Identify the most relevant features for machine learning with automated feature selection',
+      icon: Filter,
+      price: '$1,300/month',
+      features: ['Filter Methods', 'Wrapper Methods', 'Embedded Methods', 'Feature Importance', 'Redundancy Removal', 'Relevance Analysis'],
+      color: 'text-blue-500',
+      category: 'Feature Selection'
+    },
+    {
+      title: 'AI Feature Engineering',
+      description: 'Create meaningful features from raw data with automated feature engineering techniques',
+      icon: Wrench,
+      price: '$1,600/month',
+      features: ['Automated Feature Creation', 'Feature Transformation', 'Feature Interaction', 'Domain Knowledge Integration', 'Feature Validation', 'Feature Optimization'],
+      color: 'text-orange-500',
+      category: 'Feature Engineering'
+    },
+    {
+      title: 'AI Data Augmentation',
+      description: 'Generate synthetic training data to improve model performance and generalization',
+      icon: Plus,
+      price: '$1,200/month',
+      features: ['Synthetic Data Generation', 'Data Transformation', 'Noise Injection', 'Adversarial Augmentation', 'Domain Adaptation', 'Data Balancing'],
+      color: 'text-purple-500',
+      category: 'Data Augmentation'
+    },
+    {
+      title: 'AI Imbalanced Learning',
+      description: 'Handle imbalanced datasets with specialized techniques for minority class learning',
+      icon: Scale,
+      price: '$1,400/month',
+      features: ['Oversampling', 'Undersampling', 'SMOTE', 'Cost-Sensitive Learning', 'Ensemble Methods', 'Threshold Tuning'],
+      color: 'text-red-500',
+      category: 'Imbalanced Learning'
+    },
+    {
+      title: 'AI Online Learning',
+      description: 'Learn from streaming data in real-time with online learning algorithms',
+      icon: Wifi,
+      price: '$1,800/month',
+      features: ['Streaming Data', 'Real-time Learning', 'Incremental Updates', 'Concept Drift', 'Memory Management', 'Adaptive Learning'],
+      color: 'text-cyan-500',
+      category: 'Online Learning'
+    },
+    {
+      title: 'AI Batch Learning',
+      description: 'Learn from batches of data with efficient batch processing algorithms',
+      icon: Package,
+      price: '$1,300/month',
+      features: ['Batch Processing', 'Efficient Algorithms', 'Memory Optimization', 'Parallel Processing', 'Scalable Learning', 'Resource Management'],
+      color: 'text-indigo-500',
+      category: 'Batch Learning'
+    },
+    {
+      title: 'AI Semi-Supervised Learning',
+      description: 'Learn from both labeled and unlabeled data with semi-supervised techniques',
+      icon: Circle,
+      price: '$1,700/month',
+      features: ['Labeled Data', 'Unlabeled Data', 'Consistency Regularization', 'Pseudo-Labeling', 'Graph-Based Methods', 'Self-Training'],
+      color: 'text-teal-500',
+      category: 'Semi-Supervised Learning'
+    },
+    {
+      title: 'AI Unsupervised Learning',
+      description: 'Discover hidden patterns in data without labeled examples using unsupervised methods',
+      icon: Eye,
+      price: '$1,500/month',
+      features: ['Pattern Discovery', 'Clustering', 'Dimensionality Reduction', 'Anomaly Detection', 'Density Estimation', 'Representation Learning'],
+      color: 'text-yellow-500',
+      category: 'Unsupervised Learning'
+    },
+    {
+      title: 'AI Supervised Learning',
+      description: 'Learn from labeled examples with traditional supervised learning algorithms',
+      icon: CheckCircle,
+      price: '$1,200/month',
+      features: ['Classification', 'Regression', 'Decision Trees', 'Support Vector Machines', 'Neural Networks', 'Ensemble Methods'],
+      color: 'text-green-500',
+      category: 'Supervised Learning'
+    },
+    {
+      title: 'AI Reinforcement Learning',
+      description: 'Learn optimal behavior through interaction with environment using RL algorithms',
+      icon: Target,
+      price: '$2,000/month',
+      features: ['Policy Learning', 'Value Functions', 'Q-Learning', 'Actor-Critic', 'Multi-Agent RL', 'Safe RL'],
+      color: 'text-orange-500',
+      category: 'Reinforcement Learning'
+    },
+    {
+      title: 'AI Deep Learning',
+      description: 'Build and train deep neural networks for complex pattern recognition and prediction',
+      icon: Brain,
+      price: '$2,300/month',
+      features: ['Neural Networks', 'Deep Architectures', 'Backpropagation', 'Gradient Descent', 'Regularization', 'Optimization'],
+      color: 'text-purple-500',
+      category: 'Deep Learning'
+    },
+    {
+      title: 'AI Machine Learning',
+      description: 'Comprehensive machine learning solutions with traditional and modern algorithms',
+      icon: Cpu,
+      price: '$1,800/month',
+      features: ['Algorithm Selection', 'Model Training', 'Hyperparameter Tuning', 'Cross-Validation', 'Model Evaluation', 'Deployment'],
+      color: 'text-blue-500',
+      category: 'Machine Learning'
+    },
+    {
+      title: 'AI Statistical Learning',
+      description: 'Apply statistical methods to machine learning with rigorous mathematical foundations',
+      icon: BarChart3,
+      price: '$1,600/month',
+      features: ['Statistical Models', 'Hypothesis Testing', 'Confidence Intervals', 'Bayesian Methods', 'Maximum Likelihood', 'Statistical Inference'],
+      color: 'text-gray-500',
+      category: 'Statistical Learning'
+    },
+    {
+      title: 'AI Probabilistic Learning',
+      description: 'Handle uncertainty in machine learning with probabilistic models and Bayesian inference',
+      icon: BarChart,
+      price: '$1,900/month',
+      features: ['Probabilistic Models', 'Bayesian Inference', 'Uncertainty Quantification', 'Probabilistic Programming', 'Graphical Models', 'Variational Methods'],
+      color: 'text-indigo-500',
+      category: 'Probabilistic Learning'
+    },
+    {
+      title: 'AI Non-Parametric Learning',
+      description: 'Learn without assuming specific parametric forms using non-parametric methods',
+      icon: Circle,
+      price: '$1,700/month',
+      features: ['Kernel Methods', 'Nearest Neighbors', 'Decision Trees', 'Random Forests', 'Gaussian Processes', 'Non-parametric Regression'],
+      color: 'text-pink-500',
+      category: 'Non-Parametric Learning'
+    },
+    {
+      title: 'AI Parametric Learning',
+      description: 'Learn with fixed parametric forms using traditional parametric methods',
+      icon: Square,
+      price: '$1,400/month',
+      features: ['Linear Models', 'Logistic Regression', 'Polynomial Regression', 'Parametric Models', 'Maximum Likelihood', 'Least Squares'],
+      color: 'text-cyan-500',
+      category: 'Parametric Learning'
+    },
+    {
+      title: 'AI Instance-Based Learning',
+      description: 'Learn by storing and retrieving instances using memory-based methods',
+      icon: Database,
+      price: '$1,300/month',
+      features: ['K-Nearest Neighbors', 'Case-Based Reasoning', 'Lazy Learning', 'Instance Storage', 'Similarity Measures', 'Memory Management'],
+      color: 'text-teal-500',
+      category: 'Instance-Based Learning'
+    },
+    {
+      title: 'AI Model-Based Learning',
+      description: 'Learn by constructing explicit models of the data using model-based methods',
+      icon: Box,
+      price: '$1,500/month',
+      features: ['Model Construction', 'Model Selection', 'Model Validation', 'Model Interpretation', 'Model Complexity', 'Model Performance'],
+      color: 'text-violet-500',
+      category: 'Model-Based Learning'
+    },
+    {
+      title: 'AI Lazy Learning',
+      description: 'Defer computation until prediction time using lazy learning algorithms',
+      icon: Clock,
+      price: '$1,200/month',
+      features: ['Lazy Evaluation', 'Instance-Based Methods', 'Memory-Based Learning', 'Deferred Computation', 'On-Demand Learning', 'Efficient Storage'],
+      color: 'text-amber-500',
+      category: 'Lazy Learning'
+    },
+    {
+      title: 'AI Eager Learning',
+      description: 'Learn immediately from training data using eager learning algorithms',
+      icon: Zap,
+      price: '$1,300/month',
+      features: ['Immediate Learning', 'Model Construction', 'Training Phase', 'Prediction Phase', 'Eager Evaluation', 'Pre-computed Models'],
+      color: 'text-green-500',
+      category: 'Eager Learning'
+    },
+    {
+      title: 'AI Global Learning',
+      description: 'Learn global patterns and relationships using global learning algorithms',
+      icon: Globe,
+      price: '$1,600/month',
+      features: ['Global Patterns', 'Global Optimization', 'Global Models', 'Global Features', 'Global Relationships', 'Global Generalization'],
+      color: 'text-blue-500',
+      category: 'Global Learning'
+    },
+    {
+      title: 'AI Local Learning',
+      description: 'Learn local patterns and relationships using local learning algorithms',
+      icon: MapPin,
+      price: '$1,400/month',
+      features: ['Local Patterns', 'Local Optimization', 'Local Models', 'Local Features', 'Local Relationships', 'Local Generalization'],
+      color: 'text-orange-500',
+      category: 'Local Learning'
+    },
+    {
+      title: 'AI Incremental Learning',
+      description: 'Learn incrementally from new data without retraining from scratch',
+      icon: Plus,
+      price: '$1,800/month',
+      features: ['Incremental Updates', 'Online Learning', 'Streaming Data', 'Memory Management', 'Catastrophic Forgetting', 'Adaptive Learning'],
+      color: 'text-purple-500',
+      category: 'Incremental Learning'
+    },
+    {
+      title: 'AI Batch Learning',
+      description: 'Learn from batches of data using batch learning algorithms',
+      icon: Package,
+      price: '$1,300/month',
+      features: ['Batch Processing', 'Batch Updates', 'Batch Optimization', 'Batch Validation', 'Batch Evaluation', 'Batch Deployment'],
+      color: 'text-indigo-500',
+      category: 'Batch Learning'
+    },
+    {
+      title: 'AI Online Learning',
+      description: 'Learn from streaming data in real-time using online learning algorithms',
+      icon: Wifi,
+      price: '$1,700/month',
+      features: ['Streaming Data', 'Real-time Learning', 'Online Updates', 'Online Optimization', 'Online Validation', 'Online Evaluation'],
+      color: 'text-cyan-500',
+      category: 'Online Learning'
+    },
+    {
+      title: 'AI Offline Learning',
+      description: 'Learn from static datasets using offline learning algorithms',
+      icon: HardDrive,
+      price: '$1,200/month',
+      features: ['Static Data', 'Offline Processing', 'Offline Training', 'Offline Validation', 'Offline Evaluation', 'Offline Deployment'],
+      color: 'text-gray-500',
+      category: 'Offline Learning'
+    },
+    {
+      title: 'AI Hybrid Learning',
+      description: 'Combine multiple learning paradigms using hybrid learning approaches',
+      icon: Layers,
+      price: '$2,000/month',
+      features: ['Multiple Paradigms', 'Hybrid Models', 'Ensemble Methods', 'Multi-Modal Learning', 'Cross-Paradigm Learning', 'Integrated Learning'],
+      color: 'text-rose-500',
+      category: 'Hybrid Learning'
+    },
+    {
+      title: 'AI Adaptive Learning',
+      description: 'Adapt learning strategies based on data characteristics using adaptive learning',
+      icon: RefreshCw,
+      price: '$1,900/month',
+      features: ['Adaptive Strategies', 'Data-Driven Adaptation', 'Dynamic Learning', 'Self-Adaptation', 'Context-Aware Learning', 'Personalized Learning'],
+      color: 'text-emerald-500',
+      category: 'Adaptive Learning'
+    },
+    {
+      title: 'AI Meta-Learning',
+      description: 'Learn how to learn using meta-learning algorithms and techniques',
+      icon: Brain,
+      price: '$2,500/month',
+      features: ['Learning to Learn', 'Meta-Optimization', 'Few-Shot Learning', 'Rapid Adaptation', 'Transfer Learning', 'Generalization'],
+      color: 'text-violet-500',
+      category: 'Meta-Learning'
+    },
+    {
+      title: 'AI Multi-Task Learning',
+      description: 'Learn multiple tasks simultaneously using multi-task learning algorithms',
+      icon: Layers,
+      price: '$2,200/month',
+      features: ['Multiple Tasks', 'Task Relationships', 'Shared Representations', 'Task Balancing', 'Transfer Learning', 'Performance Optimization'],
+      color: 'text-pink-500',
+      category: 'Multi-Task Learning'
+    },
+    {
+      title: 'AI Multi-View Learning',
+      description: 'Learn from multiple views of the same data using multi-view learning algorithms',
+      icon: Eye,
+      price: '$1,800/month',
+      features: ['Multiple Views', 'View Integration', 'View Consistency', 'Complementary Learning', 'View Alignment', 'Multi-View Fusion'],
+      color: 'text-blue-500',
+      category: 'Multi-View Learning'
+    },
+    {
+      title: 'AI Multi-Modal Learning',
+      description: 'Learn from multiple modalities of data using multi-modal learning algorithms',
+      icon: Camera,
+      price: '$2,300/month',
+      features: ['Multiple Modalities', 'Cross-Modal Learning', 'Modality Fusion', 'Cross-Modal Retrieval', 'Modality Alignment', 'Multi-Modal Representation'],
+      color: 'text-orange-500',
+      category: 'Multi-Modal Learning'
+    },
+    {
+      title: 'AI Multi-Label Learning',
+      description: 'Learn multiple labels per instance using multi-label learning algorithms',
+      icon: Tags,
+      price: '$1,700/month',
+      features: ['Multiple Labels', 'Label Relationships', 'Label Dependencies', 'Binary Relevance', 'Classifier Chains', 'Label Ranking'],
+      color: 'text-green-500',
+      category: 'Multi-Label Learning'
+    },
+    {
+      title: 'AI Multi-Instance Learning',
+      description: 'Learn from bags of instances using multi-instance learning algorithms',
+      icon: Package,
+      price: '$1,600/month',
+      features: ['Bag-Level Learning', 'Instance-Level Prediction', 'Multiple Instance Classification', 'Attention Mechanisms', 'Instance Selection', 'Bag Representation'],
+      color: 'text-purple-500',
+      category: 'Multi-Instance Learning'
+    },
+    {
+      title: 'AI Multi-Agent Learning',
+      description: 'Learn in multi-agent environments using multi-agent learning algorithms',
+      icon: Users,
+      price: '$2,800/month',
+      features: ['Multiple Agents', 'Agent Coordination', 'Distributed Learning', 'Game Theory', 'Consensus Mechanisms', 'Swarm Intelligence'],
+      color: 'text-indigo-500',
+      category: 'Multi-Agent Learning'
+    },
+    {
+      title: 'AI Multi-Objective Learning',
+      description: 'Optimize multiple objectives simultaneously using multi-objective learning algorithms',
+      icon: Target,
+      price: '$2,100/month',
+      features: ['Multiple Objectives', 'Pareto Optimization', 'Objective Balancing', 'Trade-off Analysis', 'Multi-Objective Optimization', 'Pareto Front'],
+      color: 'text-teal-500',
+      category: 'Multi-Objective Learning'
+    },
+    {
+      title: 'AI Multi-Scale Learning',
+      description: 'Learn at multiple scales using multi-scale learning algorithms',
+      icon: Maximize2,
+      price: '$1,900/month',
+      features: ['Multiple Scales', 'Scale Invariance', 'Multi-Resolution Learning', 'Hierarchical Learning', 'Scale Integration', 'Scale Adaptation'],
+      color: 'text-amber-500',
+      category: 'Multi-Scale Learning'
+    },
+    {
+      title: 'AI Multi-Domain Learning',
+      description: 'Learn across multiple domains using multi-domain learning algorithms',
+      icon: Globe,
+      price: '$2,200/month',
+      features: ['Multiple Domains', 'Domain Adaptation', 'Cross-Domain Learning', 'Domain Transfer', 'Domain Alignment', 'Domain Generalization'],
+      color: 'text-rose-500',
+      category: 'Multi-Domain Learning'
+    },
+    {
+      title: 'AI Multi-Source Learning',
+      description: 'Learn from multiple data sources using multi-source learning algorithms',
+      icon: Database,
+      price: '$1,800/month',
+      features: ['Multiple Sources', 'Source Integration', 'Source Reliability', 'Source Weighting', 'Source Selection', 'Source Fusion'],
+      color: 'text-cyan-500',
+      category: 'Multi-Source Learning'
+    },
+    {
+      title: 'AI Multi-Target Learning',
+      description: 'Learn multiple target variables using multi-target learning algorithms',
+      icon: Target,
+      price: '$1,700/month',
+      features: ['Multiple Targets', 'Target Relationships', 'Target Dependencies', 'Target Balancing', 'Target Selection', 'Target Optimization'],
+      color: 'text-violet-500',
+      category: 'Multi-Target Learning'
+    },
+    {
+      title: 'AI Multi-Output Learning',
+      description: 'Learn multiple output variables using multi-output learning algorithms',
+      icon: ArrowRight,
+      price: '$1,600/month',
+      features: ['Multiple Outputs', 'Output Relationships', 'Output Dependencies', 'Output Balancing', 'Output Selection', 'Output Optimization'],
+      color: 'text-pink-500',
+      category: 'Multi-Output Learning'
+    },
+    {
+      title: 'AI Multi-Input Learning',
+      description: 'Learn from multiple input variables using multi-input learning algorithms',
+      icon: ArrowLeft,
+      price: '$1,500/month',
+      features: ['Multiple Inputs', 'Input Relationships', 'Input Dependencies', 'Input Balancing', 'Input Selection', 'Input Optimization'],
+      color: 'text-green-500',
+      category: 'Multi-Input Learning'
+    },
+    {
+      title: 'AI Multi-Feature Learning',
+      description: 'Learn from multiple feature sets using multi-feature learning algorithms',
+      icon: Layers,
+      price: '$1,400/month',
+      features: ['Multiple Features', 'Feature Relationships', 'Feature Dependencies', 'Feature Balancing', 'Feature Selection', 'Feature Optimization'],
+      color: 'text-blue-500',
+      category: 'Multi-Feature Learning'
+    },
+    {
+      title: 'AI Multi-Resolution Learning',
+      description: 'Learn at multiple resolutions using multi-resolution learning algorithms',
+      icon: Maximize2,
+      price: '$1,800/month',
+      features: ['Multiple Resolutions', 'Resolution Invariance', 'Multi-Resolution Analysis', 'Hierarchical Learning', 'Resolution Integration', 'Resolution Adaptation'],
+      color: 'text-orange-500',
+      category: 'Multi-Resolution Learning'
+    },
+    {
+      title: 'AI Multi-Temporal Learning',
+      description: 'Learn from multiple time scales using multi-temporal learning algorithms',
+      icon: Clock,
+      price: '$1,900/month',
+      features: ['Multiple Time Scales', 'Temporal Relationships', 'Temporal Dependencies', 'Temporal Balancing', 'Temporal Selection', 'Temporal Optimization'],
+      color: 'text-purple-500',
+      category: 'Multi-Temporal Learning'
+    },
+    {
+      title: 'AI Multi-Spatial Learning',
+      description: 'Learn from multiple spatial scales using multi-spatial learning algorithms',
+      icon: Map,
+      price: '$1,700/month',
+      features: ['Multiple Spatial Scales', 'Spatial Relationships', 'Spatial Dependencies', 'Spatial Balancing', 'Spatial Selection', 'Spatial Optimization'],
+      color: 'text-indigo-500',
+      category: 'Multi-Spatial Learning'
+    },
+    {
+      title: 'AI Multi-Spectral Learning',
+      description: 'Learn from multiple spectral bands using multi-spectral learning algorithms',
+      icon: Camera,
+      price: '$1,600/month',
+      features: ['Multiple Spectral Bands', 'Spectral Relationships', 'Spectral Dependencies', 'Spectral Balancing', 'Spectral Selection', 'Spectral Optimization'],
+      color: 'text-cyan-500',
+      category: 'Multi-Spectral Learning'
+    },
+    {
+      title: 'AI Multi-Frequency Learning',
+      description: 'Learn from multiple frequency bands using multi-frequency learning algorithms',
+      icon: Radio,
+      price: '$1,500/month',
+      features: ['Multiple Frequency Bands', 'Frequency Relationships', 'Frequency Dependencies', 'Frequency Balancing', 'Frequency Selection', 'Frequency Optimization'],
+      color: 'text-teal-500',
+      category: 'Multi-Frequency Learning'
+    },
+    {
+      title: 'AI Multi-Angle Learning',
+      description: 'Learn from multiple viewing angles using multi-angle learning algorithms',
+      icon: RotateCcw,
+      price: '$1,400/month',
+      features: ['Multiple Viewing Angles', 'Angle Relationships', 'Angle Dependencies', 'Angle Balancing', 'Angle Selection', 'Angle Optimization'],
+      color: 'text-amber-500',
+      category: 'Multi-Angle Learning'
+    },
+    {
+      title: 'AI Multi-Light Learning',
+      description: 'Learn from multiple lighting conditions using multi-light learning algorithms',
+      icon: Sun,
+      price: '$1,300/month',
+      features: ['Multiple Lighting Conditions', 'Light Relationships', 'Light Dependencies', 'Light Balancing', 'Light Selection', 'Light Optimization'],
+      color: 'text-yellow-500',
+      category: 'Multi-Light Learning'
+    },
+    {
+      title: 'AI Multi-Weather Learning',
+      description: 'Learn from multiple weather conditions using multi-weather learning algorithms',
+      icon: Cloud,
+      price: '$1,200/month',
+      features: ['Multiple Weather Conditions', 'Weather Relationships', 'Weather Dependencies', 'Weather Balancing', 'Weather Selection', 'Weather Optimization'],
+      color: 'text-gray-500',
+      category: 'Multi-Weather Learning'
+    },
+    {
+      title: 'AI Multi-Season Learning',
+      description: 'Learn from multiple seasons using multi-season learning algorithms',
+      icon: Calendar,
+      price: '$1,100/month',
+      features: ['Multiple Seasons', 'Season Relationships', 'Season Dependencies', 'Season Balancing', 'Season Selection', 'Season Optimization'],
+      color: 'text-slate-500',
+      category: 'Multi-Season Learning'
+    },
+    {
+      title: 'AI Multi-Context Learning',
+      description: 'Learn from multiple contexts using multi-context learning algorithms',
+      icon: Globe,
+      price: '$1,000/month',
+      features: ['Multiple Contexts', 'Context Relationships', 'Context Dependencies', 'Context Balancing', 'Context Selection', 'Context Optimization'],
+      color: 'text-zinc-500',
+      category: 'Multi-Context Learning'
+    },
+    {
+      title: 'AI Multi-Environment Learning',
+      description: 'Learn from multiple environments using multi-environment learning algorithms',
+      icon: MapPin,
+      price: '$900/month',
+      features: ['Multiple Environments', 'Environment Relationships', 'Environment Dependencies', 'Environment Balancing', 'Environment Selection', 'Environment Optimization'],
+      color: 'text-neutral-500',
+      category: 'Multi-Environment Learning'
+    },
+    {
+      title: 'AI Multi-Scenario Learning',
+      description: 'Learn from multiple scenarios using multi-scenario learning algorithms',
+      icon: Play,
+      price: '$800/month',
+      features: ['Multiple Scenarios', 'Scenario Relationships', 'Scenario Dependencies', 'Scenario Balancing', 'Scenario Selection', 'Scenario Optimization'],
+      color: 'text-stone-500',
+      category: 'Multi-Scenario Learning'
+    },
+    {
+      title: 'AI Multi-Condition Learning',
+      description: 'Learn from multiple conditions using multi-condition learning algorithms',
+      icon: Settings,
+      price: '$700/month',
+      features: ['Multiple Conditions', 'Condition Relationships', 'Condition Dependencies', 'Condition Balancing', 'Condition Selection', 'Condition Optimization'],
+      color: 'text-red-500',
+      category: 'Multi-Condition Learning'
+    },
+    {
+      title: 'AI Multi-Setting Learning',
+      description: 'Learn from multiple settings using multi-setting learning algorithms',
+      icon: Sliders,
+      price: '$600/month',
+      features: ['Multiple Settings', 'Setting Relationships', 'Setting Dependencies', 'Setting Balancing', 'Setting Selection', 'Setting Optimization'],
+      color: 'text-orange-500',
+      category: 'Multi-Setting Learning'
+    },
+    {
+      title: 'AI Multi-Configuration Learning',
+      description: 'Learn from multiple configurations using multi-configuration learning algorithms',
+      icon: Cog,
+      price: '$500/month',
+      features: ['Multiple Configurations', 'Configuration Relationships', 'Configuration Dependencies', 'Configuration Balancing', 'Configuration Selection', 'Configuration Optimization'],
+      color: 'text-amber-500',
+      category: 'Multi-Configuration Learning'
+    },
+    {
+      title: 'AI Multi-Parameter Learning',
+      description: 'Learn from multiple parameters using multi-parameter learning algorithms',
+      icon: Sliders,
+      price: '$400/month',
+      features: ['Multiple Parameters', 'Parameter Relationships', 'Parameter Dependencies', 'Parameter Balancing', 'Parameter Selection', 'Parameter Optimization'],
+      color: 'text-yellow-500',
+      category: 'Multi-Parameter Learning'
+    },
+    {
+      title: 'AI Multi-Variable Learning',
+      description: 'Learn from multiple variables using multi-variable learning algorithms',
+      icon: BarChart3,
+      price: '$300/month',
+      features: ['Multiple Variables', 'Variable Relationships', 'Variable Dependencies', 'Variable Balancing', 'Variable Selection', 'Variable Optimization'],
+      color: 'text-lime-500',
+      category: 'Multi-Variable Learning'
+    },
+    {
+      title: 'AI Multi-Attribute Learning',
+      description: 'Learn from multiple attributes using multi-attribute learning algorithms',
+      icon: Tag,
+      price: '$200/month',
+      features: ['Multiple Attributes', 'Attribute Relationships', 'Attribute Dependencies', 'Attribute Balancing', 'Attribute Selection', 'Attribute Optimization'],
+      color: 'text-green-500',
+      category: 'Multi-Attribute Learning'
+    },
+    {
+      title: 'AI Multi-Property Learning',
+      description: 'Learn from multiple properties using multi-property learning algorithms',
+      icon: FileText,
+      price: '$100/month',
+      features: ['Multiple Properties', 'Property Relationships', 'Property Dependencies', 'Property Balancing', 'Property Selection', 'Property Optimization'],
+      color: 'text-emerald-500',
+      category: 'Multi-Property Learning'
     }
   ];
 
@@ -1881,6 +3303,178 @@ const HomePage: React.FC = () => {
       features: ['E-commerce Platforms', 'Inventory Management', 'Customer Analytics', 'Point of Sale Systems', 'Supply Chain Integration', 'Omnichannel Solutions'],
       color: 'text-pink-500',
       category: 'RetailTech'
+    },
+    // Advanced IT Infrastructure Services
+    {
+      title: 'AI-Powered Data Center Management',
+      description: 'Intelligent data center operations with predictive maintenance and energy optimization',
+      icon: Database,
+      price: '$3,500/month',
+      features: ['Predictive Maintenance', 'Energy Optimization', 'Capacity Planning', 'Automated Monitoring', 'Disaster Recovery', 'Performance Analytics'],
+      color: 'text-cyan-500',
+      category: 'Data Center AI'
+    },
+    {
+      title: 'Edge Computing Infrastructure',
+      description: 'Distributed computing infrastructure for low-latency applications and IoT systems',
+      icon: Globe,
+      price: '$2,800/month',
+      features: ['Edge Node Deployment', 'Latency Optimization', 'IoT Integration', 'Real-time Processing', 'Distributed Storage', 'Network Optimization'],
+      color: 'text-orange-500',
+      category: 'Edge Computing'
+    },
+    {
+      title: '5G Network Implementation',
+      description: '5G network design, deployment, and optimization for enterprise applications',
+      icon: Smartphone,
+      price: '$4,200/month',
+      features: ['5G Network Design', 'Infrastructure Deployment', 'Performance Optimization', 'Security Implementation', 'IoT Integration', 'Application Development'],
+      color: 'text-green-600',
+      category: '5G Networks'
+    },
+    {
+      title: 'Blockchain Infrastructure Services',
+      description: 'Enterprise blockchain solutions with smart contracts and decentralized applications',
+      icon: Lock,
+      price: '$3,800/month',
+      features: ['Blockchain Architecture', 'Smart Contract Development', 'DApp Development', 'Consensus Mechanisms', 'Security Auditing', 'Integration Services'],
+      color: 'text-yellow-500',
+      category: 'Blockchain'
+    },
+    {
+      title: 'IoT Platform Development',
+      description: 'Comprehensive IoT solutions with device management, data analytics, and automation',
+      icon: Settings,
+      price: '$2,600/month',
+      features: ['Device Management', 'Data Analytics', 'Automation Rules', 'Security Protocols', 'Scalable Architecture', 'Real-time Monitoring'],
+      color: 'text-indigo-500',
+      category: 'IoT Solutions'
+    },
+    {
+      title: 'AI Hardware Optimization',
+      description: 'Specialized hardware solutions for AI workloads including GPU clusters and TPU optimization',
+      icon: Cpu,
+      price: '$5,500/month',
+      features: ['GPU Cluster Setup', 'TPU Optimization', 'Neural Network Acceleration', 'Memory Optimization', 'Performance Tuning', 'Cost Optimization'],
+      color: 'text-purple-500',
+      category: 'AI Hardware'
+    },
+    {
+      title: 'Quantum-Safe Cryptography',
+      description: 'Post-quantum cryptography implementation for future-proof security',
+      icon: Shield,
+      price: '$4,800/month',
+      features: ['Quantum-Safe Algorithms', 'Key Management', 'Migration Services', 'Security Assessment', 'Compliance Support', 'Future-Proofing'],
+      color: 'text-red-600',
+      category: 'Quantum Security'
+    },
+    {
+      title: 'Advanced Network Security',
+      description: 'Next-generation network security with AI-powered threat detection and response',
+      icon: Shield,
+      price: '$3,200/month',
+      features: ['AI Threat Detection', 'Zero Trust Architecture', 'Network Segmentation', 'Intrusion Prevention', 'Traffic Analysis', 'Incident Response'],
+      color: 'text-red-500',
+      category: 'Network Security'
+    },
+    {
+      title: 'Hybrid Cloud Management',
+      description: 'Seamless hybrid cloud operations with multi-cloud orchestration and optimization',
+      icon: Cloud,
+      price: '$2,900/month',
+      features: ['Multi-Cloud Orchestration', 'Workload Migration', 'Cost Optimization', 'Security Management', 'Performance Monitoring', 'Disaster Recovery'],
+      color: 'text-blue-500',
+      category: 'Hybrid Cloud'
+    },
+    {
+      title: 'AI-Powered IT Operations',
+      description: 'Intelligent IT operations with automated incident response and predictive maintenance',
+      icon: Settings,
+      price: '$2,400/month',
+      features: ['Automated Incident Response', 'Predictive Maintenance', 'Performance Optimization', 'Capacity Planning', 'Root Cause Analysis', 'Service Management'],
+      color: 'text-green-500',
+      category: 'IT Operations'
+    },
+    {
+      title: 'Digital Transformation Consulting',
+      description: 'Strategic digital transformation with technology roadmap and implementation guidance',
+      icon: Target,
+      price: '$1,800/month',
+      features: ['Technology Assessment', 'Digital Strategy', 'Change Management', 'Process Optimization', 'Technology Integration', 'Training & Support'],
+      color: 'text-purple-400',
+      category: 'Digital Transformation'
+    },
+    {
+      title: 'Compliance & Governance Solutions',
+      description: 'Comprehensive compliance management with automated monitoring and reporting',
+      icon: FileText,
+      price: '$1,600/month',
+      features: ['Compliance Monitoring', 'Automated Reporting', 'Risk Assessment', 'Policy Management', 'Audit Support', 'Regulatory Updates'],
+      color: 'text-gray-500',
+      category: 'Compliance'
+    },
+    {
+      title: 'IT Asset Management',
+      description: 'Comprehensive IT asset lifecycle management with AI-powered optimization',
+      icon: BarChart,
+      price: '$1,200/month',
+      features: ['Asset Discovery', 'Lifecycle Management', 'Cost Optimization', 'License Management', 'Depreciation Tracking', 'Procurement Support'],
+      color: 'text-blue-600',
+      category: 'Asset Management'
+    },
+    {
+      title: 'Advanced Backup & Recovery',
+      description: 'AI-powered backup solutions with intelligent recovery and business continuity',
+      icon: Database,
+      price: '$1,400/month',
+      features: ['Intelligent Backup', 'Automated Recovery', 'Business Continuity', 'Disaster Recovery', 'Data Archiving', 'Compliance Support'],
+      color: 'text-green-600',
+      category: 'Backup & Recovery'
+    },
+    {
+      title: 'Performance Monitoring & Analytics',
+      description: 'Comprehensive performance monitoring with AI-powered insights and optimization',
+      icon: BarChart3,
+      price: '$1,300/month',
+      features: ['Real-time Monitoring', 'Performance Analytics', 'Predictive Alerts', 'Capacity Planning', 'Optimization Recommendations', 'Custom Dashboards'],
+      color: 'text-orange-600',
+      category: 'Performance Monitoring'
+    },
+    {
+      title: 'IT Training & Certification',
+      description: 'Comprehensive IT training programs with certification and skill development',
+      icon: GraduationCap,
+      price: '$800/month',
+      features: ['Custom Training Programs', 'Certification Support', 'Skill Assessment', 'Hands-on Labs', 'Mentorship Programs', 'Career Development'],
+      color: 'text-indigo-600',
+      category: 'Training & Development'
+    },
+    {
+      title: 'Vendor Management Services',
+      description: 'Strategic vendor management with contract optimization and relationship management',
+      icon: Users,
+      price: '$1,100/month',
+      features: ['Vendor Assessment', 'Contract Management', 'Performance Monitoring', 'Cost Optimization', 'Relationship Management', 'Risk Mitigation'],
+      color: 'text-teal-600',
+      category: 'Vendor Management'
+    },
+    {
+      title: 'IT Project Management',
+      description: 'Specialized IT project management with agile methodologies and delivery excellence',
+      icon: Target,
+      price: '$1,500/month',
+      features: ['Agile Methodologies', 'Project Planning', 'Risk Management', 'Quality Assurance', 'Stakeholder Management', 'Delivery Excellence'],
+      color: 'text-pink-600',
+      category: 'Project Management'
+    },
+    {
+      title: 'Technology Innovation Lab',
+      description: 'Research and development lab for emerging technologies and proof-of-concept development',
+      icon: Brain,
+      price: '$4,000/month',
+      features: ['Emerging Technology Research', 'Proof of Concept Development', 'Innovation Workshops', 'Technology Assessment', 'Prototype Development', 'Market Analysis'],
+      color: 'text-cyan-600',
+      category: 'Innovation Lab'
     }
   ];
 
