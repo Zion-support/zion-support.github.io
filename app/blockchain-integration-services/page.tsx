@@ -1,0 +1,288 @@
+'use client';
+import React from 'react';
+import { Link, Shield, Zap, BarChart3, CheckCircle, ArrowRight, Clock, Database, Globe, Lock } from 'lucide-react';
+
+const BlockchainIntegrationServicesProPage: React.FC = () => {
+  const features = [
+    {
+      icon: Link,
+      title: 'Smart Contract Development',
+      description: 'Custom smart contract development and deployment on major blockchain platforms.'
+    },
+    {
+      icon: Shield,
+      title: 'Security Audits',
+      description: 'Comprehensive security audits and penetration testing for blockchain applications.'
+    },
+    {
+      icon: Zap,
+      title: 'DeFi Integration',
+      description: 'Decentralized finance integration and custom DeFi protocol development.'
+    },
+    {
+      icon: BarChart3,
+      title: 'Blockchain Analytics',
+      description: 'Advanced analytics and monitoring for blockchain transactions and smart contracts.'
+    },
+    {
+      icon: Database,
+      title: 'Data Migration',
+      description: 'Seamless migration of existing systems to blockchain-based solutions.'
+    },
+    {
+      icon: Globe,
+      title: 'Cross-Chain Solutions',
+      description: 'Interoperability solutions for connecting different blockchain networks.'
+    }
+  ];
+
+  const benefits = [
+    'Reduce transaction costs by 50%',
+    'Improve security and transparency',
+    'Enable new business models',
+    'Enhance data integrity',
+    'Automate complex processes',
+    'Future-proof your technology stack'
+  ];
+
+  const useCases = [
+    {
+      title: 'Supply Chain',
+      description: 'Track products from origin to consumer with immutable blockchain records.',
+      icon: '📦'
+    },
+    {
+      title: 'Financial Services',
+      description: 'Secure and transparent financial transactions and smart contracts.',
+      icon: '💰'
+    },
+    {
+      title: 'Healthcare',
+      description: 'Secure patient data sharing and medical record management.',
+      icon: '🏥'
+    },
+    {
+      title: 'Real Estate',
+      description: 'Streamline property transactions and ownership records.',
+      icon: '🏠'
+    }
+  ];
+
+  const metrics = [
+    { label: 'Cost Reduction', value: '50%', color: 'text-green-400' },
+    { label: 'Security Improvement', value: '99%', color: 'text-blue-400' },
+    { label: 'Transaction Speed', value: '+80%', color: 'text-purple-400' },
+    { label: 'Client Satisfaction', value: '98%', color: 'text-yellow-400' }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      {/* Hero Section */}
+      <section className="pt-20 pb-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Blockchain Integration Services
+              <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+                {' '}Pro
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with blockchain technology through our comprehensive integration services 
+              that enhance security, transparency, and efficiency.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
+              >
+                Get Started
+              </a>
+              <a
+                href="tel:+13024640950"
+                className="border border-purple-400 text-purple-400 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
+              >
+                Call +1 (302) 464-0950
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Metrics Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Proven Results
+            </h2>
+            <p className="text-xl text-gray-300">
+              Real improvements from our blockchain integration services
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {metrics.map((metric, index) => (
+              <div key={index} className="text-center">
+                <div className={`text-4xl font-bold mb-2 ${metric.color}`}>
+                  {metric.value}
+                </div>
+                <div className="text-gray-300 text-lg">{metric.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Comprehensive Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              End-to-end blockchain integration services for modern businesses
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105"
+              >
+                <div className="p-3 rounded-lg bg-gradient-to-r from-purple-500 to-pink-600 text-white mb-6 inline-block">
+                  <feature.icon className="h-8 w-8" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transform your business with blockchain technology
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-4">
+                  <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                  <span className="text-gray-300 text-lg">{benefit}</span>
+                </div>
+              ))}
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold text-white mb-6">Implementation Process</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                  <div>
+                    <div className="text-white font-semibold">Assessment & Planning</div>
+                    <div className="text-gray-300 text-sm">Analyze your business needs</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                  <div>
+                    <div className="text-white font-semibold">Design & Development</div>
+                    <div className="text-gray-300 text-sm">Create custom blockchain solutions</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                  <div>
+                    <div className="text-white font-semibold">Testing & Security</div>
+                    <div className="text-gray-300 text-sm">Comprehensive testing and audits</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                  <div>
+                    <div className="text-white font-semibold">Deployment & Support</div>
+                    <div className="text-gray-300 text-sm">Go live with ongoing support</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Proven blockchain solutions across diverse industries
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:border-purple-400/40 transition-all duration-300 hover:scale-105 text-center"
+              >
+                <div className="text-4xl mb-4">{useCase.icon}</div>
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-300 text-sm">
+                  {useCase.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Ready to Integrate Blockchain?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Join the blockchain revolution with our expert integration services
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-white text-purple-600 py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300"
+            >
+              Start Free Consultation
+            </a>
+            <a
+              href="/pricing"
+              className="border-2 border-white text-white py-4 px-8 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-all duration-300"
+            >
+              View Pricing
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default BlockchainIntegrationServicesProPage;
