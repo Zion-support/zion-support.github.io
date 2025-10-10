@@ -12,6 +12,8 @@ import UnifiedContentPromotion from './src/components/UnifiedContentPromotion';
 import InteractiveAIROICalculator from './src/components/InteractiveAIROICalculator';
 import ContentShowcase from './src/components/ContentShowcase';
 import InteractiveContentShowcase2026 from './src/components/InteractiveContentShowcase2026';
+import PerformanceOptimizer from './src/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
 
@@ -90,50 +92,54 @@ const App: React.FC = memo(() => {
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
-          <AppWithPerformanceMonitoring>
-            <SEOHead />
-            <Router>
-            <div className="min-h-screen bg-white">
-              <SkipLink to="#main-content">Skip to main content</SkipLink>
-              <Navigation />
-              <main id="main-content">
-                <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
-                <Routes>
-                  <Route path="/" element={
-                    <>
-                      <UnifiedContentPromotion />
-                      <InteractiveAIROICalculator />
-                      <ContentShowcase />
-                      <InteractiveContentShowcase2026 />
-                    </>
-                  } />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/ai-services" element={<AIServicesPage />} />
-                  <Route path="/it-services" element={<ITServicesPage />} />
-                  <Route path="/micro-saas" element={<MicroSaasPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/case-studies" element={<CaseStudiesPage />} />
-                  <Route path="/team" element={<TeamPage />} />
-                  <Route path="/careers" element={<CareersPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/cookies" element={<CookiesPage />} />
-                  <Route path="/docs" element={<DocsPage />} />
-                  <Route path="/api-docs" element={<ApiDocsPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/status" element={<StatusPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/consultation" element={<ConsultationPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                </Routes>
-              </Suspense>
-              </main>
-              <Footer />
-            </div>
-            </Router>
-          </AppWithPerformanceMonitoring>
+          <PerformanceOptimizer>
+            <AccessibilityEnhancer>
+              <AppWithPerformanceMonitoring>
+                <SEOHead />
+                <Router>
+                <div className="min-h-screen bg-white">
+                  <SkipLink to="#main-content">Skip to main content</SkipLink>
+                  <Navigation />
+                  <main id="main-content">
+                    <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
+                    <Routes>
+                      <Route path="/" element={
+                        <>
+                          <UnifiedContentPromotion />
+                          <InteractiveAIROICalculator />
+                          <ContentShowcase />
+                          <InteractiveContentShowcase2026 />
+                        </>
+                      } />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      <Route path="/ai-services" element={<AIServicesPage />} />
+                      <Route path="/it-services" element={<ITServicesPage />} />
+                      <Route path="/micro-saas" element={<MicroSaasPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/team" element={<TeamPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
+                      <Route path="/privacy" element={<PrivacyPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/cookies" element={<CookiesPage />} />
+                      <Route path="/docs" element={<DocsPage />} />
+                      <Route path="/api-docs" element={<ApiDocsPage />} />
+                      <Route path="/support" element={<SupportPage />} />
+                      <Route path="/status" element={<StatusPage />} />
+                      <Route path="/demo" element={<DemoPage />} />
+                      <Route path="/consultation" element={<ConsultationPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                    </Routes>
+                  </Suspense>
+                  </main>
+                  <Footer />
+                </div>
+                </Router>
+              </AppWithPerformanceMonitoring>
+            </AccessibilityEnhancer>
+          </PerformanceOptimizer>
         </AnalyticsProvider>
       </HelmetProvider>
     </EnhancedErrorBoundary>
