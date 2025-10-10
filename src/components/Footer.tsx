@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { Phone, Mail, MapPin, Brain, Cloud, Code, Zap, ArrowRight, Database, Bot, Users, Shield, Settings, Target, MessageSquare, Eye, Cpu, Lock, BarChart3, FileText, Search, ShoppingCart, CreditCard, Building, Factory, Truck, Home, Heart, Stethoscope, GraduationCap, Briefcase, Calculator, Calendar, Globe, TrendingUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -17,23 +16,6 @@ const Footer: React.FC = () => {
     { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design', category: 'Design' },
     { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans', category: 'Health' },
     { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation', category: 'Design' }
-=======
-import { Phone, Mail, MapPin, Brain, Cloud, Code, Zap, ArrowRight, Database, Bot } from 'lucide-react';
-
-const microSaasServices = [
-    { name: 'AI Project Manager', url: '/ai-project-manager', description: 'Intelligent project planning' },
-    { name: 'AI Social Media Manager', url: '/ai-social-media-manager', description: 'Automated social media' },
-    { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Data insights & analytics' },
-    { name: 'AI Email Marketing', url: '/ai-email-marketing', description: 'Smart email campaigns' },
-    { name: 'AI Customer Support Bot', url: '/ai-customer-support-bot', description: '24/7 AI support' },
-    { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
-    { name: 'AI Video Generator Pro', url: '/ai-video-generation', description: 'AI-powered video creation' },
-    { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
-    { name: 'AI Music Composer', url: '/ai-music-composition', description: 'AI-generated music' },
-    { name: 'AI Fashion Designer', url: '/ai-fashion-design', description: 'AI fashion design' },
-    { name: 'AI Fitness Coach', url: '/ai-fitness-coach', description: 'Personalized fitness plans' },
-    { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
   ];
 
   const aiServices = [
@@ -106,47 +88,24 @@ const microSaasServices = [
             <ul className="space-y-2">
               {microSaasServices.slice(0, 6).map((service) => (
                 <li key={service.name}>
-<<<<<<< HEAD
-                  <Link
-                    to={service.url}
-                    className="text-sm text-gray-300 hover:text-cyan-400 transition-colors flex items-center group"
-                  >
-                    <ArrowRight className="w-3 h-3 mr-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    {service.name}
-=======
                   <Link to={service.url}
                     className="group flex items-center text-sm text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     <span>{service.name}</span>
                     <ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
                   </Link>
                 </li>
               ))}
             </ul>
-<<<<<<< HEAD
-            <Link
-              to="/services"
-              className="text-cyan-400 hover:text-cyan-300 text-sm font-medium mt-4 inline-flex items-center"
-            >
-              View All Services
-              <ArrowRight className="w-4 h-4 ml-1" />
-=======
             <Link to="/services"
               className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
             >
               View All Micro SAAS →
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
             </Link>
           </div>
 
           {/* AI Services */}
           <div>
-<<<<<<< HEAD
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Brain className="w-5 h-5 mr-2 text-purple-400" />
-              AI Services
-=======
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Brain className="w-4 h-4 mr-2" />
               AI & IT Services
@@ -193,7 +152,6 @@ const microSaasServices = [
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Zap className="w-4 h-4 mr-2" />
               AI Tools
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
             </h3>
             <ul className="space-y-2">
               {aiServices.slice(0, 6).map((service) => (
@@ -253,16 +211,6 @@ const microSaasServices = [
               © 2024 Zion Tech Group. All rights reserved.
             </div>
             <div className="flex space-x-6">
-<<<<<<< HEAD
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-sm text-gray-400 hover:text-white transition-colors">
-                Cookie Policy
-=======
               <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
@@ -271,7 +219,6 @@ const microSaasServices = [
               </Link>
               <Link to="/contact" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Contact Us
->>>>>>> cursor/website-audit-and-update-with-deployment-90da
               </Link>
             </div>
           </div>

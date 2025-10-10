@@ -21,6 +21,50 @@ const Footer: React.FC = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const companyLinks = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Press & Media', href: '/press' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Investors', href: '/investors' },
+    { name: 'News & Updates', href: '/news' },
+    { name: 'Company Culture', href: '/culture' },
+  ];
+
+  const serviceCategories = [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' },
+    { name: 'Micro SAAS', href: '/micro-saas' },
+    { name: 'Cloud Solutions', href: '/cloud-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Data Analytics', href: '/data-analytics' },
+    { name: 'DevOps', href: '/devops' },
+    { name: 'Enterprise Solutions', href: '/enterprise' },
+  ];
+
+  const resourcesLinks = [
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'White Papers', href: '/whitepapers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Support Center', href: '/support' },
+  ];
+
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'GDPR Compliance', href: '/gdpr' },
+    { name: 'Security Policy', href: '/security' },
+    { name: 'SLA', href: '/sla' },
+    { name: 'Refund Policy', href: '/refunds' },
+    { name: 'Sitemap', href: '/sitemap' },
+  ];
+
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -215,9 +259,9 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-cyan-400/20">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-8 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-3">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
                 <Brain className="w-6 h-6 text-white" />
@@ -225,7 +269,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.
+              Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Empowering businesses with cutting-edge technology.
             </p>
             
             {/* Contact Info */}
@@ -258,81 +302,83 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Micro SAAS Services - Categorized */}
-          <div className="lg:col-span-3">
+          {/* Services */}
+          <div className="lg:col-span-2">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Zap className="w-4 h-4 mr-2" />
-              Micro SAAS Solutions
+              Services
             </h3>
-            <div className="grid grid-cols-2 gap-4">
-              {Object.entries(microSaasServices).map(([category, services]) => (
-                <div key={category}>
-                  <h4 className="text-white font-medium mb-2 text-sm">{category}</h4>
-                  <ul className="space-y-1">
-                    {services.slice(0, 3).map((service) => (
-                      <li key={service.name}>
-                        <a href={service.url}
-                          className="group flex items-center text-xs text-gray-300 hover:text-cyan-400 transition-colors"
-                        >
-                          <span>{service.name}</span>
-                          <ArrowRight className="w-2 h-2 ml-1 group-hover:translate-x-1 transition-transform duration-300" />
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            <ul className="space-y-2">
+              {serviceCategories.map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                  >
+                    {service.name}
+                  </a>
+                </li>
               ))}
-            </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Micro SAAS →
-            </a>
+            </ul>
           </div>
 
-          {/* AI & IT Services */}
+          {/* Company */}
           <div className="lg:col-span-2">
             <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
               <Brain className="w-4 h-4 mr-2" />
-              AI & IT Services
+              Company
             </h3>
-            <div className="space-y-4">
-              <div>
-                <h4 className="text-sm font-medium text-purple-300 mb-2">AI Services</h4>
-                <ul className="space-y-1">
-                  {aiServices.slice(0, 6).map((service) => (
-                    <li key={service.name}>
-                      <a
-                        href={service.href}
-                        className="text-gray-300 hover:text-purple-400 transition-colors duration-300 text-sm"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-green-300 mb-2">IT Services</h4>
-                <ul className="space-y-1">
-                  {itServices.slice(0, 6).map((service) => (
-                    <li key={service.name}>
-                      <a
-                        href={service.href}
-                        className="text-gray-300 hover:text-green-400 transition-colors duration-300 text-sm"
-                      >
-                        {service.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            <ul className="space-y-2">
+              {companyLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Resources */}
+          <div className="lg:col-span-2">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Award className="w-4 h-4 mr-2" />
+              Resources
+            </h3>
+            <ul className="space-y-2">
+              {resourcesLinks.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal */}
+          <div className="lg:col-span-3">
+            <h3 className="text-cyan-400 font-semibold mb-4 flex items-center">
+              <Shield className="w-4 h-4 mr-2" />
+              Legal & Compliance
+            </h3>
+            <div className="grid grid-cols-2 gap-2">
+              {legalLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-xs"
+                >
+                  {link.name}
+                </a>
+              ))}
             </div>
-            <a href="/services"
-              className="inline-flex items-center text-cyan-400 hover:text-white transition-colors mt-4"
-            >
-              View All Services →
-            </a>
           </div>
         </div>
 
