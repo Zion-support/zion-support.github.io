@@ -1,55 +1,4 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, {Suspense, lazy}from 'react';
-import {Link, useLocation}}from 'react-router-dom';
-import {X,}
-=======
-import React, { Suspense, lazy } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import {
-    X,
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-  Menu,
-  Home,
-  Users,
-  Settings,
-  Brain,
-  Cloud,
-  Shield,
-  Code,
-  BarChart,
-  ChevronDown,
-  ChevronRight,
-
-  Phone,
-
-  Mail,
-
-  MapPin,
-
-  Clock;}} from 'lucide-react'
-const Sidebar: React.FC = () => {,
-    const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<Set<string></Set>>(new Set(['ai-services', 'micro-saas', 'it-services']));
-  const location = useLocation();
-useEffect(() => {
-    const handleResize = (;
-      if (window.innerWidth >= 1024) {) => {
-  return($3;)
-  )}setIsOpen(false);}
-=======
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  ChevronDown, ChevronRight, Brain, Cloud, Shield, Code, BarChart, 
-  Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, 
-  Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, 
-  FileText, MessageCircle, Heart, DollarSign, Box, Monitor, 
-  Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, 
-  MessageSquare, CheckCircle, ShoppingCart, X, Menu, Book, Phone, Mail
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -83,12 +32,26 @@ import {
   Play,
   Mail,
   MapPin,
-  Clock
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
+  Clock,
+  Eye,
+  Mic,
+  Workflow,
+  Box,
+  Monitor,
+  LinkIcon,
+  Server,
+  Package,
+  Wifi,
+  ShoppingCart,
+  Heart
 } from 'lucide-react';
 
-const Sidebar: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface SidebarProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const location = useLocation();
 
@@ -96,13 +59,12 @@ const Sidebar: React.FC = () => {
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.sidebar')) {
-        setIsOpen(false);
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+        onClose();
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isOpen]);
+  }, [isOpen, onClose]);
 
   const toggleSection = (section: string) => {
     setExpandedSections(prev => 
@@ -291,166 +253,19 @@ const Sidebar: React.FC = () => {
     );
   };
 
-<<<<<<< HEAD
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(section)) {) => {
-  return($3;)
-  )}newExpanded.delete(section);}
-    } else {newExpanded.add(section)}}}
-    setExpandedSections(newExpanded);
-  }
-const navigationSections = [
-    {title: 'Main',
-      items: [,}{ name: 'Home', path: '/', icon: Home ,},
-        {name: 'About', path: '/about', icon: Users ,},
-        {name: 'Services', path: '/services', icon: Settings ,},
-        {name: 'Contact', path: '/contact', icon: Phone ,},
-        {name: 'Blog', path: '/blog', icon: BarChart ,},
-        {name: 'Case Studies', path: '/case-studies', icon: BarChart ,},
-      ]
-    },
-    {title: 'AI Services',
-      key: 'ai-services',
-      items: [,}{ name: 'AI Services Overview', path: '/ai-services', icon: Brain ,},
-        {name: 'Business Intelligence', path: '/ai-services/business-intelligence', icon: BarChart ,},
-        {name: 'Document Processing', path: '/ai-services/document-processing', icon: Settings ,},
-        {name: 'Customer Experience', path: '/ai-services/customer-experience', icon: Users ,},
-        {name: 'Marketing Automation', path: '/ai-services/marketing-automation', icon: Settings ,},
-        {name: 'Predictive Maintenance', path: '/ai-services/predictive-maintenance', icon: Settings ,},
-        {name: 'Supply Chain', path: '/ai-services/supply-chain', icon: Settings ,},
-        {name: 'Fraud Detection', path: '/ai-services/fraud-detection', icon: Shield ,},
-        {name: 'Content Generation', path: '/ai-services/content-generation', icon: Settings ,},
-        {name: 'HR Analytics', path: '/ai-services/hr-analytics', icon: BarChart ,},
-        {name: 'Process Automation', path: '/ai-services/process-automation', icon: Settings ,},
-        {name: 'Quality Assurance', path: '/ai-services/quality-assurance', icon: Shield ,},
-        {name: 'Energy Management', path: '/ai-services/energy-management', icon: Settings ,},
-      ]
-    },
-    {title: 'Micro SaaS',
-      key: 'micro-saas',
-      items: [,}{ name: 'Micro SaaS Overview', path: '/micro-saas', icon: Settings ,},
-        {name: 'Analytics Dashboard', path: '/micro-saas/analytics-dashboard', icon: BarChart ,},
-        {name: 'Support Bot', path: '/micro-saas/support-bot', icon: Users ,},
-        {name: 'Social Manager', path: '/micro-saas/social-manager', icon: Settings ,},
-        {name: 'Email Marketing', path: '/micro-saas/email-marketing', icon: Mail ,},
-        {name: 'Inventory Management', path: '/micro-saas/inventory-management', icon: Settings ,},
-        {name: 'Lead Scoring', path: '/micro-saas/lead-scoring', icon: BarChart ,},
-        {name: 'Document Processor', path: '/micro-saas/document-processor', icon: Settings ,},
-        {name: 'SEO Optimizer', path: '/micro-saas/seo-optimizer', icon: Settings ,},
-        {name: 'Appointment Scheduler', path: '/micro-saas/appointment-scheduler', icon: Clock ,},
-        {name: 'Chat Analytics', path: '/micro-saas/chat-analytics', icon: BarChart ,},
-        {name: 'Expense Tracker', path: '/micro-saas/expense-tracker', icon: BarChart ,},
-        {name: 'Content Generator', path: '/micro-saas/content-generator', icon: Settings ,},
-      ]
-    },
-    {title: 'IT Services',
-      key: 'it-services',
-      items: [,}{ name: 'IT Services Overview', path: '/it-services', icon: Code ,},
-        {name: 'IT Consulting', path: '/it-consulting', icon: Users ,},
-        {name: 'IT Infrastructure', path: '/it-infrastructure', icon: Settings ,},
-        {name: 'IT Support', path: '/it-support', icon: Users ,},
-        {name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: Cloud ,},
-        {name: 'Cloud Migration', path: '/cloud-migration', icon: Cloud ,},
-        {name: 'Cybersecurity', path: '/cybersecurity', icon: Shield ,},
-        {name: 'Database Management', path: '/database-management', icon: Settings ,},
-        {name: 'Managed IT', path: '/managed-it', icon: Settings ,},
-      ]
-    },
-    {title: 'Company',
-      items: [,}{ name: 'Team', path: '/team', icon: Users ,},
-        {name: 'Careers', path: '/careers', icon: Users ,},
-        {name: 'Consultation', path: '/consultation', icon: Phone ,},
-        {name: 'Pricing', path: '/pricing', icon: BarChart ,},
-      ]
-    },
-    {title: 'Resources',
-      items: [,}{ name: 'Documentation', path: '/docs', icon: Settings ,},
-        {name: 'API Docs', path: '/api-docs', icon: Code ,},
-        {name: 'Support', path: '/support', icon: Users ,},
-        {name: 'Status', path: '/status', icon: Settings ,},
-      ]
-    }
-  ]
-const contactInfo = {phone: '(302) 464-0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown, DE 19709',
-<<<<<<< HEAD
-    hours: 'Mon-Fri 9AM-6PM EST',}}
-return(<>)
-      {/* Mobile Menu Button */} <button;
-        onClick={() =>setIsOpen(true)</button>}className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all",
-=======
-    hours: 'Mon-Fri 9AM-6PM EST'
-  }
-  }
-return (
-=======
   return (
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     <>
       {/* Mobile Menu Button */}
-<<<<<<< HEAD
-      <button;
-        onClick={() =></button> setIsOpen(true)}
-
-        className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-        aria-label="Open sidebar"
-      >,
-        <Menu></Menu>
-      </button>
-
-      {/* Sidebar Overlay */}{
-    isOpen && (;
-        <div;
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden",
-  }
-<<<<<<< HEAD
-          onClick={() =>setIsOpen(false)</div>}/>
-=======
-          onClick={() =></div> setIsOpen(false)}
-        />
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-      )}
-{/* Sidebar */}</div>
-      <aside></aside>
-        <div className="flex flex-col h-full"></di></div>
-          {/* Header */}</div>
-          <div className="flex items-center justify-between p-6 border-b border-slate-700/50"></di></div>
-            <Link to="/" className="flex items-center space-x-3" onClick={() =></Link> setIsOpen(false)}>;
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-lg flex items-center justify-center"></di></div>
-                <Brain /></Brain>
-              <div /></div>
-                <h2 className="text-xl font-bold text-white cyber-text"></h>Zion Tech Group</h2>
-                <p className="text-xs text-cyan-400">AI & IT Solutions</p>
-              </div>
-            </Link>
-            <button;
-<<<<<<< HEAD
-              onClick={() =>setIsOpen(false)</button>}className="lg: hidden text-gray-400 hover:text-white transition-colors",
-              aria-label="Close sidebar"
-            >,
-              <X>
-=======
-              onClick={() =></button> setIsOpen(false)}
-              className="lg: hidden text-gray-400 hover:text-white transition-colors"
-              aria-label="Close sidebar"
-            >,
-              <X></X>
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-            </button>
-=======
       <button
-        onClick={() => setIsOpen(true)}
+        onClick={() => onClose()}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-slate-900/80 backdrop-blur-md rounded-lg text-white hover:bg-slate-800 transition-colors"
       >
-        <Menu className="w-6 h-6" />
+        <X className="w-6 h-6" />
       </button>
 
       {/* Sidebar Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={() => setIsOpen(false)} />
+        <div className="fixed inset-0 bg-black/50 z-40 lg:hidden" onClick={onClose} />
       )}
 
       {/* Sidebar */}
@@ -459,10 +274,9 @@ return (
       } lg:translate-x-0 lg:static lg:z-auto`}>
         <div className="flex flex-col h-full">
           {/* Header */}
-<<<<<<< HEAD
           <div className="p-6 border-b border-cyan-500/20">
             <div className="flex items-center justify-between">
-              <Link to="/" className="flex items-center space-x-3 group" onClick={() => setIsOpen(false)}>
+              <Link to="/" className="flex items-center space-x-3 group" onClick={onClose}>
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
                   <Brain className="w-6 h-6 text-white" />
                 </div>
@@ -472,13 +286,12 @@ return (
                 </div>
               </Link>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={onClose}
                 className="lg:hidden p-2 text-gray-400 hover:text-white transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
           </div>
 
           {/* Navigation */}
@@ -496,7 +309,7 @@ return (
                         ? 'bg-cyan-500/20 text-cyan-400'
                         : 'text-gray-300 hover:text-cyan-400 hover:bg-white/5'
                     }`}
-                    onClick={() => setIsOpen(false)}
+                    onClick={onClose}
                   >
                     <page.icon className="w-5 h-5 flex-shrink-0" />
                     <span className="font-medium">{page.name}</span>
@@ -504,38 +317,6 @@ return (
                 ))}
               </div>
             </div>
-=======
-          <div className="flex items-center justify-between p-4 border-b border-gray-700">
-            <Link to="/" className="flex items-center space-x-2" onClick={onClose}>
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
-            </Link>
-            <button
-              onClick={onClose}
-              className="p-2 hover:bg-slate-700 rounded-md transition-colors"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex-1 overflow-y-auto p-4">
-            {/* Home */}
-            <Link
-              to="/"
-              onClick={onClose}
-              className={`flex items-center px-3 py-2 mb-4 rounded-md transition-colors ${
-                isActive('/')
-                  ? 'text-blue-400 bg-blue-400/10'
-                  : 'text-gray-300 hover:text-white hover:bg-slate-700'
-              }`}
-            >
-              <Home className="w-5 h-5 mr-3" />
-              <span className="font-medium">Home</span>
-            </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
 
             {/* AI Services */}
             {renderServiceSection('AI Services', aiServices, 'ai-services', Brain)}
@@ -544,59 +325,10 @@ return (
             {renderServiceSection('IT Services', itServices, 'it-services', Cloud)}
 
             {/* Micro SAAS */}
-            {renderServiceSection('Micro SAAS', microSaasServices, 'micro-saas', Cpu)}
+            {renderServiceSection('Micro SAAS', microSaasServices, 'micro-saas', Code)}
 
-<<<<<<< HEAD
             {/* Emerging Technologies */}
             {renderServiceSection('Emerging Tech', emergingTech, 'emerging-tech', Zap)}
-=======
-            {/* Company */}
-            <div className="mb-4">
-              <div className="px-3 py-2 text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                Company
-              </div>
-              <div className="mt-2 space-y-1">
-                {companyLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    to={link.url}
-                    onClick={onClose}
-                    className={`flex items-center px-3 py-2 text-sm rounded-md transition-colors ${
-                      isActive(link.url)
-                        ? 'text-blue-400 bg-blue-400/10'
-                        : 'text-gray-400 hover:text-white hover:bg-slate-700'
-                    }`}
-                  >
-                    <link.icon className="w-4 h-4 mr-3" />
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Support */}
-            <div className="mb-4">
-              <div className="px-3 py-2 text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                Support
-              </div>
-              <div className="mt-2 space-y-1">
-                {supportLinks.map((link, index) => (
-                  <Link
-                    key={index}
-                    to={link.url}
-                    onClick={onClose}
-                    className={`flex items-center px-3 py-2 text-sm rounded-md transition-colors ${
-                      isActive(link.url)
-                        ? 'text-blue-400 bg-blue-400/10'
-                        : 'text-gray-400 hover:text-white hover:bg-slate-700'
-                    }`}
-                  >
-                    <link.icon className="w-4 h-4 mr-3" />
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
 
             {/* Contact Info */}
             <div className="mt-8 p-4 bg-slate-800/50 rounded-lg">
@@ -620,7 +352,6 @@ return (
                 </div>
               </div>
             </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
           </div>
 
           {/* Footer */}
@@ -643,8 +374,4 @@ return (
   );
 };
 
-<<<<<<< HEAD
 export default Sidebar;
-=======
-export default Sidebar;
->>>>>>> cursor/website-audit-and-update-with-deployment-a217
