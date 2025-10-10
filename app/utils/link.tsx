@@ -7,32 +7,32 @@ interface LinkProps {
 interface LinkProps {}
   href: string;
 
-  children: React.ReactNode;
-  className?: string;
-  target?: string;
+  children: React.ReactNode
+  className?: string
+  target?: string
   rel?: string
   onClick?: () => void
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps>= ({}
 export const Link: React.FC<LinkProps> = ({}
-  href,;
+  href,
   href: string,
-  children: React.ReactNode;
-  className?: string;
-  target?: string;
+  children: React.ReactNode
+  className?: string
+  target?: string
   rel?: string
   onClick?: () => void
   'aria-label'?: string,}
 }
 export const Link: React.FC<LinkProps> = ({
     ,
-  href;
-  children,;
-  className,;
-  target,;
-  rel,;
-  onClick,;
+  href
+  children,
+  className,
+  target,
+  rel,
+  onClick,
   'aria-label': ariaLabel,
   }
   ...props}
@@ -50,13 +50,13 @@ export const Link: React.FC<LinkProps> = ({
       window.location.href = href;}
     }
   }</LinkProps>
-  return (<a;
+  return (<a
   }
-  return(<a;
-import React from 'react';
+  return(<a
+import React from 'react'
 interface LinkProps {/* TODO: Fix JSX expression */}
 }
-export const,;
+export const,
   Link: React.FC<LinkProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
     }
@@ -84,7 +84,7 @@ export const,;
 export default Link;
     >;
       {children}
-    </a>);
-  );
+    </a>)
+  )
 }
-export default Link;
+export default Link

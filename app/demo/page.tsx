@@ -1,10 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Footer from '../components/Footer'
 const DemoPage: React.FC = () => {
   const demos = [
     {
@@ -106,7 +105,7 @@ const DemoPage: React.FC = () => {
       
       <Footer />
     </>
-  );
+  )
 }
 
-export default DemoPage;
+export default DemoPage

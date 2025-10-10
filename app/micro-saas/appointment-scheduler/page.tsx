@@ -1,8 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Settings, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { Settings, ArrowRight } from 'lucide-react'
 const MicroSaaSPage: React.FC = () => {
-    const serviceName = 'appointment-scheduler';
+    const serviceName = 'appointment-scheduler'
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 return (
     <>,
@@ -24,15 +24,14 @@ return (
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Solution</span>
             </h1>
             <p>
-              Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.;
+              Powerful {title.toLowerCase()} micro SaaS solution designed for modern businesses.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo,
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo,
               </button>
             </div>
           </div>
@@ -41,14 +40,12 @@ return (
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p>
-                We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!;
-              </p>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We're developing powerful {title.toLowerCase()} solutions. Stay tuned for updates!</p>
             </div>
           </div>
         </section>
       </div>
     </>
-  );
+  )
 }
-export default MicroSaaSPage;
+export default MicroSaaSPage

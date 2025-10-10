@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
 const AutonomousSystemsPage: React.FC = () => {
     return (
     <>
@@ -24,4 +24,4 @@ const AutonomousSystemsPage: React.FC = () => {
   )
   }
 }
-export default AutonomousSystemsPage;
+export default AutonomousSystemsPage

@@ -1,10 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award } from 'lucide-react'
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
+  const [currentIndex, setCurrentIndex] = useState(0)
   const features = [
     {
       icon: Brain,
@@ -65,12 +63,10 @@ const DynamicContentShowcase: React.FC = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [features.length]);
-
+      setCurrentIndex((prev) => (prev + 1) % features.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [features.length])
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -131,7 +127,7 @@ const DynamicContentShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default DynamicContentShowcase;
+export default DynamicContentShowcase

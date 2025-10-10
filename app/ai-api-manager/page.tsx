@@ -2,10 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
-import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react';
-
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Settings, Zap, Shield, Users, BarChart3 } from 'lucide-react'
 const AIApiManagerPage: React.FC = () => {
 
   const features = [
@@ -54,10 +52,9 @@ const AIApiManagerPage: React.FC = () => {
       <Navigation />
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
         <div className="relative max-w-7xl mx-auto text-center">
-
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             AI API Manager
 
@@ -78,7 +75,7 @@ const AIApiManagerPage: React.FC = () => {
 
       {/* Stats Section */}
       <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
@@ -95,7 +92,7 @@ const AIApiManagerPage: React.FC = () => {
 
       {/* Features Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Platform Features
@@ -107,7 +104,6 @@ const AIApiManagerPage: React.FC = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
@@ -127,7 +123,7 @@ const AIApiManagerPage: React.FC = () => {
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Platform?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -150,8 +146,7 @@ const AIApiManagerPage: React.FC = () => {
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-
+          <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to Manage Your APIs?
@@ -173,8 +168,6 @@ const AIApiManagerPage: React.FC = () => {
 
       <Footer />
     </div>
-  ),
+  )
 }
-
-export default AIApiManagerPage;
-
+export default AIApiManagerPage

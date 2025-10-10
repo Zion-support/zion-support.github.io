@@ -14,7 +14,7 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
-title: 'Real-Time Dashboards',
+      title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
     },
@@ -31,7 +31,7 @@ title: 'Real-Time Dashboards',
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
     },
     {
-      icon: Eye,
+      icon: BarChart,
       title: 'Visual Analytics',
       description: 'Transform complex data into intuitive visualizations and interactive charts.',
       benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
@@ -42,7 +42,7 @@ title: 'Real-Time Dashboards',
       description: 'Enterprise-grade security to protect your sensitive business data and analytics.',
       benefits: ['End-to-end encryption', 'Access controls', 'Audit trails', 'Compliance support']
     }
-  ]
+  ];
   const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
@@ -161,9 +161,9 @@ title: 'Real-Time Dashboards',
       </main>
       <Footer />
     </React.Fragment>
-  ),
+  )
 }
-export default AiAnalyticsPage;
+export default AiAnalyticsPage
   </button>
   </h2>
   </button>

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react'
 const CompliancePage: React.FC = () => {
   const features = [
     {
@@ -45,7 +45,7 @@ const CompliancePage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Compliance;
+            Compliance
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Ensure your business meets all regulatory and compliance requirements. 
@@ -97,9 +97,9 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </div>
-  ),
+  )
 }
-export default CompliancePage;
+export default CompliancePage
   </button>
   </button>
   </h1>

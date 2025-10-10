@@ -1,8 +1,7 @@
 'use client';
 
-import React from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
-
+import React from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react'
 const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
@@ -84,7 +83,7 @@ const ContentPromotionBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ContentPromotionBanner;
+export default ContentPromotionBanner

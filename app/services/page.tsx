@@ -1,6 +1,6 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
 import {
   Brain,
   Cloud,
@@ -22,12 +22,10 @@ import {
   Target
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Footer from '../components/Footer'
 const ServicesPage: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     // AI Services
     {
@@ -205,9 +203,9 @@ const ServicesPage: React.FC = () => {
 
   const filteredServices = services.filter(service => {
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase())
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory
+    return matchesSearch && matchesCategory
   })
 
   return (
@@ -361,7 +359,7 @@ const ServicesPage: React.FC = () => {
       
       <Footer />
     </>
-  );
+  )
 }
 
-export default ServicesPage;
+export default ServicesPage

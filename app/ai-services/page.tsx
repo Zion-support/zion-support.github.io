@@ -1,7 +1,7 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { 
   Brain, 
   MessageSquare, 
@@ -26,11 +26,9 @@ import {
   Server
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Footer from '../components/Footer'
 const AiServicesPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const services = [
     {
       id: 'ai-chatbots',
@@ -1047,8 +1045,7 @@ const AiServicesPage: React.FC = () => {
 
   const filteredServices = services.filter(service => 
     selectedCategory === 'all' || service.category === selectedCategory
-  );
-
+  )
   return (
     <>
       <Helmet>
@@ -1183,7 +1180,7 @@ const AiServicesPage: React.FC = () => {
       
       <Footer />
     </>
-  );
+  )
 }
 
-export default AiServicesPage;
+export default AiServicesPage

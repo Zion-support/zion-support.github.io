@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useEffect, useRef } from 'react';
 
 const FuturisticBackground: React.FC = () => {
@@ -12,11 +12,11 @@ const FuturisticBackground: React.FC = () => {
     if (!ctx) return;
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
     }
 
-    resizeCanvas();
+    resizeCanvas()
     window.addEventListener('resize', resizeCanvas);
 
     // Quantum particles
@@ -25,9 +25,9 @@ const FuturisticBackground: React.FC = () => {
       y: number;
       vx: number;
       vy: number;
-      size: number;
-      opacity: number;
-      color: string;
+      size: number
+      opacity: number
+      color: string
     }> = []
 
     const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6']
@@ -46,8 +46,7 @@ const FuturisticBackground: React.FC = () => {
     }
 
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
       // Update and draw particles
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
@@ -56,26 +55,23 @@ const FuturisticBackground: React.FC = () => {
         // Wrap around screen
         if (particle.x < 0) particle.x = canvas.width;
         if (particle.x > canvas.width) particle.x = 0;
-        if (particle.y < 0) particle.y = canvas.height;
-        if (particle.y > canvas.height) particle.y = 0;
-
+        if (particle.y < 0) particle.y = canvas.height
+        if (particle.y > canvas.height) particle.y = 0
         // Draw particle
-        ctx.beginPath();
+        ctx.beginPath()
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-        ctx.fillStyle = particle.color;
-        ctx.globalAlpha = particle.opacity;
-        ctx.fill();
-
+        ctx.fillStyle = particle.color
+        ctx.globalAlpha = particle.opacity
+        ctx.fill()
         // Draw connections
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
             const dx = particle.x - otherParticle.x;
-            const dy = particle.y - otherParticle.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-
+            const dy = particle.y - otherParticle.y
+            const distance = Math.sqrt(dx * dx + dy * dy)
             if (distance < 100) {
-              ctx.beginPath();
-              ctx.moveTo(particle.x, particle.y);
+              ctx.beginPath()
+              ctx.moveTo(particle.x, particle.y)
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.strokeStyle = particle.color;
               ctx.globalAlpha = (100 - distance) / 100 * 0.1;
@@ -88,41 +84,38 @@ const FuturisticBackground: React.FC = () => {
 
       // Draw cyber grid
       ctx.globalAlpha = 0.1;
-      ctx.strokeStyle = '#00ffff';
-      ctx.lineWidth = 0.5;
-
+      ctx.strokeStyle = '#00ffff'
+      ctx.lineWidth = 0.5
       for (let x = 0; x < canvas.width; x += 20) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke();
+        ctx.beginPath()
+        ctx.moveTo(x, 0)
+        ctx.lineTo(x, canvas.height)
+        ctx.stroke()
       }
 
       for (let y = 0; y < canvas.height; y += 20) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
+        ctx.beginPath()
+        ctx.moveTo(0, y)
         ctx.lineTo(canvas.width, y);
         ctx.stroke();
       }
 
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(animate);
+      ctx.globalAlpha = 1
+      requestAnimationFrame(animate)
     }
 
-    animate();
-
+    animate()
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', resizeCanvas)
     }
-  }, []);
-
+  }, [])
   return (
     <canvas
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
       style={{ background: 'transparent' }}
     />
-  );
+  )
 }
 
-export default FuturisticBackground;
+export default FuturisticBackground

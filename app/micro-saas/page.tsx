@@ -3,9 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react';
-
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield } from 'lucide-react'
 const MicroSaasPage: React.FC = () => {
   const microSaasTools = [
     {
@@ -146,7 +145,7 @@ const MicroSaasPage: React.FC = () => {
 
       <Footer />
     </>
-  );
+  )
 }
 
-export default MicroSaasPage;
+export default MicroSaasPage

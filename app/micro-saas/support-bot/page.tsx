@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Bot, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { Bot, ArrowRight } from 'lucide-react'
 const SmartSupportBotPage: React.FC = () => {
     return (
     <>
@@ -21,16 +21,15 @@ const SmartSupportBotPage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Automation</span>
             </h1>
             <p>
-              AI-powered customer service automation with intelligent support bot.;
-              24/7 customer assistance and automated responses.;
+              AI-powered customer service automation with intelligent support bot.
+              24/7 customer assistance and automated responses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo
               </button>
             </div>
           </div>
@@ -50,5 +49,4 @@ const SmartSupportBotPage: React.FC = () => {
   )
   }
 }
-export default SmartSupportBotPage;
-
+export default SmartSupportBotPage

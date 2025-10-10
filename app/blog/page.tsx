@@ -1,12 +1,9 @@
-'use client';
-
+'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Search, Calendar, User, Clock, ArrowRight } from 'lucide-react'
 const BlogPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
+  const [searchQuery, setSearchQuery] = useState('')
   const blogPosts = [
     {
       id: 1,
@@ -56,8 +53,7 @@ const BlogPage: React.FC = () => {
     post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
     post.category.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
+  )
   return (
     <>
       <Helmet>
@@ -154,7 +150,7 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )
 }
 
-export default BlogPage;
+export default BlogPage

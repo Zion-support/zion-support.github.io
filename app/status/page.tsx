@@ -1,18 +1,18 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+'use client'
+import React, { useState, useEffect } from 'react'
 import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import SEOOptimizer from '../components/SEOOptimizer'
 export default function StatusPage() {
-    const [lastUpdated, setLastUpdated] = useState(new Date());
-  const [isRefreshing, setIsRefreshing] = useState(false);
+const [lastUpdated, setLastUpdated] = useState(new Date())
+const [isRefreshing, setIsRefreshing] = useState(false)
 const refreshStatus = async () => {
 
-    setIsRefreshing(true);
-    // Simulate API call;
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    setLastUpdated(new Date());
+    setIsRefreshing(true)
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    setLastUpdated(new Date())
     setIsRefreshing(false)
   }
   }
@@ -142,15 +142,13 @@ const getSeverityColor = (;
   }
 const overallStatus = services.every(service => service.status === 'operational');
     ? 'operational';
-    : services.some(service => service.status === 'outage');
-      ? 'outage';
-      : 'degraded';
+    : services.some(service => service.status === 'outage')
+      ? 'outage'
+      : 'degraded'
 return (
           </h1>
-          <p>
-            Real-time status of all our services. We're committed to providing reliable,;
-            high-performance AI and IT solutions.;
-          </p>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Real-time status of all our services. We're committed to providing reliable,
+            high-performance AI and IT solutions.</p>
           <div className="flex items-center justify-center gap-4 mb-8"></div>
             <div className="flex items-center gap-2"></div>
 
@@ -164,7 +162,7 @@ return (
             </div>
             <button>
               <RefreshCw>
-              Refresh;
+              Refresh
             </button>
           </div>
           <p>
@@ -289,18 +287,14 @@ return (
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>
-            Need More Information?;
-          </h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Need More Information?</h2>
           <p>
-            Subscribe to status updates or contact our support team for more details.;
+            Subscribe to status updates or contact our support team for more details.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
-              Subscribe to Updates
+            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Subscribe to Updates
             </button>
-            <button>
-              Contact Support
+            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Support
             </button>
           </div>
         </div>

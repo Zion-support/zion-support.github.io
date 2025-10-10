@@ -2,8 +2,8 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react';
+import SEOOptimizer from '../components/SEOOptimizer'
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Building, Users, Shield, Globe, Brain, Cloud, Code, BarChart, Zap, ArrowRight, Star, Award, Target, Clock, Settings, Lock, Database, Smartphone, Eye, Sparkles } from 'lucide-react'
 const EnterprisePage: React.FC = () => {
     const features = [
     {
@@ -39,11 +39,10 @@ const EnterprisePage: React.FC = () => {
     {
     icon: Settings,
       title: 'System Integration',
-      description: 'Seamless integration with existing enterprise systems and workflows.',
-      benefits: ['API integration', 'Legacy system support', 'Workflow automation', 'Data synchronization']
-  }
+      description: 'Seamless integration with existing enterprise systems and workflows.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  }];
+
 const solutions = [
     {
     title: 'Enterprise Resource Planning',
@@ -66,25 +65,24 @@ const solutions = [
     {
     title: 'Workflow Automation',
       description: 'Automate complex business processes to improve efficiency and reduce errors.',
-      icon: Zap,
-      benefits: ['Process automation', 'Task management', 'Approval workflows', 'Document management']
-  }
+      icon: Zap,      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
+  }];
+
 const benefits = [
     'Reduce operational costs by 30%',
-    'Improve productivity by 50%',;
-    'Enhance security and compliance',;
-    'Streamline business processes',;
-    'Enable data-driven decisions',;
-    'Scale with business growth',;
-    'Integrate with existing systems',;
-    'Provide 24/7 support and monitoring';
+    'Improve productivity by 50%',
+    'Enhance security and compliance',
+    'Streamline business processes',
+    'Enable data-driven decisions',
+    'Scale with business growth',
+    'Integrate with existing systems',
+    'Provide 24/7 support and monitoring'
   ]
 const stats = [
-    { number: '500+', label: 'Enterprise Clients', icon: Building },;
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },;
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },;
+    { number: '500+', label: 'Enterprise Clients', icon: Building },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
     { number: '24/7', label: 'Support Available', icon: Clock }
   ]
 return (
@@ -99,20 +97,19 @@ return (
           <h1>
             Enterprise</h1>
             <span>
-              Solutions;
+              Solutions
             </span>
           </h1>
           <p>
-            Comprehensive enterprise-grade solutions designed for large-scale business operations.;
-            Transform your organization with cutting-edge technology and expert implementation.;
+            Comprehensive enterprise-grade solutions designed for large-scale business operations.
+            Transform your organization with cutting-edge technology and expert implementation.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Get Enterprise Consultation
               <ArrowRight>
             </button>
-            <button>
-              View Case Studies,
+            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Case Studies,
             </button>
           </div>
         </div>
@@ -142,14 +139,14 @@ return (
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2>
-              Enterprise-Grade Features;
+              Enterprise-Grade Features
             </h2>
             <p>
-              Built for scale, security, and performance to meet the demands of large organizations.;
+              Built for scale, security, and performance to meet the demands of large organizations.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-                  <feature>
+                  <feature.icon className="w-8 h-8 text-white" />
                   <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                 </div>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
@@ -170,12 +167,8 @@ return (
           </div>
         </div>
       </section>
-            <h2>
-              Comprehensive Solutions;
-            </h2>
-            <p>
-              End-to-end enterprise solutions that address every aspect of your business operations.;
-            </p>
+            <h2 className="text-4xl font-bold text-white mb-4">Comprehensive Solutions</h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">End-to-end enterprise solutions that address every aspect of your business operations.</p>
           </div>
                     </li>
 
@@ -198,26 +191,22 @@ return (
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
-          <h2>
-            Ready to Transform Your Enterprise?;
-          </h2>
+          <h2 className="text-4xl font-bold text-white mb-4">Ready to Transform Your Enterprise?</h2>
           <p>
-            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.;
+            Join hundreds of enterprise clients who trust our solutions for their mission-critical operations.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
             <button>
               Contact Enterprise Sales
               <ArrowRight>
             </button>
-            <button>
-              Learn More
+            <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More
             </button>
           </div>
         </div>
       </section>
       <Footer>
     </div>
-  ),
+  )
 }
-export default EnterprisePage;
-
+export default EnterprisePage

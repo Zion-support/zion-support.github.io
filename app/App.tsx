@@ -1,5 +1,5 @@
-'use client';
-import React, { Suspense, lazy } from 'react';
+'use client'
+import React, { Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -112,8 +112,7 @@ const EdgeComputingPage = lazy(() => import('./edge-computing/page'));
 // Loading component
 const AppLoadingSpinner = () => (
   <LoadingSpinner />
-);
-
+)
 const App: React.FC = () => {
     return (
     <ErrorBoundary>
@@ -225,6 +224,6 @@ const App: React.FC = () => {
         </BrowserRouter>
       </HelmetProvider>
     </ErrorBoundary>
-  );
+  )
 }
-export default App;
+export default App

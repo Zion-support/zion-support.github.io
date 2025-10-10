@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useEffect, useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOOptimizerProps {
@@ -6,9 +6,9 @@ interface SEOOptimizerProps {
   description?: string;
   keywords?: string;
   canonicalUrl?: string;
-  ogImage?: string;
-  twitterCard?: string;
-  structuredData?: object;
+  ogImage?: string
+  twitterCard?: string
+  structuredData?: object
   children: React.ReactNode
   }
 const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
@@ -21,11 +21,11 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
   structuredData,
   children
 }) => {
-    const [seoScore, setSeoScore] = useState(0);
-  const [recommendations, setRecommendations] = useState<string[]>([]);
+    const [seoScore, setSeoScore] = useState(0)
+  const [recommendations, setRecommendations] = useState<string[]>([])
   const analyzeSEO = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    let score = 0;
+    if (typeof window === 'undefined') return
+    let score = 0
     const newRecommendations: string[] = [],
     // Check title length
     if (title.length >= 30 && title.length <= 60) {
@@ -52,33 +52,33 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
     newRecommendations.push('Include primary keyword in description')
   }
     // Check for heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6')
     if (headings.length > 0) {
     score += 10
   } else {
     newRecommendations.push('Add proper heading structure')
   }
     // Check for images with alt text
-    const images = document.querySelectorAll('img');
-    const imagesWithAlt = document.querySelectorAll('img[alt]');
+    const images = document.querySelectorAll('img')
+    const imagesWithAlt = document.querySelectorAll('img[alt]')
     if (images.length === imagesWithAlt.length && images.length > 0) {
     score += 10
   } else {
     newRecommendations.push('Add alt text to all images')
   }
     // Check for internal links
-    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]')
     if (internalLinks.length > 0) {
     score += 10
   } else {
     newRecommendations.push('Add internal links for better SEO')
   }
-    setSeoScore(score);
-    setRecommendations(newRecommendations);
-  }, [title, description, keywords]);
+    setSeoScore(score)
+    setRecommendations(newRecommendations)
+  }, [title, description, keywords])
   useEffect(() => {
     analyzeSEO()
-  }, [analyzeSEO]);
+  }, [analyzeSEO])
   const generateStructuredData = () => {
     const defaultStructuredData = {
       "@context": "https://schema.org",
@@ -92,7 +92,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         "https://linkedin.com/company/ziontechgroup"
       ]
     }
-    return structuredData || defaultStructuredData;
+    return structuredData || defaultStructuredData
   }
   return (
     <React.Fragment>
@@ -145,7 +145,7 @@ const AdvancedSEOOptimizerNew: React.FC<SEOOptimizerProps> = ({
         </div>
       )}
     </React.Fragment>
-  );
+  )
 }
-export default AdvancedSEOOptimizerNew;
+export default AdvancedSEOOptimizerNew
   </SEOOptimizerProps>

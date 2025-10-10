@@ -1,10 +1,8 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { ChevronLeft, ChevronRight, CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react'
 const ContentCarousel: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
+  const [currentSlide, setCurrentSlide] = useState(0)
   const slides = [
     {
       icon: Brain,
@@ -33,18 +31,17 @@ const ContentCarousel: React.FC = () => {
   ]
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide((prev) => (prev + 1) % slides.length)
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
+    const timer = setInterval(nextSlide, 5000)
+    return () => clearInterval(timer)
+  }, [])
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
@@ -114,7 +111,7 @@ const ContentCarousel: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ContentCarousel;
+export default ContentCarousel

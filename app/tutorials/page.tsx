@@ -1,11 +1,9 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Play, BookOpen, Code, Zap, Shield, Cloud, Brain, Users, Clock, Star, ArrowRight, CheckCircle, ExternalLink, Download } from 'lucide-react'
 const TutorialsPage: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
+  const [selectedCategory, setSelectedCategory] = useState('all')
   const categories = [
     { id: 'all', name: 'All Tutorials', icon: BookOpen },
     { id: 'ai', name: 'AI Services', icon: Brain },
@@ -158,10 +156,8 @@ const TutorialsPage: React.FC = () => {
 
   const filteredTutorials = selectedCategory === 'all' 
     ? tutorials 
-    : tutorials.filter(tutorial => tutorial.category === selectedCategory);
-
-  const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3);
-
+    : tutorials.filter(tutorial => tutorial.category === selectedCategory)
+  const featuredTutorials = tutorials.filter(tutorial => tutorial.rating >= 4.8).slice(0, 3)
   return (
     <>
       <Helmet>
@@ -518,7 +514,7 @@ const TutorialsPage: React.FC = () => {
 
           {/* CTA */}
           <section className="mb-16">
-            <div className="cyber-card-enhanced p-8 text-center">
+          <div className="cyber-card-enhanced p-8 text-center">
               <h2 className="text-2xl font-bold text-white mb-4">Ready to Start Learning?</h2>
               <p className="text-gray-300 mb-6">
                 Join thousands of developers who are already building amazing applications with our services.
@@ -542,7 +538,7 @@ const TutorialsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default TutorialsPage;
+export default TutorialsPage

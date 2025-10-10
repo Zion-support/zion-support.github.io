@@ -2,9 +2,8 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
-
+import { Link } from 'react-router-dom'
+import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react'
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -133,7 +132,7 @@ const PricingPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )
 }
 
-export default PricingPage;
+export default PricingPage

@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, ArrowRight, Globe, Server, Key, FileText, AlertTriangle } from 'lucide-react'
 const PrivacyPage: React.FC = () => {
-  const lastUpdated = 'January 1, 2024';
-  
+  const lastUpdated = 'January 1, 2024'
   const dataTypes = [
     {
       category: 'Personal Information',
@@ -374,7 +372,7 @@ const PrivacyPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default PrivacyPage;
+export default PrivacyPage

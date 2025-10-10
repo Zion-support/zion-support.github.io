@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react'
 const AIAccountingAssistantPage: React.FC = () => {
   const features = [
     { icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' },
@@ -40,6 +40,6 @@ const AIAccountingAssistantPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
+  )
 }
-export default AIAccountingAssistantPage;
+export default AIAccountingAssistantPage

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const ARVRPlatformPage: React.FC = () => {
   const features = [
     {
@@ -44,7 +44,7 @@ const ARVRPlatformPage: React.FC = () => {
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -71,7 +71,7 @@ const ARVRPlatformPage: React.FC = () => {
       </section>
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AR/VR Platform?
@@ -93,7 +93,7 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
       </section>
       {/* Benefits Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Key Benefits,
@@ -114,7 +114,7 @@ Experience the power of our AR/VR platform solutions for your business.
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Get Started?
@@ -136,9 +136,9 @@ Experience the power of our AR/VR platform solutions for your business.
         </div>
       </section>
     </div>
-  ),
+  )
 }
-export default ARVRPlatformPage;
+export default ARVRPlatformPage
   </button>
   </button>
   </h2>

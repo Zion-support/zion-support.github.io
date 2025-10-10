@@ -1,6 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 const DataAnalyticsBiPage: React.FC = () => {
   return (
     <>
@@ -110,7 +109,7 @@ const DataAnalyticsBiPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default DataAnalyticsBiPage;
+export default DataAnalyticsBiPage

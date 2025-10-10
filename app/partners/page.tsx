@@ -3,9 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react'
 const PartnersPage: React.FC = () => {
   const partners = [
     {
@@ -159,7 +158,7 @@ const PartnersPage: React.FC = () => {
 
       <Footer />
     </>
-  );
+  )
 }
 
-export default PartnersPage;
+export default PartnersPage

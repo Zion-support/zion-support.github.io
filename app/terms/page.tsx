@@ -1,11 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { FileText, Scale, Shield, AlertTriangle, CheckCircle, ArrowRight, Globe, User, Mail, Phone, Calendar, Lock, Database, Server, Key } from 'lucide-react'
 const TermsPage: React.FC = () => {
-  const lastUpdated = 'January 1, 2024';
-  
+  const lastUpdated = 'January 1, 2024'
   const sections = [
     {
       title: 'Acceptance of Terms',
@@ -227,7 +225,7 @@ const TermsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default TermsPage;
+export default TermsPage

@@ -3,9 +3,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react';
-
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Users, Shield } from 'lucide-react'
 const ConsultationPage: React.FC = () => {
   const services = [
     {
@@ -147,7 +146,7 @@ const ConsultationPage: React.FC = () => {
 
       <Footer />
     </>
-  );
+  )
 }
 
-export default ConsultationPage;
+export default ConsultationPage

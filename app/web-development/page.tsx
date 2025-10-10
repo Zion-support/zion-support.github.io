@@ -1,18 +1,18 @@
 'use client';
-import React from 'react';
+import React from 'react'
 import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceOptimizer from '../components/PerformanceOptimizer';
-import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
-import SecurityEnhancer from '../components/SecurityEnhancer';
+import AccessibilityEnhancer from '../components/AccessibilityEnhancer'
+import SecurityEnhancer from '../components/SecurityEnhancer'
 const technologies = [
-    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },;
-    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },;
-    { name: 'Python/Django', icon: Globe, description: 'Backend development' },;
-    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },;
-    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },;
+    { name: 'React/Next.js', icon: Code, description: 'Modern frontend frameworks' },
+    { name: 'Node.js', icon: Database, description: 'Server-side JavaScript' },
+    { name: 'Python/Django', icon: Globe, description: 'Backend development' },
+    { name: 'MongoDB/PostgreSQL', icon: Database, description: 'Database solutions' },
+    { name: 'AWS/Azure', icon: Cloud, description: 'Cloud platforms' },
     { name: 'Docker/Kubernetes', icon: Shield, description: 'Containerization' }
   ]
 const process = [
@@ -44,10 +44,9 @@ const process = [
   ]
 return(<>
 
-      <SEOOptimizer;
-        title="Web Development Services - Zion Tech Group";
-        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices.";
-
+      <SEOOptimizer
+        title="Web Development Services - Zion Tech Group"
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices."
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
@@ -167,11 +166,10 @@ const WebDevelopmentPage: React.FC = () => {
 
           {/* Hero Section */}
           <section className="text-center mb-16"></section>
-            <h1>
-              Web Development Services;</h1>
-            </h1>,;
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,;
-              Build modern, scalable, and high-performance web applications with our expert development team.;
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Web Development Services</h1>
+            </h1>,
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">,
+              Build modern, scalable, and high-performance web applications with our expert development team.
               From frontend to backend, we deliver solutions that drive business growth.;
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
@@ -181,9 +179,9 @@ const WebDevelopmentPage: React.FC = () => {
               <a;
                 href="/contact";
                 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300";
-              >Start Your Project<a;
-                href="tel:+13024640950";
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
+              >Start Your Project<a
+                href="tel:+13024640950"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >Call +1 302 464 0950</a>
               >
                 Start Your Project
@@ -192,8 +190,8 @@ const WebDevelopmentPage: React.FC = () => {
 
                 Call +1 302 464 0950,
               </a>
-            </div>,;
-          </section>,;
+            </div>,
+          </section>,
 ,;
           {/* Services Grid */}
 
@@ -239,7 +237,6 @@ const WebDevelopmentPage: React.FC = () => {
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
                       <div className={`font-semibold ${service.color}`}>{service.price}</div>
                     </div>
@@ -257,10 +254,8 @@ const WebDevelopmentPage: React.FC = () => {
                     </div>
                     <div />
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}<div className={`font-semibold ${service.color}`}>{service.price}<p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
-            <h2>
-              Our Web Development Services;);
-            </h2>);
-);
+            <h2 className="text-4xl font-bold text-white mb-4">Our Web Development Services;)</h2>)
+)
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">),
               {
     webServices.map((service, index) => (</div>
@@ -268,8 +263,8 @@ const WebDevelopmentPage: React.FC = () => {
                 <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300"></div>
                   <div className="flex items-center mb-6">,</div>
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mr-4">,</div>
-                      <service.icon className="w-8 h-8 text-white" />,;
-                    </div>,;
+                      <service.icon className="w-8 h-8 text-white" />,
+                    </div>,
                     <div>,</div>
                       <h3 className="text-2xl font-bold text-white mb-2 neon-text">{service.title}</h3>
                       <div className={`font-semibold ${service.color}`}>{service.price}</div>
@@ -297,7 +292,7 @@ const WebDevelopmentPage: React.FC = () => {
                     </ul>
                   </div>
                   {
-    service.benefits && (;
+    service.benefits && (
                     <div className="mb-6"></div>
                       <h4 className="text-lg font-semibold text-white mb-3">Benefits<ul className="space-y-2">{service.benefits.map((benefit, benefitIndex) => (</ul>
   }
@@ -331,16 +326,16 @@ const WebDevelopmentPage: React.FC = () => {
                       </ul>
                     </div>
                   )}
-<a;
-                    href="/contact";
-                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button";
+<a
+                    href="/contact"
+                    className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >Get Started</a>
                   </a>
                 </div>
                     className="w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 hover: scale-105 cyber-button"
                   >
                     Get Started,
-                  </a>,;
+                  </a>,
                 </div>))}
 
             </div>
@@ -400,12 +395,8 @@ const WebDevelopmentPage: React.FC = () => {
           <section className="text-center"></section>
             <div className="cyber-card p-12 max-w-4xl mx-auto"></div>
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">Ready to Build Your Next Web Application?<p className="text-xl text-gray-300 mb-8">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
-              <h2>
-                Ready to Build Your Next Web Application?;
-              </h2>
-              <p>
-                Let's discuss your project requirements and create a custom solution that drives your business forward.;
-              </p>
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Build Your Next Web Application?</h2>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Let's discuss your project requirements and create a custom solution that drives your business forward.</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
                 <a;
 
@@ -416,9 +407,9 @@ const WebDevelopmentPage: React.FC = () => {
                 <a;
                   href="/contact";
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300";
-                >Start Your Project<a;
-                  href="tel:+13024640950";
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300";
+                >Start Your Project<a
+                  href="tel:+13024640950"
+                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >Call +1 302 464 0950</a>
                 >
                   Start Your Project
@@ -430,7 +421,7 @@ const WebDevelopmentPage: React.FC = () => {
 
           {/* CTA Section */}
           <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
+          <div className="cyber-card p-12 max-w-4xl mx-auto">
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 neon-text">
                 Ready to Build Your Next Web Application?
               </h2>
@@ -457,7 +448,7 @@ const WebDevelopmentPage: React.FC = () => {
         </main>
         <Footer />
 
-                  href="tel:+13024640950";
+                  href="tel:+13024640950"
                   className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
                 >
                   Call +1 302 464 0950,
@@ -467,15 +458,13 @@ const WebDevelopmentPage: React.FC = () => {
           </section>
         </main>
         <Footer>
-      </div>,;
+      </div>,
     </>);
 }
-export default WebDevelopmentPage;
-
+export default WebDevelopmentPage
       </div>
     </>
-  );
+  )
 }
 
-export default WebDevelopmentPage;
-
+export default WebDevelopmentPage

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Lock, Eye, ShieldCheck } from 'lucide-react'
 const CloudSecurityPage: React.FC = () => {
   const features = [
     {
@@ -45,7 +45,7 @@ icon: Shield,
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Security;
+            Cloud Security
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud security solutions. 
@@ -55,7 +55,7 @@ icon: Shield,
       </section>
       {/* Features Section */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Cloud Security?
@@ -76,7 +76,7 @@ icon: Shield,
         </div>
 {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
               Key Benefits,
@@ -97,7 +97,7 @@ icon: Shield,
       </section>
       {/* CTA Section */}
       <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -111,7 +111,7 @@ icon: Shield,
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
               <Mail className="mr-2 h-5 w-5" />
-              Email Us;
+              Email Us
   </
           </div>
         </div>
@@ -135,9 +135,9 @@ icon: Shield,
         </div>
       </div>
     </div>
-  ),
+  )
 }
-export default CloudSecurityPage;
+export default CloudSecurityPage
   </button>
   </button>
   </button>

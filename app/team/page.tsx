@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 const TeamPage: React.FC = () => {
     return (
     <>
@@ -35,4 +35,4 @@ const TeamPage: React.FC = () => {
   )
   }
 }
-export default TeamPage;
+export default TeamPage

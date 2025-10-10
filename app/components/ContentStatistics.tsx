@@ -1,7 +1,6 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
-
+'use client'
+import React, { useState, useEffect } from 'react'
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react'
 const ContentStatistics: React.FC = () => {
   const [counters, setCounters] = useState({
     clients: 0,
@@ -86,16 +85,15 @@ const ContentStatistics: React.FC = () => {
               [key]: Math.min(current + increment, target)
             }
           }
-          return prev;
+          return prev
         })
-      }, 16);
+      }, 16)
     })
 
     return () => {
-      timers.forEach(timer => clearInterval(timer));
+      timers.forEach(timer => clearInterval(timer))
     }
-  }, []);
-
+  }, [])
   return (
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -139,7 +137,7 @@ const ContentStatistics: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ContentStatistics;
+export default ContentStatistics

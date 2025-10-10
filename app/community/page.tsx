@@ -1,11 +1,9 @@
-'use client';
+'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react'
 const CommunityPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-
+  const [activeTab, setActiveTab] = useState('overview')
   const communityStats = [
     { icon: Users, value: '5,000+', label: 'Active Members' },
     { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
@@ -395,7 +393,7 @@ const CommunityPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
 
-export default CommunityPage;
+export default CommunityPage

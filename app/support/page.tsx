@@ -1,12 +1,9 @@
-'use client';
-
+'use client'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Search, Phone, Mail, MessageCircle, Clock, CheckCircle } from 'lucide-react'
 const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
+  const [searchQuery, setSearchQuery] = useState('')
   const faqs = [
     {
       question: 'How do I get started with your AI services?',
@@ -53,8 +50,7 @@ const SupportPage: React.FC = () => {
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
+  )
   return (
     <>
       <Helmet>
@@ -135,7 +131,7 @@ const SupportPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  )
 }
 
-export default SupportPage;
+export default SupportPage

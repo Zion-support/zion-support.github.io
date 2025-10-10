@@ -1,17 +1,17 @@
 'use client';
-import React from 'react';
-'use client';
+import React from 'react'
+'use client'
 import React, { useState, useCallback } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'
 import {
-    Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  Send,;
+    Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
   CheckCircle
   }
-} from 'lucide-react';
+} from 'lucide-react'
 const ContactPage: React.FC = () => {
     const [formData, setFormData] = useState({
     name: '',
@@ -24,26 +24,26 @@ phone: '',
     message: ''
   }
   })
-const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const [isSubmitting, setIsSubmitting] = useState(false)
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
 
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
-    ...prev,;
+    ...prev,
       [name]: value
   }
-    }));
-  }, []);
+    }))
+  }, [])
 const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault()
     setIsSubmitting(true)
     setSubmitStatus('idle')
 try {
       // Simulate form submission,
 
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
+      await new Promise(resolve => setTimeout(resolve, 1000))
+      setSubmitStatus('success')
       setFormData({
         name: '',
         email: '',
@@ -65,14 +65,14 @@ try {
   }
 const services = [
     'AI Solutions',
-    'Cloud Computing',;
-    'Mobile App Development',;
-    'Web Development',;
-    'Data Analytics',;
-    'Cybersecurity',;
-    'DevOps',;
-    'Consulting',;
-    'Other';
+    'Cloud Computing',
+    'Mobile App Development',
+    'Web Development',
+    'Data Analytics',
+    'Cybersecurity',
+    'DevOps',
+    'Consulting',
+    'Other'
   ]
 const contactInfo = [
     {
@@ -90,7 +90,7 @@ const contactInfo = [
     {
     icon: MapPin,
       title: 'Address',
-      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',;
+      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
       description: 'Visit our office'
   },
     {
@@ -105,8 +105,8 @@ return (
     <>
       <Helmet>
         <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta>
-        <meta>
+        <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
         <div className="container mx-auto px-4"></div>
@@ -118,10 +118,8 @@ return (
                 {' '}Touch;
               </span>
             </h1>
-            <p>
-              Ready to transform your business? Let's discuss your project and explore;
-              how our AI and IT solutions can help you achieve your goals.;
-            </p>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Ready to transform your business? Let's discuss your project and explore;
+              how our AI and IT solutions can help you achieve your goals.</p>
           </div>
         </section>
 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
@@ -137,7 +135,7 @@ return (
   }
               )}
 {
-    submitStatus === 'error' && (;
+    submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
                   <span className="text-red-400">Failed to send message. Please try again.</span>
                 </div>
@@ -147,7 +145,7 @@ return (
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
                   <div />
                     <label>
-                      Full Name *;
+                      Full Name *
                     </label>
                     <div className="relative"></div>
                       <User>
@@ -156,7 +154,7 @@ return (
                   </div>
                   <div />
                     <label>
-                      Email Address *;
+                      Email Address *
                     </label>
                     <div className="relative"></div>
                       <Mail>
@@ -220,7 +218,7 @@ return (
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                       <span>Sending...</span>
                     </>
-                  ) : (;
+                  ) : (
                     <>
                       <Send>
                       <span>Send Message</span>
@@ -234,17 +232,15 @@ return (
             <div className="space-y-8"></div>
               <div />
                 <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p>
-                  We're here to help! Reach out to us through any of these channels;
-                  and we'll get back to you as soon as possible.;
-                </p>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We're here to help! Reach out to us through any of these channels
+                  and we'll get back to you as soon as possible.</p>
               </div>
               {/* Contact Information */}
               <div className="space-y-8"></div>
                 <div />
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p>
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.;
+                    We're here to help you transform your business with cutting-edge AI and technology solutions.
                   </p>
                 </div>
                 <div className="space-y-6"></div>
@@ -300,7 +296,6 @@ return (
         </section>
       </div>
 </div>
-  ),
+  )
 }
-export default ContactPage;
-
+export default ContactPage

@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { Mail, ArrowRight } from 'lucide-react'
 const EmailMarketingSuitePage: React.FC = () => {
     return (
     <>,
@@ -21,16 +21,15 @@ const EmailMarketingSuitePage: React.FC = () => {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
             </h1>
             <p>
-              AI-powered email marketing automation. Create, send, and optimize email campaigns;
-              with intelligent automation and personalization.;
+              AI-powered email marketing automation. Create, send, and optimize email campaigns
+              with intelligent automation and personalization.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
               <button>
                 <span>Get Started</span>
                 <ArrowRight>
               </button>
-              <button>
-                View Demo
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo
               </button>
             </div>
           </div>
@@ -50,4 +49,4 @@ const EmailMarketingSuitePage: React.FC = () => {
   )
   }
 }
-export default EmailMarketingSuitePage;
+export default EmailMarketingSuitePage

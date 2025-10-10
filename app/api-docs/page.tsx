@@ -1,18 +1,18 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
 import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
 export default function APIDocsPage() {
-    const [copiedCode, setCopiedCode] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState('');
+    const [copiedCode, setCopiedCode] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
   const copyToClipboard = (code: string, id: string) => {
     navigator.clipboard.writeText(code)
     setCopiedCode(id),
     setTimeout(() => setCopiedCode(null), 2000)
   }
-  const apiEndpoints = [
+const apiEndpoints = [
     {
       title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
@@ -93,14 +93,14 @@ export default function APIDocsPage() {
       ]
     }
   ]
-  const filteredEndpoints = apiEndpoints.map(category => ({
+const filteredEndpoints = apiEndpoints.map(category => ({
     ...category,
     endpoints: category.endpoints.filter(endpoint => 
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
     )
-  })).filter(category => category.endpoints.length > 0);
+  })).filter(category => category.endpoints.length > 0)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer 
@@ -111,9 +111,9 @@ export default function APIDocsPage() {
       <Navigation />
       {/* Hero Section */}
 <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
+          <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">
-            API Documentation;
+            API Documentation
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Complete API documentation for Zion Tech Group's AI and IT solutions. 
@@ -133,7 +133,7 @@ export default function APIDocsPage() {
       </section>
       {/* Quick Start */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -171,7 +171,7 @@ export default function APIDocsPage() {
       </section>
       {/* API Endpoints */}
       <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
+          <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">
             {filteredEndpoints.map((category, categoryIndex) => (
@@ -231,7 +231,7 @@ export default function APIDocsPage() {
       </section>
       {/* CTA Section */}
       <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
-        <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
             Ready to Get Started?
           </h2>

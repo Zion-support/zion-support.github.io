@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
-    const features = [
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -22,26 +22,24 @@ const PagePage: React.FC = () => {
     {
     icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
-    }
-  ]
+      description: 'Worldwide deployment and support for international businesses'  }
+  }]
 const benefits = [
     'Advanced AI technology integration',
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ]
 return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet>
         <title>Page | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8"></section>
@@ -73,6 +71,6 @@ return (
         </div>
       </section>
     </div>
-  ),
+  )
 }
-export default PagePage;
+export default PagePage

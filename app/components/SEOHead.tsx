@@ -5,28 +5,28 @@ interface SEOHeadProps {
   description?: string;
   keywords?: string;
   canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+  ogImage?: string
+  ogType?: string
+  twitterCard?: string
   structuredData?: object
   }
 }
 const SEOHead: React.FC<SEOHeadProps> = ({
     title = 'Zion Tech Group - Advanced AI & IT Solutions',
-  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',;
-  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',;
-  canonical,;
-  ogImage = '/og-image.jpg',;
-  ogType = 'website',;
-  twitterCard = 'summary_large_image',;
+  description = 'Transform your business with cutting-edge artificial intelligence, cloud infrastructure, and innovative technology solutions. Expert AI and IT consulting services.',
+  keywords = 'AI solutions, IT consulting, cloud infrastructure, cybersecurity, automation, machine learning, artificial intelligence, business transformation',
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
   structuredData
   }
 }) => {}
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+  const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : '')
 const defaultStructuredData = {
     "@context": "https: //schema.org",
-    "@type": "Organization",;
+    "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https: //ziontechgroup.com",
     "logo": "https: //ziontechgroup.com/logo.png",
@@ -45,7 +45,7 @@ const defaultStructuredData = {
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
   },
-    "sameAs": [;
+    "sameAs": [
       "https: //www.linkedin.com/company/zion-tech-group",
       "https: //twitter.com/ziontechgroup"
     ],
@@ -54,38 +54,37 @@ return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta>
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 {/* Open Graph Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       <meta>
       {/* Twitter Card Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       {/* Additional SEO Meta Tags */}
-      <meta>
-      <meta>
-      <meta>
-      <meta>
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      <meta name="description" content="Advanced AI solutions" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
 
       {/* Structured Data */}
       <script>
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
+  )
 }
-export default SEOHead;
-
+export default SEOHead

@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
-    const features = [
+const features = [
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -22,19 +22,17 @@ const PagePage: React.FC = () => {
     {
     icon: Globe,
       title: 'Global Reach',
-      description: 'Worldwide deployment and support for international businesses'
-  }
-    }
-  ]
+      description: 'Worldwide deployment and support for international businesses'  }
+  }]
 const benefits = [
     'Advanced AI technology integration',
-    'Real-time processing and analytics',;
-    'Enterprise-grade security and compliance',;
-    'Scalable and flexible solutions',;
-    '24/7 technical support',;
-    'Easy integration with existing systems',;
-    'Cost-effective pricing plans',;
-    'Proven track record of success';
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
   ]
 return (
       {/* Hero Section */}
@@ -43,13 +41,13 @@ return (
           <div className="text-center"></div>
             <h1>
               <span>
-                Page;
+                Page
               </span>
               <br>
               <span className="text-white">Solutions</span>
             </h1>
             <p>
-              Transform your business with our advanced page solutions.;
+              Transform your business with our advanced page solutions.
               Powered by cutting-edge AI technology and industry expertise.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
@@ -57,8 +55,7 @@ return (
                 Get Started
                 <ArrowRight>
               </button>
-              <button>
-                Learn More,
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More,
               </button>
             </div>
           </div>
@@ -73,7 +70,7 @@ return (
               Why Choose Our Page?,
             </h2>
             <p>
-              Our page solutions deliver unmatched performance, security, and scalability.;
+              Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
                 </div>
@@ -105,11 +102,9 @@ return (
       <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-            <h2>
-              Ready to Get Started?;
-            </h2>
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
             <p>
-              Contact our experts to discuss your page needs and get a customized solution.;
+              Contact our experts to discuss your page needs and get a customized solution.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
               <button>
@@ -125,7 +120,6 @@ return (
         </div>
       </section>
     </div>
-  ),
+  )
 }
-export default PagePage;
-
+export default PagePage

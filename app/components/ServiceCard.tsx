@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import React from 'react'
+import { ArrowRight, CheckCircle } from 'lucide-react'
 interface ServiceCardProps {
-    title: string;
-  description: string;
+    title: string
+  description: string
   features: string[]
   price?: string
   popular?: boolean
@@ -58,7 +58,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </button>
       )}
     </div>
-  );
+  )
 }
-export default ServiceCard;
+export default ServiceCard
   </ServiceCardProps>
