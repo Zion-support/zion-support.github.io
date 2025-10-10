@@ -427,6 +427,228 @@ export default function ITServicesPage() {
           popular: true
         }
       ]
+    },
+    {
+      category: 'AI-Powered IT Solutions',
+      icon: Brain,
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      services: [
+        {
+          name: 'AI IT Operations (AIOps)',
+          description: 'AI-powered IT operations with intelligent automation, predictive analytics, and self-healing systems',
+          features: ['Predictive Analytics', 'Automated Incident Response', 'Self-Healing Systems', 'Intelligent Alerting', 'Performance Optimization'],
+          pricing: 'Starting at $8,000/month',
+          trial: 'Free AIOps assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/ai-ops',
+          popular: true
+        },
+        {
+          name: 'AI Network Security',
+          description: 'Advanced AI-powered network security with behavioral analysis and threat prediction',
+          features: ['Behavioral Analysis', 'Threat Prediction', 'Automated Response', 'Network Segmentation', 'Zero Trust Implementation'],
+          pricing: 'Starting at $12,000/month',
+          trial: 'Free security assessment',
+          timeline: '6-10 weeks',
+          link: 'https://ziontechgroup.com/ai-network-security',
+          popular: true
+        },
+        {
+          name: 'AI Cloud Cost Optimization',
+          description: 'Intelligent cloud cost management with AI-powered resource optimization and cost prediction',
+          features: ['Cost Prediction', 'Resource Optimization', 'Auto-scaling', 'Waste Detection', 'Budget Management'],
+          pricing: 'Starting at $5,000/month',
+          trial: 'Free cost analysis',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/ai-cloud-optimization',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Industry-Specific IT Solutions',
+      icon: Building,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      services: [
+        {
+          name: 'Healthcare IT Solutions',
+          description: 'HIPAA-compliant IT infrastructure for healthcare organizations with patient data security',
+          features: ['HIPAA Compliance', 'Patient Data Security', 'Electronic Health Records', 'Medical Device Integration', 'Telemedicine Support'],
+          pricing: 'Starting at $15,000',
+          trial: 'Free compliance audit',
+          timeline: '8-12 weeks',
+          link: 'https://ziontechgroup.com/healthcare-it',
+          popular: true
+        },
+        {
+          name: 'Financial Services IT',
+          description: 'SOX-compliant IT solutions for financial institutions with advanced security and compliance',
+          features: ['SOX Compliance', 'Financial Data Security', 'Transaction Monitoring', 'Risk Management', 'Regulatory Reporting'],
+          pricing: 'Starting at $20,000',
+          trial: 'Free compliance assessment',
+          timeline: '10-16 weeks',
+          link: 'https://ziontechgroup.com/financial-it',
+          popular: true
+        },
+        {
+          name: 'Manufacturing IT Solutions',
+          description: 'Industrial IT infrastructure with IoT integration and manufacturing automation',
+          features: ['IoT Integration', 'Manufacturing Automation', 'Supply Chain Management', 'Quality Control Systems', 'Predictive Maintenance'],
+          pricing: 'Starting at $18,000',
+          trial: 'Free manufacturing assessment',
+          timeline: '12-20 weeks',
+          link: 'https://ziontechgroup.com/manufacturing-it',
+          popular: false
+        },
+        {
+          name: 'Retail IT Solutions',
+          description: 'Omnichannel retail IT infrastructure with POS systems and customer analytics',
+          features: ['POS Systems', 'Inventory Management', 'Customer Analytics', 'E-commerce Integration', 'Mobile Commerce'],
+          pricing: 'Starting at $12,000',
+          trial: 'Free retail assessment',
+          timeline: '6-10 weeks',
+          link: 'https://ziontechgroup.com/retail-it',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Advanced IT Services',
+      icon: Rocket,
+      color: 'text-emerald-400',
+      bgColor: 'bg-emerald-500/10',
+      services: [
+        {
+          name: 'Edge Computing Solutions',
+          description: 'Edge computing infrastructure for low-latency applications and IoT devices',
+          features: ['Edge Servers', 'IoT Integration', 'Low-latency Processing', 'Data Synchronization', 'Offline Capabilities'],
+          pricing: 'Starting at $10,000',
+          trial: 'Free edge assessment',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/edge-computing',
+          popular: true
+        },
+        {
+          name: '5G Network Implementation',
+          description: '5G network infrastructure and optimization for high-speed connectivity',
+          features: ['5G Infrastructure', 'Network Optimization', 'Speed Testing', 'Coverage Analysis', 'Device Management'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free 5G assessment',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/5g-implementation',
+          popular: false
+        },
+        {
+          name: 'Quantum-Safe Security Solutions',
+          description: 'Future-proof security solutions designed to protect against quantum computing threats',
+          features: ['Quantum-Safe Encryption', 'Post-Quantum Cryptography', 'Security Assessment', 'Migration Planning', 'Compliance Support', 'Risk Analysis', 'Implementation', 'Ongoing Support'],
+          pricing: 'Starting at $15,000',
+          trial: 'Free security audit',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/quantum-safe-security',
+          popular: false
+        },
+        {
+          name: 'AI Infrastructure Monitoring',
+          description: 'Intelligent infrastructure monitoring with AI-powered analytics and predictive maintenance',
+          features: ['AI-Powered Analytics', 'Predictive Maintenance', 'Real-time Monitoring', 'Anomaly Detection', 'Performance Optimization', 'Capacity Planning', 'Cost Analysis', 'Automated Alerts'],
+          pricing: 'Starting at $3,000/month',
+          trial: 'Free monitoring setup',
+          timeline: '1-2 weeks',
+          link: 'https://ziontechgroup.com/ai-infrastructure-monitoring',
+          popular: true
+        },
+        {
+          name: 'Blockchain Integration Services',
+          description: 'Complete blockchain integration with smart contracts, DeFi solutions, and Web3 applications',
+          features: ['Smart Contract Development', 'DeFi Solutions', 'Web3 Integration', 'NFT Platforms', 'Token Development', 'Blockchain Migration', 'Security Audits', 'Maintenance'],
+          pricing: 'Starting at $25,000',
+          trial: 'Free consultation',
+          timeline: '8-16 weeks',
+          link: 'https://ziontechgroup.com/blockchain-integration',
+          popular: true
+        },
+        {
+          name: 'IoT & Edge Computing Solutions',
+          description: 'Comprehensive IoT solutions with edge computing, real-time analytics, and device management',
+          features: ['IoT Device Management', 'Edge Computing', 'Real-time Analytics', 'Device Security', 'Data Processing', 'Cloud Integration', 'Monitoring', 'Maintenance'],
+          pricing: 'Starting at $18,000',
+          trial: 'Free IoT assessment',
+          timeline: '6-12 weeks',
+          link: 'https://ziontechgroup.com/iot-edge-solutions',
+          popular: true
+        },
+        {
+          name: 'AR/VR Development Services',
+          description: 'Immersive AR/VR applications for training, marketing, and customer engagement',
+          features: ['AR Application Development', 'VR Experience Design', '3D Modeling', 'Interactive Content', 'Cross-platform Support', 'Performance Optimization', 'User Testing', 'Deployment'],
+          pricing: 'Starting at $30,000',
+          trial: 'Free demo',
+          timeline: '10-20 weeks',
+          link: 'https://ziontechgroup.com/ar-vr-development',
+          popular: false
+        },
+        {
+          name: 'Quantum Computing Integration',
+          description: 'Quantum computing solutions for optimization, cryptography, and advanced problem solving',
+          features: ['Quantum Algorithm Development', 'Quantum Simulation', 'Hybrid Computing', 'Quantum Security', 'Performance Optimization', 'Integration', 'Training', 'Support'],
+          pricing: 'Starting at $50,000',
+          trial: 'Free quantum assessment',
+          timeline: '12-24 weeks',
+          link: 'https://ziontechgroup.com/quantum-computing',
+          popular: false
+        }
+      ]
+    },
+    {
+      category: 'Specialized IT Services',
+      icon: Settings,
+      color: 'text-orange-400',
+      bgColor: 'bg-orange-500/10',
+      services: [
+        {
+          name: 'AI API Management',
+          description: 'Intelligent API management with AI-powered analytics, security, and optimization',
+          features: ['API Analytics', 'Security Management', 'Rate Limiting', 'Performance Optimization', 'Documentation', 'Testing', 'Monitoring', 'Versioning'],
+          pricing: 'Starting at $2,000/month',
+          trial: 'Free API audit',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/ai-api-management',
+          popular: true
+        },
+        {
+          name: 'Smart Contract Security Audit',
+          description: 'Comprehensive security auditing for smart contracts and blockchain applications',
+          features: ['Code Review', 'Vulnerability Assessment', 'Security Testing', 'Compliance Check', 'Penetration Testing', 'Risk Analysis', 'Remediation', 'Ongoing Monitoring'],
+          pricing: 'Starting at $5,000',
+          trial: 'Free security scan',
+          timeline: '2-4 weeks',
+          link: 'https://ziontechgroup.com/smart-contract-security-audit',
+          popular: true
+        },
+        {
+          name: 'Data Center Modernization',
+          description: 'Complete data center modernization with cloud migration and infrastructure optimization',
+          features: ['Infrastructure Assessment', 'Cloud Migration', 'Virtualization', 'Energy Optimization', 'Security Hardening', 'Disaster Recovery', 'Monitoring', 'Maintenance'],
+          pricing: 'Starting at $35,000',
+          trial: 'Free assessment',
+          timeline: '12-20 weeks',
+          link: 'https://ziontechgroup.com/data-center-modernization',
+          popular: false
+        },
+        {
+          name: 'IT Governance & Compliance',
+          description: 'Comprehensive IT governance framework with compliance management and risk assessment',
+          features: ['Governance Framework', 'Compliance Management', 'Risk Assessment', 'Policy Development', 'Audit Support', 'Training', 'Documentation', 'Ongoing Support'],
+          pricing: 'Starting at $8,000',
+          trial: 'Free compliance check',
+          timeline: '4-8 weeks',
+          link: 'https://ziontechgroup.com/it-governance',
+          popular: false
+        }
+      ]
     }
   ];
 
@@ -616,7 +838,7 @@ export default function ITServicesPage() {
                   <category.icon className={`w-8 h-8 ${category.color}`} />
                   <h3 className="text-2xl font-bold text-white">{category.category}</h3>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
                       {service.popular && (

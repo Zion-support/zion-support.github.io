@@ -730,13 +730,433 @@ const AIServicesPage: React.FC = () => {
         'Adaptive memory patterns',
         'Cognitive enhancement'
       ]
+    },
+    {
+      id: 16,
+      name: 'AI Quantum Financial Oracle',
+      description: 'Revolutionary quantum-powered financial modeling and risk assessment for high-frequency trading and portfolio optimization',
+      icon: Brain,
+      features: [
+        'Quantum Risk Modeling',
+        'High-Frequency Trading',
+        'Portfolio Optimization',
+        'Market Prediction',
+        'Risk Assessment',
+        'Algorithmic Trading',
+        'Real-time Analysis',
+        'Quantum Computing Integration'
+      ],
+      category: 'Quantum Finance',
+      popular: true,
+      rating: 4.9,
+      users: '150+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $2,999/mo',
+      capabilities: [
+        '300% faster calculations',
+        '99.9% prediction accuracy',
+        'Quantum advantage',
+        'Real-time risk modeling'
+      ]
+    },
+    {
+      id: 17,
+      name: 'AI Climate Solutions Pro',
+      description: 'Advanced climate modeling and environmental impact analysis with carbon footprint optimization and sustainability planning',
+      icon: Globe,
+      features: [
+        'Climate Modeling',
+        'Carbon Footprint Analysis',
+        'Sustainability Planning',
+        'Environmental Impact Assessment',
+        'Renewable Energy Optimization',
+        'Emission Tracking',
+        'Green Technology Integration',
+        'Compliance Monitoring'
+      ],
+      category: 'Climate Tech',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        '50% carbon footprint reduction',
+        'Real-time environmental monitoring',
+        'Sustainability optimization',
+        'Climate risk assessment'
+      ]
+    },
+    {
+      id: 18,
+      name: 'AI Space Technology Pro',
+      description: 'Cutting-edge AI solutions for space exploration, satellite management, and space mission optimization',
+      icon: Rocket,
+      features: [
+        'Satellite Management',
+        'Mission Planning',
+        'Space Weather Prediction',
+        'Orbital Mechanics',
+        'Space Debris Tracking',
+        'Communication Optimization',
+        'Navigation Systems',
+        'Space Mission Analytics'
+      ],
+      category: 'Space Tech',
+      popular: false,
+      rating: 4.9,
+      users: '50+',
+      color: 'from-indigo-500 to-blue-600',
+      pricing: 'Starting at $4,999/mo',
+      capabilities: [
+        '99.9% mission success rate',
+        'Real-time space monitoring',
+        'Advanced orbital calculations',
+        'Space debris mitigation'
+      ]
+    },
+    {
+      id: 19,
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI-powered drug discovery platform with molecular modeling, clinical trial optimization, and personalized medicine',
+      icon: Stethoscope,
+      features: [
+        'Molecular Modeling',
+        'Drug Design',
+        'Clinical Trial Optimization',
+        'Personalized Medicine',
+        'Side Effect Prediction',
+        'Drug Interaction Analysis',
+        'Biomarker Discovery',
+        'Regulatory Compliance'
+      ],
+      category: 'Pharmaceutical AI',
+      popular: true,
+      rating: 4.9,
+      users: '200+',
+      color: 'from-red-500 to-pink-600',
+      pricing: 'Starting at $3,999/mo',
+      capabilities: [
+        '70% faster drug discovery',
+        '90% accuracy in predictions',
+        'Personalized treatment plans',
+        'Reduced clinical trial costs'
+      ]
+    },
+    {
+      id: 20,
+      name: 'AI Holographic Workspace',
+      description: 'Immersive 3D workspace with AI-powered collaboration tools and virtual reality integration',
+      icon: Globe,
+      features: [
+        '3D Holographic Interface',
+        'Virtual Collaboration',
+        'AI-Powered Gestures',
+        'Spatial Computing',
+        'Mixed Reality Integration',
+        'Real-time Translation',
+        'Virtual Whiteboarding',
+        'Immersive Presentations'
+      ],
+      category: 'Immersive Technology',
+      popular: false,
+      rating: 4.7,
+      users: '400+',
+      color: 'from-emerald-500 to-teal-600',
+      pricing: 'Starting at $1,299/mo',
+      capabilities: [
+        'Immersive collaboration',
+        '3D data visualization',
+        'Virtual presence',
+        'Next-gen workspace'
+      ]
+    },
+    {
+      id: 21,
+      name: 'AI Fashion Design Studio',
+      description: 'AI-powered fashion design with trend analysis, virtual try-on, and sustainable fashion recommendations',
+      icon: FileText,
+      features: [
+        'Trend Analysis',
+        'Virtual Try-On',
+        'Sustainable Fashion AI',
+        'Color Palette Generation',
+        'Pattern Recognition',
+        'Size Optimization',
+        'Fashion Forecasting',
+        'Eco-friendly Materials'
+      ],
+      category: 'Fashion Tech',
+      popular: true,
+      rating: 4.6,
+      users: '1,500+',
+      color: 'from-pink-500 to-rose-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        'Trend prediction accuracy',
+        'Virtual fitting technology',
+        'Sustainable design optimization',
+        'Personalized fashion recommendations'
+      ]
+    },
+    {
+      id: 22,
+      name: 'AI Music Composition Suite',
+      description: 'AI-powered music creation with composition, arrangement, and production capabilities',
+      icon: FileText,
+      features: [
+        'AI Composition',
+        'Genre Adaptation',
+        'Lyric Generation',
+        'Instrument Arrangement',
+        'Mood-based Creation',
+        'Collaborative Composition',
+        'Mastering & Mixing',
+        'Copyright Protection'
+      ],
+      category: 'Creative AI',
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      color: 'from-yellow-500 to-orange-600',
+      pricing: 'Starting at $199/mo',
+      capabilities: [
+        'Professional-quality compositions',
+        'Multi-genre versatility',
+        'Collaborative AI creation',
+        'Copyright-safe generation'
+      ]
+    },
+    {
+      id: 23,
+      name: 'AI Energy Management System',
+      description: 'Smart energy optimization with AI-powered grid management and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Smart Grid Management',
+        'Renewable Energy Optimization',
+        'Demand Response',
+        'Energy Storage AI',
+        'Carbon Footprint Tracking',
+        'Predictive Maintenance',
+        'Cost Optimization',
+        'Grid Stability'
+      ],
+      category: 'Energy Tech',
+      popular: false,
+      rating: 4.8,
+      users: '600+',
+      color: 'from-amber-500 to-yellow-600',
+      pricing: 'Starting at $799/mo',
+      capabilities: [
+        '30% energy cost reduction',
+        'Grid stability optimization',
+        'Renewable energy integration',
+        'Predictive energy management'
+      ]
+    },
+    {
+      id: 24,
+      name: 'AI Autonomous Systems Platform',
+      description: 'AI-powered autonomous vehicle and drone management with real-time decision making',
+      icon: Settings,
+      features: [
+        'Autonomous Vehicle AI',
+        'Drone Fleet Management',
+        'Real-time Decision Making',
+        'Path Optimization',
+        'Collision Avoidance',
+        'Weather Adaptation',
+        'Fleet Coordination',
+        'Safety Monitoring'
+      ],
+      category: 'Autonomous Systems',
+      popular: true,
+      rating: 4.9,
+      users: '300+',
+      color: 'from-slate-500 to-gray-600',
+      pricing: 'Starting at $1,999/mo',
+      capabilities: [
+        '99.9% safety record',
+        'Real-time autonomous decisions',
+        'Fleet optimization',
+        'Weather-adaptive navigation'
+      ]
+    },
+    {
+      id: 25,
+      name: 'AI Blockchain Solutions',
+      description: 'AI-powered blockchain technology with smart contracts, DeFi optimization, and crypto analytics',
+      icon: Shield,
+      features: [
+        'Smart Contract AI',
+        'DeFi Optimization',
+        'Crypto Analytics',
+        'Blockchain Security',
+        'Token Economics',
+        'Yield Farming AI',
+        'Risk Assessment',
+        'Regulatory Compliance'
+      ],
+      category: 'Blockchain AI',
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      color: 'from-violet-500 to-purple-600',
+      pricing: 'Starting at $599/mo',
+      capabilities: [
+        'Automated DeFi strategies',
+        'Smart contract optimization',
+        'Crypto market analysis',
+        'Blockchain security enhancement'
+      ]
+    },
+    {
+      id: 26,
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and automated agricultural management',
+      icon: Globe,
+      features: [
+        'Crop Monitoring',
+        'Yield Prediction',
+        'Soil Analysis',
+        'Weather Integration',
+        'Pest Detection',
+        'Irrigation Optimization',
+        'Harvest Planning',
+        'Sustainability Tracking'
+      ],
+      category: 'AgTech',
+      popular: true,
+      rating: 4.7,
+      users: '800+',
+      color: 'from-green-500 to-emerald-600',
+      pricing: 'Starting at $399/mo',
+      capabilities: [
+        '25% yield increase',
+        '30% water savings',
+        'Pest detection accuracy',
+        'Sustainable farming practices'
+      ]
+    },
+    {
+      id: 27,
+      name: 'AI Supply Chain Optimization Pro',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation',
+      icon: Truck,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Logistics Automation',
+        'Supplier Management',
+        'Quality Control',
+        'Cost Optimization',
+        'Risk Assessment',
+        'Performance Analytics'
+      ],
+      category: 'Supply Chain',
+      popular: true,
+      rating: 4.6,
+      users: '1,200+',
+      color: 'from-amber-500 to-orange-600',
+      pricing: 'Starting at $499/mo',
+      capabilities: [
+        '20% cost reduction',
+        '30% inventory optimization',
+        'Real-time tracking',
+        'Predictive analytics'
+      ]
+    },
+    {
+      id: 28,
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced fraud detection and financial crime prevention with real-time monitoring and risk assessment',
+      icon: Shield,
+      features: [
+        'Real-time Fraud Detection',
+        'Money Laundering Prevention',
+        'Transaction Monitoring',
+        'Risk Assessment',
+        'Compliance Reporting',
+        'Pattern Recognition',
+        'Alert Management',
+        'Regulatory Compliance'
+      ],
+      category: 'Financial Security',
+      popular: true,
+      rating: 4.9,
+      users: '1,100+',
+      color: 'from-red-500 to-orange-600',
+      pricing: 'Starting at $899/mo',
+      capabilities: [
+        '99.9% fraud detection accuracy',
+        'Real-time monitoring',
+        'Compliance automation',
+        'Risk mitigation'
+      ]
+    },
+    {
+      id: 29,
+      name: 'AI Energy Grid Management Pro',
+      description: 'Smart energy grid management with AI-powered optimization, load balancing, and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Grid Optimization',
+        'Load Balancing',
+        'Renewable Integration',
+        'Demand Response',
+        'Energy Storage',
+        'Predictive Maintenance',
+        'Cost Optimization',
+        'Grid Stability'
+      ],
+      category: 'Energy Management',
+      popular: false,
+      rating: 4.8,
+      users: '300+',
+      color: 'from-yellow-500 to-amber-600',
+      pricing: 'Starting at $1,499/mo',
+      capabilities: [
+        '40% energy efficiency',
+        'Grid stability optimization',
+        'Renewable energy integration',
+        'Predictive maintenance'
+      ]
+    },
+    {
+      id: 30,
+      name: 'AI 3D Generation Studio',
+      description: 'AI-powered 3D model generation, animation, and virtual environment creation for gaming and VR applications',
+      icon: FileText,
+      features: [
+        '3D Model Generation',
+        'Animation Creation',
+        'Virtual Environments',
+        'Texture Generation',
+        'Rigging Automation',
+        'Rendering Optimization',
+        'VR Integration',
+        'Game Asset Creation'
+      ],
+      category: '3D Technology',
+      popular: true,
+      rating: 4.7,
+      users: '1,200+',
+      color: 'from-purple-500 to-pink-600',
+      pricing: 'Starting at $299/mo',
+      capabilities: [
+        '10x faster 3D creation',
+        'Professional quality output',
+        'VR-ready assets',
+        'Automated animation'
+      ]
     }
   ];
 
 <<<<<<< HEAD
   const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI'];
 =======
-  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI'];
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Finance', 'Climate Tech', 'Space Tech', 'Pharmaceutical AI', 'Cognitive AI', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'AgTech', 'Financial Security', 'Energy Management', '3D Technology'];
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
 
   if (!isLoaded) {
@@ -777,7 +1197,7 @@ const AIServicesPage: React.FC = () => {
 
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
           {services.map((service) => (
             <div
               key={service.id}

@@ -29,14 +29,7 @@ import {
   Palette
 } from 'lucide-react';
 
-const MicroSAASPage: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    setIsLoaded(true);
-  }, []);
-
-  const microSAASServices = [
+const microSAASServices = [
     // Productivity & Project Management
     { 
       name: 'AI Project Manager Pro', 
@@ -692,11 +685,356 @@ const MicroSAASPage: React.FC = () => {
       trial: '14-day free trial',
       link: 'https://ziontechgroup.com/ai-social-media-scheduler',
       capabilities: ['Optimal posting times', 'Content recommendations', 'Multi-platform management', 'Engagement analytics']
+    },
+
+    // New Innovative Micro SAAS Services
+    { 
+      name: 'AI Contract Analyzer Pro', 
+      href: '/ai-contract-analyzer', 
+      icon: FileText, 
+      category: 'Legal Tech', 
+      price: '$199/mo',
+      description: 'AI-powered contract analysis with risk assessment, clause identification, and automated contract review',
+      features: ['Risk Assessment', 'Clause Identification', 'Automated Review', 'Compliance Checking', 'Contract Comparison', 'Renewal Alerts', 'Legal Templates', 'Team Collaboration'],
+      popular: true,
+      rating: 4.8,
+      users: '1,800+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-contract-analyzer',
+      capabilities: ['95% accuracy in risk detection', '80% faster contract review', 'Automated compliance checking', 'Smart contract templates']
+    },
+    { 
+      name: 'AI Inventory Optimizer Pro', 
+      href: '/ai-inventory-optimizer', 
+      icon: BarChart, 
+      category: 'Supply Chain', 
+      price: '$299/mo',
+      description: 'Intelligent inventory management with demand forecasting, automated reordering, and cost optimization',
+      features: ['Demand Forecasting', 'Automated Reordering', 'Cost Optimization', 'Supplier Management', 'Multi-location Support', 'Real-time Analytics', 'Seasonal Adjustments', 'Waste Reduction'],
+      popular: true,
+      rating: 4.7,
+      users: '2,300+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-inventory-optimizer',
+      capabilities: ['30% inventory reduction', '25% cost savings', '99% stock availability', 'Automated supplier management']
+    },
+    { 
+      name: 'AI Customer Feedback Analyzer', 
+      href: '/ai-customer-feedback-analyzer', 
+      icon: MessageSquare, 
+      category: 'Analytics', 
+      price: '$149/mo',
+      description: 'Advanced sentiment analysis and customer feedback processing with actionable insights and trend identification',
+      features: ['Sentiment Analysis', 'Trend Identification', 'Actionable Insights', 'Multi-channel Support', 'Real-time Processing', 'Custom Dashboards', 'Alert System', 'ROI Tracking'],
+      popular: true,
+      rating: 4.9,
+      users: '3,600+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-customer-feedback-analyzer',
+      capabilities: ['95% sentiment accuracy', 'Real-time feedback processing', 'Actionable insights generation', 'Multi-channel integration']
+    },
+    { 
+      name: 'AI Meeting Scheduler Pro', 
+      href: '/ai-meeting-scheduler', 
+      icon: Calendar, 
+      category: 'Productivity', 
+      price: '$79/mo',
+      description: 'Smart meeting scheduling with time zone optimization, conflict resolution, and automated follow-ups',
+      features: ['Time Zone Optimization', 'Conflict Resolution', 'Automated Follow-ups', 'Meeting Templates', 'Room Booking', 'Attendee Preferences', 'Recurring Meetings', 'Integration Hub'],
+      popular: true,
+      rating: 4.6,
+      users: '2,800+',
+      trial: '7-day free trial',
+      link: 'https://ziontechgroup.com/ai-meeting-scheduler',
+      capabilities: ['90% reduction in scheduling conflicts', 'Multi-timezone optimization', 'Automated follow-up emails', 'Smart room allocation']
+    },
+    { 
+      name: 'AI Email Signature Manager Pro', 
+      href: '/ai-email-signature-manager', 
+      icon: Mail, 
+      category: 'Email Tools', 
+      price: '$39/mo',
+      description: 'Professional email signature management with AI-powered design suggestions and team-wide deployment',
+      features: ['Signature Templates', 'AI Design Suggestions', 'Team Management', 'Brand Consistency', 'Mobile Optimization', 'Analytics Tracking', 'Easy Deployment', 'Custom Fields'],
+      popular: false,
+      rating: 4.6,
+      users: '1,400+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-email-signature-manager',
+      capabilities: ['Professional signatures', 'Brand consistency', 'Team-wide deployment', 'Mobile optimization']
+    },
+    { 
+      name: 'AI Password Generator Pro', 
+      href: '/ai-password-generator', 
+      icon: Lock, 
+      category: 'Security', 
+      price: '$29/mo',
+      description: 'Advanced password generator with security analysis, breach monitoring, and secure storage',
+      features: ['Smart Password Generation', 'Security Analysis', 'Breach Monitoring', 'Secure Storage', 'Multi-device Sync', 'Team Sharing', '2FA Integration', 'Password History'],
+      popular: true,
+      rating: 4.8,
+      users: '6,800+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-password-generator',
+      capabilities: ['Military-grade encryption', 'Real-time breach monitoring', 'Cross-platform sync', 'Team password sharing']
+    },
+    { 
+      name: 'AI Logo Designer Pro', 
+      href: '/ai-logo-designer', 
+      icon: Palette, 
+      category: 'Design', 
+      price: '$79/mo',
+      description: 'AI-powered logo design with brand analysis, multiple variations, and professional quality output',
+      features: ['AI Logo Generation', 'Brand Analysis', 'Multiple Variations', 'High-res Export', 'Vector Format', 'Brand Guidelines', 'Color Palette', 'Font Suggestions'],
+      popular: true,
+      rating: 4.7,
+      users: '3,600+',
+      trial: '7-day free trial',
+      link: 'https://ziontechgroup.com/ai-logo-designer',
+      capabilities: ['Unlimited logo variations', 'Professional quality', 'Brand consistency', 'Multiple file formats']
+    },
+    { 
+      name: 'AI Invoice Designer Pro', 
+      href: '/ai-invoice-designer', 
+      icon: FileText, 
+      category: 'Business', 
+      price: '$59/mo',
+      description: 'Professional invoice design with AI-powered templates, automated calculations, and payment tracking',
+      features: ['AI Template Generation', 'Auto Calculations', 'Payment Tracking', 'Tax Integration', 'Client Portal', 'Recurring Invoices', 'Multi-currency', 'Analytics Dashboard'],
+      popular: true,
+      rating: 4.8,
+      users: '2,300+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-invoice-designer',
+      capabilities: ['Professional templates', 'Auto calculations', 'Payment tracking', 'Multi-currency support']
+    },
+    { 
+      name: 'AI Voice Assistant Pro', 
+      href: '/ai-voice-assistant', 
+      icon: Brain, 
+      category: 'AI Tools', 
+      price: '$149/mo',
+      description: 'Advanced voice AI assistant with natural language processing, multi-language support, and custom voice training',
+      features: ['Natural Language Processing', 'Multi-language Support', 'Custom Voice Training', 'Voice Commands', 'Text-to-Speech', 'Speech Recognition', 'Voice Analytics', 'Integration APIs'],
+      popular: true,
+      rating: 4.8,
+      users: '3,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-voice-assistant',
+      capabilities: ['95% voice recognition accuracy', 'Support for 50+ languages', 'Real-time voice processing', 'Custom voice cloning']
+    },
+    { 
+      name: 'AI Document Scanner Pro', 
+      href: '/ai-document-scanner', 
+      icon: FileText, 
+      category: 'Document Management', 
+      price: '$79/mo',
+      description: 'Intelligent document scanning with OCR, data extraction, and automated organization. Perfect for businesses handling large volumes of documents.',
+      features: ['Advanced OCR Technology', 'Data Extraction', 'Document Classification', 'Auto Organization', 'Search & Retrieval', 'Cloud Storage', 'Batch Processing', 'API Integration'],
+      popular: true,
+      rating: 4.7,
+      users: '2,100+',
+      trial: '10-day free trial',
+      link: 'https://ziontechgroup.com/ai-document-scanner',
+      capabilities: ['99% OCR accuracy', 'Process 1000+ docs/hour', 'Auto data extraction', 'Smart document sorting']
+    },
+    { 
+      name: 'AI Meeting Transcriber Pro', 
+      href: '/ai-meeting-transcriber', 
+      icon: Video, 
+      category: 'Communication', 
+      price: '$99/mo',
+      description: 'Real-time meeting transcription with AI-powered insights, action items extraction, and meeting summaries',
+      features: ['Real-time Transcription', 'Speaker Identification', 'Action Items Extraction', 'Meeting Summaries', 'Search & Playback', 'Multi-language Support', 'Integration with Calendars', 'Analytics Dashboard'],
+      popular: true,
+      rating: 4.9,
+      users: '4,500+',
+      trial: '7-day free trial',
+      link: 'https://ziontechgroup.com/ai-meeting-transcriber',
+      capabilities: ['98% transcription accuracy', 'Real-time processing', 'Auto action item detection', 'Meeting insights & analytics']
+    },
+    { 
+      name: 'AI Website Builder Pro', 
+      href: '/ai-website-builder', 
+      icon: Globe, 
+      category: 'Web Development', 
+      price: '$199/mo',
+      description: 'AI-powered website builder with drag-and-drop interface, automatic SEO optimization, and responsive design',
+      features: ['Drag & Drop Builder', 'AI Design Suggestions', 'Auto SEO Optimization', 'Responsive Design', 'E-commerce Integration', 'Analytics Dashboard', 'Custom Domain', 'SSL Certificate'],
+      popular: true,
+      rating: 4.8,
+      users: '5,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-website-builder',
+      capabilities: ['Build websites in minutes', 'Auto SEO optimization', 'Mobile-first design', 'E-commerce ready']
+    },
+    { 
+      name: 'AI Data Visualizer Pro', 
+      href: '/ai-data-visualizer', 
+      icon: BarChart, 
+      category: 'Analytics', 
+      price: '$129/mo',
+      description: 'Intelligent data visualization with automatic chart generation, interactive dashboards, and AI-powered insights',
+      features: ['Auto Chart Generation', 'Interactive Dashboards', 'AI Insights', 'Real-time Data', 'Custom Visualizations', 'Export Options', 'Collaboration Tools', 'API Integration'],
+      popular: true,
+      rating: 4.7,
+      users: '2,800+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-data-visualizer',
+      capabilities: ['Auto chart recommendations', 'Interactive dashboards', 'AI-powered insights', 'Real-time data updates']
+    },
+    { 
+      name: 'AI Task Automation Pro', 
+      href: '/ai-task-automation', 
+      icon: Zap, 
+      category: 'Productivity', 
+      price: '$179/mo',
+      description: 'Intelligent task automation with AI-powered workflow creation, smart triggers, and performance optimization',
+      features: ['AI Workflow Creation', 'Smart Triggers', 'Performance Optimization', 'Integration Hub', 'Custom Actions', 'Error Handling', 'Analytics Dashboard', 'Team Collaboration'],
+      popular: true,
+      rating: 4.8,
+      users: '2,900+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-task-automation',
+      capabilities: ['90% task automation', 'Smart workflow creation', 'Error-free execution', 'Performance optimization']
+    },
+    { 
+      name: 'AI Sales Predictor Pro', 
+      href: '/ai-sales-predictor', 
+      icon: TrendingUp, 
+      category: 'Sales', 
+      price: '$249/mo',
+      description: 'Advanced sales forecasting with AI-powered predictions, lead scoring, and revenue optimization',
+      features: ['Sales Forecasting', 'Lead Scoring', 'Revenue Optimization', 'Pipeline Analysis', 'Customer Lifetime Value', 'Churn Prediction', 'Market Analysis', 'ROI Tracking'],
+      popular: true,
+      rating: 4.9,
+      users: '1,700+',
+      trial: '30-day free trial',
+      link: 'https://ziontechgroup.com/ai-sales-predictor',
+      capabilities: ['95% forecast accuracy', 'Automated lead scoring', 'Revenue optimization', 'Churn prediction']
+    },
+    { 
+      name: 'AI Employee Performance Tracker', 
+      href: '/ai-employee-performance-tracker', 
+      icon: Users, 
+      category: 'HR', 
+      price: '$199/mo',
+      description: 'AI-powered employee performance tracking with goal setting, progress monitoring, and performance insights',
+      features: ['Goal Setting', 'Progress Monitoring', 'Performance Insights', 'Team Analytics', 'Feedback System', 'Skill Assessment', 'Career Development', 'Performance Reports'],
+      popular: true,
+      rating: 4.6,
+      users: '1,500+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-employee-performance-tracker',
+      capabilities: ['Automated performance tracking', 'Goal achievement insights', 'Team performance analytics', 'Career development recommendations']
+    },
+    { 
+      name: 'AI Customer Segmentation Pro', 
+      href: '/ai-customer-segmentation', 
+      icon: Target, 
+      category: 'Marketing', 
+      price: '$169/mo',
+      description: 'Intelligent customer segmentation with behavioral analysis, persona creation, and targeted marketing strategies',
+      features: ['Behavioral Analysis', 'Persona Creation', 'Segmentation Rules', 'Targeted Campaigns', 'Customer Journey Mapping', 'Lifetime Value Analysis', 'Churn Prediction', 'ROI Optimization'],
+      popular: true,
+      rating: 4.7,
+      users: '2,200+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-customer-segmentation',
+      capabilities: ['Automated segmentation', 'Behavioral insights', 'Targeted marketing', 'ROI optimization']
+    },
+    { 
+      name: 'AI A/B Testing Optimizer', 
+      href: '/ai-ab-testing-optimizer', 
+      icon: BarChart, 
+      category: 'Marketing', 
+      price: '$139/mo',
+      description: 'AI-powered A/B testing with automated test creation, statistical analysis, and optimization recommendations',
+      features: ['Automated Test Creation', 'Statistical Analysis', 'Optimization Recommendations', 'Multi-variate Testing', 'Real-time Results', 'Conversion Tracking', 'Segmentation Testing', 'Performance Reports'],
+      popular: true,
+      rating: 4.8,
+      users: '1,900+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-ab-testing-optimizer',
+      capabilities: ['Automated test creation', 'Statistical significance', 'Optimization recommendations', 'Multi-variate testing']
+    },
+    { 
+      name: 'AI Social Listening Pro', 
+      href: '/ai-social-listening', 
+      icon: MessageSquare, 
+      category: 'Social Media', 
+      price: '$189/mo',
+      description: 'Advanced social media monitoring with sentiment analysis, brand mention tracking, and competitor analysis',
+      features: ['Brand Mention Tracking', 'Sentiment Analysis', 'Competitor Analysis', 'Trend Identification', 'Crisis Management', 'Influencer Tracking', 'ROI Measurement', 'Custom Alerts'],
+      popular: true,
+      rating: 4.7,
+      users: '2,600+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-social-listening',
+      capabilities: ['Real-time monitoring', 'Sentiment analysis', 'Competitor insights', 'Crisis detection']
+    },
+    { 
+      name: 'AI Content Calendar Pro', 
+      href: '/ai-content-calendar', 
+      icon: Calendar, 
+      category: 'Content', 
+      price: '$99/mo',
+      description: 'Intelligent content planning with AI-powered suggestions, optimal timing, and performance tracking',
+      features: ['Content Suggestions', 'Optimal Timing', 'Performance Tracking', 'Multi-platform Planning', 'Content Templates', 'Team Collaboration', 'Analytics Dashboard', 'ROI Tracking'],
+      popular: true,
+      rating: 4.6,
+      users: '3,100+',
+      trial: '14-day free trial',
+      link: 'https://ziontechgroup.com/ai-content-calendar',
+      capabilities: ['AI content suggestions', 'Optimal posting times', 'Performance tracking', 'Multi-platform planning']
+    },
+    { 
+      name: 'AI Customer Support Analytics', 
+      href: '/ai-customer-support-analytics', 
+      icon: MessageSquare, 
+      category: 'Customer Service', 
+      price: '$159/mo',
+      description: 'Advanced customer support analytics with performance metrics, sentiment analysis, and optimization recommendations',
+      features: ['Performance Metrics', 'Sentiment Analysis', 'Response Time Tracking', 'Customer Satisfaction', 'Agent Performance', 'Ticket Classification', 'Trend Analysis', 'Optimization Recommendations'],
+      popular: true,
+      rating: 4.8,
+      users: '2,400+',
+      trial: '21-day free trial',
+      link: 'https://ziontechgroup.com/ai-customer-support-analytics',
+      capabilities: ['Real-time analytics', 'Sentiment tracking', 'Performance optimization', 'Customer satisfaction insights']
     }
   ];
 
-  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media'];
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-c63e
+  const categories = ['All', 'Productivity', 'Content', 'Marketing', 'Business', 'Finance', 'Development', 'Security', 'Healthcare', 'Legal', 'E-commerce', 'HR', 'AI Tools', 'Document Management', 'Communication', 'Web Development', 'Analytics', 'Email Tools', 'Design', 'Social Media', 'Legal Tech', 'Supply Chain', 'Customer Service', 'Sales'];
+
+const MicroSAASPage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const itemsPerPage = 12;
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  const filteredServices = microSAASServices.filter(service => 
+    selectedCategory === 'All' || service.category === selectedCategory
+  );
+
+  const totalPages = Math.ceil(filteredServices.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentServices = filteredServices.slice(startIndex, endIndex);
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   if (!isLoaded) {
     return (
@@ -734,10 +1072,29 @@ const MicroSAASPage: React.FC = () => {
         </div>
       </div>
 
+      {/* Category Filter */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-wrap justify-center gap-2">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => handleCategoryChange(category)}
+              className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                selectedCategory === category
+                  ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                  : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      </div>
+
       {/* Services Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {microSAASServices.map((service) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+          {currentServices.map((service) => (
             <div
               key={service.name}
               className={`futuristic-card hover-lift p-8 ${
@@ -827,6 +1184,43 @@ const MicroSAASPage: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex justify-center items-center space-x-2 mt-12">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className="px-4 py-2 rounded-lg bg-slate-800 text-gray-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            >
+              Previous
+            </button>
+            
+            <div className="flex space-x-2">
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                <button
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    currentPage === page
+                      ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
+                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700 hover:text-cyan-400'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+            
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className="px-4 py-2 rounded-lg bg-slate-800 text-gray-300 hover:bg-slate-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+            >
+              Next
+            </button>
+          </div>
+        )}
       </div>
 
       {/* CTA Section */}
