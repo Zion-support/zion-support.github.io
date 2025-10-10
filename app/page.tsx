@@ -1,10 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock } from 'lucide-react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code, FileText, Calculator, Scale, Package, ShoppingCart, Music, Eye, Factory, GraduationCap } from 'lucide-react';
 import Header from './components/Header';
-
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code } from 'lucide-react';
 
 import Footer from './components/Footer';
 
@@ -503,6 +501,55 @@ const itServices = [
     category: "Blockchain Security",
     icon: Shield,
     link: "https://ziontechgroup.com/smart-contract-security-audit"
+  }
+];
+
+// Testimonials data
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "CTO",
+    company: "TechCorp Inc.",
+    avatar: "SJ",
+    content: "Zion Tech Group transformed our entire infrastructure. The AI solutions they implemented increased our efficiency by 90% and reduced costs by 70%. Outstanding work!"
+  },
+  {
+    name: "Michael Chen",
+    role: "CEO",
+    company: "InnovateLabs",
+    avatar: "MC",
+    content: "Their AI-powered analytics platform gave us insights we never had before. Our decision-making process is now data-driven and incredibly accurate. Highly recommended!"
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "VP of Operations",
+    company: "Global Solutions",
+    avatar: "ER",
+    content: "The automation solutions they provided saved us countless hours of manual work. Our team can now focus on strategic initiatives instead of repetitive tasks."
+  }
+];
+
+// Stats data
+const stats = [
+  {
+    number: "500+",
+    label: "Projects Completed",
+    icon: Rocket
+  },
+  {
+    number: "99.9%",
+    label: "Uptime Guarantee",
+    icon: Shield
+  },
+  {
+    number: "24/7",
+    label: "Support Available",
+    icon: Clock
+  },
+  {
+    number: "50+",
+    label: "Expert Team Members",
+    icon: Users
   }
 ];
 

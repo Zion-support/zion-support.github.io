@@ -4,9 +4,6 @@ Allow: /
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /api/
@@ -16,26 +13,13 @@ Disallow: /static/
 # Allow important pages
 Allow: /about
 Allow: /services
+Allow: /ai-services
+Allow: /it-services
+Allow: /micro-saas
+Allow: /pricing
 Allow: /contact
 Allow: /blog
 Allow: /case-studies
-Allow: /pricing
 
-# Block common bot traps
-Disallow: /*.json$
-Disallow: /*?*
-Disallow: /*#*
-Disallow: /*.pdf$
-
-# Allow social media crawlers
-User-agent: facebookexternalhit
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-User-agent: WhatsApp
-Allow: /
+# Crawl delay
+Crawl-delay: 1

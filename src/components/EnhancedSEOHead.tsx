@@ -5,26 +5,30 @@ interface SEOHeadProps {
   title?: string;
   description?: string;
   keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
+  structuredData?: object;
 }
 
-const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - AI-Powered Enterprise Solutions",
-  description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
-  keywords = "AI solutions, enterprise AI, quantum computing, digital transformation, machine learning, automation, cybersecurity, cloud computing, IT services, Zion Tech Group",
-  image = "https://ziontechgroup.com/og-image.png",
-  url = "https://ziontechgroup.com",
-  type = "website"
+const SEOHead: React.FC<SEOHeadProps> = ({
+  title = "Zion Tech Group - AI-Powered Enterprise Solutions & IT Services",
+  description = "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
+  keywords = "AI solutions, artificial intelligence, quantum computing, IT services, digital transformation, enterprise software, machine learning, automation, cybersecurity, cloud migration",
+  canonicalUrl = "https://ziontechgroup.com",
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData
 }) => {
-  const structuredData = {
+  const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
+    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -59,6 +63,8 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     ]
   };
 
+  const finalStructuredData = structuredData || defaultStructuredData;
+
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -67,73 +73,54 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="format-detection" content="telephone=no,address=no,email=no" />
-      <meta name="color-scheme" content="dark light" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonicalUrl} />
+      
+      {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
-      <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content={url} />
-      <meta property="twitter:title" content={title} />
-      <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={image} />
-      <meta property="twitter:creator" content="@ziontechgroup" />
-      <meta property="twitter:site" content="@ziontechgroup" />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:site" content="@ziontechgroup" />
+      <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Additional SEO Meta Tags */}
+      <meta name="theme-color" content="#00ffff" />
+      <meta name="msapplication-TileColor" content="#00ffff" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       
-      {/* Fonts */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="apple-touch-icon" href="/logo192.png" />
-      <link rel="manifest" href="/manifest.json" />
-      
-      {/* Theme Color */}
-      <meta name="theme-color" content="#0f172a" />
+      {/* DNS Prefetch for performance */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
+        {JSON.stringify(finalStructuredData)}
       </script>
       
-      {/* Additional SEO Scripts */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "Zion Tech Group",
-          "url": "https://ziontechgroup.com/",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        })}
-      </script>
-      
-      {/* Performance Hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+      {/* Additional Performance Hints */}
       <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
     </Helmet>
   );
 };
 
-export default EnhancedSEOHead;
+export default SEOHead;
