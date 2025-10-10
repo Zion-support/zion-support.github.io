@@ -93,14 +93,8 @@ const Footer: React.FC = memo(() => {
               {aiServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-<<<<<<< HEAD
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-=======
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                  >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                     {service.name}
                   </Link>
                 </li>
@@ -125,14 +119,8 @@ const Footer: React.FC = memo(() => {
               {itServices.map((service, index) => (
                 <li key={index}>
                   <Link 
-<<<<<<< HEAD
                     to={service.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm">
-=======
-                    to={service.url} 
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
-                  >
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-6c09
                     {service.name}
                   </Link>
                 </li>
