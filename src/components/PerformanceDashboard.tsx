@@ -18,66 +18,8 @@ const PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) =
     memoryUsage: 0,
     fps: 0
   });
-<<<<<<< HEAD
 fps
       }
-=======
-
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [alerts, setAlerts] = useState<string[]>([]);
-
-  useEffect(() => {
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
-      
-      // Measure render time
-      const renderStart = performance.now();
-      const renderTime = performance.now() - renderStart;
-      
-      // Measure memory usage
-      let memoryUsage = 0;
-      if ('memory' in performance) {
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        memoryUsage = memory?.usedJSHeapSize || 0;
-      }
-      
-      // Measure FPS (simplified)
-      let fps = 60;
-      if ('requestAnimationFrame' in window) {
-        let lastTime = performance.now();
-        let frameCount = 0;
-        
-        const measureFPS = () => {
-          const currentTime = performance.now();
-          frameCount++;
-          
-          if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
-          }
-          
-          if (isMonitoring) {
-            requestAnimationFrame(measureFPS);
-          }
-        };
-        
-        requestAnimationFrame(measureFPS);
-      }
-      
-      const newMetrics: PerformanceMetrics = {
-        loadTime,
-        renderTime,
-        memoryUsage,
-        fps
-      };
-      
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
       setMetrics(newMetrics);
       onMetricsUpdate?.(newMetrics);
       // Check for performance alerts
@@ -196,11 +138,8 @@ fps
   );
 }
 export default PerformanceDashboard;
-<<<<<<< HEAD
   </div>
   </h3>
   </div>
   </PerformanceMetrics>
   </PerformanceProps>
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-1f73
