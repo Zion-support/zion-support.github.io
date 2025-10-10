@@ -5,20 +5,20 @@
  */
 export interface A11yReport {
   errors: A11yError[]
-  warnings: A11yWarning[]
-  score: number;}
+  warnings: A11yWarning[];
+  score: number;
 }
 export interface A11yError {
   type: string
   element: string
   message: string
-  wcag: string;}
+  wcag: string;
 }
 export interface A11yWarning {
   type: string
   element: string
   message: string
-  suggestion: string;}
+  suggestion: string;
 }
 class AccessibilityService {
   // Check color contrast ratio
@@ -38,31 +38,31 @@ class AccessibilityService {
       ratio: Math.round(ratio * 100) / 100,
       passes: {
         normal: ratio >= 4.5, // WCAG AA for normal text
-        large: ratio >= 3, // WCAG AA for large text (18pt+ or 14pt+ bold)}
+        large: ratio >= 3, // WCAG AA for large text (18pt+ or 14pt+ bold)
       }
     }
   }
-  private hexToRgb(hex: string): { r: number; g: number; b: number } {}
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
+  private hexToRgb(hex: string): { r: number; g: number; b: number } {
+    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
     return result
       ? {
           r: parseInt(result[1], 16),
           g: parseInt(result[2], 16),
-          b: parseInt(result[3], 16)}
+          b: parseInt(result[3], 16),
         }
-      : { r: 0, g: 0, b: 0 }
+      : { r: 0, g: 0, b: 0 };
   }
   private getLuminance(rgb: { r: number; g: number; b: number }): number {
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map(val => {
-      const v = val / 255
-      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);}
-    })
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b
+      const v = val / 255;
+      return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
   // Audit page for accessibility issues
   public auditPage(): A11yReport {
-    const errors: A11yError[] = []
-    const warnings: A11yWarning[] = []
+    const errors: A11yError[] = [];
+    const warnings: A11yWarning[] = [];
     // Check for missing alt text on images
     document.querySelectorAll('img').forEach(img => {
       if (!img.hasAttribute('alt')) {
@@ -70,47 +70,47 @@ class AccessibilityService {
           type: 'missing-alt',
           element: img['src'] || 'unknown',
           message: 'Image missing alt attribute',
-          wcag: '1.1.1 (Level A)'}
-        })
+          wcag: '1.1.1 (Level A)'
+        });
       } else if (img.alt === '') {
         warnings.push({
           type: 'empty-alt',
           element: img['src'] || 'unknown',
           message: 'Image has empty alt text',
-          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'}
-        })
+          suggestion: 'Provide descriptive alt text or use alt="" for decorative images'
+        });
       }
-    })
+    });
     // Check for missing form labels
     document.querySelectorAll('input, select, textarea').forEach(input => {
       const hasLabel =
         input.hasAttribute('aria-label') ||
-        input.hasAttribute('aria-labelledby') ||}
-        document.querySelector(`label[for="${input.id}"]`)
+        input.hasAttribute('aria-labelledby') ||
+        document.querySelector(`label[for="${input.id}"]`);
       if (!hasLabel) {
         errors.push({
           type: 'missing-label',
           element: input.tagName.toLowerCase(),
           message: 'Form element missing label',
-          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'}
-        })
+          wcag: '1.3.1 (Level A), 3.3.2 (Level A)'
+        });
       }
-    })
+    });
     // Check for proper heading hierarchy
-    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'))
-    let prevLevel = 0
+    const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
+    let prevLevel = 0;
     headings.forEach(heading => {
-      const level = parseInt(heading.tagName[1])
+      const level = parseInt(heading.tagName[1]);
       if (level > prevLevel + 1) {
         warnings.push({
           type: 'heading-hierarchy',
-          element: heading.tagName.toLowerCase(),`}
+          element: heading.tagName.toLowerCase(),
           message: `Heading level skipped from h${prevLevel} to h${level}`,
           suggestion: 'Maintain proper heading hierarchy'
-        })
+        });
       }
-      prevLevel = level
-    })
+      prevLevel = level;
+    });
     // Check for skip navigation link
     const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]')
     if (!hasSkipLink) {
