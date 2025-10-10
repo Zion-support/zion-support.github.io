@@ -377,6 +377,7 @@ const AI3DGenerationPage: React.FC = React.memo((props) => {
         </div>
       </section>
     </div>
-  )
-}
-export default AI3DGenerationPage
+  );
+};
+
+export default AI3DGenerationPage;

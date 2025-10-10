@@ -85,13 +85,34 @@ export default defineConfig({
     assetsInlineLimit: 2048, // Reduced for better caching
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom'],
-          ui: ['framer-motion', 'lucide-react', '@heroicons/react'],
-          utils: ['clsx', 'tailwind-merge'],
-          charts: ['recharts'],
-          analytics: ['web-vitals'],
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-animations';
+            }
+            if (id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-icons';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            return 'vendor-misc';
+          }
+          // Page chunks
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            return 'pages';
+          }
+          // Component chunks
+          if (id.includes('/components/')) {
+            return 'components';
+          }
         },
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',

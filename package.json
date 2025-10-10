@@ -29,7 +29,7 @@
     "build:clean": "node scripts/optimize-build.js",
     "build:final": "npm run build:clean && npm run build:production",
     "prebuild": "npm run clean",
-    "postbuild": "echo \"Build completed successfully\"",
+    "postbuild": "node scripts/generate-sitemap.js && echo \"Build completed successfully\"",
     "performance:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "performance:check": "pnpm build && pnpm serve & sleep 5 && pnpm performance:audit",
     "optimize": "node scripts/performance-optimizer.cjs",

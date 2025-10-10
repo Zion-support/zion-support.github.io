@@ -74,6 +74,16 @@ const HomePage: React.FC = () => {
     website: 'https://ziontechgroup.com'
   };
 
+  // Micro SAAS services data
+  const microSAASServices = [
+    {
+      title: 'AI Smart Calendar Pro',
+      description: 'Intelligent calendar management with AI-powered scheduling, conflict resolution, and productivity insights. Perfect for busy professionals and teams.',
+      icon: '📅',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Smart scheduling', 'Conflict resolution', 'Productivity analytics', 'Team coordination', 'Meeting optimization', 'Time blocking', 'Deadline tracking', 'Calendar sync'],
+      benefits: ['40% time saved', 'Zero scheduling conflicts', 'Better productivity', 'Team alignment'],
       link: '/ai-smart-calendar',
       popular: true,
       category: 'Productivity',
@@ -87,6 +97,15 @@ const HomePage: React.FC = () => {
       icon: '🎤',
       price: '$149/month',
       originalPrice: '$199/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Voice customization', 'Multi-language support', 'High-quality audio', 'Batch processing', 'API integration', 'Voice analytics'],
+      benefits: ['90% cost reduction', '10x faster production', 'Professional quality', 'Scalable solution'],
+      link: '/ai-voice-cloning',
+      popular: true,
+      category: 'Content Creation',
+      rating: 4.9,
+      users: '2,500+',
+      freeTrial: '14 days'
+    },
     {
       title: 'AI Meeting Assistant Pro',
       description: 'Revolutionary meeting management with real-time transcription, action item extraction, and intelligent follow-ups. Used by Fortune 500 companies.',

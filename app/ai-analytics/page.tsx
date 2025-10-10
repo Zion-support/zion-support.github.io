@@ -307,6 +307,7 @@ const AIAnalyticsPage: React.FC = React.memo((props) => {
 
       <Footer />
     </div>
-  )
-}
-export default AIAnalyticsPage
+  );
+};
+
+export default AIAnalyticsPage;

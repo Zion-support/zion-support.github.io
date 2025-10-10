@@ -1,201 +1,98 @@
 import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
+    // Add keyboard navigation support
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content
+      if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
+        const skipLink = document.querySelector('[data-skip-to-main]') as HTMLElement;
+        if (skipLink) {
+          skipLink.focus();
+        }
+      }
+      
+      // Escape key to close modals/dropdowns
+      if (event.key === 'Escape') {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.getAttribute('aria-expanded') === 'true') {
+          activeElement.click();
+        }
+      }
+    };
+
+    // Add focus management
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      
+      // Add focus ring for keyboard navigation
+      if (target.matches('button, a, input, textarea, select, [tabindex]')) {
+        target.classList.add('focus-visible');
+      }
+    };
+
+    const handleFocusOut = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      target.classList.remove('focus-visible');
+    };
+
+    // Add ARIA live region for announcements
+    const addLiveRegion = () => {
+      const existingLiveRegion = document.getElementById('aria-live-region');
+      if (!existingLiveRegion) {
+        const liveRegion = document.createElement('div');
+        liveRegion.id = 'aria-live-region';
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        liveRegion.className = 'sr-only';
+        document.body.appendChild(liveRegion);
+      }
+    };
+
     // Add skip to main content link
     const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-400 text-slate-900 px-4 py-2 rounded-lg font-semibold z-50';
-      skipLink.style.cssText = `
-        position: absolute;
-        top: -40px;
-        left: 6px;
-        background: #06b6d4;
-        color: #0f172a;
-        padding: 8px;
-        text-decoration: none;
-        border-radius: 4px;
-        z-index: 1000;
-        transition: top 0.3s;
-      `;
-      
-      skipLink.addEventListener('focus', () => {
-        skipLink.style.top = '6px';
-      });
-      
-      skipLink.addEventListener('blur', () => {
-        skipLink.style.top = '-40px';
-      });
-      
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    // Enhance keyboard navigation
-    const enhanceKeyboardNavigation = () => {
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        
-        .focus-visible:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-        
-        .focus\:not-sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: 0;
-          margin: 0;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      // Add aria-label to buttons without text
-      const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      iconButtons.forEach((button, index) => {
-        if (!button.textContent?.trim()) {
-          button.setAttribute('aria-label', `Button ${index + 1}`);
-        }
-      });
-
-      // Add aria-label to links without text
-      const iconLinks = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
-      iconLinks.forEach((link, index) => {
-        if (!link.textContent?.trim()) {
-          link.setAttribute('aria-label', `Link ${index + 1}`);
-        }
-      });
-
-      // Add role to navigation
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-        nav.setAttribute('aria-label', 'Main navigation');
+      const existingSkipLink = document.querySelector('[data-skip-to-main]');
+      if (!existingSkipLink) {
+        const skipLink = document.createElement('a');
+        skipLink.href = '#main-content';
+        skipLink.textContent = 'Skip to main content';
+        skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+        skipLink.setAttribute('data-skip-to-main', 'true');
+        document.body.insertBefore(skipLink, document.body.firstChild);
       }
+    };
 
-      // Add role to main content
+    // Add main content ID
+    const addMainContentId = () => {
       const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-      // Add role to footer
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
+      if (main && !main.id) {
+        main.id = 'main-content';
       }
     };
 
-    // Enhance form accessibility
-    const enhanceFormAccessibility = () => {
-      const forms = document.querySelectorAll('form');
-      forms.forEach((form) => {
-        // Add aria-live region for form validation
-        if (!form.querySelector('[aria-live]')) {
-          const liveRegion = document.createElement('div');
-          liveRegion.setAttribute('aria-live', 'polite');
-          liveRegion.setAttribute('aria-atomic', 'true');
-          liveRegion.className = 'sr-only';
-          liveRegion.id = `form-errors-${Date.now()}`;
-          form.appendChild(liveRegion);
-        }
-
-        // Add required indicators
-        const requiredFields = form.querySelectorAll('input[required], select[required], textarea[required]');
-        requiredFields.forEach((field) => {
-          const label = form.querySelector(`label[for="${field.id}"]`);
-          if (label && !label.querySelector('.required-indicator')) {
-            const indicator = document.createElement('span');
-            indicator.textContent = ' *';
-            indicator.className = 'required-indicator text-red-400';
-            indicator.setAttribute('aria-label', 'required');
-            label.appendChild(indicator);
-          }
-        });
-      });
-    };
-
-    // Add high contrast mode support
-    const addHighContrastSupport = () => {
-      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
-      
-      const handleContrastChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
-          document.documentElement.classList.remove('high-contrast');
-        }
-      };
-
-      mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
-
-      // Add high contrast styles
-      const style = document.createElement('style');
-      style.textContent = `
-        .high-contrast {
-          --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
-        }
-        
-        .high-contrast .bg-slate-900 {
-          background-color: #000000 !important;
-        }
-        
-        .high-contrast .text-white {
-          color: #ffffff !important;
-        }
-        
-        .high-contrast .text-gray-300 {
-          color: #ffffff !important;
-        }
-        
-        .high-contrast .border-cyan-400 {
-          border-color: #00ffff !important;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Initialize accessibility enhancements
+    // Initialize accessibility features
+    addLiveRegion();
     addSkipLink();
-    enhanceKeyboardNavigation();
-    addAriaLabels();
-    enhanceFormAccessibility();
-    addHighContrastSupport();
+    addMainContentId();
 
-    // Cleanup function
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('focusin', handleFocusIn);
+    document.addEventListener('focusout', handleFocusOut);
+
+    // Cleanup
     return () => {
-      // Cleanup any event listeners or observers
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
     };
   }, []);
 
-  return null;
+  return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
