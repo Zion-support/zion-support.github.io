@@ -1,6 +1,5 @@
-'use client';
 import React, { useState } from 'react';
-import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon } from 'lucide-react';
+import { Cloud, Shield, Settings, Database, Smartphone, Lock, BarChart, Users, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Star, Zap, Cpu, HardDrive, Wifi, Server, Code, Globe, Target, TrendingUp, Award, DollarSign, Clock as ClockIcon, Shield as ShieldIcon, Users as UsersIcon, TrendingUp as TrendingUpIcon, MessageSquare, Calendar } from 'lucide-react';
 
 export default function ITServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -20,7 +19,9 @@ export default function ITServicesPage() {
           trial: 'Free consultation',
           timeline: '2-8 weeks',
           link: 'https://ziontechgroup.com/cloud-migration',
-          popular: true
+          popular: true,
+          marketPrice: '$15,000-30,000',
+          capabilities: ['Zero-downtime migration', '99.9% uptime guarantee', 'Cost reduction up to 40%', 'Multi-cloud optimization']
         },
         {
           name: 'IT Infrastructure Design',
@@ -30,7 +31,9 @@ export default function ITServicesPage() {
           trial: 'Free assessment',
           timeline: '3-6 weeks',
           link: 'https://ziontechgroup.com/it-infrastructure',
-          popular: true
+          popular: true,
+          marketPrice: '$25,000-50,000',
+          capabilities: ['Scalable architecture design', 'High availability setup', 'Disaster recovery planning', 'Performance optimization']
         },
         {
           name: 'Database Management & Optimization',
@@ -40,7 +43,9 @@ export default function ITServicesPage() {
           trial: 'Free health check',
           timeline: 'Ongoing',
           link: 'https://ziontechgroup.com/database-management',
-          popular: false
+          popular: false,
+          marketPrice: '$8,000-15,000/month',
+          capabilities: ['99.9% database uptime', '50% performance improvement', 'Automated backup systems', 'Security hardening']
         },
         {
           name: 'Cloud Cost Optimization',
@@ -50,7 +55,9 @@ export default function ITServicesPage() {
           trial: 'Free audit',
           timeline: '2-4 weeks',
           link: 'https://ziontechgroup.com/cloud-optimization',
-          popular: false
+          popular: false,
+          marketPrice: '$5,000-12,000',
+          capabilities: ['40% cost reduction', 'Automated resource scaling', 'Cost monitoring', 'Optimization recommendations']
         }
       ]
     },
@@ -68,7 +75,9 @@ export default function ITServicesPage() {
           trial: 'Free security audit',
           timeline: '2-4 weeks',
           link: 'https://ziontechgroup.com/cybersecurity',
-          popular: true
+          popular: true,
+          marketPrice: '$12,000-25,000/month',
+          capabilities: ['99.9% threat detection rate', '24/7 security monitoring', 'Automated incident response', 'Zero security breaches']
         },
         {
           name: 'Compliance Management Platform',
@@ -78,7 +87,9 @@ export default function ITServicesPage() {
           trial: 'Free compliance check',
           timeline: '4-8 weeks',
           link: 'https://ziontechgroup.com/compliance-management',
-          popular: true
+          popular: true,
+          marketPrice: '$20,000-40,000',
+          capabilities: ['100% compliance rate', 'Automated audit preparation', 'Policy management', 'Regulatory updates']
         },
         {
           name: 'Security Awareness Training',
@@ -88,7 +99,9 @@ export default function ITServicesPage() {
           trial: 'Free training session',
           timeline: '1-2 weeks',
           link: 'https://ziontechgroup.com/security-training',
-          popular: false
+          popular: false,
+          marketPrice: '$5,000-10,000',
+          capabilities: ['90% reduction in security incidents', 'Employee certification', 'Phishing simulation', 'Security awareness']
         },
         {
           name: 'Zero Trust Security Architecture',
@@ -98,7 +111,9 @@ export default function ITServicesPage() {
           trial: 'Free assessment',
           timeline: '6-12 weeks',
           link: 'https://ziontechgroup.com/zero-trust',
-          popular: false
+          popular: false,
+          marketPrice: '$25,000-50,000',
+          capabilities: ['Zero trust implementation', 'Identity verification', 'Micro-segmentation', 'Continuous monitoring']
         }
       ]
     },
@@ -116,7 +131,9 @@ export default function ITServicesPage() {
           trial: 'Free trial month',
           timeline: 'Immediate',
           link: 'https://ziontechgroup.com/it-support',
-          popular: true
+          popular: true,
+          marketPrice: '$3,500-7,000/month',
+          capabilities: ['15-minute response time', '99.9% uptime guarantee', 'Proactive maintenance', '24/7 support']
         },
         {
           name: 'System Administration Services',
@@ -126,7 +143,9 @@ export default function ITServicesPage() {
           trial: 'Free assessment',
           timeline: 'Ongoing',
           link: 'https://ziontechgroup.com/system-administration',
-          popular: true
+          popular: true,
+          marketPrice: '$6,000-12,000/month',
+          capabilities: ['Automated system updates', 'User management', 'Performance optimization', 'Backup management']
         },
         {
           name: 'IT Strategic Consulting',
@@ -136,7 +155,9 @@ export default function ITServicesPage() {
           trial: 'Free consultation',
           timeline: 'As needed',
           link: 'https://ziontechgroup.com/it-consulting',
-          popular: false
+          popular: false,
+          marketPrice: '$300-500/hour',
+          capabilities: ['Strategic IT planning', 'Technology assessment', 'Vendor management', 'Digital transformation']
         },
         {
           name: 'IT Asset Management',
@@ -146,7 +167,9 @@ export default function ITServicesPage() {
           trial: 'Free inventory',
           timeline: '2-4 weeks',
           link: 'https://ziontechgroup.com/asset-management',
-          popular: false
+          popular: false,
+          marketPrice: '$2,500-5,000/month',
+          capabilities: ['Asset tracking', 'Lifecycle management', 'License optimization', 'Cost reduction']
         }
       ]
     },
@@ -164,7 +187,9 @@ export default function ITServicesPage() {
           trial: 'Free consultation',
           timeline: '6-12 weeks',
           link: 'https://ziontechgroup.com/custom-development',
-          popular: true
+          popular: true,
+          marketPrice: '$25,000-100,000',
+          capabilities: ['Custom software development', 'Modern technology stack', 'Quality assurance', 'Integration services']
         },
         {
           name: 'System Integration & APIs',
@@ -174,7 +199,9 @@ export default function ITServicesPage() {
           trial: 'Free integration assessment',
           timeline: '3-8 weeks',
           link: 'https://ziontechgroup.com/system-integration',
-          popular: true
+          popular: true,
+          marketPrice: '$15,000-40,000',
+          capabilities: ['System integration', 'API development', 'Data migration', 'Legacy modernization']
         },
         {
           name: 'DevOps & CI/CD Implementation',
@@ -184,7 +211,9 @@ export default function ITServicesPage() {
           trial: 'Free DevOps audit',
           timeline: '2-6 weeks',
           link: 'https://ziontechgroup.com/devops-cicd',
-          popular: true
+          popular: true,
+          marketPrice: '$10,000-25,000',
+          capabilities: ['Automated deployment', 'Continuous integration', 'Infrastructure as code', 'Monitoring setup']
         },
         {
           name: 'Legacy System Modernization',
@@ -194,7 +223,9 @@ export default function ITServicesPage() {
           trial: 'Free modernization plan',
           timeline: '8-16 weeks',
           link: 'https://ziontechgroup.com/legacy-modernization',
-          popular: false
+          popular: false,
+          marketPrice: '$35,000-80,000',
+          capabilities: ['Legacy system assessment', 'Cloud migration', 'Technology updates', 'Data migration']
         }
       ]
     },
@@ -212,7 +243,9 @@ export default function ITServicesPage() {
           trial: 'Free network assessment',
           timeline: '3-6 weeks',
           link: 'https://ziontechgroup.com/network-design',
-          popular: true
+          popular: true,
+          marketPrice: '$20,000-40,000',
+          capabilities: ['Network design', 'Wireless solutions', 'Security implementation', 'Performance optimization']
         },
         {
           name: 'Disaster Recovery & Backup',
@@ -222,7 +255,9 @@ export default function ITServicesPage() {
           trial: 'Free DR assessment',
           timeline: '2-4 weeks',
           link: 'https://ziontechgroup.com/disaster-recovery',
-          popular: false
+          popular: false,
+          marketPrice: '$8,000-20,000',
+          capabilities: ['Disaster recovery planning', 'Automated backup', 'Business continuity', 'Recovery testing']
         },
         {
           name: 'IT Performance Monitoring',
@@ -232,7 +267,9 @@ export default function ITServicesPage() {
           trial: 'Free monitoring setup',
           timeline: '1-2 weeks',
           link: 'https://ziontechgroup.com/performance-monitoring',
-          popular: false
+          popular: false,
+          marketPrice: '$5,000-12,000/month',
+          capabilities: ['Real-time monitoring', 'Performance metrics', 'Automated alerting', 'Capacity planning']
         }
       ]
     }
@@ -355,14 +392,21 @@ export default function ITServicesPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-400/30 rounded-full px-4 py-2 mb-8">
+              <Cloud className="w-4 h-4 text-cyan-400" />
+              <span className="text-cyan-400 text-sm font-medium">IT Services</span>
+            </div>
+            
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-              IT Services
+              Comprehensive IT Services
             </h1>
+            
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently. 
+              Complete IT solutions that keep your business running smoothly, securely, and efficiently. 
               From infrastructure to security, we've got you covered.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
               <div className="flex items-center space-x-2 bg-cyan-500/20 px-4 py-2 rounded-lg">
                 <Shield className="w-5 h-5 text-cyan-400" />
                 <span className="text-white font-medium">Enterprise Security</span>
@@ -375,6 +419,23 @@ export default function ITServicesPage() {
                 <Settings className="w-5 h-5 text-green-400" />
                 <span className="text-white font-medium">24/7 Support</span>
               </div>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="/contact"
+                className="cyber-button inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 group"
+              >
+                <span>Get Started Today</span>
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="/consultation"
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
+              >
+                <Calendar className="w-5 h-5 mr-2" />
+                Free Consultation
+              </a>
             </div>
           </div>
         </div>
@@ -449,6 +510,10 @@ export default function ITServicesPage() {
                         <div className="flex justify-between items-center">
                           <span className="text-sm text-gray-400">Pricing:</span>
                           <span className="text-sm font-medium text-white">{service.pricing}</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-sm text-gray-400">Market Price:</span>
+                          <span className="text-sm font-medium text-cyan-400">{service.marketPrice}</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-sm text-gray-400">Trial:</span>
@@ -618,6 +683,11 @@ export default function ITServicesPage() {
               <Calendar className="w-5 h-5 mr-2" />
               Free Consultation
             </a>
+          </div>
+          <div className="mt-8 text-sm text-gray-200">
+            <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
+            <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>
+            <p>📍 Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>
       </section>
