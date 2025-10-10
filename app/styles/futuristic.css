@@ -847,6 +847,402 @@ body {
   }
 }
 
+/* Advanced Cyberpunk Effects */
+.cyber-scan-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-scan-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--neon-cyan), transparent);
+  animation: cyberScan 3s linear infinite;
+}
+
+@keyframes cyberScan {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Energy Pulse Effect */
+.energy-pulse {
+  position: relative;
+  animation: energyPulse 2s ease-in-out infinite;
+}
+
+@keyframes energyPulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px var(--neon-cyan), 0 0 10px var(--neon-cyan);
+  }
+  50% { 
+    box-shadow: 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan), 0 0 40px var(--neon-cyan);
+  }
+}
+
+/* Hologram Card Effect */
+.hologram-card {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(0, 255, 255, 0.1) 0%, 
+    rgba(139, 92, 246, 0.1) 25%,
+    rgba(236, 72, 153, 0.1) 50%,
+    rgba(16, 185, 129, 0.1) 75%,
+    rgba(0, 255, 255, 0.1) 100%
+  );
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+  animation: hologramFlicker 4s ease-in-out infinite;
+}
+
+@keyframes hologramFlicker {
+  0%, 100% { 
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+  25% { 
+    opacity: 0.95;
+    transform: scale(1.01);
+    filter: hue-rotate(90deg);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.02);
+    filter: hue-rotate(180deg);
+  }
+  75% { 
+    opacity: 0.95;
+    transform: scale(1.01);
+    filter: hue-rotate(270deg);
+  }
+}
+
+/* Quantum Field Advanced */
+.quantum-field-advanced {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.quantum-field-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.2) 0%, transparent 50%);
+  animation: quantumFieldPulse 3s ease-in-out infinite;
+}
+
+@keyframes quantumFieldPulse {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1) rotate(0deg);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+/* Neural Network Advanced */
+.neural-network-advanced {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.neural-network-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 255, 255, 0.3) 3px, transparent 3px),
+    radial-gradient(circle at 90% 30%, rgba(139, 92, 246, 0.3) 3px, transparent 3px),
+    radial-gradient(circle at 30% 70%, rgba(236, 72, 153, 0.3) 3px, transparent 3px),
+    radial-gradient(circle at 70% 80%, rgba(16, 185, 129, 0.3) 3px, transparent 3px),
+    radial-gradient(circle at 50% 10%, rgba(59, 130, 246, 0.3) 3px, transparent 3px);
+  background-size: 60px 60px, 80px 80px, 100px 100px, 70px 70px, 90px 90px;
+  animation: neuralNetworkPulse 4s ease-in-out infinite;
+}
+
+@keyframes neuralNetworkPulse {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.7; }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: relative;
+  background: var(--bg-primary);
+  color: var(--neon-green);
+  font-family: 'Courier New', monospace;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(16, 185, 129, 0.05) 2px,
+      rgba(16, 185, 129, 0.05) 4px
+    );
+  animation: matrixRain 2s linear infinite;
+}
+
+@keyframes matrixRain {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Cyber Grid Advanced */
+.cyber-grid-advanced {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cyber-grid-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 25px 25px;
+  animation: cyberGridPulse 2s ease-in-out infinite;
+}
+
+@keyframes cyberGridPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+/* Holographic Text */
+.holographic-text {
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #9400d3,
+    #ff0000
+  );
+  background-size: 400% 400%;
+  animation: holographicTextShift 3s ease infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+@keyframes holographicTextShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Cyber Glow Effect */
+.cyber-glow {
+  position: relative;
+  animation: cyberGlow 2s ease-in-out infinite;
+}
+
+@keyframes cyberGlow {
+  0%, 100% { 
+    text-shadow: 
+      0 0 5px var(--neon-cyan),
+      0 0 10px var(--neon-cyan),
+      0 0 15px var(--neon-cyan);
+  }
+  50% { 
+    text-shadow: 
+      0 0 10px var(--neon-cyan),
+      0 0 20px var(--neon-cyan),
+      0 0 30px var(--neon-cyan),
+      0 0 40px var(--neon-cyan);
+  }
+}
+
+/* Quantum Tunnel Advanced */
+.quantum-tunnel-advanced {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.quantum-tunnel-advanced::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    transparent,
+    rgba(139, 92, 246, 0.1),
+    transparent,
+    rgba(236, 72, 153, 0.1),
+    transparent,
+    rgba(16, 185, 129, 0.1),
+    transparent
+  );
+  transform: translate(-50%, -50%);
+  animation: quantumTunnelAdvanced 5s linear infinite;
+}
+
+@keyframes quantumTunnelAdvanced {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Data Stream Advanced */
+.data-stream-advanced {
+  position: relative;
+  overflow: hidden;
+}
+
+.data-stream-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 255, 255, 0.1),
+    rgba(139, 92, 246, 0.1),
+    rgba(236, 72, 153, 0.1),
+    transparent
+  );
+  animation: dataStreamAdvanced 3s linear infinite;
+}
+
+@keyframes dataStreamAdvanced {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Neon Button Advanced */
+.neon-button-advanced {
+  position: relative;
+  background: transparent;
+  border: 2px solid var(--neon-cyan);
+  color: var(--neon-cyan);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all var(--animation-duration) var(--animation-easing);
+  overflow: hidden;
+  animation: neonButtonPulse 2s ease-in-out infinite;
+}
+
+@keyframes neonButtonPulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px var(--neon-cyan);
+  }
+  50% { 
+    box-shadow: 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+  }
+}
+
+.neon-button-advanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-neon);
+  transition: left var(--animation-duration) var(--animation-easing);
+  z-index: -1;
+}
+
+.neon-button-advanced:hover {
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+}
+
+.neon-button-advanced:hover::before {
+  left: 0;
+}
+
+/* Cyber Card Advanced */
+.cyber-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  overflow: hidden;
+  transition: all var(--animation-duration) var(--animation-easing);
+}
+
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(0, 255, 255, 0.05),
+    transparent
+  );
+  animation: cyberCardShimmer 3s ease-in-out infinite;
+}
+
+@keyframes cyberCardShimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+
+.cyber-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(0, 255, 255, 0.3);
+}
+
 /* Performance Optimizations */
 @media (prefers-reduced-motion: reduce) {
   .quantum-field::before,
@@ -857,7 +1253,20 @@ body {
   .quantum-entanglement::after,
   .neon-glow-advanced::before,
   .data-grid::before,
-  .quantum-tunnel::before {
+  .quantum-tunnel::before,
+  .cyber-scan-line::before,
+  .energy-pulse,
+  .hologram-card,
+  .quantum-field-advanced::before,
+  .neural-network-advanced::before,
+  .matrix-rain::before,
+  .cyber-grid-advanced::before,
+  .holographic-text,
+  .cyber-glow,
+  .quantum-tunnel-advanced::before,
+  .data-stream-advanced::before,
+  .neon-button-advanced,
+  .cyber-card::before {
     animation: none;
   }
 }

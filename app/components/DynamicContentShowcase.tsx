@@ -115,11 +115,66 @@ const DynamicContentShowcase: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-white mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300">Real feedback from satisfied customers</p>
+          </div>
+          
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 cyber-card">
+            <div className="text-center">
+              <div className="flex justify-center mb-4">
+                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                ))}
+              </div>
+              <blockquote className="text-xl text-gray-300 mb-6 italic">
+                "{testimonials[currentIndex].content}"
+              </blockquote>
+              <div className="text-white">
+                <p className="font-semibold text-lg">{testimonials[currentIndex].name}</p>
+                <p className="text-cyan-400">{testimonials[currentIndex].role}, {testimonials[currentIndex].company}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Experience the Future?
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              Join thousands of businesses already transforming their operations with our cutting-edge solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+13024640950"
+                className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
+              >
+                <Zap className="w-5 h-5" />
+                <span>Call: (302) 464-0950</span>
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200"
+              >
+                Get Free Consultation
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -111,14 +111,14 @@ const Navigation: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
-            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 energy-pulse">
               <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-white neon-text">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white holographic-text">Zion Tech Group</span>
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium cyber-glow">
               Home
             </Link>
             {/* AI Services Dropdown */}
@@ -132,21 +132,21 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${aiServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {aiServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card hologram-card">
                   <div className="grid grid-cols-1 gap-2">
                     {aiServices.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 group cyber-scan-line"
                         onClick={closeAllMenus}
                       >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-300" />
                         <div>
-                          <div className="text-white font-medium">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
+                          <div className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-300">{service.name}</div>
+                          <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300 ml-auto" />
                       </Link>
                     ))}
                   </div>
@@ -164,21 +164,21 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${itServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {itServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card hologram-card">
                   <div className="grid grid-cols-1 gap-2">
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 group cyber-scan-line"
                         onClick={closeAllMenus}
                       >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-300" />
                         <div>
-                          <div className="text-white font-medium">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
+                          <div className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-300">{service.name}</div>
+                          <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300 ml-auto" />
                       </Link>
                     ))}
                   </div>
@@ -196,21 +196,21 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
               </button>
               {microSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card hologram-card">
                   <div className="grid grid-cols-1 gap-2">
                     {microSaasServices.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 group cyber-scan-line"
                         onClick={closeAllMenus}
                       >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-300" />
                         <div>
-                          <div className="text-white font-medium">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
+                          <div className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-300">{service.name}</div>
+                          <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300 ml-auto" />
                       </Link>
                     ))}
                   </div>
@@ -228,34 +228,34 @@ const Navigation: React.FC = () => {
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-lg shadow-xl border border-cyan-500/20 p-4 cyber-card hologram-card">
                   <div className="grid grid-cols-1 gap-2">
                     {emergingTech.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-all duration-300 group cyber-scan-line"
                         onClick={closeAllMenus}
                       >
-                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
+                        <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 group-hover:scale-110 transition-all duration-300" />
                         <div>
-                          <div className="text-white font-medium">{service.name}</div>
-                          <div className="text-xs text-gray-400">{service.description}</div>
+                          <div className="text-white font-medium group-hover:text-cyan-300 transition-colors duration-300">{service.name}</div>
+                          <div className="text-xs text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{service.description}</div>
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300 ml-auto" />
                       </Link>
                     ))}
                   </div>
                 </div>
               )}
             </div>
-            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/about" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium cyber-glow">
               About
             </Link>
-            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium cyber-glow">
               Contact
             </Link>
-            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+            <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-all duration-300 font-medium cyber-glow">
               Blog
             </Link>
           </div>
@@ -263,14 +263,14 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <a
               href="tel:+13024640950"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-all duration-300 font-medium energy-pulse"
             >
               <Phone className="w-4 h-4" />
               <span className="text-sm">(302) 464-0950</span>
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
+              className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-all duration-300 font-medium energy-pulse"
             >
               <Mail className="w-4 h-4" />
               <span className="text-sm">Email</span>
