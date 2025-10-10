@@ -97,7 +97,6 @@ const AIAPIManagementPage: React.FC = () => {
         <meta name="keywords" content="AI API management, API gateway, API security, microservices, API monitoring, API optimization" />
       </Helmet>
 
-
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -120,11 +119,6 @@ const AIAPIManagementPage: React.FC = () => {
               <button className="border border-orange-400 text-orange-300 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
                 View Demo
               </button>
-            </div>
-          </div>
-        </section>
-
-              </div>
             </div>
           </div>
         </section>
