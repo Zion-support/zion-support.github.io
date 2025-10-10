@@ -6,6 +6,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const PagePage: React.FC = () => {
   const features = [
     {
+<<<<<<< HEAD
       icon: Brain,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -97,6 +98,8 @@ const PagePage: React.FC = () => {
       description: 'Strengthen cybersecurity and compliance measures',
       benefits: ['Enhanced protection', 'Compliance assurance', 'Risk mitigation'],
       icon: Shield,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -112,6 +115,7 @@ const PagePage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -175,10 +179,13 @@ const PagePage: React.FC = () => {
             ></Lin>
               <Target className="w-5 h-5 mr-2" >Free Assessment</Targe>
             </Target>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -289,6 +296,10 @@ const PagePage: React.FC = () => {
                       ))}
                     </ul>
                   </div>
+=======
+          </div>
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -298,6 +309,7 @@ const PagePage: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -331,12 +343,15 @@ const PagePage: React.FC = () => {
                   <TrendingUp className="w-8 h-8 text-white" />
                 <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 mb-4">{benefit.description}</p><div className="text-cyan-400 font-bold text-lg">{benefit.metric}</div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -459,6 +474,8 @@ const PagePage: React.FC = () => {
         </div>
       </div>,
     </div>);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default PagePage;

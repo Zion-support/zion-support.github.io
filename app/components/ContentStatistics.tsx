@@ -1,128 +1,54 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { Users, Award, Clock, Star, Shield, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock } from 'lucide-react';
 
-const $1: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState({)
-    projects: 0;)
-    clients: 0;)
-    uptime: 0;)
-    satisfaction: 0),
-    countries: 0),
-    years: 0,
-  });
-
-  const stats = [
-    {
-      id: 'projects'
-      label: 'Projects Completed'
-      value: 500,
-      suffix: '+'
-      icon: Award,
-const ContentStatistics: React.FC = () => {}
-  const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState({)}
-    projects: 0,
+const ContentStatistics: React.FC = () => {
+  const [counters, setCounters] = useState({
     clients: 0,
-    uptime: 0,
+    projects: 0,
     satisfaction: 0,
-    countries: 0,
     years: 0
   });
 
-  const stats = [
-    {}
-      id: 'projects',
-      label: 'Projects Completed',
-      value: 500,
-      suffix: '+',
-      icon: Award,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      description: 'Successful AI and IT implementations'},
-    {
-      id: 'clients'
-      label: 'Happy Clients'
-      value: 200,
-      suffix: '+'
-      icon: Users,
-    {}
-      id: 'clients',
-      label: 'Happy Clients',
-      value: 200,
-      suffix: '+',
-      icon: Users,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description: 'Satisfied customers worldwide'},
-    {
-      id: 'uptime'
-      label: 'Uptime Guarantee'
-      value: 99.9;
-      suffix: '%'
-      icon: Shield,
-    {}
-      id: 'uptime',
-      label: 'Uptime Guarantee',
-      value: 99.9,
-      suffix: '%',
-      icon: Shield,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      description: 'Reliable service delivery'},
-    {
-      id: 'satisfaction'
-      label: 'Client Satisfaction'
-      value: 98,
-      suffix: '%'
-      icon: Star,
-    {}
-      id: 'satisfaction',
-      label: 'Client Satisfaction',
-      value: 98,
-      suffix: '%',
-      icon: Star,
-      color: 'text-yellow-400',
-      bgColor: 'bg-yellow-500/10',
-      description: 'Customer satisfaction rate'},
-    {
-      id: 'countries'
-      label: 'Countries Served'
-      value: 25,
-      suffix: '+'
-      icon: Globe,
-    {}
-      id: 'countries',
-      label: 'Countries Served',
-      value: 25,
-      suffix: '+',
-      icon: Globe,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      description: 'Global presence and reach'},
-    {
-      id: 'years'
-      label: 'Years Experience'
-      value: 10,
-      suffix: '+'
-      icon: Clock,
-    {}
-      id: 'years',
-      label: 'Years Experience',
-      value: 10,
-      suffix: '+',
-      icon: Clock,
-      color: 'text-orange-400',
-      bgColor: 'bg-orange-500/10',
-      description: 'Industry expertise and knowledge'}
-  ];
-)
-    useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
+  const targetCounters = {
+    clients: 500,
+    projects: 1000,
+    satisfaction: 99,
+    years: 10
+  };
 
+  const statistics = [
+    {
+      icon: Users,
+      value: counters.clients,
+      label: 'Happy Clients',
+      suffix: '+',
+      color: 'text-cyan-400'
+    },
+    {
+      icon: Award,
+      value: counters.projects,
+      label: 'Projects Completed',
+      suffix: '+',
+      color: 'text-purple-400'
+    },
+    {
+      icon: TrendingUp,
+      value: counters.satisfaction,
+      label: 'Client Satisfaction',
+      suffix: '%',
+      color: 'text-green-400'
+    },
+    {
+      icon: Clock,
+      value: counters.years,
+      label: 'Years Experience',
+      suffix: '+',
+      color: 'text-yellow-400'
+    }
+  ];
+
+<<<<<<< HEAD
   useEffect(() => {}
     const observer = new IntersectionObserver()
       ([entry]) => {}
@@ -262,6 +188,8 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const ContentStatisticsPage: React.FC = () => {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   const features = [
     {
       icon: Brain,
@@ -296,7 +224,36 @@ const ContentStatisticsPage: React.FC = () => {
     'Proven track record of success'
   ];
 
+  useEffect(() => {
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const stepDuration = duration / steps;
+
+    const timers = Object.keys(targetCounters).map((key) => {
+      const target = targetCounters[key as keyof typeof targetCounters];
+      const increment = target / steps;
+      let current = 0;
+
+      return setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timers[0]);
+        }
+        setCounters(prev => ({
+          ...prev,
+          [key]: Math.floor(current)
+        }));
+      }, stepDuration);
+    });
+
+    return () => {
+      timers.forEach(timer => clearInterval(timer));
+    };
+  }, []);
+
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentStatistics | Zion Tech Group</title>
@@ -329,82 +286,86 @@ const ContentStatisticsPage: React.FC = () => {
               </button>
             </div>
           </div>
+=======
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
+      <div className="container mx-auto px-4">
+        {/* Statistics Section */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Our <span className="text-cyan-400">Achievements</span>
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Numbers that speak for themselves - our track record of success and client satisfaction.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
-      </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our ContentStatistics?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our contentstatistics solutions deliver unmatched performance, security, and scalability.
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {statistics.map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"
+            >
+              <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-4`} />
+              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+                {stat.value}{stat.suffix}
+              </div>
+              <div className="text-white font-medium">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Features Section */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
+            <p className="text-xl text-gray-300">
+              Our solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+              <div
+                key={index}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
+              >
+                <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />
+                <h4 className="text-xl font-semibold text-white mb-3">{feature.title}</h4>
+                <p className="text-gray-300 text-sm">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our contentstatistics solutions for your business.
+        {/* Benefits Section */}
+        <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold text-white mb-4">Key Benefits</h3>
+            <p className="text-xl text-gray-300">
+              Discover why thousands of businesses trust our solutions.
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+              <div key={index} className="flex items-center text-white">
+                <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                <span className="text-sm">{benefit}</span>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your contentstatistics needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
+          <div className="text-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 mx-auto">
+              <span>Get Started Today</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
           </div>
         </div>
-      </section>
+      </div>
     </div>
+<<<<<<< HEAD
     <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -421,7 +382,9 @@ const ContentStatisticsPage: React.FC = () => {
           ))}
         </div>
     </section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 
-export default ContentStatisticsPage;
+export default ContentStatistics;

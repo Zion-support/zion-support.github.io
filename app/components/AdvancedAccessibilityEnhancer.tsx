@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const AdvancedAccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -141,6 +142,8 @@ const AdvancedAccessibilityEnhancer: React.FC<AdvancedAccessibilityEnhancerProps
       root.classList.add('high-contrast');
     } else {}
       root.classList.remove('high-contrast');
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 

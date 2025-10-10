@@ -1,9 +1,8 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe } from 'lucide-react';
 
-const ContentPromotionBannerPage: React.FC = () => {
+const ContentPromotionBanner: React.FC = () => {
   const features = [
     {
       icon: Brain,
@@ -23,6 +22,7 @@ const ContentPromotionBannerPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses'
       icon: TrendingUp,
       title: '📈 300% Average ROI',
@@ -64,6 +64,9 @@ const $1: React.FC = () => {
       color: "from-green-500 to-emerald-600",
       icon: Zap,
       icon: Zap
+=======
+      description: 'Worldwide deployment with local support and compliance'
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -79,6 +82,7 @@ const $1: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>ContentPromotionBanner | Zion Tech Group</title>
@@ -363,27 +367,60 @@ import { Star, Zap, ArrowRight } from 'lucide-react';
 const ContentPromotionBanner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 border-b border-cyan-400/20 py-4">
+=======
+    <div className="bg-gradient-to-r from-cyan-600 to-purple-600 py-16">
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="flex items-center space-x-4 mb-4 md:mb-0">
-            <div className="flex items-center space-x-2">
-              <Star className="w-5 h-5 text-yellow-400" />
-              <span className="text-white font-semibold">New AI Solutions Available</span>
-            </div>
-            <div className="hidden md:block w-px h-6 bg-gray-400">
-            <div className="flex items-center space-x-2">
-              <Zap className="w-5 h-5 text-cyan-400" />
-              <span className="text-gray-300">300% Average ROI</span>
-            </div>
-          <a
-            href="/services"
-            className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-          >
-            Explore Now <ArrowRight className="w-4 h-4 ml-2" />
-          </a>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            Transform Your Business Today
+          </h2>
+          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+            Join thousands of businesses already using our AI and IT solutions to drive growth and innovation.
+          </p>
         </div>
+<<<<<<< HEAD
+=======
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <feature.icon className="w-12 h-12 text-white mx-auto mb-4" />
+              <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+              <p className="text-white/80 text-sm">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-4">Why Choose Us?</h3>
+              <ul className="space-y-3">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-center text-white">
+                    <CheckCircle className="w-5 h-5 text-white mr-3 flex-shrink-0" />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+              <p className="text-white/90 mb-6">
+                Contact us today for a free consultation and discover how we can help transform your business.
+              </p>
+              <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2 mx-auto">
+                <span>Get Started</span>
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     </div>
   );
 };
 
-export default ContentPromotionBannerPage;
+export default ContentPromotionBanner;

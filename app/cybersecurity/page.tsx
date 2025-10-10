@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -36,6 +37,8 @@ const $1: React.FC = () => {
     'Security Audits',
     'Compliance Management',
     '24/7 Security Operations Center'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   const benefits = [
@@ -49,6 +52,7 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
   const services = [
@@ -69,11 +73,14 @@ const $1: React.FC = () => {
     }
   ];return (
     <>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>Page | Zion Tech Group</title>
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
+<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -172,6 +179,8 @@ const $1: React.FC = () => {
               >
                 View Security Suite
               </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

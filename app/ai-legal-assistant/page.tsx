@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -35,6 +36,8 @@ const $1: React.FC = () => {
     'Case Law Research',
     'Document Review',
     'Legal Writing'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   ];
 
   const benefits = [
@@ -48,6 +51,7 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -157,6 +161,8 @@ const $1: React.FC = () => {
               <a href="tel:+13024640950" className="flex items-center justify-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                 <Phone className="w-5 h-5" />Call +1 302 464 0950;
               </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>

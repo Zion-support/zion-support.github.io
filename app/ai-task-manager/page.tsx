@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -55,6 +56,8 @@ const $1: React.FC = () => {
       title: 'Performance Analytics',
       description: 'Detailed insights into productivity patterns and efficiency improvements.',
       icon: TrendingUp,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -70,6 +73,7 @@ const $1: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Page | Zion Tech Group</title>
@@ -177,6 +181,8 @@ const $1: React.FC = () => {
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-8 hover: border-cyan-400/40 transition-all duration-300">,</div>
                 <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />,
                 <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
@@ -185,6 +191,7 @@ const $1: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -220,6 +227,8 @@ const $1: React.FC = () => {
                 <div className="w-16 h-16 bg-cyan-400/20 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <CheckCircle className="w-8 h-8 text-cyan-400" />
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
@@ -227,6 +236,7 @@ const $1: React.FC = () => {
       </section>
 
       {/* CTA Section */}
+<<<<<<< HEAD
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
@@ -260,6 +270,8 @@ const $1: React.FC = () => {
             <a href="tel:+13024640950" className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
               Call +1 302 464 0950;
             </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

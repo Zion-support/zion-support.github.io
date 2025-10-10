@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 const Header: React.FC = () => {
   return (
     <>
+<<<<<<< HEAD
       <Navigation />
       {/* Spacer to prevent content from going under fixed header */}
       <div className="h-16 lg:h-20" />
@@ -223,6 +224,8 @@ const Header: React.FC = () => {
         )}
       </div>
     </header>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   );
 };
 

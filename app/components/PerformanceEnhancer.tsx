@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PerformanceEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -138,6 +139,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         value: 1),
         custom_parameter_1: error.message),
         custom_parameter_2: error.stack;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -237,6 +240,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -614,6 +618,8 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({,
   }, [enableAnalytics, enableConsoleLogging, performanceMetrics, reportError]);
 
   return null;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default PerformanceEnhancerPage;

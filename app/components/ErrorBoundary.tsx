@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 'use client';
 
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 import React, { Component, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
@@ -57,10 +60,17 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-red-900 via-gray-900 to-red-900 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
             <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-10 h-10 text-red-400" />
+=======
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
             
             <h1 className="text-3xl font-bold text-white mb-4">
@@ -70,7 +80,11 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
             </p>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="bg-red-900/50 rounded-lg p-4 mb-6 text-left">
                 <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>

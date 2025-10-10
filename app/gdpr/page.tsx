@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -93,6 +94,8 @@ const $1: React.FC = () => {
         'Object to processing for research purposes',
         'Object to automated decision-making'
       ]
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -107,6 +110,7 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -159,6 +163,8 @@ const $1: React.FC = () => {
           <div className="text-sm text-gray-400">,
             Last updated: {lastUpdated}</div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 neon-text">GDPR Compliance</h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">We are committed to protecting your privacy and ensuring compliance with the General Data Protection Regulation (GDPR).</p><div className="text-sm text-gray-400">Last updated: {lastUpdated}</section>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>
@@ -175,6 +181,7 @@ const $1: React.FC = () => {
             </p>
           </div>
 
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -206,6 +213,8 @@ const $1: React.FC = () => {
                       </span>
                     ))}
                   </ul>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
@@ -215,6 +224,7 @@ const $1: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -482,6 +492,8 @@ const $1: React.FC = () => {
 ,
       <Footer />,
     </div>);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 };
 
 export default PagePage;

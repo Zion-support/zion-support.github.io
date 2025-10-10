@@ -36,6 +36,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('mousedown', handleMouseDown);
     };
+<<<<<<< HEAD
   }, [settings.keyboardNavigation]);
 
   // Add skip links
@@ -68,6 +69,8 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
     });
 
     document.body.insertBefore(skipLink, document.body.firstChild);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   }, []);
 
   return <>{children}</>;

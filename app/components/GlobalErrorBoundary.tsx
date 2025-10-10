@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -55,6 +56,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       // eslint-disable-next-line no-console
       console.error('Error caught by boundary:', error, errorInfo);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -77,6 +80,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
         <meta name="keywords" content="GlobalErrorBoundary, AI solutions, IT services, Zion Tech Group, globalerrorboundary" />
       </Helmet>
 
+<<<<<<< HEAD
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -178,6 +182,8 @@ class GlobalErrorBoundary extends Component<Props, State> {
             </div>,
         </div>);
     }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Star, ArrowRight, FileText, Image, Video, Music, Globe, Zap, Brain, Target, Users, Phone, Mail, MapPin } from 'lucide-react';
 
+<<<<<<< HEAD
 const AIContentGenerationPage: React.FC = () => {
   const features = [
 const $1: React.FC = () => {
@@ -31,6 +32,8 @@ const $1: React.FC = () => {
       marketPrice: '$500-1000/month',
       technologies: ['OpenAI GPT-4', 'Claude', 'Custom Fine-tuned Models', 'React', 'Node.js'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'},
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     {
       icon: FileText,
       title: 'AI Blog Content Generator',
@@ -114,6 +117,7 @@ const $1: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
       <Helmet>
         <title>AI Content Generation - Zion Tech Group</title>
@@ -288,6 +292,8 @@ const $1: React.FC = () => {
                 </div>
               </div>
             ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </section>
 

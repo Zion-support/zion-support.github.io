@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -29,6 +30,8 @@ const PagePage: React.FC = () => {
 const $1: React.FC = () => {
   const [content, setContent] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
   const benefits = [
     'Advanced AI technology integration',
@@ -41,6 +44,7 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -211,6 +215,8 @@ const $1: React.FC = () => {
             >
               Get Started;
             </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

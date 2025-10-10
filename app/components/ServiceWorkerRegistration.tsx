@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -48,6 +49,8 @@ const ServiceWorkerRegistration: React.FC = () => {}
       navigator.serviceWorker.addEventListener('message', (event) => {}
         if (event.data && event.data.type === 'CACHE_UPDATED') {}
         }
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
 const ServiceWorkerRegistrationPage: React.FC = () => {
   const features = [

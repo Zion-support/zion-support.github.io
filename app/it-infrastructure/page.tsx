@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
 const $1: React.FC = () => {
@@ -11,6 +12,8 @@ const $1: React.FC = () => {
     </>)
 const ITInfrastructurePage: React.FC = () => {
   const services = [
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -51,6 +54,7 @@ const ITInfrastructurePage: React.FC = () => {
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       </Helmet>
+<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -121,11 +125,14 @@ const ITInfrastructurePage: React.FC = () => {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 We provide comprehensive IT infrastructure solutions tailored to your business needs
               </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -178,12 +185,15 @@ const ITInfrastructurePage: React.FC = () => {
                     <div className="text-xl">{stat.label}</div>
                   </div>
                 ))}
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -269,6 +279,8 @@ const ITInfrastructurePage: React.FC = () => {
                 >
                   Call (302) 464-0950
                 </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </div>
             ))}
           </div>

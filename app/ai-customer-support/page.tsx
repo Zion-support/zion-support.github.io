@@ -5,12 +5,15 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { MessageCircle, Bot, Zap, Shield, BarChart, Clock, Users, CheckCircle, Star, ArrowRight, Brain, Target, Activity, TrendingUp, Award, Lock, Database, Cloud, Code, Smartphone, Settings, Search, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Compass, Navigation as NavIcon, PieChart, TrendingDown, Phone, Mail, MapPin } from 'lucide-react';
 
+<<<<<<< HEAD
 const AICustomerSupportPage: React.FC = () => {
   const features = [
     {
 const $1: React.FC = () => {
   const features = [,
     {,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
       icon: Bot,
       title: 'AI-Powered Chatbots',
       description: 'Intelligent chatbots that understand context, handle complex queries, and provide instant responses 24/7.',
@@ -44,6 +47,7 @@ const $1: React.FC = () => {
       icon: Users,
       title: 'Human-AI Collaboration',
       description: 'Seamless handoff between AI and human agents for complex issues requiring human touch.',
+<<<<<<< HEAD
       benefits: ['Best of both worlds', 'Smooth transitions', 'Enhanced efficiency', 'Quality assurance']
       benefits: ['Best of both worlds', 'Smooth transitions', 'Enhanced efficiency']
     }
@@ -94,6 +98,8 @@ const $1: React.FC = () => {
         'SLA guarantee'
       ],
       popular: false,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -110,6 +116,7 @@ const $1: React.FC = () => {
 
   const useCases = [
     {
+<<<<<<< HEAD
       title: 'E-commerce Support',
       description: 'Handle product inquiries, order tracking, and returns with AI assistance',
       icon: '🛒'
@@ -154,6 +161,8 @@ const $1: React.FC = () => {
       icon: Star,
       title: 'Customer Satisfaction',
       description: 'Improve customer satisfaction scores with faster, more accurate responses'
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
     }
   ];
 
@@ -165,6 +174,7 @@ const $1: React.FC = () => {
         <meta name="keywords" content="AI customer support, customer service automation, omnichannel support, AI chatbots, customer experience, support AI" />
       </Helmet>
 
+<<<<<<< HEAD
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
@@ -189,11 +199,14 @@ const $1: React.FC = () => {
           <section className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
               AI Customer Support;</h1>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer support with our AI Customer Support solutions. Intelligent automation, 
               omnichannel communication, and human-AI collaboration for better customer experience.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-teal-500 to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-teal-600 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
@@ -258,6 +271,8 @@ const $1: React.FC = () => {
               {features.map((feature, index) => (</div>
                 <div key={index} className="cyber-card hologram-card p-6 hover: scale-105 transition-all duration-300">,</div>
                   <feature.icon className="w-12 h-12 text-cyan-400 mb-4" />,
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   <ul className="space-y-2">
@@ -274,6 +289,7 @@ const $1: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -338,12 +354,15 @@ const $1: React.FC = () => {
                   >
                     Get Started;
                   </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -375,12 +394,15 @@ const $1: React.FC = () => {
                 <div key={index} className="text-center"></div>
                   <benefit.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
                 </div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -431,6 +453,8 @@ const $1: React.FC = () => {
               >
                 ✉️ Email Us;
               </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </section>

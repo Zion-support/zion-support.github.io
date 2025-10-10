@@ -90,15 +90,19 @@ const AICustomerServicePage: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <>
     <div></div><Helmet>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
       <Helmet>
         <title>AI Customer Service - Zion Tech Group</title>
         <meta name="description" content="Transform your customer service with our AI Customer Service solutions. 24/7 support, multilingual capabilities, and intelligent problem solving for better customer experience." />
         <meta name="keywords" content="AI customer service, chatbot, virtual assistant, customer support automation, multilingual support, AI support" />
       </Helmet>
 
+<<<<<<< HEAD
       <Navigation />
 
       <main className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
@@ -187,11 +191,14 @@ const AICustomerServicePage: React.FC = () => {
           <section className="text-center mb-16">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
               AI Customer Service Solutions</h1>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your customer service with our AI Customer Service solutions. 24/7 support, 
               multilingual capabilities, and intelligent problem solving for better customer experience.
             </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 flex items-center justify-center">
                 Get Started
@@ -215,10 +222,13 @@ const AICustomerServicePage: React.FC = () => {
                 <Mail className="w-5 h-5" />
                 Get Quote
               </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -276,6 +286,8 @@ const AICustomerServicePage: React.FC = () => {
                 </ul>
                 <a href="/contact" className="cyber-button w-full">Get Started</a>
               </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
         {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
@@ -344,6 +356,7 @@ const AICustomerServicePage: React.FC = () => {
                 </button>
               </div>
             </div>
+<<<<<<< HEAD
           </div>
         </section>
           </section>
@@ -445,6 +458,8 @@ const AICustomerServicePage: React.FC = () => {
             </div>
           </section>
         </div>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
       </main>
 
       <Footer />

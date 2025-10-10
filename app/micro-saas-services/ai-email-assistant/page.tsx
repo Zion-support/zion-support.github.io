@@ -3,6 +3,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
+<<<<<<< HEAD
 const PagePage: React.FC = () => {
   const features = [
     {
@@ -31,6 +32,8 @@ const $1: React.FC = () => {
   const [recipient, setRecipient] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
 
   const benefits = [
     'Advanced AI technology integration',
@@ -43,6 +46,7 @@ const $1: React.FC = () => {
     'Proven track record of success'
   ];
 
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -185,12 +189,15 @@ const $1: React.FC = () => {
                 className="cyber-button w-full"
               >
                 Generate with AI;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
               </button>
             </div>
           </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -294,6 +301,8 @@ const $1: React.FC = () => {
             >
               Start Writing;
             </a>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
           </div>
         </div>
       </section>

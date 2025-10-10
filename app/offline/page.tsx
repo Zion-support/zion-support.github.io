@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
@@ -49,6 +50,8 @@ const OfflinePage: React.FC = () => {
         <div className='mb-8'></div>
           <div className='mx-auto w-24 h-24 bg-indigo-100 rounded-full flex items-center justify-center mb-6'></div>
             <svg;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -82,6 +85,7 @@ const OfflinePage: React.FC = () => {
               </button>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -250,6 +254,8 @@ const OfflinePage: React.FC = () => {
               Call +1 302 464 0950;
             </a>
           </p>
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b629
         </div>
       </section>
     </div>
