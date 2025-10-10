@@ -14,8 +14,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
-=======
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -34,7 +32,6 @@ const AiAnalyticsPage: React.FC = () => {const features = [
     },
     {
       icon: Globe,
->>>>>>> cursor/fix-errors-and-merge-to-main-8ef1
       title: 'Real-Time Dashboards',
       description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
       benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
