@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOOptimizerProps {
@@ -8,15 +7,15 @@ interface SEOOptimizerProps {
   keywords?: string[];
   canonicalUrl?: string;
   ogImage?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, unknown></string>})
 }
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
   ogImage = 'https://ziontechgroup.com/og-image.jpg',
-  structuredData
+  structuredData})
 }) => {
   useEffect(() => {
     // Update page title
@@ -37,32 +36,32 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     updateCanonicalUrl(canonicalUrl);
     // Add structured data
     if (structuredData) {
-      addStructuredData(structuredData);
-    }
+      addStructuredData(structuredData)})
+}
     // Add breadcrumb structured data
     addBreadcrumbStructuredData();
     // Add organization structured data
-    addOrganizationStructuredData();
-  }, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
+    addOrganizationStructuredData()})
+}, [title, description, keywords, canonicalUrl, ogImage, structuredData]);
   const updateMetaTag = (name: string, content: string, attribute: string = 'name') => {
     let meta = document.querySelector(`meta[${attribute}="${name}"]`);
     if (!meta) {
       meta = document.createElement('meta');
       meta.setAttribute(attribute, name);
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute('content', content);
-  };
+      document.head.appendChild(meta)})
+}
+    meta.setAttribute('content', content)})
+};
   const updateCanonicalUrl = (url: string) => {
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', url);
-  };
-  const addStructuredData = (data: Record<string, unknown>) => {
+      document.head.appendChild(canonical)})
+}
+    canonical.setAttribute('href', url)})
+};
+  const addStructuredData = (data: Record<string, unknown></string>) => {
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
@@ -70,10 +69,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Remove existing structured data
     const existing = document.getElementById('structured-data');
     if (existing) {
-      existing.remove();
-    }
-    document.head.appendChild(script);
-  };
+      existing.remove()})
+}
+    document.head.appendChild(script)})
+};
   const addBreadcrumbStructuredData = () => {
     const breadcrumbData = {
       '@context': 'https://schema.org',
@@ -83,10 +82,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           '@type': 'ListItem',
           'position': 1,
           'name': 'Home',
-          'item': 'https://ziontechgroup.com'
-        }
-      ]
-    };
+          'item': 'https://ziontechgroup.com'})
+}
+      ]})
+};
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
@@ -94,12 +93,10 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     // Remove existing breadcrumb data
     const existing = document.getElementById('breadcrumb-structured-data');
     if (existing) {
-      existing.remove();
-    }
-    document.head.appendChild(script);
-  };
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
+      existing.remove()})
+}
+    document.head.appendChild(script)})
+};
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -112,10 +109,10 @@ interface SEOOptimizerProps {
   structuredData?: any;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string;
+  twitterCard?: string})
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps></SEOOptimizerProps> = ({
   title,
   description,
   keywords,
@@ -123,15 +120,15 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   structuredData,
   ogImage = '/images/og-image.jpg',
   ogType = 'website',
-  twitterCard = 'summary_large_image'
+  twitterCard = 'summary_large_image'})
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullDescription = description || 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.';
 
   return (
-    <Helmet>
+    <Helmet></Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title></titl>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="author" content="Zion Tech Group" />
@@ -168,13 +165,13 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
+        <script type="application/ld+json"></script>
           {JSON.stringify(structuredData)}
         </script>
       )}
       
       {/* Additional Structured Data for Organization */}
-      <script type="application/ld+json">
+      <script type="application/ld+json"></script>
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
@@ -191,23 +188,23 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
             "addressLocality": "Middletown",
             "addressRegion": "DE",
             "postalCode": "19709",
-            "addressCountry": "US"
-          },
+            "addressCountry": "US"})
+},
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+1-302-464-0950",
             "contactType": "Customer Service",
             "areaServed": "US",
-            "availableLanguage": "en"
-          },
+            "availableLanguage": "en"})
+},
           "sameAs": [
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
-          ]
-        })}
+          ]})
+})}
       </script>
     </Helmet>
-  );
+  )})
 };
 
 export default SEOOptimizer;
