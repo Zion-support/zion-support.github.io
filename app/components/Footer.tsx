@@ -1,9 +1,9 @@
-'use client';
-import React, { memo } from 'react';
-import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+'use client'</h3>
+import React, { memo } from 'react'</h3>
+import Link from 'next/link'</h3>
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react'</h3>
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()</h3>
   const aiServices = [
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
     { name: 'AI Marketing Automation', url: '/ai-marketing', description: 'AI-powered marketing automation' },
@@ -21,7 +21,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI Lead Generation', url: '/ai-lead-generation', description: 'AI-powered lead generation' },
     { name: 'AI Document Processing', url: '/ai-document-processing', description: 'AI document processing' },
     { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation' }
-  ];
+  ]</h3>
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
     { name: 'Cloud Migration', url: '/cloud-migration', description: 'Seamless migration' },
@@ -37,7 +37,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Mobile Development', url: '/mobile-development', description: 'Mobile applications' },
     { name: 'Web Development', url: '/web-development', description: 'Web applications' },
     { name: 'Process Automation', url: '/process-automation', description: 'Workflow automation' }
-  ];
+  ]</h3>
   const microSaasServices = [
     { name: 'Micro SAAS Solutions', url: '/micro-saas', description: '50+ AI-powered tools' },
     { name: 'AI Analytics Dashboard', url: '/ai-analytics-dashboard', description: 'Business intelligence' },
@@ -55,7 +55,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Online Learning Platform', url: '/online-learning-platform', description: 'Education' },
     { name: 'Supply Chain Optimizer', url: '/supply-chain-optimizer', description: 'Manufacturing' },
     { name: 'AI Writing Assistant', url: '/ai-writing-assistant', description: 'Content creation' }
-  ];
+  ]</h3>
   const emergingTech = [
     { name: 'Quantum Computing', url: '/quantum-computing', description: 'Quantum solutions' },
     { name: 'Robotics & Automation', url: '/robotics', description: 'Intelligent robotics' },
@@ -66,7 +66,7 @@ const Footer: React.FC = memo(() => {
     { name: '5G Implementation', url: '/5g-implementation', description: '5G solutions' },
     { name: 'AI 3D Generation', url: '/ai-3d-generation', description: '3D AI solutions' },
     { name: 'Holographic Workspace', url: '/ai-holographic-workspace', description: 'Holographic AI' }
-  ];
+  ]</h3>
   const companyLinks = [
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
@@ -75,7 +75,7 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Partners', url: '/partners' },
     { name: 'Contact', url: '/contact' }
-  ];
+  ]</h3>
   const supportLinks = [
     { name: 'Documentation', url: '/docs' },
     { name: 'API Reference', url: '/api-docs' },
@@ -83,14 +83,14 @@ const Footer: React.FC = memo(() => {
     { name: 'System Status', url: '/status' },
     { name: 'Privacy Policy', url: '/privacy' },
     { name: 'Terms of Service', url: '/terms' }
-  ];
+  ]</h3>
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST',
     emergency: '24/7 Emergency Support Available'
-  };
+  }</h3>
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
@@ -124,8 +124,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Cloud className="w-5 h-5 mr-2" />
-              IT Services;
-  </
+              IT Services
+            </h3>
             <ul className="space-y-2">
               {itServices.slice(0, 6).map((service, index) => (
                 <li key={index}>
@@ -149,8 +149,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Code className="w-5 h-5 mr-2" />
-              Micro SAAS;
-  </
+              Micro SAAS</h3>
+</h3>
             <ul className="space-y-2">
               {microSaasServices.slice(0, 8).map((service, index) => (
                 <li key={index}>
@@ -174,8 +174,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Zap className="w-5 h-5 mr-2" />
-              Emerging Tech;
-  </
+              Emerging Tech</h3>
+</h3>
             <ul className="space-y-2">
               {emergingTech.map((service, index) => (
                 <li key={index}>
@@ -192,8 +192,8 @@ const Footer: React.FC = memo(() => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
               <Users className="w-5 h-5 mr-2" />
-              Company;
-  </
+              Company</h3>
+</h3>
             <ul className="space-y-2 mb-6">
               {companyLinks.map((link, index) => (
                 <li key={index}>
@@ -251,23 +251,23 @@ const Footer: React.FC = memo(() => {
             </div>
             <div className="flex space-x-6">
               <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy;
-  </
+                Privacy Policy</h3>
+</h3>
               <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service;
-  </
+                Terms of Service</h3>
+</h3>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy;
-  </
+                Cookie Policy</h3>
+</h3>
             </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-});
-Footer.displayName = 'Footer';
-export default Footer;
+  )</h3>
+})</h3>
+Footer.displayName = 'Footer'</h3>
+export default Footer</h3>
   </a>
   </a>
   </a>
