@@ -17,7 +17,6 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 // Structured data for SEO - moved to SEOHead component
@@ -37,9 +36,10 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
-=======
-
->>>>>>> cursor/analyze-improve-and-deploy-application-3800
+const AiSocialMediaManagerPage = React.lazy(() => import('./app/ai-social-media-manager/page'));
+const AiEmailMarketingAutomationPage = React.lazy(() => import('./app/ai-email-marketing-automation/page'));
+const AiProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
+const AiCustomerFeedbackAnalyzerPage = React.lazy(() => import('./app/ai-customer-feedback-analyzer/page'));
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   usePerformanceMonitor();
@@ -68,7 +68,25 @@ const App: React.FC = () => {
                         <Suspense fallback={<PageLoader />}>
                           <Routes>
                             <Route path="/" element={<HomePage />} />
-                            {/* Add more routes as needed */}
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/pricing" element={<PricingPage />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/case-studies" element={<CaseStudiesPage />} />
+                            <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/partners" element={<PartnersPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/faq" element={<FAQPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
+                            <Route path="/ai-email-marketing-automation" element={<AiEmailMarketingAutomationPage />} />
+                            <Route path="/ai-project-manager" element={<AiProjectManagerPage />} />
+                            <Route path="/ai-customer-feedback-analyzer" element={<AiCustomerFeedbackAnalyzerPage />} />
                           </Routes>
                         </Suspense>
                       </main>

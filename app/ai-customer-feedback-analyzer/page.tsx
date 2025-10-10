@@ -1,92 +1,94 @@
 'use client';
 import React from 'react';
-import { Brain, Share2, TrendingUp, Users, Calendar, BarChart, Zap, Target, MessageCircle, Image, Video, Hash, Globe, Clock, DollarSign, CheckCircle, ArrowRight, Star, Award, Shield, Smartphone, Monitor, Laptop } from 'lucide-react';
+import { MessageSquare, Brain, BarChart, Users, TrendingUp, Target, CheckCircle, ArrowRight, Star, Award, Shield, Smartphone, Monitor, Laptop, Settings, FileText, PieChart, Zap, Clock, DollarSign, ThumbsUp, ThumbsDown, AlertTriangle, Filter } from 'lucide-react';
 
-const AiSocialMediaManagerPage: React.FC = () => {
+const AiCustomerFeedbackAnalyzerPage: React.FC = () => {
   const features = [
     {
       icon: Brain,
-      title: 'AI Content Generation',
-      description: 'Automatically create engaging posts, captions, and hashtags using advanced AI algorithms',
-      benefits: ['Auto-generated captions', 'Trending hashtag suggestions', 'Content calendar optimization', 'Brand voice consistency']
+      title: 'AI Sentiment Analysis',
+      description: 'Advanced natural language processing to understand customer emotions and sentiment in real-time',
+      benefits: ['Emotion detection', 'Sentiment scoring', 'Tone analysis', 'Context understanding']
     },
     {
       icon: BarChart,
-      title: 'Analytics & Insights',
-      description: 'Comprehensive analytics dashboard with AI-powered insights and recommendations',
-      benefits: ['Performance tracking', 'Audience analysis', 'ROI measurement', 'Predictive analytics']
+      title: 'Intelligent Analytics',
+      description: 'Comprehensive analytics dashboard with AI-powered insights and trend predictions',
+      benefits: ['Trend identification', 'Pattern recognition', 'Predictive analytics', 'Custom reporting']
     },
     {
-      icon: Calendar,
-      title: 'Smart Scheduling',
-      description: 'AI-optimized posting schedule based on audience engagement patterns',
-      benefits: ['Optimal timing suggestions', 'Cross-platform scheduling', 'Content queue management', 'Time zone optimization']
+      icon: Users,
+      title: 'Customer Segmentation',
+      description: 'AI-driven customer categorization based on feedback patterns and behavior analysis',
+      benefits: ['Behavioral segmentation', 'Demographic analysis', 'Engagement scoring', 'Persona creation']
+    },
+    {
+      icon: Zap,
+      title: 'Automated Insights',
+      description: 'AI-generated actionable insights and recommendations to improve customer experience',
+      benefits: ['Action recommendations', 'Priority scoring', 'Improvement suggestions', 'ROI predictions']
     },
     {
       icon: Target,
-      title: 'Audience Targeting',
-      description: 'AI-driven audience segmentation and targeting for maximum engagement',
-      benefits: ['Demographic analysis', 'Interest mapping', 'Behavioral insights', 'Custom audience creation']
-    },
-    {
-      icon: MessageCircle,
-      title: 'Auto-Responses',
-      description: 'Intelligent chatbot responses for comments, DMs, and customer inquiries',
-      benefits: ['24/7 customer service', 'Brand-consistent responses', 'Sentiment analysis', 'Escalation management']
+      title: 'Issue Detection',
+      description: 'Proactive identification of potential problems and customer pain points before they escalate',
+      benefits: ['Early warning system', 'Issue categorization', 'Severity assessment', 'Escalation management']
     },
     {
       icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'AI-powered strategies to increase followers, engagement, and conversions',
-      benefits: ['Growth hacking tactics', 'Engagement optimization', 'Viral content identification', 'Competitor analysis']
+      title: 'Performance Tracking',
+      description: 'Monitor customer satisfaction trends and track improvements over time',
+      benefits: ['Satisfaction tracking', 'Improvement measurement', 'Benchmarking', 'Goal setting']
     }
   ];
 
   const pricingPlans = [
     {
       name: 'Starter',
-      price: '$29',
+      price: '$59',
       period: '/month',
-      description: 'Perfect for small businesses and influencers',
+      description: 'Perfect for small businesses starting their feedback analysis journey',
       features: [
-        'Up to 3 social media accounts',
-        'Basic AI content generation',
+        'Up to 1,000 feedback entries/month',
+        'Basic sentiment analysis',
         'Simple analytics dashboard',
         'Email support',
-        '5 scheduled posts per day'
+        'Standard integrations',
+        'Basic reporting'
       ],
       popular: false
     },
     {
       name: 'Professional',
-      price: '$79',
+      price: '$149',
       period: '/month',
-      description: 'Ideal for growing businesses and agencies',
+      description: 'Ideal for growing businesses with comprehensive feedback analysis needs',
       features: [
-        'Up to 10 social media accounts',
-        'Advanced AI content generation',
+        'Up to 10,000 feedback entries/month',
+        'Advanced AI analysis',
         'Comprehensive analytics',
         'Priority support',
-        'Unlimited scheduled posts',
-        'Team collaboration tools',
-        'Custom branding'
+        'Advanced integrations',
+        'Custom dashboards',
+        'API access',
+        'Team collaboration'
       ],
       popular: true
     },
     {
       name: 'Enterprise',
-      price: '$199',
+      price: '$399',
       period: '/month',
-      description: 'For large organizations and marketing agencies',
+      description: 'For large organizations with enterprise-level feedback analysis requirements',
       features: [
-        'Unlimited social media accounts',
+        'Unlimited feedback entries',
         'Premium AI features',
-        'Advanced analytics & reporting',
+        'Custom analytics',
         '24/7 phone support',
         'White-label options',
-        'API access',
         'Custom integrations',
-        'Dedicated account manager'
+        'Dedicated account manager',
+        'Advanced security'
       ],
       popular: false
     }
@@ -94,26 +96,62 @@ const AiSocialMediaManagerPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: 'Sarah Johnson',
-      role: 'Marketing Director',
-      company: 'TechStart Inc.',
-      content: 'AI Social Media Manager increased our engagement by 300% and saved us 20 hours per week. The AI content suggestions are spot-on!',
+      name: 'Rachel Green',
+      role: 'Customer Experience Director',
+      company: 'RetailPlus',
+      content: 'AI Customer Feedback Analyzer helped us identify key pain points and improve customer satisfaction by 45%. The insights are incredibly accurate and actionable.',
       rating: 5
     },
     {
-      name: 'Mike Chen',
-      role: 'CEO',
-      company: 'E-commerce Plus',
-      content: 'The automated responses and scheduling features have transformed our social media presence. ROI increased by 250% in just 3 months.',
+      name: 'Tom Anderson',
+      role: 'VP of Operations',
+      company: 'ServiceCorp',
+      content: 'The automated insights and trend analysis have transformed how we approach customer feedback. Our response time improved by 60% and customer retention by 35%.',
       rating: 5
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Social Media Manager',
-      company: 'Creative Agency',
-      content: 'The AI insights help us understand our audience better than ever. Our client satisfaction scores have never been higher.',
+      name: 'Maria Garcia',
+      role: 'Head of Product',
+      company: 'TechInnovate',
+      content: 'The AI sentiment analysis and customer segmentation features have given us unprecedented insights into our customer base. Product development decisions are now data-driven.',
       rating: 5
     }
+  ];
+
+  const useCases = [
+    {
+      icon: MessageSquare,
+      title: 'E-commerce',
+      description: 'Analyze product reviews, support tickets, and customer surveys to improve product offerings',
+      benefits: ['Product feedback analysis', 'Review sentiment tracking', 'Support ticket insights', 'Customer journey optimization']
+    },
+    {
+      icon: Settings,
+      title: 'SaaS',
+      description: 'Monitor user feedback, feature requests, and support interactions to guide product development',
+      benefits: ['Feature request analysis', 'User satisfaction tracking', 'Churn prediction', 'Product roadmap insights']
+    },
+    {
+      icon: Users,
+      title: 'Healthcare',
+      description: 'Analyze patient feedback, satisfaction surveys, and service reviews to improve care quality',
+      benefits: ['Patient satisfaction analysis', 'Service quality insights', 'Care improvement recommendations', 'Compliance monitoring']
+    },
+    {
+      icon: FileText,
+      title: 'Financial Services',
+      description: 'Process customer feedback from multiple channels to enhance service delivery and compliance',
+      benefits: ['Compliance monitoring', 'Service quality analysis', 'Risk assessment', 'Regulatory insights']
+    }
+  ];
+
+  const integrations = [
+    { name: 'SurveyMonkey', icon: FileText, description: 'Survey data integration' },
+    { name: 'Zendesk', icon: MessageSquare, description: 'Support ticket analysis' },
+    { name: 'Google Analytics', icon: BarChart, description: 'Website feedback tracking' },
+    { name: 'Slack', icon: MessageSquare, description: 'Team notifications' },
+    { name: 'Salesforce', icon: Users, description: 'CRM integration' },
+    { name: 'HubSpot', icon: Target, description: 'Marketing automation' }
   ];
 
   return (
@@ -126,20 +164,20 @@ const AiSocialMediaManagerPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto text-center">
           <div className="mb-8">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
-              AI-Powered Social Media Management
+              <MessageSquare className="w-4 h-4 mr-2" />
+              AI-Powered Feedback Analysis
             </div>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-              AI Social Media Manager
+              AI Customer Feedback Analyzer
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your social media presence with AI-powered content creation, smart scheduling, 
-            and intelligent analytics. Grow your audience and engagement automatically.
+            Transform customer feedback into actionable insights with AI-powered sentiment analysis, 
+            trend detection, and automated recommendations. Improve customer satisfaction and drive growth.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -161,20 +199,20 @@ const AiSocialMediaManagerPage: React.FC = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">10K+</div>
-              <div className="text-sm text-gray-300">Active Users</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">50K+</div>
+              <div className="text-sm text-gray-300">Feedback Entries Analyzed</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">300%</div>
-              <div className="text-sm text-gray-300">Avg. Engagement Increase</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">45%</div>
+              <div className="text-sm text-gray-300">Satisfaction Improvement</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">20hrs</div>
-              <div className="text-sm text-gray-300">Time Saved Weekly</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">60%</div>
+              <div className="text-sm text-gray-300">Faster Response Time</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-sm text-gray-300">Uptime Guarantee</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">95%</div>
+              <div className="text-sm text-gray-300">Accuracy Rate</div>
             </div>
           </div>
         </div>
@@ -188,7 +226,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to manage and grow your social media presence with AI
+              Everything you need to analyze customer feedback and drive meaningful improvements
             </p>
           </div>
           
@@ -217,6 +255,72 @@ const AiSocialMediaManagerPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Use Cases Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Perfect for Every Industry
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AI feedback analyzer works across all industries and feedback channels
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index) => (
+              <div
+                key={useCase.title}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group text-center"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform">
+                  <useCase.icon className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <ul className="space-y-2 text-left">
+                  {useCase.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integrations Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Seamless Integrations
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Connect with your favorite tools and platforms for a unified feedback analysis experience
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {integrations.map((integration, index) => (
+              <div
+                key={integration.name}
+                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 group text-center"
+              >
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <integration.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{integration.name}</h3>
+                <p className="text-sm text-gray-400">{integration.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
@@ -225,7 +329,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your needs. All plans include our core AI features.
+              Choose the plan that fits your feedback volume and analysis needs
             </p>
           </div>
           
@@ -287,7 +391,7 @@ const AiSocialMediaManagerPage: React.FC = () => {
               What Our Customers Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Join thousands of satisfied customers who have transformed their social media presence
+              Join thousands of businesses who have transformed their customer feedback analysis
             </p>
           </div>
           
@@ -321,10 +425,10 @@ const AiSocialMediaManagerPage: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Social Media?
+            Ready to Transform Your Customer Feedback Analysis?
           </h2>
           <p className="text-xl text-cyan-100 mb-8">
-            Start your free trial today and see the difference AI can make for your social media presence.
+            Start your free trial today and discover the power of AI-driven feedback insights.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
@@ -347,4 +451,4 @@ const AiSocialMediaManagerPage: React.FC = () => {
   );
 };
 
-export default AiSocialMediaManagerPage;
+export default AiCustomerFeedbackAnalyzerPage;
