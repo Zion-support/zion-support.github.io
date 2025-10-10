@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const Analytics: React.FC = () => {
   useEffect(() => {
     // Google Analytics 4 setup
@@ -264,11 +265,59 @@ const Analytics: React.FC<AnalyticsProps> = ({,
             if (!(entry as any).hadRecentInput) {}
               trackEvent('web_vitals', 'CLS', (entry as any).value);
             }
+=======
+interface AnalyticsProps {
+  trackingId?: string;
+  enabled?: boolean;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({
+  trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID,
+  enabled = true
+}) => {
+  useEffect(() => {
+    if (!enabled || !trackingId) return;
+    
+    initializeGoogleAnalytics();
+    initializePerformanceMonitoring();
+    initializeErrorTracking();
+    initializeUserBehaviorTracking();
+  }, [enabled, trackingId]);
+
+  const initializeGoogleAnalytics = () => {
+    if (!trackingId) return;
+    
+    const gtag = (...args: any[]) => {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push(args);
+    };
+    
+    (window as any).gtag = gtag;
+    
+    gtag('js', new Date());
+    gtag('config', trackingId, {
+      page_title: document.title,
+      page_location: window.location.href
+    });
+  };
+
+  const initializePerformanceMonitoring = () => {
+    if ('PerformanceObserver' in window) {
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            // Track LCP
+          } else if (entry.entryType === 'first-input') {
+            // Track FID
+          } else if (entry.entryType === 'layout-shift') {
+            // Track CLS
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
           }
         }
 
       observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       // Monitor page load time;
       window.addEventListener('load', () => {
@@ -279,11 +328,19 @@ const Analytics: React.FC<AnalyticsProps> = ({,
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {}
           trackEvent('performance', 'page_load_time', Math.round(navigation.loadEventEnd - navigation.fetchStart));
+=======
+      // Monitor page load time
+      window.addEventListener('load', () => {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        if (loadTime) {
+          // Track page load time
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
         }
       });
     }
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const initializeErrorTracking = () => {
     // Track JavaScript errors;
@@ -356,10 +413,28 @@ const Analytics: React.FC<AnalyticsProps> = ({,
           src: (event.target as any).src || (event.target as any).href;
           error: event.type;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c796
+=======
+  const initializeErrorTracking = () => {
+    // Track JavaScript errors
+    window.addEventListener('error', (event) => {
+      // Track error
+    });
+
+    // Track unhandled promise rejections
+    window.addEventListener('unhandledrejection', (event) => {
+      // Track promise rejection
+    });
+
+    // Track resource loading errors
+    window.addEventListener('error', (event) => {
+      if (event.target !== window) {
+        // Track resource error
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       }
     }, true);
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const initializeUserBehaviorTracking = () => {
 <<<<<<< HEAD
@@ -471,7 +546,49 @@ const Analytics: React.FC<AnalyticsProps> = ({,
         form_id: form.id,
         form_class: form.className,
         form_action: form.action
+=======
+  const initializeUserBehaviorTracking = () => {
+    // Track page views
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'page_view', {
+        page_title: document.title,
+        page_location: window.location.href
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       });
+    }
+
+    // Track scroll depth
+    let maxScroll = 0;
+    window.addEventListener('scroll', () => {
+      const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+      if (scrollPercent > maxScroll) {
+        maxScroll = scrollPercent;
+        // Track scroll depth
+      }
+    });
+
+    // Track time on page
+    const startTime = Date.now();
+    window.addEventListener('beforeunload', () => {
+      const timeOnPage = Date.now() - startTime;
+      // Track time on page
+    });
+
+    // Track clicks on important elements
+    document.addEventListener('click', (event) => {
+      const target = event.target as HTMLElement;
+      const tagName = target.tagName.toLowerCase();
+      
+      if (tagName === 'a') {
+        // Track link clicks
+      } else if (tagName === 'button') {
+        // Track button clicks
+      }
+    });
+
+    // Track form submissions
+    document.addEventListener('submit', (event) => {
+      // Track form submission
     });
 =======
       trackEvent('engagement', 'form_submit', {)
@@ -490,6 +607,7 @@ const Analytics: React.FC<AnalyticsProps> = ({,
     event_label: typeof value === 'object' ? JSON.stringify(value) : value,
 =======
 
+<<<<<<< HEAD
   const trackEvent = (category: string, action: string, value?: any) => {}
     if (typeof window !== 'undefined' && 'gtag' in window) {}
       (window as any).gtag('event', action, {)}
@@ -497,6 +615,13 @@ const Analytics: React.FC<AnalyticsProps> = ({,
         event_label: typeof value === 'object' ? JSON.stringify(value) : value,
 >>>>>>> origin/merge-error-fixes
         value: typeof value === 'number' ? value : undefined
+=======
+  const trackEvent = (category: string, action: string, value?: any) => {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', action, {
+        event_category: category,
+        value: value
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       });
 =======
       (window as any).gtag('event', action, {)

@@ -6,6 +6,7 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
+<<<<<<< HEAD
   // Ignore disabled directories
   {
 <<<<<<< HEAD
@@ -26,11 +27,22 @@ export default [
     ignores: [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
       'admin-api-disabled/**',
+=======
+  // Global ignores
+  {
+    ignores: [
+      'admin-api-disabled/**',
+      'ai-customer-support-disabled/**',
+      'ai-data-visualization-disabled/**',
+      'ai-sales-automation-disabled/**',
+      'ai-workflow-automation-disabled/**',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       'api-disabled/**',
       'api.disabled/**',
       'api-backup/**',
       'components-disabled/**',
       'components.disabled/**',
+<<<<<<< HEAD
       'automation_backup/**',
       'backup*/**',
       '*-disabled/**',
@@ -50,6 +62,29 @@ export default [
     ],
   },
   // Base JavaScript configuration;
+=======
+      'components.disabled_full/**',
+      'backup/**',
+      'backup-merge-conflicts/**',
+      'backup-pages/**',
+      'backup-problematic/**',
+      'backup-problematic-files/**',
+      'clean-build/**',
+      'cache/**',
+      'ci-cd-reports/**',
+      'automation_backup/**',
+      'apps.backup/**',
+      'node_modules/**',
+      'dist/**',
+      '.next/**',
+      'out/**',
+      '*.min.js',
+      '*.min.css',
+      'chunk-*.js'
+    ]
+  },
+  // Base JavaScript configuration
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {,

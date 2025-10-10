@@ -34,6 +34,7 @@ Rocket;
 >>>>>>> origin/main
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const AIServicesPage: React.FC = () => {,
 =======
 const AIServicesPage: React.FC = () => {}
@@ -43,6 +44,11 @@ const AIServicesPage: React.FC = () => {}
   useEffect(() => {}
     setIsLoaded(true);
   }, []);
+=======
+const AIServicesPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2571,6 +2577,12 @@ const AIServicesPage: React.FC = () => {
     </>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
+<<<<<<< HEAD
 };
 
 export default AIServicesPage;
+=======
+}
+
+export default AIServicesPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233

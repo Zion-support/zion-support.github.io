@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Error reporting API endpoint;
 export default function handler(req, res) {
   if (req.method !== 'POST') {
@@ -6,10 +7,24 @@ export default function handler(req, res) {
 
   try {
     const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+=======
+// Error reporting API endpoint
+export default function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
+    return;
+  }
+
+  try {
+    // const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 
     // Log error details (in production you would send this to your monitoring service)
     // In a real application, you would:
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
+<<<<<<< HEAD
 <<<<<<< HEAD
     // 2. Store in database;
     // 3. Send alerts to development team;
@@ -29,5 +44,12 @@ export default function handler(req, res) {
     console.error('Error processing error report:', err);
     res.status(500).json({ error: 'Failed to process error report' });
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+    // 2. Store in database
+    // 3. Send alerts to development team
+    res.status(200).json({ success: true });
+  } catch {
+    res.status(500).json({ error: 'Failed to process error report' });
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   }
 }

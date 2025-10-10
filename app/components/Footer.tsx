@@ -53,6 +53,7 @@ import { Phone, Mail, MapPin, Clock, Star, Zap, Shield, Globe, Brain, Cpu, Targe
 >>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface FooterProps {
   className?: string;
 }
@@ -851,6 +852,8 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
 >>>>>>> d657cf2a1bc2 (fix: resolve merge conflicts in App.tsx, Footer.tsx, and Navigation.tsx)
               </button>
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
 

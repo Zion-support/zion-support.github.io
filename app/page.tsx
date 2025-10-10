@@ -4596,6 +4596,7 @@ const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
 const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 // Preload critical components
@@ -4611,13 +4612,20 @@ const DynamicContentShowcase = lazy(() => import('../src/components/DynamicConte
 const ContentStatistics = lazy(() => import('../src/components/ContentStatistics'));
 const ContentNewsletterSignup = lazy(() => import('../src/components/ContentNewsletterSignup'));
 
+=======
+const EnhancedServicesShowcase = lazy(() => import('./components/EnhancedServicesShowcase'));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 
 // Preload critical components with better timing
 const preloadComponents = () => {
   if (typeof window !== 'undefined') {
     setTimeout(() => {
+<<<<<<< HEAD
       // Preload components here
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
+=======
+      // Preload components after initial render
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     }, 100);
   }
 };
@@ -4689,9 +4697,25 @@ const HomePage: React.FC = () => {
   // Analytics tracking for phone clicks - optimized
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {
+<<<<<<< HEAD
       (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number'
+=======
+      (window as any).gtag('event', 'phone_click', {
+        event_category: 'contact',
+        event_label: 'header_phone'
+      });
+    }
+  }, []);
+
+  // Analytics tracking for email clicks - optimized
+  const handleEmailClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'email_click', {
+        event_category: 'contact',
+        event_label: 'header_email'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       });
     }
   }, []);
@@ -5558,60 +5582,90 @@ const HomePage: React.FC = memo(() => {
   // Testimonials data
   const testimonials = [
     {
+      id: 1,
       name: "Sarah Johnson",
-      company: "TechCorp Solutions",
-      content: "Zion Tech Group transformed our entire IT infrastructure. Their AI solutions increased our efficiency by 300%.",
-      rating: 5
+      company: "TechCorp Inc.",
+      role: "CTO",
+      content: "Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.",
+      rating: 5,
+      avatar: "SJ"
     },
     {
+      id: 2,
       name: "Michael Chen",
-      company: "InnovateLab",
-      content: "Outstanding service and cutting-edge technology. The team's expertise in AI and cloud solutions is unmatched.",
-      rating: 5
+      company: "InnovateLabs",
+      role: "CEO",
+      content: "Outstanding service and cutting-edge technology. They delivered exactly what we needed and more.",
+      rating: 5,
+      avatar: "MC"
     },
     {
+      id: 3,
       name: "Emily Rodriguez",
-      company: "FutureTech Inc",
-      content: "Professional, reliable, and innovative. They delivered exactly what we needed and more.",
-      rating: 5
+      company: "FutureTech",
+      role: "VP of Engineering",
+      content: "The team's expertise in AI and cloud solutions is unmatched. Highly recommended!",
+      rating: 5,
+      avatar: "ER"
     }
   ];
 
   // Services data
   const services = [
     {
-      icon: Brain,
+      id: 1,
       title: "AI Solutions",
-      description: "Cutting-edge artificial intelligence services to transform your business operations.",
-      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"]
+      description: "Advanced artificial intelligence solutions for business automation and optimization.",
+      icon: Brain,
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Cloud,
+      id: 2,
       title: "Cloud Infrastructure",
-      description: "Scalable and secure cloud solutions for modern businesses.",
-      features: ["AWS/Azure/GCP", "Cloud Migration", "DevOps", "Containerization"]
+      description: "Scalable and secure cloud infrastructure solutions for modern businesses.",
+      icon: Cloud,
+      features: ["AWS/Azure/GCP", "Container Orchestration", "Auto-scaling", "Disaster Recovery"],
+      color: "from-purple-500 to-pink-500"
     },
     {
-      icon: Shield,
+      id: 3,
+      title: "IT Consulting",
+      description: "Expert IT consulting services to optimize your technology stack and processes.",
+      icon: Settings,
+      features: ["Technology Assessment", "Process Optimization", "Security Audits", "Digital Transformation"],
+      color: "from-green-500 to-teal-500"
+    },
+    {
+      id: 4,
+      title: "Data Analytics",
+      description: "Transform your data into actionable insights with our advanced analytics solutions.",
+      icon: BarChart,
+      features: ["Business Intelligence", "Data Visualization", "Real-time Analytics", "Custom Dashboards"],
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      id: 5,
       title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets.",
-      features: ["Security Audits", "Threat Detection", "Compliance", "Incident Response"]
+      description: "Comprehensive cybersecurity solutions to protect your business from threats.",
+      icon: Shield,
+      features: ["Threat Detection", "Security Monitoring", "Incident Response", "Compliance"],
+      color: "from-indigo-500 to-purple-500"
     },
     {
-      icon: Code,
-      title: "Custom Development",
-      description: "Tailored software solutions built to meet your specific needs.",
-      features: ["Web Applications", "Mobile Apps", "API Development", "Database Design"]
+      id: 6,
+      title: "Mobile Development",
+      description: "Custom mobile applications for iOS and Android platforms.",
+      icon: Smartphone,
+      features: ["Native Apps", "Cross-platform", "UI/UX Design", "App Store Optimization"],
+      color: "from-pink-500 to-rose-500"
     }
   ];
 
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400 mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold text-white">Loading Zion Tech Group...</h2>
-        </div>
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
       </div>
     );
   }
@@ -5637,42 +5691,45 @@ const HomePage: React.FC = memo(() => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
-              Get Started Today
+              Get Started
             </Link>
             <Link
               to="/services"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Explore Services
+              Our Services
             </Link>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Services</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              Our Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
+              Comprehensive technology solutions designed to accelerate your business growth and innovation.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group">
-                <div className="text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors">
-                  <service.icon className="w-12 h-12" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div
+                key={service.id}
+                className="bg-white/10 backdrop-blur-lg rounded-lg p-8 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group"
+              >
+                <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <service.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300 mb-4">{service.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-gray-300">
+                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -5684,26 +5741,37 @@ const HomePage: React.FC = memo(() => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
+      <section className="py-20 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Clients Say</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              What Our Clients Say
             </h2>
+            <p className="text-xl text-gray-300">
+              Don't just take our word for it - hear from our satisfied clients.
+            </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
-                <div className="flex mb-4">
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="bg-white/10 backdrop-blur-lg rounded-lg p-8 border border-white/20"
+              >
+                <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div>
-                  <p className="font-semibold text-white">{testimonial.name}</p>
-                  <p className="text-cyan-400 text-sm">{testimonial.company}</p>
+                <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                <div className="flex items-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-gray-400">{testimonial.role}, {testimonial.company}</p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -5712,33 +5780,33 @@ const HomePage: React.FC = memo(() => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how our AI and IT solutions can accelerate your digital transformation.
+            Let's discuss how our AI and IT solutions can accelerate your success.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+            >
+              Get Free Consultation
+            </Link>
             <a
               href="tel:+13024640950"
               onClick={handlePhoneClick}
-              className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center"
             >
-              <Phone className="w-5 h-5" />
-              Call (302) 464-0950
+              <Phone className="w-5 h-5 mr-2" />
+              (302) 464-0950
             </a>
-            <Link
-              to="/contact"
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center gap-2"
-            >
-              <Mail className="w-5 h-5" />
-              Get Quote
-            </Link>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
 <<<<<<< HEAD
       {/* Lazy loaded components */}
@@ -5795,11 +5863,17 @@ const HomePage: React.FC = memo(() => {
       {/* Footer */}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
       <Footer />
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
     </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
   );
 };
 
+<<<<<<< HEAD
 HomePage.displayName = 'HomePage';
 
 export default HomePage;
+=======
+export default HomePage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233

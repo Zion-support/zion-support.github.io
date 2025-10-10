@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 import { Brain, Cpu, Shield, Globe, Users, Award, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, CheckCircle, TrendingUp, Phone, Mail, MapPin, Clock, Star, Zap, Database, Cloud, Code, Smartphone, Settings, Lock, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation as NavIcon, PieChart, TrendingDown, Activity } from 'lucide-react';
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
@@ -856,6 +861,7 @@ const ServicesPage: React.FC = () => {
             </div>
           </section>
         </main>
+<<<<<<< HEAD
       </div>
       
       <Footer />
@@ -991,6 +997,10 @@ const ServicesPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+
+        <Footer />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
       </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
     </>
@@ -998,6 +1008,7 @@ const ServicesPage: React.FC = () => {
 };
 
 export default ServicesPage;
+<<<<<<< HEAD
 =======
       {/* Benefits */}
       <section className="py-20">
@@ -1288,3 +1299,5 @@ export default ServicesPage;
 
 export default ServicesPage;
 >>>>>>> origin/main
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233

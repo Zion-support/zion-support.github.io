@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from 'fs';
@@ -173,6 +174,10 @@ const footerLinks = [
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
 #!/usr/bin/env node;
 // Sitemap URLs from the website;
+=======
+#!/usr/bin/env node
+// Sitemap URLs from the website
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 const sitemapUrls = [
   // Main Pages;
   '/',
@@ -436,23 +441,31 @@ fs.writeFileSync('/workspace/missing-pages-report.json', JSON.stringify(report, 
 console.log('\nReport saved to missing-pages-report.json');
 =======
 console.log('\n=== SUMMARY ===');
-console.log(`Total sitemap,)`
-  URLs: ${sitemapUrls.length}`);`
-console.log(`Total existing,)`
-  pages: ${existingPages.length}`);`
-console.log(`Missing,)`
-  pages: ${missingPages.length}`);`
-console.log(`Extra,)`
-  pages: ${extraPages.length}`);
+console.log(`Total sitemap URLs: ${sitemapUrls.length}`);
+console.log(`Total existing pages: ${existingPages.length}`);
+console.log(`Missing pages: ${missingPages.length}`);
+console.log(`Extra pages: ${extraPages.length}`);
 
-// Categorize missing pages;
-const missingByCategory = {/* TODO: Fix JSX expression */}
+// Categorize missing pages
+const missingByCategory = {
+  main: missingPages.filter(page => !page.includes('/')),
+  services: missingPages.filter(page => page.startsWith('/services')),
+  blog: missingPages.filter(page => page.startsWith('/blog')),
+  other: missingPages.filter(page => 
+    !page.startsWith('/services') && 
+    !page.startsWith('/blog') && 
+    page.includes('/')
+  )
 };
 
 console.log('\n=== MISSING PAGES BY CATEGORY ===');
-Object.entries(missingByCategory).forEach(([category, pages]) => {/* TODO: Fix JSX expression */}`
-    console.log(`\n${category}:`);`
+Object.entries(missingByCategory).forEach(([category, pages]) => {
+    console.log(`\n${category}:`);
     pages.forEach(page => console.log(`  ${page}`));
+<<<<<<< HEAD
   }
 });`
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-0174
+=======
+});
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233

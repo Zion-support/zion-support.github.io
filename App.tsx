@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 
 <<<<<<< HEAD
@@ -68,6 +69,11 @@ const structuredData = {
 import React, { memo, useMemo, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+=======
+import React, { Suspense, lazy, memo, useMemo } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 
 // Lazy load pages for better performance
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
@@ -98,6 +104,7 @@ const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Performance monitoring hook;
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -265,12 +272,15 @@ const ArVrSolutionsPage = lazy(() => import('./app/ar-vr-solutions/page'));
 // Micro SaaS
 const MicroSaasPage = lazy(() => import('./app/micro-saas/page'));
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 // Lazy load components
 const Navigation = React.lazy(() => import('./app/components/Navigation'));
 const Footer = React.lazy(() => import('./app/components/Footer'));
 const PerformanceMonitor = React.lazy(() => import('./app/components/PerformanceMonitor'));
 const AccessibilityEnhancer = React.lazy(() => import('./app/components/AccessibilityEnhancer'));
 
+<<<<<<< HEAD
 // Loading component
 const LoadingSpinner = memo(() => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -296,6 +306,24 @@ LoadingSpinner.displayName = 'LoadingSpinner';
 class ErrorBoundary extends React.Component<
   { children: React.ReactNode },
   { hasError: boolean; error?: Error }
+=======
+// Main page component
+const HomePage = React.lazy(() => import('./app/page'));
+
+// Loading component
+const LoadingSpinner = memo(() => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-400"></div>
+  </div>
+));
+
+LoadingSpinner.displayName = 'LoadingSpinner';
+
+// Error boundary component
+class ErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error?: Error; errorInfo?: React.ErrorInfo }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 > {
   constructor(props: { children: React.ReactNode }) {
     super(props);
@@ -303,6 +331,7 @@ class ErrorBoundary extends React.Component<
   }
 
   static getDerivedStateFromError(error: Error) {
+<<<<<<< HEAD
     return { hasError: true, error };
   }
 
@@ -369,12 +398,27 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
     // Error logging can be implemented here
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
+=======
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    this.setState({ error, errorInfo });
+    // Log error to monitoring service in production
+    if (process.env.NODE_ENV === 'development') {
+      // eslint-disable-next-line no-console
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
   }
 
   render() {
     if (this.state.hasError) {
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-lg p-8 text-center border border-white/20">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
@@ -394,7 +438,11 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
               className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
             >
+<<<<<<< HEAD
               Refresh Page
+=======
+              Reload Page
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
             </button>
           </div>
         </div>
@@ -405,6 +453,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Main App Component
 const App: React.FC = () => {
@@ -491,6 +540,11 @@ export default function App() {
     []
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-01af
+=======
+// Main App component
+const App: React.FC = () => {
+  const helmetContext = useMemo(() => ({}), []);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-0233
 
   return (
     <ErrorBoundary>
