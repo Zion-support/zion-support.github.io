@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet-async';
 interface SEOOptimizerProps {
   title?: string;
   description?: string;
@@ -141,7 +141,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     document.head.appendChild(script);
   };
   return (
-    <Head>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
@@ -153,7 +153,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       <link rel="canonical" href={canonicalUrl} />
-    </Head>
+    </Helmet>
   );
 };
 export default SEOOptimizer;
