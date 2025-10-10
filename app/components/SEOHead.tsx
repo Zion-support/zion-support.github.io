@@ -1,32 +1,56 @@
+'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
   description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+  keywords?: string[];
+  canonical?: string;
+  ogImage?: string;
+  ogType?: string;
+  twitterCard?: string;
   structuredData?: object;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
+  title = "Zion Tech Group - AI & IT Solutions | Enterprise AI Services",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology.",
-  keywords = "AI solutions, quantum computing, autonomous systems, digital transformation, enterprise AI, machine learning, automation, cloud services, cybersecurity, business intelligence, micro SAAS",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  url = "https://ziontechgroup.com",
-  type = "website",
-  structuredData
+  keywords = [
+    "AI solutions",
+    "artificial intelligence",
+    "enterprise AI",
+    "quantum computing",
+    "IT services",
+    "digital transformation",
+    "machine learning",
+    "automation",
+    "cybersecurity",
+    "cloud migration",
+    "data analytics",
+    "business intelligence",
+    "Zion Tech Group"
+  ],
+  canonical,
+  ogImage = "https://ziontechgroup.com/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
+  structuredData,
+  noindex = false,
+  nofollow = false
 }) => {
+  const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+  const fullDescription = description || "Leading provider of AI-powered enterprise solutions and digital transformation services.";
+  
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
-    "description": description,
+    "description": "Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -39,70 +63,24 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com",
-      "areaServed": "US",
-      "availableLanguage": "English"
+      "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
-      "https://www.linkedin.com/company/zion-tech-group",
+      "https://linkedin.com/company/zion-tech-group",
       "https://twitter.com/ziontechgroup",
-      "https://github.com/zion-tech-group",
-      "https://www.facebook.com/ziontechgroup",
-      "https://www.instagram.com/ziontechgroup",
-      "https://www.youtube.com/@ziontechgroup"
+      "https://github.com/zion-tech-group"
     ],
     "foundingDate": "2020",
-    "numberOfEmployees": "50-100",
+    "numberOfEmployees": "50+",
     "industry": "Technology",
-    "knowsAbout": [
-      "Artificial Intelligence",
-      "Machine Learning",
-      "Quantum Computing",
-      "Autonomous Systems",
+    "services": [
+      "AI Solutions",
+      "IT Services",
       "Digital Transformation",
-      "Cloud Computing",
+      "Quantum Computing",
       "Cybersecurity",
-      "Business Intelligence",
-      "Data Analytics",
-      "Software Development"
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "AI and IT Solutions",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI-Powered Analytics",
-            "description": "Advanced analytics solutions powered by machine learning and artificial intelligence"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Workflow Automation",
-            "description": "Streamline your business processes with intelligent automation"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "AI Security Solutions",
-            "description": "Advanced security solutions powered by artificial intelligence"
-          }
-        }
-      ]
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "250",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
+      "Cloud Migration"
+    ]
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
@@ -110,63 +88,61 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta name="keywords" content={keywords} />
+      <title>{fullTitle}</title>
+      <meta name="description" content={fullDescription} />
+      <meta name="keywords" content={keywords.join(", ")} />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <meta name="bingbot" content="index, follow" />
-      <meta name="theme-color" content="#4f46e5" />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content={type} />
-      <meta property="og:url" content={url} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
+      {/* Canonical URL */}
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Open Graph Meta Tags */}
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={fullDescription} />
+      <meta property="og:type" content={ogType} />
+      <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
+      <meta property="og:image" content={ogImage} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
       
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={url} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      {/* Twitter Card Meta Tags */}
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTitle} />
+      <meta name="twitter:description" content={fullDescription} />
+      <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       
-      {/* Additional SEO Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta name="format-detection" content="telephone=no" />
-      <meta name="mobile-web-app-capable" content="yes" />
+      {/* Additional Meta Tags */}
+      <meta name="theme-color" content="#00ffff" />
+      <meta name="msapplication-TileColor" content="#00ffff" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
       
-      {/* Canonical URL */}
-      <link rel="canonical" href={url} />
+      {/* Favicon */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
       
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      <link rel="preconnect" href="https://www.googletagmanager.com" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
+      <link rel="preconnect" href="https://www.googletagmanager.com" />
       
-      {/* DNS prefetch for performance */}
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-      <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-      <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-      
-      {/* Web App Manifest */}
-      <link rel="manifest" href="/manifest.json" />
-      
-      {/* Favicon */}
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <link rel="icon" type="image/png" href="/favicon.png" />
-      <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+      {/* DNS Prefetch */}
+      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+      <link rel="dns-prefetch" href="//www.google-analytics.com" />
+      <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       
       {/* Structured Data */}
       <script type="application/ld+json">

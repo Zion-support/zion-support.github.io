@@ -1,59 +1,85 @@
+'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, Star, Clock } from 'lucide-react';
-
-interface SearchResult {
-  title: string;
-  description: string;
-  url: string;
-  category: string;
-  icon?: React.ComponentType<any>;
-  popular?: boolean;
-}
+import { Search, X, ArrowRight, Clock, Star } from 'lucide-react';
 
 interface SearchModalProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+interface SearchResult {
+  title: string;
+  description: string;
+  url: string;
+  category: string;
+  popular?: boolean;
+}
+
 const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
-  const resultsRef = useRef<HTMLDivElement>(null);
 
-  // Mock search data - in a real app, this would come from an API
+  // Mock search results - in a real app, this would come from an API
   const searchData: SearchResult[] = [
-    // AI Services
-    { title: 'AI Workflow Automation', description: 'Automate your business processes with AI', url: '/ai-workflow-automation', category: 'AI Services', popular: true },
-    { title: 'AI Customer Support', description: '24/7 AI-powered customer support', url: '/ai-customer-support', category: 'AI Services', popular: true },
-    { title: 'AI Data Analytics', description: 'Get insights from your data with AI', url: '/ai-data-analytics', category: 'AI Services' },
-    { title: 'AI Content Generation', description: 'Create content automatically with AI', url: '/ai-content-generation', category: 'AI Services', popular: true },
-    { title: 'AI Healthcare Solutions', description: 'AI-powered healthcare solutions', url: '/ai-healthcare', category: 'AI Services' },
-    { title: 'AI Fintech Platform', description: 'Financial AI and fraud detection', url: '/ai-fintech', category: 'AI Services' },
-    { title: 'AI Computer Vision', description: 'Advanced image recognition', url: '/ai-computer-vision', category: 'AI Services' },
-    { title: 'AI Machine Learning', description: 'Complete ML platform', url: '/ai-ml-platform', category: 'AI Services' },
-    { title: 'AI Quantum Computing', description: 'Next-gen quantum solutions', url: '/ai-quantum-computing', category: 'AI Services' },
-    
-    // IT Services
-    { title: 'Cloud Migration', description: 'Migrate to the cloud seamlessly', url: '/cloud-migration', category: 'IT Services', popular: true },
-    { title: 'Cybersecurity', description: 'Enterprise-grade security solutions', url: '/cybersecurity', category: 'IT Services', popular: true },
-    { title: 'IT Infrastructure', description: 'Design and implement IT infrastructure', url: '/it-infrastructure', category: 'IT Services' },
-    { title: 'IT Support', description: '24/7 IT support services', url: '/it-support', category: 'IT Services' },
-    { title: 'Custom Development', description: 'Custom software development', url: '/custom-development', category: 'IT Services' },
-    { title: 'DevOps & CI/CD', description: 'Streamlined development processes', url: '/devops-cicd', category: 'IT Services' },
-    
-    // Micro SAAS
-    { title: 'AI Project Manager Pro', description: 'Intelligent project management', url: '/ai-project-manager', category: 'Micro SAAS', popular: true },
-    { title: 'AI Social Media Manager', description: 'Automate your social media', url: '/ai-social-media-manager', category: 'Micro SAAS' },
-    { title: 'AI Analytics Dashboard', description: 'Get insights from your data', url: '/ai-analytics-dashboard', category: 'Micro SAAS', popular: true },
-    
-    // Company Pages
-    { title: 'About Us', description: 'Learn about Zion Tech Group', url: '/about', category: 'Company' },
-    { title: 'Contact', description: 'Get in touch with us', url: '/contact', category: 'Company' },
-    { title: 'Team', description: 'Meet our team', url: '/team', category: 'Company' },
-    { title: 'Careers', description: 'Join our team', url: '/careers', category: 'Company' },
-    { title: 'Pricing', description: 'View our pricing plans', url: '/pricing', category: 'Company' },
+    {
+      title: "AI Project Manager Pro",
+      description: "Intelligent project management with predictive analytics and automated resource allocation",
+      url: "/ai-project-manager",
+      category: "Micro SAAS",
+      popular: true
+    },
+    {
+      title: "AI Analytics Dashboard",
+      description: "Get intelligent insights from your data with AI-powered analytics and predictive modeling",
+      url: "/ai-analytics-dashboard",
+      category: "Micro SAAS",
+      popular: true
+    },
+    {
+      title: "AI Customer Support Bot",
+      description: "24/7 AI-powered customer support with natural language processing and instant responses",
+      url: "/ai-customer-support-bot",
+      category: "Micro SAAS",
+      popular: true
+    },
+    {
+      title: "AI Drug Discovery Pro",
+      description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug interaction prediction",
+      url: "/ai-drug-discovery-pro",
+      category: "AI Services",
+      popular: false
+    },
+    {
+      title: "Cloud Migration & Setup",
+      description: "Seamless cloud migration with zero downtime and comprehensive security",
+      url: "/cloud-migration",
+      category: "IT Services",
+      popular: true
+    },
+    {
+      title: "Enterprise Cybersecurity Suite",
+      description: "Comprehensive security solutions to protect your digital assets and data",
+      url: "/cybersecurity",
+      category: "IT Services",
+      popular: true
+    },
+    {
+      title: "About Us",
+      description: "Learn about Zion Tech Group's mission, team, and commitment to innovation",
+      url: "/about",
+      category: "Company",
+      popular: false
+    },
+    {
+      title: "Contact Us",
+      description: "Get in touch with our team for consultations and support",
+      url: "/contact",
+      category: "Support",
+      popular: false
+    }
   ];
 
   useEffect(() => {
@@ -63,145 +89,214 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
   }, [isOpen]);
 
   useEffect(() => {
-    if (query.trim()) {
-      const filtered = searchData.filter(item =>
-        item.title.toLowerCase().includes(query.toLowerCase()) ||
-        item.description.toLowerCase().includes(query.toLowerCase()) ||
-        item.category.toLowerCase().includes(query.toLowerCase())
-      );
-      setResults(filtered.slice(0, 8)); // Limit to 8 results
-      setSelectedIndex(0);
-    } else {
-      setResults([]);
-    }
-  }, [query]);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!isOpen) return;
-
+    const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         onClose();
-      } else if (e.key === 'ArrowDown') {
-        e.preventDefault();
-        setSelectedIndex(prev => Math.min(prev + 1, results.length - 1));
-      } else if (e.key === 'ArrowUp') {
-        e.preventDefault();
-        setSelectedIndex(prev => Math.max(prev - 1, 0));
-      } else if (e.key === 'Enter') {
-        e.preventDefault();
-        if (results[selectedIndex]) {
-          window.location.href = results[selectedIndex].url;
-        }
       }
     };
 
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [isOpen, results, selectedIndex, onClose]);
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen, onClose]);
 
   useEffect(() => {
-    if (resultsRef.current && selectedIndex >= 0) {
-      const selectedElement = resultsRef.current.children[selectedIndex] as HTMLElement;
-      if (selectedElement) {
-        selectedElement.scrollIntoView({ block: 'nearest' });
-      }
+    // Load recent searches from localStorage
+    const saved = localStorage.getItem('recentSearches');
+    if (saved) {
+      setRecentSearches(JSON.parse(saved));
     }
-  }, [selectedIndex]);
+  }, []);
+
+  const handleSearch = async (searchQuery: string) => {
+    if (!searchQuery.trim()) {
+      setResults([]);
+      return;
+    }
+
+    setIsLoading(true);
+    
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 300));
+    
+    // Filter results based on query
+    const filteredResults = searchData.filter(item =>
+      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.category.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+    
+    setResults(filteredResults);
+    setIsLoading(false);
+
+    // Save to recent searches
+    if (searchQuery.trim() && !recentSearches.includes(searchQuery.trim())) {
+      const newRecent = [searchQuery.trim(), ...recentSearches].slice(0, 5);
+      setRecentSearches(newRecent);
+      localStorage.setItem('recentSearches', JSON.stringify(newRecent));
+    }
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setQuery(value);
+    handleSearch(value);
+  };
+
+  const handleResultClick = (url: string) => {
+    window.location.href = url;
+    onClose();
+  };
+
+  const handleRecentSearchClick = (searchTerm: string) => {
+    setQuery(searchTerm);
+    handleSearch(searchTerm);
+  };
+
+  const clearRecentSearches = () => {
+    setRecentSearches([]);
+    localStorage.removeItem('recentSearches');
+  };
 
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="flex min-h-screen items-start justify-center px-4 pt-16 pb-20 text-center sm:block sm:p-0">
-        <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onClick={onClose} />
-        
-        <div className="inline-block w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:align-middle">
-          <div className="bg-white px-6 py-4">
-            <div className="flex items-center space-x-4">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
-                <input
-                  ref={inputRef}
-                  type="text"
-                  placeholder="Search services, pages, or features..."
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none"
-                />
-              </div>
-              <button
-                onClick={onClose}
-                className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
-                aria-label="Close search"
-              >
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-          </div>
+    <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4">
+      {/* Backdrop */}
+      <div 
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+        onClick={onClose}
+      />
+      
+      {/* Modal */}
+      <div className="relative w-full max-w-2xl bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-xl shadow-2xl">
+        {/* Search Input */}
+        <div className="flex items-center p-4 border-b border-gray-700">
+          <Search className="w-5 h-5 text-gray-400 mr-3" />
+          <input
+            ref={inputRef}
+            type="text"
+            value={query}
+            onChange={handleInputChange}
+            placeholder="Search services, solutions, or topics..."
+            className="flex-1 bg-transparent text-white placeholder-gray-400 outline-none"
+          />
+          <button
+            onClick={onClose}
+            className="ml-3 p-1 text-gray-400 hover:text-white transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
 
-          {query && (
-            <div className="border-t border-gray-200 max-h-96 overflow-y-auto">
-              {results.length > 0 ? (
-                <div ref={resultsRef} className="py-2">
+        {/* Content */}
+        <div className="max-h-96 overflow-y-auto">
+          {query ? (
+            // Search Results
+            <div className="p-4">
+              {isLoading ? (
+                <div className="flex items-center justify-center py-8">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-400"></div>
+                  <span className="ml-3 text-gray-400">Searching...</span>
+                </div>
+              ) : results.length > 0 ? (
+                <div className="space-y-2">
                   {results.map((result, index) => (
-                    <a
-                      key={result.url}
-                      href={result.url}
-                      className={`flex items-center px-6 py-3 hover:bg-gray-50 transition-colors ${
-                        index === selectedIndex ? 'bg-cyan-50 border-r-4 border-cyan-500' : ''
-                      }`}
+                    <button
+                      key={index}
+                      onClick={() => handleResultClick(result.url)}
+                      className="w-full text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
                     >
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-2">
-                          <h3 className="text-sm font-medium text-gray-900">{result.title}</h3>
-                          {result.popular && (
-                            <Star className="h-4 w-4 text-yellow-500 fill-current" />
-                          )}
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-2 mb-1">
+                            <h3 className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                              {result.title}
+                            </h3>
+                            {result.popular && (
+                              <span className="px-2 py-0.5 bg-orange-500/20 text-orange-400 text-xs rounded-full flex items-center">
+                                <Star className="w-3 h-3 mr-1" />
+                                Popular
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-gray-400 text-sm mb-1">{result.description}</p>
+                          <span className="text-cyan-400 text-xs">{result.category}</span>
                         </div>
-                        <p className="text-sm text-gray-500 mt-1">{result.description}</p>
-                        <div className="flex items-center space-x-2 mt-1">
-                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                            {result.category}
-                          </span>
-                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
                       </div>
-                      <ArrowRight className="h-4 w-4 text-gray-400" />
-                    </a>
+                    </button>
                   ))}
                 </div>
               ) : (
-                <div className="px-6 py-8 text-center">
-                  <Search className="mx-auto h-12 w-12 text-gray-400" />
-                  <h3 className="mt-2 text-sm font-medium text-gray-900">No results found</h3>
-                  <p className="mt-1 text-sm text-gray-500">
-                    Try searching with different keywords
+                <div className="text-center py-8">
+                  <Search className="w-12 h-12 text-gray-600 mx-auto mb-4" />
+                  <h3 className="text-white font-medium mb-2">No results found</h3>
+                  <p className="text-gray-400 text-sm">
+                    Try searching for "AI", "IT services", or "cloud migration"
                   </p>
                 </div>
               )}
             </div>
-          )}
-
-          {!query && (
-            <div className="border-t border-gray-200 px-6 py-8">
-              <div className="text-center">
-                <Search className="mx-auto h-12 w-12 text-gray-400" />
-                <h3 className="mt-2 text-sm font-medium text-gray-900">Search Zion Tech Group</h3>
-                <p className="mt-1 text-sm text-gray-500">
-                  Find AI services, IT solutions, and more
-                </p>
-              </div>
-              
-              <div className="mt-6">
-                <h4 className="text-sm font-medium text-gray-900 mb-3">Popular searches</h4>
-                <div className="flex flex-wrap gap-2">
-                  {['AI Automation', 'Cloud Migration', 'Cybersecurity', 'AI Analytics', 'IT Support'].map((term) => (
+          ) : (
+            // Recent Searches and Suggestions
+            <div className="p-4">
+              {recentSearches.length > 0 && (
+                <div className="mb-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-white font-medium flex items-center">
+                      <Clock className="w-4 h-4 mr-2" />
+                      Recent Searches
+                    </h3>
                     <button
-                      key={term}
-                      onClick={() => setQuery(term)}
-                      className="inline-flex items-center px-3 py-1 rounded-full text-sm bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors"
+                      onClick={clearRecentSearches}
+                      className="text-gray-400 hover:text-white text-sm transition-colors"
                     >
-                      {term}
+                      Clear
+                    </button>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {recentSearches.map((search, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleRecentSearchClick(search)}
+                        className="px-3 py-1 bg-slate-800 text-gray-300 rounded-full text-sm hover:bg-slate-700 hover:text-white transition-colors"
+                      >
+                        {search}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <div>
+                <h3 className="text-white font-medium mb-3">Popular Searches</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {[
+                    "AI Project Manager",
+                    "Cloud Migration",
+                    "Cybersecurity",
+                    "Data Analytics",
+                    "Machine Learning",
+                    "Quantum Computing"
+                  ].map((suggestion, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleRecentSearchClick(suggestion)}
+                      className="text-left p-3 rounded-lg hover:bg-slate-800/50 transition-colors group"
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-300 group-hover:text-white transition-colors">
+                          {suggestion}
+                        </span>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors" />
+                      </div>
                     </button>
                   ))}
                 </div>

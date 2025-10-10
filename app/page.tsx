@@ -4,6 +4,9 @@ import React, { memo, useMemo } from 'react';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code, FileText, Calculator, Scale, Package, ShoppingCart, Music, Eye, Factory, GraduationCap } from 'lucide-react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SEOHead from './components/SEOHead';
+import ErrorBoundary from './components/ErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
 import type { MicroSAASService, AIService, ITService, Testimonial, Stat } from '../../src/types';
 
 // Service data
@@ -566,8 +569,29 @@ const HomePage: React.FC = memo(() => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Header />
+    <ErrorBoundary>
+      <SEOHead 
+        title="Zion Tech Group - AI & IT Solutions | Enterprise AI Services"
+        description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+        keywords={[
+          "AI solutions",
+          "artificial intelligence", 
+          "enterprise AI",
+          "quantum computing",
+          "IT services",
+          "digital transformation",
+          "machine learning",
+          "automation",
+          "cybersecurity",
+          "cloud migration",
+          "data analytics",
+          "business intelligence"
+        ]}
+        canonical="https://ziontechgroup.com"
+      />
+      <PerformanceMonitor />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <Header />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background Effects */}
@@ -969,8 +993,9 @@ const HomePage: React.FC = memo(() => {
         </div>
       </section>
 
-<Footer />
-    </div>
+        <Footer />
+      </div>
+    </ErrorBoundary>
   );
 });
 
