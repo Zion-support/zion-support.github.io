@@ -23,9 +23,11 @@ const Footer: React.FC = () => {
   const microSaasServices = {
     'Productivity': [
       { name: 'AI Project Manager Pro', url: '/ai-project-manager', description: 'Intelligent project planning' },
-      { name: 'AI Task Manager Pro', url: '/task-manager-pro', description: 'Smart task management' },
+      { name: 'AI Task Manager Pro', url: '/ai-task-manager', description: 'Smart task management' },
       { name: 'AI Workflow Automation', url: '/ai-workflow-automation', description: 'Process automation' },
-      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' }
+      { name: 'AI Scheduler Pro', url: '/ai-scheduler', description: 'Intelligent scheduling' },
+      { name: 'AI Time Tracker Pro', url: '/ai-time-tracker', description: 'Intelligent time tracking' },
+      { name: 'AI Meeting Assistant Pro', url: '/ai-meeting-assistant', description: 'AI-powered meeting management' }
     ],
     'Content & Marketing': [
       { name: 'AI Content Writer Pro', url: '/ai-content-writer', description: 'AI content generation' },
@@ -38,6 +40,8 @@ const Footer: React.FC = () => {
       { name: 'AI CRM Intelligence', url: '/ai-crm', description: 'Smart CRM solutions' },
       { name: 'AI Fintech Analyzer', url: '/ai-fintech', description: 'Financial analysis' },
       { name: 'AI Financial Analyzer', url: '/ai-financial-analyzer', description: 'Advanced financial insights' },
+      { name: 'AI Invoice Generator Pro', url: '/ai-invoice-generator', description: 'Automated invoice creation' },
+      { name: 'AI Stock Portfolio Manager', url: '/ai-stock-portfolio-manager', description: 'Intelligent portfolio management' },
       { name: 'AI E-commerce Optimizer', url: '/ai-ecommerce-optimizer', description: 'E-commerce optimization' }
     ],
     'Customer Service': [
@@ -48,7 +52,8 @@ const Footer: React.FC = () => {
     'Development': [
       { name: 'AI Code Review Assistant', url: '/ai-code-generation', description: 'Automated code analysis' },
       { name: 'AI Mobile App Builder', url: '/ai-mobile-app-development', description: 'Mobile app development' },
-      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' }
+      { name: 'AI Document Processor', url: '/ai-document-processing', description: 'Document automation' },
+      { name: 'AI Password Manager Pro', url: '/ai-password-manager', description: 'Advanced password security' }
     ],
     'Analytics': [
       { name: 'AI Analytics Dashboard', url: '/ai-analytics', description: 'Data insights & analytics' },
@@ -60,7 +65,8 @@ const Footer: React.FC = () => {
       { name: 'AI Voice Cloning Studio', url: '/ai-voice-cloning', description: 'Realistic voice synthesis' },
       { name: 'AI Music Composition Suite', url: '/ai-music-composition', description: 'AI-generated music' },
       { name: 'AI Fashion Design Studio', url: '/ai-fashion-design', description: 'AI fashion design' },
-      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' }
+      { name: 'AI 3D Generation Studio', url: '/ai-3d-generation', description: 'AI 3D content creation' },
+      { name: 'AI Logo Designer Pro', url: '/ai-logo-designer', description: 'Professional logo creation' }
     ],
     'Health & Wellness': [
       { name: 'AI Healthcare Assistant', url: '/ai-healthcare', description: 'Medical AI support' },

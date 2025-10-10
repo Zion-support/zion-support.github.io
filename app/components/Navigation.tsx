@@ -156,6 +156,7 @@ const Navigation: React.FC = () => {
     { name: 'AI Workflow Automation Pro', href: '/ai-workflow-automation', icon: Settings, category: 'Productivity', price: '$79/mo' },
     { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, category: 'Productivity', price: '$39/mo' },
     { name: 'AI Time Tracker Pro', href: '/ai-time-tracker', icon: Clock3, category: 'Productivity', price: '$34/mo' },
+    { name: 'AI Meeting Assistant Pro', href: '/ai-meeting-assistant', icon: Mic, category: 'Productivity', price: '$79/mo' },
     
     // Content & Marketing
     { name: 'AI Content Writer Pro', href: '/ai-content-writer', icon: FileText, category: 'Content', price: '$89/mo' },
