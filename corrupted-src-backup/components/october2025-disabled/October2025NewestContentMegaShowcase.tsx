@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+
 export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix JSX expression */}
      },
     {/* TODO: Fix JSX expression */}
@@ -35,7 +35,8 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
             🚀 Revolutionary, New, Content 🚀
           </h2>
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, m, b-4, fon, t-semibo, l, d">
-            3, Breakthrough, AI Technologi, e, s;
+            3, Breakthrough, AI Technologi, e, s
+          </p>
           </p>
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-6, tex, t-lg"></div>
             <div, className="flex, item, s-center, ga, p-2"></div>
@@ -48,7 +49,8 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
             <div, className="flex, item, s-center, ga, p-2"></div>
           </h2>"
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, m, b-4, fon, t-semibo, l, d"></p>
-            3, Breakthrough, AI Technologi, e, s;
+            3, Breakthrough, AI Technologi, e, s
+          </p>
           </p>"
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-6, tex, t-lg"></div>"
             <div, className="flex, item, s-center, ga, p-2"></div>"
@@ -130,7 +132,8 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
             <div, className="flex, fle, x-wrap, ga, p-4"></div>
               <Link, t, o="/conta, c, t"
                 className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">
-                Schedule, Free, Consultation;
+                Schedule, Free, Consultation
+          </Link>
               </Li, n, k>
               <Link, t, o="/servic, e, s"
                 className="px-8, p, y-4, b, g-sla, t, e-7, 0, 0/50, tex, t-white, fon, t-bold, rounde, d-xl, border, border-sla, t, e-600, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
@@ -143,17 +146,20 @@ export default function October2025NewestContentMegaShowca, s, e() {/* TODO: Fix
             <div, className="flex, fle, x-wrap, ga, p-4"></div>"
               <Link, t, o="/conta, c, t""
                 className="px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, tex, t-white, fon, t-bold, rounde, d-xl, hove, r: fr, o, m-purp, l, e-500, hove, r:to-bl, u, e-500, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50"></Link>
-                Schedule, Free, Consultation;
+                Schedule, Free, Consultation
+          </Link>
               </Li, n, k>"
               <Link, t, o="/servic, e, s""
                 className="px-8, p, y-4, b, g-sla, t, e-7, 0, 0/50, tex, t-white, fon, t-bold, rounde, d-xl, border, border-sla, t, e-600, hove, r:bg-sla, t, e-6, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"></Link>
-                Explore, All, Services;
+                Explore, All, Services
+          </Link>
               </Li, n, k>
             </div>
           </div>
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
+          </Link>
 }
 }"`

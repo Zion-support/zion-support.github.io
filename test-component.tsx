@@ -6,7 +6,10 @@ const TestComponent = () => {
     <div></div>
       <h1>Test</h1>
     </div>
-  );
+  )
+          </h1>
 const TestComponent = () => {/* TODO: Fix JSX expression */}
-};
-export default TestComponent;
+}
+          </h1>
+export default TestComponent
+          </h1>

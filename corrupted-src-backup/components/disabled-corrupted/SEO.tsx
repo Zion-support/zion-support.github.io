@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const SEO: React.FC<SEOProps> = ({,
@@ -49,9 +49,12 @@ const,
   r:image" content={image} /></meta>"
       <link rel="canonical" href={url} /></link>
     </Helmet>
-  );
-};
-export default SEO;
+  )
+          </link>
+}
+          </link>
+export default SEO
+          </link>
 "
   </SEOProps>
   </SEOProps>

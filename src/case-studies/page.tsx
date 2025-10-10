@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
+
+
+
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
@@ -67,7 +67,7 @@ const CaseStudiesPage: React.FC = () => {
       image: '🏭',
       description: 'Optimized manufacturing processes using AI for predictive maintenance and automated quality control.'
     }
-  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -80,8 +80,9 @@ const CaseStudiesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Link to="/" className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to Home;
-  </
+              Back to Home
+          </Link>
+          </Link>
           </div>
         </header>
         {/* Hero Section */}
@@ -89,11 +90,13 @@ const CaseStudiesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Success Stories;
-  </
+                Success Stories
+          </h1>
+          </h1>
               <p className="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-                Real results from real companies using our AI solutions;
-  </
+                Real results from real companies using our AI solutions
+          </p>
+          </p>
               <p className="text-lg mb-8 text-gray-300 max-w-4xl mx-auto">
                 Discover how leading companies across industries have transformed their operations 
                 and achieved remarkable ROI with our cutting-edge AI technology.
@@ -146,8 +149,9 @@ const CaseStudiesPage: React.FC = () => {
                       <Link 
                         to="/contact"
                         className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200">
-                        Learn More;
-  </
+                        Learn More
+          </Link>
+          </Link>
                       <div className="flex items-center text-green-600">
                         <CheckCircle className="w-4 h-4 mr-1" />
                         <span className="text-sm font-semibold">Verified Results</span>
@@ -164,11 +168,13 @@ const CaseStudiesPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Proven Track Record;
-  </
+                Proven Track Record
+          </h2>
+          </h2>
               <p className="text-xl text-gray-600">
-                Our AI solutions deliver consistent, measurable results;
-  </
+                Our AI solutions deliver consistent, measurable results
+          </p>
+          </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
@@ -197,8 +203,9 @@ const CaseStudiesPage: React.FC = () => {
               Ready to Create Your Success Story?
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Join the companies that have transformed their business with our AI solutions;
-  </
+              Join the companies that have transformed their business with our AI solutions
+          </p>
+          </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 to="/contact"
@@ -209,16 +216,20 @@ const CaseStudiesPage: React.FC = () => {
               <Link 
                 to="/services"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-                View Our Services;
-  </
+                View Our Services
+          </Link>
+          </Link>
             </div>
           </div>
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default CaseStudiesPage;
+  )
+          </Link>
+}
+          </Link>
+export default CaseStudiesPage
+          </Link>
   </Link>
   </p>
   </p>

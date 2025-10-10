@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, Shield, Zap, Clock, Award, ArrowRight, Brain, Cloud, Code, Database, Globe, Smartphone, Lock, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+
+
+
+
+
 const ITConsultingPage: React.FC = () => {
   const consultingServices = [
     {
@@ -22,7 +22,7 @@ const ITConsultingPage: React.FC = () => {
       benefits: ['Scalability', 'Cost Savings', 'Enhanced Security', 'Improved Performance'],
       price: 'Starting at $3,500/month'
     }
-  ];
+
   return (<React.Fragment>
       <Helmet></Helmet>
         <title>IT Consulting Services - Zion Tech Group</title>
@@ -37,7 +37,8 @@ const ITConsultingPage: React.FC = () => {
             <div className="text-center mb-16"></div>"
               <h1 className="text-4xl,"
   md:text-6xl font-bold text-gray-900 mb-6"></h1>
-                IT Consulting Services;
+                IT Consulting Services
+          </h1>
               </h1>"
               <p className="text-xl text-gray-600 max-w-3xl mx-auto"></p>
                 Transform your business with expert IT consulting. We provide strategic guidance, 
@@ -87,8 +88,9 @@ const ITConsultingPage: React.FC = () => {
                     <div className="text-center">
                       <div className="text-3xl font-bold text-blue-600 mb-2">{service.price}</div>
                       <button className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors">
-                        Get Started;
-  </
+                        Get Started
+          </button>
+          </button>
                     </div>
                   </div>
                 </div>
@@ -105,12 +107,14 @@ const ITConsultingPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors">
                   <Phone className="w-5 h-5 inline mr-2" />
-                  Call Us;
-  </
+                  Call Us
+          </button>
+          </button>
                 <button className="bg-gray-600 text-white py-3 px-8 rounded-lg hover:bg-gray-700 transition-colors">
                   <Mail className="w-5 h-5 inline mr-2" />
-                  Email Us;
-  </
+                  Email Us
+          </button>
+          </button>
               </div>
             </div>
           </section>
@@ -118,9 +122,12 @@ const ITConsultingPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default ITConsultingPage;
+  )
+          </button>
+}
+          </button>
+export default ITConsultingPage
+          </button>
   </button>
   </button>
   </button>

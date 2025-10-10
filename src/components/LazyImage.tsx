@@ -1,17 +1,17 @@
-import React from 'react';
-'use client';
+
+
 interface LazyImageProps {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+
   sr,
   c: string;,
     al,
-  t: string;
-  className?: string;
-  children?: React.ReactNode;
+
+
+
 }
 const,
-  LazyImage: React.FC;
+
           <LazyImageProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -28,13 +28,17 @@ const,
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false)
+          </LazyImageProps>
+  const [isInView, setIsInView] = useState(priority)
+          </LazyImageProps>
+  const [hasError, setHasError] = useState(false)
+          </LazyImageProps>
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (priority) return;
+    if (priority) return
+          </LazyImageProps>
     const observer = new IntersectionObserver()
       ([entry]) => {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -42,37 +46,50 @@ const,
         if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          setIsInView(true);
-          observer.disconnect();
+          setIsInView(true)
+          </LazyImageProps>
+          observer.disconnect()
+          </LazyImageProps>
         }
       },
       {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </LazyImageProps>
   threshol,
   d: 0.1,
         rootMargi,
   n: '50px'}
-    );
+    )
+          </LazyImageProps>
     if (imgRef.current) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      observer.observe(imgRef.current);
+      observer.observe(imgRef.current)
+          </LazyImageProps>
     }
-    return () => observer.disconnect();
-  }, [priority]);
+    return () => observer.disconnect()
+          </LazyImageProps>
+  }, [priority])
+          </LazyImageProps>
   const handleLoad = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    setIsLoaded(true);
-    onLoad?.();
-  };
+    setIsLoaded(true)
+          </LazyImageProps>
+    onLoad?.()
+          </LazyImageProps>
+  }
+          </LazyImageProps>
   const handleError = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    setHasError(true);
-    onError?.();
-  };
+    setHasError(true)
+          </LazyImageProps>
+    onError?.()
+          </LazyImageProps>
+  }
+          </LazyImageProps>
   return (<div>Coming Soon</div>)
   )
           <div></div>
@@ -102,7 +119,9 @@ const,
         </React.Fragment>
       )}
     </div>
-  );
-};
+  )
+          </div>
+}
+          </div>
 export default LazyImage;"
   </LazyImageProps>

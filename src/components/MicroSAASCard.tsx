@@ -1,36 +1,36 @@
-import React from 'react';
-'use client';
+
+
 interface MicroSAASCardProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   servic,
   e: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+
   titl,
-  e: string;
+
     descriptio,
-  n: string;
+
     ico,
-  n: string;
+
     pric,
   e: string;,
     feature,
   s: string[];,
     benefit,
-  s: string[];
+
     marketPrice?: string;,
     categor,
   y: string;,
     technologie,
   s: string[];,
     contactInf,
-  o: string;
-    link?: string;
-    popular?: boolean;
-  };
+
+
+
+
 }
-const MicroSAASCard: React.FC;
+
           <MicroSAASCardProps> = ({ service }) => {// TODO: Add content;}
 }
 const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
@@ -109,8 +109,10 @@ const MicroSAASCard: React.FC<MicroSAASCardProps> = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+          </p>
+}
+          </p>
 export default MicroSAASCard;"`
   </MicroSAASCardProps>
   </MicroSAASCardProps>

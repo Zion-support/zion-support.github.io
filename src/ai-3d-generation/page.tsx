@@ -1,8 +1,8 @@
-import React from 'react';
-import { Camera, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+
+
+
+
+
 const AI3DGenerationPage: React.FC = () => {
   const features = [
     '3D Model Generation',
@@ -15,7 +15,7 @@ const AI3DGenerationPage: React.FC = () => {
     'Lighting Setup',
     'Material Library',
     'Scene Composition'
-  ];
+
   const benefits = [
     'Professional 3D content',
     'Time savings',
@@ -23,7 +23,7 @@ const AI3DGenerationPage: React.FC = () => {
     'High quality output',
     'Cost-effective',
     'Scalable production'
-  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -46,7 +46,7 @@ const AI3DGenerationPage: React.FC = () => {
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Commercial license'],
       popular: false
     }
-  ];
+
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -66,32 +66,37 @@ const AI3DGenerationPage: React.FC = () => {
                   <Camera className="w-8 h-8 text-white" />
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-white neon-text">
-                  AI 3D Generation Studio;
-  </
+                  AI 3D Generation Studio
+          </h1>
+          </h1>
               </div>
               <p className="text-xl text-gray-300 mb-8">
-                Create 3D models, animations, and virtual environments with AI;
-  </
+                Create 3D models, animations, and virtual environments with AI
+          </p>
+          </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Free Trial;
-  </
+                  Start Free Trial
+          </a>
+          </a>
                 <a
                   href="#demo"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
                   <Play className="w-5 h-5" />
-                  View Gallery;
-  </
+                  View Gallery
+          </a>
+          </a>
               </div>
             </div>
           </section>
           {/* Features Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI 3D Generation Features;
-  </
+              AI 3D Generation Features
+          </h2>
+          </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <div key={index} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -122,16 +127,18 @@ const AI3DGenerationPage: React.FC = () => {
           {/* Pricing Section */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Simple, Transparent Pricing;
-  </
+              Simple, Transparent Pricing
+          </h2>
+          </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {pricingPlans.map((plan, index) => (
                 <div key={index} className={`cyber-card p-8 relative ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-semibold">
-                        Most Popular;
-  </
+                        Most Popular
+          </div>
+          </div>
                     </div>
                   )}
                   <div className="text-center mb-6">
@@ -157,8 +164,9 @@ const AI3DGenerationPage: React.FC = () => {
                         : 'border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
-                    Get Started;
-  </
+                    Get Started
+          </a>
+          </a>
                 </div>
               ))}
             </div>
@@ -170,14 +178,16 @@ const AI3DGenerationPage: React.FC = () => {
                 Ready to Create Amazing 3D Content?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join leading companies using AI 3D generation technology;
-  </
+                Join leading companies using AI 3D generation technology
+          </p>
+          </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300">
-                  Start Your Free Trial;
-  </
+                  Start Your Free Trial
+          </a>
+          </a>
                 <a
                   href="tel:+13024640950"
                   className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
@@ -190,9 +200,12 @@ const AI3DGenerationPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default AI3DGenerationPage;
+  )
+          </span>
+}
+          </span>
+export default AI3DGenerationPage
+          </span>
   </a>
   </p>
   </a>

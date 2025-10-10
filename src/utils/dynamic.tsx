@@ -1,14 +1,15 @@
-'use client';
+
 interface DynamicOptions {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  loading?: () => React.ReactElement;
-  ssr?: boolean;
+
+
 }
-export function dynamic;
+
           <T extends ComponentType<unknown>>()
   importFun,
-  c: () => Promise;
+  c: () => Promise
+          </T>
           <{/* TODO: Fix JSX expression */}
   t: T }>,
   _option,

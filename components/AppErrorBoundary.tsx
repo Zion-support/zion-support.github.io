@@ -1,7 +1,7 @@
-import React, { Component, type ErrorInfo, type ReactNode } from 'react';
+
 interface ErrorFallbackProps {
-  error: Error;
-  resetError: () => void;
+
+
 }
 function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
   return (
@@ -45,37 +45,49 @@ function ErrorFallback({ error, resetError }: ErrorFallbackProps) {
         </div>
       </div>
     </div>
-  );
+  )
+          </button>
 }
 interface AppErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode
+          </button>
 }
 interface AppErrorBoundaryState {
-  hasError: boolean;
-  error: Error | undefined;
+  hasError: boolean
+          </button>
+  error: Error | undefined
+          </button>
 }
 export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorBoundaryState> {
   constructor(props: AppErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false, error: undefined };
+    super(props)
+          </button>
+    this.state = { hasError: false, error: undefined }
+          </button>
   }
   static getDerivedStateFromError(error: Error): AppErrorBoundaryState {
-    return { hasError: true, error };
+    return { hasError: true, error }
+          </button>
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     if (process.env['NODE_ENV'] === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error caught by boundary:', error, errorInfo)
+          </button>
     }
     // Here you could send error to monitoring service
   }
   resetError = () => {
-    this.setState({ hasError: false, error: undefined });
-  };
+    this.setState({ hasError: false, error: undefined })
+          </button>
+  }
+          </button>
   render() {
     if (this.state.hasError && this.state.error) {
-      return <ErrorFallback error={this.state.error} resetError={this.resetError} />;
+      return <ErrorFallback error={this.state.error} resetError={this.resetError} />
+          </button>
     }
-    return this.props.children;
+    return this.props.children
+          </button>
   }
 }
   </button>

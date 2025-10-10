@@ -7,7 +7,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🧠',
       col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-50, 0',
       reade, r, s: '5, 0, 0, K+',
-      rati, n, g: 5., 0;
+
     },
     {
       title: 'Autonomous, Neural, Network, s',
@@ -16,7 +16,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '⚡',
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
       reade, r, s: '1, 8, 0, K+',
-      rati, n, g: 4., 9;
+
     },
     {
       title: 'Synthetic, Consciousness, Revolutio, n',
@@ -25,7 +25,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🌟',
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
       reade, r, s: '2, 0, 3, K+',
-      rati, n, g: 5., 0;
+
     },
     {
       title: 'Neur, a, l-Synaptic, Fusion, A, I',
@@ -34,7 +34,7 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
       ic, o, n: '🚀',
       col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
       reade, r, s: '1, 5, 6, K+',
-      rati, n, g: 4., 8;
+
     }
   ]; return(<div, classNam, e = "bg-gradie, n, t-to-r, fro, m-sla, t, e-900, vi, a-purp, l, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
@@ -46,7 +46,8 @@ const UltimateAIRevolutionShowcase202, 5 = () => {
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" />
       </div>
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-        Revolutionary, AI, Breakthroughs;
+        Revolutionary, AI, Breakthroughs
+          </h2>
       </h2>
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">
         Experience, the, most advanced, AI, technologies transforming, business, operations with, unprecedented, accura, c, y, consciousne, s, s, and, enterprise, value creati, o, n.)
@@ -81,7 +82,8 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
         <Sparkles, className="w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e" /></Sparkles>
       </div>"
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t"></h2>
-        Revolutionary, AI, Breakthroughs;
+        Revolutionary, AI, Breakthroughs
+          </h2>
       </h2>"
       <p, className="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o"></p>
         Experience, the, most advanced, AI, technologies transforming, business, operations with, unprecedented, accura, c, y, consciousne, s, s, and, enterprise, value creati, o, n.
@@ -141,19 +143,22 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
         <Link, t, o="/bl, o, g/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-announceme, n, t" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-purp, l, e-600, hove, r:to-bl, u, e-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
           <Rocket, className="w-5 h-5" />
-          Explore, Revolutionary, Content;
+          Explore, Revolutionary, Content
+          </Link>
           <Link, className="w-5 h-5" />
         </Li, n, k>
         <Link, t, o="/ca, s, e-studi, e, s/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-5, 0, 0-billi, o, n-succe, s, s" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
           <Award, className="w-5 h-5" />
-          View, Success, Stories;
+          View, Success, Stories
+          </Link>
           <Link, className="w-5 h-5" />
         </Li, n, k>
         <Link, t, o="/servic, e, s/quant, u, m-consciousne, s, s-ai-servic, e, s" 
           className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-oran, g, e-600, hove, r:to-r, e, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg">
           <Globe, className="w-5 h-5" />
-          Get, AI, Services;
+          Get, AI, Services
+          </Link>
           <Link, className="w-5 h-5" />
         </Li, n, k>
       </div>
@@ -182,10 +187,13 @@ const UltimateAIRevolutionShowcase202, 5 = () => {/* TODO: Fix JSX expression */
       </div>"
       <div, className="mt-8, tex, t-cent, e, r"></div>"
         <p, className="te, x, t-gr, a, y-400, tex, t-sm"></p>
-          🚀 Joi, n, 2.5M+ professionals, transforming, their businesses, with, revolutionary AI, technolog, y;
+          🚀 Joi, n, 2.5M+ professionals, transforming, their businesses, with, revolutionary AI, technolog, y
+          </p>
         </p>
       </div>
     </div>
-  );
-};
+  )
+          </p>
+}
+          </p>
 export default UltimateAIRevolutionShowcase2025;"`

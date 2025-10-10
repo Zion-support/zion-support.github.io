@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+
 export default function October2025NewContentAdvertisingBann, e, r() { 
   return(<section, classNam, e = "relative, p, y-20, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n"  > {/* Animated, Background, Elements */ })
       <div, className="absolute, inse, t-0">)
@@ -37,7 +37,8 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
           {/* Main, Headlin, e */}"
           <h2, className="te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, leadin, g-tig, h, t"></h2>"
             <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t"></span>
-              3, Revolutionary, AI Breakthroug, h, s;
+              3, Revolutionary, AI Breakthroug, h, s
+          </span>
             </sp, a, n>
           </h2>"
           <p, className="te, x, t-3xl, m, d:te, x, t-4xl, tex, t-white, fon, t-bold, m, b-8"></p>
@@ -140,6 +141,7 @@ export default function October2025NewContentAdvertisingBann, e, r() {/* TODO: F
         </div>
       </div>
     </sec, t, i, o, n>
-  );
+  )
+          </sp>
 }
 "

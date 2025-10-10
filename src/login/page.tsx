@@ -1,34 +1,34 @@
-'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-'use client';
-import React, { useState } from 'react';
+
+
+
+
+
+
+
 const LoginPage: React.FC = () => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
     rememberMe: false
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+
+
+
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
+
+
     // Simulate login process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
+
+
     // Redirect to dashboard or home page
-    window.location.href = '/';
-  };
+
+
   const features = [
     {
       icon: Shield,
@@ -45,7 +45,7 @@ $4},
       title: 'Mobile Ready',
       description:     ,
 $4}
-  ];
+
   return (
     <React.Fragment>
       <Navigation />
@@ -56,17 +56,20 @@ $4}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
               <div className="text-center mb-8">
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Welcome Back;
-  </
+                  Welcome Back
+          </h1>
+          </h1>
                 <p className="text-gray-300">
-                  Sign in to your account to access your AI and IT services;
-  </
+                  Sign in to your account to access your AI and IT services
+          </p>
+          </p>
               </div>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address;
-  </
+                    Email Address
+          </label>
+          </label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
@@ -80,50 +83,70 @@ $4}
                     />
                   </div>
     <div>Coming Soon</div>
-  );
-};
+  )
+          </div>
+}
+          </div>
   const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </div>
   emai,
   l: '',
     passwor,
   d: '',
     rememberM,
   e: false;)
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  })
+          </div>
+  const [showPassword, setShowPassword] = useState(false)
+          </div>
+  const [isLoading, setIsLoading] = useState(false)
+          </div>
   const _handleInputChange = (e: React.ChangeEvent;)
           <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const { name, value, type, checked } = e.target;
+    const { name, value, type, checked } = e.target
+          </HTMLInputElement>
     setFormData(prev => ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
 //       ...prev,
       [name]: type === 'checkbox' ? checked : value;)
-    }));
-  };
+    }))
+          </HTMLInputElement>
+  }
+          </HTMLInputElement>
   const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    e.preventDefault();
-    setIsLoading(true);
-    // Simulate login process;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
-    // Redirect to dashboard or home page;
-    window.location.href = '/';
-  };
+    e.preventDefault()
+          </HTMLInputElement>
+    setIsLoading(true)
+          </HTMLInputElement>
+    // Simulate login process
+          </HTMLInputElement>
+    await new Promise(resolve => setTimeout(resolve, 2000))
+          </HTMLInputElement>
+    setIsLoading(false)
+          </HTMLInputElement>
+    // Redirect to dashboard or home page
+          </HTMLInputElement>
+    window.location.href = '/'
+          </HTMLInputElement>
+  }
+          </HTMLInputElement>
   const features = [
   // TOD,
-  O: Add items;
-];;
+  O: Add items
+          </HTMLInputElement>
+];
+          </HTMLInputElement>
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </HTMLInputElement>
   ico,
   n: Shield,
       titl,
@@ -133,7 +156,8 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </HTMLInputElement>
   ico,
   n: CheckCircle,
       titl,
@@ -143,7 +167,8 @@ $4}
     },
     {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </HTMLInputElement>
   ico,
   n: Phone,
       titl,
@@ -151,7 +176,8 @@ $4}
       descriptio,
   n: 'Access your account from any device, anywhere'
     }
-  ];
+  ]
+          </HTMLInputElement>
   return (<div>Coming Soon</div>)
   )
           <React.Fragment>
@@ -164,16 +190,19 @@ $4}
             <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
               <div className="text-center mb-8"></div>"
                 <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
-// Welcome Back;
+// Welcome Back
+          </h1>
           </h1>"
                 <p className="text-gray-300"></p>
-// Sign in to your account to access your AI and IT services;
+// Sign in to your account to access your AI and IT services
+          </p>
           </p>
               </div>"
               <form onSubmit={handleSubmit} className="space-y-6"></form>
                 <div></div>"
                   <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Email Address;
+// Email Address
+          </label>
           </label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -188,8 +217,9 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
-                    Password;
-  </
+                    Password
+          </label>
+          </label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
@@ -246,14 +276,16 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                   <a
                     href="/signup"
                     className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors">
-                    Sign up here;
-  </
+                    Sign up here
+          </a>
+          </a>
                 </p>
               </div>
               <div className="mt-8 pt-6 border-t border-gray-700">
                 <p className="text-center text-sm text-gray-400 mb-4">
-                  Or continue with;
-  </
+                  Or continue with
+          </p>
+          </p>
                 <div className="grid grid-cols-2 gap-3">
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
                     <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24">
@@ -262,14 +294,16 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                       <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                       <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                     </svg>
-                    Google;
-  </
+                    Google
+          </svg>
+          </svg>
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
-                    Facebook;
-  </
+                    Facebook
+          </svg>
+          </svg>
                 </div>
               </div>
             </div>
@@ -277,8 +311,9 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Access Your AI & IT Services;
-  </
+                  Access Your AI & IT Services
+          </h2>
+          </h2>
                 <p className="text-xl text-gray-300 mb-8">
                   Sign in to manage your AI services, view analytics, and access all your 
                   enterprise solutions in one place.
@@ -292,8 +327,9 @@ className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-// Password;
-  </
+// Password
+          </h3>
+          </h3>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
@@ -351,13 +387,15 @@ type="submit" disabled={isLoading}
                   <a
                     href="/signup" className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
 // >
-//                     Sign up here;
+//                     Sign up here
+          </a>
           </a>
                 </p>
               </div>"
               <div className="mt-8 pt-6 border-t border-gray-700"></div>"
                 <p className="text-center text-sm text-gray-400 mb-4"></p>
-                  Or continue with;
+                  Or continue with
+          </p>
                 </p>"
                 <div className="grid grid-cols-2 gap-3"></div>"
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white,"
@@ -368,14 +406,16 @@ type="submit" disabled={isLoading}
                       <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/></path>"
                       <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></path>
                     </svg>
-// Google;
-  </
+// Google
+          </path>
+          </path>
                   <button className="flex items-center justify-center px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white hover:bg-slate-600 transition-colors">
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                     </svg>
-// Facebook;
-  </
+// Facebook
+          </svg>
+          </svg>
                 </div>
               </div>
             </div>
@@ -383,10 +423,12 @@ type="submit" disabled={isLoading}
             <div className="space-y-8"></div>
               <div></div>"
                 <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
-// Access Your AI & IT Services;
+// Access Your AI & IT Services
+          </h2>
           </h2>"
                 <p className="text-xl text-gray-300 mb-8"></p>
-// Sign in to manage your AI services, view analytics, and access all your;
+// Sign in to manage your AI services, view analytics, and access all your
+          </p>
 //                   enterprise solutions in one place.
           </p>
               </div>"
@@ -422,7 +464,8 @@ type="submit" disabled={isLoading}
 // New to Zion Tech Group?
           </h3>"
                 <p className="text-gray-300 mb-4"></p>
-// Join thousands of businesses already using our AI and IT solutions;
+// Join thousands of businesses already using our AI and IT solutions
+          </p>
 //                   to transform their operations.
           </p>
                 <a
@@ -439,9 +482,12 @@ type="submit" disabled={isLoading}
       <Footer />
     </React.Fragment>
     </div>
-  );
-};
-export default LoginPage;
+  )
+          </ArrowRight>
+}
+          </ArrowRight>
+export default LoginPage
+          </ArrowRight>
   </a>
   </button>
   </button>

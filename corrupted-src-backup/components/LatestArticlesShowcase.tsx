@@ -1,12 +1,13 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
+
+
+
 const, LatestArticlesShowcas, e: Rea, c, t.FC = () => { 
   const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n(<section, classNam, e = 'py-20, b, g-whi, t, e'>
       <div, classNam, e='container, m, x-auto, p, x-6'>
         <div, classNam, e='te, x, t-center, m, b-12'>
           <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-            Latest, Article, s & Resear, c, h;
+            Latest, Article, s & Resear, c, h
+          </h2>
   const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featu, r, e, d).sli, c, e(, 0, 6); retu, r, n (
     <section, classNam, e = 'py-20, b, g-whi, t, e'>
       <div, classNam, e='container, m, x-auto, p, x-6'></section>
@@ -19,7 +20,8 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                 <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'>
                   {artic, l, e.t, i, t, l, e}</h3>
                   <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'>
-                    Read, Mor, e;
+                    Read, Mor, e
+          </div>
                     Read, Mor, e</div>
                     <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
             View, All, Articles;)
@@ -30,8 +32,10 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {/* TODO: Fix JSX expressi
                 <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s'></Link>
                   {artic, l, e.t, i, t, l, e}
                   <div, classNam, e='te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l'></div>
-                    Read, Mor, e;
+                    Read, Mor, e
+          </div>
                     <Link, classNam, e='w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' /></Link>
-            View, All, Articles;
+            View, All, Articles
+          </Link>
             <Link, classNam, e='w-6 h-6' /></Link>
 }}

@@ -1,4 +1,4 @@
-import React from 'react';
+
 const SuccessStoriesShowcas, e: React.FC = () => { ,
   const storie, s = [
     {
@@ -48,16 +48,19 @@ const SuccessStoriesShowcas, e: React.FC = () => { ,
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-            Success, Storie, s;
+            Success, Storie, s
+          </h2>
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
+            See, how, leading companies, are, transforming their, operations, with our, AI, solutions
+          </p>
           </p>)
         </div>)
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">)
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
-  </
+            See, how, leading companies, are, transforming their, operations, with our, AI, solutions
+          </div>
+          </div>
         </div>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (</div>
@@ -78,10 +81,12 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
       <div, className="container, m, x-auto, p, x-6"></div>"
         <div, className="te, x, t-center, m, b-16"></div>"
           <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4"></h2>
-            Success, Storie, s;
+            Success, Storie, s
+          </h2>
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o"></p>
-            See, how, leading companies, are, transforming their, operations, with our, AI, solutions;
+            See, how, leading companies, are, transforming their, operations, with our, AI, solutions
+          </p>
           </p>
         </div>"
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12"></div>
@@ -117,7 +122,8 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
                 </div>"
                 <Link, t, o = "/ca, s, e-studi, e, s""
                   className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">
-                  Read, Full, Story;
+                  Read, Full, Story
+          </Link>
                   <Link, className="w-4 h-4" />
                 ></Link>
                   Read, Full, Story;"
@@ -130,7 +136,8 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
         <div, classNam, e = "te, x, t-cent, e, r"></div>
           <Link, t, o="/ca, s, e-studi, e, s"
             className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg">
-            View, All, Success Stori, e, s;
+            View, All, Success Stori, e, s
+          </Link>
             <Link, className="w-6 h-6" />
         </div>"
         <div, classNam, e = "te, x, t-cent, e, r"></div>"
@@ -142,6 +149,8 @@ const SuccessStoriesShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
+  )
+          </Link>
+}
+          </Link>
 export default SuccessStoriesShowcase;"`

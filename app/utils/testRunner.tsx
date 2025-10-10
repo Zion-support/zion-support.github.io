@@ -1,312 +1,154 @@
-'use client';
+
 /**
  * Comprehensive Test Runner and Testing Utilities
  * Provides advanced testing capabilities, mocking, and test automation
  */
-import React, { ReactElement, useCallback } from 'react';
-<<<<<<< HEAD
-// Test result types;
-<<<<<<< HEAD
-export interface PerformanceMetrics {
-  renderTime: number,
-    memoryUsage: number,
-    timestamp: string;}
-}
-export interface CoverageMetrics {
-  statements: number,
-    branches: number,
-    functions: number,
-=======
-export interface PerformanceMetrics {;
-  renderTime: number,;
-    memoryUsage: number;}
-  timestamp: string;}
-}
-export interface CoverageMetrics {;
-  statements: number,;
-    branches: number;
-  functions: number,;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-    lines: number;}
-  renderTime: number,;
-  memoryUsage: number,;
-  timestamp: string;}
-}
-export interface CoverageMetrics {;
-  statements: number,;
-  branches: number,;
-  functions: number,;}
-  lines: number;}
-}
-// Test configuration interface;
-<<<<<<< HEAD
-export interface TestConfig {
-  enableMocking: boolean,
-    enableCoverage: boolean,
-    enablePerformance: boolean,
-    enableAccessibility: boolean
-// Test result types
-export interface PerformanceMetrics {}
-  renderTime: number,
-    memoryUsage: number
-  timestamp: string;}
-}
-export interface CoverageMetrics {}
-  statements: number,
-    branches: number
-  functions: number,
-    lines: number;}
-=======
-export interface TestConfig {;
-  enableMocking: boolean,;
-    enableCoverage: boolean;
-  enablePerformance: boolean,;
-    enableAccessibility: boolean;
-// Test result types;}
-export interface PerformanceMetrics {}
-=======
-import { render, RenderOptions } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
 
-// Test result types
-export interface PerformanceMetrics {
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
-  renderTime: number;
-  memoryUsage: number;
-  timestamp: string;
+    lines: number;}
+
+
+  timestamp: string;}
 }
-<<<<<<< HEAD
-export interface CoverageMetrics {}
-  statements: number;
-  branches: number;
-  functions: number;
+
+
+
+  functions: number,;}
   lines: number;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
 }
-// Test configuration interface;
+
+
+
+
+}
+}
+
 export interface TestConfig {}
-<<<<<<< HEAD
-  enableMocking: boolean,
-    enableCoverage: boolean
-  enablePerformance: boolean,
-    enableAccessibility: boolean
-  enableVisualRegression: boolean
-  mockDataPath?: string
-  coverageThreshold: number,
-    performanceThreshold: number,
-    accessibilityThreshold: number
-  timeout?: number
-  verbose?: boolean
-  bail?: boolean
-  enableMocking: boolean,
-  enableCoverage: boolean,
-  enablePerformance: boolean,
-  enableAccessibility: boolean,
-  enableVisualRegression: boolean,
-=======
-  enableMocking: boolean;
-  enableCoverage: boolean;
-  enablePerformance: boolean;
-  enableAccessibility: boolean;
-  enableVisualRegression: boolean;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  mockDataPath?: string;
-  coverageThreshold: number,;
-    performanceThreshold: number;
-  accessibilityThreshold: number;
-  timeout?: number;
-  verbose?: boolean;
-  bail?: boolean;
-  enableMocking: boolean,;
-  enableCoverage: boolean,;
-  enablePerformance: boolean,;
-  enableAccessibility: boolean,;
-  enableVisualRegression: boolean,;
-  mockDataPath?: string;
-  coverageThreshold: number,;
-  performanceThreshold: number,;
-  accessibilityThreshold: number,;
-  timeout?: number;
-  verbose?: boolean;
-  bail?: boolean;
-  reporter?: 'console' | 'json' | 'html' | 'junit';
-  retries?: number;
-  parallel?: boolean;
-  watch?: boolean;
-  coverage?: boolean;
-  outputDir?: string;
-  includePattern?: string[],;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   excludePattern?: string[];}
 }
-<<<<<<< HEAD
-// Default test configuration
-export const defaultTestConfig: TestConfig = {,
-    enableMocking: true,
-export const defaultTestConfig: TestConfig = {}
-  enableMocking: true,
-  enableCoverage: true,
-  enablePerformance: true,
-  enableAccessibility: true,
-  enableVisualRegression: false,
-  coverageThreshold: 80,
-  performanceThreshold: 100,
-  accessibilityThreshold: 90}
-}
-interface TestResult {
-  name: string,
-    status: 'passed' | 'failed' | 'skipped' | 'pending'
-interface TestResult {}
-  name: string,
-    status: 'passed' | 'failed' | 'skipped' | 'pending'
-  duration: number
-  error?: Error
-  assertions: AssertionResult[]
-  coverage?: CoverageResult;}
-}
-interface AssertionResult {
-  name: string,
-    status: 'passed' | 'failed'
-interface AssertionResult {}
-  name: string,
-    status: 'passed' | 'failed'
-  expected?: unknown
-  actual?: unknown
-  message?: string;}
-}
-interface CoverageResult {
-  statements: number,
-    branches: number,
-    functions: number,
-    lines: number,
-    uncovered: string[];}
-}
-interface TestSuite {
-  name: string,
-    tests: Test[]
-  beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[];}</void>
-}
-interface Test {</void>
-  name: string,</void>
-    fn: () => void | Promise<void>timeout?: number
-  skip?: boolean
-=======
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-// Default test configuration;
-export const defaultTestConfig: TestConfig = {,;
+
+
     enableMocking: true,;}
 export const defaultTestConfig: TestConfig = {}
-  enableMocking: true,;
-  enableCoverage: true,;
-  enablePerformance: true,;
-  enableAccessibility: true,;
-  enableVisualRegression: false,;
-  coverageThreshold: 80,;
-  performanceThreshold: 100,;
+
+
+
+
+
+
+
   accessibilityThreshold: 90}
 }
-interface TestResult {;
-  name: string,;
+
+
     status: 'passed' | 'failed' | 'skipped' | 'pending';}
 interface TestResult {}
-  name: string;
-  status: 'passed' | 'failed' | 'skipped' | 'pending';
-  duration: number;
-  error?: Error;
-  assertions: AssertionResult[];
+
+
+
+
+
   coverage?: CoverageResult;}
 }
-interface AssertionResult {;
-  name: string,;
+
+
     status: 'passed' | 'failed';}
 interface AssertionResult {}
-  name: string;
-  status: 'passed' | 'failed';
-  expected?: unknown;
-  actual?: unknown;
+
+
+
+
   message?: string;}
 }
-interface CoverageResult {;
-  statements: number,;
-    branches: number;
-  functions: number,;
+
+
+
+
     lines: number;}
   uncovered: string[];}
 }
-interface TestSuite {;
-  name: string,;
+
+
     tests: Test[];}
-  beforeAll: (() => void | Promise<void>)[],</void></<<<void>afterAll</void></void>: (() => void | Promise<void>)[]</void></<<<void>beforeEach</void></void>: (() => void | Promise<void>)[],</void></<<<void>afterEach</void></void>: (() => void | Promise<void>)[];}</void>;
+
 }
-interface Test {</void>;
-  name: string,</void>;
-    fn: () => void | Promise<void>timeout?: number;
-  skip?: boolean;
-// Default test configuration;
-export const defaultTestConfig: TestConfig = {;
-  enableMocking: true,;
-  enableCoverage: true,;
-  enablePerformance: true,;
-  enableAccessibility: true,;
-  enableVisualRegression: false,;
-  coverageThreshold: 80,;
+
+
+
+
+
+
+
+
+
+
+
+
   performanceThreshold: 100,;}
   accessibilityThreshold: 90}
 }
-interface TestResult {;
-  name: string,;
-  status: 'passed' | 'failed' | 'skipped' | 'pending';
-  duration: number,;
-  error?: Error;
+
+
+
+
+
   assertions: AssertionResult[],;}
   coverage?: CoverageResult;}
 }
-interface AssertionResult {;
-  name: string,;
-  status: 'passed' | 'failed',;
-  expected?: unknown;
+
+
+
+
   actual?: unknown;}
   message?: string;}
 }
-interface CoverageResult {;
-  statements: number,;
-  branches: number,;
-  functions: number,;
+
+
+
+
   lines: number,;}
   uncovered: string[];}
 }
-interface TestSuite {;
+
   name: string,;}
 interface CoverageResult {}
-<<<<<<< HEAD
-  statements: number,
-    branches: number
-  functions: number,
-    lines: number
-  uncovered: string[];}
-}
-interface TestSuite {}
-  name: string,
-    tests: Test[]
-  beforeAll: (() => void | Promise<void>)[],
-  afterAll: (() => void | Promise<void>)[],
-  beforeEach: (() => void | Promise<void>)[],
-=======
-=======
 
-export interface CoverageMetrics {
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
-  statements: number;
-  branches: number;
-  functions: number;
-  lines: number;
+
+
+
 }
 
 // Test configuration interface
 export interface TestConfig {
-  timeout: number;
-  retries: number;
-  parallel: boolean;
-  coverage: boolean;
+
+
+
+
 }
 
 // Default test configuration
@@ -315,156 +157,111 @@ export const defaultTestConfig: TestConfig = {
   retries: 3,
   parallel: true,
   coverage: true
-};
+
 
 interface TestResult {
-  name: string;
-  status: 'passed' | 'failed' | 'skipped';
-  duration: number;
-  error?: string;
+
+
+
+
 }
 
 interface AssertionResult {
-  passed: boolean;
-  message: string;
-  expected?: unknown;
-  actual?: unknown;
+
+
+
+
 }
 
 interface CoverageResult {
-  statements: number;
-  branches: number;
-  functions: number;
-  lines: number;
+
+
+
+
 }
 
 interface TestSuite {
-  name: string;
-  tests: Test[];
-<<<<<<< HEAD
-  beforeAll: (() => void | Promise<void>)[],;
-  afterAll: (() => void | Promise<void>)[],;
-  beforeEach: (() => void | Promise<void>)[],;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+
+
   afterEach: (() => void | Promise<void>)[];}
-=======
-  beforeEach?: () => void;
-  afterEach?: () => void;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+
+
 }
 
 interface Test {
-  name: string;
-  fn: () => void | Promise<void>;
-  timeout?: number;
+
+
+
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export class TestRunner {
-  private static instance: TestRunner,
-  private config: TestConfig,
-  private suites: TestSuite[] = []
-  private currentSuite: TestSuite | null = null</void>
-  private results: TestResult[] = []</void>
-  private testResults: Array<{,
-interface Test {}
-  name: string,
-    fn: () => void | Promise<void>
-  timeout?: number
-  skip?: boolean
-  only?: boolean;}
-}
-export class TestRunner {}
-  private static instance: TestRunner
-  private config: TestConfig
-  private suites: TestSuite[] = []
-  private currentSuite: TestSuite | null = null
-  private results: TestResult[] = []
+
+
   private testResults: Array<{}
-    name: string,
-    status: 'passed' | 'failed' | 'skipped',
-    duration: number
-    error?: string;}
-  }> = []
-  private isRunning: boolean = false
-  private startTime: number = 0
-  constructor(config: Partial<TestConfig>= {}) {
-=======
-export class TestRunner {}
-  private static instance: TestRunner;
-  private config: TestConfig;
-  private suites: TestSuite[] = [];
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-  private currentSuite: TestSuite | null = null;
-  private results: TestResult[] = [];
-  private testResults: Array<{}
-    name: string;
-    status: 'passed' | 'failed' | 'skipped',;
-=======
+
+
 
 export class TestRunner {
-  private tests: Test[] = [];
-  private suites: TestSuite[] = [];
-  private isRunning: boolean = false;
-  private config: TestConfig = defaultTestConfig;
+
+
+
+
 
   constructor(config?: Partial<TestConfig>) {
     if (config) {
-      this.config = { ...defaultTestConfig, ...config };
+
     }
   }
 
   // Add a test to the runner
   addTest(name: string, fn: () => void | Promise<void>, timeout?: number): void {
-    this.tests.push({ name, fn, timeout: timeout || this.config.timeout });
+
   }
 
   // Add a test suite
   addSuite(suite: TestSuite): void {
-    this.suites.push(suite);
+
   }
 
   // Run all tests
   async runTests(): Promise<TestResult[]> {
     if (this.isRunning) {
-      throw new Error('Test runner is already running');
+
     }
 
-    this.isRunning = true;
-    const results: TestResult[] = [];
+
+
 
     try {
       // Run individual tests
       for (const test of this.tests) {
-        const result = await this.runSingleTest(test);
-        results.push(result);
+
+
       }
 
       // Run test suites
       for (const suite of this.suites) {
         for (const test of suite.tests) {
           if (suite.beforeEach) {
-            suite.beforeEach();
+
           }
           
-          const result = await this.runSingleTest(test);
-          results.push(result);
+
+
           
           if (suite.afterEach) {
-            suite.afterEach();
+
           }
         }
       }
     } finally {
-      this.isRunning = false;
+
     }
 
-    return results;
+
   }
 
   // Run a single test
   private async runSingleTest(test: Test): Promise<TestResult> {
-    const startTime = performance.now();
+
     
     try {
       await Promise.race([
@@ -472,41 +269,40 @@ export class TestRunner {
         new Promise((_, reject) => 
           setTimeout(() => reject(new Error('Test timeout')), test.timeout)
         )
-      ]);
+
       
-      const duration = performance.now() - startTime;
+
       return {
         name: test.name,
         status: 'passed',
         duration
-      };
+
     } catch (error) {
-      const duration = performance.now() - startTime;
+
       return {
         name: test.name,
         status: 'failed',
         duration,
         error: error instanceof Error ? error.message : String(error)
-      };
+
     }
   }
 
   // Get test statistics
   getStats(results: TestResult[]): {
-    total: number;
-    passed: number;
-    failed: number;
-    skipped: number;
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
-    duration: number;
-  } {
-    const total = results.length;
-    const passed = results.filter(r => r.status === 'passed').length;
-    const failed = results.filter(r => r.status === 'failed').length;
-    const skipped = results.filter(r => r.status === 'skipped').length;
-    const duration = results.reduce((sum, r) => sum + r.duration, 0);
 
-    return { total, passed, failed, skipped, duration };
+
+
+
+
+  } {
+
+
+
+
+
+
+
   }
 }
 
@@ -516,221 +312,66 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
     <BrowserRouter>
       {children}
     </BrowserRouter>
-  );
-};
+  )
+          </BrowserRouter>
+}
+          </BrowserRouter>
 
 const customRender = (
   ui: ReactElement,
   options?: Omit<RenderOptions, 'wrapper'>
 ) => {
   if (typeof window !== 'undefined') {
-    return render(ui, { wrapper: AllTheProviders, ...options });
+    return render(ui, { wrapper: AllTheProviders, ...options })
+          </BrowserRouter>
   }
-  return render(ui, { wrapper: AllTheProviders, ...options });
-};
-<<<<<<< HEAD
-interface TestResult {/* TODO: Fix JSX expression */}
+  return render(ui, { wrapper: AllTheProviders, ...options })
+          </BrowserRouter>
 }
-interface AssertionResult {/* TODO: Fix JSX expression */}
-}
-interface CoverageResult {/* TODO: Fix JSX expression */}
-}
-interface TestSuite {/* TODO: Fix JSX expression */}
-}
-interface Test {/* TODO: Fix JSX expression */}
-}
-export class TestRunner {/* TODO: Fix JSX expression */}
-  }> = [];
-  private,;
-  isRunning: boolean = false;
-  private,;
-  startTime: number = 0;
-  constructor(confi);
-  g: Partial<TestConfig> = {}) {/* TODO: Fix JSX expression */}
-    };
-  }
-  static getInstance(config?: Partial<TestConfig>): TestRunner {/* TODO: Fix JSX expression */}
-    }
-    return TestRunner.instance;
-  }
-  // Custom render function with providers;
-  customRender(u,;
-  i: ReactElement,;
-    options?: Omit<RenderOptions, 'wrapper'></RenderOptions>);
-  ): RenderResult {/* TODO: Fix JSX expression */}
-    const AllTheProviders = ({ children }: {/* TODO: Fix JSX expression */});
-  n: React.ReactNode }) => {/* TODO: Fix JSX expression */}
-          {children}
-        </BrowserRouter>;
-      );
-    };
-    return render(ui, {/* TODO: Fix JSX expression */});
-  r: AllTheProviders, ...options });
-  }
-  /**;
-   * Create a new test suite;
-   */;
-  public describe(name: string, fn: () => void): void {;
-    const suite: TestSuite = {;
-      name;
-      tests: [];}
-  public describe(name: string, fn: () => void): void {}
-    const suite: TestSuite = {}
-      name,;
-      tests: [],;
-      beforeAll: [],;
-      afterAll: [],;
-      beforeEach: [],;
-      afterEach: []}
-    }
-    const previousSuite = this.currentSuite;
-    this.currentSuite = suite;
-    this.suites.push(suite);
-    try {}
-      fn();}
-    } finally {}
-      this.currentSuite = previousSuite;}
-  public describe(nam,;
-  e: string, f);
-  n: () => void): void {/* TODO: Fix JSX expression */}
-    };
-    const previousSuite = this.currentSuite;
-    this.currentSuite = suite;
-    this.suites.push(suite);
-    try {/* TODO: Fix JSX expression */}
-    } finally {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**;
-   * Create a test case;
-   */;
-  public it(;
-    name: string);
-  public it();
-    name: string,;
-    fn: () => void | Promise<void>,;
-    timeout?: number;
-  ): void {}
-    if (!this.currentSuite) {}
-      throw new Error('Test must be inside a describe block');}
-    }
-    this.currentSuite.tests.push({)}
-      name,;
-      fn);
-    timeout: timeout || this.config.timeout}
-    });
-  }
-  // Performance test;
-  async runPerformanceTest(;
-    component: ReactElement)</void>;
-    testName: string</void>;
-  public it(name: string);
-    fn: () => void | Promise<void>;
-    timeout?: number;
-  ): void {,;
-    if (!this.currentSuite) {,;}
-      throw new Error('Test must be inside a describe block');}
-    }
-    this.currentSuite.tests.push({);
-      name);
-      fn);}
-      timeout: timeout || this.config.timeout}
-    });
-  }
-  // Performance test;
-  async runPerformanceTest(component: ReactElement),;
-    testName: string,;
-  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {;
-  async runPerformanceTest();
-    component: ReactElement,;
-    testName: string;}
-  ): Promise<{ passed: boolean; metrics: PerformanceMetrics }> {}
-      const startTime = performance.now();}
-      const { unmount } = this.customRender(component);
-      const renderTime = performance.now() - startTime;
-      // Measure memory usage if available;
-      let memoryUsage = 0;
-      if ('memory' in performance) {}
-        const memory = (performance as { memory?: {// usedJSHeapSize: number} }).memory;
-        if (memory) {}
-          memoryUsage = memory.usedJSHeapSize;}
+          </BrowserRouter>
+        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory
+          </BrowserRouter>
+        if (memory) {
+          </BrowserRouter>
+          memoryUsage = memory.usedJSHeapSize
+          </BrowserRouter>
         }
       }
-      unmount();
-    const metrics = {}
-      renderTime,;
-      memoryUsage,;
-      timestamp: new Date().toISOString()}
-    }
-    const passed = renderTime < this.config.performanceThreshold;
-    this.testResults.push({});
-      name: `Performance: ${testName}`,;
-      status: passed ? 'passed' : 'failed',;
-      duration: renderTime);
-    error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms;
-    const passed = renderTime < this.config.performanceThreshold;
-    this.testResults.push({});
-      name: `Performance: ${testName}`);
-      status: passed ? 'passed' : 'failed'),;
-      duration: renderTime),;
-      error: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms;
-    });
-    return { passed, metrics }
-  public it(nam,;
-  e: string,;
-    f);
-  n: () => void | Promise<void>,;
-    timeout?: number;
-  ): void {/* TODO: Fix JSX expression */}
-    }
-    this.currentSuite.tests.push({/* TODO: Fix JSX expression */});
-    });
-  }
-  // Performance test;
-  async runPerformanceTest(componen,;
-  t: ReactElement,;
-    testNam,;
-  e: string;);
-  ): Promise<{/* TODO: Fix JSX expression */}
-  s: PerformanceMetrics }> {/* TODO: Fix JSX expression */}
-      const { unmount } = this.customRender(component);
-      const renderTime = performance.now() - startTime;
-      // Measure memory usage if available;
-      let memoryUsage = 0;
-<<<<<<< HEAD
-      if ('memory' in performance) {
-=======
-;
-      if ('memory' in performance) {;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-        const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
-        if (memory) {;
-          memoryUsage = memory.usedJSHeapSize;
-<<<<<<< HEAD
-=======
-;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-        }
-      }
-      unmount();
+      unmount()
+          </BrowserRouter>
     const metrics = {/* TODO: Fix JSX expression */}
-    };
-    const passed = renderTime < this.config.performanceThreshold;
+    }
+          </BrowserRouter>
+    const passed = renderTime < this.config.performanceThreshold
+          </BrowserRouter>
     this.testResults.push({/* TODO: Fix JSX expression */}
-  e: ${testName}`,;
-      statu,;
-  s: passed ? 'passed' : 'failed',;
-      duratio,;
-  n: renderTime,;
-      erro,`;
-  r: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`);
-    });
-    return { passed, metrics };
+  e: ${testName}`,
+          </BrowserRouter>
+      statu,
+          </BrowserRouter>
+  s: passed ? 'passed' : 'failed',
+          </BrowserRouter>
+      duratio,
+          </BrowserRouter>
+  n: renderTime,
+          </BrowserRouter>
+      erro,`
+          </BrowserRouter>
+  r: passed ? undefined : `Render time ${renderTime}ms exceeded threshold ${this.config.performanceThreshold}ms`)
+          </BrowserRouter>
+    })
+          </BrowserRouter>
+    return { passed, metrics }
+          </BrowserRouter>
   }
-  /**;
-   * Create a skipped test;
-   */;
-  public itSkip(name: string, fn: () => void | Promise<void>): void {,;
+  /**
+          </BrowserRouter>
+   * Create a skipped test
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public itSkip(name: string, fn: () => void | Promise<void>): void {,
+          </BrowserRouter>
     if (!this.currentSuite) {,;}
       throw new Error('Test must be inside a describe block');}
     }
@@ -740,354 +381,563 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       throw new Error('Test must be inside a describe block');}
     }
     this.currentSuite.tests.push({)}
-      name,;
-      fn);
+      name,
+          </BrowserRouter>
+      fn)
+          </BrowserRouter>
     skip: true}
-    });
+    })
+          </BrowserRouter>
   }
-  /**;
-   * Create a focused test (only run this test)</void>;
-   */</void>;
-  public itOnly(name: string, fn: () => void | Promise<void>): void {;
-    if (!this.currentSuite) {;
-   * Create a focused test (only run this test);
+  /**
+          </BrowserRouter>
+   * Create a focused test (only run this test)</void>
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
+  public itOnly(name: string, fn: () => void | Promise<void>): void {
+          </BrowserRouter>
+    if (!this.currentSuite) {
+          </BrowserRouter>
+   * Create a focused test (only run this test)
+          </BrowserRouter>
    */;}
   public itOnly(name: string, fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('Test must be inside a describe block');}
     }
     this.currentSuite.tests.push({)}
-      name,;
-      fn);
+      name,
+          </BrowserRouter>
+      fn)
+          </BrowserRouter>
     only: true}
-    });
+    })
+          </BrowserRouter>
   }
-  /**;
-   * Setup before all tests in suite</void>;
-   */</void>;
-  public beforeAll(fn: () => void | Promise<void>): void {;
-    if (!this.currentSuite) {;
-    this.currentSuite.tests.push({);
-      name);
+  /**
+          </BrowserRouter>
+   * Setup before all tests in suite</void>
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
+  public beforeAll(fn: () => void | Promise<void>): void {
+          </BrowserRouter>
+    if (!this.currentSuite) {
+          </BrowserRouter>
+    this.currentSuite.tests.push({)
+          </BrowserRouter>
+      name)
+          </BrowserRouter>
       fn);}
       skip: true}
-    });
-  public itSkip(nam,;
-  e: string, f);
+    })
+          </BrowserRouter>
+  public itSkip(nam,
+          </BrowserRouter>
+  e: string, f)
+          </BrowserRouter>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
-    this.currentSuite.tests.push({/* TODO: Fix JSX expression */});
-    });
+    this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
+          </BrowserRouter>
+    })
+          </BrowserRouter>
   }
-  /**;
-   * Create a focused test (only run this test);
-   */;
-  public itOnly(name: string, fn: () => void | Promise<void>): void {,;
+  /**
+          </BrowserRouter>
+   * Create a focused test (only run this test)
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public itOnly(name: string, fn: () => void | Promise<void>): void {,
+          </BrowserRouter>
     if (!this.currentSuite) {,;}
       throw new Error('Test must be inside a describe block');}
     }
-    this.currentSuite.tests.push({);
-      name);
+    this.currentSuite.tests.push({)
+          </BrowserRouter>
+      name)
+          </BrowserRouter>
       fn);}
       only: true}
-    });
-  public itOnly(nam,;
-  e: string, f);
+    })
+          </BrowserRouter>
+  public itOnly(nam,
+          </BrowserRouter>
+  e: string, f)
+          </BrowserRouter>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
-    this.currentSuite.tests.push({/* TODO: Fix JSX expression */});
-    });
+    this.currentSuite.tests.push({/* TODO: Fix JSX expression */})
+          </BrowserRouter>
+    })
+          </BrowserRouter>
   }
-  /**;
-   * Setup before all tests in suite;
-   */;
-  public beforeAll(fn: () => void | Promise<void>): void {,;
+  /**
+          </BrowserRouter>
+   * Setup before all tests in suite
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public beforeAll(fn: () => void | Promise<void>): void {,
+          </BrowserRouter>
     if (!this.currentSuite) {,;}
   public beforeAll(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('beforeAll must be inside a describe block');}
-  public beforeAll(f);
+  public beforeAll(f)
+          </BrowserRouter>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
-    this.currentSuite.beforeAll.push(fn);
+    this.currentSuite.beforeAll.push(fn)
+          </BrowserRouter>
   }
-  /**;
-   * Setup after all tests in suite</void>;
-   */</void>;
-  public afterAll(fn: () => void | Promise<void>): void {;
-    if (!this.currentSuite) {;
-   * Setup after all tests in suite;
-   */;
-  public afterAll(fn: () => void | Promise<void>): void {,;
-    if (!this.currentSuite) {,;
-   * Setup after all tests in suite;
+  /**
+          </BrowserRouter>
+   * Setup after all tests in suite</void>
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
+  public afterAll(fn: () => void | Promise<void>): void {
+          </BrowserRouter>
+    if (!this.currentSuite) {
+          </BrowserRouter>
+   * Setup after all tests in suite
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public afterAll(fn: () => void | Promise<void>): void {,
+          </BrowserRouter>
+    if (!this.currentSuite) {,
+          </BrowserRouter>
+   * Setup after all tests in suite
+          </BrowserRouter>
    */;}
   public afterAll(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('afterAll must be inside a describe block');}
-   * Setup after all tests in suite;
-   */;
-  public afterAll(f);
+   * Setup after all tests in suite
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public afterAll(f)
+          </BrowserRouter>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
-    this.currentSuite.afterAll.push(fn);
+    this.currentSuite.afterAll.push(fn)
+          </BrowserRouter>
   }
-  /**;
-   * Setup before each test</void>;
-   */</void>;
-  public beforeEach(fn: () => void | Promise<void>): void {;
-    if (!this.currentSuite) {;
-   * Setup before each test;
-   */;
-  public beforeEach(fn: () => void | Promise<void>): void {,;
-    if (!this.currentSuite) {,;
-   * Setup before each test;
+  /**
+          </BrowserRouter>
+   * Setup before each test</void>
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
+  public beforeEach(fn: () => void | Promise<void>): void {
+          </BrowserRouter>
+    if (!this.currentSuite) {
+          </BrowserRouter>
+   * Setup before each test
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public beforeEach(fn: () => void | Promise<void>): void {,
+          </BrowserRouter>
+    if (!this.currentSuite) {,
+          </BrowserRouter>
+   * Setup before each test
+          </BrowserRouter>
    */;}
   public beforeEach(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('beforeEach must be inside a describe block');}
-   * Setup before each test;
-   */;
-  public beforeEach(f);
+   * Setup before each test
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public beforeEach(f)
+          </BrowserRouter>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
-    this.currentSuite.beforeEach.push(fn);
+    this.currentSuite.beforeEach.push(fn)
+          </BrowserRouter>
   }
-  /**;
-   * Setup after each test</void>;
-   */</void>;
-  public afterEach(fn: () => void | Promise<void>): void {;
-    if (!this.currentSuite) {;
-   * Setup after each test;
-   */;
-  public afterEach(fn: () => void | Promise<void>): void {,;
-    if (!this.currentSuite) {,;
-   * Setup after each test;
+  /**
+          </BrowserRouter>
+   * Setup after each test</void>
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
+  public afterEach(fn: () => void | Promise<void>): void {
+          </BrowserRouter>
+    if (!this.currentSuite) {
+          </BrowserRouter>
+   * Setup after each test
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public afterEach(fn: () => void | Promise<void>): void {,
+          </BrowserRouter>
+    if (!this.currentSuite) {,
+          </BrowserRouter>
+   * Setup after each test
+          </BrowserRouter>
    */;}
   public afterEach(fn: () => void | Promise<void>): void {}
     if (!this.currentSuite) {}
       throw new Error('afterEach must be inside a describe block');}
-   * Setup after each test;
-   */;
-  public afterEach(f);
+   * Setup after each test
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public afterEach(f)
+          </BrowserRouter>
   n: () => void | Promise<void>): void {/* TODO: Fix JSX expression */}
     }
-    this.currentSuite.afterEach.push(fn);
+    this.currentSuite.afterEach.push(fn)
+          </BrowserRouter>
   }
-  /**;
-   * Run all tests</void>;
-   */</void>;
-  public async run(): Promise<TestResult[]>{;
-   * Run all tests;
-   */;
-  public async run(): Promise<TestResult[]> {;
+  /**
+          </BrowserRouter>
+   * Run all tests</void>
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
+  public async run(): Promise<TestResult[]>{
+          </BrowserRouter>
+   * Run all tests
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  public async run(): Promise<TestResult[]> {
+          </BrowserRouter>
     if (this.isRunning) {;}
   public async run(): Promise<TestResult[]> {}
     if (this.isRunning) {}
       throw new Error('Test runner is already running');}
     }
-    this.isRunning = true;
-    this.startTime = Date.now();
-    this.results = [];
+    this.isRunning = true
+          </BrowserRouter>
+    this.startTime = Date.now()
+          </BrowserRouter>
+    this.results = []
+          </BrowserRouter>
     try {}
       if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
       for (const suite of this.suites) {}
         await this.runSuite(suite);}
-   * Run all tests;
-   */;
+   * Run all tests
+          </BrowserRouter>
+   */
+          </BrowserRouter>
   public async run(): Promise<TestResult[]> {/* TODO: Fix JSX expression */}
     }
-    this.isRunning = true;
-    this.startTime = Date.now();
-    this.results = [];
+    this.isRunning = true
+          </BrowserRouter>
+    this.startTime = Date.now()
+          </BrowserRouter>
+    this.results = []
+          </BrowserRouter>
     try {/* TODO: Fix JSX expression */}
       if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
       for (const suite of this.suites) {/* TODO: Fix JSX expression */}
       }
-      this.generateReport();
-      return this.results;
-    } finally {;
+      this.generateReport()
+          </BrowserRouter>
+      return this.results
+          </BrowserRouter>
+    } finally {
+          </BrowserRouter>
       return this.results;}
     } finally {}
       this.isRunning = false;}
     }
   }
-  /**;
-   * Run a test suite</TestResult>;
-   */</TestResult>;
+  /**
+          </BrowserRouter>
+   * Run a test suite</TestResult>
+          </BrowserRouter>
+   */</TestResult>
+          </BrowserRouter>
   private async runSuite(suite: TestSuite): Promise<void>{}
-   * Run a test suite;
-   */;
+   * Run a test suite
+          </BrowserRouter>
+   */
+          </BrowserRouter>
   private async runSuite(suite: TestSuite): Promise<void> {}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    // Run beforeAll hooks;
+    // Run beforeAll hooks
+          </BrowserRouter>
     for (const hook of suite.beforeAll) {;}
       await this.runHook(hook, 'beforeAll');}
     }
-    // Run tests;
-    for (const test of suite.tests) {;
+    // Run tests
+          </BrowserRouter>
+    for (const test of suite.tests) {
+          </BrowserRouter>
       if (test.skip) {;}
         this.results.push({`}
-    // Run beforeAll hooks;
+    // Run beforeAll hooks
+          </BrowserRouter>
     for (const hook of suite.beforeAll) {}
       await this.runHook(hook, 'beforeAll');}
     }
-    // Run tests;
+    // Run tests
+          </BrowserRouter>
     for (const test of suite.tests) {}
       if (test.skip) {}
-        this.results.push({`});
-          name: `${suite.name} - ${test.name}`,;
-          status: 'skipped',;
-          duration: 0);
-    assertions: [];
-        this.results.push({`});
-          name: `${suite.name} - ${test.name}`);
-          status: 'skipped'),;
-          duration: 0),;
-          assertions: []});
+        this.results.push({`})
+          </BrowserRouter>
+          name: `${suite.name} - ${test.name}`,
+          </BrowserRouter>
+          status: 'skipped',
+          </BrowserRouter>
+          duration: 0)
+          </BrowserRouter>
+    assertions: []
+          </BrowserRouter>
+        this.results.push({`})
+          </BrowserRouter>
+          name: `${suite.name} - ${test.name}`)
+          </BrowserRouter>
+          status: 'skipped'),
+          </BrowserRouter>
+          duration: 0),
+          </BrowserRouter>
+          assertions: []})
+          </BrowserRouter>
     } finally {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Run a test suite;
-   */;
-  private async runSuite(suit);
+  /**
+          </BrowserRouter>
+   * Run a test suite
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private async runSuite(suit)
+          </BrowserRouter>
   e: TestSuite): Promise<void> {/* TODO: Fix JSX expression */}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    // Run beforeAll hooks;
+    // Run beforeAll hooks
+          </BrowserRouter>
     for (const hook of suite.beforeAll) {/* TODO: Fix JSX expression */}
     }
-    // Run tests;
-    for (const test of suite.tests) {/* TODO: Fix JSX expression */}`;
-  e: `${suite.name} - ${test.name}`,;
-          statu,;
-  s: 'skipped',;
-          duratio,;
-  n: 0,;
-          assertion,;
-  s: [];
-        });
-        continue;
+    // Run tests
+          </BrowserRouter>
+    for (const test of suite.tests) {/* TODO: Fix JSX expression */}`
+          </BrowserRouter>
+  e: `${suite.name} - ${test.name}`,
+          </BrowserRouter>
+          statu,
+          </BrowserRouter>
+  s: 'skipped',
+          </BrowserRouter>
+          duratio,
+          </BrowserRouter>
+  n: 0,
+          </BrowserRouter>
+          assertion,
+          </BrowserRouter>
+  s: []
+          </BrowserRouter>
+        })
+          </BrowserRouter>
+        continue
+          </BrowserRouter>
       }
-      await this.runTest(suite, test);
+      await this.runTest(suite, test)
+          </BrowserRouter>
     }
-    // Run afterAll hooks;
-    for (const hook of suite.afterAll) {;
+    // Run afterAll hooks
+          </BrowserRouter>
+    for (const hook of suite.afterAll) {
+          </BrowserRouter>
     // Run afterAll hooks;}
     for (const hook of suite.afterAll) {}
       await this.runHook(hook, 'afterAll');}
     }
   }
-  /**;
-   * Run a single test</void>;
-   */</void>;
+  /**
+          </BrowserRouter>
+   * Run a single test</void>
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
   private async runTest(suite: TestSuite, test: Test): Promise<void>{`}
-   * Run a single test;
-   */;
+   * Run a single test
+          </BrowserRouter>
+   */
+          </BrowserRouter>
   private async runTest(suite: TestSuite, test: Test): Promise<void> {`}
-    const testName = `${suite.name} - ${test.name}`;
-    const startTime = Date.now();
-    const assertions: AssertionResult[] = [],;
-    try {,;
-      // Run beforeEach hooks;
-      for (const hook of suite.beforeEach) {,;
+    const testName = `${suite.name} - ${test.name}`
+          </BrowserRouter>
+    const startTime = Date.now()
+          </BrowserRouter>
+    const assertions: AssertionResult[] = [],
+          </BrowserRouter>
+    try {,
+          </BrowserRouter>
+      // Run beforeEach hooks
+          </BrowserRouter>
+      for (const hook of suite.beforeEach) {,
+          </BrowserRouter>
     const assertions: AssertionResult[] = [];}
     try {}
-      // Run beforeEach hooks;
+      // Run beforeEach hooks
+          </BrowserRouter>
       for (const hook of suite.beforeEach) {}
         await this.runHook(hook, 'beforeEach');}
       }
-      // Run the test;
-      await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000);
-      // Run afterEach hooks;
+      // Run the test
+          </BrowserRouter>
+      await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000)
+          </BrowserRouter>
+      // Run afterEach hooks
+          </BrowserRouter>
       for (const hook of suite.afterEach) {;}
         await this.runHook(hook, 'afterEach');}
       }
-      this.results.push({;
+      this.results.push({
+          </BrowserRouter>
       // Run afterEach hooks;}
       for (const hook of suite.afterEach) {}
         await this.runHook(hook, 'afterEach');}
       }
       this.results.push({)}
-        name: testName,;
-        status: 'passed');
-    duration: Date.now() - startTime,;
-      this.results.push({);
-        name: testName),;
-        status: 'passed'),;
+        name: testName,
+          </BrowserRouter>
+        status: 'passed')
+          </BrowserRouter>
+    duration: Date.now() - startTime,
+          </BrowserRouter>
+      this.results.push({)
+          </BrowserRouter>
+        name: testName),
+          </BrowserRouter>
+        status: 'passed'),
+          </BrowserRouter>
         duration: Date.now() - startTime;}
         assertions}
-      });
+      })
+          </BrowserRouter>
       if (this.config.verbose) {`}
         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }
       }
     } catch (error) {;}
       this.results.push({} catch (error) {}
       this.results.push({)}
-        name: testName,;
-        status: 'failed');
-    duration: Date.now() - startTime,;
-        error: error as Error,;
-      this.results.push({);
-        name: testName),;
-        status: 'failed'),;
-        duration: Date.now() - startTime;
+        name: testName,
+          </BrowserRouter>
+        status: 'failed')
+          </BrowserRouter>
+    duration: Date.now() - startTime,
+          </BrowserRouter>
+        error: error as Error,
+          </BrowserRouter>
+      this.results.push({)
+          </BrowserRouter>
+        name: testName),
+          </BrowserRouter>
+        status: 'failed'),
+          </BrowserRouter>
+        duration: Date.now() - startTime
+          </BrowserRouter>
         error: error as Error;}
         assertions}
-      });
-      - startTime}ms)`);
+      })
+          </BrowserRouter>
+      - startTime}ms)`)
+          </BrowserRouter>
       if (this.config.bail) {}
         throw error;}
-    // Run afterAll hooks;
+    // Run afterAll hooks
+          </BrowserRouter>
     for (const hook of suite.afterAll) {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Run a single test;
-   */;
-  private async runTest(suit,;
-  e: TestSuite, tes);
-  t: Test): Promise<void> {/* TODO: Fix JSX expression */}`;
-    const testName = `${suite.name} - ${test.name}`;
-    const startTime = Date.now();
-    const,;
-  assertions: AssertionResult[] = [];
+  /**
+          </BrowserRouter>
+   * Run a single test
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private async runTest(suit,
+          </BrowserRouter>
+  e: TestSuite, tes)
+          </BrowserRouter>
+  t: Test): Promise<void> {/* TODO: Fix JSX expression */}`
+          </BrowserRouter>
+    const testName = `${suite.name} - ${test.name}`
+          </BrowserRouter>
+    const startTime = Date.now()
+          </BrowserRouter>
+    const,
+          </BrowserRouter>
+  assertions: AssertionResult[] = []
+          </BrowserRouter>
     try {/* TODO: Fix JSX expression */}
       }
-      // Run the test;
-      await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000);
-      // Run afterEach hooks;
+      // Run the test
+          </BrowserRouter>
+      await this.runWithTimeout(test.fn, test.timeout ?? this.config.timeout ?? 5000)
+          </BrowserRouter>
+      // Run afterEach hooks
+          </BrowserRouter>
       for (const hook of suite.afterEach) {/* TODO: Fix JSX expression */}
       }
-      this.results.push({/* TODO: Fix JSX expression */});
-      });
-      if (this.config.verbose) {/* TODO: Fix JSX expression */}`;
+      this.results.push({/* TODO: Fix JSX expression */})
+          </BrowserRouter>
+      })
+          </BrowserRouter>
+      if (this.config.verbose) {/* TODO: Fix JSX expression */}`
+          </BrowserRouter>
         if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { - startTime}ms)`); } }
       }
     } catch (error) {/* TODO: Fix JSX expression */}
-      });`;
-      - startTime}ms)`);
+      });`
+          </BrowserRouter>
+      - startTime}ms)`)
+          </BrowserRouter>
       if (this.config.bail) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  /**;
-   * Run a hook;
-   */</void>;
-  private async runHook()</void>;
-    hook: () => void | Promise<void>,</void>;
-    hookName: string</void>;
-  ): Promise<void>{;
-    try {;
-   * Run a hook;
-   */;
-  private async runHook(;
-    hook: () => void | Promise<void>;
-    hookName: string,;
-  ): Promise<void> {,;
-    try {,;
-  private async runHook();
-    hook: () => void | Promise<void>,;
+  /**
+          </BrowserRouter>
+   * Run a hook
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
+  private async runHook()</void>
+          </BrowserRouter>
+    hook: () => void | Promise<void>,</void>
+          </BrowserRouter>
+    hookName: string</void>
+          </BrowserRouter>
+  ): Promise<void>{
+          </BrowserRouter>
+    try {
+          </BrowserRouter>
+   * Run a hook
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private async runHook(
+          </BrowserRouter>
+    hook: () => void | Promise<void>
+          </BrowserRouter>
+    hookName: string,
+          </BrowserRouter>
+  ): Promise<void> {,
+          </BrowserRouter>
+    try {,
+          </BrowserRouter>
+  private async runHook()
+          </BrowserRouter>
+    hook: () => void | Promise<void>,
+          </BrowserRouter>
     hookName: string;}
   ): Promise<void> {}
     try {}
@@ -1096,76 +946,129 @@ export class TestRunner {/* TODO: Fix JSX expression */}
       throw error;}
     }
   }
-  /**;
-   * Run function with timeout;
-   */</void>;
-  private async runWithTimeout()</void>;
-    fn: () => void | Promise<void>,</void>;
-    timeout: number</void>;
-  ): Promise<void>{;
-   * Run function with timeout;
-   */;
-  private async runWithTimeout();
-    fn: () => void | Promise<void>,;
-    timeout: number,;
-  ): Promise<void> {,;
-    return new Promise((resolve, reject) => {;
+  /**
+          </BrowserRouter>
+   * Run function with timeout
+          </BrowserRouter>
+   */</void>
+          </BrowserRouter>
+  private async runWithTimeout()</void>
+          </BrowserRouter>
+    fn: () => void | Promise<void>,</void>
+          </BrowserRouter>
+    timeout: number</void>
+          </BrowserRouter>
+  ): Promise<void>{
+          </BrowserRouter>
+   * Run function with timeout
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private async runWithTimeout()
+          </BrowserRouter>
+    fn: () => void | Promise<void>,
+          </BrowserRouter>
+    timeout: number,
+          </BrowserRouter>
+  ): Promise<void> {,
+          </BrowserRouter>
+    return new Promise((resolve, reject) => {
+          </BrowserRouter>
     timeout: number;}
   ): Promise<void> {}
     return new Promise((resolve, reject) => {}
       const timer = setTimeout(() => {`}
-        reject(new Error(`Test timed out after ${timeout}ms`));
-      }, timeout);
-      Promise.resolve(fn());
+        reject(new Error(`Test timed out after ${timeout}ms`))
+          </BrowserRouter>
+      }, timeout)
+          </BrowserRouter>
+      Promise.resolve(fn())
+          </BrowserRouter>
         .then(() => {}
-          clearTimeout(timer);
+          clearTimeout(timer)
+          </BrowserRouter>
           resolve();}
-        });
-        .catch(error => {);
+        })
+          </BrowserRouter>
+        .catch(error => {)
+          </BrowserRouter>
     clearTimeout(timer);}
         .catch(error => {)}
-          clearTimeout(timer);
+          clearTimeout(timer)
+          </BrowserRouter>
           reject(error);}
-        });
-    });
-   * Run a hook;
-   */;
-  private async runHook(hoo);
-  k: () => void | Promise<void>,;
-    hookNam,;
-  e: string,;
+        })
+          </BrowserRouter>
+    })
+          </BrowserRouter>
+   * Run a hook
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private async runHook(hoo)
+          </BrowserRouter>
+  k: () => void | Promise<void>,
+          </BrowserRouter>
+    hookNam,
+          </BrowserRouter>
+  e: string,
+          </BrowserRouter>
   ): Promise<void> {/* TODO: Fix JSX expression */}
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Run function with timeout;
-   */;
-  private async runWithTimeout(f);
-  n: () => void | Promise<void>,;
-    timeou,;
-  t: number,;
-  ): Promise<void> {/* TODO: Fix JSX expression */}`;
-        reject(new Error(`Test timed out after ${timeout}ms`));
-      }, timeout);
-      Promise.resolve(fn());
+  /**
+          </BrowserRouter>
+   * Run function with timeout
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private async runWithTimeout(f)
+          </BrowserRouter>
+  n: () => void | Promise<void>,
+          </BrowserRouter>
+    timeou,
+          </BrowserRouter>
+  t: number,
+          </BrowserRouter>
+  ): Promise<void> {/* TODO: Fix JSX expression */}`
+          </BrowserRouter>
+        reject(new Error(`Test timed out after ${timeout}ms`))
+          </BrowserRouter>
+      }, timeout)
+          </BrowserRouter>
+      Promise.resolve(fn())
+          </BrowserRouter>
         .then(() => {/* TODO: Fix JSX expression */}
-        });
-        .catch(error => {/* TODO: Fix JSX expression */});
-        });
-    });
+        })
+          </BrowserRouter>
+        .catch(error => {/* TODO: Fix JSX expression */})
+          </BrowserRouter>
+        })
+          </BrowserRouter>
+    })
+          </BrowserRouter>
   }
-  /**;
-   * Generate test report;
-   */;
-  private generateReport(): void {;
-    const duration = Date.now() - this.startTime;
-    const passed = this.results.filter(r => r.status === 'passed').length;
+  /**
+          </BrowserRouter>
+   * Generate test report
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private generateReport(): void {
+          </BrowserRouter>
+    const duration = Date.now() - this.startTime
+          </BrowserRouter>
+    const passed = this.results.filter(r => r.status === 'passed').length
+          </BrowserRouter>
     const failed = this.results.filter(r => r.status === 'failed').length;}
   private generateReport(): void {}
-    const duration = Date.now() - this.startTime;
-    const passed = this.results.filter(r => r.status === 'passed').length;
-    const failed = this.results.filter(r => r.status === 'failed').length;
+    const duration = Date.now() - this.startTime
+          </BrowserRouter>
+    const passed = this.results.filter(r => r.status === 'passed').length
+          </BrowserRouter>
+    const failed = this.results.filter(r => r.status === 'failed').length
+          </BrowserRouter>
     const skipped = this.results.filter(r => r.status === 'skipped').length;}
   private generateReport(): void {/* TODO: Fix JSX expression */}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
@@ -1185,231 +1088,358 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     } else if (this.config.reporter === 'junit') {/* TODO: Fix JSX expression */}
     }
   }
-  /**;
-   * Generate JSON report;
-   */;
-  private generateJsonReport(): void {;
-    const report = {;
-      summary: {,;
+  /**
+          </BrowserRouter>
+   * Generate JSON report
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private generateJsonReport(): void {
+          </BrowserRouter>
+    const report = {
+          </BrowserRouter>
+      summary: {,
+          </BrowserRouter>
     total: this.results.length,;}
   private generateJsonReport(): void {}
     const report = {}
       summary: {}
-        total: this.results.length,;
-        passed: this.results.filter(r => r.status === 'passed').length,;
-        failed: this.results.filter(r => r.status === 'failed').length,;
-        skipped: this.results.filter(r => r.status === 'skipped').length,;
-      summary: {;
-        total: this.results.length;
-        passed: this.results.filter(r => r.status === 'passed').length;
-        failed: this.results.filter(r => r.status === 'failed').length;
+        total: this.results.length,
+          </BrowserRouter>
+        passed: this.results.filter(r => r.status === 'passed').length,
+          </BrowserRouter>
+        failed: this.results.filter(r => r.status === 'failed').length,
+          </BrowserRouter>
+        skipped: this.results.filter(r => r.status === 'skipped').length,
+          </BrowserRouter>
+      summary: {
+          </BrowserRouter>
+        total: this.results.length
+          </BrowserRouter>
+        passed: this.results.filter(r => r.status === 'passed').length
+          </BrowserRouter>
+        failed: this.results.filter(r => r.status === 'failed').length
+          </BrowserRouter>
         skipped: this.results.filter(r => r.status === 'skipped').length;}
         duration: Date.now() - this.startTime}
-      },;
-      results: this.results;
+      },
+          </BrowserRouter>
+      results: this.results
+          </BrowserRouter>
     }
   private generateJsonReport(): void {/* TODO: Fix JSX expression */}
-      },;
-      result,;
-  s: this.results;
-    };
+      },
+          </BrowserRouter>
+      result,
+          </BrowserRouter>
+  s: this.results
+          </BrowserRouter>
+    }
+          </BrowserRouter>
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { ); } }
   }
-  /**;
-   * Generate HTML report;
-   */;
-  private generateHtmlReport(): void {</void>;
+  /**
+          </BrowserRouter>
+   * Generate HTML report
+          </BrowserRouter>
+   */
+          </BrowserRouter>
+  private generateHtmlReport(): void {</void>
+          </BrowserRouter>
     const html =</void>;}
   private generateHtmlReport(): void {}
-    const html =;
-<!DOCTYPE html>;
-<html></htm>;
-<head></hea>;
-    <link rel="preload" href="/assets/vendor-ConSr3 PY.js" as="script" crossorigin></lin>;
-    <link rel="preload" href="/assets/index-BRi0 Fmgq.js" as="script" crossorigin></lin>;
-    <link rel="preload" href="/assets/index-C1 QbpZNs.css" as="style"></lin>;
+    const html =
+          </BrowserRouter>
+<!DOCTYPE html>
+          </BrowserRouter>
+<html></htm>
+          </BrowserRouter>
+<head></hea>
+          </html>
+    <link rel="preload" href="/assets/vendor-ConSr3 PY.js" as="script" crossorigin></lin>
+          </head>
+    <link rel="preload" href="/assets/index-BRi0 Fmgq.js" as="script" crossorigin></lin>
+          </link>
+    <link rel="preload" href="/assets/index-C1 QbpZNs.css" as="style"></lin>
+          </link>
     <<<<title>Test</title></<<title>Results</title> | Zion Tech Group - AI & IT Solutions<style>}</style></<<<styl>body</styl></styl> { font-family: Arial, sans-serif; margin: 20 px; }
         .summary { background: #f5 f5 f5; padding: 20 px; border-radius: 5 px; margin-bottom: 20 px; }
         .test { margin: 10 px 0; padding: 10 px; border-left: 4 px solid #ccc; }
         .passed { border-left-color: #4 CAF50; }
-        .failed { border-left-color: #f44336; }</style>;
-        .skipped { border-left-color: #ff9800; }</style>;
-    </style>;
-</head>;
-<body>;
-    <h2 id="heading-test-results">Test Results</h2>;
-    <div class="summary"></div>;
-        <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>;
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>;
+        .failed { border-left-color: #f44336; }</style>
+          </title>
+        .skipped { border-left-color: #ff9800; }</style>
+          </title>
+    </style>
+          </title>
+</head>
+          </title>
+<body>
+          </title>
+    <h2 id="heading-test-results">Test Results</h2>
+          </body>
+    <div class="summary"></div>
+          </h2>
+        <h3 id="heading-summary">Summary<p>Total: ${this.results.length}</p>
+          </div>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}<p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+          </h3>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}<p>Duration: ${Date.now() - this.startTime}ms<div class="tests">${this.results</div>
+          </p>
     <div class="summary"></div>;}
-        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>;
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>;
+        <h3 id="heading-summary">Summary</h3><p>Total: ${this.results.length}</p>
+          </div>
+        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p><p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
+          </h3>
+        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p><p>Duration: ${Date.now() - this.startTime}ms</p><div class="tests">${this.results</div>
+          </p>
           .map()</div>;}
-    result => `}</div>;
-            <div class="test ${result.status}"></div>;
-                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>;
+    result => `}</div>
+          </p>
+            <div class="test ${result.status}"></div>
+          </p>
+                <h4 id="heading-${result.name}">${result.name}<p>Status: ${result.status}</p><p>Duration: ${result.duration}ms</p>
+          </div>
                 ${result.error ? `<p>Error: ${result.error.message}</p>` : ''}
-<<<<<<< HEAD
-            </div>
-        <h3 id="heading-summary">Summary</h3>
-        <p>Total: ${this.results.length}</p>
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>
-        <p>Duration: ${Date.now() - this.startTime}ms</p>
-    </div>
-    <div class="tests">
-        ${this.results;
-=======
-            </div>;
-        <h3 id="heading-summary">Summary</h3>;
-        <p>Total: ${this.results.length}</p>;
-        <p>Passed: ${this.results.filter(r => r.status === 'passed').length}</p>;
-        <p>Failed: ${this.results.filter(r => r.status === 'failed').length}</p>;
-        <p>Skipped: ${this.results.filter(r => r.status === 'skipped').length}</p>;
-        <p>Duration: ${Date.now() - this.startTime}ms</p>;
-    </div>;
-    <div class="tests"></div>;
-        ${this.results;}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
           .map(result => `}
         ${this.results}
-          .map();
-            result => `}</div>;
-            <div class="test ${result.status}"></div>;
-                <h4 id="heading-${result.name}">${result.name}</h4>;
-                <p>Status: ${result.status}</p>);
-                <p>Duration: ${result.duration}ms</p>);
-                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''});
-            </div>);
-);
-          );
+          .map()
+          </h4>
+            result => `}</div>
+          </h4>
+            <div class="test ${result.status}"></div>
+          </h4>
+                <h4 id="heading-${result.name}">${result.name}</h4>
+          </div>
+                <p>Status: ${result.status}</p>)
+          </h4>
+                <p>Duration: ${result.duration}ms</p>)
+          </p>
+                ${result.error ? `<p>Error: ${result.error.message}</p>` : ''})
+          </p>
+            </div>)
+          </p>
+)
+          </p>
+          )
+          </p>
           .join('')}
-    </div>;
-</body>;
-</html>`;
+    </div>
+          </p>
+</body>
+          </p>
+</html>`
+          </p>
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
-  // Accessibility test;
-  async runAccessibilityTest(;
-    component: ReactElement);
-  async runAccessibilityTest();
-    component: ReactElement,;
-    testName: string;
-  // Accessibility test;
-  async runAccessibilityTest(component: ReactElement),;
-    testName: string,;
+  // Accessibility test
+          </p>
+  async runAccessibilityTest(
+          </p>
+    component: ReactElement)
+          </p>
+  async runAccessibilityTest()
+          </p>
+    component: ReactElement,
+          </p>
+    testName: string
+          </p>
+  // Accessibility test
+          </p>
+  async runAccessibilityTest(component: ReactElement),
+          </p>
+    testName: string,
+          </p>
   ): Promise<{ passed: boolean; violations: string[] }> {}
-    const { container } = this.customRender(component);
-    // Basic accessibility checks;
-    const violations: string[] = [],;
-    // Check for missing alt text on images;
-    const images = container.querySelectorAll('img'),;
-    images.forEach((img, index) => {;
-    // Basic accessibility checks;
-    const violations: string[] = [];
-    // Check for missing alt text on images;
+    const { container } = this.customRender(component)
+          </p>
+    // Basic accessibility checks
+          </p>
+    const violations: string[] = [],
+          </p>
+    // Check for missing alt text on images
+          </p>
+    const images = container.querySelectorAll('img'),
+          </p>
+    images.forEach((img, index) => {
+          </p>
+    // Basic accessibility checks
+          </p>
+    const violations: string[] = []
+          </p>
+    // Check for missing alt text on images
+          </p>
     const images = container.querySelectorAll('img');}
     images.forEach((img, index) => {}
       if (!img.getAttribute('alt')) {`}
-        violations.push(`Image ${index} missing alt text`);
+        violations.push(`Image ${index} missing alt text`)
+          </p>
       }
-    });
-    // Check for missing labels on form inputs;
-    const inputs = container.querySelectorAll('input, select, textarea');
+    })
+          </p>
+    // Check for missing labels on form inputs
+          </p>
+    const inputs = container.querySelectorAll('input, select, textarea')
+          </p>
     inputs.forEach((input, index) => {}
-      const id = input.getAttribute('id');
-      const ariaLabel = input.getAttribute('aria-label');
-      const ariaLabelledBy = input.getAttribute('aria-labelledby');
+      const id = input.getAttribute('id')
+          </p>
+      const ariaLabel = input.getAttribute('aria-label')
+          </p>
+      const ariaLabelledBy = input.getAttribute('aria-labelledby')
+          </p>
       if (!id && !ariaLabel && !ariaLabelledBy) {`}
-        violations.push(`Input ${index} missing label`);
+        violations.push(`Input ${index} missing label`)
+          </p>
       }
-    });
-    // Check for proper heading hierarchy;
-    const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let previousLevel = 0;
-    headings.forEach((heading, index) => {;
+    })
+          </p>
+    // Check for proper heading hierarchy
+          </p>
+    const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6')
+          </p>
+    let previousLevel = 0
+          </p>
+    headings.forEach((heading, index) => {
+          </p>
     let previousLevel = 0;}
     headings.forEach((heading, index) => {}
-      const level = parseInt(heading.tagName.charAt(1));
+      const level = parseInt(heading.tagName.charAt(1))
+          </p>
       if (<<<level>previousLevel</level></level> + 1) {`}
-        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);
+        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`)
+          </p>
       }
-      previousLevel = level;
-    });
-    // Check for proper button text;
-    const buttons = container.querySelectorAll('button');
+      previousLevel = level
+          </p>
+    })
+          </p>
+    // Check for proper button text
+          </p>
+    const buttons = container.querySelectorAll('button')
+          </p>
     buttons.forEach((button, index) => {}
-      const text = button.textContent?.trim();
-      const ariaLabel = button.getAttribute('aria-label');
+      const text = button.textContent?.trim()
+          </p>
+      const ariaLabel = button.getAttribute('aria-label')
+          </p>
       if (!text && !ariaLabel) {`}
-        violations.push(`Button ${index} missing accessible text`);
+        violations.push(`Button ${index} missing accessible text`)
+          </p>
       }
-    });
-    const passed = violations.length === 0;
-    this.testResults.push({`});
-      name: `Accessibility: ${testName}`,;
-      status: passed ? 'passed' : 'failed',;
-      duration: 0);
-    error: passed ? undefined : `Found ${violations.length} accessibility violations;
-    });
+    })
+          </p>
+    const passed = violations.length === 0
+          </p>
+    this.testResults.push({`})
+          </p>
+      name: `Accessibility: ${testName}`,
+          </p>
+      status: passed ? 'passed' : 'failed',
+          </p>
+      duration: 0)
+          </p>
+    error: passed ? undefined : `Found ${violations.length} accessibility violations
+          </p>
+    })
+          </p>
     return { passed, violations }
   }
-  // Component test;
-  async runComponentTest();
-    component: ReactElement,;
-    testName: string);
-    assertions: (result: RenderResult) => void;
-    const passed = violations.length === 0;
-    this.testResults.push({`});
-      name: `Accessibility: ${testName}`);
-      status: passed ? 'passed' : 'failed'),;
-      duration: 0),;
-      error: passed ? undefined : `Found ${violations.length} accessibility violations;
-    });
+  // Component test
+          </p>
+  async runComponentTest()
+          </p>
+    component: ReactElement,
+          </p>
+    testName: string)
+          </p>
+    assertions: (result: RenderResult) => void
+          </p>
+    const passed = violations.length === 0
+          </p>
+    this.testResults.push({`})
+          </p>
+      name: `Accessibility: ${testName}`)
+          </p>
+      status: passed ? 'passed' : 'failed'),
+          </p>
+      duration: 0),
+          </p>
+      error: passed ? undefined : `Found ${violations.length} accessibility violations
+          </p>
+    })
+          </p>
     return { passed, violations }
   }
-  // Component test;
-  async runComponentTest(component: ReactElement),;
-    testName: string),;
-    assertions: (result: RenderResult) => void;
-  ): Promise<{ passed: boolean; error?: string }> {;
-    try {;
-      const result = this.customRender(component);
+  // Component test
+          </p>
+  async runComponentTest(component: ReactElement),
+          </p>
+    testName: string),
+          </p>
+    assertions: (result: RenderResult) => void
+          </p>
+  ): Promise<{ passed: boolean; error?: string }> {
+          </p>
+    try {
+          </p>
+      const result = this.customRender(component)
+          </p>
       assertions(result);}
       this.testResults.push({`}
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
-      const result = this.customRender(component);
-      assertions(result);
-      this.testResults.push({`});
-        name: `Component: ${testName}`,;
-        status: 'passed');
-    duration: 0;
-      this.testResults.push({`});
-        name: `Component: ${testName}`);
-        status: 'passed'),;
-        duration: 0,;
-      });
+      const result = this.customRender(component)
+          </p>
+      assertions(result)
+          </p>
+      this.testResults.push({`})
+          </p>
+        name: `Component: ${testName}`,
+          </p>
+        status: 'passed')
+          </p>
+    duration: 0
+          </p>
+      this.testResults.push({`})
+          </p>
+        name: `Component: ${testName}`)
+          </p>
+        status: 'passed'),
+          </p>
+        duration: 0,
+          </p>
+      })
+          </p>
       return { passed: true }
     } catch (error) {}
-      const errorMessage = error instanceof Error ? error.message : String(error);
+      const errorMessage = error instanceof Error ? error.message : String(error)
+          </p>
       this.testResults.push({`}
-      this.testResults.push({`});
-        name: `Component: ${testName}`,;
-        status: 'failed',;
-        duration: 0);
-    error: errorMessage;
-      this.testResults.push({`});
-        name: `Component: ${testName}`);
-        status: 'failed'),;
-        duration: 0),;
-        error: errorMessage,;
-      });
+      this.testResults.push({`})
+          </p>
+        name: `Component: ${testName}`,
+          </p>
+        status: 'failed',
+          </p>
+        duration: 0)
+          </p>
+    error: errorMessage
+          </p>
+      this.testResults.push({`})
+          </p>
+        name: `Component: ${testName}`)
+          </p>
+        status: 'failed'),
+          </p>
+        duration: 0),
+          </p>
+        error: errorMessage,
+          </p>
+      })
+          </p>
       return { passed: false, error: errorMessage }
   private generateHtmlReport(): void {/* TODO: Fix JSX expression */}
   n: 20px; }
@@ -1423,962 +1453,1132 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   r: #f44336; }
         .skipped {/* TODO: Fix JSX expression */}
   r: #ff9800; }
-    </style>;
-</head>;
-<body></body>;
-    <h1>Test Results</h1>;
-    <div class="summary"></div>;
-        <h2>Summary</h2>;
-        <p>Tota,;
-  l: ${this.results.length}</p>;
-        <p>Passe,;
-  d: ${this.results.filter(r => r.status === 'passed').length}</p>;
-        <p>Faile,;
-  d: ${this.results.filter(r => r.status === 'failed').length}</p>;
-        <p>Skippe,;
-  d: ${this.results.filter(r => r.status === 'skipped').length}</p>;
-        <p>Duratio,;
-  n: ${Date.now() - this.startTime}ms</p>;
-    </div>";
-    <div class="tests"></div>;
-        ${/* TODO: Fix JSX expression */}";
-            <div class="test ${result.status}"></div>;
-                <h3>${result.name}</h3>;
-                <p>Statu,;
-  s: ${result.status}</p>;
-                <p>Duratio,;
-  n: ${result.duration}ms</p>;
-                ${/* TODO: Fix JSX expression */}`;
+    </style>
+          </p>
+</head>
+          </p>
+<body></body>
+          </p>
+    <h1>Test Results</h1>
+          </body>
+    <div class="summary"></div>
+          </h1>
+        <h2>Summary</h2>
+          </div>
+        <p>Tota,
+          </h2>
+  l: ${this.results.length}</p>
+          </p>
+        <p>Passe,
+          </p>
+  d: ${this.results.filter(r => r.status === 'passed').length}</p>
+          </p>
+        <p>Faile,
+          </p>
+  d: ${this.results.filter(r => r.status === 'failed').length}</p>
+          </p>
+        <p>Skippe,
+          </p>
+  d: ${this.results.filter(r => r.status === 'skipped').length}</p>
+          </p>
+        <p>Duratio,
+          </p>
+  n: ${Date.now() - this.startTime}ms</p>
+          </p>
+    </div>"
+          </p>
+    <div class="tests"></div>
+          </p>
+        ${/* TODO: Fix JSX expression */}"
+          </div>
+            <div class="test ${result.status}"></div>
+          </div>
+                <h3>${result.name}</h3>
+          </div>
+                <p>Statu,
+          </h3>
+  s: ${result.status}</p>
+          </p>
+                <p>Duratio,
+          </p>
+  n: ${result.duration}ms</p>
+          </p>
+                ${/* TODO: Fix JSX expression */}`
+          </p>
   r: ${result.error.message}</p>` : ''}
-            </div>`;
-        `;
-          );
+            </div>`
+          </p>
+        `
+          </p>
+          )
+          </p>
           .join('')}
-    </div>;
-</body>`;
-</html>`;
+    </div>
+          </p>
+</body>`
+          </p>
+</html>`
+          </p>
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
-  // Accessibility test;
-  async runAccessibilityTest(componen,;
-  t: ReactElement,;
-    testNam,;
-  e: string;);
+  // Accessibility test
+          </p>
+  async runAccessibilityTest(componen,
+          </p>
+  t: ReactElement,
+          </p>
+    testNam,
+          </p>
+  e: string;)
+          </p>
   ): Promise<{/* TODO: Fix JSX expression */}
   s: string[] }> {/* TODO: Fix JSX expression */}
-    const { container } = this.customRender(component);
-    // Basic accessibility checks;
-    const,;
-  violations: string[] = [];
-    // Check for missing alt text on images;
-    const images = container.querySelectorAll('img');
-    images.forEach((img, index) => {/* TODO: Fix JSX expression */}`;
-        violations.push(`Image ${index} missing alt text`);
+    const { container } = this.customRender(component)
+          </p>
+    // Basic accessibility checks
+          </p>
+    const,
+          </p>
+  violations: string[] = []
+          </p>
+    // Check for missing alt text on images
+          </p>
+    const images = container.querySelectorAll('img')
+          </p>
+    images.forEach((img, index) => {/* TODO: Fix JSX expression */}`
+          </p>
+        violations.push(`Image ${index} missing alt text`)
+          </p>
       }
-    });
-    // Check for missing labels on form inputs;
-    const inputs = container.querySelectorAll('input, select, textarea');
-    inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}`;
-        violations.push(`Input ${index} missing label`);
+    })
+          </p>
+    // Check for missing labels on form inputs
+          </p>
+    const inputs = container.querySelectorAll('input, select, textarea')
+          </p>
+    inputs.forEach((input, index) => {/* TODO: Fix JSX expression */}`
+          </p>
+        violations.push(`Input ${index} missing label`)
+          </p>
       }
-    });
-    // Check for proper heading hierarchy;
-    const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let previousLevel = 0;
-    headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}`;
-        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`);
+    })
+          </p>
+    // Check for proper heading hierarchy
+          </p>
+    const headings = container.querySelectorAll('h1, h2, h3, h4, h5, h6')
+          </p>
+    let previousLevel = 0
+          </p>
+    headings.forEach((heading, index) => {/* TODO: Fix JSX expression */}`
+          </p>
+        violations.push(`Heading ${index} skips level (h${previousLevel} to h${level})`)
+          </p>
       }
-      previousLevel = level;
-    });
-    // Check for proper button text;
-    const buttons = container.querySelectorAll('button');
-    buttons.forEach((button, index) => {/* TODO: Fix JSX expression */}`;
-        violations.push(`Button ${index} missing accessible text`);
+      previousLevel = level
+          </p>
+    })
+          </p>
+    // Check for proper button text
+          </p>
+    const buttons = container.querySelectorAll('button')
+          </p>
+    buttons.forEach((button, index) => {/* TODO: Fix JSX expression */}`
+          </p>
+        violations.push(`Button ${index} missing accessible text`)
+          </p>
       }
-    });
-    const passed = violations.length === 0;
-    this.testResults.push({/* TODO: Fix JSX expression */}`;
-  y: ${testName}`,;
-      statu,;
-  s: passed ? 'passed' : 'failed',;
-      duratio,;
-  n: 0,;
-      erro,`;
-  r: passed ? undefined : `Found ${violations.length} accessibility violations`);
-    });
-    return { passed, violations };
+    })
+          </p>
+    const passed = violations.length === 0
+          </p>
+    this.testResults.push({/* TODO: Fix JSX expression */}`
+          </p>
+  y: ${testName}`,
+          </p>
+      statu,
+          </p>
+  s: passed ? 'passed' : 'failed',
+          </p>
+      duratio,
+          </p>
+  n: 0,
+          </p>
+      erro,`
+          </p>
+  r: passed ? undefined : `Found ${violations.length} accessibility violations`)
+          </p>
+    })
+          </p>
+    return { passed, violations }
+          </p>
   }
-  // Component test;
-  async runComponentTest(componen,;
-  t: ReactElement,;
-    testNam,;
-  e: string,;
-    assertion,;
-  s: (resul);
-  t: RenderResult) => void;
+  // Component test
+          </p>
+  async runComponentTest(componen,
+          </p>
+  t: ReactElement,
+          </p>
+    testNam,
+          </p>
+  e: string,
+          </p>
+    assertion,
+          </p>
+  s: (resul)
+          </p>
+  t: RenderResult) => void
+          </p>
   ): Promise<{/* TODO: Fix JSX expression */}
-  d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`;
-  t: ${testName}`,;
-        statu,;
-  s: 'passed',;
-        duratio,;
-  n: 0,;
-      });
+  d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`
+          </p>
+  t: ${testName}`,
+          </p>
+        statu,
+          </p>
+  s: 'passed',
+          </p>
+        duratio,
+          </p>
+  n: 0,
+          </p>
+      })
+          </p>
       return {/* TODO: Fix JSX expression */}
-  d: true };
-    } catch (error) {/* TODO: Fix JSX expression */}`;
-  t: ${testName}`,;
-        statu,;
-  s: 'failed',;
-        duratio,;
-  n: 0,;
-        erro,;
-  r: errorMessage,;
-      });
+  d: true }
+          </p>
+    } catch (error) {/* TODO: Fix JSX expression */}`
+          </p>
+  t: ${testName}`,
+          </p>
+        statu,
+          </p>
+  s: 'failed',
+          </p>
+        duratio,
+          </p>
+  n: 0,
+          </p>
+        erro,
+          </p>
+  r: errorMessage,
+          </p>
+      })
+          </p>
       return {/* TODO: Fix JSX expression */}
-  r: errorMessage };
+  r: errorMessage }
+          </p>
     }
   }
-  /**;
-   * Generate JUnit report;
-   */;
+  /**
+          </p>
+   * Generate JUnit report
+          </p>
+   */
+          </p>
   private generateJunitReport(): void {}
-<<<<<<< HEAD
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${this.results
-          .map()</testsuite>
-    result => `}</testsuite>
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${this.results}
-          .map()
-            result => `}
-            <testcase name="${result.name}" time="${result.duration / 1000}">
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>
+          </p>
             </skipped>
+          </p>
 <testsuites>}
     <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${this.results;
+          </testsuites>
+        ${this.results;}
           .map(result => `}
             <testcase name="${result.name}" time="${result.duration / 1000}">)
+          </testsuite>
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''})
+          </testcase>
                 ${result.status === 'skipped' ? '<skipped/>' : ''})
+          </testcase>
             </testcase>)
+          </testcase>
 )
+          </testcase>
           )
+          </testcase>
           .join('')}
     </testsuite>
+          </testcase>
 </testsuites>`
+          </testcase>
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
   // Integration test
+          </testcase>
   async runIntegrationTest()
+          </testcase>
     component: ReactElement,
+          </testcase>
     testName: string)
+          </testcase>
     userInteractions: (result: RenderResult) => Promise<void>
-  // Integration test;
+          </testcase>
+  // Integration test
+          </testcase>
   async runIntegrationTest(component: ReactElement),
+          </testcase>
     testName: string),
+          </testcase>
     userInteractions: (result: RenderResult) => Promise<void>): Promise<{ passed: boolean; error?: string }> {
+          </testcase>
     try {
+          </testcase>
       const result = this.customRender(component)
-      await userInteractions(result)
-      this.testResults.push({`}
-  ): Promise<{ passed: boolean; error?: string }> {}
-    try {}
-      const result = this.customRender(component)
-      await userInteractions(result)
-      this.testResults.push({`})
-        name: `Integration: ${testName}`,
-        status: 'passed')
-    duration: 0
-      this.testResults.push({`})
-        name: `Integration: ${testName}`)
-        status: 'passed'),
-        duration: 0,
-      })
-      return { passed: true }
-    } catch (error) {}
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
-      this.testResults.push({`}
-      this.testResults.push({`})
-        name: `Integration: ${testName}`,
-        status: 'failed',
-        duration: 0)
-    error: errorMessage
-      this.testResults.push({`})
-        name: `Integration: ${testName}`)
-        status: 'failed'),
-        duration: 0),
-        error: errorMessage,
-      })
-      return { passed: false, error: errorMessage }
-    }
-  }
-  // Visual regression test
-  async runVisualRegressionTest(
-    component: ReactElement)
-    testName: string
-  // Visual regression test;
-  async runVisualRegressionTest(component: ReactElement),
-    testName: string,
-  ): Promise<{ passed: boolean; diff?: unknown }> {
-    // This would typically use a tool like Percy or Chromatic;
-    // For now, we'll just return a placeholder}
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`}
-  async runVisualRegressionTest()
-    component: ReactElement,
-    testName: string
-  ): Promise<{ passed: boolean; diff?: unknown }> {}
-    // This would typically use a tool like Percy or Chromatic
-    // For now, we'll just return a placeholder}
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`})
-      name: `Visual: ${testName}`,
-      status: 'passed')
-    duration: 0
-    this.testResults.push({`})
-      name: `Visual: ${testName}`)
-      status: 'passed'),
-      duration: 0,
-    })
-    return { passed: true }
-  }
-  // Coverage test;
-  // Coverage test;
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
-    // This would typically use Istanbul or similar
-    // For now, we'll just return a placeholder
-    const coverage: CoverageMetrics = {,
-    statements: 85,
-  // Coverage test
-  // Coverage test
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
-    // This would typically use Istanbul or similar
-    // For now, we'll just return a placeholder
-    const coverage: CoverageMetrics = {}
-      statements: 85,
-      branches: 80,
-      functions: 90,
-      lines: 85}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold
-    this.testResults.push({)}
-      name: 'Coverage',
-      status: passed ? 'passed' : 'failed',
-      duration: 0,`})
-    error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
-    })
-    return { passed, coverage }
-  }
-  // Run all tests
-  async runAllTests(
-    tests: Array<{,
-    name: string,
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
-    component: ReactElement)
-    assertions?: (result: RenderResult) => void
-      userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
-    }></void>
-    // This would typically use Istanbul or similar;
-    // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {
-      statements: 85,
-      branches: 80,
-      functions: 90,
-      lines: 85}
-    }
-    const passed = coverage.statements >= this.config.coverageThreshold;
-    this.testResults.push({)
-      name: 'Coverage'),
-      status: passed ? 'passed' : 'failed'),
-      duration: 0,`}
-      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
-    })
-    return { passed, coverage }
-  }
-  // Run all tests;
-  async runAllTests(tests: Array<{)
-      name: string;)
-      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
-      component: ReactElement;)
-      assertions?: (result: RenderResult) => void;
-      userInteractions?: (result: RenderResult) => Promise<void>;}
-    }>
-  ): Promise<{
-  async runAllTests()
-    tests: Array<{}
-      name: string,
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'
-      component: ReactElement
-      assertions?: (result: RenderResult) => void
-      userInteractions?: (result: RenderResult) => Promise<void>;}
-    }>
-  ): Promise<{}
-    passed: boolean;}
-    results: Array<{ name: string; type: string; passed: boolean; error?: string }>
-  }> {}
-    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = []
-    for (const test of tests) {
-      let result;
-      switch (test.type) {
-        case 'component':
-          result = await this.runComponentTest(
-    for (const test of tests) {}
-      let result
-      switch (test.type) {}
-        case 'component':
-          result = await this.runComponentTest()
-            test.component,
-            test.name)
-    test.assertions as any
-          result = await this.runComponentTest(test.component)
-            test.name)
-            test.assertions as any;
-          )
-          break;
-        case 'integration':
-          result = await this.runIntegrationTest(
-          result = await this.runIntegrationTest()
-            test.component,
-            test.name)
-    test.userInteractions as any
-          result = await this.runIntegrationTest(test.component)
-            test.name)
-            test.userInteractions as any;
-          )
-          break;
-        case 'performance':
-          result = await this.runPerformanceTest(test.component, test.name)
-          break;
-        case 'accessibility':
-          result = await this.runAccessibilityTest(test.component, test.name)
-          break;
-        case 'visual':
-          result = await this.runVisualRegressionTest(test.component, test.name)
-          break;
-        default:}
-          result = { passed: false, error: 'Unknown test type' }
-  private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
-        ${/* TODO: Fix JSX expression */}"
-            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
-=======
-    const xml = `<?xml version="1.0" encoding="UTF-8"?>;
-<testsuites>}<testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r =>r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${this.results;
-          .map()</testsuite>;}
-    result => `}</testsuite>;
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${this.results}
-          .map();
-            result => `}
-            <testcase name="${result.name}" time="${result.duration / 1000}">;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
-                ${result.status === 'skipped' ? '<skipped>' : ''}</skipped>;
-            </skipped>;
-<testsuites>}
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${this.results;}
-          .map(result => `}
-            <testcase name="${result.name}" time="${result.duration / 1000}">);
-                ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''});
-                ${result.status === 'skipped' ? '<skipped/>' : ''});
-            </testcase>);
-);
-          );
-          .join('')}
-    </testsuite>;
-</testsuites>`;
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-  }
-  // Integration test;
-  async runIntegrationTest();
-    component: ReactElement,;
-    testName: string);
-    userInteractions: (result: RenderResult) => Promise<void>;
-  // Integration test;
-  async runIntegrationTest(component: ReactElement),;
-    testName: string),;
-    userInteractions: (result: RenderResult) => Promise<void>): Promise<{ passed: boolean; error?: string }> {;
-    try {;
-      const result = this.customRender(component);
+          </testcase>
       await userInteractions(result);}
       this.testResults.push({`}
   ): Promise<{ passed: boolean; error?: string }> {}
     try {}
-      const result = this.customRender(component);
-      await userInteractions(result);
-      this.testResults.push({`});
-        name: `Integration: ${testName}`,;
-        status: 'passed');
-    duration: 0;
-      this.testResults.push({`});
-        name: `Integration: ${testName}`);
-        status: 'passed'),;
-        duration: 0,;
-      });
+      const result = this.customRender(component)
+          </testcase>
+      await userInteractions(result)
+          </testcase>
+      this.testResults.push({`})
+          </testcase>
+        name: `Integration: ${testName}`,
+          </testcase>
+        status: 'passed')
+          </testcase>
+    duration: 0
+          </testcase>
+      this.testResults.push({`})
+          </testcase>
+        name: `Integration: ${testName}`)
+          </testcase>
+        status: 'passed'),
+          </testcase>
+        duration: 0,
+          </testcase>
+      })
+          </testcase>
       return { passed: true }
     } catch (error) {}
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error'
+          </testcase>
       this.testResults.push({`}
-      this.testResults.push({`});
-        name: `Integration: ${testName}`,;
-        status: 'failed',;
-        duration: 0);
-    error: errorMessage;
-      this.testResults.push({`});
-        name: `Integration: ${testName}`);
-        status: 'failed'),;
-        duration: 0),;
-        error: errorMessage,;
-      });
+      this.testResults.push({`})
+          </testcase>
+        name: `Integration: ${testName}`,
+          </testcase>
+        status: 'failed',
+          </testcase>
+        duration: 0)
+          </testcase>
+    error: errorMessage
+          </testcase>
+      this.testResults.push({`})
+          </testcase>
+        name: `Integration: ${testName}`)
+          </testcase>
+        status: 'failed'),
+          </testcase>
+        duration: 0),
+          </testcase>
+        error: errorMessage,
+          </testcase>
+      })
+          </testcase>
       return { passed: false, error: errorMessage }
     }
   }
-  // Visual regression test;
-  async runVisualRegressionTest(;
-    component: ReactElement);
-    testName: string;
-  // Visual regression test;
-  async runVisualRegressionTest(component: ReactElement),;
-    testName: string,;
-  ): Promise<{ passed: boolean; diff?: unknown }> {;
+  // Visual regression test
+          </testcase>
+  async runVisualRegressionTest(
+          </testcase>
+    component: ReactElement)
+          </testcase>
+    testName: string
+          </testcase>
+  // Visual regression test
+          </testcase>
+  async runVisualRegressionTest(component: ReactElement),
+          </testcase>
+    testName: string,
+          </testcase>
+  ): Promise<{ passed: boolean; diff?: unknown }> {
+          </testcase>
     // This would typically use a tool like Percy or Chromatic;}
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     this.testResults.push({`}
-  async runVisualRegressionTest();
-    component: ReactElement,;
-    testName: string;
+  async runVisualRegressionTest()
+          </testcase>
+    component: ReactElement,
+          </testcase>
+    testName: string
+          </testcase>
   ): Promise<{ passed: boolean; diff?: unknown }> {}
-    // This would typically use a tool like Percy or Chromatic;
+    // This would typically use a tool like Percy or Chromatic
+          </testcase>
     // For now, we'll just return a placeholder}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({`});
-      name: `Visual: ${testName}`,;
-      status: 'passed');
-    duration: 0;
-    this.testResults.push({`});
-      name: `Visual: ${testName}`);
-      status: 'passed'),;
-      duration: 0,;
-    });
+    this.testResults.push({`})
+          </testcase>
+      name: `Visual: ${testName}`,
+          </testcase>
+      status: 'passed')
+          </testcase>
+    duration: 0
+          </testcase>
+    this.testResults.push({`})
+          </testcase>
+      name: `Visual: ${testName}`)
+          </testcase>
+      status: 'passed'),
+          </testcase>
+      duration: 0,
+          </testcase>
+    })
+          </testcase>
     return { passed: true }
   }
-  // Coverage test;
-  // Coverage test;
-  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {;
-    // This would typically use Istanbul or similar;
-    // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {,;
-    statements: 85,;
-  // Coverage test;
+  // Coverage test
+          </testcase>
+  // Coverage test
+          </testcase>
+  async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {
+          </testcase>
+    // This would typically use Istanbul or similar
+          </testcase>
+    // For now, we'll just return a placeholder
+          </testcase>
+    const coverage: CoverageMetrics = {,
+          </testcase>
+    statements: 85,
+          </testcase>
+  // Coverage test
+          </testcase>
   // Coverage test;}
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
-    // This would typically use Istanbul or similar;
-    // For now, we'll just return a placeholder;
+    // This would typically use Istanbul or similar
+          </testcase>
+    // For now, we'll just return a placeholder
+          </testcase>
     const coverage: CoverageMetrics = {}
-      statements: 85,;
-      branches: 80,;
-      functions: 90,;
+      statements: 85,
+          </testcase>
+      branches: 80,
+          </testcase>
+      functions: 90,
+          </testcase>
       lines: 85}
     }
-    const passed = coverage.statements >= this.config.coverageThreshold;
+    const passed = coverage.statements >= this.config.coverageThreshold
+          </testcase>
     this.testResults.push({)}
-      name: 'Coverage',;
-      status: passed ? 'passed' : 'failed',;
-      duration: 0,`});
-    error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%;
-    });
+      name: 'Coverage',
+          </testcase>
+      status: passed ? 'passed' : 'failed',
+          </testcase>
+      duration: 0,`})
+          </testcase>
+    error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
+          </testcase>
+    })
+          </testcase>
     return { passed, coverage }
   }
-  // Run all tests;
-  async runAllTests(;
-    tests: Array<{,;
-    name: string;
-      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',;
-    component: ReactElement);
+  // Run all tests
+          </testcase>
+  async runAllTests(
+          </testcase>
+    tests: Array<{,
+          </testcase>
+    name: string
+          </testcase>
+      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual',
+          </testcase>
+    component: ReactElement)
+          </testcase>
     assertions?: (result: RenderResult) => void;}
-      userInteractions?: (result: RenderResult) => Promise<void>;}</voi>;
-    }></void>;
-    // This would typically use Istanbul or similar;
-    // For now, we'll just return a placeholder;
-    const coverage: CoverageMetrics = {;
-      statements: 85,;
-      branches: 80,;
+      userInteractions?: (result: RenderResult) => Promise<void>;}</voi>
+          </testcase>
+    }></void>
+          </testcase>
+    // This would typically use Istanbul or similar
+          </testcase>
+    // For now, we'll just return a placeholder
+          </testcase>
+    const coverage: CoverageMetrics = {
+          </testcase>
+      statements: 85,
+          </testcase>
+      branches: 80,
+          </testcase>
       functions: 90,;}
       lines: 85}
     }
-    const passed = coverage.statements >= this.config.coverageThreshold;
-    this.testResults.push({);
-      name: 'Coverage'),;
+    const passed = coverage.statements >= this.config.coverageThreshold
+          </testcase>
+    this.testResults.push({)
+          </testcase>
+      name: 'Coverage'),
+          </testcase>
       status: passed ? 'passed' : 'failed'),;}
       duration: 0,`}
-      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%;
-    });
+      error: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%
+          </testcase>
+    })
+          </testcase>
     return { passed, coverage }
   }
-  // Run all tests;
-  async runAllTests(tests: Array<{);
-      name: string;);
-      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual');
-      component: ReactElement;);
+  // Run all tests
+          </testcase>
+  async runAllTests(tests: Array<{)
+          </testcase>
+      name: string;)
+          </testcase>
+      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
+          </testcase>
+      component: ReactElement;)
+          </testcase>
       assertions?: (result: RenderResult) => void;}
       userInteractions?: (result: RenderResult) => Promise<void>;}
-    }>;
-  ): Promise<{;
+    }>
+          </testcase>
+  ): Promise<{
+          </testcase>
   async runAllTests();}
     tests: Array<{}
-      name: string;
-      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual';
-      component: ReactElement;
-      assertions?: (result: RenderResult) => void;
+      name: string
+          </testcase>
+      type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual'
+          </testcase>
+      component: ReactElement
+          </testcase>
+      assertions?: (result: RenderResult) => void
+          </testcase>
       userInteractions?: (result: RenderResult) => Promise<void>;}
-    }>;
+    }>
+          </testcase>
   ): Promise<{}
     passed: boolean;}
-    results: Array<{ name: string; type: string; passed: boolean; error?: string }>;
+    results: Array<{ name: string; type: string; passed: boolean; error?: string }>
+          </testcase>
   }> {}
-    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = [];
-    for (const test of tests) {;
-      let result;
-      switch (test.type) {;
-        case 'component':;
+    const results: Array<{ name: string; type: string; passed: boolean; error?: string }> = []
+          </testcase>
+    for (const test of tests) {
+          </testcase>
+      let result
+          </testcase>
+      switch (test.type) {
+          </testcase>
+        case 'component':
+          </testcase>
           result = await this.runComponentTest(;}
     for (const test of tests) {}
-      let result;
+      let result
+          </testcase>
       switch (test.type) {}
-        case 'component':;
-          result = await this.runComponentTest();
-            test.component,;
-            test.name);
-    test.assertions as any;
-          result = await this.runComponentTest(test.component);
-            test.name);
-            test.assertions as any;
-          );
-          break;
-        case 'integration':;
-          result = await this.runIntegrationTest(;
-          result = await this.runIntegrationTest();
-            test.component,;
-            test.name);
-    test.userInteractions as any;
-          result = await this.runIntegrationTest(test.component);
-            test.name);
-            test.userInteractions as any;
-          );
-          break;
-        case 'performance':;
-          result = await this.runPerformanceTest(test.component, test.name);
-          break;
-        case 'accessibility':;
-          result = await this.runAccessibilityTest(test.component, test.name);
-          break;
-        case 'visual':;
-          result = await this.runVisualRegressionTest(test.component, test.name);
-          break;
+        case 'component':
+          </testcase>
+          result = await this.runComponentTest()
+          </testcase>
+            test.component,
+          </testcase>
+            test.name)
+          </testcase>
+    test.assertions as any
+          </testcase>
+          result = await this.runComponentTest(test.component)
+          </testcase>
+            test.name)
+          </testcase>
+            test.assertions as any
+          </testcase>
+          )
+          </testcase>
+          break
+          </testcase>
+        case 'integration':
+          </testcase>
+          result = await this.runIntegrationTest(
+          </testcase>
+          result = await this.runIntegrationTest()
+          </testcase>
+            test.component,
+          </testcase>
+            test.name)
+          </testcase>
+    test.userInteractions as any
+          </testcase>
+          result = await this.runIntegrationTest(test.component)
+          </testcase>
+            test.name)
+          </testcase>
+            test.userInteractions as any
+          </testcase>
+          )
+          </testcase>
+          break
+          </testcase>
+        case 'performance':
+          </testcase>
+          result = await this.runPerformanceTest(test.component, test.name)
+          </testcase>
+          break
+          </testcase>
+        case 'accessibility':
+          </testcase>
+          result = await this.runAccessibilityTest(test.component, test.name)
+          </testcase>
+          break
+          </testcase>
+        case 'visual':
+          </testcase>
+          result = await this.runVisualRegressionTest(test.component, test.name)
+          </testcase>
+          break
+          </testcase>
         default:}
           result = { passed: false, error: 'Unknown test type' }
-  private generateJunitReport(): void {/* TODO: Fix JSX expression */}";
-    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">;
-        ${/* TODO: Fix JSX expression */}";
-            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`;
+  private generateJunitReport(): void {/* TODO: Fix JSX expression */}"
+          </testcase>
+    <testsuite name="Test Suite" tests="${this.results.length}" failures="${this.results.filter(r => r.status === 'failed').length}" skipped="${this.results.filter(r => r.status === 'skipped').length}" time="${(Date.now() - this.startTime) / 1000}">
+          </testcase>
+        ${/* TODO: Fix JSX expression */}"
+          </testsuite>
+            <testcase name="${result.name}" time="${result.duration / 1000}"></testcase>"`
+          </testsuite>
                 ${result.status === 'failed' ? `<failure message="${result.error?.message}">${result.error?.stack}</failure>` : ''}
                 ${result.status === 'skipped' ? '<skipped/>' : ''}
-            </testcase>`;
-        `;
-          );
+            </testcase>`
+          </testcase>
+        `
+          </testcase>
+          )
+          </testcase>
           .join('')}
-    </testsuite>`;
-</testsuites>`;
+    </testsuite>`
+          </testcase>
+</testsuites>`
+          </testcase>
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
   }
-  // Integration test;
-  async runIntegrationTest(componen,;
-  t: ReactElement,;
-    testNam,;
-  e: string,;
-    userInteraction,;
-  s: (resul);
-  t: RenderResult) => Promise<void></void>;
+  // Integration test
+          </testcase>
+  async runIntegrationTest(componen,
+          </testcase>
+  t: ReactElement,
+          </testcase>
+    testNam,
+          </testcase>
+  e: string,
+          </testcase>
+    userInteraction,
+          </testcase>
+  s: (resul)
+          </testcase>
+  t: RenderResult) => Promise<void></void>
+          </testcase>
   ): Promise<{/* TODO: Fix JSX expression */}
-  d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`;
-  n: ${testName}`,;
-        statu,;
-  s: 'passed',;
-        duratio,;
-  n: 0,;
-      });
+  d: boolean; error?: string }> {/* TODO: Fix JSX expression */}`
+          </testcase>
+  n: ${testName}`,
+          </testcase>
+        statu,
+          </testcase>
+  s: 'passed',
+          </testcase>
+        duratio,
+          </testcase>
+  n: 0,
+          </testcase>
+      })
+          </testcase>
       return {/* TODO: Fix JSX expression */}
-  d: true };
-    } catch (error) {/* TODO: Fix JSX expression */}`;
-  n: ${testName}`,;
-        statu,;
-  s: 'failed',;
-        duratio,;
-  n: 0,;
-        erro,;
-  r: errorMessage,;
-      });
+  d: true }
+          </testcase>
+    } catch (error) {/* TODO: Fix JSX expression */}`
+          </testcase>
+  n: ${testName}`,
+          </testcase>
+        statu,
+          </testcase>
+  s: 'failed',
+          </testcase>
+        duratio,
+          </testcase>
+  n: 0,
+          </testcase>
+        erro,
+          </testcase>
+  r: errorMessage,
+          </testcase>
+      })
+          </testcase>
       return {/* TODO: Fix JSX expression */}
-  r: errorMessage };
+  r: errorMessage }
+          </testcase>
     }
   }
-  // Visual regression test;
-  async runVisualRegressionTest(componen,;
-  t: ReactElement,;
-    testNam,;
-  e: string;);
+  // Visual regression test
+          </testcase>
+  async runVisualRegressionTest(componen,
+          </testcase>
+  t: ReactElement,
+          </testcase>
+    testNam,
+          </testcase>
+  e: string;)
+          </testcase>
   ): Promise<{/* TODO: Fix JSX expression */}
   d: boolean; diff?: unknown }> {/* TODO: Fix JSX expression */}
     if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) {} }
-    this.testResults.push({/* TODO: Fix JSX expression */}`;
-  l: ${testName}`,;
-      statu,;
-  s: 'passed',;
-      duratio,;
-  n: 0;);
-    });
+    this.testResults.push({/* TODO: Fix JSX expression */}`
+          </testcase>
+  l: ${testName}`,
+          </testcase>
+      statu,
+          </testcase>
+  s: 'passed',
+          </testcase>
+      duratio,
+          </testcase>
+  n: 0;)
+          </testcase>
+    })
+          </testcase>
     return {/* TODO: Fix JSX expression */}
-  d: true };
+  d: true }
+          </testcase>
   }
-  // Coverage test;
-  // Coverage test;
+  // Coverage test
+          </testcase>
+  // Coverage test
+          </testcase>
   async runCoverageTest(): Promise<{/* TODO: Fix JSX expression */}
   e: CoverageMetrics }> {/* TODO: Fix JSX expression */}
-    };
-    const passed = coverage.statements >= this.config.coverageThreshold;
-    this.testResults.push({/* TODO: Fix JSX expression */}`;
-  r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`);
-    });
-    return { passed, coverage };
-  }
-  // Run all tests;
-  async runAllTests(test,;
-  s: Array<{/* TODO: Fix JSX expression */}
-    }>);
-  ): Promise<{/* TODO: Fix JSX expression */}
-  d: boolean; error?: string }>;
-  }> {/* TODO: Fix JSX expression */}
-  d: boolean; error?: string }> = [];
-    for (const test of tests) {/* TODO: Fix JSX expression */}
-  r: 'Unknown test type' };
-      }
-    const,;
-  results: unknown[] = [];
-      results.push({/* TODO: Fix JSX expression */});
-  e: test.type });
     }
-    const passed = results.every(result => result.passed);
+          </testcase>
+    const passed = coverage.statements >= this.config.coverageThreshold
+          </testcase>
+    this.testResults.push({/* TODO: Fix JSX expression */}`
+          </testcase>
+  r: passed ? undefined : `Coverage ${coverage.statements}% below threshold ${this.config.coverageThreshold}%`)
+          </testcase>
+    })
+          </testcase>
+    return { passed, coverage }
+          </testcase>
+  }
+  // Run all tests
+          </testcase>
+  async runAllTests(test,
+          </testcase>
+  s: Array<{/* TODO: Fix JSX expression */}
+    }>)
+          </testcase>
+  ): Promise<{/* TODO: Fix JSX expression */}
+  d: boolean; error?: string }>
+          </testcase>
+  }> {/* TODO: Fix JSX expression */}
+  d: boolean; error?: string }> = []
+          </testcase>
+    for (const test of tests) {/* TODO: Fix JSX expression */}
+  r: 'Unknown test type' }
+          </testcase>
+      }
+    const,
+          </testcase>
+  results: unknown[] = []
+          </testcase>
+      results.push({/* TODO: Fix JSX expression */})
+          </testcase>
+  e: test.type })
+          </testcase>
+    }
+    const passed = results.every(result => result.passed)
+          </testcase>
     return { passed, results }
   }
-  // Get test results;
+  // Get test results
+          </testcase>
   getTestResults() {;}
     return [...this.testResults];}
   }
-  // Get test statistics;
-  getTestStatistics() {;
-    const total = this.testResults.length;
-    const passed = this.testResults.filter(result => result.status === 'passed').length;
-    const failed = this.testResults.filter(result => result.status === 'failed').length;
-    const skipped = this.testResults.filter(result => result.status === 'skipped').length;
-    return {;
+  // Get test statistics
+          </testcase>
+  getTestStatistics() {
+          </testcase>
+    const total = this.testResults.length
+          </testcase>
+    const passed = this.testResults.filter(result => result.status === 'passed').length
+          </testcase>
+    const failed = this.testResults.filter(result => result.status === 'failed').length
+          </testcase>
+    const skipped = this.testResults.filter(result => result.status === 'skipped').length
+          </testcase>
+    return {
+          </testcase>
   // Get test results;}
   getTestResults() {}
     return [...this.testResults];}
   }
-  // Get test statistics;
+  // Get test statistics
+          </testcase>
   getTestStatistics() {}
-    const total = this.testResults.length;
-    const passed = this.testResults.filter(result => result.status === 'passed').length;
-    const failed = this.testResults.filter(result => result.status === 'failed').length;
-    const skipped = this.testResults.filter(result => result.status === 'skipped').length;
+    const total = this.testResults.length
+          </testcase>
+    const passed = this.testResults.filter(result => result.status === 'passed').length
+          </testcase>
+    const failed = this.testResults.filter(result => result.status === 'failed').length
+          </testcase>
+    const skipped = this.testResults.filter(result => result.status === 'skipped').length
+          </testcase>
     return {}
-      total,;
-      passed,;
-      failed,;
-      skipped,;
+      total,
+          </testcase>
+      passed,
+          </testcase>
+      failed,
+          </testcase>
+      skipped,
+          </testcase>
       passRate: total > 0 ? (passed / total) * 100 : 0}
     }
   }
-  // Clear test results;
+  // Clear test results
+          </testcase>
   clearTestResults() {;}
     this.testResults = [];}
   }
-  // Generate test report;
-  generateTestReport() {;
-    const statistics = this.getTestStatistics();
-    const results = this.getTestResults();
-    return {;
-      summary: statistics,;
+  // Generate test report
+          </testcase>
+  generateTestReport() {
+          </testcase>
+    const statistics = this.getTestStatistics()
+          </testcase>
+    const results = this.getTestResults()
+          </testcase>
+    return {
+          </testcase>
+      summary: statistics,
+          </testcase>
   // Clear test results;}
   clearTestResults() {}
     this.testResults = [];}
   }
-  // Generate test report;
+  // Generate test report
+          </testcase>
   generateTestReport() {}
-    const statistics = this.getTestStatistics();
-    const results = this.getTestResults();
+    const statistics = this.getTestStatistics()
+          </testcase>
+    const results = this.getTestResults()
+          </testcase>
     return {}
-      summary: statistics,;
-      results,;
-      timestamp: new Date().toISOString(),;
+      summary: statistics,
+          </testcase>
+      results,
+          </testcase>
+      timestamp: new Date().toISOString(),
+          </testcase>
       config: this.config}
     }
   }
 }
-// React hook for testing;
-export const useTestRunner = useCallback((...args) => {;
-  const testRunner = TestRunner.getInstance();
-  const runTest = useCallback(async (;
+// React hook for testing
+          </testcase>
+export const useTestRunner = useCallback((...args) => {
+          </testcase>
+  const testRunner = TestRunner.getInstance()
+          </testcase>
+  const runTest = useCallback(async (
+          </testcase>
 // React hook for testing;}
 export const useTestRunner = useCallback((...args) => {}
-  const testRunner = TestRunner.getInstance();
-  const runTest = useCallback(async ();
-    component: ReactElement,;
-    testName: string,;
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual');
-    assertions?: (result: RenderResult) => void,;
-    userInteractions?: (result: RenderResult) => Promise<void>) => {;
-    switch (type) {;
+  const testRunner = TestRunner.getInstance()
+          </testcase>
+  const runTest = useCallback(async ()
+          </testcase>
+    component: ReactElement,
+          </testcase>
+    testName: string,
+          </testcase>
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
+          </testcase>
+    assertions?: (result: RenderResult) => void,
+          </testcase>
+    userInteractions?: (result: RenderResult) => Promise<void>) => {
+          </testcase>
+    switch (type) {
+          </testcase>
     userInteractions?: (result: RenderResult) => Promise<void>;}
   ) => {}
     switch (type) {}
-      case 'component':;
-  const runTest = useCallback(async ();
-    component: ReactElement;);
-    testName: string);
-    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual');
-    assertions?: (result: RenderResult) => void;
-    userInteractions?: (result: RenderResult) => Promise<void>;
-  ) => {,;
-    switch (type) {,;
-      case 'component':,;
-        return testRunner.runComponentTest(component, testName, assertions as any);
-      case 'integration':;
-        return testRunner.runIntegrationTest(component, testName, userInteractions as any);
-      case 'performance':;
-        return testRunner.runPerformanceTest(component, testName);
-      case 'accessibility':;
-        return testRunner.runAccessibilityTest(component, testName);
-      case 'visual':;
+      case 'component':
+          </testcase>
+  const runTest = useCallback(async ()
+          </testcase>
+    component: ReactElement;)
+          </testcase>
+    testName: string)
+          </testcase>
+    type: 'component' | 'integration' | 'performance' | 'accessibility' | 'visual')
+          </testcase>
+    assertions?: (result: RenderResult) => void
+          </testcase>
+    userInteractions?: (result: RenderResult) => Promise<void>
+          </testcase>
+  ) => {,
+          </testcase>
+    switch (type) {,
+          </testcase>
+      case 'component':,
+          </testcase>
+        return testRunner.runComponentTest(component, testName, assertions as any)
+          </testcase>
+      case 'integration':
+          </testcase>
+        return testRunner.runIntegrationTest(component, testName, userInteractions as any)
+          </testcase>
+      case 'performance':
+          </testcase>
+        return testRunner.runPerformanceTest(component, testName)
+          </testcase>
+      case 'accessibility':
+          </testcase>
+        return testRunner.runAccessibilityTest(component, testName)
+          </testcase>
+      case 'visual':
+          </testcase>
         return testRunner.runVisualRegressionTest(component, testName);}
       default:}
         return { passed: false, error: 'Unknown test type' }
     }
-  }, [testRunner]);
+  }, [testRunner])
+          </testcase>
   return {}
-    runTest,;
-    getTestResults: () => testRunner.getTestResults(),;
-    getTestStatistics: () => testRunner.getTestStatistics(),;
-    clearTestResults: () => testRunner.clearTestResults(),;
+    runTest,
+          </testcase>
+    getTestResults: () => testRunner.getTestResults(),
+          </testcase>
+    getTestStatistics: () => testRunner.getTestStatistics(),
+          </testcase>
+    clearTestResults: () => testRunner.clearTestResults(),
+          </testcase>
     generateTestReport: () => testRunner.generateTestReport()}
   }
 }
-// Test utilities;
-export const testUtils = {;
+// Test utilities
+          </testcase>
+export const testUtils = {
+          </testcase>
   // Create mock data</void>;}
-  createMockData: (type: string, count: number = 10) => {}</void>;
-// Test utilities;
+  createMockData: (type: string, count: number = 10) => {}</void>
+          </testcase>
+// Test utilities
+          </testcase>
 export const testUtils = {}
-  // Create mock data;
+  // Create mock data
+          </testcase>
   createMockData: (type: string, count: number = 10) => {}
-    const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = [];
+    const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
+          </testcase>
     for (let i = 0; i < count; i++) {}
       mockData.push({)}
         id: i + 1,`}
-        name: `Mock ${type} ${i + 1}`,;
-        description: `This is a mock ${type} item`);
-    createdAt: new Date().toISOString(),;
-        updatedAt: new Date().toISOString();
-  // Create mock data;
+        name: `Mock ${type} ${i + 1}`,
+          </testcase>
+        description: `This is a mock ${type} item`)
+          </testcase>
+    createdAt: new Date().toISOString(),
+          </testcase>
+        updatedAt: new Date().toISOString()
+          </testcase>
+  // Create mock data
+          </testcase>
   createMockData: (type: string, count: number = 10) => {}
-    const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = [];
-    for (let i = 0; i < count; i++) {;
+    const mockData: Array<{ id: number; name: string; description: string; createdAt: string; updatedAt: string }> = []
+          </testcase>
+    for (let i = 0; i < count; i++) {
+          </testcase>
       mockData.push({);}
-        id: i + 1,`});
-        name: `Mock ${type} ${i + 1}`);
-        description: `This is a mock ${type} item`);
-        createdAt: new Date().toISOString(),;
-        updatedAt: new Date().toISOString()});
+        id: i + 1,`})
+          </testcase>
+        name: `Mock ${type} ${i + 1}`)
+          </testcase>
+        description: `This is a mock ${type} item`)
+          </testcase>
+        createdAt: new Date().toISOString(),
+          </testcase>
+        updatedAt: new Date().toISOString()})
+          </testcase>
     }
-    return mockData;
-  },;
-  // Wait for element to appear;
-  waitForElement: (selector: string, timeout: number = 5000) => {,;
-    return new Promise((resolve, reject) => {;
+    return mockData
+          </testcase>
+  },
+          </testcase>
+  // Wait for element to appear
+          </testcase>
+  waitForElement: (selector: string, timeout: number = 5000) => {,
+          </testcase>
+    return new Promise((resolve, reject) => {
+          </testcase>
   // Wait for element to appear;}
   waitForElement: (selector: string, timeout: number = 5000) => {}
     return new Promise((resolve, reject) => {}
-      const element = document.querySelector(selector);
+      const element = document.querySelector(selector)
+          </testcase>
       if (element) {}
-        resolve(element);
+        resolve(element)
+          </testcase>
         return;}
       }
       const observer = new MutationObserver(() => {}
-        const element = document.querySelector(selector);
+        const element = document.querySelector(selector)
+          </testcase>
         if (element) {}
-          observer.disconnect();
+          observer.disconnect()
+          </testcase>
           resolve(element);}
         }
-      });
-      observer.observe(document.body, {;
+      })
+          </testcase>
+      observer.observe(document.body, {
+          </testcase>
         childList: true);}
     subtree: true}
-      observer.observe(document.body, {);
+      observer.observe(document.body, {)
+          </testcase>
         childList: true),;}
       observer.observe(document.body, {)}
-        childList: true,;
+        childList: true,
+          </testcase>
         subtree: true}
-      });
+      })
+          </testcase>
       setTimeout(() => {}
         observer.disconnect();`}
-        reject(new Error(`Element ${selector} not found within ${timeout}ms`));
-      }, timeout);
-    });
-  },;
-  // Simulate user interaction;
-  simulateUserInteraction: async (element: HTMLElement, action: string) => {;
-    switch (action) {;
+        reject(new Error(`Element ${selector} not found within ${timeout}ms`))
+          </testcase>
+      }, timeout)
+          </testcase>
+    })
+          </testcase>
+  },
+          </testcase>
+  // Simulate user interaction
+          </testcase>
+  simulateUserInteraction: async (element: HTMLElement, action: string) => {
+          </testcase>
+    switch (action) {
+          </testcase>
   // Simulate user interaction;}
   simulateUserInteraction: async (element: HTMLElement, action: string) => {}
     switch (action) {}
-      case 'click':;
-        element.click();
-        break;
-      case 'focus':;
-        element.focus();
-        break;
-      case 'blur':;
-        element.blur();
-        break;
-      case 'change':,;
-        if (element instanceof HTMLInputElement) {,;
-        break;
+      case 'click':
+          </testcase>
+        element.click()
+          </testcase>
+        break
+          </testcase>
+      case 'focus':
+          </testcase>
+        element.focus()
+          </testcase>
+        break
+          </testcase>
+      case 'blur':
+          </testcase>
+        element.blur()
+          </testcase>
+        break
+          </testcase>
+      case 'change':,
+          </testcase>
+        if (element instanceof HTMLInputElement) {,
+          </testcase>
+        break
+          </testcase>
       case 'change':;}
         if (element instanceof HTMLInputElement) {}
           element.value = 'test value';}
-          element.dispatchEvent(new Event('change', { bubbles: true }));
+          element.dispatchEvent(new Event('change', { bubbles: true }))
+          </testcase>
         }
-        break;
-      default:;
-        throw new Error(`Unknown action: ${action}`);
-  // Get test results;
+        break
+          </testcase>
+      default:
+          </testcase>
+        throw new Error(`Unknown action: ${action}`)
+          </testcase>
+  // Get test results
+          </testcase>
   getTestResults() {/* TODO: Fix JSX expression */}
   }
-  // Get test statistics;
+  // Get test statistics
+          </testcase>
   getTestStatistics() {/* TODO: Fix JSX expression */}
-    };
+    }
+          </testcase>
   }
-  // Clear test results;
+  // Clear test results
+          </testcase>
   clearTestResults() {/* TODO: Fix JSX expression */}
   }
-  // Generate test report;
+  // Generate test report
+          </testcase>
   generateTestReport() {/* TODO: Fix JSX expression */}
-    };
+    }
+          </testcase>
   }
 }
-// React hook for testing;
+// React hook for testing
+          </testcase>
 export const useTestRunner = () => {/* TODO: Fix JSX expression */}
-  r: 'Unknown test type' };
+  r: 'Unknown test type' }
+          </testcase>
     }
-  }, [testRunner]);
+  }, [testRunner])
+          </testcase>
   return {/* TODO: Fix JSX expression */}
-=======
 
 // Performance testing utilities
 export const measurePerformance = (fn: () => void): PerformanceMetrics => {
-  const startTime = performance.now();
-  const startMemory = (performance as any).memory?.usedJSHeapSize || 0;
+  const startTime = performance.now()
+          </testcase>
+  const startMemory = (performance as any).memory?.usedJSHeapSize || 0
+          </testcase>
   
-  fn();
+  fn()
+          </testcase>
   
-  const endTime = performance.now();
-  const endMemory = (performance as any).memory?.usedJSHeapSize || 0;
+  const endTime = performance.now()
+          </testcase>
+  const endMemory = (performance as any).memory?.usedJSHeapSize || 0
+          </testcase>
   
   return {
     renderTime: endTime - startTime,
     memoryUsage: endMemory - startMemory,
     timestamp: new Date().toISOString()
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
-  };
-};
+  }
+          </testcase>
+}
+          </testcase>
 
 // Mock utilities
 export const createMock = <T extends Record<string, any>>(overrides: Partial<T> = {}): T => {
   return new Proxy({} as T, {
     get(target, prop) {
       if (prop in overrides) {
-        return overrides[prop as keyof T];
+        return overrides[prop as keyof T]
+          </testcase>
       }
-      return jest.fn();
+      return jest.fn()
+          </testcase>
     }
-  });
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-"`
-  </T>
-  </T>
-  </T>
-  </T>
-  </T>
-  </T>
-  </T>
-  </T>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </testsuite>
-  </testsuites>
-  </h4>
-  </h3>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </void>
-  </TestConfig>
-  </TestConfig>
-  </TestConfig>
-  </void>
-  </void>
-  </void>
-  </void>
-=======
-"`;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-=======
+  })
+          </testcase>
+}
+          </testcase>
 
 // Assertion utilities
 export const expect = (actual: unknown) => ({
@@ -2404,9 +2604,11 @@ export const expect = (actual: unknown) => ({
     message: `Expected ${actual} to be falsy`,
     actual
   })
-});
+})
+          </testcase>
 
 // Export everything
-export * from '@testing-library/react';
-export { customRender as render };
->>>>>>> cursor/analyze-improve-and-deploy-application-0f89
+export * from '@testing-library/react'
+          </testcase>
+export { customRender as render }
+          </testcase>

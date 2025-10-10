@@ -5,7 +5,7 @@ export const metadata: Metadata = {,
   openGraph: {,
     title: 'Index',
     description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
-    type: 'article'}};
+
 export default function index() {
   return(<div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 py-8">
@@ -20,19 +20,23 @@ export default function index() {
             <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>
             <div className="flex justify-center space-x-4"></div>
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                BREAKTHROUGH;
+                BREAKTHROUGH
+          </span>
               </span>
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                AI;
+                AI
+          </span>
               </span>
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                ENTERPRISE;
+                ENTERPRISE
+          </span>
               </span>
             </div>
           </div>
           <div className="prose max-w-none"></div>
             <p className="text-lg text-gray-700 mb-6">
-              This page is currently under development. Please check back soon for the complete;
+              This page is currently under development. Please check back soon for the complete
+          </p>
               content.
             </p>)
           </div>)
@@ -40,7 +44,8 @@ export default function index() {
       </div>)
 export const,
   metadata: Metadata = {/* TODO: Fix JSX expression */}
-  }};
+  }}
+          </p>
 export default function index() {/* TODO: Fix JSX expression */}
 }
   return (<div className="min-h-screen bg-gray-50"></div>"
@@ -51,25 +56,30 @@ export default function index() {/* TODO: Fix JSX expression */}
             <p className="text-xl text-gray-600 mb-6">Revolutionary AI Breakthrough</p>"
             <div className="flex justify-center space-x-4"></div>"
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-                BREAKTHROUGH;
+                BREAKTHROUGH
+          </span>
               </span>"
               <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-                AI;
+                AI
+          </span>
               </span>"
               <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-                ENTERPRISE;
+                ENTERPRISE
+          </span>
               </span>
             </div>
           </div>"
           <div className="prose max-w-none"></div>"
             <p className="text-lg text-gray-700 mb-6"></p>
-              This page is currently under development. Please check back soon for the complete;
+              This page is currently under development. Please check back soon for the complete
+          </p>
               content.
             </p>
           </div>
         </div>
       </div>
     </div>)
-  );
+  )
+          </p>
 }
 "

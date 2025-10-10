@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+
+
+
+
+
 const GlobalErrorPage: React.FC = () => {
   const features = [
     {
@@ -30,7 +30,7 @@ const GlobalErrorPage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -45,18 +45,21 @@ const GlobalErrorPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Global Error;
-  </
+                Global Error
+          </h1>
+          </h1>
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
                 Global error page.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                  Get Started;
-  </
+                  Get Started
+          </button>
+          </button>
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors">
-                  Learn More;
-  </
+                  Learn More
+          </button>
+          </button>
               </div>
             </div>
           </div>
@@ -66,8 +69,9 @@ const GlobalErrorPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Services;
-  </
+                Our Services
+          </h2>
+          </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Discover how our solutions can help transform your business.
               </p>
@@ -103,16 +107,20 @@ const GlobalErrorPage: React.FC = () => {
               Contact us today to learn more about our services.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold">
-              Contact Us;
-  </
+              Contact Us
+          </button>
+          </button>
           </div>
         </section>
       </main>
       <Footer />
     </React.Fragment>
-  );
-};
-export default GlobalErrorPage;
+  )
+          </button>
+}
+          </button>
+export default GlobalErrorPage
+          </button>
   </button>
   </h2>
   </button>

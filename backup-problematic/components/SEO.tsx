@@ -1,4 +1,4 @@
-import React from 'react';
+
 interface SEOProps {/* TODO: Fix JSX expression */}
 }
 const SEO: React.FC<SEOProps> = ({,
@@ -17,9 +17,12 @@ const,
       <meta name="description" content={description} /></meta>"
       <meta name="keywords" content={keywords.join(', ')} /></meta>
       {children}
-  );
-};
-export default SEO;
+  )
+          </meta>
+}
+          </meta>
+export default SEO
+          </meta>
 "
   </SEOProps>
   </SEOProps>

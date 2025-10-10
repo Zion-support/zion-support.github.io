@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { Target, Zap, Settings, BarChart, CheckCircle, Star,  Target,  Zap,  BarChart } from 'lucide-react';
+
+
+
+
+
 const DigitalTransformationPage: React.FC = () => {
-  const features = [];
+
   return (
     {// TODO: Add content;}
-};
+
   ico,
   n: Target,
       titl,
@@ -15,7 +15,7 @@ const DigitalTransformationPage: React.FC = () => {
       descriptio,
   n: 'Digital transformation strategy and roadmap development',
       benefit,
-  s: ['Strategic planning', 'Technology assessment', 'Change management'];
+
     },
       ico,
   n: Zap,
@@ -34,17 +34,19 @@ const DigitalTransformationPage: React.FC = () => {
       benefit,
   s: ['Data analytics', 'Business intelligence', 'Performance metrics']
     }
-  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
       <main className="container mx-auto px-4 py-16 pt-24">
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse">
-// Digital Transformation;
+// Digital Transformation
+          </h1>
           </h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
-            Transform Your Business for the Digital Age;
+            Transform Your Business for the Digital Age
+          </p>
           </p>"
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed"></p>
             Accelerate your digital transformation journey with our comprehensive solutions. From strategy development to implementation,
@@ -53,17 +55,20 @@ const DigitalTransformationPage: React.FC = () => {
             <a
               href="/contact" className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300"
 // >
-//               Get Started;
+//               Get Started
+          </a>
           </a>
               href="tel:+13024640950" className="flex items-center gap-2 border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 <Target className="w-5 h-5" />
-              +1 302 464 0950;
+              +1 302 464 0950
+          </a>
           </div>
         </section>"
         <section className="mb-16"></section>"
           <h2 className="text-3xl,"
   md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
-// Transformation Services;
+// Transformation Services
+          </h2>
           </h2>"
           <div className="grid grid-cols-1,
   md:grid-cols-2,"
@@ -89,6 +94,9 @@ const DigitalTransformationPage: React.FC = () => {
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default DigitalTransformationPage;
+  )
+          </Footer>
+}
+          </Footer>
+export default DigitalTransformationPage
+          </Footer>

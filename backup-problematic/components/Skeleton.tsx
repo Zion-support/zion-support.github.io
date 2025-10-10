@@ -1,4 +1,4 @@
-import React from 'react';
+
 interface SkeletonProps {/* TODO: Fix JSX expression */}
 }
 const Skeleton = React.memo(function Skeleton({ className = '' }: SkeletonProps) {
@@ -14,7 +14,10 @@ const Skeleton = React.memo(function Skeleton({ className = '' }: SkeletonProps)
       <h3 className="text-lg font-semibold text-blue-800">Skeleton</h3>"
       <p className="text-blue-600">This component is under development.</p>
     </div>
-  );
-});
-export default Skeleton;
+  )
+          </p>
+})
+          </p>
+export default Skeleton
+          </p>
 "`

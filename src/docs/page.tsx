@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { Search, BookOpen, Code, Zap, Brain, Shield, Database, Cloud, Settings, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink, Download, Play, Users, Award, Globe } from 'lucide-react';
+
+
+
+
+
+
 const DocsPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+
+
   const docCategories = [
     { id: 'all', name: 'All Documentation', icon: BookOpen, count: 45 },
     { id: 'getting-started', name: 'Getting Started', icon: Zap, count: 8 },
@@ -14,7 +14,7 @@ const DocsPage: React.FC = () => {
     { id: 'api', name: 'API Reference', icon: Code, count: 15 },
     { id: 'integration', name: 'Integration', icon: Settings, count: 6 },
     { id: 'troubleshooting', name: 'Troubleshooting', icon: Shield, count: 4 }
-  ];
+
   const documentation = [
     {
       id: 1,
@@ -116,7 +116,7 @@ const DocsPage: React.FC = () => {
       icon: Zap,
       content: 'Advanced techniques for optimizing API calls, reducing latency, and minimizing costs.'
     }
-  ];
+
   const quickLinks = [
     {
       title: 'API Reference',
@@ -146,25 +146,25 @@ const DocsPage: React.FC = () => {
       link: '/community',
       color: 'text-cyan-400'
     }
-  ];
+
   const filteredDocs = selectedCategory === 'all' 
     ? documentation 
-    : documentation.filter(doc => doc.category === selectedCategory);
+
   const searchResults = searchQuery 
     ? documentation.filter(doc => 
         doc.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         doc.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : filteredDocs;
+
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
-      case 'Beginner': return 'text-green-400 bg-green-500/20';
-      case 'Intermediate': return 'text-yellow-400 bg-yellow-500/20';
-      case 'Advanced': return 'text-red-400 bg-red-500/20';
-      default: return 'text-gray-400 bg-gray-500/20';
+
+
+
+
     }
-  };
+
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -179,11 +179,13 @@ const DocsPage: React.FC = () => {
           {/* Hero Section */}
           <section className="text-center mb-16">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Documentation;
-  </
+              Documentation
+          </h1>
+          </h1>
             <p className="text-xl text-cyan-400 mb-8">
-              Everything you need to build with AI;
-  </
+              Everything you need to build with AI
+          </p>
+          </p>
             <p className="text-lg text-gray-300 max-w-4xl mx-auto">
               Comprehensive guides, API references, and tutorials to help you 
               integrate and optimize our AI services for your business.
@@ -207,8 +209,9 @@ const DocsPage: React.FC = () => {
           {/* Quick Links */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Quick Links;
-  </
+              Quick Links
+          </h2>
+          </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {quickLinks.map((link, index) => (
                 <Link
@@ -227,8 +230,9 @@ const DocsPage: React.FC = () => {
           {/* Categories */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Browse by Category;
-  </
+              Browse by Category
+          </h2>
+          </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
               {docCategories.map((category) => (
                 <button
@@ -250,8 +254,9 @@ const DocsPage: React.FC = () => {
           {/* Documentation List */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Documentation;
-  </
+              Documentation
+          </h2>
+          </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {searchResults.map((doc) => (
                 <div key={doc.id} className="cyber-card p-6 hover:scale-105 transition-all duration-300">
@@ -297,21 +302,24 @@ const DocsPage: React.FC = () => {
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Start building with our AI services today;
-  </
+                Start building with our AI services today
+          </p>
+          </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
                   className="cyber-button px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <MessageSquare className="w-5 h-5 mr-2" />
-                  Contact Our Team;
-  </
+                  Contact Our Team
+          </Link>
+          </Link>
                 <Link
                   to="/demo"
                   className="cyber-button-secondary px-8 py-4 text-lg font-semibold inline-flex items-center justify-center">
                   <Play className="w-5 h-5 mr-2" />
-                  Request Demo;
-  </
+                  Request Demo
+          </Link>
+          </Link>
               </div>
             </div>
           </section>
@@ -319,9 +327,12 @@ const DocsPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
-export default DocsPage;
+  )
+          </Link>
+}
+          </Link>
+export default DocsPage
+          </Link>
   </Link>
   </Link>
   </p>

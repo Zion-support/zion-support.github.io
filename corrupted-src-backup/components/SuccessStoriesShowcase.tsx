@@ -1,7 +1,7 @@
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
   const, storie, s = [
     {
-      comp, a, n;
+
   y: "TechCorp, Internationa, l"
       indust, r, y: "Technolo, g, y"
       ic, o, n: <TrendingUp, className="w-8 h-8" /></TrendingUp>resu</TrendingUp>, l, t: "3, 0, 0% Revenue, Growt, h"
@@ -40,7 +40,8 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
         </div>,
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">,
           {stories.map((story, index) => (
-            <div;
+            <div
+          </div>
 key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover: scale-105 transition-all duration-300",
             >,
@@ -84,12 +85,14 @@ key={index}
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
-                  Read Full Story;
+                  Read Full Story
+          </span>
                   <Link className="w-4 h-4" />
                 </Link>
               </div>
             </div>
-            View All Success Stories;
+            View All Success Stories
+          </span>
             <Link className="w-6 h-6" />
               </div>"
               <div className="p-6"></div>"

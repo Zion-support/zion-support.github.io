@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Home, Users, DollarSign, BarChart, Shield, Zap } from 'lucide-react';
+
+
+
+
 const PropertyManagementAIPage: React.FC = () => {
   const features = [
     { icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' },
@@ -10,7 +10,7 @@ const PropertyManagementAIPage: React.FC = () => {
     { icon: BarChart, title: 'Financial Analytics', description: 'Advanced financial reporting and property performance analytics.' },
     { icon: Shield, title: 'Maintenance Tracking', description: 'Predictive maintenance and automated work order management.' },
     { icon: Zap, title: 'Automation', description: 'Automated rent collection, lease renewals, and property operations.' }
-  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -40,6 +40,9 @@ const PropertyManagementAIPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default PropertyManagementAIPage;
+  )
+          </p>
+}
+          </p>
+export default PropertyManagementAIPage
+          </p>

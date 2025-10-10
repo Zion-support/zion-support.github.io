@@ -1,4 +1,4 @@
-import React from 'react';
+
 interface LoadingProps {/* TODO: Fix JSX expression */}
 }
 const EnhancedLoading: React.FC<LoadingProps> = ({,
@@ -8,17 +8,19 @@ const EnhancedLoading: React.FC<LoadingProps> = ({,
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-    lg: 'w-12 h-12'};
+
   const renderSpinner = () => (
-    <div;
+
 const,
   EnhancedLoading: React.FC<LoadingProps> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-  };
+  }
+          </div>
   const renderSpinner = () => (<div></div>
       className={`animate-spin rounded-full border-2 border-gray-300 border-t-blue-600 ${sizeClasses[size]}`}
     />)
-  );
+  )
+          </div>
   const renderDots = () => (</div>
     <div className="flex space-x-1">
       {[0, 1, 2].map(i => ()
@@ -46,34 +48,44 @@ const,
         />)
       ))}
     </div>
-  );
+  )
+          </div>
 `
   const renderPulse = () => (<div className={`bg-blue-600 rounded-full animate-pulse ${sizeClasses[size]}`} /></div>)
-  );
+  )
+          </div>
   const renderLoader = () => {
     switch (variant) {
       case 'dots':
-        return renderDots();
+        return renderDots()
+          </div>
       case 'pulse':
-        return renderPulse();
-      default: return renderSpinner();
+        return renderPulse()
+          </div>
+      default: return renderSpinner()
+          </div>
     }
-  };
+  }
+          </div>
   return(<div className="flex flex-col items-center justify-center p-8">)
   return (</div>
     <div className="flex flex-col items-center justify-center p-8"></div>
       <div className="mb-4">{renderLoader()}</div>
   const renderLoader = () => {/* TODO: Fix JSX expression */}
     }
-  };
+  }
+          </div>
   return ("
     <div className="flex flex-col items-center justify-center p-8"></div>")
       <div className="mb-4">{renderLoader()}</div>"
       <p className="text-gray-600 text-sm font-medium">{message}</p>
     </div>
-  );
-};
-export default EnhancedLoading;
+  )
+          </p>
+}
+          </p>
+export default EnhancedLoading
+          </p>
 "`
   </LoadingProps>
   </LoadingProps>

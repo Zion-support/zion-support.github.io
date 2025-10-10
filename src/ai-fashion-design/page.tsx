@@ -1,8 +1,8 @@
-import React from 'react';
-import { Palette, Camera, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
+
+
+
+
+
 const AIFashionDesignPage: React.FC = () => {
   const features = [
     'Design Generation',
@@ -15,7 +15,7 @@ const AIFashionDesignPage: React.FC = () => {
     'Pattern Creation',
     '3D Visualization',
     'Cost Estimation'
-  ];
+
   const benefits = [
     'Faster design cycles',
     'Trend accuracy',
@@ -23,7 +23,7 @@ const AIFashionDesignPage: React.FC = () => {
     'Market insights',
     'Creative inspiration',
     'Competitive advantage'
-  ];
+
   const pricingPlans = [
     {
       name: 'Starter',
@@ -46,7 +46,7 @@ const AIFashionDesignPage: React.FC = () => {
       features: ['Everything in Pro', 'Custom models', 'White-label', 'Dedicated support', 'Market intelligence'],
       popular: false
     }
-  ];
+
   return (
     <React.Fragment>
       <SEOOptimizer
@@ -180,8 +180,10 @@ const AIFashionDesignPage: React.FC = () => {
         <Footer />
       </div>
     </React.Fragment>
-  );
-};
+  )
+          </span>
+}
+          </span>
 export default AIFashionDesignPage</a>
   </p>
   </a>

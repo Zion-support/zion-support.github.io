@@ -1,8 +1,8 @@
-import React from 'react';
+
 interface AccessibilitySettings {// TODO: Add content;}
-};
+
   highContras,
-  t: boolean;
+
     largeTex,
   t: boolean;,
     reducedMotio,
@@ -14,21 +14,21 @@ interface AccessibilitySettings {// TODO: Add content;}
     zoomLeve,
   l: number;,
     colorBlin,
-  d: 'none' | 'protanopia' | 'deuteranopia' | 'tritanopia';
+
 }
 interface AccessibilityProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  enableKeyboardNavigation?: boolean;
-  enableScreenReader?: boolean;
-  enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-  enableReducedMotion?: boolean;
-  enableColorBlindSupport?: boolean;
-  enableZoomControl?: boolean;
+
+
+
+
+
+
+
 }
 const,
-  EnhancedAccessibility: React.FC;
+
           <AccessibilityProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -42,10 +42,12 @@ const,
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const [settings, setSettings] = useState;
+  const [settings, setSettings] = useState
+          </AccessibilityProps>
           <AccessibilitySettings>({/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </AccessibilitySettings>
   highContras,
   t: false,
     largeTex,
@@ -60,234 +62,326 @@ const,
   l: 100,
     colorBlin,
   d: 'none')
-  });
-  const [isVisible, setIsVisible] = useState(false);
-  // Load settings from localStorage;
+  })
+          </AccessibilitySettings>
+  const [isVisible, setIsVisible] = useState(false)
+          </AccessibilitySettings>
+  // Load settings from localStorage
+          </AccessibilitySettings>
   useEffect(() => {if (savedSettings) {}
   // TOD,
-  O: Add content;
+  O: Add content
+          </AccessibilitySettings>
 }
       try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        setSettings(JSON.parse(savedSettings));
+        setSettings(JSON.parse(savedSettings))
+          </AccessibilitySettings>
       } catch (error) {/* TODO: Fix JSX expression */}
   settings:', error);}
       }
     }
-  }, []);
-  // Save settings to localStorage;
+  }, [])
+          </AccessibilitySettings>
+  // Save settings to localStorage
+          </AccessibilitySettings>
 const saveSettings = useCallback((newSetting)
   s: AccessibilitySettings) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    setSettings(newSettings);
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
-  }, []);
-  // Apply high contrast mode;
+    setSettings(newSettings)
+          </AccessibilitySettings>
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))
+          </AccessibilitySettings>
+  }, [])
+          </AccessibilitySettings>
+  // Apply high contrast mode
+          </AccessibilitySettings>
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (settings.highContrast) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      document.documentElement.classList.add('high-contrast');
+      document.documentElement.classList.add('high-contrast')
+          </AccessibilitySettings>
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      document.documentElement.classList.remove('high-contrast');
+      document.documentElement.classList.remove('high-contrast')
+          </AccessibilitySettings>
     }
-  }, [settings.highContrast]);
-  // Apply large text mode;
+  }, [settings.highContrast])
+          </AccessibilitySettings>
+  // Apply large text mode
+          </AccessibilitySettings>
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (settings.largeText) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      document.documentElement.style.fontSize = '1.2rem';
+      document.documentElement.style.fontSize = '1.2rem'
+          </AccessibilitySettings>
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      document.documentElement.style.fontSize = '1rem';
+      document.documentElement.style.fontSize = '1rem'
+          </AccessibilitySettings>
     }
-  }, [settings.largeText]);
-  // Apply reduced motion;
+  }, [settings.largeText])
+          </AccessibilitySettings>
+  // Apply reduced motion
+          </AccessibilitySettings>
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     if (settings.reducedMotion) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      document.documentElement.classList.add('reduced-motion');
+      document.documentElement.classList.add('reduced-motion')
+          </AccessibilitySettings>
     } else {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      document.documentElement.classList.remove('reduced-motion');
+      document.documentElement.classList.remove('reduced-motion')
+          </AccessibilitySettings>
     }
-  }, [settings.reducedMotion]);
-  // Apply color blind support;
+  }, [settings.reducedMotion])
+          </AccessibilitySettings>
+  // Apply color blind support
+          </AccessibilitySettings>
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    document.documentElement.setAttribute('data-color-blind', settings.colorBlind);
-  }, [settings.colorBlind]);
-  // Apply zoom level;
+    document.documentElement.setAttribute('data-color-blind', settings.colorBlind)
+          </AccessibilitySettings>
+  }, [settings.colorBlind])
+          </AccessibilitySettings>
+  // Apply zoom level
+          </AccessibilitySettings>
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    document.documentElement.style.zoom = `${settings.zoomLevel}%`;
-  }, [settings.zoomLevel]);
-  // Keyboard navigation;
+    document.documentElement.style.zoom = `${settings.zoomLevel}%`
+          </AccessibilitySettings>
+  }, [settings.zoomLevel])
+          </AccessibilitySettings>
+  // Keyboard navigation
+          </AccessibilitySettings>
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (!enableKeyboardNavigation) return;
+    if (!enableKeyboardNavigation) return
+          </AccessibilitySettings>
     const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      // Skip to main content;
+      // Skip to main content
+          </AccessibilitySettings>
       if (e.key === 'Tab' && e.shiftKey && e.altKey) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        e.preventDefault();
-        const mainContent = document.querySelector('main, [role="main"]');
+        e.preventDefault()
+          </AccessibilitySettings>
+        const mainContent = document.querySelector('main, [role="main"]')
+          </AccessibilitySettings>
         if (mainContent) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-          (mainContent as HTMLElement).focus();
+          (mainContent as HTMLElement).focus()
+          </AccessibilitySettings>
         }
       }
-      // Toggle accessibility panel;
+      // Toggle accessibility panel
+          </AccessibilitySettings>
       if (e.key === 'Tab' && e.altKey && e.key === 'a') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        e.preventDefault();
-        setIsVisible(prev => !prev);
+        e.preventDefault()
+          </AccessibilitySettings>
+        setIsVisible(prev => !prev)
+          </AccessibilitySettings>
       }
-      // Escape key to close panel;
+      // Escape key to close panel
+          </AccessibilitySettings>
       if (e.key === 'Escape' && isVisible) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        setIsVisible(false);
+        setIsVisible(false)
+          </AccessibilitySettings>
       }
-    };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, [enableKeyboardNavigation, isVisible]);
-  // Focus management;
+    }
+          </AccessibilitySettings>
+    document.addEventListener('keydown', handleKeyDown)
+          </AccessibilitySettings>
+    return () => document.removeEventListener('keydown', handleKeyDown)
+          </AccessibilitySettings>
+  }, [enableKeyboardNavigation, isVisible])
+          </AccessibilitySettings>
+  // Focus management
+          </AccessibilitySettings>
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (!enableFocusManagement) return;
+    if (!enableFocusManagement) return
+          </AccessibilitySettings>
     const handleFocusIn = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const target = e.target as HTMLElement;
+      const target = e.target as HTMLElement
+          </AccessibilitySettings>
       if (target && settings.focusVisible) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        target.classList.add('focus-visible');
+        target.classList.add('focus-visible')
+          </AccessibilitySettings>
       }
-    };
+    }
+          </AccessibilitySettings>
     const handleFocusOut = (e: FocusEvent) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const target = e.target as HTMLElement;
+      const target = e.target as HTMLElement
+          </AccessibilitySettings>
       if (target) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-        target.classList.remove('focus-visible');
+        target.classList.remove('focus-visible')
+          </AccessibilitySettings>
       }
-    };
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
+    }
+          </AccessibilitySettings>
+    document.addEventListener('focusin', handleFocusIn)
+          </AccessibilitySettings>
+    document.addEventListener('focusout', handleFocusOut)
+          </AccessibilitySettings>
     return () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
-    };
-  }, [enableFocusManagement, settings.focusVisible]);
-  // Screen reader announcements;
+      document.removeEventListener('focusin', handleFocusIn)
+          </AccessibilitySettings>
+      document.removeEventListener('focusout', handleFocusOut)
+          </AccessibilitySettings>
+    }
+          </AccessibilitySettings>
+  }, [enableFocusManagement, settings.focusVisible])
+          </AccessibilitySettings>
+  // Screen reader announcements
+          </AccessibilitySettings>
 const announceToScreenReader = useCallback((messag)
   e: string) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    if (!enableScreenReader) return;
-    const announcement = document.createElement('div');
-    announcement.setAttribute('aria-live', 'polite');
-    announcement.setAttribute('aria-atomic', 'true');
-    announcement.className = 'sr-only';
-    announcement.textContent = message;
-    document.body.appendChild(announcement);
+    if (!enableScreenReader) return
+          </AccessibilitySettings>
+    const announcement = document.createElement('div')
+          </AccessibilitySettings>
+    announcement.setAttribute('aria-live', 'polite')
+          </AccessibilitySettings>
+    announcement.setAttribute('aria-atomic', 'true')
+          </AccessibilitySettings>
+    announcement.className = 'sr-only'
+          </AccessibilitySettings>
+    announcement.textContent = message
+          </AccessibilitySettings>
+    document.body.appendChild(announcement)
+          </AccessibilitySettings>
     setTimeout(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      document.body.removeChild(announcement);
-    }, 1000);
-  }, [enableScreenReader]);
-  // Toggle functions;
+      document.body.removeChild(announcement)
+          </AccessibilitySettings>
+    }, 1000)
+          </AccessibilitySettings>
+  }, [enableScreenReader])
+          </AccessibilitySettings>
+  // Toggle functions
+          </AccessibilitySettings>
 const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const newSettings = {/* TODO: Fix JSX expression */}
-  t: !settings.highContrast };
+  t: !settings.highContrast }
+          </AccessibilitySettings>
     saveSettings(newSettings);`
-    announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`);
-  };
+    announceToScreenReader(`High contrast ${newSettings.highContrast ? 'enabled' : 'disabled'}`)
+          </AccessibilitySettings>
+  }
+          </AccessibilitySettings>
   const toggleLargeText = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const newSettings = {/* TODO: Fix JSX expression */}
-  t: !settings.largeText };
+  t: !settings.largeText }
+          </AccessibilitySettings>
     saveSettings(newSettings);`
-    announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`);
-  };
+    announceToScreenReader(`Large text ${newSettings.largeText ? 'enabled' : 'disabled'}`)
+          </AccessibilitySettings>
+  }
+          </AccessibilitySettings>
   const toggleReducedMotion = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const newSettings = {/* TODO: Fix JSX expression */}
-  n: !settings.reducedMotion };
+  n: !settings.reducedMotion }
+          </AccessibilitySettings>
     saveSettings(newSettings);`
-    announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`);
-  };
+    announceToScreenReader(`Reduced motion ${newSettings.reducedMotion ? 'enabled' : 'disabled'}`)
+          </AccessibilitySettings>
+  }
+          </AccessibilitySettings>
   const toggleScreenReader = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const newSettings = {/* TODO: Fix JSX expression */}
-  r: !settings.screenReader };
+  r: !settings.screenReader }
+          </AccessibilitySettings>
     saveSettings(newSettings);`
-    announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`);
-  };
+    announceToScreenReader(`Screen reader mode ${newSettings.screenReader ? 'enabled' : 'disabled'}`)
+          </AccessibilitySettings>
+  }
+          </AccessibilitySettings>
   const toggleFocusVisible = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const newSettings = {/* TODO: Fix JSX expression */}
-  e: !settings.focusVisible };
+  e: !settings.focusVisible }
+          </AccessibilitySettings>
     saveSettings(newSettings);`
-    announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`);
-  };
+    announceToScreenReader(`Focus indicators ${newSettings.focusVisible ? 'enabled' : 'disabled'}`)
+          </AccessibilitySettings>
+  }
+          </AccessibilitySettings>
   const adjustZoom = (delt)
   a: number) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta));
+    const newZoom = Math.max(50, Math.min(200, settings.zoomLevel + delta))
+          </AccessibilitySettings>
     const newSettings = {/* TODO: Fix JSX expression */}
-  l: newZoom };
+  l: newZoom }
+          </AccessibilitySettings>
     saveSettings(newSettings);`
-    announceToScreenReader(`Zoom level set to ${newZoom}%`);
-  };
+    announceToScreenReader(`Zoom level set to ${newZoom}%`)
+          </AccessibilitySettings>
+  }
+          </AccessibilitySettings>
   const setColorBlind = (typ)
   e: AccessibilitySettings['colorBlind']) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     const newSettings = {/* TODO: Fix JSX expression */}
-  d: type };
+  d: type }
+          </AccessibilitySettings>
     saveSettings(newSettings);`
-    announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`);
-  };
-// Reset all settings;
+    announceToScreenReader(`Color blind support set to ${type === 'none' ? 'none' : type}`)
+          </AccessibilitySettings>
+  }
+          </AccessibilitySettings>
+// Reset all settings
+          </AccessibilitySettings>
   const resetSettings = () => {/* TODO: Fix JSX expression */}
   t: false}
       largeTex,
@@ -301,10 +395,14 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
       zoomLeve,
   l: 100,
       colorBlin,
-  d: 'none'};
-    saveSettings(defaultSettings);
-    announceToScreenReader('Accessibility settings reset to default');
-  };
+  d: 'none'}
+          </AccessibilitySettings>
+    saveSettings(defaultSettings)
+          </AccessibilitySettings>
+    announceToScreenReader('Accessibility settings reset to default')
+          </AccessibilitySettings>
+  }
+          </AccessibilitySettings>
   if (!isVisible) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -316,7 +414,8 @@ const toggleHighContrast = () => {/* TODO: Fix JSX expression */}
         aria-label="Open accessibility settings""
         title="Open accessibility settings (Alt + A)""
 ><Eye className="w-5 h-5" /></button>
-    );
+    )
+          </button>
   }
   return ("
 <div className="fixed bottom-4 left-4 bg-slate-900/95 backdrop-blur-md border border-cyan-400/20 rounded-lg p-4 text-white z-50 max-w-sm"><div className="flex items-center justify-between mb-4"><h3 className="font-bold text-cyan-400">Accessibility Settings</h3><button></button>")
@@ -392,8 +491,10 @@ onClick={resetSettings} className="w-full mt-4 px-3 py-2 bg-red-600,"
         >
           Reset Settings;"
         </button></div><div className="mt-4 text-xs text-gray-400"><p>Press Alt + A to toggle this panel</p><p>Press Alt + Shift + Tab to skip to main content</p></div></div>
-  );
-};
+  )
+          </button>
+}
+          </button>
 export default EnhancedAccessibility;"`
   </div>
   </div>

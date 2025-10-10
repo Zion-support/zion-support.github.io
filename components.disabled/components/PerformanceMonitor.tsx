@@ -4,4 +4,3 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   loadTim,
   e: number | null}
 }
-export default PerformanceMonitor;

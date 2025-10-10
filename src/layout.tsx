@@ -1,12 +1,12 @@
-import Analytics from './components/Analytics';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Analytics from './components/Analytics';
+
+
+
+
+
+
 export default function RootLayout({
   children}: {
-  children: React.ReactNode;
+
 }) {
   const structuredData = {
     '@context': 'https://schema.org',
@@ -88,7 +88,7 @@ name$5: 'Digital Automation',
 name$5: 'Cloud Infrastructure',
             description:       ,
 $4]
-  };
+
   return (
     <html lang='en'>
       <head>
@@ -168,18 +168,22 @@ $4]
         </ErrorBoundary>
       </body>
     </html>
-  );
-export default RootLayout;
+  )
+          </ErrorBoundary>
+export default RootLayout
+          </ErrorBoundary>
         priceSpecification: {// TODO: Add content;}
 }
           '@type': 'PriceSpecification',
           billingIncrement: 'P1M'
-        };
+        }
+          </ErrorBoundary>
   itemOffered: {// TODO: Add content;}
 }
             '@type': 'Service',
             name: 'AI Enterprise Transformation',
             description: 'Comprehensive AI implementation strategies for enterprise organizations'
-export default SrcPage;
+export default SrcPage
+          </ErrorBoundary>
 }
   </script>

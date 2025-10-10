@@ -1,4 +1,4 @@
-import React from 'react';
+
 const January2025ContentShowcaseBanne, r: React.FC = () => { ,
   return()
     <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0' > {' ' })
@@ -30,7 +30,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
           </div>
           <h2, className='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'></h2>
             <span, className='bg-gradie, n, t-to-r, fro, m-pi, n, k-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'></span>
-              Complete, AI, Knowledge H, u, b;
+              Complete, AI, Knowledge H, u, b
+          </span>
             </sp, a, n>
             <br /> <span, className='te, x, t-whi, t, e'></span>2025, Editio, n</sp, a, n>
           </h2>
@@ -58,7 +59,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                 </div>
                 <d, i, v></d>
                   <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'></h3>
-                    Breakthrough, Technologie, s;
+                    Breakthrough, Technologie, s
+          </h3>
                   </h3>
                   <p, className='te, x, t-gr, a, y-4, 0, 0'>6, Revolutionary, Guides</p>
                 </div>
@@ -71,31 +73,36 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                   <div, className='w-2 h-2, b, g-pi, n, k-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Quant, u, m-Neural, Fusio, n;
+                    Quant, u, m-Neural, Fusio, n
+          </span>
                   </sp, a, n>
                 </div>
                 <div, className='flex, item, s-center, ga, p-3'></div>
                   <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Synthetic, Consciousnes, s;
+                    Synthetic, Consciousnes, s
+          </span>
                   </sp, a, n>
                 </div>
                 <div, className='flex, item, s-center, ga, p-3'></div>
                   <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Autonomous, Enterprise, Mesh;
+                    Autonomous, Enterprise, Mesh
+          </span>
                   </sp, a, n>
                 </div>
               </div>
               <Link, t, o='/bl, o, g/category/breakthrou, g, h-technologies'
                 className='inli, n, e-flex, item, s-center, ga, p-2, tex, t-pi, n, k-400, hove, r: te, x, t-pi, n, k-300, fon, t-medium, transitio, n-colo, r, s'
               >
-                Explore, All, Technologies;
+                Explore, All, Technologies
+          </Link>
                 <Link, className='w-4 h-4' />
               ></Link>
-                Explore, All, Technologies;
+                Explore, All, Technologies
+          </Link>
                 <Link, className='w-4 h-4' /></Link>
               </Li, n, k>
             </div>
@@ -114,7 +121,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                 </div>
                 <d, i, v></d>
                   <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'></h3>
-                    Enterprise, Success, Stories;
+                    Enterprise, Success, Stories
+          </h3>
                   </h3>
                   <p, className='te, x, t-gr, a, y-4, 0, 0'>6, Proven, Case Studi, e, s</p>
                 </div>
@@ -127,31 +135,36 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                   <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Manufacturing, Transformatio, n;
+                    Manufacturing, Transformatio, n
+          </span>
                   </sp, a, n>
                 </div>
                 <div, className='flex, item, s-center, ga, p-3'></div>
                   <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Financial, Fraud, Prevention;
+                    Financial, Fraud, Prevention
+          </span>
                   </sp, a, n>
                 </div>
                 <div, className='flex, item, s-center, ga, p-3'></div>
                   <div, className='w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Healthcare, AI, Diagnostics;
+                    Healthcare, AI, Diagnostics
+          </span>
                   </sp, a, n>
                 </div>
               </div>
               <Link, t, o='/ca, s, e-studi, e, s'
                 className='inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, fon, t-medium, transitio, n-colo, r, s'
               >
-                View, All, Case Studi, e, s;
+                View, All, Case Studi, e, s
+          </Link>
                 <Link, className='w-4 h-4' />
               ></Link>
-                View, All, Case Studi, e, s;
+                View, All, Case Studi, e, s
+          </Link>
                 <Link, className='w-4 h-4' /></Link>
               </Li, n, k>
             </div>
@@ -170,7 +183,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                 </div>
                 <d, i, v></d>
                   <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'></h3>
-                    Latest, Article, s;
+                    Latest, Article, s
+          </h3>
                   </h3>
                   <p, className='te, x, t-gr, a, y-4, 0, 0'>50+ Expert, Guide, s</p>
                 </div>
@@ -184,31 +198,36 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
                   <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    AI, Platform, Engineering;
+                    AI, Platform, Engineering
+          </span>
                   </sp, a, n>
                 </div>
                 <div, className='flex, item, s-center, ga, p-3'></div>
                   <div, className='w-2 h-2, b, g-emera, l, d-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Enterprise, RAG, Systems;
+                    Enterprise, RAG, Systems
+          </span>
                   </sp, a, n>
                 </div>
                 <div, className='flex, item, s-center, ga, p-3'></div>
                   <div, className='w-2 h-2, b, g-purp, l, e-400, rounde, d-fu, l, l' /></div>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'>
                   <span, className='te, x, t-gr, a, y-300, tex, t-sm'></span>
-                    Autonomous, Operation, s;
+                    Autonomous, Operation, s
+          </span>
                   </sp, a, n>
                 </div>
               </div>
               <Link, t, o='/bl, o, g'
                 className='inli, n, e-flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, hove, r: te, x, t-bl, u, e-300, fon, t-medium, transitio, n-colo, r, s'
               >
-                Read, All, Articles;
+                Read, All, Articles
+          </Link>
                 <Link, className='w-4 h-4' />
               ></Link>
-                Read, All, Articles;
+                Read, All, Articles
+          </Link>
                 <Link, className='w-4 h-4' /></Link>
               </Li, n, k>
             </div>
@@ -218,7 +237,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
         <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/20, m, b-16'></div>
           <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'>
           <h3, className='te, x, t-3xl, fon, t-bold, tex, t-white, tex, t-center, m, b-12'></h3>
-            Content, Library, Overview;
+            Content, Library, Overview
+          </h3>
           </h3>
           <div, className='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8'></div>
             <div, className='te, x, t-cent, e, r'></div>
@@ -251,7 +271,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               <h4, className='te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>Most, Popula, r</h4>
             </div>
             <h5, className='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'></h5>
-              AI, Quantu, m-Neural, Fusion, 2025;
+              AI, Quantu, m-Neural, Fusion, 2025
+          </h5>
             </h5>
             <p, className='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'></p>
               Revolutionary, fusion, technology achievi, n, g , 1, 0,000x, performance, improvements...
@@ -275,7 +296,8 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
               <h4, className='te, x, t-xl, fon, t-bold, tex, t-whi, t, e'>Trending, No, w</h4>
             </div>
             <h5, className='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'></h5>
-              Autonomous, Enterprise, Mesh;
+              Autonomous, Enterprise, Mesh
+          </h5>
             </h5>
             <p, className='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'></p>
               Se, l, f-organizing, AI, networks achieving, 9, 9.7% operational, efficienc, y...
@@ -301,28 +323,35 @@ const January2025ContentShowcaseBanne, r: React.FC = () => {/* TODO: Fix JSX exp
   r:sca, l, e-1, 0, 5'
             ></Link>
               <BookOpen, className='w-5 h-5' /></BookOpen>
-              Explore, Complete, Library;
+              Explore, Complete, Library
+          </BookOpen>
             </Li, n, k>
             <Link, t, o='/newslett, e, r'
               className='inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, border, border-whi, t, e/20, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0'
             >
               <Users, className='w-5 h-5' />
-              Join, AI, Community;
+              Join, AI, Community
+          </Link>
             </Li, n, k>
           </div>
           <p, className='te, x, t-gr, a, y-400, tex, t-sm'>
             ></Link>
               <Users, className='w-5 h-5' /></Users>
-              Join, AI, Community;
+              Join, AI, Community
+          </Users>
             </Li, n, k>
           </div>
           <p, className='te, x, t-gr, a, y-400, tex, t-sm'></p>
-            Get, exclusive, access to, new, content and, AI, insights delivered, weekl, y;
+            Get, exclusive, access to, new, content and, AI, insights delivered, weekl, y
+          </p>
           </p>
         </div>
       </div>
     </div>
-  );
-};
-export default January2025ContentShowcaseBanner;
+  )
+          </p>
+}
+          </p>
+export default January2025ContentShowcaseBanner
+          </p>
 "

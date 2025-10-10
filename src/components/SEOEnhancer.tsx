@@ -1,5 +1,5 @@
-import React, { ReactNode } from 'react';
-import { Helmet } from 'react-helmet-async';
+
+
 interface SEOEnhancerProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -8,8 +8,8 @@ const,
     },
     addres,
   s: {/* TODO: Fix JSX expression */}
-    }};
-  const finalStructuredData = structuredData || defaultStructuredData;
+
+
   return (<React.Fragment>
       <Helmet></Helmet>
         {/* Basic Meta Tags */}
@@ -79,8 +79,11 @@ const,
       </Helmet>
       {children}
     </React.Fragment>
-  );
-};
-export default SEOEnhancer;
+  )
+          </link>
+}
+          </link>
+export default SEOEnhancer
+          </link>
 "
   </SEOEnhancerProps>

@@ -1,134 +1,134 @@
-'use client';
+
 /**
  * System Monitor Component
  * Real-time monitoring dashboard for performance, errors, and system health
  *
-import React, { useState, useEffect, useCallback } from 'react';
+
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+
 const __collectPerformanceMetrics = () => {
-  if (typeof window === 'undefined' || !window.performance) return null;
-  const navigation = window.performance.timing;
-  const paint = window.performance.getEntriesByType('paint');
+
+
+
   return {
     loadTime: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0
-  };
+
 // Helper functions
 const calculatePerformanceScore = () => {
-  const metrics = performanceOptimizer.getMetrics();
-  if (!metrics) return 0;
-  let __score = 100;
+
+
+
   // Deduct points for slow load times
-  if (metrics.loadTime > 3000) score -= 20;
-  if (metrics.loadTime > 5000) score -= 30;
+
+
   // Deduct points for slow paint times
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  return Math.max(0, score);
+
+
+
 // Network connection interface
 interface NetworkConnection {
-  effectiveType?: string;
-  downlink?: number;
-  rtt?: number;
-  saveData?: boolean;
+
+
+
+
 }
 interface NavigatorWithConnection extends Navigator {
-  connection?: NetworkConnection;
-  mozConnection?: NetworkConnection;
-  webkitConnection?: NetworkConnection;
+
+
+
 interface SystemMetrics {
   performance: {
-    score: number;
-    loadTime: number;
-    firstContentfulPaint: number;
-    largestContentfulPaint: number;
-    firstInputDelay: number;
-    cumulativeLayoutShift: number;
+
+
+
+
+
+
   errors: {
-    total: number;
-    byType: Record<string, number>;
-    byCategory: Record<string, number>;
-    bySeverity: Record<string, number>;
+
+
+
+
     recent: Array<{
-      id: string;
-      message: string;
-      type: string;
-      severity: string;
-      timestamp: string;
-    }>;
+
+
+
+
+
+
   memory: {
-    used: number;
-    limit: number;
-    percentage: number;
+
+
+
   network: {
-    effectiveType: string;
-    downlink: number;
-    rtt: number;
-    saveData: boolean;
+
+
+
+
 interface SystemMonitorProps {
-'use client';
+
 /**
- * System Monitor Component;
- * Real-time monitoring dashboard for performance, errors, and system health;
+
+
  *
-import React, { useState, useEffect, useCallback } from 'react';
-// Collect basic performance metrics;
+
+
 const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-import { performanceOptimizer } from '../utils/performanceOptimizer';
+
 const __collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  if (typeof window === 'undefined' || !window.performance) return null;
-  const navigation = window.performance.timing;
-  const paint = window.performance.getEntriesByType('paint');
+
+
+
   return {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+
   loadTim,
   e: navigation.loadEventEnd - navigation.navigationStart,
     firstContentfulPain,
-  t: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-  };
-// Helper functions;
+
+
+
 const calculatePerformanceScore = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const metrics = performanceOptimizer.getMetrics();
-  if (!metrics) return 0;
-  let __score = 100;
-  // Deduct points for slow load times;
-  if (metrics.loadTime > 3000) score -= 20;
-  if (metrics.loadTime > 5000) score -= 30;
-  // Deduct points for slow paint times;
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 2000) score -= 15;
-  if (metrics.firstContentfulPaint && metrics.firstContentfulPaint > 3000) score -= 25;
-  return Math.max(0, score);
-// Network connection interface;
+
+
+
+
+
+
+
+
+
+
+
 interface NetworkConnection {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  effectiveType?: string;
-  downlink?: number;
-  rtt?: number;
-  saveData?: boolean;
+
+
+
+
 }
 interface NavigatorWithConnection extends Navigator {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  connection?: NetworkConnection;
-  mozConnection?: NetworkConnection;
-  webkitConnection?: NetworkConnection;
+
+
+
 interface SystemMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
   performanc,
   e: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+
   scor,
-  e: number;
+
     loadTim,
   e: number;,
     firstContentfulPain,
@@ -142,20 +142,23 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     error,
   s: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+
   tota,
   l: number;,
     byTyp,
-  e: Record;
-          <string, number>;
+
+
     byCategor,
-  y: Record<string, number>;
+  y: Record<string, number>
+          </string>
     bySeverit,
-  y: Record<string, number>;
+  y: Record<string, number>
+          </string>
     recen,
   t: Array<{/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </string>
   i,
   d: string;,
     messag,
@@ -165,12 +168,15 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     severit,
   y: string;,
     timestam,
-  p: string;
-    }>;
+  p: string
+          </string>
+    }>
+          </string>
   memor,
   y: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </string>
   use,
   d: number;,
     limi,
@@ -180,7 +186,8 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     networ,
   k: {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </string>
   effectiveTyp,
   e: string;,
     downlin,
@@ -188,35 +195,49 @@ interface SystemMetrics {/* TODO: Fix JSX expression */}
     rt,
   t: number;,
     saveDat,
-  a: boolean;
+  a: boolean
+          </string>
 interface SystemMonitorProps {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  refreshInterval?: number;
-  showDetails?: boolean;
-  enableExport?: boolean;
-  className?: string;
+  refreshInterval?: number
+          </string>
+  showDetails?: boolean
+          </string>
+  enableExport?: boolean
+          </string>
+  className?: string
+          </string>
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
   refreshInterval = 5000,
   showDetails = true,
   enableExport = true,
   className = ''
 }) => {
-  const [metrics, setMetrics] = useState<SystemMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
+  const [metrics, setMetrics] = useState<SystemMetrics | null>(null)
+          </string>
+  const [isMonitoring, setIsMonitoring] = useState(false)
+          </string>
+  const [lastUpdate, setLastUpdate] = useState<Date | null>(null)
+          </string>
   // Update metrics
   const updateMetrics = useCallback(() => {
     try {
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
+      const performanceMetrics = performanceOptimizer.getMetrics()
+          </string>
+      const performanceScore = calculatePerformanceScore()
+          </string>
+      const errorStats = errorHandler.getErrorStatistics()
+          </string>
       // Get memory info
-      const memoryInfo = getMemoryInfo();
+      const memoryInfo = getMemoryInfo()
+          </string>
       // Get network info
-      const networkInfo = getNetworkInfo();
+      const networkInfo = getNetworkInfo()
+          </string>
       const newMetrics: SystemMetrics = {
-      const _networkInfo = getNetworkInfo();
+      const _networkInfo = getNetworkInfo()
+          </string>
       const _newMetrics: SystemMetrics = {
           score: performanceScore,
           loadTime: performanceMetrics?.loadTime || 0,
@@ -238,40 +259,58 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
           }))
         memory: memoryInfo,
         network: networkInfo
-      setMetrics(newMetrics);
-      setLastUpdate(new Date());
-    } catch (error) {}, []);
+      setMetrics(newMetrics)
+          </string>
+      setLastUpdate(new Date())
+          </string>
+    } catch (error) {}, [])
+          </string>
   // Initialize monitoring
   useEffect(() => {
     const initializeMonitoring = () => {
       // Start monitoring (placeholder - implement as needed)
-      setIsMonitoring(true);
-      updateMetrics();
-    initializeMonitoring();
+      setIsMonitoring(true)
+          </string>
+      updateMetrics()
+          </string>
+    initializeMonitoring()
+          </string>
     return () => {
       // Stop monitoring (placeholder - implement as needed)
-      setIsMonitoring(false);
-  }, [updateMetrics]);
+      setIsMonitoring(false)
+          </string>
+  }, [updateMetrics])
+          </string>
   // Update metrics periodically
-    if (!isMonitoring) return;
-    const interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval, updateMetrics]);
+    if (!isMonitoring) return
+          </string>
+    const interval = setInterval(updateMetrics, refreshInterval)
+          </string>
+    return () => clearInterval(interval)
+          </string>
+  }, [isMonitoring, refreshInterval, updateMetrics])
+          </string>
   // Get memory information
   const getMemoryInfo = () => {
     if ('memory' in performance) {}
-      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
+      const memory = (performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+          </string>
       const used = memory.usedJSHeapSize / 1024 / 1024; // MB
       const total = memory.totalJSHeapSize / 1024 / 1024; // MB
       const limit = memory.jsHeapSizeLimit / 1024 / 1024; // MB
-      const percentage = (used / limit) * 100;
-      return { used, total, limit, percentage };
-    return { used: 0, total: 0, limit: 0, percentage: 0 };
+      const percentage = (used / limit) * 100
+          </string>
+      return { used, total, limit, percentage }
+          </string>
+    return { used: 0, total: 0, limit: 0, percentage: 0 }
+          </string>
   // Get network information
   const getNetworkInfo = () => {
     if ('connection' in navigator) {}
-      const nav = navigator as NavigatorWithConnection;
-      const connection = nav.connection;
+      const nav = navigator as NavigatorWithConnection
+          </string>
+      const connection = nav.connection
+          </string>
         effectiveType: connection?.effectiveType || 'unknown',
         downlink: connection?.downlink || 0,
         rtt: connection?.rtt || 0,
@@ -282,7 +321,8 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       saveData: false
   // Export data
   const handleExport = () => {
-    if (!metrics) return;
+    if (!metrics) return
+          </string>
     const exportData = {
       metrics,
       performanceData: performanceOptimizer.getMetrics(),
@@ -290,28 +330,45 @@ const SystemMonitor: React.FC<SystemMonitorProps> = ({
       timestamp: new Date().toISOString()
     const blob = new Blob([JSON.stringify(exportData, null, 2)], {
       type:     ,
-$4});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+$4})
+          </string>
+    const url = URL.createObjectURL(blob)
+          </string>
+    const a = document.createElement('a')
+          </string>
+    a.href = url
+          </string>
+    a.download = `system-metrics-${new Date().toISOString().split('T')[0]}.json`
+          </string>
+    document.body.appendChild(a)
+          </string>
+    a.click()
+          </string>
+    document.body.removeChild(a)
+          </string>
+    URL.revokeObjectURL(url)
+          </string>
   // Get performance score color
   const getPerformanceScoreColor = (score: number) => {
-    if (score >= 90) return 'text-green-600';
-    if (score >= 70) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 90) return 'text-green-600'
+          </string>
+    if (score >= 70) return 'text-yellow-600'
+          </string>
+    return 'text-red-600'
+          </string>
   // Get severity color
   const getSeverityColor = (severity: string) => {
     switch (severity) {
-      case 'critical': return 'text-red-600 bg-red-100';
-      case 'high': return 'text-red-500 bg-red-50';
-      case 'medium': return 'text-yellow-600 bg-yellow-100';
-      case 'low': return 'text-green-600 bg-green-100';
-      default: return 'text-gray-600 bg-gray-100';
+      case 'critical': return 'text-red-600 bg-red-100'
+          </string>
+      case 'high': return 'text-red-500 bg-red-50'
+          </string>
+      case 'medium': return 'text-yellow-600 bg-yellow-100'
+          </string>
+      case 'low': return 'text-green-600 bg-green-100'
+          </string>
+      default: return 'text-gray-600 bg-gray-100'
+          </string>
   if (!metrics) {
     return (
       <div className={`p-4 bg-gray-100 rounded-lg ${className}`}>
@@ -319,7 +376,8 @@ $4});
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
           <span className="ml-2 text-gray-600">Loading system metrics...</span>
         </div>
-    );
+    )
+          </span>
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>
@@ -430,9 +488,11 @@ $4});
                 {Object.entries(metrics.errors.byCategory).map(([category, count]) => (
                   <div key={category} className="flex justify-between text-sm">
                     <span className="capitalize">{category}</span>
-export default SystemMonitor;
+export default SystemMonitor
+          </span>
 const,
-  SystemMonitor: React.FC;
+  SystemMonitor: React.FC
+          </span>
           <SystemMonitorProps> = ({/* TODO: Fix JSX expression */}
   O: Add content;}
 }
@@ -443,24 +503,36 @@ const,
 }) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-  const [metrics, setMetrics] = useState;
-          <SystemMetrics | null>(null);
-  const [isMonitoring, setIsMonitoring] = useState(false);
-  const [lastUpdate, setLastUpdate] = useState<Date | null>(null);
-  // Update metrics;
+  const [metrics, setMetrics] = useState
+          </SystemMonitorProps>
+          <SystemMetrics | null>(null)
+          </SystemMonitorProps>
+  const [isMonitoring, setIsMonitoring] = useState(false)
+          </SystemMetrics>
+  const [lastUpdate, setLastUpdate] = useState<Date | null>(null)
+          </SystemMetrics>
+  // Update metrics
+          </SystemMetrics>
 const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
     try {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceScore = calculatePerformanceScore();
-      const errorStats = errorHandler.getErrorStatistics();
-// Get memory info;
-      const memoryInfo = getMemoryInfo();
-      // Get network info;
-      const networkInfo = getNetworkInfo();
+      const performanceMetrics = performanceOptimizer.getMetrics()
+          </SystemMetrics>
+      const performanceScore = calculatePerformanceScore()
+          </SystemMetrics>
+      const errorStats = errorHandler.getErrorStatistics()
+          </SystemMetrics>
+// Get memory info
+          </SystemMetrics>
+      const memoryInfo = getMemoryInfo()
+          </SystemMetrics>
+      // Get network info
+          </SystemMetrics>
+      const networkInfo = getNetworkInfo()
+          </SystemMetrics>
       const,
   newMetrics: SystemMetrics = {const _networkInfo = getNetworkInfo();}
       const,
@@ -475,7 +547,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   firstInputDela,
   y: 0, // Not available in current metrics,
   cumulativeLayoutShif,
-  t: 0, // Not available in current metrics;
+  t: 0, // Not available in current metrics
+          </SystemMetrics>
         },
           tota,
   l: errorStats.totalErrors,
@@ -488,7 +561,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
           recen,
   t: errorStats.recentErrors.map(error => ({/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </SystemMetrics>
   i,
   d: error.id,
             messag,
@@ -499,17 +573,24 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
   y: error.severity,
             timestam,
   p: error.context.timestamp;)
-          }));
+          }))
+          </SystemMetrics>
   memor,
   y: memoryInfo,
         networ,
-  k: networkInfo;
-      setMetrics(newMetrics);
-      setLastUpdate(new Date());
+  k: networkInfo
+          </SystemMetrics>
+      setMetrics(newMetrics)
+          </SystemMetrics>
+      setLastUpdate(new Date())
+          </SystemMetrics>
     } catch (error) {if (!isMonitoring) return;}
-    const interval = setInterval(updateMetrics, refreshInterval);
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval, updateMetrics]);
+    const interval = setInterval(updateMetrics, refreshInterval)
+          </SystemMetrics>
+    return () => clearInterval(interval)
+          </SystemMetrics>
+  }, [isMonitoring, refreshInterval, updateMetrics])
+          </SystemMetrics>
       effectiveTyp,
   e: 'unknown',
       downlin,
@@ -517,7 +598,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
       rt,
   t: 0,
       saveDat,
-  a: false;
+  a: false
+          </SystemMetrics>
           <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}></div>
       <div className="flex items-center justify-between mb-6"></div>"
         <h2 className="text-2xl font-bold text-gray-900">System Monitor</h2>"
@@ -599,7 +681,8 @@ const updateMetrics = useCallback(() => {/* TODO: Fix JSX expression */}
                 <div></div>`
 className={`h-2 rounded-full ${}
   // TOD,
-  O: Add content;
+  O: Add content
+          </div>
 }
                     metrics.memory.percentage > 80 ? 'bg-red-500' :
                     metrics.memory.percentage > 60 ? 'bg-yellow-500' : 'bg-green-500'`

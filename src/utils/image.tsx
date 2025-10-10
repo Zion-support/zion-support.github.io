@@ -1,21 +1,21 @@
-'use client';
-import React, { useState, useCallback } from 'react';
+
+
 const Image: React.FC = () => {
 interface ImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  _quality?: number;
-  _placeholder?: 'blur' | 'empty';
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 export const Image: React.FC<ImageProps> = ({
   src,
@@ -34,16 +34,16 @@ export const Image: React.FC<ImageProps> = ({
   onError,
   ...props
 }) => {
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
+
+
   const _handleLoad = useCallback(() => {
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
+
+
+
   const handleError = useCallback(() => {
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
+
+
+
   const imageStyle: React.CSSProperties = {
     ...style,
     ...(fill && {
@@ -54,7 +54,7 @@ export const Image: React.FC<ImageProps> = ({
       height: '100%',
       objectFit:     ,
 $4})
-  };
+
   if (hasError) {
     return (
       <div
@@ -64,7 +64,8 @@ $4})
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
-    );
+    )
+          </span>
   }
   return (
     <img
@@ -80,16 +81,23 @@ $4})
       onError={handleError}
       {...props}
     />
-  );
-};
-export default Image;
-'use client';
-import React, { useState, useCallback } from 'react';
+  )
+          </img>
+}
+          </img>
+export default Image
+          </img>
+'use client'
+          </img>
+import React, { useState, useCallback } from 'react'
+          </img>
 const,
   Image: React.FC = () => {interface ImageProps {}
   // TOD,
-  O: Add content;
-};
+  O: Add content
+          </img>
+}
+          </img>
   src: string;,
     alt: string
   width?: number
@@ -98,14 +106,21 @@ const,
   priority?: boolean
   _quality?: number
   _placeholder?: 'blur' | 'empty'
-  _blurDataURL?: string;
-  fill?: boolean;
-  sizes?: string;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
+  _blurDataURL?: string
+          </img>
+  fill?: boolean
+          </img>
+  sizes?: string
+          </img>
+  style?: React.CSSProperties
+          </img>
+  onLoad?: () => void
+          </img>
+  onError?: () => void
+          </img>
 }
-export const Image: React.FC;
+export const Image: React.FC
+          </img>
           <ImageProps> = ({// TODO: Add content;}
 }
 //   src,
@@ -122,23 +137,32 @@ quality = 75,
 //   style,
 //   onLoad,
 //   onError,
-//   ...props;
+//   ...props
+          </ImageProps>
 }) => {// TODO: Add content;}
 }
-  const [, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
+  const [, setIsLoaded] = useState(false)
+          </ImageProps>
+  const [hasError, setHasError] = useState(false)
+          </ImageProps>
   const _handleLoad = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    setIsLoaded(true);
-    if (onLoad) onLoad();
-  }, [onLoad]);
+    setIsLoaded(true)
+          </ImageProps>
+    if (onLoad) onLoad()
+          </ImageProps>
+  }, [onLoad])
+          </ImageProps>
   const handleError = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-    setHasError(true);
-    if (onError) onError();
-  }, [onError]);
+    setHasError(true)
+          </ImageProps>
+    if (onError) onError()
+          </ImageProps>
+  }, [onError])
+          </ImageProps>
   const,
   imageStyle: React.CSSProperties = {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -146,7 +170,8 @@ quality = 75,
 //     ...style,
     ...(fill && {/* TODO: Fix JSX expression */}
   O: Add content;}
-};
+}
+          </ImageProps>
   position: 'absolute',
       top: 0,
       left: 0,
@@ -154,7 +179,8 @@ quality = 75,
       height: '100%',
       objectFit: 'cover'
     })
-  };
+  }
+          </ImageProps>
   if (hasError) {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

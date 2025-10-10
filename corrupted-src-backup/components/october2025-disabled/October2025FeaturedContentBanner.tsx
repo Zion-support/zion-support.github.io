@@ -72,15 +72,19 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className='te, x, t-center, m, b-12'></div>
           <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e'></div>
             <Sparkles, className='w-5 h-5, m, r-2' />
-            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5;
+            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5
+          </div>
             <Sparkles, classNam, e = 'w-5 h-5, m, l-2' />
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-            Latest, AI, Solutions & Insigh, t, s;
+            Latest, AI, Solutions & Insigh, t, s
+          </h2>
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-            Discover, breakthrough, AI platforms, delivering, millions in, value, to;
-            enterprise, organization, s;
+            Discover, breakthrough, AI platforms, delivering, millions in, value, to
+          </p>
+            enterprise, organization, s
+          </p>
           </p>
         </div>)
         {/* Featured, Content, Car, d, s */})
@@ -95,15 +99,19 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         <div, className='te, x, t-center, m, b-12'></div>
           <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e'></div>
             <Sparkles, className='w-5 h-5, m, r-2' /></Sparkles>
-            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5;
+            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5
+          </Sparkles>
             <Sparkles, classNam, e = 'w-5 h-5, m, l-2' /></Sparkles>
           </div>
           <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'></h2>
-            Latest, AI, Solutions & Insigh, t, s;
+            Latest, AI, Solutions & Insigh, t, s
+          </h2>
           </h2>
           <p, className='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'></p>
-            Discover, breakthrough, AI platforms, delivering, millions in, value, to;
-            enterprise, organization, s;
+            Discover, breakthrough, AI platforms, delivering, millions in, value, to
+          </p>
+            enterprise, organization, s
+          </p>
           </p>
         </div>
         {/* Featured, Content, Car, d, s */}
@@ -164,17 +172,20 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                   {/* C, T, A */}
                   <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'></div>
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
-                      Published, Octobe, r , 1, 20, 2, 5;
+                      Published, Octobe, r , 1, 20, 2, 5
+          </span>
                     </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
                     >
-                      Read, Full, Article;
+                      Read, Full, Article
+          </span>
                       Read, Full, Article</div>
                       <Link, classNam, e = 'w-4 h-4, m, l-2' />
                     <span, className='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'></span>
                       Published, Octobe, r , 1, 20, 2, 5;`
                     </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
                     ></div>
-                      Read, Full, Article;
+                      Read, Full, Article
+          </span>
                       <Link, classNam, e = 'w-4 h-4, m, l-2' /></Link>
                     </div>
                   </div>
@@ -182,7 +193,8 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
                 <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`}
                  /></div>
               </Li, n, k>
-            );
+            )
+          </div>
           })}
         </div>
         {/* Bottom, CT, A */}
@@ -191,24 +203,28 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
             <Link, t, o='/bl, o, g'
               className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hover:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
             >
-              Explore, All, Articles;
+              Explore, All, Articles
+          </Link>
               <TrendingUp, className='w-5 h-5, m, l-2' />
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'
             >
-              Get, a, Free Consultati, o, n;
+              Get, a, Free Consultati, o, n
+          </Link>
               <Link, className='w-5 h-5, m, l-2' />
               className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hove,
   r:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
             ></Link>
-              Explore, All, Articles;
+              Explore, All, Articles
+          </Link>
               <TrendingUp, className='w-5 h-5, m, l-2' /></TrendingUp>
             </Li, n, k>
             <Link, t, o='/conta, c, t'
               className='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'
             ></Link>
-              Get, a, Free Consultati, o, n;
+              Get, a, Free Consultati, o, n
+          </Link>
               <Link, className='w-5 h-5, m, l-2' /></Link>
             </Li, n, k>
           </div>
@@ -220,7 +236,8 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
             <d, i, v></d>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'></div>
-                $31.1M;
+                $31.1M
+          </div>
               </div>
               <div, className='te, x, t-gr, a, y-300, tex, t-sm'>Combined, Annual, Value</div>
             </div>
@@ -234,7 +251,8 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
             <d, i, v></d>
               <div, className='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'></div>
-                8-12, Week, s;
+                8-12, Week, s
+          </div>
               </div>
               <div, className='te, x, t-gr, a, y-300, tex, t-sm'>Implementation, Tim, e</div>
             </div>
@@ -248,7 +266,10 @@ const October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression */
         </div>
       </div>
     </div>
-  );
-};
-export default October2025FeaturedContentBanner;
+  )
+          </div>
+}
+          </div>
+export default October2025FeaturedContentBanner
+          </div>
 `

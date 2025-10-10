@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -37,7 +37,8 @@ import Footer from '../components/Footer';
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Smart Responses</h3>"
               <p className="text-gray-300"></p>
-// AI-powered email responses that understand context and tone, automatically generating;
+// AI-powered email responses that understand context and tone, automatically generating
+          </p>
 //                 professional replies based on your communication style.
           </p>
             </div>"
@@ -45,7 +46,8 @@ import Footer from '../components/Footer';
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Intelligent Scheduling</h3>"
               <p className="text-gray-300"></p>
-// Automatically schedule meetings, set reminders, and manage your calendar based on;
+// Automatically schedule meetings, set reminders, and manage your calendar based on
+          </p>
 //                 email content and your availability preferences.
           </p>
             </div>"
@@ -53,7 +55,8 @@ import Footer from '../components/Footer';
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Priority Sorting</h3>"
               <p className="text-gray-300"></p>
-// AI analyzes email importance and urgency, automatically organizing your inbox;
+// AI analyzes email importance and urgency, automatically organizing your inbox
+          </p>
 //                 with smart priority levels and categorization.
           </p>
             </div>"
@@ -61,7 +64,8 @@ import Footer from '../components/Footer';
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Auto Follow-ups</h3>"
               <p className="text-gray-300"></p>
-                Automated follow-up sequences for sales, customer service, and project management;
+                Automated follow-up sequences for sales, customer service, and project management
+          </p>
 // with personalized timing and content.
           </p>
             </div>"
@@ -69,7 +73,8 @@ import Footer from '../components/Footer';
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Analytics Dashboard</h3>"
               <p className="text-gray-300"></p>
-// Track email performance, response times, and engagement metrics with detailed;
+// Track email performance, response times, and engagement metrics with detailed
+          </p>
 //                 analytics and insights.
           </p>
             </div>"
@@ -77,7 +82,8 @@ import Footer from '../components/Footer';
               <div className="text-4xl mb-4"></div>"
               <h3 className="text-xl font-bold text-white mb-4">Enterprise Security</h3>"
               <p className="text-gray-300"></p>
-// Bank-level encryption and security protocols ensure your email data remains;
+// Bank-level encryption and security protocols ensure your email data remains
+          </p>
 //                 private and protected at all times.
           </p>
             </div>
@@ -139,7 +145,8 @@ import Footer from '../components/Footer';
 // Ready to Transform Your Email Workflow?
           </h2>"
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
-// Contact us today to schedule a free demo and see how our AI Email Assistant;
+// Contact us today to schedule a free demo and see how our AI Email Assistant
+          </p>
 //             can revolutionize your business communication.
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
@@ -157,6 +164,9 @@ import Footer from '../components/Footer';
       </main>
       <Footer /></Footer>
     </div>
-  );
-};
-export default PagePage;
+  )
+          </Footer>
+}
+          </Footer>
+export default PagePage
+          </Footer>

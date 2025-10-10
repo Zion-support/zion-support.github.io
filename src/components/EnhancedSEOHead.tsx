@@ -1,12 +1,12 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+
+
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+
+
+
+
+
+
 }
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadProps> = "Zion Tech Group - AI-Powered Enterprise Solutions",
   description = "Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.",
@@ -54,7 +54,7 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       "Cloud Computing",
       "Automation"
     ]
-  };
+
   return (
     <Helmet></Helmet>
       {/* Basic Meta Tags */}
@@ -170,6 +170,9 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({</SEOHeadProps>title</SEOHeadP
       <meta name="theme-color" content="#00 ffff" media="(prefers-color-scheme: light)" /></meta>
       <meta name="theme-color" content="#0 f172 a" media="(prefers-color-scheme: dark)" /></meta>
     </Helmet>
-  );
-};
-export default EnhancedSEOHead;
+  )
+          </meta>
+}
+          </meta>
+export default EnhancedSEOHead
+          </meta>

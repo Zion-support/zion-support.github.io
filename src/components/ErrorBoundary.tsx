@@ -1,34 +1,34 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { AlertTriangle, RefreshCw, Home, Mail } from 'lucide-react';
+
+
+
 interface Props {/* TODO: Fix JSX expression */}
 }
 interface State {/* TODO: Fix JSX expression */}
 }
 class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  r: false };
+
   }
   static getDerivedStateFromError(erro)
   r: Error): State {/* TODO: Fix JSX expression */}
-  r: true, error };
+
   }
   componentDidCatch(erro,
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    });
-    // Log error to monitoring service;
+
+
     // console.error('ErrorBoundary caught an)
-  error:', error, errorInfo);
-    // You can also log to external services here;
+
+
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
-      });
+
     }
   }
   handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
-  };
+
+
   handleReload = () => {/* TODO: Fix JSX expression */}
-  };
+
   render() {/* TODO: Fix JSX expression */}
       }
       return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>"
@@ -58,7 +58,8 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:bg-cyan-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Try Again;
+                Try Again
+          </RefreshCw>
               </button>
               <button></button>
                 onClick={this.handleReload}"
@@ -66,7 +67,8 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:bg-gray-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <RefreshCw className="w-4 h-4" /></RefreshCw>
-                Reload Page;
+                Reload Page
+          </RefreshCw>
               </button>
               <a></a>"
                 href="/""
@@ -74,7 +76,8 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:bg-indigo-700 transition-colors flex items-center justify-center gap-2"
               >"
                 <Home className="w-4 h-4" /></Home>
-                Go Home;
+                Go Home
+          </Home>
               </a>
               <a></a>"
                 href="mailt,"
@@ -84,7 +87,8 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   hover:text-slate-900 transition-colors flex items-center justify-center gap-2"
               >"
                 <Mail className="w-4 h-4" /></Mail>
-                Report Issue;
+                Report Issue
+          </Mail>
               </a>
             </div>
 "
@@ -95,22 +99,26 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
                 <a href="mailt,"
   o:support@ziontechgroup.com" className="text-cyan-400,"
   hover:text-cyan-300"></a>
-                  support@ziontechgroup.com;
+                  support@ziontechgroup.com
+          </a>
                 </a>
               </p>"
               <p className="mt-1"></p>"
                 <a href="te,"
   l:+13024640950" className="text-cyan-400,"
   hover:text-cyan-300"></a>
-                  (302) 464-0950;
+                  (302) 464-0950
+          </a>
                 </a>
               </p>
             </div>
           </div>
         </div>
-      );
+      )
+          </a>
     }
-    return this.props.children;
+    return this.props.children
+          </a>
   }
 }
 export default ErrorBoundary;"

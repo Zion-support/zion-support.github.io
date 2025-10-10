@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
+
+
+
+
 const AIRecruitmentAssistantPage: React.FC = () => {
   const features = [
     {
@@ -34,7 +34,7 @@ const AIRecruitmentAssistantPage: React.FC = () => {
       title: 'Automated Screening',
       description: 'AI-powered initial screening questions and assessments to filter candidates effectively.'
     }
-  ];
+
   return (
     <React.Fragment>
       <Helmet>
@@ -47,8 +47,9 @@ const AIRecruitmentAssistantPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                AI Recruitment Assistant;
-  </
+                AI Recruitment Assistant
+          </h1>
+          </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your hiring process with AI-powered recruitment tools that find, screen, and hire the best candidates faster and more efficiently.
               </p>
@@ -70,7 +71,10 @@ const AIRecruitmentAssistantPage: React.FC = () => {
         </section>
       </div>
     </React.Fragment>
-  );
-};
-export default AIRecruitmentAssistantPage;
+  )
+          </p>
+}
+          </p>
+export default AIRecruitmentAssistantPage
+          </p>
   </h1>

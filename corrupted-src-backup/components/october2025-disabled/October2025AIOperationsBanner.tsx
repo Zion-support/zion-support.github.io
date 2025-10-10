@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+
 const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
     },
     {/* TODO: Fix JSX expression */}
@@ -22,14 +22,17 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4"></div>
             <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e" />
             <span, className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">
-              OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;
+              OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS
+          </span>
             </sp, a, n>
           </div>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Transform, Your, Enterprise Operatio, n, s;
+            Transform, Your, Enterprise Operatio, n, s
+          </h2>
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
-            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence;
+            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence
+          </p>
           </p>
         </div>)
         {/* Articles, Gri, d */})
@@ -56,14 +59,17 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4"></div>"
             <Activity, className="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e" /></Activity>"
             <span, className="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d"></span>
-              OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS;
+              OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS
+          </span>
             </sp, a, n>
           </div>"
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4"></h2>
-            Transform, Your, Enterprise Operatio, n, s;
+            Transform, Your, Enterprise Operatio, n, s
+          </h2>
           </h2>"
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o"></p>
-            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence;
+            Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence
+          </p>
           </p>
         </div>
         {/* Articles, Gri, d */}"
@@ -109,7 +115,8 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
                   </div>
                 </div>
               </Li, n, k>)
-            );
+            )
+          </Link>
           })}
         </div>
         {/* Bottom, CT, A */}
@@ -155,7 +162,10 @@ const October2025AIOperationsBanne, r = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </div>
-  );
-};
-export default October2025AIOperationsBanner;
+  )
+          </div>
+}
+          </div>
+export default October2025AIOperationsBanner
+          </div>
 "`

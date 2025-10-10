@@ -1,5 +1,5 @@
 type NewServices2026BannerProp, s = {/* TODO: Fix JSX expression */}
- };
+
 export default function NewServices2026Bann, e, r({)
   varia, n, t = 'showc, a, s, e')
   showCou, n, t =  , 6)
@@ -37,10 +37,12 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
                  : 'bg-whi, t, e/20, tex, t-whi, t, e'}
              }`}
           >
-            NEW, 2026, SERVICES;
+            NEW, 2026, SERVICES
+          </div>
           </d, i, v > <h2, className={ `te, x, t-3xl, fon, t-bold, m, b-2 ${varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' }`}
           >
-            Latest, AI, Services;
+            Latest, AI, Services
+          </div>
   ].sli, c, e(0, Ma, t, h.m, a, x(1, showCou, n, t)); return (<section, classNam, e = {/* TODO: Fix JSX expression */}
        } ${ varia, n, t === 'in, f, o'  ? 'te, x, t-gr, a, y-9, 0, 0'  : 'te, x, t-whi, t, e' } py-12 ${classNa, m, e}`}
     ></section>
@@ -80,6 +82,7 @@ export default function NewServices2026Bann, e, r({/* TODO: Fix JSX expression *
         </div>
       </div>
     </secti, o, n>
-  );
+  )
+          </div>
 }
 `

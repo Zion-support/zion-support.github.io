@@ -1,10 +1,10 @@
-'use client';
-import React, { memo } from 'react';
-import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+
+
+
+
 
 const Footer: React.FC = memo(() => {
-  const currentYear = new Date().getFullYear();
+
   
   const aiServices = [
     { name: 'AI Solutions', url: '/ai-services', description: 'Comprehensive AI solutions' },
@@ -17,7 +17,7 @@ const Footer: React.FC = memo(() => {
     { name: 'AI E-commerce Solutions', url: '/ai-ecommerce-solutions', description: 'E-commerce AI solutions' },
     { name: 'AI Cybersecurity', url: '/ai-cybersecurity', description: 'AI security solutions' },
     { name: 'AI Mobile Apps', url: '/ai-mobile-app-development', description: 'Mobile AI applications' }
-  ];
+
 
   const itServices = [
     { name: 'Cloud Services', url: '/cloud-services', description: 'Cloud solutions' },
@@ -28,7 +28,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Database Services', url: '/database-services', description: 'Database management' },
     { name: 'Network Solutions', url: '/network-solutions', description: 'Network infrastructure' },
     { name: 'IT Support', url: '/it-support', description: 'Technical support' }
-  ];
+
 
   const microSaasServices = [
     { name: 'Analytics Dashboard', url: '/micro-saas/analytics-dashboard', description: 'Business analytics' },
@@ -37,7 +37,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Social Manager', url: '/micro-saas/social-manager', description: 'Social media management' },
     { name: 'Expense Tracker', url: '/micro-saas/expense-tracker', description: 'Financial tracking' },
     { name: 'Appointment Scheduler', url: '/micro-saas/appointment-scheduler', description: 'Scheduling system' }
-  ];
+
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -155,51 +155,15 @@ const Footer: React.FC = memo(() => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
-<<<<<<< HEAD
-            </div>
-            <div className="flex space-x-6">
-              <a href="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy;
-  </
-              <a href="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service;
-  </
-              <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy;
-  </
-=======
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Cookie Policy
-              </Link>
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
-            </div>
           </div>
         </div>
       </div>
     </footer>
-  );
-});
+  )
+          </p>
+})
+          </p>
 
-Footer.displayName = 'Footer';
-<<<<<<< HEAD
-export default Footer;
-  </a>
-  </a>
-  </a>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-  </h3>
-=======
-
-export default Footer;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-fb16
+Footer.displayName = 'Footer'
+          </p>

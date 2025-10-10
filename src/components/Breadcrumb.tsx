@@ -1,39 +1,39 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ChevronRight, Home } from 'lucide-react';
+
+
+
 interface BreadcrumbItem {
-  name: string;
-  href: string;
-  current?: boolean;
+
+
+
 }
 const Breadcrumb: React.FC = () => {
-  const location = useLocation();
+
   const generateBreadcrumbs = (): BreadcrumbItem[] => {,
-    const pathSegments = location.pathname.split('/').filter(Boolean);
+
     const breadcrumbs: BreadcrumbItem[] = [,
       { name: 'Home', href: '/' }
-    ];
-    let currentPath = '';
+
+
     pathSegments.forEach((segment, index) => {
-      currentPath += `/${segment}`;
-      const isLast = index === pathSegments.length - 1;
-      // Convert segment to readable name;
-      const name = segment;
+
+
+
+
         .split('-')
         .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+
       breadcrumbs.push({)
         name)
         href: currentPath),
-        current: isLast;
-      });
-    });
-    return breadcrumbs;
-  };
-  const breadcrumbs = generateBreadcrumbs();
-  // Don't show breadcrumb on home page;
+
+
+
+
+
+
+
   if (location.pathname === '/') {
-    return null;
+
   }
   const structuredData = {
     "@context": "https: //schema.org",
@@ -44,7 +44,7 @@ const Breadcrumb: React.FC = () => {
       "name": item.name,
       "item": `https://ziontechgroup.com${item.href}`
     }))
-  };
+
   return(<React.Fragment>)
       <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-cyan-400/20 py-3">)
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">)
@@ -64,7 +64,8 @@ const Breadcrumb: React.FC = () => {
                     {item.name}
                   </span>
                 ) : (
-                  <Link;
+                  <Link
+          </span>
                     to={item.href}
                     className="text-gray-300 hover: text-cyan-400 transition-colors duration-200 flex items-center",
                   >,
@@ -78,12 +79,16 @@ const Breadcrumb: React.FC = () => {
         </div>
       </nav>
       {/* Structured Data */}
-      <script;
+      <script
+          </Link>
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       /></script>
-  );
-};
-export default Breadcrumb;
+  )
+          </script>
+}
+          </script>
+export default Breadcrumb
+          </script>
   </ol>
   </nav>

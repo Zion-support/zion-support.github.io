@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+
+
+
+
+
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -73,7 +73,7 @@ const PricingPage: React.FC = () => {
       cta: 'Contact Sales',
       popular: false
     }
-  ];
+
   const addOns = [
     {
       name: 'Additional AI Models',
@@ -99,7 +99,7 @@ const PricingPage: React.FC = () => {
       price: '$5,000',
       period: '/day'
     }
-  ];
+
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
@@ -125,7 +125,7 @@ const PricingPage: React.FC = () => {
       question: 'Can I cancel anytime?',
       answer: 'Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees.'
     }
-  ];
+
   const getColorClasses = (color: string) => {
     switch (color) {
       case 'blue':
@@ -135,7 +135,7 @@ const PricingPage: React.FC = () => {
           border: 'border-blue-500',
           light: 'bg-blue-50',
           textLight: 'text-blue-600'
-        };
+
       case 'cyan':
         return {
           bg: 'bg-cyan-500',
@@ -143,7 +143,7 @@ const PricingPage: React.FC = () => {
           border: 'border-cyan-500',
           light: 'bg-cyan-50',
           textLight: 'text-cyan-600'
-        };
+
       case 'purple':
         return {
           bg: 'bg-purple-500',
@@ -151,7 +151,7 @@ const PricingPage: React.FC = () => {
           border: 'border-purple-500',
           light: 'bg-purple-50',
           textLight: 'text-purple-600'
-        };
+
       default:
         return {
           bg: 'bg-gray-500',
@@ -159,9 +159,9 @@ const PricingPage: React.FC = () => {
           border: 'border-gray-500',
           light: 'bg-gray-50',
           textLight: 'text-gray-600'
-        };
+
     }
-  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
@@ -181,7 +181,8 @@ const PricingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {plans.map((plan, index) => {
-              const colors = getColorClasses(plan.color);
+              const colors = getColorClasses(plan.color)
+          </div>
               return (
                 <div
                   key={index}
@@ -191,8 +192,9 @@ const PricingPage: React.FC = () => {
                 >
                   {plan.popular && (
                     <div className={`absolute top-0 left-0 right-0 ${colors.bg} text-white text-center py-2 text-sm font-semibold`}>
-                      Most Popular;
-  </
+                      Most Popular
+          </div>
+          </div>
                   )}
                   <div className={`p-8 ${plan.popular ? 'pt-12' : ''}`}>
                     <div className="text-center mb-8">
@@ -242,7 +244,8 @@ const PricingPage: React.FC = () => {
                     </Link>
                   </div>
                 </div>
-              );
+              )
+          </Link>
             })}
           </div>
         </div>
@@ -252,11 +255,13 @@ const PricingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Add-on Services;
-  </
+              Add-on Services
+          </h2>
+          </h2>
             <p className="text-xl text-gray-600">
-              Enhance your plan with additional services and features;
-  </
+              Enhance your plan with additional services and features
+          </p>
+          </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {addOns.map((addOn, index) => (
@@ -277,11 +282,13 @@ const PricingPage: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions;
-  </
+              Frequently Asked Questions
+          </h2>
+          </h2>
             <p className="text-xl text-gray-600">
-              Everything you need to know about our pricing and plans;
-  </
+              Everything you need to know about our pricing and plans
+          </p>
+          </p>
           </div>
           <div className="space-y-8">
             {faqs.map((faq, index) => (
@@ -306,21 +313,26 @@ const PricingPage: React.FC = () => {
             <Link
               to="/contact"
               className="bg-white text-cyan-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
-              Start Free Trial;
-  </
+              Start Free Trial
+          </Link>
+          </Link>
             <Link
               to="/demo"
               className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-cyan-600 transition-all duration-300">
-              Schedule Demo;
-  </
+              Schedule Demo
+          </Link>
+          </Link>
           </div>
         </div>
       </section>
       <Footer />
     </div>
-  );
-};
-export default PricingPage;
+  )
+          </Link>
+}
+          </Link>
+export default PricingPage
+          </Link>
   </Link>
   </Link>
   </p>

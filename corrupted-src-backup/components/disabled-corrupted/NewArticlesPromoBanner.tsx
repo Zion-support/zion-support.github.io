@@ -1,20 +1,20 @@
-import React from 'react';
-import Reac, t, { useState, useEffect } fr, o, m 'rea, c, t';
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
+
+
+
 interface NewArticlesPromoBannerProp, s {
-  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featured' | 'compa, c, t';
-  showCou, n, t?: number;
-  autoRota, t, e?: boolean;
-  rotationInterv, a, l?: number;
-  classNa, m, e ?  : string;
+
+
+
+
+
 interface NewArticlesPromoBannerProp, s {/* TODO: Fix JSX expression */}
  }
 const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/* TODO: Fix JSX expression */})
 }) => {/* TODO: Fix JSX expression */}
-        }, rotationInterv, a, l);
-      return () => clearInterv, a, l(interv, a, l);
+
+
     }
-  }, [autoRota, t, e, featuredArticl, e, s.leng, t, h, rotationInterv, a, l]);
+
   if (varia, n, t = == 'comp, a, c, t') {
     return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}>
         <div, className="flex, item, s-center, justif, y-betwe, e, n">
@@ -26,7 +26,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <BookOpen, className="w-6 h-6, tex, t-whi, t, e" />
             <d, i, v>
               <h4, className="te, x, t-white, fon, t-bo, l, d">
-                {featuredArticl, e, s.leng, t, h} New, Articles, Published;
+                {featuredArticl, e, s.leng, t, h} New, Articles, Published
+          </h4>
               </h4>
   if (varia, n, t = == 'comp, a, c, t') {/* TODO: Fix JSX expression */}
       <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-cy, a, n-600, rounde, d-l, g, p-4 ${classNa, m, e}`}></div>
@@ -35,7 +36,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             <BookOpen, className="w-6 h-6, tex, t-whi, t, e" /></BookOpen>
             <d, i, v></d>"
               <h4, className="te, x, t-white, fon, t-bo, l, d"></h4>
-                {featuredArticl, e, s.leng, t, h} New, Articles, Published;
+                {featuredArticl, e, s.leng, t, h} New, Articles, Published
+          </h4>
               </h4>"
               <p, className="te, x, t-bl, u, e-100, tex, t-sm">Latest, AI, insights and, researc, h</p>
             </div>
@@ -45,7 +47,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             Read, No, w;)
           </Li, n, k>)
         </div>)
-      </d, i, v  > );
+      </d, i, v  > )
+          </Link>
   }
   if (varia, n, t = == 'prem, i, u, m') {
     return(<div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
@@ -76,10 +79,12 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
                 <div, className="flex, item, s-center, justif, y-betwe, e, n"></div>
                   <span, className="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">{artic, l, e.readTime}</sp, a, n>
           ></Link>
-            Read, No, w;
+            Read, No, w
+          </span>
           </Li, n, k>
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
+          </span>
   }
   if (varia, n, t = == 'prem, i, u, m') {/* TODO: Fix JSX expression */}`
       <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-indi, g, o-700, vi, a-purp, l, e-700, t, o-pi, n, k-700, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}></div>"
@@ -111,7 +116,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
           <div, classNam, e = "te, x, t-center, m, t-8"></div>
             <Link, t, o="/bl, o, g"
               className="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-purp, l, e-700, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: bg-purp, l, e-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
-              View, All, Articles;
+              View, All, Articles
+          </Link>
               <Link, className="w-5 h-5" />
           </div>"
           <div, classNam, e = "te, x, t-center, m, t-8"></div>"
@@ -122,7 +128,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             </Li, n, k>
           </div>
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
+          </Link>
   }
   if (varia, n, t = == 'featu, r, e, d') {
     return(<div, classNam, e = {`bg-white, rounde, d-2xl, shado, w-2xl, overflo, w-hidd, e, n ${classNa, m, e}`}>
@@ -138,7 +145,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s</h2>
             </div>
             <span, className="bg-yell, o, w-400, tex, t-black, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d">
-              N, E, W;
+              N, E, W
+          </span>
             </sp, a, n>
           </div>
         </div>)
@@ -161,7 +169,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Featured, Article, s</h2>
             </div>"
             <span, className="bg-yell, o, w-400, tex, t-black, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d"></span>
-              N, E, W;
+              N, E, W
+          </span>
             </sp, a, n>
           </div>
         </div>"
@@ -194,7 +203,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
             ))}
           </div>
         </div>
-      </d, i, v  > );
+      </d, i, v  > )
+          </Link>
   }
   // Default variant return(<div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-600, rounde, d-x, l, p-6, m, d: p-8, tex, t-whi, t, e ${class N, a, m, e}`}>
       <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
@@ -234,6 +244,8 @@ const NewArticlesPromoBanne, r: React.FC<NewArticlesPromoBannerPro, p, s> = ({/*
         ))}
       </div>
     </div>
-  );
-};
+  )
+          </Link>
+}
+          </Link>
 export default NewArticlesPromoBanner;"`

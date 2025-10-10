@@ -1,11 +1,11 @@
-'use client';
-import React, { useState } from 'react';
-import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import React from 'react';
+
+
+
+
+
+
 const ContactPage: React.FC = () => {
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,45 +14,45 @@ export default function ContactPage() {
     phone: '',
     service: '',
     message:   ,
-$4});
-  const [isSubmitted, setIsSubmitted] = useState(false);
+
+
   const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     message: '',
     budget: '',
     timeline: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+
+
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
+
+
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+
+
     // Reset form after 3 seconds
     setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({}, 3000);
+
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+
+
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
+
+
+
+
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown, DE 19709',
     hours: 'Mon-Fri: 9AM-6PM EST'
-  };
+
   const services = [
     'AI Services',
     'IT Services',
@@ -64,7 +64,7 @@ $4});
     'Mobile App Development',
     'Custom Development',
     'Other'
-  ];
+
   const achievements = [
     { icon: Users, text: '100+ Happy Clients' },
     { icon: Award, text: '50+ Successful Projects' },
@@ -78,8 +78,10 @@ $4});
         <a href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
           Contact Us</span>
       </div>
-  );
-export default ContactPage;
+  )
+          </a>
+export default ContactPage
+          </a>
     'Quantum Computing',
     'Cybersecurity',
     'Cloud Migration',
@@ -87,7 +89,8 @@ export default ContactPage;
     'Custom Development',
     'Consulting',
     'Other'
-  ];
+  ]
+          </a>
   const budgetRanges = [
     'Under $10K',
     '$10K - $50K',
@@ -95,7 +98,8 @@ export default ContactPage;
     '$100K - $500K',
     '$500K+',
     'Not sure'
-  ];
+  ]
+          </a>
   const timelines = [
     'ASAP',
     'Within 1 month',
@@ -103,7 +107,8 @@ export default ContactPage;
     '3-6 months',
     '6+ months',
     'Just exploring'
-  ];
+  ]
+          </a>
   const offices = [
     {
       city: 'Middletown, DE',
@@ -129,7 +134,8 @@ export default ContactPage;
       hours: 'Mon-Fri: 9AM-6PM GMT',
       timezone: 'Greenwich Mean Time'
     }
-  ];
+  ]
+          </a>
   const faqs = [
     {
       question: 'How quickly can you start my project?',
@@ -147,7 +153,8 @@ export default ContactPage;
       question: 'Do you work with small businesses?',
       answer: 'Absolutely! We offer scalable solutions for businesses of all sizes, from startups to enterprise organizations.'
     }
-  ];
+  ]
+          </a>
   if (isSubmitted) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
@@ -187,7 +194,8 @@ export default ContactPage;
           </div>
         </div>
       </div>
-    );
+    )
+          </a>
   }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -489,7 +497,8 @@ export default ContactPage;
         </div>
       </section>
     </div>
-  );
+  )
+          </p>
 }
   </p>
   </h2>

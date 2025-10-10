@@ -1,6 +1,6 @@
-import React from 'react';
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
-impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
+
+
+
 const NewContentShowcas, e: React.FC = () => { ,
   const topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); return(<section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
       <div, className="container, m, x-auto, p, x-6">
@@ -11,13 +11,16 @@ const NewContentShowcas, e: React.FC = () => {
       <div, className="container, m, x-auto, p, x-6"></section>
         <div, className="te, x, t-center, m, b-16"></div>
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-purp, l, e-100, rounde, d-full, tex, t-purp, l, e-700, fon, t-semibold, m, b-4">
-            🌟 JUST, RELEASE, D;
+            🌟 JUST, RELEASE, D
+          </div>
           </div>
           <h2, className="te, x, t-5xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-            New, Conten, t & Servic, e, s;
+            New, Conten, t & Servic, e, s
+          </h2>
           </h2>
           <p, className="te, x, t-2xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
-            Explore, our, latest breakthrough, articles, and revolutionary, services;
+            Explore, our, latest breakthrough, articles, and revolutionary, services
+          </p>
           </p>
         </div>
         <div, className="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"> {/* Articles, Sect, i, o, n */ }</div>
@@ -65,7 +68,8 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>
               <Link, t, o="/bl, o, g"
                 className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0">
-                View, All, Articles;
+                View, All, Articles
+          </Link>
                 <Link, className="w-5 h-5" />
             </div>"
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>"
@@ -121,7 +125,8 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>
               <Link, t, o="/servic, e, s"
                 className="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0">
-                View, All, Services;
+                View, All, Services
+          </Link>
                 <Link, className="w-5 h-5" />
             </div>"
             <div, classNam, e = "mt-6, tex, t-cent, e, r"></div>"
@@ -135,6 +140,8 @@ const NewContentShowcas, e: React.FC = () => {/* TODO: Fix JSX expression */}
         </div>
       </div>
     </sec, t, i, o, n>
-  );
-};
+  )
+          </Link>
+}
+          </Link>
 export default NewContentShowcase;"
