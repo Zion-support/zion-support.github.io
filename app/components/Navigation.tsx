@@ -324,8 +324,67 @@ className="text-white hover:text-cyan-400 transition-colors duration-200 font-me
               onClick={closeAllMenus}
             >
               Pricing
+            </Link>
+          </div>
+        </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="lg:hidden bg-slate-900/95 backdrop-blur-md rounded-lg mt-2 p-4">
+            <div className="space-y-4">
+              <Link
+                to="/"
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Home
+              </Link>
+              
+              <Link 
+                to="/about" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
+              <Link 
+                to="/services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/micro-saas" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Micro SAAS
+              </Link>
+              <Link 
+                to="/ai-services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                AI Services
+              </Link>
+              <Link 
+                to="/it-services" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                IT Services
+              </Link>
+              <Link 
+                to="/pricing" 
+                className="block text-white hover:text-cyan-400 transition-colors duration-200 font-medium py-2"
+                onClick={closeAllMenus}
+              >
+                Pricing
+              </Link>
+
+              {/* Mobile Services */}
+              <div>
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-2 group" onClick={closeAllMenus}>
