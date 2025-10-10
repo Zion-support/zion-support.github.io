@@ -117,18 +117,21 @@ const Footer: React.FC = memo(() => {
     { name: 'Careers', url: '/careers' },
     { name: 'Partners', url: '/partners' },
     { name: 'Support', url: '/support' },
-    { name: 'Status', url: '/status' }
+    { name: 'Status', url: '/status' },
+    { name: 'Demo', url: '/demo' },
+    { name: 'Consultation', url: '/consultation' }
   ]
 
   const resourcesLinks = [
     { name: 'Pricing', url: '/pricing' },
     { name: 'FAQ', url: '/faq' },
     { name: 'Documentation', url: '/docs' },
-    { name: 'API Reference', url: '/api-docs' },
+    { name: 'API Reference', url: '/api' },
     { name: 'Tutorials', url: '/tutorials' },
     { name: 'Community', url: '/community' },
     { name: 'Demo', url: '/demo' },
-    { name: 'Compliance', url: '/compliance' }
+    { name: 'Compliance', url: '/compliance' },
+    { name: 'Sitemap', url: '/sitemap' }
   ]
 
   const enterpriseLinks = [
