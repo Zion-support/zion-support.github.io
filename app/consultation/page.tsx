@@ -1,18 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Phone, Mail, Calendar, CheckCircle, Clock, Users } from 'lucide-react';
-
-const ConsultationPage = () => {
-  const consultationServices = [
-    'AI Strategy & Implementation',
-    'Cloud Migration Planning',
-    'Cybersecurity Assessment',
-    'Digital Transformation',
-    'IT Infrastructure Review',
-    'Technology Roadmap Development'
-=======
 
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -93,7 +79,6 @@ const ConsultationPage: React.FC = () => {
       ],
       popular: false
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
   ];
 
   const experts = [
@@ -127,38 +112,13 @@ const ConsultationPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
         <title>Consultation - Zion Tech Group | Expert IT Consulting</title>
         <meta name="description" content="Get expert consultation on AI, cloud computing, cybersecurity, and IT strategy. Book a consultation with our experienced team." />
         <meta name="keywords" content="IT consultation, AI consulting, cloud consulting, cybersecurity consulting, technology strategy" />
       </Helmet>
 
-<<<<<<< HEAD
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Expert
-              </span>
-              <br />
-              <span className="text-white">Consultation</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Get personalized guidance from our experienced team to transform your business with cutting-edge technology solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                <Calendar className="mr-2 h-5 w-5" />
-                Book Consultation
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-=======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -341,11 +301,9 @@ const ConsultationPage: React.FC = () => {
                   View All Services
                 </Link>
               </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-19af
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Section */}
       <section className="py-16 px-4">
@@ -426,7 +384,8 @@ const ConsultationPage: React.FC = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
