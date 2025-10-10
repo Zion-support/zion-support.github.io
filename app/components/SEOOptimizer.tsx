@@ -1,12 +1,4 @@
 'use client';
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-=======
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
 interface SEOOptimizerProps {
   title: string;
   description: string;
@@ -42,18 +34,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-<<<<<<< HEAD
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
-=======
-      <meta name="twitter:image" content={ogImage} />
-      <link rel="canonical" href={canonicalUrl} />
->>>>>>> cursor/analyze-improve-and-deploy-application-3150
     </Helmet>
   );
 };
