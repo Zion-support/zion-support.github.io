@@ -1,238 +1,399 @@
 'use client';
-import React, { useState, useEffect, useMemo } from 'react';
-import ContentPreviewCard from '../components/ContentPreviewCard';
-interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  category: string;
-  readTime: string;
-  date: string;
-  path: string;
-  image: string;
-  featured: boolean;
-  stats?: {
-    views: number;
-    engagement: number;
-  };
-}
-export default function BlogPage() {
-  const [posts, setPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const blogPosts: BlogPost[] = useMemo(() => [
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  CalendarIcon, 
+  ClockIcon,
+  UserIcon,
+  ArrowRightIcon,
+  TagIcon
+} from '@heroicons/react/24/outline';
+
+const BlogPage: React.FC = () => {
+  const featuredPosts = [
     {
-      id: 'ai-enterprise-transformation-2025',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      description: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-      category: 'Success Story',
-      readTime: '50 min read',
-      date: '2025-01-28',
-      path: '/blog/ai-enterprise-transformation-2025',
-      image: '💰',
-      featured: true,
-      stats: { views: 18750, engagement: 97 }
+      id: 1,
+      title: "AI 2026: The Future of Autonomous Business Intelligence",
+      excerpt: "Explore the revolutionary breakthroughs in AI that will transform how businesses operate in 2026 and beyond.",
+      author: "Kleber Santos",
+      date: "2024-12-15",
+      readTime: "8 min read",
+      category: "AI Innovation",
+      image: "/api/placeholder/600/400",
+      featured: true
     },
     {
-      id: 'ai-2025-2026-mega-trends-breakthrough',
-      title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
-      description: 'Discover the groundbreaking AI trends and breakthroughs that will revolutionize enterprise operations in 2025-2026.',
-      category: 'Mega Trends',
-      readTime: '15 min read',
-      date: '2025-01-15',
-      path: '/blog/ai-2025-2026-mega-trends-breakthrough',
-      image: '🚀',
-      featured: true,
-      stats: { views: 12500, engagement: 94 }
+      id: 2,
+      title: "Micro SAAS: The Future of Business Software",
+      excerpt: "Discover how micro SAAS solutions are revolutionizing the way businesses operate and scale.",
+      author: "Sarah Johnson",
+      date: "2024-12-10",
+      readTime: "6 min read",
+      category: "Micro SAAS",
+      image: "/api/placeholder/600/400",
+      featured: true
     },
     {
-      id: 'ai-2026-autonomous-enterprise-architecture',
-      title: 'AI 2026: Autonomous Enterprise Architecture Revolution',
-      description: 'Revolutionary autonomous enterprise architecture transforming business operations with self-healing systems and predictive infrastructure.',
-      category: 'Architecture',
-      readTime: '12 min read',
-      date: '2026-01-15',
-      path: '/blog/ai-2026-autonomous-enterprise-architecture',
-      image: '🏗️',
-      featured: true,
-      stats: { views: 8900, engagement: 91 }
-    },
-    {
-      id: 'ai-2026-autonomous-agent-factories',
-      title: 'AI 2026: Autonomous Agent Factories Revolution',
-      description: 'Revolutionary autonomous agent factories transforming business operations with self-managing AI systems.',
-      category: 'AI Agents',
-      readTime: '18 min read',
-      date: '2026-02-01',
-      path: '/blog/ai-2026-autonomous-agent-factories',
-      image: '🤖',
-      featured: false,
-      stats: { views: 7200, engagement: 88 }
-    },
-    {
-      id: 'ai-2026-consensus-intelligence-breakthrough',
-      title: 'AI 2026: Consensus Intelligence Breakthrough',
-      description: 'Revolutionary consensus intelligence systems enabling collaborative AI decision-making across enterprise operations.',
-      category: 'Intelligence',
-      readTime: '14 min read',
-      date: '2026-02-15',
-      path: '/blog/ai-2026-consensus-intelligence-breakthrough',
-      image: '🧠',
-      featured: false,
-      stats: { views: 6500, engagement: 85 }
-    },
-    {
-      id: 'ai-cost-optimization-breakthrough-2026',
-      title: 'AI Cost Optimization Breakthrough 2026',
-      description: 'Revolutionary cost optimization strategies delivering 90% reduction in operational expenses through intelligent AI systems.',
-      category: 'Cost Optimization',
-      readTime: '20 min read',
-      date: '2026-03-01',
-      path: '/blog/ai-cost-optimization-breakthrough-2026',
-      image: '💡',
-      featured: false,
-      stats: { views: 9800, engagement: 92 }
-    },
-    {
-      id: 'ai-2026-hyperconscious-computing-revolution',
-      title: 'AI 2026: Hyperconscious Computing Revolution',
-      description: 'Revolutionary hyperconscious computing systems delivering unprecedented AI capabilities and enterprise transformation.',
-      category: 'Computing',
-      readTime: '16 min read',
-      date: '2026-03-15',
-      path: '/blog/ai-2026-hyperconscious-computing-revolution',
-      image: '⚡',
-      featured: false,
-      stats: { views: 5800, engagement: 87 }
-    },
-    {
-      id: 'ai-enterprise-transformation-ultimate-guide-2025',
-      title: 'AI Enterprise Transformation: Ultimate Guide 2025',
-      description: 'The complete guide to AI enterprise transformation with proven frameworks, implementation strategies, and success metrics.',
-      category: 'Transformation',
-      readTime: '45 min read',
-      date: '2025-02-10',
-      path: '/blog/ai-enterprise-transformation-ultimate-guide-2025',
-      image: '📚',
-      featured: false,
-      stats: { views: 11200, engagement: 93 }
+      id: 3,
+      title: "Enterprise AI Transformation: A Complete Guide",
+      excerpt: "Learn how to successfully implement AI solutions in your enterprise organization.",
+      author: "Michael Chen",
+      date: "2024-12-05",
+      readTime: "12 min read",
+      category: "Enterprise",
+      image: "/api/placeholder/600/400",
+      featured: true
     }
-  ], []);
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setPosts(blogPosts);
-      setLoading(false);
-    }, 500);
-    return () => clearTimeout(timer);
-  }, [blogPosts]);
-  const categories = ['all', ...Array.from(new Set(blogPosts.map(post => post.category)))];
-  const filteredPosts = selectedCategory === 'all' 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);
-  const featuredPosts = posts.filter(post => post.featured);
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-gray-50">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center mb-12">
-            <div className="h-12 bg-gray-200 rounded w-96 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-6 bg-gray-200 rounded w-64 mx-auto animate-pulse"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3, 4, 5, 6].map(item => (
-              <div key={item} className="bg-gray-100 rounded-lg p-6 animate-pulse">
-                <div className="h-48 bg-gray-200 rounded-lg mb-4"></div>
-                <div className="h-6 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded mb-2"></div>
-                <div className="h-4 bg-gray-200 rounded w-3/4"></div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
+  ];
+
+  const recentPosts = [
+    {
+      id: 4,
+      title: "Cybersecurity in the AI Era: Best Practices",
+      excerpt: "Essential cybersecurity strategies for businesses adopting AI technologies.",
+      author: "Emily Rodriguez",
+      date: "2024-12-01",
+      readTime: "5 min read",
+      category: "Cybersecurity"
+    },
+    {
+      id: 5,
+      title: "Cloud Migration: A Step-by-Step Guide",
+      excerpt: "Complete guide to migrating your business to the cloud successfully.",
+      author: "David Kim",
+      date: "2024-11-28",
+      readTime: "7 min read",
+      category: "Cloud Computing"
+    },
+    {
+      id: 6,
+      title: "Data Analytics: Turning Data into Insights",
+      excerpt: "How to leverage data analytics to drive business growth and decision-making.",
+      author: "Lisa Wang",
+      date: "2024-11-25",
+      readTime: "6 min read",
+      category: "Data Analytics"
+    },
+    {
+      id: 7,
+      title: "AI-Powered Customer Support: Implementation Guide",
+      excerpt: "Transform your customer support with AI-powered chatbots and automation.",
+      author: "Alex Thompson",
+      date: "2024-11-20",
+      readTime: "9 min read",
+      category: "Customer Support"
+    },
+    {
+      id: 8,
+      title: "DevOps Best Practices for Modern Businesses",
+      excerpt: "Essential DevOps practices to improve your development and deployment processes.",
+      author: "Maria Garcia",
+      date: "2024-11-15",
+      readTime: "8 min read",
+      category: "DevOps"
+    },
+    {
+      id: 9,
+      title: "The Future of Work: AI and Human Collaboration",
+      excerpt: "Exploring how AI will augment human capabilities in the workplace.",
+      author: "James Wilson",
+      date: "2024-11-10",
+      readTime: "10 min read",
+      category: "Future of Work"
+    }
+  ];
+
+  const categories = [
+    { name: "AI Innovation", count: 15 },
+    { name: "Micro SAAS", count: 12 },
+    { name: "Enterprise", count: 18 },
+    { name: "Cybersecurity", count: 8 },
+    { name: "Cloud Computing", count: 10 },
+    { name: "Data Analytics", count: 14 },
+    { name: "Customer Support", count: 6 },
+    { name: "DevOps", count: 9 },
+    { name: "Future of Work", count: 7 }
+  ];
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+  };
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">AI & Technology Blog</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Latest insights on AI, enterprise automation, and digital transformation from our expert team;
-  </
-        </header>
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-2 rounded-full font-medium transition-colors ${
-                selectedCategory === category
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-600 hover:bg-gray-100'
-              }`}
-            >
-              {category === 'all' ? 'All Articles' : category}
-            </button>
-          ))}
+    <React.Fragment>
+      <Helmet>
+        <title>Blog - Zion Tech Group | AI & Technology Insights</title>
+        <meta name="description" content="Stay updated with the latest insights on AI, micro SAAS, IT solutions, and technology trends from Zion Tech Group experts." />
+        <meta name="keywords" content="AI blog, technology insights, micro SAAS, IT solutions, AI trends, business technology" />
+        <meta property="og:title" content="Blog - Zion Tech Group" />
+        <meta property="og:description" content="Stay updated with the latest insights on AI, micro SAAS, IT solutions, and technology trends." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/blog" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Insights</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Stay ahead of the curve with expert insights on AI, micro SAAS, IT solutions, 
+              and the latest technology trends shaping the future of business.
+            </p>
+          </div>
         </div>
-        {/* Featured Posts */}
-        {selectedCategory === 'all' && (
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-              🌟 Featured Articles;
-  </
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredPosts.map((post) => (
-                <ContentPreviewCard
-                  key={post.id}
-                  {...post}
-                />
-              ))}
-            </div>
-          </section>
-        )}
-        {/* All Posts */}
-        <section>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            {selectedCategory === 'all' ? 'All Articles' : `${selectedCategory} Articles`}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredPosts.map((post) => (
-              <ContentPreviewCard
-                key={post.id}
-                {...post}
-              />
+      </section>
+
+      {/* Featured Posts */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Featured Articles
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our most popular and insightful articles on AI, technology, and business innovation
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {featuredPosts.map((post, index) => (
+              <article key={post.id} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-200">
+                <div className="aspect-w-16 aspect-h-9 bg-gray-200">
+                  <div className="w-full h-48 bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
+                    <span className="text-white text-lg font-semibold">Featured Image</span>
+                  </div>
+                </div>
+                
+                <div className="p-6">
+                  <div className="flex items-center mb-3">
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">
+                      {post.category}
+                    </span>
+                    {post.featured && (
+                      <span className="ml-2 bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-xs font-semibold">
+                        Featured
+                      </span>
+                    )}
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3 line-clamp-2">
+                    {post.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {post.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+                    <div className="flex items-center">
+                      <UserIcon className="h-4 w-4 mr-1" />
+                      <span>{post.author}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <CalendarIcon className="h-4 w-4 mr-1" />
+                      <span>{formatDate(post.date)}</span>
+                    </div>
+                    <div className="flex items-center">
+                      <ClockIcon className="h-4 w-4 mr-1" />
+                      <span>{post.readTime}</span>
+                    </div>
+                  </div>
+                  
+                  <Link
+                    to={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                  >
+                    Read More
+                    <ArrowRightIcon className="ml-1 h-4 w-4" />
+                  </Link>
+                </div>
+              </article>
             ))}
           </div>
-        </section>
-        {/* Newsletter CTA */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-              Never Miss an Update;
-  </
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Subscribe to our newsletter and get the latest AI insights, enterprise transformation guides, 
-              and breakthrough content delivered directly to your inbox.
-            </p>
-            <Link
-              to="/"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors">
-              Subscribe to Newsletter;
-  </
+        </div>
+      </section>
+
+      {/* Recent Posts & Sidebar */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            {/* Recent Posts */}
+            <div className="lg:col-span-3">
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">Recent Articles</h2>
+              
+              <div className="space-y-8">
+                {recentPosts.map((post, index) => (
+                  <article key={post.id} className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow duration-200">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                      <div className="flex items-center space-x-4">
+                        <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-xs font-semibold">
+                          {post.category}
+                        </span>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <CalendarIcon className="h-4 w-4 mr-1" />
+                          <span>{formatDate(post.date)}</span>
+                        </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <ClockIcon className="h-4 w-4 mr-1" />
+                          <span>{post.readTime}</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                      <Link 
+                        to={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="hover:text-blue-600 transition-colors duration-200"
+                      >
+                        {post.title}
+                      </Link>
+                    </h3>
+                    
+                    <p className="text-gray-600 mb-4">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-sm text-gray-500">
+                        <UserIcon className="h-4 w-4 mr-1" />
+                        <span>{post.author}</span>
+                      </div>
+                      
+                      <Link
+                        to={`/blog/${post.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                      >
+                        Read More
+                        <ArrowRightIcon className="ml-1 h-4 w-4" />
+                      </Link>
+                    </div>
+                  </article>
+                ))}
+              </div>
+              
+              {/* Pagination */}
+              <div className="mt-12 flex justify-center">
+                <nav className="flex items-center space-x-2">
+                  <button className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                    Previous
+                  </button>
+                  <button className="px-3 py-2 text-sm font-medium text-white bg-blue-600 border border-transparent rounded-md">
+                    1
+                  </button>
+                  <button className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                    2
+                  </button>
+                  <button className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                    3
+                  </button>
+                  <button className="px-3 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-md hover:bg-gray-50">
+                    Next
+                  </button>
+                </nav>
+              </div>
+            </div>
+
+            {/* Sidebar */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-8 space-y-8">
+                {/* Categories */}
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Categories</h3>
+                  <div className="space-y-2">
+                    {categories.map((category, index) => (
+                      <Link
+                        key={index}
+                        to={`/blog/category/${category.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="flex items-center justify-between text-gray-600 hover:text-blue-600 transition-colors duration-200"
+                      >
+                        <span className="flex items-center">
+                          <TagIcon className="h-4 w-4 mr-2" />
+                          {category.name}
+                        </span>
+                        <span className="text-sm text-gray-400">({category.count})</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Newsletter Signup */}
+                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Stay Updated</h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    Get the latest insights delivered to your inbox.
+                  </p>
+                  <div className="space-y-3">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    />
+                    <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm font-semibold transition-colors duration-200">
+                      Subscribe
+                    </button>
+                  </div>
+                </div>
+
+                {/* Popular Tags */}
+                <div className="bg-white border border-gray-200 rounded-lg p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Popular Tags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {['AI', 'Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Data Analytics', 'DevOps', 'Micro SAAS', 'Enterprise'].map((tag, index) => (
+                      <Link
+                        key={index}
+                        to={`/blog/tag/${tag.toLowerCase()}`}
+                        className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs hover:bg-blue-100 hover:text-blue-700 transition-colors duration-200"
+                      >
+                        {tag}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Don't just read about the future—be part of it. Let us help you implement 
+            these cutting-edge solutions in your organization.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 font-semibold rounded-lg transition-colors duration-200"
+            >
+              Get Started Today
+              <ArrowRightIcon className="ml-2 h-5 w-5" />
+            </Link>
+            <Link 
+              to="/services" 
+              className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 font-semibold rounded-lg transition-colors duration-200"
+            >
+              Explore Our Services
+            </Link>
+          </div>
+        </div>
+      </section>
+    </React.Fragment>
   );
-}
-  </Link>
-  </h3>
-  </ContentPreviewCard>
-  </ContentPreviewCard>
-  </h2>
-  </p>
-  </string>
+};
+
+export default BlogPage;

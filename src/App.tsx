@@ -2,6 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import { performanceMonitor } from './utils/performanceMonitor';
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
@@ -144,8 +146,11 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <Router>
-        <Suspense fallback={<MainLoadingSpinner />}>
-          <Routes>
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main className="flex-1">
+            <Suspense fallback={<MainLoadingSpinner />}>
+              <Routes>
             {/* Main Pages */}
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -274,8 +279,11 @@ const App: React.FC = () => {
             <Route path="/blog/ai-trends-2026-future-enterprise-transformation" element={<BlogAITrends2026FutureEnterpriseTransformationPage />} />
             {/* 404 Page */}
             <Route path="*" element={<NotFoundPage />} />
-          </Routes>
-        </Suspense>
+              </Routes>
+            </Suspense>
+          </main>
+          <Footer />
+        </div>
       </Router>
     </ErrorBoundary>
   );
