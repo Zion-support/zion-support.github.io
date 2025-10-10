@@ -1360,3 +1360,434 @@ body::before {
       0 0 30px var(--primary-cyan);
   }
 }
+
+/* Additional Futuristic Enhancements */
+
+/* Cyber Glow Effects */
+.cyber-glow {
+  box-shadow: 
+    0 0 5px rgba(0, 255, 255, 0.5),
+    0 0 10px rgba(0, 255, 255, 0.3),
+    0 0 15px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.cyber-glow:hover {
+  box-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.8),
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 30px rgba(0, 255, 255, 0.4),
+    0 0 40px rgba(0, 255, 255, 0.2);
+}
+
+/* Neon Border Animation */
+.neon-border {
+  position: relative;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #0a0a0a, #1a1a1a) padding-box,
+              linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff) border-box;
+  animation: neon-border-pulse 2s ease-in-out infinite;
+}
+
+@keyframes neon-border-pulse {
+  0%, 100% { 
+    border-color: rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  }
+  50% { 
+    border-color: rgba(255, 0, 255, 0.8);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+  }
+}
+
+/* Holographic Card Effect */
+.holographic-card {
+  position: relative;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  overflow: hidden;
+}
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(0, 255, 255, 0.2), 
+    transparent);
+  animation: holographic-scan 3s ease-in-out infinite;
+}
+
+@keyframes holographic-scan {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* Quantum Particle System */
+.quantum-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.quantum-particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: radial-gradient(circle, #00ffff, transparent);
+  border-radius: 50%;
+  animation: quantum-float 8s linear infinite;
+}
+
+@keyframes quantum-float {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(90vh) translateX(10px) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(10vh) translateX(-10px) scale(1);
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(0);
+    opacity: 0;
+  }
+}
+
+/* Cyber Matrix Effect */
+.matrix-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(0, 255, 0, 0.1) 50%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 100%);
+  animation: matrix-rain 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes matrix-rain {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* Neon Text Glow */
+.neon-glow-text {
+  color: #00ffff;
+  text-shadow: 
+    0 0 5px #00ffff,
+    0 0 10px #00ffff,
+    0 0 15px #00ffff,
+    0 0 20px #00ffff,
+    0 0 35px #00ffff,
+    0 0 40px #00ffff;
+  animation: neon-flicker 1.5s infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 
+      0 0 5px #00ffff,
+      0 0 10px #00ffff,
+      0 0 15px #00ffff,
+      0 0 20px #00ffff,
+      0 0 35px #00ffff,
+      0 0 40px #00ffff;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+/* Cyber Button Hover Effects */
+.cyber-button-hover {
+  position: relative;
+  background: linear-gradient(45deg, #00ffff, #0080ff);
+  border: 2px solid #00ffff;
+  color: #000;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-button-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left 0.6s ease;
+}
+
+.cyber-button-hover:hover::before {
+  left: 100%;
+}
+
+.cyber-button-hover:hover {
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.6),
+    0 0 40px rgba(0, 255, 255, 0.4),
+    0 0 60px rgba(0, 255, 255, 0.2);
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Futuristic Card Hover */
+.futuristic-card {
+  background: rgba(26, 26, 26, 0.9);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.futuristic-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(0, 255, 255, 0.1) 50%, 
+    transparent 70%);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.futuristic-card:hover::before {
+  transform: translateX(100%);
+}
+
+.futuristic-card:hover {
+  border-color: rgba(0, 255, 255, 0.6);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 40px rgba(0, 255, 255, 0.2);
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Cyber Grid Background */
+.cyber-grid-bg {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: grid-move 20s linear infinite;
+}
+
+@keyframes grid-move {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 50px; }
+}
+
+/* Neon Pulse Border */
+.neon-pulse-border {
+  border: 2px solid #00ffff;
+  animation: neon-pulse-border 2s ease-in-out infinite;
+}
+
+@keyframes neon-pulse-border {
+  0%, 100% { 
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  50% { 
+    border-color: #ff00ff;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+  }
+}
+
+/* Cyber Loading Animation */
+.cyber-loading {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(0, 255, 255, 0.3);
+  border-top: 3px solid #00ffff;
+  border-radius: 50%;
+  animation: cyber-spin 1s linear infinite;
+}
+
+@keyframes cyber-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Holographic Text Effect */
+.holographic-text-effect {
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: holographic-shift 3s ease-in-out infinite;
+  text-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.5),
+    0 0 20px rgba(255, 0, 255, 0.3);
+}
+
+@keyframes holographic-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Quantum Field Effect */
+.quantum-field-effect {
+  position: relative;
+  background: linear-gradient(135deg, 
+    rgba(139, 92, 246, 0.1) 0%, 
+    rgba(236, 72, 153, 0.1) 50%, 
+    rgba(59, 130, 246, 0.1) 100%);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  animation: quantum-vibration 2s ease-in-out infinite;
+}
+
+@keyframes quantum-vibration {
+  0%, 100% { 
+    transform: translateZ(0);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+  50% { 
+    transform: translateZ(2px);
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+  }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 1024px) {
+  .cyber-grid-bg {
+    background-size: 40px 40px;
+  }
+  
+  .neon-glow-text {
+    font-size: 1.8rem;
+  }
+  
+  .futuristic-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .cyber-grid-bg {
+    background-size: 30px 30px;
+  }
+  
+  .neon-glow-text {
+    font-size: 1.5rem;
+  }
+  
+  .futuristic-card {
+    padding: 1rem;
+  }
+  
+  .cyber-button-hover {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cyber-grid-bg {
+    background-size: 25px 25px;
+  }
+  
+  .neon-glow-text {
+    font-size: 1.2rem;
+  }
+  
+  .futuristic-card {
+    padding: 0.75rem;
+  }
+  
+  .cyber-button-hover {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Performance Optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .neon-glow-text {
+    text-shadow: none;
+    color: #ffffff;
+    background: #000000;
+  }
+  
+  .cyber-button-hover {
+    background: #ffffff;
+    color: #000000;
+    border-color: #ffffff;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .cyber-glow,
+  .neon-glow-text,
+  .holographic-text-effect {
+    text-shadow: none;
+    background: none;
+    color: #000000;
+  }
+  
+  .futuristic-card,
+  .cyber-card {
+    background: #ffffff;
+    border: 1px solid #000000;
+  }
+}
