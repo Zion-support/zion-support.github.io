@@ -19,8 +19,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
         <main className="container mx-auto px-4 py-16 pt-24"></main>
           {/* Hero Section */}"
           <section className="text-center mb-16"></section>"
-            <h1 className="text-4xl,"
-  md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
+            <h1 className="text-4xl," md:text-6xl font-bold text-white mb-6 neon-text cyber-text"></h1>
               AI Data Visualization;
             </h1>"
             <p className="text-xl text-cyan-400 mb-8 font-medium"></p>
@@ -35,8 +34,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">AI-Powered Features</h2>"
             <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8"></div>"
+  md:grid-cols-2," lg:grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-6 energy-pulse"></div>"
                 <div className="text-4xl mb-4 text-center">🎨</div>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center">Auto-Generated Charts</h3>"
@@ -90,8 +88,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           {/* Pricing Section */}"
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Pricing Plans</h2>"
-            <div className="grid grid-cols-1,"
-  md:grid-cols-3 gap-8"></div>"
+            <div className="grid grid-cols-1," md:grid-cols-3 gap-8"></div>"
               <div className="cyber-card p-8 text-center"></div>"
                 <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>"
                 <div className="text-4xl font-bold text-cyan-400 mb-6">$149<span className="text-lg">/month</span></div>"
@@ -139,8 +136,7 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
           <section className="mb-16"></section>"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">Perfect For</h2>"
             <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>"
+  md:grid-cols-2," lg:grid-cols-4 gap-8"></div>"
               <div className="cyber-card p-6 text-center"></div>"
                 <div className="text-4xl mb-4">📊</div>"
                 <h3 className="text-xl font-bold text-white mb-4">Business Intelligence</h3>"
@@ -173,10 +169,8 @@ export default function AIDataVisualizationPage() {/* TODO: Fix JSX expression *
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Join 2,000+ companies using our AI data visualization platform to make better decisions with their data.
             </p>"
-            <div className="flex flex-col,"
-  sm:flex-row gap-4 justify-center"></div>"
-              <a href="te,"
-  l:+13024640950" className="cyber-button"></a>
+            <div className="flex flex-col," sm:flex-row gap-4 justify-center"></div>"
+              <a href="te," l:+13024640950" className="cyber-button"></a>
                 📞 Cal)
   l: (302) 464-0950;
               </a>"

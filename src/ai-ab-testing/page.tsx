@@ -27,8 +27,7 @@ const AIABTestingPage: React.FC = () => {
       <Navigation /></Navigation>"
       <main className="container mx-auto px-4 py-16 pt-24"></main>"
         <section className="text-center mb-16"></section>"
-          <h1 className="text-5xl,"
-  md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse"></h1>
+          <h1 className="text-5xl," md:text-6xl font-bold text-white mb-6 cyber-text-3d neon-pulse"></h1>
             AI A/B Testing Platform;
           </h1>"
           <p className="text-xl text-cyan-400 mb-8 font-medium neon-pulse"></p>
@@ -56,16 +55,13 @@ const AIABTestingPage: React.FC = () => {
         </section>
 "
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
+          <h2 className="text-3xl," md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
             A/B Testing Features;
           </h2>"
           <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>)
+  md:grid-cols-2," lg:grid-cols-4 gap-8"></div>)
             {features.map((feature, index) => (}"
-              <div key={index} className="cyber-card p-6,"
-  hover:scale-105 transition-all duration-300"></div>"
+              <div key={index} className="cyber-card p-6," hover:scale-105 transition-all duration-300"></div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>
                 </div>"

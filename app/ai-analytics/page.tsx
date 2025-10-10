@@ -15,7 +15,6 @@ const AiAnalyticsPage: React.FC = () => {
     },
     {
       icon: BarChart,
-<<<<<<< HEAD
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
@@ -31,16 +30,6 @@ const AiAnalyticsPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-=======
-      title: 'Real-Time Dashboards',
-      description: 'Monitor your business metrics in real-time with customizable, interactive dashboards.',
-      benefits: ['Live data updates', 'Custom widgets', 'Interactive charts', 'Mobile responsive']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Performance Optimization',
-      description: 'Optimize your business performance with AI-driven recommendations and insights.',
-      benefits: ['Performance tracking', 'Optimization suggestions', 'ROI analysis', 'Growth strategies']
     },
     {
       icon: Zap,
@@ -49,10 +38,10 @@ const AiAnalyticsPage: React.FC = () => {
       benefits: ['High-speed processing', 'Scalable infrastructure', 'Real-time analysis', 'Batch processing']
     },
     {
-      icon: Eye,
-      title: 'Visual Analytics',
-      description: 'Transform complex data into intuitive visualizations and interactive charts.',
-      benefits: ['Interactive charts', 'Custom visualizations', 'Data storytelling', 'Export capabilities']
+      icon: Globe,
+      title: 'Global Analytics',
+      description: 'Analyze data from multiple sources and locations with our global analytics platform.',
+      benefits: ['Multi-source data', 'Global insights', 'Cross-platform analysis', 'Unified reporting']
     },
     {
       icon: Shield,
@@ -100,7 +89,8 @@ const AiAnalyticsPage: React.FC = () => {
       title: 'Risk Management',
       description: 'Identify and mitigate business risks proactively',
       icon: '🛡️'
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
+    }
+  ];
     }
   ];
 
@@ -108,12 +98,7 @@ const AiAnalyticsPage: React.FC = () => {
     <>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Advanced AI-powered analytics solution for modern businesses." />
-        <meta name="keywords" content="AI analytics, artificial intelligence, data analytics, AI solutions, intelligent automation" />
-=======
         <meta name="description" content="Transform your data into actionable insights with our AI-powered analytics platform. Get real-time dashboards, predictive analytics, and automated reporting." />
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       </Helmet>
       
       <Navigation />

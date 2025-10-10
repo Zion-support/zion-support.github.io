@@ -106,16 +106,13 @@ Transform your business with cutting-edge computer vision technology. From objec
 
         {/* Features Section */}
         <section className="mb-16"></section>"
-          <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
+          <h2 className="text-3xl," md:text-4xl font-bold text-white mb-12 text-center neon-text"></h2>
 // Core Capabilities;
           </h2>"
           <div className="grid grid-cols-1,
-  md:grid-cols-2,"
-  lg:grid-cols-4 gap-8"></div>
+  md:grid-cols-2," lg:grid-cols-4 gap-8"></div>
             {features.map((feature, index) => ()}"
-          <div key={index} className="cyber-card p-6,"
-  hover:scale-105 transition-all duration-300"></div>"
+          <div key={index} className="cyber-card p-6," hover:scale-105 transition-all duration-300"></div>"
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl flex items-center justify-center mb-6 mx-auto"></div>"
                   <feature.icon className="w-8 h-8 text-white" /></feature>"
                 <h3 className="text-xl font-bold text-white mb-4 text-center neon-text"></h3>
@@ -133,11 +130,9 @@ Transform your business with cutting-edge computer vision technology. From objec
                 </ul>
         {/* Applications Section */}
             Industry Applications;"
-          <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-8"></div>
+          <div className="grid grid-cols-1," md:grid-cols-2 gap-8"></div>
             {applications.map((application, index) => ()}"
-          <div key={index} className="quantum-card p-8,"
-  hover:scale-105 transition-all duration-300"></div>"
+          <div key={index} className="quantum-card p-8," hover:scale-105 transition-all duration-300"></div>"
                 <div className="flex items-center mb-6"></div>"
                   <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4"></div>"
                     <application.icon className="w-6 h-6 text-white" /></application>"
@@ -154,8 +149,7 @@ Transform your business with cutting-edge computer vision technology. From objec
                       {useCase}
 {/* Pricing Section */}
             Choose Your Plan;"
-          <div className="grid grid-cols-1,"
-  md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
+          <div className="grid grid-cols-1," md:grid-cols-3 gap-8 max-w-6xl mx-auto"></div>
             {pricing.map((plan, index) => ()}
           <div key={index} className={/* TODO: Fix JSX expression */}
   hover:scale-105 transition-all duration-300 ${plan.popular ? 'ring-2 ring-cyan-400' : ''}`}></div>
@@ -195,8 +189,7 @@ Most Popular;
           "
           <section className="text-center"></section>"
           <div className="cyber-card p-12 max-w-4xl mx-auto"></div>"
-            <h2 className="text-3xl,"
-  md:text-4xl font-bold text-white mb-6 neon-text"></h2>
+            <h2 className="text-3xl," md:text-4xl font-bold text-white mb-6 neon-text"></h2>
 Ready to See the Future?"
             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto"></p>
               Transform your business with AI-powered computer vision solutions that see, understand, and act.

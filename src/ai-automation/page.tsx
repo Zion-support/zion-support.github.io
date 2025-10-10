@@ -106,8 +106,7 @@ export default function AIAutomationPage() {
               Transform your business processes with intelligent automation that learns and adapts to your needs.
             </p>
             <a
-              href="/contact"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
+              href="/contact" className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-cyan-600 transition-colors inline-flex items-center"
             >
               <ArrowRight className="w-5 h-5 mr-2" />
               Contact Us

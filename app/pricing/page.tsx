@@ -66,10 +66,6 @@ const PricingPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <section className="py-20 px-4">
@@ -139,7 +135,6 @@ const PricingPage: React.FC = () => {
           </div>
         </section>
       </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
 =======
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
@@ -152,7 +147,6 @@ const PricingPage: React.FC = () => {
             </p>
           </div>
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
 
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -295,12 +289,7 @@ const PricingPage: React.FC = () => {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-    </>
-=======
     </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
   );
 };
 
