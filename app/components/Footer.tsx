@@ -108,7 +108,26 @@ const Footer: React.FC = memo(() => {
     { name: 'Zion AI Fraud Detector', url: '/zion-ai-fraud-detector', description: 'Fraud detection' },
     { name: 'Zion AI Customer Service Pro', url: '/zion-ai-customer-service-pro', description: 'Advanced customer service' },
     { name: 'Zion AI Marketing Automation', url: '/zion-ai-marketing-automation', description: 'Marketing AI' },
-    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' }
+    { name: 'Zion AI Document AI', url: '/zion-ai-document-ai', description: 'Document processing' },
+    { name: 'Zion Quantum Optimizer', url: '/zion-quantum-optimizer', description: 'Quantum computing solutions' },
+    { name: 'Zion Neural Interface', url: '/zion-neural-interface', description: 'Brain-computer interface' },
+    { name: 'Zion Holographic Workspace', url: '/zion-holographic-workspace', description: '3D spatial computing' },
+    { name: 'Zion 5G Network Optimizer', url: '/zion-5g-network-optimizer', description: '5G network management' },
+    { name: 'Zion Blockchain Analytics Pro', url: '/zion-blockchain-analytics-pro', description: 'Blockchain intelligence' },
+    { name: 'Zion Autonomous Vehicle AI', url: '/zion-autonomous-vehicle-ai', description: 'Autonomous systems' },
+    { name: 'Zion Space Analytics', url: '/zion-space-analytics', description: 'Space technology solutions' },
+    { name: 'Zion Robotics Controller', url: '/zion-robotics-controller', description: 'AI robotics platform' },
+    { name: 'Zion Biotech Analyzer', url: '/zion-biotech-analyzer', description: 'Biotechnology AI' },
+    { name: 'Zion Climate Solutions', url: '/zion-climate-solutions', description: 'Environmental AI' },
+    { name: 'Zion Financial Crime Detector', url: '/zion-financial-crime-detector', description: 'Financial security AI' },
+    { name: 'Zion Drug Discovery Pro', url: '/zion-drug-discovery-pro', description: 'Pharmaceutical AI' },
+    { name: 'Zion Agricultural Intelligence', url: '/zion-agricultural-intelligence', description: 'Smart farming AI' },
+    { name: 'Zion Energy Grid Manager', url: '/zion-energy-grid-manager', description: 'Smart grid AI' },
+    { name: 'Zion 3D Generation Studio', url: '/zion-3d-generation-studio', description: '3D content creation' },
+    { name: 'Zion Holographic Workspace Pro', url: '/zion-holographic-workspace-pro', description: 'Advanced spatial computing' },
+    { name: 'Zion Cybersecurity Monitor', url: '/zion-cybersecurity-monitor', description: 'AI security monitoring' },
+    { name: 'Zion API Manager Pro', url: '/zion-api-manager-pro', description: 'API management platform' },
+    { name: 'Zion Content Studio Pro', url: '/zion-content-studio-pro', description: 'Advanced content creation' }
   ];
 
   const companyLinks = [

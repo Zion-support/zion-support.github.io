@@ -190,15 +190,20 @@ const Navigation: React.FC = () => {
 
   const emergingTech = [
     { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
     { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
     { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
     { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
     { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
     { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' },
-    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
     { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
     { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
-    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
+    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' },
+    { name: 'Neuromorphic Computing', href: '/neuromorphic-computing', icon: Brain, description: 'Brain-inspired AI' },
+    { name: 'Space Technology', href: '/space-technology', icon: Globe, description: 'Satellite & space solutions' },
+    { name: 'Digital Twin Platform', href: '/digital-twin-platform', icon: Monitor, description: 'Virtual asset modeling' },
+    { name: 'Holographic Computing', href: '/holographic-computing', icon: Monitor, description: '3D spatial computing' },
+    { name: 'Biometric Security', href: '/biometric-security', icon: Shield, description: 'Advanced authentication' }
   ];
 
   return (
