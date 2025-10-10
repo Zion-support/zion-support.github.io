@@ -1,15 +1,13 @@
 'use client';
 
-import React from 'react';
-import { ArrowRight, CheckCircle, BarChart, Target, Users, Zap, Brain, Globe, Rocket, Shield, Settings, Clock } from 'lucide-react';
+import React, { memo, useMemo } from 'react';
+import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code, FileText, Calculator, Scale, Package, ShoppingCart, Music, Eye, Factory, GraduationCap } from 'lucide-react';
 import Header from './components/Header';
-
-import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin, Brain, Zap, Target, BarChart, Shield, Users, Globe, Clock, Award, Rocket, TrendingUp, Building, Activity, Settings, Database, Heart, Home, Video, Palette, Code } from 'lucide-react';
-
 import Footer from './components/Footer';
+import type { MicroSAASService, AIService, ITService, Testimonial, Stat } from '../../src/types';
 
 // Service data
-const microSAASServices = [
+const microSAASServices: MicroSAASService[] = [
   {
     name: "AI Project Manager Pro",
     description: "Intelligent project management with predictive analytics and automated resource allocation",
@@ -312,7 +310,7 @@ const microSAASServices = [
   }
 ];
 
-const aiServices = [
+const aiServices: AIService[] = [
   {
     name: "AI Drug Discovery Pro",
     description: "Accelerate pharmaceutical research with AI-powered molecular analysis and drug interaction prediction",
@@ -395,7 +393,7 @@ const aiServices = [
   }
 ];
 
-const itServices = [
+const itServices: ITService[] = [
   {
     name: "Cloud Migration & Setup",
     description: "Seamless cloud migration with zero downtime and comprehensive security",
@@ -506,7 +504,67 @@ const itServices = [
   }
 ];
 
-const HomePage: React.FC = () => {
+// Testimonials data
+const testimonials: Testimonial[] = [
+  {
+    content: "Zion Tech Group transformed our business with their AI solutions. We've seen a 300% increase in efficiency and 70% cost reduction.",
+    name: "Sarah Johnson",
+    role: "CEO",
+    company: "TechCorp Inc.",
+    avatar: "SJ"
+  },
+  {
+    content: "The AI-powered analytics dashboard has revolutionized our decision-making process. The insights are incredible.",
+    name: "Michael Chen",
+    role: "CTO",
+    company: "DataFlow Systems",
+    avatar: "MC"
+  },
+  {
+    content: "Outstanding IT infrastructure support. They've kept our systems running 99.9% of the time with zero downtime.",
+    name: "Emily Rodriguez",
+    role: "IT Director",
+    company: "Global Enterprises",
+    avatar: "ER"
+  }
+];
+
+// Stats data
+const stats: Stat[] = [
+  {
+    number: "500+",
+    label: "Projects Completed",
+    icon: Target
+  },
+  {
+    number: "99.9%",
+    label: "Uptime Guarantee",
+    icon: Shield
+  },
+  {
+    number: "24/7",
+    label: "Support Available",
+    icon: Clock
+  },
+  {
+    number: "50+",
+    label: "Expert Team Members",
+    icon: Users
+  }
+];
+
+const HomePage: React.FC = memo(() => {
+  // Memoize expensive calculations
+  const popularServices = useMemo(() => 
+    microSAASServices.filter(service => service.popular), 
+    []
+  );
+
+  const enterpriseServices = useMemo(() => 
+    aiServices.filter(service => service.enterprise), 
+    []
+  );
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <Header />
@@ -564,7 +622,13 @@ const HomePage: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Our Services</h2>
             <p className="text-xl text-gray-300">Comprehensive AI and IT solutions for modern enterprises</p>
           </div>
-<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
+          
+          {/* Micro SAAS Services */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold text-white mb-8 text-center">Micro SAAS Solutions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {microSAASServices.map((service, index) => (
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300">
                   <div className="text-center mb-4">
                     <div className="text-4xl mb-4">🤖</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
@@ -908,6 +972,8 @@ const HomePage: React.FC = () => {
 <Footer />
     </div>
   );
-};
+});
+
+HomePage.displayName = 'HomePage';
 
 export default HomePage;

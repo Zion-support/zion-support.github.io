@@ -14,6 +14,7 @@ import PerformanceOptimizer from './src/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './src/components/AccessibilityEnhancer';
 import { usePerformanceMonitor } from './src/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './src/components/Analytics';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
 
 // Structured data for SEO
 const structuredData = {
@@ -135,6 +136,7 @@ const App: React.FC = memo(() => {
                   <Footer />
                 </div>
                 </Router>
+                <PerformanceMonitor />
               </AppWithPerformanceMonitoring>
             </AccessibilityEnhancer>
           </PerformanceOptimizer>
