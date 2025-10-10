@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components
+import Footer from '../components
 
 const DemoPage: React.FC = () => {
   const [selectedDemo, setSelectedDemo] = useState('ai-analytics');
@@ -30,7 +30,7 @@ const DemoPage: React.FC = () => {
       features: [
         'Natural language understanding',
         'Multi-language support',
-        '24/7 availability',
+        '24
         'Seamless handoff to humans'
       ],
       icon: Users,
@@ -93,187 +93,169 @@ const DemoPage: React.FC = () => {
 
   const selectedDemoData = demos.find(demo => demo.id === selectedDemo);
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Live Demos - Zion Tech Group | See Our Solutions in Action</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business with real-time demonstrations." />
-        <meta name="keywords" content="AI demos, technology demos, live demonstrations, AI solutions, cloud services, cybersecurity demos" />
-      </Helmet>
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
-      <Navigation />
+        <title>Live Demos - Zion Tech Group | See Our Solutions in Action<
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business with real-time demonstrations." 
+        <meta name="keywords" content="AI demos, technology demos, live demonstrations, AI solutions, cloud services, cybersecurity demos" 
+      <
       
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <Navigation 
+      
+      {/* Hero Section *
+      <section className="relative py-20 px-4 overflow-hidden">)
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} 
         <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
             See It in
             <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Action
-            </span>
-          </h1>
+
+            <
+          <
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
             Experience our AI and IT solutions through interactive demos. 
             See exactly how our technology can transform your business.
-          </p>
+          <
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center">
-              <Play className="w-5 h-5 mr-2" />
-              Start Demo
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              
               Schedule Live Demo
-            </button>
-          </div>
-        </div>
-      </section>
+            <
+          <
+        <
+      <
 
-      {/* Demo Selection */}
+      {/* Demo Selection *
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Demo</h2>
-            <p className="text-xl text-gray-300">Select a solution to see it in action</p>
-          </div>
+            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Demo<
+            <p className="text-xl text-gray-300">Select a solution to see it in action<
+          <
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {demos.map((demo) => (
-              <button
-                key={demo.id}
-                onClick={() => setSelectedDemo(demo.id)}
+          <div className="grid grid-cols-1 md:grid-cols-2 l,
+    g:grid-cols-4 gap-6">
+            {demos.map((demo) => (<button
+                key = { demo.id };)
+                onClick = { () => setSelectedDemo(demo.id) };
                 className={`p-6 rounded-xl border transition-all duration-300 text-left ${
                   selectedDemo === demo.id
-                    ? 'border-purple-500 bg-purple-500/10'
-                    : 'border-white/10 bg-white/5 hover:bg-white/10'
+                    ? 'border-purple-500 bg-purple-500
+                    : 'border-white/10 bg-white/5 hover:bg-white
                 }`}
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4 flex items-center justify-center">
-                  <demo.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{demo.title}</h3>
-                <p className="text-gray-300 text-sm mb-3">{demo.description}</p>
+                  <demo.icon className="w-6 h-6 text-white" 
+                <
+                <h3 className="text-lg font-semibold text-white mb-2">{demo.title}<
+                <p className="text-gray-300 text-sm mb-3">{demo.description}<
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-400">{demo.category}</span>
-                  <span className="text-xs text-cyan-400">{demo.duration}</span>
-                </div>
-              </button>
+                  <span className="text-xs text-gray-400">{demo.category}<
+                  <span className="text-xs text-cyan-400">{demo.duration}<
+                <
+              <
             ))}
-          </div>
-        </div>
-      </section>
+          <
+        <
+      <
 
-      {/* Selected Demo Details */}
-      {selectedDemoData && (
-        <section className="py-16 px-4">
+      {/* Selected Demo Details *
+      {selectedDemoData && (<section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
+            <div className="bg-white/5 backdrop-blur-sm border border-white
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <div className="flex items-center mb-6">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mr-4 flex items-center justify-center">
-                      <selectedDemoData.icon className="w-8 h-8 text-white" />
-                    </div>
+                      <selectedDemoData.icon className="w-8 h-8 text-white" 
+                    <
                     <div>
-                      <h3 className="text-2xl font-bold text-white">{selectedDemoData.title}</h3>
-                      <p className="text-gray-400">{selectedDemoData.duration}</p>
-                    </div>
-                  </div>
+                      <h3 className="text-2xl font-bold text-white">{selectedDemoData.title}<
+                      <p className="text-gray-400">{selectedDemoData.duration}<
+                    <
+                  <
                   
-                  <p className="text-gray-300 mb-6">{selectedDemoData.description}</p>
+                  <p className="text-gray-300 mb-6">{selectedDemoData.description}<
                   
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
-                    <ul className="space-y-2">
-                      {selectedDemoData.features.map((feature, index) => (
-                        <li key={index} className="flex items-center">
-                          <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" />
-                          <span className="text-gray-300">{feature}</span>
-                        </li>
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Features<
+                    <ul className="space-y-2">)
+                      {selectedDemoData.features.map((feature, index) => (<li key={index} className="flex items-center">
+                          <CheckCircle className="w-5 h-5 text-green-400 mr-2 flex-shrink-0" 
+                          <span className="text-gray-300">{feature}<
+                        <)
                       ))}
-                    </ul>
-                  </div>
+                    <
+                  <
                   
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
-                      <Play className="w-5 h-5 mr-2" />
-                      Start Demo
-                    </button>
-                    <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
+                  <div className="flex flex-col sm: flex-row gap-4">
+                    <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hove,
+    r:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
+                      
                       Schedule Live Demo
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </button>
-                  </div>
-                </div>
-                
-                <div className="bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-8 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Play className="w-12 h-12 text-white" />
-                    </div>
-                    <h4 className="text-xl font-semibold text-white mb-2">Interactive Demo</h4>
-                    <p className="text-gray-300">Click play to experience this solution in action</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+                      
+                    <div className="w-24 h-24 bg-white
+                      <Play className="w-12 h-12 text-white" 
+                    <
+                    <h4 className="text-xl font-semibold text-white mb-2">Interactive Demo<
+                    <p className="text-gray-300">Click play to experience this solution in action<
+                  <
+                <
+              <
+            <
+          <
+        <
       )}
 
-      {/* Testimonials */}
+      {/* Testimonials *
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-gray-300">See how our demos led to successful implementations</p>
-          </div>
+            <h2 className="text-4xl font-bold text-white mb-4">What Our Clients Say<
+            <p className="text-xl text-gray-300">See how our demos led to successful implementations<
+          <
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6">
-                <div className="flex items-center mb-4">
+          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
+            {testimonials.map((testimonial), index) => (<div key={index} className="bg-white/5 backdrop-blur-sm border border-white
+                <div className="flex items-center mb-4">)
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <blockquote className="text-gray-300 mb-4 italic">
                   "{testimonial.quote}"
-                </blockquote>
+                <
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </div>
+                  <div className="font-semibold text-white">{testimonial.name}<
+                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}<
+                <
+              <
             ))}
-          </div>
-        </div>
-      </section>
+          <
+        <
+      <
 
-      {/* CTA Section */}
+      {/* CTA Section *
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to See More?
-          </h2>
+          <
           <p className="text-xl text-gray-300 mb-8">
             Schedule a personalized demo with our experts. We'll show you exactly 
             how our solutions can address your specific business needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
               Schedule Live Demo
-            </button>
-            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+            <
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hove,
+    r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
               Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
+            <
+          <
+        <
+      <
 
-      <Footer />
-    </div>
+      <Footer 
+    <
   );
 };
 

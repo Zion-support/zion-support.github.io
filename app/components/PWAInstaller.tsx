@@ -11,23 +11,22 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
-    '24/7 technical support',
+    '24
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>PWAInstaller | Zion Tech Group</title>
-        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" />
-      </Helmet>
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      
+        <title>PWAInstaller | Zion Tech Group<
+        <meta name="description" content="Professional PWAInstaller services by Zion Tech Group. Advanced AI and IT solutions for your business." 
+        <meta name="keywords" content="PWAInstaller, AI solutions, IT services, Zion Tech Group, pwainstaller" 
+      <
 
-        </div>
-      </section>
+        <
+      <
 
 };
 
-export default PWAInstallerPage;
+export default PWAInstallerPage;)

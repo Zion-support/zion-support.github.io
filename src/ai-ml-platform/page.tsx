@@ -4,18 +4,18 @@ import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, Shield, Brain, Phone} from 'lucide-react';
 import { Brain, TrendingUp, Shield, Users, Clock, Star } from 'lucide-react';
 
-
 import { Link } from 'react-router-dom';
 
 'use client';
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components
+import Footer from '../components
 
 const AIMLPlatformPage: React.FC = () => {
   const features = [
     {
-      icon: Brain,
+      ico,
+    n: Brain,
       title: 'Complete ML Platform',
       description: 'End-to-end machine learning platform with model development, training, and deployment',
       benefits: ['Rapid model development', 'Automated training', 'Seamless deployment']
@@ -38,8 +38,9 @@ const AIMLPlatformPage: React.FC = () => {
   const pricingPlans = [
       name: 'Developer',
       price: '$999',
-      period: '/month',
-      description: 'Perfect for individual developers',
+      period: '
+      descriptio,
+    n: 'Perfect for individual developers',
       features: [
         'Up to 5 models',
         'Basic ML tools',
@@ -48,12 +49,13 @@ const AIMLPlatformPage: React.FC = () => {
         'Basic analytics'
       ],
       popular: false
-      name: 'Team',
+      nam,
+    e: 'Team',
       price: '$2,499',
       description: 'Ideal for development teams',
   const features = [];
   return (
-    {// TODO: Add content;}
+    {/
 
 };
   ico,
@@ -97,7 +99,8 @@ const AIMLPlatformPage: React.FC = () => {
         'Advanced analytics',
         'Team collaboration'
       popular: true
-      name: 'Enterprise',
+      nam,
+    e: 'Enterprise',
       price: '$4,999',
       description: 'For large organizations',
         'Unlimited models',
@@ -112,7 +115,7 @@ const AIMLPlatformPage: React.FC = () => {
   n: 'For large organizations',
 'Unlimited models',
         'Premium ML features',
-        '24/7 support',
+        '24
         'Custom compute',
         'Custom analytics',
         'White-label options',
@@ -120,66 +123,61 @@ const AIMLPlatformPage: React.FC = () => {
 
   const stats = [
   const stats = [
-  // TOD,
+  /
   O: Add items;
 ];;
 
-    { icon: Users, value: '500+', label: 'Data Scientists' },
+    { ico,
+    n: Users, value: '500+', label: 'Data Scientists' },
     { icon: TrendingUp, value: '95%', label: 'Model Accuracy' },
     { icon: Clock, value: '70%', label: 'Faster Development' },
-    { icon: Star, value: '4.9/5', label: 'User Rating' }
+    { icon: Star, value: '4.9
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI ML Platform | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." />
-      </Helmet>
       
-      <Navigation />
-      
-      <div className="container mx-auto px-4 py-16">
+        <title>AI ML Platform | Zion Tech Group<
+        <meta name="description" content="Advanced AI ML platform solutions by Zion Tech Group." 
+      <
+
         <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">AI ML Platform<
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI ML platform solutions that will transform your business.
-          </p>
+          <
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
-            </button>
+            <
             <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
               Learn More
-          </div>
-      
-      <Footer />
-      <main className="container mx-auto px-4 py-16 pt-24">
+          <
+
         <section className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-          </h1>
+
+          <
           <p className="text-xl text-cyan-400 mb-8 font-medium">
             Coming Soon
-          </p>
+          <
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
+            <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hove,
+    r:bg-cyan-600 transition-colors">
 
-// Contact Us;
-          </button>"
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg,
+/
+          <
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg),
   hover:bg-cyan-400,"
-  hover:text-slate-900 transition-colors"></button>
+  hover:text-slate-900 transition-colors"><
 Learn More;
-          </div>
+          <
 
-      <Footer />
-    </div>
+      <Footer 
+    <
 
   );
 };
 
-
 export default $1;
 export default AiMlPlatformPage;
-
 

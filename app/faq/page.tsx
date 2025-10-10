@@ -4,7 +4,8 @@ import { Helmet } from 'react-helmet-async';
 const FAQPage: React.FC = () => {
   const faqs = [
     {
-      question: "What services does Zion Tech Group offer?",
+      questio,
+    n: "What services does Zion Tech Group offer?",
       answer: "We offer comprehensive AI-powered solutions including enterprise AI, quantum computing, autonomous systems, digital transformation, cloud services, cybersecurity, and custom micro SaaS applications."
     },
     {
@@ -25,11 +26,11 @@ const FAQPage: React.FC = () => {
     },
     {
       question: "Do you provide ongoing support?",
-      answer: "Yes, we offer comprehensive support and maintenance services including 24/7 monitoring, regular updates, security patches, and technical assistance."
+      answer: "Yes, we offer comprehensive support and maintenance services including 24
     },
     {
       question: "What technologies do you use?",
-      answer: "We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI/ML frameworks."
+      answer: "We use cutting-edge technologies including React, TypeScript, Python, TensorFlow, PyTorch, AWS, Azure, Docker, Kubernetes, and various AI
     },
     {
       question: "How do I get started?",
@@ -37,68 +38,66 @@ const FAQPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
-      <Helmet>
-        <title>Frequently Asked Questions - Zion Tech Group</title>
-        <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." />
-      </Helmet>
+  return (<div>
+        <title>Frequently Asked Questions - Zion Tech Group<
+        <meta name="description" content="Find answers to common questions about our AI and IT solutions, services, development process, and how we can help transform your business." 
+      <
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
               Frequently Asked Questions
-            </h1>
+            <
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Find answers to common questions about our AI and IT solutions, 
               services, and how we can help transform your business.
-            </p>
-          </div>
+            <
+          <
 
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {faqs.map((faq, index) => (
-                <div
-                  key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20"
+            <div className="space-y-6">)
+              {faqs.map((faq, index) => (<div
+                  key = { index };
+                  className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white
                 >
                   <h3 className="text-xl font-semibold text-white mb-3">
                     {faq.question}
-                  </h3>
+                  <
                   <p className="text-gray-300 leading-relaxed">
                     {faq.answer}
-                  </p>
-                </div>
+                  <
+                <)
               ))}
-            </div>
+            <
 
             <div className="mt-16 text-center">
               <h2 className="text-3xl font-bold text-white mb-6">
                 Still have questions?
-              </h2>
+              <
               <p className="text-xl text-gray-300 mb-8">
                 Our team is here to help. Contact us for personalized assistance.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
-                  href="/contact"
+                  href="
                   className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
                 >
                   Contact Us
-                </a>
+                <
                 <a
-                  href="/consultation"
-                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+                  href="
+                  className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hove,
+    r:bg-purple-700 transition-colors"
                 >
                   Free Consultation
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+                <
+              <
+            <
+          <
+        <
+      <
+    <
   );
 };
 

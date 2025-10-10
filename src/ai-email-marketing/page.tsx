@@ -8,7 +8,8 @@ import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, Tren
 const AIEmailMarketingPage: React.FC = () => {
   const _features = [
     {
-      icon: Mail,
+      ico,
+    n: Mail,
       title: 'AI Content Generation',
       description:     ,
 $4},
@@ -25,8 +26,9 @@ icon$5: Users,
       title: 'Behavioral Triggers',
       description:       ,
 icon$5: TrendingUp,
-      title: 'A/B Testing',
-      description:     ,
+      title: 'A
+      descriptio,
+    n:     ,
 $4}
   ];
 
@@ -48,29 +50,32 @@ $4}
   const pricing = [
       name: 'Starter',
       price: '$29',
-      period: '/month',
-      description: 'Perfect for small businesses',
+      period: '
+      descriptio,
+    n: 'Perfect for small businesses',
       features: [
         '1,000 subscribers',
-        '10,000 emails/month',
+        '10,000 emails
         'Basic AI features',
         'Email templates',
         'Basic analytics',
         'Email support'
       ],
       popular: false
-      name: 'Professional',
+      nam,
+    e: 'Professional',
       price: '$79',
       description: 'Ideal for growing businesses',
         '10,000 subscribers',
-        '100,000 emails/month',
+        '100,000 emails
         'Advanced AI features',
         'Custom templates',
         'Advanced analytics',
         'Priority support',
-        'A/B testing'
+        'A
       popular: true
-      name: 'Enterprise',
+      nam,
+    e: 'Enterprise',
       price: '$199',
       description: 'For large organizations',
         'Unlimited subscribers',
@@ -82,36 +87,32 @@ $4}
         'Advanced automation'
 
 import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Navigation from '../components
+import Footer from '../components
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Email Marketing | Zion Tech Group</title>
-        <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." />
-      </Helmet>
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       
-      <Navigation />
-      
-      <div className="container mx-auto px-4 py-16">
+        <title>AI Email Marketing | Zion Tech Group<
+        <meta name="description" content="Advanced AI email marketing solutions by Zion Tech Group." 
+      <
+
         <div className="text-center">
-          <h1 className="text-5xl font-bold text-white mb-6">AI Email Marketing</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">AI Email Marketing<
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Coming Soon - Advanced AI email marketing solutions that will transform your business.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <button className="bg-cyan-500 text-white px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors">
               Contact Us
-            </button>
-            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-slate-900 transition-colors">
+            <
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hove,
+    r:text-slate-900 transition-colors">
               Learn More
-          </div>
+          <
       
-      <Footer />
+      <Footer)
   );
 };
-
 
 export default $1;
 import { Helmet } from 'react-helmet-async';

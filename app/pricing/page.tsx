@@ -8,10 +8,12 @@ import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 const PricingPage: React.FC = () => {
   const plans = [
     {
-      name: 'Starter',
+      nam,
+    e: 'Starter',
       price: '$2,999',
-      period: '/month',
-      description: 'Perfect for small businesses getting started with AI',
+      period: '
+      descriptio,
+    n: 'Perfect for small businesses getting started with AI',
       features: [
         'Basic AI Integration',
         'Cloud Infrastructure Setup',
@@ -24,8 +26,9 @@ const PricingPage: React.FC = () => {
     {
       name: 'Professional',
       price: '$7,999',
-      period: '/month',
-      description: 'Ideal for growing companies with advanced needs',
+      period: '
+      descriptio,
+    n: 'Ideal for growing companies with advanced needs',
       features: [
         'Advanced AI Solutions',
         'Custom Development',
@@ -45,7 +48,7 @@ const PricingPage: React.FC = () => {
       features: [
         'Custom AI Solutions',
         'Dedicated Team',
-        '24/7 Support',
+        '24
         'Real-time Monitoring',
         'Custom Integrations',
         'White-label Options',
@@ -56,15 +59,12 @@ const PricingPage: React.FC = () => {
     }
   ];
 
-  return (
-    <>
-      <Helmet>
-        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
-        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
-        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />
-      </Helmet>
-      </div>
-    </>
+  return (<div>
+        <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing<
+        <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." 
+        <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" 
+      <
+    <)
   );
 };
 

@@ -6,41 +6,39 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [
     {
-      image: '/api/placeholder/600/400'
+      imag,
+    e: '/api/placeholder/600
     },
     {
       title: 'Cloud Migration for Financial Services',
       client: 'FinanceCorp',
       industry: 'Financial Services',
-      image: '/api/placeholder/600/400'
+      image: '/api/placeholder/600
     },
     {
       title: 'Cybersecurity Enhancement for Healthcare',
       client: 'MediCare Plus',
       industry: 'Healthcare',
-      image: '/api/placeholder/600/400'
+      image: '/api/placeholder/600
     }
   ];
 
-  return (
-    <>
-      <Helmet>
-        <title>Case Studies | Zion Tech Group</title>
-        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." />
-        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" />
-      </Helmet>
+  return (<div>
+        <title>Case Studies | Zion Tech Group<
+        <meta name="description" content="Explore our successful case studies and see how Zion Tech Group has helped businesses transform with AI and IT solutions." 
+        <meta name="keywords" content="case studies, success stories, AI solutions, IT services, business transformation" 
+      <
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            </p>
-          </div>
-        </section>
-
+            <
+          <
+        <)
               ))}
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
+            <
+          <
+        <
+      <
+    <
   );
 };
 
