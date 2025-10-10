@@ -77,8 +77,6 @@ interface FormStatus {
     'IT Consulting',
     'Other'
   ];
-
-              </label>
               <input
                 type="text"
                 id="name"

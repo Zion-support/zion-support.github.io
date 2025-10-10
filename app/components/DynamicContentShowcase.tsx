@@ -92,31 +92,14 @@ const DynamicContentShowcase: React.FC = () => {
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
-<<<<<<< HEAD
       content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-=======
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       rating: 5
     },
     {
       name: 'Emily Rodriguez',
-<<<<<<< HEAD
       company: 'CloudFirst Solutions',
       role: 'VP Engineering',
       content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-=======
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
       rating: 5
     }
   ];
@@ -125,7 +108,6 @@ const DynamicContentShowcase: React.FC = () => {
     if (!isPlaying) return;
     
     const timer = setInterval(() => {
-<<<<<<< HEAD
       setCurrentIndex((prev) => (prev + 1) % features.length);
     }, 3000);
 
@@ -142,53 +124,8 @@ const DynamicContentShowcase: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
           </p>
-=======
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-
-  const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
-            and interactive showcases that bring your business to life.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Play className="w-5 h-5" />
-              Start Demo
-            </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <ArrowRight className="w-5 h-5" />
-              Learn More
-            </button>
-          </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
 
-<<<<<<< HEAD
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -196,7 +133,6 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <feature.icon className="h-6 w-6 text-white" />
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
             </div>
@@ -237,13 +173,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </div>
-=======
-            ))}
-          </div>
-        </div>
-      </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
       {/* Features Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -403,7 +332,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     </div>
   );
 };
