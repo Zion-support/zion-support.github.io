@@ -5,10 +5,14 @@ import {Link}}from 'react-router-dom';
 import {Search, Phone, Mail, MessageCircle, Clock, CheckCircle, ArrowRight}}from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const SupportPage: React.FC = () => {,
 =======
 const SupportPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+const SupportPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
   const [searchQuery, setSearchQuery] = useState('');
 
   const faqs = [
@@ -38,8 +42,11 @@ const SupportPage: React.FC = () => {
       answer: 'We work with all major cloud platforms (AWS, Azure, GCP), AI frameworks (TensorFlow, PyTorch), and modern development stacks.'
     }
   ];
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
   const supportChannels = [
     {title: 'Email Support',
       description: 'Get help via email within 24 hours',

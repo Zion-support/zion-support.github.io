@@ -2,6 +2,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {,
@@ -15,6 +16,11 @@ import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
   const features = [
     {
       title: 'AI-Powered Solutions',
@@ -35,9 +41,18 @@ const ContentPromotionBanner: React.FC = () => {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+
+  const benefits = [
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 
   return(<div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">)</div>
       <div className="max-w-7xl mx-auto">
@@ -58,6 +73,7 @@ const ContentPromotionBanner: React.FC = () => {
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <p className="text-purple-100 text-sm">{feature.description</p>}</p>
 =======
               <p className="text-purple-100 text-sm">{feature.description}</p>
@@ -73,6 +89,9 @@ const ContentPromotionBanner: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+              <p className="text-purple-100 text-sm">{feature.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
             </div>
           ))}
         </div>

@@ -22,9 +22,12 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
     {title: 'Portability',
       description: 'Receive your data in a structured format',
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Database;,},
     {title: 'Restriction',
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
       icon: Database
     },
     {
@@ -34,7 +37,13 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
       icon: Lock;,},
     {title: 'Objection',
       description: 'Object to certain types of processing',
+<<<<<<< HEAD
       icon: Shield;,}]
+=======
+      icon: Shield
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 
   const contactInfo = {email: 'privacy@ziontechgroup.com',
     phone: '+1 (302) 464-0950',
@@ -44,9 +53,13 @@ import {Shield, Lock, Eye, Database, User, Mail, Phone, Calendar, CheckCircle, A
         <title>Privacy Policy - Zion Tech Group</title>
 =======
     address: '364 E Main St STE 1008, Middletown, DE 19709'
+<<<<<<< HEAD
   }
 
 
+=======
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
   return (
     <>
       <Helmet></Helmet>

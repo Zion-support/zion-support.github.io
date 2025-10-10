@@ -4,11 +4,15 @@ import React, {useState, useEffect}from 'react';
 import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
 =======
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Cloud, Zap, Shield, ChevronLeft, ChevronRight } from 'lucide-react';
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+import { Cloud, Zap, Shield, ArrowLeft, ArrowRight } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 
 const ContentCarousel: React.FC = () => {,
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -16,6 +20,7 @@ const ContentCarousel: React.FC = () => {,
   const slides = [
     {
       id: 1,
+<<<<<<< HEAD
 <<<<<<< HEAD
       title: 'AI Solutions',
 <<<<<<< HEAD
@@ -46,6 +51,18 @@ const ContentCarousel: React.FC = () => {,
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       color: 'from-purple-500 to-pink-600'
+=======
+      title: 'AI Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence solutions.',
+      features: [
+        'Machine learning models',
+        'Natural language processing',
+        'Computer vision',
+        'Predictive analytics'
+      ],
+      icon: Zap,
+      color: 'from-blue-500 to-purple-600'
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
     },
     {
       id: 2,
@@ -72,12 +89,16 @@ const ContentCarousel: React.FC = () => {,
         'Performance monitoring'
       ],
       icon: Zap,
+<<<<<<< HEAD
       color: 'from-orange-500 to-red-600',},
     {id: 4,
 =======
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
       color: 'from-green-500 to-blue-600'
+=======
+      color: 'from-orange-500 to-red-600'
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
     },
     {
       id: 3,
@@ -96,6 +117,7 @@ const ContentCarousel: React.FC = () => {,
       icon: Shield,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       color: 'from-blue-500 to-indigo-600',}];
 =======
       color: 'from-red-500 to-orange-600'
@@ -107,6 +129,11 @@ const ContentCarousel: React.FC = () => {,
     }
   ];
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+      color: 'from-red-500 to-pink-600'
+    }
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
 
   useEffect(() => {const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);}, 5000);
@@ -140,6 +167,7 @@ const ContentCarousel: React.FC = () => {,
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
     <div className="relative w-full max-w-4xl mx-auto">
@@ -283,10 +311,61 @@ const ContentCarousel: React.FC = () => {,
         
         {/* Dots Indicator */}
         <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+=======
+  const currentSlideData = slides[currentSlide];
+  const IconComponent = currentSlideData.icon;
+
+  return (
+    <div className="relative w-full max-w-4xl mx-auto">
+      <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div className={`bg-gradient-to-r ${currentSlideData.color} p-8 text-white`}>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <div className="p-3 bg-white/20 rounded-xl">
+                <IconComponent className="w-8 h-8" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold">{currentSlideData.title}</h2>
+                <p className="text-lg opacity-90 mt-2">{currentSlideData.description}</p>
+              </div>
+            </div>
+            <div className="flex space-x-2">
+              <button
+                onClick={prevSlide}
+                className="p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors"
+                aria-label="Previous slide"
+              >
+                <ArrowLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="p-2 bg-white/20 rounded-lg hover:bg-white/30 transition-colors"
+                aria-label="Next slide"
+              >
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div className="p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {currentSlideData.features.map((feature, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span className="text-gray-700">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="flex justify-center space-x-2 pb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
+<<<<<<< HEAD
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
               }`}
@@ -294,6 +373,15 @@ const ContentCarousel: React.FC = () => {,
           ))}
         </div>
 >>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+              className={`w-3 h-3 rounded-full transition-colors ${
+                index === currentSlide ? 'bg-blue-500' : 'bg-gray-300'
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
       </div>
     </div>
   );
