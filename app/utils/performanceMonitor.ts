@@ -1,439 +1,130 @@
 'use client';
-/**
- * Advanced Performance Monitoring Utility;
- * Tracks Core Web Vitals and custom metrics;
- */
-interface PerformanceMetrics {
-  fcp?: number; // First Contentful Paint;
-  lcp?: number; // Largest Contentful Paint;
-  fid?: number; // First Input Delay;
-  cls?: number; // Cumulative Layout Shift;
-  ttfb?: number; // Time to First Byte;
-  fmp?: number; // First Meaningful Paint;
-  customMetrics: Record<string, number>;
-}
-class PerformanceMonitor {
-  private metrics: PerformanceMetrics = {,
-interface PerformanceMetrics {}
-  fcp?: number; // First Contentful Paint
-  lcp?: number; // Largest Contentful Paint
-  fid?: number; // First Input Delay
-  cls?: number; // Cumulative Layout Shift
-  ttfb?: number; // Time to First Byte
-  fmp?: number; // First Meaningful Paint
-  customMetrics: Record<string, number>;</strin>
-}
-class PerformanceMonitor {}
-  private metrics: PerformanceMetrics = {}
-    customMetrics: {}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-}
-class PerformanceMonitor {/* TODO: Fix JSX expression */}
-  s: {}
-  };
-  private,
-  observers: PerformanceObserver[] = [];
-  private isInitialized = false;
-  init(): void {}
-    if (this.isInitialized || typeof window === 'undefined') return;
-    this.isInitialized = true;
-    this.setupWebVitals();
-    this.setupCustomMetrics();,
-    this.setupResourceTiming();
-  init(): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Initialize performance observers;
-   */
-  private initializeObservers(): void {
-    try {
-      // Observe paint metrics;
-      if ('PerformanceObserver' in window) {
-        // First Contentful Paint;
-        this.observeEntry('paint', (entries) => {
-          entries.forEach((entry) => {
-            if (entry.name === 'first-contentful-paint') {
-  private initializeObservers(): void {}
-    try {}
-      // Observe paint metrics
-      if ('PerformanceObserver' in window) {}
-        // First Contentful Paint
-        this.observeEntry('paint', (entries) => {}
-          entries.forEach((entry) => {}
-            if (entry.name === 'first-contentful-paint') {}
-              this.recordMetric('FCP', entry.startTime);
-            }
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
+const PerformanceMonitor.tsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology that drives innovation and efficiency.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 
-        // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {)
-          const lastEntry = entries[entries.length - 1];)
-          if (lastEntry) {
-            this.recordMetric('LCP')
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime;
-            );
-          }
+  return (
+    <>
+      <Helmet>
+        <title>Performance Monitor.ts Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI solutions powered by cutting-edge technology." />
+      </Helmet>
 
-        // First Input Delay;
-        this.observeEntry('first-input', entries => {)
-          const firstInput = entries[0];)
-          if (firstInput && (firstInput as any).processingStart !== undefined) {
-        // Largest Contentful Paint
-        this.observeEntry('largest-contentful-paint', entries => {)}
-          const lastEntry = entries[entries.length - 1];
-          if (lastEntry) {}
-            this.recordMetric()
-              'LCP',
-              (lastEntry as any).renderTime || (lastEntry as any).loadTime || lastEntry.startTime
-            );
-          }
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Performance Monitor.ts Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI solutions powered by cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
-        // First Input Delay
-        this.observeEntry('first-input', entries => {)}
-          const firstInput = entries[0];
-          if (firstInput && (firstInput as any).processingStart !== undefined) {}
-            const fid = (firstInput as any).processingStart - firstInput.startTime;
-            this.recordMetric('FID', fid);
-          }
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
 
-        // Cumulative Layout Shift;
-        this.observeEntry('layout-shift', (entries) => {
-          let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {,
-            if (!(entry as any).hadRecentInput) {,
-        // Cumulative Layout Shift
-        this.observeEntry('layout-shift', (entries) => {}
-          let clsValue = 0;
-          entries.forEach((entry: PerformanceEntry) => {}
-            if (!(entry as any).hadRecentInput) {}
-              clsValue += (entry as any).value;
-            }
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-          if (clsValue > 0) {}
-            this.recordMetric('CLS', clsValue);
-  private initializeObservers(): void {/* TODO: Fix JSX expression */}
-            }
-          });
-        });
-        // Largest Contentful Paint;
-        this.observeEntry('largest-contentful-paint', entries => {/* TODO: Fix JSX expression */}
-          })
-        });
-        // First Input Delay;
-        this.observeEntry('first-input', entries => {/* TODO: Fix JSX expression */}
-          })
-        });
-        // Cumulative Layout Shift;
-        this.observeEntry('layout-shift', (entries) => {/* TODO: Fix JSX expression */}
-            }
-          });
-          if (clsValue > 0) {/* TODO: Fix JSX expression */}
-          }
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-      }
-    } catch (error) {}
-      logger.error('Failed to initialize performance observers', error as Error);
-    }
-  }
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {
-    try {,
-      const observer = new PerformanceObserver((list) => {,
-        for (const entry of list.getEntries()) {,
-          if (entry.name === name) {,
-            (this.metrics as any)[metricKey] = entry.startTime;,
-  private observePaint(name: string, metricKey: keyof PerformanceMetrics): void {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          if (entry.name === name) {}
-            (this.metrics as any)[metricKey] = entry.startTime;
-            this.logMetric(metricKey as string, entry.startTime);
-          }
-        }
-
-      observer.observe({ entryTypes: ['paint'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private observeLCP(): void {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        this.metrics.lcp = lastEntry.startTime;
-        this.logMetric('lcp', lastEntry.startTime);
-
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private observeFID(): void {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          this.metrics.fid = (entry as any).processingStart - entry.startTime;
-          this.logMetric('fid', this.metrics.fid);
-        }
-
-      observer.observe({ entryTypes: ['first-input'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private observeCLS(): void {}
-    try {}
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          if (!(entry as any).hadRecentInput) {}
-            clsValue += (entry as any).value;
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observePaint(nam,
-  e: string, metricKe)
-  y: keyof PerformanceMetrics): void {/* TODO: Fix JSX expression */}
-          }
-        }
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private observeLCP(): void {/* TODO: Fix JSX expression */}
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private observeFID(): void {/* TODO: Fix JSX expression */}
-        }
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private observeCLS(): void {/* TODO: Fix JSX expression */}
-          }
-        }
-        this.metrics.cls = clsValue;
-        this.logMetric('cls', clsValue);
-
-      observer.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private setupCustomMetrics(): void {
-    // Time to First Byte;
-    if (performance.timing) {
-      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-      this.logMetric('ttfb', this.metrics.ttfb);
-    }
-    // Page Load Time;
-    if (performance.timing) {
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      this.addCustomMetric('pageLoadTime', loadTime);
-    }
-    // DOM Content Loaded;
-    if (performance.timing) {
-  private setupCustomMetrics(): void {}
-    // Time to First Byte
-    if (performance.timing) {}
-      this.metrics.ttfb = performance.timing.responseStart - performance.timing.navigationStart;
-      this.logMetric('ttfb', this.metrics.ttfb);
-    }
-    // Page Load Time
-    if (performance.timing) {}
-      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
-      this.addCustomMetric('pageLoadTime', loadTime);
-    }
-    // DOM Content Loaded
-    if (performance.timing) {}
-      const domContentLoaded = performance.timing.domContentLoadedEventEnd - performance.timing.navigationStart;
-      this.addCustomMetric('domContentLoaded', domContentLoaded);
-    }
-  }
-  private setupResourceTiming(): void {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        for (const entry of list.getEntries()) {}
-          if (entry.entryType === 'resource') {}
-            const resourceEntry = entry as PerformanceResourceTiming;
-            this.analyzeResource(resourceEntry);
-          }
-        }
-
-      observer.observe({ entryTypes: ['resource'] });
-      this.observers.push(observer);
-    } catch (error) {}
-      }
-  }
-  private analyzeResource(entry: PerformanceResourceTiming): void {}
-    const duration = entry.responseEnd - entry.startTime;
-    const size = entry.transferSize || 0;
-    // Track slow resources;
-    if (duration > 1000) {,
-      this.addCustomMetric(`slowResource_${entry.name}`, duration);
-    }
-    // Track large resources;
-    if (size > 100000) { // 100KB;
-      this.addCustomMetric(`largeResource_${entry.name}`, size);
-    }
-  }
-  addCustomMetric(name: string, value: number): void {,
-    this.metrics.customMetrics[name] = value;,
-    this.logMetric(name, value);
-  }
-  private logMetric(name: string, value: number): void {,
-    if (process.env.NODE_ENV === 'development') {}ms`);
-    }
-    // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'performance_metric', {)
-        metric_name: name),
-    // Track slow resources
-    if (duration > 1000) {}
-      this.addCustomMetric(`slowResource_${entry.name}`, duration);
-    }
-    // Track large resources
-    if (size > 100000) { // 100KB}
-      this.addCustomMetric(`largeResource_${entry.name}`, size);
-    }
-  }
-  addCustomMetric(name: string, value: number): void {}
-    this.metrics.customMetrics[name] = value;
-    this.logMetric(name, value);
-  }
-  private logMetric(name: string, value: number): void {}
-    if (process.env.NODE_ENV === 'development') {}
-      }ms`);
-    }
-    // Send to analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {}
-      (window as any).gtag('event', 'performance_metric', {)}
-        metric_name: name,
-        metric_value: Math.round(value),
-        event_category: 'performance',
-}
-  }
-  getMetrics(): PerformanceMetrics {}
-    return { ...this.metrics };
-  }
-  getScore(): number {}
-    const scores = [];
-    // FCP scoring (0-100)
-    if (this.metrics.fcp) {}
-      if (this.metrics.fcp <= 1800) scores.push(100);
-      else if (this.metrics.fcp <= 4000) scores.push(50);
-      else scores.push(25);
-    }
-    // LCP scoring (0-100)
-    if (this.metrics.lcp) {}
-      if (this.metrics.lcp <= 2500) scores.push(100);
-      else if (this.metrics.lcp <= 4000) scores.push(75);
-      else if (this.metrics.lcp <= 6000) scores.push(50);
-      else scores.push(25);
-    }
-    // FID scoring (0-100)
-    if (this.metrics.fid) {}
-      if (this.metrics.fid <= 100) scores.push(100);
-      else if (this.metrics.fid <= 300) scores.push(75);
-      else if (this.metrics.fid <= 500) scores.push(50);
-      else scores.push(25);
-    }
-    // CLS scoring (0-100)
-    if (this.metrics.cls) {}
-      if (this.metrics.cls <= 0.1) scores.push(100);
-      else if (this.metrics.cls <= 0.25) scores.push(75);
-      else if (this.metrics.cls <= 0.4) scores.push(50);
-      else scores.push(25);
-    }
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
-  }
-  generateReport(): string {}
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private setupCustomMetrics(): void {/* TODO: Fix JSX expression */}
-    }
-    // Page Load Time;
-    if (performance.timing) {/* TODO: Fix JSX expression */}
-    }
-    // DOM Content Loaded;
-    if (performance.timing) {/* TODO: Fix JSX expression */}
-    }
-  }
-  private setupResourceTiming(): void {/* TODO: Fix JSX expression */}
-          }
-        }
-      });
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private analyzeResource(entr)
-  y: PerformanceResourceTiming): void {/* TODO: Fix JSX expression */}
-      this.addCustomMetric(`slowResource_${entry.name}`, duration);
-    }
-    // Track large resources;
-    if (size > 100000) {/* TODO: Fix JSX expression */}`
-      this.addCustomMetric(`largeResource_${entry.name}`, size);
-    }
-  }
-  addCustomMetric(nam,
-  e: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}
-  }
-  private logMetric(nam,
-  e: string, valu)
-  e: number): void {/* TODO: Fix JSX expression */}`
-      }ms`);
-    }
-    // Send to analytics if available;
-    if (typeof window !== 'undefined' && (window as any).gtag) {/* TODO: Fix JSX expression */}
-      });
-    }
-  }
-  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
-    return { ...this.metrics };
-  }
-  getScore(): number {/* TODO: Fix JSX expression */}
-    }
-    // LCP scoring (0-100)
-    if (this.metrics.lcp) {/* TODO: Fix JSX expression */}
-    }
-    // FID scoring (0-100)
-    if (this.metrics.fid) {/* TODO: Fix JSX expression */}
-    }
-    // CLS scoring (0-100)
-    if (this.metrics.cls) {/* TODO: Fix JSX expression */}
-    }
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
-  }
-
-  generateReport(): string {
-    const score = this.getScore();
-    const metrics = this.getMetrics();
-    return `
-Performance Report:
-Score: ${score}
-Metrics: ${JSON.stringify(metrics, null, 2)}
-    `;
-  }
-
-
+export default PerformanceMonitor.tsPage;

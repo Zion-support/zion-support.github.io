@@ -1,171 +1,130 @@
-'use client'
-/**
- * Environment Configuration Manager;
- * Provides type-safe access to environment variables with validation;
- */
-export interface EnvConfig {}
-  nodeEnv: 'development' | 'production' | 'test'
-  apiUrl: string,
-  apiKey?: string;
-  enableAnalytics: boolean,
-  enableLogging: boolean,
-  logLevel: 'debug' | 'info' | 'warn' | 'error',
-  sentryDsn?: string;
-  gaTrackingId?: string;}
-}
-class EnvironmentConfig {
-  private config: EnvConfig,
-  private isInitialized = false;
-  constructor() {,
-    this.config = this.loadConfig(),
-    this.isInitialized = true;}
-  }
-  private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults;
-    return {
-class EnvironmentConfig {}
-  private config: EnvConfig
-  private isInitialized = false
-  constructor() {}
-    this.config = this.loadConfig()
-    this.isInitialized = true;}
-  }
-  private loadConfig(): EnvConfig {}
-    // Safely access environment variables with defaults
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-    return {}
-      nodeEnv,
-      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api'
-      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production'
-      enableLogging: nodeEnv !== 'test'
-      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],
-      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN;
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
+const EnvConfig.tsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology that drives innovation and efficiency.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-export interface EnvConfig {/* TODO: Fix JSX expression */}
-}
-class EnvironmentConfig {/* TODO: Fix JSX expression */}
-  }
-  private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-    };
-  }
-  /**
-   * Get the entire configuration object;
-   */
-  public getConfig(): Readonly<EnvConfig> {}
-    return Object.freeze({ ...this.config })
-  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return Object.freeze({ ...this.config });
-  }
-  /**
-   * Get a specific configuration value;
-   */
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {,
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
-    return this.config[key];}
-  public get<K extends keyof EnvConfig>(ke)
-  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Check if running in production;
-   */
-  public isProduction(): boolean {}
-    return this.config.nodeEnv === 'production';}
-  public isProduction(): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Check if running in development;
-   */
-  public isDevelopment(): boolean {}
-    return this.config.nodeEnv === 'development';}
-  public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Check if running in test mode;
-   */
-  public isTest(): boolean {}
-    return this.config.nodeEnv === 'test';}
-  public isTest(): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Validate required environment variables;
-   */
-  public validate(requiredVars: (keyof EnvConfig)[]): {,
-    valid: boolean,
-    missing: string[];}
-  } {
-    const missing: string[] = [],
-    for (const varName of requiredVars) {,
-      if (!this.config[varName]) {,
-        missing.push(varName);}
-      }
-    }
-    return {
-      valid: missing.length === 0;
-  public validate(requiredVars: (keyof EnvConfig)[]): {}
-    valid: boolean
-    missing: string[];}
-  } {}
-    const missing: string[] = []
-    for (const varName of requiredVars) {}
-      if (!this.config[varName]) {}
-        missing.push(varName);}
-      }
-    }
-    return {}
-      valid: missing.length === 0,
-      missing}
-    }
-  public validate(requiredVar)
-  s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-      }
-    }
-    return {/* TODO: Fix JSX expression */}
-    };
-  }
-  /**
-   * Get API headers with authentication;
-   */
-  public getApiHeaders(): Record<string, string> {}
-    const headers: Record<string, string> = {}
-      'Content-Type': 'application/json'}
-    }
-    if (this.config.apiKey) {}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`
-  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
-    };
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
-    }
-    return headers;
-  }
-  /**
-   * Log configuration in development mode;
-   */
-  public logConfig(): void {}
-    if (this.isDevelopment()) {}
-  public logConfig(): void {/* TODO: Fix JSX expression */}
-      });
-      console.groupEnd();
-    }
-  }
-}
-// Export singleton instance;
-export const envConfig = new EnvironmentConfig()
-// Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction()
-export const isDevelopment = () => envConfig.isDevelopment()
-export const isTest = () => envConfig.isTest()
-export const getConfig = () => envConfig.getConfig()
-export const getApiHeaders = () => envConfig.getApiHeaders()
-export const envConfig = new EnvironmentConfig();
-// Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction();
-export const isDevelopment = () => envConfig.isDevelopment();
-export const isTest = () => envConfig.isTest();
-export const getConfig = () => envConfig.getConfig();
-export const getApiHeaders = () => envConfig.getApiHeaders();
-`
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Env Config.ts Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI solutions powered by cutting-edge technology." />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Env Config.ts Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI solutions powered by cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default EnvConfig.tsPage;

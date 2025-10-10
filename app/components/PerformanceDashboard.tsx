@@ -1,133 +1,130 @@
 'use client';
 import React from 'react';
-import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-
-interface PerformanceMetrics {
-  loadTime: number,
-  renderTime: number,
-  memoryUsage: number,
-  fps: number,
-}
-
-interface PerformanceMetrics {
-  loadTime: number,
-  renderTime: number,
-  memoryUsage: number,
-  fps: number,
-  [key: string]: number;
-}
-
-
-const PerformanceDashboard: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    fps: 0,
-  });
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const updateMetrics = () => {
-      const navigation = performance.getEntriesByType(
-        'navigation'
-      )[0] as PerformanceNavigationTiming;
-      const loadTime = navigation
-        ? navigation.loadEventEnd - navigation.fetchStart
-        : 0;
-
-      // Measure render time// Measure memory usage
-      let _memoryUsage = 0;
-      if ('memory' in performance) {memoryUsage = memory?.usedJSHeapSize || 0;
-      }
-
-      // Measure FPS (simplified)
-      let _fps = 0;
-      if ('requestAnimationFrame' in window) {
-        let _lastTime = performance.now();
-        let _frameCount = 0;
-        const measureFPS = (currentTime: number) => {
-          frameCount++;
-          if (currentTime - lastTime >= 1000) {
-            fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
-            frameCount = 0;
-            lastTime = currentTime;
-          }
-          requestAnimationFrame(measureFPS);
-        };
-        requestAnimationFrame(measureFPS);
-      }
-
-      setMetrics({
-        loadTime,
-        renderTime,
-        memoryUsage,
-        fps,
-      });
-    };
-
-    updateMetrics();
-
-    // Update metrics every 5 secondsreturn () => clearInterval(interval);
-  }, []);
-
-  if (!isVisible) {
-    return (
-      <button
-        onClick={() => setIsVisible(true)}
-        className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
-      >
-        Show Performance
-      </button>
-    );
-  }
+const PerformanceDashboardPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology that drives innovation and efficiency.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 
   return (
-    <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto">
-      <div className="flex justify-between items-center mb-4">
-        <h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-500 hover:text-gray-700"
-        >
-          ×
-        </button>
+    <>
+      <Helmet>
+        <title>Performance Dashboard Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI solutions powered by cutting-edge technology." />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Performance Dashboard Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI solutions powered by cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-
-      <div className="space-y-3">
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Load Time:</span>
-          <span className="text-sm font-mono">
-            {metrics.loadTime.toFixed(2)}ms
-          </span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Render Time:</span>
-          <span className="text-sm font-mono">
-            {metrics.renderTime.toFixed(2)}ms
-          </span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">Memory Usage:</span>
-          <span className="text-sm font-mono">
-            {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB
-          </span>
-        </div>
-
-        <div className="flex justify-between">
-          <span className="text-sm text-gray-600">FPS:</span>
-          <span className="text-sm font-mono">{metrics.fps}</span>
-        </div>
-
-        <div className="pt-2 border-t border-gray-200">
-          <div className="text-xs text-gray-500">
-            Last updated: {new Date().toLocaleTimeString()}</div>
-        </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
-export default PerformanceDashboard;
+export default PerformanceDashboardPage;

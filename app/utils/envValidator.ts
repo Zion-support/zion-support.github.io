@@ -1,149 +1,130 @@
 'use client';
-/**
- * Environment Variables Validator;
- * Ensures all required environment variables are present and valid;
- */
-export interface EnvConfig {}
-  NODE_ENV: 'development' | 'production' | 'test';
-  NEXT_PUBLIC_API_URL?: string;
-  NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SITE_URL?: string;
-}
-class EnvValidator {
-  private errors: string[] = [],
-  private warnings: string[] = [],
-  /**,
-   * Validate all environment variables;
-   */,
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
-class EnvValidator {}
-  private errors: string[] = []
-  private warnings: string[] = []
-  /**
-   * Validate all environment variables
-   */
-  validate(): { isValid: boolean; errors: string[]; warnings: string[] } {}
-    this.errors = []
-    this.warnings = []
-    // Validate NODE_ENV;
-    this.validateNodeEnv()
-    // Validate optional but recommended variables;
-    this.validateOptionalVars()
-    return {
-      isValid: this.errors.length === 0;
-      errors: this.errors;
-      warnings: this.warnings;
-    return {}
-      isValid: this.errors.length === 0,
-      errors: this.errors,
-      warnings: this.warnings
-export interface EnvConfig {/* TODO: Fix JSX expression */}
-}
-class EnvValidator {/* TODO: Fix JSX expression */}
-  s: string[] } {/* TODO: Fix JSX expression */}
-    };
-  }
-  /**
-   * Get validated environment configuration;
-   */
-  getConfig(): EnvConfig {}
-    const validation = this.validate()
-    if (!validation.isValid) {}
-      throw new Error()
-        `Environment validation failed:\n${validation.errors.join('\n')}`
-      )
-    }
-    if (validation.warnings.length > 0) {}
-      }`
-      )
-    }
-    return {}
-      NODE_ENV: this.getNodeEnv(),
-      NEXT_PUBLIC_API_URL: process.env['NEXT_PUBLIC_API_URL'],
-      NEXT_PUBLIC_GA_ID: process.env['NEXT_PUBLIC_GA_ID'],
-      NEXT_PUBLIC_SITE_URL: process.env['NEXT_PUBLIC_SITE_URL']};
-  }
-  private validateNodeEnv(): void {}
-    const nodeEnv = process.env['NODE_ENV']
-    const validEnvs = ['development', 'production', 'test']
-    if (!nodeEnv) {}
-      this.errors.push('NODE_ENV is not set');
-      return;
-    }
-    if (!validEnvs.includes(nodeEnv)) {}
-      this.errors.push()
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
-      );
-    }
-  }
-  private validateOptionalVars(): void {}
-    const nodeEnv = this.getNodeEnv()
-    // In production, these should be set;
-    if (nodeEnv === 'production') {
-      if (!process.env['NEXT_PUBLIC_SITE_URL']) {
-        this.warnings.push(
-    // In production, these should be set
-    if (nodeEnv === 'production') {}
-      if (!process.env['NEXT_PUBLIC_SITE_URL']) {}
-        this.warnings.push()
-          'NEXT_PUBLIC_SITE_URL is not set (recommended for production)'
-        )
-      }
-      if (!process.env['NEXT_PUBLIC_GA_ID']) {}
-        this.warnings.push()
-          'NEXT_PUBLIC_GA_ID is not set (analytics will be disabled)'
-        )
-      }
-    }
-  }
-  private getNodeEnv(): 'development' | 'production' | 'test' {}
-    const env = process.env['NODE_ENV'] || 'development'
-    return env as 'development' | 'production' | 'test'
-  getConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-  failed:
-${validation.errors.join('
-')}`
-      )
-    }
-    if (validation.warnings.length > 0) {/* TODO: Fix JSX expression */}`
-      }`
-      )
-    }
-    return {/* TODO: Fix JSX expression */}
-    };
-  }
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-  private validateNodeEnv(): void {/* TODO: Fix JSX expression */}
-
+const EnvValidator.tsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology that drives innovation and efficiency.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
+  ];
 
-    if (!validEnvs.includes(nodeEnv)) {
-      this.errors.push(
-        `NODE_ENV must be one of: ${validEnvs.join(', ')}. Got: ${nodeEnv}`
-      );
+  return (
+    <>
+      <Helmet>
+        <title>Env Validator.ts Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI solutions powered by cutting-edge technology." />
+      </Helmet>
 
-    }
-  }
-  private validateOptionalVars(): void {/* TODO: Fix JSX expression */}
-      }
-      if (!process.env['NEXT_PUBLIC_GA_ID']) {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
-  private getNodeEnv(): 'development' | 'production' | 'test' {/* TODO: Fix JSX expression */}
-  }
-}
-// Export singleton instance;
-export const envValidator = new EnvValidator()
-// Export convenience function;
-export function validateEnv(): EnvConfig {
-// Export convenience function
-export function validateEnv(): EnvConfig {}
-  return envValidator.getConfig()
-}
-export default envValidator;
-// Export convenience function;
-export function validateEnv(): EnvConfig {/* TODO: Fix JSX expression */}
-}
-export default envValidator;`
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Env Validator.ts Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI solutions powered by cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default EnvValidator.tsPage;

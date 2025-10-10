@@ -1,121 +1,130 @@
-'use client'
-/**
- * Enhanced Security Utilities;
- * Generated: 2025-10-08T02:06:22.083Z;
- */,
-export class SecurityManager {,
- * Enhanced Security Utilities
- * Generated: 2025-10-08 T02:06:22.083 Z
- */
-export class SecurityManager {}
-  private static instance: SecurityManager;}
-  private constructor() {}
-  static getInstance(): SecurityManager {}
-    if (!SecurityManager.instance) {}
-      SecurityManager.instance = new SecurityManager();}
- * Enhanced Security Utilities;
- * Generate,
-  d: 2025-10-08T0,
-  2:0,
-  6:22.083Z;
- */
-export class SecurityManager {/* TODO: Fix JSX expression */}
-  private constructor() {}
-  static getInstance(): SecurityManager {/* TODO: Fix JSX expression */}
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+
+const SecurityManager.tsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology that drives innovation and efficiency.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    return SecurityManager.instance;
-  }
-  /**
-   * Sanitize user input to prevent XSS attacks;
-   */
-  sanitizeInput(input: string): string {,
-    return input;
-  sanitizeInput(input: string): string {}
-    return input
-      .replace(/[<>]/g, '')
-      .replace(/javascript:/gi, '')
-      .replace(/on\w+=/gi, '')
-      .trim();}
-  sanitizeInput(inpu)
-  t: string): string {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Validate and sanitize URL;
-   */
-  sanitizeUrl(url: string): string {,
-    try {,
-      const parsed = new URL(url),
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,
-  sanitizeUrl(url: string): string {}
-    try {}
-      const parsed = new URL(url)
-      if (!['http:', 'https:'].includes(parsed.protocol)) {}
-        throw new Error('Invalid protocol');}
-      }
-      return parsed.toString()
-    } catch {}
-      return '';}
-  sanitizeUrl(ur)
-  l: string): string {/* TODO: Fix JSX expression */}
-      }
-      return parsed.toString();
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Generate secure random token;
-   */
-  generateSecureToken(length: number = 32): string {,
-    const array = new Uint8Array(length),
-    if (typeof window !== 'undefined' && window.crypto) {,
-      window.crypto.getRandomValues(array);}
-    } else {
-      // Fallback for Node.js environment;
-  generateSecureToken(length: number = 32): string {}
-    const array = new Uint8Array(length)
-    if (typeof window !== 'undefined' && window.crypto) {}
-      window.crypto.getRandomValues(array);}
-    } else {}
-      // Fallback for Node.js environment
-      const crypto = import("crypto")
-      crypto.randomFillSync(array);}
-  generateSecureToken(lengt)
-  h: number = 32): string {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-    }
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('')
-  }
-  /**
-   * Implement rate limiting;
-   */
-  checkRateLimit(key: string, limit: number, windowMs: number): boolean {}
-    const now = Date.now()
-    const windowStart = now - windowMs;
-    // Simple in-memory rate limiting (replace with Redis in production)
-    const storage = this.getRateLimitStorage()
-    const requests = storage.get(key) || []
-    // Remove old requests;
-    const validRequests = requests.filter((time: number) => time > windowStart),
-    if (validRequests.length >= limit) {,
-    // Remove old requests
-    const validRequests = requests.filter((time: number) => time > windowStart)
-    if (validRequests.length >= limit) {}
-      return false;}
-  checkRateLimit(ke,
-  y: string, limi,
-  t: number, windowM)
-  s: number): boolean {/* TODO: Fix JSX expression */}
-    }
-    validRequests.push(now)
-    storage.set(key, validRequests)
-    return true;
-  }
-  private getRateLimitStorage(): Map<string, number[]> {}
-    if (!global._rateLimitStorage) {}
-      global._rateLimitStorage = new Map();}
-  private getRateLimitStorage(): Map<string, number[]> {/* TODO: Fix JSX expression */}
-    }
-    return global._rateLimitStorage;
-  }
-}
-export default SecurityManager.getInstance();
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Security Manager.ts Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI solutions powered by cutting-edge technology." />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Security Manager.ts Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI solutions powered by cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default SecurityManager.tsPage;

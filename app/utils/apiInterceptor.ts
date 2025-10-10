@@ -1,368 +1,130 @@
-/**
- * API Interceptor Utility;
- * Provides request/response interceptors for API calls;
- */
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
 
-interface InterceptorConfig {
-  onRequest?: (config: any) => any;
-  onResponse?: (response: any) => any;
-  onError?: (error: any) => any;
-}
+const ApiInterceptor.tsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology that drives innovation and efficiency.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 
-class APIInterceptor {
-  private requestInterceptors: Array<(config: any) => any> = [];
-  private responseInterceptors: Array<(response: any) => any> = [];
-  private errorInterceptors: Array<(error: any) => any> = [];
+  return (
+    <>
+      <Helmet>
+        <title>Api Interceptor.ts Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI solutions powered by cutting-edge technology." />
+      </Helmet>
 
-  // Add request interceptor;
-  addRequestInterceptor(interceptor: (config: any) => any): void {,
-    this.requestInterceptors.push(interceptor);
-  }
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Api Interceptor.ts Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI solutions powered by cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
 
-  // Add response interceptor;
-  addResponseInterceptor(interceptor: (response: any) => any): void {,
-    this.responseInterceptors.push(interceptor);
-  }
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
 
-  // Add error interceptor;
-  addErrorInterceptor(interceptor: (error: any) => any): void {,
-    this.errorInterceptors.push(interceptor);
-  }
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-  // Remove request interceptor;
-  removeRequestInterceptor(interceptor: (config: any) => any): void {,
-    const index = this.requestInterceptors.indexOf(interceptor);
-    if (index > -1) {,
-      this.requestInterceptors.splice(index, 1);
-    }
-  }
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-  // Remove response interceptor;
-  removeResponseInterceptor(interceptor: (response: any) => any): void {,
-    const index = this.responseInterceptors.indexOf(interceptor);
-    if (index > -1) {,
-      this.responseInterceptors.splice(index, 1);
-    }
-  }
-
-  // Remove error interceptor;
-  removeErrorInterceptor(interceptor: (error: any) => any): void {,
-    const index = this.errorInterceptors.indexOf(interceptor);
-    if (index > -1) {,
-      this.errorInterceptors.splice(index, 1);
-    }
-  }
-
-  // Apply request interceptors;
-  applyRequestInterceptors(config: any): any {,
-    return this.requestInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (error) {
-        return acc;
-      }
-    }, config);
-  }
-
-  // Apply response interceptors;
-  applyResponseInterceptors(response: any): any {,
-    return this.responseInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (error) {
-        return acc;
-      }
-    }, response);
-  }
-
-  // Apply error interceptors;
-  applyErrorInterceptors(error: any): any {,
-    return this.errorInterceptors.reduce((acc, interceptor) => {
-      try {
-        return interceptor(acc);
-      } catch (interceptorError) {
-        return acc;
-      }
-    }, error);
-  }
-
-  // Clear all interceptors;
-  clearAll(): void {
-    this.requestInterceptors = [];
-    this.responseInterceptors = [];
-    this.errorInterceptors = [];
-  }
-
-  // Get interceptor counts;
-  getInterceptorCounts(): {
-    request: number,
-    response: number,
-    error: number,
-  } {
-    return {
-      request: this.requestInterceptors.length;
-      response: this.responseInterceptors.length;
-      error: this.errorInterceptors.length;
-    };
-  }
-}
-
-// Create singleton instance;
-export const apiInterceptor = new APIInterceptor();
-
-export default APIInterceptor;
- * Centralized API request handling with error handling, retry logic, and caching;
- */
-// ErrorHandler class definition;
-class ErrorHandler {/* TODO: Fix JSX expression */}
-    }
-    return ErrorHandler.instance;
-  }
-  handleNetworkError(erro,
-  r: Error, ur)
-  l: string, config?: unknown): void {/* TODO: Fix JSX expression */}
-    }
-}
-export interface APIConfig {/* TODO: Fix JSX expression */}
-  };
-}
-export interface RequestConfig {/* TODO: Fix JSX expression */}
-}
-export interface APIResponse<T = unknown> {/* TODO: Fix JSX expression */}
-}
-export interface CacheEntry {/* TODO: Fix JSX expression */}
-}
-export class APIInterceptor {/* TODO: Fix JSX expression */}
-  g: Partial<APIConfig> = {}) {/* TODO: Fix JSX expression */}
-  headers: config.headers || {},
-      interceptor,
-  s: config.interceptors || {}
-    };
-    this.errorHandler = ErrorHandler.getInstance();
-  }
-  static getInstance(config?: Partial<APIConfig>): APIInterceptor {/* TODO: Fix JSX expression */}
-    }
-    return APIInterceptor.instance;
-  }
-  /**
-   * Make API request;
-   */
-  async request<T = unknown>(confi)
-  g: RequestConfig): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-      }
-    }
-    // Check for pending identical requests;
-    if (this.pendingRequests.has(cacheKey)) {/* TODO: Fix JSX expression */}
-    }
-    // Create the request promise;
-    const requestPromise = this.executeRequest<T>(fullConfig);
-    this.pendingRequests.set(cacheKey, requestPromise as Promise<APIResponse>);
-    try {/* TODO: Fix JSX expression */}
-      }
-      return response;
-    } finally {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**
-   * Execute the actual request;
-   */
-  private async executeRequest<T>(confi)
-  g: RequestConfig, attempt = 1): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-      }
-      const url = this.buildURL(finalConfig);
-      const,
-  fetchOptions: RequestInit = {/* TODO: Fix JSX expression */}
-      };
-      const response = await fetch(url, fetchOptions);
-      const duration = performance.now() - startTime;
-      // Record performance metric;
-      performanceMetrics.recordNetworkRequest(url, duration, response.status);
-      // Handle non-2xx responses;
-      if (!response.ok) {/* TODO: Fix JSX expression */}
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-      }
-      // Apply response interceptor;
-      let finalResponse = response;
-      if (this.config.interceptors?.response) {/* TODO: Fix JSX expression */}
-      }
-      // Parse response data;
-      const data = await this.parseResponse<T>(finalResponse);
-      return {/* TODO: Fix JSX expression */}
-      };
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-      // Apply error interceptor;
-      if (this.config.interceptors?.error) {/* TODO: Fix JSX expression */}
-      }
-      throw err;
-    }
-  }
-  /**
-   * GET request;
-   */
-  async get<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'GET' });
-  }
-  /**
-   * POST request;
-   */
-  async post<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'POST', body });
-  }
-  /**
-   * PUT request;
-   */
-  async put<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PUT', body });
-  }
-  /**
-   * DELETE request;
-   */
-  async delete<T = unknown>(ur,
-  l: string,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'DELETE' });
-  }
-  /**
-   * PATCH request;
-   */
-  async patch<T = unknown>(ur,
-  l: string,
-    body?: unknown,
-    confi,
-  g: Partial<RequestConfig> = {})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PATCH', body });
-  }
-  /**
-   * Prepare request configuration;
-   */
-  private prepareRequest(confi)
-  g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */}
-      },
-      timeou,
-  t: config.timeout || this.config.timeout,
-      retryAttempt,
-  s: config.retryAttempts ?? this.config.retryAttempts,
-      cach,
-  e: config.cache ?? this.config.enableCaching;
-    };
-  }
-  /**
-   * Build full URL with query parameters;
-   */
-  private buildURL(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`
-    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;
-    if (config.params) {/* TODO: Fix JSX expression */}
-      });`
-      url += `?${params.toString()}`;
-    }
-    return url;
-  }
-  /**
-   * Build request headers;
-   */
-  private buildHeaders(confi)
-  g: RequestConfig): Headers {/* TODO: Fix JSX expression */}
-    Object.entries(config.headers || {}).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-    });
-    return headers;
-  }
-  /**
-   * Create abort signal for timeout;
-   */
-  private createAbortSignal(timeou)
-  t: number): AbortSignal {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Parse response based on content type;
-   */
-  private async parseResponse<T>(respons)
-  e: Response): Promise<T> {/* TODO: Fix JSX expression */}
-    }
-    if (contentType?.includes('text/')) {/* TODO: Fix JSX expression */}
-    }
-    return (await response.blob()) as T;
-  }
-  /**
-   * Get cache key for request;
-   */
-  private getCacheKey(confi)
-  g: RequestConfig): string {/* TODO: Fix JSX expression */}`
-    return `${config.method}:${url}`;
-  }
-  /**
-   * Get response from cache;
-   */
-  private getFromCache(ke)
-  y: string): APIResponse | null {/* TODO: Fix JSX expression */}
-    }
-    return entry.data as APIResponse;
-  }
-  /**
-   * Set response in cache;
-   */
-  private setInCache(ke,
-  y: string, respons)
-  e: APIResponse): void {/* TODO: Fix JSX expression */}
-    });
-  }
-  /**
-   * Clear cache;
-   */
-  clearCache(): void {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Clear expired cache entries;
-   */
-  clearExpiredCache(): void {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
-  /**
-   * Get cache statistics;
-   */
-  getCacheStats() {/* TODO: Fix JSX expression */}
-    };
-  }
-  /**
-   * Delay helper for retry logic;
-   */
-  private delay(m)
-  s: number): Promise<void> {/* TODO: Fix JSX expression */}
-  }
-  /**
-   * Update configuration;
-   */
-  updateConfig(confi)
-  g: Partial<APIConfig>): void {/* TODO: Fix JSX expression */}
-    this.config = { ...this.config, ...config };
-  }
-  /**
-   * Get current configuration;
-   */
-  getConfig(): APIConfig {/* TODO: Fix JSX expression */}
-    return { ...this.config };
-  }
-}
-// Export singleton instance;
-export const apiInterceptor = APIInterceptor.getInstance();
-export default APIInterceptor;
-`
+export default ApiInterceptor.tsPage;

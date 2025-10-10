@@ -1,249 +1,130 @@
-/**
- * Service Worker Registration Utility;
- */
-export interface ServiceWorkerConfig {
-  onSuccess?: (registration: ServiceWorkerRegistration) => void;
-  onUpdate?: (registration: ServiceWorkerRegistration) => void;
-export interface ServiceWorkerConfig {}
-  onSuccess?: (registration: ServiceWorkerRegistration) => void
-  onUpdate?: (registration: ServiceWorkerRegistration) => void
-  onError?: (error: Error) => void;}
-export interface ServiceWorkerConfig {/* TODO: Fix JSX expression */}
-}
-/**
- * Register service worker with lifecycle callbacks;
- */
-export async function registerServiceWorker(config: ServiceWorkerConfig = {})
-): Promise<ServiceWorkerRegistration | undefined> {
-  // Check if service workers are supported;
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
-    return;}
-  }
-  // Only register in production or if explicitly enabled;
-  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||)
-      window.location.hostname === '[::1]' ||)
-export async function registerServiceWorker()
-  config: ServiceWorkerConfig = {}
-): Promise<ServiceWorkerRegistration | undefined> {}
-  // Check if service workers are supported
-  if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {}
-    return;}
-  }
-  // Only register in production or if explicitly enabled
-  const isLocalhost = Boolean()
-    window.location.hostname === 'localhost' ||
-      window.location.hostname === '[::1]' ||
-      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-  )
-  // Use isLocalhost for conditional logic if needed;
-  if (isLocalhost) {}
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+
+const RegisterServiceWorker.tsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology that drives innovation and efficiency.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  try {
-    // Wait for page to load;
-    await new Promise<void>((resolve) => {
-      if (document.readyState === 'complete') {
-  try {}
-    // Wait for page to load
-    await new Promise<void>((resolve) => {}
-      if (document.readyState === 'complete') {}
-        resolve();}
-      } else {}
-        window.addEventListener('load', () => resolve());}
-      }
-    })
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {)
-      scope: '/'})
-    })
-    // Handle updates;
-    registration.addEventListener('updatefound', () => {
-      const installingWorker = registration.installing;
-      if (!installingWorker) return;
-      installingWorker.addEventListener('statechange', () => {
-        if (installingWorker.state === 'installed') {
-          if (navigator.serviceWorker.controller) {
-            // New update available;
-            if (config.onUpdate) {
-              config.onUpdate(registration);}
-            }
-          } else {
-            // Content cached for offline use;
-            if (config.onSuccess) {
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {)}
-      scope: '/'}
-    })
-    // Handle updates
-    registration.addEventListener('updatefound', () => {}
-      const installingWorker = registration.installing
-      if (!installingWorker) return
-      installingWorker.addEventListener('statechange', () => {}
-        if (installingWorker.state === 'installed') {}
-          if (navigator.serviceWorker.controller) {}
-            // New update available
-            if (config.onUpdate) {}
-              config.onUpdate(registration);}
-            }
-          } else {}
-            // Content cached for offline use
-            if (config.onSuccess) {}
-              config.onSuccess(registration);}
-export async function registerServiceWorker(confi,
-  g: ServiceWorkerConfig = {})
-): Promise<ServiceWorkerRegistration | undefined> {/* TODO: Fix JSX expression */}
-  }
-  // Only register in production or if explicitly enabled;
-  const isLocalhost = Boolean(window.location.hostname === 'localhost' ||
-      window.location.hostname === '[::1]' ||)
-      window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Register Service Worker.ts Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI solutions powered by cutting-edge technology." />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Register Service Worker.ts Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI solutions powered by cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
-  // Use isLocalhost for conditional logic if needed;
-  if (isLocalhost) {/* TODO: Fix JSX expression */}
-    }
-  try {/* TODO: Fix JSX expression */}
-      } else {/* TODO: Fix JSX expression */}
-      }
-    });
-    const registration = await navigator.serviceWorker.register('/service-worker.js', {/* TODO: Fix JSX expression */})
-    });
-    // Handle updates;
-    registration.addEventListener('updatefound', () => {/* TODO: Fix JSX expression */}
-            }
-          } else {/* TODO: Fix JSX expression */}
-            }
-          }
-        }
-      })
-    })
-    return registration;
-  } catch (error) {
-    if (config.onError && error instanceof Error) {
-    return registration
-  } catch (error) {}
-    if (config.onError && error instanceof Error) {}
-      config.onError(error);}
-  } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }
-}
-/**
- * Unregister service worker;
- */
-export async function unregisterServiceWorker(): Promise<boolean> {}
-  if (!('serviceWorker' in navigator)) {}
-    return false;}
-  }
-  try {
-    const registration = await navigator.serviceWorker.ready;
-  try {}
-    const registration = await navigator.serviceWorker.ready
-    const result = await registration.unregister()
-    return result;}
-  } catch (error) {}
-    return false;}
-export async function unregisterServiceWorker(): Promise<boolean> {/* TODO: Fix JSX expression */}
-  }
-  try {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
-  }
-}
-/**
- * Check for service worker updates;
- */
-export async function checkForUpdates(): Promise<void> {}
-  if (!('serviceWorker' in navigator)) {}
-    return;}
-  }
-  try {
-    const registration = await navigator.serviceWorker.ready;
-  try {}
-    const registration = await navigator.serviceWorker.ready
-    await registration.update();}
-    } catch (error) {}
-export async function checkForUpdates(): Promise<void> {/* TODO: Fix JSX expression */}
-  }
-  try {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}
-    }
-}
-/**
- * Skip waiting and activate new service worker;
- */
-export function skipWaiting(): void {}
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
-    return;}
-  }
-  navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' })
-export function skipWaiting(): void {/* TODO: Fix JSX expression */}
-  }
-  navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
-  n: 'skipWaiting' });
-}
-/**
- * Clear all caches;
- */
-export function clearCaches(): void {}
-  if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {}
-    return;}
-  }
-  navigator.serviceWorker.controller.postMessage({ action: 'clearCache' })
-export function clearCaches(): void {/* TODO: Fix JSX expression */}
-  }
-  navigator.serviceWorker.controller.postMessage({/* TODO: Fix JSX expression */})
-  n: 'clearCache' });
-  }
-/**
- * Get service worker registration status;
- */
-export async function getServiceWorkerStatus(): Promise<{
-  supported: boolean,
-  registered: boolean,
-  active: boolean;}
-}> {
-  if (!('serviceWorker' in navigator)) {
-    return {
-      supported: false,
-      registered: false,
-export async function getServiceWorkerStatus(): Promise<{}
-  supported: boolean
-  registered: boolean
-  active: boolean;}
-}> {}
-  if (!('serviceWorker' in navigator)) {}
-    return {}
-      supported: false,
-      registered: false,
-      active: false}
-    }
-  }
-  try {}
-    const registration = await navigator.serviceWorker.getRegistration()
-    return {
-      supported: true,
-      registered: !!registration;
-      active: !!registration?.active}
-    }
-  } catch {
-    return {
-      supported: true,
-      registered: false,
-    return {}
-      supported: true,
-      registered: !!registration,
-      active: !!registration?.active}
-    }
-  } catch {}
-    return {}
-      supported: true,
-      registered: false,
-      active: false}
-    }
-export async function getServiceWorkerStatus(): Promise<{/* TODO: Fix JSX expression */}
-}> {/* TODO: Fix JSX expression */}
-    };
-  }
-  try {/* TODO: Fix JSX expression */}
-    };
-  } catch {/* TODO: Fix JSX expression */}
-    };
-  }
-}
-export default registerServiceWorker;
+};
+
+export default RegisterServiceWorker.tsPage;

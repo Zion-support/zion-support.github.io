@@ -1,546 +1,130 @@
-'use client'
-/**
- * Testing Utilities;
- * Provides helper functions and utilities for testing;
- */
-/**
- * Wait for a specified amount of time;
- */
-export const wait = (ms: number): Promise<void> => {,
-export const wait = (ms: number): Promise<void> => {}
-  return new Promise(resolve => setTimeout(resolve, ms));}
-}
-/**
- * Wait for a condition to be true;
- */
-export const waitFor = async (
-  condition: () => boolean;
-  timeout = 5000,
-  interval = 100;
-): Promise<void> => {
-  interval = 100
-): Promise<void> => {}
-  const startTime = Date.now()
-  while (!condition()) {}
-    if (Date.now() - startTime > timeout) {}
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`)
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+
+const TestUtils.tsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Advanced AI technology that drives innovation and efficiency.',
+      benefits: ['Smart automation', 'Predictive analytics', 'Intelligent insights', 'Automated processes']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time monitoring', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    await wait(interval)
-  }
-}
-/**
- * Mock fetch for testing;
- */
-export const mockFetch = (
-  response: unknown,
-  status = 200,
-  headers: Record<string, string> = {}
-): void => {}
-  if (typeof global !== 'undefined') {}
-    (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
-      Promise.resolve({)
-        ok: status >= 200 && status < 300),
-        status),
-      Promise.resolve({)}
-        ok: status >= 200 && status < 300,
-        status,
-        headers: new Headers(headers),
-        json: async () => response;
-        text: async () => JSON.stringify(response)}
-      } as Response)
-    ) as typeof fetch;
-  }
-}
-/**
- * Mock local storage;
- */
-export class MockStorage implements Storage {}
-  private store: Map<string, string> = new Map()
-  get length(): number {}
-    return this.store.size;}
-  }
-  clear(): void {}
-    this.store.clear();}
-  }
-  getItem(key: string): string | null {,
-    return this.store.get(key) || null;}
-  }
-  key(index: number): string | null {,
-    const keys = Array.from(this.store.keys()),
-    return keys[index] || null;}
-  }
-  removeItem(key: string): void {,
-    this.store.delete(key);}
-  }
-  setItem(key: string, value: string): void {,
-  getItem(key: string): string | null {}
-    return this.store.get(key) || null;}
-  }
-  key(index: number): string | null {}
-    const keys = Array.from(this.store.keys())
-    return keys[index] || null;}
-  }
-  removeItem(key: string): void {}
-    this.store.delete(key);}
-  }
-  setItem(key: string, value: string): void {}
-    this.store.set(key, value);}
-  }
-}
-/**
- * Create a mock localStorage for testing;
- */
-export const createMockStorage = (): MockStorage => {}
-  return new MockStorage();}
-}
-/**
- * Mock window object;
- */
-export const mockWindow = (overrides: Partial<Window> = {}): void => {
-  if (typeof global !== 'undefined') {
-    Object.defineProperty(global, 'window', {)
-      value: {)
-        ...global.window),
-export const mockWindow = (overrides: Partial<Window> = {}): void => {}
-  if (typeof global !== 'undefined') {}
-    Object.defineProperty(global, 'window', {)}
-      value: {}
-        ...global.window,
-        ...overrides}
-      })
-      writable: true,
-    })
-export const wait = (m)
-  s: number): Promise<void> => {/* TODO: Fix JSX expression */}
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Test Utils.ts Page - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI solutions powered by cutting-edge technology." />
+      </Helmet>
+
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Test Utils.ts Page
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+              Advanced AI solutions powered by cutting-edge technology.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                Learn More
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Powerful AI technology that drives results
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Contact our experts to discuss your requirements and get started today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us
+                </button>
+                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
 };
-/**
- * Wait for a condition to be true;
- */
-export const waitFor = async (conditio)
-  n: () => boolean,
-  timeout = 5000,
-  interval = 100;
-): Promise<void> => {/* TODO: Fix JSX expression */}
-      throw new Error(`Timeout waiting for condition after ${timeout}ms`);
-    }
-    await wait(interval);
-  }
-};
-/**
- * Mock fetch for testing;
- */
-export const mockFetch = (respons,
-  e: unknown,
-  status = 200,
-  header,
-  s: Record<string, string> = {})
-): void => {/* TODO: Fix JSX expression */}
-  h: typeof fetch }).fetch = jest.fn(() =>
-      Promise.resolve({/* TODO: Fix JSX expression */})
-      } as Response)
-    ) as typeof fetch;
-  }
-};
-/**
- * Mock local storage;
- */
-export class MockStorage implements Storage {/* TODO: Fix JSX expression */}
-  }
-  clear(): void {/* TODO: Fix JSX expression */}
-  }
-  getItem(ke)
-  y: string): string | null {/* TODO: Fix JSX expression */}
-  }
-  key(inde)
-  x: number): string | null {/* TODO: Fix JSX expression */}
-  }
-  removeItem(ke)
-  y: string): void {/* TODO: Fix JSX expression */}
-  }
-  setItem(ke,
-  y: string, valu)
-  e: string): void {/* TODO: Fix JSX expression */}
-  }
-}
-/**
- * Create a mock localStorage for testing;
- */
-export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression */}
-};
-/**
- * Mock window object;
- */
-export const mockWindow = (override)
-  s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */}
-      },
-      writabl,
-  e: true,
-    });
-  }
-}
-/**
- * Create a mock performance API;
- */
-export const createMockPerformance = (): Performance => {}
-  const entries: PerformanceEntry[] = []
-  return {
-    now: () => Date.now()
-    mark: (name: string) => {,
-      entries.push({),
-        name),
-        entryType: 'mark'),
-  return {}
-    now: () => Date.now(),
-    mark: (name: string) => {}
-      entries.push({)}
-        name,
-        entryType: 'mark',
-        startTime: Date.now(),
-        duration: 0}
-        toJSON: () => ({})
-      } as PerformanceEntry)
-    },
-    measure: (name: string, startMark?: string, endMark?: string) => {
-      entries.push({)
-        name)
-        entryType: 'measure'),
-    measure: (name: string, startMark?: string, endMark?: string) => {}
-      entries.push({)}
-        name,
-        entryType: 'measure',
-        startTime: Date.now(),
-        duration: 100}
-        toJSON: () => ({})
-      } as PerformanceEntry)
-    },
-    getEntriesByName: (name: string) => entries.filter(e => e.name === name),
-    getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
-    getEntries: () => entries;
-    clearMarks: () => {,
-      entries.length = 0;}
-    },
-    clearMeasures: () => {,
-    getEntries: () => entries,
-    clearMarks: () => {}
-      entries.length = 0;}
-    },
-    clearMeasures: () => {}
-      entries.length = 0;}
-    },
-    clearResourceTimings: () => {},
-    setResourceTimingBufferSize: () => {},
-    toJSON: () => ({}),
-    addEventListener: () => {},
-    removeEventListener: () => {},
-    dispatchEvent: () => true;
-    onresourcetimingbufferfull: null,
-    timeOrigin: Date.now(),
-export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */}
-  N: () => ({})
-      } as PerformanceEntry);
-    },
-    measur,
-  e: (nam)
-  e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */}
-  N: () => ({})
-      } as PerformanceEntry);
-    },
-    getEntriesByNam,
-  e: (nam)
-  e: string) => entries.filter(e => e.name === name),
-    getEntriesByTyp,
-  e: (typ)
-  e: string) => entries.filter(e => e.entryType === type),
-    getEntrie,
-  s: () => entries,
-    clearMark,
-  s: () => {/* TODO: Fix JSX expression */}
-    },
-    clearMeasure,
-  s: () => {/* TODO: Fix JSX expression */}
-    },
-    clearResourceTiming,
-  s: () => {},
-    setResourceTimingBufferSiz,
-  e: () => {},
-    toJSO,
-  N: () => ({}),
-    addEventListene,
-  r: () => {},
-    removeEventListene,
-  r: () => {},
-    dispatchEven,
-  t: () => true,
-    onresourcetimingbufferful,
-  l: null,
-    timeOrigi,
-  n: Date.now()
-  } as unknown as Performance;
-}
-/**
- * Generate random test data;
- */
-export const generateTestData = {
-  string: (length = 10): string => {,
-    return Math.random(),
-      .toString(36),
-export const generateTestData = {}
-  string: (length = 10): string => {}
-    return Math.random()
-      .toString(36)
-      .substring(2, length + 2);}
-  },
-  number: (min = 0, max = 100): number => {}
-    return Math.floor(Math.random() * (max - min + 1)) + min;}
-  },
-  boolean: (): boolean => {,
-  boolean: (): boolean => {}
-    return Math.random() > 0.5;}
-  },
-  email: (): string => {`}
-    return `test${generateTestData.string(5)}@example.com`
-  },
-  url: (): string => {`}
-    return `https://example.com/${generateTestData.string(10)}`
-  },
-  date: (): Date => {,
-  date: (): Date => {}
-    return new Date(Date.now() - Math.random() * 365 * 24 * 60 * 60 * 1000);}
-  },
-  array: <T>(generator: () => T, length = 5): T[] => {}
-    return Array.from({ length }, generator)
-export const generateTestData = {/* TODO: Fix JSX expression */}
-  },
-  numbe,
-  r: (min = 0, max = 100): number => {/* TODO: Fix JSX expression */}
-  },
-  boolea,
-  n: (): boolean => {/* TODO: Fix JSX expression */}
-  },
-  emai,
-  l: (): string => {/* TODO: Fix JSX expression */}`
-    return `test${generateTestData.string(5)}@example.com`;
-  },
-  ur,
-  l: (): string => {/* TODO: Fix JSX expression */}`
-  s://example.com/${generateTestData.string(10)}`;
-  },
-  dat,
-  e: (): Date => {/* TODO: Fix JSX expression */}
-  },
-  arra,
-  y: <T>(generato)
-  r: () => T, length = 5): T[] => {/* TODO: Fix JSX expression */}
-    return Array.from({ length }, generator);
-  }
-}
-/**
- * Deep clone an object;
- */
-export const deepClone = <T>(obj: T): T => {,
-export const deepClone = <T>(obj: T): T => {}
-  return JSON.parse(JSON.stringify(obj));}
-}
-/**
- * Compare objects for equality;
- */
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {,
-export const deepEqual = (obj1: unknown, obj2: unknown): boolean => {}
-  return JSON.stringify(obj1) === JSON.stringify(obj2);}
-}
-/**
- * Spy on console methods;
- */
-export class ConsoleSpy {
-  private originalConsole: Console,
-  private logs: string[] = [],
-  private errors: string[] = [],
-  private warnings: string[] = [],
-export class ConsoleSpy {}
-  private originalConsole: Console
-  private logs: string[] = []
-  private errors: string[] = []
-  private warnings: string[] = []
-  constructor() {}
-    this.originalConsole = { ...console }
-    this.mock()
-  }
-  private mock(): void {
-    console.log = (...args: unknown[]) => {,
-      this.logs.push(args.map(String).join(' '));}
-    }
-    console.error = (...args: unknown[]) => {,
-      this.errors.push(args.map(String).join(' '));}
-    }
-    console.warn = (...args: unknown[]) => {,
-  private mock(): void {}
-    console.log = (...args: unknown[]) => {}
-      this.logs.push(args.map(String).join(' '));}
-    }
-    console.error = (...args: unknown[]) => {}
-      this.errors.push(args.map(String).join(' '));}
-    }
-    console.warn = (...args: unknown[]) => {}
-      this.warnings.push(args.map(String).join(' '));}
-    }
-  }
-  getLogs(): string[] {}
-    return [...this.logs];}
-  }
-  getErrors(): string[] {}
-    return [...this.errors];}
-  }
-  getWarnings(): string[] {}
-    return [...this.warnings];}
-  }
-  restore(): void {
-    console.log = this.originalConsole.log;
-    console.error = this.originalConsole.error;
-  restore(): void {}
-    console.log = this.originalConsole.log
-    console.error = this.originalConsole.error
-    console.warn = this.originalConsole.warn;}
-  }
-  clear(): void {}
-    this.logs = []
-    this.errors = []
-    this.warnings = [];}
-export const deepClone = <T>(ob)
-  j: T): T => {/* TODO: Fix JSX expression */}
-};
-/**
- * Compare objects for equality;
- */
-export const deepEqual = (obj,
-  1: unknown, obj)
-  2: unknown): boolean => {/* TODO: Fix JSX expression */}
-};
-/**
- * Spy on console methods;
- */
-export class ConsoleSpy {/* TODO: Fix JSX expression */}
-    this.originalConsole = { ...console };
-    this.mock();
-  }
-  private mock(): void {/* TODO: Fix JSX expression */}
-    };
-    console.error = (...arg)
-  s: unknown[]) => {/* TODO: Fix JSX expression */}
-    };
-    console.warn = (...arg)
-  s: unknown[]) => {/* TODO: Fix JSX expression */}
-    };
-  }
-  getLogs(): string[] {/* TODO: Fix JSX expression */}
-  }
-  getErrors(): string[] {/* TODO: Fix JSX expression */}
-  }
-  getWarnings(): string[] {/* TODO: Fix JSX expression */}
-  }
-  restore(): void {/* TODO: Fix JSX expression */}
-  }
-  clear(): void {/* TODO: Fix JSX expression */}
-  }
-}
-/**
- * Create a deferred promise;
- */
-export interface Deferred<T> {
-  promise: Promise<T>,
-  resolve: (value: T) => void;
-  reject: (reason?: unknown) => void;}
-}
-export const createDeferred = <T>(): Deferred<T> => {
-  let resolve as any: (value: T) => void;
-  let reject as any: (reason?: unknown) => void;
-  const promise = new Promise<T>((res, rej) => {
-    resolve = res;
-export interface Deferred<T> {}
-  promise: Promise<T>
-  resolve: (value: T) => void
-  reject: (reason?: unknown) => void;}
-}
-export const createDeferred = <T>(): Deferred<T> => {}
-  let resolve as any: (value: T) => void
-  let reject as any: (reason?: unknown) => void
-  const promise = new Promise<T>((res, rej) => {}
-    resolve = res
-    reject = rej;}
-  })
-  return { promise, resolve, reject }
-}
-export interface Deferred<T> {/* TODO: Fix JSX expression */}
-}
-export const createDeferred = <T>(): Deferred<T> => {/* TODO: Fix JSX expression */}
-  });
-  return { promise, resolve, reject };
-};
-/**
- * Retry a function with exponential backoff;
- */
-export const retryWithBackoff = async <T>(f)
-  n: () => Promise<T>,
-  maxRetries = 3,
-  initialDelay = 1000;
-): Promise<T> => {
-  let lastError: Error,
-  for (let i = 0; i < maxRetries; i++) {,
-    try {,
-      return await fn();}
-    } catch (error) {
-      lastError = error as Error;
-      if (i < maxRetries - 1) {
-  initialDelay = 1000
-): Promise<T> => {}
-  let lastError: Error
-  for (let i = 0; i < maxRetries; i++) {}
-    try {}
-      return await fn();}
-    } catch (error) {}
-      lastError = error as Error
-      if (i < maxRetries - 1) {}
-        await wait(initialDelay * Math.pow(2, i));}
-  initialDelay = 1000;
-): Promise<T> => {/* TODO: Fix JSX expression */}
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
-  throw lastError as any;
-}
-/**
- * Measure execution time of a function;
- */
-export const measureExecutionTime = async <T>(
-  fn: () => T | Promise<T>): Promise<{ result: T; duration: number }> => {
-  fn: () => T | Promise<T>
-): Promise<{ result: T; duration: number }> => {}
-  const start = performance.now()
-  const result = await fn()
-  const duration = performance.now() - start;}
-  return { result, duration }
-}
-export default {}
-  wait,
-  waitFor,
-  mockFetch,
-  createMockStorage,
-  mockWindow,
-  createMockPerformance,
-  generateTestData,
-  deepClone,
-  deepEqual,
-  ConsoleSpy,
-  createDeferred,
-  retryWithBackoff,
-  measureExecutionTime}
-}
-export const measureExecutionTime = async <T>(f)
-  n: () => T | Promise<T></T>
-): Promise<{/* TODO: Fix JSX expression */}
-  n: number }> => {/* TODO: Fix JSX expression */}
-  return { result, duration };
-};
-export default {/* TODO: Fix JSX expression */}
-};
-`
+
+export default TestUtils.tsPage;
