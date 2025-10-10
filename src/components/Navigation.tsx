@@ -248,29 +248,7 @@ const Navigation: React.FC = () => {
     }
   ];
 
-  const toggleAI = () => {
-    setIsAIOpen(!isAIOpen);
-    if (isAIOpen) {
-      setIsITOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleIT = () => {
-    setIsITOpen(!isITOpen);
-    if (isITOpen) {
-      setIsAIOpen(false);
-      setIsSpecializedOpen(false);
-    }
-  };
-
-  const toggleSpecialized = () => {
-    setIsSpecializedOpen(!isSpecializedOpen);
-    if (isSpecializedOpen) {
-      setIsAIOpen(false);
-      setIsITOpen(false);
-    }
-  };
+  // Removed unused toggle functions
 
   const microSAASServices = [
     // Productivity & Management Tools
