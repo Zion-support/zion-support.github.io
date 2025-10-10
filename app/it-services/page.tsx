@@ -1,5 +1,6 @@
 'use client';
-import { Cloud, Shield, Settings, Database, BarChart, CheckCircle, ArrowRight, Phone, Clock, Zap, Cpu, Wifi, Server, Code, TrendingUp, DollarSign, Clock, Shield, TrendingUp, MessageSquare } from 'lucide-react';
+import React, { useState } from 'react';
+import { Cloud, Shield, Settings, Database, BarChart, CheckCircle, ArrowRight, Phone, Clock, Zap, Cpu, Wifi, Server, Code, TrendingUp, DollarSign, MessageSquare, Building, Rocket } from 'lucide-react';
 
 export default function ITServicesPage() {
   const [activeTab, setActiveTab] = useState('overview');
@@ -684,22 +685,17 @@ name: 'AI-Powered Infrastructure Management',
   ];
 
   return (
-
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 matrix-bg">
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced quantum-particles">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-
-<h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
-
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 cyber-text neon-pulse">
               IT Services
             </h1>
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed neon-glow-cyan">
-
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
               Comprehensive IT solutions that keep your business running smoothly, securely, and efficiently.
               From infrastructure to security, we've got you covered.
             </p>
@@ -788,9 +784,7 @@ name: 'AI-Powered Infrastructure Management',
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                   {category.services.map((service, serviceIndex) => (
-
-<div key={serviceIndex} className="futuristic-card hover-lift p-6 relative">
-<div key={serviceIndex} className="futuristic-card-enhanced hover-lift p-6 relative">
+                    <div key={serviceIndex} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-700/50 transition-all duration-300 group relative">
 
                       {service.popular && (
                         <div className="absolute -top-2 -right-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
@@ -853,21 +847,8 @@ name: 'AI-Powered Infrastructure Management',
                           </a>
                         </div>
                       </div>
-<div className="space-y-2">
-                        <a
-                          href={service.link}
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >
-                          Learn More
-                        </a>
-                        <a
-                          href="/contact"
-                          className="w-full neon-button-enhanced py-2 px-4 rounded-lg font-medium transition-all block text-center"
-                        >
-                          Get Started
-                        </a>
+                        </div>
                       </div>
-
                     </div>
                   ))}
                 </div>
@@ -1005,19 +986,14 @@ name: 'AI-Powered Infrastructure Management',
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="https://ziontechgroup.com/contact"
-className="neon-button-enhanced px-8 py-3 rounded-lg font-bold transition-colors inline-flex items-center"
-
               className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center"
-
             >
               <MessageSquare className="w-5 h-5 mr-2" />
               Get Started Today
             </a>
             <a
               href="tel:+13024640950"
-
-className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
-
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-cyan-600 transition-colors inline-flex items-center"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call: +1 (302) 464-0950

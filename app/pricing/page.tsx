@@ -1,4 +1,5 @@
 'use client';
+import React, { useState } from 'react';
 import { CheckCircle, X, Calendar, MessageSquare, ArrowRight, Zap, Brain, Cloud, Shield, Code, BarChart } from 'lucide-react';
 
 export default function PricingPage() {
