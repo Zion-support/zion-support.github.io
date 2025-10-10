@@ -1,7 +1,7 @@
 'use client';
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users, Cpu, ArrowRight } from 'lucide-react';
 
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -73,6 +73,15 @@ const Footer: React.FC = memo(() => {
     { name: 'Data Visualization & BI', url: '/data-visualization', description: 'Advanced dashboards' },
     { name: 'Workflow Automation', url: '/workflow-automation', description: 'Process automation' },
     { name: 'Cloud-Native Security', url: '/cloud-native-security', description: 'Container security' }
+  ];
+
+  const microSaasServices = [
+    { name: 'Zion Analytics Pro', url: '/zion-analytics-pro', description: 'Business intelligence platform' },
+    { name: 'Zion Chat AI', url: '/zion-chat-ai', description: 'AI customer support' },
+    { name: 'Zion Security Shield', url: '/zion-security-shield', description: 'Cybersecurity monitoring' },
+    { name: 'Zion Cloud Vault', url: '/zion-cloud-vault', description: 'Cloud backup & recovery' },
+    { name: 'Zion Content Studio', url: '/zion-content-studio', description: 'AI content creation' },
+    { name: 'Zion CRM Intelligence', url: '/zion-crm-intelligence', description: 'AI-enhanced CRM' }
   ];
 
   const companyLinks = [
@@ -186,19 +195,21 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Micro SAAS Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center">
-              <Cpu className="w-5 h-5 mr-2 text-cyan-400" />
+          <div className="cyber-card-enhanced p-6 rounded-2xl">
+            <h3 className="text-lg font-bold mb-6 text-green-400 flex items-center neon-text-enhanced">
+              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
+                <Cpu className="w-5 h-5 text-white" />
+              </div>
               Micro SAAS Tools
             </h3>
             <ul className="space-y-3">
               {microSaasServices.map((service, index) => (
                 <li key={index}>
                   <Link
-                    href={service.url}
-                    className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 group flex items-start"
+                    to={service.url}
+                    className="text-gray-300 hover:text-green-400 transition-colors duration-200 group flex items-start"
                   >
-                    <ArrowRight className="w-3 h-3 text-cyan-400 mr-2 mt-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 mt-2 group-hover:scale-150 transition-transform"></div>
                     <div>
                       <div className="font-medium">{service.name}</div>
                       <div className="text-xs text-gray-400 group-hover:text-gray-300">
@@ -241,35 +252,6 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           
-          {/* Micro SAAS */}
-          <div className="cyber-card-enhanced p-6 rounded-2xl">
-            <h3 className="text-lg font-bold mb-6 text-green-400 flex items-center neon-text-enhanced">
-              <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-3">
-                <Code className="w-5 h-5 text-white" />
-              </div>
-              Micro SAAS
-            </h3>
-            <ul className="space-y-3">
-              {microSaasServices.slice(0, 6).map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to={service.url}
-                    className="text-gray-300 hover:text-green-400 transition-all duration-300 text-sm group flex items-center">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full mr-3 group-hover:scale-150 transition-transform"></div>
-                    {service.name}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2 border-t border-green-500/20">
-                <Link 
-                  to="/micro-saas"
-                  className="text-green-400 hover:text-green-300 transition-all duration-300 text-sm font-semibold flex items-center group">
-                  View All Micro SAAS
-                  <Zap className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Additional Links Section */}

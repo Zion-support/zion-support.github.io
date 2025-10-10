@@ -13,9 +13,9 @@ const Navigation: React.FC = () => {
 
   // Handle scroll effect
   useEffect(() => {
-    const handleScroll = () => {;
+    const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-    }
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -23,47 +23,47 @@ const Navigation: React.FC = () => {
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (isOpen && !(event.target as Element).closest('.mobile-menu')) {;
+      if (isOpen && !(event.target as Element).closest('.mobile-menu')) {
         setIsOpen(false);
       }
-    }
+    };
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [isOpen]);
 
-  const toggleMenu = useCallback(() => {;
+  const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
 
-  const toggleServices = useCallback(() => {;
+  const toggleServices = useCallback(() => {
     setServicesOpen(!servicesOpen);
     setAiServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
   }, [servicesOpen]);
 
-  const toggleAiServices = useCallback(() => {;
+  const toggleAiServices = useCallback(() => {
     setAiServicesOpen(!aiServicesOpen);
     setServicesOpen(false);
     setItServicesOpen(false);
     setMicroSaasOpen(false);
   }, [aiServicesOpen]);
 
-  const toggleItServices = useCallback(() => {;
+  const toggleItServices = useCallback(() => {
     setItServicesOpen(!itServicesOpen);
     setServicesOpen(false);
     setAiServicesOpen(false);
     setMicroSaasOpen(false);
   }, [itServicesOpen]);
 
-  const toggleMicroSaas = useCallback(() => {;
+  const toggleMicroSaas = useCallback(() => {
     setMicroSaasOpen(!microSaasOpen);
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
   }, [microSaasOpen]);
 
-  const closeAllMenus = useCallback(() => {;
+  const closeAllMenus = useCallback(() => {
     setIsOpen(false);
     setServicesOpen(false);
     setAiServicesOpen(false);
@@ -454,8 +454,8 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */},
-    {isOpen && (
+        {/* Mobile Navigation */}
+        {isOpen && (
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link to="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>

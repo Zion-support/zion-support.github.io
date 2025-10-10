@@ -21,6 +21,9 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import FuturisticBackground from './app/components/FuturisticBackground';
+import PerformanceOptimizations from './app/components/PerformanceOptimizations';
+import SEOOptimizations from './app/components/SEOOptimizations';
+import AccessibilityEnhancements from './app/components/AccessibilityEnhancements';
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
@@ -43,8 +46,11 @@ const App: React.FC = () => {
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <SEOHead />
+        <SEOOptimizations />
         <SkipLink />
         <ServiceWorker />
+        <PerformanceOptimizations />
+        <AccessibilityEnhancements />
         <Router>
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
