@@ -2,21 +2,7 @@
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
-import { CheckCircle, ExternalLink, Award, Users, Handshake, TrendingUp } from 'lucide-react';
-=======
 import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-581e
 
 interface Partner {
   name: string;
@@ -26,7 +12,6 @@ interface Partner {
   website?: string;
   tier: 'strategic' | 'preferred' | 'certified';
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
 const PartnersPage: React.FC = () => {
   const partners: Partner[] = [
@@ -48,33 +33,6 @@ const PartnersPage: React.FC = () => {
     },
     {
       name: 'Google Cloud',
-<<<<<<< HEAD
-      logo: '/api/placeholder/200/100',
-      description: 'Advanced cloud computing and AI platform solutions',
-      category: 'Cloud & AI'
-    },
-    {
-      name: 'IBM',
-      logo: '/api/placeholder/200/100',
-      description: 'Enterprise AI and hybrid cloud solutions',
-      category: 'Enterprise AI'
-    }
-  ];
-
-  const benefits = [
-    'Access to cutting-edge technology',
-    'Joint go-to-market opportunities',
-    'Technical support and training',
-<<<<<<< HEAD
-    'Co-innovation projects',
-    'Global reach and scalability',
-    'Certified expertise and solutions'
-=======
-    'Co-marketing and co-selling',
-    'Product integration support',
-    'Priority customer support'
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
       logo: '/images/partners/google-cloud.png',
       description: 'Certified partner for Google Cloud Platform and AI/ML services',
       category: 'Cloud & AI',
@@ -105,7 +63,6 @@ const PartnersPage: React.FC = () => {
       website: 'https://salesforce.com',
       tier: 'certified'
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
   ];
 
   const benefits = [
