@@ -51,8 +51,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             <h1 className="text-3xl font-bold text-white mb-4">
-              Oops! Something went wrong;
-  </
+              Oops! Something went wrong
+            </h1>
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Please try refreshing the page.
             </p>
@@ -74,14 +74,14 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 onClick={this.handleRefresh}
                 className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors">
                 <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again;
-  </
+                Try Again
+              </button>
               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors">
                 <Home className="w-4 h-4 mr-2" />
-                Go Home;
-  </
+                Go Home
+              </button>
             </div>
             <div className="mt-6 pt-6 border-t border-white/20">
               <p className="text-sm text-gray-400 mb-3">
@@ -91,8 +91,8 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
                 href="mailto:support@ziontechgroup.com"
                 className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                 <Phone className="w-4 h-4 mr-2" />
-                support@ziontechgroup.com;
-  </
+                support@ziontechgroup.com
+              </a>
             </div>
           </div>
         </div>

@@ -113,9 +113,9 @@ const HomePage: React.FC = () => {
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
-          Skip to main content;
-  </
-      {/* Content Promotion Banner */}
+          Skip to main content
+        </a>
+        {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
         <ContentPromotionBanner />
       </Suspense>

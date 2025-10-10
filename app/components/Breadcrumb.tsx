@@ -14,8 +14,8 @@ const Breadcrumb: React.FC = () => {
               to="/"
               className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors">
               <Home className="w-4 h-4 mr-1" />
-              Home;
-  </
+              Home
+            </Link>
           </li>
           {pathnames.map((name, index) => {
             const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
