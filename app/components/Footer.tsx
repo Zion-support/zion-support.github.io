@@ -75,6 +75,22 @@ const Footer: React.FC = memo(() => {
         { name: 'Business Intelligence', href: '/business-intelligence' },
         { name: 'Robotics Solutions', href: '/robotics' }
       ]
+    },
+    {
+      title: 'Specialized Services',
+      icon: Settings,
+      services: [
+        { name: 'AI Operations', href: '/ai-ops' },
+        { name: 'Healthcare IT', href: '/healthcare-it' },
+        { name: 'Financial IT', href: '/financial-it' },
+        { name: 'Edge Computing', href: '/edge-computing' },
+        { name: '5G Implementation', href: '/5g-implementation' },
+        { name: 'IoT Platform', href: '/iot-platform' },
+        { name: 'Cloud Migration', href: '/cloud-migration' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'IT Infrastructure', href: '/it-infrastructure' },
+        { name: 'Custom Development', href: '/custom-development' }
+      ]
     }
   ];
 
@@ -87,7 +103,9 @@ const Footer: React.FC = memo(() => {
     { name: 'Pricing', href: '/pricing' },
     { name: 'News', href: '/news' },
     { name: 'Partners', href: '/partners' },
-    { name: 'Investors', href: '/investors' }
+    { name: 'Investors', href: '/investors' },
+    { name: 'Demo', href: '/demo' },
+    { name: 'Consultation', href: '/consultation' }
   ];
 
   const supportLinks = [
@@ -128,9 +146,9 @@ const Footer: React.FC = memo(() => {
       <div className="absolute bottom-10 right-1/3 w-1 h-1 bg-blue-400 rounded-full quantum-particle" style={{ animationDelay: '3s' }}></div>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6 group">
 <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25 neon-glow">
                 <Zap className="w-5 h-5 text-white" />
@@ -189,9 +207,9 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <h3 className="text-white font-semibold text-lg mb-6 neon-glow-cyan">Our Services</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <div className="flex items-center space-x-2 mb-4">
@@ -216,7 +234,7 @@ const Footer: React.FC = memo(() => {
           </div>
 
           {/* Quick Links */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="space-y-8">
               {/* Company */}
               <div>
