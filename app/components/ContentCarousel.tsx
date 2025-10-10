@@ -59,10 +59,25 @@ const ContentCarousel: React.FC = () => {
   }, []);
 
   return (
+    <div className="relative overflow-hidden rounded-2xl">
+      <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="w-full flex-shrink-0 p-8">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 text-center">
+              <p className="text-lg text-gray-300 mb-6 italic">"{testimonial.quote}"</p>
+              <div className="flex items-center justify-center space-x-4">
+                <img src={testimonial.avatar} alt={testimonial.name} className="w-12 h-12 rounded-full" />
+                <div>
+                  <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                  <p className="text-cyan-400 text-sm">{testimonial.role}</p>
+                </div>
+              </div>
             </div>
           </div>
+        ))}
+      </div>
 
-          {/* Navigation Buttons */}
+      {/* Navigation Buttons */}
           <button
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200"
@@ -90,8 +105,7 @@ const ContentCarousel: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
 };
 
 export default ContentCarousel;

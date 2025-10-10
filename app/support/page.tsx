@@ -1,11 +1,7 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MessageCircle, Clock, CheckCircle, Search } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
 
@@ -125,6 +121,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
 
+        {/* Contact Channels Section */}
+        <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -192,8 +190,6 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
       </div>
-      
-      <Footer />
     </>
   );
 };

@@ -74,23 +74,27 @@ const Navigation: React.FC = () => {
     { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' }
   ];
   const microSaasServices = [
-    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '50+ AI Tools' },
-    { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard', icon: BarChart, description: 'Business Intelligence' },
-    { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management' },
-    { name: 'Security Monitoring Suite', href: '/security-monitoring-suite', icon: Shield, description: 'Cybersecurity' },
-    { name: 'Cloud Infrastructure Manager', href: '/cloud-infrastructure-manager', icon: Cloud, description: 'Cloud Management' },
-    { name: 'Email Marketing Automation', href: '/email-marketing-automation', icon: Mail, description: 'Email Marketing' },
-    { name: 'Project Management Pro', href: '/project-management-pro', icon: CheckSquare, description: 'Project Management' },
-    { name: 'E-commerce Analytics Pro', href: '/ecommerce-analytics-pro', icon: BarChart, description: 'E-commerce Analytics' },
-    { name: 'AI Recruitment Assistant', href: '/ai-recruitment-assistant', icon: Users, description: 'HR & Recruitment' },
-    { name: 'Medical Records Manager', href: '/medical-records-manager', icon: Shield, description: 'Healthcare' },
-    { name: 'AI Accounting Assistant', href: '/ai-accounting-assistant', icon: BarChart, description: 'Finance & Accounting' },
-    { name: 'Property Management AI', href: '/property-management-ai', icon: BarChart, description: 'Real Estate' },
-    { name: 'Legal Document Manager', href: '/legal-document-manager', icon: Shield, description: 'Legal & Compliance' },
-    { name: 'Online Learning Platform', href: '/online-learning-platform', icon: Users, description: 'Education' },
-    { name: 'Supply Chain Optimizer', href: '/supply-chain-optimizer', icon: BarChart, description: 'Manufacturing' },
-    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'Content Creation' },
-    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools' }
+    { name: 'Micro SAAS Solutions', href: '/micro-saas', icon: Cpu, description: '20+ AI Tools', popular: true },
+    { name: 'AI Content Generator Pro', href: '/ai-content-generator', icon: Code, description: 'Content Creation', price: '$49/mo' },
+    { name: 'AI Analytics Dashboard', href: '/ai-analytics', icon: BarChart, description: 'Business Intelligence', price: '$99/mo' },
+    { name: 'AI Chatbot Builder', href: '/ai-chatbot-builder', icon: Users, description: 'No-Code Chatbots', price: '$79/mo' },
+    { name: 'AI Design Studio', href: '/ai-design-studio', icon: Sparkles, description: 'Design Tools', price: '$39/mo' },
+    { name: 'AI Email Marketing Suite', href: '/ai-email-marketing', icon: Mail, description: 'Email Automation', price: '$59/mo' },
+    { name: 'AI SEO Optimizer', href: '/ai-seo-optimizer', icon: Target, description: 'SEO Automation', price: '$69/mo' },
+    { name: 'AI Social Media Manager', href: '/ai-social-media-manager', icon: Globe, description: 'Social Automation', price: '$49/mo' },
+    { name: 'AI-Powered CRM', href: '/ai-crm', icon: Users, description: 'Customer Management', price: '$149/mo', popular: true },
+    { name: 'AI Invoice Generator', href: '/ai-invoice-generator', icon: FileText, description: 'Invoice Automation', price: '$29/mo' },
+    { name: 'AI Scheduler Pro', href: '/ai-scheduler', icon: Calendar, description: 'Smart Scheduling', price: '$39/mo' },
+    { name: 'AI Writing Assistant', href: '/ai-writing-assistant', icon: Code, description: 'Writing Tools', price: '$29/mo' },
+    { name: 'AI Task Manager', href: '/ai-task-manager', icon: CheckSquare, description: 'Task Automation', price: '$49/mo' },
+    { name: 'AI Security Monitor', href: '/ai-security-monitor', icon: Shield, description: 'Security AI', price: '$199/mo', popular: true },
+    { name: 'AI Cloud Manager', href: '/ai-cloud-manager', icon: Cloud, description: 'Cloud Optimization', price: '$299/mo' },
+    { name: 'AI Code Assistant', href: '/ai-code-assistant', icon: Code, description: 'Code Generation', price: '$39/mo' },
+    { name: 'AI API Builder', href: '/ai-api-builder', icon: Settings, description: 'API Development', price: '$59/mo' },
+    { name: 'AI Data Visualizer', href: '/ai-data-visualizer', icon: BarChart, description: 'Data Visualization', price: '$79/mo' },
+    { name: 'AI Video Creator', href: '/ai-video-creator', icon: Sparkles, description: 'Video Generation', price: '$89/mo' },
+    { name: 'AI Audio Studio', href: '/ai-audio-studio', icon: Sparkles, description: 'Audio Processing', price: '$49/mo' },
+    { name: 'AI Learning Platform', href: '/ai-learning-platform', icon: Users, description: 'Educational AI', price: '$69/mo' }
   ];
   const emergingTech = [
     { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum Solutions' },
@@ -202,15 +206,23 @@ const Navigation: React.FC = () => {
                       <Link
                         key={service.name}
                         href={service.href}
-                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group"
+                        className="flex items-center space-x-3 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300 group relative"
                         onClick={closeAllMenus}
                       >
+                        {service.popular && (
+                          <div className="absolute -top-1 -right-1 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs px-2 py-1 rounded-full">
+                            Popular
+                          </div>
+                        )}
                         <service.icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300" />
-                        <div>
+                        <div className="flex-1">
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
+                          {service.price && (
+                            <div className="text-xs text-cyan-400 font-semibold">{service.price}</div>
+                          )}
                         </div>
-                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400" />
                       </Link>
                     ))}
                   </div>
