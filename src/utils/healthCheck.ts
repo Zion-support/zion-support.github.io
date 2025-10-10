@@ -1,11 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 /**
  * Application Health Check Utility
  * Monitors application health and provides diagnostic information
  */
 import React from 'react'
-import { logger } from './logger'
-import { performanceMonitor } from './performanceMonitor'
 
 // Core Web Vitals thresholds
 const coreWebVitals = {

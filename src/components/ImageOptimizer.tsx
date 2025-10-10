@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
@@ -98,10 +100,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({,
     >
       {/* Placeholder */})
       {!isLoaded && ()
-        <img;)
+        <img alt="" loading="lazy";)
       {/* Placeholder */}
       {!isLoaded && (</div>
-        <img
+        <img loading="lazy"
           src={generatePlaceholder()}
           alt=""
           className="absolute inset-0 w-full h-full object-cover animate-pulse"

@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Settings, Zap, Shield, BarChart, CheckCircle, Star, Code,  Settings,  Zap,  BarChart } from 'lucide-react';
-const DevOpsCICDPage: React.FC = () => {
+const DevOpsCICDPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

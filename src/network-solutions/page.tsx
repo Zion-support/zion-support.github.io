@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Globe, Shield, Zap, Settings, CheckCircle, Star,  Globe,  Shield,  Settings } from 'lucide-react';
-const NetworkSolutionsPage: React.FC = () => {
+const NetworkSolutionsPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

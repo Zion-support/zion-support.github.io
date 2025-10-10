@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Shield, BarChart } from 'lucide-react';
 
-const AIRecruitmentAssistantPage: React.FC = () => {
+const AIRecruitmentAssistantPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Search,

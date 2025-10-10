@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Package, Target, Zap, Settings, CheckCircle, Star,  Package,  Target,  Settings } from 'lucide-react';
-const AIInventoryManagerPage: React.FC = () => {
+const AIInventoryManagerPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

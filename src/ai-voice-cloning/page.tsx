@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Music, Mic, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIVoiceCloningPage: React.FC = () => {
+const AIVoiceCloningPage: React.FC = React.memo((props) => {
   const features = [
     'Voice Cloning',
     'Text-to-Speech',

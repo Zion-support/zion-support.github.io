@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
 
-const ItServicesPage: React.FC = () => {
+const ItServicesPage: React.FC = React.memo((props) => {
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
     { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },

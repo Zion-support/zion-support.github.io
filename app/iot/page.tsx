@@ -1,8 +1,10 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Wifi, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
 ;
-const IoTPage: React.FC = () => {;
+const IoTPage: React.FC = React.memo((props) => {;
   const iotServices = [;
     {;
       title: 'IoT Device Management Platform',;

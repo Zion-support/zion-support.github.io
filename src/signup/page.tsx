@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
@@ -9,7 +11,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const SignupPage: React.FC = () => {
+const SignupPage: React.FC = React.memo((props) => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -25,7 +27,7 @@ const SignupPage: React.FC = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = useCallback((e) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -155,7 +157,7 @@ icon: Award,
       title: 'Proven Results',
       description: '300% average ROI and 95% process automation for our clients',
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = React.memo((props) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />

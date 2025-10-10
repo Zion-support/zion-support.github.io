@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';

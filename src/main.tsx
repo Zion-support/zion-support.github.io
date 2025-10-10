@@ -1,8 +1,9 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from '../App';
 import './globals.css';
-import { measureWebVitals } from './utils/performanceMonitor';
 
 // Initialize performance monitoring
 if (typeof window !== 'undefined') {
@@ -16,8 +17,7 @@ if ('serviceWorker' in navigator) {
       .then((registration) => {
         // Service Worker registered successfully
         if (process.env.NODE_ENV === 'development') {
-          console.log('SW registered: ', registration);
-        }
+          }
         
         // Handle updates
         registration.addEventListener('updatefound', () => {
@@ -37,8 +37,7 @@ if ('serviceWorker' in navigator) {
       .catch((registrationError) => {
         // Service Worker registration failed - handled silently
         if (process.env.NODE_ENV === 'development') {
-          console.log('SW registration failed: ', registrationError);
-        }
+          }
       });
   });
 }

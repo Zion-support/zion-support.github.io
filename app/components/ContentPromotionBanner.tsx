@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, TrendingUp } from 'lucide-react';
 
-const ContentPromotionBanner: React.FC = () => {
+const ContentPromotionBanner: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Brain,

@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React from 'react';
@@ -5,7 +7,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
 
-const PricingPage: React.FC = () => {
+const PricingPage: React.FC = React.memo((props) => {
   const plans = [
     {
       name: 'Starter',

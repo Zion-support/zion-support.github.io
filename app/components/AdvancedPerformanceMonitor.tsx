@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useEffect, useState, useCallback } from 'react';
 
@@ -153,9 +155,7 @@ const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (slowResources.length > 0) {
        
       // eslint-disable-next-line no-console
-      console.log(
-        'Slow resources detected:',
-        slowResources.map((r: PerformanceResourceTiming) => ({
+      => ({
           name: r.name,
           duration: r.duration,
           size: r.transferSize,

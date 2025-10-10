@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState } from 'react';
 import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';

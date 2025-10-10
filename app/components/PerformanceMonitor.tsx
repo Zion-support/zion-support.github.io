@@ -1,149 +1,67 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
+  cls: number | null;
+  fid: number | null;
+  fcp: number | null;
+  lcp: number | null;
+  ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
+const PerformanceMonitor: React.FC = React.memo((props) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    cls: null,
+    fid: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+  });
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    // Only run in production
+    if (process.env.NODE_ENV !== 'production') return;
 
-    // Only show in development or when performance monitoring is enabled
-    const shouldMonitor = process.env.NODE_ENV === 'development' || 
-                         localStorage.getItem('performance-monitoring') === 'true';
+    const handleMetric = (metric: any) => {
+      setMetrics(prev => ({
+        ...prev,
+        [metric.name]: metric.value
+      }));
 
-    if (!shouldMonitor) return;
-
-    const updateMetrics = (newMetrics: Partial<PerformanceMetrics>) => {
-      setMetrics(prev => ({ ...prev, ...newMetrics }));
+      // Send to analytics service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+          event_label: metric.id,
+          non_interaction: true,
+        });
+      }
     };
 
-    // Monitor Core Web Vitals
-    if ('web-vitals' in window) {
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-        getCLS((metric) => updateMetrics({ cls: metric.value }));
-        getFID((metric) => updateMetrics({ fid: metric.value }));
-        getFCP((metric) => updateMetrics({ fcp: metric.value }));
-        getLCP((metric) => updateMetrics({ lcp: metric.value }));
-        getTTFB((metric) => updateMetrics({ ttfb: metric.value }));
-      });
-    }
-
-    // Monitor performance with Performance Observer
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'largest-contentful-paint') {
-            updateMetrics({ lcp: entry.startTime });
-          }
-          if (entry.entryType === 'first-input') {
-            updateMetrics({ fid: entry.processingStart - entry.startTime });
-          }
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              updateMetrics({ fcp: entry.startTime });
-            }
-          }
-        });
-      });
-
-      try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'paint'] });
-      } catch (e) {
-        console.warn('Performance Observer not supported:', e);
-      }
-
-      return () => observer.disconnect();
-    }
-
-    // Show performance panel after 3 seconds
-    const timer = setTimeout(() => setIsVisible(true), 3000);
-    return () => clearTimeout(timer);
+    getCLS(handleMetric);
+    getFID(handleMetric);
+    getFCP(handleMetric);
+    getLCP(handleMetric);
+    getTTFB(handleMetric);
   }, []);
 
-  if (!isVisible || Object.keys(metrics).length === 0) {
+  // Don't render anything in production
+  if (process.env.NODE_ENV === 'production') {
     return null;
   }
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.poor) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.poor) return 'Needs Improvement';
-    return 'Poor';
-  };
-
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-lg p-4 text-xs text-white z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="font-semibold text-cyan-400">Performance</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-1">
-        {metrics.lcp && (
-          <div className="flex justify-between">
-            <span>LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>
-              {Math.round(metrics.lcp)}ms ({getScoreText(metrics.lcp, { good: 2500, poor: 4000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.fid && (
-          <div className="flex justify-between">
-            <span>FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-              {Math.round(metrics.fid)}ms ({getScoreText(metrics.fid, { good: 100, poor: 300 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.cls && (
-          <div className="flex justify-between">
-            <span>CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
-              {metrics.cls.toFixed(3)} ({getScoreText(metrics.cls, { good: 0.1, poor: 0.25 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.fcp && (
-          <div className="flex justify-between">
-            <span>FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>
-              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})
-            </span>
-          </div>
-        )}
-        
-        {metrics.ttfb && (
-          <div className="flex justify-between">
-            <span>TTFB:</span>
-            <span className={getScoreColor(metrics.ttfb, { good: 800, poor: 1800 })}>
-              {Math.round(metrics.ttfb)}ms ({getScoreText(metrics.ttfb, { good: 800, poor: 1800 })})
-            </span>
-          </div>
-        )}
-      </div>
+    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
+      <div className="font-bold mb-2">Performance Metrics</div>
+      <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
+      <div>FID: {metrics.fid?.toFixed(1) || 'N/A'}ms</div>
+      <div>FCP: {metrics.fcp?.toFixed(1) || 'N/A'}ms</div>
+      <div>LCP: {metrics.lcp?.toFixed(1) || 'N/A'}ms</div>
+      <div>TTFB: {metrics.ttfb?.toFixed(1) || 'N/A'}ms</div>
     </div>
   );
 };

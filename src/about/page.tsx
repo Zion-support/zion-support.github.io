@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Brain, Shield, Target, Users } from 'lucide-react';
@@ -6,7 +8,7 @@ import { Link } from 'react-router-dom';
 import { Users, Target, Brain, Shield } from 'lucide-react';
 import Footer from '../components/Footer';
 
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC = React.memo((props) => {
   const team = [
     {
       name: 'Kleber Santos',

@@ -7,12 +7,12 @@
 // Simple logger for performance optimizer;
   inf,
   o: (messag)
-  e: string, context?: string) => console.log('[INFO]', message, context),
+  e: string, context?: string) => ,
   performanc,
   e: (messag,
   e: string, dat,
   a: Record;)
-          <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
+          <string, unknown>, context?: string) => ,
 
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 };

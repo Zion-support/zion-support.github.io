@@ -1,6 +1,8 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 
-const Loading: React.FC = () => {
+const Loading: React.FC = React.memo((props) => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <div className="text-center"></div>

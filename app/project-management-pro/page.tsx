@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -24,7 +26,7 @@ import {;
   FileText;}
 } from 'lucide-react';
 ;
-const ProjectManagementProPage: React.FC = () => {;
+const ProjectManagementProPage: React.FC = React.memo((props) => {;
   const features = [;
     {;
       icon: CheckSquare,;

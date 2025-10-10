@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
 
-const BlockchainPage: React.FC = () => {
+const BlockchainPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Shield,

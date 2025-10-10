@@ -1,8 +1,10 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Bot, ArrowRight } from 'lucide-react';
 ;
-const SmartSupportBotPage: React.FC = () => {;
+const SmartSupportBotPage: React.FC = React.memo((props) => {;
   return (;
     <></>;
       <Helmet>;

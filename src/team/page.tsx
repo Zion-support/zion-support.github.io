@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Award, Brain, Shield, Linkedin, Mail, Github, Twitter } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const TeamPage: React.FC = () => {
+const TeamPage: React.FC = React.memo((props) => {
   const teamMembers = [
     {
       name: 'Kleber Santos',

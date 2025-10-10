@@ -1,15 +1,12 @@
 export const logger = {
   debug: (message: string, ...args: any[]) => {
     if (process.env.NODE_ENV === 'development') {
-      console.debug(`[DEBUG] ${message}`, ...args);
-    }
+      }
   },
   info: (message: string, ...args: any[]) => {
-    console.info(`[INFO] ${message}`, ...args);
-  },
+    },
   warn: (message: string, ...args: any[]) => {
-    console.warn(`[WARN] ${message}`, ...args);
-  },
+    },
   error: (message: string, error?: Error, ...args: any[]) => {
     console.error(`[ERROR] ${message}`, error, ...args);
   }};
@@ -258,16 +255,13 @@ class Logger {/* TODO: Fix JSX expression */}
 
       case LogLevel.DEBUG:
 
-        console.debug(`%c${message}`, styles, entry)
         break;
       case LogLevel.INF,
   O:`
-        // console.info(`%c${message}`, styles, entry)
-        break;
+        // break;
       case LogLevel.WAR,
   N:`
-        // // console.warn(`%c${message}`, styles, entry)
-        break;
+        // // break;
       case LogLevel.ERRO,
   R:
       case LogLevel.FATA,

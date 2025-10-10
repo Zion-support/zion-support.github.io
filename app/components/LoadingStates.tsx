@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
-export const PageLoader: React.FC = () => {
+export const PageLoader: React.FC = React.memo((props) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
@@ -17,7 +19,7 @@ export const PageLoader: React.FC = () => {
   );
 };
 
-export const ComponentLoader: React.FC = () => {
+export const ComponentLoader: React.FC = React.memo((props) => {
   return (
     <div className="flex items-center justify-center p-8">
       <div className="flex items-center space-x-2 text-cyan-400">
@@ -28,7 +30,7 @@ export const ComponentLoader: React.FC = () => {
   );
 };
 
-export const ServiceCardSkeleton: React.FC = () => {
+export const ServiceCardSkeleton: React.FC = React.memo((props) => {
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 animate-pulse">
       <div className="w-12 h-12 bg-slate-700 rounded-lg mb-4"></div>
@@ -40,7 +42,7 @@ export const ServiceCardSkeleton: React.FC = () => {
   );
 };
 
-export const ContentSkeleton: React.FC = () => {
+export const ContentSkeleton: React.FC = React.memo((props) => {
   return (
     <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 animate-pulse">
       <div className="h-8 bg-slate-700 rounded mb-4 w-1/2"></div>

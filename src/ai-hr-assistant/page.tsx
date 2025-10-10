@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -5,7 +7,7 @@ import { Users, FileText, Calendar, TrendingUp, CheckCircle, ArrowRight, Phone, 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIHRAssistantPage: React.FC = () => {
+const AIHRAssistantPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Users,

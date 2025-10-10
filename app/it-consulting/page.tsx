@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import React, { useState, useEffect } from 'react';
@@ -75,7 +79,7 @@ import {;
   Webcam as WebcamIcon, Speaker as SpeakerIcon;}
 } from 'lucide-react';
 ;
-const ITConsultingPage: React.FC = () => {;
+const ITConsultingPage: React.FC = React.memo((props) => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
 ;

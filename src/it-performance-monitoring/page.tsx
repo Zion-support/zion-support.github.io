@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { BarChart, Zap, Shield, Settings, CheckCircle, Star,  BarChart,  Zap,  Settings } from 'lucide-react';
-const ITPerformanceMonitoringPage: React.FC = () => {
+const ITPerformanceMonitoringPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

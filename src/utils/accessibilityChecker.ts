@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 /**
  * Accessibility Checker Utility
@@ -312,7 +314,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           message: `Image ${index + 1} is missing alt text`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add descriptive alt text to the image',
-          codeExample: '<img src="..." alt="Description of image" />'
+          codeExample: '<img loading="lazy" src="..." alt="Description of image" />'
         });
       }
       // Check for empty alt on decorative images without role
@@ -330,7 +332,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           
           
           "
-          <img src="..." alt="Description of image" />'
+          <img loading="lazy" src="..." alt="Description of image" />'
         })
   )
       }
@@ -349,7 +351,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           message: `Image ${index + 1} has empty alt without role="presentation"`,
           element: `img[src="${img['src']}"]`,
           fix: 'Add role="presentation" to decorative images',
-          codeExample: '<img src="..." alt="" role="presentation" />'
+          codeExample: '<img loading="lazy" src="..." alt="" role="presentation" />'
         });
       }
     });
@@ -380,7 +382,7 @@ export class AccessibilityChecker {/* TODO: Fix JSX expression */}
           
           
           "
-          <img src="..." alt="" role="presentation" />'
+          <img loading="lazy" src="..." alt="" role="presentation" />'
         })
   )
       }

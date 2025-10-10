@@ -1,3 +1,9 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Brain, Zap, Shield, BarChart } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,7 +13,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIServicesPage: React.FC = () => {
+const AIServicesPage: React.FC = React.memo((props) => {
   const services = [
     {
       title: 'AI Strategy & Consulting',

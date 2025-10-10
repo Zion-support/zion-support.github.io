@@ -105,11 +105,7 @@ class MonitoringService {
       try {
         const longTaskObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
-            // console.warn('Long task detected:', {
-            //   duration: entry.duration,
-            //   startTime: entry.startTime
-            // })
-          }
+            // }
         })
         longTaskObserver.observe({ entryTypes: ['longtask'] })
       } catch (error) {
@@ -126,12 +122,7 @@ class MonitoringService {
           entries.forEach((entry: PerformanceEntry) => {
             const resourceEntry = entry as PerformanceResourceTiming;
             if (resourceEntry.duration && resourceEntry.duration > 1000) {
-              // console.warn('Slow resource detected:', {
-              //   name: resourceEntry.name,
-              //   duration: resourceEntry.duration,
-              //   type: resourceEntry.initiatorType
-              // })
-            }
+              // }
           });
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
@@ -203,8 +194,7 @@ class MonitoringService {
     if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
       const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
       if (memory) {
-        // console.log('[Memory]', {
-        //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
+        // }MB`,
         //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
         //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
         // })
@@ -216,8 +206,7 @@ class MonitoringService {
     if ('performance' in window && 'getEntriesByType' in performance) {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
       if (navigation) {
-        // console.log('[Navigation Timing]', {
-        //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
+        // }ms`,
         //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
         //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
         //   'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,

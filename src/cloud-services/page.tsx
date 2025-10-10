@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const CloudServicesPage: React.FC = () => {
+const CloudServicesPage: React.FC = React.memo((props) => {
   return (
     <div>Coming Soon</div>
 

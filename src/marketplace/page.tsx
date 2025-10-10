@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
@@ -9,7 +11,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const MarketplacePage: React.FC = () => {
+const MarketplacePage: React.FC = React.memo((props) => {
   const [activeCategory, setActiveCategory] = useState('products');
   const [searchTerm, setSearchTerm] = useState('');
 

@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -100,7 +104,7 @@ interface AccessibilitySettings {
   focusVisible: boolean;
 }
 
-const AccessibilityEnhancer: React.FC = () => {
+const AccessibilityEnhancer: React.FC = React.memo((props) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
@@ -189,7 +193,7 @@ const AccessibilityEnhancer: React.FC = () => {
 
   // Announce page changes
   useEffect(() => {
-    const announcePageChange = () => {
+    const announcePageChange = useCallback((e) => {
       const liveRegion = document.getElementById('live-region');
       if (liveRegion) {
         const pageTitle = document.title;

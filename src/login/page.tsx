@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState } from 'react';
 
@@ -9,7 +13,7 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const LoginPage: React.FC = () => {
+const LoginPage: React.FC = React.memo((props) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -18,7 +22,7 @@ const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const _handleInputChange = useCallback((e) => {
     const { name, value, type, checked } = e.target;
     setFormData(prev => ({
       ...prev,

@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 
 
 
@@ -8,7 +10,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ApiDocs: React.FC = () => {
+const ApiDocs: React.FC = React.memo((props) => {
   return (
     <div>Coming Soon</div>
 

@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -25,7 +27,7 @@ import {;
   Monitor;}
 } from 'lucide-react';
 ;
-const SecurityMonitoringSuitePage: React.FC = () => {;
+const SecurityMonitoringSuitePage: React.FC = React.memo((props) => {;
   const features = [;
     {;
       icon: Monitor,;

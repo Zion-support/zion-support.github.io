@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React from 'react';
@@ -19,7 +21,7 @@ interface JobPosition {
   featured: boolean;
 }
 
-const CareersPage: React.FC = () => {
+const CareersPage: React.FC = React.memo((props) => {
   const openPositions: JobPosition[] = [
     {
       id: '1',

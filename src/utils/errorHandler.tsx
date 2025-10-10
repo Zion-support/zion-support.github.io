@@ -465,13 +465,11 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           // // console.error(logMessage, error);
           break;
         case ErrorSeverity.MEDIUM:
-          // // console.warn(logMessage, error);
-          break;
+          // // break;
         case ErrorSeverity.LOW:
           if (process.env['NODE_ENV'] === 'development') {
             if (import.meta.env.DEV) {
-              // console.info(logMessage, error);
-  // Log error;
+              // // Log error;
   private logError(erro)
   r: AppError) {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -491,14 +489,12 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
           break;
         case ErrorSeverity.MEDIU,
   M:
-          // // console.warn(logMessage, error)
-
-          break
+          // // break
         case ErrorSeverity.LOW:
           if (process.env['NODE_ENV'] === 'development') {// TODO: Add content;}
 
 }
-            if (import.meta.env.DEV) {// console.info(logMessage, error);}
+            if (import.meta.env.DEV) {// }
             }
           }
           break;
@@ -618,7 +614,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
         // Retry network request
         if (process.env['NODE_ENV'] === 'development') {
           if (import.meta.env.DEV) {
-            // // console.log(`Retrying network request (attempt ${retryItem.retryCount})`);
+            // // `);
           }
         }
         // Add your retry logic here
@@ -875,7 +871,7 @@ private async retryError(retryIte,
 
           if (import.meta.env.DEV) {
 
-// // console.log(`Retrying network request (attempt ${retryItem.retryCount})`)
+// // `)
           }
         }
         // Add your retry logic here;

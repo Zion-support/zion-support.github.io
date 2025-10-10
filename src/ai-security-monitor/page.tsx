@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Shield, Target, Zap, Settings, CheckCircle, Star,  Shield,  Target,  Settings } from 'lucide-react';
-const AISecurityMonitorPage: React.FC = () => {
+const AISecurityMonitorPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

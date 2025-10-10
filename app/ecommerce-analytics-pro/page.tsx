@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight } from 'lucide-react';
 
-const EcommerceAnalyticsProPage: React.FC = () => {
+const EcommerceAnalyticsProPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: BarChart,

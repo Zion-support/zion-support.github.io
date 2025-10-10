@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { useEffect, useState } from 'react';
 
 interface BeforeInstallPromptEvent extends Event {
@@ -5,7 +7,7 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: 'accepted' | 'dismissed' }>;
 }
 
-const PWAInstaller: React.FC = () => {
+const PWAInstaller: React.FC = React.memo((props) => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallButton, setShowInstallButton] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
@@ -48,10 +50,8 @@ const PWAInstaller: React.FC = () => {
       const { outcome } = await deferredPrompt.userChoice;
       
       if (outcome === 'accepted') {
-        console.log('User accepted the install prompt');
-      } else {
-        console.log('User dismissed the install prompt');
-      }
+        } else {
+        }
       
       setDeferredPrompt(null);
       setShowInstallButton(false);

@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
-const TeamPage: React.FC = () => {;
+const TeamPage: React.FC = React.memo((props) => {;
   return (;
     <></>;
       <Helmet>;

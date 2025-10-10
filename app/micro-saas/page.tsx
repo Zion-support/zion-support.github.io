@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React from 'react';
@@ -17,7 +19,7 @@ interface MicroSaasProduct {
   category: string;
 }
 
-const MicroSaasPage: React.FC = () => {
+const MicroSaasPage: React.FC = React.memo((props) => {
   const products: MicroSaasProduct[] = [
     {
       id: '1',

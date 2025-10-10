@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 'use client';
@@ -13,7 +17,7 @@ import {;
   CheckCircle;}
 } from 'lucide-react';
 ;
-const ContactPage: React.FC = () => {;
+const ContactPage: React.FC = React.memo((props) => {;
   const [formData, setFormData] = useState({;
     name: '',;
     email: '',;

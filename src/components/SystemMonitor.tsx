@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 /**
  * System Monitor Component
@@ -6,7 +10,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 // Collect basic performance metrics
 const collectPerformanceMetrics = () => {
-import { performanceOptimizer } from '../utils/performanceOptimizer';
 const __collectPerformanceMetrics = () => {
   if (typeof window === 'undefined' || !window.performance) return null;
   const navigation = window.performance.timing;
@@ -78,7 +81,6 @@ interface SystemMonitorProps {
 import React, { useState, useEffect, useCallback } from 'react';
 // Collect basic performance metrics;
 const collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
-import { performanceOptimizer } from '../utils/performanceOptimizer';
 const __collectPerformanceMetrics = () => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }

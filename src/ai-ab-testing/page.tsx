@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import { TestTube, Target, Settings, CheckCircle } from 'lucide-react';
 import { TestTube, Target, Zap, Settings, CheckCircle } from 'lucide-react';
 
-const AIABTestingPage: React.FC = () => {
+const AIABTestingPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: TestTube,

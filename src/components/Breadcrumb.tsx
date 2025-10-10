@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
@@ -8,7 +10,7 @@ interface BreadcrumbItem {
   current?: boolean;
 }
 
-const Breadcrumb: React.FC = () => {
+const Breadcrumb: React.FC = React.memo((props) => {
   const location = useLocation();
   
   const generateBreadcrumbs = (): BreadcrumbItem[] => {,

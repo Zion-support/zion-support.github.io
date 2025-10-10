@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState } from 'react';
 import {Phone, Mail, MapPin, Clock, Send, CheckCircle, Users, Award, TrendingUp, Shield} from 'lucide-react';
@@ -5,7 +9,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import React from 'react';
 
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = React.memo((props) => {
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle, MessageSquare, Calendar, User, Building, Globe, Shield, Brain, Zap, Cloud, Database, Code, BarChart, Users, Award, Target, Star, TrendingUp, ArrowRight } from 'lucide-react';
 
 export default function ContactPage() {
@@ -20,7 +24,7 @@ $4});
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const _handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const _handleInputChange = useCallback((e) => {
     message: '',
     budget: '',
     timeline: ''
@@ -29,7 +33,7 @@ $4});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = useCallback((e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -40,8 +44,7 @@ $4});
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
-    // console.log('Form submitted:', formData);
-    setIsSubmitted(true);
+    // setIsSubmitted(true);
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);

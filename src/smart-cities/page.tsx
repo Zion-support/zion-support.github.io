@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Building, Target, Zap, Settings, CheckCircle, Star,  Building,  Target,  Settings } from 'lucide-react';
-const SmartCitiesPage: React.FC = () => {
+const SmartCitiesPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

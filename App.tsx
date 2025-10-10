@@ -15,6 +15,7 @@ import Breadcrumb from './app/components/Breadcrumb';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import SEOOptimizer from './app/components/SEOOptimizer';
 import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
 import { AnalyticsProvider } from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
@@ -50,6 +51,7 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <HelmetProvider>
         <SEOHead />
+        <SEOOptimizer />
         <SkipLink />
         <Router>
           <AppWithPerformanceMonitoring>

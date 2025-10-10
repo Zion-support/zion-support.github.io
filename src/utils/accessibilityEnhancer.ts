@@ -29,8 +29,7 @@ class AccessibilityEnhancer {private config: AccessibilityConfig;}
       // Add keyboard navigation support;)
       document.addEventListener('keydown', (event) => {if (event.key === 'Tab') {}
           // Handle tab navigation;
-          console.log('Tab navigation detected');
-        }
+          }
       }
   )
     }

@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Palette, Camera, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AIFashionDesignPage: React.FC = () => {
+const AIFashionDesignPage: React.FC = React.memo((props) => {
   const features = [
     'Design Generation',
     'Trend Analysis',

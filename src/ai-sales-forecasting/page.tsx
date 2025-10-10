@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { TrendingUp, Target, Zap, Settings, CheckCircle, Star,  TrendingUp,  Target,  Settings } from 'lucide-react';
-const AISalesForecastingPage: React.FC = () => {
+const AISalesForecastingPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

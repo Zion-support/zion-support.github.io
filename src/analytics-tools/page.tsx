@@ -1,9 +1,13 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, TrendingUp, Brain, Target, BarChart, Phone, Mail, MapPin} from 'lucide-react';
 
 import React from 'react';
-const AnalyticsToolsPage: React.FC = () => {
+const AnalyticsToolsPage: React.FC = React.memo((props) => {
   const analyticsTools = [
     {
       title: 'AI Business Intelligence',
@@ -68,7 +72,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = React.memo((props) => {
   return (
     
           

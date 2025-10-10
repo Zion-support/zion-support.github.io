@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import React, { Suspense, lazy } from 'react';
@@ -69,7 +73,7 @@ const AppLoadingSpinner = () => (;
   />;
 );
 ;
-const App: React.FC = () => {;
+const App: React.FC = React.memo((props) => {;
   return (;
     <ErrorBoundary>;
       <HelmetProvider>;

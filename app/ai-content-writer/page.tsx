@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -5,7 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react';
 
-const AIContentWriterPage: React.FC = () => {
+const AIContentWriterPage: React.FC = React.memo((props) => {
   const features = [
     {
       title: 'AI-Powered Writing',

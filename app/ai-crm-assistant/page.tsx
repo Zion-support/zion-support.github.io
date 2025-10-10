@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -6,7 +8,7 @@ import Footer from '../components/Footer';
 <<<<<<< HEAD
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-const AiCrmAssistantPage: React.FC = () => {
+const AiCrmAssistantPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Brain,
@@ -37,7 +39,7 @@ const AiCrmAssistantPage: React.FC = () => {
 =======
 import { CheckCircle, ArrowRight } from 'lucide-react';
 
-const AICrmAssistantPage: React.FC = () => {
+const AICrmAssistantPage: React.FC = React.memo((props) => {
   const features = [
     {
       title: 'AI Customer Management',

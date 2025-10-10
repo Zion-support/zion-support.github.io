@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 ;
@@ -29,7 +31,7 @@ interface FormStatus {;
     message: '';}
   });
 ;
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;}
+  const handleChange = useCallback((e) => {;}
     const { name, value } = e.target;
     setFormData(prev => ({;
       ...prev,;

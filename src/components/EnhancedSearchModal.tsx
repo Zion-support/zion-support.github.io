@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { useState, useEffect, useRef } from 'react';
 import { Search, X, ArrowRight, Clock, TrendingUp, Star } from 'lucide-react';
 
@@ -149,17 +151,17 @@ const EnhancedSearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) =>
     setIsSearching(false);
   };
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
+  const handleInputChange = useCallback((e) => {</HTMLInputElement>const</HTMLInputElement> value = e.target.value;
     setQuery(value);
     searchResults(value);
   };
 
-  const handleResultClick = (result: SearchResult) => {
+  const handleResultClick = useCallback((e) => {
     window.location.href = result.url;
     onClose();
   };
 
-  const handleSuggestionClick = (suggestion: string) => {
+  const handleSuggestionClick = useCallback((e) => {
     setQuery(suggestion);
     searchResults(suggestion);
   };

@@ -1,6 +1,5 @@
 
 'use client'
-import { logger } from './logger';
 /**
  * Advanced Performance Monitoring System;
  * Tracks Core Web Vitals and custom performance metrics;
@@ -18,8 +17,7 @@ const logger = {/* TODO: Fix JSX expression */}
     if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
   O: Add content;}
 }
-      console.debug(`[${context}] ${message}`, data);
-    }
+      }
   },
   inf,
   o: (messag,
@@ -27,16 +25,14 @@ const logger = {/* TODO: Fix JSX expression */}
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
-    console.info(`[${context}] ${message}`, data);
-  },
+    },
   war,
   n: (messag,
   e: string, contex)
   t: string, data?: any) => {/* TODO: Fix JSX expression */}
   O: Add content;}
 }`
-    console.warn(`[${context}] ${message}`, data);
-  },
+    },
   erro,
   r: (messag,
   e: string, contex)
@@ -281,10 +277,7 @@ const navObserver = new PerformanceObserver((list) => {/* TODO: Fix JSX expressi
       this.customMetrics.shift();
 
     }
-    console.debug(`Custom Metric: ${name}`, 'PerformanceMonitoring', { value, unit }
-
-  )
-  }
+    }
   /**
    * Send metric to analytics service;
    */

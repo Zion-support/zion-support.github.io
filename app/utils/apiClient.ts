@@ -2,7 +2,6 @@
  * API Client Utility;
  * Provides a centralized API client with error handling and caching;
  */;
-import { apiCache } from './apiCache';
 ;
 interface RequestConfig {}
   method?: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';

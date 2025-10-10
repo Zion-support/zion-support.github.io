@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -5,7 +7,7 @@ import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ContactPage: React.FC = () => {
+const ContactPage: React.FC = React.memo((props) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

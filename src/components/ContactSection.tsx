@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { useState } from 'react';
 
 export default function ContactSection() {
@@ -9,7 +11,7 @@ export default function ContactSection() {
     message: ''
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = useCallback((e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -19,8 +21,7 @@ export default function ContactSection() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+    };
 
   const contactInfo = [
     {

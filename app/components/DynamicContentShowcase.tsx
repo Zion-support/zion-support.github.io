@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -20,7 +22,7 @@ interface Feature {
   benefits: string[];
 }
 
-const DynamicContentShowcase: React.FC = () => {
+const DynamicContentShowcase: React.FC = React.memo((props) => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials: Testimonial[] = [

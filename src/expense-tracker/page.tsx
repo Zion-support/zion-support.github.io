@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import {Receipt, TrendingUp, Shield, Zap, Brain, Target, CheckCircle, Star, Phone} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
-const ExpenseTrackerPage: React.FC = () => {
+const ExpenseTrackerPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Receipt,
@@ -225,7 +227,7 @@ $4}
 
 
 import { Link } from 'react-router-dom';
-const ExpenseTrackerPage: React.FC = () => {
+const ExpenseTrackerPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}
@@ -251,7 +253,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = React.memo((props) => {
   return (
     
           

@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { FlaskConical, Target, Zap, Settings, CheckCircle, Star,  FlaskConical,  Target,  Settings } from 'lucide-react';
-const InnovationLabsPage: React.FC = () => {
+const InnovationLabsPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

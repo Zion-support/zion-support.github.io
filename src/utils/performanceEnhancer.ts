@@ -36,14 +36,13 @@ class PerformanceEnhancer {private config: OptimizationConfig;}
       try {const observer = new PerformanceObserver((list) => {}
           const entries = list.getEntries();
           entries.forEach((entry) => {// Process performance entries;}
-            console.log('Performance)
-  entry:', entry.name, entry.duration);
+            entry:', entry.name, entry.duration);
           });
         });
         
 
         observer.observe({ entryTypes: ['measure', 'navigation'] });
-      } catch (error) {console.warn('PerformanceObserver not supported:', error);}
+      } catch (error) {}
 
       }
     }

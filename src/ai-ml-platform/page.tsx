@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Brain, TrendingUp, Shield, BarChart, Users, Clock, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
@@ -12,7 +16,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIMLPlatformPage: React.FC = () => {
+const AIMLPlatformPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Brain,

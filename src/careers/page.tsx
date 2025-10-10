@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Clock, Users, Briefcase, ArrowRight, CheckCircle, Star, Heart, Zap, Shield } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const CareersPage: React.FC = () => {
+const CareersPage: React.FC = React.memo((props) => {
   const openPositions = [
     {
       id: 'senior-ai-engineer',

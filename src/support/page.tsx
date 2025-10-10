@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
@@ -5,7 +7,7 @@ import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import { Phone, Mail, MessageSquare, Search, Clock, Users, Award, Zap, Brain, Shield, Code, BarChart, MessageSquare as Chat, Eye, Cpu, Target, Lock, BarChart3, FileText, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity, CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 
-const SupportPage: React.FC = () => {
+const SupportPage: React.FC = React.memo((props) => {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

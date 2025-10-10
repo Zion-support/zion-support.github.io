@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { useState, useEffect } from 'react';
 import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock, Star, BarChart3, Target, Rocket } from 'lucide-react';
 
-const ContentStatistics: React.FC = () => {
+const ContentStatistics: React.FC = React.memo((props) => {
   const [counters, setCounters] = useState({
     clients: 0,
     projects: 0,

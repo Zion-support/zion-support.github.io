@@ -1,7 +1,9 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 
-const SkipLink: React.FC = () => {
+const SkipLink: React.FC = React.memo((props) => {
   return (
     <a
       href="#main-content"

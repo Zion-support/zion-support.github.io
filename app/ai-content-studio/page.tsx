@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -9,7 +11,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
 import { CheckCircle, ArrowRight } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
-const AiContentStudioPage: React.FC = () => {
+const AiContentStudioPage: React.FC = React.memo((props) => {
   const features = [
     {
 <<<<<<< HEAD

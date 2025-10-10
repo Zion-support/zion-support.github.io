@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import {Building, Handshake, Award, Users, Globe, Star, CheckCircle, Phone, Mail} from 'lucide-react';
 'use client';
 import React from 'react';
@@ -9,7 +11,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const PartnersPage: React.FC = () => {
+const PartnersPage: React.FC = React.memo((props) => {
   const partnerTypes = [
     {
       title: 'Technology Partners',
@@ -184,7 +186,7 @@ icon: Globe,
       title: 'Global Reach',
       description: 'Access to worldwide markets and customers through our partner network',
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = React.memo((props) => {
   return (
     <>
       <Navigation />

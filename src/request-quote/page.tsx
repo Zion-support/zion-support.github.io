@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState } from 'react';
 
@@ -9,7 +13,7 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const RequestQuotePage: React.FC = () => {
+const RequestQuotePage: React.FC = React.memo((props) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -63,7 +67,7 @@ $4});
     'To be discussed'
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = useCallback((e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,

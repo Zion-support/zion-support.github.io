@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -7,7 +9,7 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-46ce
 
-const CloudMigrationServicesPage: React.FC = () => {
+const CloudMigrationServicesPage: React.FC = React.memo((props) => {
   const features = [
     {
 <<<<<<< HEAD

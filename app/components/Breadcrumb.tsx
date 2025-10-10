@@ -1,10 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React from 'react';
-import { useLocation } from 'react-router-dom';
 import { ChevronRight, Home } from 'lucide-react';
 
-const Breadcrumb: React.FC = () => {
+const Breadcrumb: React.FC = React.memo((props) => {
   const location = useLocation();
   
   // Don't show breadcrumb on home page

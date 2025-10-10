@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { useState } from 'react';
@@ -15,7 +17,7 @@ interface ConsultationType {
   popular: boolean;
 }
 
-const ConsultationPage: React.FC = () => {
+const ConsultationPage: React.FC = React.memo((props) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -98,18 +100,17 @@ const ConsultationPage: React.FC = () => {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-  };
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real app, this would submit the form data
-    console.log('Form submitted:', formData);
     alert('Thank you for your interest! We will contact you within 24 hours.');
   };
 

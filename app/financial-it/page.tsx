@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -5,7 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
 ;
-const FinancialITPage: React.FC = () => {;
+const FinancialITPage: React.FC = React.memo((props) => {;
   const features = [;
     {;
       icon: DollarSign,;

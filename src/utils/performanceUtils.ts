@@ -126,7 +126,7 @@ export async function measureTime;
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
-  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
+  if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { // // }ms`); } }
   return { result, duration }
 }
 /**

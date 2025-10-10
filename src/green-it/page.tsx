@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import {Leaf, Recycle, Zap, Globe, Target, CheckCircle, ArrowRight, Phone, Mail, Award, Users, TrendingUp} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
@@ -5,7 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const GreenITPage: React.FC = () => {
+const GreenITPage: React.FC = React.memo((props) => {
   const [activeTab, setActiveTab] = useState('solutions');
 
   const tabs = [
@@ -334,7 +336,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const GreenITPage: React.FC = () => {
+const GreenITPage: React.FC = React.memo((props) => {
   return (
     <div>Coming Soon</div>
 

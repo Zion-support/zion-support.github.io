@@ -1,8 +1,10 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Settings, ArrowRight } from 'lucide-react';
 ;
-const MicroSaaSPage: React.FC = () => {;
+const MicroSaaSPage: React.FC = React.memo((props) => {;
   const serviceName = 'chat-analytics';
   const title = serviceName.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
 ;

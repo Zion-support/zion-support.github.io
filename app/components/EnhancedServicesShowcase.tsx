@@ -1,7 +1,9 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
 ;
-const EnhancedServicesShowcase: React.FC = () => {;
+const EnhancedServicesShowcase: React.FC = React.memo((props) => {;
   const services = [;
     {;
       title: 'AI Solutions',;

@@ -1,11 +1,13 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Mail, Target, Send, BarChart, Users, TrendingUp } from 'lucide-react';
 
-const AiEmailMarketingPage: React.FC = () => {
+const AiEmailMarketingPage: React.FC = React.memo((props) => {
 import {Mail, Send, BarChart, Users, Target, CheckCircle, ArrowRight, Star, TrendingUp} from 'lucide-react';
 
-const AIEmailMarketingPage: React.FC = () => {
+const AIEmailMarketingPage: React.FC = React.memo((props) => {
   const _features = [
     {
       icon: Mail,

@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Home, Users, DollarSign, BarChart, Shield, Zap } from 'lucide-react';
 
-const PropertyManagementAIPage: React.FC = () => {
+const PropertyManagementAIPage: React.FC = React.memo((props) => {
   const features = [
     { icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' },
     { icon: Users, title: 'Tenant Management', description: 'Automated tenant screening, communication, and relationship management.' },

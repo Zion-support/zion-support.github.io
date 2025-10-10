@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -14,7 +16,7 @@ interface Slide {
   }[];
 }
 
-const ContentCarousel: React.FC = () => {
+const ContentCarousel: React.FC = React.memo((props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides: Slide[] = [

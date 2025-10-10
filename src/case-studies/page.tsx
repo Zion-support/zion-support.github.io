@@ -1,7 +1,9 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: React.FC = React.memo((props) => {
   const caseStudies = [
     {
       id: 1,

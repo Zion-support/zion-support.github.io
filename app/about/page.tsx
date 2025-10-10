@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -27,7 +29,7 @@ import {
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AboutPage: React.FC = () => {
+const AboutPage: React.FC = React.memo((props) => {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Client Satisfaction' },

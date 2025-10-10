@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Eye, Target, Zap, Settings, CheckCircle, Star,  Eye,  Target,  Settings } from 'lucide-react';
-const AICustomerInsightsPage: React.FC = () => {
+const AICustomerInsightsPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Wifi, Zap, Shield, Globe, CheckCircle, ArrowRight, Phone, Mail, MapPin, Clock, Users, BarChart } from 'lucide-react';
 ;
-const FiveGImplementationPage: React.FC = () => {;
+const FiveGImplementationPage: React.FC = React.memo((props) => {;
   const features = [;
     {;
       icon: Wifi,;

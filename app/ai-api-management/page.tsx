@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -5,7 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Zap, Shield, Users, BarChart3 } from 'lucide-react';
 
-const AIApiManagementPage: React.FC = () => {
+const AIApiManagementPage: React.FC = React.memo((props) => {
   const features = [
     {
       title: 'Intelligent API Monitoring',

@@ -1,3 +1,9 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 'use client';
@@ -110,7 +116,7 @@ export const,;
       </div>;
     );
   }
-  return(<img;
+  return(<img alt="" loading="lazy";
   return (<img></img>;
       src={src}
       alt={alt}

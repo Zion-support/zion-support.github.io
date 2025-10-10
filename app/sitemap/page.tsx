@@ -1,6 +1,8 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 ;
-const SitemapPage: React.FC = () => {;
+const SitemapPage: React.FC = React.memo((props) => {;
   const pages = [;}
     { path: '/', title: 'Home', description: 'Zion Tech Group - Advanced AI and IT Solutions' },;
     { path: '/about', title: 'About Us', description: 'Learn about our mission and expertise' },;

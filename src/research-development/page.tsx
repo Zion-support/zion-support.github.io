@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState } from 'react';
 
@@ -9,7 +13,7 @@ import Footer from '../components/Footer';
 
 'use client';
 import React, { useState } from 'react';
-const ResearchDevelopmentPage: React.FC = () => {
+const ResearchDevelopmentPage: React.FC = React.memo((props) => {
   const [activeTab, setActiveTab] = useState('ai');
 
   const _researchAreas = [

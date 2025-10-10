@@ -112,7 +112,6 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
-import { initializePerformanceOptimizations } from './utils/performanceOptimizations';
 
 // Dynamically import heavy components for better performance
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -141,7 +140,7 @@ const ServiceCardSkeleton: React.FC = memo(() => (
 ));
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
-const HomePage: React.FC = () => {
+const HomePage: React.FC = React.memo((props) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 

@@ -1,8 +1,10 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 ;
-const ServiceWorkerRegistrationPage: React.FC = () => {;
+const ServiceWorkerRegistrationPage: React.FC = React.memo((props) => {;
   const features = [;
     {;
       icon: Brain,;

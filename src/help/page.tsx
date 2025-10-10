@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import {HelpCircle, Search, Phone, Mail, MessageSquare, BookOpen, Video, Download, CheckCircle, ArrowRight, Users} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
@@ -9,7 +11,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const HelpPage: React.FC = () => {
+const HelpPage: React.FC = React.memo((props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('getting-started');
 

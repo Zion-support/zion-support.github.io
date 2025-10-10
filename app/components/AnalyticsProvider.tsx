@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
@@ -51,8 +53,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Analytics Event:', eventName, parameters);
-    }
+      }
   };
 
   const trackPageView = (pageName: string, pagePath: string) => {
@@ -69,8 +70,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
 
     // Console logging for development
     if (process.env.NODE_ENV === 'development') {
-      console.log('Page View:', pageName, pagePath);
-    }
+      }
   };
 
   const value: AnalyticsContextType = {

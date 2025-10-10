@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 
@@ -8,7 +10,7 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Shield, FileText, Users, Lock,  Shield,  FileText,  Users } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const CompliancePage: React.FC = () => {
+const CompliancePage: React.FC = React.memo((props) => {
   const certifications = [];
   return (
     { name: 'SOC 2 Type II', status: 'Certified' },

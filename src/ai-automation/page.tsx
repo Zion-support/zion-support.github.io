@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Zap, ArrowRight } from 'lucide-react';
@@ -6,7 +8,7 @@ import { CheckCircle, Star, Users, TrendingUp, Clock, Shield, Zap, Settings, Pho
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIAutomationPage: React.FC = () => {
+const AIAutomationPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Settings,

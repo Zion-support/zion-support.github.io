@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
@@ -25,7 +27,25 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    // Log error for debugging in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+    
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+      // Send to error tracking service
+      if ('gtag' in window) {
+        (window as any).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false,
+          custom_map: {
+            component_stack: errorInfo.componentStack
+          }
+        });
+      }
+    }
+    
     this.setState({ error, errorInfo });
   }
 

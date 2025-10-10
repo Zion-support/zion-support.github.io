@@ -1,10 +1,14 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import {BarChart, Target, Zap, Brain, Shield, CheckCircle, Star, Phone, Mail, MapPin, Users} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import React from 'react';
 
-const SmartAnalyticsPage: React.FC = () => {
+const SmartAnalyticsPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: BarChart,
@@ -152,7 +156,7 @@ $4}
 
 
 import { Link } from 'react-router-dom';
-const SmartAnalyticsPage: React.FC = () => {
+const SmartAnalyticsPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}
@@ -178,7 +182,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = React.memo((props) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />

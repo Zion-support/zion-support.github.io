@@ -23,7 +23,7 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
   }
 }
 
-export const _errorHandler = (error: AppError | Error) => {// TODO: Add content;}
+export const _errorHandler = useCallback((e) => {// TODO: Add content;}
 }
   const isDevelopment = process.env.NODE_ENV === 'development';
   const appError = error instanceof AppError ? error : new AppError(error.message)

@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { CheckCircle, Star } from 'lucide-react';
-const BusinessAppsPage: React.FC = () => {
+const BusinessAppsPage: React.FC = React.memo((props) => {
   return (
     <div>
       <Navigation />

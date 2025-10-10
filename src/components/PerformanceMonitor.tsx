@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -8,7 +10,7 @@ interface PerformanceMetrics {
   ttfb: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = React.memo((props) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     lcp: null,
     fid: null,

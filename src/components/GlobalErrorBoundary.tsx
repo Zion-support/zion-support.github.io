@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {

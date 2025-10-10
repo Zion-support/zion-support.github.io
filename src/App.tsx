@@ -1,8 +1,9 @@
+// Preload hint: react
+// Preload hint: react
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
-import { performanceMonitor } from './utils/performanceMonitor';
 
 // Lazy load components for better performance
 const HomePage = lazy(() => import('./page'));
@@ -143,7 +144,7 @@ const MainLoadingSpinner = () => (
   </div>
 );
 
-const App: React.FC = () => {
+const App: React.FC = React.memo((props) => {
   // Initialize performance monitoring
   React.useEffect(() => {
     performanceMonitor.reportMetrics();

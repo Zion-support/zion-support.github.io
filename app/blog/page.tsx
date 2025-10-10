@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -19,7 +21,7 @@ interface BlogPost {
   featured: boolean;
 }
 
-const BlogPage: React.FC = () => {
+const BlogPage: React.FC = React.memo((props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [filteredPosts, setFilteredPosts] = useState<BlogPost[]>([]);

@@ -210,14 +210,7 @@ const memory =
   O: Add content;}
 }
       // eslint-disable-next-line no-console;
-// console.log('Slow,
-  resources:', slowResources.map(r => ({/* TODO: Fix JSX expression */}
-  e: r.name}
-      //   duratio,
-  n: r.duration,
-      //   siz,
-  e: r.transferSize;)
-      // })));
+// // })));
     }
   }, []);
   const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}

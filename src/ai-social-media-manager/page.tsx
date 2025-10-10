@@ -1,9 +1,15 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import {Share2, TrendingUp, Users, Calendar, BarChart, CheckCircle, ArrowRight, Star, MessageSquare} from 'lucide-react';
 
 import React from 'react';
 
-const AISocialMediaManagerPage: React.FC = () => {
+const AISocialMediaManagerPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Share2,

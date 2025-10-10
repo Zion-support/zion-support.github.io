@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AgentReleaseRunbooksV22026Page: React.FC = () => {
+const AgentReleaseRunbooksV22026Page: React.FC = React.memo((props) => {
 
   return (
 

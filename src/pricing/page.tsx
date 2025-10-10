@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { CheckCircle, X, Zap, Brain, Cloud, ArrowRight, Star, Users, Shield, Clock } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const PricingPage: React.FC = () => {
+const PricingPage: React.FC = React.memo((props) => {
   const plans = [
     {
       name: 'Starter',

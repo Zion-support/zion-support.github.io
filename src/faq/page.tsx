@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import {ChevronDown, ChevronUp, Search, Phone, Mail, MessageSquare} from 'lucide-react';
 'use client';
 import React, { useState } from 'react';
@@ -5,7 +7,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 
-const FAQPage: React.FC = () => {
+const FAQPage: React.FC = React.memo((props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [openItems, setOpenItems] = useState<number[]>([]);
 
@@ -174,7 +176,7 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const FAQPage: React.FC = () => {
+const FAQPage: React.FC = React.memo((props) => {
   return (
     <div>Coming Soon</div>
 

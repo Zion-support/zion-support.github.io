@@ -56,8 +56,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn(`Failed to observe ${name}:`, error);
-    }
+      }
   }
 
   private observeLCP(): void {
@@ -72,8 +71,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['largest-contentful-paint'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe LCP:', error);
-    }
+      }
   }
 
   private observeFID(): void {
@@ -87,8 +85,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['first-input'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe FID:', error);
-    }
+      }
   }
 
   private observeCLS(): void {
@@ -106,8 +103,7 @@ class PerformanceMonitor {
       observer.observe({ entryTypes: ['layout-shift'] });
       this.observers.push(observer);
     } catch (error) {
-      console.warn('Failed to observe CLS:', error);
-    }
+      }
   }
 
   private setupCustomMetrics(): void {
@@ -132,8 +128,6 @@ class PerformanceMonitor {
 
   reportMetrics(): void {
     if (typeof window === 'undefined') return;
-    
-    console.log('Performance Metrics:', this._metrics);
     
     // Send to analytics service
     if (typeof gtag !== 'undefined') {

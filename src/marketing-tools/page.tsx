@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-const Pagetsx: React.FC = () => {
+const Pagetsx: React.FC = React.memo((props) => {
   const _features = [];
   return (
     {icon: Users,

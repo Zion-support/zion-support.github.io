@@ -1,8 +1,10 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import Navigation from './Navigation';
 ;
-const Header: React.FC = () => {;
+const Header: React.FC = React.memo((props) => {;
   return (;
     <></>;
       <Navigation />;}

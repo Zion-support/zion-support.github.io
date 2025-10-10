@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 
 
@@ -9,7 +13,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = React.memo((props) => {
   const aiServices = [
     {
       icon: Brain,

@@ -1,8 +1,10 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { BarChart, TrendingUp, Users, DollarSign, Zap, Target, ArrowRight, CheckCircle, Star, Award, Clock, Shield } from 'lucide-react';
 ;
-const AIAnalyticsDashboardPage: React.FC = () => {;
+const AIAnalyticsDashboardPage: React.FC = React.memo((props) => {;
   const features = [;
     {;
       icon: BarChart,;

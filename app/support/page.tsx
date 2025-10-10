@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React, { useState } from 'react';
@@ -10,7 +12,7 @@ interface FAQ {
   category: string;
 }
 
-const SupportPage: React.FC = () => {
+const SupportPage: React.FC = React.memo((props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);

@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import React, { memo, useState, useEffect } from 'react';
@@ -21,7 +25,7 @@ import {;
   Clock;}
 } from 'lucide-react';
 ;
-const Sidebar: React.FC = () => {;
+const Sidebar: React.FC = React.memo((props) => {;
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['ai-services', 'micro-saas', 'it-services']));
   const location = useLocation();

@@ -1,7 +1,8 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState, useEffect } from 'react';
 import { Phone, Mail, ExternalLink, Star, CheckCircle, ArrowRight, Zap, Brain, Cloud, Rocket, TrendingUp, Users, Award, Shield, Clock, DollarSign, Target, BarChart, Sparkles } from 'lucide-react';
-import { services, serviceCategories, contactInfo } from '../data/services';
 
 interface ServiceCardProps {
   service: typeof services[0];
@@ -181,7 +182,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service, index }) => {
   );
 };
 
-const EnhancedServicesShowcase: React.FC = () => {
+const EnhancedServicesShowcase: React.FC = React.memo((props) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [filteredServices, setFilteredServices] = useState(services);
 

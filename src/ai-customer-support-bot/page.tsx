@@ -1,3 +1,9 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import {CheckCircle, Star, Users, TrendingUp, Clock, MessageSquare, Bot, Phone} from 'lucide-react';
@@ -7,7 +13,7 @@ import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AICustomerSupportBotPage: React.FC = () => {
+const AICustomerSupportBotPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Bot,

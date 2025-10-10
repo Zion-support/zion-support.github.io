@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 /**
  * Enhanced Error Reporting Utility

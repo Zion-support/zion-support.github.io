@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 
 'use client';
 import React, { lazy } from 'react';

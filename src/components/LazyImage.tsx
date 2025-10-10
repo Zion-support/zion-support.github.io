@@ -84,12 +84,12 @@ const,
       style={{ width, height }}
 // >
       {!isInView ? ()}
-          <img></img>
+          <img alt="" loading="lazy"></img>
           src={placeholder}
           alt="" className="w-full h-full object-cover""
           aria-hidden="true"
 // />
-      ) : (<><img></img>
+      ) : (<><img alt="" loading="lazy"></img>
             src={hasError ? placeholder : src}
             alt={alt} className={cn(}
               'w-full h-full object-cover transition-opacity duration-300',

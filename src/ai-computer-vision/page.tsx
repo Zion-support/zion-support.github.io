@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 import { Eye, Camera, Video, Target, Shield, CheckCircle, ArrowRight, Settings } from 'lucide-react';
 
 import { Target, Shield, Eye,  Camera,  Target,  Shield,  Settings } from 'lucide-react';
-const AIComputerVisionPage: React.FC = () => {
+const AIComputerVisionPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}
@@ -76,7 +76,7 @@ const AIComputerVisionPage: React.FC = () => {
 
       popular: false,
 
-const PagePage: React.FC = () => {
+const PagePage: React.FC = React.memo((props) => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 

@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import {Phone, Star, Zap, Shield, Globe, Brain, BarChart, Eye, CheckCircle, Smartphone, Settings, ShoppingCart, Building, Car, Briefcase, Calculator, Zap as Lightning, Shield as Security, Star as StarIcon, CheckCircle as Check, Phone as PhoneIcon, Receipt, Calculator as CalculatorIcon} from 'lucide-react';
 'use client';
 import React, { memo } from 'react';

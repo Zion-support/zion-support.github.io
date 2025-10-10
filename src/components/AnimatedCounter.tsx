@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 import React, { useState, useEffect, useRef } from 'react';
 
 interface AnimatedCounterProps {

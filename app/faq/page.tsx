@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
-const FAQPage: React.FC = () => {
+const FAQPage: React.FC = React.memo((props) => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {

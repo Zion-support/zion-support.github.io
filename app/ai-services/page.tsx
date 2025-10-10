@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -5,7 +7,7 @@ import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp,
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const AIServicesPage: React.FC = () => {
+const AIServicesPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Brain,

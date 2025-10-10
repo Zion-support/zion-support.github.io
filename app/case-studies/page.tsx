@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 
 import React from 'react';
@@ -18,7 +20,7 @@ interface CaseStudy {
   team: string;
 }
 
-const CaseStudiesPage: React.FC = () => {
+const CaseStudiesPage: React.FC = React.memo((props) => {
   const caseStudies: CaseStudy[] = [
     {
       id: '1',

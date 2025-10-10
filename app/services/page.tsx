@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -18,7 +20,7 @@ import {
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ServicesPage: React.FC = () => {
+const ServicesPage: React.FC = React.memo((props) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 

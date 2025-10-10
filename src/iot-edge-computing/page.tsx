@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Wifi, Cpu, ArrowRight } from 'lucide-react';

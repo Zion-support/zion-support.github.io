@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 
 interface LinkProps {;
   href: string,;

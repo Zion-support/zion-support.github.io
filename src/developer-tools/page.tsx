@@ -1,3 +1,7 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 
 
@@ -8,7 +12,7 @@ import Footer from '../components/Footer';
 
 
 import { Code, Zap, BarChart, Target, Users, TrendingUp } from 'lucide-react';
-const DeveloperToolsPage: React.FC = () => {
+const DeveloperToolsPage: React.FC = React.memo((props) => {
   const _devTools = [
     {
       title: 'AI Code Generator',

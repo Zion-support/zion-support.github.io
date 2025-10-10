@@ -1,7 +1,9 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 ;
-const PagePage: React.FC = () => {;
+const PagePage: React.FC = React.memo((props) => {;
   const features = [;
     {;
       icon: Brain,;

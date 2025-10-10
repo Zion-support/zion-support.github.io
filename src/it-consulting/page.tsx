@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -5,7 +7,7 @@ import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Target, Users, BarChart, 
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const ITConsultingPage: React.FC = () => {
+const ITConsultingPage: React.FC = React.memo((props) => {
   const consultingServices = [
     {
 

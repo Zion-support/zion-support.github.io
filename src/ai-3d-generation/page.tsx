@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 import React from 'react';
 import { Camera, Play, Download, Share, Star, CheckCircle, Zap, Clock, Users, Award, ArrowRight, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AI3DGenerationPage: React.FC = () => {
+const AI3DGenerationPage: React.FC = React.memo((props) => {
   const features = [
     '3D Model Generation',
     'Animation Creation',

@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Leaf, Target, Zap, Settings, CheckCircle, Star,  Leaf,  Target,  Settings } from 'lucide-react';
-const SustainabilityTechPage: React.FC = () => {
+const SustainabilityTechPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

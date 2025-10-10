@@ -1,3 +1,5 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -13,7 +15,7 @@ interface Partner {
   tier: 'strategic' | 'preferred' | 'certified';
 }
 
-const PartnersPage: React.FC = () => {
+const PartnersPage: React.FC = React.memo((props) => {
   const partners: Partner[] = [
     {
       name: 'Microsoft',

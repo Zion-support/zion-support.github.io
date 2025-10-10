@@ -1,7 +1,11 @@
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React, { useState, useCallback } from 'react';
 
-const Image: React.FC = () => {
+const Image: React.FC = React.memo((props) => {
 interface ImageProps {
   src: string;
   alt: string;
@@ -204,7 +208,7 @@ className={`bg-gray-200 flex items-center justify-center ${className}`}
   return (<div>Coming Soon</div>)
   )
     
-          <img></img>
+          <img alt="" loading="lazy"></img>
       src={src}
       alt={alt}
       width={width}

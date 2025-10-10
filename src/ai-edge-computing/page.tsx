@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Cpu, Zap, Globe, Shield, CheckCircle, Star,  Cpu,  Zap,  Shield } from 'lucide-react';
-const AIEdgeComputingPage: React.FC = () => {
+const AIEdgeComputingPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

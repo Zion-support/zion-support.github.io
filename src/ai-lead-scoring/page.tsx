@@ -6,7 +6,7 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 import { Target, BarChart, Zap, Settings, CheckCircle, Star,  Target,  BarChart,  Settings } from 'lucide-react';
-const AILeadScoringPage: React.FC = () => {
+const AILeadScoringPage: React.FC = React.memo((props) => {
   const features = [];
   return (
     {// TODO: Add content;}

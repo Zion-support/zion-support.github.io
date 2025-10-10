@@ -1,10 +1,12 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import {Calendar, Users, Zap, Brain, Shield, CheckCircle, Star, Phone, Target} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
-const AISchedulerPage: React.FC = () => {
+const AISchedulerPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Calendar,

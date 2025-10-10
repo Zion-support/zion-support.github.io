@@ -1,9 +1,11 @@
+// Preload hint: react
+// Preload hint: react
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Smartphone, Monitor, Cloud } from 'lucide-react';
 
-const BusinessAppsPage: React.FC = () => {
+const BusinessAppsPage: React.FC = React.memo((props) => {
   const features = [
     {
       icon: Smartphone,
