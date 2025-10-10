@@ -21,12 +21,94 @@ const ServicesPage: React.FC = () => {
     // AI Services
     {
       icon: Brain,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
-      price: 'Starting at $1,500/month',
+      title: 'AI Solutions Enterprise',
+      description: 'Comprehensive AI solutions including machine learning, natural language processing, computer vision, and predictive analytics for enterprise transformation.',
+      features: ['Machine Learning Models', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting', 'Custom AI Development', 'Model Training', 'AI Integration'],
+      price: 'Starting at $2,999/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      link: 'https://ziontechgroup.com/ai-solutions-enterprise'
+    },
+    {
+      icon: Brain,
+      title: 'AI Chatbot & Virtual Assistant',
+      description: 'Intelligent conversational AI with natural language understanding, multi-language support, and seamless human handoff capabilities.',
+      features: ['Natural Language Understanding', 'Multi-language Support', 'Voice Integration', 'Human Handoff', 'Analytics Dashboard', 'Custom Training', 'API Integration', '24/7 Availability'],
+      price: 'Starting at $299/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-chatbot-virtual-assistant'
+    },
+    {
+      icon: Brain,
+      title: 'AI Computer Vision Platform',
+      description: 'Advanced computer vision solutions for object detection, image recognition, facial analysis, and automated visual inspection.',
+      features: ['Object Detection', 'Image Recognition', 'Facial Analysis', 'Visual Inspection', 'Real-time Processing', 'Custom Model Training', 'API Access', 'Cloud & Edge Deployment'],
+      price: 'Starting at $1,199/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-computer-vision-platform'
+    },
+    {
+      icon: Brain,
+      title: 'AI Natural Language Processing',
+      description: 'Powerful NLP solutions for text analysis, sentiment analysis, language translation, and automated content processing.',
+      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Content Processing', 'Entity Recognition', 'Intent Classification', 'Custom Models', 'Real-time Processing'],
+      price: 'Starting at $799/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-natural-language-processing'
+    },
+    {
+      icon: Brain,
+      title: 'AI Predictive Analytics',
+      description: 'Advanced predictive modeling for forecasting, risk assessment, demand planning, and business intelligence with AI insights.',
+      features: ['Forecasting Models', 'Risk Assessment', 'Demand Planning', 'Business Intelligence', 'Real-time Predictions', 'Custom Algorithms', 'Data Visualization', 'API Integration'],
+      price: 'Starting at $1,499/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-predictive-analytics'
+    },
+    {
+      icon: Brain,
+      title: 'AI Recommendation Engine',
+      description: 'Intelligent recommendation systems for e-commerce, content personalization, and user experience optimization.',
+      features: ['Product Recommendations', 'Content Personalization', 'User Behavior Analysis', 'A/B Testing', 'Real-time Updates', 'Multi-channel Support', 'Analytics Dashboard', 'Custom Algorithms'],
+      price: 'Starting at $899/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-recommendation-engine'
+    },
+    {
+      icon: Brain,
+      title: 'AI Document Intelligence',
+      description: 'Automated document processing with AI-powered OCR, data extraction, classification, and intelligent workflow automation.',
+      features: ['AI-Powered OCR', 'Data Extraction', 'Document Classification', 'Workflow Automation', 'Multi-format Support', 'Batch Processing', 'API Integration', 'Custom Templates'],
+      price: 'Starting at $599/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-document-intelligence'
+    },
+    {
+      icon: Brain,
+      title: 'AI Voice & Speech Processing',
+      description: 'Advanced voice recognition, speech-to-text, text-to-speech, and voice analytics for enhanced communication solutions.',
+      features: ['Voice Recognition', 'Speech-to-Text', 'Text-to-Speech', 'Voice Analytics', 'Multi-language Support', 'Real-time Processing', 'Custom Voice Models', 'API Integration'],
+      price: 'Starting at $699/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-voice-speech-processing'
+    },
+    {
+      icon: Brain,
+      title: 'AI Fraud Detection System',
+      description: 'Real-time fraud detection and prevention using machine learning algorithms for financial transactions and security monitoring.',
+      features: ['Real-time Detection', 'Machine Learning Models', 'Transaction Monitoring', 'Risk Scoring', 'Alert System', 'Custom Rules', 'API Integration', 'Compliance Reporting'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-fraud-detection-system'
+    },
+    {
+      icon: Brain,
+      title: 'AI Autonomous Systems',
+      description: 'Development of autonomous systems including robotics, autonomous vehicles, and intelligent automation solutions.',
+      features: ['Robotics Integration', 'Autonomous Vehicles', 'Intelligent Automation', 'Sensor Fusion', 'Real-time Decision Making', 'Safety Systems', 'Custom Development', 'Testing & Validation'],
+      price: 'Custom Pricing',
+      category: 'AI Services',
+      link: 'https://ziontechgroup.com/ai-autonomous-systems'
     },
     {
       icon: Brain,
@@ -88,12 +170,40 @@ const ServicesPage: React.FC = () => {
     // Cloud Services
     {
       icon: Cloud,
-      title: 'Cloud Services',
-      description: 'Scalable cloud infrastructure and migration services for enhanced performance and reliability.',
-      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud'],
+      title: 'Cloud Infrastructure & Migration',
+      description: 'Comprehensive cloud solutions including migration, infrastructure management, and optimization for AWS, Azure, and Google Cloud.',
+      features: ['Cloud Migration', 'Infrastructure as Code', 'Auto-scaling', 'Disaster Recovery', 'Multi-cloud Strategy', 'Cost Optimization', 'Security Compliance', '24/7 Monitoring'],
+      price: 'Starting at $1,999/month',
+      category: 'Cloud Services',
+      popular: true,
+      link: 'https://ziontechgroup.com/cloud-infrastructure-migration'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Security & Compliance',
+      description: 'Advanced cloud security solutions with threat detection, compliance management, and automated security monitoring.',
+      features: ['Threat Detection', 'Compliance Management', 'Access Control', 'Data Encryption', 'Security Monitoring', 'Vulnerability Assessment', 'Incident Response', 'Audit Trails'],
+      price: 'Starting at $1,499/month',
+      category: 'Cloud Services',
+      link: 'https://ziontechgroup.com/cloud-security-compliance'
+    },
+    {
+      icon: Cloud,
+      title: 'DevOps & CI/CD Pipeline',
+      description: 'Complete DevOps solutions with automated testing, deployment, monitoring, and infrastructure management.',
+      features: ['Automated Testing', 'Continuous Deployment', 'Infrastructure Monitoring', 'Version Control', 'Collaboration Tools', 'Performance Optimization', 'Security Scanning', 'Rollback Capabilities'],
       price: 'Starting at $1,299/month',
       category: 'Cloud Services',
-      popular: true
+      link: 'https://ziontechgroup.com/devops-cicd-pipeline'
+    },
+    {
+      icon: Cloud,
+      title: 'Multi-Cloud Management',
+      description: 'Unified management of multiple cloud platforms with cost optimization, security, and performance monitoring.',
+      features: ['Multi-cloud Dashboard', 'Cost Optimization', 'Security Management', 'Performance Monitoring', 'Resource Allocation', 'Compliance Tracking', 'Disaster Recovery', 'Migration Services'],
+      price: 'Starting at $1,799/month',
+      category: 'Cloud Services',
+      link: 'https://ziontechgroup.com/multi-cloud-management'
     },
     {
       icon: Cloud,
@@ -445,13 +555,21 @@ const ServicesPage: React.FC = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
-                      Get Quote
+                    <a
+                      href={service.link || 'tel:+13024640950'}
+                      target={service.link ? '_blank' : undefined}
+                      rel={service.link ? 'noopener noreferrer' : undefined}
+                      className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105"
+                    >
+                      {service.link ? 'Learn More' : 'Call Now'}
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300">
-                      Learn More
-                    </button>
+                    </a>
+                    <a
+                      href="mailto:kleber@ziontechgroup.com"
+                      className="flex-1 border border-white/20 text-white font-semibold py-3 px-6 rounded-lg hover:bg-white/10 transition-all duration-300 text-center"
+                    >
+                      Get Quote
+                    </a>
                   </div>
                 </div>
               ))}
@@ -469,12 +587,22 @@ const ServicesPage: React.FC = () => {
               Let's discuss your project and find the perfect solution for your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Free Consultation
-              </button>
-              <button className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300">
-                View Portfolio
-              </button>
+              <a
+                href="tel:+13024640950"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Call: (302) 464-0950
+              </a>
+              <a
+                href="mailto:kleber@ziontechgroup.com"
+                className="border border-white/20 text-white font-semibold py-4 px-8 rounded-lg hover:bg-white/10 transition-all duration-300"
+              >
+                Email: kleber@ziontechgroup.com
+              </a>
+            </div>
+            <div className="mt-8 text-gray-400">
+              <p>364 E Main St STE 1008, Middletown, DE 19709</p>
+              <p className="mt-2">Visit us at: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
             </div>
           </div>
         </section>

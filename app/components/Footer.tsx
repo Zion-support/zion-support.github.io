@@ -1,8 +1,6 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { memo } from 'react';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 const Footer: React.FC = memo(() => {
   const currentYear = new Date().getFullYear();
@@ -93,12 +91,14 @@ const Footer: React.FC = memo(() => {
     emergency: '24/7 Emergency Support Available'
   };
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.1)_0%,transparent_50%)] animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.1)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* AI Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6 rounded-xl">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Brain className="w-5 h-5 mr-2" />
               AI Services
             </h3>
@@ -124,8 +124,8 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* IT Services */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6 rounded-xl">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Cloud className="w-5 h-5 mr-2" />
               IT Services
             </h3>
@@ -151,8 +151,8 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* Micro SAAS */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6 rounded-xl">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Code className="w-5 h-5 mr-2" />
               Micro SAAS
             </h3>
@@ -178,8 +178,8 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* Emerging Technologies */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6 rounded-xl">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Zap className="w-5 h-5 mr-2" />
               Emerging Tech
             </h3>
@@ -197,8 +197,8 @@ const Footer: React.FC = memo(() => {
             </ul>
           </div>
           {/* Company & Support */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center">
+          <div className="cyber-card p-6 rounded-xl">
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400 flex items-center neon-text">
               <Users className="w-5 h-5 mr-2" />
               Company
             </h3>
@@ -254,7 +254,7 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
         </div>
-        <div className="mt-8 pt-8 border-t border-gray-700">
+        <div className="mt-8 pt-8 border-t border-cyan-500/20">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-sm text-gray-400 mb-4 md:mb-0">
               © {currentYear} Zion Tech Group. All rights reserved.
@@ -270,6 +270,11 @@ const Footer: React.FC = memo(() => {
                 Cookie Policy
               </a>
             </div>
+          </div>
+          <div className="mt-4 text-center">
+            <p className="text-xs text-gray-500">
+              Visit us at: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a>
+            </p>
           </div>
         </div>
       </div>
