@@ -51,8 +51,8 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                About Zion Tech Group;
-  </
+                About Zion Tech Group
+              </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
               </p>
@@ -87,7 +87,6 @@ const AboutPage: React.FC = () => {
                   <a
                     href="/services"
                     className="border border-white/20 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2">
-                    <Settings className="w-5 h-5" />
                     <span>Our Services</span>
                   </a>
                 </div>
