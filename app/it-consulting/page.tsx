@@ -461,8 +461,8 @@ const ITConsultingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto"></div>
           <div className="flex flex-col lg:flex-row gap-6 mb-8">
             {/* Search */}</div>
-            <div className="flex-1"></div>
-              <div className="relative"></div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -515,15 +515,15 @@ const ITConsultingPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service) => (</div>
               <div key={service.id} className="quantum-card p-6 group hover:scale-105 transition-all duration-300 energy-pulse"></div>
-                <div className="flex items-start justify-between mb-4"></div>
-                  <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                     <service.icon className="w-12 h-12" />
                   </div>
                   <div className="text-right"></div>
                     <div className="text-2xl font-bold text-white">{service.price}</div>
                     <div className="text-sm text-gray-400">starting price</div>
-                  </div>
-                </div>
+          </div>
+        </div>
                 
                 <h3 className="text-xl font-bold text-white mb-3 neon-glow">{service.name}</h3>
                 <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
@@ -554,8 +554,8 @@ const ITConsultingPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="space-y-2 mb-6 text-sm"></div>
-                  <div className="flex justify-between"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                     <span className="text-gray-400">Setup Time:</span>
                     <span className="text-white">{service.setupTime}</span>
                   </div>
@@ -599,9 +599,9 @@ const ITConsultingPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 cyber-scan-effect">
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 cyber-text neon-pulse">
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Optimize Your IT Infrastructure?
           </h2>
           <p className="text-xl text-cyan-400 mb-8 neon-glow">

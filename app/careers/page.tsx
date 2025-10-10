@@ -130,9 +130,8 @@ const CareersPage: React.FC = () => {
                 </div>
               ))}
             </div>
-
-            </div>
           </div>
+        </div>
         </section>
       </div>
     </>

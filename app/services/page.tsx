@@ -363,8 +363,8 @@ const ServicesPage: React.FC = () => {
                       ))}
                     </select>
                   </div>
-                </div>
-              </div>
+          </div>
+        </div>
               
               <div className="flex flex-wrap gap-2 justify-center">
                 {categories.slice(1).map((category) => (
@@ -381,8 +381,8 @@ const ServicesPage: React.FC = () => {
                   </button>
                 ))}
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         {/* Services Grid */}

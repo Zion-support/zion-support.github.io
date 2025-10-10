@@ -338,12 +338,11 @@ const ITServicesPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}</div>
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
             <div className="text-center"></div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1>
                 Professional IT Services</h1>
-              </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
                 Comprehensive technology solutions to power your business growth and digital transformation
               </p>
@@ -355,14 +354,14 @@ const ITServicesPage: React.FC = () => {
                   View Our Portfolio
                 </button>
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center mb-12"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our IT Services?
               </h2>
@@ -370,44 +369,44 @@ const ITServicesPage: React.FC = () => {
                 Expert solutions delivered by certified professionals with proven track records
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              <div className="text-center"></div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                 <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
                   <Server className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Certified Experts</h3>
                 <p className="text-gray-600">AWS, Microsoft, Cisco, and other industry certifications</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
                 <p className="text-gray-600">Bank-level security with compliance and monitoring</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <Cloud className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Cloud-First Approach</h3>
                 <p className="text-gray-600">Modern, scalable solutions built for the cloud</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <Settings className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">24/7 Support</h3>
                 <p className="text-gray-600">Round-the-clock monitoring and support services</p>
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-              <div className="text-center mb-12"></div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Services
                 </h2>
@@ -424,15 +423,15 @@ const ITServicesPage: React.FC = () => {
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
                       
-                      <div className="mb-4"></div>
-                        <div className="flex items-center justify-between mb-2"></div>
+                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                           <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 40% vs market rates</div>
-                        </div>
-                      </div>
+          </div>
+        </div>
 
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -480,9 +479,9 @@ const ITServicesPage: React.FC = () => {
         ))}
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="text-xl mb-8 text-blue-100">

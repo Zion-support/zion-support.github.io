@@ -21,8 +21,8 @@ const AutonomousSystemsPage: React.FC = () => {
               Advanced autonomous systems solutions for modern businesses.
             </p>
           </div>
+          </div>
         </div>
-      </div>
     </>
   );
 };

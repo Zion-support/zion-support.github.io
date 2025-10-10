@@ -187,9 +187,8 @@ const SupportPage: React.FC = () => {
                   <p className="text-gray-300">Monday - Friday: 9:00 AM - 6:00 PM</p>
                   <p className="text-gray-300">Saturday: 10:00 AM - 4:00 PM</p>
                 </div>
-              </div>
-            </div>
           </div>
+        </div>
         </section>
       </div>
       

@@ -206,7 +206,6 @@ interface FormStatus {
                 <p className="font-semibold text-gray-900">Office</p>
                 <p className="text-sm text-gray-600">New York, NY</p>
               </div>
-            </div>
           </div>
         </div>
     </div>

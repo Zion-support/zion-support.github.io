@@ -56,7 +56,6 @@ const PagePage: React.FC = () => {
               Our page solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
           </div>
         </div>
       </section>
@@ -66,7 +65,6 @@ const PagePage: React.FC = () => {
               Experience the power of our page solutions for your business.
             </p>
           </div>
-
           </div>
         </div>
       </section>
@@ -93,4 +91,4 @@ const PagePage: React.FC = () => {
   );
 };
 
-export default PagePage;
+export default PageName;

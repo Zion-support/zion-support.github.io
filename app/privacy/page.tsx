@@ -73,12 +73,11 @@ export default function PrivacyPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white"></div>
-      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
         <div className="container mx-auto px-4 text-center"></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1>
             Privacy Policy</h1>
-          </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Your privacy is important to us. Learn how we collect, use, and protect your information.
           </p>
@@ -86,11 +85,11 @@ export default function PrivacyPage() {
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
           </div>
+          </div>
         </div>
-      </div>
 
-      <div className="py-20"></div>
-        <div className="container mx-auto px-4"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
           <div className="max-w-4xl mx-auto space-y-12">
             {/* Introduction */}</div>
             <section>
@@ -108,8 +107,8 @@ export default function PrivacyPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Information We Collect</h2>
               <div className="grid md:grid-cols-3 gap-6">
                 {dataTypes.map((type, index) => (</div>
-                  <div key={index} className="bg-gray-50 rounded-lg p-6"></div>
-                    <div className="flex items-center mb-4"></div>
+                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <type.icon className="h-6 w-6 text-blue-600 mr-3" />
                       <h3 className="text-lg font-semibold text-gray-900">{type.category}</h3>
                     </div>
@@ -129,8 +128,8 @@ export default function PrivacyPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">How We Use Your Information</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {purposes.map((purpose, index) => (</div>
-                  <div key={index} className="flex items-start"></div>
-                    <div className="flex-shrink-0 mr-4"></div>
+                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <purpose.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div></div>
@@ -145,8 +144,8 @@ export default function PrivacyPage() {
             {/* Data Security */}
             <section>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Data Security</h2>
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-6"></div>
-                <div className="flex items-start"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <Shield className="h-6 w-6 text-blue-600 mr-3 mt-1" />
                   <div></div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Security Measures</h3>
@@ -160,8 +159,8 @@ export default function PrivacyPage() {
                       <li>• Employee training on data protection</li>
                     </ul>
                   </div>
-                </div>
-              </div>
+          </div>
+        </div>
             </section>
 
             {/* Your Rights */}
@@ -169,8 +168,8 @@ export default function PrivacyPage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Your Rights</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 {rights.map((right, index) => (</div>
-                  <div key={index} className="bg-white border border-gray-200 rounded-lg p-6"></div>
-                    <div className="flex items-center mb-3"></div>
+                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <right.icon className="h-6 w-6 text-green-600 mr-3" />
                       <h3 className="text-lg font-semibold text-gray-900">{right.title}</h3>
                     </div>
@@ -186,8 +185,8 @@ export default function PrivacyPage() {
               <p className="text-gray-700 mb-6">
                 If you have any questions about this Privacy Policy or our data practices, please contact us:
               </p>
-              <div className="grid md:grid-cols-2 gap-6"></div>
-                <div className="flex items-center"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700">privacy@ziontechgroup.com</span>
                 </div>
@@ -208,8 +207,8 @@ export default function PrivacyPage() {
 
             {/* Updates */}
             <section>
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6"></div>
-                <div className="flex items-start"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <AlertTriangle className="h-6 w-6 text-yellow-600 mr-3 mt-1" />
                   <div></div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">Policy Updates</h3>
@@ -217,12 +216,11 @@ export default function PrivacyPage() {
                       We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
                     </p>
                   </div>
-                </div>
-              </div>
-            </section>
           </div>
         </div>
-      </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }

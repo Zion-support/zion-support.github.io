@@ -29,8 +29,8 @@ const preloadComponents = () => {
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ));
@@ -150,13 +150,8 @@ const HomePage: React.FC = memo(() => {
           aria-labelledby="hero-heading"
         >
           <div className="max-w-6xl mx-auto"></div>
-            <h1 
-              id="hero-heading" 
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 neon-text cyber-text holographic-text glitch"
-              data-text="Zion Tech Group"
-            >
+            <h1>
               Zion Tech Group</h1>
-            </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
               Advanced AI and IT Solutions
             </p>
@@ -166,8 +161,8 @@ const HomePage: React.FC = memo(() => {
             </p>
             
             {/* Key Benefits */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12"></div>
-              <div className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300"></div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                 <div className="text-2xl sm:text-3xl mb-3">🚀</div>
                 <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
@@ -1328,8 +1323,8 @@ const HomePage: React.FC = memo(() => {
               {/* Contact Information */}</div>
               <div className="cyber-card hologram-card p-8"></div>
                 <h3 className="text-2xl font-bold text-white mb-6 neon-text">Contact Information</h3>
-                <div className="space-y-6"></div>
-                  <div className="flex items-center space-x-4"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center"></div>
                       <Phone className="w-6 h-6 text-white" />
                     </div>
@@ -1341,8 +1336,8 @@ const HomePage: React.FC = memo(() => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4"></div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div></div>
@@ -1353,8 +1348,8 @@ const HomePage: React.FC = memo(() => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4"></div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div></div>
@@ -1366,8 +1361,8 @@ const HomePage: React.FC = memo(() => {
                     </div>
                   </div>
                   
-                  <div className="flex items-center space-x-4"></div>
-                    <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div></div>
@@ -1377,9 +1372,8 @@ const HomePage: React.FC = memo(() => {
                         24/7 Emergency Support Available
                       </p>
                     </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
               
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8"></div>
@@ -1465,8 +1459,8 @@ const HomePage: React.FC = memo(() => {
                   </button>
                 </form>
               </div>
-            </div>
           </div>
+        </div>
         </section>
       </main>
       {/* Footer */}

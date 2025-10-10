@@ -125,8 +125,8 @@ const PerformanceDashboard: React.FC = () => {
         <div className="pt-2 border-t border-gray-200">
           <div className="text-xs text-gray-500">
             Last updated: {new Date().toLocaleTimeString()}</div>
+          </div>
         </div>
-    </div>
   );
 };
 

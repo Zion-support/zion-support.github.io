@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { memo } from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
@@ -273,9 +271,9 @@ const Footer: React.FC = memo(() => {
             </div>
           </div>
         </div>
-      </div>
-    </footer>
-  );
-});
-Footer.displayName = 'Footer';
-export default Footer;
+      </footer>
+    );
+  });
+  
+  Footer.displayName = 'Footer';
+  export default Footer;

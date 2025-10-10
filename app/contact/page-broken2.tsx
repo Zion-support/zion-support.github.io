@@ -181,8 +181,8 @@ phone: '',
                         placeholder="your@email.com"
                       />
                     </div>
-                  </div>
-                </div>
+          </div>
+        </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -217,8 +217,8 @@ phone: '',
                         placeholder="+1 (555) 123-4567"
                       />
                     </div>
-                  </div>
-                </div>
+          </div>
+        </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">
@@ -347,11 +347,10 @@ phone: '',
                       <h3 className="text-lg font-semibold text-white">Business Hours</h3>
                       <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
+        </div>
+          </div>
+        </div>
         </section>
       </div>
 </div>

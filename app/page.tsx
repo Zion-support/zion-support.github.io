@@ -1,6 +1,4 @@
 'use client';
-import React from 'react';
-'use client';
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
@@ -27,8 +25,6 @@ const preloadComponents = () => {
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
-    <div className="h-4 bg-gray-200 rounded mb-2"></div>
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
 ));
@@ -1050,9 +1046,8 @@ const HomePage: React.FC = () => {
                         24/7 Emergency Support Available
                       </p>
                     </div>
-                  </div>
-                </div>
-              </div>
+          </div>
+        </div>
               
               {/* Quick Contact Form */}
               <div className="cyber-card hologram-card p-8">
@@ -1141,11 +1136,11 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-      </main>
-      {/* Footer */}
-      <Footer />
-    </div>
-    </>
-  );
-};
-export default HomePage;
+        
+        {/* Footer */}
+        <Footer />
+      </div>
+    );
+  };
+  
+  export default HomePage;

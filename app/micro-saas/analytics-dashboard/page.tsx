@@ -64,8 +64,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}</div>
         <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
               <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
                 <BarChart className="w-4 h-4" />
                 <span>AI Analytics Dashboard</span>
@@ -87,14 +87,14 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   View Demo
                 </button>
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         {/* Features Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Powerful Analytics Features</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Everything you need to make data-driven decisions with confidence
@@ -102,11 +102,11 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (</div>
-                <div key={index} className="bg-slate-800/50 backdrop-blur-lg rounded-lg p-6 border border-slate-700/50 hover:border-cyan-400/50 transition-all group"></div>
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"></div>
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
@@ -116,8 +116,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Metrics Section */}
         <section className="py-16 px-4 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Platform Performance</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Built for scale and reliability
@@ -125,8 +125,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metrics.map((metric, index) => (</div>
-                <div key={index} className="text-center"></div>
-                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4"></div>
+                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <metric.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{metric.value}</div>
@@ -139,8 +139,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
 
         {/* Benefits Section */}
         <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Dashboard</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience the difference with our AI-powered analytics platform
@@ -157,8 +157,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
               </div>
               <div className="bg-gradient-to-br from-green-600/20 to-cyan-600/20 rounded-lg p-8 border border-green-500/30"></div>
                 <h3 className="text-2xl font-bold text-white mb-4">Success Stories</h3>
-                <div className="space-y-4"></div>
-                  <div className="flex items-center space-x-3"></div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                     <Star className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-300">"Increased revenue by 40% with better insights"</span>
                   </div>
@@ -170,16 +170,15 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                     <Star className="w-5 h-5 text-yellow-400" />
                     <span className="text-gray-300">"Improved decision making speed by 3x"</span>
                   </div>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-green-600/20 to-cyan-600/20 rounded-2xl p-12 border border-green-500/30"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Analytics?
               </h2>
@@ -196,8 +195,8 @@ const AIAnalyticsDashboardPage: React.FC = () => {
                   Schedule Demo
                 </button>
               </div>
-            </div>
           </div>
+        </div>
         </section>
       </div>
     </>

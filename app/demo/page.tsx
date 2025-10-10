@@ -215,9 +215,8 @@ const DemoPage: React.FC = () => {
                     <h4 className="text-xl font-semibold text-white mb-2">Interactive Demo</h4>
                     <p className="text-gray-300">Click play to experience this solution in action</p>
                   </div>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
           </div>
         </section>
       )}
@@ -244,8 +243,8 @@ const DemoPage: React.FC = () => {
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
-              </div>
+          </div>
+        </div>
             ))}
           </div>
         </div>

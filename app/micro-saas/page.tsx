@@ -80,8 +80,8 @@ const MicroSaasPage: React.FC = () => {
                   View All Plans
                 </Link>
               </div>
-            </div>
           </div>
+        </div>
         </section>
       </div>
     </>

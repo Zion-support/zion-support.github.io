@@ -13,10 +13,9 @@ import { Helmet } from 'react-helmet-async';
               Get Started Today
             </a>
           </div>
+          </div>
         </div>
-      </div>
-    </div>
   );
 };
 
-export default PagePage;
+export default PageName;

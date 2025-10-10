@@ -149,19 +149,19 @@ const BlockchainPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-        {/* Hero Section */}</div>
+        {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
-          <div className="absolute inset-0 bg-black opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-indigo-800/50"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                Blockchain Solutions</h1>
+                Blockchain Solutions
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
                 Transform your business with cutting-edge blockchain technology and decentralized solutions
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
                   Explore Blockchain Solutions
                 </button>
@@ -169,14 +169,14 @@ const BlockchainPage: React.FC = () => {
                   Schedule Blockchain Consultation
                 </button>
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         {/* Key Benefits */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center mb-12"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Why Choose Our Blockchain Services?
               </h2>
@@ -184,44 +184,44 @@ const BlockchainPage: React.FC = () => {
                 Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              <div className="text-center"></div>
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Link className="w-8 h-8 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts</h3>
                 <p className="text-gray-600">Certified blockchain developers and architects</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="text-center">
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Security First</h3>
                 <p className="text-gray-600">Comprehensive security audits and best practices</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <Zap className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Development</h3>
                 <p className="text-gray-600">Fast delivery with proven development frameworks</p>
               </div>
-              <div className="text-center"></div>
-                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <Target className="w-8 h-8 text-orange-600" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions</h3>
                 <p className="text-gray-600">Tailored blockchain solutions for your specific needs</p>
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-              <div className="text-center mb-12"></div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   {category} Services
                 </h2>
@@ -238,15 +238,15 @@ const BlockchainPage: React.FC = () => {
                       <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4">{service.description}</p>
                       
-                      <div className="mb-4"></div>
-                        <div className="flex items-center justify-between mb-2"></div>
+                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                           <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates</div>
-                        </div>
-                      </div>
+          </div>
+        </div>
 
                       <div className="mb-4"></div>
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -295,8 +295,8 @@ const BlockchainPage: React.FC = () => {
 
         {/* Blockchain Capabilities Showcase */}
         <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-            <div className="text-center mb-12"></div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Blockchain Capabilities
               </h2>
@@ -304,8 +304,8 @@ const BlockchainPage: React.FC = () => {
                 Comprehensive blockchain technologies and methodologies for modern business applications
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg"></div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                 <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts</h3>
                 <p className="text-gray-600">Automated contract execution with transparency and security</p>
@@ -335,14 +335,14 @@ const BlockchainPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Analytics</h3>
                 <p className="text-gray-600">Comprehensive data analysis and visualization tools</p>
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform with Blockchain?
             </h2>
             <p className="text-xl mb-8 text-blue-100">

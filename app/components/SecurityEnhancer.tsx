@@ -41,7 +41,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
     enhanceSecurity();
   }, []);
 
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 
 export default SecurityEnhancer;

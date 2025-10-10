@@ -88,8 +88,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {return {
  */
 function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
           <svg
             className="w-6 h-6 text-red-600"
@@ -128,8 +128,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             Go Home
           </button>
         </div>
-      </div>
-    </div>
+          </div>
+        </div>
   );
 }
 
@@ -138,8 +138,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
  */
 function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => void }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
         <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
           <svg
             className="w-6 h-6 text-yellow-600"
@@ -167,8 +167,8 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
             Retry Connection
           </button>
         </div>
-      </div>
-    </div>
+          </div>
+        </div>
   );
 }
 
@@ -177,8 +177,8 @@ function NetworkErrorFallback({ resetError }: { error: Error; resetError: () => 
  */
 function NotFoundFallback(): JSX.Element {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full text-center"></div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
         <h1 className="text-6xl font-bold text-gray-900">404</h1>
         <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
         <p className="mt-2 text-gray-600">
@@ -198,8 +198,8 @@ function NotFoundFallback(): JSX.Element {
             Go Back
           </button>
         </div>
-      </div>
-    </div>
+          </div>
+        </div>
   );
 }
 

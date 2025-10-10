@@ -49,12 +49,11 @@ export default function TermsPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white"></div>
-      <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20"></div>
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
         <div className="container mx-auto px-4 text-center"></div>
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1>
             Terms of Service</h1>
-          </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Please read these terms carefully before using our services
           </p>
@@ -62,17 +61,17 @@ export default function TermsPage() {
             <Calendar className="h-4 w-4 mr-2" />
             Last updated: {lastUpdated}
           </div>
+          </div>
         </div>
-      </div>
 
-      <div className="py-20"></div>
-        <div className="container mx-auto px-4"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
           <div className="max-w-4xl mx-auto"></div>
             <div className="space-y-8">
               {sections.map((section, index) => (</div>
                 <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm"></div>
-                  <div className="flex items-start"></div>
-                    <div className="flex-shrink-0 mr-4"></div>
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                       <section.icon className="h-6 w-6 text-blue-600" />
                     </div>
                     <div></div>
@@ -83,8 +82,8 @@ export default function TermsPage() {
                         {section.content}
                       </p>
                     </div>
-                  </div>
-                </div>
+          </div>
+        </div>
               ))}
             </div>
 
@@ -93,8 +92,8 @@ export default function TermsPage() {
               <p className="text-gray-700 mb-6">
                 If you have any questions about these Terms of Service, please contact us:
               </p>
-              <div className="grid md:grid-cols-2 gap-6"></div>
-                <div className="flex items-center"></div>
+              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                   <Mail className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700">legal@ziontechgroup.com</span>
                 </div>
@@ -110,8 +109,8 @@ export default function TermsPage() {
                   <User className="h-5 w-5 text-blue-600 mr-3" />
                   <span className="text-gray-700">Zion Tech Group Legal Team</span>
                 </div>
-              </div>
-            </div>
+          </div>
+        </div>
 
             <div className="mt-8 text-center"></div>
               <p className="text-sm text-gray-500">
@@ -120,7 +119,6 @@ export default function TermsPage() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }

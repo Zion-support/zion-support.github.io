@@ -97,24 +97,22 @@ const AboutPage: React.FC = () => {
                 <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
                   <div className="space-y-6">
                     <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                      <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     </div>
                     <div className="space-y-4">
-                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded"></div>
-                      <div className="h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded w-3/4"></div>
+                      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
                       <div className="h-4 bg-gradient-to-r from-pink-500 to-red-500 rounded w-1/2"></div>
                     </div>
                     <div className="text-center text-white">
                       <div className="text-2xl font-bold">AI Dashboard</div>
                       <div className="text-sm text-gray-300">Real-time Analytics</div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
+          </div>
+        </div>
+          </div>
+        </div>
           </div>
 </section>
 
@@ -147,8 +145,8 @@ const AboutPage: React.FC = () => {
                 <h3 className="text-xl font-semibold text-white mb-3">Excellence</h3>
                 <p className="text-gray-300">We deliver exceptional results that exceed expectations.</p>
               </div>
-            </div>
           </div>
+        </div>
         </section>
 
         {/* CTA Section */}

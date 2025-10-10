@@ -94,7 +94,6 @@ const FAQPage: React.FC = () => {
                   Free Consultation
                 </a>
               </div>
-            </div>
           </div>
         </div>
       </div>

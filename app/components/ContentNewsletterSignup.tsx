@@ -156,9 +156,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
               </p>
             </form>
           </div>
+          </div>
         </div>
-      </div>
-    </div>
   );
 };
 

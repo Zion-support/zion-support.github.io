@@ -65,4 +65,4 @@ import React from 'react';
   );
 };
 
-export default PagePage;
+export default PageName;

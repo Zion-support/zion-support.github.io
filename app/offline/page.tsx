@@ -40,4 +40,4 @@ import { Helmet } from 'react-helmet-async';
   );
 };
 
-export default PagePage;
+export default PageName;

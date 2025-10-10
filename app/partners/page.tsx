@@ -43,8 +43,8 @@ const PartnersPage: React.FC = () => {
                   </div>
                 ))}
               </div>
-            </div>
           </div>
+        </div>
         </section>
       </div>
     </>

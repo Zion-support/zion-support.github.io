@@ -120,9 +120,9 @@ const AccessibilityPage: React.FC = () => {
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    <feature.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300 mb-6">{feature.description}</p>
@@ -190,8 +190,8 @@ const AccessibilityPage: React.FC = () => {
                   Contact Us
                 </button>
               </div>
-            </div>
           </div>
+        </div>
         </section>
       </div>
     </>

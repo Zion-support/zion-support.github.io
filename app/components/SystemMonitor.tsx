@@ -23,8 +23,8 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
                 Learn More
               </button>
             </div>
+          </div>
         </div>
-    </div>
   );
 };
 
