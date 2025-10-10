@@ -127,11 +127,7 @@ export default [
       ...js.configs.recommended.rules,
       ...tseslint.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
-<<<<<<< HEAD
-=======
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
->>>>>>> cursor/fix-errors-and-merge-to-main-c4b3
+
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true }
