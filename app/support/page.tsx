@@ -6,11 +6,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
 const SupportPage: React.FC = () => {
-<<<<<<< HEAD
-=======
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
 
   const supportChannels = [
     {
@@ -48,14 +45,12 @@ const SupportPage: React.FC = () => {
       responseTime: 'Within 2 hours',
       contact: 'Schedule Call',
       color: 'from-orange-500 to-red-600'
-    }
-<<<<<<< HEAD
-  ];];];
+      }
+    ];
   const filteredFaqs = faqs.filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-=======
-  ];
+  );
 
   const faqCategories = [
     {
@@ -152,8 +147,7 @@ const SupportPage: React.FC = () => {
     category.questions.filter(q => 
       q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
       q.answer.toLowerCase().includes(searchTerm.toLowerCase())
-    )
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+      )
   );
 
   return (
@@ -285,7 +279,7 @@ const SupportPage: React.FC = () => {
             </div>
 
             {/* Contact CTA */}
-            <div className="text-center">
+            <section className="text-center">
               <div className="bg-slate-800/50 rounded-lg p-8">
                 <h2 className="text-2xl font-bold text-white mb-4">
                   Still Need Help?
@@ -311,18 +305,11 @@ const SupportPage: React.FC = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </section>
-    </div>
-
-=======
+        </section>
       </main>
       
       <Footer />
     </>
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
   );
 };
 

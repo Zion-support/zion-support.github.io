@@ -60,9 +60,8 @@ const PrivacyPage: React.FC = () => {
         'Portability: You can request a copy of your data in a structured format.',
         'Opt-out: You can unsubscribe from marketing communications at any time.'
       ]
-    }
-<<<<<<< HEAD
-  ];];];
+      }
+    ];
   const purposes = [
     {
     }
@@ -84,18 +83,13 @@ const PrivacyPage: React.FC = () => {
     {
       title: 'Portability',
       description: 'Receive your data in a structured format',
-      icon: Database];];
-=======
-  ];
-
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
+        icon: Database
+      }
+    ];
   return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
-<<<<<<< HEAD
-;
-=======
         <meta name="description" content="Zion Tech Group's privacy policy. Learn how we collect, use, and protect your personal information." />
       </Helmet>
       
@@ -273,4 +267,3 @@ const PrivacyPage: React.FC = () => {
 };
 
 export default PrivacyPage;
->>>>>>> cursor/website-audit-and-update-with-deployment-26c5
