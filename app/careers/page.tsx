@@ -237,7 +237,9 @@ const CareersPage: React.FC = () => {
                       <span>Posted {position.posted}</span>
                     </div>
                   </div>
-
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -263,30 +265,6 @@ const CareersPage: React.FC = () => {
                   Contact Us
                 </Link>
               </div>
-=======
-                  {position.requirements && (
-                    <div className="mb-6">
-                      <h4 className="text-white font-semibold mb-2">Key Requirements:</h4>
-                      <ul className="space-y-1">
-                        {position.requirements.map((req, reqIndex) => (
-                          <li key={reqIndex} className="text-gray-300 text-sm flex items-center">
-                            <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
-                            {req}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  <Link
-                    to="/contact"
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group"
-                  >
-                    Apply Now
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
-              ))}
             </div>
           </div>
         </section>
