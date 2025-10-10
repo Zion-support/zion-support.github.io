@@ -68,12 +68,6 @@ const HomePage: React.FC = () => {
       });
     }
   }, []);
-
-  // Contact information
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown, DE 19709',
     website: 'https://ziontechgroup.com'
   };
 
@@ -4449,6 +4443,8 @@ const HomePage: React.FC = () => {
     }
   ];
 
+=======
+>>>>>>> origin/main
   return (
     <ErrorBoundary>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg particle-system">
@@ -4878,9 +4874,9 @@ const HomePage: React.FC = () => {
 
       {/* Footer */}
       <Footer />
-        
-        {/* Skip to main content for accessibility */}
-        <a
+      
+      {/* Skip to main content for accessibility */}
+      <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
         >
@@ -5302,9 +5298,14 @@ const HomePage: React.FC = () => {
           </section>
         </main>
 
+        <Footer />
+      </div>
+=======
       {/* Footer */}
       <Footer />
     </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-c40d
+    </>
   );
 };
 
