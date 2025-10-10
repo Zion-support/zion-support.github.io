@@ -97,7 +97,7 @@
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
     "generate:sitemap": "node scripts/generate-sitemap.cjs",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
-    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\""
+    "postbuild": "echo \"Build completed successfully\""
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

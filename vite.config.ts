@@ -95,8 +95,6 @@ export default defineConfig({
         ascii_only: true
       }
     },
-    chunkSizeWarningLimit: 500,
-    reportCompressedSize: true,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
   },
