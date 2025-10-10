@@ -3,6 +3,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { MapPin, Clock, CheckCircle, Star, Users, Heart, Award, ArrowRight, Briefcase, DollarSign, Calendar } from 'lucide-react';
 
 const CareersPage: React.FC = () => {
   const openPositions = [
@@ -12,6 +13,8 @@ const CareersPage: React.FC = () => {
       location: 'Remote',
       type: 'Full-time',
       experience: '5+ years',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years ML experience', 'PhD in AI/ML preferred']
     },
     {
       title: 'Cloud Architect',
@@ -23,6 +26,22 @@ const CareersPage: React.FC = () => {
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']
     },
     {
+      title: 'DevOps Engineer',
+      department: 'Engineering',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Build and maintain CI/CD pipelines and infrastructure automation.',
+      requirements: ['Docker, Kubernetes, Jenkins', '4+ years DevOps experience', 'Infrastructure as Code']
+    },
+    {
+      title: 'Data Scientist',
+      department: 'Data Analytics',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Extract insights from complex datasets and build predictive models.',
+      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistics background']
     }
   ];
 
@@ -127,11 +146,65 @@ const CareersPage: React.FC = () => {
                     </ul>
                   </div>
 
+                  <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center group-hover:scale-105">
+                    Apply Now
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </button>
                 </div>
               ))}
             </div>
+          </div>
+        </section>
 
+        {/* Benefits Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover:bg-white/20 transition-all duration-300">
+                  <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-4" />
+                  <h3 className="text-white font-semibold mb-2">{benefit}</h3>
+                </div>
+              ))}
             </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-8 text-center">Our Values</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-cyan-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <value.icon className="w-8 h-8 text-cyan-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Don't See Your Dream Role?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              We're always looking for talented individuals. Send us your resume and let's discuss opportunities.
+            </p>
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center"
+            >
+              <Briefcase className="w-5 h-5 mr-2" />
+              Send Your Resume
+            </Link>
           </div>
         </section>
       </div>

@@ -22,19 +22,25 @@ const ServicesPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI Solutions',
-      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting'],
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes with cutting-edge machine learning and deep learning technologies.',
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting', 'Deep Learning', 'Neural Networks', 'AI Strategy'],
       price: 'Starting at $1,500/month',
       category: 'AI Services',
-      popular: true
+      popular: true,
+      trial: '30-day free trial',
+      rating: 4.9,
+      reviews: 2156
     },
     {
       icon: Brain,
       title: 'AI Marketing Automation',
-      description: 'Revolutionary AI-powered marketing automation with personalized campaigns and intelligent optimization.',
-      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel'],
+      description: 'Revolutionary AI-powered marketing automation with personalized campaigns, intelligent optimization, and predictive customer behavior analysis.',
+      features: ['Campaign Automation', 'Personalization', 'A/B Testing', 'ROI Optimization', 'Multi-channel', 'Customer Journey Mapping', 'Predictive Analytics', 'Dynamic Content'],
       price: 'Starting at $299/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      trial: '14-day free trial',
+      rating: 4.8,
+      reviews: 1876
     },
     {
       icon: Brain,
@@ -79,10 +85,112 @@ const ServicesPage: React.FC = () => {
     {
       icon: Brain,
       title: 'AI E-commerce Solutions',
-      description: 'Intelligent e-commerce platform with recommendation engines and dynamic pricing.',
-      features: ['Recommendation Engine', 'Dynamic Pricing', 'Inventory Optimization', 'Customer Insights', 'Sales Forecasting'],
+      description: 'Intelligent e-commerce platform with recommendation engines, dynamic pricing, and personalized shopping experiences.',
+      features: ['Recommendation Engine', 'Dynamic Pricing', 'Inventory Optimization', 'Customer Insights', 'Sales Forecasting', 'Visual Search', 'Chat Commerce', 'Predictive Inventory'],
       price: 'Starting at $799/month',
-      category: 'AI Services'
+      category: 'AI Services',
+      trial: '14-day free trial',
+      rating: 4.7,
+      reviews: 1234
+    },
+    {
+      icon: Brain,
+      title: 'AI Voice & Speech Recognition',
+      description: 'Advanced voice and speech recognition solutions for voice assistants, transcription, and voice analytics.',
+      features: ['Voice Assistants', 'Speech-to-Text', 'Text-to-Speech', 'Voice Analytics', 'Multi-language Support', 'Real-time Processing', 'Voice Biometrics', 'Conversational AI'],
+      price: 'Starting at $399/month',
+      category: 'AI Services',
+      trial: '14-day free trial',
+      rating: 4.8,
+      reviews: 945
+    },
+    {
+      icon: Brain,
+      title: 'AI Image & Video Analysis',
+      description: 'Computer vision solutions for image recognition, video analysis, and visual content understanding.',
+      features: ['Image Recognition', 'Video Analysis', 'Object Detection', 'Facial Recognition', 'Content Moderation', 'Visual Search', 'AR/VR Integration', 'Real-time Processing'],
+      price: 'Starting at $599/month',
+      category: 'AI Services',
+      trial: '14-day free trial',
+      rating: 4.9,
+      reviews: 1567
+    },
+    {
+      icon: Brain,
+      title: 'AI Predictive Maintenance',
+      description: 'Intelligent predictive maintenance solutions for industrial equipment and machinery optimization.',
+      features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Scheduling', 'Cost Optimization', 'IoT Integration', 'Real-time Alerts', 'Performance Analytics', 'ROI Tracking'],
+      price: 'Starting at $1,299/month',
+      category: 'AI Services',
+      trial: '30-day free trial',
+      rating: 4.8,
+      reviews: 678
+    },
+    {
+      icon: Brain,
+      title: 'AI Supply Chain Optimization',
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+      features: ['Demand Forecasting', 'Inventory Optimization', 'Route Optimization', 'Supplier Management', 'Risk Assessment', 'Cost Reduction', 'Sustainability Tracking', 'Real-time Visibility'],
+      price: 'Starting at $1,199/month',
+      category: 'AI Services',
+      trial: '30-day free trial',
+      rating: 4.7,
+      reviews: 892
+    },
+    {
+      icon: Brain,
+      title: 'AI Personalization Engine',
+      description: 'Advanced personalization platform for delivering tailored experiences across all customer touchpoints.',
+      features: ['Real-time Personalization', 'Behavioral Analysis', 'Content Optimization', 'Product Recommendations', 'Dynamic Pricing', 'A/B Testing', 'Cross-channel Consistency', 'Privacy Compliance'],
+      price: 'Starting at $899/month',
+      category: 'AI Services',
+      trial: '14-day free trial',
+      rating: 4.8,
+      reviews: 1345
+    },
+    {
+      icon: Brain,
+      title: 'AI Fraud Detection',
+      description: 'Advanced fraud detection and prevention using machine learning and real-time transaction monitoring.',
+      features: ['Real-time Detection', 'Transaction Monitoring', 'Risk Scoring', 'Pattern Recognition', 'False Positive Reduction', 'Compliance Reporting', 'API Integration', 'Custom Rules Engine'],
+      price: 'Starting at $1,499/month',
+      category: 'AI Services',
+      trial: '30-day free trial',
+      rating: 4.9,
+      reviews: 1123
+    },
+    {
+      icon: Brain,
+      title: 'AI Recommendation Systems',
+      description: 'Intelligent recommendation engines for products, content, and services with advanced machine learning algorithms.',
+      features: ['Product Recommendations', 'Content Recommendations', 'Collaborative Filtering', 'Content-based Filtering', 'Hybrid Approaches', 'Real-time Updates', 'A/B Testing', 'Performance Analytics'],
+      price: 'Starting at $699/month',
+      category: 'AI Services',
+      trial: '14-day free trial',
+      rating: 4.7,
+      reviews: 1876
+    },
+    {
+      icon: Brain,
+      title: 'AI Natural Language Processing',
+      description: 'Advanced NLP solutions for text analysis, language understanding, and automated content processing.',
+      features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Named Entity Recognition', 'Text Summarization', 'Question Answering', 'Language Generation', 'Multi-language Support'],
+      price: 'Starting at $499/month',
+      category: 'AI Services',
+      trial: '14-day free trial',
+      rating: 4.8,
+      reviews: 1456
+    },
+    {
+      icon: Brain,
+      title: 'AI Autonomous Systems',
+      description: 'Intelligent autonomous systems for robotics, drones, and self-managing infrastructure solutions.',
+      features: ['Robotic Process Automation', 'Autonomous Vehicles', 'Smart Infrastructure', 'Self-healing Systems', 'Predictive Maintenance', 'Real-time Decision Making', 'Safety Protocols', 'Performance Optimization'],
+      price: 'Starting at $2,999/month',
+      category: 'AI Services',
+      trial: '60-day free trial',
+      rating: 4.9,
+      reviews: 567
     },
     
     // Cloud Services
@@ -278,10 +386,112 @@ const ServicesPage: React.FC = () => {
     {
       icon: BarChart3,
       title: 'IT Consulting',
-      description: 'Strategic IT consulting to optimize your technology infrastructure and processes.',
-      features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training'],
+      description: 'Strategic IT consulting to optimize your technology infrastructure and processes with expert guidance and implementation support.',
+      features: ['Technology Assessment', 'Strategic Planning', 'Cost Optimization', 'Digital Transformation', 'Training', 'Vendor Management', 'Risk Assessment', 'Compliance Review'],
       price: 'Starting at $299/hour',
-      category: 'IT Services'
+      category: 'IT Services',
+      trial: 'Free consultation',
+      rating: 4.8,
+      reviews: 456
+    },
+    {
+      icon: Shield,
+      title: 'IT Security Assessment',
+      description: 'Comprehensive security assessment and penetration testing to identify vulnerabilities and strengthen your IT infrastructure.',
+      features: ['Vulnerability Assessment', 'Penetration Testing', 'Security Audit', 'Compliance Review', 'Risk Analysis', 'Remediation Planning', 'Security Training', 'Ongoing Monitoring'],
+      price: 'Starting at $2,999/assessment',
+      category: 'IT Services',
+      trial: 'Free security scan',
+      rating: 4.9,
+      reviews: 234
+    },
+    {
+      icon: Cloud,
+      title: 'Hybrid Cloud Solutions',
+      description: 'Seamless hybrid cloud solutions combining on-premises and cloud infrastructure for optimal performance and cost efficiency.',
+      features: ['Multi-cloud Strategy', 'Hybrid Architecture', 'Data Migration', 'Cost Optimization', 'Security Integration', 'Performance Monitoring', 'Disaster Recovery', 'Compliance Management'],
+      price: 'Starting at $1,999/month',
+      category: 'IT Services',
+      trial: '30-day free trial',
+      rating: 4.7,
+      reviews: 567
+    },
+    {
+      icon: Database,
+      title: 'Data Center Services',
+      description: 'Complete data center solutions including design, implementation, and management of enterprise-grade infrastructure.',
+      features: ['Data Center Design', 'Infrastructure Setup', 'Power Management', 'Cooling Systems', 'Security Implementation', 'Monitoring Systems', 'Backup Solutions', 'Disaster Recovery'],
+      price: 'Starting at $3,999/month',
+      category: 'IT Services',
+      trial: 'Free assessment',
+      rating: 4.8,
+      reviews: 189
+    },
+    {
+      icon: Smartphone,
+      title: 'Enterprise Mobility Solutions',
+      description: 'Comprehensive mobile device management and enterprise mobility solutions for secure mobile workforce enablement.',
+      features: ['Mobile Device Management', 'App Management', 'Security Policies', 'Remote Wipe', 'Compliance Monitoring', 'User Authentication', 'App Distribution', 'Performance Analytics'],
+      price: 'Starting at $199/month',
+      category: 'IT Services',
+      trial: '14-day free trial',
+      rating: 4.6,
+      reviews: 345
+    },
+    {
+      icon: Globe,
+      title: 'Network Security Solutions',
+      description: 'Advanced network security solutions including firewalls, intrusion detection, and secure network architecture design.',
+      features: ['Firewall Management', 'Intrusion Detection', 'Network Monitoring', 'VPN Solutions', 'Access Control', 'Threat Prevention', 'Security Policies', 'Incident Response'],
+      price: 'Starting at $899/month',
+      category: 'IT Services',
+      trial: 'Free security audit',
+      rating: 4.8,
+      reviews: 678
+    },
+    {
+      icon: Zap,
+      title: 'IT Process Automation',
+      description: 'Intelligent automation of IT processes including provisioning, monitoring, and incident response for improved efficiency.',
+      features: ['Process Automation', 'Workflow Optimization', 'Incident Response', 'Resource Provisioning', 'Monitoring Automation', 'Ticket Management', 'Performance Optimization', 'Cost Reduction'],
+      price: 'Starting at $1,499/month',
+      category: 'IT Services',
+      trial: '30-day free trial',
+      rating: 4.7,
+      reviews: 456
+    },
+    {
+      icon: BarChart3,
+      title: 'IT Performance Monitoring',
+      description: 'Comprehensive IT performance monitoring and analytics for proactive issue detection and system optimization.',
+      features: ['Real-time Monitoring', 'Performance Analytics', 'Alert Management', 'Capacity Planning', 'Trend Analysis', 'Root Cause Analysis', 'Custom Dashboards', 'Automated Reporting'],
+      price: 'Starting at $599/month',
+      category: 'IT Services',
+      trial: '14-day free trial',
+      rating: 4.8,
+      reviews: 789
+    },
+    {
+      icon: Shield,
+      title: 'Compliance & Governance',
+      description: 'IT compliance and governance solutions to ensure adherence to industry standards and regulatory requirements.',
+      features: ['Compliance Monitoring', 'Policy Management', 'Audit Preparation', 'Risk Assessment', 'Documentation', 'Training Programs', 'Reporting', 'Remediation Support'],
+      price: 'Starting at $1,299/month',
+      category: 'IT Services',
+      trial: 'Free compliance check',
+      rating: 4.9,
+      reviews: 234
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Cost Optimization',
+      description: 'Intelligent cloud cost optimization solutions to reduce expenses while maintaining performance and reliability.',
+      features: ['Cost Analysis', 'Resource Optimization', 'Right-sizing', 'Reserved Instances', 'Spot Instances', 'Cost Forecasting', 'Budget Management', 'ROI Tracking'],
+      price: 'Starting at $799/month',
+      category: 'IT Services',
+      trial: 'Free cost analysis',
+      rating: 4.7,
+      reviews: 567
     }
   ];
 
@@ -388,16 +598,27 @@ const ServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="flex justify-between items-center mb-8">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
               <h2 className="text-3xl font-bold text-white">
                 {selectedCategory === 'All' ? 'All Services' : `${selectedCategory}`}
               </h2>
-              <span className="text-gray-300">
-                {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
-              </span>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <span className="text-gray-300">
+                  {filteredServices.length} service{filteredServices.length !== 1 ? 's' : ''} found
+                </span>
+                <div className="flex items-center gap-2 text-sm text-gray-400">
+                  <span>Showing</span>
+                  <select className="bg-white/10 border border-white/20 rounded px-2 py-1 text-white">
+                    <option value="12">12 per page</option>
+                    <option value="24">24 per page</option>
+                    <option value="48">48 per page</option>
+                    <option value="all">All</option>
+                  </select>
+                </div>
+              </div>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
               {filteredServices.map((service, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group relative">
                   {service.popular && (
@@ -440,8 +661,19 @@ const ServicesPage: React.FC = () => {
                   </div>
                   
                   <div className="mb-6">
-                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                    <div className="text-sm text-gray-300">Contact for custom pricing</div>
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                      {service.rating && (
+                        <div className="flex items-center text-sm text-gray-300">
+                          <span className="text-yellow-400 mr-1">★</span>
+                          {service.rating} ({service.reviews} reviews)
+                        </div>
+                      )}
+                    </div>
+                    <div className="text-sm text-gray-300 mb-2">Contact for custom pricing</div>
+                    {service.trial && (
+                      <div className="text-sm text-green-400 font-medium">{service.trial}</div>
+                    )}
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-3">
@@ -455,6 +687,23 @@ const ServicesPage: React.FC = () => {
                   </div>
                 </div>
               ))}
+            </div>
+            
+            {/* Pagination */}
+            <div className="mt-12 flex justify-center">
+              <nav className="flex items-center space-x-2">
+                <button className="px-3 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                  Previous
+                </button>
+                <button className="px-3 py-2 bg-cyan-500 text-white rounded-lg">1</button>
+                <button className="px-3 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors">2</button>
+                <button className="px-3 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors">3</button>
+                <span className="px-3 py-2 text-gray-400">...</span>
+                <button className="px-3 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors">10</button>
+                <button className="px-3 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition-colors">
+                  Next
+                </button>
+              </nav>
             </div>
           </div>
         </section>

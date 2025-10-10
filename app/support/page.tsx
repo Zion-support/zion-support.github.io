@@ -192,8 +192,6 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
       </div>
-      
-      <Footer />
     </>
   );
 };
