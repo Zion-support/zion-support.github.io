@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Code, Zap, Shield, Users, BarChart, CheckCircle, ArrowRight, Star, Globe, Database, Cloud, Lock, Settings, Target, MessageSquare, Eye, Brain, Cpu, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Cube, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
+import { Smartphone, Code, Zap, Shield, Users, BarChart, CheckCircle, ArrowRight, Globe, Navigation as NavigationIcon } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
