@@ -1,71 +1,82 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, Star, Users, Clock, Award, Play, Pause, ChevronLeft, ChevronRight } from 'lucide-react';
-
-interface Feature {
-  icon: React.ComponentType<any>;
-  title: string;
-  description: string;
-  stats?: {
-    value: string;
-    label: string;
-  }[];
-}
+import { CheckCircle, ArrowRight, Star, Quote, ChevronLeft, ChevronRight, Zap, Shield, Brain, Globe, Users, TrendingUp } from 'lucide-react';
 
 interface Testimonial {
+  id: number;
   name: string;
   company: string;
   role: string;
   content: string;
   rating: number;
-  avatar?: string;
+  avatar: string;
+}
+
+interface Feature {
+  icon: React.ComponentType<any>;
+  title: string;
+  description: string;
+  benefits: string[];
 }
 
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const testimonials: Testimonial[] = [
+    {
+      id: 1,
+      name: 'Sarah Johnson',
+      company: 'TechCorp Solutions',
+      role: 'CTO',
+      content: 'Zion Tech Group transformed our entire infrastructure. The AI solutions they implemented have increased our efficiency by 300% and reduced costs significantly.',
+      rating: 5,
+      avatar: '/images/avatars/sarah.jpg'
+    },
+    {
+      id: 2,
+      name: 'Michael Chen',
+      company: 'Global Finance Inc.',
+      role: 'VP of Technology',
+      content: 'Their cloud migration services were exceptional. Zero downtime, seamless transition, and the team was incredibly professional throughout the process.',
+      rating: 5,
+      avatar: '/images/avatars/michael.jpg'
+    },
+    {
+      id: 3,
+      name: 'Emily Rodriguez',
+      company: 'HealthTech Systems',
+      role: 'CEO',
+      content: 'The cybersecurity solutions provided by Zion Tech Group gave us peace of mind. Our data is now more secure than ever, and compliance is no longer a concern.',
+      rating: 5,
+      avatar: '/images/avatars/emily.jpg'
+    }
+  ];
 
   const features: Feature[] = [
     {
       icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that learn and adapt to your business needs in real-time',
-      stats: [
-        { value: '95%', label: 'Accuracy' },
-        { value: '10x', label: 'Faster' },
-        { value: '24/7', label: 'Learning' }
-      ]
+      title: 'AI-Powered Solutions',
+      description: 'Advanced artificial intelligence to automate and optimize your business processes',
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
     },
     {
       icon: Zap,
-      title: 'Lightning Fast Performance',
-      description: 'Optimized for speed with sub-second response times and seamless user experience',
-      stats: [
-        { value: '< 100ms', label: 'Response' },
-        { value: '99.9%', label: 'Uptime' },
-        { value: '10M+', label: 'Requests' }
-      ]
+      title: 'High Performance',
+      description: 'Lightning-fast processing and real-time analytics for optimal results',
+      benefits: ['Real-time Processing', 'Scalable Architecture', 'Optimized Performance', 'Low Latency']
     },
     {
       icon: Shield,
       title: 'Enterprise Security',
-      description: 'Bank-level security with end-to-end encryption and compliance standards',
-      stats: [
-        { value: '256-bit', label: 'Encryption' },
-        { value: 'SOC 2', label: 'Compliance' },
-        { value: 'Zero', label: 'Breaches' }
-      ]
+      description: 'Bank-level security with encryption and compliance standards',
+      benefits: ['End-to-End Encryption', 'Compliance Standards', 'Security Audits', '24/7 Monitoring']
     },
     {
       icon: Globe,
-      title: 'Global Scalability',
-      description: 'Scale effortlessly across multiple regions with automatic load balancing',
-      stats: [
-        { value: '50+', label: 'Countries' },
-        { value: '15+', label: 'Languages' },
-        { value: '24/7', label: 'Support' }
-      ]
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses',
+      benefits: ['Multi-Region Support', 'Local Compliance', 'Global CDN', 'International Support']
     }
   ];
 
@@ -80,203 +91,95 @@ const DynamicContentShowcase: React.FC = () => {
     'Proven track record of success'
   ];
 
-  const testimonials: Testimonial[] = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'This solution transformed our operations completely. The AI insights are incredible and have helped us make data-driven decisions that increased our efficiency by 300%.',
-      rating: 5
-    },
-    {
-      name: 'Michael Chen',
-      company: 'DataFlow Systems',
-      role: 'CEO',
-<<<<<<< HEAD
-      content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!',
-=======
-      content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-      rating: 5
-    },
-    {
-      name: 'Emily Rodriguez',
-<<<<<<< HEAD
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Outstanding security features and seamless integration. Perfect for our needs.',
-=======
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The best investment we made this year. ROI was evident within the first month, and the support team is absolutely fantastic.',
-      rating: 5
-    },
-    {
-      name: 'David Kim',
-      company: 'CloudFirst Solutions',
-      role: 'VP Engineering',
-      content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
-      rating: 5
-    }
+  const stats = [
+    { icon: Users, value: '10,000+', label: 'Happy Customers' },
+    { icon: TrendingUp, value: '99.9%', label: 'Uptime' },
+    { icon: Star, value: '4.9/5', label: 'Rating' },
+    { icon: Zap, value: '24/7', label: 'Support' }
   ];
 
-  useEffect(() => {
-    if (!isPlaying) return;
-    
-    const timer = setInterval(() => {
-<<<<<<< HEAD
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [features.length]);
-
-  return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Dynamic Content Showcase
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience our cutting-edge solutions through an interactive showcase of features and capabilities.
-          </p>
-=======
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    
-    return () => clearInterval(timer);
-  }, [isPlaying, testimonials.length]);
-
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
-  const togglePlayPause = () => {
-    setIsPlaying(!isPlaying);
-  };
-
-  const currentTestimonial = testimonials[currentIndex];
+  useEffect(() => {
+    const timer = setInterval(nextTestimonial, 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 min-h-screen">
+    <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Dynamic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Content Showcase</span>
+            Transform Your Business with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">AI Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Experience the power of our cutting-edge solutions with real-time demonstrations 
-            and interactive showcases that bring your business to life.
+            Join thousands of businesses that have revolutionized their operations with our cutting-edge AI and IT solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105">
-              <Play className="w-5 h-5" />
-              Start Demo
+            <button className="bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+              <Zap className="w-5 h-5" />
+              Get Started Today
             </button>
-            <button className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <button className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200 flex items-center justify-center gap-2">
               <ArrowRight className="w-5 h-5" />
               Learn More
             </button>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
         </div>
+      </section>
 
-<<<<<<< HEAD
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {features.map((feature, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-              <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
-                <feature.icon className="h-6 w-6 text-white" />
-              </div>
-<<<<<<< HEAD
-              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-300">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Benefits Section */}
-        <div className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 mb-16">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Why Choose Us?</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center">
-                <CheckCircle className="h-5 w-5 text-green-400 mr-3 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Testimonials */}
-        <div className="text-center">
-          <h3 className="text-2xl font-bold text-white mb-8">What Our Clients Say</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10">
+      {/* Stats Section */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
                 <div className="flex justify-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                  ))}
+                  <stat.icon className="w-8 h-8 text-blue-400" />
                 </div>
-                <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                <div className="text-center">
-                  <p className="text-white font-semibold">{testimonial.name}</p>
-                  <p className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</p>
-                </div>
+                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-=======
             ))}
           </div>
         </div>
       </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-758b
-=======
+
       {/* Features Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Why Choose Our Solutions?
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our solutions deliver unmatched performance, security, and scalability for modern businesses.
+              Comprehensive AI and IT solutions designed to transform your business operations.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full mb-6">
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-4">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
-                
-                {feature.stats && (
-                  <div className="grid grid-cols-3 gap-4">
-                    {feature.stats.map((stat, statIndex) => (
-                      <div key={statIndex} className="text-center">
-                        <div className="text-lg font-bold text-white">{stat.value}</div>
-                        <div className="text-gray-400 text-xs">{stat.label}</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300 mb-4">{feature.description}</p>
+                <ul className="space-y-2">
+                  {feature.benefits.map((benefit, benefitIndex) => (
+                    <li key={benefitIndex} className="flex items-center text-gray-300 text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span>{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -296,114 +199,105 @@ const DynamicContentShowcase: React.FC = () => {
           <div className="relative">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-12 border border-white/20">
               <div className="text-center">
-                <div className="flex justify-center mb-6">
-                  {[...Array(currentTestimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
+                <Quote className="w-12 h-12 text-blue-400 mx-auto mb-6" />
+                <p className="text-xl text-gray-300 mb-8 italic">
+                  "{testimonials[currentTestimonial].content}"
+                </p>
+                <div className="flex justify-center mb-4">
+                  {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <blockquote className="text-xl text-gray-300 mb-8 italic">
-                  "{currentTestimonial.content}"
-                </blockquote>
                 <div className="flex items-center justify-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center">
                     <span className="text-white font-semibold text-lg">
-                      {currentTestimonial.name.charAt(0)}
+                      {testimonials[currentTestimonial].name.charAt(0)}
                     </span>
                   </div>
                   <div className="text-left">
-                    <div className="font-semibold text-white">{currentTestimonial.name}</div>
-                    <div className="text-gray-400">{currentTestimonial.role} at {currentTestimonial.company}</div>
+                    <h4 className="text-lg font-semibold text-white">{testimonials[currentTestimonial].name}</h4>
+                    <p className="text-gray-400">{testimonials[currentTestimonial].role}</p>
+                    <p className="text-blue-400">{testimonials[currentTestimonial].company}</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <button
-                onClick={prevTestimonial}
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
-              >
-                <ChevronLeft className="w-6 h-6" />
-              </button>
-              
-              <button
-                onClick={togglePlayPause}
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
-              >
-                {isPlaying ? <Pause className="w-6 h-6" /> : <Play className="w-6 h-6" />}
-              </button>
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevTestimonial}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextTestimonial}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-colors duration-200 backdrop-blur-lg border border-white/20"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </div>
 
+          {/* Testimonial Indicators */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {testimonials.map((_, index) => (
               <button
-                onClick={nextTestimonial}
-                className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200"
-              >
-                <ChevronRight className="w-6 h-6" />
-              </button>
-            </div>
-
-            {/* Testimonial Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-white' : 'bg-white/30'
-                  }`}
-                />
-              ))}
-            </div>
+                key={index}
+                onClick={() => setCurrentTestimonial(index)}
+                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
+                  index === currentTestimonial ? 'bg-blue-400' : 'bg-white/30'
+                }`}
+              />
+            ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-white mb-6">What You Get</h2>
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Key Benefits
+            </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive benefits that deliver real value to your business
+              Discover the advantages that make our solutions the preferred choice for businesses worldwide.
             </p>
           </div>
 
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div className="grid md:grid-cols-2 gap-6">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-start space-x-3">
-                  <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                  <p className="text-gray-300">{benefit}</p>
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center gap-3 bg-white/5 backdrop-blur-lg rounded-lg p-4 border border-white/10">
+                <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Experience the Future?
+          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using our solutions to transform their operations and achieve remarkable results.
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of satisfied customers and start your transformation journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center gap-2">
-                Start Free Trial
-                <ArrowRight className="w-4 h-4" />
+              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2">
+                <Zap className="w-5 h-5" />
+                Get Started Today
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300">
-                Contact Sales
+              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-200">
+                Schedule Demo
               </button>
             </div>
           </div>
         </div>
       </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-46ce
     </div>
   );
 };
