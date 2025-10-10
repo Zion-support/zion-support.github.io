@@ -1,9 +1,9 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
 const AiComputerVisionPage: React.FC = () => {,
   const features = [
     {
@@ -24,7 +24,6 @@ const AiComputerVisionPage: React.FC = () => {,
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
-<<<<<<< HEAD
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
         <meta name="description" content="Advanced computer vision solutions powered by AI technology." />
@@ -44,7 +43,6 @@ const AiComputerVisionPage: React.FC = () => {,
                   Get Started;
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-=======
   return (
     <React.Fragment></React>
       <Helmet></Helmet>
@@ -68,14 +66,12 @@ const AiComputerVisionPage: React.FC = () => {,
                   Get Started
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                   Learn More,
   </
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -98,7 +94,6 @@ const AiComputerVisionPage: React.FC = () => {,
                       <li key={benefitIndex}className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" />
                         {benefit} </li>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -124,7 +119,6 @@ const AiComputerVisionPage: React.FC = () => {,
                         <CheckCircle className="h-4 w-4 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
                         {benefit}
                       </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                     ))}
                   </ul>
                 </div>
@@ -132,7 +126,6 @@ const AiComputerVisionPage: React.FC = () => {,
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
@@ -141,7 +134,6 @@ const AiComputerVisionPage: React.FC = () => {,
             <p className="text-xl text-blue-100 mb-8">Join thousands of businesses already using our AI platform.</p>
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -152,12 +144,10 @@ const AiComputerVisionPage: React.FC = () => {,
               Join thousands of businesses already using our AI platform.
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               Start Your Free Trial,
   </
           </div>
             {features.map((feature, index) => (
-<<<<<<< HEAD
               <div key={index}className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover: border-blue-400/50 transition-all duration-300 group">,</div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover: scale-110 transition-transform duration-300">,</div>
                   <CheckCircle className="w-6 h-6 text-white" />
@@ -169,7 +159,6 @@ const AiComputerVisionPage: React.FC = () => {,
                     <li key={benefitIndex}className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                       {benefit} </li>
-=======
               <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
                   <CheckCircle className="w-6 h-6 text-white" /></CheckCircle>
@@ -182,7 +171,6 @@ const AiComputerVisionPage: React.FC = () => {,
                       <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" /></CheckCircle>
                       {benefit}
                     </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                   ))}
                 </ul>
               </div>
@@ -190,7 +178,6 @@ const AiComputerVisionPage: React.FC = () => {,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Benefits Section */} <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -203,7 +190,6 @@ const AiComputerVisionPage: React.FC = () => {,
               <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
-=======
       {/* Benefits Section */}
       <section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -218,7 +204,6 @@ const AiComputerVisionPage: React.FC = () => {,
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
                   <CheckCircle className="w-8 h-8 text-white" /></CheckCircle>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 </div>
                 <h3 className="text-lg font-semibold text-white"></h>{benefit}</h3>
               </div>
@@ -226,7 +211,6 @@ const AiComputerVisionPage: React.FC = () => {,
           </div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* CTA Section */} <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -238,7 +222,6 @@ const AiComputerVisionPage: React.FC = () => {,
   </
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
               Contact Sales;
-=======
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -252,15 +235,12 @@ const AiComputerVisionPage: React.FC = () => {,
   </
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   </
           </div>
         </div>
       </section>
       <Footer />
-=======
       <Footer /></Footer>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
     </React.Fragment>
   ),
 };
@@ -276,10 +256,4 @@ export default AiComputerVisionPage;
   </button>
   </h1>
   </main>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8

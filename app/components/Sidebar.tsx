@@ -1,15 +1,8 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, {Suspense, lazy}from 'react';
-import {Link, useLocation}}from 'react-router-dom';
-import {X,}
-=======
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
     X,
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   Menu,
   Home,
   Users,
@@ -38,7 +31,6 @@ useEffect(() => {
       if (window.innerWidth >= 1024) {) => {
   return($3;)
   )}setIsOpen(false);}
-=======
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
@@ -60,7 +52,6 @@ const Sidebar: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.sidebar')) {
         setIsOpen(false);
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -254,7 +245,6 @@ const Sidebar: React.FC = () => {
     );
   };
 
-<<<<<<< HEAD
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {) => {
   return($3;)
@@ -337,27 +327,21 @@ const navigationSections = [
 const contactInfo = {phone: '(302) 464-0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown, DE 19709',
-<<<<<<< HEAD
     hours: 'Mon-Fri 9AM-6PM EST',}}
 return(<>)
       {/* Mobile Menu Button */} <button;
         onClick={() =>setIsOpen(true)</button>}className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all",
-=======
     hours: 'Mon-Fri 9AM-6PM EST'
   }
   }
 return (
-=======
   return (
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
     <>
       {/* Mobile Menu Button */}
-<<<<<<< HEAD
       <button;
         onClick={() =></button> setIsOpen(true)}
 
         className="lg: hidden fixed top-4 left-4 z-50 bg-slate-800/90 backdrop-blur-lg text-white p-3 rounded-lg border border-cyan-400/20 hover:bg-slate-700/90 transition-all"
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
         aria-label="Open sidebar"
       >,
         <Menu></Menu>
@@ -368,12 +352,9 @@ return (
         <div;
           className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg: hidden",
   }
-<<<<<<< HEAD
           onClick={() =>setIsOpen(false)</div>}/>
-=======
           onClick={() =></div> setIsOpen(false)}
         />
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
       )}
 {/* Sidebar */}</div>
       <aside></aside>
@@ -389,21 +370,17 @@ return (
               </div>
             </Link>
             <button;
-<<<<<<< HEAD
               onClick={() =>setIsOpen(false)</button>}className="lg: hidden text-gray-400 hover:text-white transition-colors",
               aria-label="Close sidebar"
             >,
               <X>
-=======
               onClick={() =></button> setIsOpen(false)}
               className="lg: hidden text-gray-400 hover:text-white transition-colors"
               aria-label="Close sidebar"
             >,
               <X></X>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
             </button>
-=======
       <button
         onClick={() => setIsOpen(true)}
         className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-slate-900/80 backdrop-blur-md rounded-lg text-white hover:bg-slate-800 transition-colors"
@@ -440,7 +417,6 @@ return (
                 <X className="w-5 h-5" />
               </button>
             </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
           </div>
 
           {/* Navigation */}

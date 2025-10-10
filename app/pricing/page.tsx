@@ -1,13 +1,11 @@
 'use client';
 
-<<<<<<< HEAD
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Link}}from 'react-router-dom';
-import {CheckCircle, Star, ArrowRight, Zap}}from 'lucide-react';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Link} from 'react-router-dom';
+import {CheckCircle, Star, ArrowRight, Zap} from 'lucide-react';
 
 const PricingPage: React.FC = () => {,
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -110,23 +108,19 @@ const PricingPage: React.FC = () => {
     }
   };
 
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
   const plans = [
     {
       name: 'Starter',
       price: '$2,999',
       period: '/month',
-<<<<<<< HEAD
       description: 'Perfect for small businesses getting started with AI',
       features: [,
         'Basic AI Integration',
         'Cloud Infrastructure Setup',
-=======
       description: 'Perfect for small businesses getting started with AI and IT',
       features: [
         '2 AI Services Included',
         'Basic Cloud Infrastructure',
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         'Email Support',
         'Monthly Reports',
         'Basic Analytics Dashboard',
@@ -137,15 +131,12 @@ const PricingPage: React.FC = () => {
       price: '$7,999',
       period: '/month',
       description: 'Ideal for growing companies with advanced needs',
-<<<<<<< HEAD
       features: [,
         'Advanced AI Solutions',
         'Custom Development',
-=======
       features: [
         '5 AI Services Included',
         'Advanced IT Solutions',
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         'Priority Support',
         'Weekly Reports',
         'Advanced Analytics',
@@ -158,14 +149,11 @@ const PricingPage: React.FC = () => {
       price: 'Custom',
       period: '',
       description: 'Tailored solutions for large organizations',
-<<<<<<< HEAD
       features: [,
         'Custom AI Solutions',
-=======
       features: [
         'Unlimited AI Services',
         'Custom IT Solutions',
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         'Dedicated Team',
         '24/7 Support',
         'Real-time Monitoring',

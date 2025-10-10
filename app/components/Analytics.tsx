@@ -1,5 +1,5 @@
 'use client';
-import React, {Suspense, lazy}from 'react';
+import React, {Suspense, lazy} from 'react';
 interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
   enablePerformanceMonitoring?: boolean;
   enableErrorTracking?: boolean;

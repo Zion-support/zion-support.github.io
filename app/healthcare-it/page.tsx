@@ -1,10 +1,10 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight}}from 'lucide-react';
-import SEOOptimizer from '../components/SEOOptimizer';
+import Footer  from '../components/Footer';
+import {CheckCircle, Zap, Heart, Clock, Users, Shield, BarChart, ArrowRight} from 'lucide-react';
+import SEOOptimizer  from '../components/SEOOptimizer';
 icon: Heart,
       title: 'HIPAA Compliance',
       description: 'Full HIPAA compliance solutions with automated controls, monitoring, and reporting capabilities.',

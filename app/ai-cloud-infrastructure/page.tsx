@@ -1,18 +1,12 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {,
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   const features = [
     {
       icon: Brain,
@@ -32,7 +26,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
-<<<<<<< HEAD
   return(<React.Fragment>)</React.Fragment>
       <Helmet />
         <title>AI Cloud Infrastructure - Zion Tech Group</title>
@@ -53,7 +46,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
                   Get Started;
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
-=======
   return (
     <React.Fragment></React>
       <Helmet></Helmet>
@@ -78,14 +70,12 @@ const AiCloudInfrastructurePage: React.FC = () => {
                   Get Started
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-50 transition-colors"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                   Learn More,
   </
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -110,7 +100,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
                         {benefit} </li>
                     ))}
                   </ul>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
           <div className="max-w-7xl mx-auto"></div>
@@ -138,17 +127,12 @@ const AiCloudInfrastructurePage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */} <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600">,</section>
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
@@ -158,7 +142,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
               Start Your Free Trial;
-=======
         {/* CTA Section */}
         <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
@@ -170,7 +153,6 @@ const AiCloudInfrastructurePage: React.FC = () => {
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>
               Start Your Free Trial
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   </
           </div>
 </section>
@@ -186,10 +168,4 @@ export default AiCloudInfrastructurePage;
   </button>
   </button>
   </h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8

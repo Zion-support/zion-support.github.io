@@ -1,6 +1,6 @@
 'use client';
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React, {useState} from 'react';
+import {Helmet} from 'react-helmet-async';
 import {Brain,}
   Cloud,
   Shield,
@@ -20,7 +20,7 @@ import {Brain,}
   FileText,
   Target;}from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import Footer  from '../components/Footer';
 
 const ServicesPage: React.FC = () => {,
   const [searchTerm, setSearchTerm] = useState('');
@@ -68,9 +68,7 @@ const ServicesPage: React.FC = () => {,
       features: ['Real-time Monitoring', 'Behavioral Analysis', 'Risk Scoring', 'Anomaly Detection', 'Automated Alerts'],
       price: 'Starting at $799/month',
       marketPrice: '$1500-5000/month',
-<<<<<<< HEAD
       benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']},
-=======
       benefits: ['Reduce fraud losses by 85%', 'Real-time protection', 'False positive reduction', 'Compliance ready']
     },
     {
@@ -183,7 +181,6 @@ const ServicesPage: React.FC = () => {,
       marketPrice: '$150-600/month',
       benefits: ['Improved productivity', 'Reduced scheduling conflicts', 'Time optimization', 'Better resource utilization']
     },
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
     
     // IT Services;
     {icon: Cloud,
@@ -225,9 +222,7 @@ const ServicesPage: React.FC = () => {,
       features: ['IT Strategy Development', 'Technology Assessment', 'Digital Transformation Planning', 'Vendor Evaluation', 'Process Optimization', 'Change Management'],
       price: 'Starting at $200/hour',
       marketPrice: '$300-800/hour',
-<<<<<<< HEAD
       benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']},
-=======
       benefits: ['Strategic guidance', 'Cost optimization', 'Technology alignment', 'Competitive advantage']
     },
     {
@@ -330,7 +325,6 @@ const ServicesPage: React.FC = () => {,
       marketPrice: '$2000-6000/month',
       benefits: ['Improved performance', 'Better user experience', 'Cost optimization', 'Scalable solutions']
     },
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
     
     // Micro SaaS;
     {icon: BarChart3,
@@ -348,7 +342,6 @@ const ServicesPage: React.FC = () => {,
       features: ['GPT-4 Powered AI', 'Multi-channel Support', 'Advanced Sentiment Analysis', 'Automated Ticket Routing', 'Live Agent Handoff', 'Multi-language Support'],
       price: 'Starting at $149/month',
       marketPrice: '$300-800/month',
-<<<<<<< HEAD
       benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']},
     {icon: Globe,
       title: 'Web Development',
@@ -367,12 +360,10 @@ const ServicesPage: React.FC = () => {,
       marketPrice: '$15000-50000/project',
       benefits: ['Native performance', 'Cross-platform compatibility', 'App store success', 'User engagement']},
     {icon: FileText,
-=======
       benefits: ['24/7 customer support', 'Reduced response time', 'Improved customer satisfaction', 'Lead generation']
     },
     {
       icon: FileText,
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
       title: 'Zion Invoice Genius',
       description: 'AI-powered invoice generation and management with automated billing and payment tracking.',
       category: 'saas',
@@ -387,9 +378,7 @@ const ServicesPage: React.FC = () => {,
       features: ['AI-powered Lead Scoring', 'Multi-channel Lead Capture', 'Automated Lead Nurturing', 'CRM Integration', 'Advanced Analytics', 'A/B Testing'],
       price: 'Starting at $99/month',
       marketPrice: '$200-600/month',
-<<<<<<< HEAD
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']},
-=======
       benefits: ['Increase qualified leads by 300%', 'Automated lead nurturing', 'Better conversion rates', 'ROI optimization']
     },
     {
@@ -712,7 +701,6 @@ const ServicesPage: React.FC = () => {,
       marketPrice: '$250-600/month',
       benefits: ['Faster document processing', 'Reduced manual work', 'Better accuracy', 'Cost savings']
     },
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
   ];
   const categories = [
     {id: 'all', name: 'All Services', count: services.length ,},

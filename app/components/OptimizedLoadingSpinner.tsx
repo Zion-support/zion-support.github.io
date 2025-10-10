@@ -1,5 +1,5 @@
 'use client';
-import React, {Suspense, lazy}from 'react';
+import React, {Suspense, lazy} from 'react';
 interface OptimizedLoadingSpinnerProps {size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';}
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
   text?: string;

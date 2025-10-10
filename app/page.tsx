@@ -1,22 +1,15 @@
 'use client';
-<<<<<<< HEAD
-import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
-=======
-import React from 'react';
+import React, {useCallback, useState, useEffect, Suspense, lazy, memo} from 'react';
+import React  from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-// import {ServiceCardSkeleton, StatsSkeleton}}from './components/EnhancedLoadingStates';
-import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic}}from 'lucide-react';
-=======
+import AccessibilityEnhancer  from './components/AccessibilityEnhancer';
+// import {ServiceCardSkeleton, StatsSkeleton} from './components/EnhancedLoadingStates';
+import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic} from 'lucide-react';
 // import { ServiceCardSkeleton, StatsSkeleton } from './components/EnhancedLoadingStates';
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, DollarSign, Award, Rocket, Layers, Workflow, BarChart3, MessageSquare, Headphones, Monitor, HardDrive, Wifi, Printer, Router, Package, Heart, DollarSign as Dollar, Award as Trophy, Rocket as Launch, Layers as Stack, Workflow as Process, BarChart3 as Analytics, MessageSquare as Chat, Headphones as Support, Monitor as Screen, HardDrive as Storage, Wifi as Network, Printer as Print, Router as Gateway, Package as Box, Eye, Mic } from 'lucide-react';
 import { usePageTracking, useEventTracking } from './components/EnhancedAnalytics';
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
 
 // Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
@@ -1332,7 +1325,6 @@ className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holog
                 </p>
                 <p className="text-gray-300 text-sm">⏰ Mon-Fri: 9AM-6PM EST | 24/7 Emergency Support Available;,</p>
                 </p>
-=======
 import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Globe, Code, BarChart, Target, Sparkles, Cpu, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, ShoppingCart, Rocket, Clock, Award, Lightbulb, Gauge, Phone } from 'lucide-react';
 
 const HomePage: React.FC = () => {
@@ -1566,12 +1558,10 @@ const HomePage: React.FC = () => {
                   <Clock className="w-4 h-4 text-purple-400 mr-1" />
                   <span>10+ Years Experience</span>
                 </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
               </div>
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* Stats Section */} <section className="mb-16" aria-labelledby="stats-heading">
             <h2 id="stats-heading" className="text-2xl sm: text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text-enhanced">,</h2>
               Our Impact;
@@ -1756,7 +1746,6 @@ const HomePage: React.FC = () => {
                         Start Trial;
                       </a>
                     </div>
-=======
           {/* Features Section */}
           <section className="mb-20">
             <div className="text-center mb-16">
@@ -1886,14 +1875,12 @@ const HomePage: React.FC = () => {
                   <div className="border-t border-white/10 pt-4">
                     <div className="font-semibold text-white">{testimonial.name}</div>
                     <div className="text-sm text-cyan-400">{testimonial.role}, {testimonial.company}</div>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
                   </div>
                 </div>
               ))}
             </div>
           </section>
 
-<<<<<<< HEAD
           {/* CTA Section */} <section className="mb-16" aria-labelledby="cta-heading">
             <div className="cyber-card-enhanced hologram-card-enhanced p-8 text-center">
               <h2 id="cta-heading" className="text-2xl font-bold text-white mb-6 neon-text-enhanced">Get Free Consultation</h2>
@@ -1916,7 +1903,6 @@ const HomePage: React.FC = () => {
                   href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-indigo-600 transition-all duration-300">,
                   Get Free Consultation;
-=======
           {/* CTA Section */}
           <section className="text-center bg-gradient-to-r from-slate-800/50 to-purple-900/50 rounded-3xl p-12 border border-cyan-500/20">
             <div className="max-w-4xl mx-auto">
@@ -1934,7 +1920,6 @@ const HomePage: React.FC = () => {
                 >
                   Get Free Consultation
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
                 </a>
                 <a 
                   href="tel:+13024640950" 
@@ -1949,7 +1934,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
 
         {/* Services Section */} <section className="mb-16" aria-labelledby="services-heading">
           <h2 id="services-heading" className="text-2xl sm: text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">,</h2>
@@ -2413,8 +2397,6 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         </main>
 
         <Footer />

@@ -1,7 +1,6 @@
 'use client';
-<<<<<<< HEAD
-import React, {useEffect, useState, useCallback}from 'react';
-import {Settings, Zap, CheckCircle, AlertTriangle}}from 'lucide-react';
+import React, {useEffect, useState, useCallback} from 'react';
+import {Settings, Zap, CheckCircle, AlertTriangle} from 'lucide-react';
 
 interface PerformanceOptimizerProps {children: React.ReactNode;,}
   enableImageOptimization?: boolean;
@@ -166,7 +165,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
   }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
 
   return null;
-=======
 import React, { useEffect, useCallback } from 'react';
 
 const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -266,7 +264,6 @@ const PerformanceOptimizer: React.FC<{ children: React.ReactNode }> = ({ childre
       return () => window.removeEventListener('load', measurePerformance);
     }
   }, []);
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
   return <>{children}</>;
 };

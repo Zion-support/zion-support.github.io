@@ -1,39 +1,24 @@
 'use client';
 
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
+import React  from 'react';
+import {Zap, Shield, Star, Users, ArrowRight} from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {,
-=======
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
-=======
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
 import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
-=======
 import { CheckCircle, ArrowRight, Zap, Shield, Star, Users } from 'lucide-react';
 
 const ContentPromotionBanner: React.FC = () => {
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
   const features = [
     {
       title: 'AI-Powered Solutions',
@@ -47,32 +32,16 @@ const ContentPromotionBanner: React.FC = () => {
       icon: Star;,},
     {title: 'Expert Support',
       description: '24/7 support from our team of AI and IT specialists.',
-<<<<<<< HEAD
       icon: Users;,}];
-=======
       icon: Users
     }
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
 
   const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   return(<div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">)</div>
       <div className="max-w-7xl mx-auto">
@@ -84,27 +53,17 @@ const ContentPromotionBanner: React.FC = () => {
           </p>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         {/* Features Section */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12">,</div>
-=======
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
           {features.map((feature, index) => (
             <div key={index}className="text-center">
               <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
               <p className="text-purple-100 text-sm">{feature.description</p>}</p>
-=======
               <p className="text-purple-100 text-sm">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
         {/* Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {features.map((feature, index) => (
@@ -114,23 +73,15 @@ const ContentPromotionBanner: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
-=======
               <p className="text-purple-100 text-sm">{feature.description}</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
-=======
               <p className="text-purple-100 text-sm">{feature.description}</p>
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
             </div>
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* CTA Section */} <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
-=======
         {/* CTA Section */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
           <h3 className="text-2xl font-bold text-white mb-4">
             Ready to Get Started?
           </h3>
@@ -146,7 +97,6 @@ const ContentPromotionBanner: React.FC = () => {
             </button>
           </div>
         </div>
-=======
 
   return (
     <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
@@ -174,7 +124,6 @@ const ContentPromotionBanner: React.FC = () => {
           Get Started Now
           <ArrowRight className="w-5 h-5 ml-2" />
         </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
       </div>
     </div>
   );

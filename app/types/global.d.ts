@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 // Global type definitions for the application;
 declare global {interface Window {}
     gtag?: (...args: any[]) => void,

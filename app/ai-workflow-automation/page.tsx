@@ -1,23 +1,19 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
 const AiWorkflowAutomationPage: React.FC = () => {,
     const features = [
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const AiWorkflowAutomationPage: React.FC = () => {
   const features = [
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-<<<<<<< HEAD
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
       title: 'Advanced Analytics',
@@ -83,11 +79,11 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect} from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import {Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users}}from 'lucide-react';
+import SEOOptimizer  from '../components/SEOOptimizer';
+import {Zap, Workflow, Target, CheckCircle, Phone, Mail, Brain, Database, Settings, Globe, BarChart, Users} from 'lucide-react';
 
 const AIWorkflowAutomation: React.FC = () => {,
   const [isLoaded, setIsLoaded] = useState(false);
@@ -162,7 +158,6 @@ const AIWorkflowAutomation: React.FC = () => {,
                 Automate any business process with intelligent workflows;
               </p>
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">Our AI-powered workflow automation platform helps businesses eliminate manual tasks,</p>
-=======
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
@@ -214,10 +209,8 @@ const AIWorkflowAutomation: React.FC = () => {,
                 Transform your business processes with intelligent automation. 
                 Streamline operations, reduce costs, and scale efficiently with AI-powered workflows.
               </p>
-<<<<<<< HEAD
               <p className="text-lg text-gray-300 mb-12 max-w-3xl mx-auto">
                 Our AI-powered workflow automation platform helps businesses eliminate manual tasks, 
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
                 reduce errors by 75%, and save 90% of processing time with intelligent automation.
               </p>
               
@@ -305,28 +298,21 @@ const AIWorkflowAutomation: React.FC = () => {,
               </h2>
               <p>Contact our experts to discuss your requirements and get started today.;</p>
               </p>
-<<<<<<< HEAD
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
                 <button>Contact Us;</button>
                 </button>
                 <button>Learn More;</button>
                 </button>
-=======
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
                 <button>
                   Contact Us;
-=======
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
                   Get Started
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
                 </button>
                 <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                   Learn More
                 </button>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
                   </div>
                 ))}
               </div>
@@ -363,13 +349,10 @@ const AIWorkflowAutomation: React.FC = () => {,
                     </a>
                   </div>
                 ))}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
               </div>
             </div>
           </div>
         </section>
-<<<<<<< HEAD
       </div>
       <Footer />
     </>
@@ -377,7 +360,6 @@ const AIWorkflowAutomation: React.FC = () => {,
 };
 
 export default AiWorkflowAutomationPage;
-=======
 
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -465,4 +447,3 @@ export default AiWorkflowAutomationPage;
 };
 
 export default AiWorkflowAutomationPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7

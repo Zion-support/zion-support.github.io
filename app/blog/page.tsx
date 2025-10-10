@@ -1,8 +1,8 @@
 'use client';
 
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Search, Calendar, User, Clock, ArrowRight}}from 'lucide-react';
+import React, {useState} from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Search, Calendar, User, Clock, ArrowRight} from 'lucide-react';
 
 const BlogPage: React.FC = () => {,
   const [searchQuery, setSearchQuery] = useState('');

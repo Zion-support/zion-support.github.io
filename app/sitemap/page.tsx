@@ -1,7 +1,7 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap}}from 'lucide-react';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
+import {Map, ArrowRight, ExternalLink, Calendar, Users, Code, Shield, Cloud, Brain, Zap} from 'lucide-react';
 
 const SitemapPage: React.FC = () => {,
   const lastUpdated = new Date().toISOString().split('T')[0]

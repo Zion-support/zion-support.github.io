@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 'use client';
 interface SEOOptimizerProps {title: string;,}
   description: string;,

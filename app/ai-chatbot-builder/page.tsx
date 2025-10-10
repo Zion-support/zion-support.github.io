@@ -1,10 +1,9 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
 const AiChatbotBuilderPage: React.FC = () => {,
     const features = [
     {
@@ -76,10 +75,10 @@ return(<>)
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
 
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect} from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {MessageCircle, Bot, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Globe, Users, Settings, BarChart} from 'lucide-react';
 
 const AIChatbotBuilder: React.FC = () => {,
   const [isLoaded, setIsLoaded] = useState(false);
@@ -235,7 +234,6 @@ const AIChatbotBuilder: React.FC = () => {,
             <div className="hologram-card-enhanced p-6 text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">5 min</div>
               <div className="text-gray-300">Setup Time</div>
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, MessageCircle } from 'lucide-react';
 
 const AiChatbotBuilderPage: React.FC = () => {
@@ -318,12 +316,10 @@ const AiChatbotBuilderPage: React.FC = () => {
                   View Demo
                 </button>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */} <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
             Powerful Features;
@@ -352,7 +348,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         {/* Use Cases Section */} <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
             Use Cases;
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -390,11 +385,9 @@ const AiChatbotBuilderPage: React.FC = () => {
         </section>
 
         {/* Use Cases Section */}
-<<<<<<< HEAD
         <section className="mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text mb-12">
             Use Cases
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
           </h2>
           
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,</div>
@@ -424,7 +417,6 @@ const AiChatbotBuilderPage: React.FC = () => {
         {/* Benefits Section */} <section className="py-20 px-4"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
-<<<<<<< HEAD
               <h2>Why Choose Our Solution?;</h2>
               </h2>
               <p>Proven results that drive business growth and efficiency;</p>
@@ -436,16 +428,13 @@ const AiChatbotBuilderPage: React.FC = () => {
                     <CheckCircle />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
-=======
               <h2>
                 Why Choose Our Solution?;
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Use Cases
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7
               </h2>
               <p className="text-xl text-gray-300">
                 Discover how chatbots can transform your business
@@ -469,13 +458,11 @@ const AiChatbotBuilderPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
                 </div>
               ))}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* CTA Section */} <section className="py-20 px-4"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
@@ -593,7 +580,6 @@ export default AiChatbotBuilderPage;
               >
                 Email Us;
               </a>
-=======
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -611,7 +597,6 @@ export default AiChatbotBuilderPage;
               <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Contact Sales
               </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
             </div>
           </div>
         </section>
@@ -622,8 +607,5 @@ export default AiChatbotBuilderPage;
   );
 };
 
-<<<<<<< HEAD
 export default AIChatbotBuilder;
-=======
 export default AiChatbotBuilderPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7

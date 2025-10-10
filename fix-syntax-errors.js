@@ -4,39 +4,39 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Function to fix import statements
-function fixImportStatements(content) {
-  // Fix missing space before 'from' in import statements
-  content = content.replace(/import\s+([^}]+)\}from\s+/g, 'import $1} from ');
-  content = content.replace(/import\s+([^}]+)\}from\s+/g, 'import $1} from ');
-  content = content.replace(/import\s+([^}]+)\}from\s+/g, 'import $1} from ');
+// Function to fix syntax errors
+function fixSyntaxErrors(content) {
+  // Fix missing semicolons and line breaks in function calls
+  content = content.replace(/useCallback\(\(\) => \{([^}]+)\}\([^)]+\)\);/g, (match, body, deps) => {
+    const cleanBody = body.replace(/;([^;]*?)([a-zA-Z])/g, ';\n    $2');
+    return `useCallback(() => {\n    ${cleanBody.trim()}\n  }, [${deps}]);`;
+  });
   
-  // Fix missing space before 'from' in default imports
-  content = content.replace(/import\s+([^,}]+)from\s+/g, 'import $1 from ');
+  // Fix missing semicolons after statements
+  content = content.replace(/([^;])\}window\./g, '$1;\n    window.');
+  content = content.replace(/([^;])\}document\./g, '$1;\n    document.');
   
-  // Fix multiple closing braces in imports
-  content = content.replace(/import\s+\{([^}]+)\}\}from\s+/g, 'import {$1} from ');
+  // Fix missing line breaks in object properties
+  content = content.replace(/([^,}])\s*,\s*([a-zA-Z])/g, '$1,\n    $2');
   
-  return content;
-}
-
-// Function to remove merge conflict markers
-function removeMergeConflicts(content) {
-  // Remove merge conflict markers
-  content = content.replace(/<<<<<<<.*?\n/g, '');
-  content = content.replace(/=======.*?\n/g, '');
-  content = content.replace(/>>>>>>>.*?\n/g, '');
-  
-  return content;
-}
-
-// Function to fix common JSX syntax errors
-function fixJSXSyntax(content) {
   // Fix missing spaces in JSX attributes
   content = content.replace(/className="([^"]*)"([a-zA-Z])/g, 'className="$1" $2');
   
   // Fix malformed JSX fragments
   content = content.replace(/<>([^<]*?)<>/g, '<>$1</>');
+  
+  // Fix missing semicolons in useEffect
+  content = content.replace(/useEffect\(\(\) => \{([^}]+)\}\[\]\);/g, (match, body) => {
+    const cleanBody = body.replace(/;([^;]*?)([a-zA-Z])/g, ';\n    $2');
+    return `useEffect(() => {\n    ${cleanBody.trim()}\n  }, []);`;
+  });
+  
+  // Fix missing semicolons in object literals
+  content = content.replace(/([^,}])\s*,\s*([a-zA-Z])/g, '$1,\n    $2');
+  
+  // Fix missing line breaks in function calls
+  content = content.replace(/([^;])\}window\./g, '$1;\n    window.');
+  content = content.replace(/([^;])\}document\./g, '$1;\n    document.');
   
   return content;
 }
@@ -64,9 +64,7 @@ async function processFiles() {
         const originalContent = content;
         
         // Apply fixes
-        content = fixImportStatements(content);
-        content = removeMergeConflicts(content);
-        content = fixJSXSyntax(content);
+        content = fixSyntaxErrors(content);
         
         // Only write if content changed
         if (content !== originalContent) {

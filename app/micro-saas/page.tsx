@@ -195,17 +195,11 @@ const MicroSaasPage: React.FC = () => {,
       icon: CheckCircle;,},
     {title: 'Secure & Compliant',
       description: 'Enterprise-grade security and compliance built-in from day one.',
-<<<<<<< HEAD
       icon: Shield;,}]
-=======
       icon: Shield
     }
   ]
-<<<<<<< HEAD
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
@@ -213,21 +207,17 @@ const MicroSaasPage: React.FC = () => {,
     ? products;
     : products.filter(product => product.category === selectedCategory);
 
-<<<<<<< HEAD
   return(<>)
       <Helmet />
-=======
   return (
     <>
       <Helmet></Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </div>
             </div>
-import React, {useState}from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare, Brain, Target, Rocket}}from 'lucide-react';
+import React, {useState} from 'react';
+import {Helmet} from 'react-helmet-async';
+import {CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare, Brain, Target, Rocket} from 'lucide-react';
 
-<<<<<<< HEAD
 interface MicroSaasProduct {id: string;,}
   name: string;,
   description: string;,
@@ -236,7 +226,6 @@ interface MicroSaasProduct {id: string;,}
   category: string;,
   popular: boolean;,
   icon: React.ComponentType<any>;,}const MicroSaasPage: React.FC = () => {,
-=======
 interface MicroSaasProduct {
   id: string;
   name: string;
@@ -249,7 +238,6 @@ interface MicroSaasProduct {
 }
 
 const MicroSaasPage: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const microSaasProducts: MicroSaasProduct[] = [,
@@ -353,7 +341,6 @@ const MicroSaasPage: React.FC = () => {
 
   const popularProducts = microSaasProducts.filter(product => product.popular);
 
-<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
         <title>Micro SaaS - Zion Tech Group | AI-Powered Business Tools</title>
@@ -376,7 +363,6 @@ const MicroSaasPage: React.FC = () => {
             </button>
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
               View Pricing;
-=======
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <Helmet></Helmet>
@@ -402,14 +388,12 @@ const MicroSaasPage: React.FC = () => {
             </button>
             <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
               View Pricing
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
             </button>
           </div>
         </div>
       </section>
 
                   </div>
-<<<<<<< HEAD
                   <p className="text-gray-300 text-sm">{benefit</p>}</p>
       {/* Featured Products */}{popularProducts.length > 0 && (
         <section className="py-16 px-4">
@@ -419,11 +403,8 @@ const MicroSaasPage: React.FC = () => {
               <p className="text-xl text-gray-300">Our most popular micro SaaS solutions</p>
             </div>
 
-<<<<<<< HEAD
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,</div>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
               {microSaasTools.map((tool, index) => (
                 <div key={index}className={`bg-white/5 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover: scale-105 group ${,
                   tool.popular ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/20' : 'border-white/10 hover: border-cyan-400/30',}`}>{tool.popular && (</div>
@@ -441,7 +422,6 @@ const MicroSaasPage: React.FC = () => {
                         <span className="text-cyan-400 font-bold text-lg">{tool.price</span>}</span>
                         {tool.marketPrice && (
                           <span className="text-gray-400 text-sm line-through">{tool.marketPrice</span>}</span>
-=======
                   <p className="text-gray-300 text-sm">{benefit}</p>
       {/* Featured Products */}
       {popularProducts.length > 0 && (
@@ -475,7 +455,6 @@ const MicroSaasPage: React.FC = () => {
                         <span className="text-cyan-400 font-bold text-lg"></spa>{tool.price}</span>
                         {tool.marketPrice && (
                           <span className="text-gray-400 text-sm line-through"></spa>{tool.marketPrice}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                         )}
                       </div>
                     </div>
@@ -483,7 +462,6 @@ const MicroSaasPage: React.FC = () => {
                   
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tool.description</p>}</p>
                   
-<<<<<<< HEAD
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Features: </h4>,
                     <ul className="space-y-1">
@@ -491,7 +469,6 @@ const MicroSaasPage: React.FC = () => {
                         <li key={featureIndex}className="flex items-center text-gray-300 text-sm">
                           <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                           {feature} </li>
-=======
                   <div className="mb-4"></div>
                     <h4 className="text-sm font-semibold text-white mb-2"></h>Key Features:</h4>
                     <ul className="space-y-1"></ul>
@@ -500,13 +477,11 @@ const MicroSaasPage: React.FC = () => {
                           <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" /></CheckCircle>
                           {feature}
                         </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                       ))}
                     </ul>
                   </div>
 
                   {tool.benefits && (
-<<<<<<< HEAD
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-white mb-2">Benefits: </h4>,
                       <ul className="space-y-1">
@@ -514,7 +489,6 @@ const MicroSaasPage: React.FC = () => {
                           <li key={benefitIndex}className="flex items-center text-green-300 text-sm">
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                             {benefit} </li>
-=======
                     <div className="mb-6"></div>
                       <h4 className="text-sm font-semibold text-white mb-2"></h>Benefits:</h4>
                       <ul className="space-y-1"></ul>
@@ -523,13 +497,11 @@ const MicroSaasPage: React.FC = () => {
                             <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                             {benefit}
                           </li>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                         ))}
                       </ul>
                     </div>
                   )}
 
-<<<<<<< HEAD
                   <div className="flex items-center justify-between">
                     <div className="text-xs text-gray-400">
                       <span className="bg-gray-700 px-2 py-1 rounded">{tool.category</span>}</span>
@@ -538,8 +510,6 @@ const MicroSaasPage: React.FC = () => {
                       Try Now;
                     </button>
                   </div>
-<<<<<<< HEAD
-=======
                   <div className="flex items-center justify-between"></div>
                     <div className="text-xs text-gray-400"></div>
                       <span className="bg-gray-700 px-2 py-1 rounded"></spa>{tool.category}</span>
@@ -549,9 +519,6 @@ const MicroSaasPage: React.FC = () => {
                     </button>
                   </div>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
                 </div>
               ))}
             </div>
@@ -560,7 +527,6 @@ const MicroSaasPage: React.FC = () => {
     </>
       )}
 
-<<<<<<< HEAD
       {/* All Products */} <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md: flex-row gap-4 mb-12">,</div>
@@ -570,7 +536,6 @@ const MicroSaasPage: React.FC = () => {
               {categories.map(category => ()
                 <option key={category}value={category}>
                   {category === 'all' ? 'All Categories' : category} </option>
-=======
       {/* All Products */}
       <section className="py-16 px-4 bg-white/5"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -584,12 +549,10 @@ const MicroSaasPage: React.FC = () => {
                 <option key={category} value={category}></option>
                   {category === 'all' ? 'All Categories' : category}
                 </option>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               ))}
             </select>
           </div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,</div>
             {filteredProducts.map((product) => (
               <div key={product.id}className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover: bg-white/10 transition-all duration-300 border border-white/20">,</div>
@@ -599,7 +562,6 @@ const MicroSaasPage: React.FC = () => {
                   </div>
                   {product.popular && (
                     <span className="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs font-medium">Popular;</span>
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/20"></div>
@@ -610,46 +572,36 @@ const MicroSaasPage: React.FC = () => {
                   {product.popular && (
                     <span className="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs font-medium"></span>
                       Popular
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                     </span>
                   )} </div>
 
-<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{product.category</p>}</p>
                 <p className="text-gray-300 mb-4">{product.description</p>}</p>
                 <div className="text-2xl font-bold text-white mb-4">{product.price</div>}</div>
-=======
                 <h3 className="text-xl font-bold text-white mb-2"></h>{product.name}</h3>
                 <p className="text-gray-300 text-sm mb-4">{product.category}</p>
                 <p className="text-gray-300 mb-4">{product.description}</p>
                 <div className="text-2xl font-bold text-white mb-4"></di>{product.price}</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 
                 <ul className="space-y-2 mb-6"></ul>
                   {product.features.slice(0, 3).map((feature, index) => (
-<<<<<<< HEAD
                     <li key={index}className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       <span className="line-clamp-1">{feature</span>}</span>
-=======
                     <li key={index} className="flex items-center text-sm text-gray-300"></li>
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
                       <span className="line-clamp-1"></spa>{feature}</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                     </li>
                   ))}
                 </ul>
 
-<<<<<<< HEAD
                 <button className="w-full text-blue-400 hover: text-blue-300 font-medium transition-colors flex items-center justify-center gap-2">,</button>
                   Learn More;
                   <ArrowRight className="w-4 h-4" />
-=======
                 <button className="w-full text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center justify-center gap-2"></button>
                   Learn More
                   <ArrowRight className="w-4 h-4" /></ArrowRight>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 </button>
               </div>
             ))}
@@ -662,7 +614,6 @@ const MicroSaasPage: React.FC = () => {
           )} </div>
       </section>
 
-<<<<<<< HEAD
       {/* Benefits Section */} <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -678,7 +629,6 @@ const MicroSaasPage: React.FC = () => {
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Quick Setup</h3>
               <p className="text-gray-300">Get up and running in minutes with our intuitive setup process and comprehensive documentation.</p>
-=======
       {/* Benefits Section */}
       <section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
@@ -697,7 +647,6 @@ const MicroSaasPage: React.FC = () => {
               <h3 className="text-xl font-bold text-white mb-4"></h>Quick Setup</h3>
               <p className="text-gray-300"></p>
                 Get up and running in minutes with our intuitive setup process and comprehensive documentation.
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </p>
             </div>
 
@@ -705,14 +654,11 @@ const MicroSaasPage: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
                 <TrendingUp className="w-8 h-8 text-white" /></TrendingUp>
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-bold text-white mb-4">Immediate ROI</h3>
               <p className="text-gray-300">See results from day one with tools designed to deliver immediate business value and efficiency gains.</p>
-=======
               <h3 className="text-xl font-bold text-white mb-4"></h>Immediate ROI</h3>
               <p className="text-gray-300"></p>
                 See results from day one with tools designed to deliver immediate business value and efficiency gains.
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </p>
             </div>
 
@@ -720,21 +666,17 @@ const MicroSaasPage: React.FC = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6"></div>
                 <Rocket className="w-8 h-8 text-white" /></Rocket>
               </div>
-<<<<<<< HEAD
               <h3 className="text-xl font-bold text-white mb-4">Scalable Solutions</h3>
               <p className="text-gray-300">Start small and scale up as your business grows with flexible pricing and feature options.</p>
-=======
               <h3 className="text-xl font-bold text-white mb-4"></h>Scalable Solutions</h3>
               <p className="text-gray-300"></p>
                 Start small and scale up as your business grows with flexible pricing and feature options.
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </p>
             </div>
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* CTA Section */} <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
@@ -750,7 +692,6 @@ const MicroSaasPage: React.FC = () => {
               </button>
               <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
                 Contact Sales;
-=======
       {/* CTA Section */}
       <section className="py-20 px-4"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
@@ -768,7 +709,6 @@ const MicroSaasPage: React.FC = () => {
               </button>
               <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300"></button>
                 Contact Sales
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
               </button>
             </div>
           </div>

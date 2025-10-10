@@ -1,10 +1,9 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-<<<<<<< HEAD
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings} from 'lucide-react';
 const AiAnalyticsDashboardPage: React.FC = () => {,
     const features = [
     {
@@ -128,10 +127,10 @@ return(<>)
 }
 export default AiAnalyticsDashboardPage;
 
-import React, {useState, useEffect}from 'react';
+import React, {useState, useEffect} from 'react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {BarChart, TrendingUp, Users, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Database, Target, Globe}}from 'lucide-react';
+import Footer  from '../components/Footer';
+import {BarChart, TrendingUp, Users, Zap, Shield, CheckCircle, Star, ArrowRight, Brain, Database, Target, Globe} from 'lucide-react';
 
 const AIAnalyticsDashboard: React.FC = () => {,
   const [isLoaded, setIsLoaded] = useState(false);
@@ -270,7 +269,6 @@ const AIAnalyticsDashboard: React.FC = () => {,
             <div className="hologram-card-enhanced p-6 text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">100+</div>
               <div className="text-gray-300">Integrations</div>
-=======
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings, PieChart, Activity } from 'lucide-react';
 
 const AiAnalyticsDashboardPage: React.FC = () => {
@@ -338,12 +336,10 @@ const AiAnalyticsDashboardPage: React.FC = () => {
                   View Demo
                 </button>
               </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
             </div>
           </div>
         </section>
 
-<<<<<<< HEAD
         {/* Features Section */} <section className="mb-16">
           <h2 className="text-3xl md: text-4xl font-bold text-white mb-4 text-center neon-text mb-12">,</h2>
             Powerful Features;
@@ -456,7 +452,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
               >
                 Email Us;
               </a>
-=======
         {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -532,7 +527,6 @@ const AiAnalyticsDashboardPage: React.FC = () => {
               <button className="border border-gray-300 text-white hover:bg-white hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-colors">
                 Contact Sales
               </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
             </div>
           </div>
         </section>
@@ -543,8 +537,5 @@ const AiAnalyticsDashboardPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIAnalyticsDashboard;
-=======
 export default AiAnalyticsDashboardPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-e5b7

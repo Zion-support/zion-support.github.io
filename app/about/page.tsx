@@ -1,12 +1,10 @@
 'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import React  from 'react';
+import {Helmet} from 'react-helmet-async';
 
-<<<<<<< HEAD
 const AboutPage: React.FC = () => {,
   return(<>)
       <Helmet />
-=======
 const AboutPage: React.FC = () => {
   const teamMembers = [
     {
@@ -65,7 +63,6 @@ const AboutPage: React.FC = () => {
   return (
     <>
       <Helmet>
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
         <title>About - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions for modern businesses. Meet our expert team and discover our mission." />
         <meta name="keywords" content="about zion tech group, AI company, IT solutions company, technology team, company mission" />
@@ -78,7 +75,6 @@ const AboutPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-<<<<<<< HEAD
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
           <div className="text-center mb-16">
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
@@ -94,7 +90,6 @@ const AboutPage: React.FC = () => {
               <p className="text-gray-300 mb-6 leading-relaxed">To empower businesses with innovative AI and IT solutions that drive growth, efficiency, and competitive advantage in the digital age.</p>
               </p>
               <p className="text-gray-300 leading-relaxed">We believe technology should be accessible, powerful, and transformative. Our team of experts works tirelessly to deliver solutions that not only meet today's needs but anticipate tomorrow's challenges.</p>
-=======
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <div className="text-center mb-20">
@@ -116,7 +111,6 @@ const AboutPage: React.FC = () => {
               </p>
               <p className="text-gray-300 leading-relaxed text-lg">
                 We believe technology should be accessible, powerful, and transformative. Our team of experts works tirelessly to deliver solutions that not only meet today's needs but anticipate tomorrow's challenges.
->>>>>>> cursor/analyze-improve-and-deploy-application-1a78
               </p>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">

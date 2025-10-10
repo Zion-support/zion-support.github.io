@@ -1,6 +1,6 @@
 'use client';
-import React, {Suspense, lazy}from 'react';
-import {Link}}from 'react-router-dom';
+import React, {Suspense, lazy} from 'react';
+import {Link} from 'react-router-dom';
 import {Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight,}
   Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock,
   TrendingUp, Star, Settings, Calendar, CheckSquare, FileText,

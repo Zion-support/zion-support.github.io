@@ -3,7 +3,7 @@
  * Advanced Error Handler;
  * Comprehensive error handling utilities for React applications;
  */;
-import React, {ErrorInfo, useCallback}from 'react';
+import React, {ErrorInfo, useCallback} from 'react';
 // Error types;
 export enum ErrorType {// Error types;}}export enum ErrorType {}}RUNTIME = 'RUNTIME',
   NETWORK = 'NETWORK',

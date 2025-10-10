@@ -1,6 +1,5 @@
 'use client';
-<<<<<<< HEAD
-import React, {createContext, useContext, useEffect, useCallback}from 'react';
+import React, {createContext, useContext, useEffect, useCallback} from 'react';
 
 interface AnalyticsContextType {track: (event: string, parameters?: Record<string, any>) => void;}
   page: (pageName: string, parameters?: Record<string, any>) => void;
@@ -50,7 +49,6 @@ interface AnalyticsProviderProps {children: React.ReactNode,}
         page_title: pageName,
         page_location: window.location.href,
         ...parameters;})
-=======
 import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
@@ -107,23 +105,19 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
         value: parameters.value || 0,
         ...parameters
       });
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
     }
   };
 
-<<<<<<< HEAD
   const identify = useCallback((userId: string, traits?: Record<string, any>) => {if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {)
         user_id: userId,
         ...traits;})
-=======
   const trackPageView = (pageName: string, pagePath: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX', {
         page_title: pageName,
         page_location: window.location.origin + pagePath,
       });
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
     }
   };
 
@@ -137,13 +131,11 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-<<<<<<< HEAD
   const value: AnalyticsContextType = {,
     track,
     page,
     identify;}return(<AnalyticsContext.Provider value={value)}>
       {children} </AnalyticsContext.Provider>
-=======
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
@@ -154,7 +146,6 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     <AnalyticsContext.Provider value={value}>
       {children}
     </AnalyticsContext.Provider>
->>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
   );
 };
 

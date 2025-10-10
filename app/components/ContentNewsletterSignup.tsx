@@ -1,6 +1,6 @@
 'use client';
-import React, {useState}from 'react';
-import {Mail, CheckCircle, AlertCircle}}from 'lucide-react';
+import React, {useState} from 'react';
+import {Mail, CheckCircle, AlertCircle} from 'lucide-react';
 
 const ContentNewsletterSignup: React.FC = () => {,
   const [email, setEmail] = useState('');

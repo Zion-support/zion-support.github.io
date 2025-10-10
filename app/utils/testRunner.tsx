@@ -3,7 +3,7 @@
  * Comprehensive Test Runner and Testing Utilities;
  * Provides advanced testing capabilities, mocking, and test automation;
  */
-import React, {ReactElement, useCallback}from 'react';
+import React, {ReactElement, useCallback} from 'react';
 
 export interface PerformanceMetrics {renderTime: number,}
     memoryUsage: number;,}timestamp: string,}
@@ -25,8 +25,8 @@ export interface TestConfig {enableMocking: boolean,}
     enableCoverage: boolean,
   enablePerformance: boolean,
     enableAccessibility: boolean,
-// Test result types;}export interface PerformanceMetrics {}}import {render, RenderOptions}}from '@testing-library/react';
-import {BrowserRouter}}from 'react-router-dom';
+// Test result types;}export interface PerformanceMetrics {}}import {render, RenderOptions} from '@testing-library/react';
+import {BrowserRouter} from 'react-router-dom';
 
 // Test result types;
 export interface PerformanceMetrics {renderTime: number;,}
