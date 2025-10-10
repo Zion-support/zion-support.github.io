@@ -20,8 +20,6 @@ import AnalyticsProvider from './app/components/AnalyticsProvider';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import SecurityEnhancer from './app/components/SecurityEnhancer';
 
-// Structured data for SEO - moved to SEOHead component
-
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
@@ -38,6 +36,11 @@ const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
 const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
 const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+
+// New service pages
+const AiVoiceCloningStudioPage = React.lazy(() => import('./app/ai-voice-cloning-studio/page'));
+const AiQuantumFinancialOraclePage = React.lazy(() => import('./app/ai-quantum-financial-oracle/page'));
+const CybersecuritySuitePage = React.lazy(() => import('./app/it-services/cybersecurity-suite/page'));
 
 // Performance monitoring hook
 const AppWithPerformanceMonitoring: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -82,6 +85,11 @@ const App: React.FC = () => {
                               <Route path="/micro-saas" element={<MicroSaasPage />} />
                               <Route path="/ai-services" element={<AiServicesPage />} />
                               <Route path="/it-services" element={<ItServicesPage />} />
+                              
+                              {/* New service routes */}
+                              <Route path="/ai-voice-cloning-studio" element={<AiVoiceCloningStudioPage />} />
+                              <Route path="/ai-quantum-financial-oracle" element={<AiQuantumFinancialOraclePage />} />
+                              <Route path="/it-services/cybersecurity-suite" element={<CybersecuritySuitePage />} />
                             </Routes>
                           </Suspense>
                         </main>
