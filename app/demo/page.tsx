@@ -2,6 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, ArrowRight, CheckCircle } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
 const DemoPage: React.FC = () => {
   const demos = [
     {
@@ -23,24 +26,29 @@ const DemoPage: React.FC = () => {
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
   ];
+
   return (
-    <React.Fragment>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
         <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
         <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+
+      <Navigation />
+
+      <main className="pt-20">
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              See Our <span className="text-cyan-400">Solutions</span> in Action;
-  </
+              See Our <span className="text-cyan-400">Solutions</span> in Action
+            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Experience our AI and IT solutions through interactive demos. See how our technology can transform your business.
             </p>
           </div>
         </section>
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -62,13 +70,14 @@ const DemoPage: React.FC = () => {
                   </ul>
                   <button className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center">
                     <Play className="w-4 h-4 mr-2" />
-                    Watch Demo;
-  </
+                    Watch Demo
+                  </button>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-8 border border-cyan-500/20">
@@ -85,10 +94,11 @@ const DemoPage: React.FC = () => {
             </div>
           </div>
         </section>
-      </div>
-    </React.Fragment>
+      </main>
+
+      <Footer />
+    </div>
   );
 };
+
 export default DemoPage;
-  </button>
-  </h1>
