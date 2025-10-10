@@ -1,245 +1,159 @@
 'use client';
-/**;
- * Comprehensive Error Logging System;
- * Provides structured error logging with different severity levels;
- */;
-export enum ErrorSeverity {}
-  LOW = 'low',;
-  MEDIUM = 'medium',;
-  HIGH = 'high',;
-  CRITICAL = 'critical'}
-}
-export interface ErrorLogEntry {
-    timestamp: string,
-  severity: ErrorSeverity,
-  message: string,
-  error?: Error
-  }
-export interface ErrorLogEntry {}
-  timestamp: string;
-  severity: ErrorSeverity;
-  message: string;
-  error?: Error;
-  context?: Record<string>
-  userAgent?: string
-  url?: string
-  stackTrace?: string,}
-}
-class ErrorLogger {}
-  private logs: ErrorLogEntry[] = []
-  private maxLogs = 1000;
-  /**;
-   * Log an error with context
-   */
-  log(message: string,),;
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM),
-    error?: Error),;
-    context?: Record<string>
-  ): void {
-    const entry: ErrorLogEntry = {,
-  log();
-    message: string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    error?: Error,;
-    context?: Record<string, unknown>
-  }
-  ): void {}
-    const entry: ErrorLogEntry = {}
-      timestamp: new Date().toISOString(),
-      severity,;
-      message,;
-      error,;
-      context,;
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-      stackTrace: error?.stack}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    // Add to internal log;
-    this.logs.push(entry);
-    if (this.logs.length > this.maxLogs) {}
-      this.logs.shift();}
-    }
-    // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {}
-      this.logToConsole(entry);}
-    }
-    // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {
-    // Console logging in development
-  }
-    if (process.env['NODE_ENV'] === 'development') {}
-      this.logToConsole(entry);}
-    }
-    // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {}
-      this.sendToExternalService(entry);}
-export enum ErrorSeverity {/* TODO: Fix JSX expression */}
-}
-export interface ErrorLogEntry {/* TODO: Fix JSX expression */}
-}
-class ErrorLogger {/* TODO: Fix JSX expression */}
-    }
-    // Add to internal log;
-    this.logs.push(entry);
-    if (this.logs.length > this.maxLogs) {/* TODO: Fix JSX expression */}
-    }
-    // Console logging in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-    }
-    // Send to external logging service in production;
-    if (process.env['NODE_ENV'] === 'production' && severity === ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**;
-   * Log to console with appropriate styling;
-   */;
-  private logToConsole(entry: ErrorLogEntry): void {,
-    const styles: Record<ErrorSeverity, string> = {}
-  private logToConsole(entry: ErrorLogEntry): void {}
-    const styles: Record<ErrorSeverity, string> = {}
-      [ErrorSeverity.LOW]: 'color: #4ade80',
-      [ErrorSeverity.MEDIUM]: 'color: #fbbf24',
-      [ErrorSeverity.HIGH]: 'color: #fb923 c',
-      [ErrorSeverity.CRITICAL]: 'color: #ef4444, font-weight: bold'}
-    }
-    }] ${entry.message}`, styles[entry.severity]);
-    if (entry.error) {}
-      }
-    if (entry.context) {}
-      }
-    if (entry.stackTrace) {}
-  private logToConsole(entr);
-  y: ErrorLogEntry): void {/* TODO: Fix JSX expression */}
-    }
-    if (entry.error) {/* TODO: Fix JSX expression */}
-      }
-    if (entry.context) {/* TODO: Fix JSX expression */}
-      }
-    if (entry.stackTrace) {/* TODO: Fix JSX expression */}
-      }
-}
-  /**;
-   * Send error to external logging service;
-   */;
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
-    ,
-    try {,
-  }
-  private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {}
-    try {}
-      // In production, you would send to a service like Sentry, LogRocket, etc.;
-      if (!endpoint) {}
-        return;}
-      }
-      await fetch(endpoint, {
-    method: 'POST'),
-        headers: {)
-  }
-          'Content-Type': 'application/json'})
-        })
-        body: JSON.stringify({
-    )
-          ...entry;)
-          error: entry.error;),
-            ? {),;
-                message: entry.error.message),
-                name: entry.error.name),
-  }
-      await fetch(endpoint, {)}
-        method: 'POST',
-        headers: {}
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({)}
-          ...entry,;
-          error: entry.error,
-            ? {}
-                message: entry.error.message,
-                name: entry.error.name,
-                stack: entry.error.stack}
-              }
-            : undefined;
-        })
-      })
-    } catch (error) {}
-      // Silently fail to avoid infinite loop}
-  private async sendToExternalService(entr);
-  y: ErrorLogEntry): Promise<void> {/* TODO: Fix JSX expression */}
-      }
-      await fetch(endpoint, {/* TODO: Fix JSX expression */},
-        bod,;
-  y: JSON.stringify({/* TODO: Fix JSX expression */}
-              }
-            : undefined;);
-        })
-      })
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  /**;
-   * Get recent logs;
-   */;
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {
-    ,
-  }
-  getRecentLogs(count: number = 10): ErrorLogEntry[] {}
-    return this.logs.slice(-count);}
-  getRecentLogs(coun);
-  t: number = 10): ErrorLogEntry[] {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Get logs by severity;
-   */;
-  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {
-    ,
-  }
-  getLogsBySeverity(severity: ErrorSeverity): ErrorLogEntry[] {}
-    return this.logs.filter(log => log.severity === severity);}
-  getLogsBySeverity(severit);
-  y: ErrorSeverity): ErrorLogEntry[] {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Clear all logs;
-   */;
-  clearLogs(): void {}
-    this.logs = []}
-  clearLogs(): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Export logs as JSON;
-   */;
-  exportLogs(): string {}
-    return JSON.stringify(this.logs, null, 2);}
-  }
-}
-// Singleton instance;
-const errorLogger = new ErrorLogger();
-// Convenience functions;
-export const logError = (message: string, error?: Error, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-export const logCritical = (message: string, error?: Error, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-export const logWarning = (message: string, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export const logInfo = (message: string, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export default errorLogger;
-  exportLogs(): string {/* TODO: Fix JSX expression */}
-  }
-}
-// Singleton instance;
-const errorLogger = new ErrorLogger();
-// Convenience functions;
-export const logError = (messag);
-  e: string, error?: Error, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.MEDIUM, error, context);
-export const logCritical = (messag);
-  e: string, error?: Error, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.CRITICAL, error, context);
-export const logWarning = (messag);
-  e: string, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export const logInfo = (messag);
-  e: string, context?: Record<string, unknown>) =>;
-  errorLogger.log(message, ErrorSeverity.LOW, undefined, context);
-export default errorLogger;
-`;
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

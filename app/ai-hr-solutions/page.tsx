@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiHrSolutionsPage: React.FC = () => {
-  return (
+const AiHrSolutionsPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>AI HR Solutions - Zion Tech Group</title>
@@ -110,7 +109,6 @@ const AiHrSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
+  )}
 
 export default AiHrSolutionsPage;

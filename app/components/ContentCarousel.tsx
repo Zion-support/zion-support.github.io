@@ -32,18 +32,12 @@ const ContentCarousel: React.FC = () => {
     }
   ]
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  }
+  const nextSlide = () => {setCurrentSlide((prev) => (prev + 1) % slides.length)}
 
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  }
+  const prevSlide = () => {setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)}
 
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
+  useEffect(() => {const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer)}, []);
 
   return (
     <div className="relative bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
@@ -67,14 +61,14 @@ const ContentCarousel: React.FC = () => {
                     <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-8">
                       <slide.icon className="w-10 h-10 text-white" />
                     </div>
-                    <h3 className="text-3xl font-bold text-white mb-6">{slide.title}</h3>
-                    <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">{slide.description}</p>
+                    <h3>slide.title</h3>
+                    <p>slide.description</p>
                     
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
                       {slide.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-cyan-400 mr-2 flex-shrink-0" />
-                          <span className="text-sm">{feature}</span>
+                          <span>feature</span>
                         </div>
                       ))}
                     </div>

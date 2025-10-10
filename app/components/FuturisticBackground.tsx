@@ -1,8 +1,7 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 
-const FuturisticBackground: React.FC = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+const FuturisticBackground: React.FC = () => {const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -13,22 +12,19 @@ const FuturisticBackground: React.FC = () => {
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
+      canvas.height = window.innerHeight}
 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
     // Quantum particles
-    const particles: Array<{
-      x: number;
+    const particles: Array<{x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
       opacity: number;
-      color: string;
-    }> = []
+      color: string}> = []
 
     const colors = ['#00ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6']
 
@@ -45,8 +41,7 @@ const FuturisticBackground: React.FC = () => {
       })
     }
 
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const animate = () => {ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
       particles.forEach((particle, index) => {
@@ -80,8 +75,7 @@ const FuturisticBackground: React.FC = () => {
               ctx.strokeStyle = particle.color;
               ctx.globalAlpha = (100 - distance) / 100 * 0.1;
               ctx.lineWidth = 0.5;
-              ctx.stroke();
-            }
+              ctx.stroke()}
           }
         })
       })
@@ -91,19 +85,15 @@ const FuturisticBackground: React.FC = () => {
       ctx.strokeStyle = '#00ffff';
       ctx.lineWidth = 0.5;
 
-      for (let x = 0; x < canvas.width; x += 20) {
-        ctx.beginPath();
+      for (let x = 0; x < canvas.width; x += 20) {ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
-        ctx.stroke();
-      }
+        ctx.stroke()}
 
-      for (let y = 0; y < canvas.height; y += 20) {
-        ctx.beginPath();
+      for (let y = 0; y < canvas.height; y += 20) {ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-      }
+        ctx.stroke()}
 
       ctx.globalAlpha = 1;
       requestAnimationFrame(animate);
@@ -111,9 +101,7 @@ const FuturisticBackground: React.FC = () => {
 
     animate();
 
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    }
+    return () => {window.removeEventListener('resize', resizeCanvas)}
   }, []);
 
   return (

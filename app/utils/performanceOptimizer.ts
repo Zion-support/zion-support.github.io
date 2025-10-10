@@ -1,596 +1,159 @@
-// Performance optimization utilities;
-export const debounce = <T extends (...args: any[]) => any>(,
-  func: T,
-  wait: number,
-): ((...args: Parameters<T>) => void) => {
-    let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {,
-  func: T,
-  wait: number
-  }
-): ((...args: Parameters<T>) => void) => {}
-  let timeout: NodeJS.Timeout,
-  return (...args: Parameters<T>) => {}
-    clearTimeout(timeout);
-    timeout = setTimeout(() => func(...args), wait);
-  }
-}
-export const throttle = <T extends (...args: any[]) => any>(,
-  func: T,
-  limit: number,
-): ((...args: Parameters<T>) => void) => {
-    let inThrottle: boolean,
-  return (...args: Parameters<T>) => {
-    if (!inThrottle) {,
-  func: T,
-  limit: number
-  }
-): ((...args: Parameters<T>) => void) => {}
-  let inThrottle: boolean,
-  return (...args: Parameters<T>) => {}
-    if (!inThrottle) {}
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  }
-}
-export const lazyLoad = (callback: () => void, options?: IntersectionObserverInit) => {}
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {}
-    callback();
-    return;
-  }
-const observer = new IntersectionObserver((entries) => {}
-    entries.forEach((entry) => {}
-      if (entry.isIntersecting) {}
-        callback();
-        observer.disconnect();
-      }
-}, options);
-return observer;
-}
-export const preloadImage = (src: string): Promise<void> => {,
-  return new Promise((resolve, reject) => {}
-export const preloadImage = (src: string): Promise<void> => {}
-  return new Promise((resolve, reject) => {}
-    const img = new Image();
-    img.onload = () => resolve();
-    img.onerror = reject;
-    img.src = src;
-}
-export const preloadScript = (src: string): Promise<void> => {,
-  return new Promise((resolve, reject) => {}
-export const preloadScript = (src: string): Promise<void> => {}
-  return new Promise((resolve, reject) => {}
-    const script = document.createElement('script');
-    script.src = src;
-    script.onload = () => resolve();
-    script.onerror = reject;
-    document.head.appendChild(script);
-}
-export const measurePerformance = (name: string, fn: () => void) => {
-    ,
-  if (typeof window === 'undefined' || !('performance' in window)) {,
-  }
-export const measurePerformance = (name: string, fn: () => void) => {}
-  if (typeof window === 'undefined' || !('performance' in window)) {}
-    fn();
-    return;
-  }
-const start = performance.now();
-  fn();
-  const end = performance.now();
-if (process.env.NODE_ENV === 'development') {}
-    }
-}
-export const getDeviceInfo = () => {}
-  if (typeof window === 'undefined') {}
-    return { isMobile: false, isTablet: false, isDesktop: true }
-  }
-const width = window.innerWidth;
-  return {
-    isMobile: width < 768
-    isTablet: width >= 768 && width < 1024,
-    isDesktop: width >= 1024
-  }
-  }
-  private observers: PerformanceObserver[] = []
-  private isMonitoring: boolean = false,
-  constructor(config?: Partial<OptimizationConfig>) {
-    ,
-  }
-  return {}
-    isMobile: width < 768,
-    isTablet: width >= 768 && width < 1024,
-    isDesktop: width >= 1024}
-  private observers: PerformanceObserver[] = []
-  private isMonitoring: boolean = false,
-  constructor(config?: Partial<OptimizationConfig>) {}
 'use client';
-/**;
- * Performance optimization utilities for the Zion Tech Group website;
- * Provides tools for monitoring and optimizing application performance;
- */;
-// Simple logger for performance optimizer;
-const logger = {/* TODO: Fix JSX expression */},
-  performanc,;
-  e: (messag,
-  e: string, dat);
-  a: Record<string, unknown>, context?: string) => {/* TODO: Fix JSX expression */},
-  erro,;
-  r: (messag,
-  e: string, erro);
-  r: Error) => {/* TODO: Fix JSX expression */}
-  }
-}
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-}
-interface OptimizationConfig {/* TODO: Fix JSX expression */}
-}
-interface PerformanceConfig extends OptimizationConfig {}
-class PerformanceOptimizer {/* TODO: Fix JSX expression */}
-  }
-  private,;
-  config: OptimizationConfig = {/* TODO: Fix JSX expression */}
-  }
-  private,;
-  observers: PerformanceObserver[] = [],
-  private,;
-  isMonitoring: boolean = false,
-  constructor(config?: Partial<OptimizationConfig>) {/* TODO: Fix JSX expression */}
-    this.config = { ...this.config, ...config }
-    this.initializePerformanceMonitoring();
-  }
-  /**;
-   * Initialize performance monitoring;
-   */;
-  private initializePerformanceMonitoring(): void {}
-    if (typeof window === 'undefined') return;
-    // Monitor page load performance;
-    window.addEventListener('load', () => {
-    // Monitor page load performance
-  }
-    window.addEventListener('load', () => {}
-      this.measureLoadTime();
-      this.measureMemoryUsage();
-private initializePerformanceMonitoring(): void {/* TODO: Fix JSX expression */}
-    })
-    // Monitor render performance;
-    this.measureRenderTime();
-  }
-  /**;
-   * Public init method for external initialization;
-   */;
-  public init(): void {}
-    this.initializePerformanceMonitoring();
-  public init(): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Measure page load time;
-   */;
-  private measureLoadTime(): void {}
-    if (typeof window === 'undefined' || !window.performance) return;
-    if (typeof window.performance.getEntriesByType !== 'function') return;
-    try {}
-      const navigation = window.performance.getEntriesByType?.('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {}
-        this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-  private measureLoadTime(): void {/* TODO: Fix JSX expression */}
-      }
-    } catch (error) {}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }
-  /**;
-   * Measure render time using PerformanceObserver;
-   */;
-  private measureRenderTime(): void {}
-    // Check if PerformanceObserver exists (may not be available in test environments);
-    if (typeof PerformanceObserver === 'undefined') return;
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        entries.forEach((entry) => {}
-          if (entry.entryType === 'measure') {}
-            this.metrics.renderTime = entry.duration;
-          }
-observer.observe({ entryTypes: ['measure'] })
-      this.observers.push(observer);
-    } catch (error) {
-    // PerformanceObserver may not support 'measure' entryType in some environments
-  }
-    } catch (error) {}
-      // PerformanceObserver may not support 'measure' entryType in some environments;
-      }
-  }
-  private observeLCP() {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1]
-        this.metrics.lcp = lastEntry.startTime;
-  private measureRenderTime(): void {/* TODO: Fix JSX expression */}
-          }
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['measure'] })
-      this.observers.push(observer);
-    } catch (error) {/* TODO: Fix JSX expression */}
-      }
-  }
-  private observeLCP() {/* TODO: Fix JSX expression */}
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] })
-      this.observers.push(observer);
-    } catch {
-    // Ignore if not supported
-  }
-    } catch {}
-      // Ignore if not supported;
-    }
-  }
-  private observeFID() {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-    ,
-  }
-        entries.forEach((entry: PerformanceEntry) => {}
-          const fidEntry = entry as PerformanceEntry & { processingStart: number }
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observeFID() {/* TODO: Fix JSX expression */}
-  t: number }
-          this.metrics.fid = fidEntry.processingStart - fidEntry.startTime;
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] })
-      this.observers.push(observer);
-    } catch {
-    // Ignore if not supported
-  }
-    }
-  }
-  private observeCLS() {
-    try {
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {,
-  }
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
-          if (!clsEntry.hadRecentInput) {
-    clsValue += clsEntry.value
-  }
-    } catch {}
-      // Ignore if not supported;
-    }
-  }
-  private observeCLS() {}
-    try {}
-      let clsValue = 0;
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {}
-          const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
-          if (!clsEntry.hadRecentInput) {}
-            clsValue += clsEntry.value;
-          }
-        })
-        this.metrics.cls = clsValue;
-      })
-      observer.observe({ entryTypes: ['layout-shift'] })
-      this.observers.push(observer);
-    } catch {
-    // Ignore if not supported
-  }
-    } catch {}
-      // Ignore if not supported;
-    }
-  }
-  private observeFCP() {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        entries.forEach((entry) => {
-    if (entry.name === 'first-contentful-paint') {
-            this.metrics.fcp = entry.startTime
-  }
-        entries.forEach((entry) => {}
-          if (entry.name === 'first-contentful-paint') {}
-            this.metrics.fcp = entry.startTime;
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observeCLS() {/* TODO: Fix JSX expression */}
-  e: number }
-          if (!clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
-          }
-        })
-        this.metrics.cls = clsValue;
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] })
-      this.observers.push(observer);
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observeFCP() {/* TODO: Fix JSX expression */}
-          }
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] })
-      this.observers.push(observer);
-    } catch {
-    // Ignore if not supported
-  }
-    } catch {}
-      // Ignore if not supported;
-    }
-  }
-  private observeTTFB() {}
-    try {}
-      const observer = new PerformanceObserver((list) => {}
-        const entries = list.getEntries();
-        entries.forEach((entry: PerformanceEntry) => {
-    ,
-  }
-          const navEntry = entry as PerformanceEntry & { responseStart: number, requestStart: number }
-          if (navEntry.responseStart > 0) {
-    this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-  }
-        entries.forEach((entry: PerformanceEntry) => {}
-          const navEntry = entry as PerformanceEntry & { responseStart: number, requestStart: number }
-          if (navEntry.responseStart > 0) {}
-            this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart;
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observeTTFB() {/* TODO: Fix JSX expression */}
-  t: number }
-          if (navEntry.responseStart > 0) {/* TODO: Fix JSX expression */}
-          }
-        })
-      })
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] })
-      this.observers.push(observer);
-    } catch {
-    // Ignore if not supported
-  }
-    }
-  }
-  private observeMemory() {
-    if (typeof window !== 'undefined' && 'memory' in performance) {}
-      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
-      if (memory) {
-    this.metrics.memoryUsage = memory.usedJSHeapSize
-  }
-    } catch {}
-      // Ignore if not supported;
-    }
-  }
-  private observeMemory() {}
-    if (typeof window !== 'undefined' && 'memory' in performance) {}
-      const memory = (performance as Performance & { memory?: {// usedJSHeapSize: number, jsHeapSizeLimit: number} }).memory;
-      if (memory) {}
-        this.metrics.memoryUsage = memory.usedJSHeapSize;
-    } catch {/* TODO: Fix JSX expression */}
-    }
-  }
-  private observeMemory() {/* TODO: Fix JSX expression */}
-  t: number} }).memory;
-      if (memory) {/* TODO: Fix JSX expression */}
-      }
-    }
-  }
-  /**;
-   * Measure memory usage;
-   */;
-  private measureMemoryUsage(): void {}
-    if (typeof window === 'undefined' || !('memory' in window.performance)) return;
-    const memory = (window.performance as Performance & {}
-      memory?: {}
-        usedJSHeapSize: number,
-        totalJSHeapSize: number,
-        jsHeapSizeLimit: number,
-      }
-    }).memory;
-    if (memory) {}
-      this.metrics.memoryUsage = memory.usedJSHeapSize;
-  private measureMemoryUsage(): void {/* TODO: Fix JSX expression */}
-      }
-    }).memory;
-    if (memory) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**;
-   * Optimize images for better performance;
-   */;
-  public optimizeImages(): void {}
-    if (typeof window === 'undefined') return;
-    if (!this.config.enableImageOptimization) return;
-    const images = document.querySelectorAll('img');
-    images.forEach((img) => {
-    // Add loading="lazy" for better performance;
-      if (!img.hasAttribute('loading')) {
-        img.setAttribute('loading', 'lazy')
-  }
-      }
-      // Add proper alt text if missing;
-      if (!img.hasAttribute('alt')) {
-    img.setAttribute('alt', 'Zion Tech Group content')
-  }
-      }
-      // Optimize image format;
-      if (img.src.includes('.webp') || img.src.includes('.webp')) {
-        // Convert to WebP if supported;
-        if (this.supportsWebP()) {}
-    images.forEach((img) => {}
-      // Add loading="lazy" for better performance;
-      if (!img.hasAttribute('loading')) {}
-        img.setAttribute('loading', 'lazy');
-      }
-      // Add proper alt text if missing;
-      if (!img.hasAttribute('alt')) {}
-        img.setAttribute('alt', 'Zion Tech Group content');
-      }
-      // Optimize image format;
-      if (img.src.includes('.webp') || img.src.includes('.webp')) {}
-        // Convert to WebP if supported;
-        if (this.supportsWebP()) {}
-          img.src = img.src.replace(/\.(jpg|jpeg)$/i, '.webp');
-        }
-      }
-images.forEach((img) => imageObserver.observe(img));
-}
-  public optimizeImages(): void {/* TODO: Fix JSX expression */}
-      }
-      // Add proper alt text if missing;
-      if (!img.hasAttribute('alt')) {/* TODO: Fix JSX expression */}
-      }
-      // Optimize image format;
-      if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {/* TODO: Fix JSX expression */}
-        }
-      }
-    })
-  }
-  /**;
-   * Check if browser supports WebP;
-   */;
-  private supportsWebP(): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Setup lazy loading for better performance;
-   */;
-  public setupLazyLoading(): void {/* TODO: Fix JSX expression */}
-              } else {/* TODO: Fix JSX expression */}
-                element.style.backgroundImage = `url(${src})`;
-              }
-              element.removeAttribute('data-lazy');
-              lazyObserver.unobserve(element);
-            }
-          }
-        })
-      })
-      lazyElements.forEach((element) => {/* TODO: Fix JSX expression */}
-      })
-    }
-    this.metrics.lazyLoading = true;
-  }
-  /**;
-   * Enable code splitting for better performance;
-   */;
-  enableCodeSplitting(): void {/* TODO: Fix JSX expression */}
-    if (process.env.NODE_ENV === 'development') {}
-  }
-  /**;
-   * Enable caching strategies;
-   */;
-  enableCaching(): void {/* TODO: Fix JSX expression */}
-        if (process.env.NODE_ENV === 'development') {}
-      })
-      .catch((error) => {/* TODO: Fix JSX expression */}
-        if (process.env.NODE_ENV === 'development') {}
-      })
-  }
-  /**;
-   * Get current performance metrics;
-   */;
-  getMetrics(): PerformanceMetrics {/* TODO: Fix JSX expression */}
-    return { ...this.metrics }
-  }
-  /**;
-   * Get performance score (0-100);
-   */;
-  getPerformanceScore(): number {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Generate performance report;
-   */;
-  generateReport(): string {/* TODO: Fix JSX expression */}`;
-  Score: ${score}`;
-  }
-  /**;
-   * Lazy load images for better performance;
-   */;
-  lazyLoadImages(): void {/* TODO: Fix JSX expression */}
-        }
-      })
-    })
-    images.forEach(img => imageObserver.observe(img));
-    logger.info('Lazy loading initialized for images', 'PerformanceOptimizer');
-  }
-  /**;
-   * Add critical resource hints;
-   */;
-  addCriticalResourceHints(): void {/* TODO: Fix JSX expression */}
-  n: 'anonymous' },;
-      {/* TODO: Fix JSX expression */}
-  s: 'style' }]
-    criticalResources.forEach(resource => {/* TODO: Fix JSX expression */})
-    })
-    logger.info('Critical resource hints added', 'PerformanceOptimizer');
-  }
-  /**;
-   * Measure page load metrics;
-   */;
-  measurePageLoad(): PerformanceMetrics | null {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**;
-   * Report web vitals;
-   */;
-  reportWebVitals(metric);
-  s: PerformanceMetrics): void {/* TODO: Fix JSX expression */}
-    if (typeof window !== 'undefined' && (window as { gtag?: Function }).gtag) {/* TODO: Fix JSX expression */}
-  g: Function }).gtag('event', 'web_vitals', {/* TODO: Fix JSX expression */})
-          })
-        }
-      })
-    }
-  }
-  /**;
-   * Cleanup observers and resources;
-   */;
-  public cleanup(): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Generate comprehensive performance report;
-   */;
-  generateComprehensiveReport(): string {/* TODO: Fix JSX expression */}
-  Score: ${score}/100;
-Load,;
-  Time: ${metrics.loadTime.toFixed(2)}ms;
-Render,;
-  Time: ${metrics.renderTime.toFixed(2)}ms;
-Memory,;
-  Usage: ${(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB;
-Bundle,;
-  Size: ${metrics.bundleSize}KB;
-Cache Hit,;
-  Rate: ${metrics.cacheHitRate}%;
-Recommendation,;
-  s:;
-${score < 80 ? '- Consider optimizing images and enabling compression' : ''}
-${metrics.loadTime > 2000 ? '- Implement lazy loading for better initial load time' : ''}
-${metrics.memoryUsage > 30 * 1024 * 1024 ? '- Review memory usage and optimize components' : ''}`;
-    `.trim();
-  }
-  /**;
-   * Optimize the entire application;
-   */;
-  optimize(): void {/* TODO: Fix JSX expression */}
-    }
-  }
-}
-// Export singleton instance;
-export const performanceOptimizer = new PerformanceOptimizer();
-export default PerformanceOptimizer;
-export { PerformanceOptimizer, type PerformanceMetrics, type PerformanceConfig }
-`;
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

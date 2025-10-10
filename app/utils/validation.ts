@@ -1,366 +1,159 @@
-/**;
- * Comprehensive validation utilities for forms and data;
- * Provides all validation functions expected by tests;
- */;
-export interface ValidationResult {
-    isValid: boolean,
-  error?: string;
-  errors?: string[],
-  }
-export interface ValidationResult {/* TODO: Fix JSX expression */}
-}
-/**;
- * Email validation with length check;
- */;
-export function validateEmail(email: string): ValidationResult {
-    ,
-  if (!email || email.length > 254) {,
-  }
-    return { isValid: false, error: 'Email is too long' }
-export function validateEmail(emai);
-  l: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Email is too long' }
-  }
-const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const isValid = emailRegex.test(email.trim());
-return {
-    isValid,;
-    error: isValid ? undefined : 'Invalid email format',
-  }
-  return {/* TODO: Fix JSX expression */}
-  }
-}
-/**;
- * URL validation;
- */;
-export function validateURL(url: string): ValidationResult {
-    ,
-  if (!url || url.trim() === '') {,
-  }
-    return { isValid: false, error: 'URL is required' }
-  }
-try {
-    const urlObj = new URL(url);
-    const isValid = urlObj.protocol === 'http: ' || urlObj.protocol === 'https:',
-    return {,;
-      isValid;
-      error: isValid ? undefined : 'Invalid URL format',
-export function validateURL(ur)
-  }
-  l: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'URL is required' }
-  }
-try {/* TODO: Fix JSX expression */}
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Invalid URL format' }
-  }
-}
-/**;
- * String length validation;
- */;
-export function validateLength(value: string;);
-  min: number)
-  max: number)
-  fieldName: string = 'Field',
-): ValidationResult {
-    if (value.length < min) {,;
-    return {,;
-      isValid: false,
-  }
-      error: `${fieldName} must be at least ${min} characters long`;
-    }
-  }
-if (value.<<<length>max</length></length>) {
-    return {
-      isValid: false,
-  }
-      error: `${fieldName} must be no more than ${max} characters long`;
-    }
-  }
-return { isValid: true }
-export function validateLength(valu,;
-  e: string,
-  mi,;
-  n: number,
-  ma,;
-  x: number,
-  fieldNam,;
-  e: string = 'Field'),
-): ValidationResult {/* TODO: Fix JSX expression */}
-  r: `${fieldName} must be at least ${min} characters long`;
-    }
-  }
-if (value.length > max) {/* TODO: Fix JSX expression */}`;
-  r: `${fieldName} must be no more than ${max} characters long`;
-    }
-  }
-return {/* TODO: Fix JSX expression */}
-  d: true }
-}
-/**;
- * Password validation;
- */;
-export function validatePassword(password: string): ValidationResult {
-    ,
-  if (!password || password.length < 8) {,
-  }
-    return { isValid: false, error: 'Password must be at least 8 characters long' }
-  }
-if (password.length > 128) {}
-    return { isValid: false, error: 'Password is too long' }
-export function validatePassword(passwor);
-  d: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Password must be at least 8 characters long' }
-  }
-if (password.length > 128) {/* TODO: Fix JSX expression */}
-  r: 'Password is too long' }
-  }
-const hasUpperCase = /[A-Z]/.test(password);
-  const hasLowerCase = /[a-z]/.test(password);
-  const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>{]/.test(password);
-if (!hasUpperCase) {}
-    return { isValid: false, error: 'Password must contain at least one uppercase letter' }
-  }
-if (!hasLowerCase) {}
-    return { isValid: false, error: 'Password must contain at least one lowercase letter' }
-  }
-if (!hasNumbers) {}
-    return { isValid: false, error: 'Password must contain at least one number' }
-  }
-if (!hasSpecialChar) {}
-    return { isValid: false, error: 'Password must contain at least one special character' }
-  }
-return { isValid: true }
-if (!hasUpperCase) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one uppercase letter' }
-  }
-if (!hasLowerCase) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one lowercase letter' }
-  }
-if (!hasNumbers) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one number' }
-  }
-if (!hasSpecialChar) {/* TODO: Fix JSX expression */}
-  r: 'Password must contain at least one special character' }
-  }
-return {/* TODO: Fix JSX expression */}
-  d: true }
-}
-/**;
- * Required field validation;
- */;
-export function validateRequired(value: unknown, fieldName: string = 'Field'): ValidationResult {
-    ,
-  if (value === null || value === undefined) {,
-  }
-    return { isValid: false, error: `${fieldName} is required` }
-  }
-if (typeof value === 'string' && value.trim() === '') {}
-    return { isValid: false, error: `${fieldName} is required` }
-  }
-if (Array.isArray(value) && value.length === 0) {}
-    return { isValid: false, error: `${fieldName} is required` }
-  }
-return { isValid: true }
-export function validateRequired(valu,;
-  e: unknown, fieldNam);
-  e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */}`;
-  r: `${fieldName} is required` }
-  }
-if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expression */}`;
-  r: `${fieldName} is required` }
-  }
-if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */}`;
-  r: `${fieldName} is required` }
-  }
-return {/* TODO: Fix JSX expression */}
-  d: true }
-}
-/**;
- * Date validation;
- */;
-export function validateDate(dateString: string): ValidationResult {
-    ,
-  if (!dateString || dateString.trim() === '') {,
-  }
-    return { isValid: false, error: 'Date is required' }
-  }
-export function validateDate(dateStrin);
-  g: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Date is required' }
-  }
-// Check for YYYY-MM-DD format;
-  const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-  if (!dateRegex.test(dateString)) {/* TODO: Fix JSX expression */}
-  r: 'Date must be in YYYY-MM-DD format' }
-  }
-const date = new Date(dateString);
-  if (isNaN(date.getTime())) {/* TODO: Fix JSX expression */}
-  r: 'Invalid date' }
-  }
-// Check if the date is valid (e.g., not 2025-13-01);
-  const [year, month, day] = dateString.split('-').map(Number);
-  const actualDate = new Date(year, month - 1, day);
-  if (actualDate.getFullYear() !== year ||;
-      actualDate.getMonth() !== month - 1 ||;
-      actualDate.getDate() !== day) {}
-    return { isValid: false, error: 'Invalid date' }
-  }
-return { isValid: true }
-  if (actualDate.getFullYear() !== year ||;
-      actualDate.getMonth() !== month - 1 ||;
-      actualDate.getDate() !== day) {/* TODO: Fix JSX expression */}
-  r: 'Invalid date' }
-  }
-return {/* TODO: Fix JSX expression */}
-  d: true }
-}
-/**;
- * Credit card validation using Luhn algorithm;
- */;
-export function validateCreditCard(cardNumber: string): ValidationResult {
-    ,
-  if (!cardNumber || cardNumber.trim() === '') {,
-  }
-    return { isValid: false, error: 'Credit card number is required' }
-export function validateCreditCard(cardNumbe);
-  r: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'Credit card number is required' }
-  }
-const cleaned = cardNumber.replace(/[\s-]/g, '');
-  if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */}
-  r: 'Credit card number must contain only digits' }
-  }
-}</>
-  if (cleaned.length < 13 || cleaned.length > 19) {}
-    return { isValid: false, error: 'Credit card number must be between 13 and 19 digits' }
-if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */}
-  r: 'Credit card number must be between 13 and 19 digits' }
-  }
-let sum = 0;
-  let isEven = false;
-for (let i = cleaned.length - 1; i >= 0; i--) {
-    let digit = parseInt(cleaned[i], 10);
-    if (isEven) {
-      digit *= 2;
-      if (digit > 9) {
-        digit -= 9
-  }
-  for (let i = cleaned.length - 1; i >= 0; i--) {/* TODO: Fix JSX expression */}
-      }
-    }
-    sum += digit;
-    isEven = !isEven;
-  }
-const isValid = sum % 10 === 0;
-  return {
-    isValid,;
-    error: isValid ? undefined : 'Invalid credit card number',
-  }
-  return {/* TODO: Fix JSX expression */}
-  }
-}
-/**;
- * JSON validation;
- */;
-export function validateJSON(jsonString: string): ValidationResult {
-    ,
-  if (!jsonString || jsonString.trim() === '') {,
-  }
-    return { isValid: false, error: 'JSON string is required' }
-  }
-try {
-    JSON.parse(jsonString)
-  }
-    return { isValid: true }
-  } catch {}
-    return { isValid: false, error: 'Invalid JSON format' }
-export function validateJSON(jsonStrin);
-  g: string): ValidationResult {/* TODO: Fix JSX expression */}
-  r: 'JSON string is required' }
-  }
-try {/* TODO: Fix JSX expression */}
-  d: true }
-  } catch {/* TODO: Fix JSX expression */}
-  r: 'Invalid JSON format' }
-  }
-}
-/**;
- * HTML sanitization;
- */;
-export function sanitizeHTML(html: string): string {
-    if (!html) return '',
-,;
-  return html;
-    .replace(/&/g, '&amp;');
-    .replace(/</g, '&lt;');
-    .replace(/>/g, '&gt;');
-    .replace(/"/g, '&quot;');
-    .replace(/'/g, '&#x27;');
-    .replace(/\//g, '&#x2F;');
-export function sanitizeHTML(htm)
-  }
-  l: string): string {/* TODO: Fix JSX expression */}
-}
-/**;
- * Composite validation;
- */;
-export function validateComposite(value: unknown)
-  validators: Array<(val: unknown) => ValidationResult>
-): ValidationResult {
-    for (const validator of validators) {
-    const result = validator(value),
-    if (!result.isValid) {,;
-      return result;
-export function validateComposite(valu,;
-  e: unknown,
-  validator,;
-  s: Array<(va),
-  l: unknown) => ValidationResult>
-  }
-): ValidationResult {/* TODO: Fix JSX expression */}
-    }
-  }
-  return {/* TODO: Fix JSX expression */}
-  d: true }
-}
-/**;
- * Async validation;
- */;
-export async function validateAsync(;
-  validator: (val: unknown) => Promise<ValidationResult>
-  value: unknown,
-): Promise<ValidationResult> {
-    ,;
-  try {,;
-    return await validator(value)
-  }
-  } catch (error) {
-    return {
-      isValid: false,
-      error: error instanceof Error ? error.message : 'Validation failed',
-export async function validateAsync(validato,;
-  r: (va),
-  l: unknown) => Promise<ValidationResult>,
-  valu,;
-  e: unknown,
-  }
-): Promise<ValidationResult> {/* TODO: Fix JSX expression */}
-  } catch (error) {/* TODO: Fix JSX expression */}
-    }
-  }
-}
-// Re-export existing functions for compatibility;
-export {
-    isValidEmail,;
-  isValidPhone,;
-  isValidUrl,;
-  isRequired,;
-  isValidPassword,;
-  sanitizeInput
-  }
-} from './validators';
-export {/* TODO: Fix JSX expression */}
-} from './validators';"`;
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

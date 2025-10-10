@@ -1,95 +1,159 @@
+'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Star } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const ProductivityPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    <div>
+    <>
+      <Helmet>
+        <title>Productivity - Zion Tech Group</title>
+        <meta name="description" content="Advanced Productivity solutions for businesses" />
+        <meta name="keywords" content="AI, productivity, artificial intelligence, business solutions" />
+      </Helmet>
       <Navigation />
-      <main className="container mx-auto px-4 py-16 pt-24">
-        <section className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Page
-  </
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
-  </
-          <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This page is under development. Please check back soon for updates.
-          </p>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Productivity
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered productivity solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
         </section>
-        {/* Key Benefits */}
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-// Why Choose Our Productivity Tools?
-          </h2>"
-<div className="text-4xl mb-4">⚡</div>"
-              <h3 className="text-xl font-bold text-white mb-3">AI-Powered</h3>"
-              <p className="text-gray-300 text-sm">Intelligent automation and insights powered by advanced AI</p>"
-              <div className="text-4xl mb-4">🎯</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Focused Efficiency</h3>"
-              <p className="text-gray-300 text-sm">Tools designed to eliminate distractions and boost focus</p>"
-              <div className="text-4xl mb-4">📈</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Measurable Results</h3>"
-              <p className="text-gray-300 text-sm">Track and measure your productivity improvements</p>"
-              <div className="text-4xl mb-4">🔗</div>"
-              <h3 className="text-xl font-bold text-white mb-3">Seamless Integration</h3>"
-              <p className="text-gray-300 text-sm">Works with your existing tools and workflows</p>
-        {/* Tools by Category */})
-        {categories.map(category => ()}"
-          <section key={category} className="mb-16"></section>"
-            <h3 className="text-2xl font-bold text-white mb-8 text-center neon-text">{category} Tools</h3>
-            <div>{
-    productivityTools
-  }
-                .filter(tool => tool.category === category)
-                .map((tool, index) => ("
-<div className="text-4xl mb-4 text-center">{tool.icon}</div>"
-                    <h4 className="text-xl font-bold text-white mb-3 text-center">{tool.title}</h4>"
-                    <p className="text-gray-300 mb-4 text-sm text-center">{tool.description}</p>"
-                        <span className="text-2xl font-bold text-cyan-400">{tool.price}</span>"
-                        <span className="text-sm text-gray-400">Marke,
-  t: {tool.marketPrice}</span>
-                      <div>Save up to 50% vs market rates</div>"
-                      <h5 className="font-semibold text-white mb-2 text-sm">Key,
-  Features:</h5>"
-                      <ul className="space-y-1"></ul>)
-                        {tool.features.slice(0, 3).map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="flex items-center text-xs text-gray-300"></li>"
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" /></CheckCircle>
-                            {feature}
-                          </li>
-                        ))}
-                        {tool.features.length > 3 && (}"
-<li className="text-xs text-gray-400">+{tool.features.length - 3} more features</li>)
-                        )}
-                      </ul>"
-                      <h5 className="font-semibold text-white mb-2 text-sm">Benefit,
-  s:</h5>
-                        {tool.benefits.map((benefit, benefitIndex) => ()}"
-          <li key={benefitIndex} className="flex items-center text-xs text-gray-300"></li>"
-                            <Star className="w-3 h-3 text-yellow-500 mr-2 flex-shrink-0" /></Star>
-                            {benefit}"
-className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg font-semibold,
-  hover:from-cyan-600,"
-  hover:to-blue-700 transition-all text-sm inline-block"
-                      >Get This Tool</a>
-        {/* CTA Section */}"
-        <section className="text-center"></section>"
-          <h2 className="text-3xl font-bold text-white mb-6 neon-text"></h2>
-            Ready to Boost Your Productivity?"
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Get started with our productivity tools and transform how you work</p>
-            >Get Started Today</a>"
-              href="te,"
-  l: +13024640950"
-            >Call (302) 464-0950</a>
-      </main>
-      <Footer /></Footer>
-</div>),
-}
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Productivity?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Productivity solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
 export default ProductivityPage;
-  </section>
-  </p>
-  </h1>
-  </div>

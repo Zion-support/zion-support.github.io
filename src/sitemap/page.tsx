@@ -1,265 +1,159 @@
+'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import { ArrowRight, Globe, FileText, Users, Settings, Brain, Zap, Shield, Database, Cloud, Code, BarChart, MessageSquare, Eye, Cpu, Target, Lock, BarChart3, FileText as FileTextIcon, Search, Bot, Calculator, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calendar, Clock3, Compass, PieChart, TrendingDown, Activity } from 'lucide-react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const SitemapPage: React.FC = () => {
-  const mainPages = [
-    { name: 'Home', path: '/', description: 'Main homepage with company overview' },
-    { name: 'About Us', path: '/about', description: 'Learn about our company and mission' },
-    { name: 'Services', path: '/services', description: 'Comprehensive AI and IT services' },
-    { name: 'Contact', path: '/contact', description: 'Get in touch with our team' },
-    { name: 'Blog', path: '/blog', description: 'Latest insights and articles' },
-    { name: 'Case Studies', path: '/case-studies', description: 'Success stories and results' },
-    { name: 'Pricing', path: '/pricing', description: 'Transparent pricing plans' },
-    { name: 'Demo', path: '/demo', description: 'Request a personalized demo' },
-    { name: 'Team', path: '/team', description: 'Meet our expert team' },
-    { name: 'Careers', path: '/careers', description: 'Join our growing team' },
-    { name: 'Support', path: '/support', description: 'Get help and support' },
-    { name: 'Privacy Policy', path: '/privacy', description: 'Data protection and privacy' },
-    { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' }
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
   ];
-  const microSaasServices = [
-    { name: 'AI Project Manager', path: '/ai-project-manager', description: 'Intelligent project planning and management' },
-    { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management' },
-    { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence' },
-    { name: 'AI Email Marketing', path: '/ai-email-marketing', description: 'Smart email campaign automation' },
-    { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI-powered customer support' },
-    { name: 'AI Code Review Assistant', path: '/ai-code-generation', description: 'Automated code analysis and review' },
-    { name: 'AI Content Generator', path: '/ai-content-generation', description: 'AI-powered content creation' },
-    { name: 'AI Lead Generation', path: '/ai-lead-generation', description: 'Automated lead generation and qualification' },
-    { name: 'AI Document Processor', path: '/ai-document-processing', description: 'Intelligent document analysis' },
-    { name: 'AI SEO Optimizer', path: '/ai-seo-optimizer', description: 'AI-powered SEO optimization' },
-    { name: 'AI E-commerce Assistant', path: '/ai-ecommerce-solutions', description: 'E-commerce optimization tools' },
-    { name: 'AI Financial Analyzer', path: '/ai-financial-analyzer', description: 'Financial analysis and forecasting' }
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
   ];
-  const aiServices = [
-    { name: 'Machine Learning Solutions', path: '/machine-learning', description: 'Custom ML models and algorithms' },
-    { name: 'Natural Language Processing', path: '/nlp', description: 'Text analysis and language understanding' },
-    { name: 'Computer Vision', path: '/computer-vision', description: 'Image and video analysis' },
-    { name: 'AI Automation', path: '/ai-automation', description: 'Intelligent process automation' },
-    { name: 'Quantum AI Computing', path: '/quantum-ai', description: 'Next-generation quantum algorithms' },
-    { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security solutions' }
-  ];
-  const itServices = [
-    { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration and infrastructure' },
-    { name: 'Cybersecurity', path: '/cybersecurity', description: 'Advanced security solutions' },
-    { name: 'DevOps & CI/CD', path: '/devops', description: 'Development and deployment automation' },
-    { name: 'Database Services', path: '/database-services', description: 'Database optimization and management' },
-    { name: 'Network Infrastructure', path: '/network-infrastructure', description: 'Enterprise networking solutions' },
-    { name: 'IT Support & Helpdesk', path: '/it-support', description: '24/7 technical support' }
-  ];
-  const specializedServices = [
-    { name: 'Quantum Computing', path: '/quantum-computing', description: 'Quantum algorithms and security' },
-    { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems' },
-    { name: 'Blockchain & Web3', path: '/blockchain', description: 'Decentralized solutions' },
-    { name: 'IoT & Edge Computing', path: '/iot-edge', description: 'Connected devices and edge computing' },
-    { name: 'Business Intelligence', path: '/business-intelligence', description: 'Data-driven insights' },
-    { name: 'Robotics Solutions', path: '/robotics', description: 'Intelligent automation' }
-  ];
-  const blogCategories = [
-    { name: 'AI Trends', path: '/blog?category=AI Trends', description: 'Latest AI trends and developments' },
-    { name: 'Enterprise Transformation', path: '/blog?category=Transformation', description: 'Business transformation insights' },
-    { name: 'Success Stories', path: '/blog?category=Success Story', description: 'Client success stories' },
-    { name: 'Technical Guides', path: '/blog?category=Architecture', description: 'Technical implementation guides' },
-    { name: 'Cost Optimization', path: '/blog?category=Cost Optimization', description: 'Efficiency and cost reduction' }
-  ];
+
   return (
-    <React.Fragment>
-      <SEOOptimizer
-        title="Sitemap - Zion Tech Group"
-        description="Complete sitemap of all pages and services available on Zion Tech Group website. Find AI services, IT solutions, and resources easily."
-        keywords={['sitemap', 'AI services', 'IT solutions', 'website navigation', 'pages']}
-        canonicalUrl="https://ziontechgroup.com/sitemap"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <Navigation />
-        <main className="container mx-auto px-4 py-16 pt-24">
-          {/* Hero Section */}
-          <section className="text-center mb-16">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6 neon-text">
-              Site Map
-  </
-            <p className="text-xl text-cyan-400 mb-8">
-              Navigate through all our pages and services,
-  </
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
-              Find everything you need on our website. From AI services to IT solutions, 
-              case studies to technical resources - everything is organized for easy navigation.
+    <>
+      <Helmet>
+        <title>Sitemap - Zion Tech Group</title>
+        <meta name="description" content="Advanced Sitemap solutions for businesses" />
+        <meta name="keywords" content="AI, sitemap, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Sitemap
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered sitemap solution for modern businesses.
             </p>
-          </section>
-          {/* Main Pages */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Main Pages;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {mainPages.map((page, index) => (
-                <Link
-                  key={index}
-                  to={page.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                      {page.name}
-                    </h3>
-                    <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <p className="text-gray-300 text-sm">{page.description}</p>
-                </Link>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
             </div>
-          </section>
-          {/* Micro SAAS Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Services;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {microSaasServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors">
-                      {service.name}
-                    </h3>
-                    <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <p className="text-gray-300 text-sm">{service.description}</p>
-                </Link>
-              ))}
-            </div>
-          </section>
-          {/* AI Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              AI Services;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {aiServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors">
-                      {service.name}
-                    </h3>
-                    <ArrowRight className="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <p className="text-gray-300 text-sm">{service.description}</p>
-                </Link>
-              ))}
-            </div>
-          </section>
-          {/* IT Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {itServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
-                      {service.name}
-                    </h3>
-                    <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <p className="text-gray-300 text-sm">{service.description}</p>
-                </Link>
-              ))}
-            </div>
-          </section>
-          {/* Specialized Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Specialized Solutions;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {specializedServices.map((service, index) => (
-                <Link
-                  key={index}
-                  to={service.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-white group-hover:text-green-400 transition-colors">
-                      {service.name}
-                    </h3>
-                    <ArrowRight className="w-4 h-4 text-green-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <p className="text-gray-300 text-sm">{service.description}</p>
-                </Link>
-              ))}
-            </div>
-          </section>
-          {/* Blog Categories */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-white mb-8 text-center neon-text">
-              Blog Categories;
-  </
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {blogCategories.map((category, index) => (
-                <Link
-                  key={index}
-                  to={category.path}
-                  className="cyber-card p-6 hover:scale-105 transition-all duration-300 group">
-                  <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-lg font-bold text-white group-hover:text-pink-400 transition-colors">
-                      {category.name}
-                    </h3>
-                    <ArrowRight className="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  <p className="text-gray-300 text-sm">{category.description}</p>
-                </Link>
-              ))}
-            </div>
-          </section>
-          {/* Contact CTA */}
-          <section className="text-center">
-            <div className="cyber-card p-12 max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-6 neon-text">
-                Can't Find What You're Looking For?
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our team for personalized assistance and recommendations;
-  </
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="cyber-button px-8 py-4 text-lg font-semibold">
-                  Contact Us
-  </
-                <Link
-                  to="/demo"
-                  className="cyber-button-secondary px-8 py-4 text-lg font-semibold">
-                  Request Demo
-  </
-              </div>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
             </div>
-          </section>
-        </main>
-        <Footer />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Sitemap?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Sitemap solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </React.Fragment>
-  ),
-}
+      <Footer />
+    </>
+  );
+};
+
 export default SitemapPage;
-  </Link>
-  </Link>
-  </p>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </h2>
-  </p>
-  </h1>
-  </SEOOptimizer>

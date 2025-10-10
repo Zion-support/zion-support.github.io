@@ -1,206 +1,159 @@
-
-
 'use client';
-// PerformanceMetrics interface removed as it's not used in this hook;
-export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const { trackPerformance } = useAnalytics();
-  const reportMetric = useCallback()
-    (nam,
-  e: string, valu)
-  e: number) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      trackPerformance(name, value);
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const HooksPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-//     [trackPerformance]
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Hooks - Zion Tech Group</title>
+        <meta name="description" content="Advanced Hooks solutions for businesses" />
+        <meta name="keywords" content="AI, hooks, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Hooks
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered hooks solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Hooks?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Hooks solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined' || !('PerformanceObserver' in window)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return () => {}
-    }
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // LCP - Largest Contentful Paint;
-const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        reportMetric('LCP', lastEntry.startTime);
-      });
-      lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-      // FID - First Input Delay;
-const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-        const entries = list.getEntries();
-//         entries.forEach()
-          (entr)
-  y: PerformanceEntry & { processingStart?: number }) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            const fid =
-              (entry.processingStart || entry.startTime) - entry.startTime;
-            reportMetric('FID', fid)
-          }
-        );
-      });
-      fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-// CLS - Cumulative Layout Shift;
-      const clsObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-        const entries = list.getEntries();
-//         entries.forEach()
-//           ()
-            entr,
-  y: PerformanceEntry & {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              hadRecentInput?: boolean;
-              value?: number;
-            }
-          ) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            if (!entry.hadRecentInput && entry.value) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              clsValue += entry.value;
-            }
-          }
-        );
-        reportMetric('CLS', clsValue);
-      });
-      clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-      // FCP - First Contentful Paint;
-const fcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-        const entries = list.getEntries();
-        entries.forEach(entry => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-          if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            reportMetric('FCP', entry.startTime);
-          }
-        });
-      });
-      fcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-      // TTFB - Time to First Byte;
-const navigationObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-        const entries = list.getEntries();
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          if (entry.entryType === 'navigation') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            const navEntry = entry as PerformanceNavigationTiming;
-            const ttfb = navEntry.responseStart - navEntry.requestStart;
-            reportMetric('TTFB', ttfb);
-          }
-        });
-      });
-      navigationObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
-      // Resource timing;
-const resourceObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-        const entries = list.getEntries();
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          if (entry.entryType === 'resource') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            const resourceEntry = entry as PerformanceResourceTiming;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-            if (loadTime > 1000) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              // Only track slow resources;
-              reportMetric('SLOW_RESOURCE', loadTime);
-            }
-          }
-        });
-      });
-      resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
-      // Cleanup;
-      return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        lcpObserver.disconnect();
-        fidObserver.disconnect();
-        clsObserver.disconnect();
-        fcpObserver.disconnect();
-        navigationObserver.disconnect();
-        resourceObserver.disconnect();
-      }
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return () => {}
-    }
-  }, [reportMetric]);
-  // Monitor page load performance;
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const handleLoad = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (typeof window === 'undefined') return;
-      const navigation = performance.getEntriesByType()
-//         'navigation'
-      )[0] as PerformanceNavigationTiming;
-      if (navigation) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const metrics = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+};
 
-  domContentLoaded:
-//             navigation.domContentLoadedEventEnd -
-//             navigation.domContentLoadedEventStart,
-          loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-          domInteractive: navigation.domInteractive - navigation.fetchStart,
-          totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
-
-        }
-        Object.entries(metrics).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          reportMetric(key.toUpperCase(), value);
-        });
-      }
-    }
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, [reportMetric]);
-  return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//     reportMetric;
-  }
-}
-export default usePerformanceMonitoring;
-
+export default HooksPage;

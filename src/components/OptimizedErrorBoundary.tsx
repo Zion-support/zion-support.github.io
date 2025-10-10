@@ -1,255 +1,159 @@
 'use client';
-interface OptimizedErrorBoundaryProps {
-    children: ReactNode
-  fallback?: ReactNode,
-  onError?: (error: Error, errorInfo: ErrorInfo) => void
-  resetOnPropsChange?: boolean,
-  resetKeys?: Array<string | number>
-  }
-interface State {
-    hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null,
-  errorId: string
-  }
-class OptimizedErrorBoundary extends Component
-  OptimizedErrorBoundaryProps,
-  State
-> {
-  private resetTimeoutId: number | null = null
-  constructor(props: OptimizedErrorBoundaryProps) {
-    super(props),
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId:     ,
-$4}
-  }
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo
-    });
-    // Log error to console in development
-    if (process.env['NODE_ENV'] === 'development') {}
-    // Call custom error handler if provided
-    if (this.props.onError) {
-    this.props.onError(error, errorInfo)
-  }
-    // Send error to monitoring service in production
-    if (process.env['NODE_ENV'] === 'production') {
-    this.reportError(error, errorInfo)
-  }
-  }
-  componentDidUpdate(prevProps: OptimizedErrorBoundaryProps) {
-    const { resetKeys, resetOnPropsChange } = this.props;
-    const { hasError } = this.state;
-    if (hasError && prevProps.resetKeys !== resetKeys) {
-    if (resetKeys && prevProps.resetKeys) {
-          (key, index) => key !== prevProps.resetKeys?.[index]
-        );
-        if (hasResetKeyChanged) {
-          this.resetErrorBoundary()
-  }
-      }
-    }
-    if (
-      hasError &&
-      resetOnPropsChange &&
-      prevProps.children !== this.props.children
-    ) {
-    this.resetErrorBoundary()
-  }
-  }
-  componentWillUnmount() {
-    if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId)
-  }
-  }
-  private reportError = (error: Error, errorInfo: ErrorInfo) => {
-    // Report to error monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      const gtag = (
-        window as unknown as {
-          gtag: (
-            command: string,
-            action: string,
-            parameters: Record<string, unknown>
-          ) => void
-  }
-      ).gtag;
-      gtag('event', 'exception', {
-        description: error.message,
-        fatal: false,
-        custom_map: {
-          error_id: this.state.errorId,
-          component_stack: errorInfo.componentStack
-        }
-      });
-    }
-  }
-  private resetErrorBoundary = () => {
-    if (this.resetTimeoutId) {
-      clearTimeout(this.resetTimeoutId)
-  }
-    this.resetTimeoutId = window.setTimeout(() => {
-      this.setState({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        errorId:       ,
-$4});
-    }, 100);
-  }
-  private handleRetry = () => {
-    this.resetErrorBoundary()
-  }
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback
-  }
-      return (
-        <ErrorFallback
-          error={this.state.error}
-          errorInfo={this.state.errorInfo}
-          errorId={this.state.errorId}
-          onRetry={this.handleRetry}
-        />
-      );
-    }
-    return this.props.children;
-  }
-}
-interface ErrorFallbackProps {
-    error: Error | null
-  errorInfo: ErrorInfo | null
-  errorId: string,
-  onRetry: () => void
-  }
-const ErrorFallback = memo<ErrorFallbackProps>(
-  ({ error, errorInfo, errorId, onRetry }) => (
-    <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>
-      <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-6 text-center'>
-        <div className='mb-4'>
-          <div className='mx-auto w-12 h-12 bg-red-100 rounded-full flex items-center justify-center'>
-            <svg
-              className='w-6 h-6 text-red-600'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-            >
-              <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth={2}
-                d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.732-.833-2.5 0L4.268 19.5c-.77.833.192 2.5 1.732 2.5z'
-              />
-            </svg>
-          </div>
-        </div>
-        <h1 className='text-xl font-semibold text-gray-900 mb-2'>
-          Something went wrong</span>
-        <p className='text-gray-600 mb-4'>
-          We&apos;re sorry, but something unexpected happened. Please try again.
-        </p>
-        {process.env['NODE_ENV'] === 'development' && error && (
-          <details className='mb-4 text-left'>
-            <summary className='cursor-pointer text-sm text-gray-500 hover:text-gray-700'>
-              Error Details (Development)
-            </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'>
-              <div className='mb-2'>
-                <strong>Error:</strong> {error.message}
-        {process.env['NODE_ENV'] === 'development' && error && ()}
-          <details className='mb-4 text-left'></details>
-            <summary className='cursor-pointer text-sm text-gray-500,
-  hover:text-gray-700'></summary>
-// Error Details (Development)
-          </summary>
-            <div className='mt-2 p-3 bg-gray-100 rounded text-xs font-mono text-gray-800 overflow-auto'></div>
-              <div className='mb-2'></div>
-                <strong>Erro,
-  r:</strong> {error.message}
-              </div>
-              <div className='mb-2'></div>
-                <strong>Stac,
-  k:</strong>
-                <pre className='whitespace-pre-wrap'>{error.stack}</pre>
-              </div>
-              {errorInfo && (
-                <div>
-                  <strong>Component Stack:</strong>
-                  <pre className='whitespace-pre-wrap'>
-              {errorInfo && ()}
-          <div></div>
-                  <strong>Component,
-  Stack:</strong>
-                  <pre className='whitespace-pre-wrap'></pre>
-                    {errorInfo.componentStack}
-                  </pre>
-                </div>
-              )}
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
             </div>
-          </details>
-        )}
-        <div className='flex flex-col,
-  sm:flex-row gap-2 justify-center'></div>
-          <button></button>
-            onClick={onRetry}
-            className='px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors'
-          >
-            Try Again
-            className='px-4 py-2 bg-blue-600 text-white rounded-md,
-  hover:bg-blue-700,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-blue-500,
-  focus:ring-offset-2 transition-colors'
-// >
-//             Try Again</button>
-          <button></button>
-            onClick={() => window.location.reload()}
-            className='px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors'
-          >
-            Reload Page</span>
-        </div>
-        {errorId && (
-          <p className='mt-4 text-xs text-gray-400'>Error ID: {errorId}</p>
-        )}
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
-  )
-);
-ErrorFallback.displayName = 'ErrorFallback';
-            className='px-4 py-2 bg-gray-600 text-white rounded-md,
-  hover:bg-gray-700,
-  focus:outline-none,
-  focus:ring-2,
-  focus:ring-gray-500,
-  focus:ring-offset-2 transition-colors'
-// >
-//             Reload Page</button>
-        </div>
-        {errorId && ()}
-          <p className='mt-4 text-xs text-gray-400'>Error,
-  ID: {errorId}</p>
-        )}
-      </div>
-    </div>
-//   )
-);
-ErrorFallback.displayName = 'ErrorFallback'</h1>
-  </path>
-  </ErrorFallbackProps>
-  </ErrorFallback>
-  </State>
-  </string>
+      <Footer />
+    </>
+  );
+};
+
+export default ComponentsPage;

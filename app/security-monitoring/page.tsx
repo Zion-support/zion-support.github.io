@@ -1,169 +1,159 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    Shield,;
-  Eye,;
-  AlertTriangle,;
-  CheckCircle,;
-  BarChart,;
-  Clock,;
-  Users,;
-  Zap,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  ArrowRight,;
-  Brain,;
-  Globe,;
-  Lock,;
-  Activity,;
-  TrendingUp,;
-  Settings,;
-  Database
-  }
-} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const SecurityMonitoringPage: React.FC = () => {
-    const features = [
+  const features = [
     {
-      icon: Eye,
-      title: '24/7 Real-time Monitoring',
-      description: 'Continuous surveillance of your entire IT infrastructure with instant threat detection and response.'
-  },
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
     {
-    icon: AlertTriangle,
-      title: 'Advanced Threat Detection',
-      description: 'AI-powered analysis to identify sophisticated cyber threats before they impact your business.'
-  },
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
     {
-    icon: BarChart,
-      title: 'Comprehensive Analytics',
-      description: 'Detailed security reports and insights to help you understand and improve your security posture.'
-  },
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
     {
-    icon: Zap,
-      title: 'Instant Response',
-      description: 'Automated incident response and immediate notification systems to minimize security breaches.'
-  }
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-const benefits = [
-    '24/7 continuous security monitoring',
-    'AI-powered threat detection and analysis',;
-    'Real-time alerts and notifications',;
-    'Comprehensive security reporting',;
-    'Automated incident response',;
-    'Compliance monitoring and reporting',;
-    'Expert security team support',;
-    'Customizable monitoring rules';
-  ]
-return (
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
     <>
       <Helmet>
-        <title>Security Monitoring Services - Zion Tech Group | 24/7 Cybersecurity</title>
-        <meta>
-        <meta>
+        <title>Security Monitoring - Zion Tech Group</title>
+        <meta name="description" content="Advanced Security Monitoring solutions for businesses" />
+        <meta name="keywords" content="AI, security monitoring, artificial intelligence, business solutions" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h1>
-                Security Monitoring Services;
-              </h1>
-              <p>
-                Protect your business with our advanced 24/7 security monitoring solutions.;
-                Real-time threat detection, instant alerts, and expert response to keep your data safe.;
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-                <button>
-                  <Shield>
-                  Get Protected Now
-                </button>
-                <button>
-                  <Phone>
-                  Call (302) 464-0950,
-                </button>
-              </div>
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Security Monitoring
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered security monitoring solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
             </div>
           </div>
         </section>
+
         {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Security Monitoring?
               </h2>
-              <p>
-                Our security monitoring solutions deliver unmatched protection with cutting-edge technology and expert oversight.,
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-              {
-    features.map((feature, index) => (
-  }
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"></div>
-                  <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4"></div>
-                    <feature>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                  <p className="text-gray-300">{feature.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
-        {/* Benefits Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-white/5"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>
-                Key Benefits
-              </h2>
-              <p>
-                Experience comprehensive security protection with our advanced monitoring services.,
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-              {
-    benefits.map((benefit, index) => (
-  }
-                <div key={index} className="flex items-start space-x-3"></div>
-                  <CheckCircle>
-                  <p className="text-gray-300 text-lg">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
         {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
-              <h2>
-                Ready to Secure Your Business?;
-              </h2>
-              <p>
-                Contact our security experts to discuss your monitoring needs and get a customized protection plan.;
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <button>
-                  <Phone>
-                  Call (302) 464-0950;
-                </button>
-                <button>
-                  <Mail>
-                  Email Us
-                </button>
-              </div>
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Security Monitoring solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
           </div>
         </section>
       </div>
+      <Footer />
     </>
-  ),
-}
-export default SecurityMonitoringPage;
+  );
+};
 
+export default SecurityMonitoringPage;

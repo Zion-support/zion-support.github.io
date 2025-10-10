@@ -1,176 +1,159 @@
 'use client';
-/**;
- * Environment Configuration Manager;
- * Provides type-safe access to environment variables with validation;
- */;
-export interface EnvConfig {}
-  nodeEnv: 'development' | 'production' | 'test',
-  apiUrl: string,
-  apiKey?: string;
-  enableAnalytics: boolean,
-  enableLogging: boolean,
-  logLevel: 'debug' | 'info' | 'warn' | 'error',
-  sentryDsn?: string;
-  gaTrackingId?: string;}
-}
-class EnvironmentConfig {
-    private config: EnvConfig,
-  private isInitialized = false;
-  constructor() {,;
-    this.config = this.loadConfig(),
-  }
-    this.isInitialized = true;}
-  }
-  private loadConfig(): EnvConfig {
-    // Safely access environment variables with defaults;
-    return {}
-class EnvironmentConfig {}
-  private config: EnvConfig
-  private isInitialized = false,
-  constructor() {}
-    this.config = this.loadConfig();
-    this.isInitialized = true;}
-  }
-  private loadConfig(): EnvConfig {}
-    // Safely access environment variables with defaults;
-    return {}
-      nodeEnv,;
-      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api';
-      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production'
-      enableLogging: nodeEnv !== 'test',
-      logLevel: (process.env.NEXT_PUBLIC_LOG_LEVEL ||,
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],;
-      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
-      gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-export interface EnvConfig {/* TODO: Fix JSX expression */}
-}
-class EnvironmentConfig {/* TODO: Fix JSX expression */}
-  }
-  private loadConfig(): EnvConfig {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**;
-   * Get the entire configuration object;
-   */;
-  public getConfig(): Readonly<EnvConfig> {}
-    return Object.freeze({ ...this.config })
-  public getConfig(): Readonly<EnvConfig> {/* TODO: Fix JSX expression */}
-    return Object.freeze({ ...this.config })
-  }
-  /**;
-   * Get a specific configuration value;
-   */;
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {
-    ,
-  }
-  public get<K extends keyof EnvConfig>(key: K): EnvConfig[K] {}
-    return this.config[key]}
-  public get<K extends keyof EnvConfig>(ke);
-  y: K): EnvConfig[K] {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Check if running in production;
-   */;
-  public isProduction(): boolean {}
-    return this.config.nodeEnv === 'production';}
-  public isProduction(): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Check if running in development;
-   */;
-  public isDevelopment(): boolean {}
-    return this.config.nodeEnv === 'development';}
-  public isDevelopment(): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Check if running in test mode;
-   */;
-  public isTest(): boolean {}
-    return this.config.nodeEnv === 'test';}
-  public isTest(): boolean {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Validate required environment variables;
-   */;
-  public validate(requiredVars: (keyof EnvConfig)[]): {
-    ,
-    valid: boolean,
-  }
-    missing: string[],}
-  } {
-    const missing: string[] = [],
-    for (const varName of requiredVars) {,;
-      if (!this.config[varName]) {,
-  }
-        missing.push(varName);}
-      }
-    }
-    return {
-    valid: missing.length === 0
-  }
-  public validate(requiredVars: (keyof EnvConfig)[]): {}
-    valid: boolean
-    missing: string[],}
-  } {}
-    const missing: string[] = [],
-    for (const varName of requiredVars) {}
-      if (!this.config[varName]) {}
-        missing.push(varName);}
-      }
-    }
-    return {}
-      valid: missing.length === 0,
-      missing}
-    }
-  public validate(requiredVar);
-  s: (keyof EnvConfig)[]): {/* TODO: Fix JSX expression */}
-  } {/* TODO: Fix JSX expression */}
-      }
-    }
-    return {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**;
-   * Get API headers with authentication;
-   */;
-  public getApiHeaders(): Record<string, string> {}
-    const headers: Record<string, string> = {}
-      'Content-Type': 'application/json'}
-    }
-    if (this.config.apiKey) {}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
-  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */}
-    }
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`;
-    }
-    return headers;
-  }
-  /**;
-   * Log configuration in development mode;
-   */;
-  public logConfig(): void {}
-    if (this.isDevelopment()) {}
-  public logConfig(): void {/* TODO: Fix JSX expression */}
-      })
-    }
-  }
-}
-// Export singleton instance;
-export const envConfig = new EnvironmentConfig();
-// Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction();
-export const isDevelopment = () => envConfig.isDevelopment();
-export const isTest = () => envConfig.isTest();
-export const getConfig = () => envConfig.getConfig();
-export const getApiHeaders = () => envConfig.getApiHeaders();
-export const envConfig = new EnvironmentConfig();
-// Export convenient helper functions;
-export const isProduction = () => envConfig.isProduction();
-export const isDevelopment = () => envConfig.isDevelopment();
-export const isTest = () => envConfig.isTest();
-export const getConfig = () => envConfig.getConfig();
-export const getApiHeaders = () => envConfig.getApiHeaders();
-`;
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

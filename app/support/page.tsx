@@ -94,9 +94,9 @@ const SupportPage: React.FC = () => {
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <channel.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{channel.title}</h3>
-                  <p className="text-gray-300 mb-4">{channel.description}</p>
-                  <div className="text-cyan-400 font-semibold mb-2">{channel.contact}</div>
+                  <h3>channel.title</h3>
+                  <p>channel.description</p>
+                  <div>channel.contact</div>
                   <div className="text-sm text-gray-400 flex items-center justify-center">
                     <Clock className="w-4 h-4 mr-2" />
                     {channel.availability}
@@ -110,8 +110,8 @@ const SupportPage: React.FC = () => {
               <div className="space-y-4">
                 {filteredFaqs.map((faq, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                    <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
-                    <p className="text-gray-300">{faq.answer}</p>
+                    <h3>faq.question</h3>
+                    <p>faq.answer</p>
                   </div>
                 ))}
               </div>

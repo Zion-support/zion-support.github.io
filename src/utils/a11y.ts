@@ -1,423 +1,159 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-'use client'
-/**
- * Accessibility (A11Y) Utilities;
- * Provides helpers for improving web accessibility;
- */
-/**
- * Generate unique ID for aria-describedby and aria-labelledby;
- */
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 
-export function generateId(prefix = 'a11y'): string {
-    // TODO: Add content
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-}
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-}
-/**
- * Announce message to screen readers;
- */
-export function announceToScreenReader()
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-  message: string,
-  priority: 'polite' | 'assertive' = 'polite'
-): void {
-    // TODO: Add content
-  }
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-}
-  if (typeof document === 'undefined') return;
-  announcement.setAttribute('role', 'status');
-  announcement.setAttribute('aria-live', priority);
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.style.position = 'absolute';
-  announcement.style.left = '-10000px';
-  announcement.style.width = '1px';
-  announcement.style.height = '1px';
-  announcement.style.overflow = 'hidden';
-  document.body.appendChild(announcement);
-  // Set message after a slight delay to ensure screen readers pick it up;
-  setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    announcement.textContent = message;
-  }, 100);
-  // Remove announcement after it's been read;
-  setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    document.body.removeChild(announcement);
-  }, 3000);
-}
-/**
- * Trap focus within a container (useful for modals)
- */
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-export function trapFocus(element: HTMLElement): () => void {
-    // TODO: Add content
-  }
-
-}
-  const focusableElements = element.querySelectorAll;
-          <HTMLElement>()
-    'a[href], butto,
-  n:not([disabled]), textare,
-  a:not([disabled]), inpu,
-  t:not([disabled]), selec,
-  t:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
-  const firstFocusable = focusableElements[0];
-  const lastFocusable = focusableElements[focusableElements.length - 1];
-  const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (e.key !== 'Tab') return;
-    if (e.shiftKey) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Shift + Tab;
-      if (document.activeElement === firstFocusable) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        e.preventDefault();
-        lastFocusable?.focus();
-      }
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Tab;
-      if (document.activeElement === lastFocusable) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        e.preventDefault();
-        firstFocusable?.focus();
-      }
-    }
-  }
-  element.addEventListener('keydown', handleKeyDown);
-  // Focus first element;
-  firstFocusable?.focus();
-  // Return cleanup function;
-  return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    element.removeEventListener('keydown', handleKeyDown);
-  }
-}
-/**
- * Check if element is keyboard accessible;
- */
+};
 
-export function isKeyboardAccessible(element: HTMLElement): boolean {
-    // TODO: Add content
-  }
-
-}
-  const tabindex = element.getAttribute('tabindex');
-  const role = element.getAttribute('role');
-  const isInteractive = ['button', 'link', 'input', 'select', 'textarea'].includes()
-//     element.tagName.toLowerCase()
-  )
-  return (<div>Coming Soon</div>)
-  )
-// isInteractive ||
-    (tabindex !== null && tabindex !== '-1') ||
-    (role !== null && ['button', 'link', 'checkbox', 'radio'].includes(role))
-  )
-}
-/**
- * Add keyboard navigation support to custom interactive elements;
- */
-export function makeKeyboardAccessible()
-
-  element: HTMLElement,
-  onClick: (e: Event) => void,
-  options: {
-    // TODO: Add content
-  }
-
-}
-    role?: string;
-    tabindex?: number;
-  } = {}
-): () => void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const { role = 'button', tabindex = 0 } = options;
-  element.setAttribute('role', role);
-  element.setAttribute('tabindex', tabindex.toString());
-  const handleKeyDown = (e: KeyboardEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (e.key === 'Enter' || e.key === ' ') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      e.preventDefault();
-      onClick(e);
-    }
-  }
-  element.addEventListener('click', onClick);
-  element.addEventListener('keydown', handleKeyDown);
-  return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    element.removeEventListener('click', onClick);
-    element.removeEventListener('keydown', handleKeyDown);
-  }
-}
-/**
- * Check color contrast ratio (WCAG 2.1)
- */
-
-export function getContrastRatio(color1: string, color2: string): number {
-    // TODO: Add content
-  }
-
-}
-  const getLuminance = (colo)
-  r: string): number => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    // Simple RGB to luminance conversion;
-const rgb = color.match(/\d+/g)?.map(Number) || [0, 0, 0];
-    const [r, g, b] = rgb.map(val => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const normalized = val / 255;
-      return normalized;
-          <= 0.03928;
-// ? normalized / 12.92;)
-        : Math.pow((normalized + 0.055) / 1.055, 2.4);
-    });
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  }
-  const lum1 = getLuminance(color1);
-  const lum2 = getLuminance(color2);
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
-  return (brightest + 0.05) / (darkest + 0.05);
-}
-/**
- * Check if contrast ratio meets WCAG standards;
- */
-export function meetsContrastRequirements()
-
-  color1: string,
-  color2: string,
-  level: 'AA' | 'AAA' = 'AA',
-  fontSize: 'normal' | 'large' = 'normal'
-): boolean {
-    // TODO: Add content
-  }
-
-}
-  const ratio = getContrastRatio(color1, color2);
-  if (level === 'AAA') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
-  }
-  const ratio = getContrastRatio(color1, color2)
-  if (level === 'AAA') {/* TODO: Fix JSX expression */}
-  }
-    return fontSize === 'large' ? ratio >= 4.5 : ratio >= 7;
-  }
-  return fontSize === 'large' ? ratio >= 3 : ratio >= 4.5;
-}
-/**
- * Skip to content link helper;
- */
-
-export function createSkipLink(targetId: string, text = 'Skip to main content'): HTMLAnchorElement {
-    // TODO: Add content
-  }
-
-}
-  const skipLink = document.createElement('a');`
-  skipLink.href = `#${targetId}`;
-  skipLink.textContent = text;
-  skipLink.className = 'skip-link';
-  skipLink.style.position = 'absolute';
-  skipLink.style.top = '-40px';
-  skipLink.style.left = '0';
-  skipLink.style.background = '#000';
-  skipLink.style.color = '#fff';
-  skipLink.style.padding = '8px';
-  skipLink.style.textDecoration = 'none';
-  skipLink.style.zIndex = '100';
-  skipLink.addEventListener('focus', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    skipLink.style.top = '0';
-  });
-  skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    skipLink.style.top = '-40px';
-  });
-  return skipLink;
-}
-/**
- * Detect if user prefers reduced motion;
- */
-
-export function prefersReducedMotion(): boolean {
-    // TODO: Add content
-  }
-}
-  if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-
-}
-/**
- * Detect if user prefers dark mode;
- */
-
-export function prefersDarkMode(): boolean {
-    // TODO: Add content
-  }
-}
-  if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-color-scheme: dark)').matches,
-
-}
-/**
- * Get ARIA label for form validation error;
- */
-
-export function getAriaInvalid(hasError: boolean): {
-    // TODO: Add content
-  }
-
-}
-  'aria-invalid': boolean;
-  'aria-describedby'?: string;
-} {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    'aria-invalid': hasError,
-    ...(hasError && { 'aria-describedby': generateId('error') }
-  )
-  }
-}
-/**
- * Create accessible tooltip;
- */
-export function createAccessibleTooltip()
-
-  trigger: HTMLElement,
-  content: string,
-  placement: 'top' | 'bottom' | 'left' | 'right' = 'top'
-): () => void {
-    // TODO: Add content
-  }
-
-}
-  const tooltipId = generateId('tooltip');
-  const tooltip = document.createElement('div');
-  tooltip.id = tooltipId;
-  tooltip.setAttribute('role', 'tooltip');
-  tooltip.textContent = content;
-  tooltip.style.position = 'absolute';
-  tooltip.style.background = '#333';
-  tooltip.style.color = '#fff';
-  tooltip.style.padding = '4px 8px';
-  tooltip.style.borderRadius = '4px';
-  tooltip.style.fontSize = '14px';
-  tooltip.style.zIndex = '1000';
-  tooltip.style.display = 'none';
-  document.body.appendChild(tooltip);
-  trigger.setAttribute('aria-describedby', tooltipId);
-  const showTooltip = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    tooltip.style.display = 'block';
-    const triggerRect = trigger.getBoundingClientRect();
-    switch (placement) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-      case 'top':
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px`
-
-        tooltip.style.top = `${triggerRect.top - tooltip.offsetHeight - 5}px`
-        break;
-      case 'bottom':`
-        tooltip.style.left = `${triggerRect.left + triggerRect.width / 2 - tooltip.offsetWidth / 2}px``
-        tooltip.style.top = `${triggerRect.bottom + 5}px`
-        break;
-      case 'left':`
-        tooltip.style.left = `${triggerRect.left - tooltip.offsetWidth - 5}px``
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`
-        break;
-      case 'right':`
-        tooltip.style.left = `${triggerRect.right + 5}px``
-        tooltip.style.top = `${triggerRect.top + triggerRect.height / 2 - tooltip.offsetHeight / 2}px`
-        break;
-    }
-  }
-  const hideTooltip = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    tooltip.style.display = 'none';
-  }
-  trigger.addEventListener('mouseenter', showTooltip);
-  trigger.addEventListener('mouseleave', hideTooltip);
-  trigger.addEventListener('focus', showTooltip);
-  trigger.addEventListener('blur', hideTooltip);
-  return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    trigger.removeEventListener('mouseenter', showTooltip);
-    trigger.removeEventListener('mouseleave', hideTooltip);
-    trigger.removeEventListener('focus', showTooltip);
-    trigger.removeEventListener('blur', hideTooltip);
-    document.body.removeChild(tooltip);
-  }
-}
-/**
- * Manage focus restoration (useful for modals)
- */
-
-export class FocusManager {
-    // TODO: Add content
-  }
-
-}
-  private,
-  previousFocus: HTMLElement | null = null,
-  saveFocus(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.previousFocus = document.activeElement as HTMLElement;
-  }
-  restoreFocus(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (this.previousFocus) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.previousFocus.focus();
-      this.previousFocus = null;
-    }
-  }
-  moveFocusInside(containe)
-  r: HTMLElement): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const focusable = container.querySelector;
-
-          <HTMLElement>()
-
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    )
-    focusable?.focus()
-  }
-}
-}
-export default undefined;"`
-
+export default UtilsPage;

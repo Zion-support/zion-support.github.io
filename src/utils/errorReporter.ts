@@ -1,524 +1,159 @@
 'use client';
-/**
- * Enhanced Error Reporting Utility
- * Provides comprehensive error tracking, logging, and reporting capabilities
- */
-export interface ErrorReport {
-    message: string;
-  stack?: string;
-  componentStack?: string;
-  timestamp: string;
-  userAgent: string
-  url: string
-  severity: 'low' | 'medium' | 'high' | 'critical',
-  context?: Record<string, unknown>
-  }
-export interface ErrorReporterConfig {
-    enableConsoleLogging: boolean;
-  enableRemoteLogging: boolean
-  remoteEndpoint?: string
-  maxErrorsInMemory: number,
-  captureContext: boolean
-  }
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
-  captureContext: true
-}
-/**
- * ErrorReporter class for comprehensive error handling
- */
-export class ErrorReporter {
-  private static instance: ErrorReporter
-  private config: ErrorReporterConfig
-  private errorQueue: ErrorReport[] = [],
-  private errorCount: Map<string, number> = new Map();
-  private constructor(config: Partial<ErrorReporterConfig> = {}) {
-    this.config = { ...defaultConfig, ...config }
-  }
-  /**
-   * Get singleton instance
-   */
-  static getInstance(config?: Partial<ErrorReporterConfig>): ErrorReporter {
-    if (!ErrorReporter.instance) {
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-import React from 'react'
-'use client'
-/**
- * Enhanced Error Reporting Utility;
- * Provides comprehensive error tracking, logging, and reporting capabilities;
- */
-
-export interface ErrorReport {// TODO: Add content
-  }
-
-}
-  messag,
-  e: string
-  stack?: string
-  componentStack?: string,,
-
-    timestamp: string,,
-    userAgent: string,,
-    url: string,,
-    severity: 'low' | 'medium' | 'high' | 'critical'
-  context?: Record,
-          <string>
-}
-export interface ErrorReporterConfig {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  enableConsoleLogging: boolean,,
-    enableRemoteLogging: boolean
-
-  remoteEndpoint?: string,,
-    maxErrorsInMemor,
-  y: number,,
-    captureContex,
-  t: boolean,
-}
-
-  enableConsoleLogging: process.env['NODE_ENV'] === 'development',
-  enableRemoteLogging: process.env['NODE_ENV'] === 'production',
-  maxErrorsInMemory: 50,
-  captureContext: true,
-
-}
-/**
- * ErrorReporter class for comprehensive error handling;
- */
-
-export class ErrorReporter {
-    // TODO: Add content
-  }
-
-}
-  private static,
-  instance: ErrorReporter,
-  private,
-  config: ErrorReporterConfig,
-  private,
-  errorQueue: ErrorReport[] = [],
-  private,
-  errorCount: Map,
-          <string, number> = new Map();
-  private constructor(confi)
-  g: Partial<ErrorReporterConfig> = {}) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.config = { ...defaultConfig, ...config }
-  }
-  /**
-   * Get singleton instance;
-   */
-
-  static getInstance(config?: Partial;
-          <ErrorReporterConfig>): ErrorReporter {
-    // TODO: Add content
-  }
-
-}
-    if (!ErrorReporter.instance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      ErrorReporter.instance = new ErrorReporter(config);
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    return ErrorReporter.instance;
-  }
-  /**
-   * Report an error with full context
-   */
-  reportError(
-    error: Error,
-    severity: ErrorReport['severity'] = 'medium',
-    context?: Record<string, unknown>
-  ): void {
-    const errorReport: ErrorReport = {
-      message: error.message,
-   * Report an error with full context;
-   */
-//   reportError()
-    erro,
-  r: Error,
-    severit,
-  y: ErrorReport['severity'] = 'medium',
-    context?: Record;
+  ];
 
-          <string, unknown>
-  ): void {// TODO: Add content
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-}
-    const,
-  errorReport: ErrorReport = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-  message: error.message,
-      stack: error.stack,
-      timestamp: new Date().toISOString(),
-      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-      url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-      severity,
-      context: this.config.captureContext ? context : undefined
-    }
-    // Track error frequency
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
-    // Add to queue (with size limit)
-    this.errorQueue.push(errorReport);
-    if (this.errorQueue.length > this.config.maxErrorsInMemory) {
-    this.errorQueue.shift()
-  }
-    // Console logging
-    if (this.config.enableConsoleLogging) {
-    this.logToConsole(errorReport)
-  }
-    // Remote logging
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {
-    //       severity,
-      context: this.config.captureContext ? context : undefined
-  }
-    // Track error frequency;
-    this.errorCount.set(errorKey, (this.errorCount.get(errorKey) || 0) + 1);
-    // Add to queue (with size limit)
-    this.errorQueue.push(errorReport);
-    if (this.errorQueue.length > this.config.maxErrorsInMemory) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.errorQueue.shift();
-    }
-    // Console logging;
-    if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.logToConsole(errorReport);
-    }
-    // Remote logging;
-    if (this.config.enableRemoteLogging && this.config.remoteEndpoint) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.sendToRemote(errorReport);
-    }
-  }
-  /**
-   * Log error to console with formatting
-   */
-  private logToConsole(report: ErrorReport): void {
-    const style = this.getConsoleStyle(report.severity),
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env['NODE_ENV'] === 'development') {}
-    if (process.env['NODE_ENV'] === 'development') {}
-    if (process.env['NODE_ENV'] === 'development') {}
-    if (report.stack) {
-      if (process.env['NODE_ENV'] === 'development') {}
-    }
-    if (report.context) {
-      if (process.env['NODE_ENV'] === 'development') {}
-    }
-    console.groupEnd();
-  }
-  /**
-   * Get console styling based on severity
-   */
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
-    const styles = {
-      low: 'color: #2196F3, font-weight: bold',
-      medium: 'color: #FF9800, font-weight: bold',
-      high: 'color: #F44336, font-weight: bold',
-      critical:     ,
-$4}
-    return styles[severity];
-  }
-  /**
-   * Send error to remote logging service
-   */
-  private async sendToRemote(report: ErrorReport): Promise<void> {
-    if (!this.config.remoteEndpoint) return,
-    try {
-      await fetch(this.config.remoteEndpoint, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(report)
-      });
-    } catch (error) {
-    // Silently fail to avoid infinite loop
-      if (this.config.enableConsoleLogging) {
-        logger.warn('Failed to send error to remote endpoint:', error);
-   * Log error to console with formatting;
-   */
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-  private logToConsole(report: ErrorReport): void {// TODO: Add content
-  }
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-}
-    const style = this.getConsoleStyle(report.severity);
-    console.group(`%c[${report.severity.toUpperCase()}] Error Report`, style);
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    if (report.stack) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-    if (report.context) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-    console.groupEnd()
-  }
-  /**
-   * Get console styling based on severity;
-   */
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-  private getConsoleStyle(severity: ErrorReport['severity']): string {
-    // TODO: Add content
-  }
-
-}
-    const styles = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  low: 'color: #2196F3, font-weight: bold',
-      medium: 'color: #FF9800, font-weight: bold',
-      high: 'color: #F44336, font-weight: bold',
-      critical: 'color: #D32F2F; font-weight: bold, font-size: 14px'
-
-    }
-    return styles[severity]
-  }
-  /**
-   * Send error to remote logging service;
-   */
-
-  private async sendToRemote(report: ErrorReport): Promise,
-          <void> {
-    // TODO: Add content
-  }
-
-}
-    if (!this.config.remoteEndpoint) return;
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      await fetch(this.config.remoteEndpoint, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  metho,
-  d: 'POST',
-        header,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          'Content-Type': 'application/json'
-        },
-        bod)
-  y: JSON.stringify(report)
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Silently fail to avoid infinite loop;
-      if (this.config.enableConsoleLogging) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-        logger.warn('Failed to send error to remote endpoint:', error);
-
-      }
-    }
-  }
-  /**
-   * Get all errors in queue
-   */
-  getErrorQueue(): ErrorReport[] {
-    return [...this.errorQueue]
-  }
-  /**
-   * Get error statistics
-   */
-  getErrorStats(): {
-    totalErrors: number
-    uniqueErrors: number,
-    errorsByType: Record<string, number>
-  } {
-    return {
-      totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)
-    }
-  }
-  /**
-   * Clear error queue
-   */
-  clearQueue(): void {
-    * Get all errors in queue;
-   */
-
-  getErrorQueue(): ErrorReport[] {// TODO: Add content
-  }
-
-}
-    return [...this.errorQueue];
-  }
-  /**
-   * Get error statistics;
-   */
-
-  getErrorStats(): {
-    // TODO: Add content
-  }
-
-}
-  totalError,
-  s: number,,
-    uniqueError,
-  s: number,,
-    errorsByTyp,
-  e: Record,
-          <string>
-  } {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  totalErrors: this.errorQueue.length,
-      uniqueErrors: this.errorCount.size,
-      errorsByType: Object.fromEntries(this.errorCount)
-
-    }
-  }
-  /**
-   * Clear error queue;
-   */
-
-  clearQueue(): void {
-    // TODO: Add content
-  }
-
-}
-    this.errorQueue = [];
-    this.errorCount.clear();
-  }
-  /**
-   * Export errors as JSON
-   */
-  exportErrors(): string {
-    return JSON.stringify(
-      {
-        timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
-        errors: this.errorQueue
-      },
-      null,
-      2
-    );
-  }
-}
-/**
- * Convenience function to report errors
- */
-export const reportError = (
-  error: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record<string, unknown>
-): void => {
-    ErrorReporter.getInstance().reportError(error, severity, context)
-  }
-/**
- * React error boundary helper
- */
-export const captureComponentError = (
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string
-): void => {
-  const report = ErrorReporter.getInstance(),
-  report.reportError(error, 'high', {
-    componentName,
-    componentStack: errorInfo.componentStack
-  });
-}
-export default ErrorReporter;
-   * Export errors as JSON;
-   */
-
-  exportErrors(): string {
-    // TODO: Add content
-  }
-
-}
-    return JSON.stringify()
-      {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  timestamp: new Date().toISOString(),
-        stats: this.getErrorStats(),
-        errors: this.errorQueue,
-
-      },
-//       null,
-//       2)
-  }
-}
-/**
- * Convenience function to report errors;
- */
-export const reportError = ()
-  erro,
-  r: Error,
-  severity?: ErrorReport['severity'],
-  context?: Record;
-
-          <string, unknown>
-): void => {
-    // TODO: Add content
-  }
-
-}
-/**
- * React error boundary helper;
- */
-export const captureComponentError = ()
-
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string): void => {
-    // TODO: Add content
-  }
-
-}
-  const report = ErrorReporter.getInstance();
-  report.reportError(error, 'high', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//     componentName,
-    componentStac,
-  k: errorInfo.componentStack,)
-  });
-}
-export default ErrorReporter;
-
+export default UtilsPage;

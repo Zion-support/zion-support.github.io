@@ -1,390 +1,159 @@
-export const logger = {
-  debug: (message: string, ...args: any[]) => {
-    if (process.env.NODE_ENV === 'development') {
-      console.debug(`[DEBUG] ${message}`, ...args);
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  },
-  info: (message: string, ...args: any[]) => {
-    console.info(`[INFO] ${message}`, ...args);
-  },
-  warn: (message: string, ...args: any[]) => {
-    console.warn(`[WARN] ${message}`, ...args);
-  },
-  error: (message: string, error?: Error, ...args: any[]) => {
-    console.error(`[ERROR] ${message}`, error, ...args);
-  }}
+  ];
 
-/**
- * Enhanced Logger Utility;
- * Provides structured logging with different levels and contexts;
- */
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-export enum LogLevel {
-    // TODO: Add content
-  }
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-}
-  DEBUG = 0,
-  INFO = 1,
-  WARN = 2,
-  ERROR = 3,
-  FATAL = 4;
-}
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-export interface LogContext {
-    // TODO: Add content
-  }
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-}
-  component?: string;
-  action?: string;
-  userId?: string;
-  sessionId?: string;
-  requestId?: string;
-  [ke,
-  y: string]: unknown,
-}
-export interface LogMetadata {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  timestamp?: string;
-  level?: LogLevel;
-  message?: string;
-  context?: LogContext;
-  error?: Error;
-  [ke,
-  y: string]: unknown,
-}
-class Logger {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  private,
-  logLevel: LogLevel,
-  private,
-  isDevelopment: boolean,
-  constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.logLevel = process.env.NODE_ENV === 'development' ? LogLevel.DEBUG : LogLevel.INFO;
-    this.isDevelopment = process.env.NODE_ENV === 'development';
-  }
-  /**
-   * Set the minimum log level;
-   */
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-  setLogLevel(level: LogLevel): void {
-    // TODO: Add content
-  }
-
-}
-    this.logLevel = level;
-  }
-  /**
-   * Get the current log level;
-   */
-
-  getLogLevel(): LogLevel {
-    // TODO: Add content
-  }
-
-}
-    return this.logLevel;
-  }
-  /**
-   * Log a debug message;
-   */
-
-  debug(message: string, context?: LogContext, metadata?: Record;
-          <string, unknown>): void {
-    // TODO: Add content
-  }
-
-}
-    this.log(LogLevel.DEBUG, message, context, metadata);
-  }
-  /**
-   * Log an info message;
-   */
-
-  info(message: string, context?: LogContext, metadata?: Record;
-          <string, unknown>): void {
-    // TODO: Add content
-  }
-
-}
-    this.log(LogLevel.INFO, message, context, metadata);
-  }
-  /**
-   * Log a warning message;
-   */
-
-  warn(message: string, context?: LogContext, metadata?: Record;
-          <string, unknown>): void {
-    // TODO: Add content
-  }
-
-}
-    this.log(LogLevel.WARN, message, context, metadata);
-  }
-  /**
-   * Log an error message;
-   */
-//   error()
-    messag,
-  e: string,
-    errorOrContextOrMetadata?: Error | string | Record;
-          <string, unknown>,
-    contextOrMetadata?: string | Record<string, unknown>,
-
-    metadata?: Record<string, unknown>
-  ): void {
-    // TODO: Add content
-  }
-
-}
-    let,
-  error: Error | undefined,
-    let,
-  context: LogContext | undefined,
-    let,
-  meta: Record,
-          <string, unknown> | undefined;
-    // Handle different parameter combinations;
-    if (errorOrContextOrMetadata instanceof Error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      error = errorOrContextOrMetadata;
-      context = contextOrMetadata as LogContext;
-      meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      context = {/* TODO: Fix JSX expression */}
-  t: errorOrContextOrMetadata }
-      meta = contextOrMetadata as Record;
-          <string>
-    } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      context = errorOrContextOrMetadata as LogContext;
-      meta = contextOrMetadata as Record;
-          <string>
-    }
-    this.log(LogLevel.ERROR, message, context, { ...meta, error })
-  )
-  }
-  /**
-   * Log a fatal error message;
-   */
-
-  fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    // TODO: Add content
-  }
-
-}
-    this.log(LogLevel.FATAL, message, context, metadata);
-  }
-  /**
-   * Core logging method;
-   */
-//   private log()
-    leve,
-  l: LogLevel,
-    messag,
-  e: string,
-    context?: LogContext,
-    metadata?: Record;
-
-          <string, unknown>
-  ): void {
-    // TODO: Add content
-  }
-
-}
-    // Check if we should log this level;
-    if (level;)
-          < this.logLevel) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return;
-    }
-      timestam,
-  p: new Date().toISOString(),
-//       level,
-//       message,
-//       context,
-//       ...metadata;
-    }
-    // Format the log entry;
-    // Output to console in development;
-    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.outputToConsole(level, formattedMessage, logEntry);
-    }
-    // In production, you might want to send to a logging service;
-    if (!this.isDevelopment) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.sendToLoggingService(logEntry);
-    }
-  }
-  /**
-   * Format a log entry for output;
-   */
-
-  private formatLogEntry(entry: LogMetadata): string {
-    // TODO: Add content
-  }
-
-}
-    const levelStr = this.getLevelString(entry.level || LogLevel.INFO);
-    const timestamp = entry.timestamp || new Date().toISOString();
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`
-    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
-    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
-  }
-  /**
-   * Format context object for display;
-   */
-
-  private formatContext(context: LogContext): string {
-    // TODO: Add content
-  }
-
-}
-    const,
-  parts: string[] = [],`
-    if (context.component) parts.push(`componen)`
-  t:${context.component}`);`
-    if (context.action) parts.push(`actio)`
-  n:${context.action}`);`
-    if (context.userId) parts.push(`use)`
-  r:${context.userId}`);`
-    if (context.sessionId) parts.push(`sessio)`
-  n:${context.sessionId}`);`
-    if (context.requestId) parts.push(`reques)`
-  t:${context.requestId}`);
-    return parts.join(', ');
-  }
-  /**
-   * Output to console with appropriate styling;
-   */
-
-  private outputToConsole(level: LogLevel, message: string, entry: LogMetadata): void {
-    // TODO: Add content
-  }
-
-}
-    if (typeof console === 'undefined') return;
-    const styles = this.getConsoleStyles(level);
-    switch (level) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-      case LogLevel.DEBUG:
-
-        console.debug(`%c${message}`, styles, entry)
-        break;
-      case LogLevel.INF,
-  O:`
-        // console.info(`%c${message}`, styles, entry)
-        break;
-      case LogLevel.WAR,
-  N:`
-        // // console.warn(`%c${message}`, styles, entry)
-        break;
-      case LogLevel.ERRO,
-  R:
-      case LogLevel.FATA,
-  L:`
-        // // console.error(`%c${message}`, styles, entry)
-        break;
-    }
-  }
-  /**
-   * Get console styles for different log levels;
-   */
-
-  private getConsoleStyles(level: LogLevel): string {
-    // TODO: Add content
-  }
-
-}
-    switch (level) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-      case LogLevel.DEBUG: return 'color: #6B7280; font-weight: normal;'
-      case LogLevel.INFO:
-        return 'color: #3B82F6; font-weight: normal;'
-      case LogLevel.WARN:
-        return 'color: #F59E0B; font-weight: bold;'
-      case LogLevel.ERROR:
-        return 'color: #EF4444; font-weight: bold;'
-      case LogLevel.FATAL:
-        return 'color: #DC2626; font-weight: bold; background: #FEF2F2;',,
-    default: return 'color: #6B7280; font-weight: normal,'
-
-    }
-  }
-  /**
-   * Send log entry to external logging service;
-   */
-
-  private sendToLoggingService(entry: LogMetadata): void {
-    // TODO: Add content
-  }
-
-}
-    // In a real application, you would send this to your logging service;
-    // For,
-  example: Sentry, LogRocket, DataDog, etc.
-    // Example,
-  implementation:
-    // fetch('/api/logs', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    //   metho,
-  d: 'POST',
-    //   header,
-  s: {// 'Content-Type': 'application/json'},
-    //   bod)
-  y: JSON.stringify(entry)
-    // }).catch(err => {/* TODO: Fix JSX expression */})
-  service:', err);}
-    // });
-  }
-  /**
-   * Get string representation of log level;
-   */
-
-  private getLevelString(level: LogLevel): string {
-    // TODO: Add content
-  }
-
-}
-    switch (level) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-      case LogLevel.DEBUG: return 'DEBUG',
-      case LogLevel.INFO:
-
-        return 'INFO'
-      case LogLevel.WAR,
-  N:
-        return 'WARN'
-      case LogLevel.ERRO,
-  R:
-        return 'ERROR'
-      case LogLevel.FATA,
-  L: return 'FATAL',,
-    defaul,
-  t:
-        return 'UNKNOWN'
-    }
-  }
-}
-export const logger = new Logger()`
-
+export default UtilsPage;

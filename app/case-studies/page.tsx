@@ -64,20 +64,18 @@ const CaseStudiesPage: React.FC = () => {
                 <div className="h-48 bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center">
                   <div className="text-white text-center">
                     <Building className="w-16 h-16 mx-auto mb-4" />
-                    <div className="text-sm opacity-80">{study.industry}</div>
+                    <div>study.industry</div>
                   </div>
                 </div>
                 
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-white mb-2">{study.title}</h3>
+                  <h3>study.title</h3>
                   <div className="flex items-center space-x-2 text-sm text-gray-400 mb-4">
                     <Users className="w-4 h-4" />
-                    <span>{study.client}</span>
+                    <span>study.client</span>
                   </div>
                   
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {study.description}
-                  </p>
+                  <p>study.description</p>
                   
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-white mb-2">Key Results:</h4>
@@ -85,7 +83,7 @@ const CaseStudiesPage: React.FC = () => {
                       {study.results.map((result, resultIndex) => (
                         <li key={resultIndex} className="flex items-center space-x-2">
                           <TrendingUp className="w-3 h-3 text-green-400" />
-                          <span>{result}</span>
+                          <span>result</span>
                         </li>
                       ))}
                     </ul>

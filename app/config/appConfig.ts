@@ -1,113 +1,70 @@
-/**;
- * Application Configuration;
- * Centralized configuration management for the Zion Tech Group application;
- */;
-export interface AppConfig {
-    app: {
-    name: string,
-    version: string,
-    environment: 'development' | 'production' | 'test'
-  }
-  }
+// Application configuration
+export const appConfig = {
+  // App metadata
+  name: 'Zion Tech Group',
+  description: 'Advanced AI and IT Solutions',
+  version: '1.0.0',
+  
+  // API configuration
   api: {
-    baseUrl: string,
-    timeout: number,
-    retryAttempts: number,
-  }
-  }
-  features: {
-    analytics: boolean,
-    monitoring: boolean,
-    errorTracking: boolean,
-    performanceOptimization: boolean,
-  }
-  }
-  performance: {
-    enableLazyLoading: boolean,
-    imageLazyLoadThreshold: number,
-    componentLazyLoadThreshold: number,
-    cacheMaxAge: number,
-  }
-  }
-  security: {
-    enableCSP: boolean,
-    enableHSTS: boolean,
-    enableXSSProtection: boolean,
-  }
-  }
-}
-const config: AppConfig = {
-    app: {
-    name: 'Zion Tech Group',
-    version: '1.0.0',
-    environment:;
-      (process.env['NODE_ENV'] as 'development' | 'production' | 'test') || 'development',
-  },
-  api: {
-    baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.zion.app',
+    baseUrl: process.env.NEXT_PUBLIC_API_URL || 'https://api.ziontechgroup.com',
     timeout: 30000,
-    retryAttempts: 3,
+    retries: 3,
   },
+  
+  // Feature flags
   features: {
-    analytics: process.env['NODE_ENV'] === 'production',
-    monitoring: true,
+    analytics: true,
+    performanceMonitoring: true,
     errorTracking: true,
-    performanceOptimization: true,
+    accessibility: true,
   },
+  
+  // Performance settings
   performance: {
     enableLazyLoading: true,
-    imageLazyLoadThreshold: 0.5,
-    componentLazyLoadThreshold: 0.25,
-    cacheMaxAge: 3600000, // 1 hour in milliseconds
+    enableImageOptimization: true,
+    enableCodeSplitting: true,
+    enableCaching: true,
   },
+  
+  // Security settings
   security: {
     enableCSP: true,
     enableHSTS: true,
     enableXSSProtection: true,
+    enableClickjackingProtection: true,
   },
-}
-/**;
- * Get configuration value by key path;
- * @example getConfig('app.name') => 'Zion Tech Group';
- */;
-export function getConfig<T = unknown>(keyPath: string): T {
-    let value: unknown = config,
-for (const key of keys) {
-    if (value && typeof value === 'object' && key in value) {
-      value = (value as Record<string, unknown>)[key]
-  }
-    } else {}
-      throw new Error(`Configuration key "${keyPath}" not found`);
-    }
-  }
-return value as T;
-}
-/**;
- * Check if a feature is enabled;
- */;
-export function isFeatureEnabled(feature: keyof AppConfig['features']): boolean {
-    return config.features[feature]
-  }
-}
-/**;
- * Get current environment;
- */;
-export function getEnvironment(): string {
-    return config.app.environment
-  }
-}
-/**;
- * Check if running in production;
- */;
-export function isProduction(): boolean {
-    return config.app.environment === 'production'
-  }
-}
-/**;
- * Check if running in development;
- */;
-export function isDevelopment(): boolean {
-    return config.app.environment === 'development'
-  }
-}
-export default config;
+  
+  // SEO settings
+  seo: {
+    defaultTitle: 'Zion Tech Group - Advanced AI and IT Solutions',
+    defaultDescription: 'Leading provider of AI-powered business solutions and IT services',
+    defaultKeywords: 'AI, artificial intelligence, IT solutions, business automation',
+    enableStructuredData: true,
+    enableSitemap: true,
+  },
+  
+  // Analytics configuration
+  analytics: {
+    googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID,
+    enablePerformanceMonitoring: true,
+    enableErrorTracking: true,
+  },
+  
+  // Theme configuration
+  theme: {
+    primaryColor: '#0ea5e9',
+    secondaryColor: '#14b8a6',
+    accentColor: '#8b5cf6',
+  },
+  
+  // Development settings
+  development: {
+    enableHotReload: process.env.NODE_ENV === 'development',
+    enableSourceMaps: process.env.NODE_ENV === 'development',
+    enableDebugMode: process.env.NODE_ENV === 'development',
+  },
+};
+
+export default appConfig;

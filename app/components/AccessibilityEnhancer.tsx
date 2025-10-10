@@ -1,13 +1,11 @@
 'use client';
 import React, { useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
+interface AccessibilityEnhancerProps {children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
   enableScreenReaderSupport?: boolean;
   enableHighContrast?: boolean;
-  enableFocusManagement?: boolean;
-}
+  enableFocusManagement?: boolean}
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   children,
@@ -15,8 +13,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableScreenReaderSupport = true,
   enableHighContrast = true,
   enableFocusManagement = true
-}) => {
-  useEffect(() => {
+}) => {useEffect(() => {
     // Keyboard navigation enhancements
     if (enableKeyboardNavigation && typeof window !== 'undefined') {
       const handleKeyDown = (event: KeyboardEvent) => {
@@ -25,16 +22,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
           if (skipLink) {
             skipLink.focus();
-            event.preventDefault();
-          }
+            event.preventDefault()}
         }
 
         // Close dropdowns with Escape key
-        if (event.key === 'Escape') {
-          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+        if (event.key === 'Escape') {const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
           openDropdowns.forEach(dropdown => {
-            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
-          })
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false')})
         }
       }
 
@@ -43,8 +37,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
 
     // Focus management
-    if (enableFocusManagement && typeof window !== 'undefined') {
-      const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    if (enableFocusManagement && typeof window !== 'undefined') {const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       
       const trapFocus = (container: HTMLElement) => {
         const focusableContent = container.querySelectorAll(focusableElements);
@@ -57,13 +50,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           if (e.shiftKey) {
             if (document.activeElement === firstFocusableElement) {
               lastFocusableElement.focus();
-              e.preventDefault();
-            }
-          } else {
-            if (document.activeElement === lastFocusableElement) {
+              e.preventDefault()}
+          } else {if (document.activeElement === lastFocusableElement) {
               firstFocusableElement.focus();
-              e.preventDefault();
-            }
+              e.preventDefault()}
           }
         }
 
@@ -79,8 +69,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     }
 
     // Screen reader support
-    if (enableScreenReaderSupport && typeof window !== 'undefined') {
-      // Add live region for dynamic content updates
+    if (enableScreenReaderSupport && typeof window !== 'undefined') {// Add live region for dynamic content updates
       const liveRegion = document.createElement('div');
       liveRegion.setAttribute('aria-live', 'polite');
       liveRegion.setAttribute('aria-atomic', 'true');
@@ -92,41 +81,30 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       const announcePageChange = (message: string) => {
         const liveRegion = document.getElementById('live-region');
         if (liveRegion) {
-          liveRegion.textContent = message;
-        }
+          liveRegion.textContent = message}
       }
 
       // Listen for route changes (if using React Router)
       const originalPushState = history.pushState;
       const originalReplaceState = history.replaceState;
 
-      history.pushState = function(...args) {
-        originalPushState.apply(history, args);
-        announcePageChange('Page changed');
-      }
+      history.pushState = function(...args) {originalPushState.apply(history, args);
+        announcePageChange('Page changed')}
 
-      history.replaceState = function(...args) {
-        originalReplaceState.apply(history, args);
-        announcePageChange('Page updated');
-      }
+      history.replaceState = function(...args) {originalReplaceState.apply(history, args);
+        announcePageChange('Page updated')}
 
-      return () => {
-        document.body.removeChild(liveRegion);
+      return () => {document.body.removeChild(liveRegion);
         history.pushState = originalPushState;
-        history.replaceState = originalReplaceState;
-      }
+        history.replaceState = originalReplaceState}
     }
 
     // High contrast mode support
-    if (enableHighContrast && typeof window !== 'undefined') {
-      const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
+    if (enableHighContrast && typeof window !== 'undefined') {const prefersHighContrast = window.matchMedia('(prefers-contrast: high)');
       
       const updateHighContrast = (e: MediaQueryListEvent) => {
         if (e.matches) {
-          document.documentElement.classList.add('high-contrast');
-        } else {
-          document.documentElement.classList.remove('high-contrast');
-        }
+          document.documentElement.classList.add('high-contrast')} else {document.documentElement.classList.remove('high-contrast')}
       }
 
       prefersHighContrast.addEventListener('change', updateHighContrast);

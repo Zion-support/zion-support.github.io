@@ -60,22 +60,14 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     })
   }, []);
 
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {const root = document.documentElement;
     
     // High contrast mode
     if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
+      root.classList.add('high-contrast')} else {root.classList.remove('high-contrast')}
 
     // Reduced motion
-    if (newSettings.reducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
+    if (newSettings.reducedMotion) {root.classList.add('reduced-motion')} else {root.classList.remove('reduced-motion')}
 
     // Font size
     root.classList.remove('font-small', 'font-medium', 'font-large');
@@ -125,25 +117,21 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [enableKeyboardNavigation]);
 
   // Focus management
-  useEffect(() => {
-    if (!enableFocusManagement) return;
+  useEffect(() => {if (!enableFocusManagement) return;
 
     const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       
       // Ensure focus is visible
       if (target && target.classList) {
-        target.classList.add('focus-visible');
-      }
+        target.classList.add('focus-visible')}
     }
 
-    const handleFocusOut = (event: FocusEvent) => {
-      const target = event.target as HTMLElement;
+    const handleFocusOut = (event: FocusEvent) => {const target = event.target as HTMLElement;
       
       // Remove focus styling
       if (target && target.classList) {
-        target.classList.remove('focus-visible');
-      }
+        target.classList.remove('focus-visible')}
     }
 
     document.addEventListener('focusin', handleFocusIn);
@@ -156,8 +144,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [enableFocusManagement]);
 
   // Screen reader announcements
-  const announceToScreenReader = (message: string) => {
-    if (!enableScreenReaderSupport) return;
+  const announceToScreenReader = (message: string) => {if (!enableScreenReaderSupport) return;
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
@@ -167,8 +154,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     document.body.appendChild(announcement);
     
     setTimeout(() => {
-      document.body.removeChild(announcement);
-    }, 1000);
+      document.body.removeChild(announcement)}, 1000);
   }
 
   // Expose accessibility functions to window for global access
@@ -181,13 +167,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [settings]);
 
   return (
-    <div 
-      className={`accessibility-wrapper ${settings.highContrast ? 'high-contrast' : ''} ${settings.reducedMotion ? 'reduced-motion' : ''}`}
-      data-font-size={settings.fontSize}
-      data-screen-reader={settings.screenReader}
-    >
-      {children}
-    </div>
+    <div>children</div>
   );
 }
 

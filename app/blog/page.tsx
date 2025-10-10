@@ -93,12 +93,7 @@ const BlogPage: React.FC = () => {
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
-                <button
-                  key={category}
-                  className="px-6 py-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300"
-                >
-                  {category}
-                </button>
+                <button>category</button>
               ))}
             </div>
 
@@ -123,13 +118,9 @@ const BlogPage: React.FC = () => {
                     </span>
                   </div>
 
-                  <h2 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {post.title}
-                  </h2>
+                  <h2>post.title</h2>
                   
-                  <p className="text-gray-300 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
+                  <p>post.excerpt</p>
 
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2 text-sm text-gray-400">

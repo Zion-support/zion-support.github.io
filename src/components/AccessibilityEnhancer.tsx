@@ -1,225 +1,159 @@
-import React, { useEffect } from 'react';
-interface AccessibilityEnhancerProps {
-    children: React.ReactNode
-  }
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-    </AccessibilityEnhancerProps>useEffect</AccessibilityEnhancerProps>(() => {
-    // Add keyboard navigation support
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation')
-  }
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    const handleMouseDown = () => {
-    document.body.classList.remove('keyboard-navigation')
-  }
-    // Add focus indicators
-    const addFocusIndicators = () => {
-    const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2 px solid #06 b6 d4 !important,
-          outline-offset: 2 px !important
-  }
-      `;
-      document.head.appendChild(style);
-    }
-    // Add ARIA labels to interactive elements
-    const enhanceAccessibility = () => {
-    const buttons = document.querySelectorAll('button: not([aria-label])'),
-      buttons.forEach(button => {
-        if (!button.getAttribute('aria-label') && button.textContent) {
-          button.setAttribute('aria-label', button.textContent.trim())
-  }
-        // Add role if missing
-        if (!button.getAttribute('role')) {
-    button.setAttribute('role', 'button')
-  }
-      const links = document.querySelectorAll('a: not([aria-label])'),
-      links.forEach(link => {
-    if (!link.getAttribute('aria-label') && link.textContent) {
-          link.setAttribute('aria-label', link.textContent.trim())
-  }
-        // Add external link indicators
-        if (link.getAttribute('href')?.startsWith('http') && !link.getAttribute('href')?.includes('ziontechgroup.com')) {
-          link.setAttribute('aria-label', `${link.textContent?.trim()} (opens in new tab)`);
-          link.setAttribute('target', '_blank');
-          link.setAttribute('rel', 'noopener noreferrer');
-        }
-      });
-      // Add ARIA labels to images
-      const images = document.querySelectorAll('img: not([alt])'),
-      images.forEach(img => {
-    if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', '')
-  }
-      });
-      // Add ARIA labels to form inputs
-      const inputs = document.querySelectorAll('input: not([aria-label])'),
-      inputs.forEach(input => {
-        const label = document.querySelector(`label[for="${input.getAttribute('id')}"]`);
-        if (label && !input.getAttribute('aria-label')) {
-    input.setAttribute('aria-label', label.textContent?.trim() || '')
-  }
-      });
-      // Add skip links
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50',
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    }
-    addFocusIndicators();
-    enhanceAccessibility();
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-    return () => {
-    document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown)
-  }
-  }, []);
-  return <React.Fragment>{children}</React.Fragment>
-import React, { useEffect, useState } from 'react';
-interface AccessibilitySettings {
-    highContrast: boolean
-  reducedMotion: boolean
-  fontSize: 'small' | 'medium' | 'large',
-  focusVisible: boolean
-  }
-const AccessibilityEnhancer: React.FC = () => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    reducedMotion: false,
-    fontSize: 'medium',
-    focusVisible: false});
-  useEffect(() => {
-    // Check for user preferences
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches,
-    setSettings(prev => ({
-      ...prev,
-      reducedMotion: prefersReducedMotion,
-      highContrast: prefersHighContrast}));
-    // Apply accessibility settings
-    const root = document.documentElement;
-    if (settings.highContrast) {
-    root.classList.add('high-contrast')
-  } else {
-    root.classList.remove('high-contrast')
-  }
-    if (settings.reducedMotion) {
-    root.classList.add('reduced-motion')
-  } else {
-    root.classList.remove('reduced-motion')
-  }
-    // Font size
-    root.classList.remove('font-small', 'font-medium', 'font-large');
-    root.classList.add(`font-${settings.fontSize}`);
-    // Focus visible
-    if (settings.focusVisible) {
-    root.classList.add('focus-visible')
-  } else {
-    root.classList.remove('focus-visible')
-  }
-    // Add keyboard navigation support
-    const handleKeyDown = (e: KeyboardEvent) => {
-    // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        const mainContent = document.querySelector('main, [role="main"]');
-        if (mainContent) {
-          (mainContent as HTMLElement).focus();
-          e.preventDefault()
-  }
-      }
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-    const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur()
-  }
-      }
-    }
-    document.addEventListener('keydown', handleKeyDown);
-    return () => {
-    document.removeEventListener('keydown', handleKeyDown)
-  }
-  }, [settings]);
-  // Add ARIA live region for announcements
-  useEffect(() => {
-    const liveRegion = document.createElement('div');
-    liveRegion.setAttribute('aria-live', 'polite');
-    liveRegion.setAttribute('aria-atomic', 'true');
-    liveRegion.className = 'sr-only';
-    liveRegion.id = 'live-region';
-    document.body.appendChild(liveRegion);
-    return () => {
-      const existingLiveRegion = document.getElementById('live-region');
-      if (existingLiveRegion) {
-        existingLiveRegion.remove()
-  }
-    }
-  }, []);
-  // Announce page changes
-  useEffect(() => {
-    const announcePageChange = () => {
-      const liveRegion = document.getElementById('live-region');
-      if (liveRegion) {
-        const pageTitle = document.title;
-        liveRegion.textContent = `Page loaded: ${pageTitle}`;
-      }
-    }
-    // Announce after a short delay to ensure content is loaded
-    const timeoutId = setTimeout(announcePageChange, 1000);
-    return () => clearTimeout(timeoutId);
-  }, []);
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-    return null
-  }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    <div className="fixed top-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs z-50">
-      <div className="mb-2 font-bold">Accessibility Settings</div>
-      <div className="space-y-2">
-        <label className="flex items-center space-x-2">
-          <input
-            type="checkbox"
-            checked={settings.highContrast}
-            onChange={(e) => setSettings(prev => ({ ...prev, highContrast: e.target.checked }))}
-            className="rounded"
-          />
-          <span>High Contrast</span>
-        </label>
-        <label className="flex items-center space-x-2">
-          <input
-            type="checkbox"
-            checked={settings.reducedMotion}
-            onChange={(e) => setSettings(prev => ({ ...prev, reducedMotion: e.target.checked }))}
-            className="rounded"
-          />
-          <span>Reduced Motion</span>
-        </label>
-        <div>
-          <label className="block mb-1">Font Size:</label>
-          <select
-            value={settings.fontSize}
-            onChange={(e) => setSettings(prev => ({ ...prev, fontSize: e.target.value as any }))}
-            className="bg-gray-700 text-white rounded px-2 py-1">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-          </select>
-        </div>
-        <label className="flex items-center space-x-2">
-          <input
-            type="checkbox"
-            checked={settings.focusVisible}
-            onChange={(e) => setSettings(prev => ({ ...prev, focusVisible: e.target.checked }))}
-            className="rounded"
-          />
-          <span>Focus Visible</span>
-        </label>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+      <Footer />
+    </>
   );
-}
-export default AccessibilityEnhancer</AccessibilitySettings>
+};
+
+export default ComponentsPage;

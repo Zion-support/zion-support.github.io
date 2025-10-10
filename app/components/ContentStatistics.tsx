@@ -91,9 +91,7 @@ const ContentStatistics: React.FC = () => {
       }, 16);
     })
 
-    return () => {
-      timers.forEach(timer => clearInterval(timer));
-    }
+    return () => {timers.forEach(timer => clearInterval(timer))}
   }, []);
 
   return (
@@ -120,7 +118,7 @@ const ContentStatistics: React.FC = () => {
               <div className={`text-3xl font-bold ${stat.color} mb-2`}>
                 {Math.floor(stat.value)}{stat.suffix}
               </div>
-              <div className="text-gray-300">{stat.label}</div>
+              <div>stat.label</div>
             </div>
           ))}
         </div>
@@ -132,8 +130,8 @@ const ContentStatistics: React.FC = () => {
               <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                 <achievement.icon className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{achievement.title}</h3>
-              <p className="text-gray-300 text-sm">{achievement.description}</p>
+              <h3>achievement.title</h3>
+              <p>achievement.description</p>
             </div>
           ))}
         </div>

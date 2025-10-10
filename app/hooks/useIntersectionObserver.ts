@@ -1,53 +1,49 @@
+// Intersection Observer hook
 import { useEffect, useRef, useState } from 'react';
+
 interface UseIntersectionObserverOptions {
-    threshold?: number | number[]
+  threshold?: number | number[];
   root?: Element | null;
   rootMargin?: string;
-  freezeOnceVisible?: boolean
-  }
 }
-interface UseIntersectionObserverReturn {
-    ref: React.RefObject<HTMLElement>
-  isIntersecting: boolean,
-  entry: IntersectionObserverEntry | undefined
-  }
-}
-export function useIntersectionObserver(;
+
+export const useIntersectionObserver = (
   options: UseIntersectionObserverOptions = {}
-): UseIntersectionObserverReturn {
-    const {
-    threshold = 0,;
-    root = null,;
-    rootMargin = '0%',;
-    freezeOnceVisible = false,
-  }
-  } = options;
-const [isIntersecting, setIsIntersecting] = useState(false);
-  const [entry, setEntry] = useState<IntersectionObserverEntry | undefined>();
-  const ref = useRef<HTMLElement>(null);
-useEffect(() => {
-    const element = ref.current;
+) => {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [hasIntersected, setHasIntersected] = useState(false);
+  const elementRef = useRef<Element | null>(null);
+
+  useEffect(() => {
+    const element = elementRef.current;
     if (!element) return;
-const observer = new IntersectionObserver(;
+
+    const observer = new IntersectionObserver(
       ([entry]) => {
         setIsIntersecting(entry.isIntersecting);
-        setEntry(entry);
-if (entry.isIntersecting && freezeOnceVisible) {
-          observer.disconnect()
-  }
-        },
+        if (entry.isIntersecting && !hasIntersected) {
+          setHasIntersected(true);
+        }
+      },
       {
-    threshold,;
-        root,;
-        rootMargin,
-  }
-      } )
-observer.observe(element);
-return () => {
-    observer.disconnect()
-  }
-    }
-  }, [threshold, root, rootMargin, freezeOnceVisible]);
-return { ref, isIntersecting, entry }
-}
+        threshold: options.threshold || 0,
+        root: options.root || null,
+        rootMargin: options.rootMargin || '0px'
+      }
+    );
+
+    observer.observe(element);
+
+    return () => {
+      observer.unobserve(element);
+    };
+  }, [options.threshold, options.root, options.rootMargin, hasIntersected]);
+
+  return {
+    elementRef,
+    isIntersecting,
+    hasIntersected
+  };
+};
+
 export default useIntersectionObserver;

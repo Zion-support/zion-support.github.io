@@ -2,15 +2,13 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-const FAQPage: React.FC = () => {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+const FAQPage: React.FC = () => {const [openItems, setOpenItems] = useState<number[]>([]);
   const toggleItem = (index: number) => {
     setOpenItems(prev => 
       prev.includes(index) 
         ? prev.filter(item => item !== index)
         : [...prev, index]
-    );
-  }
+    )}
   const faqs = [
     {
       question: "What AI services do you offer?",
@@ -71,7 +69,7 @@ const FAQPage: React.FC = () => {
                   <button
                     onClick={() => toggleItem(index)}
                     className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-slate-700/30 transition-colors">
-                    <h3 className="text-lg font-semibold text-white pr-4">{faq.question}</h3>
+                    <h3>faq.question</h3>
                     {openItems.includes(index) ? (
                       <ChevronUp className="w-5 h-5 text-cyan-400 flex-shrink-0" />
                     ) : (
@@ -80,7 +78,7 @@ const FAQPage: React.FC = () => {
                   </button>
                   {openItems.includes(index) && (
                     <div className="px-6 pb-4">
-                      <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                      <p>faq.answer</p>
                     </div>
                   )}
                 </div>

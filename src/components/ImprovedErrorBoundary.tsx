@@ -1,648 +1,159 @@
 'use client';
-/**
- * Improved Error Boundary
- * Enhanced error handling with recovery mechanisms and user-friendly fallbacks
- */
-interface Props {
-    children: ReactNode
-  fallback?: ReactNode,
-  onError?: (erro,
-  r: Error, errorInf)
-  o: ErrorInfo) => void
-  resetKeys?: Array,
-          <string | number>
-  }
-interface State {
-    hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null,
-  errorCount: number
-  }
-class ImprovedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props),
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorCount: 0
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error
-    }
-  }
-  componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
-    // Log error to console for debugging
-    console.error('Error caught by ImprovedErrorBoundary:', {
-      message: error.message,
-      stack: error.stack,
-      component: errorInfo.componentStack ?? undefined,
-      timestamp: Date.now(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    });
-    // Call custom error handler if provided
-    if (this.props.onError) {
-    this.props.onError(error, errorInfo)
-  }
-    // Update state with error details
-    this.setState((prevState) => ({
-      errorInfo,
-      errorCount: prevState.errorCount + 1
-    }));
-    // Log to console in development
-    if (process.env['NODE_ENV'] === 'development') {}
-    // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as { Sentry: unknown }).Sentry) {
-      (window as unknown as { Sentry: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry.captureException(error, {
-        contexts: {
-          react: {
-            componentStack: errorInfo.componentStack
-interface State {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  hasErro,
-  r: boolean,,
-    erro,
-  r: Error | null,,
-    errorInf,
-  o: ErrorInfo | null,,
-    errorCoun,
-  t: number,
-}
-class ImprovedErrorBoundary extends Component;
-          <Props, State> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  constructor(props: Props) {
-    // TODO: Add content
-  }
-}
-class ImprovedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-    constructor(props: ErrorBoundaryProps) {
-    super(props),
-    this.state = {// TODO: Add content
-  }
-}
-  hasErro,
-  r: false,
-      erro,
-  r: null,
-      errorInf,
-  o: null,
-      errorCoun,
-  t: 0,
-    }
-  }
-  static getDerivedStateFromError(erro)
-  r: Error): Partial,
-          <State> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  hasErro,
-  r: true,
-//       error;
-    }
-  }
-  componentDidCatch(erro,
-  r: Error, errorInf)
-  o: ErrorInfo): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    // Log error to console for debugging;
-    console.error('Error caught by,
-  ImprovedErrorBoundary:', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  messag,
-  e: error.message,
-      stac,
-  k: error.stack,
-      componen,
-  t: errorInfo.componentStack ?? undefined,
-      timestam)
-  p: Date.now(),
-      userAgen,
-  t: navigator.userAgent,
-      ur,
-  l: window.location.href,
-    });
-    // Call custom error handler if provided;
-    if (this.props.onError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.props.onError(error, errorInfo);
-    }
-    // Update state with error details;
-    this.setState((prevState) => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       errorInfo,
-      errorCoun,
-  t: prevState.errorCount + 1,)
-    }));
-    // Log to console in development;
-    if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    }
-    // Send to external error tracking (if available)
-    if (typeof window !== 'undefined' && (window as unknown as {/* TODO: Fix JSX expression */})
-  y: unknown }).Sentry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      (window as unknown as {/* TODO: Fix JSX expression */}
-  t: Record,})
-          <string, unknown>) => void } }).Sentry.captureException(error, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        context,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          reac,
-  t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  componentStac,
-  k: errorInfo.componentStack,
-          }
-        })
-      });
-    }
-  }
-  componentDidUpdate(prevProps: Props): void {
-  componentDidUpdate(prevProp)
-  s: Props): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    // Reset error state if resetKeys changed
-    if (this.props.resetKeys && prevProps.resetKeys) {
-        (key, index) => key !== prevProps.resetKeys![index]
-      );
-      if (resetKeysChanged && this.state.hasError) {
-      if (resetKeysChanged && this.state.hasError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        this.resetErrorBoundary();
-      }
-    }
-  }
-  resetErrorBoundary = (): void => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
-  }
-  handleReload = (): void => {
-    window.location.reload()
-  }
-  handleGoHome = (): void => {
-    window.location.href = '/'
-  }
-  render(): ReactNode {
-    if (this.state.hasError) {
-      // Use custom fallback if provided
-      if (this.props.fallback) {
-        return this.props.fallback
-  }
-      // Default error UI
-      return (
-        <div className="error-boundary-container" style={styles.container}>
-          <div style={styles.content}>
-            <div style={styles.icon}>⚠️</div>
-            <h1 style={styles.title}>Oops! Something went wrong</h1>
-            <p style={styles.message}>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
             </p>
-            {process.env['NODE_ENV'] === 'development' && this.state.error && (
-              <details style={styles.details}>
-  resetErrorBoundary = (): void => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.setState({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  hasErro,
-  r: false,
-      erro,
-  r: null,
-      errorInf,
-  o: null,)
-    });
-  }
-  handleReload = (): void => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    window.location.reload();
-  }
-  handleGoHome = (): void => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    window.location.href = '/';
-  }
-  render(): ReactNode {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (this.state.hasError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Use custom fallback if provided;
-      if (this.props.fallback) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        return this.props.fallback;
-      }
-      // Default error UI;
-      return (<div>Coming Soon</div>)
-  )
-          <div className="error-boundary-container" style={styles.container}></div>
-          <div style={styles.content}></div>
-            <div style={styles.icon}></div>
-            <h1 style={styles.title}>Oops! Something went wrong</h1>
-            <p style={styles.message}></p>
-              We're sorry for the inconvenience. The application encountered an unexpected error.
-            </p>
-            {process.env['NODE_ENV'] === 'development' && this.state.error && ()}
-          <details style={styles.details}></details>
-                <summary style={styles.summary}>Error Details (Development Only)</summary>
-                <div style={styles.errorDetails}></div>
-                  <p style={styles.errorMessage}></p>
-                    <strong>Erro,
-  r:</strong> {this.state.error.message}
-                  </p>
-                  {this.state.error.stack && (
-                    <pre style={styles.stack}>
-                      {this.state.error.stack}
-                    </pre>
-                  )}
-                  {this.state.errorInfo?.componentStack && (
-                    <pre style={styles.stack}>
-                      <strong>Component Stack:</strong>
-                  {this.state.error.stack && ()}
-          <pre style={styles.stack}></pre>
-                      {this.state.error.stack}
-                    </pre>
-                  )}
-                  {this.state.errorInfo?.componentStack && ()}
-          <pre style={styles.stack}></pre>
-                      <strong>Component,
-  Stack:</strong>
-                      {this.state.errorInfo.componentStack}
-                    </pre>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
                   )}
                 </div>
-              </details>
-            )}
-            <div style={styles.actions}></div>
-              <button></button>
-                onClick={this.resetErrorBoundary}
-                style={styles.button}"
-                aria-label="Try Again"
-              >
-                Try Again;
-  </
-              <button
-// >
-//                 Try Again;
-          </button>
-              <button></button>
-                onClick={this.handleReload}
-                style={{...styles.button, ...styles.secondaryButton}}"
-                aria-label="Reload Page"
-              >
-                Reload Page;
-  </
-              <button
-// >
-//                 Reload Page;
-          </button>
-              <button></button>
-                onClick={this.handleGoHome}
-                style={{...styles.button, ...styles.secondaryButton}}"
-                aria-label="Go to Homepage"
-              >
-                Go Home;
-  </
+              ))}
             </div>
-            {this.state.errorCount > 1 && (
-              <p style={styles.errorCount}>
-                This error has occurred {this.state.errorCount} times
-            {this.state.errorCount > 1 && ()}
-          <p style={styles.errorCount}></p>
-                This error has occurred {this.state.errorCount} times;
-              </p>
-            )}
           </div>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-const styles = {
-  container: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: '20px',
-    backgroundColor: '#f5f5f5',
-    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
-  },
-  content: {
-    maxWidth: '600px',
-    width: '100%',
-    backgroundColor: 'white',
-    borderRadius: '8px',
-    padding: '40px',
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlign: 'center' as const
-  },
-  icon: {
-    fontSize: '48px',
-    marginBottom:   ,
-$4},
-  title: {
-    fontSize: '24px',
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom:   ,
-$4},
-  message: {
-    fontSize: '16px',
-    color: '#666',
-    marginBottom: '32px',
-    lineHeight:   ,
-$4},
-  details: {
-    textAlign: 'left' as const,
-    marginBottom: '24px',
-    backgroundColor: '#f9f9f9',
-    padding: '16px',
-    borderRadius: '4px',
-    border:   ,
-$4},
-  summary: {
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    marginBottom: '12px',
-    userSelect: 'none' as const
-  },
-  errorDetails: {
-    fontSize:   ,
-$4},
-  errorMessage: {
-    marginBottom: '12px',
-    color:   ,
-$4},
-  stack: {
-    backgroundColor: '#f5f5f5',
-    padding: '12px',
-    borderRadius: '4px',
-    fontSize: '12px',
-    overflowX: 'auto' as const,
-    fontFamily: 'monospace',
-    whiteSpace: 'pre-wrap' as const,
-    wordBreak: 'break-all' as const
-  },
-  actions: {
-    display: 'flex',
-    gap: '12px',
-    justifyContent: 'center',
-    flexWrap: 'wrap' as const
-  },
-  button: {
-    padding: '12px 24px',
-    fontSize: '16px',
-    fontWeight: '500',
-    color: 'white',
-    backgroundColor: '#007bff',
-    border: 'none',
-    borderRadius: '4px',
-    cursor: 'pointer',
-    transition:   ,
-$4},
-  secondaryButton: {
-    backgroundColor:   ,
-$4},
-  errorCount: {
-    marginTop: '24px',
-    fontSize: '14px',
-    color:   ,
-$4}
-}
-      );
-    }
-    return this.props.children;
-  }
-}
-const styles = {
-    // TODO: Add content
-  }
-}
-  containe,
-  r: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  minHeigh,
-  t: '100vh',
-    displa,
-  y: 'flex',
-    alignItem,
-  s: 'center',
-    justifyConten,
-  t: 'center',
-    paddin,
-  g: '20px',
-    backgroundColo,
-  r: '#f5f5f5',
-    fontFamil,"
-  y: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif'
-  },
-  conten,
-  t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  maxWidt,
-  h: '600px',
-    widt,
-  h: '100%',
-    backgroundColo,
-  r: 'white',
-    borderRadiu,
-  s: '8px',
-    paddin,
-  g: '40px',
-    boxShado,
-  w: '0 4px 6px rgba(0, 0, 0, 0.1)',
-    textAlig,
-  n: 'center' as const,
-  },
-  ico,
-  n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  fontSiz,
-  e: '48px',
-    marginBotto,
-  m: '20px'
-  },
-  titl,
-  e: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  fontSiz,
-  e: '24px',
-    fontWeigh,
-  t: 'bold',
-    colo,
-  r: '#333',
-    marginBotto,
-  m: '16px'
-  },
-  messag,
-  e: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  fontSiz,
-  e: '16px',
-    colo,
-  r: '#666',
-    marginBotto,
-  m: '32px',
-    lineHeigh,
-  t: '1.6'
-  },
-  detail,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  textAlig,
-  n: 'left' as const,
-    marginBotto,
-  m: '24px',
-    backgroundColo,
-  r: '#f9f9f9',
-    paddin,
-  g: '16px',
-    borderRadiu,
-  s: '4px',
-    borde,
-  r: '1px solid #e0e0e0'
-  },
-  summar,
-  y: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  curso,
-  r: 'pointer',
-    fontWeigh,
-  t: 'bold',
-    marginBotto,
-  m: '12px',
-    userSelec,
-  t: 'none' as const,
-  },
-  errorDetail,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  fontSiz,
-  e: '14px'
-  },
-  errorMessag,
-  e: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  marginBotto,
-  m: '12px',
-    colo,
-  r: '#d32f2f'
-  },
-  stac,
-  k: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  backgroundColo,
-  r: '#f5f5f5',
-    paddin,
-  g: '12px',
-    borderRadiu,
-  s: '4px',
-    fontSiz,
-  e: '12px',
-    overflow,
-  X: 'auto' as const,
-    fontFamil,
-  y: 'monospace',
-    whiteSpac,
-  e: 'pre-wrap' as const,
-    wordBrea,
-  k: 'break-all' as const,
-  },
-  action,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  displa,
-  y: 'flex',
-    ga,
-  p: '12px',
-    justifyConten,
-  t: 'center',
-    flexWra,
-  p: 'wrap' as const,
-  },
-  butto,
-  n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  paddin,
-  g: '12px 24px',
-    fontSiz,
-  e: '16px',
-    fontWeigh,
-  t: '500',
-    colo,
-  r: 'white',
-    backgroundColo,
-  r: '#007bff',
-    borde,
-  r: 'none',
-    borderRadiu,
-  s: '4px',
-    curso,
-  r: 'pointer',
-    transitio,
-  n: 'background-color 0.2s'
-  },
-  secondaryButto,
-  n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  backgroundColo,
-  r: '#6c757d'
-  },
-  errorCoun,
-  t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  marginTo,
-  p: '24px',
-    fontSiz,
-  e: '14px',
-    colo,
-  r: '#999'
-  }
-}
-  </State>
-  </State>
-  </string>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default ComponentsPage;

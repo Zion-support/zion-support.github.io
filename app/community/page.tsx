@@ -1,401 +1,159 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
 const CommunityPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState('overview');
-
-  const communityStats = [
-    { icon: Users, value: '5,000+', label: 'Active Members' },
-    { icon: MessageCircle, value: '50+', label: 'Discussions Daily' },
-    { icon: Calendar, value: '12', label: 'Events Monthly' },
-    { icon: Star, value: '4.9', label: 'Average Rating' }
-  ]
-
-  const events = [
+  const features = [
     {
-      title: 'AI Development Workshop',
-      date: '2024-02-15',
-      time: '2:00 PM EST',
-      type: 'Workshop',
-      attendees: 150,
-      description: 'Learn advanced AI development techniques and best practices'
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
     {
-      title: 'Cloud Infrastructure Meetup',
-      date: '2024-02-20',
-      time: '6:00 PM EST',
-      type: 'Meetup',
-      attendees: 75,
-      description: 'Discuss cloud architecture and deployment strategies'
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
     {
-      title: 'SaaS Business Growth Panel',
-      date: '2024-02-25',
-      time: '3:00 PM EST',
-      type: 'Panel',
-      attendees: 200,
-      description: 'Expert panel on scaling SaaS businesses'
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-
-  const forums = [
-    {
-      name: 'AI Services',
-      description: 'Discuss AI development, machine learning, and automation',
-      posts: 1250,
-      members: 1800
-    },
-    {
-      name: 'IT Services',
-      description: 'Cloud infrastructure, DevOps, and system administration',
-      posts: 980,
-      members: 1200
-    },
-    {
-      name: 'Micro SaaS',
-      description: 'Building and scaling micro SaaS applications',
-      posts: 750,
-      members: 900
-    },
-    {
-      name: 'General Discussion',
-      description: 'General tech discussions and community updates',
-      posts: 2100,
-      members: 3000
-    }
-  ]
+  ];
 
   const benefits = [
-    {
-      icon: Users,
-      title: 'Network with Peers',
-      description: 'Connect with like-minded developers and entrepreneurs'
-    },
-    {
-      icon: MessageCircle,
-      title: 'Expert Support',
-      description: 'Get help from our team of experts and community members'
-    },
-    {
-      icon: Calendar,
-      title: 'Exclusive Events',
-      description: 'Access to workshops, webinars, and networking events'
-    },
-    {
-      icon: Award,
-      title: 'Recognition',
-      description: 'Showcase your projects and get community recognition'
-    }
-  ]
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
   return (
     <>
       <Helmet>
         <title>Community - Zion Tech Group</title>
-        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
-        <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
-        <link rel="canonical" href="https://ziontechgroup.com/community" />
+        <meta name="description" content="Advanced Community solutions for businesses" />
+        <meta name="keywords" content="AI, community, artificial intelligence, business solutions" />
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white neon-text-enhanced">
-                Community
-              </h1>
-            </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Join our vibrant community of developers, entrepreneurs, and tech enthusiasts. 
-              Connect, learn, and grow together.
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Community
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered community solution for modern businesses.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="#join"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
-                Join Community
-              </a>
-              <a
-                href="#events"
-                className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                View Events
-              </a>
-              <a
-                href="#forums"
-                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
-              >
-                Browse Forums
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
             </div>
           </div>
+        </section>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
-            {communityStats.map((stat, index) => (
-              <div key={index} className="cyber-card-enhanced p-6 text-center">
-                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-                <div className="text-2xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-
-          {/* Tabs */}
-          <div className="mb-8">
-            <div className="flex flex-wrap justify-center gap-4">
-              {[
-                { id: 'overview', name: 'Overview' },
-                { id: 'events', name: 'Events' },
-                { id: 'forums', name: 'Forums' },
-                { id: 'benefits', name: 'Benefits' }
-              ].map((tab) => (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    activeTab === tab.id
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-800 text-gray-300 hover:bg-slate-700'
-                  }`}
-                >
-                  {tab.name}
-                </button>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               ))}
             </div>
           </div>
+        </section>
 
-          {/* Overview Tab */}
-          {activeTab === 'overview' && (
-            <div className="space-y-12">
-              <div className="cyber-card-enhanced p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Welcome to Our Community</h2>
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  Our community is a place where developers, entrepreneurs, and tech enthusiasts come together 
-                  to share knowledge, collaborate on projects, and support each other's growth. Whether you're 
-                  just starting out or you're a seasoned professional, you'll find value in our diverse and 
-                  welcoming community.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-3">What You'll Find</h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Technical discussions and problem-solving
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Project showcases and feedback
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Career advice and networking
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Industry insights and trends
-                      </li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-3">Community Guidelines</h3>
-                    <ul className="space-y-2">
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Be respectful and inclusive
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Share knowledge generously
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Help others learn and grow
-                      </li>
-                      <li className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                        Keep discussions relevant and constructive
-                      </li>
-                    </ul>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Community?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
                   </div>
                 </div>
-              </div>
+              ))}
             </div>
-          )}
+          </div>
+        </section>
 
-          {/* Events Tab */}
-          {activeTab === 'events' && (
-            <div className="space-y-8">
-              <div className="cyber-card-enhanced p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Upcoming Events</h2>
-                <div className="space-y-6">
-                  {events.map((event, index) => (
-                    <div key={index} className="bg-slate-800 rounded-lg p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex-1">
-                          <h3 className="text-xl font-semibold text-white mb-2">{event.title}</h3>
-                          <p className="text-gray-300 mb-3">{event.description}</p>
-                          <div className="flex items-center space-x-6 text-sm text-gray-400">
-                            <span className="flex items-center">
-                              <Calendar className="w-4 h-4 mr-1" />
-                              {event.date}
-                            </span>
-                            <span className="flex items-center">
-                              <Clock className="w-4 h-4 mr-1" />
-                              {event.time}
-                            </span>
-                            <span className="flex items-center">
-                              <Users className="w-4 h-4 mr-1" />
-                              {event.attendees} attendees
-                            </span>
-                          </div>
-                        </div>
-                        <div className="ml-6">
-                          <span className="px-3 py-1 bg-cyan-600 text-white text-xs font-semibold rounded">
-                            {event.type}
-                          </span>
-                        </div>
-                      </div>
-                      <a
-                        href="#"
-                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-all duration-300 inline-flex items-center"
-                      >
-                        Register Now
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Forums Tab */}
-          {activeTab === 'forums' && (
-            <div className="space-y-8">
-              <div className="cyber-card-enhanced p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Community Forums</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {forums.map((forum, index) => (
-                    <div key={index} className="bg-slate-800 rounded-lg p-6">
-                      <h3 className="text-lg font-semibold text-white mb-2">{forum.name}</h3>
-                      <p className="text-gray-300 mb-4">{forum.description}</p>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-4 text-sm text-gray-400">
-                          <span className="flex items-center">
-                            <MessageCircle className="w-4 h-4 mr-1" />
-                            {forum.posts} posts
-                          </span>
-                          <span className="flex items-center">
-                            <Users className="w-4 h-4 mr-1" />
-                            {forum.members} members
-                          </span>
-                        </div>
-                      </div>
-                      <a
-                        href="#"
-                        className="text-cyan-400 hover:text-cyan-300 font-semibold flex items-center"
-                      >
-                        Visit Forum
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </a>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Benefits Tab */}
-          {activeTab === 'benefits' && (
-            <div className="space-y-8">
-              <div className="cyber-card-enhanced p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">Community Benefits</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                          <benefit.icon className="w-6 h-6 text-white" />
-                        </div>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                        <p className="text-gray-300">{benefit.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Join Community CTA */}
-          <div id="join" className="cyber-card-enhanced p-8 mt-16 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h2>
-            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of developers and entrepreneurs who are already part of our vibrant community. 
-              Start connecting, learning, and growing today.
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Community solution today and see the difference.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300"
-              >
-                Join Now
-              </a>
-              <a
-                href="/contact"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Learn More
-              </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
           </div>
-
-          {/* Contact Information */}
-          <div className="cyber-card-enhanced p-8 mt-8">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Get in Touch</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="flex items-center space-x-3">
-                <Mail className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Email</div>
-                  <a href="mailto:community@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">
-                    community@ziontechgroup.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Phone</div>
-                  <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">
-                    +1 (302) 464-0950
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-6 h-6 text-cyan-400" />
-                <div>
-                  <div className="text-white font-semibold">Address</div>
-                  <div className="text-gray-300">364 E Main St STE 1008, Middletown, DE 19709</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        </section>
       </div>
+      <Footer />
     </>
   );
-}
+};
 
 export default CommunityPage;

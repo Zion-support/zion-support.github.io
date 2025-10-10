@@ -1,235 +1,159 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-'use client'
-/**
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
- */
-export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
-}
-export interface ErrorReport {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  messag,
-  e: string
-  stack?: string
-  component?: string,,
-    timestam,
-  p: number,,
-    userAgen,
-  t: string,,
-    ur,
-  l: string,
-class MonitoringService {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-class MonitoringService {
-  private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
-  private observer: PerformanceObserver | null = null
-
-  constructor() {
-    if (typeof window !== 'undefined') {
-      this.initializeMonitoring()
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }
+  ];
 
-  private initializeMonitoring(): void {
-    this.monitorWebVitals()
-    this.monitorLongTasks()
-    this.monitorResourceTiming()
-    this.setupErrorHandling()
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-  private monitorWebVitals(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0
-          this.reportMetric('lcp', this.metrics.lcp)
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-        // First Input Delay
-        const fidObserver = new PerformanceObserver((list) => {
-    const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime,
-            this.reportMetric('fid', this.metrics.fid)
-  });
-        });
-        fidObserver.observe({ entryTypes: ['first-input'] });
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
-    const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value || 0
-              this.metrics.cls = clsValue,
-              this.reportMetric('cls', clsValue)
-  }
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        // First Contentful Paint
-        const fcpObserver = new PerformanceObserver(list => {
-    const entries = list.getEntries();
-          entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime)
-  });
-        });
-        fcpObserver.observe({ entryTypes: ['paint'] });
-      } catch (error) {
-    // console.error('Error setting up performance observers:', error)
-  }
-    }
-  }
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-  private monitorLongTasks(): void {
-    if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            // console.warn('Long task detected:', {
-            //   duration: entry.duration,
-            //   startTime: entry.startTime
-            // })
-          }
-        })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
-      } catch (error) {
-        // Long task API might not be available
-      }
-    }
-  }
-
-  private monitorResourceTiming(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            const resourceEntry = entry as PerformanceResourceTiming,
-            if (resourceEntry.duration && resourceEntry.duration > 1000) {
-              // console.warn('Slow resource detected:', {
-              //   name: resourceEntry.name,
-              //   duration: resourceEntry.duration,
-              //   type: resourceEntry.initiatorType
-              // })
-            }
-          });
-        });
-        resourceObserver.observe({ entryTypes: ['resource'] });
-      } catch (_error) {
-    // console.error('Error monitoring resources:', _error)
-  }
-    }
-  }
-
-  private setupErrorHandling(): void {
-    window.addEventListener('error', (event) => {
-      this.logError({
-        message: event.message,
-        stack: event.error?.stack,
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      })
-    })
-
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
-      this.logError({
-        message: `Unhandled Promise Rejection: ${event.reason}`,
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-      })
-    })
-  }
-
-  private reportMetric(name: string, value: number): void {
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return
-    }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {
-      const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor'
-    }
-    // Send to analytics (if configured)
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-      })
-    }
-  }
-
-  public logError(error: ErrorReport): void {
-    this.errors.push(error)
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
-    }
-  }
-
-  public getMetrics(): PerformanceMetrics {
-    return { ...this.metrics }
-  }
-
-  public getErrors(): ErrorReport[] {
-    return [...this.errors]
-  }
-
-  public clearErrors(): void {
-    this.errors = []
-  }
-
-  public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory
-      if (memory) {
-        // console.log('[Memory]', {
-        //   used: `${Math.round(memory.usedJSHeapSize / 1048576)}MB`,
-        //   total: `${Math.round(memory.totalJSHeapSize / 1048576)}MB`,
-        //   limit: `${Math.round(memory.jsHeapSizeLimit / 1048576)}MB`
-        // })
-      }
-    }
-  }
-
-  public measureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
-      if (navigation) {
-        // console.log('[Navigation Timing]', {
-        //   'DNS Lookup': `${Math.round(navigation.domainLookupEnd - navigation.domainLookupStart)}ms`,
-        //   'TCP Connect': `${Math.round(navigation.connectEnd - navigation.connectStart)}ms`,
-        //   'TTFB': `${Math.round(navigation.responseStart - navigation.requestStart)}ms`,
-        //   'Download': `${Math.round(navigation.responseEnd - navigation.responseStart)}ms`,
-        //   'DOM Interactive': `${Math.round(navigation.domInteractive - navigation.fetchStart)}ms`,
-        //   'DOM Complete': `${Math.round(navigation.domComplete - navigation.fetchStart)}ms`,
-        //   'Load Complete': `${Math.round(navigation.loadEventEnd - navigation.fetchStart)}ms`
-        // })
-      }
-    }
-  }
-}
-
-const monitoring = new MonitoringService()
-export default monitoring;`
-
+export default UtilsPage;

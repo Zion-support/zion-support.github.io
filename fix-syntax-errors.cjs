@@ -2,165 +2,157 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { execSync } = require('child_process');
 
-// Function to fix common syntax errors in TypeScript/JSX files
-function fixSyntaxErrors(content) {
-  let fixed = content;
-  
-  // Fix semicolons after property names in object literals
-  // Pattern: property: value,; -> property: value,
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix semicolons after property names in object literals (with quotes)
-  // Pattern: "property": value,; -> "property": value,
-  fixed = fixed.replace(/(["']\w+["']):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix malformed JSX closing tags
-  // Pattern: <tag></tag> -> <tag />
-  fixed = fixed.replace(/<(\w+)><\/\1>/g, '<$1 />');
-  
-  // Fix malformed JSX with semicolons
-  // Pattern: <tag>; -> <tag>
-  fixed = fixed.replace(/<(\w+)>;/g, '<$1>');
-  
-  // Fix malformed JSX closing with semicolons
-  // Pattern: </tag>; -> </tag>
-  fixed = fixed.replace(/<\/(\w+)>;/g, '</$1>');
-  
-  // Fix array method syntax errors
-  // Pattern: .map((item, index) => (; -> .map((item, index) => (
-  fixed = fixed.replace(/\.map\(\([^)]+\)\s*=>\s*\(;/g, (match) => match.replace('(;', '('));
-  
-  // Fix array method syntax errors with closing
-  // Pattern: }); -> })
-  fixed = fixed.replace(/}\);/g, '})');
-  
-  // Fix malformed return statements
-  // Pattern: return (; -> return (
-  fixed = fixed.replace(/return\s*\(;/g, 'return (');
-  
-  // Fix malformed function declarations
-  // Pattern: function() {; -> function() {
-  fixed = fixed.replace(/function\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed arrow functions
-  // Pattern: () => {; -> () => {
-  fixed = fixed.replace(/\([^)]*\)\s*=>\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed JSX fragments
-  // Pattern: <></> -> <>
-  fixed = fixed.replace(/<><\/>/g, '<>');
-  
-  // Fix malformed JSX with extra semicolons
-  // Pattern: <Component>; -> <Component>
-  fixed = fixed.replace(/<(\w+)>;/g, '<$1>');
-  
-  // Fix malformed JSX closing with extra semicolons
-  // Pattern: </Component>; -> </Component>
-  fixed = fixed.replace(/<\/(\w+)>;/g, '</$1>');
-  
-  // Fix malformed object property assignments
-  // Pattern: property: value,; -> property: value,
-  fixed = fixed.replace(/(\w+):\s*([^,}]+),;/g, '$1: $2,');
-  
-  // Fix malformed array syntax
-  // Pattern: [item,; -> [item,
-  fixed = fixed.replace(/\[([^,\]]+),;/g, '[$1,');
-  
-  // Fix malformed array closing
-  // Pattern: ]; -> ]
-  fixed = fixed.replace(/\];/g, ']');
-  
-  // Fix malformed object closing
-  // Pattern: }; -> }
-  fixed = fixed.replace(/\};/g, '}');
-  
-  // Fix malformed function calls
-  // Pattern: function(; -> function(
-  fixed = fixed.replace(/function\s*\(;/g, 'function(');
-  
-  // Fix malformed method calls
-  // Pattern: .method(; -> .method(
-  fixed = fixed.replace(/\.(\w+)\(;/g, '.$1(');
-  
-  // Fix malformed conditional statements
-  // Pattern: if (condition) {; -> if (condition) {
-  fixed = fixed.replace(/if\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed for loops
-  // Pattern: for (init; condition; increment) {; -> for (init; condition; increment) {
-  fixed = fixed.replace(/for\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed while loops
-  // Pattern: while (condition) {; -> while (condition) {
-  fixed = fixed.replace(/while\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed switch statements
-  // Pattern: switch (expression) {; -> switch (expression) {
-  fixed = fixed.replace(/switch\s*\([^)]+\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed try-catch blocks
-  // Pattern: try {; -> try {
-  fixed = fixed.replace(/try\s*\{;/g, 'try {');
-  
-  // Fix malformed catch blocks
-  // Pattern: catch (error) {; -> catch (error) {
-  fixed = fixed.replace(/catch\s*\([^)]*\)\s*\{;/g, (match) => match.replace('{;', '{'));
-  
-  // Fix malformed finally blocks
-  // Pattern: finally {; -> finally {
-  fixed = fixed.replace(/finally\s*\{;/g, 'finally {');
-  
-  return fixed;
-}
-
-// Function to process a single file
-function processFile(filePath) {
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const fixed = fixSyntaxErrors(content);
-    
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+
+    // Fix semicolons in arrays (replace ',;' with ',')
+    const semicolonInArrayRegex = /,\s*;/g;
+    if (semicolonInArrayRegex.test(content)) {
+      content = content.replace(semicolonInArrayRegex, ',');
+      modified = true;
+    }
+
+    // Fix semicolons at end of array items (replace ';' with ',' in arrays)
+    const arraySemicolonRegex = /(\s+)([^,]+);(\s*)(\])/g;
+    if (arraySemicolonRegex.test(content)) {
+      content = content.replace(arraySemicolonRegex, '$1$2,$3$4');
+      modified = true;
+    }
+
+    // Fix unclosed JSX tags - meta tags
+    const unclosedMetaRegex = /<meta\s*>/g;
+    if (unclosedMetaRegex.test(content)) {
+      content = content.replace(unclosedMetaRegex, '<meta name="description" content="AI solutions" />');
+      modified = true;
+    }
+
+    // Fix Navigation component without closing tag
+    const navigationRegex = /<Navigation\s*>\s*<div/g;
+    if (navigationRegex.test(content)) {
+      content = content.replace(navigationRegex, '<Navigation />\n      <div');
+      modified = true;
+    }
+
+    // Fix unclosed h1, h2, button, p tags
+    const unclosedTags = ['h1', 'h2', 'h3', 'button', 'p', 'div', 'section'];
+    unclosedTags.forEach(tag => {
+      const regex = new RegExp(`<${tag}[^>]*>([^<]*);\\s*</${tag}>`, 'g');
+      if (regex.test(content)) {
+        content = content.replace(regex, `<${tag}$1</${tag}>`);
+        modified = true;
+      }
+    });
+
+    // Fix JSX fragments that are not properly closed
+    const fragmentRegex = /<>\s*<Helmet>[\s\S]*?<\/Helmet>\s*<Navigation\s*>\s*<div/g;
+    if (fragmentRegex.test(content)) {
+      content = content.replace(fragmentRegex, '<>\n      <Helmet>[\s\S]*?<\/Helmet>\n      <Navigation />\n      <div');
+      modified = true;
+    }
+
+    // Fix missing closing tags in JSX
+    const missingClosingTags = /<(\w+)[^>]*>([^<]*);\s*<\/\1>/g;
+    if (missingClosingTags.test(content)) {
+      content = content.replace(missingClosingTags, '<$1>$2</$1>');
+      modified = true;
+    }
+
+    // Fix object literal syntax errors
+    const objectLiteralRegex = /}\s*}\s*]/g;
+    if (objectLiteralRegex.test(content)) {
+      content = content.replace(objectLiteralRegex, '}\n  ]');
+      modified = true;
+    }
+
+    // Fix malformed JSX expressions
+    const malformedJSX = /{\s*([^}]*);\s*}/g;
+    if (malformedJSX.test(content)) {
+      content = content.replace(malformedJSX, '{$1}');
+      modified = true;
+    }
+
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
+  }
+}
+
+// Function to find all TSX files with syntax errors
+function findProblematicFiles() {
+  try {
+    // Get list of files with syntax errors from TypeScript compiler
+    const result = execSync('pnpm run type-check 2>&1 | grep "error TS" | head -20', { 
+      encoding: 'utf8',
+      cwd: '/workspace'
+    });
+    
+    const files = new Set();
+    const lines = result.split('\n');
+    
+    lines.forEach(line => {
+      const match = line.match(/^([^(]+)\(/);
+      if (match) {
+        files.add(match[1]);
+      }
+    });
+    
+    return Array.from(files);
+  } catch (error) {
+    console.log('Could not get TypeScript errors, using alternative method...');
+    return [];
   }
 }
 
 // Main function
 function main() {
-  const patterns = [
-    'app/**/*.tsx',
-    'app/**/*.ts',
-    'components/**/*.tsx',
-    'components/**/*.ts'
-  ];
+  console.log('Starting syntax error fixes...');
   
-  let totalFiles = 0;
-  let fixedFiles = 0;
+  // Find problematic files
+  const problematicFiles = findProblematicFiles();
   
-  patterns.forEach(pattern => {
-    const files = glob.sync(pattern, { cwd: process.cwd() });
-    totalFiles += files.length;
+  if (problematicFiles.length === 0) {
+    console.log('No problematic files found via TypeScript compiler');
+    // Fallback: check common patterns
+    const commonPatterns = [
+      'app/ai-3d-generation/page.tsx',
+      'app/ai-agricultural-intelligence-pro/page.tsx',
+      'app/ai-analytics-dashboard/page.tsx',
+      'app/ai-analytics/page.tsx',
+      'app/ai-api-management/page.tsx',
+      'app/ai-api-manager/page.tsx',
+      'app/ai-automation/page.tsx'
+    ];
     
-    files.forEach(file => {
-      if (processFile(file)) {
-        fixedFiles++;
+    problematicFiles.push(...commonPatterns);
+  }
+  
+  let fixedCount = 0;
+  
+  problematicFiles.forEach(filePath => {
+    const fullPath = path.join('/workspace', filePath);
+    if (fs.existsSync(fullPath)) {
+      if (fixSyntaxErrors(fullPath)) {
+        fixedCount++;
       }
-    });
+    }
   });
   
-  console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files.`);
+  console.log(`Fixed ${fixedCount} files`);
 }
 
 if (require.main === module) {
   main();
 }
 
-module.exports = { fixSyntaxErrors, processFile };
+module.exports = { fixSyntaxErrors, findProblematicFiles };

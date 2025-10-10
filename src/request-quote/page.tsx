@@ -1,906 +1,159 @@
 'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-'use client';
-import React, { useState } from 'react';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const RequestQuotePage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    serviceType: '',
-    projectSize: '',
-    timeline: '',
-    budget: '',
-    description: '',
-    requirements:   ,
-$4});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
-    'AI Services',
-    'IT Infrastructure',
-    'Cybersecurity',
-    'Cloud Migration',
-    'Micro SAAS Solutions',
-    'Digital Transformation',
-    'Custom Development',
-    'Consulting Services',
-    'Other'
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
   ];
-  const projectSizes = [
-    'Small (1-10 employees)',
-    'Medium (11-100 employees)',
-    'Large (101-1000 employees)',
-    'Enterprise (1000+ employees)'
-  ];
-  const timelines = [
-    'ASAP',
-    '1-3 months',
-    '3-6 months',
-    '6-12 months',
-    '12+ months',
-    'Flexible'
-  ];
-  const budgetRanges = [
-    'Under $10,000',
-    '$10,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $500,000',
-    '$500,000+',
-    'To be discussed'
-  ];
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true),
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true)
-  }
+
   const benefits = [
-    {
-      icon: Calculator,
-      title: 'Free Quote',
-      description:     ,
-$4},
-    {
-      icon: Clock,
-      title: 'Quick Response',
-      description:     ,
-$4},
-    {
-      icon: CheckCircle,
-      title: 'Transparent Pricing',
-      description:     ,
-$4},
-    {
-      icon: Star,
-      title: 'Expert Consultation',
-      description:     ,
-$4}
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
   ];
-  const whyChooseUs = [
-    {
-      icon: Users,
-      title: '50+ Successful Projects',
-      description:     ,
-$4},
-    {
-      icon: Award,
-      title: '300% Average ROI',
-      description:     ,
-$4},
-    {
-      icon: Clock,
-      title: '24/7 Support',
-      description:     ,
-$4},
-    {
-      icon: Star,
-      title: '99.9% Uptime',
-      description:     ,
-$4}
-  ];
-  if (isSubmitted) {
-    return (
-      <React.Fragment>
-        <Navigation />
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="container mx-auto px-4 py-16 pt-24">
-            <div className="max-w-2xl mx-auto text-center">
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-10 h-10 text-green-400" />
-              </div>
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text">
-                Quote Request Submitted!
-              </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Thank you for your interest in our services. We've received your quote request 
-                and will get back to you within 24 hours with a detailed proposal.
-              </p>
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8">
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>
-                <div className="space-y-3 text-left">
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1</div>
-                    <span className="text-gray-300">Our team will review your requirements</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2</div>
-                    <span className="text-gray-300">We'll prepare a detailed quote and proposal</span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>
-                    <span className="text-gray-300">Schedule a call to discuss your project</span>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Contact Us
-  </
-                <a
-                  href="/"
-                  className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center">
-                  <ArrowRight className="w-4 h-4 mr-2" />
-                  Back to Home,
-  </
-              </div>
-            </div>
-          </div>
-        </div>
-        <Footer />
-      </React.Fragment>
-    )
-  }
+
   return (
-    <React.Fragment>
+    <>
+      <Helmet>
+        <title>Request Quote - Zion Tech Group</title>
+        <meta name="description" content="Advanced Request Quote solutions for businesses" />
+        <meta name="keywords" content="AI, request quote, artificial intelligence, business solutions" />
+      </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Request a Quote,
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Get a detailed, no-obligation quote for your AI and IT project. 
-              Our experts will provide you with a comprehensive proposal within 24 hours.
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Request Quote
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered request quote solution for modern businesses.
             </p>
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Quote Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your full name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your email"
-                      />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Company Name,
-  </
-                      <input
-                        type="text"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your company name"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone Number,
-  </
-                      <input
-                        type="tel"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your phone number"
-                      />
-                    </div>
-                  </div>
-                  {/* Project Information */}
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Service Type *
-                    </label>
-                    <select
-                      name="serviceType"
-                      value={formData.serviceType}
-                      onChange={handleInputChange}
-                      required
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
-                      <option value="">Select a service type</option>
-                      {serviceTypes.map((type, index) => (
-                        <option key={index} value={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Project Size,
-  </
-                      <select
-                        name="projectSize"
-                        value={formData.projectSize}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
-                        <option value="">Select project size</option>
-                        {projectSizes.map((size, index) => (
-                          <option key={index} value={size}>{size}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Timeline;
-  </
-                      <select
-                        name="timeline"
-                        value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
-                        <option value="">Select timeline</option>
-                        {timelines.map((timeline, index) => (
-                          <option key={index} value={timeline}>{timeline}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Budget Range;
-  </
-                    <select
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20">
-                      <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => (
-                        <option key={index} value={range}>{range}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Project Description *
-                    </label>
-                    <textarea
-                      name="description"
-                      value={formData.description}
-                      onChange={handleInputChange}
-                      required
-                      rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Describe your project requirements and goals..."
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      Specific Requirements,
-  </
-                    <textarea
-                      name="requirements"
-                      value={formData.requirements}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Any specific technical requirements, integrations, or constraints..."
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center">
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Submitting...
-                      </div>
-                    ) : (
-                      'Request Quote'
-                    )}
-                  </button>
-                </form>
-              </div>
-            </div>
-            {/* Sidebar */}
-            <div className="space-y-8">
-              {/* Benefits */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>
-                <div className="space-y-4">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                        <benefit.icon className="w-4 h-4 text-cyan-400" />
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>
-                        <p className="text-xs text-gray-300">{benefit.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Why Choose Us */}
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50">
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>
-                <div className="space-y-4">
-                  {whyChooseUs.map((item, index) => (
-                    <div key={index} className="flex items-start">
-                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0">
-                        <item.icon className="w-4 h-4 text-purple-400" />
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>
-                        <p className="text-xs text-gray-300">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Contact Info */}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>
-                <p className="text-gray-300 text-sm mb-4">
-                  For urgent inquiries or immediate assistance, contact us directly.
-                </p>
-                <div className="space-y-3">
-                  <a
-                    href="tel: +13024640950"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    <Phone className="w-4 h-4 mr-2" />
-                    <span className="text-sm">(302) 464-0950</span>
-                  </a>
-                  <a
-                    href="mailto:kleber@ziontechgroup.com"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    <Mail className="w-4 h-4 mr-2" />
-                    <span className="text-sm">kleber@ziontechgroup.com</span>
-                  </a>
-                  <a
-                    href="/contact"
-                    className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    <span className="text-sm">Contact Form</span>
-                  </a>
-                </div>
-    <div>Coming Soon</div>
-  ),
-}
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  nam,
-  e: '',
-    emai,
-  l: '',
-    compan,
-  y: '',
-    phon,
-  e: '',
-    serviceTyp,
-  e: '',
-    projectSiz,
-  e: '',
-    timelin,
-  e: '',
-    budge,
-  t: '',
-    descriptio,
-  n: '',
-    requirement,
-  s: '')
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const _serviceTypes = [
-  // TOD,
-  O: Add items
-],
-//     'AI Services',
-//     'IT Infrastructure',
-//     'Cybersecurity',
-//     'Cloud Migration',
-//     'Micro SAAS Solutions',
-//     'Digital Transformation',
-//     'Custom Development',
-//     'Consulting Services',
-//     'Other'
-  ];
-  const projectSizes = [
-  // TOD,
-  O: Add items
-],
-//     'Small (1-10 employees)',
-//     'Medium (11-100 employees)',
-//     'Large (101-1000 employees)',
-//     'Enterprise (1000+ employees)'
-  ];
-  const timelines = [
-  // TOD,
-  O: Add items
-],
-//     'ASAP',
-//     '1-3 months',
-//     '3-6 months',
-//     '6-12 months',
-//     '12+ months',
-//     'Flexible'
-  ];
-  const budgetRanges = [
-  // TOD,
-  O: Add items
-],
-//     'Under $10,000',
-//     '$10,000 - $50,000',
-//     '$50,000 - $100,000',
-//     '$100,000 - $500,000',
-//     '$500,000+',
-//     'To be discussed'
-  ];
-  const handleInputChange = (e: React.ChangeEvent,)
-          <HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const { name, value } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       ...prev,
-      [name]: value;)
-    }));
-  }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    e.preventDefault();
-    setIsSubmitting(true);
-    // Simulate form submission;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-  }
-  const benefits = [
-  // TOD,
-  O: Add items
-],
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Calculator,
-      titl,
-  e: 'Free Quote',
-      descriptio,
-  n: 'Get a detailed, no-obligation quote within 24 hours'
-    },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Clock,
-      titl,
-  e: 'Quick Response',
-      descriptio,
-  n: 'We respond to all quote requests within 4 hours'
-    },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: CheckCircle,
-      titl,
-  e: 'Transparent Pricing',
-      descriptio,
-  n: 'Clear, detailed pricing with no hidden fees'
-    },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Star,
-      titl,
-  e: 'Expert Consultation',
-      descriptio,
-  n: 'Free consultation with our technology experts'
-    }
-  ];
-  const whyChooseUs = [
-  // TOD,
-  O: Add items
-],
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Users,
-      titl,
-  e: '50+ Successful Projects',
-      descriptio,
-  n: 'Proven track record of delivering results'
-    },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Award,
-      titl,
-  e: '300% Average ROI',
-      descriptio,
-  n: 'Our clients see significant returns on investment'
-    },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Clock,
-      titl,
-  e: '24/7 Support',
-      descriptio,
-  n: 'Round-the-clock support for all our clients'
-    },
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Star,
-      titl,
-  e: '99.9% Uptime',
-      descriptio,
-  n: 'Reliable, high-performance solutions'
-    }
-  ];
-  if (isSubmitted) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return (<div>Coming Soon</div>)
-  )
-          <React.Fragment>
-        <Navigation /></Navigation>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-          <div className="container mx-auto px-4 py-16 pt-24"></div>"
-            <div className="max-w-2xl mx-auto text-center"></div>"
-              <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6"></div>"
-                <CheckCircle className="w-10 h-10 text-green-400" /></CheckCircle>
-              </div>"
-              <h1 className="text-4xl font-bold text-white mb-6 neon-text"></h1>
-// Quote Request Submitted!
-          </h1>"
-              <p className="text-xl text-gray-300 mb-8"></p>
-                Thank you for your interest in our services. We've received your quote request;
-// and will get back to you within 24 hours with a detailed proposal.
-          </p>"
-              <div className="bg-slate-800/50 rounded-lg p-6 mb-8"></div>"
-                <h3 className="text-lg font-semibold text-white mb-4">What happens next?</h3>"
-                <div className="space-y-3 text-left"></div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">1</div>"
-                    <span className="text-gray-300">Our team will review your requirements</span>
-                  </div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">2</div>"
-                    <span className="text-gray-300">We'll prepare a detailed quote and proposal</span>
-                  </div>"
-                  <div className="flex items-center"></div>"
-                    <div className="w-6 h-6 bg-cyan-500 rounded-full flex items-center justify-center mr-3 text-sm font-bold text-white">3</div>"
-                    <span className="text-gray-300">Schedule a call to discuss your project</span>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center">
-                <a
-                  href="/contact" className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-// >
-          "
-          <Phone className="w-5 h-5 mr-2" /></Phone>
-// Contact Us
-          </a>
-                <a
-                  href="/" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-// >
-          "
-          <ArrowRight className="w-4 h-4 mr-2" /></ArrowRight>
-// Back to Home
-          </a>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
             </div>
           </div>
-        </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Request Quote?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Request Quote solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
       <Footer />
-    </React.Fragment>
-        <Footer /></Footer>
-      </React.Fragment>
-    ),
-  }
-  return (<div>Coming Soon</div>)
-  )
-          <React.Fragment>
-      <Navigation /></Navigation>"
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>"
-        <div className="container mx-auto px-4 py-16 pt-24"></div>
-          {/* Header */}"
-          <div className="text-center mb-16"></div>"
-            <h1 className="text-4xl,"
-  md: text-5xl font-bold text-white mb-6 neon-text"></h1>
-// Request a Quote
-          </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
-            Coming Soon,
-  </
-          </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Quote Form */}
-            <div className="lg:col-span-2">
-              <div className="bg-slate-800/50 rounded-lg p-8 border border-gray-700/50">
-                <h2 className="text-2xl font-bold text-white mb-6">Project Details</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Personal Information */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Full Name *
-          </label>
-                      <input
-type="text" name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-// required
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your full name"
-//                       />
-          </div>
-                    <div></div>"
-                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Email Address *
-          </label>
-                      <input
-type="email" name="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-// required
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your email"
-//                       />
-          </div>
-                  </div>"
-                  <div className="grid grid-cols-1,"
-  md: grid-cols-2 gap-6"></div>
-                    <div></div>"
-                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Company Name,
-          </label>
-                      <input
-type="text" name="company"
-                        value={formData.company}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your company name"
-// />
-          </div>
-                    <div></div>"
-                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Phone Number,
-          </label>
-                      <input
-type="tel" name="phone"
-                        value={formData.phone}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your phone number"
-// />
-          </div>
-                  </div>
-                  {/* Project Information */}
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Service Type *
-          </label>
-                    <select
-                      name="serviceType" value={formData.serviceType}
-                      onChange={handleInputChange}
-// required
-className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-//                     >
-          "
-          <option value="">Select a service type</option>
-                      {serviceTypes.map((type, index) => ()}
-          <option key={index} value={type}>{type}</option>
-                      ))}
-                    </select>
-                  </div>"
-                  <div className="grid grid-cols-1,"
-  md: grid-cols-2 gap-6"></div>
-                    <div></div>"
-                      <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Project Size,
-          </label>
-                      <select
-                        name="projectSize" value={formData.projectSize}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-// >
-          "
-          <option value="">Select project size</option>
-                        {projectSizes.map((size, index) => ()}
-          <option key={index} value={size}>{size}</option>
-                        ))}
-                      </select>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-300 mb-2">
-// Timeline;
-  </
-                      <select
-                        name="timeline" value={formData.timeline}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-// >
-          "
-          <option value="">Select timeline</option>
-                        {timelines.map((timeline, index) => ()}
-          <option key={index} value={timeline}>{timeline}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Budget Range;
-          </label>
-                    <select
-                      name="budget" value={formData.budget}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-// >
-          "
-          <option value="">Select budget range</option>
-                      {budgetRanges.map((range, index) => ()}
-          <option key={index} value={range}>{range}</option>
-                      ))}
-                    </select>
-                  </div>
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Project Description *
-          </label>
-                    <textarea
-                      name="description" value={formData.description}
-                      onChange={handleInputChange}
-// required
-                      rows={4}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Describe your project requirements and goals..."
-//                     />
-          </div>
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// Specific Requirements,
-          </label>
-                    <textarea
-                      name="requirements" value={formData.requirements}
-                      onChange={handleInputChange}
-                      rows={3}
-                      className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Any specific technical requirements, integrations, or constraints..."
-// />
-          </div>
-                  <button
-type="submit" disabled={isSubmitting}
-                    className="w-full cyber-button py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-// >
-                    {isSubmitting ? ()}"
-          <div className="flex items-center justify-center"></div>"
-                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-// Submitting...
-          </div>
-                    ) : ()
-// 'Request Quote'
-                    )}
-          </button>
-                </form>
-              </div>
-            </div>
-            {/* Sidebar */}"
-            <div className="space-y-8"></div>
-              {/* Benefits */}"
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
-                <h3 className="text-xl font-bold text-white mb-6">Why Request a Quote?</h3>"
-                <div className="space-y-4"></div>
-                  {benefits.map((benefit, index) => ()}"
-          <div key={index} className="flex items-start"></div>"
-                      <div className="w-8 h-8 bg-cyan-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>"
-                        <benefit.icon className="w-4 h-4 text-cyan-400" /></benefit>
-                      </div>
-                      <div></div>"
-                        <h4 className="text-sm font-semibold text-white mb-1">{benefit.title}</h4>"
-                        <p className="text-xs text-gray-300">{benefit.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Why Choose Us */}"
-              <div className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50"></div>"
-                <h3 className="text-xl font-bold text-white mb-6">Why Choose Us?</h3>"
-                <div className="space-y-4"></div>
-                  {whyChooseUs.map((item, index) => ()}"
-          <div key={index} className="flex items-start"></div>"
-                      <div className="w-8 h-8 bg-purple-500/20 rounded-lg flex items-center justify-center mr-3 flex-shrink-0"></div>"
-                        <item.icon className="w-4 h-4 text-purple-400" /></item>
-                      </div>
-                      <div></div>"
-                        <h4 className="text-sm font-semibold text-white mb-1">{item.title}</h4>"
-                        <p className="text-xs text-gray-300">{item.description}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-              {/* Contact Info */}"
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
-                <h3 className="text-xl font-bold text-white mb-4">Need Immediate Help?</h3>"
-                <p className="text-gray-300 text-sm mb-4"></p>
-// For urgent inquiries or immediate assistance, contact us directly.
-          </p>
-        </section>
-      </main>
-      <Footer /></Footer>
-    </div>
+    </>
   );
-}
+};
+
 export default RequestQuotePage;
-  </textarea>
-  </textarea>
-  </HTMLInputElement>
-  </textarea>
-  </textarea>
-  </a>
-  </a>
-  </HTMLInputElement>

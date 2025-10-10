@@ -55,15 +55,15 @@ const DemoPage: React.FC = () => {
               {demos.map((demo, index) => (
                 <div key={index} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
-                    <h3 className="text-xl font-bold text-white">{demo.title}</h3>
-                    <span className="text-cyan-400 text-sm font-semibold">{demo.duration}</span>
+                    <h3>demo.title</h3>
+                    <span>demo.duration</span>
                   </div>
-                  <p className="text-gray-300 mb-4">{demo.description}</p>
+                  <p>demo.description</p>
                   <ul className="space-y-2 mb-6">
                     {demo.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-2">
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm text-gray-300">{feature}</span>
+                        <span>feature</span>
                       </li>
                     ))}
                   </ul>

@@ -1,43 +1,41 @@
-import { useCallback } from 'react';
+// Analytics hook
+import { useState, useEffect } from 'react';
+
 interface AnalyticsEvent {
-    event_category: string,
-  event_label: string,
-  value?: number
-  }
+  name: string;
+  properties?: Record<string, any>;
 }
-export const useAnalytics = (;
-  const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {
-    ) => {
-  return (
-    $3
-  )
-  }
-    if (typeof window !== 'undefined' && 'gtag' in window) {}
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', eventName, parameters);
-    }
+
+export const useAnalytics = () => {
+  const [isEnabled, setIsEnabled] = useState(false);
+  const [events, setEvents] = useState<AnalyticsEvent[]>([]);
+
+  useEffect(() => {
+    // Initialize analytics
+    setIsEnabled(true);
   }, []);
-const trackPageView = useCallback((pagePath: string, pageTitle: string) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {}
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('config', 'GA_MEASUREMENT_ID', {
-    page_path: pagePath,
-        page_title: pageTitle,
-  }
-      })
+
+  const trackEvent = (event: AnalyticsEvent) => {
+    if (isEnabled) {
+      setEvents(prev => [...prev, event]);
+      // Send to analytics service
+      console.log('Analytics event:', event);
     }
-  }, []);
-const trackConversion = useCallback((conversionId: string, value?: number) => {
-    if (typeof window !== 'undefined' && 'gtag' in window) {}
-      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag?.('event', 'conversion', {
-    send_to: conversionId,
-        value: value,
-  }
-      })
-    }
-  }, []);
-return {
-    trackEvent,;
-    trackPageView,;
-    trackConversion,
-  }
-  }
-}
+  };
+
+  const trackPageView = (page: string) => {
+    trackEvent({
+      name: 'page_view',
+      properties: { page }
+    });
+  };
+
+  return {
+    trackEvent,
+    trackPageView,
+    isEnabled,
+    events
+  };
+};
+
+export default useAnalytics;

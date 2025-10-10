@@ -97,7 +97,7 @@ const TermsPage: React.FC = () => {
                   className="flex items-center space-x-2 p-3 rounded-lg hover:bg-cyan-500/10 transition-colors duration-300"
                 >
                   <section.icon className="w-5 h-5 text-cyan-400" />
-                  <span className="text-gray-300 text-sm">{section.title}</span>
+                  <span>section.title</span>
                 </a>
               ))}
             </div>
@@ -114,8 +114,8 @@ const TermsPage: React.FC = () => {
                     </div>
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-white mb-4">{section.title}</h2>
-                    <p className="text-gray-300 leading-relaxed text-lg">{section.content}</p>
+                    <h2>section.title</h2>
+                    <p>section.content</p>
                   </div>
                 </div>
               </div>
@@ -161,25 +161,21 @@ const TermsPage: React.FC = () => {
                 <Mail className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Email</div>
-                  <a href={`mailto:${contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
-                    {contactInfo.email}
-                  </a>
+                  <a>contactInfo.email</a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Phone</div>
-                  <a href={`tel:${contactInfo.phone}`} className="text-cyan-400 hover:text-cyan-300">
-                    {contactInfo.phone}
-                  </a>
+                  <a>contactInfo.phone</a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Globe className="w-6 h-6 text-cyan-400" />
                 <div>
                   <div className="text-white font-semibold">Address</div>
-                  <div className="text-gray-300">{contactInfo.address}</div>
+                  <div>contactInfo.address</div>
                 </div>
               </div>
             </div>

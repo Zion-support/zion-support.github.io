@@ -1,435 +1,159 @@
-import {Eye, EyeOff, Mail, Lock, User, Building, Phone, CheckCircle, Shield, Award, Globe} from 'lucide-react';
 'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const SignupPage: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    password: '',
-    confirmPassword: '',
-    agreeToTerms: false,
-    subscribeNewsletter: false
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (formData.password !== formData.confirmPassword) {
-      alert('Passwords do not match'),
-      return
-  }
-    if (!formData.agreeToTerms) {
-      alert('Please agree to the terms and conditions');
-    setIsLoading(true);
-    // Simulate signup process
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
-    // Redirect to dashboard or home page
-    window.location.href = '/';
   const features = [
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description:     ,
-$4},
-      icon: Award,
-      title: 'Proven Results',
-      description:       ,
-icon$5: Globe,
-      title: 'Global Support',
-      description:   ,
-$4];
-  const benefits = [
-    'Free 14-day trial',
-    'No setup fees',
-    '24/7 expert support',
-    'Custom integrations',
-    'Scalable solutions',
-    'Regular updates'
-  return (
-    <React.Fragment>
-    <div>Coming Soon</div>
-  );
-}
-  const [formData, setFormData] = useState({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  firstNam,
-  e: '',
-    lastNam,
-  e: '',
-    emai,
-  l: '',
-    compan,
-  y: '',
-    phon,
-  e: '',
-    passwor,
-  d: '',
-    confirmPasswor,
-  d: '',
-    agreeToTerm,
-  s: false,
-    subscribeNewslette,
-  r: false,)
-  });
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-const handleInputChange = (e: React.ChangeEvent,)
-          <HTMLInputElement>) => {/* TODO: Fix JSX expression */}
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       ...prev,
-      [name]: type === 'checkbox' ? checked : value;)
-    }));
-  }
-  const handleSubmit = async (e: React.FormEvent) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    e.preventDefault();
-    if (formData.password !== formData.confirmPassword) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      alert('Passwords do not match');
-      return;
-    }
-    if (!formData.agreeToTerms) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      alert('Please agree to the terms and conditions');
-    setIsLoading(true);
-    // Simulate signup process;
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    setIsLoading(false);
-    // Redirect to dashboard or home page;
-    window.location.href = '/';
-  const features = [
-  // TOD,
-  O: Add items
-],
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ico,
-  n: Shield,
-      titl,
-  e: 'Enterprise Security',
-      descriptio,
-  n: 'Bank-level security with advanced encryption and compliance'
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-icon: Award,
-      title: 'Proven Results',
-      description: '300% average ROI and 95% process automation for our clients',
-const PagePage: React.FC = () => {
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
+      <Helmet>
+        <title>Signup - Zion Tech Group</title>
+        <meta name="description" content="Advanced Signup solutions for businesses" />
+        <meta name="keywords" content="AI, signup, artificial intelligence, business solutions" />
+      </Helmet>
       <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center py-12">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Signup Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50">
-              <div className="text-center mb-8">
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text">
-                  Create Your Account;
-  </
-                <p className="text-gray-300">
-                  Join thousands of businesses transforming with AI and IT solutions;
-  </
-              </div>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-300 mb-2">
-                      First Name,
-  </
-                    <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input
-                        type="text"
-                        name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        required
-                        className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                        placeholder="Enter your first name"
-                      />
-                      Last Name
-                        name="lastName"
-                        value={formData.lastName}
-                        placeholder="Enter your last name"
-                    Email Address
-                    <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      placeholder="Enter your email"
-                    Company Name
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      name="company"
-                      value={formData.company}
-                      placeholder="Enter your company name"
-                    Phone Number
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      placeholder="Enter your phone number"
-                    Password
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type={showPassword ? 'text' : 'password'}
-                      name="password"
-                      value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                      placeholder="Create a password"
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
-                      {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
-                    Confirm Password
-                      type={showConfirmPassword ? 'text' : 'password'}
-                      name="confirmPassword"
-                      value={formData.confirmPassword}
-                      placeholder="Confirm your password"
-                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="space-y-4">
-                  <label className="flex items-start">
-                      type="checkbox"
-                      name="agreeToTerms"
-            {/* Left Side - Signup Form */}
-            <div className="bg-slate-800/50 rounded-2xl p-8 border border-gray-700/50"></div>"
-              <div className="text-center mb-8"></div>"
-                <h1 className="text-3xl font-bold text-white mb-2 neon-text"></h1>
-// Create Your Account;
-          </h1>"
-                <p className="text-gray-300"></p>
-// Join thousands of businesses transforming with AI and IT solutions;
-          </p>
-              </div>"
-              <form onSubmit={handleSubmit} className="space-y-6"></form>"
-                <div className="grid grid-cols-1,"
-  md: grid-cols-2 gap-4"></div>
-                  <div></div>"
-                    <label className="block text-sm font-medium text-gray-300 mb-2"></label>
-// First Name,
-          </label>
-                    <div className="relative">
-                      <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <input
-type="text" name="firstName"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-// required
-className="w-full pl-10 pr-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Enter your first name"
-/>
-                      Last Name,
-                        name="lastName" value={formData.lastName}
-                        placeholder="Enter your last name" Email Address;
-          <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="email" name="email"
-                      value={formData.email}
-                      placeholder="Enter your email" Company Name;
-                    <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      name="company" value={formData.company}
-                      placeholder="Enter your company name" Phone Number;
-                    <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type="tel" name="phone"
-                      value={formData.phone}
-                      placeholder="Enter your phone number" Password;
-                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      type={showPassword ? 'text' : 'password'}
-                      name="password" value={formData.password}
-                      className="w-full pl-10 pr-12 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20" placeholder="Create a password"
-                    <button
-                      type="button" onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-// >
-                      {showPassword ?}"
-          <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                    </button>
-Confirm Password;
-                      type={showConfirmPassword ? 'text' : 'password'}
-                      name="confirmPassword" value={formData.confirmPassword}
-                      placeholder="Confirm your password" onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
-                <div className="space-y-4">
-                  <label className="flex items-start">
-                      type="checkbox" name="agreeToTerms"
-                      checked={formData.agreeToTerms}
-                      className="w-4 h-4 text-cyan-400 bg-slate-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2 mt-1"
-                    <span className="ml-2 text-sm text-gray-300">
-                      I agree to the{' '}
-                      <a href="/terms" className="text-cyan-400 hover: text-cyan-300">
-                        Terms of Service,
-  </{' '}
-                      and{' '}
-                      <a href="/privacy" className="text-cyan-400 hover: text-cyan-300">
-                        Privacy Policy,
-  </
-                    </span>
-                      name="subscribeNewsletter"
-                      checked={formData.subscribeNewsletter}
-                      Subscribe to our newsletter for updates and tips
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                  {isLoading ? (
-                    <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Creating Account...
-                  ) : (
-                    'Create Account'
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Signup
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered signup solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
                   )}
-              </form>
-              <div className="mt-8 text-center">
-                  Already have an account?{' '}
-                  <a
-                    href="/login"
-                    className="text-cyan-400 hover:text-cyan-300 font-medium transition-colors"
-                    Sign in here
-            {/* Right Side - Features and Benefits */}
-            <div className="space-y-8">
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text">
-                  Transform Your Business Today;
-  </
-                <p className="text-xl text-gray-300 mb-8">
-                  Join thousands of businesses already using our AI and IT solutions 
-                  to achieve unprecedented growth and efficiency.
-              <div className="space-y-6">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
-                      <feature.icon className="w-6 h-6 text-cyan-400" />
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                      <p className="text-gray-300">{feature.description}</p>
-                ))}
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6">
-                <h3 className="text-lg font-semibold text-white mb-4">
-                  What You Get:
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                  {benefits.map((benefit, index) => (
-                    <div key={index} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {benefit}
-              <div className="text-center">
-                <p className="text-gray-400 text-sm mb-4">
-                  Trusted by 1000+ companies worldwide
-                <div className="flex justify-center items-center space-x-6 opacity-60">
-                  <div className="text-2xl font-bold text-white">Microsoft</div>
-                  <div className="text-2xl font-bold text-white">Google</div>
-                  <div className="text-2xl font-bold text-white">Amazon</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Signup?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Signup solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
       <Footer />
-    </React.Fragment>
-// Terms of Service;
-          </a>{' '}
-                      and{' '}"
-                      <a href="/privacy" className="text-cyan-400,"
-  hover: text-cyan-300"></a>
-// Privacy Policy,
-          </a>
-                    </span>
-name="subscribeNewsletter" checked={formData.subscribeNewsletter}
-                      Subscribe to our newsletter for updates and tips;
-                  type="submit" disabled={isLoading}
-                  className="w-full cyber-button py-3 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
-                  {isLoading ? ()}
-          <div className="flex items-center justify-center">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-Creating Account...
-                  ) : ()
-// 'Create Account'
-                  )}
-          </form>"
-              <div className="mt-8 text-center"></div>
-                  Already have an account?{' '}
-                  <a
-                    href="/login" className="text-cyan-400 hover: text-cyan-300 font-medium transition-colors"
-Sign in here,
-            {/* Right Side - Features and Benefits */}"
-            <div className="space-y-8"></div>"
-                <h2 className="text-3xl font-bold text-white mb-4 neon-text"></h2>
-// Transform Your Business Today;
-          </h2>"
-                <p className="text-xl text-gray-300 mb-8"></p>
-Join thousands of businesses already using our AI and IT solutions;
-                  to achieve unprecedented growth and efficiency."
-              <div className="space-y-6"></div>
-                {features.map((feature, index) => ()}"
-          <div key={index} className="flex items-start"></div>"
-                    <div className="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0"></div>"
-                      <feature.icon className="w-6 h-6 text-cyan-400" /></feature>"
-                      <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>"
-                      <p className="text-gray-300">{feature.description}</p>
-                ))}"
-              <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-lg p-6"></div>"
-                <h3 className="text-lg font-semibold text-white mb-4"></h3>
-                  What You,
-  Get:
-                </h3>"
-                <div className="grid grid-cols-1,"
-  md:grid-cols-2 gap-2"></div>
-                  {benefits.map((benefit, index) => ()}"
-          <div key={index} className="flex items-center text-sm text-gray-300"></div>"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /></CheckCircle>
-                      {benefit}"
-<div className="text-center"></div>"
-                <p className="text-gray-400 text-sm mb-4"></p>
-                  Trusted by 1000+ companies worldwide;"
-                <div className="flex justify-center items-center space-x-6 opacity-60"></div>"
-                  <div className="text-2xl font-bold text-white">Microsoft</div>"
-                  <div className="text-2xl font-bold text-white">Google</div>"
-                  <div className="text-2xl font-bold text-white">Amazon</div>
-      <Footer />
-    </div>
+    </>
   );
+};
+
 export default SignupPage;
-  </a>
-  </div>
-  </p>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </p>
-  </div>
-  </div>
-  </div>
-  </a>
-  </label>
-  </div>
-  </div>
-  </div>
-  </label>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </HTMLInputElement>
-  </HTMLInputElement>

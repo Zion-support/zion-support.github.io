@@ -145,7 +145,7 @@ const SitemapPage: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16">
             <div className="cyber-card-enhanced p-6 text-center">
               <Map className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
-              <div className="text-2xl font-bold text-white mb-2">{totalPages}</div>
+              <div>totalPages</div>
               <div className="text-gray-300">Total Pages</div>
             </div>
             <div className="cyber-card-enhanced p-6 text-center">
@@ -171,7 +171,7 @@ const SitemapPage: React.FC = () => {
               <div key={categoryIndex} className="cyber-card-enhanced p-8">
                 <div className="flex items-center mb-6">
                   <category.icon className="w-8 h-8 text-cyan-400 mr-3" />
-                  <h2 className="text-2xl font-bold text-white">{category.title}</h2>
+                  <h2>category.title</h2>
                   <span className="ml-4 px-3 py-1 bg-slate-700 text-cyan-400 text-sm font-semibold rounded">
                     {category.pages.length} pages
                   </span>
@@ -180,9 +180,7 @@ const SitemapPage: React.FC = () => {
                   {category.pages.map((page, pageIndex) => (
                     <div key={pageIndex} className="bg-slate-800 rounded-lg p-4 hover:bg-slate-700 transition-colors duration-300">
                       <div className="flex items-start justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                          {page.name}
-                        </h3>
+                        <h3>page.name</h3>
                         <a
                           href={page.url}
                           className="text-cyan-400 hover:text-cyan-300 transition-colors"
@@ -191,7 +189,7 @@ const SitemapPage: React.FC = () => {
                           <ArrowRight className="w-4 h-4" />
                         </a>
                       </div>
-                      <p className="text-gray-300 text-sm mb-3">{page.description}</p>
+                      <p>page.description</p>
                       <a
                         href={page.url}
                         className="text-cyan-400 hover:text-cyan-300 text-sm font-medium flex items-center"

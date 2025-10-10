@@ -2,16 +2,12 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
+interface Props {children: ReactNode;
+  fallback?: ReactNode}
 
-interface State {
-  hasError: boolean;
+interface State {hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -32,19 +28,13 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo })
   }
 
-  handleReload = () => {
-    window.location.reload();
-  }
+  handleReload = () => {window.location.reload()}
 
-  handleGoHome = () => {
-    window.location.href = '/';
-  }
+  handleGoHome = () => {window.location.href = '/'}
 
-  render() {
-    if (this.state.hasError) {
+  render() {if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
-      }
+        return this.props.fallback}
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">

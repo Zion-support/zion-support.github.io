@@ -1,13 +1,11 @@
 'use client';
 import React, { useEffect, useCallback } from 'react';
 
-interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+interface PerformanceOptimizerProps {children: React.ReactNode;
   enableImageOptimization?: boolean;
   enableLazyLoading?: boolean;
   enablePreloading?: boolean;
-  enableCodeSplitting?: boolean;
-}
+  enableCodeSplitting?: boolean}
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   children,
@@ -15,8 +13,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableLazyLoading = true,
   enablePreloading = true,
   enableCodeSplitting = true
-}) => {
-  // Image optimization
+}) => {// Image optimization
   useEffect(() => {
     if (!enableImageOptimization) return;
 
@@ -26,8 +23,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const image = img as HTMLImageElement;
         if (image.dataset.src) {
           image.src = image.dataset.src;
-          image.removeAttribute('data-src');
-        }
+          image.removeAttribute('data-src')}
       })
     }
 
@@ -37,16 +33,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableImageOptimization]);
 
   // Lazy loading
-  useEffect(() => {
-    if (!enableLazyLoading) return;
+  useEffect(() => {if (!enableLazyLoading) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const target = entry.target as HTMLElement;
-            target.classList.add('loaded');
-          }
+            target.classList.add('loaded')}
         })
       },
       { threshold: 0.1 } )
@@ -58,8 +52,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [enableLazyLoading]);
 
   // Preloading
-  useEffect(() => {
-    if (!enablePreloading) return;
+  useEffect(() => {if (!enablePreloading) return;
 
     const preloadCriticalResources = () => {
       // Preload critical CSS
@@ -76,8 +69,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       criticalFont.as = 'font';
       criticalFont.type = 'font/woff2';
       criticalFont.crossOrigin = 'anonymous';
-      document.head.appendChild(criticalFont);
-    }
+      document.head.appendChild(criticalFont)}
 
     preloadCriticalResources();
   }, [enablePreloading]);

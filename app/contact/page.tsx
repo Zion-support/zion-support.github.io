@@ -42,11 +42,7 @@ const ContactPage: React.FC = () => {
         service: '',
         message: ''
       })
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    } catch (error) {setSubmitStatus('error')} finally {setIsSubmitting(false)}
   }, []);
 
   return (
@@ -249,12 +245,7 @@ const ContactPage: React.FC = () => {
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    {isSubmitting ? (
+                  <button>isSubmitting ? (
                       <>
                         <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                         <span>Sending...</span>
@@ -264,8 +255,7 @@ const ContactPage: React.FC = () => {
                         <Send className="w-5 h-5" />
                         <span>Send Message</span>
                       </>
-                    )}
-                  </button>
+                    )</button>
                 </form>
               </div>
             </div>

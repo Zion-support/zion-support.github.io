@@ -1,155 +1,159 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {/* TODO: Fix JSX expression */}
-}
-interface State {/* TODO: Fix JSX expression */}
-}
-class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression */}
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    this.maxRetries = props.maxRetries || 3;
-  }
-  static getDerivedStateFromError(erro)
-  r: Error): State {/* TODO: Fix JSX expression */}`
-  d: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-      retryCoun,
-  t: 0,
-    }
-  }
-  componentDidCatch(erro,
-  r: Error, errorInf)
-  o: ErrorInfo) {/* TODO: Fix JSX expression */}
-    });
- cursor/analyze-improve-and-deploy-application-cde4;
-    // Log error to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-    }
-    // Call custom error handler if provided;
-    if (this.props.onError) {/* TODO: Fix JSX expression */}
-    }
- cursor/analyze-improve-and-deploy-application-cde4;
-    // Enhanced error reporting;
-    if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
-    }
-  }
-  private reportError = (erro,
-  r: Error, errorInf)
-  o: ErrorInfo) => {/* TODO: Fix JSX expression */}
-  }
-  private handleRetry = () => {/* TODO: Fix JSX expression */}
-      }));
-    }
-    // Enhanced error reporting logic;
-    const errorReport = {/* TODO: Fix JSX expression */}
-    }
-    // Log to console in development;
-    if (process.env.NODE_ENV === 'development') {/* TODO: Fix JSX expression */}
-    }
-    // Send to error reporting service (implement as needed)
-    try {/* TODO: Fix JSX expression */}
-  s: {// 'Content-Type': 'application/json'},
-      //   bod,
-  y: JSON.stringify(errorReport)
-      // });
-    } catch (reportingError) {/* TODO: Fix JSX expression */}
-    }
-  }
-  private getUserId = (): string | null => {/* TODO: Fix JSX expression */}
-  }
-  private getSessionId = (): string => {/* TODO: Fix JSX expression */}`
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('sessionId', sessionId);
-    }
-    return sessionId;
-  }
-  private handleRetry = () => {/* TODO: Fix JSX expression */}
-  o: undefined });
-  }
-  private handleReload = () => {/* TODO: Fix JSX expression */}
-  }
-  private handleGoHome = () => {/* TODO: Fix JSX expression */}
-  }
-  private copyErrorDetails = () => {/* TODO: Fix JSX expression */}
-    }
-    navigator.clipboard.writeText(JSON.stringify(errorDetails, null, 2))
-      .then(() => {/* TODO: Fix JSX expression */}
-          }, 2000);
-        }
-      })
-      .catch(() => {/* TODO: Fix JSX expression */}
-      });
-  }
-  render() {/* TODO: Fix JSX expression */}
-      }
-      return (<div className="error-boundary"></div>
-          <h2>Something went wrong</h2>
-          <p>Error,
-  ID: {// this.state.errorId}</p>
-          {/* TODO: Fix JSX expression */}
-            <button onClick={this.handleRetry}></button>)
-              Retry ({this.maxRetries - this.state.retryCount} attempts left)
-            </button>
-          )}        </div>
-          )}
- cursor/analyze-improve-and-deploy-application-cde4;
-      // Custom fallback UI;
-      if (this.props.fallback) {/* TODO: Fix JSX expression */}
-      }
-      const { retryCount, error, errorId } = this.state;
-      const canRetry = retryCount < this.maxRetries;
-      return ("
-        <div className="min-h-screen flex items-center justify-center bg-gray-50"></div>"
-          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>"
-            <div className="text-6xl mb-4">⚠️</div>"
-            <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
-              Oops! Something went wrong;
-            </h1>"
-            <p className="text-gray-600 mb-6"></p>
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-            </p>"
-            <div className="space-y-4"></div>
-              {/* TODO: Fix JSX expression */}
-                  onClick={this.handleRetry}"
-                  className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover:bg-indigo-700 transition-colors"
-                >)
-                  Try Again ({this.maxRetries - retryCount} attempts left)
-                </button>
-              )}
-              <button></button>
-                onClick={this.handleReload}"
-                className="w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-semibold,"
-  hover: bg-indigo-700 transition-colors"
-              >
-                Try Again,
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
               </button>
-              <button></button>
-                onClick={this.handleGoHome}"
-                className="w-full bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold,"
-  hover: bg-gray-300 transition-colors"
-              >
-                Go Home,
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
               </button>
             </div>
-            {/* TODO: Fix JSX expression */}
-                  {error.toString()}
-                  {this.state.errorInfo?.componentStack}
-                </pre>
-                <button></button>"
-                  id="copy-error-details"
-                  onClick={this.copyErrorDetails}"
-                  className="mt-2 text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded,"
-  hover: bg-gray-300"
-                >
-                  Copy Error Details,
-                </button>
-              </details>
-            )}
           </div>
-        </div>
-      );
-    }
-    return this.props.children;
-  }
-}
-export default EnhancedErrorBoundary;
-"`
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default ComponentsPage;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const DataAnalyticsBiPage: React.FC = () => {
-  return (
+const DataAnalyticsBiPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Data Analytics & BI - Zion Tech Group</title>
@@ -110,7 +109,6 @@ const DataAnalyticsBiPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
+  )}
 
 export default DataAnalyticsBiPage;

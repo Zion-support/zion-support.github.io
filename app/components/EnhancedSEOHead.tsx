@@ -2,15 +2,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOHeadProps {
-  title: string;
+interface SEOHeadProps {title: string;
   description: string;
   keywords?: string[]
   canonicalUrl?: string;
   structuredData?: any;
   ogImage?: string;
-  twitterCard?: string;
-}
+  twitterCard?: string}
 
 const SEOHead: React.FC<SEOHeadProps> = ({
   title,
@@ -26,7 +24,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      <title>fullTitle</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <link rel="canonical" href={canonicalUrl} />
@@ -52,9 +50,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        <script>JSON.stringify(structuredData)</script>
       )}
     </Helmet>
   );

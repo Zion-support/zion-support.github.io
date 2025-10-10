@@ -1,210 +1,159 @@
 'use client';
-/**;
- * Comprehensive Monitoring Utility;
- * Real-time application monitoring, performance tracking, and error reporting;
- */;
 import React from 'react';
-import { performanceConfig } from '../../performance.config';
-export interface PerformanceMetrics {
-    lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number
-  }
-}
-export interface ErrorReport {
-    message: string,
-  stack?: string;
-  component?: string;
-  timestamp: number,
-  userAgent: string,
-  url: string,
-  }
-}
-class MonitoringService {}
-  private metrics: PerformanceMetrics = {}
-  private errors: ErrorReport[] = []
-  private observer: PerformanceObserver | null = null,
-  constructor() {
-    if (typeof window !== 'undefined') {
-      this.initializeMonitoring()
-  }
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }
-  private initializeMonitoring(): void {
-    // Monitor Web Vitals;
-    this.monitorWebVitals();
-    // Monitor Long Tasks;
-    this.monitorLongTasks();
-    // Monitor Resource Loading;
-    this.monitorResourceTiming();
-    // Global Error Handler;
-    this.setupErrorHandling()
-  }
-  }
-  private monitorWebVitals(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        // Largest Contentful Paint;
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-  }
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number }
-          this.metrics.lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
-          this.reportMetric('lcp', this.metrics.lcp);
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-        // First Input Delay;
-        const fidObserver = new PerformanceObserver((list) => {
-    const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            this.metrics.fid = (entry as any).processingStart - entry.startTime,
-            this.reportMetric('fid', this.metrics.fid)
-  }
-          })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
-        // Cumulative Layout Shift;
-        let clsValue = 0;
-        const clsObserver = new PerformanceObserver(list => {
-    const entries = list.getEntries();
-          entries.forEach((entry: PerformanceEntry) => {
-            if (!(entry as any).hadRecentInput) {
-    // Keep HEAD version
-              this.metrics.cls = clsValue,
-              this.reportMetric('cls', clsValue)
-  }
-            }
-          })
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-        // First Contentful Paint;
-        const fcpObserver = new PerformanceObserver(list => {
-    const entries = list.getEntries();
-          entries.forEach(entry => {
-            this.metrics.fcp = entry.startTime;
-            this.reportMetric('fcp', entry.startTime)
-  }
-          })
-        })
-        fcpObserver.observe({ entryTypes: ['paint'] })
-      } catch (error) {
-    // Keep HEAD version
-  }
-    }
-  }
-  private monitorLongTasks(): void {
-    if ('PerformanceObserver' in window && performanceConfig.monitoring.enableLongTaskDetection) {
-      try {
-        const longTaskObserver = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-    // Keep HEAD version
-  }
-        })
-        longTaskObserver.observe({ entryTypes: ['longtask'] })
-      } catch (error) {
-    // Long task API might not be available
-  }
-      }
-    }
-  }
-  private monitorResourceTiming(): void {
-    if ('PerformanceObserver' in window) {
-      try {
-        const resourceObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries();
-    // Keep HEAD version
-  }
-          })
-        })
-        resourceObserver.observe({ entryTypes: ['resource'] })
-      } catch (_error) {
-    // Keep HEAD version
-  }
-    }
-  }
-  private setupErrorHandling(): void {
-    // Global error handler;
-    window.addEventListener('error', (event) => {
-      this.logError({
-        message: event.message,
-        stack: event.error?.stack,
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
-  }
-      })
-    })
-    // Unhandled promise rejection handler;
-    window.addEventListener('unhandledrejection', (event) => {
-      this.logError({}
-        message: `Unhandled Promise Rejection: ${event.reason}`,;
-        timestamp: Date.now(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-      })
-    })
-  }
-  private reportMetric(name: string, value: number): void {
-    // Sample rate,
-    if (Math.random() > performanceConfig.monitoring.sampleRate) {
-      return
-  }
-    }
-    const thresholds = performanceConfig.webVitals[name as keyof typeof performanceConfig.webVitals]
-    if (thresholds) {
-    const rating = value <= thresholds.good ? 'good' : value <= thresholds.needsImprovement ? 'needs-improvement' : 'poor';
-    // Keep HEAD version;
-    // Send to analytics (if configured);
-    if (typeof (window as any).gtag === 'function') {
-      (window as any).gtag('event', name, {
-        value: Math.round(name === 'cls' ? value * 1000 : value),
-        event_category: 'Web Vitals'
-  }
-      })
-    }
-  }
-  public logError(error: ErrorReport): void {
-    this.errors.push(error)
-    // Keep only last 50 errors,
-    if (this.errors.length > 50) {
-      this.errors = this.errors.slice(-50)
-  }
-    }
-    // Send to error tracking service (if configured);
-  }
-  public getMetrics(): PerformanceMetrics {}
-    return { ...this.metrics }
-  }
-  public getErrors(): ErrorReport[] {
-    return [...this.errors]
-  }
-  }
-  public clearErrors(): void {
-    this.errors = []
-  }
-  }
-  public measureMemory(): void {
-    if ('memory' in performance && performanceConfig.monitoring.enableMemoryMonitoring) {}
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory;
-      if (memory) {
-    // Keep HEAD version
-  }
-      }
-    }
-  }
-  public measureNavigationTiming(): void {
-    if ('performance' in window && 'getEntriesByType' in performance) {
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigation) {
-    // Keep HEAD version
-  }
-      }
-    }
-  }
-}
-// Singleton instance;
-const monitoring = new MonitoringService();
-export default monitoring;
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

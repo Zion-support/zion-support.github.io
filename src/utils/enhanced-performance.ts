@@ -1,419 +1,159 @@
-/**
- * Enhanced Performance Monitoring
- * Comprehensive performance tracking and optimization utilities
- */
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
-/**
- * Performance Observer Wrapper
- */
-export class PerformanceMonitor {
-    private metrics: Map<string, number[]> = new Map();
-  private observers: PerformanceObserver[] = [],
-  
-  constructor() {
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      this.initializeObservers()
-  }
-  }
-  
-  /**
-   * Initialize performance observers
-   */
-  private initializeObservers(): void {
-    // Monitor navigation timing
-    if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {
-      const navObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.recordMetric('navigation', entry.duration)
-  }
-      });
-      navObserver.observe({ entryTypes: ['navigation'] });
-      this.observers.push(navObserver);
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    
-    // Monitor resource timing
-    if (PerformanceObserver.supportedEntryTypes.includes('resource')) {
-    const resourceObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.recordMetric('resource', entry.duration)
-  }
-      });
-      resourceObserver.observe({ entryTypes: ['resource'] });
-      this.observers.push(resourceObserver);
-    }
-    
-    // Monitor paint timing
-    if (PerformanceObserver.supportedEntryTypes.includes('paint')) {
-    const paintObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          this.recordMetric(entry.name, entry.startTime)
-  }
-      });
-      paintObserver.observe({ entryTypes: ['paint'] });
-      this.observers.push(paintObserver);
-    }
-    
-    // Monitor largest contentful paint
-    if (PerformanceObserver.supportedEntryTypes.includes('largest-contentful-paint')) {
-    const lcpObserver = new PerformanceObserver((list) => {
-        const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1];
-        if (lastEntry) {
-          this.recordMetric('lcp', lastEntry.startTime)
-  }
-      });
-      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-      this.observers.push(lcpObserver);
-    }
-    
-    // Monitor first input delay
-    if (PerformanceObserver.supportedEntryTypes.includes('first-input')) {
-    const fidObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          const fidEntry = entry as PerformanceEventTiming;
-          const fid = fidEntry.processingStart - fidEntry.startTime;
-          this.recordMetric('fid', fid)
-  }
-      });
-      fidObserver.observe({ entryTypes: ['first-input'] });
-      this.observers.push(fidObserver);
-    }
-    
-    // Monitor layout shift
-    if (PerformanceObserver.supportedEntryTypes.includes('layout-shift')) {
-    let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          const layoutShiftEntry = entry as LayoutShift;
-          if (!layoutShiftEntry.hadRecentInput) {
-            clsValue += layoutShiftEntry.value;
-            this.recordMetric('cls', clsValue)
-  }
-        }
-      });
-      clsObserver.observe({ entryTypes: ['layout-shift'] });
-      this.observers.push(clsObserver);
-    }
-  }
-  
-  /**
-   * Record a metric
-   */
-  private recordMetric(name: string, value: number): void {
-    const values = this.metrics.get(name) || []
-    values.push(value),
-    this.metrics.set(name, values)
-  }
-  
-  /**
-   * Get Web Vitals metrics
-   */
-  getWebVitals(): Partial<PerformanceMetrics> {
-    return {
-      fcp: this.getMetric('first-contentful-paint'),
-      lcp: this.getMetric('lcp'),
-      fid: this.getMetric('fid'),
-      cls: this.getMetric('cls'),
-      ttfb: this.getTTFB()}
-  }
-  
-  /**
-   * Get a specific metric
-   */
-  getMetric(name: string): number {
-    const values = this.metrics.get(name)
-    if (!values || values.length === 0) return 0,
-    
-    // Return the most recent value
-    return values[values.length - 1]
-  }
-  
-  /**
-   * Get average of a metric
-   */
-  getAverageMetric(name: string): number {
-    const values = this.metrics.get(name)
-    if (!values || values.length === 0) return 0,
-    
-    const sum = values.reduce((acc, val) => acc + val, 0);
-    return sum / values.length
-  }
-  
-  /**
-   * Get Time to First Byte
-   */
-  private getTTFB(): number {
-    if (typeof window === 'undefined') return 0;
-    
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (!navigation) return 0;
-    
-    return navigation.responseStart - navigation.requestStart
-  }
-  
-  /**
-   * Mark a custom timing
-   */
-  mark(name: string): void {
-    if (typeof performance !== 'undefined' && performance.mark) {
-      performance.mark(name)
-  }
-  }
-  
-  /**
-   * Measure between two marks
-   */
-  measure(name: string, startMark: string, endMark: string): number {
-    if (typeof performance === 'undefined' || !performance.measure) return 0,
-    
-    try {
-      performance.measure(name, startMark, endMark);
-      const measures = performance.getEntriesByName(name, 'measure');
-      return measures[measures.length - 1]?.duration || 0
-  } catch (error) {
-    //       // console.error('Performance measurement failed:', error);
-      return 0
-  }
-  }
-  
-  /**
-   * Clear all metrics
-   */
-  clear(): void {
-    this.metrics.clear();
-    if (typeof performance !== 'undefined' && performance.clearMarks) {
-      performance.clearMarks();
-      performance.clearMeasures()
-  }
-  }
-  
-  /**
-   * Get performance report
-   */
-  getReport(): PerformanceReport {
-    const webVitals = this.getWebVitals();
-    
-    return {
-      webVitals,
-      resources: this.getResourceStats(),
-      memory: this.getMemoryStats(),
-      timestamp: Date.now()}
-  }
-  
-  /**
-   * Get resource loading statistics
-   */
-  private getResourceStats(): ResourceStats {
-    if (typeof performance === 'undefined') {
-      return { total: 0, scripts: 0, styles: 0, images: 0, fonts: 0 }
-    }
-    
-    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-    
-    return {
-      total: resources.length,
-      scripts: resources.filter(r => r.initiatorType === 'script').length,
-      styles: resources.filter(r => r.initiatorType === 'css' || r.initiatorType === 'link').length,
-      images: resources.filter(r => r.initiatorType === 'img').length,
-      fonts: resources.filter(r => r.initiatorType === 'font').length}
-  }
-  
-  /**
-   * Get memory statistics
-   */
-  private getMemoryStats(): MemoryStats | null {
-    if (typeof performance === 'undefined' || !('memory' in performance)) {
-      return null
-  }
-    
-    const memory = (performance as PerformanceWithMemory).memory;
-    
-    return {
-      usedJSHeapSize: memory.usedJSHeapSize,
-      totalJSHeapSize: memory.totalJSHeapSize,
-      jsHeapSizeLimit: memory.jsHeapSizeLimit}
-  }
-  
-  /**
-   * Disconnect all observers
-   */
-  disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = []
-  }
-}
+  ];
 
-// Types
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-import type { 
-  PerformanceReport, 
-  ResourceStats, 
-  MemoryStats, 
-  PerformanceWithMemory, 
-  LayoutShift 
-} from '../types/app.types';
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-// Utility Functions
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-/**
- * Measure function execution time
- */
-export function measureExecutionTime<T extends (...args: unknown[]) => any>(
-  fn: T,
-  label?: string
-): T {
-  return ((...args: Parameters<T>): ReturnType<T> => {
-    const start = performance.now()
-    const result = fn(...args)
-    const end = performance.now(),
-    
-    // console.log(`Function ${fn.name} took ${(end - start).toFixed(2)}ms`);
-    
-    return result;
-  }) as T;
-}
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-/**
- * Debounce function
- */
-export function debounce<T extends (...args: unknown[]) => any>(
-  fn: T,
-  delay: number
-): (...args: Parameters<T>) => void {
-    let timeoutId: NodeJS.Timeout | null = null,
-  
-  return (...args: Parameters<T>) => {
-    if (timeoutId) {
-      clearTimeout(timeoutId)
-  }
-    
-    timeoutId = setTimeout(() => {
-    fn(...args)
-  }, delay);
-  }
-}
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-/**
- * Throttle function
- */
-export function throttle<T extends (...args: unknown[]) => any>(
-  fn: T,
-  delay: number
-): (...args: Parameters<T>) => void {
-    let lastCall = 0
-  return (...args: Parameters<T>) => {
-    const now = Date.now()
-    if (now - lastCall >= delay) {
-      lastCall = now,
-      fn(...args)
-  }
-  }
-}
-
-/**
- * Request idle callback wrapper
- */
-export function runWhenIdle(callback: () => void, timeout = 1000): void {
-    if (typeof window === 'undefined') {
-    callback();
-    return
-  }
-  
-  if ('requestIdleCallback' in window) {
-    window.requestIdleCallback(callback, { timeout });
-  } else {
-    setTimeout(callback, 0)
-  }
-}
-
-/**
- * Default performance monitor instance
- */
-export const performanceMonitor = new PerformanceMonitor();
-
-export default PerformanceMonitor;
-
-import type { PerformanceMetrics } from '../../app/utils/performanceOptimizer';
-import type {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-/**
- * Enhanced Performance Monitoring;
- * Comprehensive performance tracking and optimization utilities;
- */
- * Performance Observer Wrapper;
-export class PerformanceMonitor {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  private,
-  metrics: Map,
-          <string, number[]> = new Map();
-  private,
-  observers: PerformanceObserver[] = [],
-  constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.initializeObservers();
-    }
-   * Initialize performance observers;
-  private initializeObservers(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    // Monitor navigation timing;
-    if (PerformanceObserver.supportedEntryTypes.includes('navigation')) {for (const entry of list.getEntries()) {}
-  // TOD,
-  O: Add content,
-}
-          this.recordMetric('navigation', entry.duration);
-      });
-      navObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['navigation'] });
-      this.observers.push(navObserver);
-          this.recordMetric('resource', entry.duration);
-      resourceObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['resource'] });
-      this.observers.push(resourceObserver);
-          this.recordMetric(entry.name, entry.startTime);
-      paintObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['paint'] });
-      this.observers.push(paintObserver);
-          const fidEntry = entry as PerformanceEventTiming;
-          const fid = fidEntry.processingStart - fidEntry.startTime;
-          this.recordMetric('fid', fid);
-      fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-      this.observers.push(fidObserver);
-// Types;
-//   PerformanceReport,
-//   ResourceStats,
-//   MemoryStats,
-//   PerformanceWithMemory,
-//   LayoutShift;
-} from '../types/app.types';
-// Utility Functions;
- * Throttle function;
-export function throttle;
-          <T extends (...arg)
-  s: unknown[]) => any>(* Request idle callback wrapper,
-export function runWhenIdle(callbac)
-  k: () => void, timeout = 1000): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  if (typeof window === 'undefined') {
-    return
-  }
-  if ('requestIdleCallback' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    window.requestIdleCallback(callback, { timeout });
-  } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    setTimeout(callback, 0);
-* Default performance monitor instance;
-export const performanceMonitor = new PerformanceMonitor();
-
+export default UtilsPage;

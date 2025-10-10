@@ -1,455 +1,159 @@
-import {ShoppingCart, Users, Wrench, Search, Filter, Star, Clock, CheckCircle, ArrowRight, Phone, Mail, Award} from 'lucide-react';
 'use client';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const MarketplacePage: React.FC = () => {
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
-  const categories = [
+  const features = [
     {
-      id: 'products',
-      name: 'Products',
-      icon: ShoppingCart,
-      color: 'text-blue-400',
-      bgColor: 'bg-blue-500/10',
-      description:     ,
-$4},
-      id: 'talent',
-      name: 'Talent',
-      icon: Users,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10',
-      description:       ,
-idid: 'equipment',
-      name: 'Equipment',
-      icon: Wrench,
-      color: 'text-purple-400',
-      bgColor: 'bg-purple-500/10',
-      description:     ,
-$4}
-  ];
-  const products = [
-      id: 1,
-      name: 'AI Project Manager Pro',
-      description: 'Intelligent project management with AI-powered insights and automation',
-      category: 'AI Tools',
-      price: '$49/month',
-      rating: 4.9,
-      reviews: 127,
-      image: '📊',
-      features: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
-      vendor: 'Zion Tech Group',
-      verified: true,
-    id: 2,
-      name: 'Smart Analytics Dashboard',
-      description: 'Real-time business intelligence with customizable dashboards and reports',
-      category: 'Analytics',
-      price: '$79/month',
-      rating: 4.8,
-      reviews: 89,
-      image: '📈',
-      features: ['Real-time Data', 'Custom Dashboards', 'Predictive Analytics', 'Mobile App'],
-      vendor: 'DataFlow Solutions',
-      id: 3,
-      name: 'AI Customer Support Bot',
-      description: '24/7 intelligent customer support with natural language processing',
-      category: 'Customer Service',
-      price: '$29/month',
-      rating: 4.7,
-      reviews: 203,
-      image: '🤖',
-      features: ['24/7 Support', 'Multi-language', 'Sentiment Analysis', 'Human Handoff'],
-      vendor: 'SupportAI Inc',
-      id: 4,
-      name: 'Quantum Security Suite',
-      description: 'Next-generation cybersecurity powered by quantum computing principles',
-      category: 'Security',
-      price: '$199/month',
-      reviews: 45,
-      image: '🔒',
-      features: ['Quantum Encryption', 'Threat Detection', 'Compliance', 'Real-time Monitoring'],
-      vendor: 'QuantumSec',
-  const talent = [
-      name: 'Dr. Sarah Chen',
-      title: 'AI Research Scientist',
-      expertise: ['Machine Learning', 'Deep Learning', 'Computer Vision'],
-      experience: '8 years',
-      projects: 45,
-      rate: '$150/hour',
-      image: '👩‍💼',
-      verified: true,
-      available: true,
-    name: 'Michael Rodriguez',
-      title: 'Cloud Architecture Expert',
-      expertise: ['AWS', 'Azure', 'DevOps', 'Microservices'],
-      experience: '12 years',
-      projects: 67,
-      rate: '$120/hour',
-      image: '👨‍💻',
-      name: 'Lisa Park',
-      title: 'Cybersecurity Specialist',
-      expertise: ['Penetration Testing', 'Security Audits', 'Compliance', 'Incident Response'],
-      experience: '10 years',
-      projects: 89,
-      rate: '$180/hour',
-      image: '👩‍🔬',
-      available: false
-  const equipment = [
-      name: 'AI Workstation Pro',
-      description: 'High-performance workstation optimized for AI development and training',
-      category: 'Hardware',
-      price: '$4,999',
-      reviews: 23,
-      image: '💻',
-      features: ['RTX 4090 GPU', '64GB RAM', '2TB NVMe SSD', 'AI-optimized cooling'],
-      vendor: 'TechWorkstations',
-      inStock: true,
-    name: 'Quantum Computing Access',
-      description: 'Cloud access to quantum computing resources for research and development',
-      category: 'Cloud Services',
-      price: '$500/month',
-      reviews: 15,
-      image: '⚛️',
-      features: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
-      vendor: 'QuantumCloud',
-  const getCurrentItems = () => {
-    switch (activeCategory) {
-      case 'products':
-        return products;
-      case 'talent':
-        return talent;
-      case 'equipment':
-        return equipment;
-      default:
-        return []
-  }
-  const filteredItems = getCurrentItems().filter(item =>
-    item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    item.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-  const stats = [
-      value: '500+',
-      label: 'Products Available',
-      color:       ,
-valuevalue: '200+',
-      label: 'Expert Professionals',
-      color:       ,
-valuevalue: '100+',
-      label: 'Equipment Solutions',
-      color:       ,
-iconicon: Star,
-      value: '4.8',
-      label: 'Average Rating',
-      color: 'text-yellow-400'
-  const benefits = [
-      icon: CheckCircle,
-      title: 'Verified Vendors',
-      description:       ,
-icon$5: Shield,
-      title: 'Secure Transactions',
-      description:       ,
-icon$5: Clock,
-      title: '24/7 Support',
-      description:       ,
-icon$5: Award,
-      title: 'Quality Guarantee',
-      description: '100% satisfaction guarantee on all purchases'
-  return (
-    <React.Fragment>
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16 pt-24">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md: text-5xl font-bold text-white mb-6 neon-text">
-              Zion Tech Marketplace,
-  </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Discover, compare, and purchase AI and IT solutions from verified vendors. 
-              Find the perfect tools, talent, and equipment for your business needs.
-            </p>
-          </div>
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`w-16 h-16 ${stat.color.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-full flex items-center justify-center mx-auto mb-4`}>
-                  <stat.icon className={`w-8 h-8 ${stat.color}`} />
-                <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-            ))}
-          {/* Search and Filters */}
-          <div className="mb-12">
-            <div className="flex flex-col md:flex-row gap-4 mb-8">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search marketplace..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
-                />
-              <button className="px-6 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white hover:bg-slate-700 transition-colors flex items-center">
-                <Filter className="w-5 h-5 mr-2" />
-                Filters,
-  </
-            {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex items-center px-6 py-3 rounded-lg transition-all duration-300 ${
-                    activeCategory === category.id
-                      ? `${category.bgColor} ${category.color} border-2 border-current`
-                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border-2 border-transparent'
-                  }`}
-                >
-                  <category.icon className="w-5 h-5 mr-2" />
-                  <span className="font-medium">{category.name}</span>
-          {/* Items Grid */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-white mb-8">
-              {categories.find(cat => cat.id === activeCategory)?.name} ({filteredItems.length})
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredItems.map((item) => (
-                <div key={item.id} className="bg-slate-800/50 rounded-lg p-6 border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
-                  <div className="flex items-start mb-4">
-                    <div className="text-4xl mr-4">{item.image}</div>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-lg font-semibold text-white">{item.name}</h3>
-                        {item.verified && (
-                          <div className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                            <CheckCircle className="w-3 h-3 text-white" />
-                        )}
-                      <p className="text-gray-300 text-sm mb-2">{item.description}</p>
-                      <div className="flex items-center text-sm text-gray-400 mb-2">
-                        <span className="mr-2">{item.category}</span>
-                        {item.vendor && <span>• {item.vendor}</span>}
-                  {activeCategory === 'products' && (
-                      <div className="mb-4">
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h4>
-                        <ul className="space-y-1">
-                          {item.features.map((feature, index) => (
-                            <li key={index} className="text-sm text-gray-300 flex items-start">
-                              <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
-                              {feature}
-                            </li>
-                        </ul>
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center">
-                          <Star className="w-4 h-4 text-yellow-400 mr-1" />
-                          <span className="text-sm text-white font-medium">{item.rating}</span>
-                          <span className="text-sm text-gray-400 ml-1">({item.reviews} reviews)</span>
-                        <div className="text-lg font-bold text-cyan-400">{item.price}</div>
-                    </React.Fragment>
-                  {activeCategory === 'talent' && (
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Expertise:</h4>
-                        <div className="flex flex-wrap gap-1">
-                          {item.expertise.map((skill, index) => (
-                            <span key={index} className="px-2 py-1 bg-slate-700 text-xs text-gray-300 rounded">
-                              {skill}
-                            </span>
-                          <span className="text-sm text-gray-400 ml-1">({item.projects} projects)</span>
-                        <div className="text-lg font-bold text-cyan-400">{item.rate}</div>
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-gray-400">{item.experience} experience</span>
-                        <span className={`px-2 py-1 rounded text-xs ${
-                          item.available ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-                        }`}>
-                          {item.available ? 'Available' : 'Busy'}
-                  {activeCategory === 'equipment' && (
-                        <h4 className="text-sm font-semibold text-cyan-400 mb-2">Specifications:</h4>
-                        <span className="text-gray-400">{item.vendor}</span>
-                          item.inStock ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-                          {item.inStock ? 'In Stock' : 'Out of Stock'}
-                  <button className="w-full mt-4 bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition-colors flex items-center justify-center">
-                    {activeCategory === 'talent' ? 'Contact' : 'Add to Cart'}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-          {/* Benefits */}
-            <h2 className="text-3xl font-bold text-white text-center mb-12 neon-text">
-              Why Choose Our Marketplace?
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {benefits.map((benefit, index) => (
-                  <div className="w-16 h-16 bg-cyan-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <benefit.icon className="w-8 h-8 text-cyan-400" />
-                  <h3 className="text-lg font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-gray-300 text-sm">{benefit.description}</p>
-          {/* CTA Section */}
-          <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8 text-center">
-            <h2 className="text-2xl font-bold text-white mb-4">
-              Ready to Find Your Perfect Solution?
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Browse our marketplace to discover the tools, talent, and equipment you need 
-              to transform your business with cutting-edge technology.
-            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
-              <a
-                href="/contact"
-                className="cyber-button inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg transition-all duration-300 hover:scale-105"
-                <ShoppingCart className="w-5 h-5 mr-2" />
-                Start Shopping
-  </
-                href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-      <Footer />
-  return (
-    <div>Coming Soon</div>
-  ),
-}
-  const [activeCategory, setActiveCategory] = useState('products');
-  const [searchTerm, setSearchTerm] = useState('');
-const categories = [
-    {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  i,
-  d: 'products',
-      nam,
-  e: 'Products',
-      ico,
-  n: ShoppingCart,
-      colo,
-  r: 'text-blue-400',
-      bgColo,
-  r: 'bg-blue-500/10',
-      descriptio,
-  n: 'AI-powered software products and solutions'
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-      i,
-  d: 'talent',
-      nam,
-  e: 'Talent',
-      ico,
-  n: Users,
-      colo,
-  r: 'text-green-400',
-      bgColo,
-  r: 'bg-green-500/10',
-      descriptio,
-  n: 'Expert professionals and consultants',
-      i,
-  d: 1,
-      nam,
-  e: 'AI Project Manager Pro',
-      descriptio,
-  n: 'Intelligent project management with AI-powered insights and automation',
-      categor,
-  y: 'AI Tools',
-      pric,
-  e: '$49/month',
-      ratin,
-  g: 4.9,
-      review,
-  s: 127,
-      imag,
-  e: '',
-      feature,
-  s: ['AI Planning', 'Resource Optimization', 'Risk Assessment', 'Automated Reporting'],
-      vendo,
-  r: 'Zion Tech Group',
-      verifie,
-  d: true,
-      i,
-  d: 3,
-      nam,
-  e: 'AI Customer Support Bot',
-      descriptio,
-  n: '24/7 intelligent customer support with natural language processing',
-      categor,
-  y: 'Customer Service',
-      pric,
-  e: '$29/month',
-      ratin,
-  g: 4.7,
-      review,
-  s: 203,
-      imag,
-  e: '',
-      feature,
-  s: ['24/7 Support', 'Multi-language', 'Sentiment Analysis', 'Human Handoff'],
-      vendo,
-  r: 'SupportAI Inc',
-      nam,
-  e: 'Michael Rodriguez',
-      titl,
-  e: 'Cloud Architecture Expert',
-      expertis,
-  e: ['AWS', 'Azure', 'DevOps', 'Microservices'],
-      experienc,
-  e: '12 years',
-      project,
-  s: 67,
-      rat,
-  e: '$120/hour',
-      nam,
-  e: 'Quantum Computing Access',
-      descriptio,
-  n: 'Cloud access to quantum computing resources for research and development',
-      categor,
-  y: 'Cloud Services',
-      pric,
-  e: '$500/month',
-      review,
-  s: 15,
-      imag,
-  e: '',
-      feature,
-  s: ['100 qubits', '24/7 access', 'API integration', 'Expert support'],
-      vendo,
-  r: 'QuantumCloud',
-          <ShoppingCart className="w-5 h-5 mr-2" /></ShoppingCart>
-// Start Shopping;
-          </a>
-                href="tel: +13024640950" className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-                href="mailto:kleber@ziontechgroup.com" className="border-2 border-purple-400 text-purple-400 px-8 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center"
-                <Mail className="w-4 h-4 mr-2" />
-                Email Us
-      <Footer /></Footer>
-export default MarketplacePage,
-  </div>
-  </p>
-  </h2>
-  </div>
-  </div>
-  </div>
-  </h2>
-  </button>
-  </span>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </button>
-  </div>
-  </button>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-  </h1>
-  </div>
-  </div>
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Marketplace - Zion Tech Group</title>
+        <meta name="description" content="Advanced Marketplace solutions for businesses" />
+        <meta name="keywords" content="AI, marketplace, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Marketplace
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered marketplace solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Marketplace?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Marketplace solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default MarketplacePage;

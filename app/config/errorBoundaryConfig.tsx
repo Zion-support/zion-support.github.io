@@ -1,212 +1,159 @@
-
-/**;
- * Error Boundary Configuration;
- * Centralized configuration for error handling across the application;
- */;
+'use client';
 import React from 'react';
-export interface ErrorBoundaryConfig {
-  /**;
-   * Whether to log errors to console;
-   */;
-  logErrors: boolean,
-  /**;
-   * Whether to show detailed error messages;
-   */;
-  showDetails: boolean,
-  /**;
-   * Whether to send errors to external service;
-   */;
-  reportErrors: boolean,
-  /**;
-   * Error reporting endpoint;
-   */;
-  reportingEndpoint?: string;
-/**;
-   * Whether to show error overlay in development;
-   */;
-  showErrorOverlay: boolean,
-  /**;
-   * Maximum number of errors to store;
-   */;
-  maxStoredErrors: number,
-  /**;
-   * Custom error messages by error type;
-   */;
-  customMessages: Record<string>
-/**
-   * Fallback UI components
-   */,
-  fallbackComponents: {}
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-    default: React.ComponentType<{ error: Error, resetError: () => void }>;
-    network: React.ComponentType<{ error: Error, resetError: () => void }>;
-    notFound: React.ComponentType<{ error: Error, resetError: () => void }>;
-  }
-}
-/**;
- * Default error messages;
- */;
-const DEFAULT_ERROR_MESSAGES = {
-    default: 'Something went wrong. Please try again.',
-  network: 'Network connection issue. Please check your internet connection.',
-  notFound: 'The requested resource was not found.',
-  timeout: 'Request timed out. Please try again.',
-  serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',
-  }
-}
-/**;
- * Get error boundary configuration based on environment;
- */;
-export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
-    return {
-    logErrors: true,
-    showDetails: isDevelopment,
-    reportErrors: !isDevelopment,
-    reportingEndpoint: process.env.REACT_APP_ERROR_REPORTING_ENDPOINT,
-    showErrorOverlay: isDevelopment,
-    maxStoredErrors: 50,
-    customMessages: DEFAULT_ERROR_MESSAGES,
-    fallbackComponents: {
-      default: DefaultErrorFallback,
-      network: NetworkErrorFallback,
-      notFound: NotFoundFallback,
-  },
-  }
-}
-/**;
- * Default error fallback component;
- */;
-function DefaultErrorFallback({ error, resetError }: { error: Error, resetError: () => void }) {
-    return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full"></div>
-          <svg>
-            <path>
-          </svg>
-        </div>
-        <h2>
-          Oops! Something went wrong;
-        </h2>
-        <p>
+const ConfigPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
 
-          {error.message || 'An unexpected error occurred'}
-        </p>
-        {
-    process.env['NODE_ENV'] === 'development' && (
-  }
-          <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">{error.stack}</pre>
-        )}
-        <div className="mt-6 flex gap-4"></div>
-          <button>
-            Try Again;
-          </button>
-          <button;
-            onClick={() => (window.location.href = '/')}
-            className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover: bg-gray-300 transition-colors";
-          >
-            Go Home
-          </button>
-        </div>
-      </div>
-    </div>
-  ),
-}
-/**;
- * Network error fallback component;
- */;
-function NetworkErrorFallback({ resetError }: { error: Error, resetError: () => void }) {return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6"></div>
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full"></div>
-          <svg>
-            <path>
-          </svg>
-        </div>
-        <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">Connection Issue</h2>
-        <p>
-          Unable to connect to the server. Please check your internet connection and try again.;
-        </p>
-        <div className="mt-6"></div>
-          <button>
-            Retry Connection;
-          </button>
-        </div>
-      </div>
-    </div>
-  )}
-/**;
- * Not found error fallback component;
- */;
-function NotFoundFallback(): JSX.Element {
-    return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4"></div>
-      <div className="max-w-md w-full text-center"></div>
-        <h1 className="text-6xl font-bold text-gray-900">404</h1>
-        <h2 className="mt-4 text-2xl font-bold text-gray-900">Page Not Found</h2>
-        <p>
-          The page you're looking for doesn't exist or has been moved.;
-        </p>
-        <div className="mt-6 flex gap-4 justify-center"></div>
-          <button
-  }
-            onClick={() => (window.location.href = '/')}
-            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover: bg-blue-700 transition-colors";
-          >
-            Go Home
-          </button>
-          <button,
-            onClick={() => window.history.back()}
-            className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover: bg-gray-300 transition-colors";
-          >
-            Go Back
-          </button>
-        </div>
-      </div>
-    </div>
-  ),
-}
-/**;
- * Get error type from error object;
- */;
-export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
-    if (error.message.includes('Network') || error.message.includes('fetch')) {
-    return 'network'
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-  }
-  if (error.message.includes('404') || error.message.includes('not found')) {
-    return 'notFound'
-  }
-  }
-  if (error.message.includes('timeout')) {
-    return 'timeout'
-  }
-  }
-  if (error.message.includes('500') || error.message.includes('server')) {
-    return 'serverError'
-  }
-  }
-  if (error.message.includes('validation')) {
-    return 'validation'
-  }
-  }
-  return 'default';
-}
-/**;
- * Format error for logging;
- */;
-export function formatErrorForLogging(error: Error): Record<string, unknown> {
-    return {
-    message: error.message,
-    stack: error.stack,
-    name: error.name,
-    type: getErrorType(error),
-    timestamp: new Date().toISOString(),
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
-    url: typeof window !== 'undefined' ? window.location.href : 'unknown',
-  }
-  }
-}
-export default getErrorBoundaryConfig;
+  return (
+    <>
+      <Helmet>
+        <title>Config - Zion Tech Group</title>
+        <meta name="description" content="Advanced Config solutions for businesses" />
+        <meta name="keywords" content="AI, config, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Config
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered config solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Config?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Config solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default ConfigPage;

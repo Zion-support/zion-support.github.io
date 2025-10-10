@@ -1,361 +1,159 @@
-
 'use client';
-// Performance optimization utilities;
-// Debounce utility for performance;
-export const _debounce = 
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-          <T extends (...args: any[]) => any>(),
-    func: T,
-  wait: number): ((...args: Parameters,
-          <T>) => void) => {
-    // TODO: Add content
-  }
-}
-  let timeout: NodeJS.Timeout
-  return (...args: Parameters,
-          <T>) => {
-    // TODO: Add content
-  }
-}
-// Throttle utility for performance
-export const throttle = 
-
-          <T extends (...args: any[]) => any>(),
-    func: T,
-  limit: number): ((...args: Parameters,
-          <T>) => void) => {
-    // TODO: Add content
-  }
-
-}
-  let,
-  inThrottle: boolean,
-  return (...arg,
-  s: Parameters,)
-          <T>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (!inThrottle) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      func(...args);
-      inThrottle = true;
-      setTimeout(() => (inThrottle = false), limit);
-    }
-  }
-}
-// Intersection Observer hook for lazy loading;
-export const useIntersectionObserver = ()
-
-  callback: (entries: IntersectionObserverEntry[]) => void,
-  _options: IntersectionObserverInit = {}
-) => {
-    // TODO: Add content
-  }
-
-}
-  const observer = useMemo()
-    () =>
-      typeof window !== 'undefined'
-        ? new IntersectionObserver(callback, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  threshol,
-  d: 0.1,
-            rootMargi,
-  n: '50px',
-//             ...options;)
-          })
-        : null,
-//     [callback, options]
-  )
-  const observe = useCallback()
-
-    (element: Element | null) => {
-    // TODO: Add content
-  }
-
-}
-      if (observer && element) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        observer.observe(element);
-        return () => observer.unobserve(element);
-      }
-      return () => {}
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-//     [observer]
-  );
-  const disconnect = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (observer) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      observer.disconnect();
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }, [observer]);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return () => disconnect();
-  }, [disconnect]);
-  return { observe, disconnect }
-}
-// Image lazy loading hook;
-export const useLazyImage = (sr)
-  c: string, placeholder?: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const [imageSrc, setImageSrc] = useState(placeholder || '');
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const { observe } = useIntersectionObserver()
-//     useCallback()
-      (entries) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          if (entry.isIntersecting && !isLoaded && !isError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            const img = new Image();
-            img.onload = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              setImageSrc(src);
-              setIsLoaded(true);
-            }
-            img.onerror = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              setIsError(true);
-            }
-            img.src = src;
-          }
-        }
-  )
-      },
-//       [src, isLoaded, isError]
-//     )
-  );
-  return { imageSrc, isLoaded, isError, observe }
-}
-// Performance monitoring hook;
-export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const [metrics, setMetrics] = useState;
-          <{/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    fcp?: number;
-    lcp?: number;
-    fid?: number;
-    cls?: number;
-    ttfb?: number;
-  }>({});
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined') return;
-    const updateMetrics = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = performance.getEntriesByType('paint');
-      const fcp = paint.find(entry => entry.name === 'first-contentful-paint')?.startTime;
-      const lcp = performance.getEntriesByType('largest-contentful-paint')[0]?.startTime;
-      setMetrics({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         fcp,
-//         lcp,
-        ttf,
-  b: navigation?.responseStart - navigation?.requestStart,)
-      });
-    }
-    // Monitor performance after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      window.addEventListener('load', updateMetrics);
-    }
-    // Monitor Core Web Vitals;
-    if ('web-vitals' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        getCLS((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: metric.value })));
-        getFID((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  d: metric.value })));
-        getFCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
-        getLCP((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value })));
-        getTTFB((metric) => setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  b: metric.value })));
-      });
-    }
-    return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      window.removeEventListener('load', updateMetrics);
-    }
-  }, []);
-  return metrics;
-}
-// Memory usage monitoring;
-export const useMemoryMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const [memoryInfo, setMemoryInfo] = useState;
-          <{/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    usedJSHeapSize?: number;
-    totalJSHeapSize?: number;
-    jsHeapSizeLimit?: number;
-  }>({});
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined' || !('memory' in performance)) return;
-    const updateMemoryInfo = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const memory = (performance as any).memory;
-      if (memory) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        setMemoryInfo({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  usedJSHeapSiz,
-  e: memory.usedJSHeapSize,
-          totalJSHeapSiz,
-  e: memory.totalJSHeapSize,
-          jsHeapSizeLimi,
-  t: memory.jsHeapSizeLimit,)
-        });
-      }
-    }
-    const interval = setInterval(updateMemoryInfo, 5000);
-    return () => clearInterval(interval);
-  }, []);
-  return memoryInfo;
-}
-// Resource preloading utility;
-export const preloadResource = (hre,
-  f: string, a)
-  s: string) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  if (typeof window === 'undefined') return;
-  const link = document.createElement('link');
-  link.rel = 'preload';
-  link.href = href;
-  link.as = as;
-  document.head.appendChild(link);
-}
-// Critical resource preloading;
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  if (typeof window === 'undefined') return;
-  // Preload critical fonts;
-  preloadResource('/fonts/inter-var.woff2', 'font');
-  preloadResource('/fonts/inter-var.woff', 'font');
-  // Preload critical images;
-  preloadResource('/images/hero-bg.webp', 'image');
-  preloadResource('/images/logo.svg', 'image');
-  // Preload critical CSS;
-  preloadResource('/styles/critical.css', 'style');
-}
-// Bundle size monitoring;
-export const useBundleSizeMonitoring = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const [bundleSize, setBundleSize] = useState;
-          <{/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    totalSize?: number;
-    jsSize?: number;
-    cssSize?: number;
-    imageSize?: number;
-  }>({});
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined') return;
-    const calculateBundleSize = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const resources = performance.getEntriesByType('resource');
-      let jsSize = 0;
-      let cssSize = 0;
-      let imageSize = 0;
-      resources.forEach((resource) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const size = (resource as PerformanceResourceTiming).transferSize || 0;
-        totalSize += size;
-        if (resource.name.includes('.js')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          jsSize += size;
-        } else if (resource.name.includes('.css')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          cssSize += size;
-        } else if (resource.name.match(/\.(jpg|jpeg|png|gif|webp|svg)$/)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          imageSize += size;
-        }
-      });
-      setBundleSize({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         totalSize,
-//         jsSize,
-//         cssSize,
-//         imageSize;)
-      });
-    }
-    // Calculate after page load;
-    if (document.readyState === 'complete') {/* TODO: Fix JSX expression */}
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      window.addEventListener('load', calculateBundleSize);
-    }
-    return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      window.removeEventListener('load', calculateBundleSize);
-    }
-  }, []);
-  return bundleSize;
-}
-export default {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//   debounce,
-//   throttle,
-//   useIntersectionObserver,
-//   useLazyImage,
-//   usePerformanceMonitoring,
-//   useMemoryMonitoring,
-//   preloadResource,
-//   preloadCriticalResources,
-//   useBundleSizeMonitoring;
-}
+  ];
 
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

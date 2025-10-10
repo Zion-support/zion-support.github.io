@@ -98,29 +98,29 @@ const CareersPage: React.FC = () => {
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300"
               >
-                <h3 className="text-xl font-semibold text-white mb-2">{position.title}</h3>
+                <h3>position.title</h3>
                 <div className="flex flex-wrap gap-4 text-sm text-gray-300 mb-4">
                   <div className="flex items-center space-x-1">
                     <Briefcase className="w-4 h-4" />
-                    <span>{position.department}</span>
+                    <span>position.department</span>
                   </div>
                   <div className="flex items-center space-x-1">
                     <MapPin className="w-4 h-4" />
-                    <span>{position.location}</span>
+                    <span>position.location</span>
                   </div>
                   <div className="flex items-center space-x-1">
                     <Clock className="w-4 h-4" />
-                    <span>{position.type}</span>
+                    <span>position.type</span>
                   </div>
                 </div>
-                <p className="text-gray-300 mb-4">{position.description}</p>
+                <p>position.description</p>
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-white mb-2">Requirements:</h4>
                   <ul className="text-sm text-gray-300 space-y-1">
                     {position.requirements?.map((req, reqIndex) => (
                       <li key={reqIndex} className="flex items-center space-x-2">
                         <span className="w-1 h-1 bg-purple-400 rounded-full"></span>
-                        <span>{req}</span>
+                        <span>req</span>
                       </li>
                     ))}
                   </ul>
@@ -144,8 +144,8 @@ const CareersPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
-                <p className="text-gray-300">{value.description}</p>
+                <h3>value.title</h3>
+                <p>value.description</p>
               </div>
             ))}
           </div>
@@ -159,7 +159,7 @@ const CareersPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-3">
                 <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                <span className="text-gray-300">{benefit}</span>
+                <span>benefit</span>
               </div>
             ))}
           </div>

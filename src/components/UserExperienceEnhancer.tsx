@@ -1,308 +1,159 @@
-import React from 'react';
 'use client';
-interface UserExperienceEnhancerProps {
-    enableSmoothScrolling?: boolean;
-  enableLoadingStates?: boolean;
-  enableErrorBoundaries?: boolean;
-  enableAnalytics?: boolean;
-  enableNotifications?: boolean
-  }
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
-  enableSmoothScrolling = true,
-  enableLoadingStates = true,
-  enableErrorBoundaries = true,
-  enableAnalytics = true,
-  enableNotifications = true
-}) => {
-  const [isOnline, setIsOnline] = useState(true);
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-  // Handle online/offline status
-  useEffect(() => {
-    const handleOffline = () => setIsOnline(false);
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline)
-  }
-  }, []);
-  // Smooth scrolling
-  useEffect(() => {
-    if (enableSmoothScrolling) {
-      const style = document.createElement('style');
-      style.textContent = `
-        html {
-          scroll-behavior: smooth
-  }
-        @media (prefers-reduced-motion: reduce) {
-          html {
-            scroll-behavior: auto,
-interface UserExperienceEnhancerProps {/* TODO: Fix JSX expression */}
-}
-const,
-  UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-  // Handle online/offline status;
-  useEffect(() => {/* TODO: Fix JSX expression */}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  // Smooth scrolling;
-  useEffect(() => {/* TODO: Fix JSX expression */}
-        }
-        @media (prefers-reduced-motio)
-  n: reduce) {/* TODO: Fix JSX expression */}
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    }
-  }, [enableSmoothScrolling]);
-  // Loading states management
-  const setLoading = useCallback((key: string, loading: boolean) => {
-    setLoadingStates(prev => ({ ...prev, [key]: loading }));
-  }, []);
-  // Global loading state
-  useEffect(() => {
-    if (enableLoadingStates) {
-      // Add loading state to all links
-      const links = document.querySelectorAll('a[href]');
-      links.forEach(link => {
-        link.addEventListener('click', (e) => {
-          const href = link.getAttribute('href');
-          if (href && !href.startsWith('#') && !href.startsWith('mailto: ') && !href.startsWith('tel:')) {
-  // Loading states management,
-  const setLoading = useCallback((ke,
-  y: string, loadin)
-  g: boolean) => {/* TODO: Fix JSX expression */}
-    setLoadingStates(prev => ({ ...prev, [key]: loading }));
-  }, []);
-  // Global loading state;
-  useEffect(() => {/* TODO: Fix JSX expression */}`
-            setLoading(`link-${href}`, true);
-          }
-        });
-      });
-    }
-  }, [enableLoadingStates, setLoading]);
-  // Error boundary enhancement
-  useEffect(() => {
-    if (enableErrorBoundaries) {
-      const handleError = (event: ErrorEvent) => {
-        // console.error('Global error caught:', event.error);
-        // Send error to analytics if available
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'exception', {
-            description: event.error?.message || 'Unknown error',
-            fatal: false
-  // Error boundary enhancement,
-  useEffect(() => {/* TODO: Fix JSX expression */}
-          });
-        }
-      }
-      const handleUnhandledRejection = (event: PromiseRejectionEvent) => {
-        // console.error('Unhandled promise rejection:', event.reason);
-        if (typeof window !== 'undefined' && 'gtag' in window) {
-          (window as any).gtag('event', 'exception', {
-            description: event.reason?.message || 'Unhandled promise rejection',
-            fatal: false
-      const handleUnhandledRejection = (even)
-  t: PromiseRejectionEvent) => {/* TODO: Fix JSX expression */}
-          });
-        }
-      }
-      window.addEventListener('error', handleError);
-      window.addEventListener('unhandledrejection', handleUnhandledRejection);
-      return () => {
-        window.removeEventListener('error', handleError);
-        window.removeEventListener('unhandledrejection', handleUnhandledRejection);
-      return () => {/* TODO: Fix JSX expression */}
-      }
-    }
-  }, [enableErrorBoundaries]);
-  // Analytics enhancement
-  useEffect(() => {
-    if (enableAnalytics && typeof window !== 'undefined') {
-      // Track page visibility changes
-      const handleVisibilityChange = () => {
-        if (document.hidden) {
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'page_hidden', {
-              event_category:             ,
-$4});
-          }
-        } else {
-          if ('gtag' in window) {
-            (window as any).gtag('event', 'page_visible', {
-              event_category:             ,
-$4});
-  // Analytics enhancement;
-  useEffect(() => {/* TODO: Fix JSX expression */}
-            });
-          }
-        } else {/* TODO: Fix JSX expression */}
-            });
-          }
-        }
-      }
-      // Track scroll depth
-      const handleScroll = () => {
-        const scrollDepth = Math.round(
-          (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100
-        );
-        if (scrollDepth > maxScrollDepth) {
-          maxScrollDepth = scrollDepth;
-          // Track milestone scroll depths
-          if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 25
-              });
-            }
-          } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 50
-              });
-            }
-          } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 75
-              });
-            }
-          } else if (maxScrollDepth >= 90) {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'scroll', {
-                event_category: 'engagement',
-                value: 90
-      // Track scroll depth
-      let maxScrollDepth = 0,
-      const handleScroll = () => {/* TODO: Fix JSX expression */}
-              });
-            }
-          } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {/* TODO: Fix JSX expression */}
-              });
-            }
-          } else if (maxScrollDepth >= 75 && maxScrollDepth < 90) {/* TODO: Fix JSX expression */}
-              });
-            }
-          } else if (maxScrollDepth >= 90) {/* TODO: Fix JSX expression */}
-              });
-            }
-          }
-        }
-      }
-      // Track time on page
-      const startTime = Date.now();
-      const handleBeforeUnload = () => {
-        const timeOnPage = Math.round((Date.now() - startTime) / 1000);
-        if ('gtag' in window) {
-          (window as any).gtag('event', 'timing_complete', {
-            name: 'time_on_page',
-            value: timeOnPage,
-            event_category:           ,
-$4});
-      // Track time on page;
-      const startTime = Date.now();
-      const handleBeforeUnload = () => {/* TODO: Fix JSX expression */}
-          });
-        }
-      }
-      document.addEventListener('visibilitychange', handleVisibilityChange);
-      window.addEventListener('scroll', handleScroll, { passive: true });
-      window.addEventListener('beforeunload', handleBeforeUnload);
-      return () => {
-        document.removeEventListener('visibilitychange', handleVisibilityChange);
-        window.removeEventListener('scroll', handleScroll);
-        window.removeEventListener('beforeunload', handleBeforeUnload);
-      window.addEventListener('scroll', handleScroll, {/* TODO: Fix JSX expression */})
-  e: true });
-      window.addEventListener('beforeunload', handleBeforeUnload);
-      return () => {/* TODO: Fix JSX expression */}
-      }
-    }
-  }, [enableAnalytics]);
-  // Notifications
-  useEffect(() => {
-    if (enableNotifications && !isOnline) {
-      // Show offline notification
-      const notification = document.createElement('div');
-      notification.className = 'fixed top-4 right-4 bg-yellow-500 text-black px-4 py-2 rounded-lg shadow-lg z-50';
-      notification.textContent = 'You are currently offline. Some features may not be available.';
-      document.body.appendChild(notification);
-      const timer = setTimeout(() => {
-        notification.remove()
-  }, 5000);
-      return () => {
-        clearTimeout(timer);
-        notification.remove();
-  // Notifications;
-  useEffect(() => {/* TODO: Fix JSX expression */}
-      }, 5000);
-      return () => {/* TODO: Fix JSX expression */}
-      }
-    }
-  }, [isOnline, enableNotifications]);
-  // Performance monitoring
-  useEffect(() => {
-    if (typeof window !== 'undefined' && 'performance' in window) {
-      // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'LCP',
-                value: Math.round(entry.startTime),
-                event_category:               ,
-$4});
-            }
-          } else if (entry.entryType === 'first-input') {
-            if ('gtag' in window) {
-              (window as any).gtag('event', 'web_vitals', {
-                name: 'FID',
-                value: Math.round(entry.processingStart - entry.startTime),
-                event_category:               ,
-$4});
-            }
-          } else if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              if ('gtag' in window) {
-                (window as any).gtag('event', 'web_vitals', {
-                  name: 'CLS',
-                  value: Math.round((entry as any).value * 1000),
-                  event_category:                 ,
-$4});
-  // Performance monitoring;
-  useEffect(() => {/* TODO: Fix JSX expression */}
-              });
-            }
-          } else if (entry.entryType === 'first-input') {/* TODO: Fix JSX expression */}
-              });
-            }
-          } else if (entry.entryType === 'layout-shift') {/* TODO: Fix JSX expression */}
-                });
-              }
-            }
-          }
-        }
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      return () => {
-        observer.disconnect();
-      observer.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
-      return () => {/* TODO: Fix JSX expression */}
-      }
-    }
-  }, []);
-  return null;
-}
-export default UserExperienceEnhancer;
-}
-export default UserExperienceEnhancer;`
-  </UserExperienceEnhancerProps>
-  </UserExperienceEnhancerProps>
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default ComponentsPage;

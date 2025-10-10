@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const CustomSoftwarePage: React.FC = () => {
-  return (
+const CustomSoftwarePage: React.FC = () => {return (
     <>
       <Helmet>
         <title>Custom Software Development - Zion Tech Group</title>
@@ -110,7 +109,6 @@ const CustomSoftwarePage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
+  )}
 
 export default CustomSoftwarePage;

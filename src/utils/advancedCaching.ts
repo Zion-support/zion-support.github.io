@@ -1,369 +1,159 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-'use client'
-/**
- * Advanced Caching Utility;
- * Provides intelligent caching with TTL, LRU eviction, and storage options;
- */
-
-export interface CacheOptions {
-    // TODO: Add content
-  }
-
-}
-  ttl?: number; // Time to live in milliseconds;
-  storage?: 'memory' | 'localStorage' | 'sessionStorage';
-  maxSize?: number; // Maximum number of entries;
-}
-export interface CacheEntry;
-          <T> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  value: T,,
-    expiry: number,,
-    hits: number,,
-    lastAccessed: number
-
-}
-class AdvancedCache;
-          <T = unknown> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  private,
-  cache: Map,
-          <string, CacheEntry<T>> = new Map();
-  private,
-  accessOrder: string[] = [],
-  private,
-  options: Required<CacheOptions>
-  private storageKey = 'advanced-cache',
-  constructor(_option)
-  s: CacheOptions = {}) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.options = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  tt,
-  l: options.ttl || 5 * 60 * 1000, // Default 5 minutes,
-  storag,
-  e: options.storage || 'memory',
-      maxSiz,
-  e: options.maxSize || 100,
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    // Load from persistent storage if needed;
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.loadFromStorage();
-    }
-    // Setup periodic cleanup;
-    this.setupCleanup();
-  }
-  private setupCleanup(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Clean expired entries every minute;
-      setInterval(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        this.cleanExpired();
-      }, 60 * 1000);
-    }
-  }
-  private loadFromStorage(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined') return;
-    try {
-    const data = storage?.getItem(this.storageKey)
-  }
-      if (data) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const parsed = JSON.parse(data);
-        this.cache = new Map(Object.entries(parsed.cache));
-        this.accessOrder = parsed.accessOrder || [];
-      }
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-  }
-  private saveToStorage(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined' || this.options.storage === 'memory') return;
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const storage = this.getStorage();
-      const data = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  cach,
-  e: Object.fromEntries(this.cache.entries()),
-        accessOrde,
-  r: this.accessOrder,
-      }
-      storage?.setItem(this.storageKey, JSON.stringify(data));
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-  }
-  private getStorage(): Storage | null {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined') return null;
-    if (this.options.storage === 'localStorage') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return window.localStorage;
-    } else if (this.options.storage === 'sessionStorage') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return window.sessionStorage;
-    }
-    return null;
-  }
+  ];
 
-  public set(key: string, value: T, ttl?: number): void {
-    // TODO: Add content
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-}
-    const expiry = Date.now() + (ttl || this.options.ttl);
-    // Check if we need to evict;
-    if (this.cache.size >= this.options.maxSize && !this.cache.has(key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.evictLRU();
-    }
-    this.cache.set(key, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       value,
-//       expiry,
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-      hits: 0,
-      lastAccessed: Date.now()
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    });
-    // Update access order;
-    this.updateAccessOrder(key);
-    // Save to storage if needed;
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.saveToStorage();
-    }
-  }
-  public get(ke)
-  y: string): T | null {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const entry = this.cache.get(key);
-    if (!entry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return null;
-    }
-    // Check if expired;
-    if (Date.now() > entry.expiry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.cache.delete(key);
-      this.removeFromAccessOrder(key);
-      return null;
-    }
-    // Update stats;
-    entry.hits++;
-    entry.lastAccessed = Date.now();
-    this.updateAccessOrder(key);
-    return entry.value;
-  }
-  public has(ke)
-  y: string): boolean {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const entry = this.cache.get(key);
-    if (!entry) return false;
-    // Check if expired;
-    if (Date.now() > entry.expiry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.cache.delete(key);
-      this.removeFromAccessOrder(key);
-      return false;
-    }
-    return true;
-  }
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-  public delete(key: string): boolean {
-    // TODO: Add content
-  }
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-}
-    this.removeFromAccessOrder(key);
-    return this.cache.delete(key);
-  }
-  public clear(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.cache.clear();
-    this.accessOrder = [];
-    if (this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const storage = this.getStorage();
-      storage?.removeItem(this.storageKey);
-    }
-  }
-  private updateAccessOrder(ke)
-  y: string): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    // Remove if exists;
-    this.removeFromAccessOrder(key);
-    // Add to end (most recently used)
-    this.accessOrder.push(key)
-  }
-
-  private removeFromAccessOrder(key: string): void {
-    // TODO: Add content
-  }
-
-}
-    const index = this.accessOrder.indexOf(key);
-    if (index > -1) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.accessOrder.splice(index, 1);
-    }
-  }
-  private evictLRU(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    // Remove least recently used (first in array)
-    if (this.accessOrder.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const lruKey = this.accessOrder[0];
-      this.delete(lruKey);
-    }
-  }
-  private cleanExpired(): void {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const now = Date.now();
-    const,
-  keysToDelete: string[] = [],
-    this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (now > entry.expiry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        keysToDelete.push(key);
-      }
-    });
-    keysToDelete.forEach(key => this.delete(key));
-    if (keysToDelete.length > 0 && this.options.storage !== 'memory') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.saveToStorage();
-    }
-  }
-  public getStats(): {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  siz,
-  e: number,,
-    maxSiz,
-  e: number,,
-    hitRat,
-  e: number,,
-    entrie,
-  s: Array,
-          <{/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  ke,
-  y: string,,
-    hit,
-  s: number,,
-    ag,
-  e: number,
-    }>;
-  } {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const,
-  entries: Array,
-          <{/* TODO: Fix JSX expression */}
-  e: number }> = [];
-    const now = Date.now();
-    this.cache.forEach((entry, key) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      totalHits += entry.hits;
-      entries.push({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         key,
-        hit,
-  s: entry.hits,
-        ag,
-  e: now - entry.lastAccessed,)
-      });
-    });
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  size: this.cache.size,
-      maxSize: this.options.maxSize,
-      hitRate: totalHits / Math.max(this.cache.size, 1),
-      entries: entries.sort((a, b) => b.hits - a.hits)
-
-    }
-  }
-  // Utility method for async operations with caching;
-//   public async getOrFetch;
-          <R extends T>()
-    ke,
-  y: string,
-    fetche,
-  r: () => Promise,
-          <R>,
-    ttl?: number): Promise<R> {
-    // TODO: Add content
-  }
-
-}
-    const cached = this.get(key);
-    if (cached !== null) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return cached as unknown as R;
-    }
-    const value = await fetcher()
-    this.set(key, value, ttl)
-    return value;
-  }
-}
-// Export factory function;
-export function createCache;
-          <T = unknown>(options?: CacheOptions): AdvancedCache<T> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  return new AdvancedCache;
-          <T>(options);
-}
-// Export default cache instance;
-export const defaultCache = new AdvancedCache();
-
+export default UtilsPage;

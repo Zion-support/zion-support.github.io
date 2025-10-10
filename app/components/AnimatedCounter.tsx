@@ -2,13 +2,11 @@
 import React from 'react';
 import React, { useState, useEffect } from 'react';
 
-interface AnimatedCounterProps {
-  end: number,
+interface AnimatedCounterProps {end: number,
   duration?: number;
   prefix?: string;
   suffix?: string;
-  className?: string;
-}
+  className?: string}
 
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
@@ -16,8 +14,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   prefix = '',
   suffix = '',
   className = ''
-}) => {
-  const [count, setCount] = useState(0);
+}) => {const [count, setCount] = useState(0);
 
   useEffect(() => {
     let startTime: number;
@@ -34,16 +31,13 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       setCount(currentCount);
 
       if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate);
-      }
+        animationFrame = requestAnimationFrame(animate)}
     }
 
     animationFrame = requestAnimationFrame(animate);
 
-    return () => {
-      if (animationFrame) {
-        cancelAnimationFrame(animationFrame);
-      }
+    return () => {if (animationFrame) {
+        cancelAnimationFrame(animationFrame)}
     }
   }, [end, duration]);
 

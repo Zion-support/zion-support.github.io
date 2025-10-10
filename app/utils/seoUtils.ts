@@ -1,168 +1,159 @@
-// SEO utilities for the application;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-  robots?: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[]
-}
-export class SEOManager {
-    private config: SEOConfig,
-constructor(config: SEOConfig) {
-    this.config = config
-  }
-  }
-public updateConfig(newConfig: Partial<SEOConfig>): void {}
-    this.config = { ...this.config, ...newConfig }
-    this.applyConfig();
-  }
-public getConfig(): SEOConfig {}
-    return { ...this.config }
-  }
-private applyConfig(): void {
-    if (typeof document === 'undefined') return;
-// Update title;
-    document.title = this.config.title;
-// Update meta description;
-    this.updateMetaTag('description', this.config.description);
-// Update meta keywords;
-    this.updateMetaTag('keywords', this.config.keywords.join(', '));
-// Update canonical URL;
-    this.updateCanonicalUrl();
-// Update Open Graph tags;
-    this.updateOpenGraphTags();
-// Update Twitter Card tags;
-    this.updateTwitterTags();
-// Update robots meta;
-    if (this.config.robots) {
-      this.updateMetaTag('robots', this.config.robots)
-  }
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-// Update author;
-    if (this.config.author) {
-    this.updateMetaTag('author', this.config.author)
-  }
-    }
-// Update published time;
-    if (this.config.publishedTime) {
-    this.updateMetaTag('article:published_time', this.config.publishedTime)
-  }
-    }
-// Update modified time;
-    if (this.config.modifiedTime) {
-    this.updateMetaTag('article:modified_time', this.config.modifiedTime)
-  }
-    }
-// Update section;
-    if (this.config.section) {
-    this.updateMetaTag('article:section', this.config.section)
-  }
-    }
-// Update tags;
-    if (this.config.tags) {
-    this.config.tags.forEach(tag => {
-        this.addMetaTag('article:tag', tag)
-  }
-      })
-    }
-  }
-private updateMetaTag(name: string, content: string): void {
-    if (typeof document === 'undefined') return
-  }
-    let meta = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement;
-    if (!meta) {
-    meta = document.createElement('meta');
-      meta.name = name;
-      document.head.appendChild(meta)
-  }
-    }
-    meta.content = content;
-  }
-private updateCanonicalUrl(): void {
-    if (typeof document === 'undefined' || !this.config.canonicalUrl) return;
-let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.rel = 'canonical';
-      document.head.appendChild(canonical)
-  }
-    }
-    canonical.href = this.config.canonicalUrl;
-  }
-private updateOpenGraphTags(): void {
-    if (typeof document === 'undefined') return;
-const ogTags = [}
-      { property: 'og:title', content: this.config.ogTitle || this.config.title },;
-      { property: 'og:description', content: this.config.ogDescription || this.config.description },;
-      { property: 'og:type', content: this.config.ogType || 'website' },;
-      { property: 'og:url', content: this.config.canonicalUrl || window.location.href },;
-    ]
-if (this.config.ogImage) {}
-      ogTags.push({ property: 'og:image', content: this.config.ogImage })
-    }
-ogTags.forEach(tag => {
-    this.updateMetaTagByProperty(tag.property, tag.content)
-  }
-    })
-  }
-private updateTwitterTags(): void {
-    if (typeof document === 'undefined') return;
-const twitterTags = [}
-      { name: 'twitter:card', content: this.config.twitterCard || 'summary_large_image' },;
-      { name: 'twitter:title', content: this.config.twitterTitle || this.config.title },;
-      { name: 'twitter:description', content: this.config.twitterDescription || this.config.description },;
-    ]
-if (this.config.twitterImage) {}
-      twitterTags.push({ name: 'twitter:image', content: this.config.twitterImage })
-    }
-twitterTags.forEach(tag => {
-    this.updateMetaTag(tag.name, tag.content)
-  }
-    })
-  }
-private updateMetaTagByProperty(property: string, content: string): void {
-    if (typeof document === 'undefined') return
-  }
-    let meta = document.querySelector(`meta[property="${property}"]`) as HTMLMetaElement;
-    if (!meta) {
-    meta = document.createElement('meta');
-      meta.setAttribute('property', property);
-      document.head.appendChild(meta)
-  }
-    }
-    meta.content = content;
-  }
-private addMetaTag(name: string, content: string): void {
-    if (typeof document === 'undefined') return;
-const meta = document.createElement('meta')
-    meta.name = name
-    meta.content = content,
-    document.head.appendChild(meta)
-  }
-  }
-}
-// Utility functions;
-export const generateMetaDescription = (content: string, maxLength: number = 160): string => {
-    const cleanContent = content.replace(/<[^>]*>/g, '').trim();
-  if (cleanContent.length <= maxLength) {
-    return cleanContent
-  }
-  }
-  return cleanContent.substring(0, maxLength - 3) + '...';
-}
-})
-}
-export const addStructuredData = (data: any): void => {
-    if (typeof document === 'undefined') return;
-const script = document.createElement('script')
-  script.type = 'application/ld+json'
-  script.textContent = createStructuredData(data),
-  document.head.appendChild(script)
-  }
-}
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

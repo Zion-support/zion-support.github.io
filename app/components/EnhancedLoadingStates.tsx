@@ -2,10 +2,8 @@
 import React from 'react';
 import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react';
 
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-}
+interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';
+  text?: string}
 
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
@@ -21,7 +19,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     <div className="flex flex-col items-center justify-center p-8">
       <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-500`} />
       {text && (
-        <p className="mt-2 text-sm text-gray-500">{text}</p>
+        <p>text</p>
       )}
     </div>
   );

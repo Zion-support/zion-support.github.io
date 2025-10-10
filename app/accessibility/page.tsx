@@ -114,10 +114,8 @@ const standards = [
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 mb-6">{feature.description}</p>
+                  <h3>feature.title</h3>
+                  <p>feature.description</p>
                   <ul className="space-y-2">
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
@@ -152,11 +150,9 @@ const standards = [
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <CheckCircle className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">{standard.name}</h3>
-                  <p className="text-gray-300 mb-4 text-sm">{standard.description}</p>
-                  <span className="inline-block bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
-                    {standard.status}
-                  </span>
+                  <h3>standard.name</h3>
+                  <p>standard.description</p>
+                  <span>standard.status</span>
                 </div>
               ))}
             </div>

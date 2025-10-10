@@ -1,15 +1,12 @@
-/**;
- * Google Analytics gtag types;
- */;
-interface GtagEvent {
-    event_category?: string;
-  event_label?: string;
-  value?: number;
-  [key: string]: unknown
+// Google Analytics gtag type definitions
+declare global {
+  interface Window {
+    gtag: (
+      command: 'config' | 'event' | 'js' | 'set',
+      targetId: string,
+      config?: Record<string, any>
+    ) => void;
   }
 }
-type GtagCommand = 'config' | 'set' | 'event' | 'js';
-interface Window {
-    gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void
-  }
-}
+
+export {};

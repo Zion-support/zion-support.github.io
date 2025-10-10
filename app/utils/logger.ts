@@ -1,292 +1,159 @@
 'use client';
-/**;
- * Advanced Logging System;
- * Provides structured logging with multiple levels and context;
- */;
-export enum LogLevel {
-    DEBUG = 0,;
-  INFO = 1,;
-  WARN = 2,;
-  ERROR = 3,;
-  FATAL = 4
-  }
-}
-export interface LogContext {
-    userId?: string;
-  sessionId?: string;
-  component?: string;
-  action?: string;
-  [key: string]: unknown
-  }
-}
-class Logger {
-    private logLevel: LogLevel = LogLevel.INFO,
-  private logs: Array<{
-    level: LogLevel,
-    message: string,
-    context?: LogContext;
-    metadata?: Record<string>
-    timestamp: number,
-  }
-  }> = []
-  setLogLevel(level: LogLevel): void {
-    ,
-    this.logLevel = level
-  }
-  }
-getLogLevel(): LogLevel {
-    return this.logLevel
-  }
-  }
-debug(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    </string></<<<string>this</string></string>.log(LogLevel.DEBUG, message, context, metadata)
-  }
-  }
-info(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    </string></<<<string>this</string></string>.log(LogLevel.INFO, message, context, metadata)
-  }
-  }
-warn(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    </string></<<<string>this</string></string>.log(LogLevel.WARN, message, context, metadata)
-  }
-  }
-error(message: string,),;
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>);
-    contextOrMetadata?: string | Record<string, unknown>);
-    metadata?: Record<string>
-  ): void {
-    let error: Error | undefined
-    let context: LogContext | undefined,
-    let meta: Record<string, unknown> | undefined;
-    // Handle different parameter combinations;
-    if (errorOrContextOrMetadata instanceof Error) {
-      error = errorOrContextOrMetadata
-  }
-      context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;
-      meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {}
-      context = { action: errorOrContextOrMetadata }
-      meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;
-    } else if (typeof errorOrContextOrMetadata === 'object') {
-    context = errorOrContextOrMetadata;
-      meta = contextOrMetadata as Record<string>
- * Enhanced Logger Utility;
- * Provides structured logging with different levels and contexts;
- */
-  }
-export enum LogLevel {/* TODO: Fix JSX expression */}
-}
-export interface LogContext {/* TODO: Fix JSX expression */}
-}
-export interface LogMetadata {/* TODO: Fix JSX expression */}
-}
-class Logger {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Set the minimum log level;
-   */;
-  setLogLevel(leve);
-  l: LogLevel): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Get the current log level;
-   */;
-  getLogLevel(): LogLevel {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Log a debug message;
-   */;
-  debug(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Log an info message;
-   */;
-  info(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Log a warning message;
-   */;
-  warn(messag);
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Log an error message;
-   */;
-  error(messag,;
-  e: string,
-    errorOrContextOrMetadata?: Error | string | Record<string, unknown>,;
-    contextOrMetadata?: string | Record<string, unknown>,;
-    metadata?: Record<string, unknown></string>);
-  ): void {/* TODO: Fix JSX expression */}
-    } else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */}
-  t: errorOrContextOrMetadata }
-      meta = contextOrMetadata as Record<string>
-    } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-this.log(LogLevel.ERROR, message, context, { ...meta, error: error?.stack })
-  }
-fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {
-    </string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)
-  }
-  }
-private log(level: LogLevel,),;
-    message: string),
-    context?: LogContext),;
-    metadata?: Record<string>
-  ): void {
-    if (level < this.logLevel) return;
-    const logEntry = {
-      level,;
-      message,;
-      context,;
-      metadata,
-  }
-      timestamp: Date.now()}
-this.logs.push(logEntry);
-    // Keep only last 1000 logs;
-    if (this.logs.length > 1000) {
-    this.logs = this.logs.slice(-1000)
-  }
-    }
-// Console output;
-    const levelName = LogLevel[level]
-    const timestamp = new Date().toISOString();
-    const contextStr = context ? ` [${JSON.stringify(context)}]` : '';
-    const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : '';
-    const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`;
-    switch (level) {
-    case LogLevel.DEBUG: break,
-      case LogLevel.INFO: break,
-      case LogLevel.WARN: break,
-      case LogLevel.ERROR: break,
-      case LogLevel.FATAL:,;
-        break
-  }
-    }
-  }
-getLogs(level?: LogLevel): Array<{
-    level: LogLevel,
-    message: string,
-    context?: LogContext;
-    metadata?: Record<string>
-    timestamp: number,
-  }
-  }> {
-    if (level !== undefined) {
-      return this.logs.filter(log => log.level === level);
-  /**;
-   * Log a fatal error message;
-   */;
-  fatal(messag)
-  }
-  e: string, context?: LogContext, metadata?: Record<string, unknown>): void {/* TODO: Fix JSX expression */}
-  }
-  /**;
-   * Core logging method;
-   */;
-  private log(leve,;
-  l: LogLevel,
-    messag,;
-  e: string,
-    context?: LogContext,;
-    metadata?: Record<string, unknown></string>);
-  ): void {/* TODO: Fix JSX expression */}
-    }
-    const,;
-  logEntry: LogMetadata = {/* TODO: Fix JSX expression */}
-    }
-    // Format the log entry;
-    const formattedMessage = this.formatLogEntry(logEntry);
-    // Output to console in development;
-    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */}
-    }
-    // In production, you might want to send to a logging service;
-    if (!this.isDevelopment) {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**;
-   * Format a log entry for output;
-   */;
-  private formatLogEntry(entr);
-  y: LogMetadata): string {/* TODO: Fix JSX expression */}
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;
-    const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`;
-    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
-  }
-  /**;
-   * Format context object for display;
-   */;
-  private formatContext(contex);
-  t: LogContext): string {/* TODO: Fix JSX expression */}`;
-  t:${context.component}`);`;
-    if (context.action) parts.push(`actio)`;
-  n:${context.action}`);`;
-    if (context.userId) parts.push(`use)`;
-  r:${context.userId}`);`;
-    if (context.sessionId) parts.push(`sessio)`;
-  n:${context.sessionId}`);`;
-    if (context.requestId) parts.push(`reques)`;
-  t:${context.requestId}`);
-    return parts.join(', ');
-  }
-  /**;
-   * Output to console with appropriate styling;
-   */;
-  private outputToConsole(leve,;
-  l: LogLevel, messag,;
-  e: string, entr);
-  y: LogMetadata): void {/* TODO: Fix JSX expression */}
-    }
-  }
-  /**;
-   * Get console styles for different log levels;
-   */;
-  private getConsoleStyles(leve);
-  l: LogLevel): string {/* TODO: Fix JSX expression */}
-    }
-    return [...this.logs]
-  }
-  /**;
-   * Send log entry to external logging service;
-   */;
-  private sendToLoggingService(entry: LogMetadata): void {
-    ,
-    // In a real application, you would send this to your logging service;
-    // For example: Sentry, LogRocket, DataDog, etc.;
-    // Example implementation:;
-    // fetch('/api/logs', {);
-    //   method: 'POST'),
-  }
-    //   headers: {// 'Content-Type': 'application/json'})
-    //   body: JSON.stringify(entry),
-    // }).catch(err => {
-    )
-  }
-    //   // })
-  }
-exportLogs(): string {
-    return JSON.stringify(this.logs, null, 2)
-  }
-  }
-}
-// Export singleton instance;
-export const logger = new Logger();
-  private sendToLoggingService(entr);
-  y: LogMetadata): void {/* TODO: Fix JSX expression */}
-  s: {// 'Content-Type': 'application/json'},;
-    //   bod,;
-  y: JSON.stringify(entry),
-    // }).catch(err => {/* TODO: Fix JSX expression */})
-    //   // })
-  }
-  /**;
-   * Get string representation of log level;
-   */;
-  private getLevelString(leve);
-  l: LogLevel): string {/* TODO: Fix JSX expression */}
-    }
-  }
-}
-export const logger = new Logger();`;
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const AiVoiceSolutionsPage: React.FC = () => {
-  return (
+const AiVoiceSolutionsPage: React.FC = () => {return (
     <>
       <Helmet>
         <title>AI Voice Solutions - Zion Tech Group</title>
@@ -110,7 +109,6 @@ const AiVoiceSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
-}
+  )}
 
 export default AiVoiceSolutionsPage;

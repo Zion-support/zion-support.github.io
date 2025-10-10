@@ -1,216 +1,159 @@
-import React, { Suspense, lazy, ComponentType } from 'react';
-interface LazyComponentProps {
-    fallback?: React.ReactNode;
-  children: React.ReactNode
-  }
-export default function LazyComponent({
-  className = '',
-  children
-}: LazyComponentProps) {
-const DefaultFallback = () => (
-  <div className="flex items-center justify-center p-8"></div>
-    <div className="cyber-loader"></div>
-    <span className="ml-3 text-cyan-400">Loading...</span>
-  </div>
-);
-const LazyComponent: React.FC<LazyComponentProps> = ({</LazyComponentProps>fallback</LazyComponentProps> = <DefaultFallback />,</DefaultFallback>children</DefaultFallback> 
-}) => {
-  return (
-    <Suspense fallback={fallback}></Suspens>
-      {children}
-    </Suspense>
-  );
-}
-// Higher-order component for lazy loading
-export const withLazyLoading = <P extends object>(</P>Component</P>: ComponentType<P>,</P>fallback</P>?: React.ReactNode
-) => {
-  const LazyWrappedComponent = (props: P) => (
-    <LazyComponent fallback={fallback}></LazyComponent>
-      <Component {...props} /></Component>
-    </LazyComponent>
-  );
-  LazyWrappedComponent.displayName = `withLazyLoading(${Component.displayName || Component.name})`;
-  return LazyWrappedComponent;
-}
-// Utility function to create lazy components
-export const createLazyComponent = <P extends object>(</P>importFunc</P>: () => Promise<{ default: ComponentType<P> }>,</P>fallback</P>?: React.ReactNode
-) => {
-  const LazyComponent = lazy(importFunc);
-  return (props: P) => (
-    <LazyComponent fallback={fallback}></LazyComponent>
-      <LazyComponent {...props} /></LazyComponen>
-    </LazyComponent>
-  );
-}
-export default LazyComponent;
-import LoadingSpinner from './LoadingSpinner';
-interface LazyComponentProps {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  childre,
-  n: ReactNode;
-  fallback?: ReactNode;
-  delay?: number
-  threshold?: number
-  rootMargin?: string,
-}
-// Higher-order component for lazy loading;
-export const _withLazyLoading = {}
-          <P extends object>()
-  Componen,
-  t: ComponentType,
-          <P>,
-  fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  return (prop)
-  s: P) => ()
-          <Suspense fallback={fallback || <LoadingSpinner />}>
-      <Component {...props} /></Component>
-    </Suspense>
-  );
-}
-// Lazy component wrapper with intersection observer;
-const,
-  LazyComponent: React.FC,
-          <LazyComponentProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//   children,
-  fallback = 
-          <LoadingSpinner />,
-  delay = 0,
-  threshold = 0.1,
-  rootMargin = '50px')
-}) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const [isVisible, setIsVisible] = React.useState(false);
-  const [isLoaded, setIsLoaded] = React.useState(false);
-  const elementRef = React.useRef;
-          <HTMLDivElement>(null);
-  React.useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const observer = new IntersectionObserver()
-      ([entry]) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        if (entry.isIntersecting) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            setIsVisible(true);
-            setIsLoaded(true);
-          }, delay);
-          observer.disconnect();
-        }
-      },
-      {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         threshold,
-//         rootMargin}
-    );
-    if (elementRef.current) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      observer.observe(elementRef.current);
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    return () => observer.disconnect();
-  }, [delay, threshold, rootMargin]);
-  return (<div>Coming Soon</div>)
-  )
-          <div ref={elementRef}></div>
-      {isVisible ? ()}
-          <Suspense fallback={fallback}></Suspense>
-          {children}
-        </Suspense>
-      ) : ()
-// fallback)}
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
           </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
-}
-// Preload function for critical components;
-export const preloadComponent = (importFunctio)
-  n: () => Promise,
-          <any>) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const component = lazy(importFunction);
-    return component;
-  }
-}
-// Lazy load with preloading;
-export const createLazyComponent = {}
-          <P extends object>()
-  importFunctio,
-  n: () => Promise,
-          <{/* TODO: Fix JSX expression */}
-  t: ComponentType<P> }>,
-  fallback?: ReactNode) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const LazyComponent = lazy(importFunction);
-  return (prop)
-  s: P) => ()
-          <Suspense fallback={fallback || <LoadingSpinner />}>
-      <LazyComponent {...props} /></LazyComponent>
-    </Suspense>
-  );
-}
-// Critical resource preloader;
-export const preloadCriticalResources = () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  if (typeof window === 'undefined') return;
-  // Preload critical fonts;
-const fontPreloads = [
-  // TOD,
-  O: Add items
-],
-    'http,
-  s://fonts.googleapis.com/css2?family=Orbitro,
-  n: wght@400;700,900&display=swap',
-    'http,
-  s://fonts.googleapis.com/css2?family=Rajdhan,
-  i: wght@300;400;500;600;700&display=swap'],
-  fontPreloads.forEach((href) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'style';
-    link.href = href;
-    document.head.appendChild(link);
-  });
-  // Preload critical images;
-const imagePreloads = [
-  // TOD,
-  O: Add items
-],
-//     '/og-image.jpg',
-//     '/favicon.ico'];
-  imagePreloads.forEach((src) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
-    document.head.appendChild(link);
-  });
-}
-export default LazyComponent;
-  </P>
-  </P>
-  </any>
-  </HTMLDivElement>
-  </LazyComponentProps>
-  </P>
-  </P>
+};
+
+export default ComponentsPage;

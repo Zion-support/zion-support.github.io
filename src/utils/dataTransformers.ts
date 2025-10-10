@@ -1,573 +1,159 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-'use client'
-/**
- * Data Transformation Utilities;
- * Provides utilities for transforming and formatting data;
- */
-/**
- * Deep clone an object;
- */
-
-export function deepClone<T>(obj: T): T {
-    // TODO: Add content
-  }
-
-}
-  if (obj === null || typeof obj !== 'object') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return obj;
-  }
-  if (obj instanceof Date) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return new Date(obj.getTime()) as unknown as T;
-  }
-  if (obj instanceof Array) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return obj.map(item => deepClone(item)) as unknown as T;
-  }
-  if (obj instanceof Object) {for (const key in obj) {}
-  // TOD,
-  O: Add content,
-}
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        clonedObj[key] = deepClone(obj[key]);
-      }
-    }
-    return clonedObj;
-  }
-  return obj;
-}
-/**
- * Deep merge two objects;
- */
-export function deepMerge;
-          <T extends Record<string, unknown>>(targe,
-  t: T, sourc)
-  e: Partial<T>): T {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const output = { ...target }
-  for (const key in source) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (Object.prototype.hasOwnProperty.call(source, key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const sourceValue = source[key];
-      const targetValue = output[key];
-      if ()
-//         sourceValue &&
-        typeof sourceValue === 'object' &&
-//         !Array.isArray(sourceValue) &&
-//         targetValue &&
-        typeof targetValue === 'object' &&
-//         !Array.isArray(targetValue)
-
-      ) {
-    // TODO: Add content
-  }
-
-}
-        output[key] = deepMerge()
-//           targetValue as Record;
-          <string, unknown>,
-// sourceValue as Record;
-
-          <string, unknown>
-
-        ) as T[Extract<keyof T, string>];
-      } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        output[key] = sourceValue as T[Extract;
-          <keyof T, string>];
-      }
-    }
-  }
-  return output;
-}
-/**
- * Flatten a nested object;
- */
-export function flattenObject()
-  ob,
-  j: Record,
-          <string, unknown>,
-  prefix = '',
-  separator = '.'
-
-): Record<string, unknown> {
-    // TODO: Add content
-  }
-
-}
-  const,
-  flattened: Record,
-          <string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const value = obj[key];
-      const newKey = prefix ? `${prefix}${separator}${key}` : key;
-      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         Object.assign()
-//           flattened,
-//           flattenObject(value as Record;)
-          <string, unknown>, newKey, separator)
-        );
-      } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        flattened[newKey] = value;
-      }
-    }
-  }
-  return flattened;
-}
-/**
- * Unflatten a flattened object;
- */
-export function unflattenObject()
-  ob,
-  j: Record,
-          <string, unknown>,
-  separator = '.'
-
-): Record<string, unknown> {
-    // TODO: Add content
-  }
-
-}
-  const,
-  result: Record,
-          <string, unknown> = {}
-  for (const key in obj) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (Object.prototype.hasOwnProperty.call(obj, key)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const keys = key.split(separator);
-      for (let i = 0; i;)
-          < keys.length; i++) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const k = keys[i];
-        if (i === keys.length - 1) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          current[k] = obj[key];
-        } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          current[k] = current[k] || {}
-          current = current[k] as Record;
-          <string>
-        }
-      }
-    }
-  }
-  return result;
-}
-/**
- * Pick specific keys from an object;
- */
-export function pick<T extends Record<string, unknown>, K extends keyof T>()
-
-  obj: T,
-  keys: K[]
-
-): Pick,
-          <T, K> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const result = {} as Pick;
-          <T>
-  keys.forEach(key => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-    if (key in obj) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      result[key] = obj[key];
-    }
-  }
-  )
-  return result;
-}
-/**
- * Omit specific keys from an object;
- */
-export function omit;
-          <T extends Record<string, unknown>, K extends keyof T>()
-
-  obj: T,
-  keys: K[]
-
-): Omit,
-          <T, K> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const result = { ...obj }
-  keys.forEach(key => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    delete result[key];)
-  });
-  return result as Omit;
-          <T>
-}
-/**
- * Group array items by a key;
- */
-export function groupBy<T>()
-
-  array: T[],
-  key: keyof T | ((item: T) => string | number)
-
-): Record,
-          <string, T[]> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  return array.reduce()
-    (result, item) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const groupKey = typeof key === 'function' ? String(key(item)) : String(item[key]);
-      (result[groupKey] = result[groupKey] || []).push(item);
-      return result;
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    {} as Record;
-          <string, T[]></string>
-  )
-}
-/**
- * Get unique items from an array;
- */
-
-export function unique<T>(array: T[], key?: keyof T): T[] {
-    // TODO: Add content
-  }
-
-}
-  if (!key) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return Array.from(new Set(array));
-  }
-  const seen = new Set();
-  return array.filter(item => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const value = item[key];)
-    if (seen.has(value)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return false;
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    seen.add(value)
-    return true;
-  }
-  )
-}
-/**
- * Sort array by multiple keys;
- */
-export function sortBy;
-          <T>()
+  ];
 
-  array: T[],
-  keys: Array,
-          <keyof T | ((item: T) => unknown)>,
-  orders: Array<'asc' | 'desc'> = []
-): T[] {
-    // TODO: Add content
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-}
-  return [...array].sort((a, b) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    for (let i = 0; i;)
-          < keys.length; i++) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const key = keys[i];
-      const order = orders[i] || 'asc';
-      const aVal = typeof key === 'function' ? key(a) : a[key];
-      const bVal = typeof key === 'function' ? key(b) : b[key];
-      // Handle comparison with type safety;
-      if (aVal == null || bVal == null) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        if (aVal == null && bVal == null) continue;
-        return aVal == null ? 1 : -1;
-      }
-      // Convert to comparable values;
-const aComp =
-        typeof aVal === 'string' || typeof aVal === 'number' || typeof aVal === 'boolean'
-//           ? aVal;
-          : String(aVal);
-      const bComp =
-        typeof bVal === 'string' || typeof bVal === 'number' || typeof bVal === 'boolean'
-//           ? bVal;
-          : String(bVal);
-      if (aComp;)
-          < bComp) return order === 'asc' ? -1 : 1;
-      if (aComp > bComp) return order === 'asc' ? 1 : -1;
-    }
-    return 0;
-  }
-  )
-}
-/**
- * Chunk array into smaller arrays;
- */
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-export function chunk<T>(array: T[], size: number): T[][] {
-    // TODO: Add content
-  }
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-}
-  const,
-  chunks: T[][] = []
-  for (let i = 0; i;)
-          < array.length, i += size) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    chunks.push(array.slice(i, i + size));
-  }
-    chunks.push(array.slice(i, i + size))
-  }
-  return chunks;
-}
-/**
- * Zip multiple arrays together;
- */
-export function zip;
-          <T>(...array)
-  s: T[][]): T[][] {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const length = Math.max(...arrays.map(arr => arr.length));
-  const,
-  result: T[][] = []
-  for (let i = 0; i;)
-          < length, i++) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    result.push(arrays.map(arr => arr[i]));
-  }
-    result.push(arrays.map(arr => arr[i]))
-  }
-  return result;
-}
-/**
- * Format bytes to human readable string;
- */
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-export function formatBytes(bytes: number, decimals = 2): string {
-    // TODO: Add content
-  }
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-}
-  if (bytes === 0) return '0 Bytes';
-  const k = 1024;
-  const dm = decimals;
-          < 0 ? 0 : decimals;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));`
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`;
-}
-/**
- * Format number with separators;
- */
-
-export function formatNumber(num: number, locale = 'en-US'): string {
-    // TODO: Add content
-  }
-
-}
-  return new Intl.NumberFormat(locale).format(num);
-}
-/**
- * Format currency;
- */
-
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US'): string {
-    // TODO: Add content
-  }
-
-}
-  return new Intl.NumberFormat(locale, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  styl,
-  e: 'currency',
-//     currency;)
-  }).format(amount);
-}
-/**
- * Format date;
- */
-export function formatDate()
-  dat,
-  e: Date | string | number,
-  option,
-  s: Intl.DateTimeFormatOptions = {},
-  locale = 'en-US'
-
-): string {
-    // TODO: Add content
-  }
-
-}
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
-  return new Intl.DateTimeFormat(locale, options).format(d);
-}
-/**
- * Format relative time;
- */
-
-export function formatRelativeTime(date: Date | string | number): string {
-    // TODO: Add content
-  }
-
-}
-  const d = typeof date === 'string' || typeof date === 'number' ? new Date(date) : date;
-  const now = new Date();
-  const diff = now.getTime() - d.getTime();
-  const seconds = Math.floor(diff / 1000);
-  const minutes = Math.floor(seconds / 60);
-  const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
-  const weeks = Math.floor(days / 7);
-  const months = Math.floor(days / 30);
-  const years = Math.floor(days / 365);
-  if (seconds;)
-          < 60) return 'just now';`
-  if (minutes < 60) return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;`
-  if (hours < 24) return `${hours} hour${hours > 1 ? 's' : ''} ago`;`
-  if (days < 7) return `${days} day${days > 1 ? 's' : ''} ago`;`
-  if (weeks < 4) return `${weeks} week${weeks > 1 ? 's' : ''} ago`;`
-  if (months < 12) return `${months} month${months > 1 ? 's' : ''} ago`;`
-  return `${years} year${years > 1 ? 's' : ''} ago`;
-}
-/**
- * Truncate string;
- */
-
-export function truncate(str: string, length: number, suffix = '...'): string {
-    // TODO: Add content
-  }
-
-}
-  if (str.length;)
-          <= length) return str;
-  return str.substring(0, length - suffix.length) + suffix;
-}
-/**
- * Capitalize first letter;
- */
-
-export function capitalize(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
-}
-/**
- * Convert to title case;
- */
-
-export function titleCase(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str;
-//     .toLowerCase()
-//     .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-}
-/**
- * Convert to kebab case;
- */
-
-export function kebabCase(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str;
-//     .replace(/([a-z])([A-Z])/g, '$1-$2')
-//     .replace(/[\s_]+/g, '-')
-    .toLowerCase()
-}
-/**
- * Convert to camel case;
- */
-
-export function camelCase(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (_, chr) => chr.toUpperCase());
-}
-/**
- * Convert to snake case;
- */
-
-export function snakeCase(str: string): string {
-    // TODO: Add content
-  }
-
-}
-  return str;
-//     .replace(/([a-z])([A-Z])/g, '$1_$2')
-//     .replace(/[\s-]+/g, '_')
-    .toLowerCase()
-}
-
-export default {
-    // TODO: Add content
-  }
-
-}
-//   deepClone,
-//   deepMerge,
-//   flattenObject,
-//   unflattenObject,
-//   pick,
-//   omit,
-//   groupBy,
-//   unique,
-//   sortBy,
-//   chunk,
-//   zip,
-//   formatBytes,
-//   formatNumber,
-//   formatCurrency,
-//   formatDate,
-//   formatRelativeTime,
-//   truncate,
-//   capitalize,
-//   titleCase,
-//   kebabCase,
-//   camelCase,
-//   snakeCase;
-}
-
+export default UtilsPage;

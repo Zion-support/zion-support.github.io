@@ -1,230 +1,159 @@
-import React from 'react';
 'use client';
-interface SecurityEnhancerProps {/* TODO: Fix JSX expression */}
-}
-const,
-  SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({/* TODO: Fix JSX expression */})
-}) => {/* TODO: Fix JSX expression */}
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    if (enableHTTPSRedirect) {/* TODO: Fix JSX expression */}
-    }
-    if (enableXSSProtection) {/* TODO: Fix JSX expression */}
-    }
-    if (enableClickjackingProtection) {/* TODO: Fix JSX expression */}
-    }
-    if (enableContentTypeSniffingProtection) {/* TODO: Fix JSX expression */}
-    }
-    // Add security headers;
-    addSecurityHeaders();
-    // Add security event listeners;
-    addSecurityEventListeners();
-  }, [enableCSP, enableHTTPSRedirect, enableXSSProtection, enableClickjackingProtection, enableContentTypeSniffingProtection]);
-  const addContentSecurityPolicy = () => {/* TODO: Fix JSX expression */}
-  }
-  const enforceHTTPS = () => {/* TODO: Fix JSX expression */}
-    }
-  }
-  const addXSSProtection = () => {/* TODO: Fix JSX expression */}
-  }
-  const addClickjackingProtection = () => {/* TODO: Fix JSX expression */}
-  }
-  const addContentTypeSniffingProtection = () => {/* TODO: Fix JSX expression */}
-  }
-  const addSecurityHeaders = () => {/* TODO: Fix JSX expression */}
-  t: 'strict-origin-when-cross-origin' },
-      {/* TODO: Fix JSX expression */}
-  t: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()' },
-      {/* TODO: Fix JSX expression */}
-  t: 'max-age=63072000; includeSubDomains, preload' }
-    ];
-    headers.forEach(header => {/* TODO: Fix JSX expression */})
-    });
-  }
-  const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
-      }
-    });
-    // Prevent text selection (optional)
-    document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
-      }
-    });
-    // Prevent drag and drop;
-    document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
-    });
-    document.addEventListener('drop', (e) => {/* TODO: Fix JSX expression */}
-    });
-    // Prevent F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', (e) => {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+Shift+I;
-        if (e.ctrlKey && e.shiftKey && e.keyCode === 73) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+U;
-        if (e.ctrlKey && e.keyCode === 85) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+S;
-        if (e.ctrlKey && e.keyCode === 83) {/* TODO: Fix JSX expression */}
-        }
-        // Ctrl+A;
-        if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
-        }
-      }
-    });
-    // Monitor for suspicious activity;
-    let suspiciousActivity = 0;
-    const resetSuspiciousActivity = () => {/* TODO: Fix JSX expression */}
-    }
-    // Reset suspicious activity counter every 5 minutes;
-    setInterval(resetSuspiciousActivity, 5 * 60 * 1000);
-    // Track rapid clicks (potential bot activity)
-    let clickCount = 0;
-    document.addEventListener('click', () => {/* TODO: Fix JSX expression */}
-        }
-      });
-    }
-    checkForXSS();
-    // Monitor form submissions for CSRF
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-      form.addEventListener('submit', (e) => {
-        const formData = new FormData(form as HTMLFormElement);
-        const token = formData.get('csrf_token');
-        if (!token) {
-          setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
-          logger.warn('Potential CSRF attempt detected', { form: form.id });
-        }
-      });
-    });
-    // Track rapid keyboard input;
-    let keyCount = 0;
-    document.addEventListener('keydown', () => {/* TODO: Fix JSX expression */}
-          }
-        });
-      });
-    }
-    checkSuspiciousCode();
-    // Monitor for unusual network requests
-    const originalFetch = window.fetch;
-    window.fetch = async (...args) => {
-      const url = args[0] as string;
-      if (typeof url === 'string' && !validateURL(url)) {
-        setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-        logger.warn('Suspicious network request blocked', { url });
-        throw new Error('Suspicious network request blocked');
-      }
-      return originalFetch.apply(window, args);
-    }
-  }, [validateURL]);
-  // Security headers validation
-  const validateSecurityHeaders = useCallback(() => {
-    if (typeof window === 'undefined') return;
-    const warnings: string[] = []
-    // Check for HTTPS
-    if (location.protocol !== 'https:') {
-      warnings.push('Site is not served over HTTPS'),
-      setIsSecure(false)
-  }
-    // Check for security headers (if available)
-    const headers = (window as any).securityHeaders;
-    if (headers) {
-    if (!headers['x-frame-options']) {
-        warnings.push('X-Frame-Options header missing')
-  }
-      if (!headers['x-content-type-options']) {
-    warnings.push('X-Content-Type-Options header missing')
-  }
-      if (!headers['x-xss-protection']) {
-    warnings.push('X-XSS-Protection header missing')
-  }
-    }
-    setSecurityWarnings(warnings);
-    if (warnings.length > 0) {
-      logger.warn('Security warnings detected', { warnings });
-    }
-  }, []);
-  // Rate limiting
-  const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
-    const now = Date.now()
-    const windowStart = now - windowMs,
-    const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
-      .filter((timestamp: number) => timestamp > windowStart),
-    if (requests.length >= limit) {
-      logger.warn('Rate limit exceeded', { key, limit, windowMs });
-      return false;
-    }
-    requests.push(now);
-    localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
-    return true;
-  }, []);
-  // Initialize security monitoring
-  useEffect(() => {
-    monitorCSP();
-    monitorSuspiciousActivity();
-    validateSecurityHeaders();
-    // Set up periodic security checks
-    const interval = setInterval(() => {
-      validateSecurityHeaders()
-  }, 30000); // Check every 30 seconds
-    return () => clearInterval(interval);
-  }, [monitorCSP, monitorSuspiciousActivity, validateSecurityHeaders]);
-  // Security event handlers
-  const handleSecurityEvent = useCallback((event: string, data: any) => {
-    logger.info('Security event', { event, data });
-    // Rate limit security events
-    if (!rateLimit('security_events', 10, 60000)) {
-    return
-  }
-    // Send to security monitoring service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'security_event', {
-        event_category: 'Security',
-        event_label: event,
-        custom_map: data});
-    }
-  }, [rateLimit]);
-  // Expose security utilities globally for debugging
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      (window as any).securityUtils = {
-        sanitizeInput,
-        validateURL,
-        rateLimit,
-        metrics,
-        isSecure,
-        warnings: securityWarnings}
-    }
-  }, [sanitizeInput, validateURL, rateLimit, metrics, isSecure, securityWarnings]);
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    <React.Fragment>
-      {/* Security Status Indicator */}
-      {!isSecure && (
-        <div className="fixed top-0 left-0 right-0 bg-red-600 text-white text-center py-2 z-50">
-          ⚠️ Security Warning: This site is not served over HTTPS</span>
-      )}
-      {/* Security Warnings */}
-      {securityWarnings.length > 0 && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-yellow-600 text-white p-3 rounded-lg shadow-lg z-50 max-w-md">
-          <h4 className="font-bold mb-2">Security Warnings</h4>
-          <ul className="text-sm space-y-1">
-            {securityWarnings.map((warning, index) => (
-              <li key={index}>• {warning}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-      {/* Security Metrics (Development Only) */}
-      {process.env.NODE_ENV === 'development' && (
-        <div className="fixed top-4 left-4 bg-gray-900 text-white p-3 rounded-lg shadow-lg z-40 text-xs">
-          <h4 className="font-bold mb-2">Security Metrics</h4>
-          <div className="space-y-1">
-            <div>CSP Violations: {metrics.cspViolations}</div>
-            <div>XSS Attempts: {metrics.xssAttempts}</div>
-            <div>CSRF Attempts: {metrics.csrfAttempts}</div>
-            <div>Suspicious Activity: {metrics.suspiciousActivity}</div>
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
           </div>
-        </div>
-      )}
-    </React.Fragment>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
   );
-}
-export default SecurityEnhancer</div>
-  </SecurityEnhancerProps>
+};
+
+export default ComponentsPage;

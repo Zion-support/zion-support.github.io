@@ -1,408 +1,159 @@
-import React from 'react';
 'use client';
-interface PerformanceMetrics {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  fc,
-  p: number | null,,
-    lc,
-  p: number | null,,
-    fi,
-  d: number | null,,
-    cl,
-  s: number | null,,
-    ttf,
-  b: number | null,,
-    memor,
-  y: number | null,
-}
-interface PerformanceMonitorProps {
-    // TODO: Add content
-  }
-}
-interface PerformanceProps {/* TODO: Fix JSX expression */}
-}
-const AdvancedPerformanceMonitor: React.FC,
-          <PerformanceMonitorProps> = ({
-    // TODO: Add content
-  }
-}
-//   onMetricsUpdate,
-  enableRealTimeMonitoring = true;)
-}) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  const [metrics, setMetrics] = useState;
-          <PerformanceMetrics>({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memory: null,
-  });
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    if (typeof PerformanceObserver === 'undefined') return;
-    const,
-  observers: PerformanceObserver[] = []
-    // Measure First Contentful Paint (FCP)
-    const fcpEntries = performance.getEntriesByName('first-contentful-paint') || []
-    const fcp = _fcpEntries.length > 0 ? _fcpEntries[0].startTime : null,
-    // Measure Largest Contentful Paint (LCP)
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const lcpObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-          const entries = list.getEntries();
-          const lastEntry = _entries[_entries.length - 1];
-          setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: _lastEntry.startTime }));
-        });
-        lcpObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['largest-contentful-paint'] });
-        observers.push(lcpObserver);
-      } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    // Measure First Input Delay (FID)
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const fidObserver = new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-          const entries = list.getEntries();
-          _entries.forEach(entry => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-            if ()
-              entry.entryType === 'first-input' &&
-              'processingStart' in entry &&
-//               'startTime' in entry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              const fidEntry = entry as PerformanceEventTiming;
-              setMetrics(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//                 ...prev,
-                fi,
-  d: _fidEntry.processingStart - _fidEntry.startTime,)
-              }));
-            }
-          });
-        });
-        fidObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['first-input'] });
-        observers.push(fidObserver);
-      } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-    // Measure Cumulative Layout Shift (CLS)
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      try {const clsObserver = new PerformanceObserver(list => {}
-  // TOD,
-  O: Add content,
-})
-          const entries = list.getEntries();
-          _entries.forEach(entry => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-            if ()
-              entry.entryType === 'layout-shift' &&
-              'hadRecentInput' in entry &&
-//               'value' in entry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-              const clsEntry = entry as LayoutShift;
-              if (!_clsEntry.hadRecentInput) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-                _clsValue += _clsEntry.value;
-                setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: _clsValue }));
-              }
-            }
-          });
-        });
-        clsObserver.observe({/* TODO: Fix JSX expression */})
-  s: ['layout-shift'] });
-        observers.push(clsObserver);
-      } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        }
-    }
-    // Measure Time to First Byte (TTFB)
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const navigationEntries = performance.getEntriesByType?.('navigation') || [];
-      const navigationEntry = _navigationEntries[0] as PerformanceNavigationTiming;
-      const ttfb = _navigationEntry;
-//         ? _navigationEntry.responseStart - _navigationEntry.requestStart;
-        : null;
-      // Measure Memory Usage;
-const memory =
-        (performance as Performance & {/* TODO: Fix JSX expression */})
-  e: number } })
-          .memory?.usedJSHeapSize || null;
-      setMetrics(prev => ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         ...prev,
-        fc,
-  p: _fcp,
-//         ttfb,
-//         memory;)
-      }));
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-    // Cleanup observers;
-    return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      observers.forEach(observer => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-          observer.disconnect();
-        } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          }
-      });
-    }
-  }, []);
-  const measureResourceTiming = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined' || !('performance' in window)) return;
-    const resources = performance.getEntriesByType('resource');
-    const slowResources = _resources.filter()
-      (resourc)
-  e: PerformanceResourceTiming) => resource.duration > 1000),
-    if (slowResources.length > 0) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // eslint-disable-next-line no-console;
-// console.log('Slow,
-  resources:', slowResources.map(r => ({/* TODO: Fix JSX expression */}
-  e: r.name}
-      //   duratio,
-  n: r.duration,
-      //   siz,
-  e: r.transferSize,)
-      // })));
-    }
-  }, []);
-  const measureCoreWebVitals = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (typeof window === 'undefined') return;
-    // Use web-vitals library if available;
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       import('web-vitals')
-        .then(webVitals => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          const { onCLS, onFCP, onLCP, onTTFB } = webVitals;)
-          if (onCLS) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            onCLS((metri,
-  c: {/* TODO: Fix JSX expression */})
-  e: number }) =>
-              setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  s: metric.value }))
-            );
-          }
-          if (onFCP) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            onFCP((metri,
-  c: {/* TODO: Fix JSX expression */})
-  e: number }) =>
-              setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value }))
-            );
-          }
-          if (onLCP) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            onLCP((metri,
-  c: {/* TODO: Fix JSX expression */})
-  e: number }) =>
-              setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  p: metric.value }))
-            );
-          }
-          if (onTTFB) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            onTTFB((metri,
-  c: {/* TODO: Fix JSX expression */})
-  e: number }) =>
-              setMetrics(prev => ({/* TODO: Fix JSX expression */})
-  b: metric.value }))
-            );
-          }
-        })
-        .catch(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          // web-vitals not available, continue without it;
-        });
-    } catch {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // web-vitals not available, continue without it;
-    }
-  }, []);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (!enableRealTimeMonitoring) return;
-    const cleanup = measureWebVitals();
-// Monitor performance every 5 seconds;
-    const interval = setInterval(() => {/* TODO: Fix JSX expression */}
-    }, 5000);
-    return () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (_cleanup) _cleanup();
-      clearInterval(interval);
-    }
-  }, [
-  // TOD,
-  O: Add items]
-//     enableRealTimeMonitoring,
-//     measureWebVitals,
-//     measureResourceTiming,
-//     measureCoreWebVitals]);
-  useEffect(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (onMetricsUpdate) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      onMetricsUpdate(metrics);
-    }
-  }, [metrics, onMetricsUpdate]);
-  // Performance recommendations;
-const getPerformanceRecommendations = useCallback(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const,
-  recommendations: string[] = [],
-    if (metrics.fcp && metrics.fcp > 1800) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       recommendations.push()
-//         'First Contentful Paint is slow. Consider optimizing critical rendering path.'
-      );
-    }
-    if (metrics.lcp && metrics.lcp > 2500) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       recommendations.push()
-//         'Largest Contentful Paint is slow. Optimize images and reduce render-blocking resources.'
-      );
-    }
-    if (metrics.fid && metrics.fid > 100) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       recommendations.push()
-//         'First Input Delay is high. Reduce JavaScript execution time.'
-      );
-    }
-    if (metrics.cls && metrics.cls > 0.1) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       recommendations.push()
-//         'Cumulative Layout Shift is high. Ensure stable layout and avoid dynamic content insertion.'
-      );
-    }
-    if (metrics.ttfb && metrics.ttfb > 600) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       recommendations.push()
-//         'Time to First Byte is slow. Optimize server response time.'
-      );
-    }
-    return recommendations;
-  }, [metrics]);
-  const recommendations = getPerformanceRecommendations();
-  if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    return (<div>Coming Soon</div>)
-  )
-          <div className='fixed bottom-4 right-4 bg-white p-4 rounded-lg shadow-lg border max-w-sm z-50'></div>
-        <h3 className='font-semibold text-sm mb-2'>Performance Monitor</h3>
-        <div className='text-xs space-y-1'></div>
-          <div>FC,
-  P: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>LC,`
-  P: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-          <div>FI,`
-  D: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-          <div>CL,
-  S: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-          <div></div>
-            TTF,`
-  B: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
           </div>
-          <div></div>
-            Memor,
-  y:{' '}
-            {
-    metrics.memory
-  }`
-              ? `${(metrics.memory / 1024 / 1024).toFixed(1)}MB`
-              : 'N/A'}
-          </div>
-        </div>
-        {_recommendations.length > 0 && ()}
-          <div className='mt-2'></div>
-            <h4>
-  Recommendation,
-  s:
-            </h4>
-            <ul className='text-xs text-red-600'></ul>
-{recommendations.map((rec, index) => (}
-                <li key={index}>• {rec}</li>)
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-        )}
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    );
-  }
-  return null;
-}
-export default AdvancedPerformanceMonitor;`
-  </PerformanceMetrics>
-  </PerformanceMonitorProps>
+      <Footer />
+    </>
+  );
+};
+
+export default ComponentsPage;

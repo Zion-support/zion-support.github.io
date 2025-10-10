@@ -1,907 +1,159 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-'use client'
-/**
- * Advanced Analytics System for Zion Tech Group Website;
- * Provides comprehensive user behavior tracking and insights;
- */
-
-interface UserEvent {
-    // TODO: Add content
-  }
-}
-  id: string
-    type: 'page_view' | 'click' | 'scroll' | 'form_submit' | 'download' | 'custom',,
-    category: string,,
-    action: string
-  label?: string
-
-  value?: number,,
-    timestam,
-  p: string,,
-    sessionI,
-  d: string
-  userId?: string,,
-
-    url: string
-  metadata?: Record,
-          <string>
-}
-interface UserSession {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  i,
-  d: string,
-    startTim,
-  e: string;
-  endTime?: string
-  duration?: number
-    pageViews: number,,
-    events: UserEvent[]
-
-  referrer?: string,,
-    userAgen,
-  t: string,,
-    devic,
-  e: 'desktop' | 'mobile' | 'tablet',,
-    browse,
-  r: string,,
-    o,
-  s: string
-  country?: string
-  city?: string,
-}
-
-interface AnalyticsConfig {
-    // TODO: Add content
-  }
-}
-  enableTracking: boolean
-    enableHeatmaps: boolean
-    enableSessionRecording: boolean,,
-    enableA_BTesting: boolean,,
-    enableConversionTracking: boolean,,
-    enablePerformanceTracking: boolean,,
-    enableErrorTracking: boolean,,
-    enableUserJourneyTracking: boolean
-}
-class AdvancedAnalytics {
-    // TODO: Add content
-  }
-
-}
-  private static,
-  instance: AdvancedAnalytics,
-  private,
-  config: AnalyticsConfig,
-  private,
-  currentSession: UserSession,
-  private,
-  eventQueue: UserEvent[] = []
-  private maxQueueSize = 1000
-  private isOnline = true,
-  private constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.config = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  enableTracking: true,
-      enableHeatmaps: true,
-      enableSessionRecording: false,
-      enableA_BTesting: true,
-      enableConversionTracking: true,
-      enablePerformanceTracking: true,
-      enableErrorTracking: true,
-      enableUserJourneyTracking: true,
-
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    this.currentSession = this.createNewSession();
-    this.initializeTracking();
-  }
-  static getInstance(): AdvancedAnalytics {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (!AdvancedAnalytics.instance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      AdvancedAnalytics.instance = new AdvancedAnalytics();
-    }
-    return AdvancedAnalytics.instance;
-  }
-  /**
-   * Initialize comprehensive analytics tracking;
-   */
-
-  private initializeTracking(): void {
-    // TODO: Add content
-  }
-
-}
-    if (typeof window === 'undefined' || !this.config.enableTracking) return;
-    // Track page views;
-    this.trackPageView();
-    // Track clicks;
-    this.trackClicks();
-    // Track scrolls;
-    this.trackScrolls();
-    // Track form submissions;
-    this.trackFormSubmissions();
-    // Track downloads;
-    this.trackDownloads();
-    // Track performance;
-    if (this.config.enablePerformanceTracking) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.trackPerformance();
-    }
-    // Track user journey;
-    if (this.config.enableUserJourneyTracking) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.trackUserJourney();
-    }
-    // Setup network monitoring;
-    this.setupNetworkMonitoring();
-  }
-  /**
-   * Create new user session;
-   */
-
-  private createNewSession(): UserSession {
-    // TODO: Add content
-  }
-
-}
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: this.generateSessionId(),
-      startTime: new Date().toISOString(),
-      pageViews: 0,
-      events: [],
-      userAgent: navigator.userAgent,
-      device: this.detectDevice(),
-      browser: this.detectBrowser(),
-      os: this.detectOS(),
-      referrer: document.referrer,
-
-    }
-  }
-  /**
-   * Track page views;
-   */
-
-  trackPageView(url?: string, title?: string): void {id: this.generateEventId()}
-      type: 'page_view',
-      category: 'navigation',
-      action: 'page_view',
-      label: title || document.title,
-      timestamp: new Date().toISOString(),
-      sessionId: this.currentSession.id,
-      userId: this.getUserId(),
-      url: url || window.location.href,
-      metadata: {
-    // TODO: Add content
-  }
-
-}
-  referre,
-  r: document.referrer,
-        viewpor,
-  t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  width: window.innerWidth,
-          height: window.innerHeight,
-
-        }
-      }
-    }
-    this.trackEvent(event)
-    this.currentSession.pageViews++
-  }
-  /**
-   * Track clicks;
-   */
-
-  private trackClicks(): void {
-    // TODO: Add content
-  }
-
-}
-    document.addEventListener('click', event => {
-    const element = this.getElementInfo(target)
-  }
-      const,
-  clickEvent: UserEvent = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: this.generateEventId(),
-        type: 'click',
-        category: element.category,
-        action: 'click',
-        label: element.label,
-        timestamp: new Date().toISOString(),
-        sessionId: this.currentSession.id,
-        userId: this.getUserId(),
-        url: window.location.href,
-        metadata: {
-    // TODO: Add content
-  }
-}
-  element: element.tagName,
-          id: element.id,
-          className: element.className,
-          text: element.text?.substring(0, 100),
-          position: {
-    // TODO: Add content
-  }
-
-}
-  x: event.clientX,
-            y: event.clientY,
-          }
-        }
-      }
-      this.trackEvent(clickEvent)
-    }
-  )
-  }
-  /**
-   * Track scrolls;
-   */
-
-  private trackScrolls(): void {
-    // TODO: Add content
-  }
-
-}
-    let,
-  scrollTimeout: NodeJS.Timeout,
-    window.addEventListener('scroll', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const,
-  scrollEvent: UserEvent = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: this.generateEventId(),
-          type: 'scroll',
-          category: 'engagement',
-          action: 'scroll',
-          value: Math.round()
-//             (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100,
-//           ),
-          timestamp: new Date().toISOString(),
-          sessionId: this.currentSession.id,
-          userId: this.getUserId(),
-          url: window.location.href,
-          metadata: {
-    // TODO: Add content
-  }
-}
-  scrollY: window.scrollY,
-            scrollPercentage: Math.round()
-
-//               (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100,
-//             )
-          }
-        }
-        this.trackEvent(scrollEvent)
-      }, 100)
-    }
-  )
-  }
-  /**
-   * Track form submissions;
-   */
-
-  private trackFormSubmissions(): void {
-    // TODO: Add content
-  }
-
-}
-    document.addEventListener('submit', event => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const form = event.target as HTMLFormElement;)
-      const formData = new FormData(form);
-      const formFields = Array.from(formData.keys());
-      const,
-  submitEvent: UserEvent = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: this.generateEventId(),
-        type: 'form_submit',
-        category: 'conversion',
-        action: 'form_submit',
-        label: form.id || form.className || 'unknown_form',
-        timestamp: new Date().toISOString(),
-        sessionId: this.currentSession.id,
-        userId: this.getUserId(),
-        url: window.location.href,
-        metadata: {
-    // TODO: Add content
-  }
-}
-  formId: form.id,
-          formClass: form.className,
-          formAction: form.action,
-          formMethod: form.method,
-          fields: formFields,
-
-        }
-      }
-      this.trackEvent(submitEvent)
-    }
-  )
-  }
-  /**
-   * Track downloads;
-   */
-
-  private trackDownloads(): void {
-    // TODO: Add content
-  }
-
-}
-    document.addEventListener('click', event => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      const target = event.target as HTMLElement;)
-      const link = target.closest('a');
-      if (link && this.isDownloadLink(link)) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const,
-  downloadEvent: UserEvent = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: this.generateEventId(),
-          type: 'download',
-          category: 'conversion',
-          action: 'download',
-          label: link.href,
-          timestamp: new Date().toISOString(),
-          sessionId: this.currentSession.id,
-          userId: this.getUserId(),
-          url: window.location.href,
-          metadata: {
-    // TODO: Add content
-  }
-}
-  downloadUrl: link.href,
-            downloadText: link.textContent?.substring(0, 100)
-
-          }
-        }
-        this.trackEvent(downloadEvent)
-      }
-    }
-  )
-  }
-  /**
-   * Track performance metrics;
-   */
-
-  private trackPerformance(): void {
-    // TODO: Add content
-  }
-
-}
-    if ('PerformanceObserver' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Track Core Web Vitals;
-      new PerformanceObserver(list => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-        for (const entry of list.getEntries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          if (entry.entryType === 'paint') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            const,
-  paintEvent: UserEvent = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: this.generateEventId(),
-              type: 'custom',
-              category: 'performance',
-              action: entry.name,
-              value: entry.startTime,
-              timestamp: new Date().toISOString(),
-              sessionId: this.currentSession.id,
-              userId: this.getUserId(),
-              url: window.location.href,
-              metadata: {
-    // TODO: Add content
-  }
-}
-  metric: entry.name,
-                value: entry.startTime,
-
-              }
-            }
-            this.trackEvent(paintEvent)
-          }
-        }
-
-      }).observe({ entryTypes: ['paint'] });
-
-      // Track navigation timing;
-      window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const navigation = performance.getEntriesByType()
-//           'navigation'
-        )[0] as PerformanceNavigationTiming;
-        const,
-  performanceEvent: UserEvent = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: this.generateEventId(),
-          type: 'custom',
-          category: 'performance',
-          action: 'page_load',
-          value: navigation.loadEventEnd - navigation.loadEventStart,
-          timestamp: new Date().toISOString(),
-          sessionId: this.currentSession.id,
-          userId: this.getUserId(),
-          url: window.location.href,
-          metadata: {
-    // TODO: Add content
-  }
-}
-  loadTime: navigation.loadEventEnd - navigation.loadEventStart,
-            domContentLoaded:
-
-//               navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-            firstByt,
-  e: navigation.responseStart - navigation.requestStart,
-          }
-        }
-        this.trackEvent(performanceEvent)
-      }
-  )
-    }
-  }
-  /**
-   * Track user journey;
-   */
-  private trackUserJourney(): void {
-    // Track page transitions
-  }
-    const observer = new MutationObserver(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (window.location.href !== lastUrl) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        this.trackPageView();
-        lastUrl = window.location.href;
-      }
-    });
-    observer.observe(document.body, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  childLis,
-  t: true,
-      subtre,
-  e: true,)
-    });
-  }
-  /**
-   * Setup network monitoring;
-   */
-
-  private setupNetworkMonitoring(): void {
-    // TODO: Add content
-  }
-
-}
-    window.addEventListener('online', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.isOnline = true;
-      this.flushEventQueue();
-    });
-    window.addEventListener('offline', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.isOnline = false;
-    });
-  }
-  /**
-   * Track custom event;
-   */
-
-  trackEvent(event: UserEvent): void {
-    // TODO: Add content
-  }
-
-}
-    this.currentSession.events.push(event);
-    this.eventQueue.push(event);
-    // Keep queue size manageable;
-    if (this.eventQueue.length > this.maxQueueSize) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.eventQueue.shift();
-    }
-    // Send to analytics service;
-    if (this.isOnline) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.sendEvent(event);
-    }
-  }
-  /**
-   * Send event to analytics service;
-   */
-
-  private async sendEvent(event: UserEvent): Promise,
-          <void> {
-    // TODO: Add content
-  }
-
-}
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      await fetch('/api/analytics', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  metho,
-  d: 'POST',
-        header,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          'Content-Type': 'application/json'
-        },
-        bod)
-  y: JSON.stringify(event)
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-  }
-  /**
-   * Flush event queue when back online;
-   */
-  private async flushEventQueue(): Promise;
-          <void> {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (!this.isOnline) return;
-    const eventsToSend = [...this.eventQueue];
-    this.eventQueue = [];
-    for (const event of eventsToSend) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      await this.sendEvent(event);
-    }
-  }
-  /**
-   * Get element information for tracking;
-   */
-
-  private getElementInfo(element: HTMLElement): {
-    // TODO: Add content
-  }
-}
-  category: string,,
-    label: string,,
-    tagName: string,,
-    id: string,,
-    className: string
-    text?: string,
-  } {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const tagName = element.tagName.toLowerCase();
-    const id = element.id || '';
-    const className = element.className || '';
-    const text = element.textContent?.trim();
-    // Determine category based on element type;
-let category = 'interaction';
-    if (tagName === 'button' || element.closest('button')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      category = 'button';
-    } else if (tagName === 'a' || element.closest('a')) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      category = 'link';
-    } else if (tagName === 'input' || tagName === 'select' || tagName === 'textarea') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      category = 'form';
-    }
-    // Create label;
-let label = id || className || text?.substring(0, 50) || tagName;
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       category,
-//       label,
-//       tagName,
-//       id,
-//       className,
-//       text;
-    }
-  }
-  /**
-   * Check if link is a download;
-   */
-
-  private isDownloadLink(link: HTMLAnchorElement): boolean {
-    // TODO: Add content
-  }
-}
-    return (
-
-          <div>Coming Soon</div>
-
-  )
-      link.download !== '' ||
-// !!link.href.match(/\.(pdf|doc|docx|xls|xlsx|ppt|pptx|zip|rar|7z|tar|gz)$/i) ||
-      link.getAttribute('data-download') === 'true'
-    )
-  }
-  /**
-   * Detect device type;
-   */
-
-  private detectDevice(): 'desktop' | 'mobile' | 'tablet' {
-    // TODO: Add content
-  }
-
-}
-    const width = window.innerWidth;
-    if (width;)
-          < 768) return 'mobile';
-    if (width < 1024) return 'tablet';
-    return 'desktop';
-  }
-  /**
-   * Detect browser;
-   */
-
-  private detectBrowser(): string {
-    // TODO: Add content
-  }
-
-}
-    const userAgent = navigator.userAgent;
-    if (userAgent.includes('Chrome')) return 'Chrome';
-    if (userAgent.includes('Firefox')) return 'Firefox';
-    if (userAgent.includes('Safari')) return 'Safari';
-    if (userAgent.includes('Edge')) return 'Edge';
-    return 'Unknown';
-  }
-  /**
-   * Detect operating system;
-   */
-
-  private detectOS(): string {
-    // TODO: Add content
-  }
-
-}
-    const userAgent = navigator.userAgent;
-    if (userAgent.includes('Windows')) return 'Windows';
-    if (userAgent.includes('Mac')) return 'macOS';
-    if (userAgent.includes('Linux')) return 'Linux';
-    if (userAgent.includes('Android')) return 'Android';
-    if (userAgent.includes('iOS')) return 'iOS';
-    return 'Unknown';
-  }
-  /**
-   * Generate session ID;
-   */
-
-  private generateSessionId(): string {
-    // TODO: Add content
-  }
-
-}
-    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-  /**
-   * Generate event ID;
-   */
-
-  private generateEventId(): string {
-    // TODO: Add content
-  }
-}
-
-    return `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-  }
-  /**
-   * Get user ID from storage or generate one;
-   */
-
-  private getUserId(): string | undefined {
-    // TODO: Add content
-  }
-
-}
-    let userId = localStorage.getItem('analytics_user_id');
-    if (!userId) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}`
-      userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      localStorage.setItem('analytics_user_id', userId);
-    }
-    return userId;
-  }
-  /**
-   * Get analytics summary;
-   */
-
-  getAnalyticsSummary(): {
-    // TODO: Add content
-  }
-
-}
-  sessio,
-  n: UserSession,,
-    totalEvent,
-  s: number,,
-    eventsByTyp,
-  e: Record,
-          <string>
-    eventsByCategor,
-  y: Record<string>
-    topPage,
-  s: Array<{/* TODO: Fix JSX expression */}
-  s: number }>;
-    conversionRat,
-  e: number,
-  } {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const events = this.currentSession.events;
-    const totalEvents = events.length;
-    const eventsByType = events.reduce()
-      (acc, event) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        acc[event.type] = (acc[event.type] || 0) + 1;
-        return acc;
-      },
-      {} as Record;
-          <string, number></string>
-    )
-    const eventsByCategory = events.reduce()
-
-      (acc, event) => {
-    // TODO: Add content
-  }
-
-}
-        acc[event.category] = (acc[event.category] || 0) + 1;
-        return acc;
-      },
-      {} as Record;
-
-          <string, number>
-
-    );
-    const pageViews = events.filter(e => e.type === 'page_view');
-    const topPages = pageViews;
-// .reduce()
-        (acc, event) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          const existing = acc.find(p => p.url === event.url);
-          if (existing) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            existing.views++;
-          } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-            acc.push({ url: event.url, views: 1 });
-
-          }
-          return acc;
-        },
-        [] as Array;
-          <{/* TODO: Fix JSX expression */}
-  s: number }>
-// )
-      .sort((a, b) => b.views - a.views);
-    const conversions = events.filter(e => e.category === 'conversion').length;
-    const conversionRate = totalEvents > 0 ? (conversions / totalEvents) * 100 : 0;
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  session: this.currentSession,
-//       totalEvents,
-//       eventsByType,
-//       eventsByCategory,
-      topPages: topPages.slice(0, 10),
-
-//       conversionRate;
-    }
-  }
-  /**
-   * Send session data to analytics service;
-   */
-
-  private async sendSessionData(session: UserSession): Promise,
-          <void> {
-    // TODO: Add content
-  }
-
-}
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      await fetch('/api/analytics/session', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  metho,
-  d: 'POST',
-        header,
-  s: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          'Content-Type': 'application/json'
-        },
-        bod)
-  y: JSON.stringify(session)
-      });
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      }
-  }
-  /**
-   * End current session;
-   */
-
-  endSession(): void {
-    // TODO: Add content
-  }
-
-}
-    this.currentSession.endTime = new Date().toISOString();
-    this.currentSession.duration =
-//       new Date(this.currentSession.endTime).getTime() -
-      new Date(this.currentSession.startTime).getTime();
-    // Send session data;
-    if (this.isOnline) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.sendSessionData(this.currentSession);
-    }
-    // Create new session;
-    this.currentSession = this.createNewSession();
-  }
-}
-// Export singleton instance;
-export const advancedAnalytics = AdvancedAnalytics.getInstance()
-export default advancedAnalytics;`
-
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

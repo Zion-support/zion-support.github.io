@@ -3,217 +3,157 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, Zap, DollarSign, Clock, Users, Shield, BarChart, ArrowRight } from 'lucide-react';
-const FinancialITPage: React.FC = () => {
-    const features = [
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const FinancialItPage: React.FC = () => {
+  const features = [
     {
-      icon: DollarSign,
-      title: 'SOX Compliance',
-      description: 'Full SOX compliance solutions with automated controls, monitoring, and reporting capabilities.',;
-      benefits: ['Automated controls', 'Compliance reporting', 'Audit trails']
-  },
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
     {
-    icon: Zap,
-      title: 'Financial Data Security',
-      description: 'Bank-level security for financial data with encryption, access controls, and monitoring.',;
-      benefits: ['Data encryption', 'Access controls', 'Security monitoring']
-  },
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
     {
-    icon: Clock,
-      title: 'Real-time Processing',
-      description: 'High-frequency trading and real-time financial data processing capabilities.',
-      benefits: ['Low latency', 'High throughput', 'Real-time analytics']
-  },
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
     {
-    icon: Users,
-      title: 'Regulatory Compliance',
-      description: 'Comprehensive compliance with financial regulations including PCI DSS, GDPR, and more.',;
-      benefits: ['Multi-regulation support', 'Automated compliance', 'Risk management']
-  },
-    {
-    icon: Shield,
-      title: 'Fraud Detection',
-      description: 'Advanced AI-powered fraud detection and prevention systems for financial transactions.',
-      benefits: ['Real-time detection', 'Machine learning', 'Risk scoring']
-  },
-    {
-    icon: BarChart,
-      title: 'Financial Analytics',
-      description: 'Comprehensive analytics and reporting for financial operations and compliance.',
-      benefits: ['Real-time reporting', 'Predictive analytics', 'Risk assessment']
-  }
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  ]
-const services = [
-    {
-    icon: '🏦',
-      title: 'Banking Solutions',
-      description: 'Core banking systems and digital banking platforms'
-  },
-    {
-    icon: '💳',
-      title: 'Payment Processing',
-      description: 'Secure payment gateways and transaction processing'
-  },
-    {
-    icon: '📊',
-      title: 'Risk Management',
-      description: 'Advanced risk assessment and management tools'
-  },
-    {
-    icon: '🔒',
-      title: 'Security Services',
-      description: 'Cybersecurity and data protection solutions'
-  }
-    }
-  ]
-const benefits = [
-    'SOX Compliance Ready',
-    'Bank-level Security',;
-    'Real-time Processing',;
-    'Regulatory Compliance',;
-    'Fraud Prevention',;
-    'Advanced Analytics';
-  ]
-return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900"></div>
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
       <Helmet>
-        <title>Financial IT Solutions | Zion Tech Group</title>
-        <meta>
-        <meta>
+        <title>Financial It - Zion Tech Group</title>
+        <meta name="description" content="Advanced Financial It solutions for businesses" />
+        <meta name="keywords" content="AI, financial it, artificial intelligence, business solutions" />
       </Helmet>
-      <Navigation>
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden"></section>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(34,197,94,0.3)_0%,transparent_50%)] animate-pulse" /></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} /></div>
-        <div className="relative max-w-7xl mx-auto text-center"></div>
-          <h1>
-            Financial Services;
-            <span>
-              IT Solutions;
-            </span>
-          </h1>
-          <p>
-            Specialized IT solutions for financial services with SOX compliance, security, and regulatory requirements.;
-            Built for banks, credit unions, investment firms, and fintech companies.;
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
-              Get Started Today
-              <ArrowRight>
-            </button>
-            <button>
-              Schedule Demo,
-            </button>
-          </div>
-        </div>
-      </section>
-      {/* Features Section */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-4xl font-bold text-white mb-4">Financial IT Solutions</h2>
-            <p>
-              Comprehensive IT solutions designed specifically for financial services industry;
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Financial It
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered financial it solution for modern businesses.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            {
-    features.map((feature, index) => (
-  }
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-green-400/50 transition-all duration-300 group"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <feature>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul>
-                  {
-    feature.benefits.map((benefit, benefitIndex) => (
-  }
-                    <li>
-                      <CheckCircle>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
-      {/* Services Section */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
-              Financial Services;
-            </h2>
-            <p>
-              Comprehensive IT solutions for all aspects of financial services and banking operations.;
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
-            {
-    services.map((service, index) => (
-  }
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300"></div>
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
-                <p className="text-gray-300">{service.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2>
-              Why Choose Our Financial IT Solutions?;
-            </h2>
-            <p>
-              Experience the benefits of modern financial technology with our proven solutions.;
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-            {
-    benefits.map((benefit, index) => (
-  }
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center"></div>
-                <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center"></div>
-                  <CheckCircle>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Financial It?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-      {/* CTA Section */}
-      <section className="py-20 px-4"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-4xl font-bold text-white mb-6">Ready for Financial IT Excellence?</h2>
-          <p>
-            Join leading financial institutions using our specialized IT solutions for compliance and security;
-          </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>
-            <button>
-              Start Free Trial
-            </button>
-            <button>
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
-      <Footer>
-    </div>
-  ),
-}
-export default FinancialITPage;
+        </section>
 
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Financial It solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default FinancialItPage;

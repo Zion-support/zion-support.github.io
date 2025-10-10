@@ -2,13 +2,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOOptimizerProps {
-  title: string;
+interface SEOOptimizerProps {title: string;
   description: string;
   keywords?: string[]
   canonicalUrl?: string;
-  structuredData?: object;
-}
+  structuredData?: object}
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   title,
@@ -21,7 +19,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
 
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>title</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywordsString} />
       <meta name="robots" content="index, follow" />
@@ -40,9 +38,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Structured Data */}
       {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
+        <script>JSON.stringify(structuredData)</script>
       )}
     </Helmet>
   );

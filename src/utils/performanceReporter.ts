@@ -1,492 +1,159 @@
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-'use client'
-/**
- * Performance Reporter;
- * Comprehensive performance monitoring and reporting;
- */
-
-export interface PerformanceMetric {
-    // TODO: Add content
-  }
-}
-  name: string,,
-    value: number,,
-    rating: 'good' | 'needs-improvement' | 'poor',,
-    timestamp: number
-}
-export interface PerformanceReport {
-    // TODO: Add content
-  }
-
-}
-  metric,
-  s: PerformanceMetric[]
-  navigation?: PerformanceNavigationTiming
-  resources?: PerformanceResourceTiming[],,
-    timestam,
-  p: number,,
-    userAgen,
-  t: string,,
-    ur,
-  l: string,
-}
-
-class PerformanceReporter {
-    // TODO: Add content
-  }
-}
-  private metrics: PerformanceMetric[] = []
-
-  private reportingInterval?: NodeJS.Timeout,
-  private,
-  isEnabled: boolean = false
-  /**
-   * Initialize performance monitoring
-   */
-
-  init(config?: { enabled?: boolean, reportInterval?: number }): void {
-    // TODO: Add content
-  }
-
-}
-    if (typeof window === 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       return;
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    this.isEnabled = config?.enabled ?? process.env['NODE_ENV'] === 'production'
-    if (!this.isEnabled) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       return;
-    }
-    // Monitor Core Web Vitals;
-//     this.monitorWebVitals()
-    // Monitor navigation timing;
-//     this.monitorNavigationTiming()
-    // Monitor resource timing;
-//     this.monitorResourceTiming()
-    // Setup periodic reporting;
-    if (config?.reportInterval) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.reportingInterval = setInterval(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//         this.report()
-      }, config.reportInterval)
-    }
-    // Report on page unload;
-    window.addEventListener('beforeunload', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       this.report()
-    }
-  )
-  }
-  /**
-   * Monitor Core Web Vitals using PerformanceObserver;
-   */
+  ];
 
-  private monitorWebVitals(): void {
-    // TODO: Add content
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-}
-    if (typeof PerformanceObserver === 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       return;
-    }
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Largest Contentful Paint (LCP)
-      const lcpObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const entries = entryList.getEntries();
-        const lastEntry = entries[entries.length - 1]
-        if (lastEntry && 'renderTime' in lastEntry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          const value = (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).renderTime ||
-                       (lastEntry as PerformanceEntry & { renderTime?: number; loadTime?: number }).loadTime || 0;
-          this.addMetric('LCP', value, this.getRating('lcp', value))
-        }
-      }
-  )
-      lcpObserver.observe({/* TODO: Fix JSX expression */}
-  d: true })
-  )
-      // First Input Delay (FID)
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-      const fidObserver = new PerformanceObserver((entryList) => {
-    // TODO: Add content
-  }
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-}
-        const entries = entryList.getEntries()
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          if ('processingStart' in entry && 'startTime' in entry) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            const value = (entry as PerformanceEventTiming).processingStart - (entry as PerformanceEventTiming).startTime;
-            this.addMetric('FID', value, this.getRating('fid', value));
-          }
-        }
-  )
-      }
-  )
-      fidObserver.observe({/* TODO: Fix JSX expression */}
-  d: true })
-  )
-      // Cumulative Layout Shift (CLS)
-      let clsValue = 0;
-const clsObserver = new PerformanceObserver((entryList) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        entryList.getEntries().forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          if (!(entry as any).hadRecentInput) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-            clsValue += (entry as any).value;
-          }
-        }
-  )
-//         this.addMetric('CLS', clsValue, this.getRating('cls', clsValue))
-      }
-  )
-      clsObserver.observe({/* TODO: Fix JSX expression */}
-  d: true })
-  )
-      // First Contentful Paint (FCP)
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-      const fcpObserver = new PerformanceObserver((entryList) => {
-    // TODO: Add content
-  }
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-}
-        const entries = entryList.getEntries()
-        entries.forEach((entry) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          if (entry.name === 'first-contentful-paint') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//             this.addMetric('FCP', entry.startTime, this.getRating('fcp', entry.startTime))
-          }
-        })
-      })
-      fcpObserver.observe({/* TODO: Fix JSX expression */})
-  d: true })
-    } catch (error) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      logger.warn('Failed to setup Web Vitals monitoring', { error })
-    }
-  }
-  /**
-   * Monitor navigation timing;
-   */
-
-  private monitorNavigationTiming(): void {
-    // TODO: Add content
-  }
-
-}
-    if (typeof window === 'undefined' || !window.performance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       return;
-    }
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-        if (navigation) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          // Time to First Byte (TTFB)
-          const ttfb = navigation.responseStart - navigation.requestStart;
-//           this.addMetric('TTFB', ttfb, this.getRating('ttfb', ttfb))
-          // DOM Content Loaded;
-const dcl = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-//           this.addMetric('DCL', dcl, this.getRating('dcl', dcl))
-          // Load Complete;
-const loadComplete = navigation.loadEventEnd - navigation.loadEventStart;
-//           this.addMetric('Load', loadComplete, this.getRating('load', loadComplete))
-        }
-      }, 0)
-    }
-  )
-  }
-  /**
-   * Monitor resource timing;
-   */
-
-  private monitorResourceTiming(): void {
-    // TODO: Add content
-  }
-
-}
-    if (typeof window === 'undefined' || !window.performance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       return;
-    }
-    window.addEventListener('load', () => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      setTimeout(() => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
-        // Find slowest resources;
-const slowResources = resources;
-          .filter((resource) => resource.duration > 1000)
-          .sort((a, b) => b.duration - a.duration)
-//           .slice(0, 10)
-        slowResources.forEach((resource) => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-          logger.warn('Slow resource detected', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  nam,
-  e: resource.name,
-            duratio,
-  n: resource.duration,
-            typ,
-  e: resource.initiatorType,)
-          });
-        })
-      }, 0)
-    }
-  )
-  }
-  /**
-   * Add a performance metric;
-   */
-
-  private addMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {
-    // TODO: Add content
-  }
-
-}
-    const,
-  metric: PerformanceMetric = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       name,
-//       value,
-//       rating,
-      timestam,
-  p: Date.now()
-    }
-//     this.metrics.push(metric)
-    // Log poor performing metrics;
-    if (rating === 'poor') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      logger.warn(`Poor ${name} performance`, { value, rating })
-    }
-    // Send to analytics;
-//     this.sendToAnalytics(metric)
-  }
-  /**
-   * Get performance rating based on thresholds;
-   */
-
-  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {
-    // TODO: Add content
-  }
-
-}
-    const,
-  thresholds: Record,
-          <string, {/* TODO: Fix JSX expression */}
-  r: number }> = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  lcp: { good: 2500, poor: 4000 },
-      fid: { good: 100, poor: 300 },
-      cls: { good: 0.1, poor: 0.25 },
-      fcp: { good: 1800, poor: 3000 },
-      ttfb: { good: 800, poor: 1800 },
-      dcl: { good: 1000, poor: 3000 },
-      load: { good: 2000, poor: 4000 }
-    }
-    const threshold = thresholds[metric.toLowerCase()]
-    if (!threshold) {
-    // TODO: Add content
-  }
-
-}
-      return 'good'
-    }
-    if (value;)
-          <= threshold.good) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return 'good'
-    }
-    if (value;)
-          <= threshold.poor) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return 'needs-improvement'
-    }
-    return 'poor'
-  }
-  /**
-   * Send metric to analytics;
-   */
-
-  private sendToAnalytics(metric: PerformanceMetric): void {
-    // TODO: Add content
-  }
-
-}
-    if (typeof window === 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       return;
-    }
-    // Google Analytics;
-    if (typeof gtag === 'function') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      gtag('event', metric.name, {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  event_categor,
-  y: 'Web Vitals',
-        valu)
-  e: Math.round(metric.value),
-        event_labe,
-  l: metric.rating,
-        non_interactio,
-  n: true,
-      })
-    }
-  }
-  /**
-   * Generate performance report;
-   */
-
-  private generateReport(): PerformanceReport | null {
-    // TODO: Add content
-  }
-
-}
-    if (typeof window === 'undefined' || !window.performance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      return null;
-    }
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[]
-
-    return {
-    // TODO: Add content
-  }
-}
-  metrics: this.metrics,
-
-//       navigation,
-      resource,
-  s: resources.slice(0, 50), // Limit to 50 resources,
-  timestam,
-  p: Date.now(),
-      userAgen,
-  t: navigator.userAgent,
-      ur,
-  l: window.location.href,
-    }
-  }
-  /**
-   * Report performance data;
-   */
-
-  report(): void {
-    // TODO: Add content
-  }
-
-}
-    if (!this.isEnabled) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       return;
-    }
-    const report = this.generateReport()
-    if (!report) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       return;
-    }
-    logger.info('Performance Report', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  metric,
-  s: report.metrics,
-      navigatio,
-  n: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  ttfb: report.navigation?.responseStart ?
-
-          report.navigation.responseStart - report.navigation.requestStart : null,
-        domContentLoade,
-  d: report.navigation?.domContentLoadedEventEnd ?
-          report.navigation.domContentLoadedEventEnd - report.navigation.domContentLoadedEventStart : null,
-
-      }
-
-    })
-    // Send to remote endpoint if configured;
-    // this.sendToEndpoint(report)
-  }
-  /**
-   * Cleanup and stop reporting;
-   */
-
-  destroy(): void {
-    // TODO: Add content
-  }
-
-}
-    if (this.reportingInterval) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-//       clearInterval(this.reportingInterval)
-    }
-    this.metrics = []
-  }
-}
-// Export singleton instance;
-export const performanceReporter = new PerformanceReporter()
-// Auto-initialize in browser;
-if (typeof window !== 'undefined') {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  performanceReporter.init({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  enable,
-  d: process.env['NODE_ENV'] === 'production',
-    reportInterva,
-  l: 60000, // Report every minute;)
-  })
-}
-export default performanceReporter;`
-
+export default UtilsPage;

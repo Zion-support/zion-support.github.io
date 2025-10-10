@@ -1,161 +1,159 @@
-// Accessibility utilities for improving user experience and compliance;
-export const generateId = (prefix: string = 'id'): string => {}
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
-}
-export const createAriaLabel = (text: string, context?: string): string => {}
-  return context ? `${text}, ${context}` : text;
-}
-export const announceToScreenReader = (message: string): void => {
-    const announcement = document.createElement('div'),
-  announcement.setAttribute('aria-live', 'polite');
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
-document.body.appendChild(announcement);
-setTimeout(() => {
-    document.body.removeChild(announcement)
-  }
-  }, 1000);
-}
-export const focusElement = (element: HTMLElement | null): void => {
-    if (element) {
-    element.focus()
-  }
-  }
-}
-export const trapFocus = (container: HTMLElement): (() => void) => {
-    const focusableElements = container.querySelectorAll(,
-    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-  );
-const firstElement = focusableElements[0] as HTMLElement;
-  const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-const handleTabKey = (;
-    if (e.key === 'Tab') {
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();) => {
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    }
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
   return (
-    $3
-  )
-  }
-          e.preventDefault();}
-        }
-      } else {
-    if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault()
-  }
-        }
-      }
-    }
-  }
-container.addEventListener('keydown', handleTabKey);
-return () => {
-    container.removeEventListener('keydown', handleTabKey)
-  }
-  }
-}
-export const validateAriaAttributes = (element: HTMLElement): string[] => {
-    const errors: string[] = []
-// Check for required ARIA attributes,
-  if (element.getAttribute('role') === 'button' && !element.getAttribute('aria-label') && !element.textContent?.trim()) {
-    errors.push('Button with role="button" must have aria-label or accessible text')
-  }
-  }
-if (element.getAttribute('aria-expanded') !== null && !element.getAttribute('aria-controls')) {
-    errors.push('Element with aria-expanded must have aria-controls')
-  }
-  }
-const ariaLabelledBy = element.getAttribute('aria-labelledby');
-  if (ariaLabelledBy && !document.getElementById(ariaLabelledBy)) {
-    errors.push('Element with aria-labelledby references non-existent element')
-  }
-  }
-return errors;
-}
-export const enhanceKeyboardNavigation = (element: HTMLElement): void => {
-    element.setAttribute('tabindex', '0');
-element.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      element.click()
-  }
-    }
-  })
-}
-export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
-    const skipLink = document.createElement('a')
-  }
-  skipLink.href = `#${targetId}`;
-  skipLink.textContent = text;
-  skipLink.className = 'sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50'
-return skipLink,
-}
-export const checkColorContrast = (foreground: string, background: string): boolean => {
-    // Simple contrast ratio calculation (simplified)
-  const getLuminance = (color: string): number => {
-    const rgb = color.match(/\d+/g)
-    if (!rgb) return 0,
-const [r, g, b] = rgb.map(Number).map(c => {
-      c = c / 255;
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4)
-  }
-    })
-return 0.2126 * r + 0.7152 * g + 0.0722 * b;
-  }
-const l1 = getLuminance(foreground);
-  const l2 = getLuminance(background);
-const contrast = (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
-return contrast >= 4.5; // WCAG AA standard;
-}
-export const addFocusIndicators = (): void => {
-    const style = document.createElement('style');
-  style.textContent = `;
-    *:focus {
-      outline: 2px solid #3b82f6,
-      outline-offset: 2px,
-  }
-    }
-.sr-only {
-    position: absolute,
-      width: 1px,
-      height: 1px,
-      padding: 0,
-      margin: -1px,
-      overflow: hidden,
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap,
-      border: 0,
-  }
-    }
-.focus\\:not-sr-only: focus {
-    position: static,
-      width: auto,
-      height: auto,
-      padding: 0.5rem 1rem,
-      margin: 0,
-      overflow: visible,
-      clip: auto,
-      white-space: normal,
-  }
-    }
-  `;
-document.head.appendChild(style);
-}
-export const initializeAccessibility = (): void => {
-    addFocusIndicators();
-// Add skip link to main content;
-  const mainContent = document.querySelector('main');
-  if (mainContent && !mainContent.id) {
-    mainContent.id = 'main-content';
-    const skipLink = createSkipLink('main-content');
-    document.body.insertBefore(skipLink, document.body.firstChild)
-  }
-  }
-// Enhance all interactive elements;
-  const interactiveElements = document.querySelectorAll('button, a, input, select, textarea');
-  interactiveElements.forEach((element) => {
-    enhanceKeyboardNavigation(element as HTMLElement)
-  }
-  })
-}
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default UtilsPage;

@@ -2,8 +2,7 @@
 import React, { useState } from 'react';
 import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
 
-const ContentNewsletterSignup: React.FC = () => {
-  const [email, setEmail] = useState('');
+const ContentNewsletterSignup: React.FC = () => {const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,13 +18,8 @@ const ContentNewsletterSignup: React.FC = () => {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
       setIsSubscribed(true);
-      setEmail('');
-    } catch (error) {
-      console.error('Newsletter signup error:', error);
-    } finally {
-      setIsSubmitting(false);
-      setIsLoading(false);
-    }
+      setEmail('')} catch (error) {console.error('Newsletter signup error:', error)} finally {setIsSubmitting(false);
+      setIsLoading(false)}
   }
 
   if (isSubscribed) {
@@ -70,17 +64,11 @@ const ContentNewsletterSignup: React.FC = () => {
             required
             className="flex-1 px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
-          <button
-            type="submit"
-            disabled={isSubmitting || !email}
-            className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center"
-          >
-            {isLoading ? (
+          <button>isLoading ? (
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
             ) : (
               'Subscribe'
-            )}
-          </button>
+            )</button>
         </div>
         
         <p className="text-xs text-gray-400 text-center mt-3">

@@ -1,297 +1,159 @@
-
 'use client';
-/**
- * Rate Limiting Middleware;
- * Prevents abuse by limiting the number of requests from a single IP;
- * @module rateLimiter;
- */
-export interface RateLimitConfig {
-    // TODO: Add content
-  }
-}
-  windowMs: number, // Time window in milliseconds,
-  max: number; // Maximum number of requests per window;
-  message?: string; // Custom error message
-  skipSuccessfulRequests?: boolean
-  skipFailedRequests?: boolean,
-}
-interface RequestRecord {
-    count: number
-  resetTime: number,
- * Simple in-memory rate limiter
- * For production, use Redis or similar distributed storage
-export class RateLimiter {
-  private requests: Map<string, RequestRecord> = new Map();
-  private config: RateLimitConfig,
-  constructor(config: RateLimitConfig) {
-    this.config = {
-      message: 'Too many requests, please try again later.',
-interface RequestRecord {// TODO: Add content
-  }
-}
-  count: number,,
-    resetTime: number
- * Simple in-memory rate limiter,
- * For production, use Redis or similar distributed storage;
-export class RateLimiter {
-    // TODO: Add content
-  }
-}
-  private requests: Map,
-          <string, RequestRecord> = new Map();
-  private config: RateLimitConfig,
-  constructor(config: RateLimitConfig) {
-    // TODO: Add content
-  }
-}
-    this.config = {
-    // TODO: Add content
-  }
-}
-  message: 'Too many requests, please try again later.',
-      skipSuccessfulRequests: false,
-      skipFailedRequests: false,
-//       ...config;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const MiddlewarePage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    // Cleanup old entries every minute;
-    setInterval(() => this.cleanup(), 60000);
-   * Check if request is allowed
-   * @param identifier - Unique identifier (e.g., IP address)
-   * @returns Whether the request is allowed
-  check(identifier: string): { allowed: boolean; remaining: number, resetTime: number } {
-    const now = Date.now();
-    const record = this.requests.get(identifier);
-    const __now = Date.now();
-    const _record = this.requests.get(identifier);
-    // No record or expired
-    if (!record || now > record.resetTime) {
-      const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
-      return { allowed: true, remaining: this.config.max - 1, resetTime }
-    // Increment count
-    if (record.count < this.config.max) {
-   * Check if request is allowed;
-   * @param identifier - Unique identifier (e.g., IP address)
-   * @returns Whether the request is allowed;
-  check(identifier: string): { allowed: boolean; remaining: number, resetTime: number } {
-    const now = Date.now()
-  }
-    const record = this.requests.get(identifier);
-    const __now = Date.now();
-    const _record = this.requests.get(identifier);
-    // No record or expired;
-    if (!record || now > record.resetTime) {
-    // TODO: Add content
-  }
-}
-      const resetTime = now + this.config.windowMs;
-      this.requests.set(identifier, { count: 1, resetTime });
-      return { allowed: true, remaining: this.config.max - 1, resetTime }
-    // Increment count;
-    if (record.count;
-          < this.config.max) {
-    // TODO: Add content
-  }
-}
-      record.count++;
-      this.requests.set(identifier, record);
-      return {
-    // TODO: Add content
-  }
-}
-  allowed: true,
-        remaining: this.config.max - record.count,
-        resetTime: record.resetTime
-    // Limit exceeded
-    return { allowed: false, remaining: 0, resetTime: record.resetTime }
-   * Reset rate limit for identifier
-   * @param identifier - Unique identifier
-  reset(identifier: string): void {
-    this.requests.delete(identifier)
-   * Cleanup expired entries
-  private cleanup(): void {
-    const now = Date.now(),
-    for (const [key, record] of this.requests.entries()) {
-      if (now > record.resetTime) {
-        this.requests.delete(key);
-   * Get current stats
-  getStats(): { totalTracked: number } {
-    return { totalTracked: this.requests.size }
- * Pre-configured rate limiters for common use cases
-export const rateLimiters = {
-  // Strict: 10 requests per minute
-  strict: new RateLimiter({
-    windowMs: 60 * 1000,
-    max: 10,
-    message:   ,
-$4}),
-  // Standard: 100 requests per 15 minutes
-  standard: new RateLimiter({
-    windowMs: 15 * 60 * 1000,
-    max: 100
-  // Lenient: 1000 requests per hour
-  lenient: new RateLimiter({
-    windowMs: 60 * 60 * 1000,
-    max: 1000
-  // API: 60 requests per minute
-  api: new RateLimiter({
-    max: 60,
-    message: 'API rate limit exceeded. Please try again later.'
-  // Authentication: 5 login attempts per 15 minutes
-  auth: new RateLimiter({
-    max: 5,
-    message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true
-  })
- * Get client identifier from request
- * @param request - Request object
- * @returns Client identifier (IP address or user ID)
-export function getClientIdentifier(request: Request): string {
-        resetTime: record.resetTime
-    // Limit exceeded,
-    return { allowed: false, remaining: 0, resetTime: record.resetTime }
-   * Reset rate limit for identifier;
-   * @param identifier - Unique identifier;
-  reset(identifier: string): void {
-    // TODO: Add content
-  }
-}
-    this.requests.delete(identifier);
-   * Cleanup expired entries;
-  private cleanup(): void {for (const [key, record] of this.requests.entries()) {}
-  // TODO: Add content,
-}
-      if (now > record.resetTime) {
-    // TODO: Add content
-  }
-}
-        this.requests.delete(key);
-   * Get current stats;
-  getStats(): { totalTracked: number } {
-    // TODO: Add content
-  }
-}
-    return { totalTracked: this.requests.size }
- * Pre-configured rate limiters for common use cases;
-export const rateLimiters = {
-    // TODO: Add content
-  }
-}
-  // Strict: 10 requests per minute,
-  strict: new RateLimiter({
-    // TODO: Add content
-  }
-}
-  windowMs: 60 * 1000,
-    max: 10,
-    message: 'Too many requests. Please try again in a minute.'
-  }),
-  // Standard: 100 requests per 15 minutes,
-  standard: new RateLimiter({
-    // TODO: Add content
-  }
-}
-  windowMs: 15 * 60 * 1000,
-    max: 100,
-  // Lenient: 1000 requests per hour,
+  ];
 
-    lenient: new RateLimiter({
-    // TODO: Add content
-  }
-}
-  windowMs: 60 * 60 * 1000,
-    max: 1000,
-// API: 60 requests per minute,
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-    api: new RateLimiter({
-    max: 60,
-    message: 'API rate limit exceeded. Please try again later.'
-  // Authentication: 5 login attempts per 15 minutes,
+  return (
+    <>
+      <Helmet>
+        <title>Middleware - Zion Tech Group</title>
+        <meta name="description" content="Advanced Middleware solutions for businesses" />
+        <meta name="keywords" content="AI, middleware, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Middleware
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered middleware solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-    auth: new RateLimiter({max: 5,
-    message: 'Too many login attempts. Please try again later.',
-    skipSuccessfulRequests: true
-  })
- * Get client identifier from request;
- * @param request - Request object;
- * @returns Client identifier (IP address or user ID)
-export function getClientIdentifier(request: Request): string {
-    // TODO: Add content
-  }
-}
-  // Try to get real IP from headers (for proxied requests)
-  const headers = request.headers;
-  const forwardedFor = headers.get('x-forwarded-for');
-  const realIp = headers.get('x-real-ip');
-  const cfConnectingIp = headers.get('cf-connecting-ip');
-  if (cfConnectingIp) return cfConnectingIp;
-  if (realIp) return realIp;
-  if (forwardedFor) return forwardedFor.split(',')[0].trim();
-  // Fallback to a default identifier
-  return 'unknown';
- * Create rate limit middleware
- * @param limiter - Rate limiter instance
- * @returns Middleware function
-export function createRateLimitMiddleware(limiter: RateLimiter) {
-  return async (request: Request): Promise<Response | null> => {
-    const identifier = getClientIdentifier(request),
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
-    if (!allowed) {
-    return new Response(
-        JSON.stringify({
-          error: 'Rate limit exceeded',
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
-        {
-          status: 429,
-          headers: {
-  // Fallback to a default identifier;
-  return 'unknown';
- * Create rate limit middleware
- * @param limiter - Rate limiter instance
- * @returns Middleware function,
-export function createRateLimitMiddleware(limiter: RateLimiter) {// TODO: Add content
-  }
-}
-  return async (request: Request): Promise,
-          <Response | null> => {
-    // TODO: Add content
-  }
-}
-    const identifier = getClientIdentifier(request);
-    const { allowed, remaining, resetTime } = limiter.check(identifier);
-    if (!allowed) {
-    // TODO: Add content
-  }
-}
-      return new Response()
-        JSON.stringify({
-    // TODO: Add content
-  }
-}
-  error: 'Rate limit exceeded',
-          retryAfter: Math.ceil((resetTime - Date.now()) / 1000)
-        {
-    // TODO: Add content
-  }
-}
-  status: 429,
-          headers: {
-    // TODO: Add content
-  }
-}
-            'Content-Type': 'application/json',
-            'Retry-After': String(Math.ceil((resetTime - Date.now()) / 1000)),
-            'X-RateLimit-Limit': String(limiter['config'].max),
-            'X-RateLimit-Remaining': String(remaining),
-            'X-RateLimit-Reset': String(resetTime)
-      );
-    // Request allowed - headers can be added to response later
-    return null;
-    // Request allowed - headers can be added to response later;
-return null;
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    // Request allowed - headers can be added to response later
-    return null;
-  }
-}
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Middleware?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Middleware solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default MiddlewarePage;

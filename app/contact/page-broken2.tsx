@@ -1,306 +1,159 @@
 'use client';
 import React from 'react';
-'use client';
-import React, { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
-import {
-    Phone,;
-  Mail,;
-  MapPin,;
-  Clock,;
-  Send,;
-  CheckCircle
-  }
-} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
 const ContactPage: React.FC = () => {
-    const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-phone: '',
-    service: '',
-    budget: '',
-    timeline: '',
-    message: ''
-  }
-  })
-const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
-
-    const { name, value } = e.target;
-    setFormData(prev => ({
-    ...prev,;
-      [name]: value
-  }
-    }));
-  }, []);
-const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true)
-    setSubmitStatus('idle')
-try {
-      // Simulate form submission,
-
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: ''
-  }
-      })
-    } catch (error) {
-    setSubmitStatus('error')
-  }
-    } finally {
-    setIsSubmitting(false)
-  }
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }
-const services = [
-    'AI Solutions',
-    'Cloud Computing',;
-    'Mobile App Development',;
-    'Web Development',;
-    'Data Analytics',;
-    'Cybersecurity',;
-    'DevOps',;
-    'Consulting',;
-    'Other';
-  ]
-const contactInfo = [
-    {
-    icon: Phone,
-      title: 'Phone',
-      details: '+1 (302) 464-0950',
-      description: 'Mon-Fri 9AM-6PM EST'
-  },
-    {
-    icon: Mail,
-      title: 'Email',
-      details: 'kleber@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-  },
-    {
-    icon: MapPin,
-      title: 'Address',
-      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',;
-      description: 'Visit our office'
-  },
-    {
-    icon: Clock,
-      title: 'Business Hours',
-      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
-      description: 'Eastern Time'
-  }
-    }
-  ]
-return (
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
     <>
       <Helmet>
-        <title>Contact Us - Zion Tech Group | Get in Touch</title>
-        <meta>
-        <meta>
+        <title>Contact - Zion Tech Group</title>
+        <meta name="description" content="Advanced Contact solutions for businesses" />
+        <meta name="keywords" content="AI, contact, artificial intelligence, business solutions" />
       </Helmet>
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20"></div>
-        <div className="container mx-auto px-4"></div>
-          {/* Header */}
-          <div className="text-center mb-16"></div>
-            <h1>
-              Get in;
-              <span>
-                {' '}Touch;
-              </span>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Contact
             </h1>
-            <p>
-              Ready to transform your business? Let's discuss your project and explore;
-              how our AI and IT solutions can help you achieve your goals.;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered contact solution for modern businesses.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
           </div>
         </section>
-<div className="grid grid-cols-1 lg:grid-cols-2 gap-12"></div>
-            {/* Contact Form */}
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10"></div>
-              <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
-              {
-    submitStatus === 'success' && (;
-                <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg flex items-center gap-3"></div>
-                  <CheckCircle>
-                  <span className="text-green-400">Message sent successfully! We'll get back to you soon.</span>
-                </div>
-  }
-              )}
-{
-    submitStatus === 'error' && (;
-                <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex items-center gap-3"></div>
-                  <span className="text-red-400">Failed to send message. Please try again.</span>
-                </div>
-  }
-              )}
-<form>
-                <div className="grid grid-cols-1 md: grid-cols-2 gap-6"></div>
-                  <div />
-                    <label>
-                      Full Name *;
-                    </label>
-                    <div className="relative"></div>
-                      <User>
-                      <input>
-                    </div>
-                  </div>
-                  <div />
-                    <label>
-                      Email Address *;
-                    </label>
-                    <div className="relative"></div>
-                      <Mail>
-                      <input>
-                    </div>
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
-                  <div />
-                    <label>
-                      Company
-                    </label>
-                    <div className="relative"></div>
-                      <Building>
-                      <input>
-                    </div>
-                  </div>
-                  <div />
-                    <label>
-                      Phone Number
-                    </label>
-                    <div className="relative"></div>
-                      <Phone>
-                      <input>
-                    </div>
-                  </div>
-                </div>
-                <div />
-                  <label>
-                    Service Interest,
-                  </label>
-                  <div className="relative"></div>
-                    <Globe>
-                    <select>
-                      <option value="">Select a service</option>
-                      {
-    services.map((service) => (
-  }
-                        <option>
 
-                          {service}
-                        </option>
-                      ))}
-
-                    </select>
-                  </div>
-                </div>
-                <div />
-                  <label>
-                    Message *;
-                  </label>
-                  <div className="relative"></div>
-                    <MessageCircle>
-                    <textarea>
-                  </div>
-                </div>
-                <button>
-                  {
-    isSubmitting ? (;
-                    <>
-                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                      <span>Sending...</span>
-                    </>
-                  ) : (;
-                    <>
-                      <Send>
-                      <span>Send Message</span>
-                    </>
-  }
-                  )}
-                </button>
-              </form>
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
             </div>
-            {/* Contact Information */}
-            <div className="space-y-8"></div>
-              <div />
-                <h2 className="text-3xl font-bold text-white mb-6">Contact Information</h2>
-                <p>
-                  We're here to help! Reach out to us through any of these channels;
-                  and we'll get back to you as soon as possible.;
-                </p>
-              </div>
-              {/* Contact Information */}
-              <div className="space-y-8"></div>
-                <div />
-                  <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
-                  <p>
-                    We're here to help you transform your business with cutting-edge AI and technology solutions.;
-                  </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
-                <div className="space-y-6"></div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Phone>
-                    </div>
-                    <div />
-<h3>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                        {info.title}
-                      </h3>
-                      <p>
-                        {info.details}
-                      </p>
-                      <p>
-                        {info.description}
-
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Mail>
-                    </div>
-                    <div />
-                      <h3 className="text-lg font-semibold text-white">Email</h3>
-                      <p className="text-gray-300">info@ziontechgroup.com</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <MapPin>
-                    </div>
-                    <div />
-                      <h3 className="text-lg font-semibold text-white">Address</h3>
-                      <p className="text-gray-300">123 Tech Street<br />San Francisco, CA 94105</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center"></div>
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4"></div>
-                      <Clock>
-                    </div>
-                    <div />
-                      <h3 className="text-lg font-semibold text-white">Business Hours</h3>
-                      <p className="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM<br />Sat: 10:00 AM - 4:00 PM</p>
-                    </div>
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Contact?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
                   </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Contact solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
             </div>
           </div>
         </section>
       </div>
-</div>
-  ),
-}
-export default ContactPage;
+      <Footer />
+    </>
+  );
+};
 
+export default ContactPage;

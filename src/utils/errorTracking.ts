@@ -1,462 +1,159 @@
-export const reportError = (error: Error, context?: Record<string, any>) => {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'exception', {
-      description: error.message,
-      fatal: false,
-      ...context});
-  }
-  
-  // Also log to console in development
-  if (process.env.NODE_ENV === 'development') {
-    console.error('Error reported:', error, context)
-  }
-}
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
 
-export const initErrorReporting = () => {
-  if (typeof window !== 'undefined') {
-    // Global error handler
-    window.addEventListener('error', (event) => {
-      reportError(event.error, {
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno});
-    });
-
-    // Unhandled promise rejection handler
-    window.addEventListener('unhandledrejection', (event) => {
-      reportError(new Error(event.reason), {
-        type: 'unhandledrejection'});
-    });
-  }
-}
-
-'use client'
-/**
- * Advanced Error Tracking and Reporting System;
- * Provides comprehensive error tracking with categorization and analytics;
- */
-
-export enum ErrorSeverity {
-    // TODO: Add content
-  }
-
-}
-  Low = 'low',
-  Medium = 'medium',
-  High = 'high',
-  Critical = 'critical'
-}
-
-export enum ErrorCategory {
-    // TODO: Add content
-  }
-
-}
-  Network = 'network',
-  Validation = 'validation',
-  Authorization = 'authorization',
-  Runtime = 'runtime',
-  Configuration = 'configuration',
-  ExternalService = 'external_service'
-}
-
-export interface ErrorMetadata {
-    // TODO: Add content
-  }
-
-}
-  categor,
-  y: ErrorCategory,,
-    severit,
-  y: ErrorSeverity;
-  userId?: string;
-  sessionId?: string
-  context?: Record
-          <string>
-  tags?: string[],
-  timestam,
-  p: number;
-  stackTrace?: string
-  userAgent?: string
-  url?: string,
-}
-export interface TrackedError {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: string,,
-    message: string,,
-    metadata: ErrorMetadata,,
-    occurrences: number,,
-    firstSeen: number,,
-    lastSeen: number
-}
-class ErrorTrackingService {
-    // TODO: Add content
-  }
-
-}
-  private static,
-  instance: ErrorTrackingService,
-  private,
-  errors: Map,
-          <string, TrackedError> = new Map();
-  private,
-  errorListeners: Array<(erro)
-  r: TrackedError) => void> = []
-  private maxStoredErrors = 1000,
-  private constructor() {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    this.setupGlobalErrorHandlers();
-  }
-  static getInstance(): ErrorTrackingService {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    if (!ErrorTrackingService.instance) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      ErrorTrackingService.instance = new ErrorTrackingService();
+const UtilsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    return ErrorTrackingService.instance;
-  }
-  /**
-   * Set up global error handlers;
-   */
+  ];
 
-  private setupGlobalErrorHandlers(): void {
-    // TODO: Add content
-  }
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-}
-    if (typeof window === 'undefined') return;
-    // Handle unhandled errors;
-    window.addEventListener('error', event => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-      this.trackError(event.error || new Error(event.message), {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  categor,
-  y: ErrorCategory.Runtime,
-        severit,
-  y: ErrorSeverity.High,
-        contex,
-  t: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+  return (
+    <>
+      <Helmet>
+        <title>Utils - Zion Tech Group</title>
+        <meta name="description" content="Advanced Utils solutions for businesses" />
+        <meta name="keywords" content="AI, utils, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Utils
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered utils solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-  filename: event.filename,
-          lineno: event.lineno,
-          colno: event.colno,
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-        }
-      });
-    });
-    // Handle unhandled promise rejections;
-    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.trackError(new Error(`Unhandled Promise)`
-  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Utils?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-  category: ErrorCategory.Runtime,
-        severity: ErrorSeverity.Critical,
-        context: { reason: event.reason }
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Utils solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-      }
-  )
-    }
-  )
-  }
-  /**
-   * Track an error with metadata;
-   */
-//   trackError()
-
-    error: Error,
-    metadata: Partial
-          <ErrorMetadata> & { category: ErrorCategory, severity: ErrorSeverity }
-  ): string {
-    const timestamp = Date.now()
-  }
-      ...metadata,
-      timestamp,
-      stackTrace: error.stack,
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      url: typeof window !== 'undefined' ? window.location.href : undefined,
-
-    }
-    const existingError = this.errors.get(errorId);
-    if (existingError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Update existing error;
-      existingError.occurrences++;
-      existingError.lastSeen = timestamp;
-      existingError.metadata = fullMetadata;
-    } else {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      // Create new error entry;
-const,
-  trackedError: TrackedError = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  id: errorId,
-        message: error.message,
-        metadata: fullMetadata,
-        occurrences: 1,
-        firstSeen: timestamp,
-        lastSeen: timestamp,
-
-      }
-      this.errors.set(errorId, trackedError);
-      // Notify listeners;
-      this.notifyListeners(trackedError);
-      // Maintain max stored errors;
-      if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        const oldestKey = Array.from(this.errors.keys())[0];
-        this.errors.delete(oldestKey);
-      }
-    }
-    // Log the error;`
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  error_i,
-  d: errorId,
-      categor,
-  y: metadata.category,
-//       ...metadata.context;
-    });
-    // Send to external service if critical;
-    if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      this.reportToExternalService(errorId);
-    }
-    return errorId;
-  }
-  /**
-   * Generate a unique error ID based on the message;
-   */
-
-  private generateErrorId(message: string): string {
-    // Simple hash function for error ID
-  }
-    for (let i = 0; i;
-          < message.length; i++) {
-    // TODO: Add content
-  }
-
-}
-      const char = message.charCodeAt(i);
-      hash = (hash * 32) - hash + char;
-      hash = hash & hash; // Convert to 32bit integer;
-
-    }
-
-    return `err_${Math.abs(hash).toString(36)}`
-  }
-  /**
-   * Add an error listener;
-   */
-
-  addListener(listener: (error: TrackedError) => void): void {
-    // TODO: Add content
-  }
-
-}
-    this.errorListeners.push(listener);
-  }
-  /**
-   * Remove an error listener;
-   */
-
-  removeListener(listener: (error: TrackedError) => void): void {
-    // TODO: Add content
-  }
-
-}
-    this.errorListeners = this.errorListeners.filter(l => l !== listener);
-  }
-  /**
-   * Notify all listeners of a new error;
-   */
-
-  private notifyListeners(error: TrackedError): void {
-    // TODO: Add content
-  }
-
-}
-    this.errorListeners.forEach(listener => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-})
-        listener(error);
-      } catch (listenerError) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        logger.error('Error in error listener', listenerError as Error);
-      }
-    }
-  )
-  }
-  /**
-   * Report critical errors to external service;
-   */
-
-  private async reportToExternalService(errorId: string): Promise,
-          <void> {
-    // TODO: Add content
-  }
-
-}
-    const error = this.errors.get(errorId);
-    if (!error) return;
-    try {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (typeof window !== 'undefined' && 'fetch' in window) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        await fetch('/api/error-report', {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-  method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(error)
-        }
-  )
-      }
-    } catch (reportError) {
-    // TODO: Add content
-  }
-
-}
-      logger.error('Failed to report error to external service', reportError as Error);
-    }
-  }
-  /**
-   * Get all tracked errors;
-   */
-
-  getErrors(): TrackedError[] {
-    // TODO: Add content
-  }
-
-}
-    return Array.from(this.errors.values());
-  }
-  /**
-   * Get errors by category;
-   */
-
-  getErrorsByCategory(category: ErrorCategory): TrackedError[] {
-    // TODO: Add content
-  }
-
-}
-    return this.getErrors().filter(e => e.metadata.category === category);
-  }
-  /**
-   * Get errors by severity;
-   */
-
-  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
-    // TODO: Add content
-  }
-
-}
-    return this.getErrors().filter(e => e.metadata.severity === severity);
-  }
-  /**
-   * Get error statistics;
-   */
-
-  getStatistics(): {
-    // TODO: Add content
-  }
-
-}
-  tota,
-  l: number,,
-    byCategor,
-  y: Record,
-          <ErrorCategory>
-    bySeverit,
-  y: Record<ErrorSeverity>
-    topError,
-  s: TrackedError[],
-  } {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const errors = this.getErrors();
-    const byCategory = {} as Record;
-          <ErrorCategory>
-    const bySeverity = {} as Record<ErrorSeverity>
-    errors.forEach(error => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-
-      byCategory[error.metadata.category] =
-        (byCategory[error.metadata.category] || 0) + error.occurrences
-
-      bySeverity[error.metadata.severity] =
-        (bySeverity[error.metadata.severity] || 0) + error.occurrences;
-    });
-    const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
-    return {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  tota,
-  l: errors.length,
-//       byCategory,
-//       bySeverity,
-//       topErrors;
-    }
-  }
-  /**
-   * Clear all errors;
-   */
-
-  clearErrors(): void {
-    // TODO: Add content
-  }
-
-}
-    this.errors.clear();
-  }
-  /**
-   * Clear errors older than specified time;
-   */
-
-  clearOldErrors(maxAge: number): void {
-    // TODO: Add content
-  }
-
-}
-    const now = Date.now();
-    for (const [id, error] of this.errors.entries()) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      if (now - error.lastSeen > maxAge) {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-        this.errors.delete(id);
-      }
-    }
-  }
-}
-export const errorTracking = ErrorTrackingService.getInstance()
-export default ErrorTrackingService;`
-
+export default UtilsPage;

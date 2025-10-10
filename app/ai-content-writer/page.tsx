@@ -77,11 +77,9 @@ const AIContentWriterPage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-gray-300">{stat.label}</div>
+                <div>stat.icon</div>
+                <div>stat.value</div>
+                <div>stat.label</div>
               </div>
             ))}
           </div>
@@ -105,13 +103,13 @@ const AIContentWriterPage: React.FC = () => {
 
             {features.map((feature, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8">
-                <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
-                <p className="text-gray-300 mb-6">{feature.description}</p>
+                <h3>feature.title</h3>
+                <p>feature.description</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <li key={benefitIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span>{benefit}</span>
+                      <span>benefit</span>
                     </li>
                   ))}
                 </ul>
@@ -137,7 +135,7 @@ const AIContentWriterPage: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                <h3>benefit</h3>
               </div>
             ))}
           </div>

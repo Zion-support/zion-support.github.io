@@ -1,171 +1,159 @@
+'use client';
 import React from 'react';
-interface ContentPreviewCardProps {
-    // TODO: Add content
-  }
-}
-  i,
-  d: string,
-    titl,
-  e: string,
-    descriptio,
-  n: string,,
-    categor,
-  y: string,,
-    readTim,
-  e: string,,
-    dat,
-  e: string,,
-    pat,
-  h: string,,
-    imag,
-  e: string
-  featured?: boolean,
-  stats?: {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  view,
-  s: number,,
-    engagemen,
-  t: number,
-  }
-  excerpt?: string;
-}
-const,
-  ContentPreviewCard: React.FC,
-          <ContentPreviewCardProps> = ({/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-  // id,
-//   title,
-//   description,
-//   category,
-//   readTime,
-//   date,
-//   path,
-//   image,
-  featured = false,
-//   stats,
-//   excerpt;)
-}) => {if (num >= 1000) {}
-  // TOD,
-  O: Add content,
-}
-      return (num / 1000).toFixed(1) + 'k';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ComponentsPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+    },
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-    return num.toString();
-  }
-  const getCategoryColor = (categor)
-  y: string): string => {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-    const,
-  colors: {/* TODO: Fix JSX expression */}
-  y: string]: string } = {/* TODO: Fix JSX expression */}
-  O: Add content,}
-}
-      'Success Story': 'from-green-500 to-emerald-600',
-      'Mega Trends': 'from-blue-500 to-cyan-600',
-      'Architecture': 'from-purple-500 to-pink-600',
-      'AI Agents': 'from-orange-500 to-red-600',
-      'Cost Optimization': 'from-yellow-500 to-orange-600',
-      'Intelligence': 'from-indigo-500 to-purple-600',
-      'Transformation': 'from-teal-500 to-blue-600',
-      'default': 'from-gray-500 to-gray-600'
-    }
-    return colors[category] || colors.default;
-  }
-  return (<div>Coming Soon</div>)
-  )
-          <article className={/* TODO: Fix JSX expression */}
-  hover:-translate-y-1 ${}
-  // TOD,
-  O: Add content,
-}
-      featured ? 'ring-2 ring-indigo-200' : ''
-    }`}></article>
-      {/* Image/Visual Header */}
-          `
-          <div className={`h-48 bg-gradient-to-br ${getCategoryColor(category)} flex items-center justify-center relative`}></div>
-        <div className="text-center text-white"></div>"
-          <div className="text-6xl mb-2">{image}</div>"
-          <div className="text-sm font-medium opacity-90">{category}</div>
-        </div>
-        {/* Featured Badge */}
-        {featured && ()}"
-          <div className="absolute top-4 left-4"></div>"
-            <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold"></span>
-// Featured;
-          </span>
-          </div>
-        )}
-        {/* Stats Overlay */}
-        {stats && ()}"
-          <div className="absolute top-4 right-4 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg p-2"></div>"
-            <div className="text-center"></div>"
-              <div className="text-lg font-bold text-white"></div>
-                {formatNumber(stats.views)}
-              </div>"
-              <div className="text-xs text-white opacity-90">views</div>
+  ];
+
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Components - Zion Tech Group</title>
+        <meta name="description" content="Advanced Components solutions for businesses" />
+        <meta name="keywords" content="AI, components, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Components
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered components solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
             </div>
           </div>
-        )}
-        {/* Read Time Badge */}"
-        <div className="absolute bottom-4 left-4"></div>"
-          <span className="bg-white bg-opacity-90 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-            {readTime}
-          </span>
-        </div>
-      </div>
-      {/* Content */}"
-      <div className="p-6"></div>"
-        <div className="mb-3"></div>"
-          <span className="inline-block bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"></span>
-            {category}
-          </span>
-        </div>"
-        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2"></h3>
-          {title}
-        </h3>"
-        <p className="text-gray-600 mb-4 line-clamp-3"></p>
-          {excerpt || description}
-        </p>
-        {/* Stats Row */}
-        {stats && ()}"
-          <div className="flex items-center justify-between mb-4 text-sm"></div>"
-            <div className="flex items-center space-x-4"></div>"
-              <div className="flex items-center"></div>"
-                <svg className="w-4 h-4 text-gray-400 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>"
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></path>"
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></path>
-                </svg>"
-                <span className="text-gray-600">{formatNumber(stats.views)} views</span>
-              </div>"
-              <div className="flex items-center"></div>"
-                <svg className="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>"
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></path>
-                </svg>"
-                <span className="text-green-600 font-medium">{stats.engagement}% engagement</span>
-              </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
-        )}
-        {/* Date and CTA */}"
-        <div className="flex items-center justify-between"></div>"
-          <span className="text-sm text-gray-500">{date}</span>
-          <Link></Link>
-            href={path}"
-            className="inline-flex items-center text-indigo-600,"
-  hover: text-indigo-700 font-medium text-sm"
-// >
-//             Read Article,"
-          <svg className="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"></svg>"
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></path>
-            </svg>
-          </Link>
-        </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Components?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Components solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
       </div>
-    </article>
+      <Footer />
+    </>
   );
-}
-export default ContentPreviewCard;"`
-  </ContentPreviewCardProps>
+};
+
+export default ComponentsPage;

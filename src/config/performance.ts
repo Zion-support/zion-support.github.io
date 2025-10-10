@@ -1,238 +1,159 @@
-/**
- * Performance Configuration
- * Centralized performance monitoring and optimization settings
- */
-export const _performanceConfig = {
-  // Core Web Vitals thresholds
-  metrics: {
-// lcp: {
-// good: 2500,
-// needsImprovement: 4000
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+
+const ConfigPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Intelligence',
+      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
+      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
     },
-    fid: {
-      good: 100,
-      needsImprovement: 300
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive analytics dashboard with real-time data visualization.',
+      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
     },
-    cls: {
-      good: 0.1,
-      needsImprovement: 0.25
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific goals and objectives with precision and accuracy.',
+      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
-    fcp: {
-      good: 1800,
-      needsImprovement: 3000
-    },
-    ttfb: {
-      good: 800,
-      needsImprovement: 1800
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Optimize your business growth with data-driven strategies.',
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  },
-  // Cache strategies
-  cache: {
-// static: {
-// maxAge: 31536000, // 1 year
-// staleWhileRevalidate: 86400, // 1 day
-    },
-    dynamic: {
-      maxAge: 3600, // 1 hour
-      staleWhileRevalidate: 60, // 1 minute
-    },
-    api: {
-// maxAge: 300, // 5 minutes
-// staleWhileRevalidate: 30, // 30 seconds
-    }
-  },
-  // Resource hints
-  preload: [
-    { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }],
-  prefetch: [
-    '/api/health',
-    '/api/config'],
-  // Image optimization
-  images: {
-// deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-// imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-// formats: ['image/avif', 'image/webp'],
-// minimumCacheTTL: 60,
-// dangerouslyAllowSVG: false
-  },
-  // Bundle optimization
-  bundle: {
-// minChunkSize: 20000,
-// maxChunkSize: 244000,
-// splitChunks: {
-// cacheGroups: {
-// vendor: {
-// test: /[\\/]node_modules[\\/]/,
-// priority: -10,
-// reuseExistingChunk: true
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
-        }
-      }
-    }
-  },
-  // Performance monitoring
-  monitoring: {
-// enabled: true,
-// sampleRate: 1.0, // 100% in production
-// reportInterval: 30000, // 30 seconds
-// sendToAnalytics: true,
-// logThreshold:   ,
-$4}
-}
-export type PerformanceConfig = typeof performanceConfig;
-export default performanceConfig;
+  ];
 
-/**
- * Performance Configuration;
- * Centralized performance monitoring and optimization settings;
- */
+  const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+  ];
 
-export const _performanceConfig = {
-    // TODO: Add content
-  }
+  return (
+    <>
+      <Helmet>
+        <title>Config - Zion Tech Group</title>
+        <meta name="description" content="Advanced Config solutions for businesses" />
+        <meta name="keywords" content="AI, config, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-teal-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          <div className="relative max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Config
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Advanced AI-powered config solution for modern businesses.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Get Started
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                View Demo
+              </button>
+            </div>
+          </div>
+        </section>
 
-}
-  // Core Web Vitals thresholds,
-  metric,
-  s: {/* TODO: Fix JSX expression */}
-  p: {}
-// goo,
-  d: 2500,
-// needsImprovemen,
-  t: 4000,
-    },
+        {/* Features Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300">
+                Advanced AI technology that drives results
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
+                  <div className="w-16 h-16 bg-gradient-to-br from-teal-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  {feature.benefits && (
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <CheckCircle className="w-4 h-4 text-teal-500 mr-2" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    fid: {
-    // TODO: Add content
-  }
-}
-  good: 100,
-      needsImprovement: 300,
-    },
-    cls: {
-    // TODO: Add content
-  }
-}
-  good: 0.1,
-      needsImprovement: 0.25,
-    },
-    fcp: {
-    // TODO: Add content
-  }
-}
-  good: 1800,
-      needsImprovement: 3000,
-    },
-    ttfb: {
-    // TODO: Add content
-  }
-}
-  good: 800,
-      needsImprovement: 1800,
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">
+                Why Choose Our Config?
+              </h2>
+              <p className="text-xl text-gray-300">
+                Transform your business with cutting-edge AI technology
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/10 transition-all duration-300">
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-teal-500 mr-3" />
+                    <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-    }
-  },
-  // Cache strategies,
-  cach,
-  e: {/* TODO: Fix JSX expression */}
-  c: {}
-// maxAg,
-  e: 31536000, // 1 year;
-// staleWhileRevalidat,
-  e: 86400, // 1 day;
-    },
+        {/* CTA Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Get started with our Config solution today and see the difference.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Start Free Trial
+              </button>
+              <button className="border-2 border-white/20 text-white px-8 py-4 rounded-full font-semibold hover:bg-white/10 transition-all duration-300">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <Footer />
+    </>
+  );
+};
 
-    dynamic: {
-    // TODO: Add content
-  }
-}
-  maxAge: 3600, // 1 hour,
-  staleWhileRevalidate: 60, // 1 minute;
-
-    },
-    ap,
-  i: {/* TODO: Fix JSX expression */}
-  e: 300, // 5 minutes;}
-// staleWhileRevalidat,
-  e: 30, // 30 seconds;
-    }
-  },
-  // Resource hints,
-  preloa,
-  d: [
-  // TOD,
-  O: Add items]
-    {/* TODO: Fix JSX expression */}
-  n: 'anonymous' },
-//   ],
-  prefetc,
-  h: [
-  // TOD,
-  O: Add items]
-//     '/api/health',
-//     '/api/config',
-//   ],
-  // Image optimization,
-  image,
-  s: {/* TODO: Fix JSX expression */}
-  s: [640, 750, 828, 1080, 1200, 1920, 2048, 3840]}
-// imageSize,
-  s: [16, 32, 48, 64, 96, 128, 256, 384],
-// format,
-  s: ['image/avif', 'image/webp'],
-// minimumCacheTT,
-  L: 60,
-// dangerouslyAllowSV,
-  G: false,
-  },
-  // Bundle optimization,
-  bundl,
-  e: {/* TODO: Fix JSX expression */}
-  e: 20000}
-// maxChunkSiz,
-  e: 244000,
-// splitChunk,
-  s: {/* TODO: Fix JSX expression */}
-  s: {}
-// vendo,
-  r: {/* TODO: Fix JSX expression */}
-  t: /[\/]node_modules[\/]/}
-// priorit,
-  y: -10,
-// reuseExistingChun,
-  k: true,
-        },
-
-        default: {
-    // TODO: Add content
-  }
-}
-  minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
-
-        }
-      }
-    }
-  },
-  // Performance monitoring,
-  monitorin,
-  g: {/* TODO: Fix JSX expression */}
-  d: true}
-// sampleRat,
-  e: 1.0, // 100% in production;
-// reportInterva,
-  l: 30000, // 30 seconds;
-// sendToAnalytic,
-  s: true,
-// logThreshol,
-  d: 'needsImprovement'
-  }
-}
-export type PerformanceConfig = typeof performanceConfig;
-export default performanceConfig;
-
+export default ConfigPage;
