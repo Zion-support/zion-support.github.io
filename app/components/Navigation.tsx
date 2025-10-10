@@ -112,53 +112,54 @@ const Navigation: React.FC = () => {
 
   const serviceCategories = [
     {
-      title: 'Micro SAAS Solutions',
-      icon: Zap,
-      color: 'text-cyan-400',
-      bgColor: 'bg-cyan-500/10',
-      hoverColor: 'hover:bg-cyan-500/20',
-      services: [
-        { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project planning with predictive analytics', icon: '📊', popular: true },
-        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
-        { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard', description: 'AI-powered business intelligence', icon: '📈', popular: true },
-        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true },
-        { name: 'AI Customer Support Bot', path: '/ai-customer-support-bot', description: '24/7 AI customer support', icon: '🤖', popular: true },
-        { name: 'AI Content Studio', path: '/ai-content-studio', description: 'Complete content creation suite', icon: '✍️', popular: true },
-        { name: 'AI Financial Advisor', path: '/ai-financial-advisor', description: 'Personalized financial planning', icon: '💰', popular: false },
-        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'Visual workflow builder', icon: '⚡', popular: true }
-      ]
-    },
-    {
       title: 'AI Services',
       icon: Brain,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
+      color: 'text-purple-400',
+      bgColor: 'bg-purple-500/10',
+      hoverColor: 'hover:bg-purple-500/20',
       services: [
-        { name: 'AI Workflow Automation Platform', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
-        { name: 'AI Customer Support Suite', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
-        { name: 'AI Data Analytics Platform', path: '/ai-data-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
-        { name: 'AI Content Generation Studio', path: '/ai-content-generation', description: 'Complete content creation suite', icon: '✍️', popular: true },
-        { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI and diagnosis support', icon: '🏥', popular: true },
-        { name: 'AI Fintech Platform', path: '/ai-fintech', description: 'Financial AI and fraud detection', icon: '💳', popular: true },
-        { name: 'AI Computer Vision Platform', path: '/ai-computer-vision', description: 'Advanced image recognition', icon: '👁️', popular: false },
-        { name: 'AI Machine Learning Platform', path: '/ai-ml-platform', description: 'Complete ML platform', icon: '🧠', popular: false },
-        { name: 'AI Quantum Computing', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: false }
+        { name: 'AI Drug Discovery Pro', path: '/ai-drug-discovery-pro', description: 'Revolutionary drug discovery platform', icon: '🧬', popular: true },
+        { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', description: 'Advanced climate modeling', icon: '🌍', popular: true },
+        { name: 'AI Space Technology Pro', path: '/ai-space-technology-pro', description: 'Space exploration & satellite analysis', icon: '🚀', popular: false },
+        { name: 'AI Financial Crime Detection Pro', path: '/ai-financial-crime-detection-pro', description: 'Advanced fraud detection', icon: '🛡️', popular: true },
+        { name: 'AI Supply Chain Optimization Pro', path: '/ai-supply-chain-optimization-pro', description: 'Intelligent supply chain management', icon: '📦', popular: true },
+        { name: 'AI Energy Grid Management Pro', path: '/ai-energy-grid-management-pro', description: 'Smart energy grid optimization', icon: '⚡', popular: false },
+        { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro', description: 'Precision agriculture solutions', icon: '🌱', popular: true },
+        { name: 'AI Legal Research Pro', path: '/ai-legal-research-pro', description: 'Advanced legal research & analysis', icon: '⚖️', popular: false }
       ]
     },
     {
       title: 'IT Services',
       icon: Cloud,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10',
+      hoverColor: 'hover:bg-blue-500/20',
       services: [
-        { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
-        { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
-        { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
-        { name: '24/7 IT Support & Monitoring', path: '/it-support', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
-        { name: 'Custom Software Development', path: '/custom-development', description: 'Tailored software solutions', icon: '💻', popular: true },
-        { name: 'DevOps & CI/CD Implementation', path: '/devops-cicd', description: 'Streamlined development processes', icon: '⚙️', popular: false },
-        { name: 'Database Management & Optimization', path: '/database-management', description: 'Performance tuning & security', icon: '🗄️', popular: false },
-        { name: 'Network Design & Implementation', path: '/network-design', description: 'Secure network infrastructure', icon: '🌐', popular: false }
+        { name: 'AI Infrastructure Monitoring Pro', path: '/ai-infrastructure-monitoring', description: 'Intelligent infrastructure monitoring', icon: '📊', popular: true },
+        { name: 'Blockchain Integration Services Pro', path: '/blockchain-integration-services', description: 'Enterprise blockchain solutions', icon: '⛓️', popular: true },
+        { name: 'AI API Management Pro', path: '/ai-api-management', description: 'Intelligent API gateway', icon: '🔌', popular: false },
+        { name: 'Intelligent Database Migration Pro', path: '/intelligent-database-migration', description: 'AI-powered database migration', icon: '🗄️', popular: false },
+        { name: 'AI Load Testing Pro', path: '/ai-load-testing', description: 'Intelligent performance testing', icon: '⚡', popular: false },
+        { name: 'Smart Contract Security Audit Pro', path: '/smart-contract-security-audit', description: 'Blockchain security auditing', icon: '🔒', popular: false },
+        { name: 'AI Content Delivery Network Pro', path: '/ai-content-delivery-network', description: 'Intelligent CDN optimization', icon: '🌐', popular: false },
+        { name: 'Intelligent Email Infrastructure Pro', path: '/intelligent-email-infrastructure', description: 'AI-powered email systems', icon: '📧', popular: false }
+      ]
+    },
+    {
+      title: 'Micro SAAS Solutions',
+      icon: Code,
+      color: 'text-cyan-400',
+      bgColor: 'bg-cyan-500/10',
+      hoverColor: 'hover:bg-cyan-500/20',
+      services: [
+        { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project management', icon: '📊', popular: true },
+        { name: 'AI Smart Calendar Pro', path: '/ai-smart-calendar', description: 'AI-powered calendar management', icon: '📅', popular: true },
+        { name: 'AI Content Writer Pro', path: '/ai-content-writer', description: 'Advanced AI content creation', icon: '✍️', popular: true },
+        { name: 'AI Video Generator Pro', path: '/ai-video-generator', description: 'AI-powered video creation', icon: '🎥', popular: false },
+        { name: 'AI Social Media Manager Pro', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email marketing', icon: '📧', popular: true },
+        { name: 'AI Financial Analyzer Pro', path: '/ai-financial-analyzer', description: 'Advanced financial analysis', icon: '💰', popular: true },
+        { name: 'AI Code Assistant Pro', path: '/ai-code-assistant', description: 'Intelligent coding assistant', icon: '💻', popular: true }
       ]
     },
     {
@@ -168,11 +169,11 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-pink-500/10',
       hoverColor: 'hover:bg-pink-500/20',
       services: [
-        { name: 'Quantum Computing Solutions', path: '/ai-quantum-computing', description: 'Next-gen quantum solutions', icon: '⚛️', popular: true },
+        { name: 'Quantum Computing Solutions', path: '/quantum-computing', description: 'Quantum computing applications', icon: '⚛️', popular: true },
         { name: 'Autonomous Systems', path: '/autonomous-systems', description: 'Self-managing systems', icon: '🤖', popular: true },
-        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: false },
-        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: false },
         { name: 'AR/VR Solutions', path: '/ar-vr-solutions', description: 'Immersive experiences', icon: '🥽', popular: false },
+        { name: 'IoT & Edge Computing', path: '/iot-edge-computing', description: 'Connected devices', icon: '📡', popular: false },
+        { name: 'Blockchain & Web3', path: '/blockchain-web3', description: 'Decentralized solutions', icon: '⛓️', popular: false },
         { name: 'Smart Cities', path: '/smart-cities', description: 'Urban technology solutions', icon: '🏙️', popular: false },
         { name: 'Digital Transformation', path: '/digital-transformation', description: 'Business modernization', icon: '🔄', popular: true },
         { name: 'Innovation Labs', path: '/innovation-labs', description: 'R&D and prototyping', icon: '🧪', popular: false }
@@ -180,17 +181,6 @@ const Navigation: React.FC = () => {
     }
   ];
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const toggleServices = () => {
-    setServicesOpen(!servicesOpen);
-  };
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-5faf
-
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-46bd
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? 'bg-slate-900/95 backdrop-blur-md shadow-lg border-b border-cyan-400/20' : 'bg-transparent'

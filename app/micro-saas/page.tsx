@@ -97,6 +97,72 @@ const MicroSAASPage: React.FC = () => {
       features: ['Personalization', 'A/B Testing', 'Automation', 'Analytics'],
       popular: true,
       rating: 4.7
+    },
+    { 
+      name: 'AI Financial Analyzer Pro', 
+      href: '/ai-financial-analyzer', 
+      icon: DollarSign, 
+      category: 'Finance', 
+      price: '$149/mo',
+      description: 'Advanced financial analysis and investment insights powered by AI',
+      features: ['Portfolio Analysis', 'Risk Assessment', 'Market Prediction', 'Investment Recommendations'],
+      popular: true,
+      rating: 4.8
+    },
+    { 
+      name: 'AI Code Assistant Pro', 
+      href: '/ai-code-assistant', 
+      icon: Code, 
+      category: 'Development', 
+      price: '$179/mo',
+      description: 'Intelligent coding assistant with AI-powered code generation and optimization',
+      features: ['Code Generation', 'Bug Detection', 'Performance Optimization', 'Documentation'],
+      popular: true,
+      rating: 4.9
+    },
+    { 
+      name: 'AI Password Manager Pro', 
+      href: '/ai-password-manager', 
+      icon: Lock, 
+      category: 'Security', 
+      price: '$49/mo',
+      description: 'AI-powered password management with advanced security features',
+      features: ['Password Generation', 'Security Analysis', 'Breach Monitoring', 'Auto-fill'],
+      popular: false,
+      rating: 4.6
+    },
+    { 
+      name: 'AI CRM Assistant Pro', 
+      href: '/ai-crm-assistant', 
+      icon: Users, 
+      category: 'Business', 
+      price: '$159/mo',
+      description: 'Intelligent CRM with AI-powered customer insights and automation',
+      features: ['Lead Scoring', 'Customer Segmentation', 'Sales Forecasting', 'Automation'],
+      popular: true,
+      rating: 4.7
+    },
+    { 
+      name: 'AI Invoice Generator Pro', 
+      href: '/ai-invoice-generator', 
+      icon: FileText, 
+      category: 'Business', 
+      price: '$79/mo',
+      description: 'Automated invoice generation with AI-powered customization and tracking',
+      features: ['Auto Generation', 'Custom Templates', 'Payment Tracking', 'Tax Calculation'],
+      popular: false,
+      rating: 4.5
+    },
+    { 
+      name: 'AI Expense Tracker Pro', 
+      href: '/ai-expense-tracker', 
+      icon: Calculator, 
+      category: 'Finance', 
+      price: '$59/mo',
+      description: 'Smart expense tracking with AI-powered categorization and insights',
+      features: ['Auto Categorization', 'Receipt Scanning', 'Budget Analysis', 'Tax Preparation'],
+      popular: true,
+      rating: 4.6
     }
   ];
 
@@ -183,10 +249,21 @@ const MicroSAASPage: React.FC = () => {
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
+              <div className="space-y-2">
+                <a
+                  href={`https://ziontechgroup.com${service.href}`}
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+                <a
+                  href="/contact"
+                  className="w-full border border-purple-400 text-purple-400 py-2 px-4 rounded-lg font-medium hover:bg-purple-400 hover:text-white transition-all block text-center"
+                >
+                  Get Started
+                </a>
+              </div>
             </div>
           ))}
         </div>

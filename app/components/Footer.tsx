@@ -47,21 +47,23 @@ const Footer: React.FC = memo(() => {
         { name: 'AI CRM Assistant Pro', href: '/ai-crm-assistant' },
         { name: 'AI Financial Analyzer Pro', href: '/ai-financial-analyzer' },
         { name: 'AI Code Assistant Pro', href: '/ai-code-assistant' },
-        { name: 'AI API Manager Pro', href: '/ai-api-manager' },
-        { name: 'AI Cybersecurity Monitor Pro', href: '/ai-cybersecurity-monitor' },
-        { name: 'AI Password Manager Pro', href: '/ai-password-manager' }
+        { name: 'AI Password Manager Pro', href: '/ai-password-manager' },
+        { name: 'AI Invoice Generator Pro', href: '/ai-invoice-generator' },
+        { name: 'AI Expense Tracker Pro', href: '/ai-expense-tracker' }
       ]
     },
     {
-      title: 'Specialized',
+      title: 'Emerging Tech',
       icon: Zap,
       services: [
         { name: 'Quantum Computing Solutions', href: '/quantum-computing' },
         { name: 'Autonomous Systems', href: '/autonomous-systems' },
-        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
+        { name: 'AR/VR Solutions', href: '/ar-vr-solutions' },
         { name: 'IoT & Edge Computing', href: '/iot-edge-computing' },
-        { name: 'Business Intelligence', href: '/business-intelligence' },
-        { name: 'Robotics Solutions', href: '/robotics' }
+        { name: 'Blockchain & Web3', href: '/blockchain-web3' },
+        { name: 'Smart Cities', href: '/smart-cities' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: 'Innovation Labs', href: '/innovation-labs' }
       ]
     }
   ];

@@ -28,84 +28,223 @@ const AIServicesPage: React.FC = () => {
   const services = [
     {
       id: 1,
-      name: 'AI-Powered Analytics',
-      description: 'Advanced analytics solutions powered by machine learning and artificial intelligence',
-      icon: BarChart,
+      name: 'AI Drug Discovery Pro',
+      description: 'Revolutionary AI-powered drug discovery platform accelerating pharmaceutical research by 10x',
+      icon: Brain,
       features: [
-        'Predictive Analytics',
-        'Real-time Data Processing',
-        'Custom Dashboard Creation',
-        'Ad Performance Analysis',
-        'ROI Optimization',
-        'A/B Testing Automation',
-        'Cross-Platform Integration'
+        'Molecular Structure Analysis',
+        'Drug Interaction Prediction',
+        'Clinical Trial Optimization',
+        'Regulatory Compliance Automation',
+        'Side Effect Prediction',
+        'Drug Repurposing Analysis',
+        'Biomarker Discovery'
       ],
-      category: 'Marketing',
+      category: 'Healthcare',
       popular: true,
-      rating: 4.8,
-      users: '2,800+',
+      rating: 4.9,
+      users: '500+',
+      price: 'Starting at $50,000/month',
       color: 'from-purple-500 to-pink-600',
       capabilities: [
-        '300% increase in conversion rates',
-        'Automated campaign optimization',
-        'Real-time performance tracking',
-        'Predictive customer behavior'
+        '90% faster drug discovery process',
+        '60% reduction in clinical trial costs',
+        'Real-time molecular analysis',
+        'Predictive drug efficacy modeling'
       ]
     },
     {
       id: 2,
-      name: 'AI Workflow Automation',
-      description: 'Streamline your business processes with intelligent automation',
-      icon: Zap,
+      name: 'AI Climate Solutions Pro',
+      description: 'Advanced climate modeling and environmental impact analysis using cutting-edge AI',
+      icon: Globe,
       features: [
-        'Process Automation',
-        'Smart Workflows',
-        'Error Detection',
-        'Performance Optimization'
+        'Climate Change Modeling',
+        'Carbon Footprint Analysis',
+        'Sustainability Planning',
+        'Environmental Risk Assessment',
+        'Renewable Energy Optimization',
+        'Weather Pattern Prediction',
+        'Ecosystem Monitoring'
       ],
-      category: 'Automation',
+      category: 'Environment',
       popular: true,
-      rating: 4.9,
-      users: '3,200+',
-      color: 'from-blue-500 to-cyan-600'
+      rating: 4.8,
+      users: '300+',
+      price: 'Starting at $25,000/month',
+      color: 'from-green-500 to-emerald-600',
+      capabilities: [
+        '95% accuracy in climate predictions',
+        '40% reduction in carbon emissions',
+        'Real-time environmental monitoring',
+        'Automated sustainability reporting'
+      ]
     },
     {
       id: 3,
-      name: 'AI Security Solutions',
-      description: 'Advanced security solutions powered by artificial intelligence',
-      icon: Shield,
+      name: 'AI Space Technology Pro',
+      description: 'Space exploration and satellite data analysis powered by advanced AI algorithms',
+      icon: Rocket,
       features: [
-        'Threat Detection',
-        'Anomaly Detection',
-        'Automated Response',
-        'Security Analytics'
+        'Satellite Data Analysis',
+        'Space Mission Planning',
+        'Orbital Mechanics Calculation',
+        'Space Weather Prediction',
+        'Asteroid Detection',
+        'Space Debris Tracking',
+        'Planetary Surface Analysis'
       ],
-      category: 'Security',
+      category: 'Space',
       popular: false,
       rating: 4.7,
-      users: '1,500+',
-      color: 'from-red-500 to-orange-600'
+      users: '150+',
+      price: 'Starting at $75,000/month',
+      color: 'from-blue-500 to-cyan-600',
+      capabilities: [
+        '99.9% accuracy in orbital predictions',
+        'Real-time space weather monitoring',
+        'Automated mission planning',
+        'Advanced satellite constellation management'
+      ]
     },
     {
       id: 4,
-      name: 'AI Document Processing',
-      description: 'Intelligent document processing and data extraction with OCR and NLP',
+      name: 'AI Financial Crime Detection Pro',
+      description: 'Advanced fraud detection and financial crime prevention system with real-time monitoring',
+      icon: Shield,
+      features: [
+        'Real-time Fraud Detection',
+        'Transaction Pattern Analysis',
+        'Risk Assessment Scoring',
+        'Compliance Reporting',
+        'Money Laundering Detection',
+        'Identity Verification',
+        'Behavioral Analytics'
+      ],
+      category: 'Finance',
+      popular: true,
+      rating: 4.9,
+      users: '1,200+',
+      price: 'Starting at $30,000/month',
+      color: 'from-red-500 to-orange-600',
+      capabilities: [
+        '99.5% fraud detection accuracy',
+        'Real-time transaction monitoring',
+        'Automated compliance reporting',
+        'Predictive risk modeling'
+      ]
+    },
+    {
+      id: 5,
+      name: 'AI Supply Chain Optimization Pro',
+      description: 'Intelligent supply chain management with predictive analytics and optimization',
+      icon: Target,
+      features: [
+        'Demand Forecasting',
+        'Inventory Optimization',
+        'Supplier Risk Assessment',
+        'Route Optimization',
+        'Quality Control Automation',
+        'Cost Reduction Analysis',
+        'Sustainability Tracking'
+      ],
+      category: 'Logistics',
+      popular: true,
+      rating: 4.8,
+      users: '800+',
+      price: 'Starting at $35,000/month',
+      color: 'from-indigo-500 to-purple-600',
+      capabilities: [
+        '30% reduction in supply chain costs',
+        '95% demand forecasting accuracy',
+        'Real-time supply chain monitoring',
+        'Automated optimization recommendations'
+      ]
+    },
+    {
+      id: 6,
+      name: 'AI Energy Grid Management Pro',
+      description: 'Smart energy grid management with AI-powered optimization and monitoring',
+      icon: Zap,
+      features: [
+        'Grid Load Balancing',
+        'Energy Demand Prediction',
+        'Renewable Energy Integration',
+        'Fault Detection & Diagnosis',
+        'Power Quality Monitoring',
+        'Energy Trading Optimization',
+        'Grid Stability Analysis'
+      ],
+      category: 'Energy',
+      popular: false,
+      rating: 4.7,
+      users: '200+',
+      price: 'Starting at $60,000/month',
+      color: 'from-yellow-500 to-orange-600',
+      capabilities: [
+        '25% improvement in grid efficiency',
+        'Real-time energy optimization',
+        'Predictive maintenance alerts',
+        'Automated load balancing'
+      ]
+    },
+    {
+      id: 7,
+      name: 'AI Agricultural Intelligence Pro',
+      description: 'Precision agriculture with AI-powered crop monitoring and yield optimization',
+      icon: Sprout,
+      features: [
+        'Crop Health Monitoring',
+        'Yield Prediction',
+        'Soil Analysis',
+        'Pest Detection',
+        'Irrigation Optimization',
+        'Weather Integration',
+        'Harvest Planning'
+      ],
+      category: 'Agriculture',
+      popular: true,
+      rating: 4.8,
+      users: '400+',
+      price: 'Starting at $20,000/month',
+      color: 'from-green-500 to-teal-600',
+      capabilities: [
+        '35% increase in crop yields',
+        'Real-time crop monitoring',
+        'Predictive pest management',
+        'Automated irrigation control'
+      ]
+    },
+    {
+      id: 8,
+      name: 'AI Legal Research Pro',
+      description: 'Advanced legal research and case analysis powered by natural language processing',
       icon: FileText,
       features: [
-        'OCR Processing',
-        'Data Extraction',
-        'Document Classification',
-        'Automated Workflows'
+        'Case Law Analysis',
+        'Legal Document Review',
+        'Contract Analysis',
+        'Precedent Research',
+        'Legal Writing Assistance',
+        'Compliance Checking',
+        'Risk Assessment'
       ],
-      category: 'Document Processing',
+      category: 'Legal',
       popular: false,
       rating: 4.6,
-      users: '1,800+',
-      color: 'from-green-500 to-emerald-600'
+      users: '300+',
+      price: 'Starting at $15,000/month',
+      color: 'from-gray-500 to-slate-600',
+      capabilities: [
+        '80% faster legal research',
+        'Automated document analysis',
+        'Real-time case law updates',
+        'Predictive legal outcomes'
+      ]
     }
   ];
 
-  const categories = ['All', 'Marketing', 'Automation', 'Security', 'Document Processing'];
+  const categories = ['All', 'Healthcare', 'Environment', 'Space', 'Finance', 'Logistics', 'Energy', 'Agriculture', 'Legal'];
 
   if (!isLoaded) {
     return (
@@ -188,10 +327,37 @@ const AIServicesPage: React.FC = () => {
                 </div>
               </div>
 
-              <button className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
-                Get Started
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
+              <div className="text-2xl font-bold text-cyan-400 mb-4">
+                {service.price}
+              </div>
+
+              <div className="space-y-2 mb-6">
+                <h4 className="text-sm font-semibold text-gray-300">Key Capabilities:</h4>
+                <ul className="space-y-1">
+                  {service.capabilities?.map((capability, capabilityIndex) => (
+                    <li key={capabilityIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {capability}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="space-y-2">
+                <a
+                  href={`https://ziontechgroup.com/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
+                <a
+                  href="/contact"
+                  className="w-full border border-purple-400 text-purple-400 py-2 px-4 rounded-lg font-medium hover:bg-purple-400 hover:text-white transition-all block text-center"
+                >
+                  Get Started
+                </a>
+              </div>
             </div>
           ))}
         </div>
