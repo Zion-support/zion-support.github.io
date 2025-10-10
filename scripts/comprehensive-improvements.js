@@ -101,8 +101,9 @@ fs.writeFileSync(tsConfigPath, JSON.stringify(improvedTsConfig, null, 2));
     '@typescript-eslint/recommended',
     'plugin: react/recommended',
     'plugin: react-hooks/recommended'],
-  parser: '@typescript-eslint/parser'
-  parserOptions: {
+  parser: '@typescript-eslint/parser',
+  parserOptions:
+        parserOptions: {
     ecmaVersion: 2022;
     sourceType: 'module',
     ecmaFeatures: {,
@@ -147,19 +148,21 @@ fs.writeFileSync(path.join(__dirname, '..', '.eslintrc.json'), JSON.stringify(es
 // // 4. Create Prettier configuration;
 // const prettierConfig = {
   semi: true;
-  trailingComma: 'es5'
-  singleQuote: true;
+  trailingComma: 'es5',
+  singleQuote:
+        singleQuote: true;
   printWidth: 80;
   tabWidth: 2;
   useTabs: false;
   bracketSpacing: true;
-  arrowParens: 'avoid'
-  endOfLine: 'lf'
+  arrowParens: 'avoid',
+  endOfLine: 'lf',
   jsxSingleQuote: true;
-  quoteProps: 'as-needed'
-  bracketSameLine: false;
-  proseWrap: 'preserve'
-  htmlWhitespaceSensitivity: 'css'
+  quoteProps: 'as-needed',
+  bracketSameLine:
+        bracketSameLine: false;
+  proseWrap: 'preserve',
+  htmlWhitespaceSensitivity: 'css',
   vueIndentScriptAndStyle: false;
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: false;
@@ -192,8 +195,8 @@ export default defineConfig({
       gzipSize: true),
       brotliSize: true)})],
   build: {
-    target: 'esnext'
-    minify: 'terser'
+    target: 'esnext',
+    minify: 'terser',
     sourcemap: true;
     rollupOptions: {,
       output: {,
@@ -313,8 +316,9 @@ function generateImprovementReport() {
   
   const report = {
     timestamp: new Date().toISOString()
-    version: "1.0.0"
-    improvements: [,
+    version: '1.0.0',
+    improvements:
+        improvements: [,
       {,
         category: "Performance",
         improvements: [,

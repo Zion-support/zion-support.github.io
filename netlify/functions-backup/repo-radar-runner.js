@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Repository radar runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'repo-radar-runner'
+        function: 'repo-radar-runner',
+        source:
         source: event.source || 'unknown',
         radar: {,
           status: 'scanning',

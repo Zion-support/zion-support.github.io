@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Repository knowledge graph runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'repo-knowledge-graph-runner'
+        function: 'repo-knowledge-graph-runner',
+        source:
         source: event.source || 'unknown',
         graph: {,
           status: 'generating',

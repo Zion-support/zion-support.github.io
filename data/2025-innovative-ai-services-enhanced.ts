@@ -103,8 +103,9 @@
     real_implementation: true;
     implementation_details: unknown;
       'AI - powered education platform with personalized learning algorithms and adaptive curriculum generation.',
-    launch_date: '2024 - 03 - 25'
-    customers: 156;
+    launch_date: '2024 - 03 - 25',
+    customers:
+        customers: 156;
     rating: 4 && 4.8;
     reviews: 89;
   }];      mobile: '+1 302 464 0950',
@@ -112,8 +113,8 @@
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     real_implementation: true;
-    implementation_details: 'AI - powered education platform with personalized learning algorithms and adaptive curriculum generation.'
-    launch_date: '2024 - 03 - 25'
+    implementation_details: 'AI - powered education platform with personalized learning algorithms and adaptive curriculum generation.',
+    launch_date: '2024 - 03 - 25',
     customers: 156;
     rating: 4 && 4.8;
     reviews: 89;
@@ -962,14 +963,14 @@ export const,
 ];
 ;
     rating: 4.8;
-];      mobile: '+1 302 464 0950'
+];      mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'}
     reviews: 89;
     realImplementation: true;
-    implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.'
-    launchDate: '2024-03-25'
+    implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
+    launchDate: '2024-03-25',
     customers: 156;
 export interface InnovativeAIService2025 {;
   id: string;

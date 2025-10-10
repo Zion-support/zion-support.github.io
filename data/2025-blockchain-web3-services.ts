@@ -16,7 +16,7 @@ export interface BlockchainWeb3Service {;
     setupTime: string;
       'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true;
-    implementationDetails: 'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.'
+    implementationDetails: 'Production-ready DeFi optimization platform with real-time monitoring, automated execution, and comprehensive analytics. Includes mobile app and institutional API.',
     roi: 'Users achieve 200-400% ROI through optimized yields and reduced risks compared to manual DeFi strategies.',
     useCases: [}
     realImplementatio,
@@ -46,8 +46,9 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     tagline: 'Intelligent yield farming with AI - driven strategy optimization',
     description: unknown;
       'Advanced AI platform that automatically optimizes DeFi yield farming strategies, manages risk, and maximizes returns across multiple blockchain networks and protocols.',
-    category: 'DeFi & Yield Optimization'
-    price: unknown;
+    category: 'DeFi & Yield Optimization',
+    price:
+        price: unknown;
       monthly: 199;
       yearly: 1990;
       currency: 'USD',
@@ -150,12 +151,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance'],
-    link: 'https://ziontechgroup.com / ai - powered - defi - yield - optimizer'
-    icon: ''
-    color: 'from - green - 500 to - emerald - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 15'
-    customers: 8500;
+    link: 'https://ziontechgroup.com / ai - powered - defi - yield - optimizer',
+    icon: '',
+    color: 'from - green - 500 to - emerald - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 15',
+    customers:
+        customers: 8500;
     rating: 4 && 4.9;
     reviews: 6200;
     lin,
@@ -183,8 +186,8 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   k: [,
       'OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Web3 && Web3.js'],
     realImplementation: true;
-    implementationDetails: 'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.'
-    roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.'
+    implementationDetails: 'Production-ready NFT intelligence platform with real-time data feeds, AI models, and comprehensive analytics. Includes mobile app and institutional dashboard.',
+    roi: 'NFT investors achieve 300% ROI through improved decision-making and optimized portfolio management.',
     useCases: [;
     realImplementatio,
   n: true,
@@ -218,12 +221,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     tagline: 'AI - powered NFT analytics, valuation, and trading insights',
     description: unknown;
       'Comprehensive NFT intelligence platform that provides real - time analytics, AI - powered valuation models, and trading insights to maximize NFT investment returns.',
-    category: 'NFT & Digital Assets'
-    price: unknown;
+    category: 'NFT & Digital Assets',
+    price:
+        price: unknown;
       monthly: 149;
       yearly: 1490;
-      currency: 'USD'
-      trial_days: 7;
+      currency: 'USD',
+      trial_days:
+        trial_days: 7;
       setup_time: 'Immediate',
       enterprise: 'Custom pricing',
     lin,
@@ -322,12 +327,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     complianc,
   e: [,
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance'],
-    link: 'https://ziontechgroup.com / nft - marketplace - intelligence - platform'
-    icon: ''
-    color: 'from - pink - 500 to - rose - 600'
-    popular: true;
-    launch_date: '2024 - 03 - 01'
-    customers: 3200;
+    link: 'https://ziontechgroup.com / nft - marketplace - intelligence - platform',
+    icon: '',
+    color: 'from - pink - 500 to - rose - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 03 - 01',
+    customers:
+        customers: 3200;
     rating: 4 && 4.7;
     reviews: 2100;
     lin,
@@ -357,8 +364,8 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   k: [,
       'Hyperledger Fabric, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, IoT platforms'],
     realImplementation: true;
-    implementationDetails: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.'
-    roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.'
+    implementationDetails: 'Production-ready blockchain platform with IoT integration, mobile applications, and comprehensive analytics. Includes hardware integration kits and enterprise API.',
+    roi: 'Organizations achieve 300% ROI through improved transparency, reduced compliance costs, and enhanced brand value.',
     useCases: [;
     realImplementatio,
   n: true,
@@ -385,12 +392,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     tagline: 'End - to - end transparency with immutable supply chain tracking',
     description: unknown;
       'Revolutionary blockchain platform that provides complete transparency and traceability across supply chains, enabling real - time tracking, compliance monitoring, and sustainability verification.',
-    category: 'Supply Chain & Traceability'
-    price: unknown;
+    category: 'Supply Chain & Traceability',
+    price:
+        price: unknown;
       monthly: 299;
       yearly: 2990;
-      currency: 'USD'
-      trial_days: 30;
+      currency: 'USD',
+      trial_days:
+        trial_days: 30;
       setup_time: '2 - 4 weeks',
       enterprise: 'Custom pricing',
       'Quality assurance'
@@ -494,12 +503,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     support: unknown;
       '24 / 7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry - specific standards'],
-    link: 'https://ziontechgroup.com / blockchain - supply - chain - traceability'
-    icon: ''
-    color: 'from - blue - 500 to - cyan - 600'
-    popular: true;
-    launch_date: '2024 - 02 - 10'
-    customers: 950;
+    link: 'https://ziontechgroup.com / blockchain - supply - chain - traceability',
+    icon: '',
+    color: 'from - blue - 500 to - cyan - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 02 - 10',
+    customers:
+        customers: 950;
     rating: 4 && 4.8;
     reviews: 680;
   },
@@ -507,8 +518,8 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
     techStack: ['IPFS, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true;
-    implementationDetails: 'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.'
-    roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.'
+    implementationDetails: 'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.',
+    roi: 'Content creators earn 200-500% more compared to traditional social media platforms through direct monetization.',
     useCases: [;
     suppor,
   t: unknown,
@@ -563,12 +574,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
   t: 'Community support, developer documentation, custom development services, and enterprise solutions.',
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-    link: 'https://ziontechgroup.com/web3-social-media-platform'
-    icon: ''
-    color: 'from-purple-500 to-indigo-600'
-    popular: true;
-    launchDate: '2024-01-01'
-    customers: 25000;
+    link: 'https://ziontechgroup.com/web3-social-media-platform',
+    icon: '',
+    color: 'from-purple-500 to-indigo-600',
+    popular:
+        popular: true;
+    launchDate: '2024-01-01',
+    customers:
+        customers: 25000;
     rating: 4.6;
     reviews: 18000;
     complianc,
@@ -604,12 +617,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     tagline: 'Decentralized social networking with content ownership',
     description: unknown;
       'Revolutionary Web3 social media platform where users own their content, earn from engagement, and maintain complete control over their data and privacy.',
-    category: 'Web3 & Social Media'
-    price: unknown;
+    category: 'Web3 & Social Media',
+    price:
+        price: unknown;
       monthly: 0;
       yearly: 0;
-      currency: 'USD'
-      trial_days: 0;
+      currency: 'USD',
+      trial_days:
+        trial_days: 0;
       setup_time: 'Immediate',
       enterprise: 'Custom pricing',
     complianc,
@@ -704,12 +719,14 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
     support: unknown;
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-    link: 'https://ziontechgroup.com / web3 - social - media - platform'
-    icon: ''
-    color: 'from - purple - 500 to - indigo - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 01'
-    customers: 25000;
+    link: 'https://ziontechgroup.com / web3 - social - media - platform',
+    icon: '',
+    color: 'from - purple - 500 to - indigo - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 01',
+    customers:
+        customers: 25000;
     rating: 4 && 4.6;
     reviews: 18000;
   },
@@ -737,13 +754,16 @@ export interface BlockchainWeb3Service {/* TODO: Fix JSX expression */}
 ];      'Social networking_content creation and sharing_community building_brand marketing_influencer monetization_decentralized governance'
     ];
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
-    support: 'Community support, developer documentation, custom development services, and enterprise solutions.'
-    compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
+    support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
+    compliance:
+        compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
     icon: '';
-    color: 'from - purple - 500 to - indigo - 600'
-    popular: true;
-    launch_date: '2024 - 01 - 01'
-    customers: 25000;
+    color: 'from - purple - 500 to - indigo - 600',
+    popular:
+        popular: true;
+    launch_date: '2024 - 01 - 01',
+    customers:
+        customers: 25000;
     rating: 4 && 4.6;
     reviews: 18000;
     rating: 4.6;

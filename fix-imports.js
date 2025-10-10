@@ -4,23 +4,23 @@ import path from 'path';
 
 //Mapping of broken imports to correct imports;
 const iconMappings = {
-  rrowleft: 'ArrowLeft'
-  alendar: 'Calendar'
-  ser: 'User'
-  lock: 'Clock'
-  ag: 'Tag'
-  rendingup: 'TrendingUp'
-  ollarsign: 'DollarSign'
-  sers: 'Users'
-  arget: 'Target'
-  rain: 'Brain'
-  ap: 'Zap'
-  hield: 'Shield'
-  rrowright: 'ArrowRight'
-  og: 'Log'
-  pu: 'Cpu'
-  lobe: 'Globe'
-  ocket: 'Rocket'
+  rrowleft: 'ArrowLeft',
+  alendar: 'Calendar',
+  ser: 'User',
+  lock: 'Clock',
+  ag: 'Tag',
+  rendingup: 'TrendingUp',
+  ollarsign: 'DollarSign',
+  sers: 'Users',
+  arget: 'Target',
+  rain: 'Brain',
+  ap: 'Zap',
+  hield: 'Shield',
+  rrowright: 'ArrowRight',
+  og: 'Log',
+  pu: 'Cpu',
+  lobe: 'Globe',
+  ocket: 'Rocket',
   heckcircle: 'CheckCircle',
   hare2: 'Share2',
   ookmark: 'Bookmark',

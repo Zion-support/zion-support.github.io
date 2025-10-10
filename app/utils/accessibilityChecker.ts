@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
 const AccessibilityCheckerPage: React.FC = () => {
   const features = [
     {
@@ -26,7 +25,6 @@ const AccessibilityCheckerPage: React.FC = () => {
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -37,7 +35,6 @@ const AccessibilityCheckerPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -45,7 +42,6 @@ const AccessibilityCheckerPage: React.FC = () => {
         <meta name="description" content="Professional AccessibilityChecker services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="accessibilityChecker, AI solutions, IT services, Zion Tech Group, accessibilitychecker" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -73,7 +69,6 @@ const AccessibilityCheckerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -85,7 +80,6 @@ const AccessibilityCheckerPage: React.FC = () => {
               Our accessibilitychecker solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -99,7 +93,6 @@ const AccessibilityCheckerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -111,7 +104,6 @@ const AccessibilityCheckerPage: React.FC = () => {
               Experience the power of our accessibilitychecker solutions for your business.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -122,7 +114,6 @@ const AccessibilityCheckerPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -149,6 +140,4 @@ const AccessibilityCheckerPage: React.FC = () => {
     </div>
   );
 };
-
 export default AccessibilityCheckerPage;
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d

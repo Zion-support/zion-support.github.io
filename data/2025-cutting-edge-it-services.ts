@@ -31,7 +31,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
         ]
       }
       professional: price: 999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       professiona,
   l: pric,
@@ -45,7 +46,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Priority support',
           'Performance optimization']}
       enterprise: price: 2499;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -59,8 +61,9 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'Quantum IT'
-    tags: [
+    category: 'Quantum IT',
+    tags:
+        tags: [
     categor,
   y: 'Quantum IT'
     tag,
@@ -143,7 +146,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     ]
     pricing: starter: unknown;
         price: 299;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -158,7 +162,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Standard monitoring',
           'Email support']}
       professional: price: 799;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       professiona,
   l: pric,
@@ -172,7 +177,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Priority support',
           'Performance optimization']}
       enterprise: price: 1999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -186,8 +192,9 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'Edge Computing'
-    tags: [
+    category: 'Edge Computing',
+    tags:
+        tags: [
     categor,
   y: 'Edge Computing'
     tag,
@@ -267,7 +274,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     ]
     pricing: starter: unknown;
         price: 499;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -282,7 +290,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Standard authentication',
           'Email support']}
       professional: price: 1299;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       professiona,
   l: pric,
@@ -296,7 +305,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Priority support',
           'Custom policies']}
       enterprise: price: 2999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -310,8 +320,9 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'Cybersecurity'
-    tags: [
+    category: 'Cybersecurity',
+    tags:
+        tags: [
     categor,
   y: 'Cybersecurity'
     tag,
@@ -394,7 +405,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     ]
     pricing: starter: unknown;
         price: 599;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -409,7 +421,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Standard smart contracts',
           'Email support']}
       professional: price: 1499;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       professiona,
   l: pric,
@@ -423,7 +436,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Priority support',
           'Performance optimization']}
       enterprise: price: 3499;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,
@@ -437,8 +451,9 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Dedicated specialists',
           '24/7 support']}
     }
-    category: 'Blockchain'
-    tags: [
+    category: 'Blockchain',
+    tags:
+        tags: [
     categor,
   y: 'Blockchain'
     tag,
@@ -518,7 +533,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
     ]
     pricing: starter: unknown;
         price: 399;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
     pricin,
   g: starte,
@@ -533,7 +549,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Standard automation',
           'Email support']}
       professional: price: 999;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       professiona,
   l: pric,
@@ -547,7 +564,8 @@ export const cuttingEdgeITServices2025 = [{/* TODO: Fix JSX expression */}
           'Priority support',
           'Performance optimization']}
       enterprise: price: 2499;
-        period: 'month'
+        period: 'month',
+        features:
         features: [
       enterpris,
   e: pric,

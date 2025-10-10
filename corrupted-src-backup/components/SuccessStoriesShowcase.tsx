@@ -26,8 +26,8 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0"
     }
     {
-      company: "FinanceFirst Bank"
-      industry: "Financial Services"
+      company: 'FinanceFirst Bank',
+      industry: 'Financial Services',
       icon: <Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",

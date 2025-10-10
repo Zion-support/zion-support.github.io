@@ -2,7 +2,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-
 const AccessibilityEnhancerPage: React.FC = () => {
   const features = [
     {
@@ -25,7 +24,6 @@ const AccessibilityEnhancerPage: React.FC = () => {
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
-<<<<<<< HEAD
     focusableElements[nextIndex]?.focus();
     event.preventDefault();
   }
@@ -504,7 +502,6 @@ Accessibility Report:
 - Screen Reader Score: ${metrics.screenReaderScore}/100
 - ARIA Implementation Score: ${metrics.ariaImplementationScore}/100
 - Overall Score: ${metrics.overallScore}/100
-
 Recommendations:
 - Focus on improving color contrast for better accessibility
 - Ensure all interactive elements are keyboard accessible
@@ -513,9 +510,7 @@ Recommendations:
 `;
   }
 }
-=======
   ];
-
   const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
@@ -526,7 +521,6 @@ Recommendations:
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -534,7 +528,6 @@ Recommendations:
         <meta name="description" content="Professional AccessibilityEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="accessibilityEnhancer, AI solutions, IT services, Zion Tech Group, accessibilityenhancer" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -562,7 +555,6 @@ Recommendations:
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -574,7 +566,6 @@ Recommendations:
               Our accessibilityenhancer solutions deliver unmatched performance, security, and scalability.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
@@ -588,7 +579,6 @@ Recommendations:
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -600,7 +590,6 @@ Recommendations:
               Experience the power of our accessibilityenhancer solutions for your business.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
@@ -611,7 +600,6 @@ Recommendations:
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -638,6 +626,4 @@ Recommendations:
     </div>
   );
 };
-
 export default AccessibilityEnhancerPage;
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d

@@ -44,8 +44,9 @@
   n: = new Date().toISOString()} this.saveStatus()} resolve(cod)
   e: === 0)}) child.on( this.runningScripts.delete(scriptName); this.saveStatus(); resolve(false)})})} catch (error) {script.errorCount++; this.runningScripts.delete(scriptName); this.saveStatus()} retur,
   n: false} } async runAllScripts() {/* TODO: Fix JSX expression */}
-  Scripts:) )} fo,`
-  r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(` Erro,
+  Scripts:) )} fo,',
+  r:
+        r: (const [name} script] of this.scripts) {const status = this.runningScripts.has(name) ?} // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // // console.log(` Erro,
   r: Coun)`
   t: ${script.errorCoun}t}`)} ; // // // // // // // // // console.log(for (const [name) info] of this.runningScripts) {const duration = Date.now() - info.startTime} // // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`)}` // console.log(`\\n${name}:`)` // console.log(` Descriptio)`
   n: ${script.description}`)` // console.log(` Statu)`

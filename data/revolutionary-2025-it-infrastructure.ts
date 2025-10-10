@@ -1,4 +1,4 @@
-export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025'
+export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary Cloud Infrastructure 2025',
     path: '/services/revolutionary-cloud-infrastructure-2025',
     description: 'Next-generation cloud infrastructure and management',
     icon: 'Cloud',
@@ -14,7 +14,7 @@ export const revolutionaryITInfrastructure2025Services = [{name: 'Revolutionary 
       professional: '$599/month'}
       enterprise: 'Custom'}
   },
-    name: 'Revolutionary DevOps Automation 2025'
+    name: 'Revolutionary DevOps Automation 2025',
     path: '/services/revolutionary-devops-automation-2025',
     description: 'Intelligent DevOps and CI/CD automation',
     icon: 'Code',

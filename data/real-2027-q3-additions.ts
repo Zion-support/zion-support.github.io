@@ -1,6 +1,6 @@
 
 export const real2027Q3Additions = [
-export const real2027Q3Additions = [{id: 'it - asset - discovery - agent'
+export const real2027Q3Additions = [{id: 'it - asset - discovery - agent',
     name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network - wide discovery and enrichment',
     price: '$149',
@@ -48,7 +48,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/managed - postgres - ha',
     real_service: true;
     roi: 'Eliminate 2–4 on - call incidents / month and improve p99 latency by 20–40%.'},
-    id: 'vector - search - starter'
+    id: 'vector - search - starter',
     name: 'Vector Search Starter',
     tagline: 'Production RAG foundation with evals and ops',
     price: '$89',
@@ -122,7 +122,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/serverless - cron - manager',
     real_service: true;
     roi: 'Reduce failed job incidents by 70% and engineering toil by 50%.'},
-    id: 'domain - dns - monitor'
+    id: 'domain - dns - monitor',
     name: 'Domain & DNS Monitor',
     tagline: 'Proactive domain health and expiry guardrails',
     price: '$19',
@@ -159,7 +159,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/domain - dns - monitor',
     real_service: true;
     roi: 'Avoid costly outages from expired domains and misconfigured DNS.'},
-    id: 'uptime - slo - monitor'
+    id: 'uptime - slo - monitor',
     name: 'Uptime & SLO Monitor',
     tagline: 'Synthetic checks with SLOs and error budgets',
     price: '$29',
@@ -270,7 +270,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/api - observability - starter',
     real_service: true;
     roi: 'Decrease MTTR by 40% and increase release confidence.'},
-    id: 'kubernetes - rbac - auditor'
+    id: 'kubernetes - rbac - auditor',
     name: 'Kubernetes RBAC Auditor',
     tagline: 'Least - privilege insights and drift detection',
     price: '$79',
@@ -307,7 +307,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/kubernetes - rbac - auditor',
     real_service: true;
     roi: 'Reduce lateral movement risk and pass audits faster.'},
-    id: 'infrastructure - drift - detector'
+    id: 'infrastructure - drift - detector',
     name: 'Infrastructure Drift Detector',
     tagline: 'Detect and reconcile infra drift automatically',
     price: '$69',
@@ -344,7 +344,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/infrastructure - drift - detector',
     real_service: true;
     roi: 'Prevent config drift incidents and reduce compliance toil.'},
-    id: 'incident - copilot'
+    id: 'incident - copilot',
     name: 'Incident Copilot',
     tagline: 'AI - assisted incident response and postmortems',
     price: '$99',
@@ -381,7 +381,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/incident - copilot',
     real_service: true;
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.'},
-    id: 'ai - market - research'
+    id: 'ai - market - research',
     name: 'AI Market Research',
     tagline: 'Automated landscape scans and insight briefs',
     price: '$79',
@@ -492,7 +492,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/ai - legal - contract - analyzer',
     real_service: true;
     roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.'},
-    id: 'ai - content - generator'
+    id: 'ai - content - generator',
     name: 'AI Content Generator',
     tagline: 'SEO - optimized content with brand voice',
     price: '$49',
@@ -566,7 +566,7 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
     link: '/email - dmarc - analyzer',
     real_service: true;
     roi: 'Improve deliverability and block spoofing / phishing attempts.'},
-    id: 'api - security - scanner'
+    id: 'api - security - scanner',
     name: 'API Security Scanner',
     tagline: 'API discovery and vuln scanning with CI gates',
     price: '$199',
@@ -575,8 +575,8 @@ export const real2027Q3Additions = [{/* TODO: Fix JSX expression */}
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [;
     ]
-    category: 'Security & Identity'
-    link: '/api - security - scanner'
+    category: 'Security & Identity',
+    link: '/api - security - scanner',
     real_service: true;
     roi: 'Prevent high - severity API incidents and cut MTTR.'
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports'

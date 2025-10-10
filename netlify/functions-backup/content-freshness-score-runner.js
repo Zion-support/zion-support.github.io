@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Content freshness score runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'content-freshness-score-runner'
+        function: 'content-freshness-score-runner',
+        source:
         source: event.source || 'unknown',
         scoring: {,
           status: 'active',

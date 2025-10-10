@@ -24,11 +24,11 @@ export interface RevOpsContent {/* TODO: Fix JSX expression */}
 
 export const octoberNewestRevOpsContent: RevOpsContent[] = [
   {
-    id: 'ai-revops-automation-2025'
-    title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity'
-    description: 'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.'
-    category: 'RevOps'
-    date: '2025-10-01'
+    id: 'ai-revops-automation-2025',
+    title: 'AI RevOps Automation 2025: 3.2x Pipeline Velocity',
+    description: 'Revolutionary AI-powered RevOps automation delivering 3.2x pipeline velocity and 127% ROI.',
+    category: 'RevOps',
+    date: '2025-10-01',
     readTime: '16 min',
     icon: '💰',
     gradient: 'from-emerald-600 to-teal-600',
@@ -52,9 +52,9 @@ export const octoberNewestRevOpsContent: RevOpsContent[] = [
       text: 'Read the Complete RevOps Guide',
       link: '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'}},
   {
-    id: 'autonomous-revenue-operations-2025'
-    title: 'Autonomous Revenue Operations 2025: Self-Healing Systems'
-    description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.'
+    id: 'autonomous-revenue-operations-2025',
+    title: 'Autonomous Revenue Operations 2025: Self-Healing Systems',
+    description: 'Self-healing RevOps systems with 99.9% uptime and 85% cost reduction.',
     category: 'RevOps',
     date: '2025-10-02',
     readTime: '18 min read',

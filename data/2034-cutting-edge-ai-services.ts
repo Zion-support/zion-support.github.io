@@ -240,7 +240,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 	}
 		id: 'ai-product-spec-writer',
 		name: 'AI Product Spec Writer',
-		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
 		category: 'AI Business Management',
 		pricing: { starter: '$79/mo' }
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
@@ -393,7 +393,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 }
   id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
-  description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+  description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
   category: 'AI Business Management',
   pricing: { starter: '$79 / mo' }
   features: ['PRD templates_story generation_acceptance criteria_analytics alignment'];
@@ -814,7 +814,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 	}
 		id: 'ai-product-spec-writer',
 		name: 'AI Product Spec Writer',
-		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+		description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
 		category: 'AI Business Management',
 		pricing: { starter: '$79/mo' }
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
@@ -956,7 +956,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [,
 }
   id: 'ai - product - spec - writer',
   name: 'AI Product Spec Writer',
-  description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.'
+  description: 'Generate PRDs, user stories, and acceptance criteria aligned with business goals and analytics.',
   category: 'AI Business Management',
   pricing: { starter: '$79 / mo' }
   features: ['PRD templates_story generation_acceptance criteria_analytics alignment'];

@@ -49,13 +49,14 @@
   s: {' 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}
   t: 'Critical Error Alert - Zion Tech Group'} bod,`
-  y: ` A critical error has occurred on the,
+  y: ' A critical error has occurred on the,
   website: Erro,
   r: ${errorReport.error.message} UR,
   L: ${errorReport.url} Tim,
   e: ${errorReport.timestamp} User,
-  Agent: ${errorReport.userAgent} Stack)`
-  Trace: ${errorReport.error.stack} ` }) })} // Send Slack notification if (process.env.SLACK_WEBHOOK_URL) {/* TODO: Fix JSX expression */}
+  Agent: ${errorReport.userAgent} Stack)',
+  Trace:
+        Trace: ${errorReport.error.stack} ` }) })} // Send Slack notification if (process.env.SLACK_WEBHOOK_URL) {/* TODO: Fix JSX expression */}
   d: 'POST'} header,
   s: {' 'Content-Type': 'application/json' }, bod,
   y: JSON.stringify({/* TODO: Fix JSX expression */}

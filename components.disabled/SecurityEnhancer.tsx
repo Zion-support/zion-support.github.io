@@ -44,15 +44,16 @@ import React { useEffect } from \"react\" const,
   SecurityEnhancer: _React.F,
   C: = () => {/* TODO: Fix JSX expression */}"
   t: '= csp} document.head.appendChild(cspMeta)}; const securityHeaders = {} ; Object.entries(securityHeaders).forEach(([name)value]) => {" const meta = document.createElement("meta")}}} meta.httpEqui,
-  v: '= name; meta.conten,"
-  t: '= value; document.head.appendChild(meta)});} const detectXSS = () => {" const scripts = document.querySelectorAll("script")}}} scripts.forEach(scrip,
+  v: '= name; meta.conten,',
+  t: '= value; document.head.appendChild(meta)});} const detectXSS = () => {' const scripts = document.querySelectorAll("script")}}} scripts.forEach(scrip,
   t: => {/* TODO: Fix JSX expression */}")`
   b:," connect-src "self" http; s: frame-src "none" object-src "none" base-uri "self" form-action "self, form-action "self"`; cspMeta.httpEquiv = "Content-Security-Policy"} cspMeta.content = csp}; const securityHeaders = {} ; meta.httpEquiv = name; meta.content = value; scripts.forEach(script = > {; if (; script['src'] &&) !script['src'].startsWith(window.location.origin) &&" !script['src'].includes("googletagmanager.com") &&" !script['src'].includes()}}} ) {"; if (script['src'] && !script['src'].startsWith(window.location.origin) &&; !script['src'].includes("googletagmanager.com") &&; !script['src'].includes("google-analytics.com")) {} !script['src'].includes("google-analytics.com")) {" script.remove()} ;})} ; const monitorSuspiciousActivity = () => {; const iframes = document.querySelectorAll("iframe")}}} iframes.forEach(ifram,")
   e: => {) if (!iframe['src'].startsWith(window.location.origin) &&"} !iframe['src'].includes("youtube.com") &&"," !iframe['src'].includes("vimeo.com")) {"}" iframe.remove()} ;});} const forms = document.querySelectorAll("form"); forms.forEach(for,")
   m: => {") form.addEventListener("submit")(e) => {" const formData = new FormData(form)}}} const suspiciousPatterns = []; iframes.forEach(iframe => {) !iframe['src'].startsWith(window.location.origin) &&"; !iframe['src'].includes("youtube.com") &&" !iframe['src'].includes("vimeo.com")}}} if (!iframe['src'].startsWith(window.location.origin) &&; !iframe['src'].includes("youtube.com") &&; !iframe['src'].includes("vimeo.com")) {; !iframe['src'].includes("vimeo.com")) {" forms.forEach()}}} /<script/i; /javascrip,
   t: '/i; /on\w+\s*=/i> /eval\(/i; /expression\(/i]) fo,
-  r: (const [key)value] of formData.entries()) {/* TODO: Fix JSX expression */}"
-  n: => {) if (pattern.test(value)) {"; e.preventDefault()}}} alert("Suspiciou,")
+  r: (const [key)value] of formData.entries()) {/* TODO: Fix JSX expression */}',
+  n:
+        n: => {) if (pattern.test(value)) {"; e.preventDefault()}}} alert("Suspiciou,")
   s: content detected. Please check your input.")," "; form.addEventListener("submit")(e) => {/* TODO: Fix JSX expression */}"
   t: '/i> /on\w+\s*=/i,/eval\(/i,> /expression\(/i]) for (const [key)value] of formData.entries()) {" if (typeof value = == "string") {; suspiciousPatterns.forEach(pattern => {" alert(") "Suspicious content detected. Please check your input." )}}} return} ;})} ;} ;})})} ; detectXSS(); monitorSuspiciousActivity(); const securityInterval = setInterval(() => {; monitorSuspiciousActivity()},30000) retur,
   n: () => {} clearInterval(securityInterval)}},[]);} retur,"

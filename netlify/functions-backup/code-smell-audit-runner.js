@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Code smell audit runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'code-smell-audit-runner'
+        function: 'code-smell-audit-runner',
+        source:
         source: event.source || 'unknown',
         audit: {,
           status: 'active',

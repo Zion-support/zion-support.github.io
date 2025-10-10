@@ -1,13 +1,14 @@
 module.exports = {
   metaTags: {,
     viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
-    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1'
-    canonical: true;
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview: -1',
+    canonical:
+        canonical: true;
     alternate: true;
     ogTags: {
-      type: 'website'
-      locale: 'en_US'
-      site_name: 'Zion Tech Group'
+      type: 'website',
+      locale: 'en_US',
+      site_name: 'Zion Tech Group',
       image: '/images/og-image.jpg',
       imageWidth: 1200;
       imageHeight: 630;
@@ -24,9 +25,9 @@ module.exports = {
   structuredData: {
     organization: {
       '@type': 'Organization'
-      name: 'Zion Tech Group'
-      url: 'https://zion.app'
-      logo: 'https://zion.app/images/logo.png'
+      name: 'Zion Tech Group',
+      url: 'https://zion.app',
+      logo: 'https://zion.app/images/logo.png',
       description: 'Leading AI and technology solutions provider',
       contactPoint: {,
         '@type': 'ContactPoint',

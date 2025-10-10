@@ -50,7 +50,8 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
     // Global JavaScript error handler;
     window.addEventListener('error', event => {
       this.handleError({
-        type: 'javascript'
+        type: 'javascript',
+        message:
         message: event.message;)
         filename: event.filename;)
         lineno: event.lineno;)

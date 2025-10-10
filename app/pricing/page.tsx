@@ -1,10 +1,8 @@
 'use client';
-
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
-
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -55,7 +53,6 @@ const PricingPage: React.FC = () => {
       popular: false
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -67,7 +64,6 @@ const PricingPage: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
       </Helmet>
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-4 py-16">
           <div className="text-center mb-16">
@@ -78,7 +74,6 @@ const PricingPage: React.FC = () => {
               Choose the perfect plan for your business needs. All plans include our core AI and IT solutions with transparent, no-hidden-fees pricing.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {plans.map((plan, index) => (
               <div
@@ -97,7 +92,6 @@ const PricingPage: React.FC = () => {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-300 mb-6">{plan.description}</p>
@@ -106,7 +100,6 @@ const PricingPage: React.FC = () => {
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -115,7 +108,6 @@ const PricingPage: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-
                 <Link
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${
@@ -130,7 +122,6 @@ const PricingPage: React.FC = () => {
               </div>
             ))}
           </div>
-
           <div className="text-center mt-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-4xl mx-auto">
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -149,8 +140,7 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </div>
-=======
-
+      </div>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
@@ -165,7 +155,6 @@ const PricingPage: React.FC = () => {
             </p>
           </div>
         </section>
-
         {/* Pricing Cards */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -187,7 +176,6 @@ const PricingPage: React.FC = () => {
                       </div>
                     </div>
                   )}
-                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
@@ -196,7 +184,6 @@ const PricingPage: React.FC = () => {
                       <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
-
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
@@ -205,7 +192,6 @@ const PricingPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
-
                   <Link
                     to="/contact"
                     className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
@@ -222,7 +208,6 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Additional Information */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -235,7 +220,6 @@ const PricingPage: React.FC = () => {
                   Our Enterprise plan offers completely customized AI and IT solutions tailored to your specific business requirements. Contact us for a personalized quote.
                 </p>
               </div>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -244,7 +228,6 @@ const PricingPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">Flexible Scaling</h3>
                   <p className="text-gray-300">Scale your solutions up or down based on your business needs</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-slate-900" />
@@ -252,7 +235,6 @@ const PricingPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-2">No Hidden Fees</h3>
                   <p className="text-gray-300">Transparent pricing with no surprise charges or hidden costs</p>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Star className="w-8 h-8 text-slate-900" />
@@ -261,7 +243,6 @@ const PricingPage: React.FC = () => {
                   <p className="text-gray-300">Dedicated support from our team of AI and IT experts</p>
                 </div>
               </div>
-
               <div className="text-center">
                 <Link
                   to="/contact"
@@ -274,14 +255,12 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* FAQ Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white text-center mb-12">
               Frequently Asked Questions
             </h2>
-            
             <div className="space-y-6">
               <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -291,7 +270,6 @@ const PricingPage: React.FC = () => {
                   Yes, you can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle.
                 </p>
               </div>
-              
               <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
                   What's included in the setup fee?
@@ -300,7 +278,6 @@ const PricingPage: React.FC = () => {
                   Setup includes initial configuration, integration with your existing systems, and basic training for your team.
                 </p>
               </div>
-              
               <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
                   Do you offer refunds?
@@ -309,7 +286,6 @@ const PricingPage: React.FC = () => {
                   We offer a 30-day money-back guarantee for all plans. If you're not satisfied, we'll provide a full refund.
                 </p>
               </div>
-              
               <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
                   Is there a contract commitment?
@@ -321,10 +297,8 @@ const PricingPage: React.FC = () => {
             </div>
           </div>
         </section>
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
       </div>
     </>
   );
 };
-
 export default PricingPage;

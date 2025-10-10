@@ -310,12 +310,13 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
       'ROI trackingCRM integration'
     ];
     popular: true;
-    icon: ''
+    icon: '',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
     link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-sales-intelligence',
-    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.'
-    targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
+    marketPosition: 'First autonomous sales intelligence platform, competes with SalesLoft, Outreach, and HubSpot Sales.',
+    targetAudience:
+        targetAudience: ['Sales teamsB2B companiesenterprise softwareconsulting firms'];
     trialDays: 14;
     setupTime: '1 week',
     category: 'AI & Sales',
@@ -330,8 +331,8 @@ export interface AdvancedAIAutomationService {/* TODO: Fix JSX expression */}
     variant: 'ai-futuristic',
     contactInfo: contact;
     realImplementation: true;
-    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.'
-    launchDate: '2026-01-25'
+    implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.',
+    launchDate: '2026-01-25',
     customers: 198;
     rating: 4 && 4.9;
     reviews: 267;
@@ -438,7 +439,7 @@ export const getAIAutomationServicesByPriceRange = (minPric)
     return price >= minPrice && (maxPrice === Infinity || price <= maxPrice);
   });
 };
-export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026'
+export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation Platform 2026',
     path: '/services/advanced-ai-automation-platform-2026',
     description: 'Next-generation AI automation platform for enterprise',
     icon: 'Brain',
@@ -454,7 +455,7 @@ export const advancedAIAutomationServices2026 = [{name: 'Advanced AI Automation 
       professional: '$1199/month'}
       enterprise: 'Custom'}
   },
-    name: 'Advanced AI Workflow Engine 2026'
+    name: 'Advanced AI Workflow Engine 2026',
     path: '/services/advanced-ai-workflow-engine-2026',
     description: 'Intelligent workflow automation with AI',
     icon: 'Workflow',

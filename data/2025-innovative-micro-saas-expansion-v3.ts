@@ -39,10 +39,11 @@
   reviews: number;
 
 const contact =
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup && ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-      customers: 34;
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+      customers:
+        customers: 34;
       rating: 4 && 4.9;
       reviews: 28;
     };
@@ -383,8 +384,9 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     features: [,
       'Quantum portfolio optimizationAI-powered market predictionRisk assessment algorithmsReal-time financial analyticsMulti-asset class modelingRegulatory compliance toolsBacktesting and validationCustom financial models',
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
-      launchDate: '2023-10-01'
-      customers: 34;
+      launchDate: '2023-10-01',
+      customers:
+        customers: 34;
       rating: 4.9;
       reviews: 28;
     };

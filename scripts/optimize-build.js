@@ -120,8 +120,9 @@ async function checkPerformance() {/* TODO: Fix JSX expression */}
   
   if (issues.length > 0) {
     // console.log('⚠️  Performance issues found: ');
-  for (const file of files) {/* TODO: Fix JSX expression */}`
-  detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
+  for (const file of files) {/* TODO: Fix JSX expression */}',
+  detected:
+        detected: ${file} (${Math.round(stats.size / 1024)}KB)`);
     }
   }
   

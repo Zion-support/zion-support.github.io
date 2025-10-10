@@ -80,8 +80,8 @@ export interface EmergingTechService2029 {/* TODO: Fix JSX expression */}
 }
 export const emergingTechServices2029: EmergingTechService2029[] = [,
     id: "2029-emerging-tech-service", name: "2029 Emerging Tech Service Platform",
-    tagline: "Emerging tech services for 2029", price: "$399/month"
-    description: "Advanced platform showcasing emerging technology services and innovations for 2029."
+    tagline: "Emerging tech services for 2029", price: '$399/month',
+    description: 'Advanced platform showcasing emerging technology services and innovations for 2029.',
     features: [;
       "Emerging tech services"
       "Innovation platform"
@@ -171,8 +171,8 @@ export const,
   }
 ];
 ;
-    id: "2029-emerging-tech-service"
-    name: "2029 Emerging Tech Service Platform",
+    id: '2029-emerging-tech-service',
+    name: '2029 Emerging Tech Service Platform',
     tagline: "Emerging tech services for 2029",
     price: "$399/month",
     description: "Advanced platform showcasing emerging technology services and innovations for 2029.",
@@ -183,12 +183,12 @@ export const,
       "Advanced features",
       "Expert insights"
     ],
-    link: "/services/2029-emerging-tech-service"
-    category: "Emerging Tech Services 2029"
+    link: '/services/2029-emerging-tech-service',
+    category: 'Emerging Tech Services 2029',
     realImplementation: true;
     contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};

@@ -80,8 +80,9 @@ $4}
         '@type': 'GeoCoordinates',
         latitude: '39.8283',
         longitude:       ,
-geoRadiusgeoRadius: '1000000'
-    hasOfferCatalog: {
+geoRadiusgeoRadius: '1000000',
+    hasOfferCatalog:
+        hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'AI Technology Services',
       itemListElement: [

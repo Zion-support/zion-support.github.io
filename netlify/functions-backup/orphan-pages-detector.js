@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Orphan pages detector executed successfully)
         timestamp: new Date().toISOString()
-        function: 'orphan-pages-detector'
+        function: 'orphan-pages-detector',
+        source:
         source: event.source || 'unknown',
         detection: {,
           status: 'active',

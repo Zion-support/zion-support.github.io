@@ -17,8 +17,8 @@
   r: true}error } public componentDidCatch(erro,")
   r: "Error")errorInf,
   o: ErrorInfo) {/* TODO: Fix JSX expression */}"
-  error:")error}errorInfo)} private handleRetry = () => {/* TODO: Fix JSX expression */}"
-  r: "false"}erro,"
+  error: ')error}errorInfo)} private handleRetry = () => {/* TODO: Fix JSX expression */}',
+  r: 'false'}erro,"
   r: "undefined" })} public render() { if (this.state.hasError) { if (this.props.fallback) { return this.props.fallback} return (<div className="text-left" > <div className="text-left" > <div className="text-left" > <AlertTriangle className="text-left" /> </div> <h1 className="text-left" > Something went wrong </h1> <p className="text-left" > We&apos)re sorry)but something unexpected happened. Please try refreshing the page. </p> {process.env['NODE_ENV'] === "development" && this.state.error && ( <details className="text-left" > <summary className="text-left" > Error Details </summary> <pre className="text-left" > {this.state.error.message} {this.state.error.stack} </pre> </details> )} <div className="text-left" > <Button onClick={this.handleRetry} className="text-left" > <RefreshCw className="text-left" /> Try Again </Button> <Button variant="outline" onClick={() => window.location.reload()} className="text-left" > Refresh Page </Button> </div> </div> </div> )} return this.props.children} export default ErrorBoundary;'"'"' import _React,{Component}ErrorInfo;ReactNode } from "react" import {AlertTriangle}RefreshCw } from 'lucide-react' import { Button } from './Button' interface Props {/* TODO: Fix JSX expression */}
   n: ReactNode} fallback?: ReactNode}' } } interface State {/* TODO: Fix JSX expression */}
   r: boolean} error?: Error}' } } class ErrorBoundary extends Component<Props,State> {/* TODO: Fix JSX expression */}
@@ -28,5 +28,5 @@
   r: 'Error)errorInf,
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
   error:)error}errorInfo)} private handleRetry = () => {/* TODO: Fix JSX expression */}
-  r: 'false}erro,"
+  r: 'false}erro,',
   r: 'undefined' })} public render() { if (this.state.hasError) { if (this.props.fallback) { return this.props.fallback} return (<div className="text-left" > <div className="text-left" > <div className="text-left" > <AlertTriangle className="text-left" /> </div> <h1 className="text-left" > Something went wrong </h1> <p className="text-left" > We&apos)re sorry)but something unexpected happened. Please try refreshing the page. </p> {process.env['NODE_ENV'] === 'development' && this.state.error && ( <details className="text-left" > <summary className="text-left" > Error Details </summary> <pre className="text-left" > {this.state.error.message} {this.state.error.stack} </pre> </details> )} <div className="text-left" > <Button onClick={this.handleRetry} className="text-left" > <RefreshCw className="text-left" /> Try Again </Button> <Button variant="outline" onClick={() => window.location.reload()} className="text-left" > Refresh Page </Button> </div> </div> </div> )} return this.props.children} export default ErrorBoundary;'"

@@ -80,8 +80,8 @@ export interface QuantumSpaceService {/* TODO: Fix JSX expression */}
 }
 export const quantumSpaceServices: QuantumSpaceService[] = [,
     id: "quantum-computing-platform", name: "Quantum Computing Platform",
-    tagline: "Next-generation quantum computing solutions", price: "$199/month"
-    description: "Advanced quantum computing platform for complex calculations and simulations."
+    tagline: "Next-generation quantum computing solutions", price: '$199/month',
+    description: 'Advanced quantum computing platform for complex calculations and simulations.',
     features: [;
       "Quantum algorithms"
       "Simulation tools"
@@ -171,8 +171,8 @@ export const,
   }
 ];
 ;
-    id: "quantum-computing-platform"
-    name: "Quantum Computing Platform",
+    id: 'quantum-computing-platform',
+    name: 'Quantum Computing Platform',
     tagline: "Next-generation quantum computing solutions",
     price: "$199/month",
     description: "Advanced quantum computing platform for complex calculations and simulations.",
@@ -183,12 +183,12 @@ export const,
       "Documentation",
       "Support services"
     ],
-    link: "/services/quantum-computing-platform"
-    category: "Quantum Computing"
+    link: '/services/quantum-computing-platform',
+    category: 'Quantum Computing',
     realImplementation: true;
     contactInfo: unknown;
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
+      mobile: '+1 302 464 0950',
+      email: 'kleber@ziontechgroup.com',
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'}};

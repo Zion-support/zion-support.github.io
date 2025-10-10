@@ -165,8 +165,9 @@ const, October2025FeaturedContentBanne, r = () => {/* TODO: Fix JSX expression *
         { val, u, e: "S, L, A", lab, e, l: "Aware, Routin, g" }"
         { val, u, e: "$", lab, e, l: "Predictable, Spen, d" }"
       tit, l, e: "Enterprise, AI, Value Realizati, o, n",";"
-      descripti, o, n: "90, days, to shipped, outcom, e,"
-  s: scorecar, d, s, evaluator, gate, s, tiered, routin, g",";"
+      descripti, o, n: '90, days, to shipped, outcom, e,',
+  s:
+        s: scorecar, d, s, evaluator, gate, s, tiered, routin, g",";"
       li, n, k: "/bl, o, g/enterpri, s, e-ai-val, u, e-realizati, o, n-20, 2, 5-10-08",";
       ic, o, n: Bra, i, n;"
       gradie, n, t: "fr, o, m-indi, g, o-600, t, o-bl, u, e-6, 0, 0",";"

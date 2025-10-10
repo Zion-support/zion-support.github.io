@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Duplicate media finder runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'duplicate-media-finder-runner'
+        function: 'duplicate-media-finder-runner',
+        source:
         source: event.source || 'unknown',
         finding: {,
           status: 'active',

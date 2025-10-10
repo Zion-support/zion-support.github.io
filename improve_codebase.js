@@ -87,10 +87,12 @@ class CodebaseImprover {/* TODO: Fix JSX expression */}
     if (!content) return}
     //Add better optimization settings;
     const improvedContent = content.replace(/build: \{[\s\S]*?\}/,
-      `build: {outDir: 'dist'
-    sourcemap: mode !== 'production'
-    minify: 'terser'
-    terserOptions: {)
+      `build: {outDir: 'dist',
+    sourcemap:
+        sourcemap: mode !== 'production'
+    minify: 'terser',
+    terserOptions:
+        terserOptions: {)
       compress: {)
         drop_console: true;)
   drop_debugger: true;),

@@ -40,14 +40,15 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({,
  const baseStructuredData = {
  '@context': 'https: //schema.org',
  '@type': 'Organization',
- name: 'Zion Tech Group'
- url: 'https://ziontechgroup.com'
- logo: 'https://ziontechgroup.com/logo.png'
- description: seoData.description;
+ name: 'Zion Tech Group',
+ url: 'https://ziontechgroup.com',
+ logo: 'https://ziontechgroup.com/logo.png',
+ description:
+        description: seoData.description;
  address: {
  '@type': 'PostalAddress'
- streetAddress: '364 E Main St STE 1008'
- addressLocality: 'Middletown'
+ streetAddress: '364 E Main St STE 1008',
+ addressLocality: 'Middletown',
  addressRegion: 'DE',
  postalCode: '19709',
  addressCountry: 'US'},

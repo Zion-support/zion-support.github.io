@@ -340,8 +340,8 @@ const AIAgentOrchestrationEnterprise202, 5 = () => {/* TODO: Fix JSX expression 
   Enterprise AI Agent Orchestration: The 2025 Implementation Blueprint;
   conten,"
   t: "Master enterprise AI agent orchestration with proven patterns, security frameworks, and deployment strategies that scale to production. Real-world implementation guide for 2025.", /><meta,"
-  name: "keywords,"
-  content: "AI agents, agent orchestration, enterprise AI, multi-agent systems, AI governance, production AI", /><link,"
+  name: 'keywords,',
+  content: 'AI agents, agent orchestration, enterprise AI, multi-agent systems, AI governance, production AI', /><link,"
   rel: "canonical;"
   href=",
   http,

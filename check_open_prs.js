@@ -5,11 +5,13 @@ import https from 'https';
 function makeGitHubRequest(endpoint) {
   return new Promise((resolve, reject) => {
     const options = {
-      hostname: 'api.github.com'
-      port: 443;
+      hostname: 'api.github.com',
+      port:
+        port: 443;
       path: endpoint;
-      method: 'GET'
-      headers: {,
+      method: 'GET',
+      headers:
+        headers: {,
         'User-Agent': 'Zion-App-Automation',
         'Accept': 'application/vnd.github.v3+json',
 function makeGitHubRequest(endpoint) {/* TODO: Fix JSX expression */}

@@ -188,7 +188,7 @@ import React from \'react\' import { Link } from \'next/link\' import {X,Phone,M
   f: '/case-studies' }; {/* TODO: Fix JSX expression */}
   e: 'Privacy Policy}hre,
   f: '/privacy' }; {/* TODO: Fix JSX expression */}
-  e: 'Terms of Service}hre,"
+  e: 'Terms of Service}hre,',
   f: '/terms' }; ]; return (; <> {} {isOpen && (; <div ) className="text-left" } onClick={onClose} /> )} ; {} <div className={/* TODO: Fix JSX expression */}"`
   lg: hidden ${, isOpen ? 'translate-x-0' : 'translate-x-full'}}`}> <div className="text-left" > {} <div className="text-left" > <h2 className="text-left" >Services & Solutions></div> <button; onClick={onClose} className="text-left" > </button><X className="text-left" /> ></div> ></div> {} <div className="text-left" > {} <div className="text-left" > <h3 className="text-left" >Get in Touch></div> <div className="text-left" > <div className="text-left" > <Phone className="text-left" /> <a href="te,"
   l: +<13024640950" className="text-left" > +1 302 464 0950; ></div> ></div> <div className="text-left" > <Mail className="text-left" /> <a href="mailt,"

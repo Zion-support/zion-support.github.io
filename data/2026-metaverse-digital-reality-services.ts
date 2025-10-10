@@ -1,4 +1,4 @@
-export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026'
+export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Development Platform 2026',
     path: '/services/metaverse-development-platform-2026',
     description: 'Complete metaverse development and deployment solution',
     icon: 'Globe',
@@ -14,7 +14,7 @@ export const metaverseDigitalRealityServices2026 = [{name: 'Metaverse Developmen
       professional: '$799/month'}
       enterprise: 'Custom'}
   },
-    name: 'Digital Reality Solutions 2026'
+    name: 'Digital Reality Solutions 2026',
     path: '/services/digital-reality-solutions-2026',
     description: 'Advanced AR/VR and mixed reality services',
     icon: 'Eye',

@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Component coupling graph runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'component-coupling-graph-runner'
+        function: 'component-coupling-graph-runner',
+        source:
         source: event.source || 'unknown',
         graph: {,
           status: 'generating',

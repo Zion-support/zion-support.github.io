@@ -1,5 +1,3 @@
-
-
 'use client';
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
@@ -16,20 +14,15 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content;}
 };
-
   loadTime: number;,
     renderTime: number;,
     memoryUsage: number;,
     fps: number;
   [key: string]: number;
-
 }
-
 const,
   PerformanceDashboard: React.FC<PerformanceProps> = ({ onMetricsUpdate }) => {/* TODO: Fix JSX expression */}
   });
-
-<<<<<<< HEAD
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
@@ -38,7 +31,6 @@ const,
       const loadTime = navigation
         ? navigation.loadEventEnd - navigation.fetchStart
         : 0;
-      
       // Measure render time
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
@@ -48,7 +40,6 @@ const,
         const memory = (performance as { memory?: { usedJSHeapSize: number } }).memory;
         memoryUsage = memory?.usedJSHeapSize || 0;
       }
-      
       // Measure FPS (simplified)
       let fps = 0;
       if ('requestAnimationFrame' in window) {
@@ -65,35 +56,25 @@ const,
         };
         requestAnimationFrame(measureFPS);
       }
-      
       setMetrics({
         loadTime,
         renderTime,
         memoryUsage,
         fps
-=======
   useEffect(() => {/* TODO: Fix JSX expression */}
   p: entry.startTime }));
         }
->>>>>>> f7c4928b2138abffab75f9beb3ca62b8e0c3452d
       });
     });
-
     try {/* TODO: Fix JSX expression */}
   s: ['paint'] });
       return () => observer.disconnect();
     } catch (error) {/* TODO: Fix JSX expression */}
     }
   }, []);
-
   useEffect(() => {/* TODO: Fix JSX expression */}
     }
   }, [metrics, onMetricsUpdate]);
-
   return null;
 };
-
 export default PerformanceDashboard;
-
-
-

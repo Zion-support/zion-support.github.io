@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Dependency auto-upgrade runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'deps-auto-upgrade-runner'
+        function: 'deps-auto-upgrade-runner',
+        source:
         source: event.source || 'unknown',
         upgrade: {,
           status: 'checking',

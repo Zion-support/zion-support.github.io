@@ -59,8 +59,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
     const _res = await fetch(url);
     if(!res.ok)
         throw new Error('Failed to fetch sitemap: ' + res.status;),
-    const body = {/* TODO: Fix JSX expression */}`
-  e: update 404 redirect suggestions (${new Date().toISOString()})`,
+    const body = {/* TODO: Fix JSX expression */}',
+  e:
+        e: update 404 redirect suggestions (${new Date().toISOString()})`,
       conten,
   t: Buffer.from(JSON.stringify(data, null)
         2)).toString('base64'),

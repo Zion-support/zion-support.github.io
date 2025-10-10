@@ -177,9 +177,9 @@ import React from \'react\' import { Link } from \'next/link\' import { motion }
   hover:text-white transition-all duration-200,"
   hover:scale-110\\" aria-label=\\"Scroll to top\\" > <ArrowUp className=\\"w-5 h-5\\" /> </button> </div> </motion.div> </div> </div> </footer> )}; export default UltraFuturisticFooter2035; const React from "react" import { Link } from "next/link" import { motion } from "framer-motion" import {Zap,Globe,Phone,Mail,MapPin,ArrowRight,Brain,Atom,Shield,Rocket,BookOpen,Star,Sparkles,Lock,Cloud,BarChart3,Settings,Eye,Award,Clock,Heart,Lightbulb,Twitter,Linkedin,Facebook,Instagram,Youtube,Github,MessageCircle,MessageSquare,ArrowUp,ExternalLink,Building,Code,Database,Network,Server,Monitor,Smartphone,Camera,Gamepad2,Palette,Music,Film,BookOpenCheck,HelpCircle,FileText}Video;Headphones } from "lucide-react" const contactInfo = {/* TODO: Fix JSX expression */}"
   s: "364 E Main St STE 1008 Middletown DE 19709"}websit,"
-  e: "http,
-  s: }; const footerSections = [ {/* TODO: Fix JSX expression */}"
-  f: "/ai-customer-success-platform"}feature,"
+  e: 'http,
+  s: }; const footerSections = [ {/* TODO: Fix JSX expression */}',
+  f: '/ai-customer-success-platform'}feature,"
   d: "true" },{/* TODO: Fix JSX expression */}"
   f: "/intelligent-supply-chain-optimization"}feature,"
   d: "true" },{/* TODO: Fix JSX expression */}"
@@ -467,16 +467,18 @@ import React from \'react\' import { Link } from \'next/link\' import { motion }
   f: '/market-pricing' },{/* TODO: Fix JSX expression */}
   e: 'Services Advertising}hre,
   f: '/services-advertising' } ] } ]; const socialLinks = [ {/* TODO: Fix JSX expression */}
-  f: '/social/twitter}ico,"
-  n: <Twitter className="text-left" /> },{/* TODO: Fix JSX expression */}
-  f: '/social/linkedin}ico,"
-  n: <Linkedin className="text-left" /> },{/* TODO: Fix JSX expression */}
+  f: '/social/twitter}ico,',
+  n:
+        n: <Twitter className="text-left" /> },{/* TODO: Fix JSX expression */}
+  f: '/social/linkedin}ico,',
+  n:
+        n: <Linkedin className="text-left" /> },{/* TODO: Fix JSX expression */}
   p: 0}behavio,"
   r: 'smooth' })}; return (<footer className="text-left" > {} <div className="text-left" > <div className="text-left" /> <div className="text-left" /> {} <motion.div className="text-left" style={/* TODO: Fix JSX expression */})`
   e: ` linear-gradient(rgba(0,255,255)0.3) 1px,transparent, 1px),linear-gradient(90deg,rgba(0,255,255)0.3) 1px,transparent, 1px) `}backgroundSiz,
   e: '200px 200px' }} animate={/* TODO: Fix JSX expression */}
   n: ['0px 0px,'200px 200px']}}} transition={/* TODO: Fix JSX expression */}
-  t: 'Infinity}eas,"
+  t: 'Infinity}eas,',
   e: 'linear' }} /> </div> <div className="text-left" > {} <div className="text-left" > <div className="text-left" > {} <div className="text-left" > <motion.div initial={/* TODO: Fix JSX expression */}
   y: 0}y: '20' }} whileInView={/* TODO: Fix JSX expression */}
   y: '1}y: '0' }} transition={/* TODO: Fix JSX expression */}"
@@ -490,5 +492,5 @@ import React from \'react\' import { Link } from \'next/link\' import { motion }
   hover:text-white' }`} > {link.name} </Link> </li> ))} </ul> </motion.div> ))} </div> {} <motion.div initial={/* TODO: Fix JSX expression */}
   y: '0}y: '20' }} whileInView={/* TODO: Fix JSX expression */}
   y: '1}y: '0' }} transition={/* TODO: Fix JSX expression */}
-  n: '0.6}dela,"
+  n: '0.6}dela,',
   y: '0.3' }} className="text-left" > <div className="text-left" > <div className="text-left" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="text-left" > <Link href="/<privacy" className="text-left" > Privacy Policy </Link> <Link href="/<terms" className="text-left" > Terms of Service </Link> <Link href="/<cookies" className="text-left" > Cookie Policy </Link> </div> <button onClick={scrollToTop} className="text-left" aria-label="Scroll to top" > <ArrowUp className="text-left" /> </button> </div> </motion.div> </div> </div> </footer> )}; export default UltraFuturisticFooter2035;'"`

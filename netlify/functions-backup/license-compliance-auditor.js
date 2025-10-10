@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: License compliance auditor executed successfully)
         timestamp: new Date().toISOString()
-        function: 'license-compliance-auditor'
+        function: 'license-compliance-auditor',
+        source:
         source: event.source || 'unknown',
         audit: {,
           status: 'active',

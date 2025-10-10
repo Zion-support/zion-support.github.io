@@ -4,10 +4,12 @@ import https from 'https';
 const makeGitHubRequest = (path) => {
   return new Promise((resolve, reject) => {
     const options = {
-      hostname: 'api.github.com'
-      path: path;
-      method: 'GET'
-      headers: {,
+      hostname: 'api.github.com',
+      path:
+        path: path;
+      method: 'GET',
+      headers:
+        headers: {,
         'User-Agent': 'Zion-App-Automation',
         Accept: 'application/vnd.github.v3+json'}};
 

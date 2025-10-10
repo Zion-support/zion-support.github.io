@@ -9,11 +9,13 @@ exports.handler = async function (event, context) {
       body: JSON.stringify({)
         message: 'Unused media scanner executed successfully')
         timestamp: new Date().toISOString()
-        function: 'unused-media-scanner'
+        function: 'unused-media-scanner',
+        source:
         source: event.source || 'unknown'
         scanning: {
-          status: 'active'
-          mediaScanned: 0;
+          status: 'active',
+          mediaScanned:
+        mediaScanned: 0;
           unusedFound: 0;
           lastScan: new Date().toISOString()}
       })

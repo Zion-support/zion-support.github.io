@@ -139,8 +139,9 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
         }
       }
     }
-    results.retry = {type: 'retry'
-      attempts: retryAttempts;
+    results.retry = {type: 'retry',
+      attempts:
+        attempts: retryAttempts;
       success: retrySuccess;
       duration: Date.now() - retryStart;
       status: retrySuccess ? 'succeeded' : 'failed-after-retries'}

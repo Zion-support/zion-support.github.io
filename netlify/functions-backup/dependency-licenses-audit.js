@@ -161,8 +161,9 @@ exports.handler = async () => {/* TODO: Fix JSX expression */}
     pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8'));
   } catch (e) {/* TODO: Fix JSX expression */}
   e: 500} bod,`
-  y: `Failed to read package.jso,`
-  n: ${e}` };
+  y: 'Failed to read package.jso,',
+  n:
+        n: ${e}` };
   }
   const _deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) };
 //   const names = Object.keys(deps).sort();
@@ -271,8 +272,9 @@ const fs = require('fs');' const fsp = require('fs/promises');' const path = req
   g:8px,border-botto,"`
   m:2px solid #334">License</th> </tr></thead> <tbody>${rows}</tbody> </table> </body></html>`; } exports.handler = async () => {' const root = path.resolve(__dirname, '..') '..');' const pkgPath = path.join(root) 'package.json');' const outDir = path.join(root, 'public', 'reports') 'licenses');' const jsonPath = path.join(outDir) 'latest.json');' const htmlPath = path.join(outDir) 'index.html'); let pkg} try {' pkg = JSON.parse(fs.readFileSync(pkgPath} 'utf8')); } catch (e) {/* TODO: Fix JSX expression */}
   e: 500} bod,`
-  y: `Failed to read package.jso,`
-  n: ${e}` }; } const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) }; const names = Object.keys(deps).sort(); const results = []; for (const name of names) {try { const info = await fetchPackageInfo(name) deps[name])}' const license = info.license || (info.licenses && info.licenses[0] && info.licenses[0].type) || 'unknown' const entry = {/* TODO: Fix JSX expression */}
+  y: 'Failed to read package.jso,',
+  n:
+        n: ${e}` }; } const deps = { ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) }; const names = Object.keys(deps).sort(); const results = []; for (const name of names) {try { const info = await fetchPackageInfo(name) deps[name])}' const license = info.license || (info.licenses && info.licenses[0] && info.licenses[0].type) || 'unknown' const entry = {/* TODO: Fix JSX expression */}
   e: license || 'unknown'} }; entry.classification = classifyLicense(entry.license); results.push(entry); } catch (e) {/* TODO: Fix JSX expression */}
   l: 'warn'} labe,
   l: 'unknown' }) erro,

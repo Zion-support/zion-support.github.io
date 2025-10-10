@@ -208,8 +208,9 @@ export const,
       'Trading',
       'Finance',
       'Analytics'],
-    price: '$35,999/month'
-    features: [;
+    price: '$35,999/month',
+    features:
+        features: [;
     complianc,
   e: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalabilit,
   y: 'Enterprise - grade, global deployment',    ro,
@@ -312,20 +313,20 @@ export const,
       'Financial experts',
       'Implementation team'],
     compliance: ['SEC', 'FINRA', 'SOX', 'SOC 2'],    scalability: 'Enterprise-grade, global trading',    roi: '1000% within 18 months',
-    deployment: 'Cloud-native, low-latency infrastructure'
-    maintenance: 'Continuous updates, performance optimization'
-    training: 'Trading platform training, certification'
-    documentation: 'Trading guides, best practices'
-    api: 'Trading APIs, market data feeds'
+    deployment: 'Cloud-native, low-latency infrastructure',
+    maintenance: 'Continuous updates, performance optimization',
+    training: 'Trading platform training, certification',
+    documentation: 'Trading guides, best practices',
+    api: 'Trading APIs, market data feeds',
     mobile: 'Mobile trading apps',
-    security: 'Financial-grade security, encryption'
-    backup: 'Real-time backup, disaster recovery'
+    security: 'Financial-grade security, encryption',
+    backup: 'Real-time backup, disaster recovery',
     monitoring: 'Trading performance monitoring',
-    analytics: 'Trading analytics, performance reports'
-    customization: 'Custom trading strategies, integration'
+    analytics: 'Trading analytics, performance reports',
+    customization: 'Custom trading strategies, integration',
     whiteLabel: 'Available for financial institutions',
     affiliate: '15% commission for referrals',    referral: '$100,000 bonus for partnerships',    partnership: 'Financial institution partnerships',
-    funding: 'Series C funding, $500M valuation'
+    funding: 'Series C funding, $500M valuation',
     exit: 'IPO or financial acquisition',
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -454,20 +455,20 @@ export const,
     integration: ['Design tools', 'Creative platforms', 'Asset libraries']
     support: ['24/7 creative support', 'Design experts', 'Implementation help']
     compliance: ['Copyright protection', 'Creative licensing', 'Data privacy'],    scalability: 'Creative platform, multi-user support',    roi: '400% within 12 months',
-    deployment: 'Cloud-based, web and desktop apps'
-    maintenance: 'Continuous updates, feature additions'
-    training: 'Creative training, tutorials'
-    documentation: 'Creative guides, best practices'
+    deployment: 'Cloud-based, web and desktop apps',
+    maintenance: 'Continuous updates, feature additions',
+    training: 'Creative training, tutorials',
+    documentation: 'Creative guides, best practices',
     api: 'Creative platform APIs',
     mobile: 'Mobile creative apps',
-    security: 'Content protection, access controls'
+    security: 'Content protection, access controls',
     backup: 'Creative asset backup',
     monitoring: 'Creative performance tracking',
-    analytics: 'Creative insights, usage analytics'
-    customization: 'Custom creative tools, templates'
+    analytics: 'Creative insights, usage analytics',
+    customization: 'Custom creative tools, templates',
     whiteLabel: 'Available for creative agencies',
     affiliate: '30% commission for referrals',    referral: '$10,000 bonus for partnerships',    partnership: 'Creative agency partnerships',
-    funding: 'Series A funding, $80M valuation'
+    funding: 'Series A funding, $80M valuation',
     exit: 'Acquisition by major creative platform',
     contact: mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
@@ -549,8 +550,9 @@ export const,
   s: '364 E Main St STE 1008 Middletown DE 19709'}};
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
-    marketSize: '$18.9B by 2029'
-    competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
+    marketSize: '$18.9B by 2029',
+    competitors:
+        competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
     technology: ['Quantum ComputingAI/MLComputer GraphicsDesign Tools'];
     integration: ['Design toolsCreative platformsAsset libraries'];
     support: ['24/7 creative supportDesign expertsImplementation help'],
@@ -617,18 +619,18 @@ export const,
       'Biotech experts',
       'Implementation team'],
     compliance: ['FDA', 'ISO 13485', 'GMP', 'Research ethics'],    scalability: 'Research-grade, scalable deployment',    roi: '800% within 36 months',
-    deployment: 'Laboratory setup, cloud integration'
-    maintenance: 'Continuous optimization, biological monitoring'
-    training: 'Biotech training, safety protocols'
-    documentation: 'Research protocols, safety guides'
+    deployment: 'Laboratory setup, cloud integration',
+    maintenance: 'Continuous optimization, biological monitoring',
+    training: 'Biotech training, safety protocols',
+    documentation: 'Research protocols, safety guides',
     api: 'Research data APIs',
-    mobile: 'Research monitoring apps',    security: 'Biological security, access controls',    backup: 'Biological backup, redundancy'
-    monitoring: 'Biological monitoring, quality control'
-    analytics: 'Research analytics, performance metrics'
-    customization: 'Custom research protocols, integration'
+    mobile: 'Research monitoring apps',    security: 'Biological security, access controls',    backup: 'Biological backup, redundancy',
+    monitoring: 'Biological monitoring, quality control',
+    analytics: 'Research analytics, performance metrics',
+    customization: 'Custom research protocols, integration',
     whiteLabel: 'Available for research institutions',
     affiliate: '25% commission for referrals',    referral: '$75,000 bonus for partnerships',    partnership: 'Research institution partnerships',
-    funding: 'Series B funding, $150M valuation'
+    funding: 'Series B funding, $150M valuation',
     exit: 'IPO or biotech acquisition',
     market_size: '$15.8B by 2029',
     competitors: ['Microsoft', 'Illumina', 'Twist Bioscience', 'DNA Script'],
@@ -723,8 +725,9 @@ export const,
       'Trading',
       'Finance',
       'Analytics'],
-    price: '$35,999/month'
-    features: [;
+    price: '$35,999/month',
+    features:
+        features: [;
     complianc,
   e: ['FDA', 'ISO 13485', 'GMP', 'Research ethics'],    scalabilit,
   y: 'Research - grade, scalable deployment',    ro,
@@ -816,20 +819,20 @@ export const,
       'Financial experts',
       'Implementation team'],
     compliance: ['SEC', 'FINRA', 'SOX', 'SOC 2'],    scalability: 'Enterprise-grade, global trading',    roi: '1000% within 18 months',
-    deployment: 'Cloud-native, low-latency infrastructure'
-    maintenance: 'Continuous updates, performance optimization'
-    training: 'Trading platform training, certification'
-    documentation: 'Trading guides, best practices'
-    api: 'Trading APIs, market data feeds'
+    deployment: 'Cloud-native, low-latency infrastructure',
+    maintenance: 'Continuous updates, performance optimization',
+    training: 'Trading platform training, certification',
+    documentation: 'Trading guides, best practices',
+    api: 'Trading APIs, market data feeds',
     mobile: 'Mobile trading apps',
-    security: 'Financial-grade security, encryption'
-    backup: 'Real-time backup, disaster recovery'
+    security: 'Financial-grade security, encryption',
+    backup: 'Real-time backup, disaster recovery',
     monitoring: 'Trading performance monitoring',
-    analytics: 'Trading analytics, performance reports'
-    customization: 'Custom trading strategies, integration'
+    analytics: 'Trading analytics, performance reports',
+    customization: 'Custom trading strategies, integration',
     whiteLabel: 'Available for financial institutions',
     affiliate: '15% commission for referrals',    referral: '$100,000 bonus for partnerships',    partnership: 'Financial institution partnerships',
-    funding: 'Series C funding, $500M valuation'
+    funding: 'Series C funding, $500M valuation',
     exit: 'IPO or financial acquisition',
     contact: description: unknown;
     technolog,
@@ -920,49 +923,50 @@ export const,
     integration: ['Design tools', 'Creative platforms', 'Asset libraries']
     support: ['24/7 creative support', 'Design experts', 'Implementation help']
     compliance: ['Copyright protection', 'Creative licensing', 'Data privacy'],    scalability: 'Creative platform, multi-user support',    roi: '400% within 12 months',
-    deployment: 'Cloud-based, web and desktop apps'
-    maintenance: 'Continuous updates, feature additions'
-    training: 'Creative training, tutorials'
-    documentation: 'Creative guides, best practices'
+    deployment: 'Cloud-based, web and desktop apps',
+    maintenance: 'Continuous updates, feature additions',
+    training: 'Creative training, tutorials',
+    documentation: 'Creative guides, best practices',
     api: 'Creative platform APIs',
     mobile: 'Mobile creative apps',
-    security: 'Content protection, access controls'
+    security: 'Content protection, access controls',
     backup: 'Creative asset backup',
     monitoring: 'Creative performance tracking',
-    analytics: 'Creative insights, usage analytics'
-    customization: 'Custom creative tools, templates'
+    analytics: 'Creative insights, usage analytics',
+    customization: 'Custom creative tools, templates',
     whiteLabel: 'Available for creative agencies',
     affiliate: '30% commission for referrals',    referral: '$10,000 bonus for partnerships',    partnership: 'Creative agency partnerships',
-    funding: 'Series A funding, $80M valuation'
-    exit: 'Acquisition by major creative platform'
+    funding: 'Series A funding, $80M valuation',
+    exit: 'Acquisition by major creative platform',
     contact: unknown;
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
-    marketSize: '$18 && 18.9 B by 2029'
-    competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
+    marketSize: '$18 && 18.9 B by 2029',
+    competitors:
+        competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
     technology: ['Quantum ComputingAI/MLComputer GraphicsDesign Tools'];
     integration: ['Design toolsCreative platformsAsset libraries'];
     support: ['24/7 creative supportDesign expertsImplementation help'];
     compliance: ['Copyright protectionCreative licensingData privacy'],
-    scalability: 'Creative platform, multi-user support'
+    scalability: 'Creative platform, multi-user support',
     roi: '400% within 12 months',
-    deployment: 'Cloud-based, web and desktop apps'
-    maintenance: 'Continuous updates, feature additions'
-    training: 'Creative training, tutorials'
-    documentation: 'Creative guides, best practices'
+    deployment: 'Cloud-based, web and desktop apps',
+    maintenance: 'Continuous updates, feature additions',
+    training: 'Creative training, tutorials',
+    documentation: 'Creative guides, best practices',
     api: 'Creative platform APIs',
     mobile: 'Mobile creative apps',
-    security: 'Content protection, access controls'
+    security: 'Content protection, access controls',
     backup: 'Creative asset backup',
     monitoring: 'Creative performance tracking',
-    analytics: 'Creative insights, usage analytics'
-    customization: 'Custom creative tools, templates'
+    analytics: 'Creative insights, usage analytics',
+    customization: 'Custom creative tools, templates',
     whiteLabel: 'Available for creative agencies',
     affiliate: '30% commission for referrals',
-    referral: '$10,000 bonus for partnerships'
+    referral: '$10,000 bonus for partnerships',
     partnership: 'Creative agency partnerships',
-    funding: 'Series A funding, $80M valuation'
-    exit: 'Acquisition by major creative platform'
+    funding: 'Series A funding, $80M valuation',
+    exit: 'Acquisition by major creative platform',
     contact: unknown;
       mobile: '+1 302 464 0950',
       address: '364 E Main St STE 1008 Middletown DE 19709'}

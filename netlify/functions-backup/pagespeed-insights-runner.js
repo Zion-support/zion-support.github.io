@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: PageSpeed insights runner executed successfully)
         timestamp: new Date().toISOString()
-        function: 'pagespeed-insights-runner'
+        function: 'pagespeed-insights-runner',
+        source:
         source: event.source || 'unknown',
         insights: {,
           status: 'active',

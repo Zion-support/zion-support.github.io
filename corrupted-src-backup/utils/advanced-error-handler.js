@@ -13,7 +13,8 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
     // Global error handler;
     window.addEventListener('error', event => {
       this.handleError({
-        type: 'JavaScript Error'
+        type: 'JavaScript Error',
+        message:
         message: event.message;)
         filename: event.filename;)
         lineno: event.lineno;)
@@ -224,8 +225,9 @@ class AdvancedErrorHandler {/* TODO: Fix JSX expression */}
             //             }
         })
         .catch(error => {/* TODO: Fix JSX expression */}`
-  e: `Retry ${retryCount} faile,`
-  d: ${error.message}`,
+  e: 'Retry ${retryCount} faile,',
+  d:
+        d: ${error.message}`,
             retryCount)
           });
         });

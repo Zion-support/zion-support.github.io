@@ -45,7 +45,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-project-manager-pro',
     title: 'AI Project Manager Pro',
     description: 'Revolutionary AI-powered project management platform that uses machine learning to predict project outcomes, optimize resource allocation, and prevent delays. Trusted by 15,000+ teams worldwide.',
-    shortDescription: 'AI-powered project management with predictive analytics and smart resource optimization.'
+    shortDescription: 'AI-powered project management with predictive analytics and smart resource optimization.',
     icon: '📊',
     price: '$99/month',
     originalPrice: '$149/month',
@@ -67,8 +67,9 @@ export const microSaasServices: MicroSaasService[] = [
       '50% improvement in team productivity',
       '90% reduction in manual reporting time'
     ],
-    link: '/ai-project-manager'
-    popular: true,
+    link: '/ai-project-manager',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.9;
     users: '15,000+',
@@ -118,7 +119,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-task-manager-pro',
     title: 'AI Task Manager Pro',
     description: 'Intelligent task management system that uses AI to prioritize tasks, predict deadlines, and optimize your workflow. Features smart scheduling, habit tracking, and productivity insights.',
-    shortDescription: 'Smart task management with AI prioritization and productivity optimization.'
+    shortDescription: 'Smart task management with AI prioritization and productivity optimization.',
     icon: '✅',
     price: '$49/month',
     originalPrice: '$79/month',
@@ -140,8 +141,9 @@ export const microSaasServices: MicroSaasService[] = [
       '40% increase in goal achievement',
       '25% reduction in stress levels'
     ],
-    link: '/ai-task-manager'
-    popular: true,
+    link: '/ai-task-manager',
+    popular:
+        popular: true,
     category: 'Productivity',
     rating: 4.8;
     users: '25,000+',
@@ -191,7 +193,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-content-writer-pro',
     title: 'AI Content Writer Pro',
     description: 'Advanced AI content creation platform that generates high-quality, SEO-optimized content for blogs, social media, marketing materials, and more. Uses GPT-4 and custom models trained on your brand voice.',
-    shortDescription: 'AI-powered content creation with brand voice training and SEO optimization.'
+    shortDescription: 'AI-powered content creation with brand voice training and SEO optimization.',
     icon: '✍️',
     price: '$79/month',
     originalPrice: '$129/month',
@@ -213,8 +215,9 @@ export const microSaasServices: MicroSaasService[] = [
       '50% increase in engagement rates',
       '40% cost savings on content creation'
     ],
-    link: '/ai-content-writer'
-    popular: true,
+    link: '/ai-content-writer',
+    popular:
+        popular: true,
     category: 'Content & Marketing',
     rating: 4.7;
     users: '40,000+',
@@ -263,7 +266,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-social-media-manager',
     title: 'AI Social Media Manager',
     description: 'Comprehensive AI-powered social media management platform that creates, schedules, and optimizes content across all major platforms. Features advanced analytics, audience insights, and automated engagement.',
-    shortDescription: 'AI-powered social media management with automated content creation and optimization.'
+    shortDescription: 'AI-powered social media management with automated content creation and optimization.',
     icon: '📱',
     price: '$89/month',
     originalPrice: '$149/month',
@@ -285,8 +288,9 @@ export const microSaasServices: MicroSaasService[] = [
       '40% boost in website traffic from social',
       '90% automation of routine tasks'
     ],
-    link: '/ai-social-media-manager'
-    popular: true,
+    link: '/ai-social-media-manager',
+    popular:
+        popular: true,
     category: 'Content & Marketing',
     rating: 4.6;
     users: '30,000+',
@@ -337,7 +341,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-crm-intelligence',
     title: 'AI CRM Intelligence',
     description: 'Next-generation CRM powered by AI that predicts customer behavior, automates sales processes, and provides intelligent insights. Features lead scoring, automated follow-ups, and predictive analytics.',
-    shortDescription: 'AI-powered CRM with predictive analytics and automated sales processes.'
+    shortDescription: 'AI-powered CRM with predictive analytics and automated sales processes.',
     icon: '🤖',
     price: '$129/month',
     originalPrice: '$199/month',
@@ -359,8 +363,9 @@ export const microSaasServices: MicroSaasService[] = [
       '35% boost in sales team productivity',
       '90% automation of routine sales tasks'
     ],
-    link: '/ai-crm'
-    popular: true,
+    link: '/ai-crm',
+    popular:
+        popular: true,
     category: 'Business & Finance',
     rating: 4.8;
     users: '20,000+',
@@ -410,7 +415,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-financial-analyzer',
     title: 'AI Financial Analyzer',
     description: 'Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and investment recommendations. Features automated financial reporting, trend analysis, and predictive modeling.',
-    shortDescription: 'AI-powered financial analysis with predictive modeling and risk assessment.'
+    shortDescription: 'AI-powered financial analysis with predictive modeling and risk assessment.',
     icon: '💰',
     price: '$199/month',
     originalPrice: '$299/month',
@@ -432,8 +437,9 @@ export const microSaasServices: MicroSaasService[] = [
       '60% reduction in compliance costs',
       '90% automation of financial reporting'
     ],
-    link: '/ai-financial-analyzer'
-    popular: true,
+    link: '/ai-financial-analyzer',
+    popular:
+        popular: true,
     category: 'Business & Finance',
     rating: 4.9;
     users: '12,000+',
@@ -484,7 +490,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-customer-support-bot',
     title: 'AI Customer Support Bot',
     description: 'Intelligent customer support chatbot that provides 24/7 assistance with natural language understanding, sentiment analysis, and seamless human handoff. Reduces support costs by 70% while improving customer satisfaction.',
-    shortDescription: 'AI-powered customer support chatbot with natural language understanding and sentiment analysis.'
+    shortDescription: 'AI-powered customer support chatbot with natural language understanding and sentiment analysis.',
     icon: '🎧',
     price: '$59/month',
     originalPrice: '$99/month',
@@ -506,8 +512,9 @@ export const microSaasServices: MicroSaasService[] = [
       '50% increase in first-contact resolution',
       '24/7 availability and consistency'
     ],
-    link: '/ai-customer-support-bot'
-    popular: true,
+    link: '/ai-customer-support-bot',
+    popular:
+        popular: true,
     category: 'Customer Service',
     rating: 4.7;
     users: '35,000+',
@@ -558,7 +565,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-code-review-assistant',
     title: 'AI Code Review Assistant',
     description: 'Intelligent code review platform that uses AI to analyze code quality, detect bugs, suggest improvements, and ensure best practices. Integrates with popular development tools and provides detailed feedback.',
-    shortDescription: 'AI-powered code review with automated bug detection and improvement suggestions.'
+    shortDescription: 'AI-powered code review with automated bug detection and improvement suggestions.',
     icon: '🔍',
     price: '$79/month',
     originalPrice: '$129/month',
@@ -580,8 +587,9 @@ export const microSaasServices: MicroSaasService[] = [
       '90% automation of routine reviews',
       '40% improvement in team productivity'
     ],
-    link: '/ai-code-generation'
-    popular: true,
+    link: '/ai-code-generation',
+    popular:
+        popular: true,
     category: 'Development',
     rating: 4.8;
     users: '18,000+',
@@ -632,7 +640,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-healthcare-assistant',
     title: 'AI Healthcare Assistant',
     description: 'Comprehensive AI-powered healthcare platform that provides symptom analysis, medication reminders, health monitoring, and telemedicine capabilities. HIPAA compliant with advanced privacy protection.',
-    shortDescription: 'AI-powered healthcare platform with symptom analysis and telemedicine capabilities.'
+    shortDescription: 'AI-powered healthcare platform with symptom analysis and telemedicine capabilities.',
     icon: '🏥',
     price: '$149/month',
     originalPrice: '$249/month',
@@ -654,8 +662,9 @@ export const microSaasServices: MicroSaasService[] = [
       '90% improvement in patient engagement',
       '40% increase in preventive care'
     ],
-    link: '/ai-healthcare'
-    popular: true,
+    link: '/ai-healthcare',
+    popular:
+        popular: true,
     category: 'Healthcare',
     rating: 4.9;
     users: '8,000+',
@@ -706,7 +715,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-ecommerce-optimizer',
     title: 'AI E-commerce Optimizer',
     description: 'Advanced AI platform for e-commerce optimization that provides personalized product recommendations, dynamic pricing, inventory management, and customer behavior analysis to maximize sales and revenue.',
-    shortDescription: 'AI-powered e-commerce optimization with personalized recommendations and dynamic pricing.'
+    shortDescription: 'AI-powered e-commerce optimization with personalized recommendations and dynamic pricing.',
     icon: '🛒',
     price: '$119/month',
     originalPrice: '$199/month',
@@ -728,8 +737,9 @@ export const microSaasServices: MicroSaasService[] = [
       '50% increase in revenue per visitor',
       '80% automation of marketing tasks'
     ],
-    link: '/ai-ecommerce-solutions'
-    popular: true,
+    link: '/ai-ecommerce-solutions',
+    popular:
+        popular: true,
     category: 'E-commerce',
     rating: 4.7;
     users: '22,000+',
@@ -780,7 +790,7 @@ export const microSaasServices: MicroSaasService[] = [
     id: 'ai-education-platform',
     title: 'AI Education Platform',
     description: 'Comprehensive AI-powered educational platform that provides personalized learning experiences, automated assessment, intelligent tutoring, and adaptive curriculum based on individual learning patterns.',
-    shortDescription: 'AI-powered educational platform with personalized learning and intelligent tutoring.'
+    shortDescription: 'AI-powered educational platform with personalized learning and intelligent tutoring.',
     icon: '🎓',
     price: '$89/month',
     originalPrice: '$149/month',
@@ -802,8 +812,9 @@ export const microSaasServices: MicroSaasService[] = [
       '85% improvement in assessment accuracy',
       '90% personalization of learning experience'
     ],
-    link: '/ai-education'
-    popular: true,
+    link: '/ai-education',
+    popular:
+        popular: true,
     category: 'Education',
     rating: 4.8;
     users: '28,000+',

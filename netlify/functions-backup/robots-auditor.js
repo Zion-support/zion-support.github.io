@@ -9,7 +9,8 @@ exports.handler = async function (event, context) {/* TODO: Fix JSX expression *
       },
       body: JSON.stringify({message: Robots auditor executed successfully)
         timestamp: new Date().toISOString()
-        function: 'robots-auditor'
+        function: 'robots-auditor',
+        source:
         source: event.source || 'unknown',
         audit: {,
           status: 'active',

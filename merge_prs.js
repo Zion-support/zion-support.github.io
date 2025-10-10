@@ -5,8 +5,9 @@ import https from 'https';
 function makeGitHubRequest(endpoint, method = 'GET', data = null) {
   return new Promise((resolve, reject) => {
     const options = {
-      hostname: 'api.github.com'
-      port: 443;
+      hostname: 'api.github.com',
+      port:
+        port: 443;
       path: endpoint;
       method: method;
       headers: {,

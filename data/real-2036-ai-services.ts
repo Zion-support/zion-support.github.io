@@ -4,7 +4,7 @@ export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     tagline: 'Advanced emotional AI understanding',
     description:,
       'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.'
-    price: '$3,999'
+    price: '$3,999',
     period: 'month'
       'Emotion recognition'
       'Sentiment analysis'
@@ -16,8 +16,9 @@ export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     popular: true;
     category: 'Emotional AI',
     icon: '',
-    marketPrice: '$5,000-8,000/month'
-    benefits: [}
+    marketPrice: '$5,000-8,000/month',
+    benefits:
+        benefits: [}
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   s: [}
       'Enhanced customer experience'
@@ -62,8 +63,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Creative AI',
     icon: '',
-    marketPrice: '$4,000-7,000/month'
-    benefits: [;
+    marketPrice: '$4,000-7,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -115,8 +117,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: false;
     category: 'Psychological AI',
     icon: '',
-    marketPrice: '$3,000-5,000/month'
-    benefits: [;
+    marketPrice: '$3,000-5,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: false;
     categor,
@@ -168,8 +171,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Content AI',
     icon: '',
-    marketPrice: '$6,000-10,000/month'
-    benefits: [;
+    marketPrice: '$6,000-10,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -221,8 +225,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Customer AI',
     icon: '',
-    marketPrice: '$7,000-12,000/month'
-    benefits: [;
+    marketPrice: '$7,000-12,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -274,8 +279,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Marketing AI',
     icon: '',
-    marketPrice: '$8,000-15,000/month'
-    benefits: [;
+    marketPrice: '$8,000-15,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -327,8 +333,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Research AI',
     icon: '',
-    marketPrice: '$4,500-7,000/month'
-    benefits: [;
+    marketPrice: '$4,500-7,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -380,8 +387,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Decision AI',
     icon: '',
-    marketPrice: '$10,000-18,000/month'
-    benefits: [;
+    marketPrice: '$10,000-18,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -433,8 +441,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: false;
     category: 'Ecosystem AI',
     icon: '',
-    marketPrice: '$12,000-20,000/month'
-    benefits: [;
+    marketPrice: '$12,000-20,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: false;
     categor,
@@ -486,8 +495,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Vehicle AI',
     icon: '',
-    marketPrice: '$15,000-25,000/month'
-    benefits: [;
+    marketPrice: '$15,000-25,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -514,8 +524,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Emotional AI',
     icon: '',
-    marketPrice: '$5,000-8,000/month'
-    benefits: [;
+    marketPrice: '$5,000-8,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -547,7 +558,7 @@ export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     tagline: 'Advanced emotional AI understanding',
     description:,
       'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.'
-    price: '$3,999'
+    price: '$3,999',
     period: 'month'
       'Emotion recognition'
       'Sentiment analysis'
@@ -559,8 +570,9 @@ export const real2036AIServices = [{id: 'ai-emotion-intelligence-platform',
     popular: true;
     category: 'Emotional AI',
     icon: '',
-    marketPrice: '$5,000-8,000/month'
-    benefits: [}
+    marketPrice: '$5,000-8,000/month',
+    benefits:
+        benefits: [}
 export const real2036AIServices = [{/* TODO: Fix JSX expression */}
   s: [}
       'Enhanced customer experience'
@@ -605,8 +617,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Creative AI',
     icon: '',
-    marketPrice: '$4,000-7,000/month'
-    benefits: [;
+    marketPrice: '$4,000-7,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -658,8 +671,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: false;
     category: 'Psychological AI',
     icon: '',
-    marketPrice: '$3,000-5,000/month'
-    benefits: [;
+    marketPrice: '$3,000-5,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: false;
     categor,
@@ -711,8 +725,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Content AI',
     icon: '',
-    marketPrice: '$6,000-10,000/month'
-    benefits: [;
+    marketPrice: '$6,000-10,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -764,8 +779,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Customer AI',
     icon: '',
-    marketPrice: '$7,000-12,000/month'
-    benefits: [;
+    marketPrice: '$7,000-12,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -817,8 +833,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Marketing AI',
     icon: '',
-    marketPrice: '$8,000-15,000/month'
-    benefits: [;
+    marketPrice: '$8,000-15,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -870,8 +887,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Research AI',
     icon: '',
-    marketPrice: '$4,500-7,000/month'
-    benefits: [;
+    marketPrice: '$4,500-7,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -923,8 +941,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Decision AI',
     icon: '',
-    marketPrice: '$10,000-18,000/month'
-    benefits: [;
+    marketPrice: '$10,000-18,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -976,8 +995,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: false;
     category: 'Ecosystem AI',
     icon: '',
-    marketPrice: '$12,000-20,000/month'
-    benefits: [;
+    marketPrice: '$12,000-20,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: false;
     categor,
@@ -1029,8 +1049,9 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
     popular: true;
     category: 'Vehicle AI',
     icon: '',
-    marketPrice: '$15,000-25,000/month'
-    benefits: [;
+    marketPrice: '$15,000-25,000/month',
+    benefits:
+        benefits: [;
     popula,
   r: true;
     categor,
@@ -1047,7 +1068,7 @@ export const real2036AIServices = [{/* TODO: Fix JSX expression */}
       'Predictive maintenance'
     ]
     useCases: [
-export const real2036AIServices = [{id: 'ai - emotion - intelligence - platform'
+export const real2036AIServices = [{id: 'ai - emotion - intelligence - platform',
     name: 'AI Emotion Intelligence Platform',
     tagline: 'Advanced emotional AI understanding',
     description: unknown;
