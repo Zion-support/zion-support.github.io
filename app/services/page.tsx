@@ -28,7 +28,7 @@ const ServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const services = const services = const services = [
+  const services = [
     // AI Services
     {
       icon: Brain,
@@ -38,7 +38,7 @@ const ServicesPage: React.FC = () => {
       features: ['Natural Language Processing', 'Multi-language Support', 'Sentiment Analysis', 'CRM Integration', 'Real-time Learning'],
       price: 'Starting at $299/month',
       marketPrice: '$500-2000/month',
-        benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
+      benefits: ['Reduce support costs by 60%', '24/7 availability', 'Instant responses', 'Scalable solutions']
     },
     {
       icon: BarChart3,
@@ -982,23 +982,25 @@ const ServicesPage: React.FC = () => {
       features: ['Real-time Monitoring', 'Anomaly Detection', 'Predictive Maintenance', 'Performance Optimization', 'Automated Alerts'],
       price: 'Starting at $119/month',
       marketPrice: '$200-500/month',
-      benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization'];
-    };
+      benefits: ['Improved uptime', 'Faster issue resolution', 'Proactive maintenance', 'Cost optimization']
+    }
   ];
-  const categories = const categories = const categories = [
+
+  const categories = [
     { id: 'all', name: 'All Services', count: services.length },
     { id: 'ai', name: 'AI Services', count: services.filter(s => s.category === 'ai').length },
-    { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },;
-    { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length };
+    { id: 'it', name: 'IT Services', count: services.filter(s => s.category === 'it').length },
+    { id: 'saas', name: 'Micro SaaS', count: services.filter(s => s.category === 'saas').length }
   ];
-    const filteredServices = const filteredServices = const filteredServices = services.filter();
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+
+  const filteredServices = services.filter(service => {
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  })
+  });
 
-  return ()
+  return (
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-slate-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
