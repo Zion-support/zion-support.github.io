@@ -1,8 +1,13 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Lock, Coins, Zap, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> origin/resolve-merge-conflicts-1759965566
 
 const BlockchainPage: React.FC = () => {,
   const features = [,

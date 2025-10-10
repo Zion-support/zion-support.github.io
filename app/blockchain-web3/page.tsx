@@ -1,7 +1,11 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Shield, Globe, CheckCircle, ArrowRight, Star, Users, Database, Lock, Code, DollarSign } from 'lucide-react';
+=======
+
+>>>>>>> origin/resolve-merge-conflicts-1759965566
 
 const BlockchainWeb3Page: React.FC = () => {,
   const services = [,
@@ -47,6 +51,7 @@ const BlockchainWeb3Page: React.FC = () => {,
       features: ['Code review', 'Vulnerability assessment', 'Penetration testing', 'Compliance checking'],
       benefits: ['Zero vulnerabilities', 'Compliance ready', 'Security best practices', 'Risk mitigation']
     }
+<<<<<<< HEAD
   ];
 
   const platforms = [
@@ -113,6 +118,10 @@ const BlockchainWeb3Page: React.FC = () => {,
   ];
 
   return(<>
+=======
+  ];return (
+    <>
+>>>>>>> origin/resolve-merge-conflicts-1759965566
       <Helmet>
         <title>Blockchain & Web3 Development - Zion Tech Group | DeFi & NFT Solutions</title>
         <meta name="description" content="Expert blockchain and Web3 development services. Smart contracts, DApps, DeFi platforms, NFT marketplaces, and enterprise blockchain solutions." />

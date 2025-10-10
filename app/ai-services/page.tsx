@@ -1,6 +1,7 @@
 'use client';
 import React, { useState, useMemo } from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { 
@@ -19,6 +20,9 @@ import {
   Palette as Design, ShoppingCart as Cart, CreditCard as Payment,
   PieChart as Pie, LineChart as Line, Activity as ActivityIcon
 } from 'lucide-react';
+=======
+
+>>>>>>> origin/resolve-merge-conflicts-1759965566
 
 const AIServicesPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -386,6 +390,7 @@ const AIServicesPage: React.FC = () => {
         description: 'Integrated AI-powered product recommendations and personalized shopping experience'
       }
     }
+<<<<<<< HEAD
   ], []);
 
   const categories = [
@@ -463,6 +468,9 @@ const AIServicesPage: React.FC = () => {
   };
 
   return (
+=======
+  ];return (
+>>>>>>> origin/resolve-merge-conflicts-1759965566
     <>
       <Helmet>
         <title>AI Services - Zion Tech Group</title>

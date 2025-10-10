@@ -1,8 +1,13 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import { Shield, Lock, Eye, CheckCircle, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+=======
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> origin/resolve-merge-conflicts-1759965566
 
 const CybersecurityPage: React.FC = () => {,
   const features = [,
@@ -39,6 +44,7 @@ const CybersecurityPage: React.FC = () => {,
       description: 'Employee security awareness training and phishing simulation',
       icon: Eye;
     }
+<<<<<<< HEAD
   ];
 
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain particle-field">
@@ -159,6 +165,9 @@ import Footer from '../components/Footer';
 
 const CybersecurityPage: React.FC = () => {
   return (
+=======
+  ];return (
+>>>>>>> origin/resolve-merge-conflicts-1759965566
     <>
       <Helmet>
         <title>Cybersecurity Solutions - Zion Tech Group</title>

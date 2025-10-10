@@ -341,6 +341,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
     }
   }, [seoData]);
 
+<<<<<<< HEAD
   const addStructuredData = (data: Record<string, unknown>) => {
     // Remove existing structured data;
     if (structuredDataRef.current) {
@@ -407,6 +408,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({}
       {/* Basic Meta Tags */})
       <title>{seoData.title}</title>)
       {metaTags.map((tag, index) => (
+=======
+>>>>>>> origin/resolve-merge-conflicts-1759965566
   return (
     <Helmet></Helme>
       {/* Basic Meta Tags */}
