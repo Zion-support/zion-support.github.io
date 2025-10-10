@@ -2021,6 +2021,141 @@ const HomePage: React.FC = () => {
       freeTrial: '14 days'
     },
     {
+      title: 'AI Smart Contract Auditor Pro',
+      description: 'Automated smart contract security auditing with AI-powered vulnerability detection and compliance checking. Secure your blockchain applications.',
+      icon: '🔒',
+      price: '$149/month',
+      originalPrice: '$249/month',
+      features: ['Automated vulnerability scanning', 'Gas optimization', 'Compliance checking', 'Code analysis', 'Security reports', 'Best practices', 'Integration testing', 'Audit trails'],
+      benefits: ['99.9% security coverage', 'Cost effective', 'Fast results', 'Expert insights'],
+      link: '/ai-smart-contract-auditor',
+      popular: true,
+      category: 'Blockchain Security',
+      rating: 4.8,
+      users: '3,500+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Voice Cloning Studio Pro',
+      description: 'Professional voice cloning and synthesis with AI-powered voice generation for content creators, audiobooks, and accessibility.',
+      icon: '🎤',
+      price: '$79/month',
+      originalPrice: '$129/month',
+      features: ['Voice cloning', 'Text-to-speech', 'Voice conversion', 'Emotion control', 'Multi-language support', 'High-quality audio', 'API integration', 'Custom voices'],
+      benefits: ['Professional quality', 'Time savings', 'Accessibility', 'Creative freedom'],
+      link: '/ai-voice-cloning-studio',
+      popular: true,
+      category: 'Audio AI',
+      rating: 4.7,
+      users: '12,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Code Review Assistant Pro',
+      description: 'Intelligent code review with AI-powered suggestions, security analysis, and performance optimization. Improve code quality automatically.',
+      icon: '👨‍💻',
+      price: '$89/month',
+      originalPrice: '$139/month',
+      features: ['Automated code review', 'Security analysis', 'Performance optimization', 'Best practices', 'Bug detection', 'Code suggestions', 'Team collaboration', 'Integration support'],
+      benefits: ['Better code quality', 'Faster reviews', 'Security assurance', 'Team learning'],
+      link: '/ai-code-review-assistant',
+      popular: true,
+      category: 'Development',
+      rating: 4.8,
+      users: '18,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Data Privacy Manager Pro',
+      description: 'Comprehensive data privacy compliance with GDPR, CCPA, and other regulations. Automated privacy impact assessments and consent management.',
+      icon: '🛡️',
+      price: '$199/month',
+      originalPrice: '$299/month',
+      features: ['GDPR compliance', 'CCPA compliance', 'Consent management', 'Data mapping', 'Privacy impact assessments', 'Breach detection', 'Audit trails', 'Legal updates'],
+      benefits: ['Full compliance', 'Risk reduction', 'Legal protection', 'Automated processes'],
+      link: '/ai-data-privacy-manager',
+      popular: true,
+      category: 'Privacy & Compliance',
+      rating: 4.9,
+      users: '7,500+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI API Gateway Pro',
+      description: 'Intelligent API management with AI-powered traffic optimization, security, and analytics. Scale your APIs with confidence.',
+      icon: '🌐',
+      price: '$129/month',
+      originalPrice: '$199/month',
+      features: ['API management', 'Traffic optimization', 'Security monitoring', 'Rate limiting', 'Analytics dashboard', 'Load balancing', 'Version control', 'Documentation'],
+      benefits: ['Better performance', 'Enhanced security', 'Cost optimization', 'Easy management'],
+      link: '/ai-api-gateway',
+      popular: true,
+      category: 'API Management',
+      rating: 4.7,
+      users: '9,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Email Security Pro',
+      description: 'Advanced email security with AI-powered threat detection, phishing prevention, and spam filtering. Protect your business communications.',
+      icon: '📧',
+      price: '$59/month',
+      originalPrice: '$99/month',
+      features: ['Threat detection', 'Phishing prevention', 'Spam filtering', 'Malware scanning', 'Email encryption', 'Compliance monitoring', 'User training', 'Incident response'],
+      benefits: ['99.9% threat detection', 'Reduced risk', 'Compliance ready', 'User protection'],
+      link: '/ai-email-security',
+      popular: true,
+      category: 'Email Security',
+      rating: 4.8,
+      users: '25,000+',
+      freeTrial: '7 days'
+    },
+    {
+      title: 'AI Social Media Scheduler Pro',
+      description: 'Intelligent social media management with AI-powered content optimization, optimal posting times, and engagement analytics.',
+      icon: '📱',
+      price: '$49/month',
+      originalPrice: '$79/month',
+      features: ['Content scheduling', 'Optimal timing', 'Engagement analytics', 'Hashtag optimization', 'Multi-platform support', 'Content suggestions', 'Performance tracking', 'Team collaboration'],
+      benefits: ['Better engagement', 'Time savings', 'Data-driven decisions', 'Consistent posting'],
+      link: '/ai-social-media-scheduler',
+      popular: true,
+      category: 'Social Media',
+      rating: 4.6,
+      users: '35,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Password Manager Pro',
+      description: 'Advanced password management with AI-powered security analysis, breach monitoring, and secure sharing. Enterprise-grade security.',
+      icon: '🔐',
+      price: '$39/month',
+      originalPrice: '$59/month',
+      features: ['Password generation', 'Security analysis', 'Breach monitoring', 'Secure sharing', 'Multi-device sync', '2FA integration', 'Team management', 'Compliance reporting'],
+      benefits: ['Enhanced security', 'Easy management', 'Breach protection', 'Team collaboration'],
+      link: '/ai-password-manager',
+      popular: true,
+      category: 'Security',
+      rating: 4.8,
+      users: '40,000+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Invoice Generator Pro',
+      description: 'Automated invoice generation with AI-powered data extraction, payment tracking, and financial analytics. Streamline your billing process.',
+      icon: '🧾',
+      price: '$29/month',
+      originalPrice: '$49/month',
+      features: ['Auto invoice generation', 'Data extraction', 'Payment tracking', 'Financial analytics', 'Multi-currency support', 'Tax calculations', 'Client management', 'Reporting'],
+      benefits: ['Time savings', 'Accuracy', 'Better cash flow', 'Professional invoices'],
+      link: '/ai-invoice-generator',
+      popular: true,
+      category: 'Finance',
+      rating: 4.7,
+      users: '28,000+',
+      freeTrial: '7 days'
+    },
+    {
       title: 'AI Quantum Computing Simulator Pro',
       description: 'Advanced quantum computing simulation and algorithm development platform. Explore quantum algorithms without expensive hardware.',
       icon: '⚛️',
@@ -2944,6 +3079,141 @@ const HomePage: React.FC = () => {
       freeTrial: '30 days'
     },
     {
+      title: 'AI-Powered DevOps Automation',
+      description: 'Intelligent DevOps with AI-driven CI/CD pipelines, automated testing, and intelligent deployment strategies.',
+      icon: Settings,
+      price: '$1,500/month',
+      originalPrice: '$2,200/month',
+      features: ['AI CI/CD Pipelines', 'Automated Testing', 'Smart Deployment', 'Performance Monitoring', 'Error Detection', 'Auto-scaling', 'Security Scanning', 'Cost Optimization'],
+      benefits: ['Faster deployments', 'Reduced errors', 'Better performance', 'Cost efficiency'],
+      link: '/ai-devops-automation',
+      popular: true,
+      category: 'DevOps',
+      rating: 4.8,
+      users: '800+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Edge Computing Solutions Pro',
+      description: 'Advanced edge computing infrastructure with AI-powered optimization and real-time processing capabilities.',
+      icon: Cpu,
+      price: '$1,800/month',
+      originalPrice: '$2,500/month',
+      features: ['Edge Infrastructure', 'Real-time Processing', 'AI Optimization', 'Low Latency', 'IoT Integration', 'Security Management', 'Performance Monitoring', 'Auto-scaling'],
+      benefits: ['Ultra-low latency', 'Better performance', 'Cost optimization', 'Scalable infrastructure'],
+      link: '/edge-computing-solutions',
+      popular: true,
+      category: 'Edge Computing',
+      rating: 4.7,
+      users: '400+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Microservices Architecture Pro',
+      description: 'Modern microservices architecture with AI-powered service discovery, load balancing, and intelligent monitoring.',
+      icon: Database,
+      price: '$1,200/month',
+      originalPrice: '$1,800/month',
+      features: ['Service Architecture', 'API Gateway', 'Service Discovery', 'Load Balancing', 'Monitoring & Analytics', 'Security Implementation', 'Auto-scaling', 'Documentation'],
+      benefits: ['Scalable architecture', 'Better performance', 'Easy maintenance', 'Cost effective'],
+      link: '/microservices-architecture',
+      popular: true,
+      category: 'Architecture',
+      rating: 4.8,
+      users: '600+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI Security Operations Center',
+      description: 'Advanced AI-powered SOC with threat detection, incident response, and security analytics. Protect your infrastructure.',
+      icon: Shield,
+      price: '$2,500/month',
+      originalPrice: '$3,500/month',
+      features: ['Threat Detection', 'Incident Response', 'Security Analytics', 'Vulnerability Management', 'Compliance Monitoring', 'Forensic Analysis', '24/7 Monitoring', 'Expert Support'],
+      benefits: ['Advanced protection', 'Faster response', 'Compliance ready', 'Expert monitoring'],
+      link: '/ai-security-operations',
+      popular: true,
+      category: 'Security',
+      rating: 4.9,
+      users: '300+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Data Lake & Analytics Platform',
+      description: 'Comprehensive data lake with AI-powered analytics, real-time processing, and intelligent insights generation.',
+      icon: BarChart,
+      price: '$1,600/month',
+      originalPrice: '$2,300/month',
+      features: ['Data Lake Setup', 'Real-time Analytics', 'AI Insights', 'Data Governance', 'ETL Pipelines', 'Visualization Tools', 'API Access', 'Scalable Storage'],
+      benefits: ['Better insights', 'Real-time analytics', 'Data governance', 'Scalable platform'],
+      link: '/data-lake-analytics',
+      popular: true,
+      category: 'Data Analytics',
+      rating: 4.7,
+      users: '450+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'API Management & Integration',
+      description: 'Comprehensive API management with AI-powered optimization, security, and integration capabilities.',
+      icon: Globe,
+      price: '$900/month',
+      originalPrice: '$1,300/month',
+      features: ['API Gateway', 'Rate Limiting', 'Security Policies', 'Analytics Dashboard', 'Developer Portal', 'Integration Tools', 'Documentation', 'Testing Tools'],
+      benefits: ['Better API performance', 'Enhanced security', 'Easy integration', 'Developer friendly'],
+      link: '/api-management-integration',
+      popular: true,
+      category: 'API Management',
+      rating: 4.6,
+      users: '700+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Container Orchestration Pro',
+      description: 'Advanced container orchestration with AI-powered resource optimization and intelligent scaling.',
+      icon: Settings,
+      price: '$1,100/month',
+      originalPrice: '$1,600/month',
+      features: ['Kubernetes Management', 'Container Orchestration', 'Resource Optimization', 'Auto-scaling', 'Service Mesh', 'Monitoring', 'Security', 'CI/CD Integration'],
+      benefits: ['Better resource utilization', 'Easy scaling', 'Improved reliability', 'Cost optimization'],
+      link: '/container-orchestration',
+      popular: true,
+      category: 'Containers',
+      rating: 4.8,
+      users: '550+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'AI-Powered Monitoring & Observability',
+      description: 'Intelligent monitoring with AI-driven anomaly detection, predictive analytics, and automated incident response.',
+      icon: Eye,
+      price: '$800/month',
+      originalPrice: '$1,200/month',
+      features: ['AI Monitoring', 'Anomaly Detection', 'Predictive Analytics', 'Automated Alerts', 'Performance Metrics', 'Log Analysis', 'Incident Response', 'Custom Dashboards'],
+      benefits: ['Proactive monitoring', 'Faster issue resolution', 'Better insights', 'Reduced downtime'],
+      link: '/ai-monitoring-observability',
+      popular: true,
+      category: 'Monitoring',
+      rating: 4.7,
+      users: '900+',
+      freeTrial: '14 days'
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description: 'Comprehensive zero trust security implementation with AI-powered threat detection and continuous verification.',
+      icon: Lock,
+      price: '$1,400/month',
+      originalPrice: '$2,000/month',
+      features: ['Zero Trust Framework', 'Identity Verification', 'Network Segmentation', 'Threat Detection', 'Access Control', 'Policy Management', 'Compliance', 'Incident Response'],
+      benefits: ['Enhanced security', 'Better access control', 'Compliance ready', 'Reduced risk'],
+      link: '/zero-trust-security',
+      popular: true,
+      category: 'Security',
+      rating: 4.8,
+      users: '350+',
+      freeTrial: '14 days'
+    },
+    {
       title: 'Cybersecurity Solutions',
       description: 'Comprehensive cybersecurity with threat detection, incident response, and compliance management. Protect your business 24/7.',
       icon: Shield,
@@ -3839,11 +4109,54 @@ const HomePage: React.FC = () => {
           enableErrorReporting={true}
         />
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-          {/* Animated Background Elements */}
+          {/* Enhanced Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+            {/* Primary gradient orbs */}
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-r from-cyan-500/15 to-blue-500/15 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-r from-purple-500/15 to-pink-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-400/10 to-emerald-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+            
+            {/* Additional floating elements */}
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-full blur-2xl animate-pulse delay-2000"></div>
+            <div className="absolute bottom-1/3 right-1/3 w-72 h-72 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-full blur-2xl animate-pulse delay-3000"></div>
+            
+            {/* Animated grid pattern */}
+            <div className="absolute inset-0 opacity-5">
+              <div className="grid grid-cols-20 grid-rows-20 h-full w-full">
+                {Array.from({ length: 400 }).map((_, i) => (
+                  <div
+                    key={i}
+                    className="border border-cyan-500/20 animate-pulse"
+                    style={{
+                      animationDelay: `${i * 0.05}s`,
+                      animationDuration: '4s'
+                    }}
+                  ></div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Floating particles */}
+            <div className="absolute inset-0">
+              {Array.from({ length: 30 }).map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute w-1 h-1 bg-cyan-400 rounded-full animate-ping"
+                  style={{
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                    animationDelay: `${Math.random() * 4}s`,
+                    animationDuration: `${2 + Math.random() * 3}s`
+                  }}
+                ></div>
+              ))}
+            </div>
+            
+            {/* Neon lines */}
+            <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent animate-pulse"></div>
+            <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400/50 to-transparent animate-pulse delay-1000"></div>
+            <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent animate-pulse delay-500"></div>
+            <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-purple-400/30 to-transparent animate-pulse delay-1500"></div>
           </div>
           
           <Navigation />
@@ -3982,7 +4295,7 @@ const HomePage: React.FC = () => {
                 {aiServices.map((service, index) => (
                   <div
                     key={index}
-                    className="group relative bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 hover:border-purple-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10"
+                    className="group relative bg-slate-800/80 backdrop-blur-sm border border-purple-400/20 rounded-2xl p-6 hover:border-purple-400/40 transition-all duration-500 h-full flex flex-col hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 hover:bg-slate-800/90"
                   >
                     {/* Glow Effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
