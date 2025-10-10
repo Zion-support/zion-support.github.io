@@ -8,7 +8,7 @@ import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 import Analytics from './components/Analytics';
 import SecurityEnhancer from './components/SecurityEnhancer';
-// Dynamically import heavy components for better performance
+// Dynamically import heavy components for better performance;
 const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
 const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
 const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
@@ -61,7 +61,7 @@ const HomePage: React.FC = memo(() => {
         description="Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
         keywords={['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI', 'machine learning', 'automation', 'cloud services']}
         canonicalUrl="https://ziontechgroup.com"
-        structuredData={{
+        structuredData = {{
           '@context': 'https://schema.org',
           '@type': 'TechCompany',
           name: 'Zion Tech Group',
@@ -84,7 +84,7 @@ const HomePage: React.FC = memo(() => {
             telephone: '+1-302-464-0950',
             contactType: 'Customer Service',
             areaServed: 'US',
-            availableLanguage: 'en'
+            availableLanguage: 'en'}
           },
           address: {
             '@type': 'PostalAddress',
@@ -140,10 +140,10 @@ const HomePage: React.FC = memo(() => {
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
         <section
-          className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
+          className = {`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
               ? 'opacity-100 translate-y-0' 
-              : 'opacity-0 translate-y-8'
+              : 'opacity-0 translate-y-8'}
           }`}
           aria-labelledby="hero-heading"
         >

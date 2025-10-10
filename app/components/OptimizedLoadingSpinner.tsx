@@ -97,7 +97,7 @@ const OptimizedLoadingSpinner: React.FC<OptimizedLoadingSpinnerProps> = memo(
                 <div
                   key={i}
                   className={`w-1 ${colorClasses[color].split(' ')[1]} animate-pulse`}
-                  style={{
+                  style = {{}
                     height: `${12 + i * 4}px`,
                     animationDelay: `${i * 0.1}s`,
                   }}

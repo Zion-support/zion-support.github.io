@@ -80,7 +80,7 @@ export interface TestConfig {}
 }
 // Default test configuration
 export const defaultTestConfig: TestConfig = {,
-    enableMocking: true,
+    enableMocking: true,}
 export const defaultTestConfig: TestConfig = {}
   enableMocking: true,
   enableCoverage: true,
@@ -136,7 +136,7 @@ export const defaultTestConfig: TestConfig = {
   enableAccessibility: true,
   enableVisualRegression: false,
   coverageThreshold: 80,
-  performanceThreshold: 100,
+  performanceThreshold: 100,}
   accessibilityThreshold: 90}
 }
 interface TestResult {
@@ -225,7 +225,7 @@ export class TestRunner {}
   private isRunning: boolean = false;
   private startTime: number = 0;
   constructor(config: Partial<TestConfig> = {}) {
-    this.config = {
+    this.config = {}
   constructor(config: Partial<TestConfig> = {}) {}
     this.config = {}
       ...defaultTestConfig,
@@ -340,7 +340,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   public describe(name: string, fn: () => void): void {
     const suite: TestSuite = {
       name;
-      tests: []
+      tests: []}
   public describe(name: string, fn: () => void): void {}
     const suite: TestSuite = {}
       name,
@@ -951,7 +951,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
   private generateJsonReport(): void {
     const report = {
       summary: {,
-    total: this.results.length,
+    total: this.results.length,}
   private generateJsonReport(): void {}
     const report = {}
       summary: {}
@@ -1405,7 +1405,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const coverage: CoverageMetrics = {,
     statements: 85,
   // Coverage test
-  // Coverage test
+  // Coverage test}
   async runCoverageTest(): Promise<{ passed: boolean; coverage: CoverageMetrics }> {}
     // This would typically use Istanbul or similar
     // For now, we'll just return a placeholder
@@ -1438,7 +1438,7 @@ export class TestRunner {/* TODO: Fix JSX expression */}
     const coverage: CoverageMetrics = {
       statements: 85,
       branches: 80,
-      functions: 90,
+      functions: 90,}
       lines: 85}
     }
     const passed = coverage.statements >= this.config.coverageThreshold;
@@ -1711,7 +1711,7 @@ export const useTestRunner = useCallback((...args) => {}
 }
 // Test utilities;
 export const testUtils = {
-  // Create mock data</void>
+  // Create mock data</void>}
   createMockData: (type: string, count: number = 10) => {}</void>
 // Test utilities
 export const testUtils = {}

@@ -34,7 +34,7 @@ import {
   ChevronRight,
   Phone,
   Mail,
-  MapPin
+  MapPin;
 } from 'lucide-react';
 
 const AboutPage: React.FC = () => {
@@ -50,7 +50,7 @@ const AboutPage: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            </div><div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About Zion Tech Group
               </h1>
@@ -64,8 +64,8 @@ const AboutPage: React.FC = () => {
         {/* Mission Section */}
 <section className="py-20 bg-slate-800/50">
           <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              </div><div>
                 <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-lg text-gray-300 mb-6">
                   To democratize advanced AI and technology solutions, making them accessible 
@@ -76,7 +76,7 @@ const AboutPage: React.FC = () => {
                   that can transform their operations, enhance their capabilities, and drive 
                   sustainable growth.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4">
+                </div><div className="flex flex-col sm:flex-row gap-4">
                   <a
                     href="/contact"
                     className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -94,20 +94,20 @@ const AboutPage: React.FC = () => {
                 </div>
               </div>
               <div className="relative">
-                <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                </div><div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 backdrop-blur-lg border border-white/10">
+                  </div><div className="space-y-6">
+                    </div><div className="flex items-center space-x-3">
+                      </div><div className="w-3 h-3 bg-red-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                       <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                     </div>
                     <div className="space-y-4">
-                      <div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded"></div>
+                      </div><div className="h-4 bg-gradient-to-r from-cyan-500 to-purple-500 rounded"></div>
                       <div className="h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded w-3/4"></div>
                       <div className="h-4 bg-gradient-to-r from-pink-500 to-red-500 rounded w-1/2"></div>
                     </div>
                     <div className="text-center text-white">
-                      <div className="text-2xl font-bold">AI Dashboard</div>
+                      </div><div className="text-2xl font-bold">AI Dashboard</div>
                       <div className="text-sm text-gray-300">Real-time Analytics</div>
                     </div>
 
@@ -121,27 +121,27 @@ const AboutPage: React.FC = () => {
         {/* Values Section */}
         <section className="py-16 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            </div><div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Our Values</h2>
               <p className="text-xl text-gray-300">The principles that guide everything we do</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="cyber-card p-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
+              </div><div className="cyber-card p-6">
+                </div><div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Innovation</h3>
                 <p className="text-gray-300">We constantly push the boundaries of what's possible with technology.</p>
               </div>
               <div className="cyber-card p-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
+                </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Collaboration</h3>
                 <p className="text-gray-300">We work closely with our clients to achieve their goals.</p>
               </div>
               <div className="cyber-card p-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
+                </div><div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">
                   <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Excellence</h3>
@@ -158,7 +158,7 @@ const AboutPage: React.FC = () => {
             <p className="text-xl text-gray-100 mb-8">
               Let's discuss how we can help transform your business with AI and technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Get Started
               </button>

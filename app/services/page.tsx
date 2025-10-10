@@ -11,7 +11,7 @@ import {
   Zap, 
   Globe,
   CheckCircle,
-  ArrowRight
+  ArrowRight;
 } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
@@ -78,8 +78,8 @@ const ServicesPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Our Services
             </h1>
@@ -92,11 +92,11 @@ const ServicesPage: React.FC = () => {
         {/* Services Grid */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div><div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
-                  <div className="flex items-center mb-6">
-                    <div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors">
+                </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 group">
+                  </div><div className="flex items-center mb-6">
+                    </div><div className="bg-cyan-500/20 p-3 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition-colors">
                       <service.icon className="w-8 h-8 text-cyan-400" />
                     </div>
                     <h3 className="text-xl font-bold text-white">{service.title}</h3>
@@ -134,7 +134,7 @@ const ServicesPage: React.FC = () => {
             <p className="text-xl text-gray-300 mb-8">
               Let's discuss your project and find the perfect solution for your business needs.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                 Get Free Consultation
               </button>

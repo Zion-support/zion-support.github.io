@@ -106,9 +106,9 @@ const CareersPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
+        </div><div className="container mx-auto px-4 py-16">
           {/* Header */}
-          <div className="text-center mb-16">
+          </div><div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
               Join Our <span className="text-cyan-400">Team</span>
             </h1>
@@ -116,7 +116,7 @@ const CareersPage: React.FC = () => {
               Work on cutting-edge AI and IT solutions that are transforming industries. 
               Join a team of passionate innovators building the future of technology.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -136,9 +136,9 @@ const CareersPage: React.FC = () => {
           {/* Why Work With Us */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Why Work With Us?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            </div><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              </div><div className="text-center">
+                </div><div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Innovation First</h3>
@@ -147,7 +147,7 @@ const CareersPage: React.FC = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                </div><div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Great Team</h3>
@@ -156,7 +156,7 @@ const CareersPage: React.FC = () => {
                 </p>
               </div>
               <div className="text-center">
-                <div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                </div><div className="bg-gradient-to-r from-cyan-500 to-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Work-Life Balance</h3>
@@ -170,9 +170,9 @@ const CareersPage: React.FC = () => {
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Benefits & Perks</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div
+                </div><div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"
                 >
@@ -186,10 +186,10 @@ const CareersPage: React.FC = () => {
           {/* Our Values */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Our Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                </div><div key={index} className="text-center">
+                  </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <value.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{value.title}</h3>
@@ -202,14 +202,14 @@ const CareersPage: React.FC = () => {
           {/* Open Positions */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Open Positions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            </div><div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {openPositions.map((position, index) => (
-                <div
+                </div><div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-400/50 transition-all duration-300 group"
                 >
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
+                  </div><div className="flex items-start justify-between mb-4">
+                    </div><div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                         {position.title}
                       </h3>
@@ -223,7 +223,7 @@ const CareersPage: React.FC = () => {
                   <p className="text-gray-300 mb-4">{position.description}</p>
 
                   <div className="flex items-center gap-4 mb-4 text-sm text-gray-400">
-                    <div className="flex items-center gap-1">
+                    </div><div className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
                       <span>{position.location}</span>
                     </div>
@@ -263,7 +263,7 @@ const CareersPage: React.FC = () => {
               We're always looking for talented individuals to join our team. 
               Send us your resume and let's discuss how you can contribute.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"

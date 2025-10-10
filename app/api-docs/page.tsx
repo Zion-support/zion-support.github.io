@@ -124,9 +124,9 @@ export default function APIDocsPage() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+          </div><div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">1. Get API Key</h3>
@@ -137,7 +137,7 @@ export default function APIDocsPage() {
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Code className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">2. Make Request</h3>
@@ -148,7 +148,7 @@ export default function APIDocsPage() {
             </div>
             
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
-              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+              </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-3">3. Integrate</h3>
@@ -165,11 +165,11 @@ export default function APIDocsPage() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
-          <div className="space-y-8">
+          </div><div className="space-y-8">
             {filteredEndpoints.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-8">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+              </div><div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                </div><div className="flex items-center gap-4 mb-8">
+                  </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -180,13 +180,13 @@ export default function APIDocsPage() {
                 
                 <div className="space-y-6">
                   {category.endpoints.map((endpoint, endpointIndex) => (
-                    <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center gap-4">
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    </div><div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                      </div><div className="flex items-center justify-between mb-4">
+                        </div><div className="flex items-center gap-4">
+                          <span className = {`px-3 py-1 rounded-full text-sm font-medium ${
                             endpoint.method === 'POST' 
                               ? 'bg-green-500/20 text-green-400' 
-                              : 'bg-blue-500/20 text-blue-400'
+                              : 'bg-blue-500/20 text-blue-400'}
                           }`}>
                             {endpoint.method}
                           </span>
@@ -235,7 +235,7 @@ export default function APIDocsPage() {
           <p className="text-xl text-purple-100 mb-8">
             Start building with our APIs today and create amazing applications.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Get API Key
             </button>

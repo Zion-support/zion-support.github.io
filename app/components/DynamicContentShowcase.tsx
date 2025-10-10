@@ -82,7 +82,7 @@ const DynamicContentShowcase: React.FC = () => {
             Experience the power of our cutting-edge solutions with real-time demonstrations 
             and interactive showcases that bring your business to life.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2">
               <span>Start Demo</span>
               <ArrowRight className="w-5 h-5" />
@@ -97,7 +97,7 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          </div><div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Why Choose Our Solutions?
             </h2>
@@ -108,8 +108,8 @@ const DynamicContentShowcase: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
+              </div><div key={index} className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                </div><div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -123,7 +123,7 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Testimonials Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          </div><div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
@@ -133,9 +133,9 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-              <div className="text-center">
-                <div className="flex justify-center mb-4">
+            </div><div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+              </div><div className="text-center">
+                </div><div className="flex justify-center mb-4">
                   {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
@@ -144,7 +144,7 @@ const DynamicContentShowcase: React.FC = () => {
                   "{testimonials[currentIndex].content}"
                 </blockquote>
                 <div className="text-white">
-                  <div className="font-semibold text-lg">{testimonials[currentIndex].name}</div>
+                  </div><div className="font-semibold text-lg">{testimonials[currentIndex].name}</div>
                   <div className="text-cyan-400">{testimonials[currentIndex].role}</div>
                   <div className="text-gray-400">{testimonials[currentIndex].company}</div>
                 </div>
@@ -157,8 +157,8 @@ const DynamicContentShowcase: React.FC = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                    index === currentIndex ? 'bg-cyan-400' : 'bg-white/30'
+                  className = {`w-3 h-3 rounded-full transition-colors duration-200 ${
+                    index === currentIndex ? 'bg-cyan-400' : 'bg-white/30'}
                   }`}
                 />
               ))}
@@ -170,8 +170,8 @@ const DynamicContentShowcase: React.FC = () => {
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-            <div className="text-center mb-12">
+          </div><div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+            </div><div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">Key Benefits</h2>
               <p className="text-xl text-gray-300">
                 Discover why thousands of businesses trust our solutions.
@@ -180,7 +180,7 @@ const DynamicContentShowcase: React.FC = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
+                </div><div key={index} className="text-center">
                   <CheckCircle className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                   <p className="text-white font-medium">{benefit}</p>
                 </div>

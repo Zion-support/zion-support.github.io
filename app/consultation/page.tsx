@@ -49,7 +49,7 @@ const ConsultationPage: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            </div><div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Free Consultation
               </h1>
@@ -63,12 +63,12 @@ const ConsultationPage: React.FC = () => {
         {/* Consultation Form */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Form */}
-              <div className="cyber-card p-8">
+              </div><div className="cyber-card p-8">
                 <h2 className="text-3xl font-bold text-white mb-6">Schedule Your Consultation</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
+                  </div><div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Full Name *
                     </label>
@@ -165,7 +165,7 @@ const ConsultationPage: React.FC = () => {
 
               {/* Benefits */}
               <div className="space-y-8">
-                <div>
+                </div><div>
                   <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our Consultation?</h2>
                   <p className="text-gray-300 mb-8">
                     Our expert consultants will analyze your current setup and provide personalized recommendations for your business transformation.
@@ -173,8 +173,8 @@ const ConsultationPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                  </div><div className="flex items-start">
+                    </div><div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <CheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -184,7 +184,7 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    </div><div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -194,7 +194,7 @@ const ConsultationPage: React.FC = () => {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    </div><div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <User className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -206,8 +206,8 @@ const ConsultationPage: React.FC = () => {
 
                 <div className="cyber-card p-6">
                   <h3 className="text-lg font-semibold text-white mb-4">Quick Contact</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center text-gray-300">
+                  </div><div className="space-y-3">
+                    </div><div className="flex items-center text-gray-300">
                       <Phone className="w-4 h-4 mr-3 text-cyan-400" />
                       +1 (555) 123-4567
                     </div>

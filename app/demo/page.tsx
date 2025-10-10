@@ -54,8 +54,8 @@ const DemoPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
+          </div><div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+          </div><div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               See Our Solutions
               <span className="block bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
@@ -71,7 +71,7 @@ const DemoPage: React.FC = () => {
         {/* Demo Selection */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+            </div><div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose a Demo
               </h2>
@@ -85,17 +85,17 @@ const DemoPage: React.FC = () => {
                 <button
                   key={demo.id}
                   onClick={() => setSelectedDemo(demo.id)}
-                  className={`p-6 rounded-2xl border transition-all duration-300 text-left ${
+                  className = {`p-6 rounded-2xl border transition-all duration-300 text-left ${
                     selectedDemo === demo.id
                       ? 'bg-cyan-500/20 border-cyan-400 text-white'
-                      : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-cyan-400/50'
+                      : 'bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-cyan-400/50'}
                   }`}
                 >
-                  <div className="flex items-center mb-4">
-                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 ${
+                  </div><div className="flex items-center mb-4">
+                    </div><div className = {`w-12 h-12 rounded-lg flex items-center justify-center mr-4 ${
                       selectedDemo === demo.id
                         ? 'bg-cyan-500'
-                        : 'bg-white/10'
+                        : 'bg-white/10'}
                     }`}>
                       <demo.icon className="w-6 h-6 text-white" />
                     </div>
@@ -114,12 +114,12 @@ const DemoPage: React.FC = () => {
         {/* Demo Content */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Demo Video/Interface */}
-              <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              </div><div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+                </div><div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-6">
+                  </div><div className="text-center">
+                    </div><div className="w-20 h-20 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Play className="w-10 h-10 text-white ml-1" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">
@@ -132,8 +132,8 @@ const DemoPage: React.FC = () => {
                 </div>
                 
                 <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-4">
-                    <div className="flex items-center gap-2 text-gray-400">
+                  </div><div className="flex items-center gap-4">
+                    </div><div className="flex items-center gap-2 text-gray-400">
                       <Monitor className="w-4 h-4" />
                       <span className="text-sm">Desktop</span>
                     </div>
@@ -167,7 +167,7 @@ const DemoPage: React.FC = () => {
                   {selectedDemoData.description}
                 </p>
 
-                <div className="mb-8">
+                </div><div className="mb-8">
                   <h4 className="text-xl font-semibold text-white mb-4">Key Features:</h4>
                   <ul className="space-y-3">
                     {selectedDemoData.features.map((feature, index) => (
@@ -196,7 +196,7 @@ const DemoPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
@@ -204,7 +204,7 @@ const DemoPage: React.FC = () => {
                 Schedule a personalized demo with our experts to see how our solutions 
                 can specifically address your business needs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
                   Schedule Demo
                 </button>

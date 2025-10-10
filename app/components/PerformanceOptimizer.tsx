@@ -78,7 +78,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
     <>
       {children}
       <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
-        <div className="flex items-center justify-between mb-4">
+        </div><div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900 flex items-center">
             <Settings className="h-5 w-5 mr-2 text-blue-600" />
             Performance Optimizer
@@ -96,7 +96,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
         {optimizations.length > 0 && (
           <div className="space-y-2 mb-4">
             {optimizations.map((optimization, index) => (
-              <div key={index} className="flex items-center text-sm text-green-600">
+              </div><div key={index} className="flex items-center text-sm text-green-600">
                 <CheckCircle className="h-4 w-4 mr-2" />
                 {optimization}
               </div>
@@ -106,15 +106,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children, c
 
         {performanceScore && (
           <div className="mt-4">
-            <div className="flex items-center justify-between mb-2">
+            </div><div className="flex items-center justify-between mb-2">
               <span className="text-sm font-medium text-gray-700">Performance Score</span>
               <span className="text-sm font-bold text-gray-900">{performanceScore}/100</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
-              <div
-                className={`h-2 rounded-full transition-all duration-500 ${
+              </div><div
+                className = {`h-2 rounded-full transition-all duration-500 ${
                   performanceScore >= 90 ? 'bg-green-500' : 
-                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                  performanceScore >= 70 ? 'bg-yellow-500' : 'bg-red-500'}
                 }`}
                 style={{ width: `${performanceScore}%` }}
               />

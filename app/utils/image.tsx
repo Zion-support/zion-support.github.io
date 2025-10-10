@@ -12,7 +12,7 @@ interface ImageProps {}
   priority?: boolean
   _quality?: number
   src: string,
-  alt: string,
+  alt: string,;
   width?: number;
   height?: number;
   className?: string;
@@ -61,7 +61,7 @@ export const Image: React.FC<ImageProps> = ({,
     ...(fill && {
       position: 'absolute'
       top: 0,
-      left: 0,
+      left: 0,}
   const imageStyle: React.CSSProperties = {}
     ...style,
     ...(fill && {}

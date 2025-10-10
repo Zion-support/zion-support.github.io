@@ -62,7 +62,7 @@ const AICodeSecurityAuditorPage: React.FC = () => {
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-8">
+            </div><div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-red-500 to-pink-500 rounded-full mb-8">
               <Shield className="w-10 h-10 text-white" />
             </div>
             </h1>
@@ -108,14 +108,14 @@ const AICodeSecurityAuditorPage: React.FC = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl p-12">
+            </div><div className="bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Secure Your Code?
               </h2>
               <p className="text-xl text-red-100 mb-8">
                 Join thousands of developers who are already using our AI Code Security Auditor
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="bg-white text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
                   Get Started Now
                   <ArrowRight className="ml-2 w-5 h-5" />

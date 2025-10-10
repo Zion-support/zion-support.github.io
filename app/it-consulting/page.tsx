@@ -70,7 +70,7 @@ import {
   Smartphone as SmartphoneIcon2, Laptop as LaptopIcon,
   Tablet as TabletIcon, Headphones as HeadphonesIcon2,
   Keyboard as KeyboardIcon, Mouse as MouseIcon,
-  Webcam as WebcamIcon, Speaker as SpeakerIcon
+  Webcam as WebcamIcon, Speaker as SpeakerIcon;
 } from 'lucide-react';
 
 const ITConsultingPage: React.FC = () => {
@@ -494,10 +494,10 @@ const ITConsultingPage: React.FC = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className = {`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                   selectedCategory === category.id
                     ? 'bg-cyan-500 text-white'
-                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'
+                    : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-cyan-400'}
                 }`}
               >
                 {category.name}

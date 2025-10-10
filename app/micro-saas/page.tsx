@@ -148,9 +148,9 @@ const MicroSaasPage: React.FC = () => {
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
+        </div><div className="container mx-auto px-4 py-16">
           {/* Header */}
-          <div className="text-center mb-16">
+          </div><div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
               Micro <span className="text-cyan-400">SaaS</span> Solutions
             </h1>
@@ -158,7 +158,7 @@ const MicroSaasPage: React.FC = () => {
               Affordable, scalable AI and IT tools designed for growing businesses. 
               Start with low monthly costs and scale as you grow.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"
@@ -178,9 +178,9 @@ const MicroSaasPage: React.FC = () => {
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Why Choose Our Micro SaaS?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div
+                </div><div
                   key={index}
                   className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center"
                 >
@@ -194,12 +194,12 @@ const MicroSaasPage: React.FC = () => {
           {/* Products Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             {microSaasProducts.map((product, index) => (
-              <div
+              </div><div
                 key={index}
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
-                <div className="flex items-start space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                </div><div className="flex items-start space-x-4 mb-6">
+                  </div><div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <product.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -221,8 +221,8 @@ const MicroSaasPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <div className="text-3xl font-bold text-cyan-400">{product.price}</div>
+                  </div><div>
+                    </div><div className="text-3xl font-bold text-cyan-400">{product.price}</div>
                     <div className="text-sm text-gray-300">{product.users}</div>
                   </div>
                   <div className="flex items-center space-x-1">
@@ -248,7 +248,7 @@ const MicroSaasPage: React.FC = () => {
           {/* Comparison Table */}
           <div className="mb-16">
             <h2 className="text-4xl font-bold text-white mb-8 text-center">Compare Plans</h2>
-            <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 overflow-x-auto">
+            </div><div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 overflow-x-auto">
               <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-white/10">
@@ -292,10 +292,9 @@ const MicroSaasPage: React.FC = () => {
               </table>
             </div>
           </div>
-        </section>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12">
+          <div className="text-center bg-gradient-to-r from-cyan-600 to-purple-600 rounded-2xl p-12 mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
               Ready to Get Started?
             </h2>
@@ -303,7 +302,7 @@ const MicroSaasPage: React.FC = () => {
               Choose the micro SaaS solution that fits your business needs. 
               Start with a free trial and scale as you grow.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"
@@ -319,29 +318,7 @@ const MicroSaasPage: React.FC = () => {
               </Link>
             </div>
           </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Start your free trial today and experience the power of AI-driven micro SAAS solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Start Free Trial
-                </button>
-                <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Schedule Demo
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
       </div>
     </>
   );

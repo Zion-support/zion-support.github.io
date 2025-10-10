@@ -44,7 +44,7 @@ const PartnersPage: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            </div><div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Our Partners
               </h1>
@@ -58,10 +58,10 @@ const PartnersPage: React.FC = () => {
         {/* Partners Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {partners.map((partner, index) => (
-                <div key={index} className="cyber-card p-6 text-center">
-                  <div className="w-24 h-24 bg-gray-800 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                </div><div key={index} className="cyber-card p-6 text-center">
+                  </div><div className="w-24 h-24 bg-gray-800 rounded-lg mx-auto mb-4 flex items-center justify-center">
                     <span className="text-2xl font-bold text-cyan-400">{partner.name.charAt(0)}</span>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{partner.name}</h3>
@@ -78,27 +78,27 @@ const PartnersPage: React.FC = () => {
         {/* Partnership Benefits */}
         <section className="py-16 px-4 bg-slate-800/50">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            </div><div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-white mb-4">Why Partner With Us?</h2>
               <p className="text-xl text-gray-300">Benefits of our strategic partnerships</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+              </div><div className="text-center">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Global Reach</h3>
                 <p className="text-gray-300">Access to worldwide technology resources and expertise</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Enterprise Security</h3>
                 <p className="text-gray-300">Bank-level security and compliance standards</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                </div><div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">Expert Support</h3>

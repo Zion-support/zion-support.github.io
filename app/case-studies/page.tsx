@@ -107,15 +107,15 @@ const CaseStudiesPage: React.FC = () => {
         {/* Category Filter */}
         <section className="py-8 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            </div><div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
                 <button
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
-                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  className = {`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
                     selectedCategory === category.name
                       ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-lg shadow-purple-500/25'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'}
                   }`}
                 >
                   {category.label} ({category.count})
@@ -128,12 +128,12 @@ const CaseStudiesPage: React.FC = () => {
         {/* Case Studies Grid */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {filteredStudies.map((study) => (
-                <div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
-                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                    <div className="absolute top-4 left-4">
+                </div><div key={study.id} className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+                  </div><div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden">
+                    </div><div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    </div><div className="absolute top-4 left-4">
                       <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
                         {study.industry}
                       </span>
@@ -141,7 +141,7 @@ const CaseStudiesPage: React.FC = () => {
                   </div>
                   
                   <div className="p-8">
-                    <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
+                    </div><div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                       <span className="flex items-center gap-1">
                         <Building className="w-4 h-4" />
                         {study.client}
@@ -178,7 +178,7 @@ const CaseStudiesPage: React.FC = () => {
 
                     <div className="mb-6">
                       <h4 className="text-lg font-semibold text-purple-400 mb-3">Technologies Used</h4>
-                      <div className="flex flex-wrap gap-2">
+                      </div><div className="flex flex-wrap gap-2">
                         {study.technologies.map((tech, index) => (
                           <span key={index} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm">
                             {tech}
@@ -188,7 +188,7 @@ const CaseStudiesPage: React.FC = () => {
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-400">
+                      </div><div className="text-sm text-gray-400">
                         <span className="block">Team: {study.teamSize}</span>
                         <span className="block">Duration: {study.duration}</span>
                       </div>
@@ -210,7 +210,7 @@ const CaseStudiesPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
                 Let's discuss how we can help you achieve similar results for your business.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/consultation"
                   className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2"

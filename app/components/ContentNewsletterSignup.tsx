@@ -54,7 +54,7 @@ const ContentNewsletterSignup: React.FC = () => {
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-600 to-emerald-600 py-16">
-        <div className="container mx-auto px-4 text-center">
+        </div><div className="container mx-auto px-4 text-center">
           <CheckCircle className="w-16 h-16 text-white mx-auto mb-4" />
           <h2 className="text-3xl font-bold text-white mb-4">Welcome to Our Newsletter!</h2>
           <p className="text-xl text-white/90 mb-8">
@@ -73,9 +73,9 @@ const ContentNewsletterSignup: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-r from-cyan-600 to-purple-600 py-16">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+      </div><div className="container mx-auto px-4">
+        </div><div className="max-w-4xl mx-auto">
+          </div><div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
               Stay Updated with Our Newsletter
             </h2>
@@ -86,12 +86,12 @@ const ContentNewsletterSignup: React.FC = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Newsletter Form */}
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+            </div><div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
               <h3 className="text-2xl font-bold text-white mb-6">Subscribe Now</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
+                </div><div>
                   <label className="block text-white mb-2">Email Address</label>
-                  <div className="relative">
+                  </div><div className="relative">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                     <input
                       type="email"
@@ -126,7 +126,7 @@ const ContentNewsletterSignup: React.FC = () => {
 
             {/* Benefits and Stats */}
             <div className="space-y-8">
-              <div>
+              </div><div>
                 <h3 className="text-2xl font-bold text-white mb-6">What You'll Get</h3>
                 <ul className="space-y-3">
                   {benefits.map((benefit, index) => (
@@ -140,11 +140,11 @@ const ContentNewsletterSignup: React.FC = () => {
 
               <div>
                 <h3 className="text-2xl font-bold text-white mb-6">Join Our Community</h3>
-                <div className="grid grid-cols-2 gap-4">
+                </div><div className="grid grid-cols-2 gap-4">
                   {stats.map((stat, index) => (
-                    <div key={index} className="text-center">
+                    </div><div key={index} className="text-center">
                       <stat.icon className="w-8 h-8 text-white mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-white">{stat.value}</div>
+                      </div><div className="text-2xl font-bold text-white">{stat.value}</div>
                       <div className="text-white/80 text-sm">{stat.label}</div>
                     </div>
                   ))}

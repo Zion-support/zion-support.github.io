@@ -38,7 +38,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "addressLocality": "Middletown",
       "addressRegion": "DE",
       "postalCode": "19709",
-      "addressCountry": "US"
+      "addressCountry": "US"}
     },
     "contactPoint": {
       "@type": "ContactPoint",

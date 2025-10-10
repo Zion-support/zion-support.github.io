@@ -61,7 +61,7 @@ const DEFAULT_ERROR_MESSAGES = {
   notFound: 'The requested resource was not found.',
   timeout: 'Request timed out. Please try again.',
   serverError: 'Server error occurred. Please try again later.',
-  validation: 'Validation error. Please check your input.',
+  validation: 'Validation error. Please check your input.',}
 };
 
 /**

@@ -82,7 +82,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
           '@type': 'ListItem',
           'position': 1,
           'name': 'Home',
-          'item': 'https://ziontechgroup.com'
+          'item': 'https://ziontechgroup.com'}
         }
       ]
     };
@@ -114,7 +114,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'telephone': '+1-302-464-0950',
         'contactType': 'Customer Service',
         'areaServed': 'US',
-        'availableLanguage': 'en'
+        'availableLanguage': 'en'}
       },
       'address': {
         '@type': 'PostalAddress',

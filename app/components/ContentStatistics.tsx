@@ -14,7 +14,7 @@ const ContentStatistics: React.FC = () => {
     clients: 500,
     projects: 1000,
     satisfaction: 99,
-    years: 10
+    years: 10}
   };
 
   const statistics = [
@@ -112,9 +112,9 @@ const ContentStatistics: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-20">
-      <div className="container mx-auto px-4">
+      </div><div className="container mx-auto px-4">
         {/* Statistics Section */}
-        <div className="text-center mb-16">
+        </div><div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
             Our <span className="text-cyan-400">Achievements</span>
           </h2>
@@ -125,12 +125,12 @@ const ContentStatistics: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {statistics.map((stat, index) => (
-            <div
+            </div><div
               key={index}
               className="bg-white/5 backdrop-blur-lg rounded-xl p-8 border border-white/10 text-center hover:bg-white/10 transition-all duration-300"
             >
               <stat.icon className={`w-12 h-12 ${stat.color} mx-auto mb-4`} />
-              <div className={`text-4xl font-bold ${stat.color} mb-2`}>
+              </div><div className={`text-4xl font-bold ${stat.color} mb-2`}>
                 {stat.value}{stat.suffix}
               </div>
               <div className="text-white font-medium">{stat.label}</div>
@@ -140,7 +140,7 @@ const ContentStatistics: React.FC = () => {
 
         {/* Features Section */}
         <div className="mb-16">
-          <div className="text-center mb-12">
+          </div><div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
             <p className="text-xl text-gray-300">
               Our solutions deliver unmatched performance, security, and scalability.
@@ -149,7 +149,7 @@ const ContentStatistics: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div
+              </div><div
                 key={index}
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:bg-white/10 transition-all duration-300"
               >
@@ -163,7 +163,7 @@ const ContentStatistics: React.FC = () => {
 
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-          <div className="text-center mb-8">
+          </div><div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">Key Benefits</h3>
             <p className="text-xl text-gray-300">
               Discover why thousands of businesses trust our solutions.
@@ -172,7 +172,7 @@ const ContentStatistics: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center text-white">
+              </div><div key={index} className="flex items-center text-white">
                 <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                 <span className="text-sm">{benefit}</span>
               </div>

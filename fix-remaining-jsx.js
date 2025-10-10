@@ -1,46 +1,98 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
+import { glob } from 'glob';
 
-function fixRemainingJsx() {
-  try {
-    let content = fs.readFileSync('/workspace/app/page.tsx', 'utf8');
-    
-    // Fix all remaining self-closing div tags that have content after them
-    const lines = content.split('\n');
-    const fixedLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i];
-      
-      // Check if this is a self-closing div followed by content
-      if (line.includes('<div') && line.includes('/>') && i + 1 < lines.length) {
-        const nextLine = lines[i + 1];
-        // If next line starts with whitespace and has content, fix the div
-        if (nextLine.trim() && (nextLine.includes('<') || nextLine.includes('{') || nextLine.includes('}'))) {
-          line = line.replace('/>', '>');
+async function fixRemainingJSX() {
+  const files = await glob('app/**/*.tsx');
+  let fixedCount = 0;
+
+  for (const file of files) {
+    try {
+      let content = fs.readFileSync(file, 'utf8');
+      let modified = false;
+
+      // Fix malformed div tags
+      const fixes = [
+        // Fix malformed div tags
+        { pattern: /<\/div><div>/g, replacement: '<div>' },
+        { pattern: /<\/div><div className=/g, replacement: '<div className=' },
+        { pattern: /<\/div><div>/g, replacement: '<div>' },
+        
+        // Fix malformed section tags
+        { pattern: /<\/div><section/g, replacement: '<section' },
+        { pattern: /<\/section><div/g, replacement: '<div' },
+        
+        // Fix malformed main tags
+        { pattern: /<\/div><main/g, replacement: '<main' },
+        { pattern: /<\/main><div/g, replacement: '<div' },
+        
+        // Fix malformed fragment tags
+        { pattern: /<\/div><>/g, replacement: '<>' },
+        { pattern: /<\/><div/g, replacement: '<div' },
+        
+        // Fix malformed Suspense fallback
+        { pattern: /fallback=\{<\/div><div/g, replacement: 'fallback={<div' },
+        
+        // Fix missing closing tags
+        { pattern: /<section([^>]*)>([\s\S]*?)(?=<section|$)/g, replacement: (match, attrs, content) => {
+          if (!content.includes('</section>')) {
+            return `<section${attrs}>${content}</section>`;
+          }
+          return match;
+        }},
+        
+        // Fix missing closing div tags
+        { pattern: /<div([^>]*)>([\s\S]*?)(?=<div|$)/g, replacement: (match, attrs, content) => {
+          if (!content.includes('</div>') && !content.includes('<section') && !content.includes('<main')) {
+            return `<div${attrs}>${content}</div>`;
+          }
+          return match;
+        }},
+        
+        // Fix missing closing main tags
+        { pattern: /<main([^>]*)>([\s\S]*?)(?=<main|$)/g, replacement: (match, attrs, content) => {
+          if (!content.includes('</main>')) {
+            return `<main${attrs}>${content}</main>`;
+          }
+          return match;
+        }},
+        
+        // Fix JSX fragment issues
+        { pattern: /<>([\s\S]*?)(?=<>|$)/g, replacement: (match, content) => {
+          if (!content.includes('</>')) {
+            return `<>${content}</>`;
+          }
+          return match;
+        }}
+      ];
+
+      // Apply fixes
+      fixes.forEach(fix => {
+        if (typeof fix.replacement === 'function') {
+          const newContent = content.replace(fix.pattern, fix.replacement);
+          if (newContent !== content) {
+            content = newContent;
+            modified = true;
+          }
+        } else {
+          const newContent = content.replace(fix.pattern, fix.replacement);
+          if (newContent !== content) {
+            content = newContent;
+            modified = true;
+          }
         }
+      });
+
+      if (modified) {
+        fs.writeFileSync(file, content, 'utf8');
+        console.log(`Fixed: ${file}`);
+        fixedCount++;
       }
-      
-      fixedLines.push(line);
+    } catch (error) {
+      console.error(`Error fixing ${file}:`, error.message);
     }
-    
-    content = fixedLines.join('\n');
-    
-    // Additional specific fixes
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<[^/]/g, '<div$1>');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*{/g, '<div$1>');
-    content = content.replace(/<div([^>]*?)\s*\/>\s*\n\s*<\/div>/g, '<div$1>');
-    
-    fs.writeFileSync('/workspace/app/page.tsx', content);
-    console.log('✅ Fixed remaining JSX issues in main page');
-    return true;
-  } catch (error) {
-    console.error('Error fixing remaining JSX:', error.message);
-    return false;
   }
+
+  console.log(`Fixed ${fixedCount} files`);
 }
 
-console.log('🔧 Fixing remaining JSX issues...');
-fixRemainingJsx();
-console.log('🎉 Remaining JSX fixes completed!');
+fixRemainingJSX().catch(console.error);

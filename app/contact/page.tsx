@@ -8,7 +8,7 @@ import {
   MapPin,
   Clock,
   Send,
-  CheckCircle
+  CheckCircle;
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -44,7 +44,7 @@ const ContactPage: React.FC = () => {
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
+            </div><div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 Contact Us
               </h1>
@@ -58,12 +58,12 @@ const ContactPage: React.FC = () => {
         {/* Contact Form and Info */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               {/* Contact Form */}
-              <div className="cyber-card p-8">
+              </div><div className="cyber-card p-8">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
+                  </div><div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                       Name
                     </label>
@@ -130,7 +130,7 @@ const ContactPage: React.FC = () => {
 
               {/* Contact Information */}
               <div className="space-y-8">
-                <div>
+                </div><div>
                   <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>
                   <p className="text-gray-300 mb-8">
                     We're here to help you transform your business with cutting-edge AI and technology solutions.
@@ -138,8 +138,8 @@ const ContactPage: React.FC = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
+                  </div><div className="flex items-center">
+                    </div><div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center mr-4">
                       <Phone className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -149,7 +149,7 @@ const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mr-4">
                       <Mail className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -159,7 +159,7 @@ const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-pink-500 rounded-lg flex items-center justify-center mr-4">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -169,7 +169,7 @@ const ContactPage: React.FC = () => {
                   </div>
 
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                    </div><div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
                       <Clock className="w-6 h-6 text-white" />
                     </div>
                     <div>

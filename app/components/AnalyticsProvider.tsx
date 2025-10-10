@@ -45,7 +45,7 @@ const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }
 
   const value = {
     trackEvent,
-    trackPageView,
+    trackPageView,}
   };
 
   return (

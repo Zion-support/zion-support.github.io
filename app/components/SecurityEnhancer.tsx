@@ -14,7 +14,7 @@ const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({ children }) => {
         'X-Content-Type-Options': 'nosniff',
         'X-Frame-Options': 'DENY',
         'X-XSS-Protection': '1; mode=block',
-        'Referrer-Policy': 'strict-origin-when-cross-origin'
+        'Referrer-Policy': 'strict-origin-when-cross-origin'}
       };
 
       // Add CSP meta tag

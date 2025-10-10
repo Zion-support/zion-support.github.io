@@ -84,11 +84,11 @@ export default function DocsPage() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Popular Documentation</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          </div><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {popularDocs.map((doc, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 group">
+                </div><div className="flex items-center gap-3 mb-4">
+                  </div><div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-5 h-5 text-white" />
                   </div>
                   <span className="text-purple-400 text-sm font-medium">{doc.category}</span>
@@ -114,11 +114,11 @@ export default function DocsPage() {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Browse by Category</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          </div><div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredDocs.map((category, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+              </div><div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                </div><div className="flex items-center gap-4 mb-6">
+                  </div><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
                     <BookOpen className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -134,8 +134,8 @@ export default function DocsPage() {
                       href={doc.link}
                       className="block p-4 bg-white/5 rounded-lg border border-white/10 hover:border-purple-500/50 transition-all duration-300 group"
                     >
-                      <div className="flex items-center justify-between">
-                        <div>
+                      </div><div className="flex items-center justify-between">
+                        </div><div>
                           <h4 className="text-lg font-semibold text-white mb-1 group-hover:text-purple-400 transition-colors">
                             {doc.title}
                           </h4>
@@ -161,7 +161,7 @@ export default function DocsPage() {
           <p className="text-xl text-purple-100 mb-8">
             Can't find what you're looking for? Our support team is here to help.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors">
               Contact Support
             </button>

@@ -58,8 +58,8 @@ const ContentCarousel: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
+      </div><div className="container mx-auto px-4">
+        </div><div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white mb-4">
             Our <span className="text-cyan-400">Solutions</span>
           </h2>
@@ -70,15 +70,15 @@ const ContentCarousel: React.FC = () => {
 
         {/* Carousel */}
         <div className="relative max-w-4xl mx-auto mb-12">
-          <div className="overflow-hidden rounded-2xl">
-            <div 
+          </div><div className="overflow-hidden rounded-2xl">
+            </div><div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
               {slides.map((slide, index) => (
-                <div key={index} className="w-full flex-shrink-0">
-                  <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-                    <div className="text-center mb-8">
+                </div><div key={index} className="w-full flex-shrink-0">
+                  </div><div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+                    </div><div className="text-center mb-8">
                       <slide.icon className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
                       <h3 className="text-3xl font-bold text-white mb-4">{slide.title}</h3>
                       <p className="text-xl text-gray-300 mb-6">{slide.description}</p>
@@ -86,7 +86,7 @@ const ContentCarousel: React.FC = () => {
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {slide.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-gray-300">
+                        </div><div key={featureIndex} className="flex items-center text-gray-300">
                           <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                           {feature}
                         </div>
@@ -118,8 +118,8 @@ const ContentCarousel: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-3 h-3 rounded-full transition-colors duration-200 ${
-                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'
+                className = {`w-3 h-3 rounded-full transition-colors duration-200 ${
+                  index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'}
                 }`}
               />
             ))}
@@ -128,7 +128,7 @@ const ContentCarousel: React.FC = () => {
 
         {/* Benefits Section */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
-          <div className="text-center mb-8">
+          </div><div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-white mb-4">Why Choose Us?</h3>
             <p className="text-xl text-gray-300">
               We deliver exceptional results through innovative technology and expert support.
@@ -137,7 +137,7 @@ const ContentCarousel: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center">
+              </div><div key={index} className="text-center">
                 <CheckCircle className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                 <p className="text-white font-medium">{benefit}</p>
               </div>

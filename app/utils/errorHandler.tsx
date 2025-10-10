@@ -74,7 +74,7 @@ export interface ErrorHandlerConfig {}
 }
 // Default configuration
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
-    enableLogging: true,
+    enableLogging: true,}
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {}
   enableLogging: true,
   enableReporting: true,
@@ -94,7 +94,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
   retryDelay: 1000,
   enableUserNotification: true,
   enableConsoleLogging: true,
-  enableNetworkLogging: true,
+  enableNetworkLogging: true,}
   logLevel: 'error'};
 // Error Handler class;
 export class ErrorHandler {
@@ -138,7 +138,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
     return ErrorHandler.instance;
   }</ErrorHandlerConfig>
   // Handle error</<<<ErrorHandlerConfig>handleError</ErrorHandlerConfig></ErrorHandlerConfig>(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {</string></<<<strin>const</strin></<<strin>appError</strin>: AppError = {,
-    id: this.generateErrorId(),
+    id: this.generateErrorId(),}
   constructor(config: Partial<ErrorHandlerConfig> = {}) {}
     this.config = { ...defaultErrorHandlerConfig, ...config };
   }
@@ -174,7 +174,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       componentStack: errorInfo?.componentStack ?? undefined;
       context,
       resolved: false,
-      retryCount: 0,
+      retryCount: 0,}
     };
     this.errors.push(appError);
     if (this.config.enableLogging) {}
@@ -195,7 +195,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   handleNetworkError(error: Error, url: string, status?: number): AppError {
     const appError: AppError = {,
     id: this.generateErrorId(),
-  // Handle network error
+  // Handle network error}
   handleNetworkError(error: Error, url: string, status?: number): AppError {}
     const appError: AppError = {}
       id: this.generateErrorId(),
@@ -211,7 +211,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
       stack: error.stack;
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined;
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;
+      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;}
       context: { networkUrl: url, statusCode: status },
       resolved: false,
       retryCount: 0,
@@ -229,7 +229,7 @@ export class ErrorHandler {/* TODO: Fix JSX expression */}
   handleValidationError(field: string, message: string, value?: unknown): AppError {
     const appError: AppError = {,
     id: this.generateErrorId(),
-  // Handle validation error
+  // Handle validation error}
   handleValidationError(field: string, message: string, value?: unknown): AppError {}
     const appError: AppError = {}
       id: this.generateErrorId(),
@@ -942,7 +942,7 @@ export class ErrorBoundary extends React.Component<
             <p>We're sorry, but something unexpected happened.</p>)
             <button;)
               onClick={() => this.setState({ hasError: false, error: undefined })}
-              style={{
+              style = {{}
               style={{}
                 padding: '10px 20px',
                 backgroundColor: '#007bff',

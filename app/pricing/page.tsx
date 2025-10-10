@@ -65,9 +65,9 @@ const PricingPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-        <div className="container mx-auto px-4 py-16">
+        </div><div className="container mx-auto px-4 py-16">
           {/* Header */}
-          <div className="text-center mb-16">
+          </div><div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
               Transparent <span className="text-cyan-400">Pricing</span>
             </h1>
@@ -79,17 +79,17 @@ const PricingPage: React.FC = () => {
           {/* Pricing Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {plans.map((plan, index) => (
-              <div
+              </div><div
                 key={index}
-                className={`relative rounded-2xl p-8 ${
+                className = {`relative rounded-2xl p-8 ${
                   plan.popular
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
-                    : 'bg-white/5 backdrop-blur-lg border border-white/20 text-white hover:bg-white/10'
+                    : 'bg-white/5 backdrop-blur-lg border border-white/20 text-white hover:bg-white/10'}
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center space-x-1">
+                  </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    </div><div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center space-x-1">
                       <Star className="w-4 h-4" />
                       <span>Most Popular</span>
                     </div>
@@ -98,7 +98,7 @@ const PricingPage: React.FC = () => {
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold mb-2">
+                  </div><div className="text-4xl font-bold mb-2">
                     {plan.price}
                     <span className="text-lg font-normal">{plan.period}</span>
                   </div>
@@ -116,10 +116,10 @@ const PricingPage: React.FC = () => {
 
                 <Link
                   to="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
+                  className = {`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
                     plan.popular
                       ? 'bg-white text-cyan-600 hover:bg-gray-100'
-                      : 'bg-cyan-600 text-white hover:bg-cyan-700'
+                      : 'bg-cyan-600 text-white hover:bg-cyan-700'}
                   }`}
                 >
                   Get Started
@@ -131,7 +131,7 @@ const PricingPage: React.FC = () => {
 
           {/* Additional Info */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            </div><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-4 flex items-center">
                 <Zap className="w-6 h-6 text-cyan-400 mr-3" />
                 What's Included
@@ -190,7 +190,7 @@ const PricingPage: React.FC = () => {
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
               Join thousands of businesses already using our AI and IT solutions to drive growth and innovation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="bg-white text-cyan-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center space-x-2"

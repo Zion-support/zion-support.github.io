@@ -45,8 +45,8 @@ const FAQPage: React.FC = () => {
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+        </div><div className="container mx-auto px-4">
+          </div><div className="text-center mb-16">
             <h1 className="text-5xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h1>
@@ -57,9 +57,9 @@ const FAQPage: React.FC = () => {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
+            </div><div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div
+                </div><div
                   key={index}
                   className="bg-white/10 backdrop-blur-lg rounded-lg p-6 border border-white/20"
                 >
@@ -80,7 +80,7 @@ const FAQPage: React.FC = () => {
               <p className="text-xl text-gray-300 mb-8">
                 Our team is here to help. Contact us for personalized assistance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              </div><div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-cyan-700 transition-colors"
