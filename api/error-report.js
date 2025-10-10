@@ -1,40 +1,49 @@
-// Error reporting API endpoint
-export default function handler(req, res) {
+import { withErrorLogging } from './withErrorLogging.cjs';
+
+async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-  try {
-    const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+  const { error, userAgent, url, timestamp, userId } = req.body || {};
 
-    // Log error details (in production you would send this to your monitoring service)
-    // In a real application, you would:
-    // 1. Send to Sentry, LogRocket, Bugsnag, etc.
-    // 2. Store in database
-    // 3. Send alerts to development team
-    console.error('Error reported:', { error, stack, componentStack, timestamp, userAgent, url });
-    
-    res.status(200).json({ success: true, message: 'Error reported successfully' });
-  } catch (err) {
-=======
+  if (!error) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Error details are required' }));
+    return;
   }
 
   try {
-    // const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+    // Basic error logging logic
+    const errorReport = {
+      id: 'err_' + Date.now(),
+      error: typeof error === 'string' ? error : JSON.stringify(error),
+      userAgent: userAgent || req.headers['user-agent'],
+      url: url || req.headers.referer,
+      timestamp: timestamp || new Date().toISOString(),
+      userId: userId || 'anonymous',
+      createdAt: new Date().toISOString()
+    };
 
-    // Log error details (in production you would send this to your monitoring service)
-    // 1. Send to Sentry, LogRocket, Bugsnag, etc.
-    // 2. Store in database
-    // 3. Send alerts to development team
-    res.status(200).json({ success: true });
+    // Log error for debugging
+    console.error('Client Error Report:', errorReport);
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+      message: 'Error report received successfully',
+      reportId: errorReport.id
+    }));
   } catch (err) {
-    console.error("Error:", err);
->>>>>>> origin/resolve-merge-conflicts
     console.error('Error processing error report:', err);
-    res.status(500).json({ error: 'Failed to process error report' });
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to process error report' }));
   }
 }
+
+export default withErrorLogging(handler);

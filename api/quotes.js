@@ -1,68 +1,77 @@
-export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-<<<<<<< HEAD
+import { withErrorLogging } from './withErrorLogging.cjs';
+
+// Sample quotes data
+const quotes = [
+  {
+    id: 1,
+    text: "The future of business lies in AI-driven solutions that enhance human capabilities.",
+    author: "Zion Tech Group",
+    category: "AI"
+  },
+  {
+    id: 2,
+    text: "Technology is best when it brings people together and solves real-world problems.",
+    author: "Zion Tech Group",
+    category: "Technology"
+  },
+  {
+    id: 3,
+    text: "Innovation distinguishes between a leader and a follower.",
+    author: "Steve Jobs",
+    category: "Innovation"
+  },
+  {
+    id: 4,
+    text: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs",
+    category: "Motivation"
+  },
+  {
+    id: 5,
+    text: "AI will not replace humans, but humans who use AI will replace those who don't.",
+    author: "Zion Tech Group",
+    category: "AI"
+  }
+];
+
+async function handler(req, res) {
+  if (req.method !== 'GET') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
-=======
->>>>>>> origin/resolve-merge-conflicts
   }
 
   try {
-    const { name, email, phone, details, country, service } = req.body || {};
-
-    if (!name || !email || !phone || !details) {
-<<<<<<< HEAD
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
-      return;
-=======
->>>>>>> origin/resolve-merge-conflicts
+    const { category, limit = 5 } = req.query || {};
+    
+    let filteredQuotes = quotes;
+    
+    if (category) {
+      filteredQuotes = quotes.filter(quote => 
+        quote.category.toLowerCase() === category.toLowerCase()
+      );
     }
-
-    // Process quote submission logic here
-    const quote = {
-<<<<<<< HEAD
-      id: Date.now().toString(),
-=======
->>>>>>> origin/resolve-merge-conflicts
-      name,
-      email,
-      phone,
-      details,
-<<<<<<< HEAD
-      country,
-      service,
-      timestamp: new Date().toISOString(),
-      status: 'pending'
-    };
-
-    // In a real application, you would save this to a database
-    // For now, we'll just log it
-    console.log('Quote submitted:', quote);
-
+    
+    // Limit results
+    const limitedQuotes = filteredQuotes.slice(0, parseInt(limit));
+    
+    // Randomize order
+    const shuffledQuotes = limitedQuotes.sort(() => Math.random() - 0.5);
+    
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
-      message: 'Quote request submitted successfully',
-      quoteId: quote.id
+      quotes: shuffledQuotes,
+      total: shuffledQuotes.length,
+      category: category || 'all'
     }));
   } catch (error) {
-    console.error('Quote submission error:', error);
+    console.error('Quotes API error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to submit quote request' }));
-=======
-    };
-
-    // In a real application, you would save this to a database
-    res.statusCode = 200;
-    res.json({ success: true, quote });
-  } catch (error) {
-    console.error('Error processing quote:', error);
-    res.status(500).json({ error: error.message || 'Quote submission failed' });
->>>>>>> origin/resolve-merge-conflicts
+    res.end(JSON.stringify({ error: 'Failed to fetch quotes' }));
   }
 }
+
+export default withErrorLogging(handler);

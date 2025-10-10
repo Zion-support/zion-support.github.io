@@ -1,47 +1,46 @@
-const { withSentry } = require('../withSentry.cjs');
-const { isValidEmail } = require('../emailUtils.cjs');
+import { withErrorLogging } from '../withErrorLogging.cjs';
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
 
-=======
->>>>>>> origin/resolve-merge-conflicts
+  const { email, name, preferences = {} } = req.body || {};
+
+  if (!email || !email.includes('@')) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Valid email address is required' }));
+    return;
+  }
+
   try {
-    const { email } = req.body || {};
-
-    if (!email) {
-<<<<<<< HEAD
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Email is required' }));
-      return;
-    }
-
-    if (!isValidEmail(email)) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Invalid email format' }));
-      return;
-    }
-
-    // Save subscription logic here
+    // Basic newsletter subscription logic
     const subscription = {
-      email,
+      id: 'sub_' + Date.now(),
+      email: email.toLowerCase().trim(),
+      name: name || '',
+      preferences,
+      status: 'active',
       subscribedAt: new Date().toISOString(),
-      status: 'active'
+      source: 'website'
     };
+
+    // Log subscription for processing
+    console.log('Newsletter Subscription:', subscription);
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
       message: 'Successfully subscribed to newsletter',
-      subscription
+      subscription: {
+        id: subscription.id,
+        email: subscription.email,
+        status: subscription.status
+      }
     }));
   } catch (error) {
     console.error('Newsletter subscription error:', error);
@@ -51,18 +50,4 @@ async function handler(req, res) {
   }
 }
 
-module.exports = withSentry(handler);
-=======
-    };
-
-    res.statusCode = 200;
-    res.json({ success: true, subscription });
-  } catch (err) {
-    console.error("Error:", err);
-    console.error('Error subscribing to newsletter:', err);
-    res.status(500).json({ error: 'Failed to subscribe to newsletter' });
-  }
-}
-
-export default withSentry(handler);
->>>>>>> origin/resolve-merge-conflicts
+export default withErrorLogging(handler);
