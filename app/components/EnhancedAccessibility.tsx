@@ -15,7 +15,6 @@ const EnhancedAccessibility: React.FC = () => {
     reducedMotion: false,
     screenReader: false,
     keyboardNavigation: false,
-  });
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -28,13 +27,13 @@ const EnhancedAccessibility: React.FC = () => {
 
     // Detect screen reader usage
     const detectScreenReader = () => {
-      const hasScreenReader = 
+      const hasScreenReader =
         window.speechSynthesis ||
         'speechSynthesis' in window ||
         navigator.userAgent.includes('NVDA') ||
         navigator.userAgent.includes('JAWS') ||
         navigator.userAgent.includes('VoiceOver');
-      
+
       setSettings(prev => ({ ...prev, screenReader: !!hasScreenReader }));
     };
 
@@ -46,10 +45,10 @@ const EnhancedAccessibility: React.FC = () => {
 
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
+
     // Font size
-    root.style.setProperty('--font-size-multiplier', 
-      newSettings.fontSize === 'small' ? '0.875' : 
+    root.style.setProperty('--font-size-multiplier',
+      newSettings.fontSize === 'small' ? '0.875' :
       newSettings.fontSize === 'large' ? '1.25' : '1'
     );
 
@@ -96,7 +95,7 @@ const EnhancedAccessibility: React.FC = () => {
     announcement.className = 'sr-only';
     announcement.textContent = message;
     document.body.appendChild(announcement);
-    
+
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);

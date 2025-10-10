@@ -53,7 +53,7 @@ class ProductionLogger {
         error_context: entry.context,
         error_timestamp: entry.timestamp,
         event_category: 'Error'
-      });
+
     }
   }
 

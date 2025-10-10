@@ -13,9 +13,9 @@ interface AnalyticsProviderProps {
   trackingId?: string;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ 
-  children, 
-  trackingId = 'G-XXXXXXXXXX' 
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
+  children,
+  trackingId = 'G-XXXXXXXXXX'
 }) => {
   useEffect(() => {
     // Initialize Google Analytics
@@ -37,7 +37,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       gtag('config', trackingId, {
         page_title: document.title,
         page_location: window.location.href,
-      });
+
     }
   }, [trackingId]);
 
@@ -45,7 +45,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', event, properties);
     }
-    
+
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
       }
@@ -57,9 +57,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_title: name,
         page_location: window.location.href,
         ...properties,
-      });
+
     }
-    
+
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
       }
@@ -70,9 +70,9 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag('config', trackingId, {
         user_id: userId,
         ...traits,
-      });
+
     }
-    
+
     // Also log in development
     if (process.env.NODE_ENV === 'development') {
       }

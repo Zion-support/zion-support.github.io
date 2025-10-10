@@ -19,8 +19,8 @@ export const preloadCriticalResources = useCallback((...args) => {
   })
   // Preload critical images
   const criticalImages = [
-    '/images/hero-bg.jpg',
-    '/images/logo.png',
+    '/images/hero-bg.webp',
+    '/images/logo.webp',
     '/images/favicon.ico'
   ]
   criticalImages.forEach(src => {
@@ -35,9 +35,9 @@ export const preloadRoute = useCallback((...args) => {
   if (typeof window === 'undefined') return
   // Preload route-specific resources
   const routeResources = {
-    '/blog': ['/api/blog/posts', '/images/blog-hero.jpg'],
-    '/services': ['/api/services', '/images/services-hero.jpg'],
-    '/contact': ['/api/contact', '/images/contact-hero.jpg']}
+    '/blog': ['/api/blog/posts', '/images/blog-hero.webp'],
+    '/services': ['/api/services', '/images/services-hero.webp'],
+    '/contact': ['/api/contact', '/images/contact-hero.webp']}
   }
   const resources = routeResources[route as keyof typeof routeResources]
   if (resources) {

@@ -1,3 +1,4 @@
+
 import React, { Suspense, memo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -80,7 +81,6 @@ const DemoPage = React.lazy(() => import('./app/demo/page'));
 const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
 const ServicesPage = React.lazy(() => import('./app/services/page'));
 const AIOpsPage = React.lazy(() => import('./app/ai-ops/page'));
-
 // AI Services Pages
 const AIProjectManagerPage = React.lazy(() => import('./app/ai-project-manager/page'));
 const AIQuantumComputingPage = React.lazy(() => import('./app/ai-quantum-computing/page'));
@@ -98,7 +98,6 @@ const AICodeSecurityAuditorPage = React.lazy(() => import('./app/ai-code-securit
 const AIMentalHealthCompanionPage = React.lazy(() => import('./app/ai-mental-health-companion/page'));
 const AISmartHomeControllerPage = React.lazy(() => import('./app/ai-smart-home-controller/page'));
 const AIInvestmentOptimizerPage = React.lazy(() => import('./app/ai-investment-optimizer/page'));
-
 // IT Services Pages
 const CloudMigrationPage = React.lazy(() => import('./app/cloud-migration/page'));
 const CybersecurityPage = React.lazy(() => import('./app/cybersecurity/page'));
@@ -127,9 +126,9 @@ const HealthPage = React.lazy(() => import('./app/health/page'));
 const SecurityPage = React.lazy(() => import('./app/security/page'));
 const CompliancePage = React.lazy(() => import('./app/compliance/page'));
 const GDPRPage = React.lazy(() => import('./app/gdpr/page'));
-const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const HealthcareITPage = React.lazy(() => import('./app/healthcare-it/page'));
 const FinancialITPage = React.lazy(() => import('./app/financial-it/page'));
+const EdgeComputingPage = React.lazy(() => import('./app/edge-computing/page'));
 const FiveGImplementationPage = React.lazy(() => import('./app/5g-implementation/page'));
 const IoTPlatformPage = React.lazy(() => import('./app/iot-platform/page'));
 
@@ -177,56 +176,12 @@ const App: React.FC = memo(() => {
                       <Route path="/demo" element={<DemoPage />} />
                       <Route path="/consultation" element={<ConsultationPage />} />
                       <Route path="/services" element={<ServicesPage />} />
-
+                      
                       {/* Additional Pages */}
                       <Route path="/health" element={<HealthPage />} />
                       <Route path="/security" element={<SecurityPage />} />
                       <Route path="/compliance" element={<CompliancePage />} />
                       <Route path="/gdpr" element={<GDPRPage />} />
-
-                      {/* AI Services Pages */}
-                      <Route path="/ai-ops" element={<AIOpsPage />} />
-                      <Route path="/ai-project-manager" element={<AIProjectManagerPage />} />
-                      <Route path="/ai-quantum-computing" element={<AIQuantumComputingPage />} />
-                      <Route path="/ai-quantum-financial-oracle" element={<AIQuantumFinancialOraclePage />} />
-                      <Route path="/ai-smart-calendar" element={<AISmartCalendarPage />} />
-                      <Route path="/ai-social-media-manager" element={<AISocialMediaManagerPage />} />
-                      <Route path="/ai-space-technology-pro" element={<AISpaceTechnologyProPage />} />
-                      <Route path="/ai-supply-chain-optimization-pro" element={<AISupplyChainOptimizationProPage />} />
-                      <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
-                      <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
-
-                      {/* New Micro SAAS Services */}
-                      <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
-                      <Route path="/ai-code-security-auditor" element={<AICodeSecurityAuditorPage />} />
-                      <Route path="/ai-mental-health-companion" element={<AIMentalHealthCompanionPage />} />
-                      <Route path="/ai-smart-home-controller" element={<AISmartHomeControllerPage />} />
-                      <Route path="/ai-investment-optimizer" element={<AIInvestmentOptimizerPage />} />
-
-                      {/* IT Services Pages */}
-                      <Route path="/cloud-migration" element={<CloudMigrationPage />} />
-                      <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                      <Route path="/it-infrastructure" element={<ITInfrastructurePage />} />
-                      <Route path="/it-support" element={<ITSupportPage />} />
-                      <Route path="/custom-development" element={<CustomDevelopmentPage />} />
-                      <Route path="/devops-cicd" element={<DevOpsCICDPage />} />
-                      <Route path="/database-management" element={<DatabaseManagementPage />} />
-                      <Route path="/network-design" element={<NetworkDesignPage />} />
-                      <Route path="/blockchain-integration-services" element={<BlockchainIntegrationServicesPage />} />
-                      <Route path="/smart-contract-security-audit" element={<SmartContractSecurityAuditPage />} />
-
-                      {/* Emerging Technologies Pages */}
-                      <Route path="/autonomous-systems" element={<AutonomousSystemsPage />} />
-                      <Route path="/blockchain-web3" element={<BlockchainWeb3Page />} />
-                      <Route path="/iot-edge-computing" element={<IoTEdgeComputingPage />} />
-                      <Route path="/ar-vr-solutions" element={<ARVRSolutionsPage />} />
-                      <Route path="/smart-cities" element={<SmartCitiesPage />} />
-                      <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-                      <Route path="/innovation-labs" element={<InnovationLabsPage />} />
-                      <Route path="/business-intelligence" element={<BusinessIntelligencePage />} />
-                      <Route path="/robotics" element={<RoboticsPage />} />
-
-                      {/* Additional Pages */}
                       <Route path="/edge-computing" element={<EdgeComputingPage />} />
                       <Route path="/financial-it" element={<FinancialITPage />} />
                       <Route path="/healthcare-it" element={<HealthcareITPage />} />
@@ -246,6 +201,4 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </EnhancedErrorBoundary>
   );
-});
-
-export default App;
+}

@@ -5,9 +5,9 @@ interface EmptyComponentProps {
   children?: React.ReactNode;
 }
 
-export default function EmptyComponent({ 
-  className = '', 
-  children 
+export default function EmptyComponent({
+  className = '',
+  children
 }: EmptyComponentProps) {
   return (
     <div className={`emptycomponent ${className}`}>

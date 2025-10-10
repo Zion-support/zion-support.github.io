@@ -1,14 +1,14 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-import { 
-  Brain, 
-  Cloud, 
-  Zap, 
-  Shield, 
-  Code, 
-  BarChart, 
-  Users, 
-  Settings, 
+import {
+  Brain,
+  Cloud,
+  Zap,
+  Shield,
+  Code,
+  BarChart,
+  Users,
+  Settings,
   FileText,
   CheckCircle,
   ArrowRight,
@@ -289,7 +289,7 @@ const ServicesPage: React.FC = () => {
               Our Services
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business. 
+              Comprehensive AI, IT, and Micro SAAS solutions designed to transform your business.
               From cutting-edge AI platforms to robust IT infrastructure, we've got you covered.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

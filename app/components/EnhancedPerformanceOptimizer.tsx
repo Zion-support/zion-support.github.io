@@ -28,21 +28,21 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enablePrefetching = true,
   enableCriticalResourcePreloading = true
 }) => {
-  
+
   // Image optimization
   useEffect(() => {
     if (!enableImageOptimization || typeof window === 'undefined') return;
 
     const optimizeImages = () => {
       const images = document.querySelectorAll('img[data-src]');
-      
+
       images.forEach((img) => {
         const imageElement = img as HTMLImageElement;
         if (imageElement.dataset.src) {
           imageElement.src = imageElement.dataset.src;
           imageElement.removeAttribute('data-src');
         }
-      });
+
     };
 
     // Optimize images on load
@@ -77,7 +77,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             imageObserver.unobserve(img);
           }
         }
-      });
+
     }, observerOptions);
 
     // Observe all images with data-src
@@ -108,7 +108,6 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.href = domain;
         link.crossOrigin = 'anonymous';
         document.head.appendChild(link);
-      });
 
       // DNS prefetch for additional domains
       const dnsPrefetchDomains = [
@@ -121,7 +120,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         link.rel = 'dns-prefetch';
         link.href = domain;
         document.head.appendChild(link);
-      });
+
     };
 
     addResourceHints();
@@ -157,7 +156,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           link.rel = 'stylesheet';
         };
         document.head.appendChild(link);
-      });
+
     };
 
     preloadCriticalResources();
@@ -190,7 +189,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const reportWebVitals = async () => {
       try {
         const { getCLS, getFID, getFCP, getLCP, getTTFB } = await import('web-vitals');
-        
+
         const reportMetric = (metric: any) => {
           // Send to analytics
           if ('gtag' in window) {
@@ -199,7 +198,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
               event_label: metric.name,
               value: Math.round(metric.value),
               non_interaction: true,
-            });
+
           }
         };
 
@@ -236,7 +235,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           link.rel = 'prefetch';
           link.href = page;
           document.head.appendChild(link);
-        });
+
       }, 3000);
     };
 
@@ -263,12 +262,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           -o-transform: translateZ(0);
           transform: translateZ(0);
         }
-        
+
         /* Optimize repaints */
         .cyber-card, .quantum-card {
           will-change: transform;
         }
-        
+
         /* Optimize scrolling */
         .overflow-auto, .overflow-scroll {
           -webkit-overflow-scrolling: touch;
@@ -291,12 +290,12 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         const elements = document.querySelectorAll('[data-cleanup]');
         elements.forEach((element) => {
           element.removeAttribute('data-cleanup');
-        });
+
       };
 
       // Run cleanup every 5 minutes
       const interval = setInterval(cleanup, 300000);
-      
+
       return () => clearInterval(interval);
     };
 
@@ -309,7 +308,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     if (typeof window === 'undefined' || !window.performance) return;
 
     const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    
+
     if (navigation) {
       const metrics = {
         domContentLoaded: navigation.domContentLoadedEventEnd - navigation.fetchStart,
@@ -328,8 +327,8 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             event_label: key,
             value: Math.round(value),
             non_interaction: true,
-          });
-        });
+
+
       }
     }
   }, []);

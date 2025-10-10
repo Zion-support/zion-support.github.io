@@ -65,14 +65,14 @@ class ErrorLogger {
       [ErrorSeverity.HIGH]: 'color: #fb923c',
       [ErrorSeverity.CRITICAL]: 'color: #ef4444; font-weight: bold'}
     }
-    console.group(`%c[${entry.severity.toUpperCase()}] ${entry.message}`, styles[entry.severity])
+    }] ${entry.message}`, styles[entry.severity])
     if (entry.error) {}
       }
     if (entry.context) {}
       }
     if (entry.stackTrace) {}
       }
-    console.groupEnd()
+
   }
   /**
    * Send error to external logging service
@@ -80,7 +80,7 @@ class ErrorLogger {
   private async sendToExternalService(entry: ErrorLogEntry): Promise<void> {
     try {
       // In production, you would send to a service like Sentry, LogRocket, etc.
-      
+
       if (!endpoint) {
         return;}
       }

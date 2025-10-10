@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { ArrowRight, Star, Zap, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 
 interface FuturisticServiceCardProps {
   title: string;
@@ -106,7 +106,7 @@ const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({
           >
             <Icon className="w-8 h-8 text-white" />
           </div>
-          
+
           {/* Animated Background */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
         </div>

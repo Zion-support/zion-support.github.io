@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { 
-  Search, 
-  HelpCircle, 
-  BookOpen, 
-  MessageSquare, 
-  Phone, 
-  Mail, 
+import {
+  Search,
+  HelpCircle,
+  BookOpen,
+  MessageSquare,
+  Phone,
+  Mail,
   ChevronDown,
   ChevronRight,
   CheckCircle,
@@ -143,11 +143,11 @@ const HelpPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Help Center
@@ -155,7 +155,7 @@ const HelpPage: React.FC = () => {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Find answers, get support, and learn how to make the most of our AI solutions
           </p>
-          
+
           {/* Search Bar */}
           <div className="max-w-2xl mx-auto">
             <div className="relative">
@@ -183,7 +183,7 @@ const HelpPage: React.FC = () => {
               Access our most popular resources and support channels
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickLinks.map((link, index) => (
               <a
@@ -219,7 +219,7 @@ const HelpPage: React.FC = () => {
               Find answers to common questions about our services and solutions
             </p>
           </div>
-          
+
           <div className="space-y-6">
             {faqCategories.map((category, categoryIndex) => (
               <div key={categoryIndex} className="cyber-card">
@@ -237,7 +237,7 @@ const HelpPage: React.FC = () => {
                     <ChevronRight className="w-6 h-6 text-cyan-400" />
                   )}
                 </button>
-                
+
                 {expandedCategory === category.title && (
                   <div className="px-6 pb-6 space-y-4">
                     {category.questions.map((faq, faqIndex) => (
@@ -265,7 +265,7 @@ const HelpPage: React.FC = () => {
               Our support team is here to help you succeed
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {contactMethods.map((method, index) => (
               <div key={index} className="cyber-card p-8 text-center hover:scale-105 transition-all duration-300">

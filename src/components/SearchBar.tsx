@@ -56,9 +56,8 @@ const SearchBar: React.FC = () => {
           link: service.link,
           category: service.category,
           type: 'micro-saas'
-        });
+
       }
-    });
 
     // Search AI services
     aiServices.forEach(service => {
@@ -69,9 +68,8 @@ const SearchBar: React.FC = () => {
           link: service.href,
           category: 'AI Services',
           type: 'ai'
-        });
+
       }
-    });
 
     // Search IT services
     itServices.forEach(service => {
@@ -82,9 +80,8 @@ const SearchBar: React.FC = () => {
           link: service.href,
           category: 'IT Services',
           type: 'it'
-        });
+
       }
-    });
 
     // Search specialized services
     specializedServices.forEach(service => {
@@ -95,9 +92,8 @@ const SearchBar: React.FC = () => {
           link: service.href,
           category: 'Specialized',
           type: 'specialized'
-        });
+
       }
-    });
 
     setResults(searchResults.slice(0, 10)); // Limit to 10 results
   };
@@ -116,7 +112,7 @@ const SearchBar: React.FC = () => {
       setResults([]);
     } else if (e.key === 'ArrowDown') {
       e.preventDefault();
-      setSelectedIndex(prev => 
+      setSelectedIndex(prev =>
         prev < results.length - 1 ? prev + 1 : prev
       );
     } else if (e.key === 'ArrowUp') {

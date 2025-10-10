@@ -19,7 +19,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology.',
   keywords = 'AI, artificial intelligence, enterprise solutions, digital transformation, IT services, quantum computing, machine learning, automation',
   canonical,
-  ogImage = '/og-image.jpg',
+  ogImage = '/og-image.webp',
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData,
@@ -36,7 +36,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
+    logo: 'https://ziontechgroup.com/logo.webp',
     description: description,
     address: {
       '@type': 'PostalAddress',
@@ -80,7 +80,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="robots" content={robotsContent} />
       <link rel="canonical" href={canonical || 'https://ziontechgroup.com'} />
-      
+
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical || 'https://ziontechgroup.com'} />
@@ -88,21 +88,21 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Zion Tech Group" />
-      
+
       {/* Twitter */}
       <meta property="twitter:card" content={twitterCard} />
       <meta property="twitter:url" content={canonical || 'https://ziontechgroup.com'} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={ogImage} />
-      
+
       {/* Additional SEO Meta Tags */}
       <meta name="author" content="Zion Tech Group" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="format-detection" content="telephone=no,address=no,email=no" />
       <meta name="theme-color" content="#0f172a" />
-      
+
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}

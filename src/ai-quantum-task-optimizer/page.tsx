@@ -1,5 +1,5 @@
 import React from 'react';
-import { Brain, Zap, Target, BarChart, Clock, CheckCircle, ArrowRight, Star, Users, Award, Shield, Globe, Cpu, Database, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location, Box, Mic, DollarSign, Truck, Link, HardDrive, FileCheck } from 'lucide-react';
+import { Brain, Zap, Target, BarChart, Shield, Cpu, Navigation, Zap, Target, Shield } from 'lucide-react';
 
 const AIQuantumTaskOptimizerPage: React.FC = () => {
   return (

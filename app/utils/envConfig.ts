@@ -22,7 +22,7 @@ class EnvironmentConfig {
   }
   private loadConfig(): EnvConfig {
     // Safely access environment variables with defaults
-    
+
     return {
       nodeEnv,
       apiUrl:
@@ -102,18 +102,7 @@ class EnvironmentConfig {
    */
   public logConfig(): void {
     if (this.isDevelopment()) {
-      console.group('🔧 Environment Configuration')
-      console.table({
-        Environment: this.config.nodeEnv,
-        'API URL': this.config.apiUrl,
-        'Analytics Enabled': this.config.enableAnalytics,
-        'Logging Enabled': this.config.enableLogging,
-        'Log Level': this.config.logLevel,
-        'API Key Set': !!this.config.apiKey,
-        'Sentry DSN Set': !!this.config.sentryDsn,
-        'GA Tracking ID Set': !!this.config.gaTrackingId}
-      })
-      console.groupEnd()
+
     }
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 import React, { useState, useCallback, memo } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Phone, Mail, MapPin, Star, Zap, Target, Globe, Award, Users, Brain, Cpu, Settings, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
+import { Shield, Lock, AlertTriangle, CheckCircle, Phone, Mail, Target, Brain, Target, Shield, CheckCircle, Phone, Mail } from 'lucide-react';
 
 const AICybersecurityPage: React.FC = memo(() => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -140,13 +140,13 @@ const AICybersecurityPage: React.FC = memo(() => {
             <Shield className="w-4 h-4" />
             <span>AI-Powered Security</span>
           </div>
-          
+
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             AI Cybersecurity Solutions
           </h1>
-          
+
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Protect your business with advanced AI-powered cybersecurity solutions. 
+            Protect your business with advanced AI-powered cybersecurity solutions.
             Detect threats in real-time, automate responses, and maintain compliance with 99.9% accuracy.
           </p>
 
@@ -287,7 +287,6 @@ const AICybersecurityPage: React.FC = memo(() => {
       </div>
     </div>
   );
-});
 
 AICybersecurityPage.displayName = 'AICybersecurityPage';
 

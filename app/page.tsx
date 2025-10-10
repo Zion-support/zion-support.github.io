@@ -1,7 +1,6 @@
 'use client';
 
 import React, { Suspense } from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight, Star, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import Footer from './components/Footer';
 import SEOHead from './components/SEOHead';
@@ -544,6 +543,226 @@ const microSAASServices = [
     popular: true,
     icon: ChefHat,
     link: "https://ziontechgroup.com/ai-culinary-assistant-pro"
+  },
+  {
+    name: "AI Voice Cloning Studio",
+    description: "Professional voice synthesis and cloning with 99.9% accuracy for content creators",
+    price: "$299/mo",
+    features: ["Voice Cloning", "Multi-language Support", "Emotion Control", "Real-time Synthesis"],
+    category: "Audio",
+    popular: true,
+    icon: Music,
+    link: "https://ziontechgroup.com/ai-voice-cloning-studio"
+  },
+  {
+    name: "AI Code Security Auditor",
+    description: "Automated code security analysis with vulnerability detection and compliance checking",
+    price: "$199/mo",
+    features: ["Vulnerability Detection", "Compliance Checking", "Code Review", "Security Reports"],
+    category: "Security",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-code-security-auditor"
+  },
+  {
+    name: "AI Mental Health Companion",
+    description: "AI-powered mental health support with 24/7 availability and personalized care",
+    price: "$149/mo",
+    features: ["24/7 Support", "Mood Tracking", "Crisis Intervention", "Therapy Recommendations"],
+    category: "Health",
+    popular: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-mental-health-companion"
+  },
+  {
+    name: "AI Smart Home Controller",
+    description: "Intelligent home automation with voice control and predictive maintenance",
+    price: "$89/mo",
+    features: ["Voice Control", "Predictive Maintenance", "Energy Optimization", "Security Integration"],
+    category: "IoT",
+    popular: true,
+    icon: Home,
+    link: "https://ziontechgroup.com/ai-smart-home-controller"
+  },
+  {
+    name: "AI Investment Optimizer",
+    description: "Advanced portfolio management with real-time market analysis and risk assessment",
+    price: "$399/mo",
+    features: ["Portfolio Optimization", "Risk Assessment", "Market Analysis", "Automated Trading"],
+    category: "Finance",
+    popular: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-investment-optimizer"
+  },
+  {
+    name: "AI Legal Research Pro",
+    description: "Advanced legal research platform with AI-powered case analysis and precedent discovery",
+    price: "$399/mo",
+    features: ["Case Analysis", "Precedent Discovery", "Legal Research", "Document Review"],
+    category: "Legal",
+    popular: true,
+    icon: Scale,
+    link: "https://ziontechgroup.com/ai-legal-research-pro"
+  },
+  {
+    name: "AI Supply Chain Optimizer",
+    description: "Intelligent supply chain management with predictive analytics and optimization algorithms",
+    price: "$599/mo",
+    features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Risk Management"],
+    category: "Logistics",
+    popular: true,
+    icon: Truck,
+    link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  {
+    name: "AI Energy Management Pro",
+    description: "Smart energy optimization with grid management and renewable energy integration",
+    price: "$499/mo",
+    features: ["Grid Optimization", "Renewable Integration", "Energy Storage", "Cost Optimization"],
+    category: "Energy",
+    popular: true,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-energy-grid-management-pro"
+  },
+  {
+    name: "AI Space Technology Pro",
+    description: "Advanced space exploration and satellite management with AI-powered mission planning",
+    price: "$5,500/mo",
+    features: ["Satellite Operations", "Mission Planning", "Data Analysis", "Orbital Mechanics"],
+    category: "Space",
+    popular: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-space-technology-pro"
+  },
+  {
+    name: "AI Climate Solutions Pro",
+    description: "Comprehensive climate monitoring and carbon footprint optimization platform",
+    price: "$3,200/mo",
+    features: ["Carbon Analysis", "Weather Prediction", "Sustainability Planning", "Emission Tracking"],
+    category: "Environment",
+    popular: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
+  },
+  {
+    name: "AI Drug Discovery Pro",
+    description: "Advanced pharmaceutical AI platform for accelerating drug discovery and development",
+    price: "$4,500/mo",
+    features: ["Molecular Analysis", "Drug Interaction Prediction", "Clinical Trial Optimization", "Patent Research"],
+    category: "Healthcare",
+    popular: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-drug-discovery-pro"
+  },
+  {
+    name: "AI Financial Crime Detection Pro",
+    description: "Real-time fraud detection and financial security monitoring with machine learning algorithms",
+    price: "$2,800/mo",
+    features: ["Fraud Detection", "Risk Assessment", "Compliance Monitoring", "Transaction Analysis"],
+    category: "Finance",
+    popular: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-financial-crime-detection-pro"
+  },
+  {
+    name: "AI Agricultural Intelligence Pro",
+    description: "Smart farming platform with AI-powered crop monitoring, yield prediction, and automated irrigation",
+    price: "$299/mo",
+    features: ["Crop Monitoring", "Yield Prediction", "Automated Irrigation", "Pest Detection"],
+    category: "Agriculture",
+    popular: true,
+    icon: Sprout,
+    link: "https://ziontechgroup.com/ai-agricultural-intelligence-pro"
+  },
+  {
+    name: "AI Fashion Design Studio",
+    description: "AI-powered fashion design platform with trend analysis and automated pattern generation",
+    price: "$149/mo",
+    features: ["Trend Analysis", "Pattern Generation", "Color Matching", "Size Optimization"],
+    category: "Fashion",
+    popular: true,
+    icon: Palette,
+    link: "https://ziontechgroup.com/ai-fashion-design"
+  },
+  {
+    name: "AI Music Composition Studio",
+    description: "AI-powered music creation platform with genre analysis and automated composition",
+    price: "$89/mo",
+    features: ["Genre Analysis", "Automated Composition", "Instrument Arrangement", "Royalty-free Music"],
+    category: "Creative",
+    popular: true,
+    icon: Music,
+    link: "https://ziontechgroup.com/ai-music-composition"
+  },
+  {
+    name: "AI Manufacturing Optimizer",
+    description: "Smart manufacturing process optimization with predictive maintenance and quality control",
+    price: "$399/mo",
+    features: ["Predictive Maintenance", "Quality Control", "Process Optimization", "Supply Chain Integration"],
+    category: "Manufacturing",
+    popular: true,
+    icon: Factory,
+    link: "https://ziontechgroup.com/ai-manufacturing"
+  },
+  {
+    name: "AI Logistics Optimizer",
+    description: "Intelligent logistics management with route optimization and supply chain analytics",
+    price: "$299/mo",
+    features: ["Route Optimization", "Supply Chain Analytics", "Fleet Management", "Demand Forecasting"],
+    category: "Logistics",
+    popular: true,
+    icon: Truck,
+    link: "https://ziontechgroup.com/ai-logistics-optimizer"
+  },
+  {
+    name: "AI 3D Generation Studio",
+    description: "AI-powered 3D model generation and animation platform for creators and developers",
+    price: "$179/mo",
+    features: ["3D Model Generation", "Animation Creation", "Texture Synthesis", "Rendering Optimization"],
+    category: "Creative",
+    popular: true,
+    icon: Eye,
+    link: "https://ziontechgroup.com/ai-3d-generation"
+  },
+  {
+    name: "AI Mobile App Builder",
+    description: "No-code AI platform for building native mobile apps with advanced AI features",
+    price: "$129/mo",
+    features: ["No-Code Development", "AI Integration", "Cross-Platform", "Real-time Testing"],
+    category: "Development",
+    popular: true,
+    icon: Smartphone,
+    link: "https://ziontechgroup.com/ai-mobile-app-builder"
+  },
+  {
+    name: "AI Holographic Workspace",
+    description: "Immersive 3D workspace with holographic UI for next-generation collaboration and productivity",
+    price: "$499/mo",
+    features: ["3D Holographic Interface", "Virtual Collaboration", "Spatial Computing", "AR/VR Integration"],
+    category: "Productivity",
+    popular: true,
+    icon: Eye,
+    link: "https://ziontechgroup.com/ai-holographic-workspace"
+  },
+  {
+    name: "AI Neural Memory Assistant",
+    description: "Advanced cognitive enhancement platform that uses neural networks to improve memory and learning capabilities",
+    price: "$199/mo",
+    features: ["Memory Enhancement", "Learning Acceleration", "Cognitive Training", "Brain Health Monitoring"],
+    category: "Productivity",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-memory-assistant"
+  },
+  {
+    name: "AI Quantum Financial Oracle",
+    description: "Revolutionary quantum-powered financial prediction platform with 99.7% accuracy in market forecasting",
+    price: "$2,999/mo",
+    features: ["Quantum Market Analysis", "Risk-Free Predictions", "Real-time Trading Signals", "Portfolio Optimization"],
+    category: "Finance",
+    popular: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-financial-oracle"
   }
 ];
 
@@ -717,6 +936,326 @@ const aiServices: AIService[] = [
     enterprise: false,
     icon: Globe,
     link: "https://ziontechgroup.com/ai-content-delivery-network"
+  },
+  {
+    name: "AI Quantum Computing Platform",
+    description: "Next-generation quantum computing solutions for complex problem solving and optimization",
+    price: "$6,000/mo",
+    features: ["Quantum Algorithms", "Optimization Problems", "Cryptography", "Simulation"],
+    category: "Quantum AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-computing"
+  },
+  {
+    name: "AI Autonomous Systems Platform",
+    description: "Next-generation autonomous systems with self-learning capabilities and real-time decision making",
+    price: "$6,500/mo",
+    features: ["Self-Learning Algorithms", "Real-time Decision Making", "Predictive Maintenance", "Autonomous Operations"],
+    category: "Autonomous Systems",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-autonomous-systems"
+  },
+  {
+    name: "AI Blockchain Solutions Pro",
+    description: "Advanced blockchain integration with AI-powered smart contracts and decentralized applications",
+    price: "$3,800/mo",
+    features: ["Smart Contract AI", "Decentralized Applications", "Blockchain Analytics", "Crypto Trading AI"],
+    category: "Blockchain AI",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-blockchain-solutions"
+  },
+  {
+    name: "AI Edge Computing Platform",
+    description: "Intelligent edge computing solutions with real-time processing and low-latency AI inference",
+    price: "$2,500/mo",
+    features: ["Edge AI Processing", "Real-time Inference", "Low-latency Computing", "Distributed Intelligence"],
+    category: "Edge Computing",
+    enterprise: false,
+    icon: Cpu,
+    link: "https://ziontechgroup.com/ai-edge-computing"
+  },
+  {
+    name: "AI 5G Network Optimization",
+    description: "Advanced 5G network management with AI-powered optimization and intelligent resource allocation",
+    price: "$4,800/mo",
+    features: ["5G Optimization", "Network Slicing", "Resource Allocation", "Performance Monitoring"],
+    category: "5G Technology",
+    enterprise: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-5g-optimization"
+  },
+  {
+    name: "AI IoT Platform Pro",
+    description: "Comprehensive IoT platform with AI-powered device management and data analytics",
+    price: "$2,200/mo",
+    features: ["Device Management", "Data Analytics", "Predictive Maintenance", "Security Monitoring"],
+    category: "IoT AI",
+    enterprise: false,
+    icon: Settings,
+    link: "https://ziontechgroup.com/ai-iot-platform"
+  },
+  {
+    name: "AI Cybersecurity Pro",
+    description: "Advanced AI-powered cybersecurity platform with threat detection and automated response",
+    price: "$3,500/mo",
+    features: ["Threat Detection", "Automated Response", "Behavioral Analysis", "Zero-day Protection"],
+    category: "Cybersecurity AI",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-cybersecurity"
+  },
+  {
+    name: "AI API Management Platform",
+    description: "Intelligent API management with AI-powered optimization, security, and analytics",
+    price: "$1,600/mo",
+    features: ["API Gateway", "Rate Limiting", "Security Policies", "Analytics Dashboard"],
+    category: "API Management",
+    enterprise: false,
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-api-management"
+  },
+  {
+    name: "AI Business Intelligence Pro",
+    description: "Advanced business intelligence platform with AI-powered insights and predictive analytics",
+    price: "$2,800/mo",
+    features: ["Predictive Analytics", "Data Visualization", "Automated Reporting", "Business Insights"],
+    category: "Business Intelligence",
+    enterprise: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-business-intelligence"
+  },
+  {
+    name: "AI Content Delivery Network",
+    description: "Intelligent CDN with AI-powered optimization and global content distribution",
+    price: "$1,900/mo",
+    features: ["Global Distribution", "AI Optimization", "Real-time Analytics", "Edge Computing"],
+    category: "Content Delivery",
+    enterprise: false,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-content-delivery-network"
+  },
+  {
+    name: "AI Voice Cloning Studio Pro",
+    description: "Professional voice synthesis and cloning with 99.9% accuracy for enterprise applications",
+    price: "$999/mo",
+    features: ["Enterprise Voice Cloning", "Multi-language Support", "Emotion Control", "Real-time Synthesis"],
+    category: "Audio AI",
+    enterprise: true,
+    icon: Music,
+    link: "https://ziontechgroup.com/ai-voice-cloning-studio"
+  },
+  {
+    name: "AI Code Security Auditor Pro",
+    description: "Enterprise-grade code security analysis with vulnerability detection and compliance checking",
+    price: "$599/mo",
+    features: ["Enterprise Vulnerability Detection", "Compliance Checking", "Code Review", "Security Reports"],
+    category: "Security AI",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-code-security-auditor"
+  },
+  {
+    name: "AI Mental Health Companion Pro",
+    description: "Enterprise mental health support with AI-powered personalized care and crisis intervention",
+    price: "$499/mo",
+    features: ["Enterprise Support", "Mood Tracking", "Crisis Intervention", "Therapy Recommendations"],
+    category: "Health AI",
+    enterprise: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-mental-health-companion"
+  },
+  {
+    name: "AI Smart Home Controller Pro",
+    description: "Enterprise smart building automation with AI-powered predictive maintenance and energy optimization",
+    price: "$299/mo",
+    features: ["Enterprise Automation", "Predictive Maintenance", "Energy Optimization", "Security Integration"],
+    category: "IoT AI",
+    enterprise: true,
+    icon: Home,
+    link: "https://ziontechgroup.com/ai-smart-home-controller"
+  },
+  {
+    name: "AI Investment Optimizer Pro",
+    description: "Enterprise portfolio management with real-time market analysis and advanced risk assessment",
+    price: "$1,299/mo",
+    features: ["Enterprise Portfolio Optimization", "Advanced Risk Assessment", "Market Analysis", "Automated Trading"],
+    category: "Finance AI",
+    enterprise: true,
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-investment-optimizer"
+  },
+  {
+    name: "AI Legal Research Pro",
+    description: "Enterprise legal research platform with AI-powered case analysis and precedent discovery",
+    price: "$999/mo",
+    features: ["Enterprise Case Analysis", "Precedent Discovery", "Legal Research", "Document Review"],
+    category: "Legal AI",
+    enterprise: true,
+    icon: Scale,
+    link: "https://ziontechgroup.com/ai-legal-research-pro"
+  },
+  {
+    name: "AI Supply Chain Optimization Pro",
+    description: "Enterprise supply chain management with predictive analytics and optimization algorithms",
+    price: "$1,999/mo",
+    features: ["Enterprise Demand Forecasting", "Inventory Optimization", "Route Planning", "Risk Management"],
+    category: "Supply Chain AI",
+    enterprise: true,
+    icon: Truck,
+    link: "https://ziontechgroup.com/ai-supply-chain-optimization-pro"
+  },
+  {
+    name: "AI Energy Grid Management Pro",
+    description: "Enterprise energy management system for smart grids with predictive maintenance and optimization",
+    price: "$1,599/mo",
+    features: ["Enterprise Grid Optimization", "Predictive Maintenance", "Energy Storage", "Demand Forecasting"],
+    category: "Energy AI",
+    enterprise: true,
+    icon: Zap,
+    link: "https://ziontechgroup.com/ai-energy-grid-management-pro"
+  },
+  {
+    name: "AI Space Technology Pro",
+    description: "Enterprise space exploration and satellite management with AI-powered mission planning",
+    price: "$5,500/mo",
+    features: ["Enterprise Satellite Operations", "Mission Planning", "Data Analysis", "Orbital Mechanics"],
+    category: "Space AI",
+    enterprise: true,
+    icon: Rocket,
+    link: "https://ziontechgroup.com/ai-space-technology-pro"
+  },
+  {
+    name: "AI Climate Solutions Pro",
+    description: "Enterprise climate monitoring and carbon footprint optimization platform",
+    price: "$3,200/mo",
+    features: ["Enterprise Carbon Analysis", "Weather Prediction", "Sustainability Planning", "Emission Tracking"],
+    category: "Environmental AI",
+    enterprise: true,
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-climate-solutions-pro"
+  },
+  {
+    name: "AI Drug Discovery Pro",
+    description: "Enterprise pharmaceutical AI platform for accelerating drug discovery and development",
+    price: "$4,500/mo",
+    features: ["Enterprise Molecular Analysis", "Drug Interaction Prediction", "Clinical Trial Optimization", "Patent Research"],
+    category: "Healthcare AI",
+    enterprise: true,
+    icon: Heart,
+    link: "https://ziontechgroup.com/ai-drug-discovery-pro"
+  },
+  {
+    name: "AI Financial Crime Detection Pro",
+    description: "Enterprise fraud detection and financial security monitoring with machine learning algorithms",
+    price: "$2,800/mo",
+    features: ["Enterprise Fraud Detection", "Risk Assessment", "Compliance Monitoring", "Transaction Analysis"],
+    category: "Financial AI",
+    enterprise: true,
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-financial-crime-detection-pro"
+  },
+  {
+    name: "AI Agricultural Intelligence Pro",
+    description: "Enterprise smart farming platform with AI-powered crop monitoring and yield prediction",
+    price: "$799/mo",
+    features: ["Enterprise Crop Monitoring", "Yield Prediction", "Automated Irrigation", "Pest Detection"],
+    category: "Agriculture AI",
+    enterprise: true,
+    icon: Sprout,
+    link: "https://ziontechgroup.com/ai-agricultural-intelligence-pro"
+  },
+  {
+    name: "AI Fashion Design Studio Pro",
+    description: "Enterprise fashion design platform with AI-powered trend analysis and pattern generation",
+    price: "$499/mo",
+    features: ["Enterprise Trend Analysis", "Pattern Generation", "Color Matching", "Size Optimization"],
+    category: "Fashion AI",
+    enterprise: true,
+    icon: Palette,
+    link: "https://ziontechgroup.com/ai-fashion-design"
+  },
+  {
+    name: "AI Music Composition Studio Pro",
+    description: "Enterprise music creation platform with AI-powered genre analysis and composition",
+    price: "$299/mo",
+    features: ["Enterprise Genre Analysis", "Automated Composition", "Instrument Arrangement", "Royalty-free Music"],
+    category: "Creative AI",
+    enterprise: true,
+    icon: Music,
+    link: "https://ziontechgroup.com/ai-music-composition"
+  },
+  {
+    name: "AI Manufacturing Optimizer Pro",
+    description: "Enterprise manufacturing process optimization with predictive maintenance and quality control",
+    price: "$1,299/mo",
+    features: ["Enterprise Predictive Maintenance", "Quality Control", "Process Optimization", "Supply Chain Integration"],
+    category: "Manufacturing AI",
+    enterprise: true,
+    icon: Factory,
+    link: "https://ziontechgroup.com/ai-manufacturing"
+  },
+  {
+    name: "AI Logistics Optimizer Pro",
+    description: "Enterprise logistics management with route optimization and supply chain analytics",
+    price: "$999/mo",
+    features: ["Enterprise Route Optimization", "Supply Chain Analytics", "Fleet Management", "Demand Forecasting"],
+    category: "Logistics AI",
+    enterprise: true,
+    icon: Truck,
+    link: "https://ziontechgroup.com/ai-logistics-optimizer"
+  },
+  {
+    name: "AI 3D Generation Studio Pro",
+    description: "Enterprise 3D model generation and animation platform for creators and developers",
+    price: "$599/mo",
+    features: ["Enterprise 3D Model Generation", "Animation Creation", "Texture Synthesis", "Rendering Optimization"],
+    category: "Creative AI",
+    enterprise: true,
+    icon: Eye,
+    link: "https://ziontechgroup.com/ai-3d-generation"
+  },
+  {
+    name: "AI Mobile App Builder Pro",
+    description: "Enterprise no-code AI platform for building native mobile apps with advanced AI features",
+    price: "$499/mo",
+    features: ["Enterprise No-Code Development", "AI Integration", "Cross-Platform", "Real-time Testing"],
+    category: "Development AI",
+    enterprise: true,
+    icon: Smartphone,
+    link: "https://ziontechgroup.com/ai-mobile-app-builder"
+  },
+  {
+    name: "AI Holographic Workspace Pro",
+    description: "Enterprise immersive 3D workspace with holographic UI for next-generation collaboration",
+    price: "$1,999/mo",
+    features: ["Enterprise 3D Holographic Interface", "Virtual Collaboration", "Spatial Computing", "AR/VR Integration"],
+    category: "Productivity AI",
+    enterprise: true,
+    icon: Eye,
+    link: "https://ziontechgroup.com/ai-holographic-workspace"
+  },
+  {
+    name: "AI Neural Memory Assistant Pro",
+    description: "Enterprise cognitive enhancement platform with neural networks for memory and learning",
+    price: "$699/mo",
+    features: ["Enterprise Memory Enhancement", "Learning Acceleration", "Cognitive Training", "Brain Health Monitoring"],
+    category: "Productivity AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-neural-memory-assistant"
+  },
+  {
+    name: "AI Quantum Financial Oracle Pro",
+    description: "Enterprise quantum-powered financial prediction platform with 99.7% accuracy",
+    price: "$2,999/mo",
+    features: ["Enterprise Quantum Market Analysis", "Risk-Free Predictions", "Real-time Trading Signals", "Portfolio Optimization"],
+    category: "Finance AI",
+    enterprise: true,
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-quantum-financial-oracle"
   }
 ];
 
@@ -927,6 +1466,267 @@ const itServices: ITService[] = [
     category: "Digital Twin",
     icon: Eye,
     link: "https://ziontechgroup.com/digital-twin-platform"
+  },
+  {
+    name: "AI-Powered Data Center Management",
+    description: "Intelligent data center operations with AI-powered optimization and predictive maintenance",
+    price: "$4,500/mo",
+    features: ["AI Optimization", "Predictive Maintenance", "Energy Efficiency", "Performance Monitoring"],
+    category: "Data Center",
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-data-center-management"
+  },
+  {
+    name: "Quantum Computing Infrastructure",
+    description: "Quantum computing infrastructure setup and optimization for advanced computing needs",
+    price: "$8,500/mo",
+    features: ["Quantum Infrastructure", "Algorithm Optimization", "Quantum Security", "Research Support"],
+    category: "Quantum Computing",
+    icon: Brain,
+    link: "https://ziontechgroup.com/quantum-computing-infrastructure"
+  },
+  {
+    name: "AR/VR Development Platform",
+    description: "Immersive AR/VR development platform with advanced rendering and interaction capabilities",
+    price: "$3,200/mo",
+    features: ["AR/VR Development", "3D Rendering", "Motion Tracking", "Haptic Feedback"],
+    category: "AR/VR",
+    icon: Eye,
+    link: "https://ziontechgroup.com/ar-vr-platform"
+  },
+  {
+    name: "Smart City Infrastructure",
+    description: "Comprehensive smart city infrastructure with IoT integration and data analytics",
+    price: "$6,800/mo",
+    features: ["Smart Infrastructure", "IoT Integration", "Data Analytics", "Citizen Services"],
+    category: "Smart Cities",
+    icon: Building,
+    link: "https://ziontechgroup.com/smart-city-infrastructure"
+  },
+  {
+    name: "Robotics Integration Services",
+    description: "Advanced robotics integration with AI-powered automation and control systems",
+    price: "$4,500/mo",
+    features: ["Robotics Integration", "AI Automation", "Control Systems", "Safety Protocols"],
+    category: "Robotics",
+    icon: Settings,
+    link: "https://ziontechgroup.com/robotics-integration"
+  },
+  {
+    name: "AI Cloud Cost Optimization",
+    description: "Smart cloud resource management with AI-powered cost optimization and performance tuning",
+    price: "$2,200/mo",
+    features: ["Cost Optimization", "Resource Management", "Performance Tuning", "Automated Scaling"],
+    category: "Cloud Optimization",
+    icon: Cloud,
+    link: "https://ziontechgroup.com/ai-cloud-optimization"
+  },
+  {
+    name: "AI Security Operations Center",
+    description: "AI-powered security monitoring with threat detection and automated incident response",
+    price: "$3,500/mo",
+    features: ["Threat Detection", "Automated Response", "Security Monitoring", "Incident Management"],
+    category: "Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-security-operations"
+  },
+  {
+    name: "Data Lake & Warehouse Solutions",
+    description: "Enterprise data management with AI-powered analytics and real-time processing",
+    price: "$2,800/mo",
+    features: ["Data Lake Setup", "Warehouse Design", "Real-time Processing", "AI Analytics"],
+    category: "Data Management",
+    icon: Database,
+    link: "https://ziontechgroup.com/data-warehouse"
+  },
+  {
+    name: "Real-time Analytics Platform",
+    description: "Live data processing and analytics with AI-powered insights and visualization",
+    price: "$2,500/mo",
+    features: ["Real-time Processing", "Live Analytics", "Data Visualization", "AI Insights"],
+    category: "Analytics",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/real-time-analytics"
+  },
+  {
+    name: "AI Business Intelligence Pro",
+    description: "Advanced analytics platform with AI-powered insights and predictive analytics",
+    price: "$2,800/mo",
+    features: ["Predictive Analytics", "Data Visualization", "Automated Reporting", "Business Insights"],
+    category: "Business Intelligence",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/ai-business-intelligence"
+  },
+  {
+    name: "AI Content Delivery Network Pro",
+    description: "Intelligent CDN with AI-powered optimization and global content distribution",
+    price: "$1,900/mo",
+    features: ["Global Distribution", "AI Optimization", "Real-time Analytics", "Edge Computing"],
+    category: "Content Delivery",
+    icon: Globe,
+    link: "https://ziontechgroup.com/ai-content-delivery-network"
+  },
+  {
+    name: "AI API Management Pro",
+    description: "Intelligent API management with AI-powered optimization, security, and analytics",
+    price: "$1,600/mo",
+    features: ["API Gateway", "Rate Limiting", "Security Policies", "Analytics Dashboard"],
+    category: "API Management",
+    icon: Code,
+    link: "https://ziontechgroup.com/ai-api-management"
+  },
+  {
+    name: "AI Infrastructure Monitoring Pro",
+    description: "Intelligent infrastructure monitoring with AI-powered insights and automation",
+    price: "$1,900/mo",
+    features: ["AI Monitoring", "Predictive Analytics", "Automated Responses", "Performance Insights"],
+    category: "AI Infrastructure",
+    icon: Activity,
+    link: "https://ziontechgroup.com/ai-infrastructure-monitoring"
+  },
+  {
+    name: "AI Security Operations Center Pro",
+    description: "AI-powered security monitoring with threat detection and automated incident response",
+    price: "$3,500/mo",
+    features: ["Threat Detection", "Automated Response", "Security Monitoring", "Incident Management"],
+    category: "Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/ai-security-operations"
+  },
+  {
+    name: "AI Cloud Cost Optimization Pro",
+    description: "Smart cloud resource management with AI-powered cost optimization and performance tuning",
+    price: "$2,200/mo",
+    features: ["Cost Optimization", "Resource Management", "Performance Tuning", "Automated Scaling"],
+    category: "Cloud Optimization",
+    icon: Cloud,
+    link: "https://ziontechgroup.com/ai-cloud-optimization"
+  },
+  {
+    name: "AI Data Center Management Pro",
+    description: "Intelligent data center operations with AI-powered optimization and predictive maintenance",
+    price: "$4,500/mo",
+    features: ["AI Optimization", "Predictive Maintenance", "Energy Efficiency", "Performance Monitoring"],
+    category: "Data Center",
+    icon: Database,
+    link: "https://ziontechgroup.com/ai-data-center-management"
+  },
+  {
+    name: "Blockchain Integration Services Pro",
+    description: "Web3 and blockchain solutions for decentralized applications and smart contracts",
+    price: "$3,500/mo",
+    features: ["Smart Contracts", "DApp Development", "Token Economics", "Security Audits"],
+    category: "Blockchain",
+    icon: Shield,
+    link: "https://ziontechgroup.com/blockchain-integration-services"
+  },
+  {
+    name: "Smart Contract Security Audit Pro",
+    description: "Comprehensive security auditing for blockchain smart contracts",
+    price: "$2,200/mo",
+    features: ["Security Analysis", "Vulnerability Assessment", "Code Review", "Compliance Check"],
+    category: "Blockchain Security",
+    icon: Shield,
+    link: "https://ziontechgroup.com/smart-contract-security-audit"
+  },
+  {
+    name: "AI IT Operations (AIOps) Pro",
+    description: "AI-powered IT operations with intelligent monitoring and automated incident response",
+    price: "$2,800/mo",
+    features: ["Intelligent Monitoring", "Automated Incident Response", "Predictive Maintenance", "Performance Optimization"],
+    category: "AIOps",
+    icon: Brain,
+    link: "https://ziontechgroup.com/ai-ops"
+  },
+  {
+    name: "Healthcare IT Solutions Pro",
+    description: "HIPAA-compliant healthcare IT infrastructure with advanced security and compliance",
+    price: "$3,500/mo",
+    features: ["HIPAA Compliance", "Medical Data Security", "Electronic Health Records", "Telemedicine Platform"],
+    category: "Healthcare IT",
+    icon: Heart,
+    link: "https://ziontechgroup.com/healthcare-it"
+  },
+  {
+    name: "Financial Services IT Pro",
+    description: "SOX-compliant financial IT infrastructure with advanced security and regulatory compliance",
+    price: "$4,200/mo",
+    features: ["SOX Compliance", "Financial Data Security", "Risk Management", "Regulatory Reporting"],
+    category: "Financial IT",
+    icon: BarChart,
+    link: "https://ziontechgroup.com/financial-it"
+  },
+  {
+    name: "Edge Computing Solutions Pro",
+    description: "Low-latency edge infrastructure with distributed computing and real-time processing",
+    price: "$2,500/mo",
+    features: ["Edge Infrastructure", "Low-latency Processing", "Distributed Computing", "Real-time Analytics"],
+    category: "Edge Computing",
+    icon: Cpu,
+    link: "https://ziontechgroup.com/edge-computing"
+  },
+  {
+    name: "5G Network Implementation Pro",
+    description: "High-speed 5G network deployment with advanced optimization and management",
+    price: "$5,500/mo",
+    features: ["5G Deployment", "Network Optimization", "Performance Monitoring", "Capacity Planning"],
+    category: "5G Networks",
+    icon: Globe,
+    link: "https://ziontechgroup.com/5g-implementation"
+  },
+  {
+    name: "IoT Platform Development Pro",
+    description: "Comprehensive IoT solutions with device management and data analytics",
+    price: "$2,200/mo",
+    features: ["Device Management", "Data Analytics", "Security Monitoring", "Scalable Architecture"],
+    category: "IoT Development",
+    icon: Settings,
+    link: "https://ziontechgroup.com/iot-platform"
+  },
+  {
+    name: "Quantum Computing Infrastructure Pro",
+    description: "Quantum computing infrastructure setup and optimization for advanced computing needs",
+    price: "$8,500/mo",
+    features: ["Quantum Infrastructure", "Algorithm Optimization", "Quantum Security", "Research Support"],
+    category: "Quantum Computing",
+    icon: Brain,
+    link: "https://ziontechgroup.com/quantum-computing-infrastructure"
+  },
+  {
+    name: "AR/VR Development Platform Pro",
+    description: "Immersive AR/VR development platform with advanced rendering and interaction capabilities",
+    price: "$3,200/mo",
+    features: ["AR/VR Development", "3D Rendering", "Motion Tracking", "Haptic Feedback"],
+    category: "AR/VR",
+    icon: Eye,
+    link: "https://ziontechgroup.com/ar-vr-platform"
+  },
+  {
+    name: "Smart City Infrastructure Pro",
+    description: "Comprehensive smart city infrastructure with IoT integration and data analytics",
+    price: "$6,800/mo",
+    features: ["Smart Infrastructure", "IoT Integration", "Data Analytics", "Citizen Services"],
+    category: "Smart Cities",
+    icon: Building,
+    link: "https://ziontechgroup.com/smart-city-infrastructure"
+  },
+  {
+    name: "Robotics Integration Services Pro",
+    description: "Advanced robotics integration with AI-powered automation and control systems",
+    price: "$4,500/mo",
+    features: ["Robotics Integration", "AI Automation", "Control Systems", "Safety Protocols"],
+    category: "Robotics",
+    icon: Settings,
+    link: "https://ziontechgroup.com/robotics-integration"
+  },
+  {
+    name: "Digital Twin Platform Pro",
+    description: "Digital twin technology for real-time monitoring and simulation of physical assets",
+    price: "$3,800/mo",
+    features: ["Digital Twin Creation", "Real-time Monitoring", "Simulation Engine", "Predictive Analytics"],
+    category: "Digital Twin",
+    icon: Eye,
+    link: "https://ziontechgroup.com/digital-twin-platform"
   }
 ];
 
@@ -996,14 +1796,20 @@ const HomePage: React.FC = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 overflow-hidden quantum-field-ultra">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         
+        {/* Quantum Particles */}
+        <div className="absolute top-10 left-10 w-2 h-2 bg-cyan-400 rounded-full quantum-particle" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute top-20 right-20 w-1 h-1 bg-purple-400 rounded-full quantum-particle" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-pink-400 rounded-full quantum-particle" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-10 right-1/3 w-1 h-1 bg-blue-400 rounded-full quantum-particle" style={{ animationDelay: '3s' }}></div>
+        
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 cyber-text-ultra neon-pulse">
             AI-Powered Enterprise Solutions
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto fade-in-up">
             Transform your business with cutting-edge AI technology. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains.
           </p>
           
@@ -1051,17 +1857,17 @@ const HomePage: React.FC = () => {
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-white mb-12 text-center">Micro SAAS Solutions</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {microSAASServices.slice(0, 12).map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group cursor-pointer" onClick={() => service.link && window.open(service.link, '_blank')}>
+              {microSAASServices.map((service, index) => (
+                <div key={index} className="futuristic-card-ultra p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}>
                   <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {service.icon ? <service.icon className="w-6 h-6 text-white" /> : <div className="text-2xl">🤖</div>}
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
+                      <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1071,7 +1877,7 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
-                      <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                      <button className="neon-button-ultra text-sm">
                         Learn More →
                       </button>
                     </div>
@@ -1079,29 +1885,30 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8">
-              <Link to="/micro-saas" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
-                View All Micro SAAS Solutions
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
           </div>
 
           {/* AI Services */}
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-white mb-12 text-center">Enterprise AI Solutions</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {aiServices.slice(0, 12).map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-purple-400/20 rounded-xl p-6 hover:border-purple-400/40 transition-all duration-300 group cursor-pointer" onClick={() => service.link && window.open(service.link, '_blank')}>
-                  <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-6 h-6 text-white" />
+              {aiServices.map((service, index) => (
+                <div key={index} className={`holographic-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer ${service.enterprise ? 'ring-2 ring-purple-400/30' : ''}`} onClick={() => window.open(service.link, '_blank')}>
+                  {service.enterprise && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        Enterprise
+                      </span>
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.name}</h3>
+                  )}
+                  <div className="text-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-purple-400 via-pink-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-purple-400/25">
+                      <service.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">{service.name}</h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1111,7 +1918,7 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-2xl font-bold text-purple-400 mb-2">{service.price}</div>
-                      <button className="text-purple-400 hover:text-purple-300 font-medium text-sm transition-colors">
+                      <button className="neon-button-enhanced text-sm">
                         Learn More →
                       </button>
                     </div>
@@ -1119,29 +1926,23 @@ const HomePage: React.FC = () => {
                 </div>
               ))}
             </div>
-            <div className="text-center mt-8">
-              <Link to="/ai-services" className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold py-3 px-8 rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
-                View All AI Solutions
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
           </div>
 
           {/* IT Services */}
           <div className="mb-24">
             <h3 className="text-3xl font-bold text-white mb-12 text-center">IT Infrastructure Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {itServices.slice(0, 12).map((service, index) => (
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:border-green-400/40 transition-all duration-300 group cursor-pointer" onClick={() => service.link && window.open(service.link, '_blank')}>
+              {itServices.map((service, index) => (
+                <div key={index} className="cyber-grid-advanced p-6 hover:scale-105 transition-all duration-300 group cursor-pointer" onClick={() => window.open(service.link, '_blank')}>
                   <div className="text-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <service.icon className="w-6 h-6 text-white" />
+                    <div className="w-16 h-16 bg-gradient-to-r from-green-400 via-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-green-400/25">
+                      <service.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
                     <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
                     
                     <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {feature}
@@ -1151,21 +1952,165 @@ const HomePage: React.FC = () => {
                     
                     <div className="text-center">
                       <div className="text-2xl font-bold text-green-400 mb-2">{service.price}</div>
-                      <button className="text-green-400 hover:text-green-300 font-medium text-sm transition-colors">
+                      <button className="neon-button text-sm">
                         Learn More →
                       </button>
                     </div>
                   </div>
                 </div>
               ))}
-            </div>
-            <div className="text-center mt-8">
-              <Link to="/it-services" className="bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold py-3 px-8 rounded-xl hover:from-green-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center">
-                View All IT Services
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
-            </div>
+
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {microSAASServices.map((service, index) => (
+              <div
+                key={index}
+                className="cyber-card p-6 hover:scale-105 transition-all duration-300 relative group cursor-pointer"
+                onClick={() => window.open(service.link, '_blank')}
+              >
+                {service.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-cyan-400 to-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center">
+                      <Star className="w-3 h-3 mr-1" />
+                      Popular
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">{service.name}</h3>
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{service.description}</p>
+                  
+                  <div className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
+                    <button className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                      Learn More →
+                    </button>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* AI Services Section */}
+      <section className="py-16 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Enterprise AI Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Advanced AI solutions for enterprise clients. Transform your industry with cutting-edge artificial intelligence.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {aiServices.map((service, index) => (
+              <div
+                key={index}
+                className={`cyber-card p-8 hover:scale-105 transition-all duration-300 relative group cursor-pointer ${
+                  service.enterprise ? 'ring-2 ring-purple-400/30' : ''
+                }`}
+                onClick={() => window.open(service.link, '_blank')}
+              >
+                {service.enterprise && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                      Enterprise
+                    </span>
+                  </div>
+                )}
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors">{service.name}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
+                  
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-purple-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white mb-4">{service.price}</div>
+                    <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all group-hover:shadow-lg group-hover:shadow-purple-500/25">
+                      Get Started
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* IT Services Section */}
+      <section className="py-16 bg-white/5">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              IT Infrastructure Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive IT solutions to build, secure, and scale your technology infrastructure.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {itServices.map((service, index) => (
+              <div 
+                key={index} 
+                className="cyber-card p-6 hover:scale-105 transition-all duration-300 group cursor-pointer"
+                onClick={() => window.open(service.link, '_blank')}
+              >
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-green-400 transition-colors">{service.name}</h3>
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">{service.description}</p>
+                  
+                  <div className="space-y-2 mb-4">
+                    {service.features.slice(0, 3).map((feature, featureIndex) => (
+                      <div key={featureIndex} className="flex items-center text-xs text-gray-300">
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                        {feature}
+                      </div>
+                    ))}
+                  </div>
+                  
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-white mb-2">{service.price}</div>
+                    <div className="text-green-400 hover:text-green-300 font-semibold text-sm transition-colors group-hover:underline">
+                      Learn More →
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <section className="py-24 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
@@ -1181,7 +2126,7 @@ const HomePage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
+              <div key={index} className="holographic-card p-8 hover:scale-105 transition-all duration-300 group">
                 <div className="flex items-center mb-4">
                   <div className="flex text-yellow-400">
                     {[...Array(5)].map((_, i) => (
@@ -1189,15 +2134,15 @@ const HomePage: React.FC = () => {
                     ))}
                   </div>
                 </div>
-                <p className="text-gray-300 mb-6 italic">
+                <p className="text-gray-300 mb-6 italic leading-relaxed">
                   "{testimonial.content}"
                 </p>
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center text-white font-bold mr-4 group-hover:scale-110 transition-transform duration-300">
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <h4 className="text-white font-semibold group-hover:text-cyan-400 transition-colors">{testimonial.name}</h4>
                     <p className="text-gray-400 text-sm">{testimonial.role}</p>
                     <p className="text-gray-500 text-xs">{testimonial.company}</p>
                   </div>
@@ -1213,14 +2158,14 @@ const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="text-center group cyber-card p-6 hover:scale-105 transition-all duration-300">
                 <div className="relative mb-4">
-                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-400/25">
                     <stat.icon className="w-8 h-8 text-white" />
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
                 </div>
-                <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-2 cyber-text-enhanced">{stat.number}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </div>
             ))}
@@ -1265,7 +2210,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
           
-          <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-4 px-8 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105">
+          <button className="neon-button-ultra text-lg py-4 px-8">
             Get Free Consultation
           </button>
         </div>

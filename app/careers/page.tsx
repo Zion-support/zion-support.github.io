@@ -1,15 +1,14 @@
 'use client';
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Briefcase, 
-  MapPin, 
-  Clock, 
-  Users, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Phone, 
+import {
+  Briefcase,
+  MapPin,
+  Clock,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
   Mail,
   Filter,
   Search,
@@ -248,7 +247,6 @@ export default function CareersPage() {
     const locationMatch = selectedLocation === 'all' || position.location === selectedLocation;
     const typeMatch = selectedType === 'all' || position.type === selectedType;
     return departmentMatch && locationMatch && typeMatch;
-  });
 
   const benefits = [
     {
@@ -337,7 +335,7 @@ export default function CareersPage() {
               Join Our Team
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Build the future of AI with us. Join a team of passionate innovators 
+              Build the future of AI with us. Join a team of passionate innovators
               working on cutting-edge technology that transforms businesses worldwide.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -458,7 +456,7 @@ export default function CareersPage() {
                       <div className="text-gray-400 text-sm">{position.experience}</div>
                     </div>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <h4 className="text-sm font-semibold text-cyan-400 mb-2">Key Requirements:</h4>
@@ -482,7 +480,7 @@ export default function CareersPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
                       to={`/careers/${position.id}`}
@@ -559,7 +557,7 @@ export default function CareersPage() {
             Don't See the Right Role?
           </h2>
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            We're always looking for talented individuals. Send us your resume and we'll 
+            We're always looking for talented individuals. Send us your resume and we'll
             reach out when we have a position that matches your skills.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

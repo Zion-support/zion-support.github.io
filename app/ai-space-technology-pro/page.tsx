@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Clock, Users, Award, Target, Shield, Zap, Brain, Cloud, Code, BarChart, TrendingUp, DollarSign, Calendar, MessageSquare, ExternalLink, Rocket, Satellite, Orbit, Telescope, Planet, Star as StarIcon, Sun, Moon, Comet, Meteor, Galaxy, Universe, Activity, AlertTriangle, CheckSquare, Play, Pause, RotateCcw, Settings, Download, Upload, Eye, Search, Filter, SortAsc, SortDesc, Maximize, Minimize, X, Plus, Minus, RefreshCw, Save, Edit, Trash2, Copy, Share, Bookmark, Flag, ThumbsUp, ThumbsDown, MessageCircle, Send, Reply, Forward, Archive, Tag, Link, ExternalLink as ExternalLinkIcon, Info, HelpCircle, AlertCircle, CheckCircle2, XCircle, Clock as ClockIcon, Calendar as CalendarIcon, User, Users as UsersIcon, Building, Home, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Globe, Lock, Unlock, Key, Shield as ShieldIcon, Zap as ZapIcon, Brain as BrainIcon, Cloud as CloudIcon, Code as CodeIcon, BarChart as BarChartIcon, TrendingUp as TrendingUpIcon, DollarSign as DollarSignIcon, Award as AwardIcon, Target as TargetIcon, Star as StarIcon2, CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon, Phone as PhoneIcon2, Mail as MailIcon2, MapPin as MapPinIcon2, Clock as ClockIcon2, Users as UsersIcon2, Award as AwardIcon2, Target as TargetIcon2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon2, Cloud as CloudIcon2, Code as CodeIcon2, BarChart as BarChartIcon2, TrendingUp as TrendingUpIcon2, DollarSign as DollarSignIcon2, Calendar as CalendarIcon2, MessageSquare as MessageSquareIcon2, ExternalLink as ExternalLinkIcon2 } from 'lucide-react';
+import { CheckCircle, Star, DollarSign, Calendar, MessageSquare, Rocket, Satellite, Orbit, Telescope, Star, Universe, Play, Save, Calendar, Building, DollarSign, Star, CheckCircle, DollarSign, Calendar, MessageSquare } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
@@ -18,7 +17,7 @@ export default function AISpaceTechnologyProPage() {
         'Orbital optimization',
         'Real-time monitoring'
       ],
-      image: '/images/ai-space-technology/satellite-operations.jpg'
+      image: '/images/ai-space-technology/satellite-operations.webp'
     },
     {
       title: 'Space Mission Planning',
@@ -30,7 +29,7 @@ export default function AISpaceTechnologyProPage() {
         'Risk assessment',
         'Mission success prediction'
       ],
-      image: '/images/ai-space-technology/mission-planning.jpg'
+      image: '/images/ai-space-technology/mission-planning.webp'
     },
     {
       title: 'Astronomical Data Analysis',
@@ -42,7 +41,7 @@ export default function AISpaceTechnologyProPage() {
         'Discovery algorithms',
         'Real-time analysis'
       ],
-      image: '/images/ai-space-technology/astronomical-data.jpg'
+      image: '/images/ai-space-technology/astronomical-data.webp'
     },
     {
       title: 'Orbital Mechanics Optimization',
@@ -54,7 +53,7 @@ export default function AISpaceTechnologyProPage() {
         'Collision avoidance',
         'Fuel efficiency optimization'
       ],
-      image: '/images/ai-space-technology/orbital-mechanics.jpg'
+      image: '/images/ai-space-technology/orbital-mechanics.webp'
     }
   ];
 
@@ -180,7 +179,7 @@ export default function AISpaceTechnologyProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
@@ -190,19 +189,19 @@ export default function AISpaceTechnologyProPage() {
               <Rocket className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">AI Space Technology Pro</span>
             </div>
-            
+
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               AI-Powered Space Technology
               <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Exploring the Universe
               </span>
             </h1>
-            
+
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Advanced space exploration and satellite management with AI-powered mission planning, 
+              Advanced space exploration and satellite management with AI-powered mission planning,
               orbital mechanics optimization, and astronomical data analysis. Reach for the stars.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#features"
@@ -254,7 +253,7 @@ export default function AISpaceTechnologyProPage() {
               Cutting-edge AI technology designed specifically for space exploration and satellite operations
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300">
@@ -267,7 +266,7 @@ export default function AISpaceTechnologyProPage() {
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-3">
@@ -293,7 +292,7 @@ export default function AISpaceTechnologyProPage() {
               End-to-end AI-powered solutions for space exploration and satellite operations
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -323,23 +322,23 @@ export default function AISpaceTechnologyProPage() {
               Flexible pricing options for space agencies and aerospace companies
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-2xl p-8">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-white mb-2">AI Space Technology Pro</h3>
                 <p className="text-gray-300 mb-6">Complete AI-powered space technology platform</p>
-                
+
                 <div className="flex items-baseline justify-center mb-6">
                   <span className="text-5xl font-bold text-white">${pricing.monthly.toLocaleString()}</span>
                   <span className="text-gray-400 ml-2">/month</span>
                 </div>
-                
+
                 <div className="text-green-400 text-sm mb-8">
                   Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
@@ -352,7 +351,7 @@ export default function AISpaceTechnologyProPage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">Add-ons:</h4>
                   <ul className="space-y-3">
@@ -368,7 +367,7 @@ export default function AISpaceTechnologyProPage() {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <a
                   href="/contact"
@@ -394,7 +393,7 @@ export default function AISpaceTechnologyProPage() {
               See how our AI technology is transforming space exploration
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -429,7 +428,7 @@ export default function AISpaceTechnologyProPage() {
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Join leading space agencies using AI to advance space exploration and satellite operations.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="/contact"
@@ -446,7 +445,7 @@ export default function AISpaceTechnologyProPage() {
               Schedule Demo
             </a>
           </div>
-          
+
           <div className="text-gray-200 text-sm">
             <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
             <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>

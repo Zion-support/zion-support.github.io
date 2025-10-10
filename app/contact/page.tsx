@@ -1,38 +1,37 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import SEOOptimizer from '../components/SEOOptimizer';
 import EnhancedContactForm from '../../src/components/EnhancedContactForm';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  CheckCircle, 
-  MessageSquare, 
-  Calendar, 
-  User, 
-  Building, 
-  Globe, 
-  Shield, 
-  Brain, 
-  Zap, 
-  Cloud, 
-  Database, 
-  Code, 
-  BarChart, 
-  Users, 
-  Award, 
-  Target, 
-  Star, 
-  TrendingUp, 
-  ArrowRight, 
-  Sparkles, 
-  Cpu, 
-  Database as DatabaseIcon, 
-  Smartphone, 
-  Lock 
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  CheckCircle,
+  MessageSquare,
+  Calendar,
+  User,
+  Building,
+  Globe,
+  Shield,
+  Brain,
+  Zap,
+  Cloud,
+  Database,
+  Code,
+  BarChart,
+  Users,
+  Award,
+  Target,
+  Star,
+  TrendingUp,
+  ArrowRight,
+  Sparkles,
+  Cpu,
+  Database as DatabaseIcon,
+  Smartphone,
+  Lock
 } from 'lucide-react';
 
 const ContactPage: React.FC = () => {
@@ -116,12 +115,12 @@ const ContactPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      <SEOOptimizer 
+      <SEOOptimizer
         title="Contact Zion Tech Group - AI & IT Solutions"
         description="Get in touch with our AI and IT experts. Contact us for consultations, project inquiries, and enterprise solutions. Call (302) 464-0950 or email kleber@ziontechgroup.com"
         keywords="contact us, AI consulting, IT services, enterprise solutions, consultation"
       />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
@@ -131,14 +130,14 @@ const ContactPage: React.FC = () => {
               <Sparkles className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">Get In Touch</span>
             </div>
-            
+
             <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
               Let's Build the
               <span className="block holographic-text cyber-text">Future Together</span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-              Ready to transform your business with AI and cutting-edge technology? 
+              Ready to transform your business with AI and cutting-edge technology?
               Our experts are here to help you achieve your goals.
             </p>
 
@@ -175,7 +174,7 @@ const ContactPage: React.FC = () => {
                       className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
                     >
                       <ArrowRight className="w-4 h-4 mr-1" />
-                      {method.action.startsWith('tel:') ? 'Call Now' : 
+                      {method.action.startsWith('tel:') ? 'Call Now' :
                        method.action.startsWith('mailto:') ? 'Send Email' : 'View on Map'}
                     </a>
                   )}

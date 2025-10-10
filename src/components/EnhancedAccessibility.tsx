@@ -5,9 +5,9 @@ interface EnhancedAccessibilityProps {
   children?: React.ReactNode;
 }
 
-export default function EnhancedAccessibility({ 
-  className = '', 
-  children 
+export default function EnhancedAccessibility({
+  className = '',
+  children
 }: EnhancedAccessibilityProps) {
   return (
     <div className={`enhancedaccessibility ${className}`}>

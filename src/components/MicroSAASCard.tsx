@@ -5,9 +5,9 @@ interface MicroSAASCardProps {
   children?: React.ReactNode;
 }
 
-export default function MicroSAASCard({ 
-  className = '', 
-  children 
+export default function MicroSAASCard({
+  className = '',
+  children
 }: MicroSAASCardProps) {
   return (
     <div className={`microsaascard ${className}`}>

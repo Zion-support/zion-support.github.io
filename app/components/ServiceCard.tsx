@@ -30,7 +30,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
           </span>
         </div>
       )}
-      
+
       <div className="text-center space-y-4">
         <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto">
           <Icon className="w-8 h-8 text-cyan-400" />
@@ -39,7 +39,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
         <p className="text-gray-300">{description}</p>
         {price && <div className="text-cyan-400 font-bold text-xl">{price}</div>}
       </div>
-      
+
       <div className="space-y-3">
         <h4 className="text-white font-semibold">Key Features:</h4>
         <ul className="space-y-2">
@@ -51,7 +51,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
           ))}
         </ul>
       </div>
-      
+
       <Link
         to={href}
         className="w-full cyber-button inline-flex items-center justify-center px-6 py-3 text-center font-semibold rounded-lg transition-all duration-300 group"
@@ -61,7 +61,6 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
       </Link>
     </div>
   );
-});
 
 ServiceCard.displayName = 'ServiceCard';
 export default ServiceCard;

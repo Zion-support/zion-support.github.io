@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { 
-  Home, 
-  Lightbulb, 
-  Thermometer, 
-  Shield, 
-  Camera, 
-  Speaker, 
-  Wifi, 
-  Battery, 
-  Settings, 
-  Zap, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Clock, 
+import {
+  Home,
+  Lightbulb,
+  Thermometer,
+  Shield,
+  Camera,
+  Speaker,
+  Wifi,
+  Battery,
+  Settings,
+  Zap,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
   Globe,
   Phone,
   Mail,
@@ -706,7 +705,6 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
     thisWeek: 312.8,
     thisMonth: 1284.5,
     savings: 15.3
-  });
 
   const features = [
     {
@@ -798,32 +796,32 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
   ];
 
   const toggleDevice = (deviceId: number) => {
-    setDevices(devices.map(device => 
-      device.id === deviceId 
+    setDevices(devices.map(device =>
+      device.id === deviceId
         ? { ...device, status: device.status === 'on' ? 'off' : 'on' }
         : device
     ));
   };
 
   const adjustBrightness = (deviceId: number, brightness: number) => {
-    setDevices(devices.map(device => 
-      device.id === deviceId 
+    setDevices(devices.map(device =>
+      device.id === deviceId
         ? { ...device, brightness }
         : device
     ));
   };
 
   const adjustTemperature = (deviceId: number, temperature: number) => {
-    setDevices(devices.map(device => 
-      device.id === deviceId 
+    setDevices(devices.map(device =>
+      device.id === deviceId
         ? { ...device, temperature }
         : device
     ));
   };
 
   const activateScene = (sceneId: number) => {
-    setScenes(scenes.map(scene => 
-      scene.id === sceneId 
+    setScenes(scenes.map(scene =>
+      scene.id === sceneId
         ? { ...scene, active: !scene.active }
         : scene
     ));
@@ -841,24 +839,24 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
       {/* Hero Section */}
       <div className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center bg-green-500/10 border border-green-400/20 rounded-full px-6 py-3 mb-8">
               <Home className="w-5 h-5 text-green-400 mr-2" />
               <span className="text-green-300 font-medium">AI Smart Home Controller Pro</span>
             </div>
-            
+
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent neon-text">
               Intelligent Home Automation
             </h1>
-            
+
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
               Control Your Home with AI-Powered Intelligence
             </p>
-            
+
             <p className="text-lg text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your home into a smart, energy-efficient, and secure environment. 
+              Transform your home into a smart, energy-efficient, and secure environment.
               Control everything with voice commands, automate routines, and optimize energy usage with advanced AI.
             </p>
 
@@ -868,7 +866,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-blue-600 rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
               </button>
-              
+
               <button className="group inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-xl hover:bg-green-400 hover:text-slate-900 transition-all duration-300 transform hover:scale-105">
                 <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Watch Demo
@@ -935,9 +933,9 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                           }`} />
                         </button>
                       </div>
-                      
+
                       <p className="text-gray-400 text-sm mb-3">{device.room}</p>
-                      
+
                       {device.type === 'light' && (
                         <div className="space-y-2">
                           <label className="text-gray-300 text-sm">Brightness: {device.brightness}%</label>
@@ -951,7 +949,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                           />
                         </div>
                       )}
-                      
+
                       {device.type === 'thermostat' && (
                         <div className="space-y-2">
                           <label className="text-gray-300 text-sm">Temperature: {device.temperature}°F</label>
@@ -965,7 +963,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                           />
                         </div>
                       )}
-                      
+
                       {device.type === 'speaker' && (
                         <div className="space-y-2">
                           <label className="text-gray-300 text-sm">Volume: {device.volume}%</label>
@@ -974,7 +972,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                             min="0"
                             max="100"
                             value={device.volume}
-                            onChange={(e) => setDevices(devices.map(d => 
+                            onChange={(e) => setDevices(devices.map(d =>
                               d.id === device.id ? { ...d, volume: parseInt(e.target.value) } : d
                             ))}
                             className="w-full"
@@ -1000,8 +998,8 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                         key={scene.id}
                         onClick={() => activateScene(scene.id)}
                         className={`w-full p-3 rounded-lg border transition-all ${
-                          scene.active 
-                            ? 'border-green-400 bg-green-400/10' 
+                          scene.active
+                            ? 'border-green-400 bg-green-400/10'
                             : 'border-white/20 hover:border-green-400/50'
                         }`}
                       >
@@ -1097,7 +1095,7 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -1117,8 +1115,8 @@ export default function SmartHomeController({ className = '' }: SmartHomeControl
                 </ul>
 
                 <button className={`w-full py-4 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                  plan.popular 
-                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700 transform hover:scale-105' 
+                  plan.popular
+                    ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700 transform hover:scale-105'
                     : 'bg-white/10 text-white hover:bg-white/20'
                 }`}>
                   {plan.popular ? 'Get Started' : 'Choose Plan'}

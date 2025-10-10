@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Mail, Target, BarChart, Zap, CheckCircle, ArrowRight, Phone, Mail as MailIcon, Users, TrendingUp, Shield } from 'lucide-react';
+import { Mail, Target, BarChart, Zap, ArrowRight, Mail, Users, TrendingUp, Shield } from 'lucide-react';
 import Link from 'next/link';
 
 const EmailOptimizerPage: React.FC = () => {
@@ -65,7 +65,7 @@ const EmailOptimizerPage: React.FC = () => {
             Email <span className="text-cyan-400">Optimizer</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Transform your email marketing with AI-powered optimization. Increase open rates, 
+            Transform your email marketing with AI-powered optimization. Increase open rates,
             boost engagement, and maximize ROI with our intelligent email optimization platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

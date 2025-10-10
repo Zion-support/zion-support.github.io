@@ -16,7 +16,6 @@ export const SecurityEnhancer: React.FC = () => {
     xssAttempts: 0,
     csrfAttempts: 0,
     suspiciousActivity: 0,
-  });
 
   const [isSecure, setIsSecure] = useState(true);
   const [securityWarnings, setSecurityWarnings] = useState<string[]>([]);
@@ -44,7 +43,7 @@ export const SecurityEnhancer: React.FC = () => {
           setMetrics(prev => ({ ...prev, xssAttempts: prev.xssAttempts + 1 }));
           logger.warn('Potential XSS attempt detected', { src: script.src });
         }
-      });
+
     };
 
     checkForXSS();
@@ -55,13 +54,12 @@ export const SecurityEnhancer: React.FC = () => {
       form.addEventListener('submit', (e) => {
         const formData = new FormData(form as HTMLFormElement);
         const token = formData.get('csrf_token');
-        
+
         if (!token) {
           setMetrics(prev => ({ ...prev, csrfAttempts: prev.csrfAttempts + 1 }));
           logger.warn('Potential CSRF attempt detected', { form: form.id });
         }
-      });
-    });
+
 
   }, []);
 
@@ -80,8 +78,8 @@ export const SecurityEnhancer: React.FC = () => {
       const urlObj = new URL(url);
       const allowedProtocols = ['http:', 'https:'];
       const allowedHosts = ['ziontechgroup.com', 'www.ziontechgroup.com'];
-      
-      return allowedProtocols.includes(urlObj.protocol) && 
+
+      return allowedProtocols.includes(urlObj.protocol) &&
              allowedHosts.includes(urlObj.hostname);
     } catch {
       return false;
@@ -109,13 +107,13 @@ export const SecurityEnhancer: React.FC = () => {
         suspiciousPatterns.forEach(pattern => {
           if (pattern.test(content)) {
             setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
-            logger.warn('Suspicious code pattern detected', { 
+            logger.warn('Suspicious code pattern detected', {
               pattern: pattern.toString(),
               script: script.id || 'inline'
-            });
+
           }
-        });
-      });
+
+
     };
 
     checkSuspiciousCode();
@@ -124,13 +122,13 @@ export const SecurityEnhancer: React.FC = () => {
     const originalFetch = window.fetch;
     window.fetch = async (...args) => {
       const url = args[0] as string;
-      
+
       if (typeof url === 'string' && !validateURL(url)) {
         setMetrics(prev => ({ ...prev, suspiciousActivity: prev.suspiciousActivity + 1 }));
         logger.warn('Suspicious network request blocked', { url });
         throw new Error('Suspicious network request blocked');
       }
-      
+
       return originalFetch.apply(window, args);
     };
 
@@ -163,7 +161,7 @@ export const SecurityEnhancer: React.FC = () => {
     }
 
     setSecurityWarnings(warnings);
-    
+
     if (warnings.length > 0) {
       logger.warn('Security warnings detected', { warnings });
     }
@@ -173,15 +171,15 @@ export const SecurityEnhancer: React.FC = () => {
   const rateLimit = useCallback((key: string, limit: number, windowMs: number) => {
     const now = Date.now();
     const windowStart = now - windowMs;
-    
+
     const requests = JSON.parse(localStorage.getItem(`rate_limit_${key}`) || '[]')
       .filter((timestamp: number) => timestamp > windowStart);
-    
+
     if (requests.length >= limit) {
       logger.warn('Rate limit exceeded', { key, limit, windowMs });
       return false;
     }
-    
+
     requests.push(now);
     localStorage.setItem(`rate_limit_${key}`, JSON.stringify(requests));
     return true;
@@ -204,7 +202,7 @@ export const SecurityEnhancer: React.FC = () => {
   // Security event handlers
   const handleSecurityEvent = useCallback((event: string, data: any) => {
     logger.info('Security event', { event, data });
-    
+
     // Rate limit security events
     if (!rateLimit('security_events', 10, 60000)) {
       return;
@@ -216,7 +214,7 @@ export const SecurityEnhancer: React.FC = () => {
         event_category: 'Security',
         event_label: event,
         custom_map: data,
-      });
+
     }
   }, [rateLimit]);
 

@@ -7,10 +7,10 @@ interface LoadingProps {
   fullScreen?: boolean;
 }
 
-const Loading: React.FC<LoadingProps> = ({ 
-  size = 'md', 
-  text = 'Loading...', 
-  fullScreen = false 
+const Loading: React.FC<LoadingProps> = ({
+  size = 'md',
+  text = 'Loading...',
+  fullScreen = false
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',

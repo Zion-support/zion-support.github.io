@@ -1,11 +1,11 @@
 'use client';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
+import {
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
   Users,
   TrendingUp,
   BarChart,
@@ -101,7 +101,7 @@ export default function CaseStudiesPage() {
         '60% cost savings in diagnostic processes',
         '40% improvement in patient satisfaction'
       ],
-      image: '/images/case-studies/healthcare-ai.jpg',
+      image: '/images/case-studies/healthcare-ai.webp',
       duration: '6 months',
       teamSize: '12 experts',
       technologies: ['Machine Learning', 'Computer Vision', 'Cloud Computing', 'API Integration'],
@@ -132,7 +132,7 @@ export default function CaseStudiesPage() {
         'Real-time transaction monitoring',
         '50% reduction in fraud losses'
       ],
-      image: '/images/case-studies/finance-fraud.jpg',
+      image: '/images/case-studies/finance-fraud.webp',
       duration: '4 months',
       teamSize: '8 experts',
       technologies: ['Machine Learning', 'Real-time Analytics', 'Blockchain', 'API Integration'],
@@ -163,7 +163,7 @@ export default function CaseStudiesPage() {
         '99.5% quality control accuracy',
         '40% reduction in downtime'
       ],
-      image: '/images/case-studies/manufacturing-iot.jpg',
+      image: '/images/case-studies/manufacturing-iot.webp',
       duration: '8 months',
       teamSize: '15 experts',
       technologies: ['IoT', 'AI Analytics', 'Cloud Computing', 'Automation'],
@@ -194,7 +194,7 @@ export default function CaseStudiesPage() {
         '60% reduction in support tickets',
         '25% increase in average order value'
       ],
-      image: '/images/case-studies/retail-ai.jpg',
+      image: '/images/case-studies/retail-ai.webp',
       duration: '5 months',
       teamSize: '10 experts',
       technologies: ['Machine Learning', 'NLP', 'Recommendation Engine', 'Chatbot'],
@@ -225,7 +225,7 @@ export default function CaseStudiesPage() {
         '85% student satisfaction score',
         '60% reduction in administrative workload'
       ],
-      image: '/images/case-studies/education-ai.jpg',
+      image: '/images/case-studies/education-ai.webp',
       duration: '7 months',
       teamSize: '14 experts',
       technologies: ['Machine Learning', 'NLP', 'Adaptive Learning', 'Analytics'],
@@ -256,7 +256,7 @@ export default function CaseStudiesPage() {
         '5x faster deployment cycles',
         'Unlimited scalability'
       ],
-      image: '/images/case-studies/cloud-migration.jpg',
+      image: '/images/case-studies/cloud-migration.webp',
       duration: '6 months',
       teamSize: '12 experts',
       technologies: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
@@ -279,7 +279,6 @@ export default function CaseStudiesPage() {
     const industryMatch = selectedIndustry === 'all' || study.industry === selectedIndustry;
     const serviceMatch = selectedService === 'all' || study.service === selectedService;
     return industryMatch && serviceMatch;
-  });
 
   const getIndustryIcon = (industry: string) => {
     const icons = {
@@ -316,7 +315,7 @@ export default function CaseStudiesPage() {
               Success Stories
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Real results from real clients. Discover how we've helped businesses across 
+              Real results from real clients. Discover how we've helped businesses across
               industries achieve remarkable transformations with AI and technology.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -409,12 +408,12 @@ export default function CaseStudiesPage() {
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="p-8">
                     <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
                       {study.title}
                     </h3>
-                    
+
                     <div className="flex items-center space-x-4 mb-4">
                       <div className="flex items-center space-x-2">
                         <Building className="w-4 h-4 text-gray-400" />

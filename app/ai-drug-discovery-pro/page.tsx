@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { CheckCircle, Star, ArrowRight, Phone, Mail, MapPin, Clock, Users, Award, Target, Shield, Zap, Brain, Cloud, Code, BarChart, TrendingUp, DollarSign, Calendar, MessageSquare, ExternalLink, Beaker, Microscope, FlaskConical, TestTube, Atom, Dna, Stethoscope, Heart, Activity, AlertTriangle, CheckSquare, Play, Pause, RotateCcw, Settings, Download, Upload, Eye, Search, Filter, SortAsc, SortDesc, Maximize, Minimize, X, Plus, Minus, RefreshCw, Save, Edit, Trash2, Copy, Share, Bookmark, Flag, ThumbsUp, ThumbsDown, MessageCircle, Send, Reply, Forward, Archive, Tag, Link, ExternalLink as ExternalLinkIcon, Info, HelpCircle, AlertCircle, CheckCircle2, XCircle, Clock as ClockIcon, Calendar as CalendarIcon, User, Users as UsersIcon, Building, Home, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Globe, Lock, Unlock, Key, Shield as ShieldIcon, Zap as ZapIcon, Brain as BrainIcon, Cloud as CloudIcon, Code as CodeIcon, BarChart as BarChartIcon, TrendingUp as TrendingUpIcon, DollarSign as DollarSignIcon, Award as AwardIcon, Target as TargetIcon, Star as StarIcon, CheckCircle as CheckCircleIcon, ArrowRight as ArrowRightIcon, Phone as PhoneIcon2, Mail as MailIcon2, MapPin as MapPinIcon2, Clock as ClockIcon2, Users as UsersIcon2, Award as AwardIcon2, Target as TargetIcon2, Shield as ShieldIcon2, Zap as ZapIcon2, Brain as BrainIcon2, Cloud as CloudIcon2, Code as CodeIcon2, BarChart as BarChartIcon2, TrendingUp as TrendingUpIcon2, DollarSign as DollarSignIcon2, Calendar as CalendarIcon2, MessageSquare as MessageSquareIcon2, ExternalLink as ExternalLinkIcon2 } from 'lucide-react';
+import { CheckCircle, Star, Clock, Target, DollarSign, Calendar, MessageSquare, Beaker, Microscope, TestTube, Atom, Play, Search, Save, Clock, Calendar, Building, DollarSign, Target, Star, CheckCircle, Clock, Target, DollarSign, Calendar, MessageSquare } from 'lucide-react';
 import Navigation from '../../components/Navigation';
 import Footer from '../../components/Footer';
 
@@ -18,7 +17,7 @@ export default function AIDrugDiscoveryProPage() {
         'Real-time molecular visualization',
         'Quantum-level precision modeling'
       ],
-      image: '/images/ai-drug-discovery/molecular-modeling.jpg'
+      image: '/images/ai-drug-discovery/molecular-modeling.webp'
     },
     {
       title: 'Drug Interaction Analysis',
@@ -30,7 +29,7 @@ export default function AIDrugDiscoveryProPage() {
         'Real-time safety monitoring',
         'Comprehensive drug database'
       ],
-      image: '/images/ai-drug-discovery/drug-interactions.jpg'
+      image: '/images/ai-drug-discovery/drug-interactions.webp'
     },
     {
       title: 'Clinical Trial Optimization',
@@ -42,7 +41,7 @@ export default function AIDrugDiscoveryProPage() {
         'Optimal patient selection',
         'Predictive outcome modeling'
       ],
-      image: '/images/ai-drug-discovery/clinical-trials.jpg'
+      image: '/images/ai-drug-discovery/clinical-trials.webp'
     },
     {
       title: 'Patent Research & Analysis',
@@ -54,7 +53,7 @@ export default function AIDrugDiscoveryProPage() {
         'Patent landscape analysis',
         'Freedom to operate analysis'
       ],
-      image: '/images/ai-drug-discovery/patent-research.jpg'
+      image: '/images/ai-drug-discovery/patent-research.webp'
     }
   ];
 
@@ -180,7 +179,7 @@ export default function AIDrugDiscoveryProPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-600/20"></div>
@@ -190,19 +189,19 @@ export default function AIDrugDiscoveryProPage() {
               <Beaker className="w-4 h-4 text-cyan-400" />
               <span className="text-cyan-400 text-sm font-medium">AI Drug Discovery Pro</span>
             </div>
-            
+
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6">
               AI-Powered Drug Discovery
               <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Revolutionizing Medicine
               </span>
             </h1>
-            
+
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Accelerate pharmaceutical research with AI-powered molecular analysis, drug interaction prediction, 
+              Accelerate pharmaceutical research with AI-powered molecular analysis, drug interaction prediction,
               and clinical trial optimization. Discover new treatments 10x faster.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
                 href="#features"
@@ -254,7 +253,7 @@ export default function AIDrugDiscoveryProPage() {
               Cutting-edge AI technology designed specifically for pharmaceutical research and drug development
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
             {features.map((feature, index) => (
               <div key={index} className="bg-slate-800/50 rounded-2xl p-8 hover:bg-slate-700/50 transition-all duration-300">
@@ -267,7 +266,7 @@ export default function AIDrugDiscoveryProPage() {
                     <p className="text-gray-300">{feature.description}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3">
                   {feature.benefits.map((benefit, benefitIndex) => (
                     <div key={benefitIndex} className="flex items-center space-x-3">
@@ -293,7 +292,7 @@ export default function AIDrugDiscoveryProPage() {
               End-to-end AI-powered solutions for every stage of drug development
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             {capabilities.map((capability, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -323,23 +322,23 @@ export default function AIDrugDiscoveryProPage() {
               Flexible pricing options for pharmaceutical companies of all sizes
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="bg-slate-800/50 rounded-2xl p-8">
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-white mb-2">AI Drug Discovery Pro</h3>
                 <p className="text-gray-300 mb-6">Complete AI-powered drug discovery platform</p>
-                
+
                 <div className="flex items-baseline justify-center mb-6">
                   <span className="text-5xl font-bold text-white">${pricing.monthly.toLocaleString()}</span>
                   <span className="text-gray-400 ml-2">/month</span>
                 </div>
-                
+
                 <div className="text-green-400 text-sm mb-8">
                   Save ${(pricing.monthly * 12) - pricing.yearly} per year with annual billing
                 </div>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">What's included:</h4>
@@ -352,7 +351,7 @@ export default function AIDrugDiscoveryProPage() {
                     ))}
                   </ul>
                 </div>
-                
+
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">Add-ons:</h4>
                   <ul className="space-y-3">
@@ -368,7 +367,7 @@ export default function AIDrugDiscoveryProPage() {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <a
                   href="/contact"
@@ -394,7 +393,7 @@ export default function AIDrugDiscoveryProPage() {
               See how our AI technology is transforming drug discovery
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-slate-800/50 rounded-lg p-6">
@@ -429,7 +428,7 @@ export default function AIDrugDiscoveryProPage() {
           <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Join leading pharmaceutical companies using AI to accelerate drug development and improve patient outcomes.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a
               href="/contact"
@@ -446,7 +445,7 @@ export default function AIDrugDiscoveryProPage() {
               Schedule Demo
             </a>
           </div>
-          
+
           <div className="text-gray-200 text-sm">
             <p>📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-cyan-200">+1 (302) 464-0950</a></p>
             <p>✉️ Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-cyan-200">kleber@ziontechgroup.com</a></p>

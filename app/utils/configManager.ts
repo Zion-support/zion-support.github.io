@@ -97,9 +97,9 @@ class ConfigManager {
 
   private loadEnvironmentConfig(): void {
     const env = process.env.NODE_ENV as Environment || 'development'
-    
+
     this.config.environment = env
-    
+
     // Override with environment-specific settings
     if (env === 'production') {
       this.config.logging.level = 'error'

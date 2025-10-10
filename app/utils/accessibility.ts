@@ -24,7 +24,7 @@ export class AccessibilityManager {
       announceDelay: 100,
       ...config
     };
-    
+
     this.initialize();
   }
 
@@ -57,7 +57,7 @@ export class AccessibilityManager {
 
     this.liveRegion.setAttribute('aria-live', priority);
     this.liveRegion.textContent = message;
-    
+
     // Clear after announcement
     setTimeout(() => {
       if (this.liveRegion) {
@@ -74,7 +74,7 @@ export class AccessibilityManager {
 
     this.focusHistory.push(document.activeElement as HTMLElement);
     element.focus();
-    
+
     if (announceMessage) {
       this.announce(announceMessage);
     }
@@ -157,7 +157,7 @@ export class AccessibilityManager {
           element.blur();
           break;
       }
-    });
+
   }
 
   /**
@@ -167,7 +167,7 @@ export class AccessibilityManager {
     if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
       button.setAttribute('aria-label', 'Button');
     }
-    
+
     this.addKeyboardNavigation(button);
   }
 
@@ -176,11 +176,11 @@ export class AccessibilityManager {
    */
   enhanceFormField(field: HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement): void {
     const label = document.querySelector(`label[for="${field.id}"]`);
-    
+
     if (!label && !field.getAttribute('aria-label')) {
       field.setAttribute('aria-label', field.placeholder || 'Form field');
     }
-    
+
     if (field.required) {
       field.setAttribute('aria-required', 'true');
     }
@@ -192,12 +192,12 @@ export class AccessibilityManager {
   createAccessibleModal(modal: HTMLElement): void {
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
-    
+
     const title = modal.querySelector('[data-modal-title]');
     if (title) {
       modal.setAttribute('aria-labelledby', title.id || 'modal-title');
     }
-    
+
     this.trapFocus(modal);
   }
 
@@ -206,8 +206,8 @@ export class AccessibilityManager {
    */
   isVisibleToScreenReader(element: HTMLElement): boolean {
     const style = window.getComputedStyle(element);
-    return style.display !== 'none' && 
-           style.visibility !== 'hidden' && 
+    return style.display !== 'none' &&
+           style.visibility !== 'hidden' &&
            element.getAttribute('aria-hidden') !== 'true';
   }
 
@@ -228,7 +228,7 @@ export class AccessibilityManager {
   isFocusable(element: HTMLElement): boolean {
     const tabIndex = element.getAttribute('tabindex');
     if (tabIndex === '-1') return false;
-    
+
     if (element instanceof HTMLButtonElement ||
         element instanceof HTMLInputElement ||
         element instanceof HTMLSelectElement ||
@@ -236,7 +236,7 @@ export class AccessibilityManager {
         element instanceof HTMLAnchorElement) {
       return !element.disabled;
     }
-    
+
     return tabIndex !== null;
   }
 
@@ -273,15 +273,13 @@ export const accessibilityUtils = {
       z-index: 1000;
       transition: top 0.3s;
     `;
-    
+
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
-    });
-    
+
     skipLink.addEventListener('blur', () => {
       skipLink.style.top = '-40px';
-    });
-    
+
     return skipLink;
   },
 
@@ -291,7 +289,7 @@ export const accessibilityUtils = {
   addAriaAttributes(element: HTMLElement, attributes: Record<string, string>): void {
     Object.entries(attributes).forEach(([key, value]) => {
       element.setAttribute(key, value);
-    });
+
   },
 
   /**
@@ -300,7 +298,7 @@ export const accessibilityUtils = {
   removeAriaAttributes(element: HTMLElement, attributes: string[]): void {
     attributes.forEach(attr => {
       element.removeAttribute(attr);
-    });
+
   }
 };
 

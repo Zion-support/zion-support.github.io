@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { Search, TrendingUp, Target, BarChart, CheckCircle, ArrowRight, Phone, Globe, Zap, Users } from 'lucide-react';
+import { Search, TrendingUp, Target, BarChart, ArrowRight, Globe, Zap, Users } from 'lucide-react';
 import Link from 'next/link';
 
 const SEOOptimizerPage: React.FC = () => {
@@ -65,7 +65,7 @@ const SEOOptimizerPage: React.FC = () => {
             SEO <span className="text-cyan-400">Optimizer</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Boost your search rankings with our AI-powered SEO optimization platform. 
+            Boost your search rankings with our AI-powered SEO optimization platform.
             Get more organic traffic, higher rankings, and better visibility in search results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

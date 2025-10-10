@@ -5,9 +5,9 @@ interface UltimateBusinessIntelligenceShowcase2025Props {
   children?: React.ReactNode;
 }
 
-export default function UltimateBusinessIntelligenceShowcase2025({ 
-  className = '', 
-  children 
+export default function UltimateBusinessIntelligenceShowcase2025({
+  className = '',
+  children
 }: UltimateBusinessIntelligenceShowcase2025Props) {
   return (
     <div className={`ultimatebusinessintelligenceshowcase2025 ${className}`}>

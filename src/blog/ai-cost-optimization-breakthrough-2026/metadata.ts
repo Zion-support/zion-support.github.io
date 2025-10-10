@@ -9,7 +9,7 @@ export const metadata = {
     url: 'https://ziontechgroup.com/blog/ai-cost-optimization-breakthrough-2026',
     images: [
       {
-        url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg',
+        url: 'https://ziontechgroup.com/images/ai-cost-optimization-2026.webp',
         width: 1200,
         height: 630,
         alt: 'AI Cost Optimization Breakthrough 2026'
@@ -20,7 +20,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90%',
     description: 'Revolutionary AI cost optimization strategies delivering 90% cost reduction, $200M+ savings, and 10x efficiency gains.',
-    images: ['https://ziontechgroup.com/images/ai-cost-optimization-2026.jpg']
+    images: ['https://ziontechgroup.com/images/ai-cost-optimization-2026.webp']
   },
   robots: {
     index: true,

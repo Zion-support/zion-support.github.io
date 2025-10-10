@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Search, X, ArrowRight, Star, Clock } from 'lucide-react';
+import { Search, X, ArrowRight, Star } from 'lucide-react';
 
 interface SearchResult {
   title: string;
@@ -34,7 +34,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'AI Computer Vision', description: 'Advanced image recognition', url: '/ai-computer-vision', category: 'AI Services' },
     { title: 'AI Machine Learning', description: 'Complete ML platform', url: '/ai-ml-platform', category: 'AI Services' },
     { title: 'AI Quantum Computing', description: 'Next-gen quantum solutions', url: '/ai-quantum-computing', category: 'AI Services' },
-    
+
     // IT Services
     { title: 'Cloud Migration', description: 'Migrate to the cloud seamlessly', url: '/cloud-migration', category: 'IT Services', popular: true },
     { title: 'Cybersecurity', description: 'Enterprise-grade security solutions', url: '/cybersecurity', category: 'IT Services', popular: true },
@@ -42,12 +42,12 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     { title: 'IT Support', description: '24/7 IT support services', url: '/it-support', category: 'IT Services' },
     { title: 'Custom Development', description: 'Custom software development', url: '/custom-development', category: 'IT Services' },
     { title: 'DevOps & CI/CD', description: 'Streamlined development processes', url: '/devops-cicd', category: 'IT Services' },
-    
+
     // Micro SAAS
     { title: 'AI Project Manager Pro', description: 'Intelligent project management', url: '/ai-project-manager', category: 'Micro SAAS', popular: true },
     { title: 'AI Social Media Manager', description: 'Automate your social media', url: '/ai-social-media-manager', category: 'Micro SAAS' },
     { title: 'AI Analytics Dashboard', description: 'Get insights from your data', url: '/ai-analytics-dashboard', category: 'Micro SAAS', popular: true },
-    
+
     // Company Pages
     { title: 'About Us', description: 'Learn about Zion Tech Group', url: '/about', category: 'Company' },
     { title: 'Contact', description: 'Get in touch with us', url: '/contact', category: 'Company' },
@@ -115,7 +115,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
     <div className="fixed inset-0 z-50 overflow-y-auto">
       <div className="flex min-h-screen items-start justify-center px-4 pt-16 pb-20 text-center sm:block sm:p-0">
         <div className="fixed inset-0 bg-black bg-opacity-50 transition-opacity" onClick={onClose} />
-        
+
         <div className="inline-block w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:align-middle">
           <div className="bg-white px-6 py-4">
             <div className="flex items-center space-x-4">
@@ -191,7 +191,7 @@ const SearchModal: React.FC<SearchModalProps> = ({ isOpen, onClose }) => {
                   Find AI services, IT solutions, and more
                 </p>
               </div>
-              
+
               <div className="mt-6">
                 <h4 className="text-sm font-medium text-gray-900 mb-3">Popular searches</h4>
                 <div className="flex flex-wrap gap-2">

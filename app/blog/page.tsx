@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { Calendar, User, Clock, ArrowRight, Search, Filter, Tag, TrendingUp, Star, Eye, MessageCircle, Share2, BookOpen, Brain, Cloud, Shield, Code, BarChart, Zap, Target, Globe } from 'lucide-react';
+import { Calendar, Clock, ArrowRight, Search, Filter, TrendingUp, Star, Eye, MessageCircle, BookOpen, Brain, Cloud, Shield, Code } from 'lucide-react';
 
 export default function BlogPage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -21,11 +21,11 @@ export default function BlogPage() {
     excerpt: 'Explore the latest trends in enterprise AI adoption, from quantum computing integration to autonomous systems, and discover how businesses are leveraging AI for competitive advantage.',
     author: 'Dr. Sarah Chen',
     authorRole: 'Head of AI Research',
-    authorImage: '/images/authors/sarah-chen.jpg',
+    authorImage: '/images/authors/sarah-chen.webp',
     publishDate: '2024-01-15',
     readTime: '8 min read',
     category: 'ai',
-    image: '/images/blog/ai-enterprise-future.jpg',
+    image: '/images/blog/ai-enterprise-future.webp',
     tags: ['AI', 'Enterprise', 'Future Tech', 'Innovation'],
     views: 1250,
     likes: 89,
@@ -40,11 +40,11 @@ export default function BlogPage() {
       excerpt: 'Learn the essential steps and strategies for successful cloud migration, including planning, execution, and optimization techniques.',
       author: 'Michael Rodriguez',
       authorRole: 'Head of Engineering',
-      authorImage: '/images/authors/michael-rodriguez.jpg',
+      authorImage: '/images/authors/michael-rodriguez.webp',
       publishDate: '2024-01-12',
       readTime: '6 min read',
       category: 'cloud',
-      image: '/images/blog/cloud-migration-guide.jpg',
+      image: '/images/blog/cloud-migration-guide.webp',
       tags: ['Cloud', 'Migration', 'Best Practices', 'Infrastructure'],
       views: 890,
       likes: 67,
@@ -56,11 +56,11 @@ export default function BlogPage() {
       excerpt: 'Discover how AI is both creating new security challenges and providing innovative solutions to protect enterprise data and systems.',
       author: 'Dr. Emily Watson',
       authorRole: 'Head of AI Research',
-      authorImage: '/images/authors/emily-watson.jpg',
+      authorImage: '/images/authors/emily-watson.webp',
       publishDate: '2024-01-10',
       readTime: '7 min read',
       category: 'security',
-      image: '/images/blog/ai-cybersecurity.jpg',
+      image: '/images/blog/ai-cybersecurity.webp',
       tags: ['Cybersecurity', 'AI', 'Threats', 'Solutions'],
       views: 1100,
       likes: 78,
@@ -72,11 +72,11 @@ export default function BlogPage() {
       excerpt: 'A comprehensive guide to leading successful digital transformation initiatives, from strategy development to implementation.',
       author: 'Kleber Santos',
       authorRole: 'CEO & Founder',
-      authorImage: '/images/authors/kleber-santos.jpg',
+      authorImage: '/images/authors/kleber-santos.webp',
       publishDate: '2024-01-08',
       readTime: '9 min read',
       category: 'business',
-      image: '/images/blog/digital-transformation.jpg',
+      image: '/images/blog/digital-transformation.webp',
       tags: ['Digital Transformation', 'Leadership', 'Change Management', 'Strategy'],
       views: 950,
       likes: 72,
@@ -88,11 +88,11 @@ export default function BlogPage() {
       excerpt: 'Explore how edge computing is revolutionizing AI deployment and enabling real-time processing at the network edge.',
       author: 'Michael Rodriguez',
       authorRole: 'Head of Engineering',
-      authorImage: '/images/authors/michael-rodriguez.jpg',
+      authorImage: '/images/authors/michael-rodriguez.webp',
       publishDate: '2024-01-05',
       readTime: '5 min read',
       category: 'technology',
-      image: '/images/blog/edge-computing.jpg',
+      image: '/images/blog/edge-computing.webp',
       tags: ['Edge Computing', 'AI', 'Real-time', 'Infrastructure'],
       views: 720,
       likes: 54,
@@ -104,11 +104,11 @@ export default function BlogPage() {
       excerpt: 'Learn about the importance of AI ethics and how to implement responsible AI practices in your organization.',
       author: 'Dr. Sarah Chen',
       authorRole: 'Head of AI Research',
-      authorImage: '/images/authors/sarah-chen.jpg',
+      authorImage: '/images/authors/sarah-chen.webp',
       publishDate: '2024-01-03',
       readTime: '6 min read',
       category: 'ai',
-      image: '/images/blog/ai-ethics.jpg',
+      image: '/images/blog/ai-ethics.webp',
       tags: ['AI Ethics', 'Responsible AI', 'Governance', 'Compliance'],
       views: 680,
       likes: 61,
@@ -121,7 +121,6 @@ export default function BlogPage() {
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || post.category === selectedCategory;
     return matchesSearch && matchesCategory;
-  });
 
   const getCategoryIcon = (category: string) => {
     const icons = {
@@ -156,7 +155,7 @@ export default function BlogPage() {
               Blog & Insights
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Stay updated with the latest trends in AI, cloud computing, cybersecurity, 
+              Stay updated with the latest trends in AI, cloud computing, cybersecurity,
               and digital transformation. Expert insights from our team of specialists.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

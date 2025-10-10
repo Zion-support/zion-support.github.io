@@ -45,7 +45,7 @@ const ServiceSchema: React.FC<ServiceSchemaProps> = ({ service }) => {
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo.png",
+      "logo": "https://ziontechgroup.com/logo.webp",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-302-464-0950",
@@ -53,7 +53,7 @@ const ServiceSchema: React.FC<ServiceSchemaProps> = ({ service }) => {
         "email": "kleber@ziontechgroup.com"
       }
     },
-    "screenshot": `https://ziontechgroup.com/screenshots${service.url}.png`,
+    "screenshot": `https://ziontechgroup.com/screenshots${service.url}.webp`,
     "softwareVersion": "1.0",
     "datePublished": "2024-01-01",
     "dateModified": new Date().toISOString().split('T')[0],
@@ -69,7 +69,7 @@ const ServiceSchema: React.FC<ServiceSchemaProps> = ({ service }) => {
     "installUrl": `https://ziontechgroup.com${service.url}`,
     "updateUrl": `https://ziontechgroup.com${service.url}`,
     "supportUrl": "https://ziontechgroup.com/support",
-    "screenshot": `https://ziontechgroup.com/screenshots${service.url}.png`
+    "screenshot": `https://ziontechgroup.com/screenshots${service.url}.webp`
   };
 
   return (

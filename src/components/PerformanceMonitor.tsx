@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Activity, Zap, Clock, AlertTriangle } from 'lucide-react';
+import { Activity, AlertTriangle } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -19,18 +19,18 @@ const PerformanceMonitor: React.FC = () => {
     const measurePerformance = () => {
       const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
-      
+
       // Measure render time
       const renderStart = performance.now();
       requestAnimationFrame(() => {
         const renderTime = performance.now() - renderStart;
-        
+
         // Check memory usage (if available)
         const memoryUsage = (performance as any).memory?.usedJSHeapSize || 0;
-        
+
         // Check connection speed
         const connection = (navigator as any).connection;
-        const isSlowConnection = connection ? 
+        const isSlowConnection = connection ?
           connection.effectiveType === 'slow-2g' || connection.effectiveType === '2g' : false;
 
         setMetrics({
@@ -38,13 +38,12 @@ const PerformanceMonitor: React.FC = () => {
           renderTime,
           memoryUsage: memoryUsage / 1024 / 1024, // Convert to MB
           isSlowConnection
-        });
 
         // Show warning if performance is poor
         if (loadTime > 3000 || renderTime > 16 || memoryUsage > 50) {
           setIsVisible(true);
         }
-      });
+
     };
 
     // Measure after page load
@@ -75,7 +74,7 @@ const PerformanceMonitor: React.FC = () => {
           ×
         </button>
       </div>
-      
+
       <div className="space-y-1">
         <div className="flex justify-between">
           <span>Load Time:</span>
@@ -83,21 +82,21 @@ const PerformanceMonitor: React.FC = () => {
             {metrics.loadTime.toFixed(0)}ms
           </span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>Render Time:</span>
           <span className={metrics.renderTime > 16 ? 'text-red-400' : 'text-green-400'}>
             {metrics.renderTime.toFixed(1)}ms
           </span>
         </div>
-        
+
         <div className="flex justify-between">
           <span>Memory:</span>
           <span className={metrics.memoryUsage > 50 ? 'text-red-400' : 'text-green-400'}>
             {metrics.memoryUsage.toFixed(1)}MB
           </span>
         </div>
-        
+
         {metrics.isSlowConnection && (
           <div className="flex items-center space-x-1 text-yellow-400">
             <AlertTriangle className="w-3 h-3" />

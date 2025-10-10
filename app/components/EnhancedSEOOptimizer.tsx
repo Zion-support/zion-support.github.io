@@ -22,7 +22,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
   description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
   keywords = ['AI solutions', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise AI'],
   canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  ogImage = 'https://ziontechgroup.com/og-image.webp',
   structuredData,
   noIndex = false,
   author = 'Zion Tech Group',
@@ -35,17 +35,17 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
     try {
       // Update page title
       document.title = title;
-      
+
       // Update meta description
       updateMetaTag('description', description);
       updateMetaTag('keywords', keywords.join(', '));
-      
+
       // Update author
       updateMetaTag('author', author);
-      
+
       // Update robots
       updateMetaTag('robots', noIndex ? 'noindex,nofollow' : 'index,follow');
-      
+
       // Update Open Graph tags
       updateMetaTag('og:title', title, 'property');
       updateMetaTag('og:description', description, 'property');
@@ -54,7 +54,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       updateMetaTag('og:type', 'website', 'property');
       updateMetaTag('og:site_name', 'Zion Tech Group', 'property');
       updateMetaTag('og:locale', 'en_US', 'property');
-      
+
       // Add article-specific meta tags
       if (publishedTime) {
         updateMetaTag('article:published_time', publishedTime, 'property');
@@ -68,9 +68,9 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       if (tags.length > 0) {
         tags.forEach(tag => {
           updateMetaTag('article:tag', tag, 'property');
-        });
+
       }
-      
+
       // Update Twitter tags
       updateMetaTag('twitter:card', 'summary_large_image', 'name');
       updateMetaTag('twitter:title', title, 'name');
@@ -78,30 +78,30 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       updateMetaTag('twitter:image', ogImage, 'name');
       updateMetaTag('twitter:site', '@ziontechgroup', 'name');
       updateMetaTag('twitter:creator', '@ziontechgroup', 'name');
-      
+
       // Update canonical URL
       updateCanonicalUrl(canonicalUrl);
-      
+
       // Add structured data
       if (structuredData) {
         addStructuredData(structuredData);
       }
-      
+
       // Add default structured data
       addDefaultStructuredData();
-      
+
       // Add breadcrumb structured data
       addBreadcrumbStructuredData();
-      
+
       // Add FAQ structured data
       addFAQStructuredData();
-      
+
       // Add organization structured data
       addOrganizationStructuredData();
-      
+
       // Add WebSite structured data
       addWebSiteStructuredData();
-      
+
       logger.info('SEO optimization completed', { title, canonicalUrl }, 'EnhancedSEOOptimizer');
     } catch (error) {
       logger.error('SEO optimization failed', { error: (error as Error).message }, 'EnhancedSEOOptimizer');
@@ -147,7 +147,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       '@type': 'TechCompany',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
+      logo: 'https://ziontechgroup.com/logo.webp',
       description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
       foundingDate: '2020',
       numberOfEmployees: '50-100',
@@ -181,7 +181,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'https://linkedin.com/company/ziontechgroup'
       ]
     };
-    
+
     addStructuredData(defaultData);
   };
 
@@ -198,7 +198,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         }
       ]
     };
-    
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(breadcrumbData);
@@ -250,7 +250,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         }
       ]
     };
-    
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(faqData);
@@ -269,7 +269,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       '@type': 'Organization',
       name: 'Zion Tech Group',
       url: 'https://ziontechgroup.com',
-      logo: 'https://ziontechgroup.com/logo.png',
+      logo: 'https://ziontechgroup.com/logo.webp',
       description: 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
       foundingDate: '2020',
       numberOfEmployees: '50-100',
@@ -294,7 +294,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'https://linkedin.com/company/ziontechgroup'
       ]
     };
-    
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(organizationData);
@@ -325,7 +325,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
         'query-input': 'required name=search_term_string'
       }
     };
-    
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(websiteData);
