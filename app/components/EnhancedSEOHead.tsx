@@ -3,14 +3,52 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const EnhancedSEOHead: React.FC = () => {
-  return (
-;
-const EnhancedSEOHead: React.FC = () => {
-return (
-    <Helmet>
-);
+interface SEOHeadProps {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  ogImage?: string;
+  noIndex?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  structuredData?: any;
+  breadcrumbStructuredData?: any;
 }
+
+const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+  title = 'Zion Tech Group - AI & IT Solutions',
+  description = 'Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, and digital transformation services.',
+  keywords = ['AI', 'artificial intelligence', 'quantum computing', 'autonomous systems', 'digital transformation', 'enterprise solutions'],
+  canonicalUrl = 'https://ziontechgroup.com',
+  ogImage = 'https://ziontechgroup.com/og-image.jpg',
+  noIndex = false,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  structuredData,
+  breadcrumbStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://ziontechgroup.com'
+      }
+    ]
+  }
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullDescription = description;
+  const fullKeywords = [...keywords, 'Zion Tech Group', 'AI solutions', 'enterprise technology'];
+  const author = 'Zion Tech Group';
+  return (
+    <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
@@ -99,7 +137,7 @@ return (
             'https://linkedin.com/company/ziontechgroup',
             'https://twitter.com/ziontechgroup'
           ]
-        });
+        })}
       </script>
       
       <script type="application/ld+json">

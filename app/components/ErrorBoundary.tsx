@@ -174,7 +174,9 @@ constructor(props: Props) {
             </div>
           </div>
         </div>);
-    return this.props.children}
+    }
+    return this.props.children;
+  }
 }
 
 export default ErrorBoundary;
