@@ -13,7 +13,7 @@ export const ServiceCardSkeleton: React.FC = React.memo(() => (
     </div>
     <div className="h-8 bg-gray-700 rounded"></div>
   </div>
-);
+));
 
 export const HeroSkeleton: React.FC = React.memo(() => (
   <div className="text-center mb-16 animate-pulse">
@@ -25,7 +25,7 @@ export const HeroSkeleton: React.FC = React.memo(() => (
       <div className="h-12 bg-gray-700 rounded w-48"></div>
     </div>
   </div>
-);
+));
 
 export const ContentSkeleton: React.FC = React.memo(() => (
   <div className="animate-pulse">
@@ -34,7 +34,7 @@ export const ContentSkeleton: React.FC = React.memo(() => (
     <div className="h-4 bg-gray-700 rounded mb-2"></div>
     <div className="h-4 bg-gray-700 rounded w-3/4"></div>
   </div>
-);
+));
 
 export const CardSkeleton: React.FC = React.memo(() => (
   <div className="cyber-card p-6 animate-pulse">
@@ -43,6 +43,6 @@ export const CardSkeleton: React.FC = React.memo(() => (
     <div className="h-4 bg-gray-700 rounded mb-2"></div>
     <div className="h-4 bg-gray-700 rounded w-2/3"></div>
   </div>
-);
+));
 
 export default ServiceCardSkeleton;

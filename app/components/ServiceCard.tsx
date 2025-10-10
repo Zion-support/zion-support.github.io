@@ -61,6 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = memo(({
       </Link>
     </div>
   );
+});
 
 ServiceCard.displayName = 'ServiceCard';
 export default ServiceCard;

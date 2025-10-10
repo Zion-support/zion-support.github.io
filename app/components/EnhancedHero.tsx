@@ -31,7 +31,7 @@ const EnhancedHero: React.FC = () => {
       (window as any).gtag('event', 'phone_click', {
         event_category: 'engagement',
         event_label: 'main_phone_number',
-
+      });
     }
   }, []);
 

@@ -22,6 +22,7 @@ export const PerformanceOptimizer: React.FC = () => {
     codeSplit: false,
     serviceWorker: false,
     optimized: false
+  });
 
   const collectWebVitals = useCallback(() => {
     if (typeof window === 'undefined') return;

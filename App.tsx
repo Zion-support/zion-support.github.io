@@ -153,4 +153,6 @@ const App: React.FC = memo(() => {
       </HelmetProvider>
     </ErrorBoundary>
   );
-}
+});
+
+export default App;

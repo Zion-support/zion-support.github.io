@@ -225,7 +225,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-
+          });
         }
       }
     }

@@ -48,7 +48,7 @@ const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhancerProps
               closeButton.click();
             }
           }
-
+        });
       }
 
       // Navigate dropdowns with arrow keys

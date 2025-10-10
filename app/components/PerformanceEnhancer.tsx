@@ -90,7 +90,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         value: 1,
         custom_parameter_1: error.message,
         custom_parameter_2: error.stack
-
+      });
     }
 
     // Send to custom endpoint

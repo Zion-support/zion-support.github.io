@@ -18,12 +18,15 @@ const ServiceWorkerRegistration: React.FC = () => {
                       window.location.reload();
                     }
                   }
-
-              }
-
-          })
-          .catch((registrationError) => {
-
+                }
+              });
+            })
+            .catch((registrationError) => {
+              console.error('Service worker registration failed:', registrationError);
+            });
+          }
+        }
+      }
 
       // Listen for service worker messages
       navigator.serviceWorker.addEventListener('message', (event) => {

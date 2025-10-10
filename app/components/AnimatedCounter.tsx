@@ -20,6 +20,7 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   const [isVisible, setIsVisible] = useState(false);
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.5,
+  });
 
   useEffect(() => {
     if (entry?.isIntersecting && !isVisible) {

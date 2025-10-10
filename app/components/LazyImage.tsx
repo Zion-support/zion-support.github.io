@@ -26,6 +26,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
   const [setNode, entry] = useIntersectionObserver({
     threshold: 0.1,
     rootMargin: '50px',
+  });
 
   React.useEffect(() => {
     if (entry?.isIntersecting) {

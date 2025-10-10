@@ -13,17 +13,13 @@ const AccessibilityEnhancer: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     reducedMotion: false,
-<<<<<<< HEAD
     focusVisible: true,
     screenReader: false,
     keyboardNavigation: true,
     colorBlind: false,
-    dyslexia: false
-=======
-    fontSize: 'medium',
-    focusVisible: true
+    dyslexia: false,
+    fontSize: 'medium'
   });
->>>>>>> cursor/analyze-improve-and-deploy-application-87e5
 
   useEffect(() => {
     // Check for user preferences
@@ -87,8 +83,9 @@ const AccessibilityEnhancer: React.FC = () => {
     }
   }, [settings]);
 
-<<<<<<< HEAD
-    // Screen reader optimizations
+  // Screen reader optimizations
+  const applyScreenReaderOptimizations = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
     if (newSettings.screenReader) {
       root.classList.add('screen-reader-optimized');
     } else {
@@ -122,9 +119,7 @@ const AccessibilityEnhancer: React.FC = () => {
     }, []);
 
   // Initialize accessibility settings
-=======
   // Add CSS for accessibility features
->>>>>>> cursor/analyze-improve-and-deploy-application-87e5
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `

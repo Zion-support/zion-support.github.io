@@ -42,7 +42,7 @@ const EnhancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           imageElement.src = imageElement.dataset.src;
           imageElement.removeAttribute('data-src');
         }
-
+      });
     };
 
     // Optimize images on load

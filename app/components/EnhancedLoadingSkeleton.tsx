@@ -34,7 +34,7 @@ export const HeroSkeleton: React.FC = React.memo(() => (
       <Skeleton className="h-12 w-32" />
     </div>
   </div>
-);
+));
 
 export const ServiceCardSkeleton: React.FC = React.memo(() => (
   <div className="cyber-card p-6">
@@ -60,7 +60,7 @@ export const ServiceCardSkeleton: React.FC = React.memo(() => (
       <Skeleton className="h-8 w-24 mx-auto" />
     </div>
   </div>
-);
+));
 
 export const NavigationSkeleton: React.FC = React.memo(() => (
   <nav className="bg-slate-900/95 backdrop-blur-md border-b border-cyan-400/20 sticky top-0 z-50">
@@ -79,7 +79,7 @@ export const NavigationSkeleton: React.FC = React.memo(() => (
       </div>
     </div>
   </nav>
-);
+));
 
 export const FooterSkeleton: React.FC = React.memo(() => (
   <footer className="bg-slate-900 border-t border-cyan-400/20">
@@ -101,7 +101,7 @@ export const FooterSkeleton: React.FC = React.memo(() => (
       </div>
     </div>
   </footer>
-);
+));
 
 export const ContentSkeleton: React.FC = React.memo(() => (
   <div className="container mx-auto px-4 py-16">
@@ -117,7 +117,7 @@ export const ContentSkeleton: React.FC = React.memo(() => (
       </div>
     </div>
   </div>
-);
+));
 
 export const PageSkeleton: React.FC = React.memo(() => (
   <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -125,6 +125,6 @@ export const PageSkeleton: React.FC = React.memo(() => (
     <ContentSkeleton />
     <FooterSkeleton />
   </div>
-);
+));
 
 export default Skeleton;

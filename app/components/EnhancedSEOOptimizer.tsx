@@ -68,7 +68,7 @@ const EnhancedSEOOptimizer: React.FC<SEOOptimizerProps> = ({
       if (tags.length > 0) {
         tags.forEach(tag => {
           updateMetaTag('article:tag', tag, 'property');
-
+        });
       }
 
       // Update Twitter tags

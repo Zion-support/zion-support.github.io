@@ -165,6 +165,7 @@ const FuturisticHero: React.FC = memo(() => {
       </div>
     </section>
   );
+});
 
 FuturisticHero.displayName = 'FuturisticHero';
 export default FuturisticHero;

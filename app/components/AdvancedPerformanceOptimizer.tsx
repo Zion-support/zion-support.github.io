@@ -30,6 +30,7 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
     fid: 0,
     cls: 0,
     ttfb: 0
+  });
 
   // Web Vitals monitoring
   useEffect(() => {
