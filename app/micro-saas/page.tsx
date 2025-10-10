@@ -182,12 +182,19 @@ const MicroSAASPage: React.FC = () => {
       icon: Video, 
       category: 'Content', 
       price: '$199/mo',
+<<<<<<< HEAD
       description: 'Create professional videos with AI-powered editing, voice synthesis, and automated storytelling',
       features: ['Auto Editing', 'Voice Synthesis', 'Visual Effects', 'Template Library', 'Brand Kit', 'Social Media Optimization'],
       popular: true,
       rating: 4.6,
       users: '2,800+',
       trial: '7-day free trial'
+=======
+      description: 'Create professional videos with AI-powered editing and effects',
+      features: ['Auto Editing', 'Voice Synthesis', 'Visual Effects', 'Template Library'],
+      popular: true,
+      rating: 4.6
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
     },
     { 
       name: 'AI Social Media Manager Pro', 
@@ -2033,10 +2040,36 @@ const MicroSAASPage: React.FC = () => {
       rating: 4.7
     },
     { 
+<<<<<<< HEAD
+=======
+      name: 'AI Password Manager Pro', 
+      href: '/ai-password-manager', 
+      icon: Lock, 
+      category: 'Security', 
+      price: '$4.99/mo',
+      description: 'Ultra-secure password management with AI-powered generation and monitoring',
+      features: ['AI Generation', 'Security Monitoring', 'One-Click Login', 'Multi-Platform Sync'],
+      popular: true,
+      rating: 4.9
+    },
+    { 
+      name: 'AI Expense Tracker Pro', 
+      href: '/ai-expense-tracker', 
+      icon: DollarSign, 
+      category: 'Finance', 
+      price: '$9.99/mo',
+      description: 'Smart expense tracking with AI receipt scanning and financial insights',
+      features: ['Receipt Scanning', 'Smart Categorization', 'Analytics', 'Budgeting'],
+      popular: true,
+      rating: 4.8
+    },
+    { 
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
       name: 'AI Invoice Generator Pro', 
       href: '/ai-invoice-generator', 
       icon: FileText, 
       category: 'Business', 
+<<<<<<< HEAD
       price: '$79/mo',
       description: 'Automated invoice generation with AI-powered customization and tracking',
       features: ['Auto Generation', 'Custom Templates', 'Payment Tracking', 'Tax Calculation'],
@@ -2054,6 +2087,13 @@ const MicroSAASPage: React.FC = () => {
       popular: true,
       rating: 4.6
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
+=======
+      price: '$19.99/mo',
+      description: 'Automated invoice creation with AI-powered billing and payment processing',
+      features: ['Auto Generation', 'Payment Processing', 'Analytics', 'Multi-Currency'],
+      popular: true,
+      rating: 4.7
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
     }
   ];
 

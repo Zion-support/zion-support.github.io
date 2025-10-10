@@ -127,6 +127,7 @@ const Navigation: React.FC = () => {
       bgColor: 'bg-cyan-500/10',
       hoverColor: 'hover:bg-cyan-500/20',
       services: [
+<<<<<<< HEAD
         { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', description: 'Quantum-powered financial predictions', icon: '⚛️', popular: true },
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Advanced cognitive enhancement', icon: '🧠', popular: true },
         { name: 'AI Holographic Workspace', path: '/ai-holographic-workspace', description: '3D workspace with holographic UI', icon: '🥽', popular: true },
@@ -231,6 +232,16 @@ const Navigation: React.FC = () => {
         { name: 'Quantum Cloud Infrastructure', path: '/quantum-cloud-infrastructure', description: 'Quantum computing cloud', icon: '⚛️', popular: true },
         { name: 'AI Neural Memory Assistant', path: '/ai-neural-memory-assistant', description: 'Personal AI memory', icon: '🧠', popular: true }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8798
+=======
+        { name: 'AI Project Manager Pro', path: '/ai-project-manager', description: 'Intelligent project planning with predictive analytics', icon: '📊', popular: true },
+        { name: 'AI Smart Calendar Pro', path: '/ai-smart-calendar', description: 'AI-powered calendar management', icon: '📅', popular: true },
+        { name: 'AI Video Generator Pro', path: '/ai-video-generator', description: 'Create professional videos with AI', icon: '🎥', popular: true },
+        { name: 'AI Password Manager Pro', path: '/ai-password-manager', description: 'Ultra-secure password management', icon: '🔒', popular: true },
+        { name: 'AI Expense Tracker Pro', path: '/ai-expense-tracker', description: 'Smart expense tracking with AI', icon: '💰', popular: true },
+        { name: 'AI Invoice Generator Pro', path: '/ai-invoice-generator', description: 'Automated invoice creation', icon: '📄', popular: true },
+        { name: 'AI Social Media Manager', path: '/ai-social-media-manager', description: 'Automated social media management', icon: '📱', popular: true },
+        { name: 'AI Email Marketing Suite', path: '/ai-email-marketing', description: 'Intelligent email campaigns', icon: '📧', popular: true }
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
       ]
     },
     {
@@ -240,6 +251,7 @@ const Navigation: React.FC = () => {
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
       services: [
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -387,6 +399,16 @@ const Navigation: React.FC = () => {
         { name: 'AI Agricultural Intelligence Pro', path: '/ai-agricultural-intelligence-pro', description: 'Precision agriculture solutions', icon: '🌱', popular: true },
         { name: 'AI Legal Research Pro', path: '/ai-legal-research-pro', description: 'Advanced legal research & analysis', icon: '⚖️', popular: false }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
+=======
+        { name: 'AI Analytics Platform', path: '/ai-analytics', description: 'Advanced analytics with ML predictions', icon: '📊', popular: true },
+        { name: 'AI Workflow Automation', path: '/ai-workflow-automation', description: 'End-to-end business process automation', icon: '⚡', popular: true },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: 'Advanced 24/7 customer support', icon: '🤖', popular: true },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'Complete content creation suite', icon: '✍️', popular: true },
+        { name: 'AI Healthcare Solutions', path: '/ai-healthcare', description: 'Medical AI and diagnosis support', icon: '🏥', popular: true },
+        { name: 'AI Fintech Platform', path: '/ai-fintech', description: 'Financial AI and fraud detection', icon: '💳', popular: true },
+        { name: 'AI Security Solutions', path: '/ai-cybersecurity', description: 'Advanced AI security solutions', icon: '🛡️', popular: true },
+        { name: 'AI Document Processing', path: '/ai-document-processing', description: 'Intelligent document processing', icon: '📄', popular: true }
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
       ]
     },
     {
@@ -397,6 +419,7 @@ const Navigation: React.FC = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       services: [
+<<<<<<< HEAD
         { name: 'Cloud Migration & Setup', path: '/cloud-migration', description: 'Seamless cloud migration', icon: '☁️', popular: true },
         { name: 'Enterprise Cybersecurity Suite', path: '/cybersecurity', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
         { name: 'IT Infrastructure Design', path: '/it-infrastructure', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
@@ -546,6 +569,16 @@ const Navigation: React.FC = () => {
         { name: 'AI Financial Analyzer Pro', path: '/ai-financial-analyzer', description: 'Advanced financial analysis', icon: '💰', popular: true },
         { name: 'AI Code Assistant Pro', path: '/ai-code-assistant', description: 'Intelligent coding assistant', icon: '💻', popular: true }
 >>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-453e
+=======
+        { name: 'Cloud Migration & Setup', path: '/it-services', description: 'Seamless cloud migration', icon: '☁️', popular: true },
+        { name: 'Enterprise Cybersecurity', path: '/it-services', description: 'Comprehensive security solutions', icon: '🛡️', popular: true },
+        { name: 'IT Infrastructure Design', path: '/it-services', description: 'Scalable infrastructure architecture', icon: '🏗️', popular: true },
+        { name: '24/7 IT Support', path: '/it-services', description: 'Round-the-clock technical support', icon: '🔄', popular: true },
+        { name: 'Custom Software Development', path: '/it-services', description: 'Tailored software solutions', icon: '💻', popular: true },
+        { name: 'DevOps & CI/CD', path: '/it-services', description: 'Streamlined development processes', icon: '⚙️', popular: true },
+        { name: 'Database Management', path: '/it-services', description: 'Performance tuning & security', icon: '🗄️', popular: false },
+        { name: 'Network Design', path: '/it-services', description: 'Secure network infrastructure', icon: '🌐', popular: false }
+>>>>>>> origin/cursor/enhance-and-expand-ziontechgroup-com-services-and-site-92bf
       ]
     },
     {
